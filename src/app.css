@@ -144,14 +144,6 @@ body {
 		radial-gradient(ellipse at 50% 100%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
 }
 
-/* Subject card hover effect */
-.subject-card {
-	@apply glass-card;
-}
-
-.subject-card:hover {
-	transform: translateY(-4px);
-}
 
 /* Document type badges */
 .badge-exam {
@@ -176,6 +168,7 @@ body {
 
 /* Floating particles animation */
 @keyframes float {
+
 	0%,
 	100% {
 		transform: translateY(0px) rotate(0deg);
@@ -192,6 +185,7 @@ body {
 
 /* Pulse glow */
 @keyframes pulse-glow {
+
 	0%,
 	100% {
 		box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);

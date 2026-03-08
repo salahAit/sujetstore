@@ -70,6 +70,7 @@ db.exec(`
     type TEXT NOT NULL CHECK(type IN ('exam', 'test', 'lesson', 'summary', 'exercise', 'solution')),
     content TEXT,
     pdf_url TEXT,
+    solution_url TEXT,
     file_size INTEGER,
     source TEXT,
     academic_year TEXT,
@@ -525,8 +526,8 @@ console.log(`✅ ${ysCount} ربط مادة-سنة`);
 
 // Insert sample documents for 1AM (السنة الأولى متوسط) as examples
 const insertDoc = db.prepare(
-	`INSERT INTO documents (year_subject_id, trimester_id, title, title_ar, slug, type, source, academic_year, has_solution, difficulty)
-	 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+	`INSERT INTO documents (year_subject_id, trimester_id, title, title_ar, slug, type, source, academic_year, has_solution, difficulty, pdf_url, solution_url)
+	 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
 );
 
 // Get year_subject IDs for 1am
@@ -550,7 +551,9 @@ for (const ys of ysRows) {
 			'نموذج مقترح',
 			'2024/2025',
 			1,
-			'medium'
+			'medium',
+			'/documents/demo.pdf', // pdf_url
+			'/documents/demo.pdf' // solution_url
 		);
 		docCount++;
 
@@ -565,7 +568,9 @@ for (const ys of ysRows) {
 			'نموذج رسمي',
 			'2024/2025',
 			1,
-			'medium'
+			'medium',
+			'/documents/demo.pdf',
+			'/documents/demo.pdf'
 		);
 		docCount++;
 	}
@@ -581,7 +586,9 @@ for (const ys of ysRows) {
 		'ملخص شامل',
 		'2024/2025',
 		0,
-		'easy'
+		'easy',
+		'/documents/demo.pdf',
+		null // no solution for a summary
 	);
 	docCount++;
 }

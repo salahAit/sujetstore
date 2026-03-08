@@ -111,7 +111,10 @@
 
 					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 						{#each docs as doc}
-							<div class="glass-card p-5 transition-all duration-300 hover:scale-[1.01]">
+							<a
+								href="/{data.level.slug}/{data.year.slug}/{data.subject.slug}/{doc.slug}"
+								class="glass-card block p-5 transition-all duration-300 hover:scale-[1.01]"
+							>
 								<div class="flex items-start gap-3">
 									<span class="text-xl">{typeIcons[doc.type] || '📄'}</span>
 									<div class="min-w-0 flex-1">
@@ -139,18 +142,13 @@
 									</div>
 								</div>
 
-								{#if doc.pdf_url}
-									<div class="mt-4 border-t border-white/5 pt-3">
-										<a
-											href={doc.pdf_url}
-											target="_blank"
-											class="text-primary hover:text-primary-foreground inline-flex items-center gap-2 text-sm transition-colors"
-										>
-											📥 تحميل PDF
-										</a>
-									</div>
-								{/if}
-							</div>
+								<div
+									class="text-primary group mt-4 flex items-center gap-2 border-t border-white/5 pt-3 text-sm font-semibold"
+								>
+									👁️ عرض الوثيقة
+									<span class="transition-transform group-hover:-translate-x-1">←</span>
+								</div>
+							</a>
 						{/each}
 					</div>
 				</div>
@@ -171,7 +169,10 @@
 
 				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 					{#each generalDocs as doc}
-						<div class="glass-card p-5 transition-all duration-300 hover:scale-[1.01]">
+						<a
+							href="/{data.level.slug}/{data.year.slug}/{data.subject.slug}/{doc.slug}"
+							class="glass-card block p-5 transition-all duration-300 hover:scale-[1.01]"
+						>
 							<div class="flex items-start gap-3">
 								<span class="text-xl">{typeIcons[doc.type] || '📄'}</span>
 								<div class="min-w-0 flex-1">
@@ -186,7 +187,14 @@
 									{/if}
 								</div>
 							</div>
-						</div>
+
+							<div
+								class="text-primary group mt-4 flex items-center gap-2 border-t border-white/5 pt-3 text-sm font-semibold"
+							>
+								👁️ عرض الوثيقة
+								<span class="transition-transform group-hover:-translate-x-1">←</span>
+							</div>
+						</a>
 					{/each}
 				</div>
 			</div>

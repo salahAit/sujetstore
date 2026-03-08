@@ -104,6 +104,7 @@ export const documents = sqliteTable('documents', {
 	// المحتوى
 	content: text('content'), // محتوى HTML/Markdown
 	pdfUrl: text('pdf_url'), // رابط PDF
+	solutionUrl: text('solution_url'), // رابط PDF الحل
 	fileSize: integer('file_size'), // حجم الملف
 
 	// بيانات إضافية
