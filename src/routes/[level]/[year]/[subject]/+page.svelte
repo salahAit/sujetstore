@@ -14,6 +14,7 @@
 		Inbox,
 		X
 	} from 'lucide-svelte';
+	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
 
 	let { data }: { data: any } = $props();
 
@@ -118,7 +119,7 @@
 				class="flex h-16 w-16 items-center justify-center rounded-2xl text-3xl"
 				style="background: {data.subject.color}20; border: 1px solid {data.subject.color}40"
 			>
-				{data.subject.icon}
+				<DynamicIcon name={data.subject.icon} size={32} class="text-foreground" />
 			</div>
 			<div class="text-center sm:text-right">
 				<h1 class="text-3xl font-extrabold lg:text-4xl">{data.subject.name_ar}</h1>
