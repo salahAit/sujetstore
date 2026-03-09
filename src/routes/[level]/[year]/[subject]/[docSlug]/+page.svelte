@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Printer, Download, FileText, CheckCircle, Calendar, GraduationCap } from 'lucide-svelte';
 	let { data }: { data: any } = $props();
 
 	let activeTab = $state('exam'); // 'exam' or 'solution'
@@ -73,8 +74,11 @@
 				<span class="badge-{doc.type} rounded-full border px-2 py-0.5"
 					>{typeLabels[doc.type] || doc.type}</span
 				>
-				{#if doc.year}<span>📅 {doc.year}</span>{/if}
-				{#if doc.source}<span>📝 {doc.source}</span>{/if}
+				{#if doc.year}<span class="flex items-center gap-1"><Calendar size={14} /> {doc.year}</span
+					>{/if}
+				{#if doc.source}<span class="flex items-center gap-1"
+						><GraduationCap size={14} /> {doc.source}</span
+					>{/if}
 			</div>
 		</div>
 
@@ -90,7 +94,7 @@
 						class="border-primary/30 bg-primary/10 text-primary hover:bg-primary/30 flex items-center justify-center rounded-lg border p-2 transition-colors"
 						title="طباعة الموضوع"
 					>
-						🖨️
+						<Printer size={20} />
 					</button>
 					<a
 						href={doc.pdfUrl}
@@ -98,7 +102,7 @@
 						target="_blank"
 						class="bg-primary/20 hover:bg-primary/30 text-primary border-primary/30 flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-semibold transition-colors"
 					>
-						📥 تحميل {doc.hasSolution ? 'الموضوع' : 'الملف'}
+						<Download size={18} /> تحميل {doc.hasSolution ? 'الموضوع' : 'الملف'}
 					</a>
 				</div>
 			{/if}
@@ -112,7 +116,7 @@
 						class="flex items-center justify-center rounded-lg border border-emerald-500/30 bg-emerald-500/10 p-2 text-emerald-500 transition-colors hover:bg-emerald-500/30 dark:text-emerald-400"
 						title="طباعة التصحيح"
 					>
-						🖨️
+						<Printer size={20} />
 					</button>
 					<a
 						href={doc.solutionUrl}
@@ -120,7 +124,7 @@
 						target="_blank"
 						class="flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/20 px-4 py-2 text-sm font-semibold text-emerald-400 transition-colors hover:bg-emerald-500/30"
 					>
-						📥 تحميل التصحيح ✅
+						<Download size={18} /> تحميل التصحيح
 					</a>
 				</div>
 			{/if}
@@ -139,24 +143,26 @@
 				{#if doc.hasSolution && doc.solutionUrl}
 					<button
 						onclick={() => (activeTab = 'exam')}
-						class="flex-1 rounded-lg px-4 py-2 text-sm font-bold transition-all {activeTab ===
+						class="flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-bold transition-all {activeTab ===
 						'exam'
 							? 'bg-primary text-primary-foreground shadow-sm'
 							: 'text-muted-foreground hover:bg-white/10'}"
 					>
-						📄 الموضوع
+						<FileText size={18} /> الموضوع
 					</button>
 					<button
 						onclick={() => (activeTab = 'solution')}
-						class="flex-1 rounded-lg px-4 py-2 text-sm font-bold transition-all {activeTab ===
+						class="flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-bold transition-all {activeTab ===
 						'solution'
 							? 'bg-emerald-500 text-white shadow-sm'
 							: 'text-muted-foreground hover:bg-white/10'}"
 					>
-						✅ التصحيح النموذجي
+						<CheckCircle size={18} /> التصحيح النموذجي
 					</button>
 				{:else}
-					<span class="text-foreground px-4 py-2 font-bold">📄 الوثيقة</span>
+					<span class="text-foreground flex items-center gap-2 px-4 py-2 font-bold"
+						><FileText size={18} /> الوثيقة</span
+					>
 				{/if}
 			</div>
 
@@ -267,14 +273,15 @@
 						class="border-primary/30 bg-primary/10 text-primary hover:bg-primary/30 flex h-9 w-9 items-center justify-center rounded-lg border transition-colors"
 						title="طباعة الموضوع"
 					>
-						🖨️
+						<Printer size={18} />
 					</button>
 					<a
 						href={doc.pdfUrl}
 						download
 						target="_blank"
 						class="text-primary hover:bg-primary hover:text-primary-foreground bg-primary/20 flex h-9 items-center justify-center rounded-lg px-3 text-sm font-semibold transition-colors"
-						title="تحميل الموضوع">📥 <span class="hidden sm:mr-1 sm:inline">تحميل</span></a
+						title="تحميل الموضوع"
+						><Download size={16} /> <span class="hidden sm:mr-1 sm:inline">تحميل</span></a
 					>
 				{/if}
 				{#if activeTab === 'solution' && doc.solutionUrl}
@@ -286,14 +293,15 @@
 						class="flex h-9 w-9 items-center justify-center rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-500 transition-colors hover:bg-emerald-500/30 dark:text-emerald-400"
 						title="طباعة التصحيح"
 					>
-						🖨️
+						<Printer size={18} />
 					</button>
 					<a
 						href={doc.solutionUrl}
 						download
 						target="_blank"
 						class="flex h-9 items-center justify-center rounded-lg bg-emerald-500/20 px-3 text-sm font-semibold text-emerald-500 transition-colors hover:bg-emerald-500 hover:text-white"
-						title="تحميل التصحيح">📥 <span class="hidden sm:mr-1 sm:inline">تحميل</span></a
+						title="تحميل التصحيح"
+						><Download size={16} /> <span class="hidden sm:mr-1 sm:inline">تحميل</span></a
 					>
 				{/if}
 

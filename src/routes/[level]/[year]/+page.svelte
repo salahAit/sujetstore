@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { Inbox } from 'lucide-svelte';
+	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
 	let { data }: { data: any } = $props();
 </script>
 
@@ -26,7 +28,7 @@
 <section class="hero-gradient py-10 lg:py-14">
 	<div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
 		<div class="text-muted-foreground mb-3 inline-flex items-center gap-2 text-sm">
-			<span>{data.level.icon}</span>
+			<span class="flex items-center"><DynamicIcon name={data.level.icon} size={16} /></span>
 			<span>{data.level.name_ar}</span>
 		</div>
 		<h1 class="mb-2 text-3xl font-extrabold lg:text-4xl">{data.year.name_ar}</h1>
@@ -48,10 +50,10 @@
 					<div class="flex items-center gap-4">
 						<!-- Subject Icon -->
 						<div
-							class="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl text-2xl"
-							style="background: {subject.color}20; border: 1px solid {subject.color}40"
+							class="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl"
+							style="background: {subject.color}20; border: 1px solid {subject.color}40; color: {subject.color}"
 						>
-							{subject.icon}
+							<DynamicIcon name={subject.icon} size={28} />
 						</div>
 
 						<div class="min-w-0 flex-1">
@@ -78,9 +80,9 @@
 		</div>
 
 		{#if data.subjects.length === 0}
-			<div class="py-16 text-center">
-				<div class="mb-4 text-6xl">📭</div>
-				<p class="text-muted-foreground text-xl">لا توجد مواد بعد لهذه السنة</p>
+			<div class="text-muted-foreground flex flex-col items-center py-16 text-center">
+				<Inbox size={48} class="mb-4 opacity-50" />
+				<p class="text-xl">لا توجد مواد بعد لهذه السنة</p>
 			</div>
 		{/if}
 	</div>

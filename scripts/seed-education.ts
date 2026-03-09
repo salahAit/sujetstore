@@ -94,7 +94,7 @@ const levels = [
 		name_fr: 'Enseignement Primaire',
 		slug: 'primaire',
 		description: 'المرحلة الابتدائية من السنة الأولى إلى السنة الخامسة',
-		icon: '🎒',
+		icon: 'Backpack',
 		color: '#10b981',
 		order: 1
 	},
@@ -105,7 +105,7 @@ const levels = [
 		name_fr: 'Enseignement Moyen',
 		slug: 'moyen',
 		description: 'المرحلة المتوسطة من السنة الأولى إلى السنة الرابعة',
-		icon: '📚',
+		icon: 'BookOpen',
 		color: '#3b82f6',
 		order: 2
 	},
@@ -116,7 +116,7 @@ const levels = [
 		name_fr: 'Enseignement Secondaire',
 		slug: 'secondaire',
 		description: 'المرحلة الثانوية من السنة الأولى إلى السنة الثالثة',
-		icon: '🎓',
+		icon: 'GraduationCap',
 		color: '#8b5cf6',
 		order: 3
 	}
@@ -249,7 +249,7 @@ const subjectsData = [
 		name_ar: 'الرياضيات',
 		name_fr: 'Mathématiques',
 		slug: 'math',
-		icon: '📐',
+		icon: 'Calculator',
 		color: '#ef4444'
 	},
 	{
@@ -258,7 +258,7 @@ const subjectsData = [
 		name_ar: 'اللغة العربية',
 		name_fr: 'Langue Arabe',
 		slug: 'arabic',
-		icon: '📝',
+		icon: 'PenTool',
 		color: '#10b981'
 	},
 	{
@@ -267,7 +267,7 @@ const subjectsData = [
 		name_ar: 'اللغة الفرنسية',
 		name_fr: 'Langue Française',
 		slug: 'french',
-		icon: '🇫🇷',
+		icon: 'MessageCircle',
 		color: '#3b82f6'
 	},
 	{
@@ -276,7 +276,7 @@ const subjectsData = [
 		name_ar: 'اللغة الإنجليزية',
 		name_fr: 'Langue Anglaise',
 		slug: 'english',
-		icon: '🇬🇧',
+		icon: 'MessageCircleCode',
 		color: '#6366f1'
 	},
 	{
@@ -285,7 +285,7 @@ const subjectsData = [
 		name_ar: 'العلوم الطبيعية',
 		name_fr: 'Sciences Naturelles',
 		slug: 'science',
-		icon: '🔬',
+		icon: 'Microscope',
 		color: '#22c55e'
 	},
 	{
@@ -294,7 +294,7 @@ const subjectsData = [
 		name_ar: 'العلوم الفيزيائية',
 		name_fr: 'Sciences Physiques',
 		slug: 'physics',
-		icon: '⚡',
+		icon: 'Zap',
 		color: '#f59e0b'
 	},
 	{
@@ -303,7 +303,7 @@ const subjectsData = [
 		name_ar: 'التاريخ والجغرافيا',
 		name_fr: 'Histoire-Géographie',
 		slug: 'history',
-		icon: '🌍',
+		icon: 'Globe',
 		color: '#8b5cf6'
 	},
 	{
@@ -312,7 +312,7 @@ const subjectsData = [
 		name_ar: 'التربية الإسلامية',
 		name_fr: 'Éducation Islamique',
 		slug: 'islamic',
-		icon: '🕌',
+		icon: 'Book',
 		color: '#059669'
 	},
 	{
@@ -321,7 +321,7 @@ const subjectsData = [
 		name_ar: 'التربية المدنية',
 		name_fr: 'Éducation Civique',
 		slug: 'civic',
-		icon: '⚖️',
+		icon: 'Scale',
 		color: '#0891b2'
 	},
 	{
@@ -330,7 +330,7 @@ const subjectsData = [
 		name_ar: 'الفلسفة',
 		name_fr: 'Philosophie',
 		slug: 'philosophy',
-		icon: '💭',
+		icon: 'Brain',
 		color: '#7c3aed'
 	},
 	{
@@ -339,7 +339,7 @@ const subjectsData = [
 		name_ar: 'الإعلام الآلي',
 		name_fr: 'Informatique',
 		slug: 'informatics',
-		icon: '💻',
+		icon: 'Laptop',
 		color: '#0ea5e9'
 	}
 ];

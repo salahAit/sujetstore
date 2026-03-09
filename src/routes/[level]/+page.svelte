@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { BookOpen, FileText } from 'lucide-svelte';
+	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
 	let { data }: { data: any } = $props();
 
 	const levelColors: Record<string, string> = {
@@ -29,7 +31,9 @@
 <!-- Level Header -->
 <section class="hero-gradient py-12 lg:py-16">
 	<div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-		<div class="mb-4 text-6xl">{data.level.icon}</div>
+		<div class="text-primary mb-4 flex justify-center">
+			<DynamicIcon name={data.level.icon} size={64} />
+		</div>
 		<h1 class="mb-3 text-3xl font-extrabold lg:text-5xl">{data.level.name_ar}</h1>
 		<p class="text-muted-foreground text-lg">{data.level.name_fr}</p>
 		{#if data.level.description}
@@ -71,11 +75,11 @@
 
 							<div class="text-muted-foreground flex items-center gap-4 text-xs">
 								<span class="flex items-center gap-1">
-									<span>📘</span>
+									<BookOpen size={14} />
 									{year.subjectCount} مادة
 								</span>
 								<span class="flex items-center gap-1">
-									<span>📄</span>
+									<FileText size={14} />
 									{year.docCount} وثيقة
 								</span>
 							</div>

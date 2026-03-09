@@ -1,5 +1,19 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import {
+		Printer,
+		Download,
+		FileText,
+		CheckCircle,
+		Calendar,
+		GraduationCap,
+		FileEdit,
+		BookOpen,
+		Bookmark,
+		PenTool,
+		Inbox,
+		X
+	} from 'lucide-svelte';
 
 	let { data }: { data: any } = $props();
 
@@ -59,15 +73,6 @@
 		summary: 'ملخص',
 		exercise: 'تمرين',
 		solution: 'حل'
-	};
-
-	const typeIcons: Record<string, string> = {
-		exam: '📋',
-		test: '📝',
-		lesson: '📖',
-		summary: '📌',
-		exercise: '✏️',
-		solution: '✅'
 	};
 
 	// Group documents by trimester
@@ -166,7 +171,23 @@
 								class="glass-card flex flex-col p-5 transition-all duration-300 hover:scale-[1.01]"
 							>
 								<div class="flex flex-1 items-start gap-3">
-									<span class="text-xl">{typeIcons[doc.type] || '📄'}</span>
+									<span class="text-primary/70 mt-1">
+										{#if doc.type === 'exam'}
+											<FileText size={20} />
+										{:else if doc.type === 'test'}
+											<FileEdit size={20} />
+										{:else if doc.type === 'lesson'}
+											<BookOpen size={20} />
+										{:else if doc.type === 'summary'}
+											<Bookmark size={20} />
+										{:else if doc.type === 'exercise'}
+											<PenTool size={20} />
+										{:else if doc.type === 'solution'}
+											<CheckCircle size={20} />
+										{:else}
+											<FileText size={20} />
+										{/if}
+									</span>
 									<div class="min-w-0 flex-1">
 										<div class="mb-2 flex flex-wrap items-center gap-2">
 											<span class="rounded-full border px-2 py-0.5 text-xs badge-{doc.type}">
@@ -177,10 +198,16 @@
 											{doc.title_ar || doc.title}
 										</h3>
 										{#if doc.source}
-											<p class="text-muted-foreground mt-2 text-xs">{doc.source}</p>
+											<p class="text-muted-foreground mt-2 flex items-center gap-1 text-xs">
+												<GraduationCap size={12} />
+												{doc.source}
+											</p>
 										{/if}
 										{#if doc.academic_year}
-											<p class="text-muted-foreground text-xs">📅 {doc.academic_year}</p>
+											<p class="text-muted-foreground mt-1 flex items-center gap-1 text-xs">
+												<Calendar size={12} />
+												{doc.academic_year}
+											</p>
 										{/if}
 									</div>
 								</div>
@@ -196,7 +223,9 @@
 											? 'bg-primary/5 text-primary/70 hover:bg-primary/10'
 											: 'bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground'}"
 									>
-										📄 الموضوع {visitedDocs.has(`${doc.id}-exam`) ? '✓' : ''}
+										<FileText size={16} /> الموضوع {#if visitedDocs.has(`${doc.id}-exam`)}
+											<CheckCircle size={14} />
+										{/if}
 									</button>
 
 									{#if doc.has_solution}
@@ -210,7 +239,9 @@
 												? 'bg-emerald-500/5 text-emerald-500/70 hover:bg-emerald-500/10'
 												: 'bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500 hover:text-white'}"
 										>
-											✅ الحل {visitedDocs.has(`${doc.id}-solution`) ? '✓' : ''}
+											<CheckCircle size={16} /> الحل {#if visitedDocs.has(`${doc.id}-solution`)}
+												<CheckCircle size={14} />
+											{/if}
 										</button>
 									{/if}
 								</div>
@@ -239,7 +270,23 @@
 							class="glass-card flex flex-col p-5 transition-all duration-300 hover:scale-[1.01]"
 						>
 							<div class="flex flex-1 items-start gap-3">
-								<span class="text-xl">{typeIcons[doc.type] || '📄'}</span>
+								<span class="mt-1 text-emerald-500/70">
+									{#if doc.type === 'exam'}
+										<FileText size={20} />
+									{:else if doc.type === 'test'}
+										<FileEdit size={20} />
+									{:else if doc.type === 'lesson'}
+										<BookOpen size={20} />
+									{:else if doc.type === 'summary'}
+										<Bookmark size={20} />
+									{:else if doc.type === 'exercise'}
+										<PenTool size={20} />
+									{:else if doc.type === 'solution'}
+										<CheckCircle size={20} />
+									{:else}
+										<FileText size={20} />
+									{/if}
+								</span>
 								<div class="min-w-0 flex-1">
 									<div class="mb-2 flex items-center gap-2">
 										<span class="rounded-full border px-2 py-0.5 text-xs badge-{doc.type}">
@@ -248,7 +295,10 @@
 									</div>
 									<h3 class="text-sm leading-relaxed font-semibold">{doc.title_ar || doc.title}</h3>
 									{#if doc.source}
-										<p class="text-muted-foreground mt-2 text-xs">{doc.source}</p>
+										<p class="text-muted-foreground mt-2 flex items-center gap-1 text-xs">
+											<GraduationCap size={12} />
+											{doc.source}
+										</p>
 									{/if}
 								</div>
 							</div>
@@ -264,7 +314,9 @@
 										? 'bg-primary/5 text-primary/70 hover:bg-primary/10'
 										: 'bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground'}"
 								>
-									📄 الموضوع {visitedDocs.has(`${doc.id}-exam`) ? '✓' : ''}
+									<FileText size={16} /> الموضوع {#if visitedDocs.has(`${doc.id}-exam`)}
+										<CheckCircle size={14} />
+									{/if}
 								</button>
 
 								{#if doc.has_solution}
@@ -278,7 +330,9 @@
 											? 'bg-emerald-500/5 text-emerald-500/70 hover:bg-emerald-500/10'
 											: 'bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500 hover:text-white'}"
 									>
-										✅ الحل {visitedDocs.has(`${doc.id}-solution`) ? '✓' : ''}
+										<CheckCircle size={16} /> الحل {#if visitedDocs.has(`${doc.id}-solution`)}
+											<CheckCircle size={14} />
+										{/if}
 									</button>
 								{/if}
 							</div>
@@ -289,10 +343,10 @@
 		{/if}
 
 		{#if data.documents.length === 0}
-			<div class="py-16 text-center">
-				<div class="mb-4 text-6xl">📭</div>
+			<div class="text-muted-foreground flex flex-col items-center py-16 text-center">
+				<Inbox size={48} class="mb-4 opacity-50" />
 				<h3 class="mb-2 text-xl font-bold">لا توجد وثائق بعد</h3>
-				<p class="text-muted-foreground">سيتم إضافة فروض واختبارات قريباً لهذه المادة</p>
+				<p>سيتم إضافة فروض واختبارات قريباً لهذه المادة</p>
 			</div>
 		{/if}
 	</div>
@@ -334,14 +388,15 @@
 						class="border-primary/30 bg-primary/10 text-primary hover:bg-primary/30 flex h-9 w-9 items-center justify-center rounded-lg border transition-colors"
 						title="طباعة الموضوع"
 					>
-						🖨️
+						<Printer size={18} />
 					</button>
 					<a
 						href={selectedDoc.pdf_url}
 						download
 						target="_blank"
 						class="text-primary hover:bg-primary hover:text-primary-foreground bg-primary/20 flex h-9 items-center justify-center rounded-lg px-3 text-sm font-semibold transition-colors"
-						title="تحميل الموضوع">📥 <span class="hidden sm:mr-1 sm:inline">تحميل</span></a
+						title="تحميل الموضوع"
+						><Download size={16} /> <span class="hidden sm:mr-1 sm:inline">تحميل</span></a
 					>
 				{/if}
 				{#if activeTab === 'solution' && selectedDoc.solution_url}
@@ -353,14 +408,15 @@
 						class="flex h-9 w-9 items-center justify-center rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-500 transition-colors hover:bg-emerald-500/30 dark:text-emerald-400"
 						title="طباعة التصحيح"
 					>
-						🖨️
+						<Printer size={18} />
 					</button>
 					<a
 						href={selectedDoc.solution_url}
 						download
 						target="_blank"
 						class="flex h-9 items-center justify-center rounded-lg bg-emerald-500/20 px-3 text-sm font-semibold text-emerald-500 transition-colors hover:bg-emerald-500 hover:text-white"
-						title="تحميل التصحيح">📥 <span class="hidden sm:mr-1 sm:inline">تحميل</span></a
+						title="تحميل التصحيح"
+						><Download size={16} /> <span class="hidden sm:mr-1 sm:inline">تحميل</span></a
 					>
 				{/if}
 
@@ -369,17 +425,7 @@
 					class="text-destructive hover:bg-destructive hover:text-destructive-foreground border-destructive/20 bg-destructive/10 flex h-9 w-9 items-center justify-center rounded-lg border transition-colors"
 					title="إغلاق"
 				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="20"
-						height="20"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg
-					>
+					<X size={20} />
 				</button>
 			</div>
 		</div>

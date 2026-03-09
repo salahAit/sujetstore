@@ -1,7 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import { ModeWatcher, toggleMode } from 'mode-watcher';
-	import { Sun, Moon } from 'lucide-svelte';
+	import { Sun, Moon, BookOpen, Backpack, GraduationCap } from 'lucide-svelte';
+	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
 	import { page } from '$app/stores';
 
 	let { children } = $props();
@@ -17,7 +18,7 @@
 		<div class="flex h-16 items-center justify-between">
 			<!-- Logo -->
 			<a href="/" class="flex items-center gap-3 text-xl font-bold" dir="ltr">
-				<span class="text-3xl">📚</span>
+				<BookOpen size={32} class="text-primary" />
 				<span class="gradient-text text-2xl">DzLearn</span>
 			</a>
 
@@ -25,33 +26,33 @@
 			<div class="hidden items-center gap-6 md:flex">
 				<a
 					href="/primaire"
-					class="text-muted-foreground font-semibold transition-colors hover:text-emerald-400 {$page.url.pathname.startsWith(
+					class="text-muted-foreground flex items-center gap-1 font-semibold transition-colors hover:text-emerald-400 {$page.url.pathname.startsWith(
 						'/primaire'
 					)
 						? 'text-emerald-400'
 						: ''}"
 				>
-					🎒 ابتدائي
+					<Backpack size={18} /> ابتدائي
 				</a>
 				<a
 					href="/moyen"
-					class="text-muted-foreground font-semibold transition-colors hover:text-blue-400 {$page.url.pathname.startsWith(
+					class="text-muted-foreground flex items-center gap-1 font-semibold transition-colors hover:text-blue-400 {$page.url.pathname.startsWith(
 						'/moyen'
 					)
 						? 'text-blue-400'
 						: ''}"
 				>
-					📚 متوسط
+					<BookOpen size={18} /> متوسط
 				</a>
 				<a
 					href="/secondaire"
-					class="text-muted-foreground font-semibold transition-colors hover:text-purple-400 {$page.url.pathname.startsWith(
+					class="text-muted-foreground flex items-center gap-1 font-semibold transition-colors hover:text-purple-400 {$page.url.pathname.startsWith(
 						'/secondaire'
 					)
 						? 'text-purple-400'
 						: ''}"
 				>
-					🎓 ثانوي
+					<GraduationCap size={18} /> ثانوي
 				</a>
 
 				<!-- Theme Toggle -->
@@ -120,7 +121,7 @@
 						: ''}"
 					onclick={() => (isMobileMenuOpen = false)}
 				>
-					🎒 التعليم الابتدائي
+					<Backpack size={20} /> التعليم الابتدائي
 				</a>
 				<a
 					href="/moyen"
@@ -131,7 +132,7 @@
 						: ''}"
 					onclick={() => (isMobileMenuOpen = false)}
 				>
-					📚 التعليم المتوسط
+					<BookOpen size={20} /> التعليم المتوسط
 				</a>
 				<a
 					href="/secondaire"
@@ -142,7 +143,7 @@
 						: ''}"
 					onclick={() => (isMobileMenuOpen = false)}
 				>
-					🎓 التعليم الثانوي
+					<GraduationCap size={20} /> التعليم الثانوي
 				</a>
 			</div>
 		{/if}
@@ -161,7 +162,7 @@
 			<!-- Brand -->
 			<div>
 				<div class="mb-4 flex items-center gap-3 text-xl font-bold">
-					<span class="text-3xl">📚</span>
+					<BookOpen size={32} class="text-primary" />
 					<span class="gradient-text text-2xl">DzLearn</span>
 				</div>
 				<p class="text-muted-foreground text-sm leading-relaxed">
@@ -175,16 +176,22 @@
 				<h3 class="mb-4 text-lg font-bold">المراحل التعليمية</h3>
 				<ul class="text-muted-foreground space-y-2 text-sm">
 					<li>
-						<a href="/primaire" class="transition-colors hover:text-emerald-400"
-							>🎒 التعليم الابتدائي</a
+						<a
+							href="/primaire"
+							class="flex items-center gap-2 transition-colors hover:text-emerald-400"
+							><Backpack size={16} /> التعليم الابتدائي</a
 						>
 					</li>
 					<li>
-						<a href="/moyen" class="transition-colors hover:text-blue-400">📚 التعليم المتوسط</a>
+						<a href="/moyen" class="flex items-center gap-2 transition-colors hover:text-blue-400"
+							><BookOpen size={16} /> التعليم المتوسط</a
+						>
 					</li>
 					<li>
-						<a href="/secondaire" class="transition-colors hover:text-purple-400"
-							>🎓 التعليم الثانوي</a
+						<a
+							href="/secondaire"
+							class="flex items-center gap-2 transition-colors hover:text-purple-400"
+							><GraduationCap size={16} /> التعليم الثانوي</a
 						>
 					</li>
 				</ul>

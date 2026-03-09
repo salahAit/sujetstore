@@ -1,4 +1,14 @@
 <script lang="ts">
+	import {
+		Ruler,
+		Microscope,
+		BookOpen,
+		Backpack,
+		GraduationCap,
+		MapPin,
+		ClipboardList
+	} from 'lucide-svelte';
+	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
 	let { data }: { data: any } = $props();
 </script>
 
@@ -13,18 +23,12 @@
 <!-- Hero Section -->
 <section class="hero-gradient relative overflow-hidden py-20 lg:py-32">
 	<!-- Floating decorations -->
-	<div class="float-animation absolute top-20 right-10 text-6xl opacity-10">📐</div>
-	<div
-		class="float-animation absolute bottom-20 left-10 text-5xl opacity-10"
-		style="animation-delay: 2s"
-	>
-		🔬
+	<div class="float-animation absolute top-20 right-10 opacity-10"><Ruler size={64} /></div>
+	<div class="float-animation absolute bottom-20 left-10 opacity-10" style="animation-delay: 2s">
+		<Microscope size={56} />
 	</div>
-	<div
-		class="float-animation absolute top-40 left-1/4 text-4xl opacity-10"
-		style="animation-delay: 4s"
-	>
-		📖
+	<div class="float-animation absolute top-40 left-1/4 opacity-10" style="animation-delay: 4s">
+		<BookOpen size={48} />
 	</div>
 
 	<div class="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
@@ -53,21 +57,21 @@
 				href="/primaire"
 				class="group inline-flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-emerald-500/20 px-6 py-3 font-bold text-emerald-400 transition-all duration-300 hover:scale-105 hover:bg-emerald-500/30"
 			>
-				<span class="text-2xl">🎒</span>
+				<Backpack size={24} />
 				ابتدائي
 			</a>
 			<a
 				href="/moyen"
 				class="group inline-flex items-center gap-3 rounded-xl border border-blue-500/30 bg-blue-500/20 px-6 py-3 font-bold text-blue-400 transition-all duration-300 hover:scale-105 hover:bg-blue-500/30"
 			>
-				<span class="text-2xl">📚</span>
+				<BookOpen size={24} />
 				متوسط
 			</a>
 			<a
 				href="/secondaire"
 				class="group inline-flex items-center gap-3 rounded-xl border border-purple-500/30 bg-purple-500/20 px-6 py-3 font-bold text-purple-400 transition-all duration-300 hover:scale-105 hover:bg-purple-500/30"
 			>
-				<span class="text-2xl">🎓</span>
+				<GraduationCap size={24} />
 				ثانوي
 			</a>
 		</div>
@@ -114,8 +118,10 @@
 				>
 					<div class="text-center">
 						<!-- Icon -->
-						<div class="mb-6 text-6xl transition-transform duration-300 group-hover:scale-110">
-							{level.icon}
+						<div
+							class="mb-6 flex justify-center transition-transform duration-300 group-hover:scale-110"
+						>
+							<DynamicIcon name={level.icon} size={64} class="text-primary" />
 						</div>
 
 						<!-- Title -->
@@ -166,22 +172,22 @@
 		</div>
 
 		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-			<div class="glass-card p-6 text-center">
-				<div class="mb-4 text-4xl">🇩🇿</div>
+			<div class="glass-card flex flex-col items-center p-6 text-center">
+				<MapPin size={40} class="mb-4 text-emerald-500" />
 				<h3 class="mb-2 text-lg font-bold">منهج جزائري</h3>
 				<p class="text-muted-foreground text-sm">
 					محتوى متوافق 100% مع المنهاج الدراسي الوطني الجزائري
 				</p>
 			</div>
-			<div class="glass-card p-6 text-center">
-				<div class="mb-4 text-4xl">📋</div>
+			<div class="glass-card flex flex-col items-center p-6 text-center">
+				<ClipboardList size={40} class="mb-4 text-blue-500" />
 				<h3 class="mb-2 text-lg font-bold">فروض واختبارات</h3>
 				<p class="text-muted-foreground text-sm">
 					نماذج فروض واختبارات مع الحلول النموذجية لجميع الفصول
 				</p>
 			</div>
-			<div class="glass-card p-6 text-center">
-				<div class="mb-4 text-4xl">📖</div>
+			<div class="glass-card flex flex-col items-center p-6 text-center">
+				<BookOpen size={40} class="mb-4 text-purple-500" />
 				<h3 class="mb-2 text-lg font-bold">دروس وملخصات</h3>
 				<p class="text-muted-foreground text-sm">دروس مفصلة وملخصات شاملة لتسهيل المراجعة</p>
 			</div>
