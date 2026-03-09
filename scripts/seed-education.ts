@@ -553,7 +553,7 @@ for (const ys of ysRows) {
 			1,
 			'medium',
 			'/documents/demo.pdf', // pdf_url
-			'/documents/demo.pdf' // solution_url
+			'/documents/sdemo.pdf' // solution_url
 		);
 		docCount++;
 
@@ -570,7 +570,7 @@ for (const ys of ysRows) {
 			1,
 			'medium',
 			'/documents/demo.pdf',
-			'/documents/demo.pdf'
+			'/documents/sdemo.pdf'
 		);
 		docCount++;
 	}

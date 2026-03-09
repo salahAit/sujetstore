@@ -2,8 +2,11 @@
 	import '../app.css';
 	import { ModeWatcher, toggleMode } from 'mode-watcher';
 	import { Sun, Moon } from 'lucide-svelte';
+	import { page } from '$app/stores';
 
 	let { children } = $props();
+
+	let isMobileMenuOpen = $state(false);
 </script>
 
 <ModeWatcher />
@@ -13,7 +16,7 @@
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-16 items-center justify-between">
 			<!-- Logo -->
-			<a href="/" class="flex items-center gap-3 text-xl font-bold">
+			<a href="/" class="flex items-center gap-3 text-xl font-bold" dir="ltr">
 				<span class="text-3xl">📚</span>
 				<span class="gradient-text text-2xl">DzLearn</span>
 			</a>
@@ -22,19 +25,31 @@
 			<div class="hidden items-center gap-6 md:flex">
 				<a
 					href="/primaire"
-					class="text-muted-foreground font-semibold transition-colors hover:text-emerald-400"
+					class="text-muted-foreground font-semibold transition-colors hover:text-emerald-400 {$page.url.pathname.startsWith(
+						'/primaire'
+					)
+						? 'text-emerald-400'
+						: ''}"
 				>
 					🎒 ابتدائي
 				</a>
 				<a
 					href="/moyen"
-					class="text-muted-foreground font-semibold transition-colors hover:text-blue-400"
+					class="text-muted-foreground font-semibold transition-colors hover:text-blue-400 {$page.url.pathname.startsWith(
+						'/moyen'
+					)
+						? 'text-blue-400'
+						: ''}"
 				>
 					📚 متوسط
 				</a>
 				<a
 					href="/secondaire"
-					class="text-muted-foreground font-semibold transition-colors hover:text-purple-400"
+					class="text-muted-foreground font-semibold transition-colors hover:text-purple-400 {$page.url.pathname.startsWith(
+						'/secondaire'
+					)
+						? 'text-purple-400'
+						: ''}"
 				>
 					🎓 ثانوي
 				</a>
@@ -63,46 +78,74 @@
 					<span class="hidden dark:block"><Sun size={20} /></span>
 				</button>
 				<button
-					class="text-muted-foreground hover:text-foreground rounded-lg p-2 transition-colors hover:bg-white/5 md:hidden"
-					onclick={() => document.getElementById('mobile-menu')?.classList.toggle('hidden')}
+					class="text-muted-foreground hover:text-foreground rounded-lg p-2 transition-colors hover:bg-white/5 md:hidden {isMobileMenuOpen
+						? 'text-foreground bg-white/5'
+						: ''}"
+					onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)}
 					title="القائمة"
 					aria-label="القائمة"
 				>
 					<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M4 6h16M4 12h16M4 18h16"
-						/>
+						{#if isMobileMenuOpen}
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M6 18L18 6M6 6l12 12"
+							/>
+						{:else}
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"
+							/>
+						{/if}
 					</svg>
 				</button>
 			</div>
-
-			<!-- Mobile Menu -->
-			<div id="mobile-menu" class="hidden pb-4 md:hidden">
-				<div class="flex flex-col gap-3">
-					<a
-						href="/primaire"
-						class="text-muted-foreground py-2 font-semibold transition-colors hover:text-emerald-400"
-					>
-						🎒 التعليم الابتدائي
-					</a>
-					<a
-						href="/moyen"
-						class="text-muted-foreground py-2 font-semibold transition-colors hover:text-blue-400"
-					>
-						📚 التعليم المتوسط
-					</a>
-					<a
-						href="/secondaire"
-						class="text-muted-foreground py-2 font-semibold transition-colors hover:text-purple-400"
-					>
-						🎓 التعليم الثانوي
-					</a>
-				</div>
-			</div>
 		</div>
+
+		<!-- Mobile Menu -->
+		{#if isMobileMenuOpen}
+			<div
+				class="animate-in slide-in-from-top-4 fade-in mt-1 space-y-2 border-t border-white/10 py-4 duration-200 md:hidden dark:border-white/5"
+			>
+				<a
+					href="/primaire"
+					class="text-muted-foreground flex items-center gap-3 rounded-xl px-4 py-3 font-semibold transition-colors hover:bg-emerald-500/10 hover:text-emerald-500 dark:hover:text-emerald-400 {$page.url.pathname.startsWith(
+						'/primaire'
+					)
+						? 'bg-emerald-500/10 text-emerald-500 dark:text-emerald-400'
+						: ''}"
+					onclick={() => (isMobileMenuOpen = false)}
+				>
+					🎒 التعليم الابتدائي
+				</a>
+				<a
+					href="/moyen"
+					class="text-muted-foreground flex items-center gap-3 rounded-xl px-4 py-3 font-semibold transition-colors hover:bg-blue-500/10 hover:text-blue-500 dark:hover:text-blue-400 {$page.url.pathname.startsWith(
+						'/moyen'
+					)
+						? 'bg-blue-500/10 text-blue-500 dark:text-blue-400'
+						: ''}"
+					onclick={() => (isMobileMenuOpen = false)}
+				>
+					📚 التعليم المتوسط
+				</a>
+				<a
+					href="/secondaire"
+					class="text-muted-foreground flex items-center gap-3 rounded-xl px-4 py-3 font-semibold transition-colors hover:bg-purple-500/10 hover:text-purple-500 dark:hover:text-purple-400 {$page.url.pathname.startsWith(
+						'/secondaire'
+					)
+						? 'bg-purple-500/10 text-purple-500 dark:text-purple-400'
+						: ''}"
+					onclick={() => (isMobileMenuOpen = false)}
+				>
+					🎓 التعليم الثانوي
+				</a>
+			</div>
+		{/if}
 	</div>
 </nav>
 

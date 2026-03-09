@@ -144,7 +144,6 @@ body {
 		radial-gradient(ellipse at 50% 100%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
 }
 
-
 /* Document type badges */
 .badge-exam {
 	@apply border-red-500/30 bg-red-500/20 text-red-400;
@@ -168,7 +167,6 @@ body {
 
 /* Floating particles animation */
 @keyframes float {
-
 	0%,
 	100% {
 		transform: translateY(0px) rotate(0deg);
@@ -185,7 +183,6 @@ body {
 
 /* Pulse glow */
 @keyframes pulse-glow {
-
 	0%,
 	100% {
 		box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);

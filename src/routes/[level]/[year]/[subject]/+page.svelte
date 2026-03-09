@@ -1,5 +1,56 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	let { data }: { data: any } = $props();
+
+	// Modal State
+	let selectedDoc = $state<any>(null);
+	let activeTab = $state<'exam' | 'solution'>('exam');
+	let isFullscreen = $state(false);
+
+	// Track visited docs
+	let visitedDocs = $state<Set<string>>(new Set());
+
+	onMount(() => {
+		const stored = localStorage.getItem('visited_docs');
+		if (stored) {
+			try {
+				visitedDocs = new Set(JSON.parse(stored));
+			} catch (e) {}
+		}
+	});
+
+	function openDoc(doc: any, tab: 'exam' | 'solution') {
+		selectedDoc = doc;
+		activeTab = tab;
+		isFullscreen = true;
+
+		const docKey = `${doc.id}-${tab}`;
+		const newVisited = new Set(visitedDocs);
+		if (!newVisited.has(docKey)) {
+			newVisited.add(docKey);
+			visitedDocs = newVisited;
+			localStorage.setItem('visited_docs', JSON.stringify([...newVisited]));
+		}
+	}
+
+	function closeDoc() {
+		selectedDoc = null;
+		isFullscreen = false;
+	}
+
+	function printDoc(url: string) {
+		const iframe = document.createElement('iframe');
+		iframe.style.display = 'none';
+		iframe.src = url;
+		document.body.appendChild(iframe);
+
+		iframe.onload = () => {
+			setTimeout(() => {
+				iframe.contentWindow?.print();
+			}, 500);
+		};
+	}
 
 	const typeLabels: Record<string, string> = {
 		exam: 'اختبار',
@@ -111,24 +162,16 @@
 
 					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 						{#each docs as doc}
-							<a
-								href="/{data.level.slug}/{data.year.slug}/{data.subject.slug}/{doc.slug}"
-								class="glass-card block p-5 transition-all duration-300 hover:scale-[1.01]"
+							<div
+								class="glass-card flex flex-col p-5 transition-all duration-300 hover:scale-[1.01]"
 							>
-								<div class="flex items-start gap-3">
+								<div class="flex flex-1 items-start gap-3">
 									<span class="text-xl">{typeIcons[doc.type] || '📄'}</span>
 									<div class="min-w-0 flex-1">
 										<div class="mb-2 flex flex-wrap items-center gap-2">
 											<span class="rounded-full border px-2 py-0.5 text-xs badge-{doc.type}">
 												{typeLabels[doc.type] || doc.type}
 											</span>
-											{#if doc.has_solution}
-												<span
-													class="rounded-full border border-emerald-500/30 bg-emerald-500/20 px-2 py-0.5 text-xs text-emerald-400"
-												>
-													مع الحل ✅
-												</span>
-											{/if}
 										</div>
 										<h3 class="text-sm leading-relaxed font-semibold">
 											{doc.title_ar || doc.title}
@@ -142,13 +185,36 @@
 									</div>
 								</div>
 
-								<div
-									class="text-primary group mt-4 flex items-center gap-2 border-t border-white/5 pt-3 text-sm font-semibold"
-								>
-									👁️ عرض الوثيقة
-									<span class="transition-transform group-hover:-translate-x-1">←</span>
+								<div class="mt-4 flex gap-2 border-t border-white/5 pt-3">
+									<button
+										onclick={(e) => {
+											e.preventDefault();
+											openDoc(doc, 'exam');
+										}}
+										class="flex flex-1 items-center justify-center gap-2 rounded-lg py-2 text-sm font-semibold transition-colors
+											{visitedDocs.has(`${doc.id}-exam`)
+											? 'bg-primary/5 text-primary/70 hover:bg-primary/10'
+											: 'bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground'}"
+									>
+										📄 الموضوع {visitedDocs.has(`${doc.id}-exam`) ? '✓' : ''}
+									</button>
+
+									{#if doc.has_solution}
+										<button
+											onclick={(e) => {
+												e.preventDefault();
+												openDoc(doc, 'solution');
+											}}
+											class="flex flex-1 items-center justify-center gap-2 rounded-lg py-2 text-sm font-semibold transition-colors
+												{visitedDocs.has(`${doc.id}-solution`)
+												? 'bg-emerald-500/5 text-emerald-500/70 hover:bg-emerald-500/10'
+												: 'bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500 hover:text-white'}"
+										>
+											✅ الحل {visitedDocs.has(`${doc.id}-solution`) ? '✓' : ''}
+										</button>
+									{/if}
 								</div>
-							</a>
+							</div>
 						{/each}
 					</div>
 				</div>
@@ -169,11 +235,10 @@
 
 				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 					{#each generalDocs as doc}
-						<a
-							href="/{data.level.slug}/{data.year.slug}/{data.subject.slug}/{doc.slug}"
-							class="glass-card block p-5 transition-all duration-300 hover:scale-[1.01]"
+						<div
+							class="glass-card flex flex-col p-5 transition-all duration-300 hover:scale-[1.01]"
 						>
-							<div class="flex items-start gap-3">
+							<div class="flex flex-1 items-start gap-3">
 								<span class="text-xl">{typeIcons[doc.type] || '📄'}</span>
 								<div class="min-w-0 flex-1">
 									<div class="mb-2 flex items-center gap-2">
@@ -188,13 +253,36 @@
 								</div>
 							</div>
 
-							<div
-								class="text-primary group mt-4 flex items-center gap-2 border-t border-white/5 pt-3 text-sm font-semibold"
-							>
-								👁️ عرض الوثيقة
-								<span class="transition-transform group-hover:-translate-x-1">←</span>
+							<div class="mt-4 flex gap-2 border-t border-white/5 pt-3">
+								<button
+									onclick={(e) => {
+										e.preventDefault();
+										openDoc(doc, 'exam');
+									}}
+									class="flex flex-1 items-center justify-center gap-2 rounded-lg py-2 text-sm font-semibold transition-colors
+										{visitedDocs.has(`${doc.id}-exam`)
+										? 'bg-primary/5 text-primary/70 hover:bg-primary/10'
+										: 'bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground'}"
+								>
+									📄 الموضوع {visitedDocs.has(`${doc.id}-exam`) ? '✓' : ''}
+								</button>
+
+								{#if doc.has_solution}
+									<button
+										onclick={(e) => {
+											e.preventDefault();
+											openDoc(doc, 'solution');
+										}}
+										class="flex flex-1 items-center justify-center gap-2 rounded-lg py-2 text-sm font-semibold transition-colors
+											{visitedDocs.has(`${doc.id}-solution`)
+											? 'bg-emerald-500/5 text-emerald-500/70 hover:bg-emerald-500/10'
+											: 'bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500 hover:text-white'}"
+									>
+										✅ الحل {visitedDocs.has(`${doc.id}-solution`) ? '✓' : ''}
+									</button>
+								{/if}
 							</div>
-						</a>
+						</div>
 					{/each}
 				</div>
 			</div>
@@ -209,3 +297,137 @@
 		{/if}
 	</div>
 </section>
+
+<!-- Fullscreen Modal Viewer -->
+{#if isFullscreen && selectedDoc}
+	<!-- svelte-ignore a11y_click_events_have_key_events -->
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
+	<div
+		class="bg-background/95 fixed inset-0 z-50 flex flex-col backdrop-blur-sm sm:p-4 md:p-8"
+		onclick={(e) => {
+			if (e.target === e.currentTarget) closeDoc();
+		}}
+	>
+		<div
+			class="mx-auto flex w-full max-w-5xl items-center justify-between border border-white/10 bg-black/10 px-4 py-3 shadow-sm sm:rounded-t-xl dark:bg-white/5"
+		>
+			<div class="text-foreground/90 flex items-center gap-3 truncate">
+				<h2
+					class="inline-block max-w-[150px] truncate align-middle text-sm font-bold sm:max-w-md sm:text-lg"
+				>
+					{selectedDoc.title_ar || selectedDoc.title}
+				</h2>
+				<span
+					class="badge-{selectedDoc.type} mx-2 inline-block rounded-full border px-2 py-0.5 align-middle text-xs"
+				>
+					{activeTab === 'exam' ? 'الموضوع' : 'التصحيح'}
+				</span>
+			</div>
+
+			<div class="flex items-center gap-2">
+				{#if activeTab === 'exam' && selectedDoc.pdf_url}
+					<button
+						onclick={(e) => {
+							e.preventDefault();
+							printDoc(selectedDoc.pdf_url);
+						}}
+						class="border-primary/30 bg-primary/10 text-primary hover:bg-primary/30 flex h-9 w-9 items-center justify-center rounded-lg border transition-colors"
+						title="طباعة الموضوع"
+					>
+						🖨️
+					</button>
+					<a
+						href={selectedDoc.pdf_url}
+						download
+						target="_blank"
+						class="text-primary hover:bg-primary hover:text-primary-foreground bg-primary/20 flex h-9 items-center justify-center rounded-lg px-3 text-sm font-semibold transition-colors"
+						title="تحميل الموضوع">📥 <span class="hidden sm:mr-1 sm:inline">تحميل</span></a
+					>
+				{/if}
+				{#if activeTab === 'solution' && selectedDoc.solution_url}
+					<button
+						onclick={(e) => {
+							e.preventDefault();
+							printDoc(selectedDoc.solution_url);
+						}}
+						class="flex h-9 w-9 items-center justify-center rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-500 transition-colors hover:bg-emerald-500/30 dark:text-emerald-400"
+						title="طباعة التصحيح"
+					>
+						🖨️
+					</button>
+					<a
+						href={selectedDoc.solution_url}
+						download
+						target="_blank"
+						class="flex h-9 items-center justify-center rounded-lg bg-emerald-500/20 px-3 text-sm font-semibold text-emerald-500 transition-colors hover:bg-emerald-500 hover:text-white"
+						title="تحميل التصحيح">📥 <span class="hidden sm:mr-1 sm:inline">تحميل</span></a
+					>
+				{/if}
+
+				<button
+					onclick={closeDoc}
+					class="text-destructive hover:bg-destructive hover:text-destructive-foreground border-destructive/20 bg-destructive/10 flex h-9 w-9 items-center justify-center rounded-lg border transition-colors"
+					title="إغلاق"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg
+					>
+				</button>
+			</div>
+		</div>
+
+		<div
+			class="relative mx-auto w-full max-w-5xl flex-1 overflow-hidden border-x border-b border-white/10 bg-white shadow-2xl sm:rounded-b-xl"
+		>
+			{#if activeTab === 'exam' && selectedDoc.pdf_url}
+				<iframe
+					src={selectedDoc.pdf_url + '#toolbar=0&view=FitH'}
+					title="قارئ الوثيقة"
+					class="absolute inset-0 h-full w-full border-0"
+				></iframe>
+			{:else if activeTab === 'solution' && selectedDoc.solution_url}
+				<iframe
+					src={selectedDoc.solution_url + '#toolbar=0&view=FitH'}
+					title="قارئ الوثيقة"
+					class="absolute inset-0 h-full w-full border-0"
+				></iframe>
+			{:else}
+				<div class="flex h-full w-full items-center justify-center text-black/50">
+					لا يوجد ملف لعرضه بصيغة PDF
+				</div>
+			{/if}
+		</div>
+
+		<!-- Mobile/Desktop Toggle inside Fullscreen -->
+		{#if selectedDoc.has_solution && selectedDoc.solution_url}
+			<div
+				class="absolute bottom-6 left-1/2 z-60 flex -translate-x-1/2 items-center rounded-full border border-white/10 bg-black/80 p-1.5 shadow-2xl backdrop-blur-md"
+			>
+				<button
+					onclick={() => openDoc(selectedDoc, 'exam')}
+					class="rounded-full px-4 py-2 text-sm font-bold transition-all {activeTab === 'exam'
+						? 'bg-primary text-primary-foreground shadow-sm'
+						: 'text-white/70 hover:bg-white/10 hover:text-white'}"
+				>
+					الموضوع
+				</button>
+				<button
+					onclick={() => openDoc(selectedDoc, 'solution')}
+					class="rounded-full px-4 py-2 text-sm font-bold transition-all {activeTab === 'solution'
+						? 'bg-emerald-500 text-white shadow-sm'
+						: 'text-white/70 hover:bg-white/10 hover:text-white'}"
+				>
+					التصحيح
+				</button>
+			</div>
+		{/if}
+	</div>
+{/if}
