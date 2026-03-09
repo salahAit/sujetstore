@@ -74,10 +74,10 @@
 					href={doc.pdfUrl}
 					download
 					target="_blank"
-					class="text-primary hover:bg-primary hover:text-primary-foreground bg-primary/20 flex h-9 items-center justify-center rounded-lg px-3 text-sm font-semibold transition-colors"
+					class="from-primary to-primary/80 text-primary-foreground hover:shadow-primary/25 flex h-9 items-center justify-center gap-2 rounded-lg bg-gradient-to-r px-4 text-sm font-semibold shadow-md transition-all hover:-translate-y-0.5"
 					title="تحميل الموضوع"
 				>
-					<Download size={16} /> <span class="hidden sm:mr-1 sm:inline">تحميل</span>
+					<Download size={16} /> <span class="hidden sm:inline">تحميل الموضوع</span>
 				</a>
 			{/if}
 			{#if activeTab === 'solution' && doc.solutionUrl}
@@ -95,10 +95,10 @@
 					href={doc.solutionUrl}
 					download
 					target="_blank"
-					class="flex h-9 items-center justify-center rounded-lg bg-emerald-500/20 px-3 text-sm font-semibold text-emerald-500 transition-colors hover:bg-emerald-500 hover:text-white"
+					class="flex h-9 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-emerald-500 to-emerald-400 px-4 text-sm font-semibold text-white shadow-md shadow-emerald-500/25 transition-all hover:-translate-y-0.5"
 					title="تحميل التصحيح"
 				>
-					<Download size={16} /> <span class="hidden sm:mr-1 sm:inline">تحميل</span>
+					<Download size={16} /> <span class="hidden sm:inline">تحميل التصحيح</span>
 				</a>
 			{/if}
 
@@ -136,29 +136,39 @@
 
 	<!-- Mobile/Desktop Toggle inside Fullscreen -->
 	{#if doc.hasSolution && doc.solutionUrl}
-		<div
-			class="absolute bottom-6 left-1/2 z-60 flex -translate-x-1/2 items-center rounded-full border border-white/10 bg-black/80 p-1.5 shadow-2xl backdrop-blur-md"
-		>
-			<button
-				onclick={() => {
-					activeTab = 'exam';
-				}}
-				class="rounded-full px-4 py-2 text-sm font-bold transition-all {activeTab === 'exam'
-					? 'bg-primary text-primary-foreground shadow-sm'
-					: 'text-white/70 hover:bg-white/10 hover:text-white'}"
+		<div class="fixed bottom-6 left-1/2 z-[60] -translate-x-1/2">
+			<div
+				class="flex items-center gap-1 rounded-full border border-white/10 bg-black/80 p-1.5 shadow-2xl backdrop-blur-xl"
 			>
-				الموضوع
-			</button>
-			<button
-				onclick={() => {
-					activeTab = 'solution';
-				}}
-				class="rounded-full px-4 py-2 text-sm font-bold transition-all {activeTab === 'solution'
-					? 'bg-emerald-500 text-white shadow-sm'
-					: 'text-white/70 hover:bg-white/10 hover:text-white'}"
-			>
-				التصحيح
-			</button>
+				<button
+					onclick={() => {
+						activeTab = 'exam';
+					}}
+					class="relative flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-bold tracking-wide transition-all duration-300 {activeTab ===
+					'exam'
+						? 'text-primary-foreground shadow-lg'
+						: 'text-white/60 hover:text-white'}"
+				>
+					{#if activeTab === 'exam'}
+						<div class="bg-primary absolute inset-0 rounded-full"></div>
+					{/if}
+					<span class="relative z-10">الموضوع</span>
+				</button>
+				<button
+					onclick={() => {
+						activeTab = 'solution';
+					}}
+					class="relative flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-bold tracking-wide transition-all duration-300 {activeTab ===
+					'solution'
+						? 'text-white shadow-lg shadow-emerald-500/20'
+						: 'text-white/60 hover:text-white'}"
+				>
+					{#if activeTab === 'solution'}
+						<div class="absolute inset-0 rounded-full bg-emerald-500"></div>
+					{/if}
+					<span class="relative z-10">التصحيح</span>
+				</button>
+			</div>
 		</div>
 	{/if}
 </div>
