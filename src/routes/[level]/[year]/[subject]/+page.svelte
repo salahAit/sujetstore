@@ -182,13 +182,15 @@
 			</div>
 		{:else}
 			<!-- Tabs Navigation -->
-			<div class="mb-8 flex flex-wrap gap-2 border-b border-white/10 pb-4">
+			<div
+				class="mb-6 flex gap-2 overflow-x-auto border-b border-white/10 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] sm:mb-8 sm:flex-wrap [&::-webkit-scrollbar]:hidden"
+			>
 				{#each data.trimesters as trimester}
 					{@const docsCount = getDocsByTrimester(trimester.id).length}
 					{#if docsCount > 0}
 						<button
 							onclick={() => (activeTrimesterTab = trimester.id)}
-							class="flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-bold transition-all {activeTrimesterTab ===
+							class="flex shrink-0 items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-bold transition-all {activeTrimesterTab ===
 							trimester.id
 								? 'bg-primary text-primary-foreground shadow-primary/20 shadow-md'
 								: 'text-muted-foreground hover:bg-white/5 hover:text-white'}"
@@ -205,7 +207,7 @@
 				{#if getGeneralDocs().length > 0}
 					<button
 						onclick={() => (activeTrimesterTab = 'general')}
-						class="flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-bold transition-all {activeTrimesterTab ===
+						class="flex shrink-0 items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-bold transition-all {activeTrimesterTab ===
 						'general'
 							? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/20'
 							: 'text-muted-foreground hover:bg-white/5 hover:text-white'}"
@@ -240,7 +242,7 @@
 		class="glass-card group flex flex-col justify-between gap-4 border-r-4 p-4 transition-all duration-300 hover:bg-white/5 sm:flex-row sm:items-center"
 		style="border-right-color: {accentColor}"
 	>
-		<div class="flex min-w-0 flex-1 items-center gap-4">
+		<div class="flex min-w-0 flex-1 items-start gap-3 sm:items-center sm:gap-4">
 			<div
 				class="text-primary/70 group-hover:bg-primary/10 group-hover:text-primary flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/5 transition-colors"
 			>
@@ -288,14 +290,14 @@
 		</div>
 
 		<div
-			class="mx-auto flex w-full shrink-0 flex-col items-center gap-2 border-t border-white/5 pt-3 sm:ms-4 sm:w-auto sm:flex-row sm:border-t-0 sm:pt-0"
+			class="mx-auto flex w-full shrink-0 items-center gap-2 border-t border-white/5 pt-3 sm:ms-4 sm:w-auto sm:border-t-0 sm:pt-0"
 		>
 			<button
 				onclick={(e) => {
 					e.preventDefault();
 					openDoc(doc, 'exam');
 				}}
-				class="relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/30 sm:w-auto sm:py-2"
+				class="relative flex flex-1 items-center justify-center gap-1.5 overflow-hidden rounded-lg bg-blue-600 px-3 py-2 text-xs font-semibold text-white shadow-md shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/30 sm:flex-none sm:px-4 sm:py-2 sm:text-sm"
 			>
 				<FileText size={16} /> الموضوع
 			</button>
@@ -306,7 +308,7 @@
 						e.preventDefault();
 						openDoc(doc, 'solution');
 					}}
-					class="relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-lg bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/30 sm:w-auto sm:py-2"
+					class="relative flex flex-1 items-center justify-center gap-1.5 overflow-hidden rounded-lg bg-emerald-500 px-3 py-2 text-xs font-semibold text-white shadow-md shadow-emerald-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/30 sm:flex-none sm:px-4 sm:py-2 sm:text-sm"
 				>
 					<CheckCircle size={16} /> الحل
 				</button>
