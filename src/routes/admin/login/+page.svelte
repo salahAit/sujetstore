@@ -12,10 +12,8 @@
 <div class="font-cairo flex min-h-screen items-center justify-center bg-[#0a0f1c] px-4 text-white">
 	<div class="w-full max-w-md">
 		<div class="mb-8 text-center">
-			<div
-				class="bg-primary/10 text-primary border-primary/20 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border"
-			>
-				<User size={32} />
+			<div class="mx-auto mb-4 flex h-20 w-20 items-center justify-center">
+				<img src="/logo.webp" alt="SujetStore Logo" class="h-full w-full drop-shadow-xl" />
 			</div>
 			<h1 class="text-3xl font-bold">لوحة التحكم</h1>
 			<p class="text-muted-foreground mt-2 text-sm">أدخل بيانات الاعتماد للمتابعة</p>

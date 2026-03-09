@@ -16,9 +16,8 @@
 <nav class="bg-background/80 sticky top-0 z-50 border-b border-white/10 backdrop-blur-xl">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-16 items-center justify-between">
-			<!-- Logo -->
 			<a href="/" class="flex items-center gap-3 text-xl font-bold" dir="ltr">
-				<BookOpen size={32} class="text-primary" />
+				<img src="/logo.webp" alt="SujetStore Logo" class="h-8 w-8" />
 				<span class="gradient-text text-2xl">SujetStore</span>
 			</a>
 
@@ -162,7 +161,7 @@
 			<!-- Brand -->
 			<div>
 				<div class="mb-4 flex items-center gap-3 text-xl font-bold">
-					<BookOpen size={32} class="text-primary" />
+					<img src="/logo.webp" alt="SujetStore Logo" class="text-primary h-8 w-8" />
 					<span class="gradient-text text-2xl">SujetStore</span>
 				</div>
 				<p class="text-muted-foreground text-sm leading-relaxed">

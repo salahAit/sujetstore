@@ -46,7 +46,7 @@
 			<!-- Sidebar Header -->
 			<div class="flex h-16 items-center justify-between border-b border-white/10 px-6">
 				<a href="/admin" class="text-primary flex items-center gap-2 text-xl font-bold">
-					<LayoutDashboard size={24} />
+					<img src="/logo.webp" alt="Logo" class="h-8 w-8" />
 					SujetStore Admin
 				</a>
 				<button
