@@ -1,0 +1,180 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { Brain, Plus, Edit, Trash2, Eye, EyeOff, Lock, CheckCircle, Search } from 'lucide-svelte';
+
+	let quizzes = $state<any[]>([]);
+	let loading = $state(true);
+	let searchQuery = $state('');
+
+	onMount(async () => {
+		await loadQuizzes();
+	});
+
+	async function loadQuizzes() {
+		loading = true;
+		try {
+			const res = await fetch('/api/admin/quizzes');
+			if (res.ok) quizzes = await res.json();
+		} finally {
+			loading = false;
+		}
+	}
+
+	async function togglePublish(id: number, currentStatus: boolean) {
+		const res = await fetch(`/api/admin/quizzes/${id}`, {
+			method: 'PUT',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ isPublished: !currentStatus })
+		});
+		if (res.ok) await loadQuizzes();
+	}
+
+	async function togglePremium(id: number, currentStatus: boolean) {
+		const res = await fetch(`/api/admin/quizzes/${id}`, {
+			method: 'PUT',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ isPremium: !currentStatus })
+		});
+		if (res.ok) await loadQuizzes();
+	}
+
+	async function deleteQuiz(id: number) {
+		if (confirm('هل أنت متأكد من حذف هذا التمرين وجميع أسئلته؟')) {
+			const res = await fetch(`/api/admin/quizzes/${id}`, { method: 'DELETE' });
+			if (res.ok) await loadQuizzes();
+		}
+	}
+
+	let filteredQuizzes = $derived(
+		quizzes.filter(
+			(q) => (q.title || '').includes(searchQuery) || (q.titleAr || '').includes(searchQuery)
+		)
+	);
+</script>
+
+<div class="space-y-6">
+	<div class="flex items-center justify-between">
+		<h1 class="flex items-center gap-3 text-2xl font-bold">
+			<Brain size={28} class="text-purple-500" /> إدارة التمارين التفاعلية
+		</h1>
+		<a
+			href="/admin/quizzes/new"
+			class="flex items-center gap-2 rounded-xl bg-purple-600 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-purple-600/20 transition-all hover:bg-purple-700"
+		>
+			<Plus size={18} /> تمرين جديد
+		</a>
+	</div>
+
+	<!-- Search & Filters -->
+	<div class="mb-6 flex gap-4">
+		<div class="relative flex-1">
+			<Search class="absolute top-1/2 right-4 -translate-y-1/2 text-white/40" size={18} />
+			<input
+				type="text"
+				bind:value={searchQuery}
+				placeholder="ابحث عن تمرين..."
+				class="w-full rounded-xl border border-white/10 bg-white/5 py-3 pr-12 pl-4 outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+			/>
+		</div>
+	</div>
+
+	{#if loading}
+		<div class="flex h-32 items-center justify-center">
+			<div
+				class="h-8 w-8 animate-spin rounded-full border-4 border-purple-500 border-t-transparent"
+			></div>
+		</div>
+	{:else}
+		<div class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+			<table class="w-full text-right">
+				<thead class="border-b border-white/10 bg-white/5 text-sm font-medium text-white/60">
+					<tr>
+						<th class="p-4">العنوان</th>
+						<th class="p-4">الأسئلة</th>
+						<th class="p-4">مدفوع</th>
+						<th class="p-4">الحالة</th>
+						<th class="p-4 text-left">إجراءات</th>
+					</tr>
+				</thead>
+				<tbody class="divide-y divide-white/5">
+					{#each filteredQuizzes as quiz}
+						<tr class="transition-colors hover:bg-white/5">
+							<td class="p-4">
+								<p class="font-bold">{quiz.titleAr || quiz.title}</p>
+								<p class="mt-1 flex items-center gap-2 text-xs text-white/50">
+									<span class="rounded bg-white/10 px-1.5 py-0.5"
+										>{quiz.difficulty || 'medium'}</span
+									>
+									<span class="opacity-50">•</span>
+									{quiz.slug}
+								</p>
+							</td>
+							<td class="p-4">
+								<span
+									class="inline-flex items-center gap-1 rounded-full bg-blue-500/10 px-2.5 py-1 text-xs font-semibold text-blue-400"
+								>
+									{quiz.questionCount}
+								</span>
+							</td>
+							<td class="p-4">
+								<button
+									onclick={() => togglePremium(quiz.id, quiz.isPremium)}
+									class="inline-flex items-center transition-colors {quiz.isPremium
+										? 'text-amber-400 hover:text-amber-500'
+										: 'text-white/30 hover:text-white/50'}"
+								>
+									<Lock size={18} />
+								</button>
+							</td>
+							<td class="p-4">
+								<button
+									onclick={() => togglePublish(quiz.id, quiz.isPublished)}
+									class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors {quiz.isPublished
+										? 'bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20'
+										: 'bg-white/10 text-white/60 hover:bg-white/20'}"
+								>
+									{#if quiz.isPublished}
+										<Eye size={12} /> منشور
+									{:else}
+										<EyeOff size={12} /> مسودة
+									{/if}
+								</button>
+							</td>
+							<td class="p-4 text-left">
+								<div class="flex items-center justify-end gap-2">
+									<a
+										href={`/admin/quizzes/${quiz.id}/builder`}
+										class="rounded-lg bg-blue-500/10 p-2 text-blue-400 transition-colors hover:bg-blue-500/20"
+										title="بناء الأسئلة"
+									>
+										<Brain size={18} />
+									</a>
+									<a
+										href={`/admin/quizzes/${quiz.id}/edit`}
+										class="rounded-lg bg-white/5 p-2 transition-colors hover:bg-white/10"
+										title="تعديل الإعدادات"
+									>
+										<Edit size={18} />
+									</a>
+									<button
+										onclick={() => deleteQuiz(quiz.id)}
+										class="rounded-lg bg-red-500/10 p-2 text-red-400 transition-colors hover:bg-red-500/20"
+									>
+										<Trash2 size={18} />
+									</button>
+								</div>
+							</td>
+						</tr>
+					{/each}
+					{#if filteredQuizzes.length === 0}
+						<tr>
+							<td colspan="5" class="p-8 text-center text-white/50"
+								>لا توجد تمارين مضافة حتى الآن</td
+							>
+						</tr>
+					{/if}
+				</tbody>
+			</table>
+		</div>
+	{/if}
+</div>

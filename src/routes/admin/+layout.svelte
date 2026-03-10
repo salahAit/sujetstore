@@ -6,6 +6,7 @@
 		CalendarDays,
 		BookOpen,
 		FileText,
+		Brain,
 		LogOut,
 		Menu,
 		X
@@ -20,6 +21,7 @@
 		{ name: 'المراحل التعليمية', href: '/admin/levels', icon: GraduationCap },
 		{ name: 'السنوات الدراسية', href: '/admin/years', icon: CalendarDays },
 		{ name: 'المواد الدراسية', href: '/admin/subjects', icon: BookOpen },
+		{ name: 'التمارين التفاعلية', href: '/admin/quizzes', icon: Brain },
 		{ name: 'الوثائق', href: '/admin/documents', icon: FileText }
 	];
 </script>

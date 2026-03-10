@@ -104,7 +104,7 @@
 				<div class="bg-card rounded-2xl border p-6 shadow-sm">
 					<div class="flex items-end justify-between gap-2" style="height: 200px;">
 						{#each stats.last7Days as day}
-							{@const maxViews = Math.max(...stats.last7Days.map((d) => d.views || 0), 1)}
+							{@const maxViews = Math.max(...stats.last7Days.map((d: any) => d.views || 0), 1)}
 							<div class="flex flex-1 flex-col items-center gap-2">
 								<div
 									class="w-full rounded-t-lg bg-linear-to-t from-blue-600 to-blue-400 transition-all duration-500"
