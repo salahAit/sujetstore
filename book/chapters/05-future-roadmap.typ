@@ -1,34 +1,90 @@
-= الرؤية المستقبلية واقتصاديات المنصة
-إطلاق النسخة الأولى ليس نقطة وصول، بل قاعدة انطلاق نحو بيئة تبني نظاماً بينياً تربوياً شاملاً.
+= Future Roadmap & Business Model
 
-== التلمذة الآلية والتقييم (Quiz Engine)
-عوضاً عن أسلوب "الحل بالورقة ومقارنة الحل"، سيتم دمج نظام ذكي للتمارين التفاعلية. سيتيح التقييم الذاتي الفوري سواء عبر خيارات متعددة (MCQ)، ربط مصطلحات، أو ملء فراغات، مما يتيح التعرف على موطن الخلل وقت وقوعه وتوفير تلميحات داعمة.
+The initial release of SujetStore is a foundation — not a final product. The platform is designed with clear expansion vectors that build on the existing architecture.
 
-== الحلول والمراجعات المرئية (Video Solutions & Streaming Architecture)
-لتعزيز الفهم المعمق، ولإزالة التعقيدات التي لا يمكن تفسيرها عبر الملفات النصية المكتوبة بصيغة PDF فقط، سيتم دمج مشغل مرئي لتوفير حلول فيديو (Video Walkthroughs) تعتمد على استراتيجية "تصوير الورقة والقلم" لمحاكاة جلوس الأستاذ بجوار التلميذ.
+== Phase 1: Interactive Assessment Engine (Quiz System)
 
-ونظراً لأن استضافة الفيديو تُعد الثقب الأسود لميزانيات المنصات التعليمية، تم هندسة بنية تحتية سحابية (Cloud Architecture) اقتصادية وذات كفاءة قصوى تضمن سرعة البث وتقضي على تكاليف نقل البيانات، وتعتمد على التحالف التقني التالي:
+Moving beyond the traditional "solve on paper, compare with answer key" approach, the platform will integrate an interactive exercise engine:
 
-- *بروتوكول HLS (HTTP Live Streaming):* لن يتم رفع الفيديوهات كملفات كاملة (MP4)، بل ستُعالج برمجياً لتُقطع إلى أجزاء صغيرة (Chunks) مدة كل منها 10 ثوانٍ. هذا يضمن عمل الفيديو فوراً دون انتظار التحميل، مع تكيّف الجودة تلقائياً حسب سرعة إنترنت المتعلم.
-- *التشفير وحماية المحتوى (AES-128 Encryption):* سيتم تشفير كل جزء من أجزاء الفيديو لمنع عمليات القرصنة والتحميل غير المرخص عبر إضافات المتصفحات (مثل IDM)، مما يحمي المادة العلمية المدفوعة للمنصة.
-- *التخزين السحابي (Backblaze B2):* ستُخزن الملفات المجزأة في خوادم Backblaze B2، والتي توفر الموثوقية العالية بأقل تكلفة تخزين عالمياً (أقل بـ 5 مرات من Amazon S3).
-- *شبكة التوزيع ونقل البيانات (Cloudflare CDN):* بفضل اتفاقية "تحالف النطاق الترددي" (Bandwidth Alliance) بين Backblaze و Cloudflare، سيتم سحب الفيديوهات وتوزيعها على خوادم قريبة من الطلاب في شمال إفريقيا وأوروبا مجاناً (Zero Egress Fees). المنصة ستدفع تكلفة مساحة التخزين الرمزية فقط، ولن تدفع أي رسوم مقابل عدد المشاهدات مهما بلغت الملايين.
+- *Multiple Question Types:* MCQ (multiple choice), term matching, fill-in-the-blank, and drag-and-drop ordering exercises.
+- *Instant Feedback:* Real-time scoring with targeted hints when a student answers incorrectly, identifying the specific concept that needs review.
+- *Curriculum-Aligned:* Quizzes mapped directly to the competencies defined in the official Ministry of Education curriculum for each subject and trimester.
 
-== التحليل المركزي (Tracking Dashboard)
-الانتقال من الحفظ المحلي إلى نظام بيانات مركزي آمن وذكي (Backend Tracking).
+== Phase 2: Video Solutions & Streaming Architecture
 
-- *ملف دراسي تحليلي:* يوضح المواضيع المكتملة والمتبقية كنسبة مئوية.
-- *تشخيص النقاط الآلي:* تحليل النواقص بناءً على أخطاء التلميذ في التمارين التفاعلية لتوجيهه بنصائح آلية.
-- *لوحات للأولياء:* إحصائيات دقيقة لتوضيح الجهد المبذول فصلياً وسنوياً.
+To support deeper understanding — especially for subjects like Physics and Mathematics where static PDFs have limitations — the platform will integrate video walkthroughs using a "pen and paper" recording style that mimics a teacher sitting beside the student.
 
-== اقتصاديات المنصة ونموذج الأعمال (Freemium Model & Unit Economics)
-تتبنى المنصة استراتيجية "النمو المعتمد على المنتج" (Product-Led Growth)، معتمدة على قاعدة الصفر إعلان (Zero Ads). قرار الاستغناء عن الإعلانات بشكل قطعي هو قرار استراتيجي يهدف لبناء الثقة المطلقة مع التلميذ والولي، وتوفير بيئة دراسية خالية تماماً من المشتتات البصرية، مما يخلق خندقاً تنافسياً (Moat) يصعب على المنصات التقليدية مجاراته.
+The streaming infrastructure is designed for cost-efficiency at scale:
 
-لضمان الاستدامة المالية وتغطية تكاليف التشغيل والتطوير المستمر، سيتم تطبيق نموذج "الفريميوم" (Freemium) وفق الآليات التالية:
+#table(
+  columns: (1fr, 2fr),
+  [*Technology*], [*Purpose*],
+  [HLS Protocol], [Adaptive bitrate streaming with 10-second chunks. Instant playback without full download.],
+  [AES-128 Encryption], [Per-chunk encryption to prevent unauthorized download via browser extensions.],
+  [Backblaze B2], [Cold storage at 1/5th the cost of Amazon S3.],
+  [Cloudflare CDN], [Zero egress fees via the Bandwidth Alliance. Edge distribution across North Africa and Europe.],
+)
 
-- *المغناطيس المجاني (The Lead Magnet):* ستبقى القاعدة الرئيسية، والمواد الأساسية، وقارئ ملفات الـ PDF بقوالب `Typst` مجانية كلياً للجميع مدى الحياة. هذا يضمن تدفقاً مستمراً لملايين الزيارات العضوية (Organic Traffic).
-- *المحتوى المتميز (Premium Content):* سيتم وضع الميزات المتقدمة، مثل "التمارين التفاعلية (Quizzes)" و"شروحات الفيديو الدقيقة"، خلف جدار دفع (Paywall).
-- *التسعير النفسي وهندسة الباقات (Psychological Pricing):* تم تصميم نموذج التسعير ليكون في متناول كل الفئات المجتمعية الجزائرية:
-  - *سعر المادة الفردية:* تسعير رمزي يقدر بـ 100 دج للمادة الواحدة لفصل أو عام دراسي كامل.
-  - *باقة الطور الكاملة (تأثير الشرك - Decoy Effect):* سيتم توفير ميزة تحرير القفل عن جميع مواد مستوى معين بمبلغ 1000 دج. هذه الباقة تمنح المستخدم توفيراً يعادل مادتين مجانيتين، مما يدفع الأغلبية الساحقة نحو اقتناء الباقة الكاملة بدلاً من المواد الفردية.
-- *الاستهداف وقابلية التوسع (Scalability Target):* بالنظر إلى وجود حوالي 11 مليون تلميذ في المنظومة التربوية الجزائرية، فإن استهداف نسبة اختراق للسوق تقل عن 1% (حوالي 100,000 مشترك) ضمن باقة الـ 1000 دج، سيولد إيرادات مستدامة تقدر بـ 100 مليون دينار جزائري. هذه العوائد تضمن مكافأة فريق الأساتذة المبدع، وتمويل مشاريع التوسع التقني دون إثقال كاهل المواطن.
+This architecture enables the platform to serve millions of video views while paying only for storage — not bandwidth.
+
+== Phase 3: Centralized Analytics Dashboard
+
+Transitioning from local tracking to a server-side analytics system:
+
+- *Student Progress Profiles:* Visual progress indicators showing completed vs. remaining documents as percentages per subject and trimester.
+- *Automated Weakness Detection:* Analysis of quiz errors to identify knowledge gaps and generate targeted review recommendations.
+- *Parent Dashboards:* Summary statistics showing study effort and progress by trimester and academic year.
+
+== Business Model: Freemium with Zero Advertising
+
+SujetStore adopts a *Product-Led Growth* (PLG) strategy with an absolute zero-advertising policy. This is a strategic decision to build trust with students and parents, and to maintain a distraction-free study environment.
+
+=== Revenue Structure
+
+#table(
+  columns: (1fr, 2fr),
+  [*Tier*], [*Details*],
+  [Free (Forever)], [Full access to the document archive, PDF viewer, Typst-formatted documents, filters, and local tracking. This tier drives organic traffic.],
+  [Premium], [Interactive quizzes, video solutions, and advanced analytics behind a paywall.],
+)
+
+=== Pricing Strategy & Unit Economics
+
+The pricing model is designed to be accessible to all socioeconomic segments of Algerian society:
+
+- *Per-Subject:* 100 DZD (~\$0.70 USD) per subject for a full academic year.
+- *Full-Level Bundle (Decoy Effect):* 1,000 DZD (~\$7 USD) for all subjects within a level — effectively providing 2 free subjects and driving the majority of users toward the bundle.
+- *Market Penetration Target:* With approximately 11 million students in the Algerian educational system, reaching less than 1% (≈100,000 subscribers) at the bundle price would generate 100 million DZD in sustainable annual revenue — sufficient to compensate content creators and fund continuous platform development.
+
+== Deployment & Operations
+
+=== Current Infrastructure
+
+#table(
+  columns: (1fr, 2fr),
+  [*Component*], [*Specification*],
+  [Provider], [Contabo VPS],
+  [Resources], [12 vCPU · 48GB RAM · NVMe Storage],
+  [Web Server], [Caddy (auto-SSL reverse proxy)],
+  [Process Manager], [systemd service unit],
+  [Backup Strategy], [Daily SQLite `.backup` of `users.db` with 7-day retention],
+)
+
+=== Deployment Commands
+
+```bash
+./deploy.sh full    # Initial setup + deployment
+./deploy.sh deploy  # Subsequent updates
+```
+
+=== Security Layers
+
+#table(
+  columns: (1fr, 2fr),
+  [*Layer*], [*Implementation*],
+  [Transport], [HTTPS enforced via Caddy auto-SSL],
+  [Cookies], [`HttpOnly` · `Secure` · `SameSite=Lax`],
+  [Passwords], [bcryptjs hashing],
+  [SQL Injection], [Prepared statements via Drizzle ORM],
+  [Rate Limiting], [Request throttling on `/admin/login` endpoints],
+)

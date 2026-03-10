@@ -1,22 +1,22 @@
-= الإستراتيجية البيداغوجية (الكيف قبل الكم)
+= Pedagogical Strategy: Quality Over Quantity
 
-تتبنى المنصة رؤية تركز على جودة المحتوى وتنظيمه بما يتوافق حصرياً وبدقة مع المناهج الرسمية لوزارة التربية الوطنية. نحن نؤمن بأن التعليم الرقمي الناجح لا ينحصر في رقمنة الكتاب المدرسي أو إغراق الطالب بالملفات، بل يهتم بـ "الكيف قبل الكم".
+The platform adopts a philosophy centered on content quality and pedagogical alignment with the official curricula issued by the Algerian Ministry of National Education. Successful digital education is not about digitizing textbooks or flooding students with files — it is about curating the right material, in the right order, with the right structure.
 
-== هندسة الكفاءات والتدرج المعرفي
-المواضيع والتمارين ليست تجميعاً عشوائياً، بل مصممة بعناية فائقة لتحقيق الكفاءات المستهدفة المسطرة في المنهاج الرسمي.
+== Competency-Based Organization
 
-كل وثيقة تدرج تُرفق بوعي بيداغوجي لسؤال: "ماذا سيستفيد التلميذ؟ وما هي المكتسبات القبلية التي سيوظفها؟".
+Documents on SujetStore are not random compilations. Every uploaded quiz, exam, or summary is intentionally placed within a pedagogical context:
 
-التدرج العلمي يبدأ من المعرفة المباشرة (الاسترجاع)، مروراً بالتطبيق البسيط، وصولاً إلى الوضعيات الإدماجية المركبة لضمان الإحاطة الشاملة بالبرنامج.
+- *Curriculum Alignment:* Each document is tagged with its trimester, type (quiz, exam, lesson/summary), source (official or proposed), and academic year. This ensures students can filter down to exactly what they need for their current revision focus.
+- *Progressive Difficulty:* The archival structure naturally supports progression — from Term 1 (foundational concepts) through Term 3 (synthesis and integration activities), mirroring the official academic calendar.
+- *Trimester-Based Navigation:* The Segmented Control tab interface explicitly separates content by trimester, preventing the cognitive overload that comes from seeing an undifferentiated list of dozens of documents.
 
-== محاربة "الشكشوكة" والتكرار العشوائي
-تلتزم المنصة بتجنب تكرار المواضيع بشكل عشوائي وممل. إذا تطلب الأمر إدراج تمرين يحقق نفس الدالة المعرفية لموضوع سابق، فسيتم الإشارة إلى ذلك بوضوح للمتعلم؛ للتأكيد على أن الهدف هو التدرب الإضافي وتسريع البديهة التأملية، وليس اكتساب كفاءة جديدة.
+== Fighting Content Duplication
 
-== الصرامة البصرية (Typst Integration)
-للقضاء على الإرهاق البصري الناتج عن الخطوط الرديئة أو الماسحات الضوئية (Scan) الضعيفة، ستوفر المنصة هوية بصرية موحدة واحترافية.
+The platform actively avoids the "repeat and hope" approach common on social media groups, where the same exam gets re-posted dozens of times with no context. When similar exercises target the same learning objective, the system makes this relationship explicit — reinforcing the pedagogical intent rather than creating noise.
 
-تم اعتماد نظام `Typst` كنظام أساسي وحصري لتنضيد المستندات وتوليد ملفات PDF عالية الدقة رياضياً ونحوياً وجمالياً.
+== Visual Consistency with Typst
 
-`Typst` يتفوق على أنظمة LaTeX القديمة بسرعته الفائقة وسهولة تخصيصه.
+To eliminate the visual fatigue caused by low-quality scans and inconsistent formatting, the platform supports integration with the `Typst` typesetting system for generating high-quality, professionally formatted PDF documents.
 
-- *قوالب مخصصة:* سيتم برمجة قالب (Template) مبرمج خصيصاً لكل مادة. الرياضيات ستعنى بالمعادلات المعقدة والرسوم البيانية باستخدام مكتبات الرسم الداخلية لـ `Typst`. بينما تعنى المواد الأدبية بالتشكيل اللغوي والاقتباسات. هذا يحافظ على التناسق البصري الجذاب والتسلسل المنطقي.
+- *Custom Templates:* Purpose-built templates for each subject area. Mathematics documents handle complex equations and graphs using Typst's native rendering. Literary subjects emphasize proper Arabic typography and diacritical marks.
+- *Uniform Branding:* All platform-generated documents share a consistent visual identity — clean margins, professional headers, and legible fonts — creating a stark contrast with the typical scan quality found elsewhere.

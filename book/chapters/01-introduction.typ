@@ -1,14 +1,21 @@
-= مقدمة: إعادة هندسة التعلم الرقمي
+= Introduction: Rethinking Digital Learning in Algeria
 
-مرحبا بكم في الدليل الشامل والمفصل للمنصة التعليمية. تهدف هذه المنصة إلى إحداث نقلة نوعية وجذرية في طريقة تقديم واستنباط المحتوى التعليمي للطلاب في الجزائر.
+== The Problem
 
-في ظل الثورة الرقمية، يواجه الطالب تشتتاً متزايداً وسط عشوائية المحتوى على المنصات الاجتماعية والمنتديات غير المنظمة. تُنشر آلاف المواضيع يومياً وتضيع بين المنشورات، مما يجعل الوصول إليها وقت المراجعة أمراً بالغ الصعوبة. علاوة على ذلك، يُقدم المحتوى غالباً دون تصنيف بيداغوجي واضح أو إشارة إلى الكفاءة المستهدفة، مما يغرق التلميذ في حل عدد هائل من التمارين المكررة ويستنزف وقته دون جدوى حقيقية.
+In the current Algerian educational landscape, students face a fragmented digital experience. Exam papers, quizzes, and study materials are scattered across social media groups, unmoderated forums, and low-quality scan repositories. Key issues include:
 
-من هنا، ولدت الحاجة لبيئة رقمية هادئة ومنهجية؛ تنقل التعلم من فضاء الترفيه والتشويش إلى فضاء التحصيل الأكاديمي الرصين. هذا الدليل هو الوثيقة المرجعية الموجهة للإدارة المركزية، صناع القرار، والمعلمين، والمطورين.
+- *Content Dispersion:* Thousands of documents are posted daily across Facebook groups and Telegram channels with no indexing, versioning, or quality control. Finding a specific exam from a specific trimester becomes an exercise in frustration.
+- *No Pedagogical Structure:* Materials are dumped without classification by trimester, type, difficulty, or alignment with the official Ministry of Education curriculum.
+- *Poor Visual Quality:* Most documents are low-resolution phone scans with inconsistent fonts, skewed pages, and illegible handwriting.
+- *Hostile User Experience:* Existing platforms (e.g., DzExams) rely on aggressive advertising, intrusive pop-ups, and confusing navigation that actively hinders the learning process.
 
-== الأهداف الجوهرية (The Core Objectives)
+== The Vision
 
-- *التركيز المعرفي المطلق:* تقديم المحتوى ضمن واجهة (UI) مبسطة، نظيفة تماماً، وخالية من المشتتات للإعلانات المزعجة لتوفير "التركيز المطلق".
-- *أرشفة شجرية دقيقة:* تبني نظام أرشفة يعتمد على تصنيفات واضحة (الطور > السنة > المادة > الفصل > نوع الوثيقة)، لاستخراج المعلومة في ثوانٍ معدودة.
-- *تمكين صناع المحتوى:* توفير أدوات إدارية قوية تسمح للأستاذ بإدراج الفروض والحلول بكبسة زر، ليتفرغ للجانب التربوي بدلاً من التقني.
-- *بنية تحتية غير قابلة للانهيار:* استخدام تقنيات (SvelteKit & Bun) تسمح بالتوسع المستمر لخدمة ملايين الزيارات التزامنية (Scalability) دون انهيار النظام.
+*SujetStore* was conceived as a purpose-built, open-source educational archive platform that directly addresses these pain points. It provides a clean, focused, and fast experience for browsing, filtering, and reading exam papers and study materials for the Algerian curriculum — from primary school through high school.
+
+== Core Objectives
+
+- *Absolute Focus:* Deliver content within a distraction-free, ad-free interface designed for deep study and review. No pop-ups, no banners, no autoplay videos.
+- *Hierarchical Archiving:* Organize the entire curriculum into a strict, navigable taxonomy: _Level → Year → Subject → Trimester → Document Type_.
+- *Empowering Content Creators:* Provide a powerful yet simple admin CMS that allows educators to upload, categorize, and manage documents without any technical knowledge or database interaction.
+- *Resilient Infrastructure:* Leverage a modern, lightweight stack (SvelteKit + Bun + SQLite) that can scale to millions of concurrent users without infrastructure collapse.

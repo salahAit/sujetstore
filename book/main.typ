@@ -1,23 +1,26 @@
-#set document(title: "دليل منصة أفدنا التعليمية", author: "فريق أفدنا")
-#set text(lang: "ar", dir: rtl, size: 14pt, font: "KFGQPC Uthman Taha Naskh")
-#set page(paper: "a4", numbering: "1")
+#set document(title: "SujetStore Platform — Technical Manual", author: "SujetStore Team")
+#set text(lang: "en", size: 12pt, font: "Inter")
+#set page(paper: "a4", numbering: "1", margin: (x: 2.5cm, y: 2.5cm))
 #set heading(numbering: "1.1.")
-#set par(justify: true, leading: 1.5em)
+#set par(justify: true, leading: 1.2em)
 
 #align(center)[
-  #v(4cm)
-  #text(size: 32pt, weight: "bold", fill: rgb("#065f46"))[دليل منصة أفدنا التعليمية]
-  
+  #v(5cm)
+  #text(size: 36pt, weight: "bold", fill: rgb("#065f46"))[SujetStore]
+
+  #v(0.5cm)
+  #text(size: 18pt, fill: luma(100))[Educational Archive Platform for the Algerian Curriculum]
+
   #v(1cm)
-  #text(size: 20pt)[الرؤية، التقنيات، والمستقبل]
-  
+  #text(size: 14pt, fill: luma(120))[Technical Manual — Architecture, Features & Roadmap]
+
   #v(3cm)
-  #text(size: 14pt, fill: luma(100))[(الإصدار المطور - 2026)]
+  #text(size: 12pt, fill: luma(150))[Version 2.0 — March 2026]
 ]
 
 #pagebreak()
 
-#outline(title: "الفهرس", depth: 3, indent: 1.5em)
+#outline(title: "Table of Contents", depth: 3, indent: 1.5em)
 
 #pagebreak()
 

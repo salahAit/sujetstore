@@ -1,66 +1,135 @@
-= المعمارية التقنية وتجربة المستخدم (UX/UI)
+= Features & User Experience
 
-تبنى فريق التطوير مبدأ "البساطة تخلق الفعالية". تم تجهيز المنصة بميزات لضمان تجربة سلسة.
+The platform was designed with the principle that _"simplicity creates effectiveness."_ Every feature serves a clear purpose: helping students find, filter, and study documents as quickly as possible.
 
-== واجهة المتعلم (Student-Facing Interface)
+== Student-Facing Interface
+
+=== Homepage & Navigation Hierarchy
+
+The homepage presents the three educational levels of the Algerian system as prominent, interactive cards:
+
+- *Primary* — Grades 1 through 5
+- *Middle School* — Grades 1AM through 4AM
+- *Secondary* — Grades 1AS through 3AS (across all streams)
+
+Each card displays live statistics (number of years and documents available) and links directly to the year selection page. A real-time stats bar shows the total count of documents, exams, quizzes, and subjects across the entire platform.
+
+A global breadcrumb navigation system (`Level / Year / Subject`) ensures the student always knows their location and can navigate back to any level with a single click.
 
 #figure(
   image("../images/01-homepage.png", width: 90%),
-  caption: [الواجهة الرئيسية للمنصة]
+  caption: [The SujetStore homepage with level cards, stats bar, and feature highlights]
 )
 
-- *تصميم متجاوب أصولياً (Mobile-First Design):* الواجهة متجاوبة 100% مع جميع أحجام الشاشات، وتم بناؤها بمبدأ (الهاتف أولاً) نظراً لأن الشريحة الأكبر تعتمد على الهواتف الذكية للوصول والتصفح.
-- *تخصيص للغة العربية (Native RTL & Typography):* بني التصميم جذرياً ليناسب خصوصية اتجاه النص (Right-To-Left) مع اعتماد خط `Cairo` العصري في كامل التطبيق لضمان عدم حدوث تشوهات بصرية.
-- *وضعيات القراءة (Dark/Light Mode):* تخصيص وضعيات القراءة لدعم راحة العين بتوفير الوضع الليلي المخفف للإضاءة الزرقاء والوضع النهاري، بحفظ تلقائي لتفضيلات المستخدم.
-- *التمرير العميق:* نظام تصفح سلس يعتمد على التمرير السهل لاستكشاف الأطوار، السنوات، المواد، ثم الوثائق، بدلاً من إرهاق الطالب بالنقر المتعدد.
+=== Mobile-First Responsive Design
+
+The entire interface is built with a *mobile-first* approach, recognizing that the majority of Algerian students access educational content from smartphones. Key responsive behaviors include:
+
+- Filter controls stack vertically on small screens and align horizontally on desktop.
+- Tab navigation scrolls horizontally when screen width is constrained.
+- Document rows adapt their layout for optimal touch interaction.
+- All interactive elements meet minimum touch target sizes (44×44px).
+
+=== Dark & Light Mode with Shadcn-Svelte Theming
+
+The platform implements a complete dual-theme system using `Shadcn-Svelte` semantic color tokens. Every component — from buttons and dropdowns to cards and toggle switches — automatically adapts to the user's preferred color scheme.
+
+Key tokens used throughout the interface:
+- `bg-background` / `text-foreground` — Base page colors
+- `bg-card` / `text-card-foreground` — Elevated surface containers
+- `bg-muted` / `text-muted-foreground` — Subdued backgrounds and secondary text
+- `bg-primary` / `text-primary-foreground` — Active and accent elements
+- `bg-accent` / `text-accent-foreground` — Hover and interactive states
+
+This approach guarantees that *no hardcoded colors* appear in the codebase, ensuring perfect contrast in both light and dark modes.
+
+=== Native RTL & Arabic Typography
+
+The design is built from the ground up for Right-to-Left (RTL) text direction, with the `Cairo` font applied globally for optimal Arabic readability. Flex layouts, padding, margins, and icon positions are all RTL-aware.
+
+== Trimester Tabs — Segmented Control
+
+The subject page organizes documents using a *Segmented Control* interface — a horizontal tab bar centered on the page with three segments: _Term 1_, _Term 2_, and _Term 3_.
 
 #figure(
   image("../images/05-subject.png", width: 90%),
-  caption: [استعراض المواضيع والمواد بأسلوب التمرير العميق]
+  caption: [Subject page showing Segmented Control tabs, contextual filter bar, and document list]
 )
 
-- *عارض الوثائق المدمج:* تم دمج عارض PDF مخصص `PDF Viewer` بأسلوب `Tabs` لفصل موضوع الاختبار عن الإجابة النموذجية، مما يتيح التصفح المركز مع إمكانية تحميل الوثيقة بضغطة زر.
+Implementation details:
+- Built with a `bg-muted` container and `bg-background shadow-sm` for the active segment, following the standard Shadcn UI `TabsList` / `TabsTrigger` pattern.
+- *Smart Auto-Selection:* On page load, the system automatically selects the first trimester that contains documents, preventing the user from landing on an empty tab.
+- Documents with `trimester_id = null` (e.g., lessons and summaries) are displayed across *all* trimester tabs, ensuring they are always accessible regardless of the active tab.
+
+== Contextual Filter Bar
+
+Directly below the trimester tabs, a horizontal Filter Bar allows fine-grained filtering of documents:
+
+#table(
+  columns: (1fr, 1fr, 2fr),
+  [*Filter*], [*Type*], [*Options*],
+  [Document Type], [Dropdown], [All · Quiz · Exam · Lesson/Summary],
+  [Source], [Dropdown], [All · Official · Proposed],
+  [Academic Year], [Dropdown], [All · 2024 · 2023 · 2022],
+  [Has Solution], [Toggle Switch], [On/Off — filters to documents with corrections only],
+)
+
+All filtering is performed *client-side and reactively* using Svelte 5's `$derived.by()` rune, providing instant results with zero network requests. When no documents match the current filter combination, a clear empty-state message with a filter icon is displayed.
+
+The filter bar uses Shadcn-compatible classes (`bg-card`, `bg-background`, `text-foreground`) and adapts its layout based on screen size:
+- *Mobile:* Controls stack vertically, each taking full width
+- *Desktop:* Controls align horizontally in a single row
+
+== Embedded PDF Document Viewer
+
+When a student clicks a document row, a fullscreen modal opens with an embedded PDF viewer featuring:
+
+- *Tabbed Navigation:* Separate "Subject" and "Solution" tabs for switching between the exam paper and its model answer.
+- *Direct Download:* A download button (📥) for saving the PDF locally.
+- *Background Printing:* A print button (🖨️) that triggers printing without opening disruptive browser dialogs.
+- *Visited Tracking:* Documents the student has already opened are marked with a checkmark (✓) and a visual color change on the button, powered by `localStorage`.
 
 #figure(
   image("../images/06-document-viewer.png", width: 90%),
-  caption: [عارض الوثائق المدمج للتركيز المطلق وفصل الحلول]
+  caption: [Fullscreen PDF viewer with Subject/Solution tab switching, download, and print controls]
 )
 
-== لوحة التحكم (Admin CMS)
-نظام إدارة محتوى متكامل (CMS) لا يتطلب تعاملاً مباشراً مع قاعدة البيانات:
+== Smart Local Tracking
+
+To respect student privacy while still providing useful study progress features, the platform implements a *localStorage-based tracking system*:
+
+- Documents are marked as "viewed" when opened, and this state persists across browser sessions.
+- No server-side tracking, no user accounts required, and no data is transmitted to external services.
+- Subject and Solution buttons visually reflect their visited state, enabling students to quickly identify which materials they have already reviewed.
+
+== Admin Content Management System (CMS)
+
+The platform includes a full-featured admin panel protected by session-based authentication using `bcryptjs` password hashing.
 
 #figure(
   image("../images/02-admin-dashboard.png", width: 90%),
-  caption: [الواجهة الإدارية الشاملة]
+  caption: [Admin dashboard with statistics, quick actions, and sidebar navigation]
 )
 
-- *الأمان المطلق:* محمية بنظام مصادقة متين (Authentication) وجلسات مشفرة (Cookies Hash).
-- *النوافذ العائمة (Modals):* استخدام تفاعل سريع عبر نوافذ عائمة لإكمال الإضافة أو التعديل الفوري دون فتح صفحات جديدة.
+=== Admin Capabilities
 
-#figure(
-  image("../images/04-admin-modal.png", width: 90%),
-  caption: [النوافذ العائمة لتسريع وتيرة الإدخال]
-)
-
-- *إدارة هرمية (CRUD):* إدارة المراحل، تفكيكها لسنوات مرجعياً، وإدخال الوثائق التقاعدية (سلاسل، فروض، اختبارات).
+- *Hierarchical CRUD:* Full create, read, update, and delete operations for educational levels, academic years, subjects, and documents.
+- *Modal-Based Editing:* All add/edit operations use floating modals for fast interaction without full page navigation.
+- *Confirmation Dialogs:* Destructive operations (e.g., deleting a document) require explicit confirmation through a custom `ConfirmModal` component, preventing accidental data loss.
+- *File Upload & Linking:* Documents can be uploaded directly or linked via URL, with preview capabilities before publishing.
+- *Mobile-Friendly Dashboard:* The admin interface is fully responsive, allowing content management from any device.
 
 #figure(
   image("../images/03-admin-documents.png", width: 90%),
-  caption: [إدارة الوثائق التعليمية ضمن هرم متسلسل]
+  caption: [Document management table with type badges, file links, and CRUD actions]
 )
 
-- *العلاقات المرجعية:* تفكيك المراحل لسنوات دراسية وإدارتها مرجعياً لتسهيل ربط المواد والوثائق بمكانها الصحيح.
+#figure(
+  image("../images/04-admin-modal.png", width: 90%),
+  caption: [Floating modal for adding a new document with form fields and dropdowns]
+)
 
 #figure(
   image("../images/07-admin-levels.png", width: 90%),
-  caption: [إدارة المراحل التعليمية والعلاقات المرجعية]
+  caption: [Educational levels management with icons, slugs, and edit/delete actions]
 )
-
-- *التأكيدات الجراحية:* منع مسح الوثائق الحساسة بالخطأ عبر نظام تأكيد بصري مخصص.
-- *معاينة وربط الملفات (File Binding):* إمكانية رفع الملفات وربط الروابط مع التحقق والمعاينة قبل الإطلاق.
-
-== التتبع المحلي الذكي (Local Tracking)
-لتقدير وقت المتعلم دون إرغامه على التسجيل، أُدرجت أداة تتبع محلية (`LocalStorage Based Tracking`).
-
-- إمكانية تعليم المواضيع كـ "تمت الإجابة عليها" أو "مقروءة".
-- حفظ النشاطات بشكل محلي وآمن ومجهول دون اتصال بخوادم خارجية، للرجوع إليها وقياس الجهد المبذول وتصفيته.
