@@ -1,6 +1,26 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { Database, Plus, Edit, Trash2, Search, Filter, Eye, X } from 'lucide-svelte';
+	import {
+		Database,
+		Plus,
+		Edit,
+		Trash2,
+		Search,
+		Filter,
+		Eye,
+		X,
+		CheckCircle,
+		XCircle
+	} from 'lucide-svelte';
+
+	import MCQ from '$lib/components/questions/MCQ.svelte';
+	import TrueFalse from '$lib/components/questions/TrueFalse.svelte';
+	import Ordering from '$lib/components/questions/Ordering.svelte';
+	import DragDrop from '$lib/components/questions/DragDrop.svelte';
+	import Matching from '$lib/components/questions/Matching.svelte';
+	import FillBlank from '$lib/components/questions/FillBlank.svelte';
+	import ShortAnswer from '$lib/components/questions/ShortAnswer.svelte';
+	import Cloze from '$lib/components/questions/Cloze.svelte';
 
 	let questions = $state<any[]>([]);
 	let loading = $state(true);
@@ -10,6 +30,8 @@
 
 	// Preview state
 	let previewQuestion = $state<any>(null);
+	let previewAnswer = $state<any>(null);
+	let previewResult = $state<boolean | null>(null);
 
 	onMount(async () => {
 		await loadQuestions();
@@ -37,10 +59,87 @@
 
 	function openPreview(q: any) {
 		previewQuestion = q;
+		previewAnswer = null;
+		previewResult = null;
 	}
 
 	function closePreview() {
 		previewQuestion = null;
+		previewAnswer = null;
+		previewResult = null;
+	}
+
+	function onAnswer(answer: any) {
+		previewAnswer = answer;
+	}
+
+	function checkPreviewAnswer() {
+		if (!previewQuestion) return;
+
+		const qd =
+			typeof previewQuestion.questionData === 'string'
+				? JSON.parse(previewQuestion.questionData)
+				: previewQuestion.questionData;
+
+		const answer = previewAnswer;
+
+		switch (previewQuestion.type) {
+			case 'mcq':
+				previewResult =
+					JSON.stringify(answer?.selectedIndexes) === JSON.stringify(qd.correctIndexes);
+				break;
+			case 'true_false':
+				previewResult = answer?.value === qd.correctAnswer;
+				break;
+			case 'ordering':
+				if (!answer?.order) {
+					previewResult = false;
+					break;
+				}
+				const correctItems = qd.correctOrder.map((idx: number) => qd.items[idx]);
+				previewResult = JSON.stringify(answer.order) === JSON.stringify(correctItems);
+				break;
+			case 'drag_drop':
+				if (!answer?.assignments) {
+					previewResult = false;
+					break;
+				}
+				previewResult = qd.items.every(
+					(item: any) => answer.assignments[item.text] === item.category
+				);
+				break;
+			case 'matching':
+				if (!answer?.matches) {
+					previewResult = false;
+					break;
+				}
+				previewResult = Object.entries(answer.matches).every(
+					([left, right]) => Number(left) === Number(right)
+				);
+				break;
+			case 'fill_blank':
+				if (!answer?.text) {
+					previewResult = false;
+					break;
+				}
+				previewResult = qd.answers.some(
+					(a: string) => a.toLowerCase().trim() === answer.text.toLowerCase().trim()
+				);
+				break;
+			case 'short_answer':
+				if (!answer?.text) {
+					previewResult = false;
+					break;
+				}
+				const matchCount = qd.keywords.filter((kw: string) => answer.text.includes(kw)).length;
+				previewResult = matchCount >= (qd.minKeywords || 1);
+				break;
+			case 'cloze':
+				previewResult = answer?.selectedIndex === qd.correctIndex;
+				break;
+			default:
+				previewResult = false;
+		}
 	}
 
 	let filteredQuestions = $derived(
@@ -144,7 +243,7 @@
 				<tbody class="divide-y divide-white/5">
 					{#each filteredQuestions as q}
 						<tr class="transition-colors hover:bg-white/5">
-							<td class="w-48 p-4 font-mono text-sm text-emerald-400">
+							<td class="max-w-[12rem] px-4 py-4 font-mono text-xs text-emerald-400">
 								{#if q.categoryName}
 									{q.categoryName}
 								{:else}
@@ -242,35 +341,114 @@
 			</div>
 
 			<div class="space-y-6">
-				{#if previewQuestion.questionTextAr}
-					<div>
-						<h3 class="mb-1 text-sm font-semibold text-white/50">النص بالعربية:</h3>
-						<p class="text-xl font-medium whitespace-pre-wrap text-white">
-							{previewQuestion.questionTextAr}
-						</p>
-					</div>
-				{/if}
-
-				{#if previewQuestion.questionText}
-					<div dir="ltr">
-						<h3 class="mb-1 text-right text-sm font-semibold text-white/50">نص اللغة الأجنبية:</h3>
-						<p class="text-left text-xl font-medium whitespace-pre-wrap text-white">
-							{previewQuestion.questionText}
-						</p>
-					</div>
-				{/if}
-
-				<div
-					class="relative overflow-x-auto rounded-xl border border-white/10 bg-black/30 p-4 font-mono text-sm leading-relaxed text-yellow-300/80"
-				>
-					<div class="absolute top-2 right-4 text-xs font-bold text-white/20 select-none">
-						بيانات السؤال (JSON)
-					</div>
-					<pre>{JSON.stringify(JSON.parse(previewQuestion.questionData || '{}'), null, 2)}</pre>
+				<!-- Interactive Component -->
+				<div class="min-h-[300px] rounded-xl border border-white/10 bg-black/20 p-6">
+					{#if previewQuestion.type === 'mcq'}
+						<MCQ
+							data={typeof previewQuestion.questionData === 'string'
+								? JSON.parse(previewQuestion.questionData)
+								: previewQuestion.questionData}
+							{onAnswer}
+						/>
+					{:else if previewQuestion.type === 'true_false'}
+						<TrueFalse
+							data={typeof previewQuestion.questionData === 'string'
+								? JSON.parse(previewQuestion.questionData)
+								: previewQuestion.questionData}
+							{onAnswer}
+						/>
+					{:else if previewQuestion.type === 'ordering'}
+						<Ordering
+							data={typeof previewQuestion.questionData === 'string'
+								? JSON.parse(previewQuestion.questionData)
+								: previewQuestion.questionData}
+							{onAnswer}
+						/>
+					{:else if previewQuestion.type === 'drag_drop'}
+						<DragDrop
+							data={typeof previewQuestion.questionData === 'string'
+								? JSON.parse(previewQuestion.questionData)
+								: previewQuestion.questionData}
+							{onAnswer}
+						/>
+					{:else if previewQuestion.type === 'matching'}
+						<Matching
+							data={typeof previewQuestion.questionData === 'string'
+								? JSON.parse(previewQuestion.questionData)
+								: previewQuestion.questionData}
+							{onAnswer}
+						/>
+					{:else if previewQuestion.type === 'fill_blank'}
+						<FillBlank
+							data={typeof previewQuestion.questionData === 'string'
+								? JSON.parse(previewQuestion.questionData)
+								: previewQuestion.questionData}
+							{onAnswer}
+						/>
+					{:else if previewQuestion.type === 'short_answer'}
+						<ShortAnswer
+							data={typeof previewQuestion.questionData === 'string'
+								? JSON.parse(previewQuestion.questionData)
+								: previewQuestion.questionData}
+							{onAnswer}
+						/>
+					{:else if previewQuestion.type === 'cloze'}
+						<Cloze
+							data={typeof previewQuestion.questionData === 'string'
+								? JSON.parse(previewQuestion.questionData)
+								: previewQuestion.questionData}
+							{onAnswer}
+						/>
+					{:else}
+						<div class="p-8 text-center text-white/50">
+							هذا النوع من الأسئلة غير مدعوم في المعاينة التفاعلية بعد.
+						</div>
+					{/if}
 				</div>
 
-				{#if previewQuestion.explanation}
-					<div class="relative rounded-xl border border-blue-500/20 bg-blue-500/5 p-4">
+				<!-- Validation Actions -->
+				<div class="flex items-center justify-between border-t border-white/10 pt-4">
+					{#if previewResult !== null}
+						<div
+							class="flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-bold {previewResult
+								? 'bg-emerald-500/10 text-emerald-400'
+								: 'bg-red-500/10 text-red-400'}"
+						>
+							{#if previewResult}
+								<CheckCircle size={20} /> إجابة صحيحة
+							{:else}
+								<XCircle size={20} /> إجابة خاطئة
+							{/if}
+						</div>
+					{:else}
+						<div></div>
+					{/if}
+
+					<div class="flex items-center gap-3">
+						{#if previewResult !== null}
+							<button
+								onclick={() => {
+									previewAnswer = null;
+									previewResult = null;
+								}}
+								class="rounded-xl border border-white/10 bg-white/5 px-6 py-2.5 text-sm font-bold text-white transition-all hover:bg-white/10"
+							>
+								إعادة المحاولة
+							</button>
+						{:else}
+							<button
+								onclick={checkPreviewAnswer}
+								disabled={previewAnswer === null}
+								class="rounded-xl bg-blue-600 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-blue-600/20 transition-all hover:bg-blue-700 disabled:pointer-events-none disabled:opacity-50"
+							>
+								تحقق من الإجابة
+							</button>
+						{/if}
+					</div>
+				</div>
+
+				{#if previewQuestion.explanation && previewResult !== null}
+					<div class="relative mt-6 rounded-xl border border-blue-500/20 bg-blue-500/5 p-4">
 						<div class="absolute top-2 right-4 text-xs font-bold text-blue-500/40 select-none">
 							شرح / تلميح
 						</div>
