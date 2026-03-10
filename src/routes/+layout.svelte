@@ -4,6 +4,7 @@
 	import { Sun, Moon, BookOpen, Backpack, GraduationCap, Bookmark, BarChart3 } from 'lucide-svelte';
 	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
 	import SearchBar from '$lib/components/SearchBar.svelte';
+	import NotificationBell from '$lib/components/NotificationBell.svelte';
 	import { page } from '$app/stores';
 
 	let { children } = $props();
@@ -58,6 +59,9 @@
 				<!-- Search -->
 				<SearchBar />
 
+				<!-- Notifications -->
+				<NotificationBell />
+
 				<!-- Theme Toggle -->
 				<button
 					onclick={toggleMode}
@@ -73,6 +77,7 @@
 			<!-- Mobile menu button and theme toggle -->
 			<div class="flex items-center gap-2 md:hidden">
 				<SearchBar />
+				<NotificationBell />
 				<button
 					onclick={toggleMode}
 					class="text-muted-foreground rounded-lg p-2 transition-colors hover:bg-black/5 dark:hover:bg-white/5"

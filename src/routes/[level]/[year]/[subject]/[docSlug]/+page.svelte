@@ -1,7 +1,19 @@
 <script lang="ts">
-	import { Printer, Download, X, Share2, FileText, FileEdit, CheckCircle } from 'lucide-svelte';
+	import {
+		Printer,
+		Download,
+		X,
+		Share2,
+		FileText,
+		FileEdit,
+		CheckCircle,
+		Star,
+		MessageCircle,
+		Send
+	} from 'lucide-svelte';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
+	import { onMount } from 'svelte';
 
 	let { data }: { data: any } = $props();
 
@@ -53,9 +65,86 @@
 			} catch (e) {}
 		} else {
 			await navigator.clipboard.writeText(url);
-			// Could add a toast here
 		}
 	}
+
+	// === Ratings ===
+	let avgRating = $state(0);
+	let totalRatings = $state(0);
+	let userRating = $state(0);
+	let hoverRating = $state(0);
+
+	async function loadRating() {
+		try {
+			const res = await fetch(`/api/ratings?docId=${doc.id}`);
+			const data = await res.json();
+			avgRating = data.average;
+			totalRatings = data.total;
+		} catch (e) {}
+	}
+
+	async function submitRating(value: number) {
+		userRating = value;
+		await fetch('/api/ratings', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ docId: doc.id, rating: value })
+		});
+		await loadRating();
+	}
+
+	// === Comments ===
+	let comments = $state<any[]>([]);
+	let commentAuthor = $state('');
+	let commentText = $state('');
+	let posting = $state(false);
+
+	async function loadComments() {
+		try {
+			const res = await fetch(`/api/comments?docId=${doc.id}`);
+			const data = await res.json();
+			comments = data.comments || [];
+		} catch (e) {}
+	}
+
+	async function postComment() {
+		if (!commentAuthor.trim() || !commentText.trim()) return;
+		posting = true;
+		await fetch('/api/comments', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				docId: doc.id,
+				authorName: commentAuthor.trim(),
+				content: commentText.trim()
+			})
+		});
+		commentText = '';
+		posting = false;
+		await loadComments();
+	}
+
+	function timeAgo(dateStr: string): string {
+		const d = new Date(dateStr);
+		const now = Date.now();
+		const diff = Math.floor((now - d.getTime()) / 1000);
+		if (diff < 60) return 'الآن';
+		if (diff < 3600) return `منذ ${Math.floor(diff / 60)} د`;
+		if (diff < 86400) return `منذ ${Math.floor(diff / 3600)} س`;
+		return `منذ ${Math.floor(diff / 86400)} ي`;
+	}
+
+	onMount(() => {
+		// Track view
+		fetch('/api/stats', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ docId: doc.id, action: 'view' })
+		}).catch(() => {});
+
+		loadRating();
+		loadComments();
+	});
 </script>
 
 <svelte:head>
@@ -243,3 +332,89 @@
 		</div>
 	</section>
 {/if}
+
+<!-- Ratings & Comments Section (below the fullscreen viewer) -->
+<section class="mx-auto max-w-5xl px-4 py-8">
+	<!-- Star Rating -->
+	<div class="bg-card mb-8 rounded-2xl border p-6 shadow-sm">
+		<h3 class="mb-4 flex items-center gap-2 text-lg font-bold">
+			<Star size={20} class="text-yellow-500" /> قيّم هذه الوثيقة
+		</h3>
+		<div class="flex items-center gap-4">
+			<div class="flex gap-1">
+				{#each [1, 2, 3, 4, 5] as star}
+					<button
+						onclick={() => submitRating(star)}
+						onmouseenter={() => (hoverRating = star)}
+						onmouseleave={() => (hoverRating = 0)}
+						class="transition-transform hover:scale-110"
+					>
+						<Star
+							size={28}
+							class="{(hoverRating || userRating || avgRating) >= star
+								? 'fill-yellow-400 text-yellow-400'
+								: 'text-muted-foreground'} transition-colors"
+						/>
+					</button>
+				{/each}
+			</div>
+			<span class="text-muted-foreground text-sm">
+				{avgRating.toFixed(1)} / 5 ({totalRatings} تقييم)
+			</span>
+		</div>
+	</div>
+
+	<!-- Comments -->
+	<div class="bg-card rounded-2xl border p-6 shadow-sm">
+		<h3 class="mb-6 flex items-center gap-2 text-lg font-bold">
+			<MessageCircle size={20} class="text-blue-500" /> التعليقات ({comments.length})
+		</h3>
+
+		<!-- Comment Form -->
+		<div class="mb-6 space-y-3 border-b pb-6">
+			<input
+				bind:value={commentAuthor}
+				type="text"
+				placeholder="اسمك..."
+				class="bg-muted w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:border-blue-500"
+				maxlength="50"
+			/>
+			<div class="flex gap-2">
+				<input
+					bind:value={commentText}
+					type="text"
+					placeholder="أضف تعليقاً..."
+					class="bg-muted flex-1 rounded-lg border px-4 py-2.5 text-sm outline-none focus:border-blue-500"
+					maxlength="1000"
+					onkeydown={(e) => e.key === 'Enter' && postComment()}
+				/>
+				<button
+					onclick={postComment}
+					disabled={posting || !commentAuthor.trim() || !commentText.trim()}
+					class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white transition-colors hover:bg-blue-700 disabled:opacity-50"
+				>
+					<Send size={16} />
+				</button>
+			</div>
+		</div>
+
+		<!-- Comment List -->
+		{#if comments.length === 0}
+			<p class="text-muted-foreground py-8 text-center text-sm">
+				لا توجد تعليقات بعد. كن أول من يعلّق!
+			</p>
+		{:else}
+			<div class="space-y-4">
+				{#each comments as c}
+					<div class="border-b pb-4 last:border-0 last:pb-0">
+						<div class="flex items-center justify-between">
+							<span class="text-sm font-bold text-blue-500">{c.authorName}</span>
+							<span class="text-muted-foreground text-[11px]">{timeAgo(c.createdAt)}</span>
+						</div>
+						<p class="text-muted-foreground mt-1 text-sm leading-relaxed">{c.content}</p>
+					</div>
+				{/each}
+			</div>
+		{/if}
+	</div>
+</section>
