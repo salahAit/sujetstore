@@ -42,21 +42,67 @@ export const years = sqliteTable('years', {
 });
 
 /**
- * 3. المواد الدراسية (Subjects)
+ * 3. الشعب والجذوع (Streams)
+ * GEN للابتدائي/المتوسط، TCST/TCL للأولى ثانوي، SE/MATH/TM/GE/LP/LE للتخصصات
+ */
+export const streams = sqliteTable('streams', {
+	id: text('id').primaryKey(), // 'GEN', 'SE', 'MATH', 'TM', 'GE', 'LP', 'LE', 'TCST', 'TCL'
+	name: text('name').notNull(),
+	nameAr: text('name_ar').notNull(),
+	nameFr: text('name_fr').notNull(),
+	order: integer('order').notNull().default(0)
+});
+
+/**
+ * 4. ربط الشعب بالمستويات (Level-Stream mapping)
+ * يحدد أي شعب متاحة في أي مستوى
+ */
+export const levelStreams = sqliteTable('level_streams', {
+	id: integer('id').primaryKey({ autoIncrement: true }),
+	yearId: text('year_id')
+		.references(() => years.id)
+		.notNull(),
+	streamId: text('stream_id')
+		.references(() => streams.id)
+		.notNull()
+});
+
+/**
+ * 5. المواد الدراسية (Subjects) — بأكواد الامتحانات
+ * الرمز يمثل "ورقة الامتحان" وليس اسم المادة فقط
  */
 export const subjects = sqliteTable('subjects', {
-	id: text('id').primaryKey(), // 'math', 'arabic', 'physics'
+	id: text('id').primaryKey(), // 'ARB-SCI', 'MAT-B', 'PHY-MTM'
 	name: text('name').notNull(),
 	nameAr: text('name_ar').notNull(),
 	nameFr: text('name_fr').notNull(),
 	slug: text('slug').notNull().unique(),
+	examGroup: text('exam_group'), // المادة العامة: 'arabic', 'math', 'physics'
 	icon: text('icon'), // أيقونة المادة
 	color: text('color') // لون المادة
 });
 
 /**
- * 4. ربط المواد بالسنوات (Year-Subject mapping)
- * many-to-many
+ * 6. ربط المواد بالشعب (Stream-Subject mapping)
+ * القاعدة الذهبية: إذا اشتركت شعبتان في نفس رمز المادة، فهما يمتحنان في نفس الورقة
+ */
+export const streamSubjects = sqliteTable('stream_subjects', {
+	id: integer('id').primaryKey({ autoIncrement: true }),
+	streamId: text('stream_id')
+		.references(() => streams.id)
+		.notNull(),
+	subjectId: text('subject_id')
+		.references(() => subjects.id)
+		.notNull(),
+	yearId: text('year_id')
+		.references(() => years.id), // null = لجميع مستويات هذه الشعبة
+	coefficient: integer('coefficient'),
+	order: integer('order').notNull().default(0)
+});
+
+/**
+ * 7. ربط المواد بالسنوات (Year-Subject mapping) — طبقة التوافق
+ * يتم ملؤها تلقائياً من stream_subjects لضمان عمل المسارات القديمة
  */
 export const yearSubjects = sqliteTable('year_subjects', {
 	id: integer('id').primaryKey({ autoIncrement: true }),
@@ -66,7 +112,9 @@ export const yearSubjects = sqliteTable('year_subjects', {
 	subjectId: text('subject_id')
 		.references(() => subjects.id)
 		.notNull(),
-	coefficient: integer('coefficient'), // معامل المادة
+	streamId: text('stream_id')
+		.references(() => streams.id), // ربط اختياري بالشعبة
+	coefficient: integer('coefficient'),
 	order: integer('order').notNull().default(0)
 });
 
@@ -229,6 +277,15 @@ export type NewYear = typeof years.$inferInsert;
 
 export type Subject = typeof subjects.$inferSelect;
 export type NewSubject = typeof subjects.$inferInsert;
+
+export type Stream = typeof streams.$inferSelect;
+export type NewStream = typeof streams.$inferInsert;
+
+export type LevelStream = typeof levelStreams.$inferSelect;
+export type NewLevelStream = typeof levelStreams.$inferInsert;
+
+export type StreamSubject = typeof streamSubjects.$inferSelect;
+export type NewStreamSubject = typeof streamSubjects.$inferInsert;
 
 export type YearSubject = typeof yearSubjects.$inferSelect;
 export type NewYearSubject = typeof yearSubjects.$inferInsert;
