@@ -1,4 +1,4 @@
-// scripts/screenshot.js
+// scripts/screenshot.js (Run with bun)
 import { firefox } from 'playwright';
 import path from 'path';
 import fs from 'fs';
@@ -72,6 +72,12 @@ if (!fs.existsSync(outDir)) {
     await page.goto('http://localhost:5173/admin/levels');
     await page.waitForLoadState('networkidle');
     await page.screenshot({ path: path.join(outDir, '07-admin-levels.png') });
+
+    console.log('Taking achievements page screenshot...');
+    await page.goto('http://localhost:5173/achievements');
+    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: path.join(outDir, '08-achievements.png') });
 
     await browser.close();
     console.log('Done!');

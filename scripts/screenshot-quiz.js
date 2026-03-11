@@ -1,4 +1,4 @@
-// scripts/screenshot-quiz.js
+// scripts/screenshot-quiz.js (Run with bun)
 import { firefox } from 'playwright';
 import path from 'path';
 import fs from 'fs';
@@ -22,11 +22,24 @@ if (!fs.existsSync(outDir)) {
     await page.waitForTimeout(1000);
     await page.screenshot({ path: path.join(outDir, '08-quiz-catalog.png') });
 
-    console.log('Taking quiz player screenshot...');
-    await page.goto('http://localhost:5173/quizzes/math-quiz-t1-5ap');
+    console.log('Taking quiz player screenshot (Exam Mode Selection)...');
+    const quizUrl = 'http://localhost:5173/quizzes/math-quiz-t1-5ap';
+    await page.goto(quizUrl);
     await page.waitForLoadState('networkidle');
     await page.waitForTimeout(1000);
-    await page.screenshot({ path: path.join(outDir, '09-quiz-player.png') });
+    await page.screenshot({ path: path.join(outDir, '09-quiz-mode-selection.png') });
+
+    console.log('Taking quiz player MCQ screenshot (Arabic Lettering)...');
+    await page.click('button:has-text("وضع الامتحان")');
+    await page.waitForTimeout(2000);
+    await page.screenshot({ path: path.join(outDir, '09-quiz-player-mcq.png') });
+
+    console.log('Taking quiz player Practice Mode screenshot...');
+    await page.goto(quizUrl);
+    await page.waitForLoadState('networkidle');
+    await page.click('button:has-text("وضع التدريب")');
+    await page.waitForTimeout(2000);
+    await page.screenshot({ path: path.join(outDir, '09-quiz-practice-mode.png') });
 
     console.log('Logging into admin...');
     await page.goto('http://localhost:5173/admin/login');

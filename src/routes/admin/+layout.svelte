@@ -33,7 +33,7 @@
 {#if $page.url.pathname === '/admin/login'}
 	{@render children()}
 {:else}
-	<div class="font-cairo flex min-h-screen bg-[#0a0f1c] text-white" dir="rtl">
+	<div class="font-cairo bg-background text-foreground flex min-h-screen" dir="rtl">
 		<!-- Mobile sidebar backdrop -->
 		{#if isMobileMenuOpen}
 			<div
@@ -45,18 +45,18 @@
 
 		<!-- Sidebar -->
 		<aside
-			class="fixed inset-y-0 right-0 z-50 flex w-64 flex-col border-l border-white/10 bg-[#0f172a] transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 {isMobileMenuOpen
+			class="bg-card fixed inset-y-0 right-0 z-50 flex w-64 flex-col border-l border-black/5 transition-transform duration-300 ease-in-out dark:border-white/10 lg:static lg:translate-x-0 {isMobileMenuOpen
 				? 'translate-x-0'
 				: 'translate-x-full'}"
 		>
 			<!-- Sidebar Header -->
-			<div class="flex h-16 items-center justify-between border-b border-white/10 px-6">
+			<div class="flex h-16 items-center justify-between border-b border-black/5 px-6 dark:border-white/10">
 				<a href="/admin" class="text-primary flex items-center gap-2 text-xl font-bold">
 					<img src="/logo.webp" alt="Logo" class="h-8 w-8" />
 					SujetStore Admin
 				</a>
 				<button
-					class="text-white/70 hover:text-white lg:hidden"
+					class="text-muted-foreground hover:text-foreground lg:hidden"
 					onclick={() => (isMobileMenuOpen = false)}
 				>
 					<X size={24} />
@@ -73,11 +73,11 @@
 						href={item.href}
 						class="group flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium transition-all {isActive
 							? 'bg-primary/10 text-primary border-primary/20 border'
-							: 'border border-transparent text-white/70 hover:bg-white/5 hover:text-white'}"
+							: 'text-muted-foreground hover:bg-black/5 hover:text-foreground dark:hover:bg-white/5 border border-transparent'}"
 					>
 						<item.icon
 							size={20}
-							class={isActive ? 'text-primary' : 'text-white/50 group-hover:text-white'}
+							class={isActive ? 'text-primary' : 'text-muted-foreground group-hover:text-foreground'}
 						/>
 						{item.name}
 					</a>
@@ -85,7 +85,7 @@
 			</nav>
 
 			<!-- User Menu & Logout -->
-			<div class="border-t border-white/10 p-4">
+			<div class="border-t border-black/5 p-4 dark:border-white/10">
 				{#if data.user}
 					<div class="mb-4 flex items-center gap-3 px-2">
 						<div
@@ -94,8 +94,8 @@
 							{data.user.name.charAt(0)}
 						</div>
 						<div class="overflow-hidden text-sm">
-							<p class="truncate font-bold text-white">{data.user.name}</p>
-							<p class="truncate text-white/50">{data.user.email}</p>
+							<p class="truncate font-bold text-foreground">{data.user.name}</p>
+							<p class="text-muted-foreground truncate">{data.user.email}</p>
 						</div>
 					</div>
 				{/if}
@@ -114,15 +114,15 @@
 		<!-- Main Content -->
 		<div class="flex flex-1 flex-col overflow-hidden">
 			<!-- Top header (Mobile only) -->
-			<header class="flex h-16 items-center border-b border-white/10 bg-[#0f172a] px-4 lg:hidden">
-				<button class="text-white/70 hover:text-white" onclick={() => (isMobileMenuOpen = true)}>
+			<header class="bg-card flex h-16 items-center border-b border-black/5 px-4 dark:border-white/10 lg:hidden">
+				<button class="text-muted-foreground hover:text-foreground" onclick={() => (isMobileMenuOpen = true)}>
 					<Menu size={24} />
 				</button>
 				<div class="text-primary flex-1 text-center font-bold">SujetStore Admin</div>
 			</header>
 
 			<!-- Main area -->
-			<main class="flex-1 overflow-x-hidden overflow-y-auto bg-[#0a0f1c] p-4 sm:p-6 lg:p-8">
+			<main class="bg-background flex-1 overflow-x-hidden overflow-y-auto p-4 sm:p-6 lg:p-8">
 				{@render children()}
 			</main>
 		</div>

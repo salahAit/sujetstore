@@ -28,7 +28,9 @@ Recognizing that the vast majority of Algerian students access educational conte
 
 - *Stacked Controls:* Filter controls stack vertically on small screens and align horizontally on desktop displays.
 - *Horizontal Scrolling:* Tab navigation (for trimesters and quiz stats) scrolls horizontally with hidden scrollbars when screen width is constrained to preserve vertical screen real estate.
-- *Touch Targets:* All interactive elements (buttons, checkboxes, drag-and-drop handles) meet or exceed the minimum touch target size of 44×44px required by accessibility guidelines.
+- *Touch Targets:* All interactive elements meet or exceed the minimum touch target size of 44×44px.
+- *Glassmorphism Architecture:* The UI utilizes a premium "Glassmorphism" effect for year and subject cards. This involves backdrop-blur filters combined with semi-transparent borders and subtle gradients, creating a multi-layered depth effect that remains performant on mobile devices.
+- *Data Visualization:* Cards dynamically display item counts (e.g., "15 Subjects", "24 Exams"), providing students with immediate visual cues about content density before navigation.
 
 == Global Navigation Hierarchy
 

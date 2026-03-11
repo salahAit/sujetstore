@@ -6,8 +6,12 @@ To complement the static document archive, SujetStore features a fully functiona
 
 The assessment engine is deeply integrated with the platform's core architecture:
 
-- *Type-Safe JSON Storage:* All quiz questions are stored in a single `questions` table. Instead of fragmented schemas per question type, SujetStore uses a single `question_data` column configured as a custom JSON type in Drizzle ORM. This enables seamless storage of nested objects (options, coordinates, formulas) with automatic JSON serialization and deserialization at the database driver level.
-- *Dual Modes:* Students can take a quiz in "Practice Mode" (instant feedback per question) or "Exam Mode" (timed, all answers submitted at once).
+- *Type-Safe JSON Storage:* All quiz questions are stored in a single `questions` table. Instead of fragmented schemas per question type, SujetStore uses a single `question_data` column (JSONB equivalent). This enables seamless storage of nested objects with automatic serialization.
+- *Arabic-First UX:* MCQ options automatically display Arabic lettering (أ، ب، ج، د) for a native localized experience.
+- *Dual Operational Modes:* Quizzes support two distinct modes:
+  - *"Practice Mode":* Instant evaluation after each question, ideal for learning.
+  - *"Exam Mode":* A formal timed assessment where results are only revealed after final submission.
+- *Smart Shuffle:* Questions and their internal options can be randomized per attempt to ensure assessment integrity.
 
 == The 14 Supported Question Types
 
