@@ -375,10 +375,13 @@
 			<!-- Share -->
 			<button
 				onclick={openShare}
-				class="text-muted-foreground hover:text-foreground relative mt-8 inline-flex items-center gap-2 text-sm transition-colors"
+				class="group relative mt-10 inline-flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-emerald-500/10 to-teal-500/10 px-8 py-3.5 text-sm font-bold text-emerald-600 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/10 dark:from-emerald-500/20 dark:to-teal-500/20 dark:text-emerald-400"
 			>
-				<Share2 size={16} />
-				مشاركة الرابط
+				<div
+					class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 opacity-0 transition-opacity group-hover:opacity-10"
+				></div>
+				<Share2 size={18} class="transition-transform group-hover:rotate-12" />
+				مشاركة الرابط مع زملائك
 			</button>
 		</div>
 	{:else if !submitted}
@@ -733,10 +736,13 @@
 				</button>
 				<button
 					onclick={openShare}
-					class="relative flex items-center gap-2 rounded-xl border border-black/10 bg-black/5 px-6 py-3 font-bold transition-all hover:bg-black/10 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
+					class="group relative flex items-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-3 font-bold text-white shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.02] hover:shadow-xl hover:shadow-emerald-500/30 active:scale-95"
 				>
-					<Share2 size={18} />
-					مشاركة التقرير
+					<div
+						class="absolute inset-0 bg-white opacity-0 transition-opacity group-hover:opacity-10"
+					></div>
+					<Share2 size={20} class="transition-transform group-hover:rotate-12" />
+					شارك النتيجة مع أصدقائك
 				</button>
 				<a
 					href="/quizzes"
