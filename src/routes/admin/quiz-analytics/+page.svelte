@@ -40,7 +40,7 @@
 		</div>
 		<a
 			href="/admin"
-			class="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold transition hover:bg-white/10"
+			class="flex items-center gap-2 rounded-lg border border-border bg-card text-card-foreground shadow-sm px-4 py-2 text-sm font-semibold transition hover:bg-muted"
 		>
 			<ArrowLeft size={16} /> العودة
 		</a>
@@ -56,7 +56,7 @@
 	{:else if stats}
 		<!-- Overview Cards -->
 		<div class="mb-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
-			<div class="bg-card rounded-xl border p-5 shadow-sm">
+			<div class="bg-backgroundard rounded-xl border p-5 shadow-sm">
 				<div class="flex items-center gap-3">
 					<div
 						class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400"
@@ -69,7 +69,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="bg-card rounded-xl border p-5 shadow-sm">
+			<div class="bg-backgroundard rounded-xl border p-5 shadow-sm">
 				<div class="flex items-center gap-3">
 					<div
 						class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-400"
@@ -82,7 +82,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="bg-card rounded-xl border p-5 shadow-sm">
+			<div class="bg-backgroundard rounded-xl border p-5 shadow-sm">
 				<div class="flex items-center gap-3">
 					<div
 						class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10 text-blue-400"
@@ -95,10 +95,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="bg-card rounded-xl border p-5 shadow-sm">
+			<div class="bg-backgroundard rounded-xl border p-5 shadow-sm">
 				<div class="flex items-center gap-3">
 					<div
-						class="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400"
+						class="flex h-10 w-10 items-center justify-center rounded-lg bg-backgroundmber-500/10 text-amber-400"
 					>
 						<Target size={20} />
 					</div>
@@ -112,7 +112,7 @@
 
 		<!-- Score Distribution -->
 		{#if stats.distribution.length > 0}
-			<div class="bg-card mb-8 rounded-xl border p-6 shadow-sm">
+			<div class="bg-backgroundard mb-8 rounded-xl border p-6 shadow-sm">
 				<h2 class="mb-4 flex items-center gap-2 text-lg font-bold">
 					<TrendingUp size={20} class="text-purple-400" /> توزيع الدرجات
 				</h2>
@@ -123,7 +123,7 @@
 							<span class="w-32 shrink-0 text-left text-sm font-medium">{item.range}</span>
 							<div class="bg-muted h-6 flex-1 overflow-hidden rounded-full">
 								<div
-									class="flex h-full items-center rounded-full bg-gradient-to-r from-purple-600 to-indigo-500 px-2 text-xs font-bold text-white transition-all duration-500"
+									class="flex h-full items-center rounded-full bg-gradient-to-r from-purple-600 to-indigo-500 px-2 text-xs font-bold text-foreground transition-all duration-500"
 									style="width: {Math.max(8, (item.count / maxCount) * 100)}%"
 								>
 									{item.count}
@@ -137,7 +137,7 @@
 
 		<!-- Per-Quiz Stats Table -->
 		{#if stats.quizStats.length > 0}
-			<div class="bg-card mb-8 overflow-hidden rounded-xl border shadow-sm">
+			<div class="bg-backgroundard mb-8 overflow-hidden rounded-xl border shadow-sm">
 				<div class="border-b p-4">
 					<h2 class="flex items-center gap-2 text-lg font-bold">
 						<Trophy size={20} class="text-amber-400" /> أداء كل تمرين
@@ -157,7 +157,7 @@
 						</thead>
 						<tbody>
 							{#each stats.quizStats as quiz}
-								<tr class="border-t border-white/5 transition hover:bg-white/5">
+								<tr class="border-t border-white/5 transition hover:bg-card text-card-foreground shadow-sm">
 									<td class="px-4 py-3 font-semibold">{quiz.title}</td>
 									<td class="px-4 py-3 text-center">{quiz.attempts}</td>
 									<td class="px-4 py-3 text-center">
@@ -174,7 +174,7 @@
 										<span
 											class="rounded-full px-2 py-0.5 text-xs font-bold {quiz.passRate >= 50
 												? 'bg-emerald-500/10 text-emerald-400'
-												: 'bg-amber-500/10 text-amber-400'}"
+												: 'bg-backgroundmber-500/10 text-amber-400'}"
 										>
 											{quiz.passRate}%
 										</span>
@@ -193,7 +193,7 @@
 
 		<!-- Recent Attempts -->
 		{#if stats.recentAttempts.length > 0}
-			<div class="bg-card overflow-hidden rounded-xl border shadow-sm">
+			<div class="bg-backgroundard overflow-hidden rounded-xl border shadow-sm">
 				<div class="border-b p-4">
 					<h2 class="flex items-center gap-2 text-lg font-bold">
 						<Clock size={20} class="text-blue-400" /> آخر المحاولات
@@ -211,7 +211,7 @@
 						</thead>
 						<tbody>
 							{#each stats.recentAttempts as attempt}
-								<tr class="border-t border-white/5 transition hover:bg-white/5">
+								<tr class="border-t border-white/5 transition hover:bg-card text-card-foreground shadow-sm">
 									<td class="px-4 py-3 font-medium">{attempt.quizTitle}</td>
 									<td class="px-4 py-3 text-center">
 										<span

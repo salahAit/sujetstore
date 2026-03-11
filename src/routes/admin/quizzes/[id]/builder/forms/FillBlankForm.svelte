@@ -15,7 +15,7 @@
 </script>
 
 <div class="space-y-4">
-	<p class="mb-4 text-sm text-white/50">
+	<p class="mb-4 text-sm text-muted-foreground">
 		في "نص السؤال" بالأعلى، استخدم ثلاث شرطات سفلية <code>___</code> لتمثيل الفراغ المُراد ملؤه.
 		<br />ثم أضف هنا جميع الإجابات الصحيحة المقبولة (تُقبل الإجابة إذا طابقت أيًا منها).
 	</p>
@@ -28,11 +28,11 @@
 					type="text"
 					bind:value={data.acceptedAnswers[i]}
 					placeholder="مثال: باريس"
-					class="flex-1 rounded-xl border border-white/10 bg-white/5 p-2 text-sm outline-none focus:border-blue-500"
+					class="flex-1 rounded-xl border border-border bg-card text-card-foreground shadow-sm p-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 				/>
 				<button
 					onclick={() => removeAnswer(i)}
-					class="rounded-lg p-2 text-white/30 transition-colors hover:bg-red-500/10 hover:text-red-400"
+					class="rounded-lg p-2 text-foreground/30 transition-colors hover:bg-red-500/10 hover:text-red-400"
 				>
 					<Trash2 size={16} />
 				</button>

@@ -15,13 +15,13 @@
 </script>
 
 <div class="space-y-4">
-	<p class="mb-4 text-sm text-white/50">
+	<p class="mb-4 text-sm text-muted-foreground">
 		أضف أزواج الربط. سيتم عرض القائمة اليمنى بشكل عشوائي للطالب.
 	</p>
 
 	<div class="space-y-3">
 		{#each data.pairs as pair, i}
-			<div class="flex items-center gap-3 rounded-xl border border-white/5 bg-white/5 p-3">
+			<div class="flex items-center gap-3 rounded-xl border border-white/5 bg-card text-card-foreground shadow-sm p-3">
 				<div
 					class="flex h-8 w-8 shrink-0 items-center justify-center rounded bg-blue-500/10 text-sm font-bold text-blue-400"
 				>
@@ -33,22 +33,22 @@
 					type="text"
 					bind:value={pair.left}
 					placeholder="القائمة أ (ثابتة)"
-					class="w-1/2 rounded-lg border border-white/10 bg-black/20 p-2 text-sm outline-none focus:border-blue-500"
+					class="w-1/2 rounded-lg border border-border bg-background p-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 				/>
 
-				<div class="truncate px-2 text-white/30">↔️</div>
+				<div class="truncate px-2 text-foreground/30">↔️</div>
 
 				<!-- Right Side -->
 				<input
 					type="text"
 					bind:value={pair.right}
 					placeholder="القائمة ب (تظهر مشوشة)"
-					class="w-1/2 rounded-lg border border-white/10 bg-black/20 p-2 text-sm outline-none focus:border-blue-500"
+					class="w-1/2 rounded-lg border border-border bg-background p-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 				/>
 
 				<button
 					onclick={() => removePair(i)}
-					class="ml-2 rounded-lg p-2 text-white/30 transition-colors hover:bg-red-500/10 hover:text-red-400"
+					class="ml-2 rounded-lg p-2 text-foreground/30 transition-colors hover:bg-red-500/10 hover:text-red-400"
 				>
 					<Trash2 size={16} />
 				</button>

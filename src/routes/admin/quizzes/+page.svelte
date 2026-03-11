@@ -59,7 +59,7 @@
 		</h1>
 		<a
 			href="/admin/quizzes/new"
-			class="flex items-center gap-2 rounded-xl bg-purple-600 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-purple-600/20 transition-all hover:bg-purple-700"
+			class="flex items-center gap-2 rounded-xl bg-purple-600 px-4 py-2 text-sm font-bold text-foreground shadow-lg shadow-purple-600/20 transition-all hover:bg-purple-700"
 		>
 			<Plus size={18} /> تمرين جديد
 		</a>
@@ -68,12 +68,12 @@
 	<!-- Search & Filters -->
 	<div class="mb-6 flex gap-4">
 		<div class="relative flex-1">
-			<Search class="absolute top-1/2 right-4 -translate-y-1/2 text-white/40" size={18} />
+			<Search class="absolute top-1/2 right-4 -translate-y-1/2 text-foreground/40" size={18} />
 			<input
 				type="text"
 				bind:value={searchQuery}
 				placeholder="ابحث عن تمرين..."
-				class="w-full rounded-xl border border-white/10 bg-white/5 py-3 pr-12 pl-4 outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+				class="w-full rounded-xl border border-border bg-card text-card-foreground shadow-sm py-3 pr-12 pl-4 outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:ring-1 focus:ring-primary"
 			/>
 		</div>
 	</div>
@@ -85,9 +85,9 @@
 			></div>
 		</div>
 	{:else}
-		<div class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+		<div class="overflow-hidden rounded-2xl border border-border bg-card text-card-foreground shadow-sm">
 			<table class="w-full text-right">
-				<thead class="border-b border-white/10 bg-white/5 text-sm font-medium text-white/60">
+				<thead class="border-b border-border bg-card text-card-foreground shadow-sm text-sm font-medium text-foreground/60">
 					<tr>
 						<th class="p-4">العنوان</th>
 						<th class="p-4">الأسئلة</th>
@@ -98,11 +98,11 @@
 				</thead>
 				<tbody class="divide-y divide-white/5">
 					{#each filteredQuizzes as quiz}
-						<tr class="transition-colors hover:bg-white/5">
+						<tr class="transition-colors hover:bg-muted/50">
 							<td class="p-4">
 								<p class="font-bold">{quiz.titleAr || quiz.title}</p>
-								<p class="mt-1 flex items-center gap-2 text-xs text-white/50">
-									<span class="rounded bg-white/10 px-1.5 py-0.5"
+								<p class="mt-1 flex items-center gap-2 text-xs text-muted-foreground">
+									<span class="rounded bg-muted px-1.5 py-0.5"
 										>{quiz.difficulty || 'medium'}</span
 									>
 									<span class="opacity-50">•</span>
@@ -121,7 +121,7 @@
 									onclick={() => togglePremium(quiz.id, quiz.isPremium)}
 									class="inline-flex items-center transition-colors {quiz.isPremium
 										? 'text-amber-400 hover:text-amber-500'
-										: 'text-white/30 hover:text-white/50'}"
+										: 'text-white/30 hover:text-muted-foreground'}"
 								>
 									<Lock size={18} />
 								</button>
@@ -131,7 +131,7 @@
 									onclick={() => togglePublish(quiz.id, quiz.isPublished)}
 									class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors {quiz.isPublished
 										? 'bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20'
-										: 'bg-white/10 text-white/60 hover:bg-white/20'}"
+										: 'bg-muted text-foreground/60 hover:bg-white/20'}"
 								>
 									{#if quiz.isPublished}
 										<Eye size={12} /> منشور
@@ -151,7 +151,7 @@
 									</a>
 									<a
 										href={`/admin/quizzes/${quiz.id}/edit`}
-										class="rounded-lg bg-white/5 p-2 transition-colors hover:bg-white/10"
+										class="rounded-lg bg-card text-card-foreground shadow-sm p-2 transition-colors hover:bg-muted"
 										title="تعديل الإعدادات"
 									>
 										<Edit size={18} />
@@ -168,7 +168,7 @@
 					{/each}
 					{#if filteredQuizzes.length === 0}
 						<tr>
-							<td colspan="5" class="p-8 text-center text-white/50"
+							<td colspan="5" class="p-8 text-center text-muted-foreground"
 								>لا توجد تمارين مضافة حتى الآن</td
 							>
 						</tr>

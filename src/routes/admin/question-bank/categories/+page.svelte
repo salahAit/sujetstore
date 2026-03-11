@@ -111,8 +111,8 @@
 <div class="font-cairo px-4 py-6 md:px-8" dir="rtl">
 	<div class="mb-8 flex items-center justify-between">
 		<div>
-			<h1 class="text-3xl font-bold text-white">تصنيفات الأسئلة (Categories)</h1>
-			<p class="mt-2 text-sm text-white/60">
+			<h1 class="text-3xl font-bold text-foreground">تصنيفات الأسئلة (Categories)</h1>
+			<p class="mt-2 text-sm text-foreground/60">
 				إدارة شجرة مجلدات الأسئلة، مشابهة لنظام Moodle لتنظيم بنك الأسئلة الشامل.
 			</p>
 		</div>
@@ -129,18 +129,18 @@
 	</div>
 
 	{#if isAdding && addingUnderParent === null}
-		<div class="mb-6 flex items-center gap-4 rounded-xl border border-white/20 bg-white/5 p-4">
+		<div class="mb-6 flex items-center gap-4 rounded-xl border border-border bg-card text-card-foreground shadow-sm p-4">
 			<input
 				type="text"
 				bind:value={newCatName}
 				placeholder="اسم التصنيف"
-				class="focus:border-primary w-1/3 rounded-lg border border-white/10 bg-[#0f172a] p-2 text-white outline-none"
+				class="focus:border-primary w-1/3 rounded-lg border border-border bg-[#0f172a] p-2 text-foreground outline-none"
 			/>
 			<input
 				type="text"
 				bind:value={newCatDesc}
 				placeholder="الوصف (اختياري)"
-				class="focus:border-primary w-1/2 rounded-lg border border-white/10 bg-[#0f172a] p-2 text-white outline-none"
+				class="focus:border-primary w-1/2 rounded-lg border border-border bg-[#0f172a] p-2 text-foreground outline-none"
 			/>
 			<button
 				onclick={saveNew}
@@ -148,21 +148,21 @@
 			>
 			<button
 				onclick={() => (isAdding = false)}
-				class="rounded-lg px-4 py-2 text-white/50 hover:bg-white/10">إلغاء</button
+				class="rounded-lg px-4 py-2 text-muted-foreground hover:bg-muted">إلغاء</button
 			>
 		</div>
 	{/if}
 
-	<div class="rounded-xl border border-white/10 bg-white/5 p-6">
+	<div class="rounded-xl border border-border bg-card text-card-foreground shadow-sm p-6">
 		{#if categories.length === 0}
-			<div class="py-10 text-center text-white/50">
+			<div class="py-10 text-center text-muted-foreground">
 				لا توجد تصنيفات بعد. أضف أول تصنيف رئيسي لترتيب بنك الأسئلة.
 			</div>
 		{:else}
 			{#snippet renderCategory(cat: any, depth: number)}
 				<div class="mb-1 flex flex-col select-none">
 					<div
-						class="group flex items-center rounded-lg px-3 py-2 transition-colors hover:bg-white/10"
+						class="group flex items-center rounded-lg px-3 py-2 transition-colors hover:bg-muted"
 						style="margin-right: {depth * 2}rem;"
 					>
 						<button onclick={() => toggleExpand(cat.id)} class="text-primary mr-2 hover:text-white">
@@ -182,13 +182,13 @@
 								<input
 									type="text"
 									bind:value={editName}
-									class="focus:border-primary rounded border border-white/20 bg-black/50 p-1 text-sm text-white"
+									class="focus:border-primary rounded border border-border bg-black/50 p-1 text-sm text-foreground"
 								/>
 								<input
 									type="text"
 									bind:value={editDesc}
 									placeholder="الوصف..."
-									class="focus:border-primary w-48 rounded border border-white/20 bg-black/50 p-1 text-sm text-white"
+									class="focus:border-primary w-48 rounded border border-border bg-black/50 p-1 text-sm text-foreground"
 								/>
 								<button
 									onclick={() => saveEdit(cat.id, cat.parentId)}
@@ -204,9 +204,9 @@
 								onclick={() => toggleExpand(cat.id)}
 								role="presentation"
 							>
-								<span class="font-medium text-white">{cat.name}</span>
+								<span class="font-medium text-foreground">{cat.name}</span>
 								{#if cat.description}
-									<span class="mt-0.5 text-xs text-white/40">{cat.description}</span>
+									<span class="mt-0.5 text-xs text-foreground/40">{cat.description}</span>
 								{/if}
 							</div>
 						{/if}
@@ -244,7 +244,7 @@
 
 					{#if isAdding && addingUnderParent === cat.id}
 						<div
-							class="border-primary mt-1 mb-2 flex items-center gap-4 rounded-lg border-l-2 bg-white/5 px-4 py-2"
+							class="border-primary mt-1 mb-2 flex items-center gap-4 rounded-lg border-l-2 bg-card text-card-foreground shadow-sm px-4 py-2"
 							style="margin-right: {(depth + 1) * 2}rem;"
 						>
 							<CornerDownLeft class="text-primary" size={16} />
@@ -252,13 +252,13 @@
 								type="text"
 								bind:value={newCatName}
 								placeholder="اسم التصنيف الفرعي"
-								class="focus:border-primary w-48 rounded border border-white/10 bg-[#0f172a] p-1.5 text-sm text-white outline-none"
+								class="focus:border-primary w-48 rounded border border-border bg-[#0f172a] p-1.5 text-sm text-foreground outline-none"
 							/>
 							<input
 								type="text"
 								bind:value={newCatDesc}
 								placeholder="الوصف"
-								class="focus:border-primary flex-1 rounded border border-white/10 bg-[#0f172a] p-1.5 text-sm text-white outline-none"
+								class="focus:border-primary flex-1 rounded border border-border bg-[#0f172a] p-1.5 text-sm text-foreground outline-none"
 							/>
 							<button
 								onclick={saveNew}
@@ -270,7 +270,7 @@
 									isAdding = false;
 									addingUnderParent = null;
 								}}
-								class="rounded px-3 py-1.5 text-sm text-white/50 hover:bg-white/10">إلغاء</button
+								class="rounded px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted">إلغاء</button
 							>
 						</div>
 					{/if}

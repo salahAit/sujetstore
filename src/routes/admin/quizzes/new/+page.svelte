@@ -64,7 +64,7 @@
 </script>
 
 <div class="mx-auto max-w-3xl space-y-6">
-	<div class="flex items-center justify-between border-b border-white/10 pb-4">
+	<div class="flex items-center justify-between border-b border-border pb-4">
 		<h1 class="text-2xl font-bold">إضافة تمرين تفاعلي جديد</h1>
 	</div>
 
@@ -75,26 +75,26 @@
 		</div>
 	{/if}
 
-	<div class="space-y-6 rounded-2xl border border-white/10 bg-white/5 p-6 shadow-sm">
+	<div class="space-y-6 rounded-2xl border border-border bg-card text-card-foreground shadow-sm p-6 shadow-sm">
 		<!-- Titles -->
 		<div class="grid gap-6 sm:grid-cols-2">
 			<div class="space-y-2 text-right">
-				<label class="text-sm font-semibold text-white/70">العنوان (عربي) *</label>
+				<label class="text-sm font-semibold text-foreground/80">العنوان (عربي) *</label>
 				<input
 					type="text"
 					bind:value={titleAr}
 					placeholder="مثال: تمرين في الرياضيات الفصل الأول"
-					class="w-full rounded-xl border border-white/10 bg-black/20 p-3 text-right text-sm outline-none focus:border-purple-500"
+					class="w-full rounded-xl border border-border bg-background p-3 text-right text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 				/>
 			</div>
 			<div class="space-y-2 text-left">
-				<label class="text-sm font-semibold text-white/70">* Title (FR/EN)</label>
+				<label class="text-sm font-semibold text-foreground/80">* Title (FR/EN)</label>
 				<input
 					type="text"
 					bind:value={title}
 					dir="ltr"
 					placeholder="Ex: Math Quiz Trimester 1"
-					class="w-full rounded-xl border border-white/10 bg-black/20 p-3 text-left text-sm outline-none focus:border-purple-500"
+					class="w-full rounded-xl border border-border bg-background p-3 text-left text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 				/>
 			</div>
 		</div>
@@ -102,10 +102,10 @@
 		<!-- Linkage -->
 		<div class="grid gap-6 sm:grid-cols-2">
 			<div class="space-y-2 text-right">
-				<label class="text-sm font-semibold text-white/70">المادة / القسم *</label>
+				<label class="text-sm font-semibold text-foreground/80">المادة / القسم *</label>
 				<select
 					bind:value={yearSubjectId}
-					class="w-full rounded-xl border border-white/10 bg-black/20 p-3 text-right text-sm outline-none focus:border-purple-500"
+					class="w-full rounded-xl border border-border bg-background p-3 text-right text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 				>
 					{#each yearSubjects as ys}
 						<option value={ys.id}>
@@ -115,10 +115,10 @@
 				</select>
 			</div>
 			<div class="space-y-2 text-right">
-				<label class="text-sm font-semibold text-white/70">الفصل (اختياري)</label>
+				<label class="text-sm font-semibold text-foreground/80">الفصل (اختياري)</label>
 				<select
 					bind:value={trimesterId}
-					class="w-full rounded-xl border border-white/10 bg-black/20 p-3 text-right text-sm outline-none focus:border-purple-500"
+					class="w-full rounded-xl border border-border bg-background p-3 text-right text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 				>
 					<option value={undefined}>عام (بدون فصل)</option>
 					{#each trimesters as t}
@@ -130,22 +130,22 @@
 
 		<!-- Description -->
 		<div class="space-y-2 text-right">
-			<label class="text-sm font-semibold text-white/70">الوصف</label>
+			<label class="text-sm font-semibold text-foreground/80">الوصف</label>
 			<textarea
 				bind:value={description}
 				rows="3"
 				placeholder="وصف محتوى التمرين..."
-				class="w-full resize-none rounded-xl border border-white/10 bg-black/20 p-3 text-right text-sm outline-none focus:border-purple-500"
+				class="w-full resize-none rounded-xl border border-border bg-background p-3 text-right text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 			></textarea>
 		</div>
 
 		<!-- Settings Grid -->
 		<div class="grid gap-6 sm:grid-cols-3">
 			<div class="space-y-2 text-right">
-				<label class="text-sm font-semibold text-white/70">مستوى الصعوبة</label>
+				<label class="text-sm font-semibold text-foreground/80">مستوى الصعوبة</label>
 				<select
 					bind:value={difficulty}
-					class="w-full rounded-xl border border-white/10 bg-black/20 p-3 text-right text-sm outline-none focus:border-purple-500"
+					class="w-full rounded-xl border border-border bg-background p-3 text-right text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 				>
 					<option value="easy">سهل</option>
 					<option value="medium">متوسط</option>
@@ -153,45 +153,45 @@
 				</select>
 			</div>
 			<div class="space-y-2 text-right">
-				<label class="text-sm font-semibold text-white/70">الوقت المخصص (بالثواني)</label>
+				<label class="text-sm font-semibold text-foreground/80">الوقت المخصص (بالثواني)</label>
 				<input
 					type="number"
 					bind:value={timeLimit}
 					min="0"
 					placeholder="0 = مفتوح"
-					class="w-full rounded-xl border border-white/10 bg-black/20 p-3 text-right text-sm outline-none focus:border-purple-500"
+					class="w-full rounded-xl border border-border bg-background p-3 text-right text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 				/>
-				<p class="text-xs text-white/40">استخدم 0 لوقت غير محدود</p>
+				<p class="text-xs text-foreground/40">استخدم 0 لوقت غير محدود</p>
 			</div>
 			<div class="space-y-2 text-right">
-				<label class="text-sm font-semibold text-white/70">نسبة النجاح (%)</label>
+				<label class="text-sm font-semibold text-foreground/80">نسبة النجاح (%)</label>
 				<input
 					type="number"
 					bind:value={passingScore}
 					min="0"
 					max="100"
-					class="w-full rounded-xl border border-white/10 bg-black/20 p-3 text-right text-sm outline-none focus:border-purple-500"
+					class="w-full rounded-xl border border-border bg-background p-3 text-right text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 				/>
 			</div>
 		</div>
 
 		<!-- Toggles -->
-		<div class="flex items-center gap-6 rounded-xl border border-white/10 bg-black/20 p-4">
+		<div class="flex items-center gap-6 rounded-xl border border-border bg-background p-4">
 			<label class="flex cursor-pointer items-center gap-3">
 				<input
 					type="checkbox"
 					bind:checked={isPremium}
-					class="h-5 w-5 rounded border-white/20 accent-amber-500"
+					class="h-5 w-5 rounded border-border accent-amber-500"
 				/>
-				<span class="font-semibold text-white/80">محتوى مدفوع (Premium)</span>
+				<span class="font-semibold text-foreground/80">محتوى مدفوع (Premium)</span>
 			</label>
 			<label class="flex cursor-pointer items-center gap-3">
 				<input
 					type="checkbox"
 					bind:checked={isPublished}
-					class="h-5 w-5 rounded border-white/20 accent-emerald-500"
+					class="h-5 w-5 rounded border-border accent-emerald-500"
 				/>
-				<span class="font-semibold text-white/80">مباشر (Published)</span>
+				<span class="font-semibold text-foreground/80">مباشر (Published)</span>
 			</label>
 		</div>
 
@@ -199,7 +199,7 @@
 			<button
 				onclick={save}
 				disabled={saving}
-				class="flex items-center gap-2 rounded-xl bg-purple-600 px-8 py-3 font-bold text-white shadow-lg transition-all hover:bg-purple-700 disabled:opacity-50"
+				class="flex items-center gap-2 rounded-xl bg-purple-600 px-8 py-3 font-bold text-foreground shadow-lg transition-all hover:bg-purple-700 disabled:opacity-50"
 			>
 				{#if saving}
 					<div

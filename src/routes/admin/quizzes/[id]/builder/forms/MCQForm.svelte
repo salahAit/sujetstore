@@ -29,7 +29,7 @@
 </script>
 
 <div class="space-y-4">
-	<p class="mb-4 text-sm text-white/50">
+	<p class="mb-4 text-sm text-muted-foreground">
 		أضف الخيارات وحدد الإجابة/الإجابات الصحيحة. يمكنك تحديد أكثر من خيار صحيح.
 	</p>
 
@@ -42,7 +42,7 @@
 						i
 					)
 						? 'border-emerald-500 bg-emerald-500/20 text-emerald-400'
-						: 'border-white/10 bg-white/5 text-white/30 hover:bg-white/10'}"
+						: 'border-border bg-card text-card-foreground shadow-sm text-foreground/30 hover:bg-muted'}"
 					title="تعيين كإجابة صحيحة"
 				>
 					{i + 1}
@@ -51,11 +51,11 @@
 					type="text"
 					bind:value={option.text}
 					placeholder={`نص الخيار ${i + 1}`}
-					class="flex-1 rounded-xl border border-white/10 bg-white/5 p-2 text-sm outline-none focus:border-blue-500"
+					class="flex-1 rounded-xl border border-border bg-card text-card-foreground shadow-sm p-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 				/>
 				<button
 					onclick={() => removeOption(i)}
-					class="rounded-lg p-2 text-white/30 transition-colors hover:bg-red-500/10 hover:text-red-400"
+					class="rounded-lg p-2 text-foreground/30 transition-colors hover:bg-red-500/10 hover:text-red-400"
 				>
 					<Trash2 size={16} />
 				</button>

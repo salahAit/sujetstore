@@ -55,7 +55,7 @@ if (!fs.existsSync(outDir)) {
 
     // Go to subject page
     console.log('Taking subject page screenshot...');
-    await page.goto('http://localhost:5173/moyen/1am/math'); // Typical subject
+    await page.goto('http://localhost:5173/moyen/1am/mat-b'); // Typical subject
     await page.waitForLoadState('networkidle');
     await page.screenshot({ path: path.join(outDir, '05-subject.png') });
 

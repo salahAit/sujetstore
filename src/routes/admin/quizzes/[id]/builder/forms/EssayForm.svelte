@@ -14,21 +14,21 @@
 <div class="space-y-4">
 	<div class="grid gap-4 md:grid-cols-2">
 		<div class="space-y-2">
-			<span class="text-sm font-semibold text-white/70">الحد الأدنى للكلمات</span>
+			<span class="text-sm font-semibold text-foreground/80">الحد الأدنى للكلمات</span>
 			<input type="number" bind:value={data.minWords} min="0" placeholder="0 = بدون حد"
-				class="w-full rounded-xl border border-white/10 bg-black/20 p-3 text-sm outline-none focus:border-blue-500" />
+				class="w-full rounded-xl border border-border bg-background p-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary" />
 		</div>
 		<div class="space-y-2">
-			<span class="text-sm font-semibold text-white/70">الحد الأقصى للكلمات</span>
+			<span class="text-sm font-semibold text-foreground/80">الحد الأقصى للكلمات</span>
 			<input type="number" bind:value={data.maxWords} min="0" placeholder="0 = بدون حد"
-				class="w-full rounded-xl border border-white/10 bg-black/20 p-3 text-sm outline-none focus:border-blue-500" />
+				class="w-full rounded-xl border border-border bg-background p-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary" />
 		</div>
 	</div>
 
 	<div class="space-y-2">
-		<span class="text-sm font-semibold text-white/70">كلمات مفتاحية للتصحيح التلقائي (اختياري)</span>
+		<span class="text-sm font-semibold text-foreground/80">كلمات مفتاحية للتصحيح التلقائي (اختياري)</span>
 		<textarea bind:value={keywordsText} oninput={updateKeywords} rows="2" placeholder="كلمة1، كلمة2، كلمة3"
-			class="w-full rounded-xl border border-white/10 bg-black/20 p-3 text-sm outline-none focus:border-blue-500"></textarea>
-		<p class="text-xs text-white/40">اترك فارغاً للتصحيح اليدوي من المعلم. إذا أضفت كلمات مفتاحية سيتم التصحيح تلقائياً</p>
+			class="w-full rounded-xl border border-border bg-background p-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"></textarea>
+		<p class="text-xs text-foreground/40">اترك فارغاً للتصحيح اليدوي من المعلم. إذا أضفت كلمات مفتاحية سيتم التصحيح تلقائياً</p>
 	</div>
 </div>

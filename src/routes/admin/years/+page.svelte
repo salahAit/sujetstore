@@ -43,7 +43,7 @@
 	</div>
 	<button
 		onclick={() => (isCreateModalOpen = true)}
-		class="flex items-center gap-2 rounded-xl bg-blue-500 px-4 py-2 font-bold text-white transition-all hover:scale-105 hover:bg-blue-600"
+		class="flex items-center gap-2 rounded-xl bg-blue-500 px-4 py-2 font-bold text-foreground transition-all hover:scale-105 hover:bg-blue-600"
 	>
 		<Plus size={20} />
 		إضافة سنة دراسية
@@ -66,10 +66,10 @@
 	</div>
 {/if}
 
-<div class="glass-card overflow-hidden rounded-2xl border border-white/10">
+<div class="bg-backgroundard text-card-foreground border-border overflow-hidden rounded-2xl border shadow-sm">
 	<div class="overflow-x-auto">
 		<table class="w-full text-right text-sm">
-			<thead class="border-b border-white/10 bg-white/5 text-xs text-white/50">
+			<thead class="border-b border-border bg-muted/50 text-xs text-muted-foreground">
 				<tr>
 					<th class="px-6 py-4 font-medium tracking-wider uppercase">ID</th>
 					<th class="px-6 py-4 font-medium tracking-wider uppercase">الاسم بالعربية</th>
@@ -79,16 +79,16 @@
 					<th class="px-6 py-4 text-center font-medium tracking-wider uppercase">إجراءات</th>
 				</tr>
 			</thead>
-			<tbody class="divide-y divide-white/10">
+			<tbody class="divide-y divide-border">
 				{#each data.years as year}
-					<tr class="transition-colors hover:bg-white/5">
-						<td class="px-6 py-4 font-medium whitespace-nowrap text-white/70" dir="ltr"
+					<tr class="transition-colors hover:bg-muted/50">
+						<td class="px-6 py-4 font-medium whitespace-nowrap text-foreground/80" dir="ltr"
 							>{year.id}</td
 						>
 						<td class="px-6 py-4 font-bold whitespace-nowrap">{year.nameAr}</td>
 						<td class="px-6 py-4 whitespace-nowrap" dir="ltr">{year.nameFr}</td>
 						<td class="px-6 py-4 whitespace-nowrap">
-							<span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-xs"
+							<span class="rounded-full border border-border bg-card text-card-foreground shadow-sm px-2 py-1 text-xs"
 								>{year.levelId}</span
 							>
 						</td>
@@ -98,7 +98,7 @@
 						>
 							<button
 								onclick={() => openEdit(year)}
-								class="text-blue-400 transition-colors hover:text-blue-300"
+								class="text-primary transition-colors hover:text-primary/80"
 								title="تعديل"
 							>
 								<Edit size={18} />
@@ -114,7 +114,7 @@
 								<input type="hidden" name="id" value={year.id} />
 								<button
 									type="submit"
-									class="text-red-400 transition-colors hover:text-red-300"
+									class="text-red-600 dark:text-red-400 transition-colors hover:opacity-80"
 									title="حذف"
 								>
 									<Trash2 size={18} />
@@ -126,7 +126,7 @@
 
 				{#if data.years.length === 0}
 					<tr>
-						<td colspan="6" class="px-6 py-8 text-center text-white/50">
+						<td colspan="6" class="px-6 py-8 text-center text-muted-foreground">
 							لا توجد سنوات تعليمية بعد
 						</td>
 					</tr>
@@ -141,17 +141,17 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
-		class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
+		class="fixed inset-0 z-50 flex items-center justify-center bg-background/80 p-4 backdrop-blur-sm"
 		onclick={(e) => {
 			if (e.target === e.currentTarget) isCreateModalOpen = false;
 		}}
 	>
 		<div
-			class="glass-card max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-white/10 p-6 shadow-2xl"
+			class="bg-backgroundard text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
 		>
 			<div class="mb-6 flex items-center justify-between">
 				<h2 class="text-xl font-bold">إضافة سنة دراسية</h2>
-				<button class="text-white/50 hover:text-white" onclick={() => (isCreateModalOpen = false)}>
+				<button class="text-muted-foreground hover:text-foreground" onclick={() => (isCreateModalOpen = false)}>
 					<X size={20} />
 				</button>
 			</div>
@@ -166,7 +166,7 @@
 							name="id"
 							required
 							dir="ltr"
-							class="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+							class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
 							placeholder="1am"
 						/>
 					</div>
@@ -176,7 +176,7 @@
 							id="levelId"
 							name="levelId"
 							required
-							class="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none [&>option]:bg-[#0a0f1c]"
+							class="bg-background border-input text-foreground focus:ring-ring [&>option]:bg-background w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
 						>
 							{#each data.levels as level}
 								<option value={level.id}>{level.nameAr}</option>
@@ -192,7 +192,7 @@
 						id="name"
 						name="name"
 						required
-						class="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+						class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
 						placeholder="السنة الأولى متوسط"
 					/>
 				</div>
@@ -205,7 +205,7 @@
 							id="nameAr"
 							name="nameAr"
 							required
-							class="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+							class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
 							placeholder="الأولى متوسط"
 						/>
 					</div>
@@ -217,7 +217,7 @@
 							name="nameFr"
 							required
 							dir="ltr"
-							class="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+							class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
 							placeholder="1AM"
 						/>
 					</div>
@@ -231,7 +231,7 @@
 						name="slug"
 						required
 						dir="ltr"
-						class="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-blue-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+						class="bg-background border-input text-primary focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
 						placeholder="1am"
 					/>
 				</div>
@@ -240,13 +240,13 @@
 					<button
 						type="button"
 						onclick={() => (isCreateModalOpen = false)}
-						class="flex-1 rounded-xl border border-white/10 bg-white/5 py-2.5 font-bold transition-colors hover:bg-white/10"
+						class="bg-secondary text-secondary-foreground hover:bg-secondary/80 flex-1 rounded-xl border-transparent py-2.5 font-bold transition-colors"
 					>
 						إلغاء
 					</button>
 					<button
 						type="submit"
-						class="flex-1 rounded-xl bg-blue-500 py-2.5 font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:bg-blue-600"
+						class="flex-1 rounded-xl bg-blue-500 py-2.5 font-bold text-foreground shadow-lg transition-all hover:scale-[1.02] hover:bg-blue-600"
 					>
 						حفظ الإضافة
 					</button>
@@ -261,17 +261,17 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
-		class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
+		class="fixed inset-0 z-50 flex items-center justify-center bg-background/80 p-4 backdrop-blur-sm"
 		onclick={(e) => {
 			if (e.target === e.currentTarget) isEditModalOpen = false;
 		}}
 	>
 		<div
-			class="glass-card max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-white/10 p-6 shadow-2xl"
+			class="bg-backgroundard text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
 		>
 			<div class="mb-6 flex items-center justify-between">
-				<h2 class="text-xl font-bold text-blue-400">تعديل سنة دراسية</h2>
-				<button class="text-white/50 hover:text-white" onclick={() => (isEditModalOpen = false)}>
+				<h2 class="text-primary text-xl font-bold">تعديل سنة دراسية</h2>
+				<button class="text-muted-foreground hover:text-foreground" onclick={() => (isEditModalOpen = false)}>
 					<X size={20} />
 				</button>
 			</div>
@@ -289,7 +289,7 @@
 							required
 							dir="ltr"
 							bind:value={editingItem.id}
-							class="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+							class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
 						/>
 					</div>
 					<div>
@@ -301,7 +301,7 @@
 							name="levelId"
 							required
 							bind:value={editingItem.levelId}
-							class="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none [&>option]:bg-[#0a0f1c]"
+							class="bg-background border-input text-foreground focus:ring-ring [&>option]:bg-background w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
 						>
 							{#each data.levels as level}
 								<option value={level.id}>{level.nameAr}</option>
@@ -318,7 +318,7 @@
 						name="name"
 						required
 						bind:value={editingItem.name}
-						class="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+						class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
 					/>
 				</div>
 
@@ -332,7 +332,7 @@
 							name="nameAr"
 							required
 							bind:value={editingItem.nameAr}
-							class="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+							class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
 						/>
 					</div>
 					<div>
@@ -344,7 +344,7 @@
 							required
 							dir="ltr"
 							bind:value={editingItem.nameFr}
-							class="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+							class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
 						/>
 					</div>
 				</div>
@@ -358,7 +358,7 @@
 						required
 						dir="ltr"
 						bind:value={editingItem.slug}
-						class="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-blue-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+						class="bg-background border-input text-primary focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
 					/>
 				</div>
 
@@ -366,13 +366,13 @@
 					<button
 						type="button"
 						onclick={() => (isEditModalOpen = false)}
-						class="flex-1 rounded-xl border border-white/10 bg-white/5 py-2.5 font-bold transition-colors hover:bg-white/10"
+						class="bg-secondary text-secondary-foreground hover:bg-secondary/80 flex-1 rounded-xl border-transparent py-2.5 font-bold transition-colors"
 					>
 						إلغاء
 					</button>
 					<button
 						type="submit"
-						class="flex-1 rounded-xl bg-blue-500 py-2.5 font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:bg-blue-600"
+						class="flex-1 rounded-xl bg-blue-500 py-2.5 font-bold text-foreground shadow-lg transition-all hover:scale-[1.02] hover:bg-blue-600"
 					>
 						حفظ التعديلات
 					</button>

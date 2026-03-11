@@ -40,12 +40,12 @@
 </script>
 
 <div class="space-y-6">
-	<p class="text-sm text-white/50">
+	<p class="text-sm text-muted-foreground">
 		قم بإنشاء تصنيفات (صناديق)، ثم أضف عناصر وقم بتعيينها لتصنيف محدد.
 	</p>
 
 	<!-- Categories -->
-	<div class="rounded-xl border border-white/10 bg-black/20 p-4">
+	<div class="rounded-xl border border-border bg-background p-4">
 		<h4 class="mb-3 font-bold text-blue-400">التصنيفات</h4>
 		<div class="mb-4 flex flex-wrap gap-2">
 			{#each data.categories as cat}
@@ -68,13 +68,13 @@
 				type="text"
 				bind:value={newCatName}
 				placeholder="اسم تصنيف جديد..."
-				class="flex-1 rounded-lg border border-white/10 bg-white/5 p-2 text-sm outline-none focus:border-blue-500"
+				class="flex-1 rounded-lg border border-border bg-card text-card-foreground shadow-sm p-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 				onkeydown={(e) => e.key === 'Enter' && addCategory()}
 			/>
 			<button
 				onclick={addCategory}
 				disabled={!newCatName.trim()}
-				class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-blue-700 disabled:opacity-50"
+				class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-blue-700 disabled:opacity-50"
 			>
 				إضافة
 			</button>
@@ -83,16 +83,16 @@
 
 	<!-- Items -->
 	{#if data.categories.length > 0}
-		<div class="rounded-xl border border-white/10 bg-black/20 p-4">
+		<div class="rounded-xl border border-border bg-background p-4">
 			<h4 class="mb-3 font-bold text-amber-400">العناصر</h4>
 
 			<div class="mb-4 max-h-48 space-y-2 overflow-y-auto pr-2">
 				{#each data.items as item}
 					<div
-						class="flex items-center gap-2 rounded-lg border border-white/5 bg-white/5 p-2 text-sm"
+						class="flex items-center gap-2 rounded-lg border border-white/5 bg-card text-card-foreground shadow-sm p-2 text-sm"
 					>
 						<span class="flex-1">{item.text}</span>
-						<span class="text-xs text-white/40"
+						<span class="text-xs text-foreground/40"
 							>ينتمي إلى: {data.categories.find((c: any) => c.id === item.categoryId)?.name}</span
 						>
 						<button onclick={() => removeItem(item.id)} class="text-white/30 hover:text-red-400">
@@ -107,12 +107,12 @@
 					type="text"
 					bind:value={newItemText}
 					placeholder="نص العنصر..."
-					class="flex-1 rounded-lg border border-white/10 bg-white/5 p-2 text-sm outline-none focus:border-amber-500"
+					class="flex-1 rounded-lg border border-border bg-card text-card-foreground shadow-sm p-2 text-sm outline-none focus:border-amber-500"
 					onkeydown={(e) => e.key === 'Enter' && addItem()}
 				/>
 				<select
 					bind:value={selectedCatForNewItem}
-					class="w-32 rounded-lg border border-white/10 bg-white/5 p-2 text-sm outline-none focus:border-amber-500"
+					class="w-32 rounded-lg border border-border bg-card text-card-foreground shadow-sm p-2 text-sm outline-none focus:border-amber-500"
 				>
 					{#each data.categories as cat}
 						<option value={cat.id}>{cat.name}</option>
@@ -121,7 +121,7 @@
 				<button
 					onclick={addItem}
 					disabled={!newItemText.trim() || !selectedCatForNewItem}
-					class="rounded-lg bg-amber-600 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-amber-700 disabled:opacity-50"
+					class="rounded-lg bg-backgroundmber-600 px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-backgroundmber-700 disabled:opacity-50"
 				>
 					إضافة
 				</button>

@@ -23,7 +23,7 @@ if (!fs.existsSync(outDir)) {
     await page.screenshot({ path: path.join(outDir, '08-quiz-catalog.png') });
 
     console.log('Taking quiz player screenshot (Exam Mode Selection)...');
-    const quizUrl = 'http://localhost:5173/quizzes/math-quiz-t1-5ap';
+    const quizUrl = 'http://localhost:5173/quizzes/primary-math-quiz';
     await page.goto(quizUrl);
     await page.waitForLoadState('networkidle');
     await page.waitForTimeout(1000);

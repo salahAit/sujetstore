@@ -37,7 +37,7 @@
 		<!-- Mobile sidebar backdrop -->
 		{#if isMobileMenuOpen}
 			<div
-				class="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm lg:hidden"
+				class="fixed inset-0 z-40 bg-background/80 backdrop-blur-sm lg:hidden"
 				onclick={() => (isMobileMenuOpen = false)}
 				role="presentation"
 			></div>
@@ -45,12 +45,12 @@
 
 		<!-- Sidebar -->
 		<aside
-			class="bg-card fixed inset-y-0 right-0 z-50 flex w-64 flex-col border-l border-black/5 transition-transform duration-300 ease-in-out dark:border-white/10 lg:static lg:translate-x-0 {isMobileMenuOpen
+			class="bg-card text-card-foreground fixed inset-y-0 right-0 z-50 flex w-64 flex-col border-l border-border transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 {isMobileMenuOpen
 				? 'translate-x-0'
 				: 'translate-x-full'}"
 		>
 			<!-- Sidebar Header -->
-			<div class="flex h-16 items-center justify-between border-b border-black/5 px-6 dark:border-white/10">
+			<div class="flex h-16 items-center justify-between border-b border-border px-6">
 				<a href="/admin" class="text-primary flex items-center gap-2 text-xl font-bold">
 					<img src="/logo.webp" alt="Logo" class="h-8 w-8" />
 					SujetStore Admin
@@ -73,7 +73,7 @@
 						href={item.href}
 						class="group flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium transition-all {isActive
 							? 'bg-primary/10 text-primary border-primary/20 border'
-							: 'text-muted-foreground hover:bg-black/5 hover:text-foreground dark:hover:bg-white/5 border border-transparent'}"
+							: 'text-muted-foreground hover:bg-muted/50 hover:text-foreground border border-transparent'}"
 					>
 						<item.icon
 							size={20}
@@ -85,7 +85,7 @@
 			</nav>
 
 			<!-- User Menu & Logout -->
-			<div class="border-t border-black/5 p-4 dark:border-white/10">
+			<div class="border-t border-border p-4">
 				{#if data.user}
 					<div class="mb-4 flex items-center gap-3 px-2">
 						<div
@@ -114,7 +114,7 @@
 		<!-- Main Content -->
 		<div class="flex flex-1 flex-col overflow-hidden">
 			<!-- Top header (Mobile only) -->
-			<header class="bg-card flex h-16 items-center border-b border-black/5 px-4 dark:border-white/10 lg:hidden">
+			<header class="bg-backgroundard flex h-16 items-center border-b border-black/5 px-4 dark:border-border lg:hidden">
 				<button class="text-muted-foreground hover:text-foreground" onclick={() => (isMobileMenuOpen = true)}>
 					<Menu size={24} />
 				</button>

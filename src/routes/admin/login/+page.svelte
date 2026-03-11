@@ -9,7 +9,7 @@
 	<title>تسجيل الدخول - لوحة التحكم</title>
 </svelte:head>
 
-<div class="font-cairo flex min-h-screen items-center justify-center bg-[#0a0f1c] px-4 text-white">
+<div class="font-cairo bg-background text-foreground flex min-h-screen items-center justify-center px-4">
 	<div class="w-full max-w-md">
 		<div class="mb-8 text-center">
 			<div class="mx-auto mb-4 flex h-20 w-20 items-center justify-center">
@@ -19,7 +19,7 @@
 			<p class="text-muted-foreground mt-2 text-sm">أدخل بيانات الاعتماد للمتابعة</p>
 		</div>
 
-		<div class="glass-card rounded-2xl border border-white/10 p-8 shadow-2xl">
+		<div class="bg-backgroundard text-card-foreground border-border rounded-2xl border p-8 shadow-2xl">
 			<form method="POST" class="space-y-5">
 				<div>
 					<label for="username" class="mb-2 block text-sm font-medium">اسم المستخدم</label>
@@ -29,7 +29,7 @@
 						name="username"
 						required
 						dir="ltr"
-						class="focus:border-primary focus:ring-primary w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-white transition-colors focus:ring-1 focus:outline-none"
+						class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-4 py-3 transition-colors focus:ring-1 focus:outline-none"
 						placeholder="admin"
 					/>
 				</div>
@@ -42,7 +42,7 @@
 						name="password"
 						required
 						dir="ltr"
-						class="focus:border-primary focus:ring-primary w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-white transition-colors focus:ring-1 focus:outline-none"
+						class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-4 py-3 transition-colors focus:ring-1 focus:outline-none"
 						placeholder="••••••••"
 					/>
 				</div>
@@ -64,7 +64,7 @@
 			</form>
 		</div>
 
-		<div class="mt-8 text-center text-sm text-white/40">
+		<div class="text-muted-foreground mt-8 text-center text-sm">
 			&copy; {new Date().getFullYear()} SujetStore. جميع الحقوق محفوظة.
 		</div>
 	</div>

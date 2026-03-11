@@ -40,7 +40,7 @@
 </script>
 
 <div class="space-y-4">
-	<p class="mb-4 text-sm text-white/50">
+	<p class="mb-4 text-sm text-muted-foreground">
 		أضف العناصر بالترتيب الصحيح. سيتم عرضها مشوشة للطالب أثناء الامتحان.
 	</p>
 
@@ -51,12 +51,12 @@
 				ondragstart={(e) => dragStart(e, i)}
 				ondragover={dragOver}
 				ondrop={(e) => drop(e, i)}
-				class="flex items-center gap-2 rounded-xl border border-white/5 bg-white/5 p-2 transition-colors hover:border-white/10 {draggedIndex ===
+				class="flex items-center gap-2 rounded-xl border border-white/5 bg-card text-card-foreground shadow-sm p-2 transition-colors hover:border-border {draggedIndex ===
 				i
 					? 'border-dashed opacity-50'
 					: ''}"
 			>
-				<button class="cursor-grab p-2 text-white/30 hover:text-white/60 active:cursor-grabbing">
+				<button class="cursor-grab p-2 text-foreground/30 hover:text-white/60 active:cursor-grabbing">
 					<GripVertical size={16} />
 				</button>
 
@@ -75,7 +75,7 @@
 
 				<button
 					onclick={() => removeItem(i)}
-					class="rounded-lg p-2 text-white/30 transition-colors hover:bg-red-500/10 hover:text-red-400"
+					class="rounded-lg p-2 text-foreground/30 transition-colors hover:bg-red-500/10 hover:text-red-400"
 				>
 					<Trash2 size={16} />
 				</button>

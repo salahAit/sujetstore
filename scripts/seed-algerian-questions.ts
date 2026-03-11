@@ -46,6 +46,7 @@ const catGramM = addCat("الإعراب والصرف", catArabM, null);
 const catAnal = addCat("التحليل والدوال", catMathS, null);
 const catMech = addCat("الميكانيك", catPhysS, null);
 const catBio = addCat("علم الأحياء", catSciS, null);
+const catMaster = addCat("تمرين شامل (14 نوع)", catSec, null);
 
 // 3. Questions
 console.log("\n📝 Adding questions...");
@@ -62,12 +63,13 @@ addQ(catArith, 'true_false', 'easy', '0 even', 'هل الصفر عدد زوجي 
 addQ(catArith, 'fill_blank', 'easy', '45+?=100', 'أكمل: 45 + ___ = 100', { sentence: "45 + ___ = 100", answers: ["55"] }, '100 - 45 = 55');
 addQ(catArith, 'ordering', 'easy', 'Order nums', 'رتّب الأعداد تصاعدياً', { items: ["125", "89", "201", "56", "150"], correctOrder: [3, 1, 0, 4, 2] }, '56 ← 89 ← 125 ← 150 ← 201');
 addQ(catGeom, 'mcq', 'medium', 'Hexagon sides', 'كم عدد أضلاع الشكل السداسي ؟', { options: [{ id: "1", text: "5", isCorrect: false }, { id: "2", text: "6", isCorrect: true }, { id: "3", text: "7", isCorrect: false }, { id: "4", text: "8", isCorrect: false }] }, 'السداسي = 6 أضلاع');
-
+addQ(catArith, 'calculated', 'hard', 'Perimeter', 'احسب محيط مستطيل طوله {a} وعرضه {b}', { formula: "({a} + {b}) * 2", displayTemplate: "الطول = {a} ، العرض = {b}", variables: [{ name: "a", min: 10, max: 20 }, { name: "b", min: 1, max: 9 }], tolerance: 0 }, 'المحيط = (الطول + العرض) × 2');
 // لغة عربية ابتدائي
 addQ(catGram, 'mcq', 'medium', 'Subject', 'ما إعراب "التلميذُ" في: كتبَ التلميذُ الدرسَ ؟', { options: [{ id: "1", text: "مفعول به", isCorrect: false }, { id: "2", text: "فاعل مرفوع", isCorrect: true }, { id: "3", text: "مبتدأ", isCorrect: false }, { id: "4", text: "خبر", isCorrect: false }] }, '"التلميذُ" فاعل مرفوع بالضمة');
 addQ(catGram, 'true_false', 'easy', 'Hamza', 'الهمزة في كلمة "سأل" همزة وصل', { correctAnswer: false }, 'الهمزة في "سأل" همزة قطع');
 addQ(catGram, 'fill_blank', 'medium', 'Complete', 'أكمل: ذهبَ ___ إلى المدرسة', { sentence: "ذهبَ ___ إلى المدرسة", answers: ["الولدُ", "الولد"] }, '"الولدُ" فاعل مرفوع');
-
+addQ(catGram, 'sentence_reorder', 'easy', 'Reorder', 'رتب الكلمات لتكوين جملة مفيدة:', { words: ["التلميذُ", "الدرسَ", "كتبَ"], correctOrder: [2, 0, 1] }, 'كتب التلميذ الدرس');
+addQ(catGram, 'essay', 'medium', 'Essay', 'اكتب فقرة قصيرة عن فضل العلم (تحتوي على كلمتي "نور" و "المستقبل"):', { minWords: 10, maxWords: 50, keywords: ["نور", "المستقبل"], minKeywords: 2 }, 'تقييم معتمد على الكلمات المفتاحية وطول النص');
 // رياضيات متوسط
 addQ(catAlg, 'mcq', 'medium', 'Solve', 'حل المعادلة: 2س + 6 = 20', { options: [{ id: "1", text: "س = 5", isCorrect: false }, { id: "2", text: "س = 7", isCorrect: true }, { id: "3", text: "س = 8", isCorrect: false }, { id: "4", text: "س = 10", isCorrect: false }] }, '2س = 14 ← س = 7');
 addQ(catAlg, 'mcq', 'hard', 'Factor', 'حلّل: س² - 9', { options: [{ id: "1", text: "(س-3)(س+3)", isCorrect: true }, { id: "2", text: "(س-9)(س+1)", isCorrect: false }, { id: "3", text: "(س-3)²", isCorrect: false }, { id: "4", text: "(س+3)²", isCorrect: false }] }, 'فرق مربعين: (س-3)(س+3)');
@@ -98,7 +100,23 @@ addQ(catMech, 'matching', 'hard', 'Formulas', 'صل بين الكمية والع
 addQ(catBio, 'mcq', 'medium', 'Cell', 'ما العضية المسؤولة عن التنفس الخلوي ؟', { options: [{ id: "1", text: "النواة", isCorrect: false }, { id: "2", text: "الميتوكوندريا", isCorrect: true }, { id: "3", text: "الريبوسوم", isCorrect: false }, { id: "4", text: "جهاز غولجي", isCorrect: false }] }, 'الميتوكوندريا = محطة الطاقة');
 addQ(catBio, 'true_false', 'medium', 'DNA', 'الحمض النووي DNA يتواجد فقط في نواة الخلية', { correctAnswer: false }, 'DNA في النواة وكذلك في الميتوكوندريا');
 addQ(catBio, 'drag_drop', 'hard', 'Classify', 'صنّف إلى حقيقيات وبدائيات النوى', { items: [{ text: "البكتيريا", category: "بدائيات النوى" }, { text: "الفطريات", category: "حقيقيات النوى" }, { text: "البكتيريا الزرقاء", category: "بدائيات النوى" }, { text: "الإنسان", category: "حقيقيات النوى" }, { text: "النباتات", category: "حقيقيات النوى" }], categories: ["حقيقيات النوى", "بدائيات النوى"] }, 'البكتيريا بدائية، الفطريات والإنسان والنباتات حقيقية');
+addQ(catBio, 'matrix', 'hard', 'Matrix', 'حدد خصائص كل كائن:', { statements: ["يحتوي على جدار خلوي", "يملك نواة حقيقية", "ذاتي التغذية"], columns: ["النبات", "الحيوان"], correctAnswers: [0, 1, 0] }, 'النباتات ذاتية ولها جدار خلوي');
 
+// Master Quiz (14 Types)
+addQ(catMaster, 'mcq', 'medium', 'MCQ', 'كم عدد أضلاع الشكل السداسي؟ (اختيار من متعدد)', { options: [{ id: "1", text: "5", isCorrect: false }, { id: "2", text: "6", isCorrect: true }, { id: "3", text: "7", isCorrect: false }, { id: "4", text: "8", isCorrect: false }] }, 'السداسي = 6 أضلاع');
+addQ(catMaster, 'true_false', 'easy', 'TF', 'الهمزة في كلمة "سأل" همزة وصل (صح أم خطأ)', { correctAnswer: false }, 'الهمزة في "سأل" همزة قطع');
+addQ(catMaster, 'fill_blank', 'easy', 'Fill', 'أكمل الفراغ: 45 + ___ = 100', { sentence: "45 + ___ = 100", answers: ["55"] }, '100 - 45 = 55');
+addQ(catMaster, 'drag_drop', 'hard', 'Drag', 'صنّف إلى حقيقيات وبدائيات النوى (سحب وإفلات للتصنيف)', { items: [{ text: "البكتيريا", category: "بدائيات النوى" }, { text: "الفطريات", category: "حقيقيات النوى" }], categories: ["حقيقيات النوى", "بدائيات النوى"] }, 'البكتيريا بدائية');
+addQ(catMaster, 'ordering', 'easy', 'Order', 'رتّب الأعداد تصاعدياً (ترتيب)', { items: ["125", "89", "201", "56"], correctOrder: [3, 1, 0, 2] }, '56 ← 89 ← 125 ← 201');
+addQ(catMaster, 'matching', 'medium', 'Match', 'اربط الكلمة بمرادفها (سحب وإفلات للمطابقة)', { leftItems: [{ id: 0, text: "سعيد" }, { id: 1, text: "سريع" }], rightItems: [{ id: 0, text: "مسرور" }, { id: 1, text: "عاجل" }] }, 'سعيد=مسرور، سريع=عاجل');
+addQ(catMaster, 'short_answer', 'medium', 'Short', 'من هو مكتشف الجاذبية؟ (إجابة قصيرة)', { answers: ["نيوتن", "إسحاق نيوتن"] }, 'العالم الإنجليزي إسحاق نيوتن');
+addQ(catMaster, 'cloze', 'medium', 'Cloze', 'اختر الكلمة المناسبة (قائمة منسدلة): ذهب المعلمون ___ المدرسة', { sentence: "ذهب المعلمون ___ المدرسة", options: ["إلى", "على", "في"], correctIndex: 0 }, 'حرف الجر "إلى" للوجهة');
+addQ(catMaster, 'calculated', 'hard', 'Calc', 'احسب محيط مستطيل طوله {a} وعرضه {b} (سؤال رياضي متغير الأرقام عشوائياً)', { formula: "({a} + {b}) * 2", displayTemplate: "الطول = {a} ، العرض = {b}", variables: [{ name: "a", min: 10, max: 20 }, { name: "b", min: 1, max: 9 }], tolerance: 0 }, 'المحيط = (الطول + العرض) × 2');
+addQ(catMaster, 'sentence_reorder', 'easy', 'Sentence', 'رتب الكلمات لتكوين جملة مفيدة (سحب الكلمات لتكوين جملة):', { words: ["التلميذُ", "الدرسَ", "كتبَ"], correctOrder: [2, 0, 1] }, 'كتب التلميذ الدرس');
+addQ(catMaster, 'essay', 'medium', 'Essay', 'اكتب فقرة قصيرة عن فضل العلم تحتوي على كلمة "نور" (مقال حر مع تصحيح ذكي عبر الكلمات المفتاحية):', { minWords: 5, maxWords: 50, keywords: ["نور"], minKeywords: 1 }, 'تقييم معتمد على الكلمات المفتاحية');
+addQ(catMaster, 'matrix', 'hard', 'Matrix', 'حدد خصائص كل كائن (شبكة اختيارات):', { statements: ["يحتوي على جدار خلوي", "يملك نواة حقيقية"], columns: ["النبات", "الحيوان"], correctAnswers: [0, 1] }, 'النباتات لها جدار خلوي');
+addQ(catMaster, 'hotspot', 'medium', 'Hotspot', 'اضغط على الدائرة المعبرة عن البطين الأيسر (تحديد منطقة على الصورة):', { imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Diagram_of_the_human_heart_%28cropped%29.svg/512px-Diagram_of_the_human_heart_%28cropped%29.svg.png", zones: [{ x: 40, y: 70, radius: 10, label: "البطين الأيمن" }, { x: 65, y: 65, radius: 10, label: "البطين الأيسر" }], correctZone: 1 }, 'الجزء السفلي الأيسر');
+addQ(catMaster, 'drag_to_image', 'medium', 'DragToImage', 'ضع المسميات على الخلية الحيوانية (السحب والإفلات على الصورة):', { imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Animal_cell_structure_en.svg/512px-Animal_cell_structure_en.svg.png", labels: [{ text: "النواة", correctX: 45, correctY: 53 }, { text: "غشاء الخلية", correctX: 18, correctY: 82 }] }, 'النواة في المنتصف');
 // 4. Create quizzes
 console.log("\n🎮 Creating quizzes...");
 function findYS(lSlug: string, sSlug: string): number | null {
@@ -120,6 +138,7 @@ function createQuiz(ysId: number, tId: string, title: string, tAr: string, slug:
 }
 
 const pMath = findYS('primaire', 'MAT-B');
+const pArb = findYS('primaire', 'ARB-B');
 const mMath = findYS('moyen', 'MAT-B');
 const mPhys = findYS('moyen', 'PHY-B');
 const sMath = findYS('secondaire', 'MAT-SE');
@@ -127,11 +146,15 @@ const sPhys = findYS('secondaire', 'PHY-SE');
 const sSci = findYS('secondaire', 'SCI-SE');
 
 if (pMath) createQuiz(pMath, 't1', 'Primary Math', 'تمرين رياضيات - ابتدائي', 'primary-math-quiz', 'تمرين شامل في الحساب والهندسة', 'easy', 600, [catArith, catGeom]);
+if (pArb) createQuiz(pArb, 't1', 'Primary Arabic', 'تمرين لغة عربية - ابتدائي', 'primary-arabic-quiz', 'تمرين في النحو والإملاء', 'easy', 600, [catGram]);
 if (mMath) createQuiz(mMath, 't1', 'Middle Algebra', 'تمرين الجبر - متوسط', 'middle-algebra-quiz', 'تمرين في المعادلات والتحليل', 'medium', 900, [catAlg]);
 if (mPhys) createQuiz(mPhys, 't2', 'Middle Physics', 'تمرين الفيزياء - متوسط', 'middle-physics-quiz', 'تمرين في الكهرباء والموصلات', 'medium', 600, [catElec]);
 if (sMath) createQuiz(sMath, 't1', 'Secondary Analysis', 'تمرين التحليل - ثانوي', 'secondary-analysis-quiz', 'تمرين في المشتقات والتكامل', 'hard', 1200, [catAnal]);
 if (sPhys) createQuiz(sPhys, 't2', 'Secondary Mechanics', 'تمرين الميكانيك - ثانوي', 'secondary-mechanics-quiz', 'تمرين في قوانين نيوتن والحركة', 'hard', 900, [catMech]);
-if (sSci) createQuiz(sSci, 't1', 'Secondary Biology', 'تمرين علوم طبيعية - ثانوي', 'secondary-biology-quiz', 'تمرين في الخلية والوراثة', 'medium', 600, [catBio]);
+if (sSci) {
+    createQuiz(sSci, 't1', 'Secondary Biology', 'تمرين علوم طبيعية - ثانوي', 'secondary-biology-quiz', 'تمرين في الخلية والوراثة', 'medium', 600, [catBio]);
+    createQuiz(sSci, 't1', 'All Question Types Master', 'تمرين شامل - 14 نوع (للتجربة)', 'master-quiz-14', 'تمرين تجريبي مميز يحتوي على جميع أنواع الأسئلة التفاعلية الأربعة عشر المتاحة في المنصة.', 'hard', 2400, [catMaster]);
+}
 
 // Summary
 const fQ = (db.query("SELECT COUNT(*) as c FROM questions").get() as any).c;

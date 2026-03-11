@@ -103,31 +103,31 @@
 		aria-modal="true"
 	>
 		<div
-			class="flex h-full max-h-[85vh] w-full max-w-4xl flex-col rounded-2xl border border-white/10 bg-slate-900 shadow-2xl"
+			class="flex h-full max-h-[85vh] w-full max-w-4xl flex-col rounded-2xl border border-border bg-slate-900 shadow-2xl"
 		>
 			<!-- Header -->
-			<div class="flex items-center justify-between border-b border-white/10 p-6">
+			<div class="flex items-center justify-between border-b border-border p-6">
 				<div class="flex items-center gap-3">
 					<Database class="text-emerald-500" size={24} />
 					<h2 class="text-xl font-bold">استيراد من بنك الأسئلة الشامل</h2>
 				</div>
 				<button
 					onclick={() => (isOpen = false)}
-					class="rounded-lg p-2 text-white/50 transition-colors hover:bg-white/10 hover:text-white"
+					class="rounded-lg p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-white"
 				>
 					<X size={20} />
 				</button>
 			</div>
 
 			<!-- Search -->
-			<div class="border-b border-white/10 p-4">
+			<div class="border-b border-border p-4">
 				<div class="relative max-w-lg">
-					<Search class="absolute top-1/2 right-4 -translate-y-1/2 text-white/40" size={18} />
+					<Search class="absolute top-1/2 right-4 -translate-y-1/2 text-foreground/40" size={18} />
 					<input
 						type="text"
 						bind:value={searchQuery}
 						placeholder="البحث في نص السؤال..."
-						class="w-full rounded-xl border border-white/10 bg-white/5 py-3 pr-12 pl-4 text-sm outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+						class="w-full rounded-xl border border-border bg-card text-card-foreground shadow-sm py-3 pr-12 pl-4 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:ring-1 focus:ring-primary"
 					/>
 				</div>
 			</div>
@@ -141,7 +141,7 @@
 						></div>
 					</div>
 				{:else if filteredQuestions.length === 0}
-					<div class="flex h-32 flex-col items-center justify-center text-white/50">
+					<div class="flex h-32 flex-col items-center justify-center text-muted-foreground">
 						<p>لا توجد أسئلة مطابقة للبحث.</p>
 					</div>
 				{:else}
@@ -149,11 +149,11 @@
 						{#each filteredQuestions as q}
 							<!-- svelte-ignore a11y_click_events_have_key_events -->
 							<div
-								class="flex cursor-pointer items-center justify-between rounded-xl border p-4 transition-all hover:bg-white/5 {selectedQuestions.has(
+								class="flex cursor-pointer items-center justify-between rounded-xl border p-4 transition-all hover:bg-card text-card-foreground shadow-sm {selectedQuestions.has(
 									q.id
 								)
 									? 'border-emerald-500 bg-emerald-500/10'
-									: 'border-white/10'}"
+									: 'border-border'}"
 								onclick={() => toggleSelection(q.id)}
 								role="button"
 								tabindex="0"
@@ -163,17 +163,17 @@
 										class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border {selectedQuestions.has(
 											q.id
 										)
-											? 'border-emerald-500 bg-emerald-500 text-white'
+											? 'border-emerald-500 bg-emerald-500 text-foreground'
 											: 'border-white/30 bg-transparent text-transparent'}"
 									>
 										<Check size={14} />
 									</div>
 									<div>
-										<p class="line-clamp-2 max-w-2xl font-semibold text-white/90">
+										<p class="line-clamp-2 max-w-2xl font-semibold text-foreground/90">
 											{q.questionTextAr || q.questionText}
 										</p>
-										<p class="mt-1 flex items-center gap-2 text-xs text-white/50">
-											<span class="rounded bg-white/10 px-2 py-0.5"
+										<p class="mt-1 flex items-center gap-2 text-xs text-muted-foreground">
+											<span class="rounded bg-muted px-2 py-0.5"
 												>{typeLabels[q.type] || q.type}</span
 											>
 											<span class="opacity-50">•</span>
@@ -200,21 +200,21 @@
 			</div>
 
 			<!-- Footer Actions -->
-			<div class="flex items-center justify-between border-t border-white/10 bg-black/20 p-6">
-				<p class="text-sm font-semibold text-white/60">
+			<div class="flex items-center justify-between border-t border-border bg-background p-6">
+				<p class="text-sm font-semibold text-foreground/60">
 					تم تحديد <span class="text-emerald-400">{selectedQuestions.size}</span> عناصر
 				</p>
 				<div class="flex gap-3">
 					<button
 						onclick={() => (isOpen = false)}
-						class="rounded-xl bg-white/5 px-6 py-2.5 text-sm font-bold text-white transition-all hover:bg-white/10"
+						class="rounded-xl bg-card text-card-foreground shadow-sm px-6 py-2.5 text-sm font-bold text-foreground transition-all hover:bg-muted"
 					>
 						إلغاء
 					</button>
 					<button
 						onclick={importSelected}
 						disabled={selectedQuestions.size === 0 || importing}
-						class="flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-2.5 text-sm font-bold text-white shadow-lg transition-all hover:bg-emerald-700 disabled:opacity-50"
+						class="flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-2.5 text-sm font-bold text-foreground shadow-lg transition-all hover:bg-emerald-700 disabled:opacity-50"
 					>
 						{#if importing}
 							<div

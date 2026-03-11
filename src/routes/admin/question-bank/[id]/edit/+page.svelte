@@ -135,10 +135,10 @@
 </script>
 
 <div class="mx-auto max-w-4xl space-y-6">
-	<div class="flex items-center gap-4 border-b border-white/10 pb-4">
+	<div class="flex items-center gap-4 border-b border-border pb-4">
 		<a
 			href="/admin/question-bank"
-			class="rounded-lg p-2 text-white/50 transition-colors hover:bg-white/5 hover:text-white"
+			class="rounded-lg p-2 text-muted-foreground transition-colors hover:bg-card text-card-foreground shadow-sm hover:text-white"
 		>
 			<ArrowRight size={24} />
 		</a>
@@ -161,14 +161,14 @@
 	{:else}
 		<div class="grid gap-6 md:grid-cols-3">
 			<div class="space-y-6 md:col-span-1">
-				<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-					<h3 class="mb-4 font-bold text-white/80">تصنيف السؤال</h3>
+				<div class="rounded-2xl border border-border bg-card text-card-foreground shadow-sm p-6">
+					<h3 class="mb-4 font-bold text-foreground/80">تصنيف السؤال</h3>
 					<div class="space-y-4">
 						<div class="space-y-2">
-							<label class="text-sm font-semibold text-white/50">تحديد التصنيف (Category) *</label>
+							<label class="text-sm font-semibold text-muted-foreground">تحديد التصنيف (Category) *</label>
 							<select
 								bind:value={categoryId}
-								class="w-full rounded-xl border border-white/10 bg-black/20 p-3 font-mono text-sm outline-none focus:border-emerald-500"
+								class="w-full rounded-xl border border-border bg-background p-3 font-mono text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 							>
 								{#if categories.length === 0}
 									<option class="bg-[#1a1b26]" value={null} disabled
@@ -182,10 +182,10 @@
 						</div>
 
 						<div class="space-y-2">
-							<label class="text-sm font-semibold text-white/50">مستوى الصعوبة</label>
+							<label class="text-sm font-semibold text-muted-foreground">مستوى الصعوبة</label>
 							<select
 								bind:value={difficulty}
-								class="w-full rounded-xl border border-white/10 bg-black/20 p-3 text-sm outline-none focus:border-emerald-500"
+								class="w-full rounded-xl border border-border bg-background p-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 							>
 								<option class="bg-[#1a1b26]" value="easy">سهل (Easy)</option>
 								<option class="bg-[#1a1b26]" value="medium">متوسط (Medium)</option>
@@ -193,13 +193,13 @@
 							</select>
 						</div>
 
-						<div class="mt-6 space-y-2 border-t border-white/10 pt-4">
-							<label class="text-sm font-semibold text-white/50">تلميح أو شرح (اختياري)</label>
+						<div class="mt-6 space-y-2 border-t border-border pt-4">
+							<label class="text-sm font-semibold text-muted-foreground">تلميح أو شرح (اختياري)</label>
 							<textarea
 								bind:value={explanation}
 								rows="4"
 								placeholder="شرح يظهر للطالب بعد الإجابة..."
-								class="w-full resize-none rounded-xl border border-white/10 bg-black/20 p-3 text-sm outline-none focus:border-emerald-500"
+								class="w-full resize-none rounded-xl border border-border bg-background p-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 							></textarea>
 						</div>
 					</div>
@@ -207,37 +207,37 @@
 			</div>
 
 			<div class="space-y-6 md:col-span-2">
-				<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-					<h3 class="mb-4 font-bold text-white/80">محتوى السؤال</h3>
+				<div class="rounded-2xl border border-border bg-card text-card-foreground shadow-sm p-6">
+					<h3 class="mb-4 font-bold text-foreground/80">محتوى السؤال</h3>
 
 					<div class="space-y-4">
 						<div class="grid gap-4 sm:grid-cols-2">
 							<div class="space-y-2">
-								<label class="text-sm font-semibold text-white/50">نص السؤال (بالعربية) *</label>
+								<label class="text-sm font-semibold text-muted-foreground">نص السؤال (بالعربية) *</label>
 								<textarea
 									bind:value={questionTextAr}
 									rows="3"
-									class="w-full resize-none rounded-xl border border-white/10 bg-black/20 p-3 text-sm outline-none focus:border-emerald-500"
+									class="w-full resize-none rounded-xl border border-border bg-background p-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 								></textarea>
 							</div>
 							<div class="space-y-2">
-								<label class="text-sm font-semibold text-white/50">نص السؤال (لغة أجنبية) *</label>
+								<label class="text-sm font-semibold text-muted-foreground">نص السؤال (لغة أجنبية) *</label>
 								<textarea
 									bind:value={questionText}
 									dir="ltr"
 									rows="3"
-									class="w-full resize-none rounded-xl border border-white/10 bg-black/20 p-3 text-left text-sm outline-none focus:border-emerald-500"
+									class="w-full resize-none rounded-xl border border-border bg-background p-3 text-left text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 								></textarea>
 							</div>
 						</div>
 
-						<div class="space-y-2 border-t border-white/10 pt-4">
-							<label class="text-sm font-semibold text-white/50"
+						<div class="space-y-2 border-t border-border pt-4">
+							<label class="text-sm font-semibold text-muted-foreground"
 								>نوع السؤال والمحتوى الديناميكي</label
 							>
 							<select
 								bind:value={type}
-								class="w-full rounded-xl border border-emerald-500/30 bg-black/20 p-4 text-emerald-400 outline-none focus:border-emerald-500"
+								class="w-full rounded-xl border border-emerald-500/30 bg-background p-4 text-emerald-400 outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 							>
 								{#each Object.entries(typeLabels) as [val, label]}
 									<option class="bg-[#1a1b26]" value={val}>{label}</option>
@@ -245,7 +245,7 @@
 							</select>
 						</div>
 
-						<div class="mt-4 rounded-xl border border-white/10 bg-black/20 p-6 shadow-inner">
+						<div class="mt-4 rounded-xl border border-border bg-background p-6 shadow-inner">
 							{#if type === 'mcq'}
 								<MCQForm bind:data={questionData} />
 							{:else if type === 'true_false'}
@@ -271,7 +271,7 @@
 					<button
 						onclick={save}
 						disabled={saving}
-						class="flex items-center gap-2 rounded-xl bg-emerald-600 px-8 py-3 font-bold text-white shadow-lg transition-all hover:bg-emerald-700 disabled:opacity-50"
+						class="flex items-center gap-2 rounded-xl bg-emerald-600 px-8 py-3 font-bold text-foreground shadow-lg transition-all hover:bg-emerald-700 disabled:opacity-50"
 					>
 						{#if saving}
 							<div

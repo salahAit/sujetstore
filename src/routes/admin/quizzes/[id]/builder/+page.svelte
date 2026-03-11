@@ -188,16 +188,16 @@
 <div class="mx-auto max-w-5xl space-y-6">
 	<!-- Header -->
 	<div
-		class="flex flex-col gap-4 border-b border-white/10 pb-4 sm:flex-row sm:items-center sm:justify-between"
+		class="flex flex-col gap-4 border-b border-border pb-4 sm:flex-row sm:items-center sm:justify-between"
 	>
 		<div class="flex items-center gap-4">
-			<a href="/admin/quizzes" class="text-white/50 transition-colors hover:text-white">
+			<a href="/admin/quizzes" class="text-muted-foreground transition-colors hover:text-white">
 				<ArrowRight size={24} />
 			</a>
 			<div>
 				<h1 class="text-2xl font-bold">بناء الأسئلة</h1>
 				{#if quiz}
-					<p class="text-sm text-white/50">{quiz.titleAr} • {questions.length} أسئلة</p>
+					<p class="text-sm text-muted-foreground">{quiz.titleAr} • {questions.length} أسئلة</p>
 				{/if}
 			</div>
 		</div>
@@ -211,7 +211,7 @@
 			</button>
 			<button
 				onclick={() => (showTypeSelector = true)}
-				class="flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2 font-bold text-white shadow-lg transition-all hover:bg-blue-700"
+				class="flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2 font-bold text-foreground shadow-lg transition-all hover:bg-blue-700"
 				disabled={editingQuestion !== null}
 			>
 				<Plus size={18} /> سؤال جديد
@@ -233,7 +233,7 @@
 	{#if editingQuestion}
 		<div class="relative rounded-2xl border border-blue-500/30 bg-blue-500/5 p-6">
 			<button
-				class="absolute top-4 left-4 text-white/50 hover:text-white"
+				class="absolute top-4 left-4 text-muted-foreground hover:text-white"
 				onclick={() => (editingQuestion = null)}>إلغاء</button
 			>
 			<h2 class="mb-6 flex items-center gap-2 text-xl font-bold">
@@ -261,7 +261,7 @@
 			tabindex="0"
 		>
 			<div
-				class="w-full max-w-2xl rounded-2xl border border-white/10 bg-slate-900 p-6 shadow-2xl"
+				class="w-full max-w-2xl rounded-2xl border border-border bg-slate-900 p-6 shadow-2xl"
 				onclick={(e) => e.stopPropagation()}
 				role="dialog"
 				aria-modal="true"
@@ -271,7 +271,7 @@
 					{#each QUESTION_TYPES as type}
 						<button
 							onclick={() => startAdding(type.id)}
-							class="flex flex-col items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 p-4 transition-all hover:border-blue-500 hover:bg-white/10"
+							class="flex flex-col items-center justify-center gap-2 rounded-xl border border-border bg-card text-card-foreground shadow-sm p-4 transition-all hover:border-blue-500 hover:bg-muted"
 						>
 							<div
 								class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-lg font-bold text-blue-400"
@@ -284,7 +284,7 @@
 				</div>
 				<button
 					onclick={() => (showTypeSelector = false)}
-					class="mt-6 w-full rounded-xl bg-white/5 py-3 text-center text-sm font-bold text-white/70 hover:bg-white/10"
+					class="mt-6 w-full rounded-xl bg-card text-card-foreground shadow-sm py-3 text-center text-sm font-bold text-foreground/80 hover:bg-muted"
 					>إلغاء</button
 				>
 			</div>
@@ -300,13 +300,13 @@
 					ondragstart={(e) => dragStart(e, index)}
 					ondragover={(e) => dragOver(e, index)}
 					ondrop={(e) => drop(e, index)}
-					class="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 transition-all hover:border-white/20 {draggedIndex ===
+					class="group flex items-center gap-4 rounded-xl border border-border bg-card text-card-foreground shadow-sm p-4 transition-all hover:border-border {draggedIndex ===
 					index
 						? 'border-dashed opacity-50'
 						: ''}"
 				>
 					<!-- Drag handle -->
-					<div class="cursor-grab text-white/30 hover:text-white/60 active:cursor-grabbing">
+					<div class="cursor-grab text-foreground/30 hover:text-white/60 active:cursor-grabbing">
 						<GripVertical size={20} />
 					</div>
 
@@ -317,10 +317,10 @@
 					</div>
 
 					<div class="flex-1 overflow-hidden">
-						<p class="truncate font-semibold text-white">
+						<p class="truncate font-semibold text-foreground">
 							{q.questionTextAr || 'صورة/سؤال بدون نص'}
 						</p>
-						<p class="mt-1 text-xs text-white/50">
+						<p class="mt-1 text-xs text-muted-foreground">
 							نوع: {QUESTION_TYPES.find((t) => t.id === q.type)?.name} • النقاط: {q.points}
 						</p>
 					</div>
@@ -329,7 +329,7 @@
 					<div class="flex items-center gap-2 opacity-0 transition-opacity group-hover:opacity-100">
 						<button
 							onclick={() => (editingQuestion = JSON.parse(JSON.stringify(q)))}
-							class="rounded-lg bg-white/5 p-2 transition-colors hover:bg-white/10"
+							class="rounded-lg bg-card text-card-foreground shadow-sm p-2 transition-colors hover:bg-muted"
 							title="تعديل"
 						>
 							<Edit2 size={16} />
@@ -347,7 +347,7 @@
 		</div>
 	{:else if !loadingData && questions.length === 0}
 		<div
-			class="flex flex-col items-center justify-center rounded-2xl border border-dashed border-white/10 py-16 text-white/50"
+			class="flex flex-col items-center justify-center rounded-2xl border border-dashed border-border py-16 text-muted-foreground"
 		>
 			<Brain size={48} class="mb-4 opacity-50" />
 			<p>لا توجد أسئلة في هذا التمرين بعد.</p>

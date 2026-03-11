@@ -43,13 +43,13 @@
 <!-- Stats Grid -->
 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 	{#each stats as stat}
-		<div class="glass-card rounded-2xl border border-white/10 p-6 shadow-sm">
+		<div class="bg-backgroundard text-card-foreground border-border rounded-2xl border p-6 shadow-sm">
 			<div class="flex items-center justify-between">
 				<div>
 					<p class="text-muted-foreground text-sm font-medium">{stat.name}</p>
 					<p class="mt-2 text-3xl font-bold">{stat.value}</p>
 				</div>
-				<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 {stat.color}">
+				<div class="bg-secondary {stat.color} flex h-12 w-12 items-center justify-center rounded-xl">
 					<stat.icon size={24} />
 				</div>
 			</div>
@@ -63,7 +63,7 @@
 	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 		<a
 			href="/admin/documents"
-			class="group glass-card flex items-center gap-4 rounded-xl border border-white/10 p-4 transition-all hover:bg-white/5"
+			class="group bg-backgroundard text-card-foreground border-border hover:bg-secondary flex items-center gap-4 rounded-xl border p-4 transition-all"
 		>
 			<div class="bg-primary/20 text-primary flex h-10 w-10 items-center justify-center rounded-lg">
 				<FileText size={20} />
@@ -75,7 +75,7 @@
 		</a>
 		<a
 			href="/admin/subjects"
-			class="group glass-card flex items-center gap-4 rounded-xl border border-white/10 p-4 transition-all hover:bg-white/5"
+			class="group bg-backgroundard text-card-foreground border-border hover:bg-secondary flex items-center gap-4 rounded-xl border p-4 transition-all"
 		>
 			<div
 				class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/20 text-purple-500"
@@ -89,7 +89,7 @@
 		</a>
 		<a
 			href="/admin/years"
-			class="group glass-card flex items-center gap-4 rounded-xl border border-white/10 p-4 transition-all hover:bg-white/5"
+			class="group bg-backgroundard text-card-foreground border-border hover:bg-secondary flex items-center gap-4 rounded-xl border p-4 transition-all"
 		>
 			<div
 				class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20 text-blue-500"
