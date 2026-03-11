@@ -8,7 +8,9 @@
 </script>
 
 <div class="space-y-4">
-	<div class="rounded-2xl border-2 border-white/10 bg-white/5 p-6">
+	<div
+		class="border-border bg-secondary/50 rounded-2xl border-2 p-6 dark:border-white/10 dark:bg-white/5"
+	>
 		<textarea
 			bind:value={answer}
 			oninput={handleInput}

@@ -42,7 +42,7 @@
 		const y = Math.round(((clientY - rect.top) / rect.height) * 100);
 
 		placed = { ...placed, [activeLabel]: { x, y } };
-		pool = pool.filter(i => i !== activeLabel);
+		pool = pool.filter((i) => i !== activeLabel);
 		activeLabel = null;
 
 		checkAnswer();
@@ -72,7 +72,7 @@
 
 <div class="space-y-4">
 	{#if activeLabel !== null}
-		<div class="text-center text-sm text-blue-400 font-bold animate-pulse">
+		<div class="animate-pulse text-center text-sm font-bold text-blue-400">
 			📍 اضغط على الصورة لوضع: "{data.labels?.[activeLabel]?.text}"
 		</div>
 	{/if}
@@ -84,13 +84,20 @@
 		bind:this={containerRef}
 		onclick={placeOnImage}
 		ontouchstart={placeOnImage}
-		class="relative mx-auto max-w-lg overflow-hidden rounded-xl border border-white/10 {activeLabel !== null ? 'cursor-crosshair ring-2 ring-blue-500/50' : 'cursor-default'}"
+		class="border-border relative mx-auto max-w-lg overflow-hidden rounded-xl border dark:border-white/10 {activeLabel !==
+		null
+			? 'cursor-crosshair ring-2 ring-blue-500/50'
+			: 'cursor-default'}"
 		role="img"
 	>
 		{#if data.imageUrl}
-			<img src={data.imageUrl} alt="ضع التسميات في أماكنها" class="w-full pointer-events-none select-none" />
+			<img
+				src={data.imageUrl}
+				alt="ضع التسميات في أماكنها"
+				class="pointer-events-none w-full select-none"
+			/>
 		{:else}
-			<div class="flex h-48 items-center justify-center bg-white/5 text-sm text-white/30">
+			<div class="bg-muted text-muted-foreground/50 flex h-48 items-center justify-center text-sm">
 				رسم تخطيطي
 			</div>
 		{/if}
@@ -99,9 +106,12 @@
 		{#each Object.entries(placed) as [idxStr, pos]}
 			{@const idx = parseInt(idxStr)}
 			<button
-				onclick={(e) => { e.stopPropagation(); removePlaced(idx); }}
+				onclick={(e) => {
+					e.stopPropagation();
+					removePlaced(idx);
+				}}
 				{disabled}
-				class="absolute -translate-x-1/2 -translate-y-1/2 rounded-lg bg-blue-600 px-2 py-1 text-xs font-bold text-white shadow-lg transition-all hover:bg-red-500 hover:scale-110"
+				class="absolute -translate-x-1/2 -translate-y-1/2 rounded-lg bg-blue-600 px-2 py-1 text-xs font-bold text-white shadow-lg transition-all hover:scale-110 hover:bg-red-500"
 				style="left: {pos.x}%; top: {pos.y}%;"
 				title="اضغط للإزالة"
 			>
@@ -111,7 +121,7 @@
 
 		<!-- Show correct positions after result -->
 		{#if showResult}
-			{#each (data.labels || []) as label, i}
+			{#each data.labels || [] as label, i}
 				<div
 					class="absolute -translate-x-1/2 -translate-y-1/2 rounded border-2 border-dashed border-emerald-400/60 px-1.5 py-0.5 text-[10px] font-bold text-emerald-400"
 					style="left: {label.correctX}%; top: {label.correctY}%;"
@@ -123,12 +133,14 @@
 	</div>
 
 	<!-- Label pool -->
-	<div class="flex flex-wrap gap-2 justify-center">
+	<div class="flex flex-wrap justify-center gap-2">
 		{#each pool as idx}
 			<button
 				onclick={() => selectLabel(idx)}
 				{disabled}
-				class="rounded-lg px-3 py-1.5 text-sm font-bold transition-all {activeLabel === idx ? 'bg-blue-600 text-white ring-2 ring-blue-400' : 'border border-white/20 bg-white/10 text-white/80 hover:bg-white/20'} disabled:opacity-50 active:scale-95"
+				class="rounded-lg px-3 py-1.5 text-sm font-bold transition-all {activeLabel === idx
+					? 'bg-blue-600 text-white ring-2 ring-blue-400'
+					: 'border-border bg-secondary text-foreground/80 hover:bg-secondary/40 border dark:border-white/20 dark:bg-white/10 dark:text-white/80 dark:hover:bg-white/20'} active:scale-95 disabled:opacity-50"
 			>
 				{data.labels?.[idx]?.text}
 			</button>
@@ -136,7 +148,11 @@
 	</div>
 
 	{#if showResult}
-		<div class="mt-2 rounded-lg p-3 text-center text-sm font-bold {isCorrect ? 'bg-emerald-500/20 text-emerald-400' : 'bg-red-500/20 text-red-400'}">
+		<div
+			class="mt-2 rounded-lg p-3 text-center text-sm font-bold {isCorrect
+				? 'bg-emerald-500/20 text-emerald-400'
+				: 'bg-red-500/20 text-red-400'}"
+		>
 			{isCorrect ? '✓ جميع التسميات في أماكنها الصحيحة!' : '✗ بعض التسميات ليست في أماكنها الصحيحة'}
 		</div>
 	{/if}

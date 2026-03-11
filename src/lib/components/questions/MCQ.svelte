@@ -29,13 +29,13 @@
 			class="flex w-full items-center gap-3 rounded-xl border-2 p-4 text-right transition-all duration-200 {selected ===
 			i
 				? 'border-blue-500 bg-blue-500/10 shadow-md shadow-blue-500/10'
-				: 'border-white/10 bg-white/5 hover:border-white/20 hover:bg-white/10'}"
+				: 'border-border bg-secondary/50 hover:bg-secondary/80 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10'}"
 		>
 			<span
 				class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold {selected ===
 				i
 					? 'bg-blue-500 text-white'
-					: 'text-muted-foreground bg-white/10'}"
+					: 'text-muted-foreground bg-muted'}"
 			>
 				{String.fromCharCode(1571 + i)}
 			</span>

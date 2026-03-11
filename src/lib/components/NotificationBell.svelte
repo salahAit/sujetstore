@@ -48,7 +48,7 @@
 <div class="relative">
 	<button
 		onclick={toggle}
-		class="text-muted-foreground relative rounded-lg p-2 transition-colors hover:bg-white/5"
+		class="text-muted-foreground relative rounded-lg p-2 transition-colors hover:bg-black/5 dark:hover:bg-white/5"
 		title="الإشعارات"
 	>
 		<Bell size={20} />
@@ -83,7 +83,9 @@
 					<p class="text-muted-foreground px-4 py-8 text-center text-sm">لا توجد إشعارات</p>
 				{:else}
 					{#each notifications as notif}
-						<div class="border-b px-4 py-3 transition-colors last:border-0 hover:bg-white/5">
+						<div
+							class="border-b px-4 py-3 transition-colors last:border-0 hover:bg-black/5 dark:hover:bg-white/5"
+						>
 							<div class="flex items-start justify-between gap-2">
 								<p class="text-sm font-semibold">{notif.title}</p>
 								<span class="text-muted-foreground shrink-0 text-[10px]"

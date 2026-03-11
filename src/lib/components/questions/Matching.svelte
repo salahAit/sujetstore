@@ -50,10 +50,10 @@
 					disabled={isLeftMatched(i)}
 					class="w-full rounded-xl border-2 p-3 text-right font-semibold transition-all {selectedLeft ===
 					i
-						? 'border-blue-500 bg-blue-500/15 text-blue-300 shadow-md'
+						? 'border-blue-500 bg-blue-500/15 text-blue-600 shadow-md dark:text-blue-300'
 						: isLeftMatched(i)
-							? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-400 opacity-70'
-							: 'border-white/10 bg-white/5 hover:border-white/20'}"
+							? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-600 opacity-70 dark:text-emerald-400'
+							: 'border-border bg-secondary/50 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20'}"
 				>
 					{pair.left}
 				</button>
@@ -69,8 +69,8 @@
 					class="w-full rounded-xl border-2 p-3 text-right font-semibold transition-all {isRightMatched(
 						ri
 					)
-						? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-400 opacity-70'
-						: 'border-white/10 bg-white/5 hover:border-amber-500/30 hover:bg-amber-500/5'}"
+						? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-600 opacity-70 dark:text-emerald-400'
+						: 'border-border bg-secondary/50 hover:border-amber-500/30 hover:bg-amber-500/10 dark:border-white/10 dark:bg-white/5 dark:hover:bg-amber-500/5'}"
 				>
 					{pairs[ri].right}
 				</button>

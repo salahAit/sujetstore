@@ -91,7 +91,7 @@
 <!-- Search Trigger Button -->
 <button
 	onclick={open}
-	class="text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-sm transition-colors hover:bg-white/10"
+	class="text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-lg border border-black/5 bg-black/5 px-3 py-1.5 text-sm transition-colors hover:bg-black/10 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
 	title="بحث (Ctrl+K)"
 >
 	<Search size={16} />
@@ -113,10 +113,10 @@
 		}}
 	>
 		<div
-			class="bg-card w-full max-w-lg overflow-hidden rounded-xl border border-white/10 shadow-2xl"
+			class="bg-card w-full max-w-lg overflow-hidden rounded-xl border border-black/5 shadow-2xl dark:border-white/10"
 		>
 			<!-- Search Input -->
-			<div class="flex items-center gap-3 border-b border-white/10 px-4 py-3">
+			<div class="flex items-center gap-3 border-b border-black/5 px-4 py-3 dark:border-white/10">
 				<Search size={20} class="text-muted-foreground shrink-0" />
 				<input
 					bind:this={inputRef}
@@ -151,10 +151,10 @@
 							class="flex w-full items-start gap-3 px-4 py-3 text-right transition-colors {i ===
 							selectedIndex
 								? 'bg-primary/10 text-primary'
-								: 'hover:bg-white/5'}"
+								: 'hover:bg-black/5 dark:hover:bg-white/5'}"
 						>
 							<div
-								class="text-muted-foreground mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5"
+								class="text-muted-foreground mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-black/5 dark:bg-white/5"
 							>
 								{#if doc.type === 'exam'}
 									<FileText size={16} />
@@ -190,7 +190,7 @@
 
 			<!-- Footer -->
 			<div
-				class="text-muted-foreground flex items-center justify-between border-t border-white/10 px-4 py-2 text-xs"
+				class="text-muted-foreground flex items-center justify-between border-t border-black/5 px-4 py-2 text-xs dark:border-white/10"
 			>
 				<span>↑↓ للتنقل · Enter للفتح · Esc للإغلاق</span>
 			</div>

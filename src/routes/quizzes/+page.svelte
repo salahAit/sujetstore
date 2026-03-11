@@ -5,9 +5,9 @@
 	let { data }: { data: any } = $props();
 
 	const difficultyLabels: Record<string, { label: string; color: string }> = {
-		easy: { label: 'سهل', color: 'text-emerald-400' },
-		medium: { label: 'متوسط', color: 'text-amber-400' },
-		hard: { label: 'صعب', color: 'text-red-400' }
+		easy: { label: 'سهل', color: 'text-emerald-600 dark:text-emerald-400' },
+		medium: { label: 'متوسط', color: 'text-amber-600 dark:text-amber-400' },
+		hard: { label: 'صعب', color: 'text-red-600 dark:text-red-400' }
 	};
 </script>
 
@@ -53,7 +53,7 @@
 
 					<div class="mb-4 flex items-center gap-3">
 						<div
-							class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-purple-400"
+							class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400"
 						>
 							<DynamicIcon name={row.subject.icon || 'BookOpen'} size={24} />
 						</div>
@@ -63,7 +63,9 @@
 						</div>
 					</div>
 
-					<h3 class="mb-2 text-lg font-bold transition-colors group-hover:text-purple-400">
+					<h3
+						class="mb-2 text-lg font-bold transition-colors group-hover:text-purple-600 dark:group-hover:text-purple-400"
+					>
 						{quiz.titleAr || quiz.title}
 					</h3>
 

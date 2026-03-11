@@ -39,7 +39,7 @@
 
 	function checkAnswer() {
 		if (arranged.length === (data.words || []).length) {
-			const order = arranged.map(w => w.origIdx);
+			const order = arranged.map((w) => w.origIdx);
 			const correct = JSON.stringify(order) === JSON.stringify(data.correctOrder);
 			onAnswer?.({ order, correct });
 		}
@@ -50,9 +50,14 @@
 
 <div class="space-y-4">
 	<!-- Arranged sentence -->
-	<div class="min-h-[56px] rounded-xl border-2 border-dashed border-white/20 bg-white/5 p-3 flex flex-wrap gap-2 {arranged.length === 0 ? 'items-center justify-center' : ''}">
+	<div
+		class="flex min-h-[56px] flex-wrap gap-2 rounded-xl border-2 border-dashed border-black/10 bg-black/5 p-3 dark:border-white/20 dark:bg-white/5 {arranged.length ===
+		0
+			? 'items-center justify-center'
+			: ''}"
+	>
 		{#if arranged.length === 0}
-			<span class="text-sm text-white/30">اضغط على الكلمات لترتيب الجملة</span>
+			<span class="text-muted-foreground/50 text-sm">اضغط على الكلمات لترتيب الجملة</span>
 		{:else}
 			{#each arranged as word, i}
 				<button
@@ -67,12 +72,12 @@
 	</div>
 
 	<!-- Word pool -->
-	<div class="flex flex-wrap gap-2 justify-center">
+	<div class="flex flex-wrap justify-center gap-2">
 		{#each shuffledWords as word, i}
 			<button
 				onclick={() => addWord(i)}
 				{disabled}
-				class="rounded-lg border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-bold text-white/80 transition-all hover:bg-white/20 active:scale-95 disabled:opacity-50"
+				class="bg-secondary text-secondary-foreground/80 hover:bg-secondary/80 rounded-lg border border-black/10 px-3 py-1.5 text-sm font-bold transition-all active:scale-95 disabled:opacity-50 dark:border-white/20 dark:bg-white/10 dark:text-white/80 dark:hover:bg-white/20"
 			>
 				{word.text}
 			</button>
@@ -80,8 +85,14 @@
 	</div>
 
 	{#if showResult}
-		<div class="mt-2 rounded-lg p-3 text-center text-sm font-bold {isCorrect ? 'bg-emerald-500/20 text-emerald-400' : 'bg-red-500/20 text-red-400'}">
-			{isCorrect ? '✓ ترتيب صحيح!' : `✗ الترتيب الصحيح: ${data.words?.filter((_:any, i:number) => data.correctOrder.includes(i)).join(' ') || ''}`}
+		<div
+			class="mt-2 rounded-lg p-3 text-center text-sm font-bold {isCorrect
+				? 'bg-emerald-500/20 text-emerald-400'
+				: 'bg-red-500/20 text-red-400'}"
+		>
+			{isCorrect
+				? '✓ ترتيب صحيح!'
+				: `✗ الترتيب الصحيح: ${data.words?.filter((_: any, i: number) => data.correctOrder.includes(i)).join(' ') || ''}`}
 		</div>
 	{/if}
 </div>

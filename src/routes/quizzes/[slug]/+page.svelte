@@ -324,9 +324,9 @@
 		<!-- Mode Selection Screen -->
 		<div class="py-10 text-center">
 			<div
-				class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-purple-500/10"
+				class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-purple-500/10 dark:bg-purple-500/20"
 			>
-				<Brain size={40} class="text-purple-400" />
+				<Brain size={40} class="text-purple-600 dark:text-purple-400" />
 			</div>
 			<h1 class="mb-2 text-2xl font-extrabold sm:text-3xl">{quiz.titleAr || quiz.title}</h1>
 			{#if quiz.description}
@@ -361,7 +361,7 @@
 				<!-- Practice Mode -->
 				<button
 					onclick={() => startQuiz('practice')}
-					class="group flex items-center justify-center gap-3 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 px-8 py-4 text-lg font-bold text-emerald-400 transition-all hover:-translate-y-0.5 hover:bg-emerald-500/20"
+					class="group flex items-center justify-center gap-3 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 px-8 py-4 text-lg font-bold text-emerald-600 transition-all hover:-translate-y-0.5 hover:bg-emerald-500/20 dark:text-emerald-400"
 				>
 					<BookOpen size={22} class="transition-transform group-hover:scale-110" />
 					وضع التدريب
@@ -372,7 +372,7 @@
 			<!-- Share -->
 			<button
 				onclick={copyLink}
-				class="text-muted-foreground mt-8 inline-flex items-center gap-2 text-sm hover:text-white"
+				class="text-muted-foreground hover:text-foreground mt-8 inline-flex items-center gap-2 text-sm"
 			>
 				<Share2 size={16} /> نسخ رابط التمرين
 			</button>
@@ -383,7 +383,9 @@
 			<div class="flex items-center justify-between">
 				<h1 class="text-lg font-bold sm:text-xl">{quiz.titleAr || quiz.title}</h1>
 				{#if mode === 'practice'}
-					<span class="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-bold text-emerald-400">
+					<span
+						class="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-bold text-emerald-600 dark:text-emerald-400"
+					>
 						<BookOpen size={12} class="-mt-0.5 mr-1 inline" /> وضع التدريب
 					</span>
 				{/if}
@@ -443,8 +445,8 @@
 								? 'bg-emerald-500/30 text-emerald-300'
 								: 'bg-red-500/30 text-red-300'
 							: answers[q.id]
-								? 'bg-purple-500/20 text-purple-300'
-								: 'text-muted-foreground bg-white/10 hover:bg-white/20'}"
+								? 'bg-purple-500/20 text-purple-600 dark:text-purple-300'
+								: 'text-muted-foreground bg-black/5 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20'}"
 				>
 					{i + 1}
 				</button>
@@ -457,7 +459,7 @@
 				<div class="bg-card rounded-2xl border p-6 shadow-sm sm:p-8">
 					<div class="mb-4 flex items-center justify-between">
 						<span
-							class="rounded-full bg-purple-500/15 px-3 py-1 text-xs font-semibold text-purple-400"
+							class="rounded-full bg-purple-500/15 px-3 py-1 text-xs font-semibold text-purple-600 dark:text-purple-400"
 						>
 							{typeLabels[currentQuestion.type] || currentQuestion.type}
 						</span>
@@ -518,8 +520,8 @@
 						>
 							<div
 								class="flex items-center gap-2 font-bold {practiceResults[currentQuestion.id]
-									? 'text-emerald-400'
-									: 'text-red-400'}"
+									? 'text-emerald-600 dark:text-emerald-400'
+									: 'text-red-600 dark:text-red-400'}"
 							>
 								{#if practiceResults[currentQuestion.id]}
 									<CheckCircle size={20} /> إجابة صحيحة! 🎉
@@ -529,12 +531,16 @@
 							</div>
 							{#if !practiceResults[currentQuestion.id]}
 								<p class="mt-2 text-sm">
-									<span class="font-semibold text-emerald-400">الإجابة الصحيحة:</span>
+									<span class="font-semibold text-emerald-600 dark:text-emerald-400"
+										>الإجابة الصحيحة:</span
+									>
 									{getCorrectAnswer(currentQuestion)}
 								</p>
 							{/if}
 							{#if currentQuestion.explanation}
-								<p class="mt-2 rounded-lg bg-amber-500/10 p-3 text-sm text-amber-300">
+								<p
+									class="mt-2 rounded-lg bg-amber-500/10 p-3 text-sm text-amber-700 dark:text-amber-300"
+								>
 									💡 <span class="font-semibold">شرح:</span>
 									{currentQuestion.explanation}
 								</p>
@@ -549,7 +555,7 @@
 				<button
 					onclick={prev}
 					disabled={currentIndex === 0}
-					class="flex items-center gap-1 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-white/10 disabled:opacity-30"
+					class="flex items-center gap-1 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-black/5 disabled:opacity-30 dark:hover:bg-white/10"
 				>
 					<ChevronRight size={18} /> السابق
 				</button>
@@ -572,7 +578,7 @@
 				{:else}
 					<button
 						onclick={next}
-						class="flex items-center gap-1 rounded-lg bg-purple-600/20 px-4 py-2.5 text-sm font-semibold text-purple-300 transition-colors hover:bg-purple-600/30"
+						class="flex items-center gap-1 rounded-lg bg-purple-500/10 px-4 py-2.5 text-sm font-semibold text-purple-600 transition-colors hover:bg-purple-500/20 dark:bg-purple-600/20 dark:text-purple-300 dark:hover:bg-purple-600/30"
 					>
 						التالي <ChevronLeft size={18} />
 					</button>
@@ -600,7 +606,7 @@
 						fill="none"
 						stroke="currentColor"
 						stroke-width="8"
-						class="text-white/10"
+						class="text-black/5 dark:text-white/10"
 					/>
 					<circle
 						cx="60"
@@ -615,7 +621,11 @@
 					/>
 				</svg>
 				<div>
-					<p class="text-4xl font-extrabold {passed ? 'text-emerald-400' : 'text-red-400'}">
+					<p
+						class="text-4xl font-extrabold {passed
+							? 'text-emerald-600 dark:text-emerald-400'
+							: 'text-red-600 dark:text-red-400'}"
+					>
 						{percentage}%
 					</p>
 					<p class="text-muted-foreground text-sm">{results.score}/{results.total}</p>
@@ -627,7 +637,9 @@
 			</h2>
 			<p class="text-muted-foreground mb-2">الوقت: {formatTime(elapsed)}</p>
 			{#if mode === 'practice'}
-				<p class="mb-4 text-sm text-emerald-400">وضع التدريب — لم يتم حفظ النتيجة</p>
+				<p class="mb-4 text-sm text-emerald-600 dark:text-emerald-400">
+					وضع التدريب — لم يتم حفظ النتيجة
+				</p>
 			{/if}
 			<p class="text-muted-foreground mb-6">
 				{passed ? 'لقد اجتزت التمرين بنجاح!' : `تحتاج ${quiz.passingScore || 60}% للنجاح`}
@@ -636,7 +648,7 @@
 			<!-- Toggle Review -->
 			<button
 				onclick={() => (showReview = !showReview)}
-				class="mb-6 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-2.5 text-sm font-bold transition-all hover:bg-white/10"
+				class="mb-6 inline-flex items-center gap-2 rounded-xl border border-black/10 bg-black/5 px-6 py-2.5 text-sm font-bold transition-all hover:bg-black/10 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
 			>
 				{#if showReview}
 					<EyeOff size={16} /> إخفاء مراجعة الإجابات
@@ -717,13 +729,13 @@
 				</button>
 				<button
 					onclick={copyLink}
-					class="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 font-bold transition-all hover:bg-white/10"
+					class="flex items-center gap-2 rounded-xl border border-black/10 bg-black/5 px-6 py-3 font-bold transition-all hover:bg-black/10 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
 				>
 					<Share2 size={18} /> مشاركة
 				</button>
 				<a
 					href="/quizzes"
-					class="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 font-bold transition-all hover:bg-white/10"
+					class="flex items-center gap-2 rounded-xl border border-black/10 bg-black/5 px-6 py-3 font-bold transition-all hover:bg-black/10 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
 				>
 					تمارين أخرى
 				</a>

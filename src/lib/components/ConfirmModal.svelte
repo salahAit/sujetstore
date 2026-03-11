@@ -38,13 +38,13 @@
 					<AlertTriangle size={28} />
 				</div>
 
-				<h3 class="mb-2 text-xl font-bold text-white">{title}</h3>
-				<p class="mb-6 text-sm text-white/70">{message}</p>
+				<h3 class="text-foreground mb-2 text-xl font-bold">{title}</h3>
+				<p class="text-muted-foreground mb-6 text-sm">{message}</p>
 
 				<div class="flex w-full gap-3">
 					<button
 						onclick={() => (isOpen = false)}
-						class="flex-1 rounded-xl border border-white/10 bg-white/5 py-2.5 font-bold text-white transition-colors hover:bg-white/10"
+						class="text-foreground bg-secondary hover:bg-secondary/80 flex-1 rounded-xl border border-black/5 py-2.5 font-bold transition-colors dark:border-white/10"
 					>
 						{cancelText}
 					</button>

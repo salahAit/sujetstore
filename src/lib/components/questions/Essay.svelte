@@ -35,12 +35,15 @@
 		{disabled}
 		rows="6"
 		placeholder="اكتب إجابتك هنا..."
-		class="w-full rounded-xl border border-white/10 bg-black/20 p-4 text-sm leading-relaxed outline-none transition-all focus:border-blue-500 disabled:opacity-50 resize-y"
+		class="border-border bg-muted/30 w-full resize-y rounded-xl border p-4 text-sm leading-relaxed transition-all outline-none focus:border-blue-500 disabled:opacity-50 dark:border-white/10 dark:bg-black/20"
 	></textarea>
 
-	<div class="flex items-center justify-between text-xs text-white/50">
+	<div class="text-muted-foreground flex items-center justify-between text-xs">
 		<span>
-			عدد الكلمات: <span class="font-bold {wordCount < minWords ? 'text-amber-400' : 'text-emerald-400'}">{wordCount}</span>
+			عدد الكلمات: <span
+				class="font-bold {wordCount < minWords ? 'text-amber-400' : 'text-emerald-400'}"
+				>{wordCount}</span
+			>
 			{#if minWords > 0}
 				<span> / الحد الأدنى: {minWords}</span>
 			{/if}
@@ -52,8 +55,14 @@
 
 	{#if showResult}
 		{#if data.keywords?.length}
-			<div class="rounded-lg p-3 text-sm {isCorrect ? 'bg-emerald-500/20 text-emerald-400' : 'bg-amber-500/20 text-amber-400'}">
-				{isCorrect ? '✓ الإجابة تحتوي على الكلمات المفتاحية المطلوبة' : '✗ الإجابة لا تحتوي على بعض الكلمات المفتاحية المطلوبة'}
+			<div
+				class="rounded-lg p-3 text-sm {isCorrect
+					? 'bg-emerald-500/20 text-emerald-400'
+					: 'bg-amber-500/20 text-amber-400'}"
+			>
+				{isCorrect
+					? '✓ الإجابة تحتوي على الكلمات المفتاحية المطلوبة'
+					: '✗ الإجابة لا تحتوي على بعض الكلمات المفتاحية المطلوبة'}
 			</div>
 		{:else}
 			<div class="rounded-lg bg-blue-500/20 p-3 text-sm text-blue-400">

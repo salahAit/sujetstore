@@ -25,7 +25,9 @@
 <ModeWatcher />
 
 <!-- Navbar -->
-<nav class="bg-background/80 sticky top-0 z-50 border-b border-white/10 backdrop-blur-xl">
+<nav
+	class="bg-background/80 sticky top-0 z-50 border-b border-black/5 backdrop-blur-xl dark:border-white/10"
+>
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-16 items-center justify-between">
 			<a href="/" class="flex items-center gap-3 text-xl font-bold" dir="ltr">
@@ -77,7 +79,11 @@
 				</a>
 				<a
 					href="/achievements"
-					class="text-muted-foreground flex items-center gap-1 font-semibold transition-colors hover:text-amber-400 {$page.url.pathname.startsWith('/achievements') ? 'text-amber-400' : ''}"
+					class="text-muted-foreground flex items-center gap-1 font-semibold transition-colors hover:text-amber-400 {$page.url.pathname.startsWith(
+						'/achievements'
+					)
+						? 'text-amber-400'
+						: ''}"
 				>
 					<Trophy size={18} /> إنجازاتي
 				</a>
@@ -114,8 +120,8 @@
 					<span class="hidden dark:block"><Sun size={20} /></span>
 				</button>
 				<button
-					class="text-muted-foreground hover:text-foreground rounded-lg p-2 transition-colors hover:bg-white/5 md:hidden {isMobileMenuOpen
-						? 'text-foreground bg-white/5'
+					class="text-muted-foreground hover:text-foreground rounded-lg p-2 transition-colors hover:bg-black/5 md:hidden dark:hover:bg-white/5 {isMobileMenuOpen
+						? 'text-foreground bg-black/5 dark:bg-white/5'
 						: ''}"
 					onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)}
 					title="القائمة"
@@ -145,7 +151,7 @@
 		<!-- Mobile Menu -->
 		{#if isMobileMenuOpen}
 			<div
-				class="animate-in slide-in-from-top-4 fade-in mt-1 space-y-2 border-t border-white/10 py-4 duration-200 md:hidden dark:border-white/5"
+				class="animate-in slide-in-from-top-4 fade-in mt-1 space-y-2 border-t border-black/5 py-4 duration-200 md:hidden dark:border-white/5"
 			>
 				<a
 					href="/primaire"
@@ -182,7 +188,11 @@
 				</a>
 				<a
 					href="/achievements"
-					class="text-muted-foreground flex items-center gap-3 rounded-xl px-4 py-3 font-semibold transition-colors hover:bg-amber-500/10 hover:text-amber-500 dark:hover:text-amber-400 {$page.url.pathname.startsWith('/achievements') ? 'bg-amber-500/10 text-amber-500 dark:text-amber-400' : ''}"
+					class="text-muted-foreground flex items-center gap-3 rounded-xl px-4 py-3 font-semibold transition-colors hover:bg-amber-500/10 hover:text-amber-500 dark:hover:text-amber-400 {$page.url.pathname.startsWith(
+						'/achievements'
+					)
+						? 'bg-amber-500/10 text-amber-500 dark:text-amber-400'
+						: ''}"
 					onclick={() => (isMobileMenuOpen = false)}
 				>
 					<Trophy size={20} /> الإنجازات
@@ -198,7 +208,7 @@
 </main>
 
 <!-- Footer -->
-<footer class="bg-background/50 border-t border-white/10 py-12">
+<footer class="bg-background/50 border-t border-black/5 py-12 dark:border-white/10">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
 			<!-- Brand -->
@@ -265,7 +275,9 @@
 			</div>
 		</div>
 
-		<div class="text-muted-foreground mt-8 border-t border-white/5 pt-8 text-center text-sm">
+		<div
+			class="text-muted-foreground mt-8 border-t border-black/5 pt-8 text-center text-sm dark:border-white/5"
+		>
 			<p>© {new Date().getFullYear()} SujetStore - جميع الحقوق محفوظة</p>
 		</div>
 	</div>

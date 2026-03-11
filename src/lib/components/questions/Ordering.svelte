@@ -38,11 +38,11 @@
 			class="flex cursor-grab items-center gap-3 rounded-xl border-2 p-4 transition-all duration-200 active:cursor-grabbing {dragIndex ===
 			i
 				? 'scale-[1.02] border-blue-500 bg-blue-500/10 shadow-lg'
-				: 'border-white/10 bg-white/5 hover:border-white/20'}"
+				: 'border-border bg-secondary/50 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20'}"
 		>
 			<GripVertical size={20} class="text-muted-foreground shrink-0" />
 			<span
-				class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-500/20 text-xs font-bold text-blue-400"
+				class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-500/20 text-xs font-bold text-blue-600 dark:text-blue-400"
 			>
 				{i + 1}
 			</span>

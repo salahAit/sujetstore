@@ -65,15 +65,15 @@
 			<!-- Tabs -->
 			<div class="mb-6 flex gap-2 overflow-x-auto">
 				<button onclick={() => activeTab = 'badges'}
-					class="flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-bold transition-all {activeTab === 'badges' ? 'bg-amber-600 text-white' : 'bg-white/5 text-white/60 hover:bg-white/10'}">
+					class="flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-bold transition-all {activeTab === 'badges' ? 'bg-amber-600 text-white' : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'}">
 					<Medal size={16} /> الشارات
 				</button>
 				<button onclick={() => activeTab = 'leaderboard'}
-					class="flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-bold transition-all {activeTab === 'leaderboard' ? 'bg-blue-600 text-white' : 'bg-white/5 text-white/60 hover:bg-white/10'}">
+					class="flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-bold transition-all {activeTab === 'leaderboard' ? 'bg-blue-600 text-white' : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'}">
 					<Crown size={16} /> لوحة الصدارة
 				</button>
 				<button onclick={() => activeTab = 'history'}
-					class="flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-bold transition-all {activeTab === 'history' ? 'bg-emerald-600 text-white' : 'bg-white/5 text-white/60 hover:bg-white/10'}">
+					class="flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-bold transition-all {activeTab === 'history' ? 'bg-emerald-600 text-white' : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'}">
 					<TrendingUp size={16} /> السجل
 				</button>
 			</div>
@@ -104,28 +104,28 @@
 				<div class="bg-card rounded-xl border overflow-hidden">
 					<table class="w-full text-sm">
 						<thead>
-							<tr class="border-b border-white/10">
-								<th class="p-3 text-right font-bold text-white/70">#</th>
-								<th class="p-3 text-right font-bold text-white/70">اللاعب</th>
-								<th class="p-3 text-center font-bold text-white/70">التمارين</th>
-								<th class="p-3 text-center font-bold text-white/70">النقاط</th>
+							<tr class="border-b">
+								<th class="text-muted-foreground p-3 text-right font-bold">#</th>
+								<th class="text-muted-foreground p-3 text-right font-bold">اللاعب</th>
+								<th class="text-muted-foreground p-3 text-center font-bold">التمارين</th>
+								<th class="text-muted-foreground p-3 text-center font-bold">النقاط</th>
 							</tr>
 						</thead>
 						<tbody>
 							{#each data.leaderboard as player, i}
-								<tr class="border-b border-white/5 transition-colors hover:bg-white/5">
-									<td class="p-3 font-bold {i === 0 ? 'text-amber-500' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-700' : 'text-white/50'}">
+								<tr class="hover:bg-muted/50 border-b transition-colors">
+									<td class="p-3 font-bold {i === 0 ? 'text-amber-500' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-700' : 'text-muted-foreground'}">
 										{i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : i + 1}
 									</td>
 									<td class="p-3 font-semibold">
 										{player.fingerprint?.substring(0, 8)}...
 									</td>
-									<td class="p-3 text-center text-white/70">{player.quizzes}</td>
+									<td class="p-3 text-center text-muted-foreground">{player.quizzes}</td>
 									<td class="p-3 text-center font-bold text-amber-500">{player.total_points}</td>
 								</tr>
 							{/each}
 							{#if data.leaderboard.length === 0}
-								<tr><td colspan="4" class="p-8 text-center text-white/40">لا توجد بيانات بعد</td></tr>
+								<tr><td colspan="4" class="text-muted-foreground p-8 text-center opacity-70">لا توجد بيانات بعد</td></tr>
 							{/if}
 						</tbody>
 					</table>

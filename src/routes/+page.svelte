@@ -33,7 +33,7 @@
 
 	<div class="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
 		<div
-			class="text-muted-foreground mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm backdrop-blur-sm"
+			class="text-muted-foreground mb-8 inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/5 px-4 py-2 text-sm backdrop-blur-sm dark:border-white/10 dark:bg-white/5"
 		>
 			<span class="inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>
 			المنهج الدراسي الجزائري - محدّث
@@ -51,25 +51,24 @@
 			وفق المنهاج الدراسي الوطني الجزائري
 		</p>
 
-		<!-- Quick access buttons -->
 		<div class="flex flex-wrap justify-center gap-4">
 			<a
 				href="/primaire"
-				class="group inline-flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-emerald-500/20 px-6 py-3 font-bold text-emerald-400 transition-all duration-300 hover:scale-105 hover:bg-emerald-500/30"
+				class="group inline-flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-6 py-3 font-bold text-emerald-600 transition-all duration-300 hover:scale-105 hover:bg-emerald-500/20 dark:bg-emerald-500/20 dark:text-emerald-400 dark:hover:bg-emerald-500/30"
 			>
 				<Backpack size={24} />
 				ابتدائي
 			</a>
 			<a
 				href="/moyen"
-				class="group inline-flex items-center gap-3 rounded-xl border border-blue-500/30 bg-blue-500/20 px-6 py-3 font-bold text-blue-400 transition-all duration-300 hover:scale-105 hover:bg-blue-500/30"
+				class="group inline-flex items-center gap-3 rounded-xl border border-blue-500/30 bg-blue-500/10 px-6 py-3 font-bold text-blue-600 transition-all duration-300 hover:scale-105 hover:bg-blue-500/20 dark:bg-blue-500/20 dark:text-blue-400 dark:hover:bg-blue-500/30"
 			>
 				<BookOpen size={24} />
 				متوسط
 			</a>
 			<a
 				href="/secondaire"
-				class="group inline-flex items-center gap-3 rounded-xl border border-purple-500/30 bg-purple-500/20 px-6 py-3 font-bold text-purple-400 transition-all duration-300 hover:scale-105 hover:bg-purple-500/30"
+				class="group inline-flex items-center gap-3 rounded-xl border border-purple-500/30 bg-purple-500/10 px-6 py-3 font-bold text-purple-600 transition-all duration-300 hover:scale-105 hover:bg-purple-500/20 dark:bg-purple-500/20 dark:text-purple-400 dark:hover:bg-purple-500/30"
 			>
 				<GraduationCap size={24} />
 				ثانوي
@@ -79,7 +78,9 @@
 </section>
 
 <!-- Stats Section -->
-<section class="border-y border-white/10 bg-white/[0.02] py-8">
+<section
+	class="border-y border-black/5 bg-black/[0.02] py-8 dark:border-white/10 dark:bg-white/[0.02]"
+>
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-2 gap-6 text-center sm:grid-cols-4">
 			<div>
@@ -134,7 +135,6 @@
 								<div class="text-lg font-bold">{level.yearCount}</div>
 								<div class="text-muted-foreground">سنوات</div>
 							</div>
-							<div class="w-px bg-white/10"></div>
 							<div class="text-center">
 								<div class="text-lg font-bold">{level.docCount}</div>
 								<div class="text-muted-foreground">وثيقة</div>
@@ -165,7 +165,9 @@
 </section>
 
 <!-- Features Section -->
-<section class="border-t border-white/10 bg-white/[0.01] py-16">
+<section
+	class="border-t border-black/5 bg-black/[0.01] py-16 dark:border-white/10 dark:bg-white/[0.01]"
+>
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="mb-12 text-center">
 			<h2 class="mb-4 text-3xl font-bold lg:text-4xl">لماذا SujetStore؟</h2>

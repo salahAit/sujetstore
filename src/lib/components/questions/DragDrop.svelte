@@ -43,7 +43,7 @@
 			<div
 				draggable="true"
 				ondragstart={() => startDrag(item.text)}
-				class="cursor-grab rounded-lg border-2 border-dashed border-white/20 bg-white/5 px-4 py-2 font-semibold transition-all hover:border-blue-500/50 hover:bg-blue-500/5 active:cursor-grabbing"
+				class="border-border bg-secondary cursor-grab rounded-lg border-2 border-dashed px-4 py-2 font-semibold transition-all hover:border-blue-500/50 hover:bg-blue-500/5 active:cursor-grabbing dark:border-white/20 dark:bg-white/5"
 			>
 				{item.text}
 			</div>
@@ -60,12 +60,14 @@
 				ondragover={allowDrop}
 				ondrop={() => drop(ci)}
 				role="region"
-				class="min-h-[120px] rounded-2xl border-2 border-dashed border-white/15 bg-white/[0.02] p-4 transition-colors"
+				class="border-border/50 bg-secondary/30 min-h-[120px] rounded-2xl border-2 border-dashed p-4 transition-colors dark:border-white/15 dark:bg-white/[0.02]"
 			>
 				<h4 class="mb-3 text-center text-sm font-bold text-blue-400">{cat}</h4>
 				<div class="flex flex-wrap gap-2">
 					{#each items.filter((item) => assignments[item.text] === ci) as assigned}
-						<span class="rounded-lg bg-blue-500/15 px-3 py-1.5 text-sm font-semibold text-blue-300">
+						<span
+							class="rounded-lg bg-blue-500/15 px-3 py-1.5 text-sm font-semibold text-blue-600 dark:text-blue-300"
+						>
 							{assigned.text}
 						</span>
 					{/each}

@@ -146,23 +146,23 @@ body {
 
 /* Document type badges */
 .badge-exam {
-	@apply border-red-500/30 bg-red-500/20 text-red-400;
+	@apply border-red-500/30 bg-red-500/10 text-red-700 dark:bg-red-500/20 dark:text-red-400;
 }
 
 .badge-test {
-	@apply border-orange-500/30 bg-orange-500/20 text-orange-400;
+	@apply border-orange-500/30 bg-orange-500/10 text-orange-700 dark:bg-orange-500/20 dark:text-orange-400;
 }
 
 .badge-lesson {
-	@apply border-blue-500/30 bg-blue-500/20 text-blue-400;
+	@apply border-blue-500/30 bg-blue-500/10 text-blue-700 dark:bg-blue-500/20 dark:text-blue-400;
 }
 
 .badge-summary {
-	@apply border-green-500/30 bg-green-500/20 text-green-400;
+	@apply border-green-500/30 bg-green-500/10 text-green-700 dark:bg-green-500/20 dark:text-green-400;
 }
 
 .badge-exercise {
-	@apply border-purple-500/30 bg-purple-500/20 text-purple-400;
+	@apply border-purple-500/30 bg-purple-500/10 text-purple-700 dark:bg-purple-500/20 dark:text-purple-400;
 }
 
 /* Floating particles animation */
