@@ -25,7 +25,10 @@
 #pagebreak()
 
 #include "chapters/01-introduction.typ"
-#include "chapters/02-pedagogical-strategy.typ"
-#include "chapters/03-features.typ"
-#include "chapters/04-tech-and-development.typ"
-#include "chapters/05-future-roadmap.typ"
+#include "chapters/02-architecture.typ"
+#include "chapters/03-ui-ux.typ"
+#include "chapters/04-document-engine.typ"
+#include "chapters/05-quiz-engine.typ"
+#include "chapters/06-gamification.typ"
+#include "chapters/07-admin-dashboard.typ"
+#include "chapters/08-deployment-roadmap.typ"
