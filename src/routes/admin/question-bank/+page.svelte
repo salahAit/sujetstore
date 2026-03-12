@@ -213,6 +213,48 @@
 			case 'cloze':
 				previewResult = answer?.selectedIndex === qd.correctIndex;
 				break;
+			case 'calculated': {
+				if (!answer?.value && answer?.value !== 0) { previewResult = false; break; }
+				const vars: Record<string, number> = {};
+				for (const v of (qd.variables || [])) {
+					vars[v.name] = Math.floor(Math.random() * (v.max - v.min + 1)) + v.min;
+				}
+				try {
+					const expr = (qd.formula || '').replace(/\{(\w+)\}/g, (_: string, k: string) => String(vars[k] ?? 0));
+					const expected = new Function(`return ${expr}`)();
+					previewResult = Math.abs(Number(answer.value) - expected) <= (qd.tolerance || 0);
+				} catch { previewResult = false; }
+				break;
+			}
+			case 'sentence_reorder':
+				if (!answer?.order) { previewResult = false; break; }
+				previewResult = JSON.stringify(answer.order) === JSON.stringify(qd.correctOrder);
+				break;
+			case 'hotspot':
+				previewResult = answer?.selectedZone === qd.correctZone;
+				break;
+			case 'drag_to_image': {
+				if (!answer?.placements) { previewResult = false; break; }
+				const labels = qd.labels || [];
+				previewResult = labels.every((lbl: any, i: number) => {
+					const p = answer.placements[i];
+					if (!p) return false;
+					const dx = Math.abs(p.x - lbl.correctX);
+					const dy = Math.abs(p.y - lbl.correctY);
+					return dx <= 10 && dy <= 10;
+				});
+				break;
+			}
+			case 'matrix': {
+				if (!answer?.selections) { previewResult = false; break; }
+				const correct = qd.correctAnswers || [];
+				previewResult = correct.every((c: number, i: number) => answer.selections[i] === c);
+				break;
+			}
+			case 'essay':
+				// Essays are always "correct" for preview — they need manual grading
+				previewResult = true;
+				break;
 			default:
 				previewResult = false;
 		}
@@ -237,7 +279,13 @@
 		matching: 'ربط',
 		fill_blank: 'أكمل الفراغ',
 		short_answer: 'إجابة قصيرة',
-		cloze: 'اختيار من القائمة'
+		cloze: 'اختيار من القائمة',
+		calculated: 'حسابي متغير',
+		sentence_reorder: 'إعادة ترتيب جملة',
+		hotspot: 'تحديد على صورة',
+		drag_to_image: 'سحب إلى صورة',
+		matrix: 'مصفوفة',
+		essay: 'مقال / إجابة طويلة'
 	};
 </script>
 

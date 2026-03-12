@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { Brain, Plus, Edit, Trash2, Eye, EyeOff, Lock, CheckCircle, Search } from 'lucide-svelte';
+	import { Brain, Plus, Edit, Trash2, Eye, EyeOff, Lock, CheckCircle, Search, Copy } from 'lucide-svelte';
 
 	let quizzes = $state<any[]>([]);
 	let loading = $state(true);
@@ -42,6 +42,19 @@
 		if (confirm('هل أنت متأكد من حذف هذا التمرين وجميع أسئلته؟')) {
 			const res = await fetch(`/api/admin/quizzes/${id}`, { method: 'DELETE' });
 			if (res.ok) await loadQuizzes();
+		}
+	}
+
+	async function duplicateQuiz(id: number) {
+		try {
+			const res = await fetch(`/api/admin/quizzes/${id}/duplicate`, { method: 'POST' });
+			if (res.ok) {
+				await loadQuizzes();
+			} else {
+				alert('خطأ في نسخ التمرين');
+			}
+		} catch {
+			alert('خطأ في الاتصال');
 		}
 	}
 
@@ -156,6 +169,13 @@
 									>
 										<Edit size={18} />
 									</a>
+									<button
+										onclick={() => duplicateQuiz(quiz.id)}
+										class="rounded-lg bg-amber-500/10 p-2 text-amber-400 transition-colors hover:bg-amber-500/20"
+										title="نسخ التمرين"
+									>
+										<Copy size={18} />
+									</button>
 									<button
 										onclick={() => deleteQuiz(quiz.id)}
 										class="rounded-lg bg-red-500/10 p-2 text-red-400 transition-colors hover:bg-red-500/20"

@@ -121,7 +121,7 @@
 				<button
 					onclick={addItem}
 					disabled={!newItemText.trim() || !selectedCatForNewItem}
-					class="rounded-lg bg-backgroundmber-600 px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-backgroundmber-700 disabled:opacity-50"
+					class="rounded-lg bg-amber-600 px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-amber-700 disabled:opacity-50"
 				>
 					إضافة
 				</button>

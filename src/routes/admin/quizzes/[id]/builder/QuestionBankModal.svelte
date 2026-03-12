@@ -92,7 +92,13 @@
 		matching: 'ربط',
 		fill_blank: 'أكمل الفراغ',
 		short_answer: 'إجابة قصيرة',
-		cloze: 'اختيار من القائمة'
+		cloze: 'اختيار من القائمة',
+		calculated: 'حسابي متغير',
+		sentence_reorder: 'إعادة ترتيب جملة',
+		hotspot: 'تحديد على صورة',
+		drag_to_image: 'سحب إلى صورة',
+		matrix: 'مصفوفة',
+		essay: 'مقال / إجابة طويلة'
 	};
 </script>
 

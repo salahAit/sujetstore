@@ -9,7 +9,8 @@
 		Edit2,
 		AlertCircle,
 		Save,
-		Brain
+		Brain,
+		Upload
 	} from 'lucide-svelte';
 	import { onMount, tick } from 'svelte';
 	import QuestionForm from './QuestionForm.svelte'; // The dynamic wrapper we will create
@@ -26,6 +27,7 @@
 	let showTypeSelector = $state(false);
 	let showBankModal = $state(false);
 	let editingQuestion = $state<any>(null); // null = not editing, {} = new question
+	let jsonFileInput = $state<HTMLInputElement | null>(null);
 
 	const QUESTION_TYPES = [
 		{ id: 'mcq', name: 'اختيار من متعدد', icon: 'M' },
@@ -183,6 +185,42 @@
 			body: JSON.stringify({ orders: payload })
 		});
 	}
+
+	async function importJSON(event: Event) {
+		const target = event.target as HTMLInputElement;
+		const file = target.files?.[0];
+		if (!file) return;
+		try {
+			const text = await file.text();
+			const data = JSON.parse(text);
+			const questionsArr = Array.isArray(data) ? data : (data.questions || []);
+			if (questionsArr.length === 0) {
+				alert('لم يتم العثور على أسئلة في الملف');
+				return;
+			}
+			let imported = 0;
+			for (const q of questionsArr) {
+				const res = await fetch(`/api/admin/quizzes/${quizId}/questions`, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						type: q.type || 'mcq',
+						questionText: q.questionText || q.question_text || '',
+						questionTextAr: q.questionTextAr || q.question_text_ar || '',
+						questionData: typeof q.questionData === 'string' ? q.questionData : JSON.stringify(q.questionData || q.question_data || {}),
+						explanation: q.explanation || '',
+						points: q.points || 1
+					})
+				});
+				if (res.ok) imported++;
+			}
+			alert(`تم استيراد ${imported} سؤال بنجاح!`);
+			await loadQuiz();
+		} catch (e: any) {
+			alert('خطأ في قراءة الملف: ' + e.message);
+		}
+		target.value = '';
+	}
 </script>
 
 <div class="mx-auto max-w-5xl space-y-6">
@@ -202,6 +240,20 @@
 			</div>
 		</div>
 		<div class="flex gap-3">
+			<button
+				onclick={() => jsonFileInput?.click()}
+				class="flex items-center gap-2 rounded-xl border border-purple-500/30 bg-purple-500/10 px-4 py-2 font-bold text-purple-400 transition-all hover:bg-purple-500/20"
+				disabled={editingQuestion !== null}
+			>
+				<Upload size={18} /> استيراد JSON
+			</button>
+			<input
+				type="file"
+				accept=".json"
+				bind:this={jsonFileInput}
+				onchange={importJSON}
+				class="hidden"
+			/>
 			<button
 				onclick={() => (showBankModal = true)}
 				class="flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 font-bold text-emerald-400 transition-all hover:bg-emerald-500/20"
