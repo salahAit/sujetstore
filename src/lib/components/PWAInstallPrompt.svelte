@@ -8,55 +8,49 @@
 	let showPrompt = $state(false);
 	
 	onMount(() => {
-		// Only check if we haven't persistently dismissed it
-		const isDismissed = localStorage.getItem('pwa_prompt_dismissed') === 'true';
-		
-		if (!isDismissed) {
-			window.addEventListener('beforeinstallprompt', (e) => {
-				// Prevent the mini-infobar from appearing on mobile
-				e.preventDefault();
-				
-				// Stash the event so it can be triggered later.
-				deferredPrompt = e;
-				
-				// Show our custom UI
-				// Delay slightly so it doesn't immediately interrupt the user on page load
-				setTimeout(() => {
-					showPrompt = true;
-				}, 3000);
-			});
-		}
+		// Listen for the install prompt event from the browser
+		window.addEventListener('beforeinstallprompt', (e) => {
+			// We do NOT use e.preventDefault() here so the native browser button in the address bar STILL shows up!
+			
+			// Stash the event so it can be triggered later.
+			deferredPrompt = e;
+			
+			// Show our custom UI immediately if not dismissed previously
+			const isDismissed = localStorage.getItem('pwa_prompt_dismissed') === 'true';
+			if (!isDismissed) {
+				showPrompt = true;
+			}
+		});
 
 		// Listen for successful installation
 		window.addEventListener('appinstalled', () => {
 			deferredPrompt = null;
 			showPrompt = false;
-			// Don't ask again
 			localStorage.setItem('pwa_prompt_dismissed', 'true');
 			console.log('PWA was installed successfully');
 		});
+
+		// DEBUG: Force show the prompt UI if ?debug_pwa=true is in the URL
+		if (window.location.search.includes('debug_pwa=true')) {
+			showPrompt = true;
+		}
 	});
 
 	async function installApp() {
 		if (deferredPrompt) {
-			// Hide the custom prompt
 			showPrompt = false;
-			
-			// Show the browser's native install prompt
 			deferredPrompt.prompt();
 			
-			// Wait for the user to respond to the prompt
 			const { outcome } = await deferredPrompt.userChoice;
-			
-			// Optionally, log or handle the user's choice...
 			console.log(`User response to the install prompt: ${outcome}`);
 			
-			// We've used the prompt, and can't use it again until it's fired again
 			deferredPrompt = null;
-			
 			if (outcome === 'accepted') {
 			   localStorage.setItem('pwa_prompt_dismissed', 'true'); 
 			}
+		} else {
+			// Fallback: If no prompt is caught, hide it anyway to prevent confusion
+			showPrompt = false;
 		}
 	}
 
