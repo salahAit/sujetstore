@@ -22,6 +22,7 @@
 		Share2
 	} from 'lucide-svelte';
 	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
+	import ShareModal from '$lib/components/ShareModal.svelte';
 	import { toggleBookmark, isBookmarked } from '$lib/stores/bookmarks.svelte';
 
 	let { data }: { data: any } = $props();
@@ -30,6 +31,7 @@
 	let selectedDoc = $state<any>(null);
 	let activeTab = $state<'exam' | 'solution'>('exam');
 	let isFullscreen = $state(false);
+	let isShareModalOpen = $state(false);
 
 	let activeTrimesterTab = $state<string>('t1');
 
@@ -90,7 +92,7 @@
 		}
 
 		if (filterHasSolution) {
-			docs = docs.filter((d: any) => d.has_solution);
+			docs = docs.filter((d: any) => d.has_solution || d._itemType === 'quiz');
 		}
 
 		return docs;
@@ -156,19 +158,7 @@
 	}
 
 	async function shareDoc() {
-		if (!selectedDoc) return;
-		const title = selectedDoc.title_ar || selectedDoc.title;
-		const url = window.location.href;
-		const text = `${title} — SujetStore`;
-
-		if (navigator.share) {
-			try {
-				await navigator.share({ title: text, url });
-			} catch {}
-		} else {
-			await navigator.clipboard.writeText(url);
-			alert('تم نسخ الرابط!');
-		}
+		isShareModalOpen = true;
 	}
 
 	const typeLabels: Record<string, string> = {
@@ -424,6 +414,7 @@
 						<option value="all">النوع: الكل</option>
 						<option value="test">فرض</option>
 						<option value="exam">اختبار</option>
+						<option value="interactive_quiz">تمرين تفاعلي</option>
 						<option value="lesson_summary">درس / ملخص</option>
 					</select>
 
@@ -785,3 +776,9 @@
 		</div>
 	{/if}
 {/if}
+
+<ShareModal
+	bind:isOpen={isShareModalOpen}
+	url={typeof window !== 'undefined' ? window.location.href : ''}
+	title={selectedDoc?.title_ar || selectedDoc?.title || data?.subject?.name_ar || ''}
+/>
