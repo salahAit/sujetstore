@@ -16,10 +16,25 @@
 	import SearchBar from '$lib/components/SearchBar.svelte';
 	import NotificationBell from '$lib/components/NotificationBell.svelte';
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
+	import 'mobile-drag-drop/default.css';
 
 	let { children } = $props();
 
 	let isMobileMenuOpen = $state(false);
+
+	onMount(async () => {
+		// Enable HTML5 drag and drop on touch screens (Smartphones/Tablets)
+		const { polyfill } = await import('mobile-drag-drop');
+		const { scrollBehaviourDragImageTranslateOverride } = await import('mobile-drag-drop/scroll-behaviour');
+		
+		polyfill({
+			dragImageTranslateOverride: scrollBehaviourDragImageTranslateOverride
+		});
+
+		// Required for iOS Safari to allow drag drop over scrolling
+		window.addEventListener('touchmove', function() {}, {passive: false});
+	});
 </script>
 
 <ModeWatcher />
