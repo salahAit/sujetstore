@@ -1,42 +1,55 @@
-= Administrative Dashboard & Content Management
+= لوحة التحكم وإدارة المحتوى (Admin Dashboard)
 
-A platform is only as good as its content. SujetStore provides administrators and educators with a powerful, custom-built Content Management System (CMS) to manage the entire educational tree without touching the database.
+تعتمد قوة أي منصة تعليمية على جودة وسهولة إدارة محتواها. توفر SujetStore للمدراء والمربين نظام إدارة محتوى (CMS) مخصصاً بالكامل، يتيح التحكم في الشجرة التعليمية والمستندات والتمارين دون الحاجة للتعامل المباشر مع قاعدة البيانات.
 
-== Security & Authentication
+== 1. الأمن وتسجيل الدخول
 
-Access to the `/admin` routes is strictly protected. 
-- Authentication uses a custom implementation relying on `bcryptjs` for password hashing.
-- Sessions are stored in the `users.db` SQLite database via secure HTTP-only, `SameSite=Lax` cookies.
-- Rate limiting is enforced on login endpoints to prevent brute-force attacks.
+الوصول إلى لوحة التحكم (`/admin`) محمي بشكل صارم:
+- يتم التحقق من الهوية باستخدام `bcryptjs` لتشفير كلمات المرور.
+- تُخزن الجلسات (Sessions) في قاعدة بيانات `users.db` عبر ملفات تعريف ارتباط (Cookies) آمنة.
+- يتم تطبيق سياسات تقييد معدل الطلبات (Rate Limiting) لمنع هجمات التخمين.
 
-== The Document CMS
+== 2. إدارة المستندات والمواد
 
-The administration panel provides full CRUD (Create, Read, Update, Delete) capabilities for the taxonomic hierarchy:
+تتيح لوحة التحكم إدارة كاملة لجميع المستويات التعليمية:
+1. *الأطوار* (مثل: التعليم الثانوي).
+2. *السنوات الدراسية* (مثل: 3 ثانوي).
+3. *المواد* (مثل: الرياضيات).
+4. *المستندات* (مثل: بكالوريا 2023 مع الحل).
 
-1. *Levels* (e.g., Middle School)
-2. *Years* (e.g., 4AM)
-3. *Subjects* (e.g., Mathematics)
-4. *Documents* (e.g., Term 1 Exam with Solution)
+#figure(
+  image("../images/question-bank.png", width: 90%),
+  caption: [إدارة بنك الأسئلة والفرز المتقدم]
+)
 
-*Key UI Features:*
-- *Modal-Based Editing:* All add/edit operations use floating Shadcn-Svelte modals for fast interaction without triggering full page reloads.
-- *Confirmation Dialogs:* Destructive operations require explicit confirmation through a `ConfirmModal` component to prevent accidental data loss.
-- *Secondary Stream Awareness:* The CMS is fully aware of the Algerian stream system. When uploading documents or quizzes for secondary school levels, the system prompts for stream scoping (e.g., scoping a Physics exam specifically to the _Mathematical Technical_ track) to ensure accurate content delivery without subject name collisions.
+=== 2.1. ميزات واجهة الإدارة
+- *التعامل عبر النوافذ المنبثقة (Modals)*: تتم عمليات الإضافة والتعديل بسرعة فائقة دون الحاجة لإعادة تحميل الصفحة.
+- *رسائل التأكيد*: العمليات الحساسة (مثل الحذف) تتطلب تأكيداً صريحاً لمنع فقدان البيانات العرضي.
+- *دعم الشعب الدراسية*: النظام مدرك تماماً لنظام الشعب في التعليم الجزائري، حيث يُطلب تحديد الشعبة عند رفع المحتوى الثانوي لضمان وصوله للطلاب المعنيين بدقة.
 
-== The Interactive Quiz Builder
+== 3. بنك الأسئلة والتمارين التفاعلية
 
-Creating interactive Moodle-style content is notoriously complex in most LMS platforms. SujetStore solves this by providing a highly optimized, visual Quiz Builder.
+تم تخصيص جزء كبير من لوحة التحكم لإدارة التمارين التفاعلية نظراً لتعقيدها.
 
-*Builder Features:*
-- *Drag-and-Drop Ordering:* Teachers can reorder questions within a quiz visually.
-- *Specialized Question Sub-forms:* Because the platform supports 14 different question types, the builder dynamically renders a tailored sub-form based on the selected type. 
-  - For example, selecting "Matrix" reveals a grid builder for rows and columns.
-  - Selecting "Hotspot" reveals an image upload field and X/Y coordinate inputs for defining clickable zones.
-- *Quiz Metadata Engine:* Set time limits, required passing scores, and publish toggles.
+#figure(
+  image("../images/quizzes.png", width: 90%),
+  caption: [لوحة إدارة التمارين التفاعلية وحالة النشر]
+)
 
-== Analytics Dashboard
+=== 3.1. تقسيم الصفحات (Pagination) والإحصائيات
+لمواجهة كثرة البيانات، تم تطبيق نظام "تقسيم الصفحات" على جميع جداول الإدارة (المستندات، المواد، التمارين). يعرض كل جدول 10 عناصر فقط مع إمكانية التنقل السلس، مما يحافظ على سرعة استجابة المتصفح.
 
-The admin home page provides a high-level overview of platform health:
-- Total Document counts grouped by Level and Year.
-- Global point accumulations.
-- Quiz completion statistics to identify the most difficult or popular exercises across the platform.
+=== 3.2. البحث والفلترة الذكية
+يمكن البحث عن التمارين بالاسم، أو تصفيتها حسب مستوى الصعوبة ونوع السؤال، مع تحديث الإحصائيات فوراً لتعطي المدير نظرة شاملة عن رصيد المنصة من الأسئلة.
+
+#figure(
+  image("../images/quiz-builder.png", width: 90%),
+  caption: [منشئ التمارين - مرونة عالية في بناء التقييمات]
+)
+
+== 4. لوحة الإحصائيات (Analytics Dashboard)
+
+توفر الصفحة الرئيسية للإدارة ملخصاً شاملاً لصحة المنصة:
+- إجمالي عدد المستندات والتمارين مصنفة حسب الأطوار.
+- عدد الأسئلة المتوفرة في البنك.
+- إحصائيات حول صعوبة الأسئلة لضمان جودة المحتوى التعليمي وتوازنه.

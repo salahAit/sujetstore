@@ -1,23 +1,23 @@
-= Introduction: Rethinking Digital Learning in Algeria
+= مقدمة: إعادة التفكير في التعلم الرقمي في الجزائر
 
-== The Problem
+== المشكلة
 
-In the current Algerian educational landscape, students face a fragmented digital experience. Exam papers, quizzes, and study materials are scattered across social media groups, unmoderated forums, and low-quality scan repositories. Key issues include:
+في المشهد التعليمي الحالي في الجزائر، يواجه الطلاب تجربة رقمية مشتتة. أوراق الامتحانات، الاختبارات، والمواد الدراسية مبعثرة عبر مجموعات وسائل التواصل الاجتماعي، المنتديات غير المنظمة، ومستودعات الصور منخفضة الجودة. تشمل المشاكل الرئيسية ما يلي:
 
-- *Content Dispersion:* Thousands of documents are posted daily across Facebook groups and Telegram channels with no indexing, versioning, or quality control. Finding a specific exam from a specific trimester becomes an exercise in frustration.
-- *No Pedagogical Structure:* Materials are dumped without classification by trimester, type, difficulty, or alignment with the official Ministry of Education curriculum.
-- *Poor Visual Quality:* Most documents are low-resolution phone scans with inconsistent fonts, skewed pages, and illegible handwriting.
-- *Hostile User Experience:* Existing platforms rely on aggressive advertising, intrusive pop-ups, and confusing navigation that actively hinders the learning process.
+- *تشتت المحتوى:* يتم نشر آلاف المستندات يومياً عبر مجموعات فيسبوك وقنوات تلغرام دون أرشفة أو فهرسة أو مراقبة جودة. العثور على امتحان محدد لفصل دراسي معين يصبح أمراً مرهقاً.
+- *غياب الهيكلية البيداغوجية:* تُطرح المواد دون تصنيف حسب الفصل الدراسي، النوع، الصعوبة، أو التوافق مع المناهج الرسمية لوزارة التربية الوطنية.
+- *جودة بصرية رديئة:* معظم المستندات عبارة عن مسوحات ضوئية منخفضة الدقة من الهواتف، مع خطوط غير متناسقة وصفحات مائلة وكتابة يدوية غير واضحة.
+- *تجربة مستخدم سيئة:* تعتمد المنصات الحالية على الإعلانات المزعجة، والنوافذ المنبثقة، والتنقل المعقد الذي يعيق بنشاط عملية التعلم.
 
-== The Vision
+== الرؤية
 
-*SujetStore* was conceived as a purpose-built, open-source educational archive platform that directly addresses these pain points. It provides a clean, focused, and fast experience for browsing, filtering, and studying exam papers, interactive quizzes, and study materials for the Algerian curriculum — from primary school through high school.
+تأسست *SujetStore* لتكون منصة أرشفة تعليمية مفتوحة المصدر تعالج هذه النقاط مباشرة. إنها توفر تجربة نظيفة ومركزة وسريعة لتصفح وتصفية ودراسة أوراق الامتحانات والتمارين التفاعلية والمواد الدراسية للمنهج الجزائري — من الابتدائي إلى الثانوي.
 
-== Core Objectives
+== الأهداف الأساسية
 
-- *Absolute Focus:* Deliver content within a distraction-free, ad-free interface designed for deep study and review. No pop-ups, no banners, no autoplay videos.
-- *Strict Taxonomy & Exam Codes:* Organize the entire curriculum using the official Algerian Exam Code system, ensuring accurate subject mapping across 9 different High School streams (e.g., distinguishing Physics for Math vs. Science streams) avoiding overlap.
-- *Hierarchical Archiving:* A clear, navigable taxonomy: _Level → Year → Stream (Secondary) → Subject → Trimester → Document Type_.
-- *Interactive Learning:* Move beyond static PDFs by providing a robust 14-type quiz engine that tests comprehension instantly.
-- *Empowering Content Creators:* Provide a powerful yet simple admin CMS that allows educators to upload, categorize, and manage documents and interactive quizzes effortlessly.
-- *Resilient Infrastructure:* Leverage a modern, lightweight stack (SvelteKit + Bun + SQLite) that can scale to millions of concurrent users without infrastructure collapse.
+- *التركيز المطلق:* تقديم المحتوى في واجهة خالية من التشتت والإعلانات، مصممة للمراجعة والدراسة العميقة.
+- *تصنيف صارم ورموز الامتحانات:* تنظيم المنهج الدراسي بالكامل باستخدام نظام تصنيف رسمي يضمن مطابقة المواد بدقة عبر 9 شعب ثانوية مختلفة.
+- *أرشفة هرمية:* هيكلية واضحة: _الطور ← السنة الدراسية ← الشعبة (ثانوي) ← المادة ← الفصل الدراسي ← نوع المستند_.
+- *التعلم التفاعلي:* الانتقال لما وراء ملفات PDF الثابتة من خلال توفير محرك تمارين تفاعلي يضم 14 نوعاً من الأسئلة.
+- *تمكين صانعي المحتوى:* توفير لوحة تحكم إدارية (CMS) قوية وبسيطة تسمح للمربين برفع وتصنيف وإدارة المستندات والتمارين التفاعلية بسهولة.
+- *بنية تحتية مرنة:* الاعتماد على تقنيات حديثة وخفيفة (SvelteKit + Bun + SQLite) يمكنها التوسع لتخدم آلاف المستخدمين بكفاءة عالية.

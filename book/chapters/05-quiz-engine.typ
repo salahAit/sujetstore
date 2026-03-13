@@ -1,84 +1,77 @@
-= The Interactive Assessment Engine
+= محرك التمارين التفاعلية (The Interactive Assessment Engine)
 
-SujetStore features an incredibly robust, deeply integrated interactive quiz engine that goes far beyond simple multiple-choice questions. It provides a full-featured Moodle-like assessment environment tailored specifically for the Algerian curriculum, complete with 14 distinct question types, visual interactive editors, and a centralized question bank.
+يُعد محرك التمارين التفاعلية في SujetStore من أكثر الأنظمة تطوراً وتكاملاً، حيث يتجاوز مجرد كونه نظاماً للأسئلة البسيطة ليقدم بيئة تقييم كاملة تشبه أنظمة Moodle التعليمية، ولكنها مصممة خصيصاً لتناسب المناهج الجزائرية. يشتمل النظام على 14 نوعاً مختلفاً من الأسئلة، مع محرر بصري متطور وبنك أسئلة مركزي.
 
-== 1. Admin Quiz Management System
+== 1. نظام إدارة التمارين (Admin Quiz Management)
 
-The Quiz Management System is designed to give administrators and educators total control over interactive content.
+تم تصميم نظام إدارة التمارين ليمنح المدراء والمربين تحكماً كاملاً في المحتوى التفاعلي.
 
-=== 1.1. Quiz Creation and Configuration
-Administrators can create quizzes and bind them to specific `year_subjects` (e.g., "Math - 2nd Year Secondary - Science Stream") and, optionally, specific trimesters. Each quiz can be configured with:
-- *Difficulty Levels*: Easy, Medium, Hard (affecting gamification point yields).
-- *Monetization/Premium Gating*: Quizzes can be marked as `isPremium`. Free users cannot access premium quizzes, driving subscription conversions.
-- *Publishing States*: Quizzes can be kept as drafts (`isPublished = false`) while under construction.
-- *Time Limits & Passing Scores*: Formal assessment parameters to simulate real exam conditions.
+=== 1.1. إنشاء وإعداد التمارين
+يمكن للمدراء إنشاء تمارين وربطها بمواد دراسية محددة (مثل: "رياضيات - سنة ثانية ثانوي - شعبة علوم تجريبية")، مع إمكانية تحديد الفصل الدراسي. تشمل الإعدادات:
+- *مستويات الصعوبة*: سهل، متوسط، صعب (تؤثر على نقاط التحفيز Gamification).
+- *وضع الاحتراف (Premium)*: يمكن تمييز التمارين كـ `isPremium` لجذب المشتركين.
+- *حالات النشر*: يمكن حفظ التمرين كمسودة أثناء العمل عليه.
 
-=== 1.2. Quiz Duplication
-To maximize educator productivity, the system features a one-click *Quiz Duplication* mechanism. Clicking "Copy" on a quiz triggers a backend API (`/api/admin/quizzes/[id]/duplicate`) that:
-- Deep-clones the quiz metadata.
-- Appends "(Copy)" to the title.
-- Resets the `isPublished` flag to `false`.
-- Duplicates all relation links (`quiz_questions`) while preserving the exact ordering and point values of the original quiz, without duplicating the underlying questions in the bank.
+=== 1.2. تكرار التمارين (Quiz Duplication)
+لتوفير الوقت، يتوفر زر "نسخ" يقوم باستنساخ التمرين بالكامل بجميع إعداداته وروابط الأسئلة الخاصة به، مما يسهل إنشاء نسخ معدلة من التمارين الناجحة.
 
-== 2. The Centralized Question Bank
+== 2. بنك الأسئلة المركزي (Centralized Question Bank)
 
-Instead of siloing questions within individual quizzes, SujetStore utilizes a *Centralized Question Bank*. All questions are stored in a single table (`questions`) and mapped to quizzes via a many-to-many relationship table (`quiz_questions`).
+تعتمد منصة SujetStore مبدأ "بنك الأسئلة الموحد"، حيث تُخزن جميع الأسئلة في مستودع مركزي، ويمكن استخدامها في تمارين متعددة.
 
-=== 2.1. Benefits of the Question Bank
-- *Reusability*: A single "Algebra Hard Question" can be linked to a Midterm Quiz, a Final Exam Quiz, and a Premium Practice Quiz simultaneously.
-- *Data Integrity*: Updating a question's typo in the bank instantly fixes it across all quizzes that use it.
-- *Categorization*: Questions can be organized into `question_categories` (e.g., "Grammar", "Mechanics", "Fractions"), allowing for structured storage.
+#figure(
+  image("../images/question-bank.png", width: 90%),
+  caption: [واجهة بنك الأسئلة الشاملة مع الإحصائيات الديناميكية]
+)
 
-=== 2.2. Visual Identification
-The Question Bank UI is designed for rapid parsing. Each of the 14 question types is represented by a unique, color-coded Lucide icon (e.g., a green check-square for True/False, a purple mapping pin for Hotspots). This visual taxonomy persists across the bank, the builder, and the preview modals.
+=== 2.1. فوائد بنك الأسئلة
+- *إعادة الاستخدام*: يمكن ربط نفس السؤال "الصعب" في تمرين للمراجعة وفي امتحان نهائي في آن واحد.
+- *سلامة البيانات*: أي تعديل على السؤال في البنك يُحدث تلقائياً في جميع التمارين التي تستخدمه.
+- *التصنيف*: تنظيم الأسئلة وفق تصنيفات دقيقة (مثل "قواعد"، "ميكانيكا"، "كسور").
 
-== 3. The Quiz Builder Interface
+=== 2.2. الإحصائيات الديناميكية والفلترة
+تتميز واجهة البنك بلوحة إحصائيات علوية تتفاعل مع البحث والفلاتر فورياً، مما يسمح للمدير بمعرفة توازن الأسئلة ومدى توفرها حسب الصعوبة والنوع.
 
-The Quiz Builder is a highly interactive, drag-and-drop SPA (Single Page Application) built with Svelte 5. 
+== 3. منشئ التمارين المتقدم (The Quiz Builder)
 
-=== 3.1. Drag-and-Drop Sequencing
-Educators can visually reorder questions within a quiz using HTML5 Drag-and-Drop API. The new order is automatically saved and synchronized with the backend.
+يُعتبر منشئ التمارين واجهة تفاعلية متطورة مبنية بتقنية Svelte 5 للسحب والإفلات.
 
-=== 3.2. JSON Import Engine
-For massive bulk operations, the builder includes a *JSON Import Engine*. Educators can author hundreds of questions in JSON format (usually generated via AI or exported from other systems) and ingest them instantly. The specific API parses the JSON array, validates the schema for the requested question types, inserts them into the Question Bank, and automatically links them to the active quiz.
+#figure(
+  image("../images/quiz-builder.png", width: 90%),
+  caption: [منشئ التمارين: السحب والإفلات وإدارة الأسئلة]
+)
 
-=== 3.3. Question Bank Modal
-Educators can click "Import from Bank" to open a modal that searches the entire database. They can filter by Type, Difficulty, and Search Query, then multi-select questions to inject into the current quiz.
+=== 3.1. الترتيب البصري
+يمكن للمدير إعادة ترتيب الأسئلة داخل التمرين بسهولة تامة عبر السحب والإفلات، ويتم حفظ الترتيب الجديد تلقائياً في قاعدة البيانات.
 
-=== 3.4. Live Previewing
-Every question can be previewed directly from the Bank or the Builder. The preview modal renders the exact Svelte component that the student will see, and includes a test validation engine (`checkPreviewAnswer()`) to ensure the grading logic works perfectly before publishing.
+=== 3.2. المعاينة الموحدة (Unified Preview)
+تتوفر نافذة معاينة ذكية تسمح بتجربة السؤال والتحقق من الإجابة (Correct/Incorrect) ورؤية الشرح (Explanation) قبل نشر التمرين للطلاب.
 
-== 4. The 14 Question Types in Detail
+#figure(
+  image("../images/preview-modal.png", width: 70%),
+  caption: [نافذة المعاينة الموحدة مع التحقق من الإجابة]
+)
 
-SujetStore supports an unparalleled variety of 14 interactive question types, all serialized seamlessly into a single `question_data` JSONB column.
+== 4. تفاصيل أنواع الأسئلة الـ 14
 
-=== 4.1. Standard & Text Types
-1. *Multiple Choice (MCQ)*: Supports single or multiple correct answers. Arabic lettering (أ، ب، ج، د) is automatically applied for localization. Options are randomized at runtime.
-2. *True/False*: A streamlined binary choice with bold, recognizable UI cards.
-3. *Short Answer*: Free-form text input. Evaluated server-side by checking if the student's string contains a minimum number of required predefined `keywords` (allowing for typographical leniency).
-4. *Fill in the Blank*: A paragraph with blank text inputs. Evaluated by strict or case-insensitive string matching array.
-5. *Cloze (Dropdowns)*: Similar to Fill-in-the-Blank, but replaces free-text inputs with HTML `<select>` dropdowns defined inline.
-6. *Essay/Long Answer*: A rich text or plain text area that tracks word counts. Graded manually, or automatically via keyword density analysis.
+1. *خيارات متعددة (MCQ)*: دعم إجابة واحدة أو عدة إجابات صحيحة مع ترقيم عربي (أ، ب، ج...).
+2. *صح/خطأ*: واجهة واضحة وبسيطة.
+3. *إجابة قصيرة*: كتابة نصية يتم تقييمها بناءً على كلمات مفتاحية.
+4. *ملء الفراغات*: جمل تحتوي على خانات إدخال نصية.
+5. *Cloze (قوائم منسدلة)*: إدراج قوائم خيارات داخل فقرة نصية.
+6. *الترتيب (Ordering)*: ترتيب عناصر بشكل عمودي.
+7. *المطابقة (Matching)*: التوصيل بين قائمتين من العناصر.
+8. *سحب وإفلات (تصنيفات)*: توزيع البطاقات على صناديق محددة.
+9. *ترتيب الجمل*: بناء جملة صحيحة من كلمات مبعثرة.
+10. *جدول تقاطعي (Matrix)*: تقييم عدة خيارات ضمن جدول شبكي.
+11. *عملية حسابية (Calculated)*: محرك رياضي يولد أرقاماً عشوائية ويقيم النتيجة مع هامش خطأ مسموح.
+12. *النقاط الساخنة (Hotspot)*: صورة تفاعلية، يتم تحديد السؤال بالنقر على منطقة معينة في الصورة.
+13. *السحب إلى الصورة (Drag To Image)*: سحب تسميات توضيحية ووضعها فوق الصورة في إحداثيات محددة.
+14. *المقال (Essay)*: مساحة للكتابة الطويلة مع تتبع عدد الكلمات (تصحيح يدوي).
 
-=== 4.2. Complex Interactive Types
-7. *Matching*: Students draw connections or select corresponding pairs from two columns (e.g., matching a philosopher to their quote).
-8. *Ordering*: A vertical stack of draggable items (e.g., historical events). Students drag them to arrange them in chronological order.
-9. *Drag & Drop (Categorization)*: Students drag draggable pills into designated drop-zone buckets.
-10. *Sentence Reorder*: Designed for language learning. A scrambled list of words that the student must tap/drag sequentially to form a syntactically correct sentence.
-11. *Matrix*: A 2D grid where rows are statements and columns are evaluation criteria (e.g., mapping 5 different animals to "Mammal", "Reptile", or "Bird" via radio buttons).
+== 5. معمارية التقييم والأمن
+تتم جميع عمليات التقييم في *الجهة الخلفية (Server-Side)*:
+1. يرسل المتصفح إجابة الطالب فقط (مثل: "رقم الخيار المختاد").
+2. يقوم الخادم بتحميل الإجابات الصحيحة من قاعدة البيانات (التي لا يراها الطالب أبداً).
+3. تتم مقارنة النتائج وإرسال التقرير النهائي (isCorrect) مع الشرح.
 
-=== 4.3. Advanced Mathematical Types
-12. *Calculated*: A highly dynamic mathematical engine. The teacher defines a formula (e.g., `{x} * {y} + 10`). At runtime, the server generates random values for `x` and `y` within defined minimum/maximum boundaries. The student is presented with the unique numbers, and their text input is evaluated against the dynamically computed mathematical result, incorporating an acceptable `tolerance` margin for floating-point errors.
-
-=== 4.4. Visual & Image Editors (The Image Upload API)
-To support visual questions, SujetStore includes an internal `/api/admin/upload-image` endpoint that handles secure file uploads (WebP, PNG, JPEG), returns a public path, and integrates directly into the visual editors.
-
-13. *Hotspot*: The teacher uploads an image (e.g., a map of Algeria or a human heart). The admin UI provides a *Visual Click-to-Place Editor*. The teacher clicks directly on the image to define circular "Zones". They then designate one or more zones as the correct answer. The student sees the image and must click the correct physical coordinate.
-14. *Drag to Image*: The teacher uploads a background image and defines text "Labels". Using the Visual Editor, the teacher drags the labels to specific coordinates on the image to define their `correctX` and `correctY` positions. The student receives the image with labels clustered at the bottom, and must drag them to their correct physical overlays within a 10px tolerance threshold.
-
-== 5. Grading and Security Architecture
-All evaluation logic runs *Server-Side*. When a student clicks "Check Answer" or "Submit Exam":
-1. Only the student's payload (e.g., `selectedZone: 2` or `order: [3, 1, 2]`) is dispatched to the server.
-2. The server loads the true schema from the database (which was never sent to the client, preventing DevTools cheating).
-3. The server runs the specific evaluator for the question type.
-4. The server responds with `isCorrect: true/false`, the points earned, and optionally the `correctAnswer` payload so the UI can highlight mistakes in red and correct answers in green.
