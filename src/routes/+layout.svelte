@@ -15,7 +15,7 @@
 	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
 	import SearchBar from '$lib/components/SearchBar.svelte';
 	import NotificationBell from '$lib/components/NotificationBell.svelte';
-	import PWAInstallPrompt from '$lib/components/PWAInstallPrompt.svelte';
+	import PWAInstallButton from '$lib/components/PWAInstallButton.svelte';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import 'mobile-drag-drop/default.css';
@@ -50,6 +50,8 @@
 				<img src="/logo.webp" alt="SujetStore Logo" class="h-8 w-8" />
 				<span class="gradient-text text-2xl">SujetStore</span>
 			</a>
+			<!-- PWA Install Button next to logo -->
+			<PWAInstallButton />
 
 			<!-- Navigation Links -->
 			<div class="hidden items-center gap-6 md:flex">
@@ -201,6 +203,17 @@
 					onclick={() => (isMobileMenuOpen = false)}
 				>
 					<GraduationCap size={20} /> التعليم الثانوي
+				</a>
+				<a
+					href="/quizzes"
+					class="text-muted-foreground flex items-center gap-3 rounded-xl px-4 py-3 font-semibold transition-colors hover:bg-fuchsia-500/10 hover:text-fuchsia-500 dark:hover:text-fuchsia-400 {$page.url.pathname.startsWith(
+						'/quizzes'
+					)
+						? 'bg-fuchsia-500/10 text-fuchsia-500 dark:text-fuchsia-400'
+						: ''}"
+					onclick={() => (isMobileMenuOpen = false)}
+				>
+					<Brain size={20} /> تمارين
 				</a>
 				<a
 					href="/achievements"

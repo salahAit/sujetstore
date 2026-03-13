@@ -37,11 +37,9 @@ export async function GET({ params, locals }) {
     return json({
         ...quiz,
         questions: rawQuestions.map((q) => {
-            let parsedData = {};
-            try {
-                parsedData = JSON.parse(q.questionData as string);
-            } catch (e) { }
-            return { ...q, questionData: parsedData };
+            // The customType in schema-content.ts already calls JSON.parse on fromDriver,
+            // so q.questionData is already an object here.
+            return { ...q, questionData: q.questionData };
         })
     });
 }

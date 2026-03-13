@@ -79,18 +79,20 @@
 			<!-- svelte-ignore a11y_click_events_have_key_events -->
 			<div
 				bind:this={imageContainer}
-				class="relative cursor-crosshair overflow-hidden rounded-xl border-2 border-dashed border-blue-500/30"
+				class="relative cursor-crosshair overflow-hidden rounded-xl border-2 border-dashed border-blue-500/30 bg-black/5"
 				onclick={handleImageClick}
 				role="button"
 				tabindex="0"
 			>
-				<img src={data.imageUrl} alt="صورة السؤال" class="w-full" />
+				<img src={data.imageUrl} alt="صورة السؤال" class="w-full pointer-events-none object-contain max-h-[400px]" />
+				
 				{#each (data.zones || []) as zone, i}
 					<div
-						class="absolute flex h-8 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 text-xs font-bold {i === data.correctZone
-							? 'border-emerald-500 bg-emerald-500/40 text-emerald-200'
-							: 'border-red-400 bg-red-500/30 text-red-200'}"
-						style="left: {zone.x}%; top: {zone.y}%"
+						class="absolute flex h-8 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 text-xs font-bold shadow-lg shadow-black/50 transition-transform hover:scale-110 {i === data.correctZone
+							? 'border-emerald-400 bg-emerald-500/90 text-white'
+							: 'border-blue-400 bg-blue-500/90 text-white'}"
+						style="left: {zone.x}%; top: {zone.y}%; width: {zone.radius * 2}%; height: {zone.radius * 2}%; min-width: 2rem; min-height: 2rem;"
+						title={zone.label || `منطقة ${i + 1}`}
 					>
 						{i + 1}
 					</div>

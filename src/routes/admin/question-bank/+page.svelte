@@ -31,6 +31,7 @@
 	import Matrix from '$lib/components/questions/Matrix.svelte';
 	import Essay from '$lib/components/questions/Essay.svelte';
 	import { QUESTION_TYPES, getQuestionType } from '$lib/admin/questionTypes'; // Added new import
+	import QuestionPreviewModal from '$lib/admin/components/QuestionPreviewModal.svelte';
 
 	let questions = $state<any[]>([]);
 	let loading = $state(true);
@@ -40,8 +41,7 @@
 
 	// Preview state
 	let previewQuestion = $state<any>(null);
-	let previewAnswer = $state<any>(null);
-	let previewResult = $state<boolean | null>(null);
+	let previewOpen = $state(false);
 
 	onMount(async () => {
 		await loadQuestions();
@@ -131,134 +131,12 @@
 
 	function openPreview(q: any) {
 		previewQuestion = q;
-		previewAnswer = null;
-		previewResult = null;
+		previewOpen = true;
 	}
 
 	function closePreview() {
+		previewOpen = false;
 		previewQuestion = null;
-		previewAnswer = null;
-		previewResult = null;
-	}
-
-	function onAnswer(answer: any) {
-		previewAnswer = answer;
-	}
-
-	function checkPreviewAnswer() {
-		if (!previewQuestion) return;
-
-		const qd =
-			typeof previewQuestion.questionData === 'string'
-				? JSON.parse(previewQuestion.questionData)
-				: previewQuestion.questionData;
-
-		const answer = previewAnswer;
-
-		switch (previewQuestion.type) {
-			case 'mcq': {
-				const correctIdx = qd.correctIndexes
-					? qd.correctIndexes
-					: (qd.options || [])
-							.map((opt: any, i: number) => (typeof opt === 'object' && opt.isCorrect ? i : -1))
-							.filter((i: number) => i >= 0);
-				previewResult = JSON.stringify(answer?.selectedIndexes) === JSON.stringify(correctIdx);
-				break;
-			}
-			case 'true_false':
-				previewResult = answer?.value === qd.correctAnswer;
-				break;
-			case 'ordering':
-				if (!answer?.order) {
-					previewResult = false;
-					break;
-				}
-				const correctItems = qd.correctOrder.map((idx: number) => qd.items[idx]);
-				previewResult = JSON.stringify(answer.order) === JSON.stringify(correctItems);
-				break;
-			case 'drag_drop':
-				if (!answer?.assignments) {
-					previewResult = false;
-					break;
-				}
-				previewResult = qd.items.every(
-					(item: any) => answer.assignments[item.text] === item.category
-				);
-				break;
-			case 'matching':
-				if (!answer?.matches) {
-					previewResult = false;
-					break;
-				}
-				previewResult = Object.entries(answer.matches).every(
-					([left, right]) => Number(left) === Number(right)
-				);
-				break;
-			case 'fill_blank':
-				if (!answer?.text) {
-					previewResult = false;
-					break;
-				}
-				previewResult = qd.answers.some(
-					(a: string) => a.toLowerCase().trim() === answer.text.toLowerCase().trim()
-				);
-				break;
-			case 'short_answer':
-				if (!answer?.text) {
-					previewResult = false;
-					break;
-				}
-				const matchCount = qd.keywords.filter((kw: string) => answer.text.includes(kw)).length;
-				previewResult = matchCount >= (qd.minKeywords || 1);
-				break;
-			case 'cloze':
-				previewResult = answer?.selectedIndex === qd.correctIndex;
-				break;
-			case 'calculated': {
-				if (!answer?.value && answer?.value !== 0) { previewResult = false; break; }
-				const vars: Record<string, number> = {};
-				for (const v of (qd.variables || [])) {
-					vars[v.name] = Math.floor(Math.random() * (v.max - v.min + 1)) + v.min;
-				}
-				try {
-					const expr = (qd.formula || '').replace(/\{(\w+)\}/g, (_: string, k: string) => String(vars[k] ?? 0));
-					const expected = new Function(`return ${expr}`)();
-					previewResult = Math.abs(Number(answer.value) - expected) <= (qd.tolerance || 0);
-				} catch { previewResult = false; }
-				break;
-			}
-			case 'sentence_reorder':
-				if (!answer?.order) { previewResult = false; break; }
-				previewResult = JSON.stringify(answer.order) === JSON.stringify(qd.correctOrder);
-				break;
-			case 'hotspot':
-				previewResult = answer?.selectedZone === qd.correctZone;
-				break;
-			case 'drag_to_image': {
-				if (!answer?.placements) { previewResult = false; break; }
-				const labels = qd.labels || [];
-				previewResult = labels.every((lbl: any, i: number) => {
-					const p = answer.placements[i];
-					if (!p) return false;
-					const dx = Math.abs(p.x - lbl.correctX);
-					const dy = Math.abs(p.y - lbl.correctY);
-					return dx <= 10 && dy <= 10;
-				});
-				break;
-			}
-			case 'matrix': {
-				if (!answer?.selections) { previewResult = false; break; }
-				const correct = qd.correctAnswers || [];
-				previewResult = correct.every((c: number, i: number) => answer.selections[i] === c);
-				break;
-			}
-			case 'essay':
-				// Essays are always "correct" for preview — they need manual grading
-				previewResult = true;
-				break;
-			default:
-				previewResult = false;
-		}
 	}
 
 	let filteredQuestions = $derived(
@@ -437,174 +315,5 @@
 	{/if}
 </div>
 
-{#if previewQuestion}
-	{@const qType = getQuestionType(previewQuestion.type)}
-	<!-- Preview Modal -->
-	<div
-		class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
-		onclick={closePreview}
-		role="presentation"
-	>
-		<div
-			class="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-border bg-background p-8 shadow-2xl"
-			onclick={(e) => e.stopPropagation()}
-			role="presentation"
-		>
-			<button
-				onclick={closePreview}
-				class="absolute top-4 left-4 rounded-lg p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-white"
-			>
-				<X size={20} />
-			</button>
+<QuestionPreviewModal bind:isOpen={previewOpen} question={previewQuestion} />
 
-			<div class="mb-6 border-b border-border pb-4">
-				<h2 class="flex items-center gap-2 text-2xl font-bold">
-					<Eye class="text-emerald-500" /> معاينة سريعة للسؤال
-				</h2>
-				<div class="mt-2 flex gap-2">
-					<span
-						class="inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-semibold {qType.color} {qType.border} border {qType.bg}"
-					>
-						{#if qType.icon}
-							{@const IconIcon = qType.icon}
-							<IconIcon size={14} />
-						{/if}
-						نوع السؤال: {qType.name}
-					</span>
-					<span class="rounded bg-muted px-2.5 py-1 text-xs text-foreground/60">
-						الصعوبة: {previewQuestion.difficulty}
-					</span>
-				</div>
-			</div>
-
-			<div class="space-y-6">
-				<!-- Interactive Component -->
-				<div class="min-h-[300px] rounded-xl border border-border bg-background p-6">
-					{#if previewQuestion.type === 'mcq'}
-						<MCQ
-							data={typeof previewQuestion.questionData === 'string'
-								? JSON.parse(previewQuestion.questionData)
-								: previewQuestion.questionData}
-							{onAnswer}
-						/>
-					{:else if previewQuestion.type === 'true_false'}
-						<TrueFalse
-							data={typeof previewQuestion.questionData === 'string'
-								? JSON.parse(previewQuestion.questionData)
-								: previewQuestion.questionData}
-							{onAnswer}
-						/>
-					{:else if previewQuestion.type === 'ordering'}
-						<Ordering
-							data={typeof previewQuestion.questionData === 'string'
-								? JSON.parse(previewQuestion.questionData)
-								: previewQuestion.questionData}
-							{onAnswer}
-						/>
-					{:else if previewQuestion.type === 'drag_drop'}
-						<DragDrop
-							data={typeof previewQuestion.questionData === 'string'
-								? JSON.parse(previewQuestion.questionData)
-								: previewQuestion.questionData}
-							{onAnswer}
-						/>
-					{:else if previewQuestion.type === 'matching'}
-						<Matching
-							data={typeof previewQuestion.questionData === 'string'
-								? JSON.parse(previewQuestion.questionData)
-								: previewQuestion.questionData}
-							{onAnswer}
-						/>
-					{:else if previewQuestion.type === 'fill_blank'}
-						<FillBlank
-							data={typeof previewQuestion.questionData === 'string'
-								? JSON.parse(previewQuestion.questionData)
-								: previewQuestion.questionData}
-							{onAnswer}
-						/>
-					{:else if previewQuestion.type === 'short_answer'}
-						<ShortAnswer
-							data={typeof previewQuestion.questionData === 'string'
-								? JSON.parse(previewQuestion.questionData)
-								: previewQuestion.questionData}
-							{onAnswer}
-						/>
-					{:else if previewQuestion.type === 'cloze'}
-						<Cloze
-							data={typeof previewQuestion.questionData === 'string'
-								? JSON.parse(previewQuestion.questionData)
-								: previewQuestion.questionData}
-							{onAnswer}
-						/>
-					{:else if previewQuestion.type === 'calculated'}
-						<Calculated data={typeof previewQuestion.questionData === 'string' ? JSON.parse(previewQuestion.questionData) : previewQuestion.questionData} {onAnswer} />
-					{:else if previewQuestion.type === 'sentence_reorder'}
-						<SentenceReorder data={typeof previewQuestion.questionData === 'string' ? JSON.parse(previewQuestion.questionData) : previewQuestion.questionData} {onAnswer} />
-					{:else if previewQuestion.type === 'hotspot'}
-						<Hotspot data={typeof previewQuestion.questionData === 'string' ? JSON.parse(previewQuestion.questionData) : previewQuestion.questionData} {onAnswer} />
-					{:else if previewQuestion.type === 'drag_to_image'}
-						<DragToImage data={typeof previewQuestion.questionData === 'string' ? JSON.parse(previewQuestion.questionData) : previewQuestion.questionData} {onAnswer} />
-					{:else if previewQuestion.type === 'matrix'}
-						<Matrix data={typeof previewQuestion.questionData === 'string' ? JSON.parse(previewQuestion.questionData) : previewQuestion.questionData} {onAnswer} />
-					{:else if previewQuestion.type === 'essay'}
-						<Essay data={typeof previewQuestion.questionData === 'string' ? JSON.parse(previewQuestion.questionData) : previewQuestion.questionData} {onAnswer} />
-					{:else}
-						<div class="p-8 text-center text-muted-foreground">
-							هذا النوع من الأسئلة غير مدعوم في المعاينة التفاعلية بعد.
-						</div>
-					{/if}
-				</div>
-
-				<!-- Validation Actions -->
-				<div class="flex items-center justify-between border-t border-border pt-4">
-					{#if previewResult !== null}
-						<div
-							class="flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-bold {previewResult
-								? 'bg-emerald-500/10 text-emerald-400'
-								: 'bg-red-500/10 text-red-400'}"
-						>
-							{#if previewResult}
-								<CheckCircle size={20} /> إجابة صحيحة
-							{:else}
-								<XCircle size={20} /> إجابة خاطئة
-							{/if}
-						</div>
-					{:else}
-						<div></div>
-					{/if}
-
-					<div class="flex items-center gap-3">
-						{#if previewResult !== null}
-							<button
-								onclick={() => {
-									previewAnswer = null;
-									previewResult = null;
-								}}
-								class="rounded-xl border border-border bg-card text-card-foreground shadow-sm px-6 py-2.5 text-sm font-bold text-foreground transition-all hover:bg-muted"
-							>
-								إعادة المحاولة
-							</button>
-						{:else}
-							<button
-								onclick={checkPreviewAnswer}
-								disabled={previewAnswer === null}
-								class="rounded-xl bg-blue-600 px-6 py-2.5 text-sm font-bold text-foreground shadow-lg shadow-blue-600/20 transition-all hover:bg-blue-700 disabled:pointer-events-none disabled:opacity-50"
-							>
-								تحقق من الإجابة
-							</button>
-						{/if}
-					</div>
-				</div>
-
-				{#if previewQuestion.explanation && previewResult !== null}
-					<div class="relative mt-6 rounded-xl border border-blue-500/20 bg-blue-500/5 p-4">
-						<div class="absolute top-2 right-4 text-xs font-bold text-blue-500/40 select-none">
-							شرح / تلميح
-						</div>
-						<p class="mt-4 whitespace-pre-wrap text-blue-200">{previewQuestion.explanation}</p>
-					</div>
-				{/if}
-			</div>
-		</div>
-	</div>
-{/if}

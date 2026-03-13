@@ -42,3 +42,38 @@ export function getQuestionType(id: string) {
         border: 'border-border' 
     };
 }
+
+export function getDefaultDataForType(type: string) {
+    switch (type) {
+        case 'mcq':
+            return { options: [], correctIndices: [] };
+        case 'true_false':
+            return { correctAnswer: true };
+        case 'ordering':
+            return { items: [] };
+        case 'drag_drop':
+            return { categories: [], items: [] };
+        case 'matching':
+            return { pairs: [] };
+        case 'fill_blank':
+            return { acceptedAnswers: [] };
+        case 'short_answer':
+            return { acceptedKeywords: [] };
+        case 'cloze':
+            return { options: [] };
+        case 'calculated':
+            return { formula: '', displayTemplate: '', variables: [], tolerance: 0 };
+        case 'sentence_reorder':
+            return { words: [], correctOrder: [] };
+        case 'hotspot':
+            return { imageUrl: '', zones: [], correctZone: 0 };
+        case 'drag_to_image':
+            return { imageUrl: '', labels: [] };
+        case 'matrix':
+            return { statements: [], columns: ['صحيح', 'خطأ'], correctAnswers: [] };
+        case 'essay':
+            return { minWords: 0, maxWords: 0, keywords: [] };
+        default:
+            return {};
+    }
+}

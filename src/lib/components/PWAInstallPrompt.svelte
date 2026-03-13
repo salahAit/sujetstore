@@ -13,44 +13,34 @@
 	let isUnsupportedBrowser = $state(false);
 
 	onMount(() => {
-		// 1. Detect Browser to show alternative instructions
+		// 1. Detect Browser
 		const userAgent = window.navigator.userAgent.toLowerCase();
 		isFirefox = userAgent.includes('firefox');
 		isIOS = /iphone|ipad|ipod/.test(userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 		
 		isUnsupportedBrowser = isFirefox || isIOS;
+		const isDismissed = localStorage.getItem('pwa_prompt_dismissed') === 'true';
 
-		// 2. Listen for the native install prompt event (Chrome/Edge/Android)
+		// 2. Chrome/Edge/Android Native Event
 		window.addEventListener('beforeinstallprompt', (e) => {
-			// Do NOT use e.preventDefault() so the native browser button in the address bar STILL shows up!
+			// Do NOT prevent default
 			deferredPrompt = e;
+			isUnsupportedBrowser = false; // It's supported!
 			
-			// If we got the event, it's definitely supported, override flags
-			isUnsupportedBrowser = false;
-			
-			const isDismissed = localStorage.getItem('pwa_prompt_dismissed') === 'true';
 			if (!isDismissed) {
 				showPrompt = true;
 			}
 		});
 
-		// 3. Fallback for Firefox/Safari: 
-		// Since they don't fire `beforeinstallprompt`, we check if it's already installed (standalone mode)
-		// If not, and it hasn't been dismissed, we show the manual prompt.
-		if (isUnsupportedBrowser) {
-			const isDismissed = localStorage.getItem('pwa_prompt_dismissed') === 'true';
-			
-			// Note: window.matchMedia('(display-mode: standalone)') is unreliable on some Linux/Firefox setups.
-			// We will rely purely on the user dismissing it.
-			if (!isDismissed) {
-				// Delay slightly to not interrupt immediate page load
-				setTimeout(() => {
-					showPrompt = true;
-				}, 3000);
-			}
+		// 3. Fallback for Firefox/Safari
+		// If it's Firefox or iOS context, and they haven't dismissed it, blindly show the prompt.
+		if (isUnsupportedBrowser && !isDismissed) {
+			setTimeout(() => {
+				showPrompt = true;
+			}, 3000);
 		}
 
-		// 4. Listen for successful installation
+		// 4. Listen for successful installation (Chrome mostly)
 		window.addEventListener('appinstalled', () => {
 			deferredPrompt = null;
 			showPrompt = false;
@@ -58,7 +48,7 @@
 			console.log('PWA was installed successfully');
 		});
 
-		// DEBUG: Force show the prompt UI if ?debug_pwa=true is in the URL
+		// DEBUG
 		if (window.location.search.includes('debug_pwa=true')) {
 			showPrompt = true;
 		}
@@ -98,7 +88,7 @@
 {#if showPrompt}
 	<div 
 		transition:slide={{ duration: 300 }}
-		class="fixed bottom-0 sm:bottom-4 inset-x-0 mx-auto w-full sm:max-w-md z-50 p-4"
+		class="fixed bottom-0 sm:bottom-4 inset-x-0 mx-auto w-full sm:max-w-md z-[100] p-4"
 	>
 		<div class="bg-card text-card-foreground border-border shadow-2xl rounded-2xl border p-4 sm:p-5 flex flex-col gap-4 relative overflow-hidden backdrop-blur-xl bg-opacity-95 dark:bg-opacity-95">
 			<!-- Decorative Background Glow -->
@@ -110,7 +100,7 @@
 						<Download size={24} />
 					</div>
 					<div>
-						<h3 class="font-bold text-lg mb-1 leading-tight">تطبيق SujetStore مجاناً</h3>
+						<h3 class="font-bold text-lg mb-1 leading-tight">تثبيت التطبيق</h3>
 						<p class="text-xs text-muted-foreground mr-1 leading-relaxed">
 							{#if isIOS}
 								أضف التطبيق للشاشة الرئيسية: اضغط على الزر (مشاركة) أسفل الشاشة ثم اختر "إضافة للشاشة الرئيسية" (Add to Home Screen).
@@ -131,10 +121,10 @@
 				</button>
 			</div>
 
-			<div class="flex gap-3 mt-1 pl-10">
+			<div class="flex gap-3 mt-1">
 				<button 
 					onclick={installApp}
-					class="flex-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-4 py-2.5 rounded-xl shadow-md transition-all active:scale-95"
+					class="flex-[2] bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-4 py-2.5 rounded-xl shadow-md transition-all active:scale-95"
 				>
 					{#if isUnsupportedBrowser}
 						حسناً، فهمت

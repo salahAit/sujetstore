@@ -10,12 +10,14 @@
 		AlertCircle,
 		Save,
 		Brain,
-		Upload
+		Upload,
+		Eye
 	} from 'lucide-svelte';
 	import { onMount, tick } from 'svelte';
 	import QuestionForm from '$lib/admin/components/question-forms/QuestionForm.svelte';
 	import QuestionBankModal from './QuestionBankModal.svelte';
-	import { QUESTION_TYPES, getQuestionType } from '$lib/admin/questionTypes';
+	import QuestionPreviewModal from '$lib/admin/components/QuestionPreviewModal.svelte';
+	import { QUESTION_TYPES, getQuestionType, getDefaultDataForType } from '$lib/admin/questionTypes';
 
 	let quizId = $derived(page.params.id);
 	let quiz = $state<any>(null);
@@ -27,6 +29,8 @@
 	// Builder State
 	let showTypeSelector = $state(false);
 	let showBankModal = $state(false);
+	let showPreviewModal = $state(false);
+	let previewQuestion = $state<any>(null);
 	let editingQuestion = $state<any>(null); // null = not editing, {} = new question
 	let jsonFileInput = $state<HTMLInputElement | null>(null);
 
@@ -62,41 +66,6 @@
 			points: 1
 		};
 		showTypeSelector = false;
-	}
-
-	function getDefaultDataForType(type: string) {
-		switch (type) {
-			case 'mcq':
-				return { options: [], correctIndices: [] };
-			case 'true_false':
-				return { correctAnswer: true };
-			case 'ordering':
-				return { items: [] };
-			case 'drag_drop':
-				return { categories: [], items: [] };
-			case 'matching':
-				return { pairs: [] };
-			case 'fill_blank':
-				return { acceptedAnswers: [] };
-			case 'short_answer':
-				return { acceptedKeywords: [] };
-			case 'cloze':
-				return { options: [] };
-			case 'calculated':
-				return { formula: '', displayTemplate: '', variables: [], tolerance: 0 };
-			case 'sentence_reorder':
-				return { words: [], correctOrder: [] };
-			case 'hotspot':
-				return { imageUrl: '', zones: [], correctZone: 0 };
-			case 'drag_to_image':
-				return { imageUrl: '', labels: [] };
-			case 'matrix':
-				return { statements: [], columns: ['صحيح', 'خطأ'], correctAnswers: [] };
-			case 'essay':
-				return { minWords: 0, maxWords: 0, keywords: [] };
-			default:
-				return {};
-		}
 	}
 
 	async function saveQuestion(savedData: any) {
@@ -223,7 +192,14 @@
 				{/if}
 			</div>
 		</div>
-		<div class="flex gap-3">
+		<div class="flex flex-wrap items-center gap-3">
+			<a
+				href="/quizzes/{quiz?.slug || quizId}"
+				target="_blank"
+				class="flex items-center gap-2 rounded-xl border border-orange-500/30 bg-orange-500/10 px-4 py-2 font-bold text-orange-400 transition-all hover:bg-orange-500/20"
+			>
+				<Eye size={18} /> معاينة
+			</a>
 			<button
 				onclick={() => jsonFileInput?.click()}
 				class="flex items-center gap-2 rounded-xl border border-purple-500/30 bg-purple-500/10 px-4 py-2 font-bold text-purple-400 transition-all hover:bg-purple-500/20"
@@ -259,6 +235,11 @@
 		bind:isOpen={showBankModal}
 		quizId={Number(quizId)}
 		onImportSuccess={loadQuiz}
+	/>
+
+	<QuestionPreviewModal
+		bind:isOpen={showPreviewModal}
+		question={previewQuestion}
 	/>
 
 	{#if error}
@@ -299,8 +280,10 @@
 			<div
 				class="w-full max-w-2xl rounded-2xl border border-border bg-background p-6 shadow-2xl"
 				onclick={(e) => e.stopPropagation()}
+				onkeydown={(e) => e.stopPropagation()}
 				role="dialog"
 				aria-modal="true"
+				tabindex="-1"
 			>
 				<h2 class="mb-4 text-center text-xl font-bold">اختر نوع السؤال</h2>
 				<div class="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -330,18 +313,16 @@
 
 	<!-- Question List -->
 	{#if !loadingData && questions.length > 0}
-		<div class="space-y-3">
+		<div class="space-y-3" role="list">
 			{#each questions as q, index}
 				{@const qType = QUESTION_TYPES.find((t) => t.id === q.type)}
 				<div
+					role="listitem"
 					draggable="true"
 					ondragstart={(e) => dragStart(e, index)}
 					ondragover={(e) => dragOver(e, index)}
 					ondrop={(e) => drop(e, index)}
-					class="group flex items-center gap-4 rounded-xl border border-border bg-card text-card-foreground shadow-sm p-4 transition-all hover:border-border {draggedIndex ===
-					index
-						? 'border-dashed opacity-50'
-						: ''}"
+					class="group flex items-center gap-4 rounded-xl border border-border bg-card text-card-foreground shadow-sm p-4 transition-all hover:border-border {draggedIndex === index ? 'border-dashed opacity-50' : ''}"
 				>
 					<!-- Drag handle -->
 					<div class="cursor-grab text-foreground/30 hover:text-white/60 active:cursor-grabbing">
@@ -370,7 +351,17 @@
 					</div>
 
 					<!-- Actions -->
-					<div class="flex items-center gap-2 opacity-0 transition-opacity group-hover:opacity-100">
+					<div class="flex items-center gap-2 transition-opacity">
+						<button
+							onclick={() => {
+								previewQuestion = JSON.parse(JSON.stringify(q));
+								showPreviewModal = true;
+							}}
+							class="rounded-lg bg-orange-500/10 text-orange-400 p-2 transition-colors hover:bg-orange-500/20"
+							title="معاينة"
+						>
+							<Eye size={16} />
+						</button>
 						<button
 							onclick={() => (editingQuestion = JSON.parse(JSON.stringify(q)))}
 							class="rounded-lg bg-card text-card-foreground shadow-sm p-2 transition-colors hover:bg-muted"

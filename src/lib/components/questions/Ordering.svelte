@@ -2,7 +2,11 @@
 	import { GripVertical } from 'lucide-svelte';
 
 	let { data, onAnswer }: { data: any; onAnswer: (answer: any) => void } = $props();
-	let items = $state<string[]>([...(data.items || [])]);
+	let items = $state<string[]>([]);
+
+	$effect(() => {
+		items = [...(data.items || [])];
+	});
 
 	let dragIndex = $state<number | null>(null);
 	let dropIndex = $state<number | null>(null);

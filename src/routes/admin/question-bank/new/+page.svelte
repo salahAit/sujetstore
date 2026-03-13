@@ -4,19 +4,13 @@
 	import { onMount } from 'svelte';
 
 	import QuestionForm from '$lib/admin/components/question-forms/QuestionForm.svelte';
-	import { QUESTION_TYPES } from '$lib/admin/questionTypes';
+	import { QUESTION_TYPES, getDefaultDataForType } from '$lib/admin/questionTypes';
 
 	let categoryId = $state<number | null>(null);
 	let difficulty = $state('medium');
 
-	let draftQuestion = $state({
-		type: 'mcq',
-		questionText: '',
-		questionTextAr: '',
-		explanation: '',
-		points: 1,
-		questionData: {}
-	});
+	let draftQuestion = $state<any>(null);
+	let showTypeSelector = $state(true);
 
 	let categories = $state<any[]>([]);
 	let loadingData = $state(true);
@@ -48,12 +42,18 @@
 		}
 	});
 
-	// Reset question data when type changes
-	$effect(() => {
-		if (draftQuestion.type) {
-			draftQuestion.questionData = {};
-		}
-	});
+	// Helper to start adding a specific question type
+	function startAdding(typeId: string) {
+		draftQuestion = {
+			type: typeId,
+			questionText: '',
+			questionTextAr: '',
+			questionData: getDefaultDataForType(typeId),
+			explanation: '',
+			points: 1
+		};
+		showTypeSelector = false;
+	}
 
 	async function save() {
 		if (!draftQuestion.questionTextAr || !categoryId || !draftQuestion.type) {
@@ -98,7 +98,7 @@
 	<div class="flex items-center gap-4 border-b border-border pb-4">
 		<a
 			href="/admin/question-bank"
-			class="rounded-lg p-2 text-muted-foreground transition-colors hover:bg-card text-card-foreground shadow-sm hover:text-white"
+			class="rounded-lg p-2 text-muted-foreground transition-colors hover:bg-card shadow-sm hover:text-white"
 		>
 			<ArrowRight size={24} />
 		</a>
@@ -119,8 +119,9 @@
 				<h3 class="mb-4 font-bold text-foreground/80">تصنيف السؤال</h3>
 				<div class="space-y-4">
 					<div class="space-y-2">
-						<label class="text-sm font-semibold text-muted-foreground">تحديد التصنيف (Category) *</label>
+						<label for="category-select" class="text-sm font-semibold text-muted-foreground">تحديد التصنيف (Category) *</label>
 						<select
+							id="category-select"
 							bind:value={categoryId}
 							class="w-full rounded-xl border border-border bg-background p-3 font-mono text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 						>
@@ -136,8 +137,9 @@
 					</div>
 
 					<div class="space-y-2">
-						<label class="text-sm font-semibold text-muted-foreground">مستوى الصعوبة</label>
+						<label for="difficulty-select" class="text-sm font-semibold text-muted-foreground">مستوى الصعوبة</label>
 						<select
+							id="difficulty-select"
 							bind:value={difficulty}
 							class="w-full rounded-xl border border-border bg-background p-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 						>
@@ -159,25 +161,48 @@
 
 		<!-- Main question builder -->
 		<div class="space-y-6 md:col-span-2">
-			<div class="rounded-2xl border border-border bg-card text-card-foreground shadow-sm p-6">
-				<div class="mb-6 space-y-2 border-b border-border pb-6">
-					<label class="text-lg font-bold text-emerald-400">تحديد نوع السؤال</label>
-					<select
-						bind:value={draftQuestion.type}
-						class="w-full rounded-xl border border-emerald-500/30 bg-background p-4 font-bold text-foreground shadow-sm outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 cursor-pointer"
-					>
-						{#each QUESTION_TYPES as qt}
-							<option class="bg-background font-semibold" value={qt.id}>{qt.name}</option>
+			{#if showTypeSelector && !draftQuestion}
+				<div class="rounded-2xl border border-border bg-card p-6 shadow-sm">
+					<h2 class="mb-4 text-center text-xl font-bold text-emerald-400">اختر نوع السؤال</h2>
+					<div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+						{#each QUESTION_TYPES as type}
+							{@const IconComp = type.icon}
+							<button
+								onclick={() => startAdding(type.id)}
+								class="flex flex-col items-center justify-center gap-2 rounded-xl border border-border bg-background p-4 shadow-sm transition-all hover:border-blue-500 hover:bg-muted text-foreground"
+							>
+								<div class="flex h-12 w-12 items-center justify-center rounded-full {type.bg} {type.color}">
+									<IconComp size={24} />
+								</div>
+								<span class="text-sm font-semibold">{type.name}</span>
+							</button>
 						{/each}
-					</select>
+					</div>
 				</div>
+			{/if}
 
-				<QuestionForm 
-					bind:question={draftQuestion} 
-					onSave={save} 
-					onCancel={() => goto('/admin/question-bank')} 
-				/>
-			</div>
+			{#if draftQuestion}
+				<div class="relative rounded-2xl border border-blue-500/30 bg-blue-500/5 p-6">
+					<button
+						class="absolute top-4 left-4 text-muted-foreground hover:text-white"
+						onclick={() => { draftQuestion = null; showTypeSelector = true; }}
+					>
+						تغيير النوع
+					</button>
+					<h2 class="mb-6 flex items-center gap-2 text-xl font-bold">
+						<span class="rounded bg-blue-500/20 px-2 text-sm text-blue-400">
+							{QUESTION_TYPES.find((t) => t.id === draftQuestion.type)?.name}
+						</span>
+						سؤال جديد
+					</h2>
+
+					<QuestionForm 
+						bind:question={draftQuestion} 
+						onSave={save} 
+						onCancel={() => goto('/admin/question-bank')} 
+					/>
+				</div>
+			{/if}
 		</div>
 	</div>
 </div>
