@@ -8,7 +8,7 @@
 
 	// Pagination state
 	let currentPage = $state(1);
-	const pageSize = 10;
+	let pageSize = $state(10);
 	let paginatedSubjects = $derived(
 		data.subjects.slice((currentPage - 1) * pageSize, currentPage * pageSize)
 	);
@@ -139,7 +139,7 @@
 		</table>
 	</div>
 	{#if data.subjects.length > 0}
-		<Pagination totalItems={data.subjects.length} {pageSize} bind:currentPage />
+		<Pagination totalItems={data.subjects.length} bind:pageSize bind:currentPage />
 	{/if}
 </div>
 

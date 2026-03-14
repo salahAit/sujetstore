@@ -109,9 +109,9 @@
 </script>
 
 <div class="font-cairo px-4 py-6 md:px-8" dir="rtl">
-	<div class="mb-8 flex items-center justify-between">
+	<div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 		<div>
-			<h1 class="text-3xl font-bold text-foreground">تصنيفات الأسئلة (Categories)</h1>
+			<h1 class="text-3xl font-bold text-foreground">التصنيفات</h1>
 			<p class="mt-2 text-sm text-foreground/60">
 				إدارة شجرة مجلدات الأسئلة، مشابهة لنظام Moodle لتنظيم بنك الأسئلة الشامل.
 			</p>

@@ -31,7 +31,7 @@
 </svelte:head>
 
 <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-	<div class="mb-8 flex items-center justify-between">
+	<div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 		<div>
 			<h1 class="flex items-center gap-3 text-2xl font-extrabold sm:text-3xl">
 				<BarChart3 size={28} class="text-purple-400" /> إحصائيات التمارين

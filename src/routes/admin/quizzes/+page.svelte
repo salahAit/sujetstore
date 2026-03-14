@@ -10,7 +10,7 @@
 
 	// Pagination state
 	let currentPage = $state(1);
-	const pageSize = 10;
+	let pageSize = $state(10);
 
 	onMount(async () => {
 		await Promise.all([loadQuizzes(), loadStats()]);
@@ -92,7 +92,7 @@
 </script>
 
 <div class="space-y-6">
-	<div class="flex items-center justify-between">
+	<div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 		<h1 class="flex items-center gap-3 text-2xl font-bold">
 			<Brain size={28} class="text-purple-500" /> إدارة التمارين التفاعلية
 		</h1>
@@ -150,7 +150,8 @@
 		</div>
 	{:else}
 		<div class="overflow-hidden rounded-2xl border border-border bg-card text-card-foreground shadow-sm">
-			<table class="w-full text-right">
+			<div class="overflow-x-auto">
+				<table class="w-full text-right min-w-[800px]">
 				<thead class="border-b border-border bg-card text-card-foreground shadow-sm text-sm font-medium text-foreground/60">
 					<tr>
 						<th class="p-4">العنوان</th>
@@ -246,9 +247,10 @@
 					{/if}
 				</tbody>
 			</table>
+			</div>
 		</div>
 		{#if filteredQuizzes.length > 0}
-			<Pagination totalItems={filteredQuizzes.length} {pageSize} bind:currentPage />
+			<Pagination totalItems={filteredQuizzes.length} bind:pageSize bind:currentPage />
 		{/if}
 	{/if}
 </div>

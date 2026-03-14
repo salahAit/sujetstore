@@ -92,7 +92,7 @@
   set par(justify: true, leading: 1.2em, spacing: 1.5em)
   
   // Style Figures (Images)
-  show figure: set block(spacing: 2em)
+  show figure: set block(above: 2em, below: 2em)
   show figure.caption: set text(size: 9pt, style: "italic", fill: primary.lighten(20%))
 
   body

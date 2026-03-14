@@ -42,7 +42,7 @@
 
 	// Pagination state
 	let currentPage = $state(1);
-	const pageSize = 10;
+	let pageSize = $state(10);
 
 	// Preview state
 	let previewQuestion = $state<any>(null);
@@ -181,26 +181,26 @@
 </script>
 
 <div class="space-y-6">
-	<div class="flex items-center justify-between">
+	<div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
 		<h1 class="flex items-center gap-3 text-2xl font-bold">
 			<Database size={28} class="text-emerald-500" /> بنك الأسئلة الشامل
 		</h1>
-		<div class="flex items-center gap-3">
+		<div class="flex flex-wrap items-center gap-3">
 			<a
 				href="/admin/question-bank/categories"
-				class="flex items-center rounded-xl border border-border bg-card text-card-foreground shadow-sm px-4 py-2 text-sm font-bold text-foreground transition-all hover:bg-muted"
+				class="flex items-center rounded-xl border border-border bg-card text-card-foreground shadow-sm px-4 py-2 text-sm font-bold transition-all hover:bg-muted"
 			>
 				إدارة التصنيفات
 			</a>
 			<button
 				onclick={exportQuestions}
-				class="flex items-center gap-2 rounded-xl border border-border bg-card text-card-foreground shadow-sm px-4 py-2 text-sm font-bold text-foreground transition-all hover:bg-muted"
+				class="flex items-center gap-2 rounded-xl border border-border bg-card text-card-foreground shadow-sm px-4 py-2 text-sm font-bold transition-all hover:bg-muted"
 			>
 				<Download size={16} /> تصدير
 			</button>
 			<button
 				onclick={() => fileInput?.click()}
-				class="flex items-center gap-2 rounded-xl border border-border bg-card text-card-foreground shadow-sm px-4 py-2 text-sm font-bold text-foreground transition-all hover:bg-muted"
+				class="flex items-center gap-2 rounded-xl border border-border bg-card text-card-foreground shadow-sm px-4 py-2 text-sm font-bold transition-all hover:bg-muted"
 			>
 				<Upload size={16} /> استيراد
 			</button>
@@ -268,12 +268,12 @@
 				class="w-full rounded-xl border border-border bg-card text-card-foreground shadow-sm py-3 pr-12 pl-4 outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:ring-1 focus:ring-primary"
 			/>
 		</div>
-		<div class="flex gap-4">
-			<div class="relative">
+		<div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+			<div class="relative w-full sm:w-auto">
 				<Filter class="absolute top-1/2 right-4 -translate-y-1/2 text-foreground/40" size={16} />
 				<select
 					bind:value={selectedType}
-					class="w-48 appearance-none rounded-xl border border-border bg-card text-card-foreground shadow-sm py-3 pr-12 pl-4 text-sm font-medium transition-colors outline-none hover:bg-muted focus:border-primary focus:ring-1 focus:ring-primary focus:ring-1 focus:ring-primary"
+					class="w-full sm:w-48 appearance-none rounded-xl border border-border bg-card text-card-foreground shadow-sm py-3 pr-12 pl-4 text-sm font-medium transition-colors outline-none hover:bg-muted focus:border-primary focus:ring-1 focus:ring-primary focus:ring-1 focus:ring-primary"
 				>
 					<option value="all" class="bg-background">كل الأنواع</option>
 					{#each QUESTION_TYPES as qt}
@@ -283,7 +283,7 @@
 			</div>
 			<select
 				bind:value={selectedDifficulty}
-				class="w-40 rounded-xl border border-border bg-card text-card-foreground shadow-sm px-4 py-3 text-sm font-medium transition-colors outline-none hover:bg-muted focus:border-primary focus:ring-1 focus:ring-primary focus:ring-1 focus:ring-primary"
+				class="w-full sm:w-40 rounded-xl border border-border bg-card text-card-foreground shadow-sm px-4 py-3 text-sm font-medium transition-colors outline-none hover:bg-muted focus:border-primary focus:ring-1 focus:ring-primary focus:ring-1 focus:ring-primary"
 			>
 				<option value="all" class="bg-background">كل المستويات</option>
 				<option value="easy" class="bg-background">سهل</option>
@@ -301,7 +301,8 @@
 		</div>
 	{:else}
 		<div class="overflow-hidden rounded-2xl border border-border bg-card text-card-foreground shadow-sm p-1">
-			<table class="w-full border-collapse text-right">
+			<div class="overflow-x-auto">
+				<table class="w-full border-collapse text-right min-w-[800px]">
 				<thead class="border-b border-border bg-card text-card-foreground shadow-sm text-sm font-medium text-foreground/60">
 					<tr>
 						<th class="p-4">التصنيف</th>
@@ -377,9 +378,10 @@
 					{/if}
 				</tbody>
 			</table>
+			</div>
 		</div>
 		{#if filteredQuestions.length > 0}
-			<Pagination totalItems={filteredQuestions.length} {pageSize} bind:currentPage />
+			<Pagination totalItems={filteredQuestions.length} bind:pageSize bind:currentPage />
 		{/if}
 	{/if}
 </div>
