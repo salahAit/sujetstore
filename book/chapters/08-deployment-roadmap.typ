@@ -1,58 +1,60 @@
-= Deployment & Future Roadmap
+= النشر وخارطة الطريق المستقبلية (Deployment & Roadmap)
 
-== Production Deployment Guide
+== دليل النشر في بيئة الإنتاج (Production Deployment)
 
-SujetStore is designed to be easily deployed on cheap VPS infrastructure (e.g., Contabo, Hetzner) while handling massive scale.
+تم تصميم تطبيق SujetStore ليكون قابلاً للنشر والتثبيت بسهولة على خوادم VPS اقتصادية (مثل منصات Contabo، Hetzner) مع الحفاظ على قدرة معالجة لعدد هائل من الطلبات.
 
-=== Current Infrastructure Footprint
+=== البصمة التحتية الحالية للنظام
 
 #table(
-  columns: (1fr, 2fr),
-  [*Component*], [*Specification*],
-  [Provider], [Standard Linux VPS (Ubuntu 22.04+)],
-  [Web Server], [Caddy (auto-SSL reverse proxy)],
-  [Process Manager], [systemd service unit],
-  [Backup Strategy], [Daily SQLite `.backup` of `users.db` with 7-day retention],
+  columns: (1.5fr, 3fr),
+  [*المكون (Component)*], [*المواصفات المختارة*],
+  [مزود الخدمة], [خادم VPS قياسي بنظام (Ubuntu 22.04+)],
+  [خادم الويب], [خادم Caddy (Reverse Proxy) مع تجديد تلقائي لشهادات SSL],
+  [مدير العمليات], [خدمة systemd (Systemd Service Unit)],
+  [استراتيجية النسخ الاحتياطي], [تصدير آلي لنسخة `.backup` يومية لقاعدة `users.db` مع احتفاظ تلقائي لـ 7 أيام متتالية]
 )
 
-=== Deployment Commands
+=== أوامر النشر (Deployment Commands)
 
-A deployment script (`deploy.sh`) is provided in the repository root to automate the build and restart process.
+نُرفق المنصة بسكربت نشر جاهز (`deploy.sh`) في المجلد الجذري لأتمتة عمليات البناء وإعادة التشغيل بمجرد التخريج.
 
 ```bash
-./deploy.sh full    # Initial setup, dependency install + deployment
-./deploy.sh deploy  # Subsequent updates (git pull, build, restart)
+./deploy.sh full    # التثبيت المبدئي (جلب الحزم + النشر الكامل لأول مرة)
+./deploy.sh deploy  # التحديثات اللاحقة (سحب التعديلات، البناء وإعادة التشغيل)
 ```
 
-== Security Layers
+== طبقات الحماية والأمان
+
+تُطبق المنصة مجموعة من طبقات الأمان القياسية لحماية الجلسات والبيانات:
 
 #table(
   columns: (1fr, 2fr),
-  [*Layer*], [*Implementation*],
-  [Transport], [HTTPS enforced via Caddy auto-SSL],
-  [Cookies], [`HttpOnly` · `Secure` · `SameSite=Lax`],
-  [Passwords], [bcryptjs hashing for Admin accounts],
-  [SQL Injection], [Guaranteed prevention via Drizzle ORM prepared statements],
+  [*الطبقة (Layer)*], [*طريقة التنفيذ (Implementation)*],
+  [الشبكة (Transport)], [فرض التشفير HTTPS اجبارياً عبر إعدادات Caddy],
+  [ملفات الارتباط (Cookies)], [تأمين الجلسات بخواص: `HttpOnly` · `Secure` · `SameSite=Lax`],
+  [كلمات المرور], [التجزئة باستخدام خوارزمية `bcryptjs` لحسابات الإدارة],
+  [حقن SQL], [وقاية تامة باستخدام البيانات الجاهزة (Prepared Statements) داخل Drizzle ORM]
 )
 
-== Future Roadmap
+== خارطة الطريق المستقبلية (Future Roadmap)
 
-While Phase 1 (The Interactive Assessment Engine) is now successfully completed, SujetStore has clear expansion vectors for Phase 2 and beyond.
+بعد استكمال المرحلة 1 (محرك التقييم التفاعلي) بنجاح، تتوفر لـ SujetStore آفاق وناقلات توسع واضحة لتطبيقات المرحلة الثانية وما بعدها.
 
-=== Phase 2: Video Solutions & Streaming Architecture
+=== المرحلة 2: حلول الفيديو وهيكل البث (Streaming Architecture)
 
-To support deeper understanding—especially for subjects like Physics and Mathematics—the platform will integrate video walkthroughs mimicking a teacher's explanation.
+لدعم الفهم العميق، لاسيما في المواد العلمية كالرياضيات والفيزياء، ستدمج المنصة شروحات فيديو تحاكي طريقة الأستاذ على السبورة.
 
-*Proposed Streaming Tech Stack:*
-- *HLS Protocol:* Adaptive bitrate streaming with 10-second chunks for instant playback.
-- *AES-128 Encryption:* Per-chunk encryption to prevent unauthorized downloads.
-- *Backblaze B2:* Cold storage at a fraction of the cost of Amazon S3.
-- *Cloudflare CDN:* Zero egress fees via the Bandwidth Alliance, providing rapid edge distribution across North Africa.
+*المعمارية التقنية المقترحة للبث:*
+- *بروتوكول HLS:* بث متكيف النطاق (Adaptive Bitrate) بتقطيعات مدتها 10 ثوانٍ لضمان استجابة وتشغيل فوري.
+- *تشفير AES-128:* تشفير خاص لكل مقطع فرعي لمنع التحميل والمعالجة غير المصرح بها.
+- *تخزين Backblaze B2:* تخزين بارد آمن وتكلفته تعادل جزءاً بسيطاً من تكلفة Amazon S3.
+- *شبكة توزيع Cloudflare (CDN):* استغلال خاصية (Bandwidth Alliance) لتحصيل رسوم نقل (Egress) صفرية، مع توفير وصول سريع للغاية لطلاب منطقة شمال إفريقيا.
 
-=== Phase 3: Advanced Analytics & Weakness Detection
+=== المرحلة 3: التحليلات المتقدمة ورصد نقاط الضعف
 
-Transitioning from macro-level admin analytics to personalized student diagnostics:
+الانتقال من مرحلة الإحصاء الإداري العام (Macro) إلى مشخصات دقيقة ومخصصة للطلاب (Micro):
 
-- *Automated Weakness Detection:* Analysis of specific interactive quiz errors to identify targeted knowledge gaps (e.g., "Struggles with Fractions").
-- *Personalized Recommendations:* Automatically suggesting specific summaries or lessons based on failed quiz competencies.
-- *Parent Dashboards:* Summary statistics tracking a student's study time, exam scores, and progression by trimester.
+- *رصد الثغرات آلياً:* تحليل الأخطاء المتكررة للطلاب بالمسابقات التفاعلية التحديد المباشر للفجوات المعرفية (مثال: الإشعار بـ "الطالب يعاني صعوبة في قسمة الكسور").
+- *توصيات مخصصة:* قيام النظام بتقديم نصائح أو دروس و ملخصات فورية تعتمد كلياً على كفاءات الاختبار غير المكتسبة.
+- *لوحات الآباء:* ملخصات ومخططات تعقب مرئية تبين للولي أوقات دراسة ومتابعة الابن، النتائج التفاعلية، والتقدم خلال الفصول دراسياً.

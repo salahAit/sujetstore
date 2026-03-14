@@ -1,40 +1,40 @@
-= Gamification & Engagement
+= التحفيز والمشاركة (Gamification & Engagement)
 
-To increase student engagement, motivation, and retention, SujetStore implements a complete gamification layer. This transforms the solitary act of studying into a rewarding, trackable journey.
+لزيادة معدل تفاعل الطلاب، رفع دافعيتهم للتعلم، وضمان استمراريتهم؛ تطبق منصة SujetStore طبقة متكاملة من نظام التحفيز (Gamification). هذا المنهج يحول تجربة المراجعة التعليمية الانفرادية إلى مسار تفاعلي، مجزئ، وقابل للتتبع.
 
-== Points System
+== نظام النقاط (Points System)
 
-The foundation of the gamification system is the Points ledger. Points are awarded automatically for positive educational behaviors:
+يمثل سجل النقاط العمود الفقري لنظام التحفيز بالمنصة. تُمنح النقاط تلقائياً للطالب نظير ممارسته لسلوكيات دراسية إيجابية:
 
-- *Completing a Quiz:* +10 points.
-- *Achieving a Perfect Score:* Bonus points depending on quiz length.
-- *Earning a Badge:* Bonus points ranging from +10 to +50 based on difficulty.
+- *إكمال تمرين تفاعلي:* +10 نقاط بشكل افتراضي.
+- *تحقيق العلامة الكاملة:* نقاط إضافية إضافية تعتمد على حجم التمرين وصعوبته.
+- *الحصول على وسام (Badge):* مكافآت نقاط إضافية تتراوح من +10 إلى +50 نقطة حسب ندرة الوسام.
 
-All point transactions are recorded in the `user_points` table with a timestamp and reason, providing students with a transparent history of their earnings.
+تسجل مجمل هذه العمليات والمعاملات في قاعدة البيانات ضمن جدول `user_points` بذكر التوقيت والسبب، مما يوفر للطالب تاريخاً شفافاً لعملية تحقيقه للنقاط ويشجعه على المزيد من الإنجاز.
 
-== Achievement Badges
+== الأوسمة (Achievement Badges)
 
-The platform defines 8 built-in achievement badges that students unlock by reaching specific milestones in the Quiz Engine. 
+تحدد المنصة 8 أوسمة افتراضية قياسية يمكن للطلاب الحصول عليها وتحريرها متى حققوا محطات بارزة معينة من خلال التفاعل مع "محرك التمارين التفاعلية".
 
 #table(
-  columns: (1fr, 1fr, 2fr),
-  [*Badge*], [*Icon*], [*Unlock Condition*],
-  [First Quiz], [🎯], [Complete your very first interactive quiz],
-  [Quiz Explorer], [📚], [Complete 5 total quizzes],
-  [Quiz Master], [🏆], [Complete 10 total quizzes],
-  [Perfect Score], [⭐], [Score 100% on any quiz],
-  [Speed Demon], [⚡], [Complete a quiz in under 1 minute],
-  [Hot Streak], [🔥], [Score 80%+ on 3 consecutive quizzes],
-  [Versatile], [🎪], [Try 5 different interactive question types],
-  [Centurion], [💯], [Accumulate 100 total points],
+  columns: (1fr, 0.5fr, 3fr),
+  [*الوسام*], [*الرمز*], [*شروط التحرير*],
+  [التجربة الأولى], [🎯], [إكمال أول اختبار تفاعلي تماماً على المنصة],
+  [المستكشف], [📚], [إكمال عدد إجمالي وصل لـ 5 تمارين],
+  [متقن التمارين], [🏆], [إكمال عدد إجمالي وصل لـ 10 تمارين],
+  [العلامة الكاملة], [⭐], [الوصول لدرجة 100% في أي اختبار دون أخطاء],
+  [أسرع من البرق], [⚡], [إنهاء التمرين كاملاً بآداء ناجح بأقل من دقيقة],
+  [تسلسل الانتصارات], [🔥], [الحصول على تقييم بأكثر من 80% لثلاث تمارين متتالية],
+  [المُتعدد العبقري], [🎪], [تجريب وحل 5 أنواع مختلفة ومميزة من الأسئلة],
+  [النادي المئوي], [💯], [النجاح في تحقيق رصيد تجميعي يفوق الـ 100 نقطة]
 )
 
-The badge evaluation logic runs asynchronously upon quiz submission. When a new threshold is met, the system inserts a record into the `user_badges` table.
+يتم تشغيل منطق التقييم التلقائي للأوسمة في الخلفية بطريقة غير متزامنة (Asynchronous) مباشرة إثر تقديم أي تمرين للمنصة. وعند استيفاء أو تخطي حد جديد من هذه الشروط، يسجل النظام الإنجاز في جدول `user_badges` ويرفق الإشعار للطلاب.
 
-== The Achievements Dashboard
+== لوحة الإنجازات للمستخدم
 
-Students can view their progress on the dedicated Achievements page (`/achievements`). This page utilizes a horizontal tab layout to present three key views:
+يتوفر بمتناول يد الطلبة مساحة خاصة لتفقد المدى المنجز، منسقة في صفحة خاصة تحت عنوان "إنجازاتي" (`/achievements`). هذا الفضاء يعتمد على تخطيط علامات التبويب المرتزة بطريقة أفقية لعرض تفاصيل بارزة ضمن 3 واجهات جوهرية:
 
-1. *Badges Grid:* A visual display of all 8 badges. Unearned badges appear grayscale/locked, while earned badges are fully colored with their unlock timestamps.
-2. *Leaderboard:* A global ranking showing the top 10 most active students on the platform, ranked by total accumulated points.
-3. *Points History:* A chronological log of the student's recent point earnings and the specific actions that triggered them.
+1. *مصفوفة الأوسمة:* شبكة مصورة لعرض مجمل الأوسمة الثمانية. الأوسمة التي لم يُحصل عليها بعد تكون رمادية (مغلقة)، أما تلك المحققة بالفعل فتتلون بألوانها الساطعة الكاملة مقرونة بتاريخ وقت تحقيق النصر.
+2. *لوحة الصدارة (Leaderboard):* سلم الترتيب العالمي الذي يبرز أعضاء المنصة الأكثر نشاطاً في المراكز العشرة الأولى مرتبين حسب أكبر رصيد نقاط مجموعي متوفر بحوزتهم.
+3. *سجل رصيد النقاط:* وهو عرض زمني متسلل يبين التحصيلات النقطية الحديثة مع تحديد نوع العمليات التفاعلية التي تسببت بالحصول عليها بشكل دقيق.

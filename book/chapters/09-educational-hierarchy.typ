@@ -1,77 +1,78 @@
-= The Educational Hierarchy Engine
+= محرك الهيكلية التعليمية (Educational Hierarchy Engine)
 
-SujetStore models the complex, multi-tiered Algerian educational system with high precision. Understanding this hierarchy is crucial for administrators managing documents and quizzes, as it dictates how content is routed to specific students.
+تحاكي منصة SujetStore النظام التعليمي الجزائري متعدد الطبقات والتشعبات بدقة متناهية. إن الفهم التام لهذه الهيكلية يعتبر أمراً حيوياً للمديرين (Admins) الذين يديرون رفع المستندات وبناء الاختبارات، حيث أنها النواة التي تُحدد طبيعة وكيفية توجيه المحتوى للطلاب المعنيين.
 
-== 1. The Core Entities
+== 1. الكيانات الأساسية للنظام
 
-Our database schema breaks the educational journey into four distinct mathematical entities: *Levels*, *Years*, *Streams*, and *Subjects*.
+تقسم مخططات قاعدة البيانات مسار المتعلم إلى أربعة كيانات رياضية منفصلة: *الأطوار* (Levels)، *السنوات* (Years)، *الشعب* (Streams)، و #strong[المواد الأساسية] (Base Subjects).
 
-=== 1.1. Levels (المراحل التعليمية)
-Levels represent the broadest categorization in the Algerian system (`education_levels` table):
-- *Primary Education (التعليم الابتدائي)*: 5 years of schooling.
-- *Middle Education (التعليم المتوسط)*: 4 years of schooling culminating in the BEM exam.
-- *Secondary Education (التعليم الثانوي)*: 3 years of schooling culminating in the BAC exam.
+=== 1.1. الأطوار التعليمية (Levels)
+وهي أوسع تصنيف في النظام التربوي الجزائري (مجدولة في `education_levels`):
+- *التعليم الابتدائي (Primary)*: 5 سنوات من التمدرس الأكاديمي.
+- *التعليم المتوسط (Middle)*: 4 سنوات تُتوج بشهادة التعليم المتوسط (BEM).
+- *التعليم الثانوي (Secondary)*: 3 سنوات دراسية من التخصص تُختتم بشهادة البكالوريا (BAC).
 
-=== 1.2. Years (السنوات الدراسية)
-Each Level is subdivided into specific Years (`years` table).
-- For Primary: 1AP, 2AP, 3AP, 4AP, 5AP.
-- For Middle: 1AM, 2AM, 3AM, 4AM.
-- For Secondary: 1AS, 2AS, 3AS.
-Years are strictly parented to a single Level (`level_id` foreign key).
+=== 1.2. السنوات الدراسية (Years)
+يُقسم كل طور وفقاً لجداول (`years`) إلى سنوات معتمدة:
+- للابتدائي: 1AP, 2AP, 3AP, 4AP, 5AP.
+- للمتوسط: 1AM, 2AM, 3AM, 4AM.
+- للثانوي: 1AS, 2AS, 3AS.
+السنوات ترتبط حصرياً بمرحلة أو طور محدد، فلا يمكن تدريس 4AM داخل طور الابتدائي عبر قفل المفتاح الأجنبي (`level_id`).
 
-=== 1.3. Streams (الشعب الدراسية)
-Streams represent the specialized academic tracks that students follow. In the Algerian system, specialization begins in Secondary Education (`streams` table).
-Examples of Streams include:
-- *Common Trunk Science & Tech (جذع مشترك علوم وتكنولوجيا)* - Typically 1AS.
-- *Common Trunk Letters (جذع مشترك آداب)* - Typically 1AS.
-- *Experimental Sciences (علوم تجريبية)* - 2AS and 3AS.
-- *Mathematics (رياضيات)* - 2AS and 3AS.
-- *Management and Economics (تسيير واقتصاد)* - 2AS and 3AS.
-- *Foreign Languages (لغات أجنبية)* - 2AS and 3AS.
+=== 1.3. الشعب الدراسية (Streams)
+تُعد الشعب ركيزة التخصص الأكاديمي. في الجزائر، يبدأ التوجيه المتخصص مع انطلاق مرحلة الثانوي (`streams`).
+من أمثلة الشعب المدرجة:
+- *جذع مشترك علوم وتكنولوجيا* - (مستوى 1AS المُشترك).
+- *جذع مشترك آداب* - (مستوى 1AS المُشترك).
+- *علوم تجريبية (Experimental Sciences)* - في السنتين 2AS و 3AS.
+- *رياضيات (Mathematics)* - في السنتين 2AS و 3AS.
+- *تسيير واقتصاد (Management and Economics)* - في السنتين 2AS و 3AS.
+- *لغات أجنبية (Foreign Languages)* - في السنتين 2AS و 3AS.
 
-To map which streams are available in which years, the database uses a many-to-many join table (`level_streams`). For example, the *Experimental Sciences* stream is mapped to *2AS* and *3AS*, but never *1AS*, *4AM*, or *1AP*. 
-Primary and Middle education act functionally as a single "General" stream per year, although the architecture supports adding arbitrary streams if the educational system changes.
+ولرسم الخريطة التي تحدد الشعب المتوفرة في كل سنة دراسية بالظبط، نعتمد على جدول ارتباط مباشر (`level_streams`). مثال ذلك: تتوفر شعبة *العلوم التجريبية* لتلاميذ الـ 2AS والـ 3AS، لكنها لا يمكن أبداً استدعاؤها في واجهات طالب الـ 1AS أو הـ 1AP أو الـ 4AM.
 
-=== 1.4. Base Subjects (المواد الأساسية)
-The `subjects` table holds the normalized names of subjects (e.g., "Mathematics", "Physics", "Arabic Language"). These are abstract entities. They do not belong to a year or a stream; they are just labels and icons.
+أمّا الأطوار المتوسطة والابتدائية فتعمل وظيفياً تحت مسار (عام/مُشترك)، لكن برمجية الهيكلية مبنية للسماح بإضافة وتمرير شعب جديدة مستقبلاً للأساسيات بكل أريحية.
 
-== 2. The Intersection: YearSubjects and StreamSubjects
+=== 1.4. المواد الأساسية (Base Subjects)
+يدير النظام جدول `subjects` ليحفظ العناوين المعيارية الموحدة للمواد (مثل: الرياضيات، العلوم الفيزيائية). هذه كيانات مجردة — أي أنها غير مرتبطة ذاتيا بسنة ما؛ هم مجرد عناوين وأيقونات صورية دلالية.
 
-To attach actual educational content (PDF documents, interactive quizzes) to the hierarchy, we must define exactly *when* and *where* a base subject is taught.
+== 2. التقاطعات الهندسية للتعيينات: (YearSubjects و StreamSubjects)
 
-=== 2.1. Year Subjects (مواد السنة)
-The `year_subjects` table connects a Base Subject to a specific Year.
-- *Examples*: "Math for 1AM", "Physics for 3AS".
-When an admin navigates the backend dashboard (e.g., clicking on Secondary -> 3AS -> Physics), they are viewing a `year_subject`. All documents and quizzes are ultimately parented to a `year_subject_id`.
+للتمكن من إرسال أو وضع المحتوى التعليمي الفعلي (مستندات PDF، امتحانات تفاعلية) وجب تحديد *متى* و #strong[أين] تُدرس هذه "المادة الأساسية".
 
-=== 2.2. The Complexity of Secondary Education (Shared vs. Specialized)
-While `year_subjects` map subjects to years, Secondary Education introduces a severe complication: *Streams*.
-In 3AS (3rd Year Secondary), Physics is taught to both the *Experimental Sciences* stream and the *Mathematics* stream. 
+=== 2.1. مواد السنة المخصصة (Year Subjects)
+يقوم جدول `year_subjects` بكتابة جسر تواصل يدمج (المادة الأساسية) بـ (السنة الدراسية المحددة).
+- *أمثلة*: "الرياضيات للسنة الأولى متوسط 1AM"، "الفيزياء للثالثة ثانوي 3AS".
 
-Must the admin upload the "2024 Final Physics Exam" twice—once for Experimental Sciences and once for Mathematics? 
-*No.* SujetStore implements the *Algierian Exam Paper Coding System* via the `stream_subjects` table.
+حين يستعرض المدير لوحة الخوادم لاختيار الثانوي ← ثم 3AS ← ثم فيزياء، فهو تقنياً يستجوب مسرّب `year_subject`. فعلياً، كل مستند يُرفع أو اختبار يُنشر ستكون مرجعيته النهاية نحو معرّف `year_subject_id`.
 
-=== 2.3. Stream Subjects and the Exam Code Rule
-The `stream_subjects` join table maps a `year_subject` to a combination of `stream` and `trimester`.
-The Golden Rule of SujetStore is: _"If two streams take the exact same physical piece of paper in an exam, they share the exact same exam code and thus the same `year_subject`."_
+=== 2.2. تعقيدات وشوائب المرحلة الثانوية
+بينما تُعتبر الأمور مباشرة في مرحلتي الابتدائي والمتوسط، فإنّ طور *التعليم الثانوي* يفرض تعقيداً هندسياً شديداً بسبب نظام *التوجيه والشُعَب*.
+في السنة الثالثة (3AS)، مادة الفيزياء تُدرس لكل من أقطاب "الرياضيات" و "العلوم التجريبية".
+فهل يتوجب على المدير رفع وتصنيف مستند "امتحان بكالوريا 2024 فيزياء" مرتين لكي يظهر لكلتا الشعبتين؟
+*الإجابة هي: لا قطعاً.* فهنا يتدخل نظام (ترميز الامتحان الجزائري) والذي أدمجته SujetStore لبرمجة جدول `stream_subjects`.
 
-*Scenario A: Shared Subjects (المواد المشتركة)*
-Consider the Islamic Sciences exam in the BAC. Every single stream (Math, Sciences, Letters, Management, etc.) takes the exact same exam paper on the same day. 
-- The admin uploads the "2024 Islamic Sciences BAC" document *once* to the `year_subject` "Islamic Sciences - 3AS".
-- In the `stream_subjects` table, this single `year_subject_id` is linked to *all six* 3AS streams.
-- If a Math student or a Letters student browses their unique stream profile, they will both see this shared document. If the admin fixes a typo in the title, it updates instantly for all streams.
+=== 2.3. تعيينات الشعبة (Stream Subjects) وقاعدة الامتحان الكلي
+يربط جدول التعيين هذا `stream_subjects` بين الـ `year_subject` ومزيج من شروط الـ(الشعبة) الـ(فصل دراسي).
+*تذكير بالقاعدة الذهبية:* "إذا اشتركت شعبتان في اجتياز نفس ورقة الامتحان بدقة، فإنهما تشتركان في نفس كود الامتحان وتسقط عنهما التكرارات".
 
-*Scenario B: Specialized Subjects (المواد الخاصة)*
-Consider Physics in 3AS. The *Mathematics* stream takes a much harder Physics exam than the *Experimental Sciences* stream. They take different papers on different days.
-- To handle this, the system creates *two distinct* `year_subjects`:
-  1. "Physics (Math Stream) - 3AS"
-  2. "Physics (Science Stream) - 3AS"
-- The admin uploads the Math Physics exam to year_subject #1, and the Science Physics exam to year_subject #2.
-- In `stream_subjects`, year_subject #1 is mapped *only* to the Math stream, and year_subject #2 is mapped *only* to the Experimental Sciences stream.
+*السيناريو الأول: المواد المشتركة (Shared Subjects)*
+على سبيل المثال، مادة العلوم الإسلامية لشهادة البكالوريا. كل شعب المترشحين دون استثناء يجتازون نفس النسخة ونفس الورقة للامتحان في ذات التوقيت.
+- يقوم المدير برفع ملف الامتحان *مرة واحدة فقط* في إطار المادة "العلوم الإسلامية - 3AS".
+- ضمن الجدول الموجه `stream_subjects`، يُربط هذا المعرّف الواحد الخاص بالمادة، لجميع الشعب الست.
+- وبالتالي فعندما يقوم طالب، سواءً كان رياضياً أو هُماماً في اللغات الأجنبية، بجمع وبحث المستندات من ملفاته الخاصة، ستظهر لهم النسخة الإدارية الواحدة تلقائياً. وفي حال تصحيح الإدارة لخطأ في الاسم سيحدث تحديث آني لجميع الشعب بستتها.
 
-== 3. Dynamic Trimesters
+*السيناريو الثاني: المواد التخصصية (Specialized Subjects)*
+بالعودة للفيزياء في مستوى 3AS. فئة وممتحني (شعبة الرياضيات/تقني رياضي) لهم مواضيع وحلول معقدة وتختلف بالمطلق مع نظائرهم في (علوم تجريبية). لديهم أوراق، توقيت وحجم امتحاني منفصل تماماً.
+- يحل النظام هذه المعضلة بخلق وتجنيد مسارين تعليميين دراسيين منفصلين `year_subjects` وهما:
+  1. "فيزياء (فئة الرياضيات والتقني رياضي) - 3AS"
+  2. "فيزياء (فئة علوم تجريبية) - 3AS"
+- سيرفع المدير أوراق اختبار فئة الرياضيات للمسار رقم 1، وأوراق فئة العلوم למسار 2.
+- وفي جداول توجيه الـ `stream_subjects`، مسار 1 موثّق وحصري لبروفايلات طُلاب الرياضيات، والمسار 2 متاح وتلقائي التوجيه لطُلاب العلوم التجريبية.
 
-The Algerian school year is divided into three trimesters (الفصل الأول، الثاني، الثالث), plus General (عام) files for things like full-year curriculums or BAC subjects.
-- Documents are assigned an optional `trimester_id`.
-- Quizzes are assigned an optional `trimester_id`.
-- The user interface automatically clusters and tabs content horizontally based on their trimester, calculating the exact document count for each trimester on the fly ensuring empty trimesters are hidden.
+== 3. الفصول الدراسية الديناميكية (Dynamic Trimesters)
+
+يُقسم الموسم التربوي إلى ثلاثة فصول متتالية (الفصل الأول، الثاني، الثالث)، علاوة على مساحة خاصة و "عامة" للمستجدات خارج التقويم (كالتوجيهات السنوية، امتحانات البكالوريا التجريبية والنهائية).
+- كل مستند يُرفع يملك خيار ربطه برمز الفصل الدراسي `trimester_id`.
+- وكذلك الحال بالنسبة لوحدات الاختبار التفاعلية التي قد تُهيكل بحسب فصولها كذلك.
+- تتكلف الواجهة الأمامية للمستخدم بالتجزئة، العرض الأفقي وحساب تعداد الوثائق الكلي لكل فصل بشكل مباشر أثناء التصفح، لتطمس بذلك الفصول المفرغة وتتوارى تلقائياً للحفاظ على فضاء الشاشة.

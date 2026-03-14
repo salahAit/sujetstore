@@ -1,42 +1,43 @@
-= The Document Engine
+= محرك إدارة المستندات (The Document Engine)
 
-The core utility of SujetStore is the rapid discovery, filtering, and consumption of static educational documents (Exams, Assignments, Summaries).
+تتمثل الميزة الأساسية لمنصة SujetStore في قدرتها على توفير استكشاف سريع وتصفية فورية لالآلاف من المستندات التعليمية الثابتة (امتحانات، فروض، وملخصات) واستهلاكها بيسر.
 
-== Discovery & Categorization
+== الاستكشاف والتصنيف الهرمي (Discovery)
 
-The homepage presents the three educational levels of the Algerian system:
-- *Primary* — Grades 1 through 5
-- *Middle School* — Grades 1AM through 4AM
-- *Secondary* — Grades 1AS through 3AS (across all specialized streams)
+تعرض الصفحة الرئيسية المراحل التعليمية الثلاث ضمن النظام التربوي الجزائري بشكل واضح:
+- *الطور الابتدائي* — من السنة الأولى إلى الخامسة (1AP - 5AP).
+- *الطور المتوسط* — من السنة الأولى إلى الرابعة (1AM - 4AM).
+- *الطور الثانوي* — من السنة الأولى إلى الثالثة، مع تغطية كافة الشعب المتخصصة الفرعية لكل مستوى (1AS - 3AS).
 
-Each drill-down reveals a structured grid of years, leading to the core subjects.
+يؤدي النقر المباشر المتعمق إلى عرض شبكة منظمة من الفصول الدراسية التي تقود الطالب نحو المواد التعليمية الأساسية.
 
-== Trimester Tabs: Segmented Control
+== الفصول الدراسية: علامات التبويب الذكية (Segmented Control)
 
-Inside a subject page, documents are grouped using a *Segmented Control* interface — a horizontal tab bar with three segments: _Term 1_, _Term 2_, _Term 3_, and _General_.
+داخل صفحة المادة، يتم تجميع المستندات المعروضة باستخدام واجهة "التحكم المجزأ" — وهي عبارة عن شريط علامات تبويب أفقية مقسم لثلاثة قطاعات: _الفصل 1_، _الفصل 2_، _الفصل 3_، بالإضافة إلى قسم مخصص للوثائق الشاملة _عام_.
 
-Built on Shadcn UI's `Tabs` pattern, this control physically separates the academic year. Furthermore, the system implements *Smart Auto-Tab Selection*: On page mount, the engine scans the trimesters in order and automatically activates the first one that contains available documents, saving the user from clicking through empty tabs.
+يعتمد هذا التصميم على نمط `Tabs` من مكتبة Shadcn UI لتوفير فصل مادي صريح بين فترات السنة الدراسية الأكاديمية. 
+بالإضافة إلى ذلك، يطبق النظام ميزة *التبويب التلقائي الذكي*: فعند تحميل الصفحة للمرة الأولى، يقوم المحرك بمسح الفصول الدراسية بالترتيب الزمني ويقوم تلقائياً بتفعيل عرض أول فصل يحتوي على مستندات فعلية ضمن قاعدته، مما يوفر على الطالب عناء النقر عبر علامات التبويب الفارغة.
 
-== The Contextual Filter Bar
+== شريط التصفية الآني (Contextual Filter Bar)
 
-Inside each trimester tab, users can narrow down hundreds of documents instantly using client-side Svelte 5 `$derived` runes:
+من خلال كل علامة تبويب، يمكن للطلاب تضييق نطاق مئات المستندات المعروضة في ثوانٍ معدودة وذلك باستخدام مقبسـات التحديث الآني (Reactive Runes (`$derived`)) من Svelte 5:
 
-- *Document Type:* Filter by Exam, Assignment, Lesson, Summary, or Book.
-- *Source:* Filter by Official (Ministry standard) or Proposed (Teacher drafts).
-- *Strict Solution Toggle:* A prominent switch to show "Only documents with solutions attached."
+- *نوع المستند:* يمكن حصر العرض بـ (اختبار، فرض، ملخص، درس، تمرين، إلخ).
+- *المصدر:* يتيح التصفية بين المستندات (الرسمية لوزارة التربية) وتلك (المقترحة من طرف الأساتذة).
+- *زر الإقران بالحلول:* زر تبديل بارز لتفعيل وضع "إظهار المستندات المرفقة بالتصحيح حصراً".
 
-Because filtering happens entirely client-side, the UI updates instantly without any network latency or skeleton loaders.
+بفضل إتمام عملية الفلترة بالكامل عبر متصفح العميل (Client-side)، تتحدث واجهة المستخدم فورياً بمجرد اختيار الفلتر وبدون أي تأخير شبكي أو طلب إعادة تحميل للصفحة.
 
-== Smart PDF Viewer & Printing
+== عارض PDF الذكي ونظام الطباعة
 
-SujetStore integrates an in-browser PDF viewing experience that keeps students on the platform without forcing downloads:
+يوفر SujetStore تجربة شاملة عرض ملفات الـ PDF بشكل مدمج تبقي الطلاب متصلين داخل المنصة دون إجبارهم على تحميل المستندات لأجهزتهم الشخصية:
 
-- *Fullscreen Modal:* Clicking a document opens a distraction-free, full-height modal containing the PDF `iframe`.
-- *One-Click Solution Toggle:* If a document possesses an attached solution file, a floating toggle button allows the student to flip instantly between viewing the "Subject" and the "Correction" without reloading the modal. 
-- *Background Printing:* Print functionality is handled seamlessly, opening the system print dialog directly from the file blob to ensure perfect margins regardless of browser quirks.
+- *النافذة بملء الشاشة المقروءة:* النقر على المستند يؤدي إلى فتحه ضمن نافذة تفاعلية (Modal) ممتدة لارتفاع الشاشة بالكامل مصممة للقراءة المريحة والخالية من مصادر التشتت داخل (iframe).
+- *تبديل الحلول بنقرة واحدة:* إذا كان المستند يتضمن حلاً مرفقاً في قاعدة البيانات، فسيجد الطالب زر تبديل عائم يسمح له بالانتقال الذكي الفوري بين عرض ورقة "الموضوع" و"التصحيح" دون الحاجة لإعادة تحميل النافذة.
+- *طباعة بالخلفية الدقيقة:* ميزة الطبع معالجة بشكل متجانس بحيث تستخدم نافذة الطباعة للنظام مباشرة بناءً على حزمة النواة (Blob) المرتبطة بالملف وذلك لضمان جودة الهوامش المستقلة عن اضطرابات المتصفحات المعتادة.
 
-== Smart Tracking Persistence
+== التتبع الذكي لمراجعات الطالب (Persistence Tracking)
 
-To help students track what they have studied over long periods, the application implements local persistence tracking. When a student opens a document, its ID is saved to the browser's `localStorage` via a `Set` implementation.
+لمساعدة الطلبة على متابعة تقدم المراجعة وتحديد المستندات التي قاموا بدراستها على فترات زمنية متباعدة، يدمج التطبيق نظاماً لـ حفظ سجل التعقب المحلي. عندما يقوم الطالب بفتح مستند ما للمطالعة، يتم تجيل معرّفه (ID) داخل قرص المستكشف (`localStorage`) للمتصفح باستخدام بنية `Set`.
 
-When displaying the document lists, previously viewed items are marked with a distinct Checkmark indicator (✓) and a slightly faded styling, providing immediate visual feedback on their revision progress.
+عند التصفح لاحقاً لعرص قوائم المستندات، سيلاحظ الطالب وجود رمز "علامة صح" (✓) بجانب المستندات التي قام بمشاهدتها من قبل بالإضافة لتنسيق مرئي باهت بعض الشيء، ليقدم استجابة وتغذية رجعية بصرية مباشرة على مسار المراجعة والتقدم.

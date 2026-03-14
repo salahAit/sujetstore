@@ -1,80 +1,116 @@
-= System Architecture & Tech Stack
+= الهيكلية التقنية ومعمارية النظام (Architecture & Tech Stack)
 
-SujetStore is built on a modern, performance-oriented stack carefully selected for speed, simplicity, and developer experience.
+تم بناء SujetStore على حزمة تقنيات حديثة تركز على الأداء الفائق، السهولة، وتجربة المطور القوية.
 
-== The Tech Stack
+== الحزمة التقنية (The Tech Stack)
 
 #table(
-  columns: (1fr, 1fr, 2fr),
-  [*Component*], [*Technology*], [*Rationale*],
-  [Runtime], [Bun (v1.1+)], [3× faster than Node.js. Built-in bundler, test runner, and native SQLite driver.],
-  [Framework], [SvelteKit (Svelte 5)], [Full-stack framework with SSR. Powerful reactive runes (`$state`, `$derived`). Minimal client-side overhead.],
-  [Database], [SQLite], [Embedded, zero-config, read-optimized. Uses `bun:sqlite` for native performance.],
-  [ORM], [Drizzle ORM], [Lightweight, type-safe query builder with full TypeScript support.],
-  [CSS], [TailwindCSS v4], [Utility-first CSS with native CSS variable support and zero-config setup.],
-  [UI Components], [Shadcn-Svelte], [Accessible, themeable component library with semantic color tokens.],
-  [Auth], [Custom (bcryptjs)], [Session-based authentication stored in SQLite. No external dependencies.],
-  [Deployment], [Caddy + systemd], [Auto-SSL reverse proxy with process management.],
+  columns: (1.5fr, 1fr, 3fr),
+  [*المكون*], [*التقنية المستخدمة*], [*السبب والفائدة*],
+  [بيئة التشغيل (Runtime)], [Bun (v1.1+)], [أسرع بـ 3 مرات من Node.js. مزود بمجمع (Bundler) مدمج ومحرك SQLite أصلي يوفر سرعات استعلام خارقة.],
+  [إطار العمل (Framework)], [SvelteKit (Svelte 5)], [إطار عمل متكامل يدعم التصيير جهة الخادم (SSR) مع تفاعلية قوية بفضل (Runes) وبأقل عبء على المتصفح.],
+  [قاعدة البيانات], [SQLite], [مدمجة، صفرية الإعدادات، ومحسنة للقراءة. تعتمد على `bun:sqlite` لضمان أداء عالي.],
+  [ربط البيانات (ORM)], [Drizzle ORM], [خفيف، آمن من حيث الأنماط (Type-safe) مع دعم كامل وقوي لـ TypeScript.],
+  [التنسيق (CSS)], [TailwindCSS v4], [تنسيق يعتمد على الأدوات المساعدة مع دعم المتغيرات الصرفة وإعدادات صفرية لضمان خفة الحجم.],
+  [مكونات الواجهة], [Shadcn-Svelte], [مكتبة مكونات قابلة للتخصيص الكامل وتدعم إمكانية الوصول (A11y) مع متغيرات لونية دلالية.],
+  [المصادقة (Auth)], [يُكتب مخصصاً (bcryptjs)], [مصادقة مبنية على الجلسات (Sessions)، سريعة وبدون أي تبعيات خارجية.],
+  [النشر (Deployment)], [Caddy + systemd], [خادم وكيل عكسي (Reverse Proxy) مع شهادات SSL تلقائية ونظام إدارة خدمات متكامل.]
 )
 
-== Architecture Philosophy: The Compact Monolith
+== فلسفة المعمارية: المبنى المتراص (The Compact Monolith)
 
-Rather than adopting microservices or a headless frontend/backend split, SujetStore uses a *Compact Monolith* architecture:
+بدلاً من التوجه نحو الخدمات المصغرة المعقدة (Microservices) أو فصل الواجهة تماماً عن الخلفية (Headless)، تعتمد المنصة على معمارية المبنى المتراص:
 
-- *Single Process:* The frontend (Svelte 5) and backend (SvelteKit server routes) run within a single Bun process.
-- *File-Based Routing:* Routes are defined by the filesystem structure under `src/routes/`, eliminating the need for manual route configuration.
-- *Co-located Data:* Both SQLite databases (`content.db` and `users.db`) live on the same server, accessed via `bun:sqlite` for sub-millisecond query performance.
+- *عملية واحدة (Single Process):* تعمل واجهة المستخدم (Frontend) والخلفية (Backend) كلاهما داخل نفس بيئة Bun.
+- *توجيه الملفات:* يتم إدارة المسارات بناءً على هيكل الملفات بداخل `src/routes/`، مما يلغي الحاجة لتكوين يدوي.
+- *قواعد بيانات مجمعة:* تتواجد قواعد البيانات الأساسية معاً وتُدار محلياً للاستعلام السريع دون أعباء جلب الشبكة.
 
-== Dual-Database Strategy
+#v(1cm)
+// Architecture Diagram
+#align(center)[
+  #rect(width: 85%, fill: rgb("#F8FAFC"), stroke: 1.5pt + rgb("#C2A052"), radius: 8pt)[
+    #v(1em)
+    #text(weight: "bold", size: 16pt, fill: rgb("#065F46"))[SvelteKit & Bun Environment (بيئة التشغيل)]
+    #v(1em)
+    #grid(
+      columns: (1fr, 1fr),
+      gutter: 1.5em,
+      rect(fill: white, stroke: 1pt + luma(200), radius: 5pt)[
+        #v(0.5em)
+        #text(weight: "bold", fill: rgb("#1E293B"))[Frontend (Svelte 5)]\
+        #text(size: 11pt, fill: luma(100))[TailwindCSS / Shadcn UI]\
+        #v(0.5em)
+      ],
+      rect(fill: white, stroke: 1pt + luma(200), radius: 5pt)[
+        #v(0.5em)
+        #text(weight: "bold", fill: rgb("#1E293B"))[Backend (API Routes)]\
+        #text(size: 11pt, fill: luma(100))[Drizzle ORM / Auth Logic]\
+        #v(0.5em)
+      ]
+    )
+    #v(1em)
+    #line(length: 60%, stroke: 1.5pt + rgb("#065F46"))
+    #v(1em)
+    #grid(
+      columns: (1fr, 1fr),
+      gutter: 1.5em,
+      rect(fill: white, stroke: 1.5pt + rgb("#1E293B"), radius: 5pt)[
+        #v(0.5em)
+        #text(weight: "bold", size: 13pt)[content.db]\
+        #text(size: 11pt, fill: luma(100))[قاعدة بيانات المحتوى (للقراءة)]\
+        #v(0.5em)
+      ],
+      rect(fill: white, stroke: 1.5pt + rgb("#065F46"), radius: 5pt)[
+        #v(0.5em)
+        #text(weight: "bold", size: 13pt)[users.db]\
+        #text(size: 11pt, fill: luma(100))[قاعدة بيانات التفاعل (للكتابة)]\
+        #v(0.5em)
+      ]
+    )
+    #v(1em)
+  ]
+]
+#v(1cm)
 
-The system uses two separate SQLite databases to cleanly separate concerns:
+== استراتيجية قواعد البيانات المزدوجة
 
-=== Content Database (`content.db`) — Read-Intensive
+تستخدم المنصة قاعدتي بيانات SQLite منفصلتين بشكل تام لضمان سرعة الاستعلام العالية وفصل مسؤوليات النظام:
 
-Stores all educational content: levels, years, subjects, trimesters, documents, quizzes, and quiz questions. This database is generated offline using the seed script and deployed as a single file. Updates are often performed by replacing the entire file or making bulk inserts through the Admin panel.
+=== 1. قاعدة بيانات المحتوى (`content.db`) - مكثفة הקراءة
+تخزن جميع المواد التعليمية: الأطوار، السنوات، الفصول، المواد، المستندات وبنك الأسئلة الكامل. تولد هذه القاعدة بشكل أساسي عبر لوحة الإدارة وهي مصممة للعمل بسرعة فائقة عند جلب البيانات.
 
-=== Users Database (`users.db`) — Read-Write
-
-Stores admin user accounts, session data, user gamification data (points, badges), quiz attempts, ratings, comments, and global notifications. WAL mode is enabled for concurrent read/write access:
-
+=== 2. قاعدة بيانات التفاعل (`users.db`) - مكثفة الكتابة
+تخزن حسابات المديرين، الجلسات الحية، نقاط ومكافآت الطلاب (Gamification)، محاولات التمارين وحلولها. تستخدم هذه القاعدة تقنية WAL لضمان تسجيل البيانات (مثل تسجيل محاولات الطلاب في التمارين) بدون التسبب بأي عرقلة لعمليات قراءة قاعدة بيانات المحتوى.
 ```sql
 PRAGMA journal_mode = WAL;
 PRAGMA busy_timeout = 5000;
 PRAGMA synchronous = NORMAL;
 ```
 
-This ensures that high-volume writes (like tracking points and attempts) never block reads on the content database.
+== نظام ترميز الامتحانات (The Exam Paper Coding System)
 
-== The Exam Paper Coding System
+تلتزم المنصة بدقة عالية للنظام الجزائري لترميز ورق الامتحانات لمعالجة التوزيع المعقد للمواد بين الشعب التعليمية المختلفة.
+*القاعدة الذهبية للنظام*: "إذا اشتركت شعبتان في اجتياز نفس ورقة الامتحان بدقة، فإنهما تشتركان في نفس كود الامتحان وتسقط عنهما التكرارات".
 
-A core feature of SujetStore is its adherence to the *Algerian Exam Coding System*. This handles the complex relationship between educational streams (شعب) and subject papers.
+- *المواد المشتركة*: إذا كان امتحان الفيزياء لشعبة "العلوم التجريبية" متطابقاً مع امتحان شعبة "الرياضيات"، يتم تعيين رمز واحد لهما `PHY-SCI` ويعرض للطلاب في كلتا الشعبتين.
+- *المواد الخاصة*: إذا كان الامتحان يختلف بين الشعب، يتم تخصيص رمز دراسي فريد لكل شعبة.
 
-=== The Golden Rule
-The system follows a strict principle: _"If two streams take the exact same exam paper, they share a single Exam Code."_
+تم تطبيق هذا النظام عبر 3 جداول أساسية في Drizzle: جدول الشعب (`streams`)، وجدول الربط (`level_streams`)، وجدول التعيينات (`stream_subjects`).
 
-- *Shared Papers:* If "Physics" for the _Experimental Sciences_ stream is identical to "Physics" for the _Math_ stream, both map to a single `PHY-SCI` code.
-- *Unique Papers:* If "Math" for _Math_ stream is different from "Math" for _Literary_ stream, they receive separate `MAT-MTM` and `MAT-LIT` codes respectively.
+== إجراءات التطوير (Development Workflow)
 
-=== Relational Mapping
-The SQLite schema implements this through three dedicated tables:
-- `streams`: Defines secondary education tracks (e.g., GEN, SE, MATH).
-- `level_streams`: Maps specific years (e.g., 2AS, 3AS) to available streams.
-- `stream_subjects`: Maps streams to their respective exam-code subjects and trimesters, ensuring students only see relevant materials for their track.
-
-
-== Development Workflow
-
+الأوامر الأساسية لتشغيل بيئة التطوير محلياً:
 ```bash
-# Install dependencies using Bun
+# تثبيت الحزم والمكاتب عبر محرك Bun
 bun install
 
-# Seed the databases with the Algerian default tree (Primary, Middle, Secondary)
+# تهيئة قواعد البيانات بالأطوار الافتراضية للجزائر
 bun run scripts/seed-education.ts
 bun run scripts/seed-algerian-questions.ts
 
-# Start the development server
+# بدء خادم التطوير السريع
 bun run dev
 
-# Type-check the project
+# التحقق من الأخطاء وأنماط TypeScript
 bunx svelte-check
 ```

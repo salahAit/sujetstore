@@ -1,37 +1,37 @@
-= UI/UX & Design System
+= واجهة وتجربة المستخدم (UI/UX & Design System)
 
-SujetStore was designed with the principle that _"simplicity creates effectiveness."_ The interface feels native, fast, and accessible regardless of the device.
+تم تصميم SujetStore بناءً على مبدأ أساسي: _"البساطة تخلق الفعالية"_. تبدو الواجهة سريعة الاستجابة، أصلية والشعور، وسهلة الوصول بغض النظر عن الجهاز أو الشاشة المستخدمة.
 
-== Native RTL & Arabic Typography
+== دعم اللغة العربية والاتجاه (RTL) بشكل أصلي
 
-The entire design is built from the ground up for Right-to-Left (RTL) text direction. 
+التصميم مبني من الصفر ليدعم النصوص من اليمين إلى اليسار (RTL) بشكل أصلي:
 
-- *Typography:* The `Cairo` font from Google Fonts is applied globally. It was selected for its exceptional legibility in Arabic numerals and varied stroke weights, making it ideal for both long reading (like document summaries) and bold headers.
-- *Layout Engine:* Flexbox and CSS Grid are utilized exclusively with logical CSS properties (`padding-inline`, `margin-inline-start`) to ensure perfect mirroring natively without any hacky overrides.
+- *الخطوط (Typography):* يتم استخدام خطوط مجمع الملك فهد (KFGQPC) و `Cairo` لدعم القراءة الطويلة بوضوح تام، وتوفير أرقام واضحة تتناسق مع النصوص الأكاديمية.
+- *محرك التخطيط (Layout Engine):* يعتمد النظام حصرياً على `Flexbox` و `CSS Grid` مع استخدام خصائص הـ CSS المنطقية (مثل `padding-inline` و `margin-inline-start`) لضمان محاذاة تلقائية مثالية من اليمين لليسار دون الحاجة لأي تجاوزات أو حيل برمجية.
 
-== Dark & Light Mode with Shadcn-Svelte Theming
+== الوضع المظلم والفاتح (Dark & Light Mode)
 
-The platform implements a complete dual-theme system using `Shadcn-Svelte` semantic color tokens. Every component — from buttons and dropdowns to cards and toggle switches — automatically adapts to the user's preferred color scheme based on their system setting, with a manual override toggle available in the navigation bar.
+يوفر النظام سمات ألوان مزدوجة بالاعتماد على متغيرات `Shadcn-Svelte` الدلالية. تتكيف كل المكونات — من الأزرار والقوائم المنسدلة إلى البطاقات ومفاتيح التبديل — تلقائياً مع تفضيلات نظام المستخدم، مع توفر زر التبديل اليدوي في شريط التنقل.
 
-Key semantic tokens used throughout the interface:
-- `bg-background` / `text-foreground` — Base page colors
-- `bg-card` / `text-card-foreground` — Elevated surface containers (like Document boxes)
-- `bg-muted` / `text-muted-foreground` — Subdued backgrounds and secondary helper text
-- `bg-primary` / `text-primary-foreground` — Active elements, CTAs, and primary buttons
-- `bg-accent` / `text-accent-foreground` — Hover and interactive states
+*المتغيرات اللونية الدلالية المستخدمة في النظام:*
+- `bg-background` / `text-foreground` — ألوان الصفحة الأساسية.
+- `bg-card` / `text-card-foreground` — الأسطح المرتفعة (مثل بطاقات المستندات).
+- `bg-muted` / `text-muted-foreground` — الخلفيات الثانوية والنصوص المساعدة.
+- `bg-primary` / `text-primary-foreground` — العناصر التفاعلية والأزرار الرئيسية.
+- `bg-accent` / `text-accent-foreground` — حالات التمرير والتفاعل السريع.
 
-This approach guarantees that *no hardcoded hex colors* appear in the core UI codebase (excluding specific gamification badges), ensuring perfect visual contrast in both modes.
+يضمن هذا النهج *عدم وجود ألوان ستاتيكية (Hex)* مبرمجة برمجياً داخل الكود (باستثناء ألوان أوسمة التحفيز)، مما يضمن تبايناً بصرياً مثالياً في كلا الموضعين.
 
-== Mobile-First Responsive Design
+== تصميم الهواتف المحمولة أولاً (Mobile-First)
 
-Recognizing that the vast majority of Algerian students access educational content from smartphones, the interface implements strict mobile-first paradigms:
+بالنظر إلى أن التقديرات تشير إلى أن الغالبية العظمى من الطلاب الجزائريين يصلون للمحتوى التعليمي عبر الهواتف الذكية، تم تطبيق القواعد التالية بصرامة:
 
-- *Stacked Controls:* Filter controls stack vertically on small screens and align horizontally on desktop displays.
-- *Horizontal Scrolling:* Tab navigation (for trimesters and quiz stats) scrolls horizontally with hidden scrollbars when screen width is constrained to preserve vertical screen real estate.
-- *Touch Targets:* All interactive elements meet or exceed the minimum touch target size of 44×44px.
-- *Glassmorphism Architecture:* The UI utilizes a premium "Glassmorphism" effect for year and subject cards. This involves backdrop-blur filters combined with semi-transparent borders and subtle gradients, creating a multi-layered depth effect that remains performant on mobile devices.
-- *Data Visualization:* Cards dynamically display item counts (e.g., "15 Subjects", "24 Exams"), providing students with immediate visual cues about content density before navigation.
+- *عناصر تحكم مكدسة:* تترتب فلاتر البحث بشكل عمودي على الشاشات الصغيرة وتتوزع أفقياً على الشاشات الكبيرة.
+- *التمرير الأفقي المخفي:* يعتمد التنقل بين الفصول الدراسية وإحصائيات الاختبارات على التمرير الأفقي مع إخفاء شريط التمرير للحفاظ على مساحة الشاشة العمودية الثمينة.
+- *أحجام النقر:* تطابق جميع العناصر التفاعلية الحجم الأدنى الموصى به للمس النقر (44×44 بكسل).
+- *تأثير الزجاج (Glassmorphism):* تُستخدم لمسات بصرية راقية كخلفيات التمويه شبه الشفافة لإبراز البطاقات، مما يخلق عمقاً بصرياً دون إبطاء الأجهزة الضعيفة الأداء.
+- *الإحصائيات المباشرة:* تُظهر جميع البطاقات فوراً أرقام المحتوى (مثل "15 مادة"، "24 امتحاناً")، لتقديم معلومات سريعة عن كثافة المحتوى.
 
-== Global Navigation Hierarchy
+== هيكلية التنقل الشاملة (Breadcrumbs)
 
-A global breadcrumb navigation system (`Level / Year / Subject`) is present on all inner pages. This ensures the student always knows their exact location in the curriculum taxonomy and can navigate back to a parent category with a single click, completely eliminating the feeling of being "lost" inside the application.
+تم دمج نظام تتبع المسار `المرحلة / السنة / المادة` (Breadcrumbs) في أعلى جميع الصفحات الداخلية. يضمن هذا النظام أن الطالب على دراية تامة بموقعه داخل الشجرة التعليمية ويوفر له التنقل للرجوع إلى نقطة سابقة بنقرة واحدة، مما يُلغي تماماً الشعور "بالضياع" داخل التطبيق السحابي.
