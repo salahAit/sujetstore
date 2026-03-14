@@ -1,4 +1,5 @@
 <script lang="ts">
+	import RichTextEditor from '../../shared/RichTextEditor.svelte';
 	let { data = $bindable() }: any = $props();
 
 	if (!data) data = { statements: [], columns: ['صحيح', 'خطأ'], correctAnswers: [] };
@@ -34,11 +35,12 @@
 			<button onclick={addStatement} class="rounded-lg bg-blue-600 px-3 py-1 text-xs font-bold text-foreground">+ إضافة عبارة</button>
 		</div>
 		{#each (data.statements || []) as stmt, i}
-			<div class="flex gap-2 items-center">
-				<input bind:value={data.statements[i]} placeholder="العبارة {i+1}..."
-					class="flex-1 rounded-lg border border-border bg-background p-2 text-xs outline-none" />
+			<div class="flex gap-2 items-start">
+				<div class="flex-1">
+					<RichTextEditor bind:value={data.statements[i]} placeholder={`العبارة ${i + 1}...`} minHeight="min-h-[40px]" />
+				</div>
 				<select bind:value={data.correctAnswers[i]}
-					class="rounded-lg border border-border bg-background p-2 text-xs outline-none">
+					class="mt-1 rounded-lg border border-border bg-background p-2 text-xs outline-none">
 					{#each (data.columns || []) as col, j}
 						<option value={j}>{col}</option>
 					{/each}

@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { Plus, Trash2 } from 'lucide-svelte';
+	import RichTextEditor from '../../shared/RichTextEditor.svelte';
+	import ImageUploader from '../../shared/ImageUploader.svelte';
 
 	let { data = $bindable() } = $props();
 
@@ -36,10 +38,10 @@
 	<div class="space-y-3 border-r-2 border-white/5 pr-4">
 		{#each data.options as option, i}
 			<div class="flex flex-col gap-2 rounded-xl border border-border bg-card p-3 shadow-sm transition-colors hover:border-blue-500/30">
-				<div class="flex items-center gap-3">
+				<div class="flex items-start gap-3">
 					<button
 						onclick={() => toggleCorrect(i)}
-						class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border transition-colors {data.correctIndices.includes(
+						class="mt-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border transition-colors {data.correctIndices.includes(
 							i
 						)
 							? 'border-emerald-500 bg-emerald-500/20 text-emerald-400'
@@ -48,30 +50,23 @@
 					>
 						{i + 1}
 					</button>
-					<input
-						type="text"
-						bind:value={option.text}
-						placeholder={`نص الخيار ${i + 1}`}
-						class="flex-1 rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
-					/>
+					<div class="flex-1 space-y-3">
+						<RichTextEditor
+							bind:value={option.text}
+							placeholder={`نص الخيار ${i + 1}`}
+							minHeight="min-h-[40px]"
+						/>
+						<ImageUploader 
+							bind:imageUrl={option.imageUrl} 
+							label="صورة الخيار (اختياري)" 
+						/>
+					</div>
 					<button
 						onclick={() => removeOption(i)}
-						class="rounded-lg p-2 text-foreground/30 transition-colors hover:bg-red-500/10 hover:text-red-400"
+						class="mt-2 rounded-lg p-2 text-foreground/30 transition-colors hover:bg-red-500/10 hover:text-red-400"
 					>
 						<Trash2 size={16} />
 					</button>
-				</div>
-				<div class="flex items-center gap-3 pr-14">
-					<input
-						type="text"
-						bind:value={option.imageUrl}
-						placeholder="رابط صورة الخيار (اختياري)"
-						dir="ltr"
-						class="w-full rounded-xl border border-border bg-background px-3 py-1.5 text-left text-xs text-muted-foreground outline-none focus:border-blue-500"
-					/>
-					{#if option.imageUrl}
-						<img src={option.imageUrl} alt="preview" class="h-8 max-w-[60px] rounded object-contain border" />
-					{/if}
 				</div>
 			</div>
 		{/each}

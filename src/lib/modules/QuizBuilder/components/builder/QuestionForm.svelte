@@ -14,6 +14,8 @@
 	import DragToImageForm from './forms/DragToImageForm.svelte';
 	import MatrixForm from './forms/MatrixForm.svelte';
 	import EssayForm from './forms/EssayForm.svelte';
+	import RichTextEditor from '../shared/RichTextEditor.svelte';
+	import ImageUploader from '../shared/ImageUploader.svelte';
 
 	let { question = $bindable(), onSave, onCancel } = $props();
 
@@ -28,58 +30,45 @@
 	<div class="grid gap-6 md:grid-cols-2">
 		<div class="space-y-4">
 			<div class="space-y-2">
-				<label class="text-sm font-semibold text-foreground/80">نص السؤال (عربي) *</label>
-				<textarea
-					bind:value={question.questionTextAr}
-					rows="3"
-					placeholder="مثال: اختر الإجابة الصحيحة..."
-					class="w-full rounded-xl border border-border bg-background p-3 text-right text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
-				></textarea>
+				<span class="block text-sm font-semibold text-foreground/80">نص السؤال (عربي) *</span>
+				<RichTextEditor 
+					bind:value={question.questionTextAr} 
+					placeholder="الرجاء كتابة السؤال هنا..." 
+				/>
 			</div>
 			<div class="space-y-2">
-				<label class="flex items-center justify-between text-sm font-semibold text-foreground/80">
-					<span>رابط صورة السؤال (اختياري)</span>
-					<span class="rounded bg-blue-500/10 px-2 py-0.5 text-xs text-blue-500">Universal Image</span>
-				</label>
-				<input
-					type="text"
-					bind:value={question.imageUrl}
-					placeholder="https://example.com/image.png"
-					dir="ltr"
-					class="w-full rounded-xl border border-border bg-background p-3 text-left text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
-				/>
+				<ImageUploader bind:imageUrl={question.imageUrl} label="صورة مرفقة بالسؤال (اختياري)" />
 			</div>
 			{#if question.imageUrl}
 				<div class="space-y-2 animate-in fade-in slide-in-from-top-2">
-					<label class="text-sm font-semibold text-foreground/80">تعليق توضيحي للصورة</label>
+					<label for="imageCaption" class="text-sm font-semibold text-foreground/80">تعليق توضيحي للصورة</label>
 					<input
+						id="imageCaption"
 						type="text"
 						bind:value={question.imageCaption}
 						placeholder="مثال: التوزيع المرفق يوضح كذا..."
 						class="w-full rounded-xl border border-border bg-background p-3 text-right text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 					/>
-					<img src={question.imageUrl} alt="preview" class="mt-2 max-h-32 rounded-lg border border-border object-contain" />
 				</div>
 			{/if}
 		</div>
 
 		<div class="space-y-4">
 			<div class="space-y-2">
-				<label class="text-sm font-semibold text-foreground/80">Question Text (EN/FR) - اختياري</label>
-				<textarea
-					bind:value={question.questionText}
-					rows="3"
-					dir="ltr"
-					class="w-full rounded-xl border border-border bg-background p-3 text-left text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
-				></textarea>
+				<span class="block text-sm font-semibold text-foreground/80">Question Text (EN/FR) - اختياري</span>
+				<RichTextEditor 
+					bind:value={question.questionText} 
+					placeholder="Question text in English or French..." 
+				/>
 			</div>
 		</div>
 	</div>
 
 	<div class="grid gap-6 md:grid-cols-2">
 		<div class="space-y-2">
-			<label class="text-sm font-semibold text-foreground/80">النقاط (Points)</label>
+			<label for="points" class="text-sm font-semibold text-foreground/80">النقاط (Points)</label>
 			<input
+				id="points"
 				type="number"
 				bind:value={question.points}
 				min="1"
@@ -87,13 +76,12 @@
 			/>
 		</div>
 		<div class="space-y-2">
-			<label class="text-sm font-semibold text-foreground/80">شرح الإجابة (يظهر بعد الحل)</label>
-			<textarea
+			<span class="block text-sm font-semibold text-foreground/80">شرح الإجابة (يظهر بعد الحل)</span>
+			<RichTextEditor 
 				bind:value={question.explanation}
-				rows="1"
 				placeholder="شرح إضافي لتوضيح سبب الإجابة..."
-				class="w-full rounded-xl border border-border bg-background p-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
-			></textarea>
+				minHeight="min-h-[80px]"
+			/>
 		</div>
 	</div>
 

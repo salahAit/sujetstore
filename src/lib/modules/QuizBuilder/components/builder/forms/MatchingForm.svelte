@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Plus, Trash2 } from 'lucide-svelte';
+	import RichTextEditor from '../../shared/RichTextEditor.svelte';
 
 	let { data = $bindable() } = $props();
 
@@ -29,22 +30,24 @@
 				</div>
 
 				<!-- Left Side -->
-				<input
-					type="text"
-					bind:value={pair.left}
-					placeholder="القائمة أ (ثابتة)"
-					class="w-1/2 rounded-lg border border-border bg-background p-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
-				/>
+				<div class="w-1/2">
+					<RichTextEditor
+						bind:value={pair.left}
+						placeholder="القائمة أ (ثابتة)"
+						minHeight="min-h-[40px]"
+					/>
+				</div>
 
 				<div class="truncate px-2 text-foreground/30">↔️</div>
 
 				<!-- Right Side -->
-				<input
-					type="text"
-					bind:value={pair.right}
-					placeholder="القائمة ب (تظهر مشوشة)"
-					class="w-1/2 rounded-lg border border-border bg-background p-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
-				/>
+				<div class="w-1/2">
+					<RichTextEditor
+						bind:value={pair.right}
+						placeholder="القائمة ب (تظهر مشوشة)"
+						minHeight="min-h-[40px]"
+					/>
+				</div>
 
 				<button
 					onclick={() => removePair(i)}

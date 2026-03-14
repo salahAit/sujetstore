@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Plus, Trash2, GripVertical } from 'lucide-svelte';
+	import RichTextEditor from '../../shared/RichTextEditor.svelte';
 
 	let { data = $bindable() } = $props();
 
@@ -47,6 +48,7 @@
 	<div class="space-y-2">
 		{#each data.items as item, i}
 			<div
+				role="listitem"
 				draggable="true"
 				ondragstart={(e) => dragStart(e, i)}
 				ondragover={dragOver}
@@ -66,12 +68,13 @@
 					{i + 1}
 				</div>
 
-				<input
-					type="text"
-					bind:value={item.text}
-					placeholder={`عنصر ${i + 1}`}
-					class="flex-1 bg-transparent px-2 text-sm outline-none"
-				/>
+				<div class="flex-1">
+					<RichTextEditor
+						bind:value={item.text}
+						placeholder={`عنصر ${i + 1}`}
+						minHeight="min-h-[40px]"
+					/>
+				</div>
 
 				<button
 					onclick={() => removeItem(i)}
