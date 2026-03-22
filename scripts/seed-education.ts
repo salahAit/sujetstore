@@ -241,6 +241,8 @@ const subjectsData = [
 	{ id: 'HIS-LE',  name: 'History (LE)', name_ar: 'التاريخ والجغرافيا (لغات)', name_fr: 'Histoire-Géo (LE)', slug: 'his-le', exam_group: 'history', icon: 'Globe', color: '#8b5cf6' },
 
 	// --- مواد الثانوي: اللغات الأجنبية (فرنسية/إنجليزية) ---
+	{ id: 'FRE-SEC', name: 'French', name_ar: 'اللغة الفرنسية', name_fr: 'Langue Française', slug: 'fre-sec', exam_group: 'french', icon: 'MessageCircle', color: '#3b82f6' },
+	{ id: 'ENG-SEC', name: 'English', name_ar: 'اللغة الإنجليزية', name_fr: 'Langue Anglaise', slug: 'eng-sec', exam_group: 'english', icon: 'MessageCircleCode', color: '#6366f1' },
 	{ id: 'LANG-SCI', name: 'Languages (Scientific)', name_ar: 'اللغات الأجنبية (العلمي)', name_fr: 'Langues (Scientifique)', slug: 'lang-sci', exam_group: 'languages', icon: 'MessageCircle', color: '#3b82f6' },
 	{ id: 'LANG-LP',  name: 'Languages (LP)', name_ar: 'اللغات الأجنبية (آداب)', name_fr: 'Langues (LP)', slug: 'lang-lp', exam_group: 'languages', icon: 'MessageCircle', color: '#3b82f6' },
 	{ id: 'LANG-LE',  name: 'Languages (LE)', name_ar: 'اللغات الأجنبية (لغات)', name_fr: 'Langues (LE)', slug: 'lang-le', exam_group: 'languages', icon: 'MessageCircle', color: '#3b82f6' },
@@ -290,28 +292,29 @@ type StreamSubjectEntry = { stream: string; subjects: string[]; years?: string[]
 const streamSubjectsMap: StreamSubjectEntry[] = [
 	// الابتدائي (GEN): مواد -B
 	{ stream: 'GEN', subjects: ['ARB-B', 'MAT-B', 'FRE-B', 'ISL-B', 'CIV-B'], years: ['1ap', '2ap'] },
-	{ stream: 'GEN', subjects: ['ARB-B', 'MAT-B', 'FRE-B', 'ISL-B', 'CIV-B', 'SCI-B', 'HIS-B'], years: ['3ap', '4ap', '5ap'] },
+	{ stream: 'GEN', subjects: ['ARB-B', 'MAT-B', 'FRE-B', 'ISL-B', 'CIV-B', 'SCI-B', 'HIS-B'], years: ['3ap'] },
+	{ stream: 'GEN', subjects: ['ARB-B', 'MAT-B', 'FRE-B', 'ISL-B', 'CIV-B', 'SCI-B', 'HIS-B', 'AMZ-B'], years: ['4ap', '5ap'] },
 
-	// المتوسط (GEN): مواد -B مع إضافة فيزياء وإنجليزية
-	{ stream: 'GEN', subjects: ['ARB-B', 'MAT-B', 'FRE-B', 'ENG-B', 'SCI-B', 'PHY-B', 'ISL-B', 'HIS-B', 'CIV-B'], years: ['1am', '2am', '3am', '4am'] },
+	// المتوسط (GEN): مواد -B مع إضافة فيزياء وإنجليزية وأمازيغية
+	{ stream: 'GEN', subjects: ['ARB-B', 'MAT-B', 'FRE-B', 'ENG-B', 'SCI-B', 'PHY-B', 'ISL-B', 'HIS-B', 'CIV-B', 'AMZ-B'], years: ['1am', '2am', '3am', '4am'] },
 
 	// سنة أولى ثانوي: جذع مشترك علوم وتكنولوجيا
-	{ stream: 'TCST', subjects: ['ARB-SCI', 'MAT-SE', 'PHY-SE', 'SCI-SE', 'LANG-SCI', 'HIS-SCI', 'ISL-ALL', 'PHI-SCI'], years: ['1as'] },
+	{ stream: 'TCST', subjects: ['ARB-SCI', 'MAT-SE', 'PHY-SE', 'SCI-SE', 'FRE-SEC', 'ENG-SEC', 'HIS-SCI', 'ISL-ALL', 'PHI-SCI', 'AMZ-ALL'], years: ['1as'] },
 	// سنة أولى ثانوي: جذع مشترك آداب
-	{ stream: 'TCL', subjects: ['ARB-LP', 'MAT-LIT', 'LANG-LP', 'HIS-LP', 'ISL-ALL', 'PHI-LP'], years: ['1as'] },
+	{ stream: 'TCL', subjects: ['ARB-LP', 'MAT-LIT', 'FRE-SEC', 'ENG-SEC', 'HIS-LP', 'ISL-ALL', 'PHI-LP', 'AMZ-ALL'], years: ['1as'] },
 
 	// علوم تجريبية (S2, S3)
-	{ stream: 'SE', subjects: ['ARB-SCI', 'MAT-SE', 'PHY-SE', 'SCI-SE', 'LANG-SCI', 'HIS-SCI', 'ISL-ALL', 'PHI-SCI'], years: ['2as', '3as'] },
+	{ stream: 'SE', subjects: ['ARB-SCI', 'MAT-SE', 'PHY-SE', 'SCI-SE', 'FRE-SEC', 'ENG-SEC', 'HIS-SCI', 'ISL-ALL', 'PHI-SCI', 'AMZ-ALL'], years: ['2as', '3as'] },
 	// رياضيات (S2, S3)
-	{ stream: 'MATH', subjects: ['ARB-SCI', 'MAT-MATH', 'PHY-MTM', 'SCI-MATH', 'LANG-SCI', 'HIS-SCI', 'ISL-ALL', 'PHI-SCI'], years: ['2as', '3as'] },
+	{ stream: 'MATH', subjects: ['ARB-SCI', 'MAT-MATH', 'PHY-MTM', 'SCI-MATH', 'FRE-SEC', 'ENG-SEC', 'HIS-SCI', 'ISL-ALL', 'PHI-SCI', 'AMZ-ALL'], years: ['2as', '3as'] },
 	// تقني رياضي (S2, S3)
-	{ stream: 'TM', subjects: ['ARB-SCI', 'MAT-TM', 'PHY-MTM', 'LANG-SCI', 'HIS-SCI', 'ISL-ALL', 'PHI-SCI', 'TECH-CIV', 'TECH-MEC', 'TECH-ELE', 'TECH-PRO'], years: ['2as', '3as'] },
+	{ stream: 'TM', subjects: ['ARB-SCI', 'MAT-TM', 'PHY-MTM', 'FRE-SEC', 'ENG-SEC', 'HIS-SCI', 'ISL-ALL', 'PHI-SCI', 'TECH-CIV', 'TECH-MEC', 'TECH-ELE', 'TECH-PRO', 'AMZ-ALL'], years: ['2as', '3as'] },
 	// تسيير واقتصاد (S2, S3)
-	{ stream: 'GE', subjects: ['ARB-SCI', 'MAT-GE', 'LANG-SCI', 'HIS-GE', 'ISL-ALL', 'PHI-GE', 'ACC-FIN', 'ECO-MAN', 'LAW'], years: ['2as', '3as'] },
+	{ stream: 'GE', subjects: ['ARB-SCI', 'MAT-GE', 'FRE-SEC', 'ENG-SEC', 'HIS-GE', 'ISL-ALL', 'PHI-GE', 'ACC-FIN', 'ECO-MAN', 'LAW', 'AMZ-ALL'], years: ['2as', '3as'] },
 	// آداب وفلسفة (S2, S3)
-	{ stream: 'LP', subjects: ['ARB-LP', 'MAT-LIT', 'LANG-LP', 'HIS-LP', 'ISL-ALL', 'PHI-LP'], years: ['2as', '3as'] },
+	{ stream: 'LP', subjects: ['ARB-LP', 'MAT-LIT', 'FRE-SEC', 'ENG-SEC', 'HIS-LP', 'ISL-ALL', 'PHI-LP', 'AMZ-ALL'], years: ['2as', '3as'] },
 	// لغات أجنبية (S2, S3)
-	{ stream: 'LE', subjects: ['ARB-LE', 'MAT-LIT', 'LANG-LE', 'HIS-LE', 'ISL-ALL', 'PHI-LE', 'LAN-SPA', 'LAN-GER', 'LAN-ITA'], years: ['2as', '3as'] },
+	{ stream: 'LE', subjects: ['ARB-LE', 'MAT-LIT', 'FRE-SEC', 'ENG-SEC', 'HIS-LE', 'ISL-ALL', 'PHI-LE', 'LAN-SPA', 'LAN-GER', 'LAN-ITA', 'AMZ-ALL'], years: ['2as', '3as'] },
 ];
 
 // ============================================

@@ -37,6 +37,7 @@
 	let pdfBase64 = $state('');
 	let pdfLoading = $state(false);
 	let pdfError = $state('');
+	let isPreviewSolution = $state(false);
 
 	// Layout state
 	let splitPercent = $state(50);
@@ -53,7 +54,54 @@
 	});
 
 	// Stats
-	let totalPoints = $derived(exercises.reduce((sum, ex) => sum + Number(ex.points || 0), 0));
+	let totalScore = $derived(exercises.reduce((sum, ex) => {
+		let pt = typeof ex.points === 'string' ? parseFloat(ex.points) : ex.points;
+		return sum + (isNaN(pt) ? 0 : pt);
+	}, 0));
+
+	let publishing = $state(false);
+
+	async function publishDocument(isPublished: boolean) {
+		if (!isMetadataComplete) {
+			alert('يرجى استكمال جميع بيانات الموضوع (المستوى، السنة، المادة...)');
+			return;
+		}
+		if (exercises.length === 0) {
+			alert('يجب إضافة تمرين واحد على الأقل.');
+			return;
+		}
+
+		publishing = true;
+		
+		const title = `موضوع ${metadata.docType === 'exam' ? 'اختبار' : 'فرض'} ${metadata.trimesterName} في مادة ${metadata.subjectName}`;
+
+		try {
+			const res = await fetch('/api/sujet-builder/publish', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					templateId: activeTemplate,
+					document: {
+						metadata: $state.snapshot(metadata),
+						exercises: $state.snapshot(exercises)
+					},
+					isPublished,
+					title
+				})
+			});
+			const data = await res.json();
+			if (data.success) {
+				alert(isPublished ? 'تم نشر الموضوع بنجاح للحفظ والعرض للطلاب!' : 'تم حفظ المسودة بنجاح في قاعدة البيانات.');
+			} else {
+				alert('حدث خطأ: ' + (data.error || 'غير معروف'));
+			}
+		} catch (err) {
+			console.error(err);
+			alert('خطأ في الاتصال بالخادم!');
+		} finally {
+			publishing = false;
+		}
+	}
 
 	// Generate PDF
 	async function generatePdf() {
@@ -68,7 +116,8 @@
 					document: {
 						metadata: $state.snapshot(metadata),
 						exercises: $state.snapshot(exercises)
-					}
+					},
+					isSolution: isPreviewSolution
 				})
 			});
 			const result = await res.json();
@@ -147,7 +196,7 @@
 		</div>
 		<div class="flex items-center gap-3 text-xs text-muted-foreground">
 			<span class="rounded-lg bg-muted px-2 py-1">التمارين: <strong class="text-foreground">{exercises.length}</strong></span>
-			<span class="rounded-lg bg-muted px-2 py-1">المجموع: <strong class="text-primary">{totalPoints} نقطة</strong></span>
+			<span class="rounded-lg bg-muted px-2 py-1">المجموع: <strong class="text-primary">{totalScore} نقطة</strong></span>
 			{#if isMetadataComplete}
 				<button onclick={reset} class="flex items-center gap-1 rounded-lg bg-muted px-2.5 py-1.5 text-muted-foreground hover:bg-red-500/10 hover:text-red-500" title="إعادة تعيين">
 					<RotateCcw size={14} /> إعادة تعيين
@@ -172,7 +221,7 @@
 				/>
 				
 				{#if isMetadataComplete}
-					<ExerciseEditor bind:exercises />
+					<ExerciseEditor bind:exercises {metadata} />
 				{:else}
 					<div class="mt-8 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-amber-500/40 bg-amber-500/10 py-16 text-center shadow-sm">
 						<div class="mb-4 rounded-full bg-amber-500/20 p-4 text-amber-600 dark:text-amber-400">
@@ -202,8 +251,22 @@
 		<div class="flex flex-1 flex-col overflow-hidden">
 			<!-- Preview Header -->
 			<div class="flex items-center justify-between border-b border-border bg-card px-4 py-2">
-				<div class="flex items-center gap-2">
+				<div class="flex items-center gap-4">
 					<h3 class="text-sm font-bold text-foreground">📄 معاينة الموضوع</h3>
+					<div class="flex items-center overflow-hidden rounded-lg border border-border bg-muted/30 p-0.5">
+						<button 
+							onclick={() => { isPreviewSolution = false; generatePdf(); }}
+							class="px-3 py-1 text-[10px] font-bold transition-all {!isPreviewSolution ? 'bg-primary text-white shadow-sm' : 'text-muted-foreground hover:text-foreground'}"
+						>
+							الموضوع
+						</button>
+						<button 
+							onclick={() => { isPreviewSolution = true; generatePdf(); }}
+							class="px-3 py-1 text-[10px] font-bold transition-all {isPreviewSolution ? 'bg-green-600 text-white shadow-sm' : 'text-muted-foreground hover:text-foreground'}"
+						>
+							التصحيح
+						</button>
+					</div>
 				</div>
 				<div class="flex items-center gap-2">
 					{#if isMetadataComplete}

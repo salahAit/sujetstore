@@ -41,20 +41,21 @@
   v(0pt)
   grid(columns: (1fr, auto, 1fr), column-gutter: 5pt, align: horizon,
     align(right)[#set par(leading: 0.4em); 
-      #text(font: "Noto Naskh Arabic", weight: "bold")[#data.metadata.at("docType", default: data.metadata.at("exam_type", default: "فرض"))] \ 
-      #text(font: "Noto Naskh Arabic", weight: "bold")[#data.metadata.at("trimesterName", default: "")] \
-      #text(font: "Noto Naskh Arabic", weight: "bold")[#data.metadata.at("yearName", default: data.metadata.at("branch", default: ""))]],
+      #text(font: "Noto Naskh Arabic", weight: "bold")[#data.at("metadata", default: (:)).at("docType", default: data.at("metadata", default: (:)).at("exam_type", default: "فرض"))] \ 
+      #text(font: "Noto Naskh Arabic", weight: "bold")[#data.at("metadata", default: (:)).at("trimesterName", default: "")] \
+      #text(font: "Noto Naskh Arabic", weight: "bold")[#data.at("metadata", default: (:)).at("yearName", default: data.at("metadata", default: (:)).at("branch", default: ""))]],
     align(center)[#link("https://sujetstore.com/")[#image("logo.png", width: 2.2cm, fit: "contain")]],
     align(left)[#set par(leading: 0.4em); 
-      #text(font: "Noto Naskh Arabic", weight: "bold")[#data.metadata.at("academicYear", default: data.metadata.at("date", default: ""))] \ 
-      #text(font: "Noto Naskh Arabic", weight: "bold")[المدة: #data.metadata.at("duration", default: "")]]
+      #text(font: "Noto Naskh Arabic", weight: "bold")[#data.at("metadata", default: (:)).at("academicYear", default: data.at("metadata", default: (:)).at("date", default: ""))] \ 
+      #text(font: "Noto Naskh Arabic", weight: "bold")[المدة: #data.at("metadata", default: (:)).at("duration", default: "")]]
   )
   v(1pt)
   
   // ─────── شريط العنوان ───────
   {
-    let exam-type-label = data.metadata.at("docType", default: data.metadata.at("exam_type", default: "فرض"))
-    let subject-label = data.metadata.at("subjectName", default: data.metadata.at("subject", default: ""))
+    let metadata-ref = data.at("metadata", default: (:))
+    let exam-type-label = metadata-ref.at("docType", default: metadata-ref.at("exam_type", default: "فرض"))
+    let subject-label = metadata-ref.at("subjectName", default: metadata-ref.at("subject", default: ""))
     let solution-suffix = if is-solution { " - الإجابة النموذجية" } else { "" }
     
     align(center)[
@@ -87,13 +88,13 @@
         gutter: 10pt,
         align: horizon,
         text(size: 22pt, fill: if is-solution { green } else { blue })[▪],
-        text(font: "Noto Naskh Arabic", weight: "bold", size: 17pt)[التمرين #ex.at("num", default: ordinals.at(idx, default: str(idx + 1))) : (#ex.at("points", default: "0") نقاط)],
+        text(font: "Noto Naskh Arabic", weight: "bold", size: 17pt)[#eval("التمرين " + ex.at("num", default: ordinals.at(idx, default: str(idx + 1))) + " : (" + str(ex.at("points", default: "0")) + " نقاط)", mode: "markup")],
       )
       #v(2pt)
       
       #block(width: 100%, inset: (right: 15pt))[
         #if ex.keys().contains("instruction") and ex.instruction != "" [
-          #text(style: "italic", size: 13pt)[#ex.instruction]
+          #text(style: "italic", size: 13pt)[#eval(ex.instruction, mode: "markup")]
           #v(2pt)
         ]
         

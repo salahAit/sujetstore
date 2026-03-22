@@ -208,6 +208,40 @@ export const quizzes = sqliteTable('quizzes', {
 });
 
 /**
+ * 7.5 بنك تمارين منشئ المواضيع (SujetBuilder Exercise Bank)
+ * لحفظ التمارين القابلة لإعادة الاستخدام في المواضيع (Exams/Tests)
+ */
+export const bankExercises = sqliteTable('bank_exercises', {
+	id: integer('id').primaryKey({ autoIncrement: true }),
+	yearSubjectId: integer('year_subject_id')
+		.references(() => yearSubjects.id)
+		.notNull(),
+	title: text('title').notNull(), // e.g. "التمرين الأول", "وضعية إدماجية"
+	content: customType<{ data: any; driverData: string }>({
+		dataType() {
+			return 'text'; // SQLite stores JSON in text columns
+		},
+		toDriver(val: any): string {
+			return JSON.stringify(val);
+		},
+		fromDriver(value: unknown): any {
+			if (typeof value === 'string') {
+				try {
+					return JSON.parse(value);
+				} catch (e) {
+					return value;
+				}
+			}
+			return value;
+		}
+	})('content').notNull(), // Array of ContentBlock
+	points: integer('points').default(0),
+	tags: text('tags'), // Optional comma-separated tags
+	createdAt: text('created_at').default(sql`(datetime('now'))`),
+	updatedAt: text('updated_at')
+});
+
+/**
  * 8. تصنيفات الأسئلة (Question Categories)
  * Moodle-style: Hierarchical tree structure for question banks
  */
@@ -325,6 +359,9 @@ export type DocumentType = 'exam' | 'test' | 'lesson' | 'summary' | 'exercise' |
 
 export type Quiz = typeof quizzes.$inferSelect;
 export type NewQuiz = typeof quizzes.$inferInsert;
+
+export type BankExercise = typeof bankExercises.$inferSelect;
+export type NewBankExercise = typeof bankExercises.$inferInsert;
 
 export type Question = typeof questions.$inferSelect;
 export type NewQuestion = typeof questions.$inferInsert;

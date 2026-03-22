@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { ContentBlock } from '$lib/modules/SujetBuilder/types';
 	import { Type, FunctionSquare, Table2, ImageIcon, Trash2, Upload, Loader2, Plus, CheckCircle, ListChecks, GitBranch, Tag } from 'lucide-svelte';
+	import MathPalette from './MathPalette.svelte';
 
 	let {
 		block = $bindable(),
@@ -38,6 +39,10 @@
 	let uploading = $state(false);
 	let dragOver = $state(false);
 	const uploadId = `img-upload-${Math.random().toString(36).slice(2, 9)}`;
+
+	// Input refs for MathPalette
+	let textInputRef: HTMLTextAreaElement | null = $state(null);
+	let mathInputRef: HTMLInputElement | null = $state(null);
 
 	// Image upload
 	async function uploadFile(file: File) {
@@ -165,12 +170,14 @@
 	{#if block.type === 'text'}
 		<div class="space-y-2">
 			<textarea
+				bind:this={textInputRef}
 				class="w-full resize-y rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
 				rows="2"
 				placeholder="اكتب النص هنا..."
 				bind:value={block.content}
 				oninput={() => onchange?.()}
 			></textarea>
+			<MathPalette bind:value={block.content} inputRef={textInputRef} {onchange} isTextMode={true} />
 			<div class="grid grid-cols-2 gap-2">
 				<input
 					type="text"
@@ -193,12 +200,14 @@
 	{:else if block.type === 'math'}
 		<div class="space-y-2">
 			<input
+				bind:this={mathInputRef}
 				type="text"
 				class="w-full rounded-lg border border-border bg-background px-3 py-2 font-mono text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
 				placeholder="a^2 + b^2 = c^2"
 				bind:value={block.content}
 				oninput={() => onchange?.()}
 			/>
+			<MathPalette bind:value={block.content} inputRef={mathInputRef} {onchange} isTextMode={false} />
 			<label class="flex items-center gap-2 text-xs text-muted-foreground">
 				<input type="checkbox" bind:checked={block.display} onchange={() => onchange?.()} class="rounded" />
 				عرض مركزي (Display mode)

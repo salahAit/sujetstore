@@ -7,16 +7,16 @@
   if b.type == "text" [
     #grid(columns: (1fr, auto), [
       #(if is-solution and b.at("answer", default: "") != "" {
-        text(fill: blue)[#b.answer]
+        text(fill: blue)[#eval(b.answer, mode: "markup")]
       } else {
-        text(size: 14pt)[#b.content]
+        text(size: 14pt)[#eval(b.content, mode: "markup")]
       })
     ], if is-solution and b.at("mark", default: "") != "" { align(bottom)[#text(size: 14pt, fill: red)[#b.mark ن]] } else { [] })
   ] else if b.type == "true_false" [
     #for item in b.items [
       #grid(columns: (1fr, auto), [
-        - #item.q #h(5pt) [#box(width: 35pt, align(center)[#(if is-solution { text(fill: blue)[#item.a] } else { "........" })])] \
-        #v(-2pt) #text(size: 10pt)[التصحيح: #(if is-solution and item.at("c", default: "") != "" { text(fill: blue)[#item.c] } else { "........................................................................................................" })]
+        - #eval(item.q, mode: "markup") #h(5pt) [#box(width: 35pt, align(center)[#(if is-solution { text(fill: blue)[#eval(item.a, mode: "markup")] } else { "........" })])] \
+        #v(-2pt) #text(size: 10pt)[التصحيح: #(if is-solution and item.at("c", default: "") != "" { text(fill: blue)[#eval(item.c, mode: "markup")] } else { "........................................................................................................" })]
       ], if is-solution { align(bottom)[#text(size: 14pt, fill: red)[#item.mark ن]] } else { [] })
       #v(4pt)
     ]
@@ -25,10 +25,10 @@
     #stack(dir: ttb, spacing: 8pt,
       ..b.groups.map(g => [
         #grid(columns: (1fr, auto), [
-          #text(font: "Noto Naskh Arabic", weight: "bold")[#g.header] \
+          #text(font: "Noto Naskh Arabic", weight: "bold")[#eval(g.header, mode: "markup")] \
           #h(15pt) #g.options.map(opt => [
             #let symbol = if is-solution and opt == g.correct { text(fill: blue)[×] } else { " " }
-            #box(stroke: 0.5pt, width: 12pt, height: 12pt, radius: 2pt, align(center + horizon)[#v(-2pt)#symbol]) #h(4pt) #(if is-solution and opt == g.correct { text(fill: blue)[#opt] } else { opt })
+            #box(stroke: 0.5pt, width: 12pt, height: 12pt, radius: 2pt, align(center + horizon)[#v(-2pt)#symbol]) #h(4pt) #(if is-solution and opt == g.correct { text(fill: blue)[#eval(opt, mode: "markup")] } else { eval(opt, mode: "markup") })
           ]).join(h(20pt))
         ], if is-solution and g.at("mark", default: "") != "" { text(size: 14pt, fill: red)[#g.mark ن] } else { [] })
       ]))
@@ -50,7 +50,7 @@
   ] else if b.type == "labeling" [
     #grid(columns: (1fr, auto), [
       #grid(columns: (1fr, 1fr), gutter: 15pt,
-        ..b.labels.map(l => [ - #(if is-solution { text(fill: blue)[#l] } else { ".........................................." }) ])
+        ..b.labels.map(l => [ - #(if is-solution { text(fill: blue)[#eval(l, mode: "markup")] } else { ".........................................." }) ])
       )
     ], if is-solution and m != "" { text(size: 14pt, fill: red)[#m ن] } else { [] })
   ] else if b.type == "table" [
@@ -65,10 +65,10 @@
         ..b.cells.map(c => [
           #(if type(c) == dictionary {
             stack(dir: ttb, spacing: 5pt,
-              if is-solution { text(fill: blue)[#c.answer] } else { c.content },
+              if is-solution { text(fill: blue)[#eval(c.answer, mode: "markup")] } else { eval(c.content, mode: "markup") },
               if is-solution and c.at("mark", default: "") != "" { align(left)[#text(size: 12pt, fill: red)[#c.mark ن]] }
             )
-          } else { c })
+          } else { eval(c, mode: "markup") })
         ])
       )
     ]
@@ -103,9 +103,44 @@
       align(center)[
         #image(b.src, width: b.at("width", default: 80%))
         #if b.at("caption", default: "") != "" {
-          text(size: 10pt, style: "italic")[#b.caption]
+          text(size: 10pt, style: "italic")[#eval(b.caption, mode: "markup")]
         }
       ]
     }
   ]
+}
+
+// render-exercises: iterates the array of exercises
+#let render-exercises(exercises, is-solution: false) = {
+  let ordinals = ("الأول", "الثاني", "الثالث", "الرابع", "الخامس", "السادس", "السابع", "الثامن")
+  
+  for (idx, ex) in exercises.enumerate() {
+    v(10pt)
+    block(breakable: true, width: 100%)[
+      #grid(
+        columns: (auto, 1fr),
+        gutter: 10pt,
+        align: horizon,
+        text(size: 22pt, fill: if is-solution { green } else { blue })[▪],
+        text(font: "Noto Naskh Arabic", weight: "bold", size: 17pt)[#eval("التمرين " + ex.at("num", default: ordinals.at(idx, default: str(idx + 1))) + " : (" + str(ex.at("points", default: "0")) + " نقاط)", mode: "markup")],
+      )
+      #v(5pt)
+      
+      #if ex.at("instruction", default: "") != "" [
+        #text(style: "italic", size: 13pt)[#eval(ex.instruction, mode: "markup")]
+        #v(2pt)
+      ]
+      
+      #let blocks = ex.at("blocks", default: ex.at("content", default: ()))
+      #for b in blocks [
+        #render-block(b, is-solution)
+        #v(5pt)
+      ]
+    ]
+  }
+}
+
+// render-solutions: specific wrapper for solution mode
+#let render-solutions(solutions, exercises) = {
+  render-exercises(exercises, is-solution: true)
 }

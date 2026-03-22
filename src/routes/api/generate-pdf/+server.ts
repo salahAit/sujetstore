@@ -13,10 +13,27 @@ const GENERATED_DIR = join(PROJECT_ROOT, 'static/generated');
 export const POST: RequestHandler = async ({ request }) => {
 	try {
 		const body = await request.json();
-		const { templateId, document: examDoc } = body;
+		const { templateId, document: examDoc, isSolution } = body;
 
-		if (!templateId || !examDoc) {
-			return json({ success: false, error: 'Missing templateId or document' }, { status: 400 });
+		// Pre-process document to fix image paths for Typst
+		// Typst needs paths relative to the --root (project root)
+		const processedDoc = JSON.parse(JSON.stringify(examDoc));
+		if (processedDoc.exercises) {
+			processedDoc.exercises.forEach((ex: any) => {
+				const blocks = ex.blocks || ex.content || [];
+				blocks.forEach((block: any) => {
+					if (block.type === 'image' && block.src?.startsWith('/uploads')) {
+						block.src = join('static', block.src);
+					}
+					if (block.type === 'image_grid' && block.items) {
+						block.items.forEach((it: any) => {
+							if (it.src?.startsWith('/uploads')) {
+								it.src = join('static', it.src);
+							}
+						});
+					}
+				});
+			});
 		}
 
 		// Ensure output directory exists
@@ -25,7 +42,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		// Generate unique output filename (absolute path)
 		const pdfName = `sujet-${randomUUID()}.pdf`;
 		const outputFile = join(GENERATED_DIR, pdfName);
-		const dataJson = JSON.stringify(examDoc);
+		const dataJson = JSON.stringify(processedDoc);
 
 		// Compile Typst to PDF from the typst root directory
 		const result = await new Promise<{ success: boolean; error?: string }>((resolve) => {
@@ -33,8 +50,10 @@ export const POST: RequestHandler = async ({ request }) => {
 				'compile',
 				'main.typ',
 				outputFile,
+				'--root', PROJECT_ROOT,
 				'--input', `template-id=${templateId}`,
-				'--input', `data=${dataJson}`
+				'--input', `data=${dataJson}`,
+				'--input', `is-solution=${!!isSolution}`
 			];
 
 			const proc = spawn('typst', args, {

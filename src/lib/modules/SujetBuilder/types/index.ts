@@ -151,6 +151,8 @@ export type ContentBlock =
 // --- Exercise Structure ---
 
 export interface ExerciseBlock {
+	/** Unique identifier for drag and drop (svelte-dnd-action) */
+	id?: string;
 	/** Exercise ordinal — 'الأول', 'الثاني', etc. (auto-generated if omitted) */
 	num?: string;
 	/** Total points for this exercise */

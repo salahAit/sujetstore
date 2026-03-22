@@ -10,7 +10,7 @@
 
 // Parse JSON data from sys.inputs
 #let raw-data = sys.inputs.at("data", default: "{}")
-#let data = json.decode(raw-data)
+#let data = json(bytes(raw-data))
 
 #let metadata = data.at("metadata", default: (:))
 #let exercises = data.at("exercises", default: ())
