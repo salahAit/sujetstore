@@ -23,3 +23,4 @@
 #include "chapters/07-gamification.typ"
 #include "chapters/08-admin-dashboard.typ"
 #include "chapters/09-deployment-roadmap.typ"
+#include "chapters/10-sujet-builder.typ"

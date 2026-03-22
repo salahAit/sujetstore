@@ -18,7 +18,8 @@
 		Save,
 		Download,
 		X,
-		Loader2
+		Loader2,
+		Pencil
 	} from 'lucide-svelte';
 
 	let {
@@ -209,7 +210,10 @@
 	onfinalize={handleDndFinalize}
 >
 	<div class="flex items-center justify-between border-b border-border pb-2">
-		<h3 class="text-lg font-bold text-foreground">✏️ التمارين</h3>
+		<div class="flex items-center gap-2 text-primary">
+			<Pencil size={18} />
+			<h3 class="text-lg font-bold text-foreground">التمارين</h3>
+		</div>
 		<div class="flex items-center gap-2">
 			<button
 				class="flex items-center gap-1.5 rounded-xl bg-muted px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-muted-foreground/10"

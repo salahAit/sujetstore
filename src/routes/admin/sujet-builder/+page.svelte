@@ -43,6 +43,7 @@
 	let splitPercent = $state(50);
 	let isDragging = $state(false);
 	let editorCollapsed = $state(false);
+	let previewCollapsed = $state(false);
 
 	// Template ID
 	let activeTemplate = $derived.by<TemplateId>(() => {
@@ -148,6 +149,7 @@
 		const popup = window.open('', '_blank', 'width=800,height=1000');
 		if (popup) {
 			popup.document.write(`<html><head><title>معاينة الموضوع</title></head><body style="margin:0"><iframe src="data:application/pdf;base64,${pdfBase64}" style="width:100%;height:100%;border:none"></iframe></body></html>`);
+			previewCollapsed = true;
 		}
 	}
 
@@ -202,13 +204,28 @@
 					<RotateCcw size={14} /> إعادة تعيين
 				</button>
 			{/if}
+			<button
+				onclick={() => { 
+					previewCollapsed = !previewCollapsed;
+					if (previewCollapsed) editorCollapsed = false;
+				}}
+				class="rounded-lg bg-muted p-1.5 text-muted-foreground hover:text-primary"
+				title={previewCollapsed ? 'إظهار المعاينة' : 'ملء الشاشة للمحرر'}
+			>
+				{#if previewCollapsed}
+					<Minimize2 size={14} />
+				{:else}
+					<Maximize2 size={14} />
+				{/if}
+			</button>
 		</div>
 	</header>
 
 	<!-- ═══ SPLIT PANE ═══ -->
 	<div class="relative flex flex-1 overflow-hidden" class:cursor-col-resize={isDragging} class:select-none={isDragging}>
 		<!-- LEFT: EDITOR -->
-		<div class="overflow-y-auto" style="width: {editorCollapsed ? 0 : splitPercent}%; {editorCollapsed ? 'display:none' : ''}">
+		<div class="overflow-y-auto" style="width: {editorCollapsed ? 0 : (previewCollapsed ? 100 : splitPercent)}%; {editorCollapsed ? 'display:none' : ''}">
+
 			<div class="space-y-4 p-4">
 				<MetadataPanel
 					levels={data.levels}
@@ -237,7 +254,7 @@
 		</div>
 
 		<!-- DIVIDER (draggable) -->
-		{#if !editorCollapsed}
+		{#if !editorCollapsed && !previewCollapsed}
 			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 			<div
 				class="group relative z-10 flex w-2 cursor-col-resize items-center justify-center bg-border transition-colors hover:bg-primary/30"
@@ -248,21 +265,25 @@
 		{/if}
 
 		<!-- RIGHT: PREVIEW -->
-		<div class="flex flex-1 flex-col overflow-hidden">
+		<div class="flex flex-col overflow-hidden" style="flex: 1; {previewCollapsed ? 'display:none' : ''}">
+
 			<!-- Preview Header -->
 			<div class="flex items-center justify-between border-b border-border bg-card px-4 py-2">
-				<div class="flex items-center gap-4">
-					<h3 class="text-sm font-bold text-foreground">📄 معاينة الموضوع</h3>
-					<div class="flex items-center overflow-hidden rounded-lg border border-border bg-muted/30 p-0.5">
+				<div class="flex items-center gap-2">
+					<div class="flex items-center gap-1.5 text-primary">
+						<Eye size={16} />
+						<h3 class="text-sm font-bold text-foreground">معاينة الموضوع</h3>
+					</div>
+					<div class="flex items-center overflow-hidden rounded-lg border border-border bg-muted/50 p-0.5">
 						<button 
 							onclick={() => { isPreviewSolution = false; generatePdf(); }}
-							class="px-3 py-1 text-[10px] font-bold transition-all {!isPreviewSolution ? 'bg-primary text-white shadow-sm' : 'text-muted-foreground hover:text-foreground'}"
+							class="px-3 py-1 text-[11px] font-bold transition-all {!isPreviewSolution ? 'bg-background text-primary shadow-sm' : 'text-muted-foreground hover:text-foreground hover:bg-background/20'}"
 						>
 							الموضوع
 						</button>
 						<button 
 							onclick={() => { isPreviewSolution = true; generatePdf(); }}
-							class="px-3 py-1 text-[10px] font-bold transition-all {isPreviewSolution ? 'bg-green-600 text-white shadow-sm' : 'text-muted-foreground hover:text-foreground'}"
+							class="px-3 py-1 text-[11px] font-bold transition-all {isPreviewSolution ? 'bg-background text-primary shadow-sm' : 'text-muted-foreground hover:text-foreground hover:bg-background/20'}"
 						>
 							التصحيح
 						</button>
@@ -288,9 +309,12 @@
 						{/if}
 					{/if}
 					<button
-						onclick={() => (editorCollapsed = !editorCollapsed)}
+						onclick={() => {
+							editorCollapsed = !editorCollapsed;
+							if (editorCollapsed) previewCollapsed = false;
+						}}
 						class="rounded-lg bg-muted p-1.5 text-muted-foreground hover:text-primary"
-						title={editorCollapsed ? 'إظهار المحرر' : 'تكبير المعاينة'}
+						title={editorCollapsed ? 'إظهار المحرر' : 'ملء الشاشة للمعاينة'}
 					>
 						{#if editorCollapsed}
 							<Minimize2 size={14} />
@@ -301,7 +325,12 @@
 				</div>
 			</div>
 			<!-- Preview Content -->
-			<div class="flex-1 overflow-auto bg-muted/30 p-4">
+
+			<div class="relative flex-1 overflow-auto bg-muted/30 p-4">
+				<!-- Overlay to prevent iframe from swallowing mouse events during drag -->
+				{#if isDragging}
+					<div class="absolute inset-0 z-50"></div>
+				{/if}
 				<PdfPreview {pdfBase64} loading={pdfLoading} error={pdfError} />
 			</div>
 		</div>

@@ -107,10 +107,15 @@
 		{ value: 'test', label: 'فرض' },
 		{ value: 'exam', label: 'اختبار' }
 	];
+
+	import { ClipboardList } from 'lucide-svelte';
 </script>
 
 <div class="space-y-3">
-	<h3 class="text-sm font-bold text-foreground border-b border-border pb-1.5">📋 معلومات الموضوع</h3>
+	<div class="flex items-center gap-1.5 border-b border-border pb-1.5 text-primary">
+		<ClipboardList size={16} />
+		<h3 class="text-sm font-bold text-foreground">معلومات الموضوع</h3>
+	</div>
 
 	<div class="grid grid-cols-2 gap-3">
 		<!-- Level -->
