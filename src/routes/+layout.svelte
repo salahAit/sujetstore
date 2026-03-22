@@ -23,6 +23,7 @@
 	let { children } = $props();
 
 	let isMobileMenuOpen = $state(false);
+	let isSujetBuilder = $derived($page.url.pathname.startsWith('/admin/sujet-builder'));
 
 	onMount(async () => {
 		// Enable HTML5 drag and drop on touch screens (Smartphones/Tablets)
@@ -41,6 +42,7 @@
 <ModeWatcher />
 
 <!-- Navbar -->
+{#if !isSujetBuilder}
 <nav
 	class="bg-background/80 sticky top-0 z-50 border-b border-black/5 backdrop-blur-xl dark:border-white/10"
 >
@@ -230,13 +232,19 @@
 		{/if}
 	</div>
 </nav>
+{/if}
 
 <!-- Main Content -->
+{#if isSujetBuilder}
+	{@render children()}
+{:else}
 <main class="min-h-screen flex-1">
 	{@render children()}
 </main>
+{/if}
 
 <!-- Footer -->
+{#if !isSujetBuilder}
 <footer class="bg-background/50 border-t border-black/5 py-12 dark:border-white/10">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -311,3 +319,4 @@
 		</div>
 	</div>
 </footer>
+{/if}

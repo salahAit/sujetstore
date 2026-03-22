@@ -11,7 +11,8 @@
 		BarChart3,
 		LogOut,
 		Menu,
-		X
+		X,
+		FilePlus2
 	} from 'lucide-svelte';
 
 	let { data, children } = $props();
@@ -23,14 +24,16 @@
 		{ name: 'المراحل التعليمية', href: '/admin/levels', icon: GraduationCap },
 		{ name: 'السنوات الدراسية', href: '/admin/years', icon: CalendarDays },
 		{ name: 'المواد الدراسية', href: '/admin/subjects', icon: BookOpen },
+		{ name: 'منشئ المواضيع', href: '/admin/sujet-builder', icon: FilePlus2 },
 		{ name: 'التمارين التفاعلية', href: '/admin/quizzes', icon: Brain },
 		{ name: 'بنك الأسئلة', href: '/admin/question-bank', icon: Database },
 		{ name: 'إحصائيات التمارين', href: '/admin/quiz-analytics', icon: BarChart3 },
 		{ name: 'الوثائق', href: '/admin/documents', icon: FileText }
 	];
+	let isSujetBuilder = $derived($page.url.pathname.startsWith('/admin/sujet-builder'));
 </script>
 
-{#if $page.url.pathname === '/admin/login'}
+{#if $page.url.pathname === '/admin/login' || isSujetBuilder}
 	{@render children()}
 {:else}
 	<div class="font-cairo bg-background text-foreground flex min-h-screen" dir="rtl">
