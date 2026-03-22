@@ -5,7 +5,8 @@
 	import ExerciseEditor from '$lib/modules/SujetBuilder/components/ExerciseEditor.svelte';
 	import PdfPreview from '$lib/modules/SujetBuilder/components/PdfPreview.svelte';
 	import { Button } from '$lib/components/ui/button';
-	import { ArrowRight, Eye, Download, RotateCcw, PanelLeft, Columns, PanelRight, ExternalLink, FileText } from 'lucide-svelte';
+	import { ArrowRight, Eye, Download, RotateCcw, PanelLeft, Columns, PanelRight, ExternalLink, FileText, Sun, Moon, Printer } from 'lucide-svelte';
+	import { toggleMode } from 'mode-watcher';
 
 	let { data }: { data: PageData } = $props();
 
@@ -27,16 +28,16 @@
 	let isMetadataComplete = $derived(!!metadata.levelId && !!metadata.yearId && !!metadata.subjectId);
 
 	let exercises = $state<ExerciseBlock[]>([
-		{
-			points: 6,
-			instruction: '',
-			content: [{ type: 'text', content: '' }]
-		}
+		{ 
+			id: Math.random().toString(36).substring(7), 
+			points: 6, 
+			instruction: '', 
+			content: [{ type: 'text', content: '' }] 
+		} as ExerciseBlock
 	]);
-
-	// PDF state
 	let pdfBase64 = $state('');
-	let pdfLoading = $state(false);
+	let svgPages = $state<string[]>([]);
+	let isGenerating = $state(false);
 	let pdfError = $state('');
 	let isPreviewSolution = $state(false);
 
@@ -111,35 +112,50 @@
 
 	// Generate PDF
 	async function generatePdf() {
-		pdfLoading = true;
+		isGenerating = true;
 		pdfError = '';
 		try {
 			const res = await fetch('/api/generate-pdf', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({
-					templateId: activeTemplate,
-					document: {
-						metadata: $state.snapshot(metadata),
-						exercises: $state.snapshot(exercises)
+					templateId: metadata.docType,
+					document: { 
+						metadata: $state.snapshot(metadata), 
+						exercises: $state.snapshot(exercises) 
 					},
-					isSolution: isPreviewSolution
+					isSolution: isPreviewSolution,
+					format: 'svg'
 				})
 			});
 			const result = await res.json();
 			if (result.success) {
 				pdfBase64 = result.pdfBase64;
+				svgPages = result.svgPages || [];
 			} else {
 				pdfError = result.error || 'فشل في توليد الملف';
 			}
 		} catch (e: any) {
 			pdfError = e.message || 'خطأ في الاتصال';
 		} finally {
-			pdfLoading = false;
+			isGenerating = false;
 		}
 	}
 
 	// Download PDF
+	function printPdf() {
+		if (!pdfBase64) return;
+		const iframe = document.createElement('iframe');
+		iframe.style.display = 'none';
+		iframe.src = `data:application/pdf;base64,${pdfBase64}`;
+		document.body.appendChild(iframe);
+		iframe.onload = () => {
+			iframe.contentWindow?.focus();
+			iframe.contentWindow?.print();
+			setTimeout(() => document.body.removeChild(iframe), 1000);
+		};
+	}
+
 	function downloadPdf() {
 		if (!pdfBase64) return;
 		const link = document.createElement('a');
@@ -151,9 +167,58 @@
 	// Open preview in popup window
 	function openPopup() {
 		if (!pdfBase64) return;
-		popupWindow = window.open('', '_blank', 'width=800,height=1000');
+		popupWindow = window.open('', '_blank', 'width=1000,height=800');
 		if (popupWindow) {
-			popupWindow.document.write(`<html><head><title>معاينة الموضوع</title><style>body{margin:0;padding:0;overflow:hidden;} iframe{width:100vw;height:100vh;border:none;}</style></head><body><iframe src="data:application/pdf;base64,${pdfBase64}#view=FitH" type="application/pdf"></iframe></body></html>`);
+			const titleText = `${metadata.subjectName || 'موضوع'} - ${metadata.yearName || ''}`;
+			const html = `
+				<!DOCTYPE html>
+				<html dir="rtl" lang="ar">
+				<head>
+					<title>${titleText} (معاينة)</title>
+					${'<style>'}
+						body { margin: 0; padding: 0; display: flex; flex-direction: column; height: 100vh; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f1f5f9; }
+						.header { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; background: white; border-bottom: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); z-index: 10; }
+						.title { font-weight: 600; font-size: 16px; color: #0f172a; margin: 0; display: flex; align-items: center; gap: 8px; }
+						.title svg { color: #64748b; }
+						.actions { display: flex; gap: 8px; }
+						.btn { padding: 8px 16px; border-radius: 6px; border: 1px solid #cbd5e1; background: white; color: #334155; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+						.btn:hover { background: #f8fafc; color: #0f172a; border-color: #94a3b8; }
+						.btn-primary { background: #0f172a; color: white; border-color: #0f172a; }
+						.btn-primary:hover { background: #1e293b; color: white; border-color: #1e293b; }
+						.btn-danger { background: white; color: #ef4444; border-color: #fca5a5; }
+						.btn-danger:hover { background: #fef2f2; color: #dc2626; border-color: #f87171; }
+						iframe { flex: 1; width: 100%; border: none; background: #cbd5e1; }
+					${'</style>'}
+				</head>
+				<body>
+					<div class="header">
+						<h1 class="title">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+							معاينة الطباعة
+						</h1>
+						<div class="actions">
+							<button class="btn btn-primary" onclick="window.print()">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V2h12v7"/><rect x="6" y="14" width="12" height="8"/></svg>
+								طباعة
+							</button>
+							<a class="btn" href="data:application/pdf;base64,${pdfBase64}" download="sujet-${metadata.subjectName || 'exam'}.pdf">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+								تحميل PDF
+							</a>
+							<button class="btn btn-danger" onclick="window.close()">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+								إغلاق
+							</button>
+						</div>
+					</div>
+					<iframe src="data:application/pdf;base64,${pdfBase64}#view=FitH" type="application/pdf"></iframe>
+				</body>
+				</html>
+			`;
+			popupWindow.document.open();
+			popupWindow.document.write(html);
+			popupWindow.document.close();
+			
 			isPopupOpen = true;
 			previewCollapsed = true;
 			editorCollapsed = false; // ensure editor expands
@@ -179,8 +244,16 @@
 
 	// Reset
 	function reset() {
-		exercises = [{ points: 4, instruction: '', content: [{ type: 'text', content: '' }] }];
+		exercises = [
+			{ 
+				id: Math.random().toString(36).substring(7), 
+				points: 4, 
+				instruction: '', 
+				content: [{ type: 'text', content: '' }] 
+			} as ExerciseBlock
+		];
 		pdfBase64 = '';
+		svgPages = [];
 		pdfError = '';
 	}
 
@@ -235,6 +308,12 @@
 						<RotateCcw size={14} /> <span class="hidden sm:inline">إعادة تعيين</span>
 					</Button>
 				{/if}
+
+				{#if isPopupOpen}
+					<Button variant="default" size="sm" onclick={restorePreview} class="gap-1.5 px-3 bg-blue-600 hover:bg-blue-700 text-white shadow-sm border-0 mr-1 animate-pulse">
+						<RotateCcw size={14} /> <span class="hidden sm:inline">إستعادة المعاينة</span>
+					</Button>
+				{/if}
 				
 				<!-- Layout Controls (Segmented Control) -->
 				<div class="hidden md:flex items-center rounded-lg border border-border bg-muted/40 p-0.5 shadow-sm">
@@ -263,6 +342,18 @@
 						<PanelRight size={16} />
 					</Button>
 				</div>
+
+				<!-- Theme Toggle -->
+				<Button
+					variant="ghost"
+					size="icon-sm"
+					onclick={toggleMode}
+					class="text-muted-foreground rounded-lg p-2 transition-colors hover:bg-black/5 dark:hover:bg-white/5"
+					title="تغيير المظهر"
+				>
+					<Moon size={18} class="block dark:hidden" />
+					<Sun size={18} class="hidden dark:block" />
+				</Button>
 			</div>
 		</div>
 	</header>
@@ -308,6 +399,8 @@
 			<div
 				class="hidden lg:flex group relative z-10 w-2 cursor-col-resize items-center justify-center bg-border transition-colors hover:bg-primary/30"
 				onmousedown={startDrag}
+				role="separator"
+				aria-label="Resizer"
 			>
 				<div class="h-8 w-1 rounded-full bg-muted-foreground/30 transition-colors group-hover:bg-primary"></div>
 			</div>
@@ -345,29 +438,32 @@
 					</div>
 				</div>
 				<div class="flex items-center gap-2">
-					{#if isMetadataComplete}
-						<Button
-							onclick={generatePdf}
-							disabled={pdfLoading}
-							size="sm"
-							class="gap-1.5 px-3 text-xs font-medium shadow-sm"
-						>
-							<Eye size={14} />
-							<span class="hidden lg:inline">{pdfLoading ? 'جاري التوليد...' : 'توليد الموضوع'}</span>
-							<span class="lg:hidden">{pdfLoading ? '...' : 'توليد'}</span>
-						</Button>
-						
-						{#if pdfBase64}
-							<div class="flex items-center rounded-lg border border-border bg-muted/40 p-0.5">
-								<Button variant="ghost" size="sm" onclick={downloadPdf} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-primary shadow-sm h-7" title="تحميل PDF">
-									<Download size={14} /> <span class="hidden 2xl:inline">تحميل</span>
-								</Button>
-								<div class="h-4 w-px bg-border mx-0.5"></div>
-								<Button variant="ghost" size="sm" onclick={openPopup} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-primary shadow-sm h-7" title="فتح المعاينة في بطاقة مستقلة">
-									<ExternalLink size={14} /> <span class="hidden 2xl:inline">نافذة منبثقة</span>
-								</Button>
-							</div>
-						{/if}
+					<Button
+						onclick={generatePdf}
+						disabled={isGenerating || !isMetadataComplete}
+						size="sm"
+						variant={isMetadataComplete ? "default" : "outline"}
+						class="gap-1.5 px-3 text-xs font-medium shadow-sm transition-all"
+					>
+						<Eye size={14} />
+						<span class="hidden lg:inline">{isGenerating ? 'جاري التوليد...' : 'توليد الموضوع'}</span>
+						<span class="lg:hidden">{isGenerating ? '...' : 'توليد'}</span>
+					</Button>
+					
+					{#if pdfBase64}
+						<div class="flex items-center rounded-lg border border-border bg-muted/40 p-0.5">
+							<Button variant="ghost" size="sm" onclick={printPdf} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-blue-600 shadow-sm h-7" title="تحميل PDF">
+								<Printer size={14} /> <span class="hidden 2xl:inline">طباعة</span>
+							</Button>
+							<div class="h-4 w-px bg-border mx-0.5"></div>
+							<Button variant="ghost" size="sm" onclick={downloadPdf} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-green-600 shadow-sm h-7" title="تحميل PDF">
+								<Download size={14} /> <span class="hidden 2xl:inline">تحميل</span>
+							</Button>
+							<div class="h-4 w-px bg-border mx-0.5"></div>
+							<Button variant="ghost" size="sm" onclick={openPopup} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-primary shadow-sm h-7" title="فتح المعاينة في بطاقة مستقلة">
+								<ExternalLink size={14} /> <span class="hidden 2xl:inline">نافذة منبثقة</span>
+							</Button>
+						</div>
 					{/if}
 					
 					<!-- Mobile-only view toggle -->
@@ -401,11 +497,17 @@
 						</Button>
 					</div>
 				{:else}
-					<div class="flex-1 w-full h-full overflow-hidden rounded-xl shadow-sm border border-border bg-white">
-						<PdfPreview {pdfBase64} loading={pdfLoading} error={pdfError} />
+					<div class="flex-1 overflow-hidden relative group">
+						<PdfPreview 
+							{pdfBase64} 
+							{svgPages}
+							loading={isGenerating} 
+							error={pdfError} 
+						/>
 					</div>
 				{/if}
 			</div>
 		</div>
 	</div>
 </div>
+```

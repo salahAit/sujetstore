@@ -13,10 +13,9 @@ const GENERATED_DIR = join(PROJECT_ROOT, 'static/generated');
 export const POST: RequestHandler = async ({ request }) => {
 	try {
 		const body = await request.json();
-		const { templateId, document: examDoc, isSolution } = body;
+		const { templateId, document: examDoc, isSolution, format = 'pdf' } = body;
 
 		// Pre-process document to fix image paths for Typst
-		// Typst needs paths relative to the --root (project root)
 		const processedDoc = JSON.parse(JSON.stringify(examDoc));
 		if (processedDoc.exercises) {
 			processedDoc.exercises.forEach((ex: any) => {
@@ -39,60 +38,74 @@ export const POST: RequestHandler = async ({ request }) => {
 		// Ensure output directory exists
 		await mkdir(GENERATED_DIR, { recursive: true });
 
-		// Generate unique output filename (absolute path)
-		const pdfName = `sujet-${randomUUID()}.pdf`;
-		const outputFile = join(GENERATED_DIR, pdfName);
+		// Generate unique output filename
+		const fileId = randomUUID();
+		const isSvg = format === 'svg';
+		const outputBase = join(GENERATED_DIR, fileId);
+		const outputFile = isSvg ? `${outputBase}-{n}.svg` : `${outputBase}.pdf`;
 		const dataJson = JSON.stringify(processedDoc);
 
-		// Compile Typst to PDF from the typst root directory
-		const result = await new Promise<{ success: boolean; error?: string }>((resolve) => {
+		const fontsDir = join(PROJECT_ROOT, 'book', 'fonts');
+
+		// Compile Typst to PDF
+		const pdfResult = await new Promise<{ success: boolean; error?: string }>((resolve) => {
 			const args = [
-				'compile',
-				'main.typ',
-				outputFile,
+				'compile', 'main.typ', `${outputBase}.pdf`,
 				'--root', PROJECT_ROOT,
+				'--font-path', fontsDir,
 				'--input', `template-id=${templateId}`,
 				'--input', `data=${dataJson}`,
 				'--input', `is-solution=${!!isSolution}`
 			];
-
-			const proc = spawn('typst', args, {
-				cwd: TYPST_ROOT,
-				timeout: 15000,
-				stdio: ['ignore', 'pipe', 'pipe']
-			});
-
+			const proc = spawn('typst', args, { cwd: TYPST_ROOT, timeout: 15000 });
 			let stderr = '';
-			proc.stderr.on('data', (data) => { stderr += data.toString(); });
-
-			proc.on('close', (code) => {
-				if (code === 0) {
-					resolve({ success: true });
-				} else {
-					resolve({ success: false, error: stderr || `Typst exited with code ${code}` });
-				}
-			});
-
-			proc.on('error', (err) => {
-				resolve({ success: false, error: `Failed to spawn typst: ${err.message}` });
-			});
+			proc.stderr.on('data', (d) => stderr += d.toString());
+			proc.on('close', (c) => c === 0 ? resolve({ success: true }) : resolve({ success: false, error: stderr }));
 		});
 
-		if (!result.success) {
-			return json({ success: false, error: result.error }, { status: 500 });
+		if (!pdfResult.success) return json({ success: false, error: pdfResult.error }, { status: 500 });
+		
+		const pdfBuffer = await readFile(`${outputBase}.pdf`);
+		const pdfBase64 = pdfBuffer.toString('base64');
+		await unlink(`${outputBase}.pdf`).catch(() => {});
+
+		let responseData: any = { success: true, pdfBase64 };
+
+		if (isSvg) {
+			// Also compile to SVG for preview
+			await new Promise((resolve) => {
+				const proc = spawn('typst', [
+					'compile', 'main.typ', `${outputBase}-{n}.svg`,
+					'--root', PROJECT_ROOT,
+					'--font-path', fontsDir,
+					'--input', `template-id=${templateId}`,
+					'--input', `data=${dataJson}`,
+					'--input', `is-solution=${!!isSolution}`
+				], { cwd: TYPST_ROOT, timeout: 15000 });
+				proc.on('close', resolve);
+			});
+
+			const fs = await import('fs');
+			const files = await fs.promises.readdir(GENERATED_DIR);
+			const svgFiles = files
+				.filter(f => f.startsWith(fileId) && f.endsWith('.svg'))
+				.sort((a, b) => {
+					const numA = parseInt(a.match(/-(\d+)\.svg$/)?.[1] || '0');
+					const numB = parseInt(b.match(/-(\d+)\.svg$/)?.[1] || '0');
+					return numA - numB;
+				});
+
+			responseData.svgPages = await Promise.all(
+				svgFiles.map(async (f) => {
+					const p = join(GENERATED_DIR, f);
+					const b = await readFile(p);
+					await unlink(p).catch(() => {});
+					return b.toString('base64');
+				})
+			);
 		}
 
-		// Read the generated PDF
-		const pdfBuffer = await readFile(outputFile);
-		const pdfBase64 = pdfBuffer.toString('base64');
-
-		// Cleanup temp file
-		await unlink(outputFile).catch(() => {});
-
-		return json({
-			success: true,
-			pdfBase64
-		});
+		return json(responseData);
 
 	} catch (err: any) {
 		return json({ success: false, error: err.message || 'Unknown error' }, { status: 500 });

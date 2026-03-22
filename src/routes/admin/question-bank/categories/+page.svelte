@@ -113,7 +113,7 @@
 		<div>
 			<h1 class="text-3xl font-bold text-foreground">التصنيفات</h1>
 			<p class="mt-2 text-sm text-foreground/60">
-				إدارة شجرة مجلدات الأسئلة، مشابهة لنظام Moodle لتنظيم بنك الأسئلة الشامل.
+				إدارة شجرة مجلدات الأسئلة لتنظيم بنك الأسئلة الشامل.
 			</p>
 		</div>
 		<button
