@@ -277,13 +277,13 @@
 					<div class="flex items-center overflow-hidden rounded-lg border border-border bg-muted/50 p-0.5">
 						<button 
 							onclick={() => { isPreviewSolution = false; generatePdf(); }}
-							class="px-3 py-1 text-[11px] font-bold transition-all {!isPreviewSolution ? 'bg-background text-primary shadow-sm' : 'text-muted-foreground hover:text-foreground hover:bg-background/20'}"
+							class="px-3 py-1 text-[11px] font-bold transition-all {!isPreviewSolution ? 'bg-blue-600 text-white shadow-sm' : 'text-muted-foreground hover:text-foreground hover:bg-background/20'}"
 						>
 							الموضوع
 						</button>
 						<button 
 							onclick={() => { isPreviewSolution = true; generatePdf(); }}
-							class="px-3 py-1 text-[11px] font-bold transition-all {isPreviewSolution ? 'bg-background text-primary shadow-sm' : 'text-muted-foreground hover:text-foreground hover:bg-background/20'}"
+							class="px-3 py-1 text-[11px] font-bold transition-all {isPreviewSolution ? 'bg-green-600 text-white shadow-sm' : 'text-muted-foreground hover:text-foreground hover:bg-background/20'}"
 						>
 							التصحيح
 						</button>
