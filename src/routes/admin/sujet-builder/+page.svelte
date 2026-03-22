@@ -4,7 +4,8 @@
 	import MetadataPanel from '$lib/modules/SujetBuilder/components/MetadataPanel.svelte';
 	import ExerciseEditor from '$lib/modules/SujetBuilder/components/ExerciseEditor.svelte';
 	import PdfPreview from '$lib/modules/SujetBuilder/components/PdfPreview.svelte';
-	import { ArrowRight, Eye, Download, RotateCcw, Maximize2, Minimize2, ExternalLink, FileText } from 'lucide-svelte';
+	import { Button } from '$lib/components/ui/button';
+	import { ArrowRight, Eye, Download, RotateCcw, PanelLeft, Columns, PanelRight, ExternalLink, FileText } from 'lucide-svelte';
 
 	let { data }: { data: PageData } = $props();
 
@@ -188,43 +189,63 @@
 
 <div class="flex h-screen flex-col">
 	<!-- ═══ TOP BAR ═══ -->
-	<header class="flex items-center justify-between border-b border-border bg-card px-4 py-2">
-		<div class="flex items-center gap-3">
-			<a href="/admin" class="flex items-center gap-1.5 rounded-lg bg-muted px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary">
+	<header class="flex flex-col md:flex-row items-center justify-between border-b border-border bg-card px-4 py-2 gap-3 md:gap-0">
+		<div class="flex w-full md:w-auto items-center justify-between md:justify-start gap-3">
+			<Button variant="outline" size="sm" href="/admin" class="shrink-0 gap-1.5 px-3 text-muted-foreground hover:bg-primary/10 hover:text-primary border-transparent hover:border-border bg-muted">
 				<ArrowRight size={16} />
-				لوحة التحكم
-			</a>
-			<h1 class="text-lg font-bold text-foreground">منشئ المواضيع</h1>
+				<span class="hidden sm:inline">لوحة التحكم</span>
+			</Button>
+			<h1 class="text-base md:text-lg font-bold text-foreground truncate">منشئ المواضيع</h1>
 		</div>
-		<div class="flex items-center gap-3 text-xs text-muted-foreground">
-			<span class="rounded-lg bg-muted px-2 py-1">التمارين: <strong class="text-foreground">{exercises.length}</strong></span>
-			<span class="rounded-lg bg-muted px-2 py-1">المجموع: <strong class="text-primary">{totalScore} نقطة</strong></span>
-			{#if isMetadataComplete}
-				<button onclick={reset} class="flex items-center gap-1 rounded-lg bg-muted px-2.5 py-1.5 text-muted-foreground hover:bg-red-500/10 hover:text-red-500" title="إعادة تعيين">
-					<RotateCcw size={14} /> إعادة تعيين
-				</button>
-			{/if}
-			<button
-				onclick={() => { 
-					previewCollapsed = !previewCollapsed;
-					if (previewCollapsed) editorCollapsed = false;
-				}}
-				class="rounded-lg bg-muted p-1.5 text-muted-foreground hover:text-primary"
-				title={previewCollapsed ? 'إظهار المعاينة' : 'ملء الشاشة للمحرر'}
-			>
-				{#if previewCollapsed}
-					<Minimize2 size={14} />
-				{:else}
-					<Maximize2 size={14} />
+		
+		<div class="flex w-full md:w-auto items-center justify-between md:justify-end gap-2 text-xs text-muted-foreground overflow-x-auto pb-1 md:pb-0 hide-scrollbar">
+			<div class="flex items-center gap-2 shrink-0">
+				<span class="rounded-lg bg-muted px-2 py-1.5 border border-border/50">التمارين: <strong class="text-foreground">{exercises.length}</strong></span>
+				<span class="rounded-lg bg-primary/10 px-2 py-1.5 border border-primary/20">المجموع: <strong class="text-primary">{totalScore} نقطة</strong></span>
+			</div>
+			
+			<div class="flex items-center gap-3 shrink-0">
+				{#if isMetadataComplete}
+					<Button variant="outline" size="sm" onclick={reset} class="gap-1 px-2.5 text-muted-foreground shadow-sm transition-colors hover:border-red-500/30 hover:bg-red-500/10 hover:text-red-500" title="إعادة تعيين">
+						<RotateCcw size={14} /> <span class="hidden sm:inline">إعادة تعيين</span>
+					</Button>
 				{/if}
-			</button>
+				
+				<!-- Layout Controls (Segmented Control) -->
+				<div class="hidden md:flex items-center rounded-lg border border-border bg-muted/40 p-0.5 shadow-sm">
+					<Button 
+						variant="ghost" size="icon-sm"
+						onclick={() => { previewCollapsed = true; editorCollapsed = false; }}
+						class="rounded-md transition-all {previewCollapsed ? 'bg-background text-primary shadow-sm ring-1 ring-border/50 hover:bg-background hover:text-primary' : 'text-muted-foreground hover:text-foreground hover:bg-background/20'}"
+						title="المحرر فقط"
+					>
+						<PanelLeft size={16} />
+					</Button>
+					<Button 
+						variant="ghost" size="icon-sm"
+						onclick={() => { previewCollapsed = false; editorCollapsed = false; }}
+						class="rounded-md transition-all {!previewCollapsed && !editorCollapsed ? 'bg-background text-primary shadow-sm ring-1 ring-border/50 hover:bg-background hover:text-primary' : 'text-muted-foreground hover:text-foreground hover:bg-background/20'}"
+						title="عرض مزدوج"
+					>
+						<Columns size={16} />
+					</Button>
+					<Button 
+						variant="ghost" size="icon-sm"
+						onclick={() => { previewCollapsed = false; editorCollapsed = true; }}
+						class="rounded-md transition-all {editorCollapsed ? 'bg-background text-primary shadow-sm ring-1 ring-border/50 hover:bg-background hover:text-primary' : 'text-muted-foreground hover:text-foreground hover:bg-background/20'}"
+						title="المعاينة فقط"
+					>
+						<PanelRight size={16} />
+					</Button>
+				</div>
+			</div>
 		</div>
 	</header>
 
 	<!-- ═══ SPLIT PANE ═══ -->
-	<div class="relative flex flex-1 overflow-hidden" class:cursor-col-resize={isDragging} class:select-none={isDragging}>
+	<div class="relative flex flex-1 flex-col lg:flex-row overflow-hidden" class:cursor-col-resize={isDragging} class:select-none={isDragging}>
 		<!-- LEFT: EDITOR -->
-		<div class="overflow-y-auto" style="width: {editorCollapsed ? 0 : (previewCollapsed ? 100 : splitPercent)}%; {editorCollapsed ? 'display:none' : ''}">
+		<div class="overflow-y-auto lg:h-full transition-all duration-200 {editorCollapsed ? 'hidden lg:hidden' : 'flex-1 lg:flex-none'}" style="lg:width: {editorCollapsed ? 0 : (previewCollapsed ? 100 : splitPercent)}%;">
 
 			<div class="space-y-4 p-4">
 				<MetadataPanel
@@ -253,26 +274,28 @@
 			</div>
 		</div>
 
-		<!-- DIVIDER (draggable) -->
+		<!-- DIVIDER (draggable - only visibly active on large screens) -->
 		{#if !editorCollapsed && !previewCollapsed}
 			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 			<div
-				class="group relative z-10 flex w-2 cursor-col-resize items-center justify-center bg-border transition-colors hover:bg-primary/30"
+				class="hidden lg:flex group relative z-10 w-2 cursor-col-resize items-center justify-center bg-border transition-colors hover:bg-primary/30"
 				onmousedown={startDrag}
 			>
 				<div class="h-8 w-1 rounded-full bg-muted-foreground/30 transition-colors group-hover:bg-primary"></div>
 			</div>
+			<!-- Mobile divider -->
+			<div class="lg:hidden h-2 w-full bg-border md:bg-muted/50"></div>
 		{/if}
 
 		<!-- RIGHT: PREVIEW -->
-		<div class="flex flex-col overflow-hidden" style="flex: 1; {previewCollapsed ? 'display:none' : ''}">
+		<div class="flex flex-col overflow-hidden transition-all duration-200 {previewCollapsed ? 'hidden lg:hidden' : 'flex-1 lg:flex-none shrink-0'}" style="lg:width: {previewCollapsed ? 0 : (editorCollapsed ? 100 : 100 - splitPercent)}%;">
 
 			<!-- Preview Header -->
-			<div class="flex items-center justify-between border-b border-border bg-card px-4 py-2">
+			<div class="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-card px-4 py-2">
 				<div class="flex items-center gap-2">
 					<div class="flex items-center gap-1.5 text-primary">
 						<Eye size={16} />
-						<h3 class="text-sm font-bold text-foreground">معاينة الموضوع</h3>
+						<h3 class="text-sm font-bold text-foreground hidden sm:inline">معاينة الموضوع</h3>
 					</div>
 					<div class="flex items-center overflow-hidden rounded-lg border border-border bg-muted/50 p-0.5">
 						<button 
@@ -291,37 +314,41 @@
 				</div>
 				<div class="flex items-center gap-2">
 					{#if isMetadataComplete}
-						<button
+						<Button
 							onclick={generatePdf}
 							disabled={pdfLoading}
-							class="flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-primary/90 disabled:opacity-50"
+							size="sm"
+							class="gap-1.5 px-3 text-xs font-medium shadow-sm"
 						>
 							<Eye size={14} />
-							{pdfLoading ? 'جاري التوليد...' : 'توليد الموضوع'}
-						</button>
+							<span class="hidden lg:inline">{pdfLoading ? 'جاري التوليد...' : 'توليد الموضوع'}</span>
+							<span class="lg:hidden">{pdfLoading ? '...' : 'توليد'}</span>
+						</Button>
+						
 						{#if pdfBase64}
-							<button onclick={downloadPdf} class="flex items-center gap-1 rounded-lg bg-muted px-2.5 py-1.5 text-xs text-muted-foreground hover:text-primary" title="تحميل PDF">
-								<Download size={14} /> تحميل
-							</button>
-							<button onclick={openPopup} class="flex items-center gap-1 rounded-lg bg-muted px-2.5 py-1.5 text-xs text-muted-foreground hover:text-primary" title="فتح في نافذة">
-								<ExternalLink size={14} /> نافذة
-							</button>
+							<div class="flex items-center rounded-lg border border-border bg-muted/40 p-0.5">
+								<Button variant="ghost" size="sm" onclick={downloadPdf} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-primary shadow-sm h-7" title="تحميل PDF">
+									<Download size={14} /> <span class="hidden 2xl:inline">تحميل</span>
+								</Button>
+								<div class="h-4 w-px bg-border mx-0.5"></div>
+								<Button variant="ghost" size="sm" onclick={openPopup} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-primary shadow-sm h-7" title="فتح المعاينة في بطاقة مستقلة">
+									<ExternalLink size={14} /> <span class="hidden 2xl:inline">نافذة منبثقة</span>
+								</Button>
+							</div>
 						{/if}
 					{/if}
-					<button
-						onclick={() => {
-							editorCollapsed = !editorCollapsed;
-							if (editorCollapsed) previewCollapsed = false;
-						}}
-						class="rounded-lg bg-muted p-1.5 text-muted-foreground hover:text-primary"
-						title={editorCollapsed ? 'إظهار المحرر' : 'ملء الشاشة للمعاينة'}
-					>
-						{#if editorCollapsed}
-							<Minimize2 size={14} />
-						{:else}
-							<Maximize2 size={14} />
-						{/if}
-					</button>
+					
+					<!-- Mobile-only view toggle -->
+					<div class="md:hidden flex items-center rounded-lg border border-border bg-muted/40 p-0.5 shadow-sm">
+						<Button 
+							variant="ghost" size="icon-sm"
+							onclick={() => { previewCollapsed = true; editorCollapsed = false; }}
+							class="rounded-md transition-all {previewCollapsed ? 'bg-background text-primary shadow-sm ring-1 ring-border/50 hover:bg-background hover:text-primary' : 'text-muted-foreground hover:text-foreground'}"
+							title="العودة للمحرر"
+						>
+							<PanelLeft size={16} />
+						</Button>
+					</div>
 				</div>
 			</div>
 			<!-- Preview Content -->
