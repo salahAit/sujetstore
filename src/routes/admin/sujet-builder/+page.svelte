@@ -40,6 +40,10 @@
 	let pdfError = $state('');
 	let isPreviewSolution = $state(false);
 
+	let windowWidth = $state(1024);
+	let popupWindow: Window | null = null;
+	let isPopupOpen = $state(false);
+
 	// Layout state
 	let splitPercent = $state(50);
 	let isDragging = $state(false);
@@ -147,11 +151,30 @@
 	// Open preview in popup window
 	function openPopup() {
 		if (!pdfBase64) return;
-		const popup = window.open('', '_blank', 'width=800,height=1000');
-		if (popup) {
-			popup.document.write(`<html><head><title>معاينة الموضوع</title></head><body style="margin:0"><iframe src="data:application/pdf;base64,${pdfBase64}" style="width:100%;height:100%;border:none"></iframe></body></html>`);
+		popupWindow = window.open('', '_blank', 'width=800,height=1000');
+		if (popupWindow) {
+			popupWindow.document.write(`<html><head><title>معاينة الموضوع</title><style>body{margin:0;padding:0;overflow:hidden;} iframe{width:100vw;height:100vh;border:none;}</style></head><body><iframe src="data:application/pdf;base64,${pdfBase64}#view=FitH" type="application/pdf"></iframe></body></html>`);
+			isPopupOpen = true;
 			previewCollapsed = true;
+			editorCollapsed = false; // ensure editor expands
+			
+			// Track window close
+			const timer = setInterval(() => {
+				if (popupWindow?.closed) {
+					clearInterval(timer);
+					restorePreview();
+				}
+			}, 500);
 		}
+	}
+
+	function restorePreview() {
+		isPopupOpen = false;
+		previewCollapsed = false;
+		if (popupWindow && !popupWindow.closed) {
+			popupWindow.close();
+		}
+		popupWindow = null;
 	}
 
 	// Reset
@@ -186,6 +209,8 @@
 		window.addEventListener('mouseup', onUp);
 	}
 </script>
+
+<svelte:window bind:innerWidth={windowWidth} />
 
 <div class="flex h-screen flex-col">
 	<!-- ═══ TOP BAR ═══ -->
@@ -245,7 +270,10 @@
 	<!-- ═══ SPLIT PANE ═══ -->
 	<div class="relative flex flex-1 flex-col lg:flex-row overflow-hidden" class:cursor-col-resize={isDragging} class:select-none={isDragging}>
 		<!-- LEFT: EDITOR -->
-		<div class="overflow-y-auto lg:h-full transition-all duration-200 {editorCollapsed ? 'hidden lg:hidden' : 'flex-1 lg:flex-none'}" style="lg:width: {editorCollapsed ? 0 : (previewCollapsed ? 100 : splitPercent)}%;">
+		<div 
+			class="overflow-y-auto lg:h-full transition-all duration-200 {editorCollapsed ? 'hidden lg:hidden' : 'flex-1 lg:flex-none'}" 
+			style:width={windowWidth >= 1024 ? (editorCollapsed ? '0%' : (previewCollapsed || isPopupOpen ? '100%' : `${splitPercent}%`)) : '100%'}
+		>
 
 			<div class="space-y-4 p-4">
 				<MetadataPanel
@@ -275,7 +303,7 @@
 		</div>
 
 		<!-- DIVIDER (draggable - only visibly active on large screens) -->
-		{#if !editorCollapsed && !previewCollapsed}
+		{#if !editorCollapsed && !previewCollapsed && !isPopupOpen}
 			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 			<div
 				class="hidden lg:flex group relative z-10 w-2 cursor-col-resize items-center justify-center bg-border transition-colors hover:bg-primary/30"
@@ -288,7 +316,11 @@
 		{/if}
 
 		<!-- RIGHT: PREVIEW -->
-		<div class="flex flex-col overflow-hidden transition-all duration-200 {previewCollapsed ? 'hidden lg:hidden' : 'flex-1 lg:flex-none shrink-0'}" style="lg:width: {previewCollapsed ? 0 : (editorCollapsed ? 100 : 100 - splitPercent)}%;">
+		<div 
+			class="flex flex-col overflow-hidden transition-all duration-200 {previewCollapsed && !isPopupOpen ? 'hidden lg:hidden' : 'flex-1 lg:flex-none shrink-0'}" 
+			style:width={windowWidth >= 1024 ? (previewCollapsed || isPopupOpen ? '0%' : (editorCollapsed ? '100%' : `${100 - splitPercent}%`)) : '100%'}
+			style:display={windowWidth >= 1024 && (previewCollapsed || isPopupOpen) ? 'none' : ''}
+		>
 
 			<!-- Preview Header -->
 			<div class="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-card px-4 py-2">
@@ -353,12 +385,26 @@
 			</div>
 			<!-- Preview Content -->
 
-			<div class="relative flex-1 overflow-auto bg-muted/30 p-4">
+			<div class="relative flex flex-1 flex-col overflow-hidden bg-muted/10 p-2 md:p-4">
 				<!-- Overlay to prevent iframe from swallowing mouse events during drag -->
 				{#if isDragging}
 					<div class="absolute inset-0 z-50"></div>
 				{/if}
-				<PdfPreview {pdfBase64} loading={pdfLoading} error={pdfError} />
+				
+				{#if isPopupOpen}
+					<div class="flex flex-1 flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed border-primary/20 bg-primary/5 p-8 text-center text-primary/80 h-full w-full">
+						<ExternalLink size={48} class="opacity-50" />
+						<h3 class="text-xl font-bold">المعاينة مفتوحة في نافذة منبثقة</h3>
+						<p class="text-sm font-medium mb-2">يمكنك المتابعة في التحرير هنا بحجم شاشة كامل.</p>
+						<Button onclick={restorePreview} variant="default" size="sm" class="gap-2 shadow-sm">
+							<RotateCcw size={14} /> إعادة المعاينة إلى هنا
+						</Button>
+					</div>
+				{:else}
+					<div class="flex-1 w-full h-full overflow-hidden rounded-xl shadow-sm border border-border bg-white">
+						<PdfPreview {pdfBase64} loading={pdfLoading} error={pdfError} />
+					</div>
+				{/if}
 			</div>
 		</div>
 	</div>
