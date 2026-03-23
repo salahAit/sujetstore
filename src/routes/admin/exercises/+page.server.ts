@@ -17,6 +17,10 @@ export const load: PageServerLoad = async () => {
 				subjectName: contentSchema.subjects.nameAr,
 				yearName: contentSchema.years.nameAr,
 				levelName: contentSchema.educationLevels.nameAr,
+				levelId: contentSchema.educationLevels.id,
+				yearId: contentSchema.years.id,
+				streamId: contentSchema.streams.id,
+				streamName: contentSchema.streams.nameAr,
 				yearSubjectId: contentSchema.bankExercises.yearSubjectId
 			})
 			.from(contentSchema.bankExercises)
@@ -24,18 +28,22 @@ export const load: PageServerLoad = async () => {
 			.leftJoin(contentSchema.subjects, eq(contentSchema.yearSubjects.subjectId, contentSchema.subjects.id))
 			.leftJoin(contentSchema.years, eq(contentSchema.yearSubjects.yearId, contentSchema.years.id))
 			.leftJoin(contentSchema.educationLevels, eq(contentSchema.years.levelId, contentSchema.educationLevels.id))
+			.leftJoin(contentSchema.streams, eq(contentSchema.yearSubjects.streamId, contentSchema.streams.id))
 			.orderBy(desc(contentSchema.bankExercises.createdAt))
 			.all();
 
 		// Fetch metadata for filters
 		const levels = await contentDatabase.select().from(contentSchema.educationLevels).all();
 		const years = await contentDatabase.select().from(contentSchema.years).all();
+		const streams = await contentDatabase.select().from(contentSchema.streams).all();
+		const levelStreams = await contentDatabase.select().from(contentSchema.levelStreams).all();
 		const subjects = await contentDatabase.select().from(contentSchema.subjects).all();
 		const trimesters = await contentDatabase.select().from(contentSchema.trimesters).all();
 		const yearSubjects = await contentDatabase
 			.select({
 				id: contentSchema.yearSubjects.id,
 				yearId: contentSchema.yearSubjects.yearId,
+				streamId: contentSchema.yearSubjects.streamId,
 				subjectId: contentSchema.yearSubjects.subjectId,
 				subjectName: contentSchema.subjects.nameAr
 			})
@@ -48,6 +56,8 @@ export const load: PageServerLoad = async () => {
 			metadata: {
 				levels,
 				years,
+				streams,
+				levelStreams,
 				subjects,
 				trimesters,
 				yearSubjects
@@ -57,7 +67,7 @@ export const load: PageServerLoad = async () => {
 		console.error("Error loading exercises:", e);
 		return {
 			exercises: [],
-			metadata: { levels: [], years: [], subjects: [], trimesters: [], yearSubjects: [] },
+			metadata: { levels: [], years: [], streams: [], levelStreams: [], subjects: [], trimesters: [], yearSubjects: [] },
 			error: e.message
 		};
 	}

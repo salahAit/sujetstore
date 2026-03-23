@@ -32,6 +32,7 @@
 	let searchUnit = $state('');
 	let selectedLevel = $state('');
 	let selectedYear = $state('');
+	let selectedStream = $state('');
 	let selectedSubject = $state('');
 	let selectedTrimester = $state('');
 
@@ -42,22 +43,35 @@
 			: data.metadata.years
 	);
 
+	let filteredStreams = $derived(
+		selectedYear
+			? data.metadata.streams.filter((s: any) => 
+					data.metadata.levelStreams.some((ls: any) => ls.yearId === selectedYear && ls.streamId === s.id)
+			  )
+			: []
+	);
+
 	let filteredYearSubjects = $derived(
 		selectedYear 
-			? data.metadata.yearSubjects.filter((ys: any) => ys.yearId === selectedYear) 
-			: data.metadata.yearSubjects
+			? data.metadata.yearSubjects.filter((ys: any) => {
+					const yearMatch = ys.yearId === selectedYear;
+					const streamMatch = !selectedStream || ys.streamId === selectedStream;
+					return yearMatch && streamMatch;
+			  }) 
+			: []
 	);
 
 	// Filtering logic
 	let filteredExercises = $derived(
 		data.exercises.filter((ex: any) => {
 			const matchesUnit = !searchUnit || ex.unit?.toLowerCase().includes(searchUnit.toLowerCase()) || ex.title.toLowerCase().includes(searchUnit.toLowerCase());
-			const matchesLevel = !selectedLevel || ex.levelName === data.metadata.levels.find((l: any) => l.id === selectedLevel)?.nameAr;
-			const matchesYear = !selectedYear || ex.yearName === data.metadata.years.find((y: any) => y.id === selectedYear)?.nameAr;
+			const matchesLevel = !selectedLevel || ex.levelId === selectedLevel;
+			const matchesYear = !selectedYear || ex.yearId === selectedYear;
+			const matchesStream = !selectedStream || ex.streamId === selectedStream;
 			const matchesSubject = !selectedSubject || ex.yearSubjectId === Number(selectedSubject);
 			const matchesTrimester = !selectedTrimester || ex.trimesterId === selectedTrimester;
 			
-			return matchesUnit && matchesLevel && matchesYear && matchesSubject && matchesTrimester;
+			return matchesUnit && matchesLevel && matchesYear && matchesStream && matchesSubject && matchesTrimester;
 		})
 	);
 
@@ -90,6 +104,7 @@
 		searchUnit = '';
 		selectedLevel = '';
 		selectedYear = '';
+		selectedStream = '';
 		selectedSubject = '';
 		selectedTrimester = '';
 	}
@@ -181,10 +196,11 @@
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5">
 		<!-- Search -->
 		<div class="space-y-1">
-			<label class="text-muted-foreground text-xs font-medium">البحث (العنوان/الوحدة)</label>
+			<label for="search-unit" class="text-muted-foreground text-xs font-medium">البحث (العنوان/الوحدة)</label>
 			<div class="relative">
 				<Search class="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={16} />
 				<input
+					id="search-unit"
 					type="text"
 					bind:value={searchUnit}
 					placeholder="ابحث هنا..."
@@ -195,8 +211,9 @@
 
 		<!-- Level -->
 		<div class="space-y-1">
-			<label class="text-muted-foreground text-xs font-medium">الطور التعليمي</label>
+			<label for="filter-level" class="text-muted-foreground text-xs font-medium">الطور التعليمي</label>
 			<select
+				id="filter-level"
 				bind:value={selectedLevel}
 				class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
 			>
@@ -209,9 +226,14 @@
 
 		<!-- Year -->
 		<div class="space-y-1">
-			<label class="text-muted-foreground text-xs font-medium">السنة الدراسية</label>
+			<label for="filter-year" class="text-muted-foreground text-xs font-medium">المستوى الدراسي</label>
 			<select
+				id="filter-year"
 				bind:value={selectedYear}
+				onchange={() => {
+					selectedStream = '';
+					selectedSubject = '';
+				}}
 				class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
 			>
 				<option value="">كل السنوات</option>
@@ -221,12 +243,31 @@
 			</select>
 		</div>
 
+		<!-- Stream -->
+		<div class="space-y-1">
+			<label for="filter-stream" class="text-muted-foreground text-xs font-medium">الشعبة</label>
+			<select
+				id="filter-stream"
+				bind:value={selectedStream}
+				onchange={() => (selectedSubject = '')}
+				disabled={!selectedYear || filteredStreams.length === 0}
+				class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-50"
+			>
+				<option value="">كل الشعب</option>
+				{#each filteredStreams as stream}
+					<option value={stream.id}>{stream.nameAr}</option>
+				{/each}
+			</select>
+		</div>
+
 		<!-- Subject -->
 		<div class="space-y-1">
-			<label class="text-muted-foreground text-xs font-medium">المادة</label>
+			<label for="filter-subject" class="text-muted-foreground text-xs font-medium">المادة</label>
 			<select
+				id="filter-subject"
 				bind:value={selectedSubject}
-				class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+				disabled={!selectedYear}
+				class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary disabled:opacity-50"
 			>
 				<option value="">كل المواد</option>
 				{#each filteredYearSubjects as ys}
@@ -237,8 +278,9 @@
 
 		<!-- Trimester -->
 		<div class="space-y-1">
-			<label class="text-muted-foreground text-xs font-medium">الفصل</label>
+			<label for="filter-trimester" class="text-muted-foreground text-xs font-medium">الفصل</label>
 			<select
+				id="filter-trimester"
 				bind:value={selectedTrimester}
 				class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
 			>
@@ -268,7 +310,7 @@
 				<tr>
 					<th class="px-6 py-4 font-medium tracking-wider uppercase">العنوان</th>
 					<th class="px-6 py-4 font-medium tracking-wider uppercase">المادة</th>
-					<th class="px-6 py-4 font-medium tracking-wider uppercase">المستوى</th>
+					<th class="px-6 py-4 font-medium tracking-wider uppercase">المستوى/الشعبة</th>
 					<th class="px-6 py-4 font-medium tracking-wider uppercase">الوحدة</th>
 					<th class="px-6 py-4 font-medium tracking-wider uppercase">النقاط</th>
 					<th class="px-6 py-4 font-medium tracking-wider uppercase">التاريخ</th>
@@ -291,7 +333,12 @@
 							</div>
 						</td>
 						<td class="px-6 py-4 text-muted-foreground">
-							{ex.levelName} - {ex.yearName}
+							<div class="flex flex-col gap-0.5">
+								<span>{ex.levelName} - {ex.yearName}</span>
+								{#if ex.streamName}
+									<span class="text-primary text-[10px] font-bold">{ex.streamName}</span>
+								{/if}
+							</div>
 						</td>
 						<td class="px-6 py-4">
 							<span class="bg-muted text-muted-foreground rounded-lg px-2 py-1 text-xs">

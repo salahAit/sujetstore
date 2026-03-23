@@ -11,7 +11,7 @@
 			color: 'text-primary'
 		},
 		{
-			name: 'السنوات الدراسية',
+			name: 'المستويات الدراسية',
 			value: data.stats.years,
 			icon: CalendarDays,
 			color: 'text-blue-500'
@@ -97,8 +97,8 @@
 				<CalendarDays size={20} />
 			</div>
 			<div>
-				<h3 class="font-bold transition-colors group-hover:text-blue-500">إدارة السنوات</h3>
-				<p class="text-muted-foreground text-xs">تعديل الأطوار والسنوات المتاحة</p>
+				<h3 class="font-bold transition-colors group-hover:text-blue-500">إدارة المستويات</h3>
+				<p class="text-muted-foreground text-xs">تعديل الأطوار والمستويات المتاحة</p>
 			</div>
 		</a>
 	</div>
