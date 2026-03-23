@@ -24,3 +24,5 @@
 #include "chapters/08-admin-dashboard.typ"
 #include "chapters/09-deployment-roadmap.typ"
 #include "chapters/10-sujet-builder.typ"
+#include "chapters/11-json-import-guide.typ"
+

@@ -22,7 +22,9 @@ export const load: PageServerLoad = async ({ params }) => {
 	// Fetch all metadata for the editor
 	const levels = await contentDatabase.select().from(contentSchema.educationLevels).all();
 	const years = await contentDatabase.select().from(contentSchema.years).all();
+	const streams = await contentDatabase.select().from(contentSchema.streams).all();
 	const subjects = await contentDatabase.select().from(contentSchema.subjects).all();
+	const streamSubjects = await contentDatabase.select().from(contentSchema.streamSubjects).all();
 	const trimesters = await contentDatabase.select().from(contentSchema.trimesters).all();
 	const yearSubjects = await contentDatabase
 		.select({
@@ -40,7 +42,9 @@ export const load: PageServerLoad = async ({ params }) => {
 		metadata: {
 			levels,
 			years,
+			streams,
 			subjects,
+			streamSubjects,
 			trimesters,
 			yearSubjects
 		}

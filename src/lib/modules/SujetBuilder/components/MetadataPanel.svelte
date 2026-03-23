@@ -140,7 +140,7 @@
 		<!-- Year -->
 		{#if metadata.levelId}
 			<div class="col-span-2 sm:col-span-1">
-				<label for="sb-year" class="mb-1 block text-xs font-medium text-muted-foreground">السنة</label>
+				<label for="sb-year" class="mb-1 block text-xs font-medium text-muted-foreground">المستوى</label>
 				<div class="relative">
 					<select
 						id="sb-year"
@@ -148,7 +148,7 @@
 						value={metadata.yearId}
 						onchange={handleYearChange}
 					>
-						<option value="">اختر السنة...</option>
+						<option value="">اختر المستوى...</option>
 						{#each filteredYears as year}
 							<option value={year.id}>{year.nameAr}</option>
 						{/each}

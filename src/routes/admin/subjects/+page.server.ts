@@ -5,7 +5,13 @@ import { eq } from 'drizzle-orm';
 
 export const load: PageServerLoad = async () => {
     const subjects = await contentDatabase.select().from(contentSchema.subjects).all();
-    return { subjects };
+    const streams = await contentDatabase.select().from(contentSchema.streams).all();
+    const levels = await contentDatabase.select().from(contentSchema.educationLevels).all();
+    const streamSubjects = await contentDatabase.select().from(contentSchema.streamSubjects).all();
+    const yearSubjects = await contentDatabase.select().from(contentSchema.yearSubjects).all();
+    const years = await contentDatabase.select().from(contentSchema.years).all();
+    
+    return { subjects, streams, levels, streamSubjects, yearSubjects, years };
 };
 
 export const actions: Actions = {

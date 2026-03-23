@@ -9,8 +9,36 @@
 	// Pagination state
 	let currentPage = $state(1);
 	let pageSize = $state(10);
+	let filterLevel = $state('');
+	let filterStream = $state('');
+	let searchQuery = $state('');
+
+	let filteredSubjects = $derived(data.subjects.filter((subject: any) => {
+		if (searchQuery && !subject.nameAr.includes(searchQuery) && !subject.nameFr.toLowerCase().includes(searchQuery.toLowerCase()) && !subject.id.toLowerCase().includes(searchQuery.toLowerCase())) {
+			return false;
+		}
+
+		if (filterStream) {
+			const hasStream = data.streamSubjects.some((ss: any) => ss.streamId === filterStream && ss.subjectId === subject.id);
+			if (!hasStream) return false;
+		}
+
+		if (filterLevel) {
+            const levelYears = data.years.filter((y: any) => y.levelId === filterLevel).map((y: any) => y.id);
+			const hasLevel = data.yearSubjects.some((ys: any) => levelYears.includes(ys.yearId) && ys.subjectId === subject.id);
+			const hasDirectStreamLevel = filterStream ? false : data.streamSubjects.some((ss: any) => {
+				if(ss.subjectId !== subject.id) return false;
+				const streamLevelYears = data.years.filter((y: any) => y.levelId === filterLevel).map((y: any) => y.id);
+				return ss.yearId && streamLevelYears.includes(ss.yearId);
+			});
+			if (!hasLevel && !hasDirectStreamLevel) return false;
+		}
+
+		return true;
+	}));
+
 	let paginatedSubjects = $derived(
-		data.subjects.slice((currentPage - 1) * pageSize, currentPage * pageSize)
+		filteredSubjects.slice((currentPage - 1) * pageSize, currentPage * pageSize)
 	);
 
 	let isCreateModalOpen = $state(false);
@@ -74,7 +102,48 @@
 	</div>
 {/if}
 
-<div class="bg-backgroundard text-card-foreground border-border overflow-hidden rounded-2xl border shadow-sm">
+<div class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-3">
+	<div>
+		<label for="searchQuery" class="mb-1 block text-sm font-medium text-muted-foreground">بحث</label>
+		<input
+			type="text"
+			id="searchQuery"
+			bind:value={searchQuery}
+			placeholder="ابحث بالاسم أو المعرف..."
+			class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
+		/>
+	</div>
+	
+	<div>
+		<label for="filterLevel" class="mb-1 block text-sm font-medium text-muted-foreground">المرحلة التعليمية</label>
+		<select
+			id="filterLevel"
+			bind:value={filterLevel}
+			class="bg-background border-input text-foreground focus:ring-ring [&>option]:bg-background w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
+		>
+			<option value="">جميع المراحل</option>
+			{#each data.levels as level}
+				<option value={level.id}>{level.nameAr}</option>
+			{/each}
+		</select>
+	</div>
+
+	<div>
+		<label for="filterStream" class="mb-1 block text-sm font-medium text-muted-foreground">الشعبة / التخصص</label>
+		<select
+			id="filterStream"
+			bind:value={filterStream}
+			class="bg-background border-input text-foreground focus:ring-ring [&>option]:bg-background w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
+		>
+			<option value="">جميع الشعب</option>
+			{#each data.streams as stream}
+				<option value={stream.id}>{stream.nameAr} ({stream.id})</option>
+			{/each}
+		</select>
+	</div>
+</div>
+
+<div class="bg-card text-card-foreground border-border overflow-hidden rounded-2xl border shadow-sm">
 	<div class="overflow-x-auto">
 		<table class="w-full text-right text-sm">
 			<thead class="border-b border-border bg-muted/50 text-xs text-muted-foreground">

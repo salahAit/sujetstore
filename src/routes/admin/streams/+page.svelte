@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Plus, Trash2, Edit, X } from 'lucide-svelte';
+	import { Plus, Trash2, Edit, X, Settings } from 'lucide-svelte';
 	import ConfirmModal from '$lib/components/ConfirmModal.svelte';
 	import type { ActionData } from './$types';
 
@@ -33,20 +33,20 @@
 </script>
 
 <svelte:head>
-	<title>إدارة المستويات - لوحة التحكم</title>
+	<title>إدارة الشعب الدراسية - لوحة التحكم</title>
 </svelte:head>
 
 <div class="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
 	<div>
-		<h1 class="text-3xl font-bold">المستويات الدراسية</h1>
-		<p class="text-muted-foreground mt-2 text-sm">إدارة المستويات (الأولى ثانوي، الثانية متوسط...)</p>
+		<h1 class="text-3xl font-bold">الشعب الدراسية</h1>
+		<p class="text-muted-foreground mt-2 text-sm">إدارة الشعب والجذوع المشتركة</p>
 	</div>
 	<button
 		onclick={() => (isCreateModalOpen = true)}
-		class="flex items-center gap-2 rounded-xl bg-blue-500 px-4 py-2 font-bold text-foreground transition-all hover:scale-105 hover:bg-blue-600"
+		class="flex items-center gap-2 rounded-xl bg-orange-500 px-4 py-2 font-bold text-white transition-all hover:scale-105 hover:bg-orange-600"
 	>
 		<Plus size={20} />
-		إضافة سنة دراسية
+		إضافة شعبة
 	</button>
 </div>
 
@@ -66,38 +66,40 @@
 	</div>
 {/if}
 
-<div class="bg-backgroundard text-card-foreground border-border overflow-hidden rounded-2xl border shadow-sm">
+<div class="bg-card text-card-foreground border-border overflow-hidden rounded-2xl border shadow-sm">
 	<div class="overflow-x-auto">
 		<table class="w-full text-right text-sm">
 			<thead class="border-b border-border bg-muted/50 text-xs text-muted-foreground">
 				<tr>
 					<th class="px-6 py-4 font-medium tracking-wider uppercase">ID</th>
-					<th class="px-6 py-4 font-medium tracking-wider uppercase">الاسم بالعربية</th>
-					<th class="px-6 py-4 font-medium tracking-wider uppercase">الاسم بالفرنسية</th>
-					<th class="px-6 py-4 font-medium tracking-wider uppercase">المرحلة</th>
-					<th class="px-6 py-4 font-medium tracking-wider uppercase">الرابط (Slug)</th>
+					<th class="px-6 py-4 font-medium tracking-wider uppercase">الاسم الكامل</th>
+					<th class="px-6 py-4 font-medium tracking-wider uppercase">الاسم (عربي)</th>
+					<th class="px-6 py-4 font-medium tracking-wider uppercase">الاسم (فرنسي)</th>
+					<th class="px-6 py-4 text-center font-medium tracking-wider uppercase">إدارة المواد</th>
 					<th class="px-6 py-4 text-center font-medium tracking-wider uppercase">إجراءات</th>
 				</tr>
 			</thead>
 			<tbody class="divide-y divide-border">
-				{#each data.years as year}
+				{#each data.streams as stream}
 					<tr class="transition-colors hover:bg-muted/50">
 						<td class="px-6 py-4 font-medium whitespace-nowrap text-foreground/80" dir="ltr"
-							>{year.id}</td
+							>{stream.id}</td
 						>
-						<td class="px-6 py-4 font-bold whitespace-nowrap">{year.nameAr}</td>
-						<td class="px-6 py-4 whitespace-nowrap" dir="ltr">{year.nameFr}</td>
-						<td class="px-6 py-4 whitespace-nowrap">
-							<span class="rounded-full border border-border bg-card text-card-foreground shadow-sm px-2 py-1 text-xs"
-								>{year.levelId}</span
+						<td class="px-6 py-4 font-bold whitespace-nowrap">{stream.name}</td>
+						<td class="px-6 py-4 whitespace-nowrap">{stream.nameAr}</td>
+						<td class="px-6 py-4 whitespace-nowrap" dir="ltr">{stream.nameFr}</td>
+						<td class="px-6 py-4 text-center whitespace-nowrap">
+							<a
+								href={`/admin/streams/${stream.id}`}
+								class="inline-flex items-center gap-2 rounded-lg bg-secondary px-3 py-1.5 text-xs font-medium text-secondary-foreground transition-colors hover:bg-secondary/80"
 							>
+								<Settings size={14} />
+								المواد الدراسية
+							</a>
 						</td>
-						<td class="text-primary px-6 py-4 whitespace-nowrap" dir="ltr">{year.slug}</td>
-						<td class="flex justify-center gap-3 px-6 py-4 whitespace-nowrap"> </td><td
-							class="flex justify-center gap-3 px-6 py-4 whitespace-nowrap"
-						>
+						<td class="flex justify-center gap-3 px-6 py-4 whitespace-nowrap">
 							<button
-								onclick={() => openEdit(year)}
+								onclick={() => openEdit(stream)}
 								class="text-primary transition-colors hover:text-primary/80"
 								title="تعديل"
 							>
@@ -108,10 +110,10 @@
 								method="POST"
 								onsubmit={(e) => {
 									e.preventDefault();
-									confirmDelete(year.id, e.currentTarget);
+									confirmDelete(stream.id, e.currentTarget);
 								}}
 							>
-								<input type="hidden" name="id" value={year.id} />
+								<input type="hidden" name="id" value={stream.id} />
 								<button
 									type="submit"
 									class="text-red-600 dark:text-red-400 transition-colors hover:opacity-80"
@@ -124,10 +126,10 @@
 					</tr>
 				{/each}
 
-				{#if data.years.length === 0}
+				{#if data.streams.length === 0}
 					<tr>
 						<td colspan="6" class="px-6 py-8 text-center text-muted-foreground">
-							لا توجد سنوات تعليمية بعد
+							لا توجد شعب دراسية بعد
 						</td>
 					</tr>
 				{/if}
@@ -147,42 +149,27 @@
 		}}
 	>
 		<div
-			class="bg-backgroundard text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
+			class="bg-card text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
 		>
 			<div class="mb-6 flex items-center justify-between">
-				<h2 class="text-xl font-bold">إضافة سنة دراسية</h2>
+				<h2 class="text-xl font-bold">إضافة شعبة دراسية</h2>
 				<button class="text-muted-foreground hover:text-foreground" onclick={() => (isCreateModalOpen = false)}>
 					<X size={20} />
 				</button>
 			</div>
 
 			<form action="?/create" method="POST" class="space-y-4">
-				<div class="grid grid-cols-2 gap-4">
-					<div>
-						<label for="id" class="mb-1 block text-sm font-medium">المعرف (ID - إنجليزي)</label>
-						<input
-							type="text"
-							id="id"
-							name="id"
-							required
-							dir="ltr"
-							class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
-							placeholder="1am"
-						/>
-					</div>
-					<div>
-						<label for="levelId" class="mb-1 block text-sm font-medium">المرحلة التعليمية</label>
-						<select
-							id="levelId"
-							name="levelId"
-							required
-							class="bg-background border-input text-foreground focus:ring-ring [&>option]:bg-background w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
-						>
-							{#each data.levels as level}
-								<option value={level.id}>{level.nameAr}</option>
-							{/each}
-						</select>
-					</div>
+				<div>
+					<label for="id" class="mb-1 block text-sm font-medium">المعرف (ID - إنجليزي)</label>
+					<input
+						type="text"
+						id="id"
+						name="id"
+						required
+						dir="ltr"
+						class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
+						placeholder="SE"
+					/>
 				</div>
 
 				<div>
@@ -193,7 +180,7 @@
 						name="name"
 						required
 						class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
-						placeholder="السنة الأولى متوسط"
+						placeholder="علوم تجريبية"
 					/>
 				</div>
 
@@ -206,7 +193,7 @@
 							name="nameAr"
 							required
 							class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
-							placeholder="الأولى متوسط"
+							placeholder="ع ت"
 						/>
 					</div>
 					<div>
@@ -218,22 +205,9 @@
 							required
 							dir="ltr"
 							class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
-							placeholder="1AM"
+							placeholder="Sc. Exp"
 						/>
 					</div>
-				</div>
-
-				<div>
-					<label for="slug" class="mb-1 block text-sm font-medium">الرابط (Slug)</label>
-					<input
-						type="text"
-						id="slug"
-						name="slug"
-						required
-						dir="ltr"
-						class="bg-background border-input text-primary focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
-						placeholder="1am"
-					/>
 				</div>
 
 				<div class="mt-8 flex gap-3">
@@ -246,7 +220,7 @@
 					</button>
 					<button
 						type="submit"
-						class="flex-1 rounded-xl bg-blue-500 py-2.5 font-bold text-foreground shadow-lg transition-all hover:scale-[1.02] hover:bg-blue-600"
+						class="flex-1 rounded-xl bg-orange-500 py-2.5 font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:bg-orange-600"
 					>
 						حفظ الإضافة
 					</button>
@@ -267,10 +241,10 @@
 		}}
 	>
 		<div
-			class="bg-backgroundard text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
+			class="bg-card text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
 		>
 			<div class="mb-6 flex items-center justify-between">
-				<h2 class="text-primary text-xl font-bold">تعديل سنة دراسية</h2>
+				<h2 class="text-primary text-xl font-bold">تعديل شعبة دراسية</h2>
 				<button class="text-muted-foreground hover:text-foreground" onclick={() => (isEditModalOpen = false)}>
 					<X size={20} />
 				</button>
@@ -278,36 +252,18 @@
 
 			<form action="?/update" method="POST" class="space-y-4">
 				<input type="hidden" name="originalId" value={editingItem.id} />
-				<div class="grid grid-cols-2 gap-4">
-					<div>
-						<label for="edit_id" class="mb-1 block text-sm font-medium">المعرف (ID - إنجليزي)</label
-						>
-						<input
-							type="text"
-							id="edit_id"
-							name="id"
-							required
-							dir="ltr"
-							bind:value={editingItem.id}
-							class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
-						/>
-					</div>
-					<div>
-						<label for="edit_levelId" class="mb-1 block text-sm font-medium"
-							>المرحلة التعليمية</label
-						>
-						<select
-							id="edit_levelId"
-							name="levelId"
-							required
-							bind:value={editingItem.levelId}
-							class="bg-background border-input text-foreground focus:ring-ring [&>option]:bg-background w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
-						>
-							{#each data.levels as level}
-								<option value={level.id}>{level.nameAr}</option>
-							{/each}
-						</select>
-					</div>
+				
+				<div>
+					<label for="edit_id" class="mb-1 block text-sm font-medium">المعرف (ID - إنجليزي)</label>
+					<input
+						type="text"
+						id="edit_id"
+						name="id"
+						required
+						dir="ltr"
+						bind:value={editingItem.id}
+						class="bg-background border-input text-foreground focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
+					/>
 				</div>
 
 				<div>
@@ -324,8 +280,7 @@
 
 				<div class="grid grid-cols-2 gap-4">
 					<div>
-						<label for="edit_nameAr" class="mb-1 block text-sm font-medium">الاسم (عربي قصير)</label
-						>
+						<label for="edit_nameAr" class="mb-1 block text-sm font-medium">الاسم (عربي قصير)</label>
 						<input
 							type="text"
 							id="edit_nameAr"
@@ -349,19 +304,6 @@
 					</div>
 				</div>
 
-				<div>
-					<label for="edit_slug" class="mb-1 block text-sm font-medium">الرابط (Slug)</label>
-					<input
-						type="text"
-						id="edit_slug"
-						name="slug"
-						required
-						dir="ltr"
-						bind:value={editingItem.slug}
-						class="bg-background border-input text-primary focus:ring-ring w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-1"
-					/>
-				</div>
-
 				<div class="mt-8 flex gap-3">
 					<button
 						type="button"
@@ -372,7 +314,7 @@
 					</button>
 					<button
 						type="submit"
-						class="flex-1 rounded-xl bg-blue-500 py-2.5 font-bold text-foreground shadow-lg transition-all hover:scale-[1.02] hover:bg-blue-600"
+						class="flex-1 rounded-xl bg-blue-500 py-2.5 font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:bg-blue-600"
 					>
 						حفظ التعديلات
 					</button>
@@ -386,5 +328,5 @@
 	bind:isOpen={isDeleteModalOpen}
 	onConfirm={performDelete}
 	title="تأكيد الحذف"
-	message="هل أنت متأكد من رغبتك في حذف هذه السنة الدراسية؟ سيؤدي ذلك لنتائج غير متوقعة في حال وجود دروس أو وثائق مرتبطة بها."
+	message="هل أنت متأكد من رغبتك في حذف هذه الشعبة؟ سيؤدي ذلك لنتائج غير متوقعة في حال وجود دروس أو وثائق مرتبطة بها."
 />

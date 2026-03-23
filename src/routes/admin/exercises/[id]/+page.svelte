@@ -26,6 +26,7 @@
 	// Classification State
 	let selectedLevel = $state('');
 	let selectedYear = $state('');
+	let selectedStream = $state('');
 	let selectedYearSubjectId = $state(data.exercise?.yearSubjectId?.toString() || '');
 
 	// Initialization of classification from existing data
@@ -35,10 +36,19 @@
 			if (ys) {
 				selectedYear = ys.yearId;
 				const year = data.metadata.years.find((y: any) => y.id === ys.yearId);
-				if (year) selectedLevel = year.levelId;
+				if (year) {
+					selectedLevel = year.levelId;
+					// Infer stream if possible (optional: get first stream that matches this subject and year)
+					if (year.levelId === 'secondaire') {
+						const matchingStream = data.metadata.streamSubjects.find((ss: any) => ss.subjectId === ys.subjectId && (ss.yearId === ys.yearId || ss.yearId === null));
+						if (matchingStream) selectedStream = matchingStream.streamId;
+					}
+				}
 			}
 		}
 	});
+
+	let needsStream = $derived(selectedLevel === 'secondaire');
 
 	// Derived lists for filters
 	let filteredYears = $derived(
@@ -47,11 +57,36 @@
 			: []
 	);
 
-	let filteredYearSubjects = $derived(
-		selectedYear 
-			? data.metadata.yearSubjects.filter((ys: any) => ys.yearId === selectedYear) 
-			: []
-	);
+	let filteredStreams = $derived.by(() => {
+		if (!needsStream || !selectedYear) return [];
+		const yearStreamIds = data.metadata.streamSubjects
+			.filter((ss: any) => ss.yearId === selectedYear || ss.yearId === null)
+			.map((ss: any) => ss.streamId);
+		return data.metadata.streams.filter((s: any) => yearStreamIds.includes(s.id));
+	});
+
+	let filteredYearSubjects = $derived.by(() => {
+		if (!selectedYear) return [];
+		
+		let streamId = needsStream ? selectedStream : 'GEN';
+		let validSubjectIds: string[] | null = null;
+		
+		if (needsStream && streamId) {
+			validSubjectIds = data.metadata.streamSubjects
+				.filter((ss: any) => ss.streamId === streamId && (ss.yearId === selectedYear || ss.yearId === null))
+				.map((ss: any) => ss.subjectId);
+		} else if (!needsStream) {
+			validSubjectIds = data.metadata.streamSubjects
+				.filter((ss: any) => ss.streamId === 'GEN' && (ss.yearId === selectedYear || ss.yearId === null))
+				.map((ss: any) => ss.subjectId);
+		}
+
+		return data.metadata.yearSubjects.filter((ys: any) => {
+			if (ys.yearId !== selectedYear) return false;
+			if (validSubjectIds && !validSubjectIds.includes(ys.subjectId)) return false;
+			return true;
+		});
+	});
 
 	// Block management
 	function addBlock(type: string) {
@@ -311,36 +346,54 @@
 			</div>
 
 			<!-- Year -->
-			<div class="space-y-2">
-				<label class="text-xs font-bold text-muted-foreground">السنة الدراسية</label>
-				<select
-					bind:value={selectedYear}
-					class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
-					disabled={!selectedLevel}
-				>
-					<option value="">اختر السنة...</option>
-					{#each filteredYears as year}
-						<option value={year.id}>{year.nameAr}</option>
-					{/each}
-				</select>
-			</div>
+			{#if selectedLevel}
+				<div class="space-y-2">
+					<label class="text-xs font-bold text-muted-foreground">المستوى / السنة الدراسية</label>
+					<select
+						bind:value={selectedYear}
+						class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+					>
+						<option value="">اختر المستوى...</option>
+						{#each filteredYears as year}
+							<option value={year.id}>{year.nameAr}</option>
+						{/each}
+					</select>
+				</div>
+			{/if}
 
-			<!-- Subject (Hidden real input) -->
-			<div class="space-y-2">
-				<label class="text-xs font-bold text-muted-foreground">المادة</label>
-				<select
-					name="yearSubjectId"
-					bind:value={selectedYearSubjectId}
-					class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary font-bold"
-					disabled={!selectedYear}
-					required
-				>
-					<option value="">اختر المادة...</option>
-					{#each filteredYearSubjects as ys}
-						<option value={ys.id.toString()}>{ys.subjectName}</option>
-					{/each}
-				</select>
-			</div>
+			<!-- Stream -->
+			{#if needsStream && selectedYear}
+				<div class="space-y-2">
+					<label class="text-xs font-bold text-muted-foreground">الشعبة / التخصص</label>
+					<select
+						bind:value={selectedStream}
+						class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+					>
+						<option value="">اختر الشعبة...</option>
+						{#each filteredStreams as stream}
+							<option value={stream.id}>{stream.nameAr}</option>
+						{/each}
+					</select>
+				</div>
+			{/if}
+
+			<!-- Subject -->
+			{#if selectedYear && (!needsStream || selectedStream)}
+				<div class="space-y-2">
+					<label class="text-xs font-bold text-muted-foreground">المادة</label>
+					<select
+						name="yearSubjectId"
+						bind:value={selectedYearSubjectId}
+						class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary font-bold"
+						required
+					>
+						<option value="">اختر المادة...</option>
+						{#each filteredYearSubjects as ys}
+							<option value={ys.id.toString()}>{ys.subjectName}</option>
+						{/each}
+					</select>
+				</div>
+			{/if}
 
 			<hr class="border-border" />
 

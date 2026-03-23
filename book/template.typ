@@ -4,11 +4,10 @@
 #let technical-num(..nums) = {
   let n = nums.pos()
   if n.len() == 1 {
-    numbering("I", n.at(0))
+    numbering("1", n.at(0))
   } else {
-    // تنسيق الترقيم ليكون الفصل (روماني) أولاً ثم القسم (عربي)
-    // نستخدم صناديق منفصلة لضمانفاظ الترتيب الصحيح في التدفق من اليمين لليسار
-    let ch = numbering("I", n.at(0))
+    // تنسيق الترقيم ليكون الفصل أولاً ثم القسم
+    let ch = numbering("1", n.at(0))
     let sec = numbering("1", n.at(1))
     [#box(ch)-#box(sec)]
   }
@@ -94,6 +93,10 @@
   // Style Figures (Images)
   show figure: set block(above: 2em, below: 2em)
   show figure.caption: set text(size: 9pt, style: "italic", fill: primary.lighten(20%))
+
+  // Force LTR for Code Blocks (Fixes mirrored JSON)
+  show raw: set text(dir: ltr, font: "monospace")
+  show raw: set block(fill: luma(245), inset: 10pt, radius: 4pt, width: 100%)
 
   body
 }

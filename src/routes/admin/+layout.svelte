@@ -22,7 +22,8 @@
 	const navigation = [
 		{ name: 'الرئيسية', href: '/admin', icon: LayoutDashboard },
 		{ name: 'المراحل التعليمية', href: '/admin/levels', icon: GraduationCap },
-		{ name: 'السنوات الدراسية', href: '/admin/years', icon: CalendarDays },
+		{ name: 'المستويات (السنوات الدراسية)', href: '/admin/years', icon: CalendarDays },
+		{ name: 'الشعب الدراسية', href: '/admin/streams', icon: BookOpen },
 		{ name: 'المواد الدراسية', href: '/admin/subjects', icon: BookOpen },
 		{ name: 'منشئ المواضيع', href: '/admin/sujet-builder', icon: FilePlus2 },
 		{ name: 'التمارين التفاعلية', href: '/admin/quizzes', icon: Brain },

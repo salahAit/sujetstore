@@ -4,8 +4,10 @@ import {
     quizQuestions,
     yearSubjects,
     subjects,
-    years,
-    educationLevels
+	years,
+	educationLevels,
+	streams,
+	streamSubjects
 } from '$lib/server/db/schema-content';
 import { eq, and } from 'drizzle-orm';
 
@@ -24,5 +26,20 @@ export async function load() {
         .innerJoin(educationLevels, eq(years.levelId, educationLevels.id))
         .where(eq(quizzes.isPublished, true));
 
-    return { quizzes: rows };
+	const levels = await contentDatabase.select().from(educationLevels).all();
+	const yearsList = await contentDatabase.select().from(years).all();
+	const streamsList = await contentDatabase.select().from(streams).all();
+	const subjectsList = await contentDatabase.select().from(subjects).all();
+	const streamSubjectsList = await contentDatabase.select().from(streamSubjects).all();
+
+	return { 
+		quizzes: rows,
+		metadata: {
+			levels,
+			years: yearsList,
+			streams: streamsList,
+			subjects: subjectsList,
+			streamSubjects: streamSubjectsList
+		}
+	};
 }
