@@ -26,7 +26,8 @@
 		{ name: 'المواد الدراسية', href: '/admin/subjects', icon: BookOpen },
 		{ name: 'منشئ المواضيع', href: '/admin/sujet-builder', icon: FilePlus2 },
 		{ name: 'التمارين التفاعلية', href: '/admin/quizzes', icon: Brain },
-		{ name: 'بنك الأسئلة', href: '/admin/question-bank', icon: Database },
+		{ name: 'بنك الأسئلة التفاعلية', href: '/admin/question-bank', icon: Database },
+		{ name: 'بنك التمارين المطبوعة', href: '/admin/exercises', icon: FileText },
 		{ name: 'إحصائيات التمارين', href: '/admin/quiz-analytics', icon: BarChart3 },
 		{ name: 'الوثائق', href: '/admin/documents', icon: FileText }
 	];

@@ -216,6 +216,8 @@ export const bankExercises = sqliteTable('bank_exercises', {
 	yearSubjectId: integer('year_subject_id')
 		.references(() => yearSubjects.id)
 		.notNull(),
+	trimesterId: text('trimester_id').references(() => trimesters.id), // New: Classification by trimester
+	unit: text('unit'), // New: Study unit (e.g. "الميكانيك")
 	title: text('title').notNull(), // e.g. "التمرين الأول", "وضعية إدماجية"
 	content: customType<{ data: any; driverData: string }>({
 		dataType() {
