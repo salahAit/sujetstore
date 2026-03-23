@@ -78,5 +78,33 @@ export const actions: Actions = {
 		} catch (e: any) {
 			return fail(500, { message: e.message });
 		}
+	},
+	import: async ({ request }) => {
+		const formData = await request.formData();
+		const exercisesDataStr = formData.get('exercisesData') as string;
+		
+		if (!exercisesDataStr) return fail(400, { message: 'بيانات غير صالحة' });
+
+		try {
+			const exercises = JSON.parse(exercisesDataStr);
+			const exercisesToInsert = Array.isArray(exercises) ? exercises : [exercises];
+
+			const inserts = exercisesToInsert.map(ex => ({
+				title: ex.title || 'تمرين مستورد',
+				yearSubjectId: Number(ex.yearSubjectId) || 1, // Fallback if missing, though schema requires it
+				trimesterId: ex.trimesterId || null,
+				unit: ex.unit || null,
+				points: Number(ex.points) || 0,
+				content: ex.content || [],
+			}));
+
+			if (inserts.length === 0) return fail(400, { message: 'الملف فارغ' });
+
+			await contentDatabase.insert(contentSchema.bankExercises).values(inserts);
+			
+			return { success: true, message: `تم استيراد ${inserts.length} تمارين بنجاح` };
+		} catch (e: any) {
+			return fail(500, { message: 'خطأ في الاستيراد: ' + e.message });
+		}
 	}
 };

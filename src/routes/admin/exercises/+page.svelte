@@ -1,9 +1,32 @@
 <script lang="ts">
-	import { Plus, Trash2, Edit, Search, Filter, BookOpen, Calendar, Database, FileText } from 'lucide-svelte';
+	import { Plus, Trash2, Edit, Search, Filter, BookOpen, Calendar, Database, FileText, Upload, Loader2 } from 'lucide-svelte';
 	import ConfirmModal from '$lib/components/ConfirmModal.svelte';
 	import Pagination from '$lib/admin/components/Pagination.svelte';
 	
 	let { data } = $props<{ data: any }>();
+	
+	import { enhance } from '$app/forms';
+
+	// Import State
+	let isImporting = $state(false);
+	let importFormElement = $state<HTMLFormElement | null>(null);
+	let importFileInput = $state<HTMLInputElement | null>(null);
+	let importData = $state('');
+
+	function handleImportFile(event: Event) {
+		const file = (event.target as HTMLInputElement).files?.[0];
+		if (!file) return;
+
+		const reader = new FileReader();
+		reader.onload = (e) => {
+			importData = e.target?.result as string;
+			if (importData && importFormElement) {
+				setTimeout(() => importFormElement!.requestSubmit(), 50);
+			}
+			if (importFileInput) importFileInput.value = '';
+		};
+		reader.readAsText(file);
+	}
 
 	// Filter state
 	let searchUnit = $state('');
@@ -82,13 +105,51 @@
 		<h1 class="text-3xl font-bold">بنك التمارين المطبوعة</h1>
 		<p class="text-muted-foreground mt-2 text-sm">إدارة التمارين القابلة للطباعة وتصنيفها حسب الوحدات والفصول</p>
 	</div>
-	<a
-		href="/admin/exercises/new"
-		class="flex items-center gap-2 rounded-xl bg-primary px-4 py-2 font-bold text-primary-foreground transition-all hover:scale-105"
-	>
-		<Plus size={20} />
-		إضافة تمرين جديد
-	</a>
+	<div class="flex flex-wrap items-center gap-2 mt-4 sm:mt-0">
+		<!-- Import Form -->
+		<form
+			bind:this={importFormElement}
+			action="?/import"
+			method="POST"
+			use:enhance={() => {
+				isImporting = true;
+				return async ({ result, update }) => {
+					isImporting = false;
+					if (result.type === 'success') {
+						alert(result.data?.message || 'تم الاستيراد بنجاح');
+					} else if (result.type === 'failure') {
+						alert(result.data?.message || 'خطأ في الاستيراد');
+					}
+					await update();
+				};
+			}}
+		>
+			<input type="hidden" name="exercisesData" bind:value={importData} />
+			<input type="file" accept=".json" class="hidden" bind:this={importFileInput} onchange={handleImportFile} />
+			<button
+				type="button"
+				onclick={() => importFileInput?.click()}
+				disabled={isImporting}
+				class="bg-card text-foreground border-border hover:bg-muted flex flex-1 sm:flex-none justify-center items-center gap-2 rounded-xl border px-4 py-2 font-bold transition-all disabled:opacity-50"
+			>
+				{#if isImporting}
+					<Loader2 size={20} class="animate-spin" />
+					جاري الاستيراد...
+				{:else}
+					<Upload size={20} />
+					استيراد من JSON
+				{/if}
+			</button>
+		</form>
+
+		<a
+			href="/admin/exercises/new"
+			class="flex flex-1 sm:flex-none justify-center items-center gap-2 rounded-xl bg-primary px-4 py-2 font-bold text-primary-foreground transition-all hover:scale-105"
+		>
+			<Plus size={20} />
+			إضافة تمرين جديد
+		</a>
+	</div>
 </div>
 
 <!-- Stats Cards -->

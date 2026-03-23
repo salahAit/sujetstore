@@ -2,7 +2,7 @@
 	import { 
 		ArrowRight, Save, Trash2, Plus, Type, FunctionSquare, 
 		Table2, ImageIcon, CheckCircle, ListChecks, GitBranch, Tag,
-		ChevronLeft, Loader2, FileText, Database
+		ChevronLeft, Loader2, FileText, Database, Download
 	} from 'lucide-svelte';
 	import { page } from '$app/state';
 	import BlockEditor from '$lib/modules/SujetBuilder/components/BlockEditor.svelte';
@@ -84,6 +84,25 @@
 		}
 		isSaving = true;
 	}
+
+	function exportExercise() {
+		const exerciseData = {
+			title,
+			points,
+			yearSubjectId: Number(selectedYearSubjectId),
+			trimesterId,
+			unit,
+			content
+		};
+		const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify([exerciseData], null, 2));
+		const downloadAnchorNode = document.createElement('a');
+		downloadAnchorNode.setAttribute("href", dataStr);
+		const filename = `exercise_${title.replace(/[^a-z0-9]/gi, '_').toLowerCase() || 'new'}.json`;
+		downloadAnchorNode.setAttribute("download", filename);
+		document.body.appendChild(downloadAnchorNode);
+		downloadAnchorNode.click();
+		downloadAnchorNode.remove();
+	}
 </script>
 
 <svelte:head>
@@ -105,20 +124,31 @@
 			<p class="text-muted-foreground text-xs">قم بإعداد التمرين بتصنيف دقيق ليتم استخدامه لاحقاً في منشئ المواضيع</p>
 		</div>
 	</div>
-	
-	<button 
-		form="exercise-form"
-		class="flex items-center gap-2 rounded-xl bg-primary px-6 py-2.5 font-bold text-primary-foreground shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
-		disabled={isSaving}
-	>
-		{#if isSaving}
-			<Loader2 size={18} class="animate-spin" />
-			جاري الحفظ...
-		{:else}
-			<Save size={18} />
-			حفظ التمرين
-		{/if}
-	</button>
+	<div class="flex items-center gap-3 w-full sm:w-auto mt-4 sm:mt-0">
+		<button 
+			type="button"
+			class="flex items-center gap-2 rounded-xl bg-card border border-border px-4 py-2.5 font-bold text-foreground shadow-sm transition-all hover:bg-muted"
+			onclick={exportExercise}
+			title="تصدير التمرين (JSON)"
+		>
+			<Download size={18} class="text-muted-foreground" />
+			<span class="hidden sm:inline">تصدير JSON</span>
+		</button>
+
+		<button 
+			form="exercise-form"
+			class="flex items-center gap-2 rounded-xl bg-primary px-6 py-2.5 font-bold text-primary-foreground shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
+			disabled={isSaving}
+		>
+			{#if isSaving}
+				<Loader2 size={18} class="animate-spin" />
+				جاري الحفظ...
+			{:else}
+				<Save size={18} />
+				حفظ التمرين
+			{/if}
+		</button>
+	</div>
 </div>
 
 {#if page.url.searchParams.get('success')}

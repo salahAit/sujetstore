@@ -5,7 +5,7 @@
 	import ExerciseEditor from '$lib/modules/SujetBuilder/components/ExerciseEditor.svelte';
 	import PdfPreview from '$lib/modules/SujetBuilder/components/PdfPreview.svelte';
 	import { Button } from '$lib/components/ui/button';
-	import { ArrowRight, Eye, Download, RotateCcw, PanelLeft, Columns, PanelRight, ExternalLink, FileText, Sun, Moon, Printer } from 'lucide-svelte';
+	import { ArrowRight, Eye, Download, Upload, RotateCcw, PanelLeft, Columns, PanelRight, ExternalLink, FileText, Sun, Moon, Printer } from 'lucide-svelte';
 	import { toggleMode } from 'mode-watcher';
 
 	let { data }: { data: PageData } = $props();
@@ -257,6 +257,46 @@
 		pdfError = '';
 	}
 
+	// Import Export
+	let fileInput = $state<HTMLInputElement | null>(null);
+
+	function exportSubject() {
+		const documentData = {
+			templateId: activeTemplate,
+			document: {
+				metadata: $state.snapshot(metadata),
+				exercises: $state.snapshot(exercises)
+			}
+		};
+		const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(documentData, null, 2));
+		const downloadAnchorNode = document.createElement('a');
+		downloadAnchorNode.setAttribute("href", dataStr);
+		const filename = `sujet_${metadata.yearId || 'year'}_${metadata.subjectId || 'subject'}.json`;
+		downloadAnchorNode.setAttribute("download", filename);
+		document.body.appendChild(downloadAnchorNode);
+		downloadAnchorNode.click();
+		downloadAnchorNode.remove();
+	}
+
+	function importSubject(event: Event) {
+		const file = (event.target as HTMLInputElement).files?.[0];
+		if (!file) return;
+
+		const reader = new FileReader();
+		reader.onload = (e) => {
+			try {
+				const data = JSON.parse(e.target?.result as string);
+				if (data.document?.metadata) metadata = data.document.metadata;
+				if (data.document?.exercises) exercises = data.document.exercises;
+				if (fileInput) fileInput.value = ''; // reset
+				alert('تم استيراد الموضوع بنجاح!');
+			} catch (err) {
+				alert('ملف JSON غير صالح أو به خطأ في الهيكلية.');
+			}
+		};
+		reader.readAsText(file);
+	}
+
 	// Resizable split handler
 	function startDrag(e: MouseEvent) {
 		isDragging = true;
@@ -303,6 +343,15 @@
 			</div>
 			
 			<div class="flex items-center gap-3 shrink-0">
+				<!-- Import / Export -->
+				<input type="file" accept=".json" class="hidden" bind:this={fileInput} onchange={importSubject} />
+				<Button variant="outline" size="sm" onclick={() => fileInput?.click()} class="gap-1 px-2.5 text-muted-foreground shadow-sm hover:text-foreground hover:bg-muted" title="استيراد موضوع">
+					<Upload size={14} /> <span class="hidden xl:inline">استيراد</span>
+				</Button>
+				<Button variant="outline" size="sm" onclick={exportSubject} class="gap-1 px-2.5 text-muted-foreground shadow-sm hover:text-foreground hover:bg-muted mr-1" title="تصدير موضوع">
+					<Download size={14} /> <span class="hidden xl:inline">تصدير</span>
+				</Button>
+
 				{#if isMetadataComplete}
 					<Button variant="outline" size="sm" onclick={reset} class="gap-1 px-2.5 text-muted-foreground shadow-sm transition-colors hover:border-red-500/30 hover:bg-red-500/10 hover:text-red-500" title="إعادة تعيين">
 						<RotateCcw size={14} /> <span class="hidden sm:inline">إعادة تعيين</span>
