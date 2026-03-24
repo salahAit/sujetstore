@@ -15,12 +15,44 @@ export const POST: RequestHandler = async ({ request }) => {
 		const body = await request.json();
 		const { templateId, document: examDoc, isSolution, format = 'pdf' } = body;
 
-		// Pre-process document to fix image paths for Typst
+		// Pre-process document to fix image paths and sanitize content for Typst
 		const processedDoc = JSON.parse(JSON.stringify(examDoc));
+
+		const TYPST_MATH_WORDS = new Set([
+			'sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'arcsin', 'arccos', 'arctan', 'sinh', 'cosh', 'tanh', 'log', 'ln', 'exp', 'lim', 'liminf', 'limsup', 'max', 'min', 'inf', 'sup', 'det', 'dim', 'ker', 'hom', 'mod', 'gcd', 'lcm', 'arg', 'deg',
+			'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
+			'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega',
+			'cal', 'bb', 'frak', 'bold', 'italic', 'serif', 'sans', 'mono', 'text', 'op', 'upright', 'math', 'sqrt', 'root', 'abs', 'norm', 'floor', 'ceil', 'round', 'vec', 'hat', 'bar', 'tilde', 'dot', 'ddot', 
+			'rightarrow', 'leftarrow', 'leftrightarrow', 'Rightarrow', 'Leftarrow', 'Leftrightarrow', 'times', 'div', 'approx', 'neq', 'leq', 'geq', 'in', 'notin', 'subset', 'supset', 'cup', 'cap', 'emptyset', 'infty', 'nabla', 'partial', 'sum', 'prod', 'int', 'oint'
+		]);
+
+		function sanitizeForTypst(text: string): string {
+			if (!text || typeof text !== 'string') return text;
+			return text.replace(/\$([^$]+)\$/g, (match, inner) => {
+				let fixed = inner.replace(/[a-zA-Z]{2,}/g, (word: string) => {
+					if (TYPST_MATH_WORDS.has(word)) return word;
+					return word.split('').join(' ');
+				});
+				fixed = fixed.replace(/(\d)([a-zA-Z])/g, '$1 $2');
+				return `$${fixed}$`;
+			});
+		}
+
+		function sanitizeBlock(block: any) {
+			if (block.content && typeof block.content === 'string') {
+				block.content = sanitizeForTypst(block.content);
+			}
+			if (block.answer && typeof block.answer === 'string') {
+				block.answer = sanitizeForTypst(block.answer);
+			}
+		}
+
 		if (processedDoc.exercises) {
 			processedDoc.exercises.forEach((ex: any) => {
+				if (ex.instruction) ex.instruction = sanitizeForTypst(ex.instruction);
 				const blocks = ex.blocks || ex.content || [];
 				blocks.forEach((block: any) => {
+					sanitizeBlock(block);
 					if (block.type === 'image' && block.src?.startsWith('/uploads')) {
 						block.src = join('static', block.src);
 					}

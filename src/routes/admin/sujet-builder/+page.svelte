@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 	import type { ExamMetadata, ExerciseBlock, TemplateId, ExamType, TrimesterId, LevelId } from '$lib/modules/SujetBuilder/types';
 	import MetadataPanel from '$lib/modules/SujetBuilder/components/MetadataPanel.svelte';
@@ -286,8 +287,18 @@
 		reader.onload = (e) => {
 			try {
 				const data = JSON.parse(e.target?.result as string);
-				if (data.document?.metadata) metadata = data.document.metadata;
-				if (data.document?.exercises) exercises = data.document.exercises;
+				// Handle both nested { document: { metadata, exercises } } and flat { metadata, exercises }
+				const doc = data.document || data;
+				
+				if (doc.metadata) metadata = doc.metadata;
+				if (doc.exercises) {
+					// Ensure every exercise has a unique `id` for the keyed each block
+					exercises = doc.exercises.map((ex: any) => ({
+						...ex,
+						id: ex.id || Math.random().toString(36).substring(2, 9)
+					}));
+				}
+				
 				if (fileInput) fileInput.value = ''; // reset
 				alert('تم استيراد الموضوع بنجاح!');
 			} catch (err) {
@@ -296,6 +307,26 @@
 		};
 		reader.readAsText(file);
 	}
+
+	// Load existing subject if ID is provided in URL
+	onMount(async () => {
+		const urlParams = new URLSearchParams(window.location.search);
+		const editId = urlParams.get('edit');
+		if (editId) {
+			try {
+				const res = await fetch(`/api/sujet-builder/load?id=${editId}`);
+				const result = await res.json();
+				if (result.success && result.document) {
+					metadata = result.document.metadata;
+					exercises = result.document.exercises;
+					// Trigger a PDF generation if needed
+					setTimeout(() => generatePdf(), 500);
+				}
+			} catch (err) {
+				console.error('Failed to load subject for editing:', err);
+			}
+		}
+	});
 
 	// Resizable split handler
 	function startDrag(e: MouseEvent) {

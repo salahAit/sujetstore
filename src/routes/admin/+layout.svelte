@@ -29,8 +29,9 @@
 		{ name: 'التمارين التفاعلية', href: '/admin/quizzes', icon: Brain },
 		{ name: 'بنك الأسئلة التفاعلية', href: '/admin/question-bank', icon: Database },
 		{ name: 'بنك التمارين المطبوعة', href: '/admin/exercises', icon: FileText },
+		{ name: 'بنك المواضيع المنشأة', href: '/admin/sujet-bank', icon: FilePlus2 },
 		{ name: 'إحصائيات التمارين', href: '/admin/quiz-analytics', icon: BarChart3 },
-		{ name: 'الوثائق', href: '/admin/documents', icon: FileText }
+		{ name: 'الوثائق المرفوعة', href: '/admin/documents', icon: FileText }
 	];
 	let isSujetBuilder = $derived($page.url.pathname.startsWith('/admin/sujet-builder'));
 </script>

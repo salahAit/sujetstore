@@ -1,5 +1,8 @@
-// render-block: renders a single content block (exam or solution mode)
-// Adapted from exam_1/template_logic.typ official design
+#let safe-eval(content, mode: "markup") = {
+  if content == "" or content == none { return [] }
+  let result = eval(content, mode: mode)
+  result
+}
 
 #let render-block(b, is-solution) = {
   let m = b.at("mark", default: b.at("points", default: ""))
@@ -7,9 +10,9 @@
   if b.type == "text" [
     #grid(columns: (1fr, auto), [
       #(if is-solution and b.at("answer", default: "") != "" {
-        text(fill: blue)[#eval(b.answer, mode: "markup")]
+        text(fill: blue)[#safe-eval(b.answer)]
       } else {
-        text(size: 14pt)[#eval(b.content, mode: "markup")]
+        text(size: 14pt)[#safe-eval(b.content)]
       })
     ], if is-solution and b.at("mark", default: "") != "" { align(bottom)[#text(size: 14pt, fill: red)[#b.mark ن]] } else { [] })
   ] else if b.type == "true_false" [
