@@ -283,7 +283,12 @@
 					onchange={() => onchange?.()}
 				>
 					<option value="KFGQPC Uthman Taha Naskh">خط عثمان طه (الافتراضي)</option>
-					<option value="Arial">Arial (خط بسيط)</option>
+					<option value="Amiri">Amiri — أميري (نسخ كلاسيكي)</option>
+					<option value="Cairo">Cairo — القاهرة (حديث بدون سيريف)</option>
+					<option value="Scheherazade New">Scheherazade — شهرزاد (نسخ رسمي)</option>
+					<option value="Noto Naskh Arabic">Noto Naskh — نوتو نسخ (قوقل)</option>
+					<option value="Noto Kufi Arabic">Noto Kufi — نوتو كوفي (عصري)</option>
+					<option value="Arial">Arial — آريال (بسيط)</option>
 				</select>
 				<ChevronDown size={14} class="pointer-events-none absolute left-2.5 top-2.5 text-muted-foreground" />
 			</div>
