@@ -26,24 +26,40 @@ export const POST: RequestHandler = async ({ request }) => {
 			'rightarrow', 'leftarrow', 'leftrightarrow', 'Rightarrow', 'Leftarrow', 'Leftrightarrow', 'times', 'div', 'approx', 'neq', 'leq', 'geq', 'in', 'notin', 'subset', 'supset', 'cup', 'cap', 'emptyset', 'infty', 'nabla', 'partial', 'sum', 'prod', 'int', 'oint'
 		]);
 
+		function sanitizeMathInner(inner: string): string {
+			if (!inner) return inner;
+			// 1. Handle Latin words (split if not known, e.g. "cm" -> "c m")
+			let fixed = inner.replace(/[a-zA-Z]{2,}/g, (word: string) => {
+				if (TYPST_MATH_WORDS.has(word)) return word;
+				return word.split('').join(' ');
+			});
+			// 2. Handle Arabic words (wrap in quotes to treat as literal text in math mode)
+			fixed = fixed.replace(/[\u0600-\u06FF]{2,}/g, (word: string) => {
+				return `"${word}"`;
+			});
+			// 3. Spacing between numbers and units/letters
+			fixed = fixed.replace(/(\d)([a-zA-Z\u0600-\u06FF])/g, '$1 $2');
+			return fixed;
+		}
+
 		function sanitizeForTypst(text: string): string {
 			if (!text || typeof text !== 'string') return text;
 			return text.replace(/\$([^$]+)\$/g, (match, inner) => {
-				let fixed = inner.replace(/[a-zA-Z]{2,}/g, (word: string) => {
-					if (TYPST_MATH_WORDS.has(word)) return word;
-					return word.split('').join(' ');
-				});
-				fixed = fixed.replace(/(\d)([a-zA-Z])/g, '$1 $2');
-				return `$${fixed}$`;
+				return `$${sanitizeMathInner(inner)}$`;
 			});
 		}
 
 		function sanitizeBlock(block: any) {
-			if (block.content && typeof block.content === 'string') {
-				block.content = sanitizeForTypst(block.content);
-			}
-			if (block.answer && typeof block.answer === 'string') {
-				block.answer = sanitizeForTypst(block.answer);
+			if (block.type === 'math' && block.content && typeof block.content === 'string') {
+				// Special case: math block is entirely math context
+				block.content = sanitizeMathInner(block.content);
+			} else {
+				if (block.content && typeof block.content === 'string') {
+					block.content = sanitizeForTypst(block.content);
+				}
+				if (block.answer && typeof block.answer === 'string') {
+					block.answer = sanitizeForTypst(block.answer);
+				}
 			}
 		}
 
@@ -83,7 +99,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		console.log('[generate-pdf] templateId:', templateId);
 
 		// Compile Typst to PDF
-		const pdfResult = await new Promise<{ success: boolean; error?: string }>((resolve) => {
+		const pdfResult = await new Promise<{ success: boolean; error?: string }>((res) => {
 			const args = [
 				'compile', 'main.typ', `${outputBase}.pdf`,
 				'--root', process.cwd(),
@@ -96,7 +112,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			const proc = spawn('typst', args, { cwd: TYPST_ROOT, timeout: 15000 });
 			let stderr = '';
 			proc.stderr.on('data', (d) => stderr += d.toString());
-			proc.on('close', (c) => c === 0 ? resolve({ success: true }) : resolve({ success: false, error: stderr }));
+			proc.on('close', (c) => c === 0 ? res({ success: true }) : res({ success: false, error: stderr }));
 		});
 
 		if (!pdfResult.success) return json({ success: false, error: pdfResult.error }, { status: 500 });
@@ -109,7 +125,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		if (isSvg) {
 			// Also compile to SVG for preview
-			await new Promise((resolve) => {
+			await new Promise((res) => {
 				const proc = spawn('typst', [
 					'compile', 'main.typ', `${outputBase}-{n}.svg`,
 					'--root', PROJECT_ROOT,
@@ -118,7 +134,7 @@ export const POST: RequestHandler = async ({ request }) => {
 					'--input', `data=${dataJson}`,
 					'--input', `is-solution=${!!isSolution}`
 				], { cwd: TYPST_ROOT, timeout: 15000 });
-				proc.on('close', resolve);
+				proc.on('close', res);
 			});
 
 			const fs = await import('fs');

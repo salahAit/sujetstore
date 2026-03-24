@@ -60,24 +60,40 @@ export const POST: RequestHandler = async ({ request }) => {
 			'rightarrow', 'leftarrow', 'leftrightarrow', 'Rightarrow', 'Leftarrow', 'Leftrightarrow', 'times', 'div', 'approx', 'neq', 'leq', 'geq', 'in', 'notin', 'subset', 'supset', 'cup', 'cap', 'emptyset', 'infty', 'nabla', 'partial', 'sum', 'prod', 'int', 'oint'
 		]);
 
+		function sanitizeMathInner(inner: string): string {
+			if (!inner) return inner;
+			// 1. Handle Latin words (split if not known, e.g. "cm" -> "c m")
+			let fixed = inner.replace(/[a-zA-Z]{2,}/g, (word: string) => {
+				if (TYPST_MATH_WORDS.has(word)) return word;
+				return word.split('').join(' ');
+			});
+			// 2. Handle Arabic words (wrap in quotes to treat as literal text in math mode)
+			fixed = fixed.replace(/[\u0600-\u06FF]{2,}/g, (word: string) => {
+				return `"${word}"`;
+			});
+			// 3. Spacing between numbers and units/letters
+			fixed = fixed.replace(/(\d)([a-zA-Z\u0600-\u06FF])/g, '$1 $2');
+			return fixed;
+		}
+
 		function sanitizeForTypst(text: string): string {
 			if (!text || typeof text !== 'string') return text;
 			return text.replace(/\$([^$]+)\$/g, (match, inner) => {
-				let fixed = inner.replace(/[a-zA-Z]{2,}/g, (word: string) => {
-					if (TYPST_MATH_WORDS.has(word)) return word;
-					return word.split('').join(' ');
-				});
-				fixed = fixed.replace(/(\d)([a-zA-Z])/g, '$1 $2');
-				return `$${fixed}$`;
+				return `$${sanitizeMathInner(inner)}$`;
 			});
 		}
 
 		function sanitizeBlock(block: any) {
-			if (block.content && typeof block.content === 'string') {
-				block.content = sanitizeForTypst(block.content);
-			}
-			if (block.answer && typeof block.answer === 'string') {
-				block.answer = sanitizeForTypst(block.answer);
+			if (block.type === 'math' && block.content && typeof block.content === 'string') {
+				// Special case: math block is entirely math context
+				block.content = sanitizeMathInner(block.content);
+			} else {
+				if (block.content && typeof block.content === 'string') {
+					block.content = sanitizeForTypst(block.content);
+				}
+				if (block.answer && typeof block.answer === 'string') {
+					block.answer = sanitizeForTypst(block.answer);
+				}
 			}
 		}
 
