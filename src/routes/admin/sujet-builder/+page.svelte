@@ -23,7 +23,8 @@
 		docType: 'test' as ExamType,
 		academicYear: '2024/2025',
 		duration: '1 سا',
-		siteUrl: 'sujetstore.com'
+		siteUrl: 'sujetstore.com',
+		font: 'KFGQPC Uthman Taha Naskh'
 	});
 
 	let isMetadataComplete = $derived(!!metadata.levelId && !!metadata.yearId && !!metadata.subjectId);
@@ -120,7 +121,7 @@
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({
-					templateId: metadata.docType,
+					templateId: activeTemplate,
 					document: { 
 						metadata: $state.snapshot(metadata), 
 						exercises: $state.snapshot(exercises) 
@@ -290,7 +291,9 @@
 				// Handle both nested { document: { metadata, exercises } } and flat { metadata, exercises }
 				const doc = data.document || data;
 				
-				if (doc.metadata) metadata = doc.metadata;
+				if (doc.metadata) {
+					metadata = { ...doc.metadata, font: doc.metadata.font || 'KFGQPC Uthman Taha Naskh' };
+				}
 				if (doc.exercises) {
 					// Ensure every exercise has a unique `id` for the keyed each block
 					exercises = doc.exercises.map((ex: any) => ({
@@ -455,10 +458,11 @@
 					streamSubjects={data.streamSubjects}
 					trimesters={data.trimesters}
 					bind:metadata
+					onchange={generatePdf}
 				/>
 				
 				{#if isMetadataComplete}
-					<ExerciseEditor bind:exercises {metadata} />
+					<ExerciseEditor bind:exercises {metadata} onchange={generatePdf} />
 				{:else}
 					<div class="mt-8 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-amber-500/40 bg-amber-500/10 py-16 text-center shadow-sm">
 						<div class="mb-4 rounded-full bg-amber-500/20 p-4 text-amber-600 dark:text-amber-400">
