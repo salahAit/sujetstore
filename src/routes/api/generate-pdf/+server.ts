@@ -76,19 +76,23 @@ export const POST: RequestHandler = async ({ request }) => {
 		const outputBase = join(GENERATED_DIR, fileId);
 		const outputFile = isSvg ? `${outputBase}-{n}.svg` : `${outputBase}.pdf`;
 		const dataJson = JSON.stringify(processedDoc);
-
-		const fontsDir = join(PROJECT_ROOT, 'book', 'fonts');
+		const fontPath = join(process.cwd(), 'static', 'fonts');
+		console.log('[generate-pdf] CWD:', process.cwd());
+		console.log('[generate-pdf] Font path:', fontPath);
+		console.log('[generate-pdf] Font in metadata:', processedDoc?.metadata?.font);
+		console.log('[generate-pdf] templateId:', templateId);
 
 		// Compile Typst to PDF
 		const pdfResult = await new Promise<{ success: boolean; error?: string }>((resolve) => {
 			const args = [
 				'compile', 'main.typ', `${outputBase}.pdf`,
 				'--root', process.cwd(),
-				'--font-path', join(process.cwd(), 'static', 'fonts'),
+				'--font-path', fontPath,
 				'--input', `template-id=${templateId}`,
 				'--input', `data=${dataJson}`,
 				'--input', `is-solution=${!!isSolution}`
 			];
+			console.log('[generate-pdf] Typst args (no data):', args.filter(a => !a.startsWith('{')).join(' '));
 			const proc = spawn('typst', args, { cwd: TYPST_ROOT, timeout: 15000 });
 			let stderr = '';
 			proc.stderr.on('data', (d) => stderr += d.toString());
@@ -109,7 +113,7 @@ export const POST: RequestHandler = async ({ request }) => {
 				const proc = spawn('typst', [
 					'compile', 'main.typ', `${outputBase}-{n}.svg`,
 					'--root', PROJECT_ROOT,
-					'--font-path', fontsDir,
+					'--font-path', fontPath,
 					'--input', `template-id=${templateId}`,
 					'--input', `data=${dataJson}`,
 					'--input', `is-solution=${!!isSolution}`
