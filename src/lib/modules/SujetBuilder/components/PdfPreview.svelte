@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { Loader2, AlertCircle, Printer, Download, ZoomIn, ZoomOut, Maximize } from 'lucide-svelte';
 	import { Button } from '$lib/components/ui/button';
 
@@ -15,8 +16,32 @@
 	} = $props();
 
 	let scale = $state(1.5);
+	let visiblePage = $state(1);
+	let scrollContainer: HTMLDivElement | null = $state(null);
 
 	let numPages = $derived(svgPages.length);
+
+	// Track which page is visible during scroll
+	$effect(() => {
+		if (!scrollContainer || svgPages.length === 0) return;
+		const pages = scrollContainer.querySelectorAll('[data-page]');
+		if (pages.length === 0) return;
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				for (const entry of entries) {
+					if (entry.isIntersecting) {
+						const pageNum = parseInt((entry.target as HTMLElement).dataset.page || '1');
+						visiblePage = pageNum;
+					}
+				}
+			},
+			{ root: scrollContainer, threshold: 0.5 }
+		);
+
+		pages.forEach((el) => observer.observe(el));
+		return () => observer.disconnect();
+	});
 
 	function zoom(delta: number) {
 		scale = Math.max(0.2, Math.min(4.0, scale + delta));
@@ -65,12 +90,12 @@
 				</Button>
 			</div>
 
-			<span class="text-xs font-bold text-slate-600">{numPages} {numPages === 1 ? 'صفحة' : 'صفحات'}</span>
+			<span class="text-xs font-bold text-slate-600">{visiblePage}/{numPages}</span>
 		</div>
 	{/if}
 
 	<!-- SVG Content Area (Continuous Scroll) -->
-	<div class="flex-1 overflow-auto p-4 md:p-8 flex flex-col items-center gap-6 custom-scrollbar">
+	<div class="flex-1 overflow-auto p-4 md:p-8 flex flex-col items-center gap-6 custom-scrollbar" bind:this={scrollContainer}>
 		{#if loading}
 			<div class="flex flex-1 flex-col items-center justify-center gap-3 text-muted-foreground pt-32">
 				<Loader2 size={36} class="animate-spin text-primary" />
@@ -84,7 +109,7 @@
 			</div>
 		{:else if svgPages.length > 0}
 			{#each svgPages as page, i}
-				<div class="svg-page-container relative shadow-2xl rounded-sm border border-slate-200 bg-white" style="width: {80 * scale}%; max-width: 1000px;">
+				<div class="svg-page-container relative shadow-2xl rounded-sm border border-slate-200 bg-white" data-page={i + 1} style="width: {80 * scale}%; max-width: 1000px;">
 					<img 
 						src="data:image/svg+xml;base64,{page}" 
 						alt="صفحة {i + 1}"
