@@ -59,7 +59,19 @@
 					(ss.yearId === metadata.yearId || ss.yearId === null)
 			)
 			.map((ss) => ss.subjectId);
-		return subjects.filter((s) => subjectIds.includes(s.id));
+		
+		return subjects
+			.filter((s) => subjectIds.includes(s.id))
+			.map(s => {
+				// If secondary, add stream name to help differentiate (e.g. English for Scientific vs Literary)
+				if (needsStream && metadata.streamName) {
+					return {
+						...s,
+						nameAr: `${s.nameAr} - ${metadata.streamName}`
+					};
+				}
+				return s;
+			});
 	});
 
 	function handleLevelChange(e: Event) {
