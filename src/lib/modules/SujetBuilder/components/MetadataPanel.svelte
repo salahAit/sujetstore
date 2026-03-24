@@ -287,7 +287,6 @@
 						<option value="Noto Naskh Arabic">Noto Naskh — نوتو نسخ (قياسي)</option>
 					</optgroup>
 					<optgroup label="خطوط لاتينية (Latin - Fr/En)">
-						<option value="Inter">Inter — إنتر (عصري)</option>
 						<option value="Montserrat">Montserrat — مونتسيرات (أنيق)</option>
 						<option value="EB Garamond">EB Garamond — غاراموند (سيريف فرنسي)</option>
 						<option value="Arial">Arial — آريال (بسيط)</option>
