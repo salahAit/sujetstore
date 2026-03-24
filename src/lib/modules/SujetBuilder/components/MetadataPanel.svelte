@@ -282,13 +282,24 @@
 					bind:value={metadata.font}
 					onchange={() => onchange?.()}
 				>
-					<option value="KFGQPC Uthman Taha Naskh">خط عثمان طه (الافتراضي)</option>
-					<option value="Amiri">Amiri — أميري (نسخ كلاسيكي)</option>
-					<option value="Cairo">Cairo — القاهرة (حديث بدون سيريف)</option>
-					<option value="Scheherazade New">Scheherazade — شهرزاد (نسخ رسمي)</option>
-					<option value="Noto Naskh Arabic">Noto Naskh — نوتو نسخ (قوقل)</option>
-					<option value="Noto Kufi Arabic">Noto Kufi — نوتو كوفي (عصري)</option>
-					<option value="Arial">Arial — آريال (بسيط)</option>
+					<optgroup label="خطوط عربية (Arabic Fonts)">
+						<option value="KFGQPC Uthman Taha Naskh">خط عثمان طه (الافتراضي)</option>
+						<option value="Tajawal">Tajawal — تجول (عصري وعريض)</option>
+						<option value="Almarai">Almarai — المراعي (ناعم واحترافي)</option>
+						<option value="Vazirmatn">Vazirmatn — وزير متن (ممتاز للنصوص المختلطة)</option>
+						<option value="Lalezar">Lalezar — لاله زار (ممتاز للعناوين)</option>
+						<option value="Amiri">Amiri — أميري (نسخ كلاسيكي فخم)</option>
+						<option value="Scheherazade New">Scheherazade — شهرزاد (نسخ رسمي)</option>
+						<option value="Noto Naskh Arabic">Noto Naskh — نوتو نسخ (خط قوقل القياسي)</option>
+						<option value="Noto Kufi Arabic">Noto Kufi — نوتو كوفي (هندسي عصري)</option>
+						<option value="Cairo">Cairo — القاهرة (حديث وواضح)</option>
+					</optgroup>
+					<optgroup label="خطوط لاتينية (Latin - Fr/En)">
+						<option value="Inter">Inter — إنتر (مثالي للواجهات الحديثة)</option>
+						<option value="Montserrat">Montserrat — مونتسيرات (أنيق وعصري)</option>
+						<option value="EB Garamond">EB Garamond — غاراموند (سيريف فرنسي كلاسيكي)</option>
+						<option value="Arial">Arial — آريال (بسيط ومعياري)</option>
+					</optgroup>
 				</select>
 				<ChevronDown size={14} class="pointer-events-none absolute left-2.5 top-2.5 text-muted-foreground" />
 			</div>
