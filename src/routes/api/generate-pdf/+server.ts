@@ -83,8 +83,8 @@ export const POST: RequestHandler = async ({ request }) => {
 		const pdfResult = await new Promise<{ success: boolean; error?: string }>((resolve) => {
 			const args = [
 				'compile', 'main.typ', `${outputBase}.pdf`,
-				'--root', PROJECT_ROOT,
-				'--font-path', fontsDir,
+				'--root', process.cwd(),
+				'--font-path', join(process.cwd(), 'static', 'fonts'),
 				'--input', `template-id=${templateId}`,
 				'--input', `data=${dataJson}`,
 				'--input', `is-solution=${!!isSolution}`

@@ -28,7 +28,7 @@
     #stack(dir: ttb, spacing: 8pt,
       ..b.groups.map(g => [
         #grid(columns: (1fr, auto), [
-          #text(font: "KFGQPC Uthman Taha Naskh", weight: "bold")[#eval(g.header, mode: "markup")] \
+          #text(weight: "bold")[#eval(g.header, mode: "markup")] \
           #h(15pt) #g.options.map(opt => [
             #let symbol = if is-solution and opt == g.correct { text(fill: blue)[×] } else { " " }
             #box(stroke: 0.5pt, width: 12pt, height: 12pt, radius: 2pt, align(center + horizon)[#v(-2pt)#symbol]) #h(4pt) #(if is-solution and opt == g.correct { text(fill: blue)[#eval(opt, mode: "markup")] } else { eval(opt, mode: "markup") })
@@ -64,7 +64,7 @@
         align: center,
         stroke: 0.5pt,
         inset: 8pt,
-        ..b.headers.map(h => [ #text(font: "KFGQPC Uthman Taha Naskh", weight: "bold")[#h] ]),
+        ..b.headers.map(h => [ #text(weight: "bold")[#h] ]),
         ..b.cells.map(c => [
           #(if type(c) == dictionary {
             stack(dir: ttb, spacing: 5pt,
@@ -125,7 +125,7 @@
         gutter: 10pt,
         align: horizon,
         text(size: 22pt, fill: if is-solution { green } else { blue })[▪],
-        text(font: "KFGQPC Uthman Taha Naskh", weight: "bold", size: 17pt)[#eval("التمرين " + ex.at("num", default: ordinals.at(idx, default: str(idx + 1))) + " : (" + str(ex.at("points", default: "0")) + " نقاط)", mode: "markup")],
+        text(weight: "bold", size: 17pt)[#eval("التمرين " + ex.at("num", default: ordinals.at(idx, default: str(idx + 1))) + " : (" + str(ex.at("points", default: "0")) + " نقاط)", mode: "markup")],
       )
       #v(5pt)
       

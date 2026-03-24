@@ -117,6 +117,7 @@ export const POST: RequestHandler = async ({ request }) => {
 				'main.typ',
 				outputFile,
 				'--root', PROJECT_ROOT,
+				'--font-path', join(PROJECT_ROOT, 'static', 'fonts'),
 				'--input', `template-id=${templateId}`,
 				'--input', `data=${dataJson}`,
 				'--input', `is-solution=false`

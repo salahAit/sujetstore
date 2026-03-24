@@ -271,5 +271,22 @@
 				oninput={() => onchange?.()}
 			/>
 		</div>
+
+		<!-- Font Selection -->
+		<div class="col-span-2">
+			<label for="sb-font" class="mb-1 block text-xs font-medium text-muted-foreground">الخط الرئيسي للموضوع</label>
+			<div class="relative">
+				<select
+					id="sb-font"
+					class="w-full appearance-none rounded-lg border border-border bg-card px-3 py-1.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+					bind:value={metadata.font}
+					onchange={() => onchange?.()}
+				>
+					<option value="KFGQPC Uthman Taha Naskh">خط عثمان طه (الافتراضي)</option>
+					<option value="Arial">Arial (خط بسيط)</option>
+				</select>
+				<ChevronDown size={14} class="pointer-events-none absolute left-2.5 top-2.5 text-muted-foreground" />
+			</div>
+		</div>
 	</div>
 </div>
