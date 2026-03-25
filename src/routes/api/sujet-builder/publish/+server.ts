@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import { contentDatabase } from '$lib/server/db';
-import { documents, yearSubjects } from '$lib/server/db/schema-content';
+import { documents, yearSubjects, bankExercises } from '$lib/server/db/schema-content';
 import { eq, and, isNull } from 'drizzle-orm';
 import { spawn } from 'child_process';
 import { resolve, join } from 'path';
@@ -120,49 +120,54 @@ export const POST: RequestHandler = async ({ request }) => {
 		// Ensure output directory exists
 		await mkdir(UPLOADS_DIR, { recursive: true });
 
-		// Generate unique output filename
+		// Generate unique output filenames
 		const pdfCode = randomUUID().slice(0, 8);
 		const filename = `${metadata.docType}-${metadata.yearId}-${pdfCode}.pdf`;
+		const solutionFilename = `${metadata.docType}-${metadata.yearId}-${pdfCode}-solution.pdf`;
 		const outputFile = join(UPLOADS_DIR, filename);
+		const solutionOutputFile = join(UPLOADS_DIR, solutionFilename);
 		const dataJson = JSON.stringify(processedDoc);
+		const fontPath = join(PROJECT_ROOT, 'static', 'fonts');
 
-		// Compile Typst to PDF
-		const result = await new Promise<{ success: boolean; error?: string }>((resolvePromise) => {
-			const args = [
-				'compile',
-				'main.typ',
-				outputFile,
-				'--root', PROJECT_ROOT,
-				'--font-path', join(PROJECT_ROOT, 'static', 'fonts'),
-				'--input', `template-id=${templateId}`,
-				'--input', `data=${dataJson}`,
-				'--input', `is-solution=false`
-			];
-
-			const proc = spawn('typst', args, {
-				cwd: TYPST_ROOT,
-				timeout: 15000,
-				stdio: ['ignore', 'pipe', 'pipe']
+		// Helper: compile Typst to PDF
+		function compileTypst(output: string, isSolution: boolean): Promise<{ success: boolean; error?: string }> {
+			return new Promise((resolvePromise) => {
+				const args = [
+					'compile', 'main.typ', output,
+					'--root', PROJECT_ROOT,
+					'--font-path', fontPath,
+					'--input', `template-id=${templateId}`,
+					'--input', `data=${dataJson}`,
+					'--input', `is-solution=${isSolution}`
+				];
+				const proc = spawn('typst', args, {
+					cwd: TYPST_ROOT, timeout: 15000,
+					stdio: ['ignore', 'pipe', 'pipe']
+				});
+				let stderr = '';
+				proc.stderr.on('data', (d) => { stderr += d.toString(); });
+				proc.on('close', (code) => {
+					code === 0
+						? resolvePromise({ success: true })
+						: resolvePromise({ success: false, error: stderr || `Typst exited with code ${code}` });
+				});
+				proc.on('error', (err) => {
+					resolvePromise({ success: false, error: `Failed to spawn typst: ${err.message}` });
+				});
 			});
+		}
 
-			let stderr = '';
-			proc.stderr.on('data', (data) => { stderr += data.toString(); });
+		// 1. Compile subject PDF
+		const subjectResult = await compileTypst(outputFile, false);
+		if (!subjectResult.success) {
+			return json({ success: false, error: subjectResult.error }, { status: 500 });
+		}
 
-			proc.on('close', (code) => {
-				if (code === 0) {
-					resolvePromise({ success: true });
-				} else {
-					resolvePromise({ success: false, error: stderr || `Typst exited with code ${code}` });
-				}
-			});
-
-			proc.on('error', (err) => {
-				resolvePromise({ success: false, error: `Failed to spawn typst: ${err.message}` });
-			});
-		});
-
-		if (!result.success) {
-			return json({ success: false, error: result.error }, { status: 500 });
+		// 2. Compile solution PDF
+		const solutionResult = await compileTypst(solutionOutputFile, true);
+		if (!solutionResult.success) {
+			console.warn('Solution PDF failed:', solutionResult.error);
+			// Continue anyway — subject PDF is more important
 		}
 
 		// Measure file size
@@ -185,11 +190,34 @@ export const POST: RequestHandler = async ({ request }) => {
 			type: metadata.docType,
 			content: JSON.stringify(examDoc),
 			pdfUrl: `/uploads/documents/${filename}`,
+			solutionUrl: solutionResult.success ? `/uploads/documents/${solutionFilename}` : null,
+			hasSolution: solutionResult.success,
 			year: metadata.academicYear,
 			isPublished: isPublished ?? false,
 			fileSize: size,
 			downloadCount: 0
 		}).returning();
+
+		const docId = newDoc[0].id;
+
+		// Sync exercises to the bank
+		const ordinals = ['الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس', 'السابع', 'الثامن'];
+		if (examDoc.exercises && examDoc.exercises.length > 0) {
+			const bankInserts = examDoc.exercises.map((ex: any, idx: number) => ({
+				yearSubjectId: mapping.id,
+				documentId: docId,
+				trimesterId: metadata.trimesterId || null,
+				title: ex.title || `التمرين ${ordinals[idx] || (idx + 1)}`,
+				content: ex.blocks || ex.content || [],
+				points: typeof ex.points === 'string' ? parseInt(ex.points) || 0 : (ex.points || 0),
+				tags: null
+			}));
+			try {
+				await contentDatabase.insert(bankExercises).values(bankInserts);
+			} catch (bankErr) {
+				console.warn('Failed to sync exercises to bank:', bankErr);
+			}
+		}
 
 		return json({
 			success: true,

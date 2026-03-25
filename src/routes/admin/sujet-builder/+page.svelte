@@ -6,7 +6,7 @@
 	import ExerciseEditor from '$lib/modules/SujetBuilder/components/ExerciseEditor.svelte';
 	import PdfPreview from '$lib/modules/SujetBuilder/components/PdfPreview.svelte';
 	import { Button } from '$lib/components/ui/button';
-	import { ArrowRight, Eye, Download, Upload, RotateCcw, PanelLeft, Columns, PanelRight, ExternalLink, FileText, Sun, Moon, Printer } from 'lucide-svelte';
+	import { ArrowRight, Eye, Download, Upload, RotateCcw, PanelLeft, Columns, PanelRight, ExternalLink, FileText, Sun, Moon, Printer, Save, Copy } from 'lucide-svelte';
 	import { toggleMode } from 'mode-watcher';
 
 	let { data }: { data: PageData } = $props();
@@ -69,6 +69,8 @@
 	}, 0));
 
 	let publishing = $state(false);
+	let publishStatus = $state('');
+	let editingDocId = $state<number | null>(null);
 
 	async function publishDocument(isPublished: boolean) {
 		if (!isMetadataComplete) {
@@ -315,18 +317,25 @@
 	onMount(async () => {
 		const urlParams = new URLSearchParams(window.location.search);
 		const editId = urlParams.get('edit');
-		if (editId) {
+		const cloneId = urlParams.get('clone');
+		const loadId = editId || cloneId;
+
+		if (loadId) {
 			try {
-				const res = await fetch(`/api/sujet-builder/load?id=${editId}`);
+				const res = await fetch(`/api/sujet-builder/load?id=${loadId}`);
 				const result = await res.json();
 				if (result.success && result.document) {
-					metadata = result.document.metadata;
-					exercises = result.document.exercises;
-					// Trigger a PDF generation if needed
+					metadata = { ...result.document.metadata, font: result.document.metadata.font || 'KFGQPC Uthman Taha Naskh' };
+					exercises = (result.document.exercises || []).map((ex: any) => ({
+						...ex,
+						id: ex.id || Math.random().toString(36).substring(2, 9)
+					}));
+					// Only track the document ID for editing, not cloning
+					if (editId) editingDocId = parseInt(editId);
 					setTimeout(() => generatePdf(), 500);
 				}
 			} catch (err) {
-				console.error('Failed to load subject for editing:', err);
+				console.error('Failed to load subject:', err);
 			}
 		}
 	});
@@ -377,6 +386,23 @@
 			</div>
 			
 			<div class="flex items-center gap-3 shrink-0">
+				<!-- Publish / Save -->
+				{#if isMetadataComplete && exercises.length > 0}
+					<div class="flex items-center rounded-lg border border-border bg-muted/40 p-0.5 shadow-sm">
+						<Button variant="ghost" size="sm" onclick={() => publishDocument(false)} disabled={publishing}
+							class="gap-1 rounded-md px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-foreground h-7" title="حفظ كمسودة">
+							<Save size={14} />
+							<span class="hidden xl:inline">{publishing ? 'جاري الحفظ...' : 'حفظ'}</span>
+						</Button>
+						<div class="h-4 w-px bg-border mx-0.5"></div>
+						<Button variant="ghost" size="sm" onclick={() => publishDocument(true)} disabled={publishing}
+							class="gap-1 rounded-md px-2.5 py-1 text-xs text-green-600 transition-colors hover:bg-green-500/10 hover:text-green-500 h-7" title="نشر الموضوع مع PDF والحل">
+							<Upload size={14} />
+							<span class="hidden xl:inline">{publishing ? 'جاري النشر...' : 'نشر'}</span>
+						</Button>
+					</div>
+				{/if}
+
 				<!-- Import / Export -->
 				<input type="file" accept=".json" class="hidden" bind:this={fileInput} onchange={importSubject} />
 				<Button variant="outline" size="sm" onclick={() => fileInput?.click()} class="gap-1 px-2.5 text-muted-foreground shadow-sm hover:text-foreground hover:bg-muted" title="استيراد موضوع">

@@ -140,6 +140,13 @@
 								>
 									<Edit size={18} />
 								</a>
+								<a
+									href={`/admin/sujet-builder?clone=${doc.id}`}
+									class="text-teal-500 transition-colors hover:text-teal-400 p-2 rounded-lg bg-teal-500/10"
+									title="إنشاء نسخة"
+								>
+									<FilePlus2 size={18} />
+								</a>
 								{#if doc.pdfUrl}
 									<a
 										href={doc.pdfUrl}
