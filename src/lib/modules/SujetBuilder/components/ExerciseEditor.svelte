@@ -19,7 +19,13 @@
 		Download,
 		X,
 		Loader2,
-		Pencil
+		Pencil,
+		Maximize2,
+		Minimize2,
+		ChevronDown,
+		ChevronUp,
+		ArrowUp,
+		ArrowDown
 	} from 'lucide-svelte';
 
 	let {
@@ -67,6 +73,33 @@
 	let bankExercises: any[] = $state([]);
 	let loadingBank = $state(false);
 	let savingStates = $state<Record<number, boolean>>({});
+
+	// UI State
+	let expandedExerciseId = $state<string | null>(null);
+	let collapsedExercises = $state<Set<string>>(new Set());
+
+	function toggleCollapse(id: string) {
+		const newSet = new Set(collapsedExercises);
+		if (newSet.has(id)) newSet.delete(id);
+		else newSet.add(id);
+		collapsedExercises = newSet;
+	}
+
+	function moveExercise(index: number, direction: 'up' | 'down') {
+		if (direction === 'up' && index > 0) {
+			const temp = exercises[index];
+			exercises[index] = exercises[index - 1];
+			exercises[index - 1] = temp;
+			exercises = [...exercises];
+			onchange?.();
+		} else if (direction === 'down' && index < exercises.length - 1) {
+			const temp = exercises[index];
+			exercises[index] = exercises[index + 1];
+			exercises[index + 1] = temp;
+			exercises = [...exercises];
+			onchange?.();
+		}
+	}
 
 	async function fetchBankExercises() {
 		if (!metadata.yearId || !metadata.subjectId) return;
@@ -234,60 +267,126 @@
 	</div>
 
 	{#each exercises as exercise, ei (exercise.id)}
-		<div class="rounded-2xl border border-border bg-card p-4 transition-all hover:shadow-md">
-			<!-- Exercise Header -->
-			<div class="mb-3 flex items-center justify-between">
-				<div class="flex items-center gap-3">
-					<div class="cursor-grab active:cursor-grabbing text-muted-foreground hover:text-foreground hover:bg-muted p-1 rounded transition-colors" title="اسحب لإعادة الترتيب">
-						<GripVertical size={16} />
-					</div>
-					<input
-						type="text"
-						class="w-40 rounded-lg border-0 bg-transparent px-1 py-0 text-sm font-bold text-foreground focus:border-primary focus:bg-background focus:outline-none focus:ring-1 focus:ring-primary"
-						value={exercise.num || `التمرين ${ordinals[exercises.indexOf(exercise)] ?? exercises.indexOf(exercise) + 1}`}
-						oninput={(e) => { exercise.num = (e.target as HTMLInputElement).value; onchange?.(); }}
-						placeholder="اسم التمرين..."
-					/>
-				</div>
-				<div class="flex items-center gap-2">
-					<label for="sb-points-{ei}" class="text-xs text-muted-foreground">النقاط:</label>
-					<input
-						id="sb-points-{ei}"
-						type="number"
-						min="1"
-						max="20"
-						class="w-16 rounded-lg border border-border bg-background px-2 py-1 text-center text-sm text-foreground focus:border-primary focus:outline-none"
-						bind:value={exercise.points}
-						oninput={() => onchange?.()}
-					/>
-					<button
-						class="rounded-lg p-1.5 text-blue-500 hover:bg-blue-500/10"
-						onclick={() => saveToBank(exercise, exercises.indexOf(exercise))}
-						title="حفظ هذا التمرين في البنك"
-						disabled={savingStates[ei]}
-					>
-						{#if savingStates[ei]}
-							<Loader2 size={14} class="animate-spin" />
-						{:else}
-							<Save size={14} />
-						{/if}
-					</button>
-					<button
-						class="rounded-lg p-1.5 text-muted-foreground hover:bg-red-500/10 hover:text-red-500"
-						onclick={() => removeExercise(exercises.indexOf(exercise))}
-						title="حذف التمرين"
-					>
-						<Trash2 size={14} />
-					</button>
-				</div>
-			</div>
+		<div class="transition-all {expandedExerciseId === exercise.id ? 'fixed inset-0 z-50 flex flex-col bg-muted/30 p-4 md:p-8 backdrop-blur-sm' : ''}">
+			<!-- Full-screen backdrop click to close -->
+			{#if expandedExerciseId === exercise.id}
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
+				<div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick={() => expandedExerciseId = null}></div>
+			{/if}
 
+			<div class="relative z-10 flex flex-col rounded-2xl border border-border bg-card shadow-sm transition-all hover:shadow-md {expandedExerciseId === exercise.id ? 'mx-auto w-full max-w-5xl flex-1 overflow-hidden shadow-2xl' : ''}">
+				<!-- Exercise Header -->
+				<div class="flex items-center justify-between border-b border-border/50 bg-muted/10 p-3">
+					<div class="flex items-center gap-2 flex-1">
+						{#if !expandedExerciseId}
+							<div class="cursor-grab active:cursor-grabbing text-muted-foreground hover:text-foreground hover:bg-muted p-2 rounded-lg transition-colors" title="اسحب لإعادة الترتيب">
+								<GripVertical size={18} />
+							</div>
+						{/if}
+						<button
+							class="rounded-lg p-2 text-muted-foreground transition-colors hover:bg-muted"
+							onclick={() => toggleCollapse(exercise.id!)}
+							title={collapsedExercises.has(exercise.id!) ? 'توسيع التمرين' : 'طي التمرين'}
+						>
+							{#if collapsedExercises.has(exercise.id!)}
+								<ChevronDown size={18} />
+							{:else}
+								<ChevronUp size={18} />
+							{/if}
+						</button>
+						<input
+							type="text"
+							class="flex-1 min-w-[120px] rounded-lg border border-transparent bg-transparent px-2 py-1.5 text-base font-bold text-foreground transition-colors focus:border-primary focus:bg-background focus:outline-none focus:ring-1 focus:ring-primary hover:border-border/50 hover:bg-muted/30"
+							value={exercise.num || `التمرين ${ordinals[exercises.indexOf(exercise)] ?? exercises.indexOf(exercise) + 1}`}
+							oninput={(e) => { exercise.num = (e.target as HTMLInputElement).value; onchange?.(); }}
+							placeholder="اسم التمرين..."
+						/>
+					</div>
+					
+					<div class="flex items-center gap-1.5 shrink-0 bg-background/50 rounded-lg p-1 border border-border/50">
+						{#if !expandedExerciseId}
+							<!-- Move UP/DOWN -->
+							<div class="flex items-center border-l border-border/50 pl-1 ml-1">
+								<button
+									class="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground disabled:opacity-30 disabled:hover:bg-transparent"
+									onclick={() => moveExercise(exercises.indexOf(exercise), 'up')}
+									disabled={exercises.indexOf(exercise) === 0}
+									title="نقل لأعلى"
+								>
+									<ArrowUp size={16} />
+								</button>
+								<button
+									class="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground disabled:opacity-30 disabled:hover:bg-transparent"
+									onclick={() => moveExercise(exercises.indexOf(exercise), 'down')}
+									disabled={exercises.indexOf(exercise) === exercises.length - 1}
+									title="نقل لأسفل"
+								>
+									<ArrowDown size={16} />
+								</button>
+							</div>
+						{/if}
+
+						<label for="sb-points-{ei}" class="text-xs font-medium text-muted-foreground px-1 hidden sm:inline">النقاط:</label>
+						<input
+							id="sb-points-{ei}"
+							type="number"
+							min="1"
+							max="20"
+							class="w-14 rounded-md border border-border bg-background px-2 py-1 text-center text-sm font-bold text-primary focus:border-primary focus:outline-none shadow-sm"
+							bind:value={exercise.points}
+							oninput={() => onchange?.()}
+						/>
+						
+						<div class="h-5 w-px bg-border/80 mx-1"></div>
+						
+						<!-- Actions -->
+						<button
+							class="rounded-md p-1.5 text-blue-500 transition-colors hover:bg-blue-500/10"
+							onclick={() => saveToBank(exercise, exercises.indexOf(exercise))}
+							title="حفظ هذا التمرين في البنك"
+							disabled={savingStates[ei]}
+						>
+							{#if savingStates[ei]}
+								<Loader2 size={18} class="animate-spin" />
+							{:else}
+								<Save size={18} />
+							{/if}
+						</button>
+						<button
+							class="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+							onclick={() => expandedExerciseId = expandedExerciseId === exercise.id ? null : exercise.id!}
+							title={expandedExerciseId === exercise.id ? 'تصغير' : 'تكبير ملء الشاشة'}
+						>
+							{#if expandedExerciseId === exercise.id}
+								<Minimize2 size={18} />
+							{:else}
+								<Maximize2 size={18} />
+							{/if}
+						</button>
+						<button
+							class="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-red-500/10 hover:text-red-500"
+							onclick={() => {
+								if (expandedExerciseId === exercise.id) expandedExerciseId = null;
+								removeExercise(exercises.indexOf(exercise));
+							}}
+							title="حذف التمرين"
+						>
+							<Trash2 size={18} />
+						</button>
+					</div>
+				</div>
+
+				<!-- Exercise Body (Collapsible) -->
+				{#if !collapsedExercises.has(exercise.id!) || expandedExerciseId === exercise.id}
+					<div class="flex-1 overflow-y-auto p-4 {expandedExerciseId === exercise.id ? 'bg-background' : ''}">
+			
 			<!-- Instruction (optional) -->
-			<div class="mb-3">
-				<label for="sb-instr-{ei}" class="mb-1 block text-xs text-muted-foreground">نص الوضعية / التعليمة (اختياري)</label>
+			<div class="mb-5">
+				<label for="sb-instr-{ei}" class="mb-1.5 block text-xs font-bold text-muted-foreground uppercase tracking-wider">نص الوضعية / التعليمة (اختياري)</label>
 				<textarea
 					id="sb-instr-{ei}"
-					class="w-full resize-y rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+					class="w-full resize-y rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
 					rows="2"
 					placeholder="مثال: بمناسبة شهر رمضان المبارك، ساهمت جمعية خيرية في توزيع قفف الإفطار..."
 					bind:value={exercise.instruction}
@@ -296,7 +395,7 @@
 			</div>
 
 			<!-- Content Blocks -->
-			<div class="space-y-2">
+			<div class="space-y-4">
 				{#each exercise.content as block, bi}
 					<BlockEditor
 						bind:block={exercises[exercises.indexOf(exercise)].content[bi]}
@@ -307,59 +406,65 @@
 			</div>
 
 			<!-- Add Block Buttons -->
-			<div class="mt-3 border-t border-border pt-3">
-				<p class="mb-2 text-xs text-muted-foreground">إضافة كتلة:</p>
+			<div class="mt-4 border-t border-border/60 pt-4">
+				<p class="mb-3 text-xs font-bold text-muted-foreground uppercase tracking-wider">إضافة كتلة جديدة</p>
 				<div class="flex flex-wrap gap-2">
 					<button
-						class="flex items-center gap-1 rounded-lg border border-dashed border-border px-2.5 py-1.5 text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+						class="flex items-center gap-1.5 rounded-xl bg-muted/50 px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/10 hover:text-primary border border-border/50 shadow-sm"
 						onclick={() => addBlock(exercises.indexOf(exercise), 'text')}
 					>
-						<Type size={12} /> نص
+						<Type size={16} /> نص
 					</button>
 					<button
-						class="flex items-center gap-1 rounded-lg border border-dashed border-border px-2.5 py-1.5 text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+						class="flex items-center gap-1.5 rounded-xl bg-muted/50 px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/10 hover:text-primary border border-border/50 shadow-sm"
 						onclick={() => addBlock(exercises.indexOf(exercise), 'math')}
 					>
-						<FunctionSquare size={12} /> معادلة
+						<FunctionSquare size={16} /> معادلة
 					</button>
 					<button
-						class="flex items-center gap-1 rounded-lg border border-dashed border-border px-2.5 py-1.5 text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+						class="flex items-center gap-1.5 rounded-xl bg-muted/50 px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/10 hover:text-primary border border-border/50 shadow-sm"
 						onclick={() => addBlock(exercises.indexOf(exercise), 'table')}
 					>
-						<Table2 size={12} /> جدول
+						<Table2 size={16} /> جدول
 					</button>
 					<button
-						class="flex items-center gap-1 rounded-lg border border-dashed border-border px-2.5 py-1.5 text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+						class="flex items-center gap-1.5 rounded-xl bg-muted/50 px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/10 hover:text-primary border border-border/50 shadow-sm"
 						onclick={() => addBlock(exercises.indexOf(exercise), 'image')}
 					>
-						<ImageIcon size={12} /> صورة
+						<ImageIcon size={16} /> صورة
 					</button>
+					
+					<div class="w-px bg-border/60 mx-1"></div>
+					
 					<button
-						class="flex items-center gap-1 rounded-lg border border-dashed border-border px-2.5 py-1.5 text-xs text-muted-foreground transition-colors hover:border-emerald-500 hover:text-emerald-500"
+						class="flex items-center gap-1.5 rounded-xl bg-emerald-500/10 px-3 py-2 text-sm font-medium text-emerald-700 dark:text-emerald-400 transition-colors hover:bg-emerald-500/20 border border-emerald-500/20 shadow-sm"
 						onclick={() => addBlock(exercises.indexOf(exercise), 'true_false')}
 					>
-						<CheckCircle size={12} /> صح/خطأ
+						<CheckCircle size={16} /> صح/خطأ
 					</button>
 					<button
-						class="flex items-center gap-1 rounded-lg border border-dashed border-border px-2.5 py-1.5 text-xs text-muted-foreground transition-colors hover:border-violet-500 hover:text-violet-500"
+						class="flex items-center gap-1.5 rounded-xl bg-violet-500/10 px-3 py-2 text-sm font-medium text-violet-700 dark:text-violet-400 transition-colors hover:bg-violet-500/20 border border-violet-500/20 shadow-sm"
 						onclick={() => addBlock(exercises.indexOf(exercise), 'multiple_choice')}
 					>
-						<ListChecks size={12} /> اختيار متعدد
+						<ListChecks size={16} /> اختيار متعدد
 					</button>
 					<button
-						class="flex items-center gap-1 rounded-lg border border-dashed border-border px-2.5 py-1.5 text-xs text-muted-foreground transition-colors hover:border-amber-500 hover:text-amber-500"
+						class="flex items-center gap-1.5 rounded-xl bg-amber-500/10 px-3 py-2 text-sm font-medium text-amber-700 dark:text-amber-400 transition-colors hover:bg-amber-500/20 border border-amber-500/20 shadow-sm"
 						onclick={() => addBlock(exercises.indexOf(exercise), 'diagram_flow')}
 					>
-						<GitBranch size={12} /> مخطط تدفقي
+						<GitBranch size={16} /> مخطط تدفقي
 					</button>
 					<button
-						class="flex items-center gap-1 rounded-lg border border-dashed border-border px-2.5 py-1.5 text-xs text-muted-foreground transition-colors hover:border-cyan-500 hover:text-cyan-500"
+						class="flex items-center gap-1.5 rounded-xl bg-cyan-500/10 px-3 py-2 text-sm font-medium text-cyan-700 dark:text-cyan-400 transition-colors hover:bg-cyan-500/20 border border-cyan-500/20 shadow-sm"
 						onclick={() => addBlock(exercises.indexOf(exercise), 'labeling')}
 					>
-						<Tag size={12} /> تسميات
+						<Tag size={16} /> تسميات
 					</button>
 				</div>
-			</div>
+			</div> <!-- End of Add Block Buttons -->
+					</div> <!-- End of flex-1 overflow-y-auto -->
+				{/if} <!-- End of collapsible body -->
+		</div>
 		</div>
 	{/each}
 

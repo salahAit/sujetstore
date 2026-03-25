@@ -146,6 +146,38 @@
 			onchange?.();
 		}
 	}
+
+	// Text formatting helpers
+	function insertFormatting(prefix: string, suffix: string = '') {
+		if (block.type !== 'text' || !textInputRef) return;
+		
+		const textarea = textInputRef;
+		const start = textarea.selectionStart;
+		const end = textarea.selectionEnd;
+		const text = block.content;
+		const selectedText = text.substring(start, end);
+		
+		const before = text.substring(0, start);
+		const after = text.substring(end);
+		
+		let textToInsert = selectedText;
+		if (prefix === '- ' && !selectedText) textToInsert = 'عنصر';
+		else if (!selectedText && prefix !== '- ') textToInsert = 'نص';
+		
+		block.content = before + prefix + textToInsert + suffix + after;
+		onchange?.();
+		
+		// Reset focus and selection
+		setTimeout(() => {
+			if (textarea) {
+				textarea.focus();
+				textarea.setSelectionRange(
+					start + prefix.length,
+					start + prefix.length + textToInsert.length
+				);
+			}
+		}, 0);
+	}
 </script>
 
 <div class="group relative rounded-xl border border-border bg-card/50 p-3 transition-all hover:border-primary/30">
@@ -169,10 +201,43 @@
 	<!-- ════════════ TEXT ════════════ -->
 	{#if block.type === 'text'}
 		<div class="space-y-2">
+			<!-- Formatting Toolbar -->
+			<div class="flex flex-wrap items-center gap-1.5 rounded-t-lg border-x border-t border-border bg-muted/30 px-2 py-1.5 shadow-sm">
+				<button 
+					class="rounded bg-background px-2.5 py-1 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-muted hover:text-primary border border-border/50" 
+					onclick={() => insertFormatting('*', '*')}
+					title="غامق"
+				> B </button>
+				<button 
+					class="rounded bg-background px-2.5 py-1 text-xs font-bold tracking-widest text-foreground underline decoration-2 shadow-sm transition-colors hover:bg-muted hover:text-primary border border-border/50" 
+					onclick={() => insertFormatting('_', '_')}
+					title="تسطير"
+				> U </button>
+				
+				<div class="w-px h-4 bg-border/80 mx-1"></div>
+				
+				<button 
+					class="flex items-center gap-1.5 rounded bg-background px-2 py-1 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-muted hover:text-primary border border-border/50" 
+					onclick={() => insertFormatting('- ')}
+					title="قائمة نقطية"
+				>
+					<span class="text-[10px] text-muted-foreground mr-0.5">●</span> قائمة
+				</button>
+				
+				<div class="w-px h-4 bg-border/80 mx-1"></div>
+				
+				<button 
+					class="flex items-center gap-1 rounded bg-background px-2 py-1 text-xs font-mono font-bold text-foreground shadow-sm transition-colors hover:bg-muted hover:text-primary border border-border/50" 
+					onclick={() => insertFormatting('$ ', ' $')}
+					title="رياضيات مدمجة"
+				>
+					<span class="text-[10px] text-blue-500 mr-0.5">$</span> معادلة
+				</button>
+			</div>
+			
 			<textarea
 				bind:this={textInputRef}
-				class="w-full resize-y rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-				rows="2"
+				class="w-full resize-y rounded-b-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary min-h-[80px]"
 				placeholder="اكتب النص هنا..."
 				bind:value={block.content}
 				oninput={() => onchange?.()}
