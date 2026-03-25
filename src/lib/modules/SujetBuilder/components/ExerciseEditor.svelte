@@ -237,35 +237,36 @@
 	const ordinals = ['الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس', 'السابع', 'الثامن'];
 </script>
 
+<div class="flex items-center justify-between border-b border-border pb-2 mb-4">
+	<div class="flex items-center gap-2 text-primary">
+		<Pencil size={18} />
+		<h3 class="text-lg font-bold text-foreground">التمارين</h3>
+	</div>
+	<div class="flex items-center gap-2">
+		<button
+			class="flex items-center gap-1.5 rounded-xl bg-muted px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-muted-foreground/10"
+			onclick={openImportModal}
+			title="استيراد تمرين جاهز من البنك"
+		>
+			<Download size={16} />
+			استيراد من البنك
+		</button>
+		<button
+			class="flex items-center gap-1.5 rounded-xl bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary transition-colors hover:bg-primary/20"
+			onclick={addExercise}
+		>
+			<Plus size={16} />
+			تمرين جديد
+		</button>
+	</div>
+</div>
+
 <div 
 	class="space-y-4 min-h-[100px]"
 	use:dndzone={{ items: exercises, flipDurationMs }}
 	onconsider={handleDndConsider}
 	onfinalize={handleDndFinalize}
 >
-	<div class="flex items-center justify-between border-b border-border pb-2">
-		<div class="flex items-center gap-2 text-primary">
-			<Pencil size={18} />
-			<h3 class="text-lg font-bold text-foreground">التمارين</h3>
-		</div>
-		<div class="flex items-center gap-2">
-			<button
-				class="flex items-center gap-1.5 rounded-xl bg-muted px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-muted-foreground/10"
-				onclick={openImportModal}
-				title="استيراد تمرين جاهز من البنك"
-			>
-				<Download size={16} />
-				استيراد من البنك
-			</button>
-			<button
-				class="flex items-center gap-1.5 rounded-xl bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary transition-colors hover:bg-primary/20"
-				onclick={addExercise}
-			>
-				<Plus size={16} />
-				تمرين جديد
-			</button>
-		</div>
-	</div>
 
 	{#each exercises as exercise, ei (exercise.id)}
 		<div class="transition-all {expandedExerciseId === exercise.id ? 'fixed inset-0 z-50 flex flex-col bg-muted/30 p-4 md:p-8 backdrop-blur-sm' : ''}">
