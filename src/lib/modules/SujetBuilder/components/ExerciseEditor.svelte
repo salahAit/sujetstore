@@ -154,7 +154,7 @@
 					subjectId: metadata.subjectId,
 					streamId: metadata.streamId,
 					title: title,
-					content: exercise.content,
+					content: JSON.stringify(exercise.content),
 					points: exercise.points,
 					tags: ''
 				})

@@ -183,7 +183,7 @@
 <div class="space-y-6">
 	<div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
 		<h1 class="flex items-center gap-3 text-2xl font-bold">
-			<Database size={28} class="text-emerald-500" /> بنك الأسئلة الشامل
+			<span><Database size={28} class="text-emerald-500" /></span> بنك الأسئلة الشامل
 		</h1>
 		<div class="flex flex-wrap items-center gap-3">
 			<a
@@ -224,7 +224,7 @@
 	<div class="grid grid-cols-2 gap-4 md:grid-cols-4">
 		<div class="flex flex-col gap-2 rounded-2xl border border-border bg-card p-5 shadow-sm">
 			<div class="flex items-center gap-2 text-emerald-500">
-				<Database size={20} />
+				<span><Database size={20} /></span>
 				<span class="font-bold text-sm">إجمالي النتائج</span>
 			</div>
 			<p class="text-3xl font-black text-foreground mt-1">

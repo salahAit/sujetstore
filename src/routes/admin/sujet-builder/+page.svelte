@@ -6,7 +6,7 @@
 	import ExerciseEditor from '$lib/modules/SujetBuilder/components/ExerciseEditor.svelte';
 	import PdfPreview from '$lib/modules/SujetBuilder/components/PdfPreview.svelte';
 	import { Button } from '$lib/components/ui/button';
-	import { ArrowRight, Eye, Download, Upload, RotateCcw, PanelLeft, Columns, PanelRight, ExternalLink, FileText, Sun, Moon, Printer, Save, Copy } from 'lucide-svelte';
+	import { ArrowRight, Eye, Download, Upload, RotateCcw, PanelLeft, Columns, PanelRight, ExternalLink, FileText, Sun, Moon, Printer, Save, Copy, ChevronUp, ChevronDown } from 'lucide-svelte';
 	import { toggleMode } from 'mode-watcher';
 
 	let { data }: { data: PageData } = $props();
@@ -52,6 +52,7 @@
 	let isDragging = $state(false);
 	let editorCollapsed = $state(false);
 	let previewCollapsed = $state(false);
+	let isMetadataCollapsed = $state(false);
 
 	// Template ID
 	let activeTemplate = $derived.by<TemplateId>(() => {
@@ -149,14 +150,28 @@
 	// Download PDF
 	function printPdf() {
 		if (!pdfBase64) return;
+		
+		const byteCharacters = atob(pdfBase64);
+		const byteNumbers = new Array(byteCharacters.length);
+		for (let i = 0; i < byteCharacters.length; i++) {
+			byteNumbers[i] = byteCharacters.charCodeAt(i);
+		}
+		const byteArray = new Uint8Array(byteNumbers);
+		const blob = new Blob([byteArray], { type: 'application/pdf' });
+		const blobUrl = URL.createObjectURL(blob);
+
 		const iframe = document.createElement('iframe');
 		iframe.style.display = 'none';
-		iframe.src = `data:application/pdf;base64,${pdfBase64}`;
+		iframe.src = blobUrl;
 		document.body.appendChild(iframe);
+		
 		iframe.onload = () => {
 			iframe.contentWindow?.focus();
 			iframe.contentWindow?.print();
-			setTimeout(() => document.body.removeChild(iframe), 1000);
+			setTimeout(() => {
+				document.body.removeChild(iframe);
+				URL.revokeObjectURL(blobUrl);
+			}, 1000);
 		};
 	}
 
@@ -476,16 +491,48 @@
 		>
 
 			<div class="space-y-4 p-4">
-				<MetadataPanel
-					levels={data.levels}
-					years={data.years}
-					streams={data.streams}
-					subjects={data.subjects}
-					streamSubjects={data.streamSubjects}
-					trimesters={data.trimesters}
-					bind:metadata
-					onchange={generatePdf}
-				/>
+				<div class="rounded-xl border border-border bg-card shadow-sm transition-all overflow-hidden">
+					<div class="flex items-center justify-between p-3 {isMetadataCollapsed ? '' : 'border-b border-border bg-muted/20'}">
+						<div class="flex items-center gap-3">
+							<h3 class="text-sm font-bold text-foreground">معلومات الموضوع</h3>
+							{#if isMetadataCollapsed && isMetadataComplete}
+								<div class="hidden sm:flex items-center gap-2 text-xs text-muted-foreground">
+									<span class="rounded bg-primary/10 px-2 py-0.5 text-primary">{metadata.subjectName}</span>
+									<span>•</span>
+									<span>{metadata.yearName}</span>
+									<span>•</span>
+									<span>{metadata.trimesterName}</span>
+								</div>
+							{/if}
+						</div>
+						<button 
+							class="rounded-lg p-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+							onclick={() => isMetadataCollapsed = !isMetadataCollapsed}
+							title={isMetadataCollapsed ? "توسيع المعلومات" : "طي المعلومات"}
+						>
+							{#if isMetadataCollapsed}
+								<ChevronDown size={16} />
+							{:else}
+								<ChevronUp size={16} />
+							{/if}
+						</button>
+					</div>
+					
+					{#if !isMetadataCollapsed}
+						<div class="p-1">
+							<MetadataPanel
+								levels={data.levels}
+								years={data.years}
+								streams={data.streams}
+								subjects={data.subjects}
+								streamSubjects={data.streamSubjects}
+								trimesters={data.trimesters}
+								bind:metadata
+								onchange={generatePdf}
+							/>
+						</div>
+					{/if}
+				</div>
 				
 				{#if isMetadataComplete}
 					<ExerciseEditor bind:exercises {metadata} onchange={generatePdf} />
