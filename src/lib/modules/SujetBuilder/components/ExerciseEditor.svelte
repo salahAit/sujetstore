@@ -176,6 +176,7 @@
 		exercises = [
 			...exercises,
 			{
+				id: Date.now().toString(),
 				points: 4,
 				instruction: '',
 				content: [{ type: 'text', content: '' }]

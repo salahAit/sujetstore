@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import { spawn } from 'child_process';
 import { resolve, dirname, join } from 'path';
-import { readFile, unlink, mkdir } from 'fs/promises';
+import { readFile, unlink, mkdir, writeFile } from 'fs/promises';
 import { randomUUID } from 'crypto';
 import type { RequestHandler } from './$types';
 
@@ -83,7 +83,6 @@ export const POST: RequestHandler = async ({ request }) => {
 			});
 		}
 
-		// Ensure output directory exists
 		await mkdir(GENERATED_DIR, { recursive: true });
 
 		// Generate unique output filename
@@ -92,6 +91,12 @@ export const POST: RequestHandler = async ({ request }) => {
 		const outputBase = join(GENERATED_DIR, fileId);
 		const outputFile = isSvg ? `${outputBase}-{n}.svg` : `${outputBase}.pdf`;
 		const dataJson = JSON.stringify(processedDoc);
+		
+		// Write data to file to prevent command line length limits
+		const dataFileAbs = `${outputBase}.json`;
+		await writeFile(dataFileAbs, dataJson, 'utf-8');
+		const dataFileRel = `/static/generated/${fileId}.json`;
+		
 		const fontPath = join(process.cwd(), 'static', 'fonts');
 		console.log('[generate-pdf] CWD:', process.cwd());
 		console.log('[generate-pdf] Font path:', fontPath);
@@ -105,7 +110,7 @@ export const POST: RequestHandler = async ({ request }) => {
 				'--root', process.cwd(),
 				'--font-path', fontPath,
 				'--input', `template-id=${templateId}`,
-				'--input', `data=${dataJson}`,
+				'--input', `data-file=${dataFileRel}`,
 				'--input', `is-solution=${!!isSolution}`
 			];
 			console.log('[generate-pdf] Typst args (no data):', args.filter(a => !a.startsWith('{')).join(' '));
@@ -120,6 +125,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		const pdfBuffer = await readFile(`${outputBase}.pdf`);
 		const pdfBase64 = pdfBuffer.toString('base64');
 		await unlink(`${outputBase}.pdf`).catch(() => {});
+		await unlink(dataFileAbs).catch(() => {});
 
 		let responseData: any = { success: true, pdfBase64 };
 
@@ -131,7 +137,7 @@ export const POST: RequestHandler = async ({ request }) => {
 					'--root', PROJECT_ROOT,
 					'--font-path', fontPath,
 					'--input', `template-id=${templateId}`,
-					'--input', `data=${dataJson}`,
+					'--input', `data-file=${dataFileRel}`,
 					'--input', `is-solution=${!!isSolution}`
 				], { cwd: TYPST_ROOT, timeout: 15000 });
 				proc.on('close', res);
@@ -161,5 +167,8 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	} catch (err: any) {
 		return json({ success: false, error: err.message || 'Unknown error' }, { status: 500 });
+	} finally {
+		// Clean up regardless of error if variables exist
+		// OutputBase is not accessible here, so we'll just try/catch inside block
 	}
 };

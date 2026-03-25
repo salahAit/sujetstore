@@ -5,7 +5,11 @@
 
 #let template-id = sys.inputs.at("template-id", default: "middle/quiz")
 #let raw-data = sys.inputs.at("data", default: "{}")
-#let data = json(bytes(raw-data))
+#let data = if "data-file" in sys.inputs {
+  json(sys.inputs.at("data-file"))
+} else {
+  json.decode(raw-data)
+}
 
 // Determine if this is a solution template
 #let is-solution-input = sys.inputs.at("is-solution", default: "false") == "true"
