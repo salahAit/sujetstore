@@ -22,7 +22,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			'sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'arcsin', 'arccos', 'arctan', 'sinh', 'cosh', 'tanh', 'log', 'ln', 'exp', 'lim', 'liminf', 'limsup', 'max', 'min', 'inf', 'sup', 'det', 'dim', 'ker', 'hom', 'mod', 'gcd', 'lcm', 'arg', 'deg',
 			'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
 			'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega',
-			'cal', 'bb', 'frak', 'bold', 'italic', 'serif', 'sans', 'mono', 'text', 'op', 'upright', 'math', 'sqrt', 'root', 'abs', 'norm', 'floor', 'ceil', 'round', 'vec', 'hat', 'bar', 'tilde', 'dot', 'ddot', 
+			'cal', 'bb', 'frak', 'bold', 'italic', 'serif', 'sans', 'mono', 'text', 'op', 'upright', 'math', 'sqrt', 'root', 'abs', 'norm', 'floor', 'ceil', 'round', 'vec', 'hat', 'bar', 'tilde', 'dot', 'ddot',
 			'rightarrow', 'leftarrow', 'leftrightarrow', 'Rightarrow', 'Leftarrow', 'Leftrightarrow', 'times', 'div', 'approx', 'neq', 'leq', 'geq', 'in', 'notin', 'subset', 'supset', 'cup', 'cap', 'emptyset', 'infty', 'nabla', 'partial', 'sum', 'prod', 'int', 'oint'
 		]);
 
@@ -91,12 +91,12 @@ export const POST: RequestHandler = async ({ request }) => {
 		const outputBase = join(GENERATED_DIR, fileId);
 		const outputFile = isSvg ? `${outputBase}-{n}.svg` : `${outputBase}.pdf`;
 		const dataJson = JSON.stringify(processedDoc);
-		
+
 		// Write data to file to prevent command line length limits
 		const dataFileAbs = `${outputBase}.json`;
 		await writeFile(dataFileAbs, dataJson, 'utf-8');
 		const dataFileRel = `/static/generated/${fileId}.json`;
-		
+
 		const fontPath = join(process.cwd(), 'static', 'fonts');
 		console.log('[generate-pdf] CWD:', process.cwd());
 		console.log('[generate-pdf] Font path:', fontPath);
@@ -121,11 +121,10 @@ export const POST: RequestHandler = async ({ request }) => {
 		});
 
 		if (!pdfResult.success) return json({ success: false, error: pdfResult.error }, { status: 500 });
-		
+
 		const pdfBuffer = await readFile(`${outputBase}.pdf`);
 		const pdfBase64 = pdfBuffer.toString('base64');
-		await unlink(`${outputBase}.pdf`).catch(() => {});
-		await unlink(dataFileAbs).catch(() => {});
+		await unlink(`${outputBase}.pdf`).catch(() => { });
 
 		let responseData: any = { success: true, pdfBase64 };
 
@@ -134,7 +133,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			await new Promise((res) => {
 				const proc = spawn('typst', [
 					'compile', 'main.typ', `${outputBase}-{n}.svg`,
-					'--root', PROJECT_ROOT,
+					'--root', process.cwd(),
 					'--font-path', fontPath,
 					'--input', `template-id=${templateId}`,
 					'--input', `data-file=${dataFileRel}`,
@@ -157,11 +156,14 @@ export const POST: RequestHandler = async ({ request }) => {
 				svgFiles.map(async (f) => {
 					const p = join(GENERATED_DIR, f);
 					const b = await readFile(p);
-					await unlink(p).catch(() => {});
+					await unlink(p).catch(() => { });
 					return b.toString('base64');
 				})
 			);
 		}
+
+		// Clean up the data JSON file after all compilations are done
+		await unlink(dataFileAbs).catch(() => { });
 
 		return json(responseData);
 
