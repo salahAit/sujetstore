@@ -1,16 +1,20 @@
 <script lang="ts">
 	import type { ContentBlock } from '$lib/modules/SujetBuilder/types';
-	import { Type, FunctionSquare, Table2, ImageIcon, Trash2, Upload, Loader2, Plus, CheckCircle, ListChecks, GitBranch, Tag } from 'lucide-svelte';
+	import { Type, FunctionSquare, Table2, ImageIcon, Trash2, Upload, Loader2, Plus, CheckCircle, ListChecks, GitBranch, Tag, GripVertical, Copy, ArrowRightLeft, Code2 } from 'lucide-svelte';
 	import MathPalette from './MathPalette.svelte';
 
 	let {
 		block = $bindable(),
 		onremove,
-		onchange
+		onchange,
+		onduplicate,
+		showGrip = true
 	}: {
 		block: ContentBlock;
 		onremove?: () => void;
 		onchange?: () => void;
+		onduplicate?: () => void;
+		showGrip?: boolean;
 	} = $props();
 
 	const blockTypeLabels: Record<string, string> = {
@@ -21,7 +25,8 @@
 		true_false: 'صح/خطأ',
 		multiple_choice: 'اختيار متعدد',
 		diagram_flow: 'مخطط تدفقي',
-		labeling: 'تسميات'
+		labeling: 'تسميات',
+		typst_raw: 'Typst حر'
 	};
 
 	const blockTypeIcons: Record<string, any> = {
@@ -32,7 +37,8 @@
 		true_false: CheckCircle,
 		multiple_choice: ListChecks,
 		diagram_flow: GitBranch,
-		labeling: Tag
+		labeling: Tag,
+		typst_raw: Code2
 	};
 
 	// Image upload state
@@ -43,6 +49,130 @@
 	// Input refs for MathPalette
 	let textInputRef: HTMLTextAreaElement | null = $state(null);
 	let mathInputRef: HTMLInputElement | null = $state(null);
+	let typstRawRef: HTMLTextAreaElement | null = $state(null);
+
+	// Autocomplete state
+	let showAutocomplete = $state(false);
+	let autocompleteItems = $state<{ label: string; template: string }[]>([]);
+	let autocompletePos = $state({ top: 0, left: 0 });
+	let selectedAutocompleteIndex = $state(0);
+
+	const autocompleteDict: { trigger: string; label: string; template: string }[] = [
+		{ trigger: 'fr', label: 'كسر frac(a, b)', template: 'frac(, )' },
+		{ trigger: 'sq', label: 'جذر sqrt(x)', template: 'sqrt()' },
+		{ trigger: 'ro', label: 'جذر نوني root(n, x)', template: 'root(, )' },
+		{ trigger: 'su', label: 'مجموع sum', template: 'sum_(i=1)^(n) ' },
+		{ trigger: 'pr', label: 'جداء product', template: 'product_(i=1)^(n) ' },
+		{ trigger: 'in', label: 'تكامل integral', template: 'integral_(a)^(b) ' },
+		{ trigger: 'li', label: 'نهاية lim', template: 'lim_(x arrow 0) ' },
+		{ trigger: 'ma', label: 'مصفوفة mat(...)', template: 'mat(, ; , )' },
+		{ trigger: 'ca', label: 'حالات cases(...)', template: 'cases( = , = )' },
+		{ trigger: 'bi', label: 'تركيبة binom(n,k)', template: 'binom(, )' },
+		{ trigger: 'ab', label: 'قيمة مطلقة abs(x)', template: 'abs()' },
+		{ trigger: 've', label: 'متجه vec(x)', template: 'vec()' },
+		{ trigger: 'ov', label: 'خط علوي overline', template: 'overline()' },
+		{ trigger: 'al', label: 'alpha α', template: 'alpha' },
+		{ trigger: 'be', label: 'beta β', template: 'beta' },
+		{ trigger: 'de', label: 'delta δ', template: 'delta' },
+		{ trigger: 'th', label: 'theta θ', template: 'theta' },
+		{ trigger: 'pi', label: 'pi π', template: 'pi' },
+		{ trigger: 'pa', label: 'توازي parallel', template: 'parallel' },
+		{ trigger: 'pe', label: 'تعامد perp', template: 'perp' },
+		{ trigger: 'an', label: 'زاوية angle', template: 'angle' },
+		{ trigger: 'ar', label: 'سهم arrow.r', template: 'arrow.r' },
+		{ trigger: 'ti', label: 'ضرب times', template: 'times' },
+		{ trigger: 'di', label: 'قسمة div', template: 'div' },
+	];
+
+	function handleMathKeydown(e: KeyboardEvent, inputEl: HTMLInputElement | HTMLTextAreaElement | null) {
+		if (!inputEl) return;
+
+		if (showAutocomplete) {
+			if (e.key === 'ArrowDown') {
+				e.preventDefault();
+				selectedAutocompleteIndex = Math.min(selectedAutocompleteIndex + 1, autocompleteItems.length - 1);
+				return;
+			}
+			if (e.key === 'ArrowUp') {
+				e.preventDefault();
+				selectedAutocompleteIndex = Math.max(selectedAutocompleteIndex - 1, 0);
+				return;
+			}
+			if (e.key === 'Enter' || e.key === 'Tab') {
+				if (autocompleteItems.length > 0) {
+					e.preventDefault();
+					applyAutocomplete(autocompleteItems[selectedAutocompleteIndex]);
+					return;
+				}
+			}
+			if (e.key === 'Escape') {
+				showAutocomplete = false;
+				return;
+			}
+		}
+	}
+
+	function handleMathInput(inputEl: HTMLInputElement | HTMLTextAreaElement | null) {
+		if (!inputEl) return;
+		onchange?.();
+
+		const cursorPos = inputEl.selectionStart || 0;
+		const text = (block as any).content || '';
+		
+		// Get the last 2 chars before cursor
+		const beforeCursor = text.substring(Math.max(0, cursorPos - 2), cursorPos).toLowerCase();
+		
+		if (beforeCursor.length >= 2) {
+			const matches = autocompleteDict.filter(d => d.trigger === beforeCursor);
+			if (matches.length > 0) {
+				autocompleteItems = matches;
+				selectedAutocompleteIndex = 0;
+				showAutocomplete = true;
+				return;
+			}
+		}
+		showAutocomplete = false;
+	}
+
+	function applyAutocomplete(item: { label: string; template: string }) {
+		if (block.type !== 'math' && block.type !== 'typst_raw') return;
+		const inputEl = block.type === 'math' ? mathInputRef : typstRawRef;
+		if (!inputEl) return;
+
+		const cursorPos = inputEl.selectionStart || 0;
+		const text = block.content;
+		// Replace the 2-char trigger with the template
+		const before = text.substring(0, cursorPos - 2);
+		const after = text.substring(cursorPos);
+		block.content = before + item.template + after;
+		showAutocomplete = false;
+		onchange?.();
+
+		setTimeout(() => {
+			inputEl.focus();
+			// Place cursor inside parentheses if applicable
+			const parenPos = item.template.indexOf('(');
+			const newPos = parenPos >= 0 ? before.length + parenPos + 1 : before.length + item.template.length;
+			inputEl.setSelectionRange(newPos, newPos);
+		}, 0);
+	}
+
+	// Block type conversion
+	function convertBlock(toType: 'text' | 'math' | 'typst_raw') {
+		const content = (block as any).content || '';
+		if (toType === 'text') {
+			(block as any).type = 'text';
+			(block as any).content = content;
+		} else if (toType === 'math') {
+			(block as any).type = 'math';
+			(block as any).content = content.replace(/\$/g, '');
+			(block as any).display = true;
+		} else if (toType === 'typst_raw') {
+			(block as any).type = 'typst_raw';
+			(block as any).content = content;
+		}
+		onchange?.();
+	}
 
 	// Image upload
 	async function uploadFile(file: File) {
@@ -143,6 +273,42 @@
 		if (block.type === 'table') {
 			block.headers = [...block.headers, ''];
 			block.cells = [...block.cells, ''];
+			if (block.rows) {
+				block.rows = block.rows.map(row => [...row, '']);
+			}
+			onchange?.();
+		}
+	}
+
+	function removeTableColumn(ci: number) {
+		if (block.type === 'table') {
+			block.headers = block.headers.filter((_, i) => i !== ci);
+			block.cells = block.cells.filter((_, i) => i !== ci);
+			if (block.rows) {
+				block.rows = block.rows.map(row => row.filter((_, i) => i !== ci));
+			}
+			onchange?.();
+		}
+	}
+
+	function addTableRow() {
+		if (block.type === 'table') {
+			if (!block.rows) {
+				// Convert existing cells to rows format
+				block.rows = [block.cells.map(c => typeof c === 'string' ? c : c.content)];
+			}
+			block.rows = [...block.rows, block.headers.map(() => '')];
+			onchange?.();
+		}
+	}
+
+	function removeTableRow(ri: number) {
+		if (block.type === 'table' && block.rows) {
+			block.rows = block.rows.filter((_, i) => i !== ri);
+			if (block.rows.length === 0) {
+				block.rows = undefined;
+				block.cells = block.headers.map(() => '');
+			}
 			onchange?.();
 		}
 	}
@@ -167,7 +333,6 @@
 		block.content = before + prefix + textToInsert + suffix + after;
 		onchange?.();
 		
-		// Reset focus and selection
 		setTimeout(() => {
 			if (textarea) {
 				textarea.focus();
@@ -178,24 +343,83 @@
 			}
 		}, 0);
 	}
+
+	// Determine if block can be converted
+	let canConvert = $derived(block.type === 'text' || block.type === 'math' || block.type === 'typst_raw');
+	let showConvertMenu = $state(false);
 </script>
 
+<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div class="group relative rounded-xl border border-border bg-card/50 p-3 transition-all hover:border-primary/30">
-	<!-- Block Type Badge + Remove -->
+	<!-- Block Header -->
 	<div class="mb-2 flex items-center justify-between">
-		<span class="flex items-center gap-1.5 rounded-lg bg-muted px-2 py-1 text-xs font-medium text-muted-foreground">
-			{#if blockTypeIcons[block.type]}
-				<svelte:component this={blockTypeIcons[block.type]} size={12} />
+		<div class="flex items-center gap-1.5">
+			{#if showGrip}
+				<div class="cursor-grab active:cursor-grabbing text-muted-foreground/50 hover:text-muted-foreground transition-colors" data-grip>
+					<GripVertical size={14} />
+				</div>
 			{/if}
-			{blockTypeLabels[block.type] ?? block.type}
-		</span>
-		<button
-			class="text-muted-foreground opacity-0 transition-opacity hover:text-red-500 group-hover:opacity-100"
-			onclick={onremove}
-			title="حذف الكتلة"
-		>
-			<Trash2 size={14} />
-		</button>
+			<span class="flex items-center gap-1.5 rounded-lg bg-muted px-2 py-1 text-xs font-medium text-muted-foreground">
+				{#if blockTypeIcons[block.type]}
+					{@const IconComponent = blockTypeIcons[block.type]}
+					<IconComponent size={12} />
+				{/if}
+				{blockTypeLabels[block.type] ?? block.type}
+			</span>
+		</div>
+		<div class="flex items-center gap-0.5">
+			<!-- Convert button -->
+			{#if canConvert}
+				<div class="relative">
+					<button
+						class="rounded-md p-1 text-muted-foreground opacity-0 transition-all hover:bg-blue-500/10 hover:text-blue-500 group-hover:opacity-100"
+						onclick={() => showConvertMenu = !showConvertMenu}
+						title="تحويل نوع الكتلة"
+					>
+						<ArrowRightLeft size={13} />
+					</button>
+					{#if showConvertMenu}
+						<!-- svelte-ignore a11y_click_events_have_key_events -->
+						<div class="fixed inset-0 z-40" onclick={() => showConvertMenu = false}></div>
+						<div class="absolute left-0 top-full z-50 mt-1 flex flex-col gap-0.5 rounded-lg border border-border bg-card p-1 shadow-lg min-w-[100px]">
+							{#if block.type !== 'text'}
+								<button class="flex items-center gap-1.5 rounded-md px-2 py-1 text-xs hover:bg-muted text-start" onclick={() => { convertBlock('text'); showConvertMenu = false; }}>
+									<Type size={12} /> نص
+								</button>
+							{/if}
+							{#if block.type !== 'math'}
+								<button class="flex items-center gap-1.5 rounded-md px-2 py-1 text-xs hover:bg-muted text-start" onclick={() => { convertBlock('math'); showConvertMenu = false; }}>
+									<FunctionSquare size={12} /> معادلة
+								</button>
+							{/if}
+							{#if block.type !== 'typst_raw'}
+								<button class="flex items-center gap-1.5 rounded-md px-2 py-1 text-xs hover:bg-muted text-start" onclick={() => { convertBlock('typst_raw'); showConvertMenu = false; }}>
+									<Code2 size={12} /> Typst حر
+								</button>
+							{/if}
+						</div>
+					{/if}
+				</div>
+			{/if}
+			<!-- Duplicate button -->
+			{#if onduplicate}
+				<button
+					class="rounded-md p-1 text-muted-foreground opacity-0 transition-all hover:bg-primary/10 hover:text-primary group-hover:opacity-100"
+					onclick={onduplicate}
+					title="تكرار الكتلة"
+				>
+					<Copy size={13} />
+				</button>
+			{/if}
+			<!-- Remove button -->
+			<button
+				class="rounded-md p-1 text-muted-foreground opacity-0 transition-all hover:bg-red-500/10 hover:text-red-500 group-hover:opacity-100"
+				onclick={onremove}
+				title="حذف الكتلة"
+			>
+				<Trash2 size={13} />
+			</button>
+		</div>
 	</div>
 
 	<!-- ════════════ TEXT ════════════ -->
@@ -238,7 +462,7 @@
 			<textarea
 				bind:this={textInputRef}
 				class="w-full resize-y rounded-b-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary min-h-[80px]"
-				placeholder="اكتب النص هنا..."
+				placeholder="اكتب النص هنا... (استخدم $...$ لإدراج رموز رياضية)"
 				bind:value={block.content}
 				oninput={() => onchange?.()}
 			></textarea>
@@ -263,15 +487,31 @@
 
 	<!-- ════════════ MATH ════════════ -->
 	{:else if block.type === 'math'}
-		<div class="space-y-2">
+		<div class="space-y-2 relative">
 			<input
 				bind:this={mathInputRef}
 				type="text"
 				class="w-full rounded-lg border border-border bg-background px-3 py-2 font-mono text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-				placeholder="a^2 + b^2 = c^2"
+				placeholder="مثال: frac(a, b) + sqrt(x^2 + y^2)"
 				bind:value={block.content}
-				oninput={() => onchange?.()}
+				oninput={() => handleMathInput(mathInputRef)}
+				onkeydown={(e) => handleMathKeydown(e, mathInputRef)}
+				onfocus={() => { showAutocomplete = false; }}
 			/>
+			<!-- Autocomplete Dropdown -->
+			{#if showAutocomplete && autocompleteItems.length > 0}
+				<div class="absolute left-0 right-0 top-[42px] z-50 rounded-lg border border-primary/30 bg-card shadow-xl overflow-hidden">
+					{#each autocompleteItems as item, i}
+						<button
+							class="flex w-full items-center gap-2 px-3 py-2 text-xs text-start transition-colors {i === selectedAutocompleteIndex ? 'bg-primary/10 text-primary' : 'hover:bg-muted text-foreground'}"
+							onmousedown={(e) => { e.preventDefault(); applyAutocomplete(item); }}
+						>
+							<span class="font-mono text-primary/70 bg-primary/5 rounded px-1.5 py-0.5">{item.template}</span>
+							<span class="text-muted-foreground">{item.label}</span>
+						</button>
+					{/each}
+				</div>
+			{/if}
 			<MathPalette bind:value={block.content} inputRef={mathInputRef} {onchange} isTextMode={false} />
 			<label class="flex items-center gap-2 text-xs text-muted-foreground">
 				<input type="checkbox" bind:checked={block.display} onchange={() => onchange?.()} class="rounded" />
@@ -279,38 +519,134 @@
 			</label>
 		</div>
 
+	<!-- ════════════ TYPST RAW ════════════ -->
+	{:else if block.type === 'typst_raw'}
+		<div class="space-y-2 relative">
+			<div class="rounded-lg overflow-hidden border border-border">
+				<div class="flex items-center gap-2 bg-zinc-800 px-3 py-1.5 text-[10px] font-bold text-zinc-400">
+					<Code2 size={12} />
+					<span>Typst Markup</span>
+					<span class="mr-auto text-zinc-500">اكتب أي كود Typst هنا</span>
+				</div>
+				<textarea
+					bind:this={typstRawRef}
+					class="w-full resize-y bg-zinc-900 px-3 py-2 font-mono text-sm text-green-300 focus:outline-none min-h-[100px] placeholder:text-zinc-600"
+					placeholder={'مثال:\n#align(center)[\n  $ sum_(i=1)^n i = frac(n(n+1), 2) $\n]'}
+					bind:value={block.content}
+					oninput={() => handleMathInput(typstRawRef)}
+					onkeydown={(e) => handleMathKeydown(e, typstRawRef)}
+					spellcheck="false"
+				></textarea>
+			</div>
+			<!-- Autocomplete Dropdown -->
+			{#if showAutocomplete && autocompleteItems.length > 0}
+				<div class="absolute left-0 right-0 z-50 rounded-lg border border-primary/30 bg-card shadow-xl overflow-hidden" style="top: calc(100% - 60px);">
+					{#each autocompleteItems as item, i}
+						<button
+							class="flex w-full items-center gap-2 px-3 py-2 text-xs text-start transition-colors {i === selectedAutocompleteIndex ? 'bg-primary/10 text-primary' : 'hover:bg-muted text-foreground'}"
+							onmousedown={(e) => { e.preventDefault(); applyAutocomplete(item); }}
+						>
+							<span class="font-mono text-primary/70 bg-primary/5 rounded px-1.5 py-0.5">{item.template}</span>
+							<span class="text-muted-foreground">{item.label}</span>
+						</button>
+					{/each}
+				</div>
+			{/if}
+			<MathPalette bind:value={block.content} inputRef={typstRawRef} {onchange} isTextMode={false} />
+			<div class="grid grid-cols-2 gap-2">
+				<input
+					type="text"
+					class="rounded-lg border border-blue-200 bg-blue-50 px-2 py-1 text-xs text-blue-700 focus:border-blue-400 focus:outline-none dark:border-blue-800 dark:bg-blue-900/30 dark:text-blue-300"
+					placeholder="الإجابة (للحل النموذجي)"
+					bind:value={block.answer}
+					oninput={() => onchange?.()}
+				/>
+				<input
+					type="text"
+					class="rounded-lg border border-red-200 bg-red-50 px-2 py-1 text-xs text-red-700 focus:border-red-400 focus:outline-none dark:border-red-800 dark:bg-red-900/30 dark:text-red-300"
+					placeholder="النقاط (مثال: 02)"
+					bind:value={block.mark}
+					oninput={() => onchange?.()}
+				/>
+			</div>
+		</div>
+
 	<!-- ════════════ TABLE ════════════ -->
 	{:else if block.type === 'table'}
 		<div class="space-y-2 overflow-x-auto">
+			<!-- Headers Row -->
 			<div class="flex items-center gap-1">
 				{#each block.headers as _, i}
-					<input
-						type="text"
-						class="min-w-[80px] flex-1 rounded border border-border bg-muted px-2 py-1.5 text-center text-xs font-bold text-foreground focus:border-primary focus:outline-none"
-						placeholder="عنوان {i + 1}"
-						bind:value={block.headers[i]}
-						oninput={() => onchange?.()}
-					/>
+					<div class="relative flex-1 min-w-[80px]">
+						<input
+							type="text"
+							class="w-full rounded border border-border bg-muted px-2 py-1.5 text-center text-xs font-bold text-foreground focus:border-primary focus:outline-none"
+							placeholder="عنوان {i + 1}"
+							bind:value={block.headers[i]}
+							oninput={() => onchange?.()}
+						/>
+						{#if block.headers.length > 1}
+							<button
+								class="absolute -top-1 -left-1 rounded-full bg-red-500 p-0.5 text-white opacity-0 transition-opacity hover:bg-red-600 group-hover:opacity-100 shadow-sm"
+								onclick={() => removeTableColumn(i)}
+								title="حذف العمود"
+								style="width: 14px; height: 14px; font-size: 8px; display: flex; align-items: center; justify-content: center;"
+							>×</button>
+						{/if}
+					</div>
 				{/each}
 				<button
-					class="rounded-lg border border-dashed border-border p-1.5 text-muted-foreground hover:border-primary hover:text-primary"
+					class="rounded-lg border border-dashed border-border p-1.5 text-muted-foreground hover:border-primary hover:text-primary shrink-0"
 					onclick={addTableColumn}
 					title="إضافة عمود"
 				>+</button>
 			</div>
-			<div class="flex items-center gap-1">
-				{#each block.cells as _, ci}
-					{#if typeof block.cells[ci] === 'string'}
-						<input
-							type="text"
-							class="min-w-[80px] flex-1 rounded border border-border bg-background px-2 py-1.5 text-center text-xs text-foreground focus:border-primary focus:outline-none"
-							placeholder="..."
-							bind:value={block.cells[ci]}
-							oninput={() => onchange?.()}
-						/>
-					{/if}
+
+			<!-- Data Rows -->
+			{#if block.rows && block.rows.length > 0}
+				{#each block.rows as row, ri}
+					<div class="flex items-center gap-1">
+						{#each row as _, ci}
+							{#if typeof block.rows![ri][ci] === 'string'}
+								<input
+									type="text"
+									class="min-w-[80px] flex-1 rounded border border-border bg-background px-2 py-1.5 text-center text-xs text-foreground focus:border-primary focus:outline-none"
+									placeholder="..."
+									bind:value={block.rows![ri][ci]}
+									oninput={() => onchange?.()}
+								/>
+							{/if}
+						{/each}
+						<button
+							class="rounded p-1 text-muted-foreground hover:text-red-500 shrink-0"
+							onclick={() => removeTableRow(ri)}
+							title="حذف الصف"
+						><Trash2 size={12} /></button>
+					</div>
 				{/each}
-			</div>
+			{:else}
+				<!-- Legacy single row -->
+				<div class="flex items-center gap-1">
+					{#each block.cells as _, ci}
+						{#if typeof block.cells[ci] === 'string'}
+							<input
+								type="text"
+								class="min-w-[80px] flex-1 rounded border border-border bg-background px-2 py-1.5 text-center text-xs text-foreground focus:border-primary focus:outline-none"
+								placeholder="..."
+								bind:value={block.cells[ci]}
+								oninput={() => onchange?.()}
+							/>
+						{/if}
+					{/each}
+				</div>
+			{/if}
+
+			<button
+				class="flex w-full items-center justify-center gap-1 rounded-lg border border-dashed border-border py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary hover:bg-primary/5 transition-colors"
+				onclick={addTableRow}
+			>
+				<Plus size={12} /> إضافة صف
+			</button>
 		</div>
 
 	<!-- ════════════ IMAGE ════════════ -->

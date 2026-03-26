@@ -70,6 +70,8 @@ export interface TableBlock {
 	headers: string[];
 	/** Cells can be simple strings or objects with content/answer/mark */
 	cells: (string | { content: string; answer?: string; mark?: string })[];
+	/** Multi-row support: array of rows, each row is array of cell values */
+	rows?: (string | { content: string; answer?: string; mark?: string })[][];
 }
 
 /** صورة */
@@ -125,6 +127,16 @@ export interface LabelingBlock {
 	mark?: string;
 }
 
+/** كتابة Typst حرة */
+export interface TypstRawBlock {
+	type: 'typst_raw';
+	content: string;
+	/** Solution answer */
+	answer?: string;
+	/** Points */
+	mark?: string;
+}
+
 /** شبكة صور مع تسميات */
 export interface ImageGridBlock {
 	type: 'image_grid';
@@ -147,7 +159,8 @@ export type ContentBlock =
 	| MultipleChoiceBlock
 	| DiagramFlowBlock
 	| LabelingBlock
-	| ImageGridBlock;
+	| ImageGridBlock
+	| TypstRawBlock;
 
 // --- Exercise Structure ---
 

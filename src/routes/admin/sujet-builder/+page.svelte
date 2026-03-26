@@ -4,7 +4,7 @@
 	import type { ExamMetadata, ExerciseBlock, TemplateId, ExamType, TrimesterId, LevelId } from '$lib/modules/SujetBuilder/types';
 	import MetadataPanel from '$lib/modules/SujetBuilder/components/MetadataPanel.svelte';
 	import ExerciseEditor from '$lib/modules/SujetBuilder/components/ExerciseEditor.svelte';
-	import PdfPreview from '$lib/modules/SujetBuilder/components/PdfPreview.svelte';
+	import TypstPreview from '$lib/modules/SujetBuilder/components/TypstPreview.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import { ArrowRight, Eye, Download, Upload, RotateCcw, PanelLeft, Columns, PanelRight, ExternalLink, FileText, Sun, Moon, Printer, Save, Copy, ChevronUp, ChevronDown } from 'lucide-svelte';
 	import { toggleMode } from 'mode-watcher';
@@ -38,10 +38,21 @@
 		} as ExerciseBlock
 	]);
 	let pdfBase64 = $state('');
-	let svgPages = $state<string[]>([]);
 	let isGenerating = $state(false);
 	let pdfError = $state('');
 	let isPreviewSolution = $state(false);
+
+	// Reactive document for WASM preview
+	let examDocument = $derived({
+		metadata: $state.snapshot(metadata),
+		exercises: $state.snapshot(exercises)
+	});
+
+	// Reference to TypstPreview instance
+	let typstPreviewRef: any = $state(null);
+	function triggerRecompile() {
+		typstPreviewRef?.triggerCompile();
+	}
 
 	let windowWidth = $state(1024);
 	let popupWindow: Window | null = null;
@@ -115,8 +126,8 @@
 		}
 	}
 
-	// Generate PDF
-	async function generatePdf() {
+	// Generate PDF via server (for download/publish only)
+	async function generatePdfServer() {
 		isGenerating = true;
 		pdfError = '';
 		try {
@@ -130,13 +141,12 @@
 						exercises: $state.snapshot(exercises) 
 					},
 					isSolution: isPreviewSolution,
-					format: 'svg'
+					format: 'pdf'
 				})
 			});
 			const result = await res.json();
 			if (result.success) {
 				pdfBase64 = result.pdfBase64;
-				svgPages = result.svgPages || [];
 			} else {
 				pdfError = result.error || 'فشل في توليد الملف';
 			}
@@ -145,6 +155,12 @@
 		} finally {
 			isGenerating = false;
 		}
+	}
+
+	// Handle PDF ready from WASM
+	function handlePdfReady(pdfData: Uint8Array) {
+		const binary = Array.from(pdfData).map(b => String.fromCharCode(b)).join('');
+		pdfBase64 = btoa(binary);
 	}
 
 	// Download PDF
@@ -272,7 +288,6 @@
 			} as ExerciseBlock
 		];
 		pdfBase64 = '';
-		svgPages = [];
 		pdfError = '';
 	}
 
@@ -347,7 +362,7 @@
 					}));
 					// Only track the document ID for editing, not cloning
 					if (editId) editingDocId = parseInt(editId);
-					setTimeout(() => generatePdf(), 500);
+					// WASM preview auto-compiles via reactive document
 				}
 			} catch (err) {
 				console.error('Failed to load subject:', err);
@@ -528,14 +543,14 @@
 								streamSubjects={data.streamSubjects}
 								trimesters={data.trimesters}
 								bind:metadata
-								onchange={generatePdf}
+								onchange={triggerRecompile}
 							/>
 						</div>
 					{/if}
 				</div>
 				
 				{#if isMetadataComplete}
-					<ExerciseEditor bind:exercises {metadata} onchange={generatePdf} />
+					<ExerciseEditor bind:exercises {metadata} onchange={triggerRecompile} />
 				{:else}
 					<div class="mt-8 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-amber-500/40 bg-amber-500/10 py-16 text-center shadow-sm">
 						<div class="mb-4 rounded-full bg-amber-500/20 p-4 text-amber-600 dark:text-amber-400">
@@ -577,17 +592,17 @@
 				<div class="flex items-center gap-2">
 					<div class="flex items-center gap-1.5 text-primary">
 						<Eye size={16} />
-						<h3 class="text-sm font-bold text-foreground hidden sm:inline">معاينة الموضوع</h3>
+						<h3 class="text-sm font-bold text-foreground hidden sm:inline">معاينة مباشرة</h3>
 					</div>
 					<div class="flex items-center overflow-hidden rounded-lg border border-border bg-muted/50 p-0.5">
 						<button 
-							onclick={() => { isPreviewSolution = false; generatePdf(); }}
+							onclick={() => { isPreviewSolution = false; triggerRecompile(); }}
 							class="px-3 py-1 text-[11px] font-bold transition-all {!isPreviewSolution ? 'bg-blue-600 text-white shadow-sm' : 'text-muted-foreground hover:text-foreground hover:bg-background/20'}"
 						>
 							الموضوع
 						</button>
 						<button 
-							onclick={() => { isPreviewSolution = true; generatePdf(); }}
+							onclick={() => { isPreviewSolution = true; triggerRecompile(); }}
 							class="px-3 py-1 text-[11px] font-bold transition-all {isPreviewSolution ? 'bg-green-600 text-white shadow-sm' : 'text-muted-foreground hover:text-foreground hover:bg-background/20'}"
 						>
 							التصحيح
@@ -595,33 +610,20 @@
 					</div>
 				</div>
 				<div class="flex items-center gap-2">
-					<Button
-						onclick={generatePdf}
-						disabled={isGenerating || !isMetadataComplete}
-						size="sm"
-						variant={isMetadataComplete ? "default" : "outline"}
-						class="gap-1.5 px-3 text-xs font-medium shadow-sm transition-all"
-					>
-						<Eye size={14} />
-						<span class="hidden lg:inline">{isGenerating ? 'جاري التوليد...' : 'توليد الموضوع'}</span>
-						<span class="lg:hidden">{isGenerating ? '...' : 'توليد'}</span>
-					</Button>
 					
-					{#if pdfBase64}
-						<div class="flex items-center rounded-lg border border-border bg-muted/40 p-0.5">
-							<Button variant="ghost" size="sm" onclick={printPdf} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-blue-600 shadow-sm h-7" title="تحميل PDF">
-								<Printer size={14} /> <span class="hidden 2xl:inline">طباعة</span>
-							</Button>
-							<div class="h-4 w-px bg-border mx-0.5"></div>
-							<Button variant="ghost" size="sm" onclick={downloadPdf} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-green-600 shadow-sm h-7" title="تحميل PDF">
-								<Download size={14} /> <span class="hidden 2xl:inline">تحميل</span>
-							</Button>
-							<div class="h-4 w-px bg-border mx-0.5"></div>
-							<Button variant="ghost" size="sm" onclick={openPopup} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-primary shadow-sm h-7" title="فتح المعاينة في بطاقة مستقلة">
-								<ExternalLink size={14} /> <span class="hidden 2xl:inline">نافذة منبثقة</span>
-							</Button>
-						</div>
-					{/if}
+					<div class="flex items-center rounded-lg border border-border bg-muted/40 p-0.5">
+						<Button variant="ghost" size="sm" onclick={async () => { await generatePdfServer(); printPdf(); }} disabled={isGenerating || !isMetadataComplete} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-blue-600 shadow-sm h-7" title="طباعة PDF">
+							<Printer size={14} /> <span class="hidden 2xl:inline">طباعة</span>
+						</Button>
+						<div class="h-4 w-px bg-border mx-0.5"></div>
+						<Button variant="ghost" size="sm" onclick={async () => { await generatePdfServer(); downloadPdf(); }} disabled={isGenerating || !isMetadataComplete} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-green-600 shadow-sm h-7" title="تحميل PDF">
+							<Download size={14} /> <span class="hidden 2xl:inline">تحميل</span>
+						</Button>
+						<div class="h-4 w-px bg-border mx-0.5"></div>
+						<Button variant="ghost" size="sm" onclick={async () => { await generatePdfServer(); openPopup(); }} disabled={isGenerating || !isMetadataComplete} class="gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-background hover:text-primary shadow-sm h-7" title="فتح المعاينة في بطاقة مستقلة">
+							<ExternalLink size={14} /> <span class="hidden 2xl:inline">نافذة منبثقة</span>
+						</Button>
+					</div>
 					
 					<!-- Mobile-only view toggle -->
 					<div class="md:hidden flex items-center rounded-lg border border-border bg-muted/40 p-0.5 shadow-sm">
@@ -655,11 +657,13 @@
 					</div>
 				{:else}
 					<div class="flex-1 overflow-hidden relative group">
-						<PdfPreview 
-							{pdfBase64} 
-							{svgPages}
-							loading={isGenerating} 
-							error={pdfError} 
+						<TypstPreview 
+							bind:this={typstPreviewRef}
+							document={examDocument}
+							isSolution={isPreviewSolution}
+							bind:loading={isGenerating}
+							bind:error={pdfError}
+							onPdfReady={handlePdfReady}
 						/>
 					</div>
 				{/if}

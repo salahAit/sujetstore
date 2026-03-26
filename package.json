@@ -53,6 +53,9 @@
 	},
 	"dependencies": {
 		"@fontsource/cairo": "^5.2.7",
+		"@myriaddreamin/typst-ts-renderer": "^0.7.0-rc2",
+		"@myriaddreamin/typst-ts-web-compiler": "^0.7.0-rc2",
+		"@myriaddreamin/typst.ts": "^0.7.0-rc2",
 		"@tailwindcss/vite": "^4.1.17",
 		"bcryptjs": "^3.0.3",
 		"drizzle-orm": "^0.45.1",

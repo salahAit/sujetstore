@@ -2,7 +2,7 @@
 	import type { ExerciseBlock, ContentBlock } from '$lib/modules/SujetBuilder/types';
 	import type { ExamMetadata } from '$lib/modules/SujetBuilder/types';
 	import BlockEditor from './BlockEditor.svelte';
-	import { dndzone } from 'svelte-dnd-action';
+	import { dndzone, SHADOW_ITEM_MARKER_PROPERTY_NAME } from 'svelte-dnd-action';
 	import {
 		Plus,
 		Trash2,
@@ -190,39 +190,76 @@
 		onchange?.();
 	}
 
+	// Ensure content blocks have IDs for DnD
+	function ensureBlockIds(content: any[]): any[] {
+		return content.map(b => {
+			if (!b.id) return { ...b, id: generateId() };
+			return b;
+		});
+	}
+
+	function handleBlockDndConsider(exerciseIndex: number, e: CustomEvent<any>) {
+		const exIdx = exerciseIndex;
+		exercises[exIdx].content = e.detail.items;
+	}
+
+	function handleBlockDndFinalize(exerciseIndex: number, e: CustomEvent<any>) {
+		const exIdx = exerciseIndex;
+		exercises[exIdx].content = e.detail.items;
+		onchange?.();
+	}
+
+	function duplicateBlock(exerciseIndex: number, blockIndex: number) {
+		const original = exercises[exerciseIndex].content[blockIndex];
+		const clone = JSON.parse(JSON.stringify(original));
+		clone.id = generateId();
+		exercises[exerciseIndex].content = [
+			...exercises[exerciseIndex].content.slice(0, blockIndex + 1),
+			clone,
+			...exercises[exerciseIndex].content.slice(blockIndex + 1)
+		];
+		onchange?.();
+	}
+
 	function addBlock(exerciseIndex: number, type: ContentBlock['type']) {
-		let newBlock: ContentBlock;
+		let newBlock: ContentBlock & { id?: string };
 		switch (type) {
 			case 'text':
-				newBlock = { type: 'text', content: '' };
+				newBlock = { type: 'text', content: '', id: generateId() };
 				break;
 			case 'math':
-				newBlock = { type: 'math', content: '', display: true };
+				newBlock = { type: 'math', content: '', display: true, id: generateId() };
 				break;
 			case 'table':
-				newBlock = { type: 'table', headers: ['', ''], cells: ['', ''] };
+				newBlock = { type: 'table', headers: ['', ''], cells: ['', ''], id: generateId() };
 				break;
 			case 'image':
-				newBlock = { type: 'image', src: '' };
+				newBlock = { type: 'image', src: '', id: generateId() };
 				break;
 			case 'true_false':
-				newBlock = { type: 'true_false', items: [{ q: '', a: '', mark: '01' }] };
+				newBlock = { type: 'true_false', items: [{ q: '', a: '', mark: '01' }], id: generateId() };
 				break;
 			case 'multiple_choice':
 				newBlock = {
 					type: 'multiple_choice',
-					groups: [{ header: '', options: ['', '', ''], correct: '', mark: '01' }]
+					groups: [{ header: '', options: ['', '', ''], correct: '', mark: '01' }],
+					id: generateId()
 				};
 				break;
 			case 'diagram_flow':
-				newBlock = { type: 'diagram_flow', flow: ['', '', ''], mark: '01' };
+				newBlock = { type: 'diagram_flow', flow: ['', '', ''], mark: '01', id: generateId() };
 				break;
 			case 'labeling':
-				newBlock = { type: 'labeling', labels: ['', '', ''], mark: '01' };
+				newBlock = { type: 'labeling', labels: ['', '', ''], mark: '01', id: generateId() };
+				break;
+			case 'typst_raw':
+				newBlock = { type: 'typst_raw', content: '', id: generateId() };
 				break;
 			default:
 				return;
 		}
+		// Ensure existing blocks have IDs
+		exercises[exerciseIndex].content = ensureBlockIds(exercises[exerciseIndex].content);
 		exercises[exerciseIndex].content = [...exercises[exerciseIndex].content, newBlock];
 		onchange?.();
 	}
@@ -396,12 +433,17 @@
 				></textarea>
 			</div>
 
-			<!-- Content Blocks -->
-			<div class="space-y-4">
-				{#each exercise.content as block, bi}
+			<!-- Content Blocks (DnD enabled) -->
+			<div class="space-y-4 min-h-[40px]"
+				use:dndzone={{ items: ensureBlockIds(exercise.content), flipDurationMs: 200, dropTargetStyle: {}, dragDisabled: false }}
+				onconsider={(e) => handleBlockDndConsider(exercises.indexOf(exercise), e)}
+				onfinalize={(e) => handleBlockDndFinalize(exercises.indexOf(exercise), e)}
+			>
+				{#each ensureBlockIds(exercise.content) as block, bi (block.id)}
 					<BlockEditor
 						bind:block={exercises[exercises.indexOf(exercise)].content[bi]}
 						onremove={() => removeBlock(exercises.indexOf(exercise), bi)}
+						onduplicate={() => duplicateBlock(exercises.indexOf(exercise), bi)}
 						{onchange}
 					/>
 				{/each}
@@ -461,6 +503,16 @@
 						onclick={() => addBlock(exercises.indexOf(exercise), 'labeling')}
 					>
 						<Tag size={16} /> تسميات
+					</button>
+					
+					<div class="w-px bg-border/60 mx-1"></div>
+					
+					<button
+						class="flex items-center gap-1.5 rounded-xl bg-zinc-800/90 px-3 py-2 text-sm font-medium text-green-400 transition-colors hover:bg-zinc-700 border border-zinc-600/50 shadow-sm"
+						onclick={() => addBlock(exercises.indexOf(exercise), 'typst_raw')}
+						title="كتابة كود Typst حر"
+					>
+						<span class="font-mono text-xs">{'</>'}</span> Typst حر
 					</button>
 				</div>
 			</div> <!-- End of Add Block Buttons -->

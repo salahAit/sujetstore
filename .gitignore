@@ -57,3 +57,7 @@ vite.config.ts.timestamp-*
 scripts/debug_*.ts
 scripts/temp_*.ts
 scripts/test_*.ts
+
+# Generated Subject Data
+static/generated/
+static/wasm/

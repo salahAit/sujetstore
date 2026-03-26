@@ -65,14 +65,25 @@
         stroke: 0.5pt,
         inset: 8pt,
         ..b.headers.map(h => [ #text(weight: "bold")[#h] ]),
-        ..b.cells.map(c => [
-          #(if type(c) == dictionary {
-            stack(dir: ttb, spacing: 5pt,
-              if is-solution { text(fill: blue)[#eval(c.answer, mode: "markup")] } else { eval(c.content, mode: "markup") },
-              if is-solution and c.at("mark", default: "") != "" { align(left)[#text(size: 12pt, fill: red)[#c.mark ن]] }
-            )
-          } else { eval(c, mode: "markup") })
-        ])
+        ..(if b.at("rows", default: none) != none {
+          b.rows.map(row => row.map(c => [
+            #(if type(c) == dictionary {
+              stack(dir: ttb, spacing: 5pt,
+                if is-solution { text(fill: blue)[#eval(c.answer, mode: "markup")] } else { eval(c.content, mode: "markup") },
+                if is-solution and c.at("mark", default: "") != "" { align(left)[#text(size: 12pt, fill: red)[#c.mark ن]] }
+              )
+            } else { eval(c, mode: "markup") })
+          ])).flatten()
+        } else {
+          b.cells.map(c => [
+            #(if type(c) == dictionary {
+              stack(dir: ttb, spacing: 5pt,
+                if is-solution { text(fill: blue)[#eval(c.answer, mode: "markup")] } else { eval(c.content, mode: "markup") },
+                if is-solution and c.at("mark", default: "") != "" { align(left)[#text(size: 12pt, fill: red)[#c.mark ن]] }
+              )
+            } else { eval(c, mode: "markup") })
+          ])
+        })
       )
     ]
   ] else if b.type == "image_grid" [
@@ -110,6 +121,14 @@
         }
       ]
     }
+  ] else if b.type == "typst_raw" [
+    #grid(columns: (1fr, auto), [
+      #(if is-solution and b.at("answer", default: "") != "" {
+        text(fill: blue)[#safe-eval(b.answer)]
+      } else {
+        safe-eval(b.content)
+      })
+    ], if is-solution and b.at("mark", default: "") != "" { align(bottom)[#text(size: 14pt, fill: red)[#b.mark ن]] } else { [] })
   ]
 }
 
