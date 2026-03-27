@@ -159,8 +159,8 @@
 			<button
 				type="button"
 				class="whitespace-nowrap rounded-md px-2.5 py-1 text-[10px] font-bold transition-all {activeCategory === cat.id
-					? 'bg-primary text-white shadow-sm'
-					: 'text-muted-foreground hover:bg-background hover:text-foreground'}"
+					? 'bg-background text-foreground shadow-sm'
+					: 'text-muted-foreground hover:bg-background/50 hover:text-foreground'}"
 				onclick={() => (activeCategory = cat.id)}
 			>
 				{cat.name}
@@ -178,11 +178,6 @@
 				title={sym.tooltip ? `${sym.tooltip}\n${sym.template}` : sym.template}
 			>
 				{sym.label}
-				{#if sym.tooltip}
-					<span class="pointer-events-none absolute -top-8 left-1/2 z-50 -translate-x-1/2 whitespace-nowrap rounded bg-foreground/90 px-2 py-0.5 text-[9px] text-background opacity-0 shadow-lg transition-opacity group-hover:opacity-100">
-						{sym.tooltip}
-					</span>
-				{/if}
 			</button>
 		{/each}
 	</div>
