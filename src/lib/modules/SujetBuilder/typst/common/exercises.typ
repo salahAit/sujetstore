@@ -58,31 +58,66 @@
     ], if is-solution and m != "" { text(size: 14pt, fill: red)[#m ن] } else { [] })
   ] else if b.type == "table" [
     #v(5pt)
+    #let t-align = b.at("align", default: "center")
+    #let t-width = b.at("width", default: "full")
+    #let t-borders = b.at("borders", default: "grid")
+    #let t-header-bg = b.at("headerBackground", default: false)
+    
+    #let t-stroke = if t-borders == "grid" { 0.5pt } else if t-borders == "horizontal" { (x, y) => (bottom: 0.5pt, top: if y == 0 { 0.5pt } else { 0pt }) } else { none }
+    #let t-fill = (x, y) => if y == 0 and t-header-bg { luma(240) } else { none }
+    #let t-cols = if t-width == "full" { b.headers.map(x => 1fr) } else { b.headers.map(x => auto) }
+    
+    #let process-row(row, is-sol, is-hdr) = {
+      let out = ()
+      let skip = 0
+      for c in row {
+        if skip > 0 {
+          skip -= 1
+          continue
+        }
+        let is-dict = type(c) == dictionary
+        let cs = if is-dict { c.at("colspan", default: 1) } else { 1 }
+        let cb = if is-dict { c.at("bold", default: false) } else { false }
+        if is-hdr { cb = true }
+        
+        let answer-str = if is-dict { c.at("answer", default: "") } else { "" }
+        let mark-str = if is-dict { c.at("mark", default: "") } else { "" }
+        let content-str = if is-dict { c.at("content", default: "") } else { c }
+        
+        let cell-styled = if is-sol and answer-str != "" {
+          text(fill: blue)[#safe-eval(answer-str)]
+        } else {
+          safe-eval(content-str)
+        }
+        
+        if cb { cell-styled = text(weight: "bold")[#cell-styled] }
+        
+        if is-sol and mark-str != "" {
+          cell-styled = stack(dir: ttb, spacing: 5pt, cell-styled, align(left)[#text(size: 12pt, fill: red)[#mark-str ن]])
+        }
+        
+        if cs > 1 {
+          out.push(table.cell(colspan: cs)[#cell-styled])
+          skip = cs - 1
+        } else {
+          out.push(cell-styled)
+        }
+      }
+      return out
+    }
+
     #align(center)[
       #table(
-        columns: b.headers.map(x => 1fr),
-        align: center,
-        stroke: 0.5pt,
+        columns: t-cols,
+        align: eval(t-align) + horizon,
+        stroke: t-stroke,
+        fill: t-fill,
         inset: 8pt,
-        ..b.headers.map(h => [ #text(weight: "bold")[#h] ]),
+        ..process-row(b.headers, is-solution, true),
         ..(if b.at("rows", default: none) != none {
-          b.rows.map(row => row.map(c => [
-            #(if type(c) == dictionary {
-              stack(dir: ttb, spacing: 5pt,
-                if is-solution { text(fill: blue)[#eval(c.answer, mode: "markup")] } else { eval(c.content, mode: "markup") },
-                if is-solution and c.at("mark", default: "") != "" { align(left)[#text(size: 12pt, fill: red)[#c.mark ن]] }
-              )
-            } else { eval(c, mode: "markup") })
-          ])).flatten()
+          b.rows.map(row => process-row(row, is-solution, false)).flatten()
         } else {
-          b.cells.map(c => [
-            #(if type(c) == dictionary {
-              stack(dir: ttb, spacing: 5pt,
-                if is-solution { text(fill: blue)[#eval(c.answer, mode: "markup")] } else { eval(c.content, mode: "markup") },
-                if is-solution and c.at("mark", default: "") != "" { align(left)[#text(size: 12pt, fill: red)[#c.mark ن]] }
-              )
-            } else { eval(c, mode: "markup") })
-          ])
+          process-row(b.cells, is-solution, false)
         })
       )
     ]

@@ -64,14 +64,30 @@ export interface MathBlock {
 	display?: boolean;
 }
 
-/** جدول مع خانات قابلة للتنقيط (تناسبية، تحويل وحدات، ...) */
+/** A cell inside the table with advanced merging and formatting options */
+export interface TableCell {
+	content: string;
+	answer?: string;
+	mark?: string;
+	colspan?: number;
+	rowspan?: number;
+	bold?: boolean;
+}
+
+/** جدول مع خانات قابلة للتنقيط ومزايا دمج متقدمة */
 export interface TableBlock {
 	type: 'table';
-	headers: string[];
-	/** Cells can be simple strings or objects with content/answer/mark */
-	cells: (string | { content: string; answer?: string; mark?: string })[];
+	headers: (string | TableCell)[];
+	/** Cells can be simple strings or objects with content/answer/mark/colspan/bold */
+	cells: (string | TableCell)[];
 	/** Multi-row support: array of rows, each row is array of cell values */
-	rows?: (string | { content: string; answer?: string; mark?: string })[][];
+	rows?: (string | TableCell)[][];
+	
+	// Table Customization Options
+	align?: 'left' | 'center' | 'right';
+	borders?: 'grid' | 'horizontal' | 'none';
+	headerBackground?: boolean;
+	width?: 'full' | 'auto';
 }
 
 /** صورة */

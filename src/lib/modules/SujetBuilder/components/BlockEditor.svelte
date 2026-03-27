@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ContentBlock } from '$lib/modules/SujetBuilder/types';
-	import { Type, FunctionSquare, Table2, ImageIcon, Trash2, Upload, Loader2, Plus, CheckCircle, ListChecks, GitBranch, Tag, GripVertical, Copy, ArrowRightLeft, Code2 } from 'lucide-svelte';
+	import { Type, FunctionSquare, Table2, ImageIcon, Trash2, Upload, Loader2, Plus, CheckCircle, ListChecks, GitBranch, Tag, GripVertical, Copy, ArrowRightLeft, Code2, AlignLeft, AlignCenter, AlignRight, Grid3x3, Minus, Square, PaintBucket, Maximize2, Minimize2 } from 'lucide-svelte';
 	import MathPalette from './MathPalette.svelte';
 
 	let {
@@ -347,6 +347,96 @@
 	// Determine if block can be converted
 	let canConvert = $derived(block.type === 'text' || block.type === 'math' || block.type === 'typst_raw');
 	let showConvertMenu = $state(false);
+
+	// Advanced Table Helpers
+	function ensureCellObject(ri: number | 'header' | 'cells', ci: number) {
+		if (block.type !== 'table') return null;
+		
+		let cellArray: any[];
+		if (ri === 'header') cellArray = block.headers;
+		else if (ri === 'cells') cellArray = block.cells;
+		else {
+			if (!block.rows) return null;
+			cellArray = block.rows[ri];
+		}
+		
+		if (typeof cellArray[ci] === 'string') {
+			cellArray[ci] = { content: cellArray[ci] };
+		}
+		return cellArray[ci] as { content: string; colspan?: number; bold?: boolean };
+	}
+
+	function isCellCovered(row: any[], ci: number) {
+		let covered = false;
+		for (let i = 0; i < ci; i++) {
+			const cell = row[i];
+			const span = typeof cell === 'object' && cell !== null ? (cell.colspan || 1) : 1;
+			if (i + span > ci) {
+				covered = true;
+				break;
+			}
+		}
+		return covered;
+	}
+
+	function changeColspan(ri: number | 'header' | 'cells', ci: number, delta: number) {
+		if (block.type !== 'table') return;
+		const cell = ensureCellObject(ri, ci);
+		if (!cell) return;
+		
+		const currentSpan = cell.colspan || 1;
+		const newSpan = Math.max(1, currentSpan + delta);
+		
+		if (newSpan > 1) {
+			const maxCols = block.headers.length;
+			if (ci + newSpan > maxCols) return;
+		}
+		
+		cell.colspan = newSpan;
+		onchange?.();
+	}
+
+	function toggleCellBold(ri: number | 'header' | 'cells', ci: number) {
+		if (block.type !== 'table') return;
+		const cell = ensureCellObject(ri, ci);
+		if (!cell) return;
+		cell.bold = !cell.bold;
+		onchange?.();
+	}
+	
+	function getCellContentRef(ri: number | 'header' | 'cells', ci: number): string {
+		if (block.type !== 'table') return '';
+		
+		let cellArray: any[];
+		if (ri === 'header') cellArray = block.headers;
+		else if (ri === 'cells') cellArray = block.cells;
+		else {
+			if (!block.rows) return '';
+			cellArray = block.rows[ri];
+		}
+		
+		const c = cellArray[ci];
+		return typeof c === 'string' ? c : (c?.content || '');
+	}
+	
+	function updateCellContent(ri: number | 'header' | 'cells', ci: number, val: string) {
+		if (block.type !== 'table') return;
+		
+		let cellArray: any[];
+		if (ri === 'header') cellArray = block.headers;
+		else if (ri === 'cells') cellArray = block.cells;
+		else {
+			if (!block.rows) return;
+			cellArray = block.rows[ri];
+		}
+
+		if (typeof cellArray[ci] === 'string') {
+			cellArray[ci] = val;
+		} else {
+			cellArray[ci].content = val;
+		}
+		onchange?.();
+	}
 </script>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -574,77 +664,162 @@
 	<!-- ════════════ TABLE ════════════ -->
 	{:else if block.type === 'table'}
 		<div class="space-y-2 overflow-x-auto">
-			<!-- Headers Row -->
-			<div class="flex items-center gap-1">
-				{#each block.headers as _, i}
-					<div class="relative flex-1 min-w-[80px]">
-						<input
-							type="text"
-							class="w-full rounded border border-border bg-muted px-2 py-1.5 text-center text-xs font-bold text-foreground focus:border-primary focus:outline-none"
-							placeholder="عنوان {i + 1}"
-							bind:value={block.headers[i]}
-							oninput={() => onchange?.()}
-						/>
-						{#if block.headers.length > 1}
-							<button
-								class="absolute -top-1 -left-1 rounded-full bg-red-500 p-0.5 text-white opacity-0 transition-opacity hover:bg-red-600 group-hover:opacity-100 shadow-sm"
-								onclick={() => removeTableColumn(i)}
-								title="حذف العمود"
-								style="width: 14px; height: 14px; font-size: 8px; display: flex; align-items: center; justify-content: center;"
-							>×</button>
-						{/if}
-					</div>
-				{/each}
-				<button
-					class="rounded-lg border border-dashed border-border p-1.5 text-muted-foreground hover:border-primary hover:text-primary shrink-0"
-					onclick={addTableColumn}
-					title="إضافة عمود"
-				>+</button>
+			<!-- Table Customization Toolbar -->
+			<div class="flex flex-wrap items-center gap-2 rounded-t-lg border-x border-t border-border bg-muted/30 px-3 py-2 shadow-sm min-w-max">
+				<!-- Alignment -->
+				<div class="flex items-center rounded-md border border-border/50 bg-background overflow-hidden">
+					<button type="button" class="px-3 py-1.5 hover:bg-muted {block.align === 'right' ? 'bg-primary/10 text-primary' : 'text-muted-foreground'}" onclick={() => { block.align = 'right'; onchange?.(); }} title="طبيعي (يمين)"><AlignRight size={16} /></button>
+					<div class="w-px h-4 bg-border"></div>
+					<button type="button" class="px-3 py-1.5 hover:bg-muted {block.align !== 'left' && block.align !== 'right' ? 'bg-primary/10 text-primary' : 'text-muted-foreground'}" onclick={() => { block.align = 'center'; onchange?.(); }} title="توسيط"><AlignCenter size={16} /></button>
+					<div class="w-px h-4 bg-border"></div>
+					<button type="button" class="px-3 py-1.5 hover:bg-muted {block.align === 'left' ? 'bg-primary/10 text-primary' : 'text-muted-foreground'}" onclick={() => { block.align = 'left'; onchange?.(); }} title="محاذاة لليسار"><AlignLeft size={16} /></button>
+				</div>
+
+				<!-- Borders -->
+				<div class="flex items-center rounded-md border border-border/50 bg-background overflow-hidden">
+					<button type="button" class="px-3 py-1.5 flex items-center gap-1.5 text-xs font-medium hover:bg-muted {block.borders !== 'none' && block.borders !== 'horizontal' ? 'bg-primary/10 text-primary' : 'text-muted-foreground'}" onclick={() => { block.borders = 'grid'; onchange?.(); }} title="جدول شبكي"><Grid3x3 size={16} /> شبكي</button>
+					<div class="w-px h-4 bg-border"></div>
+					<button type="button" class="px-3 py-1.5 flex items-center gap-1.5 text-xs font-medium hover:bg-muted {block.borders === 'horizontal' ? 'bg-primary/10 text-primary' : 'text-muted-foreground'}" onclick={() => { block.borders = 'horizontal'; onchange?.(); }} title="خطوط أفقية فقط"><Minus size={16} /> أفقي</button>
+					<div class="w-px h-4 bg-border"></div>
+					<button type="button" class="px-3 py-1.5 flex items-center gap-1.5 text-xs font-medium hover:bg-muted {block.borders === 'none' ? 'bg-primary/10 text-primary' : 'text-muted-foreground'}" onclick={() => { block.borders = 'none'; onchange?.(); }} title="بدون حدود"><Square size={16} /> فارغ</button>
+				</div>
+
+				<!-- Header BG -->
+				<button 
+					type="button"
+					class="flex items-center gap-1.5 rounded-md border border-border/50 px-3 py-1.5 text-xs font-medium transition-colors {block.headerBackground ? 'bg-primary/10 text-primary border-primary/20' : 'bg-background text-muted-foreground hover:bg-muted'}"
+					onclick={() => { block.headerBackground = !block.headerBackground; onchange?.(); }}
+					title="تظليل الترويسة"
+				>
+					<PaintBucket size={16} /> تظليل الترويسة
+				</button>
+
+				<!-- Width -->
+				<button 
+					type="button"
+					class="flex items-center gap-1.5 rounded-md border border-border/50 px-3 py-1.5 text-xs font-medium transition-colors {block.width === 'auto' ? 'bg-primary/10 text-primary border-primary/20' : 'bg-background text-muted-foreground hover:bg-muted'}"
+					onclick={() => { block.width = block.width === 'auto' ? 'full' : 'auto'; onchange?.(); }}
+					title="توسيع أو تقليص العرض"
+				>
+					{#if block.width === 'auto'}
+						<Minimize2 size={16} /> تلقائي
+					{:else}
+						<Maximize2 size={16} /> عرض كامل
+					{/if}
+				</button>
 			</div>
 
-			<!-- Data Rows -->
-			{#if block.rows && block.rows.length > 0}
-				{#each block.rows as row, ri}
-					<div class="flex items-center gap-1">
-						{#each row as _, ci}
-							{#if typeof block.rows![ri][ci] === 'string'}
-								<input
-									type="text"
-									class="min-w-[80px] flex-1 rounded border border-border bg-background px-2 py-1.5 text-center text-xs text-foreground focus:border-primary focus:outline-none"
-									placeholder="..."
-									bind:value={block.rows![ri][ci]}
-									oninput={() => onchange?.()}
-								/>
-							{/if}
-						{/each}
-						<button
-							class="rounded p-1 text-muted-foreground hover:text-red-500 shrink-0"
-							onclick={() => removeTableRow(ri)}
-							title="حذف الصف"
-						><Trash2 size={12} /></button>
-					</div>
-				{/each}
-			{:else}
-				<!-- Legacy single row -->
-				<div class="flex items-center gap-1">
-					{#each block.cells as _, ci}
-						{#if typeof block.cells[ci] === 'string'}
-							<input
-								type="text"
-								class="min-w-[80px] flex-1 rounded border border-border bg-background px-2 py-1.5 text-center text-xs text-foreground focus:border-primary focus:outline-none"
-								placeholder="..."
-								bind:value={block.cells[ci]}
-								oninput={() => onchange?.()}
-							/>
-						{/if}
-					{/each}
-				</div>
-			{/if}
+			<!-- Table Content -->
+			<div class="w-full overflow-x-auto border-x border-b border-border/50 rounded-b-lg p-2 bg-gradient-to-b from-muted/10 to-transparent">
+				<table class="border-collapse {block.width === 'auto' ? 'w-max mx-auto' : 'w-full'}" 
+					style="text-align: {block.align === 'right' ? 'right' : block.align === 'left' ? 'left' : 'center'};">
+					<thead>
+						<tr>
+							{#each block.headers as h, ci}
+								{#if !isCellCovered(block.headers, ci)}
+									{@const cellObj = (typeof h === 'object' && h !== null ? h : {}) as any}
+									<th colspan={cellObj.colspan || 1} 
+										class="relative group/th border px-1 py-0 focus-within:ring-1 focus-within:ring-primary focus-within:z-10 bg-background transition-colors
+											{block.borders === 'none' ? 'border-transparent' : block.borders === 'horizontal' ? 'border-r-transparent border-l-transparent border-y-border' : 'border-border'}
+											{block.headerBackground ? '!bg-muted/50' : ''}">
+										
+										<!-- Toolbar on focus -->
+										<div class="absolute -top-8 left-1/2 -translate-x-1/2 hidden group-focus-within/th:flex items-center gap-0.5 rounded-md bg-popover text-popover-foreground shadow-md border border-border p-1 z-20 whitespace-nowrap">
+											<button type="button" class="p-1 hover:bg-muted rounded {cellObj.bold ? 'text-primary' : ''}" onclick={() => toggleCellBold('header', ci)} title="عريض"><strong class="font-serif">B</strong></button>
+											<div class="w-px h-3 bg-border mx-0.5"></div>
+											<button type="button" class="px-1.5 py-0.5 font-mono hover:bg-muted rounded text-[10px]" onclick={() => changeColspan('header', ci, 1)} title="زيادة الامتداد">+</button>
+											<span class="text-[10px] text-muted-foreground px-1">{cellObj.colspan || 1}</span>
+											<button type="button" class="px-1.5 py-0.5 font-mono hover:bg-muted rounded text-[10px]" onclick={() => changeColspan('header', ci, -1)} title="تقليل الامتداد">-</button>
+										</div>
 
-			<button
-				class="flex w-full items-center justify-center gap-1 rounded-lg border border-dashed border-border py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary hover:bg-primary/5 transition-colors"
-				onclick={addTableRow}
-			>
+										<input type="text"
+												class="w-full bg-transparent px-2 py-1.5 text-sm focus:outline-none transition-all placeholder:font-normal {cellObj.bold ? 'font-bold' : 'font-semibold text-muted-foreground'}"
+												style="text-align: inherit;"
+												placeholder="عنوان {ci + 1}"
+												value={getCellContentRef('header', ci)}
+												oninput={(e) => updateCellContent('header', ci, (e.target as HTMLInputElement).value)} />
+												
+										{#if block.headers.length > 1}
+											<button type="button" class="absolute -top-1.5 -right-1.5 rounded-full bg-red-500 text-white w-4 h-4 flex items-center justify-center text-[10px] opacity-0 group-hover/th:opacity-100 transition-opacity shadow-sm hover:scale-110" onclick={() => removeTableColumn(ci)} title="حذف العمود">×</button>
+										{/if}
+									</th>
+								{/if}
+							{/each}
+							<th class="w-8 border-none p-1">
+								<button type="button" class="w-6 h-6 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 border border-dashed border-border rounded transition-colors" onclick={addTableColumn} title="إضافة عمود">+</button>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						{#if block.rows && block.rows.length > 0}
+							{#each block.rows as row, ri}
+								<tr class="group/tr">
+									{#each row as cell, ci}
+										{#if !isCellCovered(row, ci)}
+											{@const cellObj = (typeof cell === 'object' && cell !== null ? cell : {}) as any}
+											<td colspan={cellObj.colspan || 1} 
+												class="relative group/td border px-1 py-0 focus-within:ring-1 focus-within:ring-primary focus-within:z-10 bg-background transition-colors
+														{block.borders === 'none' ? 'border-transparent' : block.borders === 'horizontal' ? 'border-r-transparent border-l-transparent border-y-border' : 'border-border'}">
+												
+												<!-- Toolbar on focus -->
+												<div class="absolute -top-8 left-1/2 -translate-x-1/2 hidden group-focus-within/td:flex items-center gap-0.5 rounded-md bg-popover text-popover-foreground shadow-md border border-border p-1 z-20 whitespace-nowrap">
+													<button type="button" class="p-1 hover:bg-muted rounded {cellObj.bold ? 'text-primary' : ''}" onclick={() => toggleCellBold(ri, ci)} title="عريض"><strong class="font-serif">B</strong></button>
+													<div class="w-px h-3 bg-border mx-0.5"></div>
+													<button type="button" class="px-1.5 py-0.5 font-mono hover:bg-muted rounded text-[10px]" onclick={() => changeColspan(ri, ci, 1)} title="زيادة الامتداد">+</button>
+													<span class="text-[10px] text-muted-foreground px-1">{cellObj.colspan || 1}</span>
+													<button type="button" class="px-1.5 py-0.5 font-mono hover:bg-muted rounded text-[10px]" onclick={() => changeColspan(ri, ci, -1)} title="تقليل الامتداد">-</button>
+												</div>
+
+												<input type="text"
+														class="w-full bg-transparent px-2 py-1.5 text-sm focus:outline-none transition-all placeholder:font-normal placeholder:text-muted-foreground/40 {cellObj.bold ? 'font-bold' : 'font-normal text-foreground'}"
+														style="text-align: inherit;"
+														placeholder="..."
+														value={getCellContentRef(ri, ci)}
+														oninput={(e) => updateCellContent(ri, ci, (e.target as HTMLInputElement).value)} />
+											</td>
+										{/if}
+									{/each}
+									<td class="w-8 border-none p-1 opacity-0 group-hover/tr:opacity-100 transition-opacity">
+										<button type="button" class="text-muted-foreground hover:text-red-500 hover:bg-red-500/10 p-1.5 rounded transition-colors" onclick={() => removeTableRow(ri)} title="حذف الصف"><Trash2 size={12} /></button>
+									</td>
+								</tr>
+							{/each}
+						{:else}
+							<!-- Legacy single row -->
+							<tr class="group/tr">
+								{#each block.cells as cell, ci}
+									{#if !isCellCovered(block.cells, ci)}
+										{@const cellObj = (typeof cell === 'object' && cell !== null ? cell : {}) as any}
+										<td colspan={cellObj.colspan || 1} 
+											class="relative group/td border px-1 py-0 focus-within:ring-1 focus-within:ring-primary focus-within:z-10 bg-background transition-colors
+													{block.borders === 'none' ? 'border-transparent' : block.borders === 'horizontal' ? 'border-r-transparent border-l-transparent border-y-border' : 'border-border'}">
+											
+											<!-- Toolbar on focus -->
+											<div class="absolute -top-8 left-1/2 -translate-x-1/2 hidden group-focus-within/td:flex items-center gap-0.5 rounded-md bg-popover text-popover-foreground shadow-md border border-border p-1 z-20 whitespace-nowrap">
+												<button type="button" class="p-1 hover:bg-muted rounded {cellObj.bold ? 'text-primary' : ''}" onclick={() => toggleCellBold('cells', ci)} title="عريض"><strong class="font-serif">B</strong></button>
+												<div class="w-px h-3 bg-border mx-0.5"></div>
+												<button type="button" class="px-1.5 py-0.5 font-mono hover:bg-muted rounded text-[10px]" onclick={() => changeColspan('cells', ci, 1)} title="زيادة الامتداد">+</button>
+												<span class="text-[10px] text-muted-foreground px-1">{cellObj.colspan || 1}</span>
+												<button type="button" class="px-1.5 py-0.5 font-mono hover:bg-muted rounded text-[10px]" onclick={() => changeColspan('cells', ci, -1)} title="تقليل الامتداد">-</button>
+											</div>
+
+											<input type="text"
+													class="w-full bg-transparent px-2 py-1.5 text-sm focus:outline-none transition-all placeholder:font-normal placeholder:text-muted-foreground/40 {cellObj.bold ? 'font-bold' : 'font-normal text-foreground'}"
+													style="text-align: inherit;"
+													placeholder="..."
+													value={getCellContentRef('cells', ci)}
+													oninput={(e) => updateCellContent('cells', ci, (e.target as HTMLInputElement).value)} />
+										</td>
+									{/if}
+								{/each}
+								<td class="w-8 border-none p-1"></td>
+							</tr>
+						{/if}
+					</tbody>
+				</table>
+			</div>
+
+			<button type="button" class="flex w-full items-center justify-center gap-1 rounded-lg border border-dashed border-border py-1.5 text-xs text-muted-foreground hover:border-primary hover:text-primary hover:bg-primary/5 transition-colors" onclick={addTableRow}>
 				<Plus size={12} /> إضافة صف
 			</button>
 		</div>
