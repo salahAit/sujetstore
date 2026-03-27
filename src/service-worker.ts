@@ -74,13 +74,13 @@ self.addEventListener('fetch', (event) => {
 			}
 			return response;
 		} catch (err) {
-			// If network fails (Offline), try the cache
+			// If network fails (Offline or Aborted), try the cache
 			const cachedResponse = await cache.match(event.request);
 			if (cachedResponse) {
 				return cachedResponse;
 			}
-			// If neither network nor cache has the resource, return a generic offline error
-			throw err;
+			// If neither network nor cache has the resource, safely return a network error
+			return Response.error();
 		}
 	}
 

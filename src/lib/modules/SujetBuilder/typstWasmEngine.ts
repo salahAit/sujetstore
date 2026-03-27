@@ -86,63 +86,52 @@ export async function loadTemplateFiles(): Promise<void> {
  * Build a self-contained Typst document by inlining all templates.
  * This avoids #import statements which the WASM compiler can't resolve.
  */
-function buildInlinedDocument(data: any, isSolution: boolean): string {
-	// Get the template files
-	let exercisesTyp = cachedTypFiles['common/exercises.typ'] || '';
-	let templateTyp = cachedTypFiles['common/template.typ'] || '';
-
-	// Remove import statements from template.typ (we'll inline exercises.typ)
-	templateTyp = templateTyp.replace(
-		/#import\s+"exercises\.typ"\s*:\s*render-block/,
-		''
-	);
-
-	// Strip ALL #image(...) calls — WASM compiler denies all file I/O.
-	// Replace with placeholder rects to preserve layout spacing.
-	// Must keep # prefix for Typst content mode compatibility.
-	// The regex handles params like: #image("x.png", width: 100%, height: 100%, fit: "contain")
-	const imageRegex = /#image\((?:[^()]*|\([^()]*\))*\)/g;
-	templateTyp = templateTyp.replace(imageRegex, '#rect(width: 20pt, height: 20pt, fill: luma(90%), stroke: none)');
-	exercisesTyp = exercisesTyp.replace(imageRegex, '#rect(width: 20pt, height: 20pt, fill: luma(90%), stroke: none)');
-
-	// Build the JSON data string — escape properly for Typst
-	const jsonStr = JSON.stringify(data);
-	const escapedJson = jsonStr.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
-
-	// Compose the full document
-	return `// ═══ Inlined exercises.typ ═══
-${exercisesTyp}
-
-// ═══ Inlined template.typ ═══
-${templateTyp}
-
-// ═══ Main entry ═══
-#let data = json.decode("${escapedJson}")
-#let is-solution = ${isSolution}
-#official-template(data, is-solution: is-solution)
-`;
-}
-
 /**
- * Inject binary files (images) into the WASM shadow filesystem
+ * Prepare the WASM shadow filesystem by mapping all cached files.
+ * For the active template, we dynamically inject the JSON data and isSolution flag.
+ * Returns the mainFilePath to execute.
  */
-async function injectBinaryFiles(): Promise<void> {
-	if (!engine) return;
+async function prepareShadowFileSystem(documentData: any, isSolution: boolean, templateId: string): Promise<string> {
+	if (!engine) throw new Error('Engine not initialized');
 
+	// 1. Map binary files (images, etc)
 	for (const [path, base64] of Object.entries(cachedBinaryFiles)) {
 		try {
 			const binary = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
-			// Map at original path (e.g., /common/qrcode.png)
 			engine.mapShadow(`/${path}`, binary);
-			// Also map at root for any remaining relative references
 			const filename = path.split('/').pop();
-			if (filename) {
-				engine.mapShadow(`/${filename}`, binary);
-			}
+			if (filename) engine.mapShadow(`/${filename}`, binary);
 		} catch (e) {
-			console.warn(`[TypstWASM] Failed to map shadow file: ${path}`, e);
+			console.warn(`[TypstWASM] Failed to map binary file: ${path}`, e);
 		}
 	}
+
+	// 2. Map Typst files
+	for (const [path, content] of Object.entries(cachedTypFiles)) {
+		let finalContent = content;
+		
+		// If this is the active template, inject the data natively
+		if (path === `templates/${templateId}.typ`) {
+			const jsonStr = JSON.stringify({ metadata: documentData.metadata, exercises: documentData.exercises });
+			const escapedJson = jsonStr.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+			
+			finalContent = finalContent.replace(
+				/sys\.inputs\.at\("data"(?:,\s*default:\s*"\{?\}?")?\)/g,
+				`"${escapedJson}"`
+			);
+
+			finalContent = `#let is-solution = ${isSolution}\n${finalContent}`;
+		}
+
+		try {
+			const bytes = new TextEncoder().encode(finalContent);
+			engine.mapShadow(`/${path}`, bytes);
+		} catch (e) {
+			console.warn(`[TypstWASM] Failed to map typ file: ${path}`, e);
+		}
+	}
+
+	return `/templates/${templateId}.typ`;
 }
 
 /**
@@ -162,45 +151,36 @@ export async function compileToSvg(
 		await initTypstEngine();
 		await loadTemplateFiles();
 
-		// Reset and re-inject binary files
 		try {
 			engine.resetShadow();
-		} catch {
-			// resetShadow might fail on first call
-		}
-		await injectBinaryFiles();
+		} catch {}
 
-		const mainContent = buildInlinedDocument(
-			{ metadata: documentData.metadata, exercises: documentData.exercises },
-			isSolution
-		);
+		const mainFilePath = await prepareShadowFileSystem(documentData, isSolution, 'middle/exam');
 
 		console.log('[TypstWASM] Compiling SVG...');
-		const svgStr: string = await engine.svg({ mainContent });
+		const svgStr: string = await engine.svg({ mainFilePath });
 
-		// Encode SVG to base64 for img src
-		const svgPages = [btoa(unescape(encodeURIComponent(svgStr)))];
+		const svgPages = [svgStr];
 
 		console.log('[TypstWASM] SVG compiled successfully');
 		return { success: true, svgPages };
 	} catch (err: any) {
 		const errMsg = typeof err === 'string' ? err : err?.message || String(err);
 		console.error('[TypstWASM] Compilation error:', errMsg);
-		return {
-			success: false,
-			error: errMsg
-		};
+		return { success: false, error: errMsg };
 	} finally {
 		isCompiling = false;
 	}
 }
 
 /**
- * Compile to PDF (for download/print)
+ * Render directly to a DOM container (faster, incremental updates)
  */
-export async function compileToPdf(
+export async function renderToDom(
+	container: HTMLElement,
 	documentData: any,
-	isSolution: boolean = false
+	isSolution: boolean = false,
+	scale: number = 2.0
 ): Promise<CompileResult> {
 	if (isCompiling) {
 		return { success: false, error: 'جاري الترجمة بالفعل...' };
@@ -215,14 +195,53 @@ export async function compileToPdf(
 		try {
 			engine.resetShadow();
 		} catch {}
-		await injectBinaryFiles();
 
-		const mainContent = buildInlinedDocument(
-			{ metadata: documentData.metadata, exercises: documentData.exercises },
-			isSolution
-		);
+		const mainFilePath = await prepareShadowFileSystem(documentData, isSolution, 'middle/exam');
 
-		const pdfData: Uint8Array = await engine.pdf({ mainContent });
+		console.log('[TypstWASM] Rendering to DOM...');
+		
+		await engine.canvas(container, { 
+			mainFilePath,
+			pixelPerPt: scale * 2.5,
+			backgroundColor: '#ffffff'
+		});
+
+		console.log('[TypstWASM] Canvas rendered successfully');
+		return { success: true };
+	} catch (err: any) {
+		const errMsg = typeof err === 'string' ? err : err?.message || String(err);
+		console.error('[TypstWASM] Render error:', errMsg);
+		return { success: false, error: errMsg };
+	} finally {
+		isCompiling = false;
+	}
+}
+
+/**
+ * Compile to PDF (for download/print)
+ */
+export async function compileToPdf(
+	documentData: any,
+	isSolution: boolean = false,
+	templateId: string = 'middle/exam'
+): Promise<CompileResult> {
+	if (isCompiling) {
+		return { success: false, error: 'جاري الترجمة بالفعل...' };
+	}
+
+	isCompiling = true;
+
+	try {
+		await initTypstEngine();
+		await loadTemplateFiles();
+
+		try {
+			engine.resetShadow();
+		} catch {}
+
+		const mainFilePath = await prepareShadowFileSystem(documentData, isSolution, templateId);
+
+		const pdfData: Uint8Array = await engine.pdf({ mainFilePath });
 		return { success: true, pdfData };
 	} catch (err: any) {
 		return { success: false, error: err?.message || String(err) };

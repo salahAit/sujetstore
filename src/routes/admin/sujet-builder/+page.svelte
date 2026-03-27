@@ -543,14 +543,13 @@
 								streamSubjects={data.streamSubjects}
 								trimesters={data.trimesters}
 								bind:metadata
-								onchange={triggerRecompile}
 							/>
 						</div>
 					{/if}
 				</div>
 				
 				{#if isMetadataComplete}
-					<ExerciseEditor bind:exercises {metadata} onchange={triggerRecompile} />
+					<ExerciseEditor bind:exercises {metadata} />
 				{:else}
 					<div class="mt-8 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-amber-500/40 bg-amber-500/10 py-16 text-center shadow-sm">
 						<div class="mb-4 rounded-full bg-amber-500/20 p-4 text-amber-600 dark:text-amber-400">
@@ -595,6 +594,13 @@
 						<h3 class="text-sm font-bold text-foreground hidden sm:inline">معاينة مباشرة</h3>
 					</div>
 					<div class="flex items-center overflow-hidden rounded-lg border border-border bg-muted/50 p-0.5">
+						<button 
+							onclick={() => { triggerRecompile(); }}
+							class="px-3 py-1 text-[11px] font-bold text-muted-foreground hover:text-foreground hover:bg-background/20 border-l border-border"
+							title="تحديث المعاينة بالمتغيرات الجديدة"
+						>
+							تحديث
+						</button>
 						<button 
 							onclick={() => { isPreviewSolution = false; triggerRecompile(); }}
 							class="px-3 py-1 text-[11px] font-bold transition-all {!isPreviewSolution ? 'bg-blue-600 text-white shadow-sm' : 'text-muted-foreground hover:text-foreground hover:bg-background/20'}"
@@ -660,6 +666,7 @@
 						<TypstPreview 
 							bind:this={typstPreviewRef}
 							document={examDocument}
+							templateId={activeTemplate}
 							isSolution={isPreviewSolution}
 							bind:loading={isGenerating}
 							bind:error={pdfError}
