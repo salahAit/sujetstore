@@ -363,18 +363,28 @@
 		if (typeof cellArray[ci] === 'string') {
 			cellArray[ci] = { content: cellArray[ci] };
 		}
-		return cellArray[ci] as { content: string; colspan?: number; bold?: boolean };
+		return cellArray[ci] as { content: string; colspan?: number; rowspan?: number; bold?: boolean };
 	}
 
-	function isCellCovered(row: any[], ci: number) {
+	function getTableGrid() {
+		if (block.type !== 'table') return [];
+		return [block.headers, ...(block.rows && block.rows.length > 0 ? block.rows : [block.cells])];
+	}
+
+	function isGridCellCovered(grid: any[][], ri: number, ci: number) {
 		let covered = false;
-		for (let i = 0; i < ci; i++) {
-			const cell = row[i];
-			const span = typeof cell === 'object' && cell !== null ? (cell.colspan || 1) : 1;
-			if (i + span > ci) {
-				covered = true;
-				break;
+		for (let r = 0; r <= ri; r++) {
+			for (let c = 0; c <= ci; c++) {
+				if (r === ri && c === ci) continue; // don't check self
+				const cell = grid[r][c];
+				const rs = typeof cell === 'object' && cell !== null ? (cell.rowspan || 1) : 1;
+				const cs = typeof cell === 'object' && cell !== null ? (cell.colspan || 1) : 1;
+				if (r + rs > ri && c + cs > ci) {
+					covered = true;
+					break;
+				}
 			}
+			if (covered) break;
 		}
 		return covered;
 	}
@@ -393,6 +403,28 @@
 		}
 		
 		cell.colspan = newSpan;
+		onchange?.();
+	}
+
+	function changeRowspan(ri: number | 'header' | 'cells', ci: number, delta: number) {
+		if (block.type !== 'table') return;
+		const cell = ensureCellObject(ri, ci);
+		if (!cell) return;
+		
+		const currentSpan = cell.rowspan || 1;
+		const newSpan = Math.max(1, currentSpan + delta);
+		
+		const grid = getTableGrid();
+		let realRi = 0;
+		if (ri === 'header') realRi = 0;
+		else if (ri === 'cells') realRi = 1;
+		else realRi = ri + 1;
+		
+		if (newSpan > 1) {
+			if (realRi + newSpan > grid.length) return; // Cannot span past table bottom
+		}
+		
+		cell.rowspan = newSpan;
 		onchange?.();
 	}
 
@@ -716,20 +748,34 @@
 					<thead>
 						<tr>
 							{#each block.headers as h, ci}
-								{#if !isCellCovered(block.headers, ci)}
-									{@const cellObj = (typeof h === 'object' && h !== null ? h : {}) as any}
-									<th colspan={cellObj.colspan || 1} 
+								{@const cellObj = (typeof h === 'object' && h !== null ? h : {}) as any}
+								{#if !isGridCellCovered(getTableGrid(), 0, ci)}
+									<th colspan={cellObj.colspan || 1} rowspan={cellObj.rowspan || 1}
 										class="relative group/th border px-1 py-0 focus-within:ring-1 focus-within:ring-primary focus-within:z-10 bg-background transition-colors
 											{block.borders === 'none' ? 'border-transparent' : block.borders === 'horizontal' ? 'border-r-transparent border-l-transparent border-y-border' : 'border-border'}
 											{block.headerBackground ? '!bg-muted/50' : ''}">
 										
 										<!-- Toolbar on focus -->
-										<div class="absolute -top-8 left-1/2 -translate-x-1/2 hidden group-focus-within/th:flex items-center gap-0.5 rounded-md bg-popover text-popover-foreground shadow-md border border-border p-1 z-20 whitespace-nowrap">
-											<button type="button" class="p-1 hover:bg-muted rounded {cellObj.bold ? 'text-primary' : ''}" onclick={() => toggleCellBold('header', ci)} title="عريض"><strong class="font-serif">B</strong></button>
-											<div class="w-px h-3 bg-border mx-0.5"></div>
-											<button type="button" class="px-1.5 py-0.5 font-mono hover:bg-muted rounded text-[10px]" onclick={() => changeColspan('header', ci, 1)} title="زيادة الامتداد">+</button>
-											<span class="text-[10px] text-muted-foreground px-1">{cellObj.colspan || 1}</span>
-											<button type="button" class="px-1.5 py-0.5 font-mono hover:bg-muted rounded text-[10px]" onclick={() => changeColspan('header', ci, -1)} title="تقليل الامتداد">-</button>
+										<div class="absolute -top-[52px] left-1/2 -translate-x-1/2 hidden group-focus-within/th:flex items-center gap-1 rounded-md bg-popover text-popover-foreground shadow-lg border border-border p-1 z-20 whitespace-nowrap">
+											<button type="button" class="p-1.5 hover:bg-muted rounded {cellObj.bold ? 'text-primary' : ''}" onclick={() => toggleCellBold('header', ci)} title="عريض"><strong class="font-serif text-sm">B</strong></button>
+											<div class="flex flex-col gap-0.5 border-r border-border pr-1">
+												<div class="flex items-center gap-0.5" title="دمج وتقسيم أفقي">
+													<div class="flex items-center justify-center bg-muted/50 rounded w-12 h-5">
+														<button type="button" class="flex-1 font-mono hover:bg-muted/80 rounded text-[10px] h-full" onclick={() => changeColspan('header', ci, 1)}>+</button>
+														<span class="flex-1 text-[10px] text-center font-medium leading-none">{cellObj.colspan || 1}</span>
+														<button type="button" class="flex-1 font-mono hover:bg-muted/80 rounded text-[10px] h-full" onclick={() => changeColspan('header', ci, -1)}>-</button>
+													</div>
+													<Grid3x3 size={10} class="text-muted-foreground/50 rotate-90" />
+												</div>
+												<div class="flex items-center gap-0.5" title="دمج وتقسيم عمودي">
+													<div class="flex items-center justify-center bg-muted/50 rounded w-12 h-5">
+														<button type="button" class="flex-1 font-mono hover:bg-muted/80 rounded text-[10px] h-full" onclick={() => changeRowspan('header', ci, 1)}>+</button>
+														<span class="flex-1 text-[10px] text-center font-medium leading-none">{cellObj.rowspan || 1}</span>
+														<button type="button" class="flex-1 font-mono hover:bg-muted/80 rounded text-[10px] h-full" onclick={() => changeRowspan('header', ci, -1)}>-</button>
+													</div>
+													<Grid3x3 size={10} class="text-muted-foreground/50" />
+												</div>
+											</div>
 										</div>
 
 										<input type="text"
@@ -755,19 +801,33 @@
 							{#each block.rows as row, ri}
 								<tr class="group/tr">
 									{#each row as cell, ci}
-										{#if !isCellCovered(row, ci)}
-											{@const cellObj = (typeof cell === 'object' && cell !== null ? cell : {}) as any}
-											<td colspan={cellObj.colspan || 1} 
+										{@const cellObj = (typeof cell === 'object' && cell !== null ? cell : {}) as any}
+										{#if !isGridCellCovered(getTableGrid(), ri + 1, ci)}
+											<td colspan={cellObj.colspan || 1} rowspan={cellObj.rowspan || 1}
 												class="relative group/td border px-1 py-0 focus-within:ring-1 focus-within:ring-primary focus-within:z-10 bg-background transition-colors
 														{block.borders === 'none' ? 'border-transparent' : block.borders === 'horizontal' ? 'border-r-transparent border-l-transparent border-y-border' : 'border-border'}">
 												
 												<!-- Toolbar on focus -->
-												<div class="absolute -top-8 left-1/2 -translate-x-1/2 hidden group-focus-within/td:flex items-center gap-0.5 rounded-md bg-popover text-popover-foreground shadow-md border border-border p-1 z-20 whitespace-nowrap">
-													<button type="button" class="p-1 hover:bg-muted rounded {cellObj.bold ? 'text-primary' : ''}" onclick={() => toggleCellBold(ri, ci)} title="عريض"><strong class="font-serif">B</strong></button>
-													<div class="w-px h-3 bg-border mx-0.5"></div>
-													<button type="button" class="px-1.5 py-0.5 font-mono hover:bg-muted rounded text-[10px]" onclick={() => changeColspan(ri, ci, 1)} title="زيادة الامتداد">+</button>
-													<span class="text-[10px] text-muted-foreground px-1">{cellObj.colspan || 1}</span>
-													<button type="button" class="px-1.5 py-0.5 font-mono hover:bg-muted rounded text-[10px]" onclick={() => changeColspan(ri, ci, -1)} title="تقليل الامتداد">-</button>
+												<div class="absolute -top-[52px] left-1/2 -translate-x-1/2 hidden group-focus-within/td:flex items-center gap-1 rounded-md bg-popover text-popover-foreground shadow-lg border border-border p-1 z-20 whitespace-nowrap">
+													<button type="button" class="p-1.5 hover:bg-muted rounded {cellObj.bold ? 'text-primary' : ''}" onclick={() => toggleCellBold(ri, ci)} title="عريض"><strong class="font-serif text-sm">B</strong></button>
+													<div class="flex flex-col gap-0.5 border-r border-border pr-1">
+														<div class="flex items-center gap-0.5" title="دمج وتقسيم أفقي">
+															<div class="flex items-center justify-center bg-muted/50 rounded w-12 h-5">
+																<button type="button" class="flex-1 font-mono hover:bg-muted/80 rounded text-[10px] h-full" onclick={() => changeColspan(ri, ci, 1)}>+</button>
+																<span class="flex-1 text-[10px] text-center font-medium leading-none">{cellObj.colspan || 1}</span>
+																<button type="button" class="flex-1 font-mono hover:bg-muted/80 rounded text-[10px] h-full" onclick={() => changeColspan(ri, ci, -1)}>-</button>
+															</div>
+															<Grid3x3 size={10} class="text-muted-foreground/50 rotate-90" />
+														</div>
+														<div class="flex items-center gap-0.5" title="دمج وتقسيم عمودي">
+															<div class="flex items-center justify-center bg-muted/50 rounded w-12 h-5">
+																<button type="button" class="flex-1 font-mono hover:bg-muted/80 rounded text-[10px] h-full" onclick={() => changeRowspan(ri, ci, 1)}>+</button>
+																<span class="flex-1 text-[10px] text-center font-medium leading-none">{cellObj.rowspan || 1}</span>
+																<button type="button" class="flex-1 font-mono hover:bg-muted/80 rounded text-[10px] h-full" onclick={() => changeRowspan(ri, ci, -1)}>-</button>
+															</div>
+															<Grid3x3 size={10} class="text-muted-foreground/50" />
+														</div>
+													</div>
 												</div>
 
 												<input type="text"
@@ -788,19 +848,33 @@
 							<!-- Legacy single row -->
 							<tr class="group/tr">
 								{#each block.cells as cell, ci}
-									{#if !isCellCovered(block.cells, ci)}
-										{@const cellObj = (typeof cell === 'object' && cell !== null ? cell : {}) as any}
-										<td colspan={cellObj.colspan || 1} 
+									{@const cellObj = (typeof cell === 'object' && cell !== null ? cell : {}) as any}
+									{#if !isGridCellCovered(getTableGrid(), 1, ci)}
+										<td colspan={cellObj.colspan || 1} rowspan={cellObj.rowspan || 1}
 											class="relative group/td border px-1 py-0 focus-within:ring-1 focus-within:ring-primary focus-within:z-10 bg-background transition-colors
 													{block.borders === 'none' ? 'border-transparent' : block.borders === 'horizontal' ? 'border-r-transparent border-l-transparent border-y-border' : 'border-border'}">
 											
 											<!-- Toolbar on focus -->
-											<div class="absolute -top-8 left-1/2 -translate-x-1/2 hidden group-focus-within/td:flex items-center gap-0.5 rounded-md bg-popover text-popover-foreground shadow-md border border-border p-1 z-20 whitespace-nowrap">
-												<button type="button" class="p-1 hover:bg-muted rounded {cellObj.bold ? 'text-primary' : ''}" onclick={() => toggleCellBold('cells', ci)} title="عريض"><strong class="font-serif">B</strong></button>
-												<div class="w-px h-3 bg-border mx-0.5"></div>
-												<button type="button" class="px-1.5 py-0.5 font-mono hover:bg-muted rounded text-[10px]" onclick={() => changeColspan('cells', ci, 1)} title="زيادة الامتداد">+</button>
-												<span class="text-[10px] text-muted-foreground px-1">{cellObj.colspan || 1}</span>
-												<button type="button" class="px-1.5 py-0.5 font-mono hover:bg-muted rounded text-[10px]" onclick={() => changeColspan('cells', ci, -1)} title="تقليل الامتداد">-</button>
+											<div class="absolute -top-[52px] left-1/2 -translate-x-1/2 hidden group-focus-within/td:flex items-center gap-1 rounded-md bg-popover text-popover-foreground shadow-lg border border-border p-1 z-20 whitespace-nowrap">
+												<button type="button" class="p-1.5 hover:bg-muted rounded {cellObj.bold ? 'text-primary' : ''}" onclick={() => toggleCellBold('cells', ci)} title="عريض"><strong class="font-serif text-sm">B</strong></button>
+												<div class="flex flex-col gap-0.5 border-r border-border pr-1">
+													<div class="flex items-center gap-0.5" title="دمج وتقسيم أفقي">
+														<div class="flex items-center justify-center bg-muted/50 rounded w-12 h-5">
+															<button type="button" class="flex-1 font-mono hover:bg-muted/80 rounded text-[10px] h-full" onclick={() => changeColspan('cells', ci, 1)}>+</button>
+															<span class="flex-1 text-[10px] text-center font-medium leading-none">{cellObj.colspan || 1}</span>
+															<button type="button" class="flex-1 font-mono hover:bg-muted/80 rounded text-[10px] h-full" onclick={() => changeColspan('cells', ci, -1)}>-</button>
+														</div>
+														<Grid3x3 size={10} class="text-muted-foreground/50 rotate-90" />
+													</div>
+													<div class="flex items-center gap-0.5" title="دمج وتقسيم عمودي">
+														<div class="flex items-center justify-center bg-muted/50 rounded w-12 h-5">
+															<button type="button" class="flex-1 font-mono hover:bg-muted/80 rounded text-[10px] h-full" onclick={() => changeRowspan('cells', ci, 1)}>+</button>
+															<span class="flex-1 text-[10px] text-center font-medium leading-none">{cellObj.rowspan || 1}</span>
+															<button type="button" class="flex-1 font-mono hover:bg-muted/80 rounded text-[10px] h-full" onclick={() => changeRowspan('cells', ci, -1)}>-</button>
+														</div>
+														<Grid3x3 size={10} class="text-muted-foreground/50" />
+													</div>
+												</div>
 											</div>
 
 											<input type="text"

@@ -67,40 +67,67 @@
     #let t-fill = (x, y) => if y == 0 and t-header-bg { luma(240) } else { none }
     #let t-cols = if t-width == "full" { b.headers.map(x => 1fr) } else { b.headers.map(x => auto) }
     
-    #let process-row(row, is-sol, is-hdr) = {
+    #let get-grid() = {
+      let g = (b.headers,)
+      if b.at("rows", default: none) != none {
+        for r in b.rows { g.push(r) }
+      } else {
+        g.push(b.cells)
+      }
+      return g
+    }
+    
+    #let process-grid(grid, is-sol) = {
       let out = ()
-      let skip = 0
-      for c in row {
-        if skip > 0 {
-          skip -= 1
-          continue
-        }
-        let is-dict = type(c) == dictionary
-        let cs = if is-dict { c.at("colspan", default: 1) } else { 1 }
-        let cb = if is-dict { c.at("bold", default: false) } else { false }
-        if is-hdr { cb = true }
-        
-        let answer-str = if is-dict { c.at("answer", default: "") } else { "" }
-        let mark-str = if is-dict { c.at("mark", default: "") } else { "" }
-        let content-str = if is-dict { c.at("content", default: "") } else { c }
-        
-        let cell-styled = if is-sol and answer-str != "" {
-          text(fill: blue)[#safe-eval(answer-str)]
-        } else {
-          safe-eval(content-str)
-        }
-        
-        if cb { cell-styled = text(weight: "bold")[#cell-styled] }
-        
-        if is-sol and mark-str != "" {
-          cell-styled = stack(dir: ttb, spacing: 5pt, cell-styled, align(left)[#text(size: 12pt, fill: red)[#mark-str ن]])
-        }
-        
-        if cs > 1 {
-          out.push(table.cell(colspan: cs)[#cell-styled])
-          skip = cs - 1
-        } else {
-          out.push(cell-styled)
+      for ri in range(grid.len()) {
+        let row = grid.at(ri)
+        for ci in range(row.len()) {
+          // check if covered
+          let covered = false
+          for r in range(ri + 1) {
+            for c in range(ci + 1) {
+              if r == ri and c == ci { continue }
+              if r >= grid.len() or c >= grid.at(r).len() { continue }
+              let p-cell = grid.at(r).at(c)
+              let is-d = type(p-cell) == dictionary
+              let rs = if is-d { p-cell.at("rowspan", default: 1) } else { 1 }
+              let cs = if is-d { p-cell.at("colspan", default: 1) } else { 1 }
+              if r + rs > ri and c + cs > ci {
+                covered = true
+              }
+            }
+          }
+          
+          if not covered {
+            let cell = row.at(ci)
+            let is-dict = type(cell) == dictionary
+            let rs = if is-dict { cell.at("rowspan", default: 1) } else { 1 }
+            let cs = if is-dict { cell.at("colspan", default: 1) } else { 1 }
+            let cb = if is-dict { cell.at("bold", default: false) } else { false }
+            if ri == 0 { cb = true } // Headers
+            
+            let answer-str = if is-dict { cell.at("answer", default: "") } else { "" }
+            let mark-str = if is-dict { cell.at("mark", default: "") } else { "" }
+            let content-str = if is-dict { cell.at("content", default: "") } else { cell }
+            
+            let cell-styled = if is-sol and answer-str != "" {
+              text(fill: blue)[#safe-eval(answer-str)]
+            } else {
+              safe-eval(content-str)
+            }
+            
+            if cb { cell-styled = text(weight: "bold")[#cell-styled] }
+            
+            if is-sol and mark-str != "" {
+              cell-styled = stack(dir: ttb, spacing: 5pt, cell-styled, align(left)[#text(size: 12pt, fill: red)[#mark-str ن]])
+            }
+            
+            if cs > 1 or rs > 1 {
+              out.push(table.cell(colspan: cs, rowspan: rs)[#cell-styled])
+            } else {
+              out.push(cell-styled)
+            }
+          }
         }
       }
       return out
@@ -113,12 +140,7 @@
         stroke: t-stroke,
         fill: t-fill,
         inset: 8pt,
-        ..process-row(b.headers, is-solution, true),
-        ..(if b.at("rows", default: none) != none {
-          b.rows.map(row => process-row(row, is-solution, false)).flatten()
-        } else {
-          process-row(b.cells, is-solution, false)
-        })
+        ..process-grid(get-grid(), is-solution)
       )
     ]
   ] else if b.type == "image_grid" [
