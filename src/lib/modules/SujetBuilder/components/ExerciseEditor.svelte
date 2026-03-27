@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ExerciseBlock, ContentBlock } from '$lib/modules/SujetBuilder/types';
+	import type { ExerciseBlock, ContentBlock, ColumnsBlock } from '$lib/modules/SujetBuilder/types';
 	import type { ExamMetadata } from '$lib/modules/SujetBuilder/types';
 	import BlockEditor from './BlockEditor.svelte';
 	import { dndzone, SHADOW_ITEM_MARKER_PROPERTY_NAME } from 'svelte-dnd-action';
@@ -25,7 +25,8 @@
 		ChevronDown,
 		ChevronUp,
 		ArrowUp,
-		ArrowDown
+		ArrowDown,
+		Columns
 	} from 'lucide-svelte';
 
 	let {
@@ -44,13 +45,22 @@
 		return Math.random().toString(36).substring(2, 9);
 	}
 
-	// Ensure all initial exercises have an ID for dnd-action
+	// Ensure all initial exercises and their blocks have IDs for dnd-action
 	$effect(() => {
 		let modified = false;
 		const updated = exercises.map(ex => {
 			if (!ex.id) {
 				modified = true;
-				return { ...ex, id: generateId() };
+				ex = { ...ex, id: generateId() };
+			}
+			// Also ensure block IDs
+			if (ex.content) {
+				for (let i = 0; i < ex.content.length; i++) {
+					if (!(ex.content[i] as any).id) {
+						modified = true;
+						(ex.content[i] as any).id = generateId();
+					}
+				}
 			}
 			return ex;
 		});
@@ -192,10 +202,13 @@
 
 	// Ensure content blocks have IDs for DnD
 	function ensureBlockIds(content: any[]): any[] {
-		return content.map(b => {
-			if (!b.id) return { ...b, id: generateId() };
-			return b;
-		});
+		if (!content) return [];
+		for (let i = 0; i < content.length; i++) {
+			if (!content[i].id) {
+				content[i] = { ...content[i], id: generateId() };
+			}
+		}
+		return content;
 	}
 
 	function handleBlockDndConsider(exerciseIndex: number, e: CustomEvent<any>) {
@@ -255,6 +268,9 @@
 			case 'typst_raw':
 				newBlock = { type: 'typst_raw', content: '', id: generateId() };
 				break;
+			case 'columns':
+				newBlock = { type: 'columns', children: [{ type: 'text', content: '', id: generateId() }, { type: 'text', content: '', id: generateId() }], id: generateId() } as any;
+				break;
 			default:
 				return;
 		}
@@ -269,6 +285,23 @@
 			(_, i) => i !== blockIndex
 		);
 		onchange?.();
+	}
+
+	function moveBlock(exerciseIndex: number, blockIndex: number, direction: 'up' | 'down') {
+		const content = exercises[exerciseIndex].content;
+		if (direction === 'up' && blockIndex > 0) {
+			const temp = content[blockIndex];
+			content[blockIndex] = content[blockIndex - 1];
+			content[blockIndex - 1] = temp;
+			exercises[exerciseIndex].content = [...content];
+			onchange?.();
+		} else if (direction === 'down' && blockIndex < content.length - 1) {
+			const temp = content[blockIndex];
+			content[blockIndex] = content[blockIndex + 1];
+			content[blockIndex + 1] = temp;
+			exercises[exerciseIndex].content = [...content];
+			onchange?.();
+		}
 	}
 
 	const ordinals = ['الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس', 'السادس', 'السابع', 'الثامن'];
@@ -434,20 +467,24 @@
 			</div>
 
 			<!-- Content Blocks (DnD enabled) -->
+		{#if exercise.content}
 			<div class="space-y-4 min-h-[40px]"
-				use:dndzone={{ items: ensureBlockIds(exercise.content), flipDurationMs: 200, dropTargetStyle: {}, dragDisabled: false }}
+				use:dndzone={{ items: exercise.content, flipDurationMs: 200, dropTargetStyle: { outline: '2px dashed hsl(var(--primary) / 0.4)', outlineOffset: '4px', borderRadius: '12px' }, dragDisabled: false }}
 				onconsider={(e) => handleBlockDndConsider(exercises.indexOf(exercise), e)}
 				onfinalize={(e) => handleBlockDndFinalize(exercises.indexOf(exercise), e)}
 			>
-				{#each ensureBlockIds(exercise.content) as block, bi (block.id)}
+				{#each exercise.content as block, bi (block.id)}
 					<BlockEditor
 						bind:block={exercises[exercises.indexOf(exercise)].content[bi]}
 						onremove={() => removeBlock(exercises.indexOf(exercise), bi)}
 						onduplicate={() => duplicateBlock(exercises.indexOf(exercise), bi)}
+						onmoveup={bi > 0 ? () => moveBlock(exercises.indexOf(exercise), bi, 'up') : undefined}
+						onmovedown={bi < exercise.content.length - 1 ? () => moveBlock(exercises.indexOf(exercise), bi, 'down') : undefined}
 						{onchange}
 					/>
 				{/each}
 			</div>
+		{/if}
 
 			<!-- Add Block Buttons -->
 			<div class="mt-4 border-t border-border/60 pt-4">
@@ -513,6 +550,16 @@
 						title="كتابة كود Typst حر"
 					>
 						<span class="font-mono text-xs">{'</>'}</span> Typst حر
+					</button>
+
+					<div class="w-px bg-border/60 mx-1"></div>
+
+					<button
+						class="flex items-center gap-1.5 rounded-xl bg-indigo-500/10 px-3 py-2 text-sm font-medium text-indigo-700 dark:text-indigo-400 transition-colors hover:bg-indigo-500/20 border border-indigo-500/20 shadow-sm"
+						onclick={() => addBlock(exercises.indexOf(exercise), 'columns')}
+						title="كتل جنباً إلى جنب"
+					>
+						<Columns size={16} /> أعمدة
 					</button>
 				</div>
 			</div> <!-- End of Add Block Buttons -->

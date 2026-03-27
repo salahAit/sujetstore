@@ -1,19 +1,24 @@
 <script lang="ts">
-	import type { ContentBlock } from '$lib/modules/SujetBuilder/types';
-	import { Type, FunctionSquare, Table2, ImageIcon, Trash2, Upload, Loader2, Plus, CheckCircle, ListChecks, GitBranch, Tag, GripVertical, Copy, ArrowRightLeft, Code2, AlignLeft, AlignCenter, AlignRight, Grid3x3, Minus, Square, PaintBucket, Maximize2, Minimize2 } from 'lucide-svelte';
+	import type { ContentBlock, ColumnsBlock } from '$lib/modules/SujetBuilder/types';
+	import { Type, FunctionSquare, Table2, ImageIcon, Trash2, Upload, Loader2, Plus, CheckCircle, ListChecks, GitBranch, Tag, GripVertical, Copy, ArrowRightLeft, Code2, AlignLeft, AlignCenter, AlignRight, Grid3x3, Minus, Square, PaintBucket, Maximize2, Minimize2, Columns, ArrowUp, ArrowDown } from 'lucide-svelte';
 	import MathPalette from './MathPalette.svelte';
+	import Self from './BlockEditor.svelte';
 
 	let {
 		block = $bindable(),
 		onremove,
 		onchange,
 		onduplicate,
+		onmoveup,
+		onmovedown,
 		showGrip = true
 	}: {
 		block: ContentBlock;
 		onremove?: () => void;
 		onchange?: () => void;
 		onduplicate?: () => void;
+		onmoveup?: () => void;
+		onmovedown?: () => void;
 		showGrip?: boolean;
 	} = $props();
 
@@ -26,7 +31,8 @@
 		multiple_choice: 'اختيار متعدد',
 		diagram_flow: 'مخطط تدفقي',
 		labeling: 'تسميات',
-		typst_raw: 'Typst حر'
+		typst_raw: 'Typst حر',
+		columns: 'أعمدة'
 	};
 
 	const blockTypeIcons: Record<string, any> = {
@@ -38,7 +44,8 @@
 		multiple_choice: ListChecks,
 		diagram_flow: GitBranch,
 		labeling: Tag,
-		typst_raw: Code2
+		typst_raw: Code2,
+		columns: Columns
 	};
 
 	// Image upload state
@@ -532,6 +539,27 @@
 				>
 					<Copy size={13} />
 				</button>
+			{/if}
+			<!-- Move Up/Down buttons -->
+			{#if onmoveup || onmovedown}
+				<div class="flex items-center border-l border-border/50 pl-0.5 ml-0.5">
+					<button
+						class="rounded-md p-1 text-muted-foreground opacity-0 transition-all hover:bg-muted hover:text-foreground group-hover:opacity-100 disabled:opacity-20 disabled:hover:bg-transparent"
+						onclick={onmoveup}
+						disabled={!onmoveup}
+						title="نقل لأعلى"
+					>
+						<ArrowUp size={13} />
+					</button>
+					<button
+						class="rounded-md p-1 text-muted-foreground opacity-0 transition-all hover:bg-muted hover:text-foreground group-hover:opacity-100 disabled:opacity-20 disabled:hover:bg-transparent"
+						onclick={onmovedown}
+						disabled={!onmovedown}
+						title="نقل لأسفل"
+					>
+						<ArrowDown size={13} />
+					</button>
+				</div>
 			{/if}
 			<!-- Remove button -->
 			<button
@@ -1064,6 +1092,48 @@
 					<Plus size={10} /> تسمية
 				</button>
 				<input type="text" class="w-20 rounded border border-red-200 bg-red-50 px-2 py-1 text-xs text-red-700 focus:outline-none dark:border-red-800 dark:bg-red-900/30 dark:text-red-300" placeholder="النقاط" bind:value={block.mark} oninput={() => onchange?.()} />
+			</div>
+		</div>
+	{/if}
+
+	<!-- ════════════ COLUMNS (side by side) ════════════ -->
+	{#if block.type === 'columns'}
+		{@const colBlock = block as unknown as ColumnsBlock & { id?: string }}
+		<div class="space-y-2">
+			<div class="flex items-center gap-2 mb-2">
+				<span class="text-xs text-muted-foreground">عدد الأعمدة: {colBlock.children.length}</span>
+				<button
+					class="flex items-center gap-1 rounded border border-dashed border-indigo-300 px-2 py-0.5 text-[10px] text-indigo-600 hover:bg-indigo-50 dark:border-indigo-700 dark:text-indigo-400"
+					onclick={() => {
+						colBlock.children = [...colBlock.children, { type: 'text', content: '', id: Math.random().toString(36).slice(2, 9) } as any];
+						onchange?.();
+					}}
+				>
+					<Plus size={10} /> عمود
+				</button>
+			</div>
+			<div class="grid gap-3" style="grid-template-columns: repeat({colBlock.children.length}, 1fr);">
+				{#each colBlock.children as child, ci}
+					<div class="relative rounded-lg border-2 border-dashed border-indigo-300/50 p-1 bg-indigo-50/20 dark:bg-indigo-900/10 dark:border-indigo-700/40">
+						{#if colBlock.children.length > 1}
+							<button
+								class="absolute -top-2.5 -right-2.5 z-10 rounded-full bg-red-500 text-white p-0.5 shadow hover:bg-red-600 transition-colors"
+								onclick={() => {
+									colBlock.children = colBlock.children.filter((_: any, i: number) => i !== ci);
+									onchange?.();
+								}}
+								title="حذف هذا العمود"
+							>
+								<Trash2 size={10} />
+							</button>
+						{/if}
+						<Self
+							bind:block={colBlock.children[ci]}
+							{onchange}
+							showGrip={false}
+						/>
+					</div>
+				{/each}
 			</div>
 		</div>
 	{/if}

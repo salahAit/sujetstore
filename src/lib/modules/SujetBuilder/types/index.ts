@@ -165,6 +165,15 @@ export interface ImageGridBlock {
 	}[];
 }
 
+/** كتلة أعمدة: تعرض كتل متعددة جنباً إلى جنب */
+export interface ColumnsBlock {
+	type: 'columns';
+	/** The blocks to display side by side */
+	children: ContentBlock[];
+	/** Optional column widths (e.g. ['1fr', '2fr']). Defaults to equal widths. */
+	widths?: string[];
+}
+
 /** Union of all possible content block types */
 export type ContentBlock =
 	| TextBlock
@@ -176,7 +185,8 @@ export type ContentBlock =
 	| DiagramFlowBlock
 	| LabelingBlock
 	| ImageGridBlock
-	| TypstRawBlock;
+	| TypstRawBlock
+	| ColumnsBlock;
 
 // --- Exercise Structure ---
 

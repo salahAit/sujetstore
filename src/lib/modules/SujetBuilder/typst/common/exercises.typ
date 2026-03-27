@@ -186,6 +186,18 @@
         safe-eval(b.content)
       })
     ], if is-solution and b.at("mark", default: "") != "" { align(bottom)[#text(size: 14pt, fill: red)[#b.mark ن]] } else { [] })
+  ] else if b.type == "columns" [
+    #let children = b.at("children", default: ())
+    #let n = children.len()
+    #if n > 0 {
+      let cols = b.at("widths", default: none)
+      if cols == none { cols = range(n).map(_ => 1fr) } else { cols = cols.map(w => eval(w)) }
+      grid(
+        columns: cols,
+        column-gutter: 12pt,
+        ..children.map(child => [#render-block(child, is-solution)])
+      )
+    }
   ]
 }
 
