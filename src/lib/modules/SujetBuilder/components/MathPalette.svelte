@@ -153,12 +153,11 @@
 </script>
 
 <div class="mt-2 rounded-lg border border-border/60 bg-muted/20 overflow-hidden">
-	<!-- Category Tabs -->
-	<div class="flex items-center gap-0.5 overflow-x-auto border-b border-border/40 bg-muted/30 px-1.5 py-1 hide-scrollbar">
+	<div class="flex items-center gap-1 overflow-x-auto border-b border-border/40 bg-muted/30 px-2 py-1.5 hide-scrollbar">
 		{#each categories as cat}
 			<button
 				type="button"
-				class="whitespace-nowrap rounded-md px-2.5 py-1 text-[10px] font-bold transition-all {activeCategory === cat.id
+				class="whitespace-nowrap rounded-md px-3 py-1.5 text-xs font-bold transition-all {activeCategory === cat.id
 					? 'bg-background text-foreground shadow-sm'
 					: 'text-muted-foreground hover:bg-background/50 hover:text-foreground'}"
 				onclick={() => (activeCategory = cat.id)}
@@ -169,11 +168,11 @@
 	</div>
 
 	<!-- Symbols Grid -->
-	<div class="flex flex-wrap gap-1 p-2">
+	<div class="flex flex-wrap gap-1.5 p-3">
 		{#each categories.find((c) => c.id === activeCategory)?.symbols ?? [] as sym}
 			<button
 				type="button"
-				class="group relative flex min-w-[32px] items-center justify-center rounded-md border border-border/50 bg-background px-2 py-1.5 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary/50 hover:bg-primary/10 hover:text-primary hover:shadow-md active:scale-95"
+				class="group relative flex min-w-[44px] items-center justify-center rounded-md border border-border/50 bg-background px-3 py-2 text-base font-semibold text-foreground shadow-sm transition-all hover:border-primary/50 hover:bg-primary/10 hover:text-primary hover:shadow-md active:scale-95"
 				onclick={() => insertSymbol(sym.template)}
 				title={sym.tooltip ? `${sym.tooltip}\n${sym.template}` : sym.template}
 			>
