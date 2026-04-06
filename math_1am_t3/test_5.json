@@ -1,0 +1,90 @@
+{
+    "metadata": {
+        "levelId": "moyen",
+        "yearId": "1am",
+        "yearName": "الأولى متوسط",
+        "subjectId": "MAT",
+        "subjectName": "الرياضيات",
+        "trimesterId": "t3",
+        "trimesterName": "الفصل الثالث",
+        "docType": "test",
+        "academicYear": "2024 / 2025",
+        "duration": "ساعة واحدة",
+        "siteUrl": "SujetStore.com"
+    },
+    "exercises": [
+        {
+            "num": "التمرين الأول",
+            "points": 6,
+            "content": [
+                {
+                    "type": "text",
+                    "content": "أوجد العدد الناقص $x$ في المساوات الآتية:"
+                },
+                {
+                    "type": "math",
+                    "content": "x / 4 = 12",
+                    "display": true
+                },
+                {
+                    "type": "text",
+                    "content": "الحل:",
+                    "answer": "$x = 12 times 4 = 48$.",
+                    "mark": "3"
+                },
+                {
+                    "type": "math",
+                    "content": "x times 0.5 = 20",
+                    "display": true
+                },
+                {
+                    "type": "text",
+                    "content": "الحل:",
+                    "answer": "$x = 20 / 0.5 = 40$.",
+                    "mark": "3"
+                }
+            ]
+        },
+        {
+            "num": "التمرين الثاني",
+            "points": 6,
+            "content": [
+                {
+                    "type": "text",
+                    "content": "تمثل الخريطة منطقة بمقياس $1 / 200000$."
+                },
+                {
+                    "type": "text",
+                    "content": "1) ماذا يعني هذا المقياس؟",
+                    "answer": "يعني أن $1cm$ على الخريطة يمثل $200000cm$ في الحقيقة (أي $2km$).",
+                    "mark": "3"
+                },
+                {
+                    "type": "text",
+                    "content": "2) المسافة على الخريطة بين قريتين هي $5cm$. احسب المسافة الحقيقية بالكيلومتر.",
+                    "answer": "$5 times 2 = 10 km$. (أو $5 times 200000 = 1000000 cm = 10 km$).",
+                    "mark": "3"
+                }
+            ]
+        },
+        {
+            "num": "الوضعية الإدماجية",
+            "points": 8,
+            "instruction": "في مخبر المؤسسة، طلب الأستاذ من التلاميذ صنع مجسم لمكعب باستخدام سلك معدني صلب.",
+            "content": [
+                {
+                    "type": "text",
+                    "content": "1) إذا كان طول الحرف الواحد للمكعب هو $15cm$، احسب الطول الإجمالي للسلك اللازم لصنع الهيكل.",
+                    "answer": "للمكعب 12 حرفاً. طول السلك = $15 times 12 = 180 cm$.",
+                    "mark": "4"
+                },
+                {
+                    "type": "text",
+                    "content": "2) إذا أراد التلاميذ تغليف أوجه هذا المكعب بالورق المقوى، فما هي مساحة الورق اللازمة؟",
+                    "answer": "مساحة الوجه الواحد (مربع) = $15 times 15 = 225 cm^2$. المساحة الإجمالية لـ 6 أوجه = $225 times 6 = 1350 cm^2$.",
+                    "mark": "4"
+                }
+            ]
+        }
+    ]
+}

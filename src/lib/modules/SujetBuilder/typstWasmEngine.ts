@@ -94,11 +94,18 @@ export async function loadTemplateFiles(): Promise<void> {
 async function prepareShadowFileSystem(documentData: any, isSolution: boolean, templateId: string): Promise<string> {
 	if (!engine) throw new Error('Engine not initialized');
 
-	// 1. Map binary files (images, etc)
+	// 1. Map binary files (images, fonts, etc) and register fonts
 	for (const [path, base64] of Object.entries(cachedBinaryFiles)) {
 		try {
 			const binary = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
 			engine.mapShadow(`/${path}`, binary);
+			
+			// If it's a font file, also add it to the compiler's font set
+			if (/\.(ttf|otf|woff|woff2)$/i.test(path)) {
+				// The compiler expects an array buffer or uint8array for fonts
+				engine.addFont(binary);
+			}
+
 			const filename = path.split('/').pop();
 			if (filename) engine.mapShadow(`/${filename}`, binary);
 		} catch (e) {
@@ -116,8 +123,13 @@ async function prepareShadowFileSystem(documentData: any, isSolution: boolean, t
 			const escapedJson = jsonStr.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 			
 			finalContent = finalContent.replace(
+				/json\.decode\(sys\.inputs\.at\("data"(?:,\s*default:\s*"\{?\}?")?\)\)/g,
+				`json(bytes("${escapedJson}"))`
+			);
+
+			finalContent = finalContent.replace(
 				/sys\.inputs\.at\("data"(?:,\s*default:\s*"\{?\}?")?\)/g,
-				`"${escapedJson}"`
+				`bytes("${escapedJson}")`
 			);
 
 			finalContent = `#let is-solution = ${isSolution}\n${finalContent}`;

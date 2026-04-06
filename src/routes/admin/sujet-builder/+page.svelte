@@ -324,20 +324,36 @@
 				const doc = data.document || data;
 				
 				if (doc.metadata) {
-					metadata = { ...doc.metadata, font: doc.metadata.font || 'KFGQPC Uthman Taha Naskh' };
+					metadata = { 
+						...metadata,  // keep defaults
+						...doc.metadata, 
+						font: doc.metadata.font || 'KFGQPC Uthman Taha Naskh',
+						siteUrl: doc.metadata.siteUrl || 'sujetstore.com'
+					};
 				}
-				if (doc.exercises) {
-					// Ensure every exercise has a unique `id` for the keyed each block
-					exercises = doc.exercises.map((ex: any) => ({
-						...ex,
-						id: ex.id || Math.random().toString(36).substring(2, 9)
-					}));
+				if (doc.exercises && Array.isArray(doc.exercises)) {
+					exercises = doc.exercises.map((ex: any) => {
+						// Normalize content blocks: add unique IDs
+						const normalizedContent = (ex.content || []).map((block: any) => ({
+							...block,
+							id: block.id || Math.random().toString(36).substring(2, 9)
+						}));
+
+						return {
+							...ex,
+							id: ex.id || Math.random().toString(36).substring(2, 9),
+							instruction: ex.instruction || '',
+							content: normalizedContent
+						};
+					});
 				}
 				
 				if (fileInput) fileInput.value = ''; // reset
-				alert('تم استيراد الموضوع بنجاح!');
-			} catch (err) {
-				alert('ملف JSON غير صالح أو به خطأ في الهيكلية.');
+				const exCount = doc.exercises?.length || 0;
+				alert(`تم استيراد الموضوع بنجاح!\n${exCount} تمرين(تمارين) تم تحميلها.`);
+			} catch (err: any) {
+				console.error('[Import] Error:', err);
+				alert(`ملف JSON غير صالح أو به خطأ في الهيكلية.\n\nالخطأ: ${err.message}`);
 			}
 		};
 		reader.readAsText(file);

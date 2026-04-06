@@ -1,0 +1,146 @@
+{
+    "metadata": {
+        "levelId": "moyen",
+        "yearId": "1am",
+        "yearName": "الأولى متوسط",
+        "subjectId": "MAT",
+        "subjectName": "الرياضيات",
+        "trimesterId": "t3",
+        "trimesterName": "الفصل الثالث",
+        "docType": "test",
+        "academicYear": "2024 / 2025",
+        "duration": "ساعة واحدة",
+        "siteUrl": "SujetStore.com"
+    },
+    "exercises": [
+        {
+            "num": "التمرين الأول",
+            "points": 6,
+            "content": [
+                {
+                    "type": "text",
+                    "content": "أكمل الجدول الخاص بالمجسمات التالية:"
+                },
+                {
+                    "type": "table",
+                    "headers": [
+                        "المجسم",
+                        "عدد الأوجه",
+                        "عدد الحروف",
+                        "عدد الرؤوس",
+                        "شكل الوجه"
+                    ],
+                    "cells": [
+                        "المكعب",
+                        {
+                            "content": "...",
+                            "answer": "6",
+                            "mark": "0.75"
+                        },
+                        {
+                            "content": "...",
+                            "answer": "12",
+                            "mark": "0.75"
+                        },
+                        {
+                            "content": "...",
+                            "answer": "8",
+                            "mark": "0.75"
+                        },
+                        {
+                            "content": "...",
+                            "answer": "مربع",
+                            "mark": "0.75"
+                        },
+                        "متوازي المستطيلات",
+                        {
+                            "content": "...",
+                            "answer": "6",
+                            "mark": "0.75"
+                        },
+                        {
+                            "content": "...",
+                            "answer": "12",
+                            "mark": "0.75"
+                        },
+                        {
+                            "content": "...",
+                            "answer": "8",
+                            "mark": "0.75"
+                        },
+                        {
+                            "content": "...",
+                            "answer": "مستطيل",
+                            "mark": "0.75"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "num": "التمرين الثاني",
+            "points": 6,
+            "content": [
+                {
+                    "type": "text",
+                    "content": "حوّل الحجوم التالية إلى الوحدة المطلوبة:"
+                },
+                {
+                    "type": "math",
+                    "content": "12 m^3 = ... L",
+                    "display": false
+                },
+                {
+                    "type": "text",
+                    "content": "التحويل 1",
+                    "answer": "$12000 L$",
+                    "mark": "2"
+                },
+                {
+                    "type": "math",
+                    "content": "54000 cm^3 = ... dm^3",
+                    "display": false
+                },
+                {
+                    "type": "text",
+                    "content": "التحويل 2",
+                    "answer": "$54 dm^3$",
+                    "mark": "2"
+                },
+                {
+                    "type": "math",
+                    "content": "3.5 L = ... cm^3",
+                    "display": false
+                },
+                {
+                    "type": "text",
+                    "content": "التحويل 3",
+                    "answer": "$3500 cm^3$",
+                    "mark": "2"
+                }
+            ]
+        },
+        {
+            "num": "الوضعية الإدماجية",
+            "points": 8,
+            "content": [
+                {
+                    "type": "text",
+                    "content": "حوض أسماك زجاجي على شكل متوازي مستطيلات، طوله $60cm$، عرضه $30cm$، وارتفاعه $40cm$."
+                },
+                {
+                    "type": "text",
+                    "content": "1) احسب السعة الإجمالية للحوض بـ $cm^3$.",
+                    "answer": "$V = 60 times 30 times 40 = 72000 cm^3$.",
+                    "mark": "4"
+                },
+                {
+                    "type": "text",
+                    "content": "2) ملأنا الحوض بالماء حتى ارتفاع $30cm$. ما هو حجم الماء الموجود في الحوض باللتر؟",
+                    "answer": "حجم الماء = $60 times 30 times 30 = 54000 cm^3$. التحويل: $54000 cm^3 = 54 dm^3 = 54 L$.",
+                    "mark": "4"
+                }
+            ]
+        }
+    ]
+}

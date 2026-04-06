@@ -1,11 +1,19 @@
 #let safe-eval(content, mode: "markup") = {
   if content == "" or content == none { return [] }
-  let result = eval(content, mode: mode)
+  
+  // Define common units as variables to avoid "unknown variable" errors in math eval
+  let scope = (
+    cm: 1cm, mm: 1mm, pt: 1pt, em: 1em,
+  )
+  
+  let result = eval(content, mode: mode, scope: scope)
   result
 }
 
 #let render-block(b, is-solution) = {
   let m = b.at("mark", default: b.at("points", default: ""))
+  
+  let scope = (cm: 1cm, mm: 1mm, pt: 1pt, em: 1em)
   
   if b.type == "text" [
     #grid(columns: (1fr, auto), [
@@ -18,8 +26,8 @@
   ] else if b.type == "true_false" [
     #for item in b.items [
       #grid(columns: (1fr, auto), [
-        - #eval(item.q, mode: "markup") #h(5pt) [#box(width: 35pt, align(center)[#(if is-solution { text(fill: blue)[#eval(item.a, mode: "markup")] } else { "........" })])] \
-        #v(-2pt) #text(size: 10pt)[التصحيح: #(if is-solution and item.at("c", default: "") != "" { text(fill: blue)[#eval(item.c, mode: "markup")] } else { "........................................................................................................" })]
+        - #eval(item.q, mode: "markup", scope: scope) #h(5pt) [#box(width: 35pt, align(center)[#(if is-solution { text(fill: blue)[#eval(item.a, mode: "markup", scope: scope)] } else { "........" })])] \
+        #v(-2pt) #text(size: 10pt)[التصحيح: #(if is-solution and item.at("c", default: "") != "" { text(fill: blue)[#eval(item.c, mode: "markup", scope: scope)] } else { "........................................................................................................" })]
       ], if is-solution { align(bottom)[#text(size: 14pt, fill: red)[#item.mark ن]] } else { [] })
       #v(4pt)
     ]
@@ -28,10 +36,10 @@
     #stack(dir: ttb, spacing: 8pt,
       ..b.groups.map(g => [
         #grid(columns: (1fr, auto), [
-          #text(weight: "bold")[#eval(g.header, mode: "markup")] \
+          #text(weight: "bold")[#eval(g.header, mode: "markup", scope: scope)] \
           #h(15pt) #g.options.map(opt => [
             #let symbol = if is-solution and opt == g.correct { text(fill: blue)[×] } else { " " }
-            #box(stroke: 0.5pt, width: 12pt, height: 12pt, radius: 2pt, align(center + horizon)[#v(-2pt)#symbol]) #h(4pt) #(if is-solution and opt == g.correct { text(fill: blue)[#eval(opt, mode: "markup")] } else { eval(opt, mode: "markup") })
+            #box(stroke: 0.5pt, width: 12pt, height: 12pt, radius: 2pt, align(center + horizon)[#v(-2pt)#symbol]) #h(4pt) #(if is-solution and opt == g.correct { text(fill: blue)[#eval(opt, mode: "markup", scope: scope)] } else { eval(opt, mode: "markup", scope: scope) })
           ]).join(h(20pt))
         ], if is-solution and g.at("mark", default: "") != "" { text(size: 14pt, fill: red)[#g.mark ن] } else { [] })
       ]))
@@ -42,18 +50,18 @@
         #grid(
           columns: (1fr, auto, 1.2fr, auto, 1fr), 
           align: center + horizon, 
-          rect(width: 100%, stroke: 0.7pt, inset: 10pt, radius: 4pt)[#(if is-solution { text(fill: blue)[#b.flow.at(2)] } else { "..............." })],
+          rect(width: 100%, stroke: 0.7pt, inset: 10pt, radius: 4pt)[#(if is-solution { text(fill: blue)[#eval(b.flow.at(2), mode: "markup", scope: scope)] } else { "..............." })],
           [ #h(10pt) $arrow.l$ #h(10pt) ],
-          rect(width: 100%, stroke: 1.5pt + blue.darken(20%), inset: 12pt, radius: 4pt, fill: blue.lighten(95%))[#text(weight: "bold")[#b.flow.at(1)]],
+          rect(width: 100%, stroke: 1.5pt + blue.darken(20%), inset: 12pt, radius: 4pt, fill: blue.lighten(95%))[#text(weight: "bold")[#eval(b.flow.at(1), mode: "markup", scope: scope)]],
           [ #h(10pt) $arrow.l$ #h(10pt) ],
-          rect(width: 100%, stroke: 0.7pt, inset: 10pt, radius: 4pt)[#(if is-solution { text(fill: blue)[#b.flow.at(0)] } else { "..............." })]
+          rect(width: 100%, stroke: 0.7pt, inset: 10pt, radius: 4pt)[#(if is-solution { text(fill: blue)[#eval(b.flow.at(0), mode: "markup", scope: scope)] } else { "..............." })]
         )
       ]
     ], if is-solution and m != "" { text(size: 14pt, fill: red)[#m ن] } else { [] })
   ] else if b.type == "labeling" [
     #grid(columns: (1fr, auto), [
       #grid(columns: (1fr, 1fr), gutter: 15pt,
-        ..b.labels.map(l => [ - #(if is-solution { text(fill: blue)[#eval(l, mode: "markup")] } else { ".........................................." }) ])
+        ..b.labels.map(l => [ - #(if is-solution { text(fill: blue)[#eval(l, mode: "markup", scope: scope)] } else { ".........................................." }) ])
       )
     ], if is-solution and m != "" { text(size: 14pt, fill: red)[#m ن] } else { [] })
   ] else if b.type == "table" [
@@ -165,16 +173,16 @@
     ]
   ] else if b.type == "math" [
     #(if b.at("display", default: false) {
-      align(center)[$ #eval(b.content, mode: "math") $]
+      align(center)[$ #eval(b.content, mode: "math", scope: scope) $]
     } else {
-      [$ #eval(b.content, mode: "math") $]
+      [$ #eval(b.content, mode: "math", scope: scope) $]
     })
   ] else if b.type == "image" [
     #if b.at("src", default: "") != "" {
       align(center)[
         #image(b.src, width: b.at("width", default: 80%))
         #if b.at("caption", default: "") != "" {
-          text(size: 10pt, style: "italic")[#eval(b.caption, mode: "markup")]
+          text(size: 10pt, style: "italic")[#eval(b.caption, mode: "markup", scope: scope)]
         }
       ]
     }
@@ -218,7 +226,7 @@
       #v(5pt)
       
       #if ex.at("instruction", default: "") != "" [
-        #text(style: "italic", size: 13pt)[#eval(ex.instruction, mode: "markup")]
+        #text(style: "italic", size: 13pt)[#eval(ex.instruction, mode: "markup", scope: scope)]
         #v(2pt)
       ]
       
