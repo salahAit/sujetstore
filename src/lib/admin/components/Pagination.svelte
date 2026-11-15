@@ -5,11 +5,11 @@
 		totalItems,
 		pageSize = $bindable(10),
 		currentPage = $bindable(1)
-	} = $props<{
+	}: {
 		totalItems: number;
 		pageSize: number;
 		currentPage: number;
-	}>();
+	} = $props();
 
 	let totalPages = $derived(Math.ceil(totalItems / pageSize) || 1);
 

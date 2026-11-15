@@ -19,7 +19,7 @@
 			<p class="text-muted-foreground mt-2 text-sm">أدخل بيانات الاعتماد للمتابعة</p>
 		</div>
 
-		<div class="bg-backgroundard text-card-foreground border-border rounded-2xl border p-8 shadow-2xl">
+		<div class="bg-card text-card-foreground border-border rounded-2xl border p-8 shadow-2xl">
 			<form method="POST" class="space-y-5">
 				<div>
 					<label for="username" class="mb-2 block text-sm font-medium">اسم المستخدم</label>

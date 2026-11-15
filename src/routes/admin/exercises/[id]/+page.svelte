@@ -5,43 +5,57 @@
 		ChevronLeft, Loader2, FileText, Database, Download
 	} from 'lucide-svelte';
 	import { page } from '$app/state';
-	import BlockEditor from '$lib/modules/SujetBuilder/components/BlockEditor.svelte';
-	import type { ContentBlock } from '$lib/modules/SujetBuilder/types';
+	import BlockEditor from '#lib/modules/SujetBuilder/components/BlockEditor.svelte';
+	import type { ContentBlock } from '#lib/modules/SujetBuilder/types';
 	
-	let { data } = $props<{ data: any }>();
+	let { data }: { data: any } = $props();
 
 	// Form State
-	let title = $state(data.exercise?.title || 'تمرين جديد');
-	let points = $state(data.exercise?.points || 5);
-	let trimesterId = $state(data.exercise?.trimesterId || '');
-	let unit = $state(data.exercise?.unit || '');
-	
+	let title = $state('تمرين جديد');
+	let points = $state(5);
+	let trimesterId = $state('');
+	let unit = $state('');
+
 	// Content State (JSON)
-	let content = $state<ContentBlock[]>(
-		data.exercise?.content ? 
-		(typeof data.exercise.content === 'string' ? JSON.parse(data.exercise.content) : data.exercise.content) 
-		: [{ type: 'text', content: '' }]
-	);
+	let content = $state<ContentBlock[]>([{ type: 'text', content: '' }]);
 
 	// Classification State
 	let selectedLevel = $state('');
 	let selectedYear = $state('');
 	let selectedStream = $state('');
-	let selectedYearSubjectId = $state(data.exercise?.yearSubjectId?.toString() || '');
+	let selectedYearSubjectId = $state('');
 
-	// Initialization of classification from existing data
+	let initialized = false;
+
+	// Initialization of form & classification from existing data
 	$effect(() => {
-		if (data.exercise && data.metadata.yearSubjects) {
-			const ys = data.metadata.yearSubjects.find((y: any) => y.id === data.exercise.yearSubjectId);
-			if (ys) {
-				selectedYear = ys.yearId;
-				const year = data.metadata.years.find((y: any) => y.id === ys.yearId);
-				if (year) {
-					selectedLevel = year.levelId;
-					// Infer stream if possible (optional: get first stream that matches this subject and year)
-					if (year.levelId === 'secondaire') {
-						const matchingStream = data.metadata.streamSubjects.find((ss: any) => ss.subjectId === ys.subjectId && (ss.yearId === ys.yearId || ss.yearId === null));
-						if (matchingStream) selectedStream = matchingStream.streamId;
+		const ex = data.exercise;
+		if (!initialized && ex) {
+			initialized = true;
+			title = ex.title || 'تمرين جديد';
+			points = ex.points || 5;
+			trimesterId = ex.trimesterId || '';
+			unit = ex.unit || '';
+			content = ex.content
+				? typeof ex.content === 'string'
+					? JSON.parse(ex.content)
+					: ex.content
+				: [{ type: 'text', content: '' }];
+			selectedYearSubjectId = ex.yearSubjectId?.toString() || '';
+
+			if (data.metadata.yearSubjects) {
+				const ys = data.metadata.yearSubjects.find((y: any) => y.id === ex.yearSubjectId);
+				if (ys) {
+					selectedYear = ys.yearId;
+					const year = data.metadata.years.find((y: any) => y.id === ys.yearId);
+					if (year) {
+						selectedLevel = year.levelId;
+						if (year.levelId === 'secondaire') {
+							const matchingStream = data.metadata.streamSubjects.find(
+								(ss: any) => ss.subjectId === ys.subjectId && (ss.yearId === ys.yearId || ss.yearId === null)
+							);
+							if (matchingStream) selectedStream = matchingStream.streamId;
+						}
 					}
 				}
 			}
@@ -315,9 +329,10 @@
 
 			<!-- Points -->
 			<div class="space-y-2">
-				<label class="text-sm font-medium">عدد النقاط (المقترح)</label>
+				<label for="ex-points" class="text-sm font-medium">عدد النقاط (المقترح)</label>
 				<div class="flex items-center gap-3">
 					<input 
+						id="ex-points"
 						name="points"
 						type="number" 
 						min="1" 
@@ -333,8 +348,9 @@
 
 			<!-- Level -->
 			<div class="space-y-2">
-				<label class="text-xs font-bold text-muted-foreground">الطور التعليمي</label>
+				<label for="ex-level" class="text-xs font-bold text-muted-foreground">الطور التعليمي</label>
 				<select
+					id="ex-level"
 					bind:value={selectedLevel}
 					class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
 				>
@@ -348,8 +364,9 @@
 			<!-- Year -->
 			{#if selectedLevel}
 				<div class="space-y-2">
-					<label class="text-xs font-bold text-muted-foreground">المستوى / السنة الدراسية</label>
+					<label for="ex-year" class="text-xs font-bold text-muted-foreground">المستوى / السنة الدراسية</label>
 					<select
+						id="ex-year"
 						bind:value={selectedYear}
 						class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
 					>
@@ -364,8 +381,9 @@
 			<!-- Stream -->
 			{#if needsStream && selectedYear}
 				<div class="space-y-2">
-					<label class="text-xs font-bold text-muted-foreground">الشعبة / التخصص</label>
+					<label for="ex-stream" class="text-xs font-bold text-muted-foreground">الشعبة / التخصص</label>
 					<select
+						id="ex-stream"
 						bind:value={selectedStream}
 						class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
 					>
@@ -380,8 +398,9 @@
 			<!-- Subject -->
 			{#if selectedYear && (!needsStream || selectedStream)}
 				<div class="space-y-2">
-					<label class="text-xs font-bold text-muted-foreground">المادة</label>
+					<label for="ex-subject" class="text-xs font-bold text-muted-foreground">المادة</label>
 					<select
+						id="ex-subject"
 						name="yearSubjectId"
 						bind:value={selectedYearSubjectId}
 						class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary font-bold"
@@ -399,8 +418,9 @@
 
 			<!-- Trimester -->
 			<div class="space-y-2">
-				<label class="text-xs font-bold text-muted-foreground">الفصل الدراسي</label>
+				<label for="ex-trimester" class="text-xs font-bold text-muted-foreground">الفصل الدراسي</label>
 				<select
+					id="ex-trimester"
 					name="trimesterId"
 					bind:value={trimesterId}
 					class="bg-background border-border w-full rounded-xl border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
@@ -414,8 +434,9 @@
 
 			<!-- Unit -->
 			<div class="space-y-2">
-				<label class="text-xs font-bold text-muted-foreground">الوحدة الدراسية / المحور</label>
+				<label for="ex-unit" class="text-xs font-bold text-muted-foreground">الوحدة الدراسية / المحور</label>
 				<input 
+					id="ex-unit"
 					name="unit"
 					type="text" 
 					bind:value={unit}

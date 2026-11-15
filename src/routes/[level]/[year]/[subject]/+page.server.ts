@@ -1,101 +1,158 @@
 import type { PageServerLoad } from './$types';
-import { Database } from 'bun:sqlite';
+import { contentSqlite } from '#lib/server/db';
+import { canAccessTier, getSiteSettings } from '#lib/server/visibility';
 import { error } from '@sveltejs/kit';
 
-export const load: PageServerLoad = async ({ params, locals }) => {
-	const db = new Database('data/content.db', { readonly: true });
+export const load: PageServerLoad = async ({ params, url, locals }) => {
+	const db = contentSqlite;
+	const siteSettings = getSiteSettings();
+	const dynamicPortalUrl = (siteSettings.dynamic_portal_url || '').replace(/\/$/, '');
 
-	const level = db.query('SELECT * FROM education_levels WHERE slug = ?').get(params.level) as any;
-	if (!level) {
-		db.close();
-		throw error(404, 'المرحلة غير موجودة');
-	}
+	const level = db
+		.query("SELECT * FROM education_levels WHERE slug = ? AND visibility = 'published'")
+		.get(params.level) as any;
+	if (!level) throw error(404, 'المرحلة غير متاحة حالياً');
 
 	const year = db
-		.query('SELECT * FROM years WHERE slug = ? AND level_id = ?')
+		.query("SELECT * FROM years WHERE slug = ? AND level_id = ? AND visibility = 'published'")
 		.get(params.year, level.id) as any;
-	if (!year) {
-		db.close();
-		throw error(404, 'السنة غير موجودة');
-	}
+	if (!year) throw error(404, 'السنة غير متاحة حالياً');
 
-	// ========================================
-	// Smart Detection: Is params.subject a STREAM slug or a SUBJECT slug?
-	// For secondary school, the URL pattern is:
-	//   /secondaire/3as/se       → stream page (show subjects)
-	//   /primaire/5ap/arb-b      → subject page (show documents)
-	// ========================================
-
-	// Try to match as a stream first (stream IDs are uppercase, slugs are lowercase)
-	const streamSlug = params.subject.toUpperCase();
-	const stream = db.query(`
-		SELECT s.* FROM streams s
+	const streamCheck = db
+		.query(
+			`
+		SELECT s.*, ls.visibility as link_visibility
+		FROM streams s
 		JOIN level_streams ls ON ls.stream_id = s.id
-		WHERE s.id = ? AND ls.year_id = ?
-	`).get(streamSlug, year.id) as any;
+		WHERE LOWER(s.id) = LOWER(?) AND ls.year_id = ? AND ls.visibility = 'published'
+	`
+		)
+		.get(params.subject, year.id) as any;
 
-	if (stream) {
-		// === STREAM MODE: Show subjects for this stream ===
-		const subjects = db.query(`
-			SELECT sub.*, ss.coefficient, ss."order",
-				(SELECT COUNT(d.id) FROM documents d 
-				 JOIN year_subjects ys ON d.year_subject_id = ys.id
-				 WHERE ys.subject_id = sub.id AND ys.year_id = ? AND ys.stream_id = ?) as docCount
+	if (streamCheck) {
+		const subjects = db
+			.query(
+				`
+			SELECT s.*, ss.coefficient, ss.order as sort_order,
+				(
+					SELECT COUNT(d.id) FROM documents d
+					JOIN year_subjects ys ON d.year_subject_id = ys.id
+					WHERE ys.year_id = ? AND ys.subject_id = s.id
+						AND (ys.stream_id = ? OR ys.stream_id IS NULL)
+						AND ys.visibility = 'published'
+						AND d.is_published = 1
+				) as docCount,
+				(
+					SELECT COUNT(q.id) FROM quizzes q
+					JOIN year_subjects ys ON q.year_subject_id = ys.id
+					WHERE ys.year_id = ? AND ys.subject_id = s.id
+						AND (ys.stream_id = ? OR ys.stream_id IS NULL)
+						AND ys.visibility = 'published'
+						AND q.is_published = 1
+				) as quizCount
 			FROM stream_subjects ss
-			JOIN subjects sub ON ss.subject_id = sub.id
-			WHERE ss.stream_id = ? AND ss.year_id = ?
+			JOIN subjects s ON ss.subject_id = s.id
+			WHERE ss.stream_id = ? AND (ss.year_id = ? OR ss.year_id IS NULL) AND ss.visibility = 'published'
 			ORDER BY ss."order"
-		`).all(year.id, stream.id, stream.id, year.id);
+		`
+			)
+			.all(year.id, streamCheck.id, year.id, streamCheck.id, streamCheck.id, year.id);
 
-		db.close();
 		return {
 			mode: 'stream' as const,
-			level, year, stream, subjects,
-			// Empty fields for type compatibility
-			subject: null, yearSubject: null, trimesters: [], documents: [], quizzes: [],
-			user: locals.user
+			level,
+			year,
+			stream: streamCheck,
+			subjects,
+			dynamicPortalUrl
 		};
 	}
 
-	// === SUBJECT MODE: Show documents (original behavior) ===
 	const subject = db.query('SELECT * FROM subjects WHERE slug = ?').get(params.subject) as any;
-	if (!subject) {
-		db.close();
-		throw error(404, 'المادة غير موجودة');
+	if (!subject) throw error(404, 'المادة غير موجودة');
+
+	const streamParam = url.searchParams.get('stream')?.trim() || null;
+
+	const yearSubjectRows = (
+		streamParam
+			? db
+					.query(
+						"SELECT * FROM year_subjects WHERE year_id = ? AND subject_id = ? AND (LOWER(stream_id) = LOWER(?) OR stream_id IS NULL) AND visibility = 'published'"
+					)
+					.all(year.id, subject.id, streamParam)
+			: db
+					.query("SELECT * FROM year_subjects WHERE year_id = ? AND subject_id = ? AND visibility = 'published'")
+					.all(year.id, subject.id)
+	) as any[];
+
+	if (yearSubjectRows.length === 0) {
+		throw error(404, 'المادة غير متاحة حالياً لهذه السنة');
 	}
 
-	const yearSubject = db
-		.query('SELECT * FROM year_subjects WHERE year_id = ? AND subject_id = ?')
-		.get(year.id, subject.id) as any;
-	if (!yearSubject) {
-		db.close();
-		throw error(404, 'المادة غير مسجلة لهذه السنة');
-	}
+	const ysIds = yearSubjectRows.map((r) => r.id);
+	const placeholders = ysIds.map(() => '?').join(',');
+	const primaryYearSubject = yearSubjectRows[0];
 
 	const trimesters = db.query('SELECT * FROM trimesters ORDER BY "order"').all();
 
-	const documents = db
-		.query(`
-		SELECT * FROM documents 
-		WHERE year_subject_id = ? AND is_published = 1
-		ORDER BY trimester_id, type, title
-	`)
-		.all(yearSubject.id);
+	const rawDocuments = db
+		.query(
+			`
+		SELECT *, is_published as isPublished, has_solution as hasSolution, access_tier as accessTier
+		FROM documents
+		WHERE year_subject_id IN (${placeholders}) AND is_published = 1
+		ORDER BY trimester_id, type, id DESC
+	`
+		)
+		.all(...ysIds) as any[];
 
-	const quizzes = db
-		.query(`
-		SELECT * FROM quizzes 
-		WHERE year_subject_id = ? AND is_published = 1
-		ORDER BY trimester_id, title
-	`)
-		.all(yearSubject.id);
+	const documents = rawDocuments.map((d) => {
+		const check = canAccessTier(d.accessTier, locals.user, locals.isStaticBuild);
+		if (!check.allowed) {
+			return {
+				...d,
+				pdf_url: null,
+				solution_url: null,
+				content: null,
+				isLocked: true,
+				lockReason: check.reason
+			};
+		}
+		return { ...d, isLocked: false, lockReason: null };
+	});
 
-	db.close();
+	const rawQuizzes = db
+		.query(
+			`
+		SELECT id, title, title_ar, slug, description, difficulty, time_limit, question_count, passing_score, trimester_id,
+			is_premium as isPremium, is_published as isPublished, access_tier as accessTier
+		FROM quizzes
+		WHERE year_subject_id IN (${placeholders}) AND is_published = 1
+		ORDER BY trimester_id, id DESC
+	`
+		)
+		.all(...ysIds) as any[];
+
+	const quizzes = rawQuizzes.map((q) => {
+		const check = canAccessTier(q.accessTier || (q.isPremium ? 'premium' : 'public'), locals.user, locals.isStaticBuild);
+		return {
+			...q,
+			isLocked: !check.allowed,
+			lockReason: check.reason ?? null
+		};
+	});
 
 	return {
 		mode: 'subject' as const,
-		level, year, subject, yearSubject, trimesters, documents, quizzes,
-		stream: null, subjects: [],
-		user: locals.user
+		level,
+		year,
+		subject,
+		yearSubject: primaryYearSubject,
+		streamFilter: streamParam,
+		trimesters,
+		documents,
+		quizzes,
+		dynamicPortalUrl,
+		user: locals.user ? { role: locals.user.role, subscriptionTier: locals.user.subscriptionTier } : null
 	};
 };

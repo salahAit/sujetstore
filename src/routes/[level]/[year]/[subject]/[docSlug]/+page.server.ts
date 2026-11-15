@@ -1,21 +1,22 @@
 import { error } from '@sveltejs/kit';
-import { contentDatabase } from '$lib/server/db';
+import { contentDatabase } from '#lib/server/db';
 import {
 	documents,
 	subjects,
 	years,
 	educationLevels,
 	yearSubjects
-} from '$lib/server/db/schema-content';
+} from '#lib/server/db/schema-content';
+import { canAccessTier, getSiteSettings } from '#lib/server/visibility';
 import { eq, ne, and } from 'drizzle-orm';
 
-export async function load({ params }) {
+export async function load({ params, locals }) {
 	const docSlug = params.docSlug;
 
-	// fetch document with level, year, subject info for breadcrumbs
 	const [docRow] = await contentDatabase
 		.select({
 			doc: documents,
+			yearSubject: yearSubjects,
 			subject: subjects,
 			year: years,
 			level: educationLevels
@@ -25,14 +26,34 @@ export async function load({ params }) {
 		.innerJoin(subjects, eq(yearSubjects.subjectId, subjects.id))
 		.innerJoin(years, eq(yearSubjects.yearId, years.id))
 		.innerJoin(educationLevels, eq(years.levelId, educationLevels.id))
-		.where(eq(documents.slug, docSlug))
+		.where(
+			and(
+				eq(documents.slug, docSlug),
+				eq(documents.isPublished, true),
+				eq(yearSubjects.visibility, 'published'),
+				eq(years.visibility, 'published'),
+				eq(educationLevels.visibility, 'published')
+			)
+		)
 		.limit(1);
 
 	if (!docRow) {
-		error(404, 'الوثيقة غير موجودة');
+		throw error(404, 'الوثيقة غير موجودة أو غير منشورة حالياً');
 	}
 
-	// Fetch related documents from the same subject
+	const siteSettings = getSiteSettings();
+	const dynamicPortalUrl = (siteSettings.dynamic_portal_url || '').replace(/\/$/, '');
+	const accessCheck = canAccessTier(docRow.doc.accessTier, locals.user, locals.isStaticBuild);
+
+	const safeDocument = accessCheck.allowed
+		? docRow.doc
+		: {
+				...docRow.doc,
+				pdfUrl: null,
+				solutionUrl: null,
+				content: null
+			};
+
 	const relatedDocs = await contentDatabase
 		.select({
 			id: documents.id,
@@ -40,7 +61,8 @@ export async function load({ params }) {
 			titleAr: documents.titleAr,
 			slug: documents.slug,
 			type: documents.type,
-			hasSolution: documents.hasSolution
+			hasSolution: documents.hasSolution,
+			accessTier: documents.accessTier
 		})
 		.from(documents)
 		.where(
@@ -53,10 +75,15 @@ export async function load({ params }) {
 		.limit(5);
 
 	return {
-		document: docRow.doc,
+		document: safeDocument,
 		subject: docRow.subject,
 		year: docRow.year,
 		level: docRow.level,
-		relatedDocs
+		relatedDocs,
+		accessCheck: {
+			...accessCheck,
+			tier: docRow.doc.accessTier,
+			dynamicPortalUrl
+		}
 	};
 }

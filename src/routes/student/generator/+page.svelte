@@ -1,0 +1,342 @@
+<script lang="ts">
+	import QuizPlayer from '#lib/modules/QuizBuilder/components/player/QuizPlayer.svelte';
+	import {
+		Sparkles,
+		Brain,
+		FileText,
+		Download,
+		Loader2,
+		AlertCircle,
+		RotateCcw,
+		CheckCircle2,
+		Eye
+	} from 'lucide-svelte';
+
+	let { data }: { data: any } = $props();
+
+	let activeTab = $state<'quiz' | 'pdf'>('quiz');
+	let selectedYsId = $state<number>(0);
+
+	$effect(() => {
+		if (!selectedYsId && data.yearSubjects.length > 0) {
+			selectedYsId = data.yearSubjects[0].yearSubjectId;
+		}
+	});
+
+	// Quiz mode options
+	let difficulty = $state<'all' | 'easy' | 'medium' | 'hard'>('all');
+	let questionCount = $state(5);
+	let generatingQuiz = $state(false);
+	let generatedQuizData = $state<{ quiz: any; questions: any[] } | null>(null);
+
+	// PDF mode options
+	let trimesterId = $state('t1');
+	let docType = $state<'exam' | 'test'>('exam');
+	let exerciseCount = $state(2);
+	let generatingPdf = $state(false);
+	let pdfResult = $state<{ pdfUrl: string; solutionUrl: string; title: string } | null>(null);
+
+	let errorMsg = $state<string | null>(null);
+
+	async function generateQuiz() {
+		generatingQuiz = true;
+		errorMsg = null;
+		generatedQuizData = null;
+		try {
+			const res = await fetch('/api/generator', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					mode: 'quiz',
+					yearSubjectId: selectedYsId,
+					difficulty,
+					count: questionCount
+				})
+			});
+			const out = await res.json();
+			if (!res.ok) throw new Error(out.error || 'تعذر توليد التمرين');
+			generatedQuizData = { quiz: out.quiz, questions: out.questions };
+		} catch (e: any) {
+			errorMsg = e.message;
+		} finally {
+			generatingQuiz = false;
+		}
+	}
+
+	async function handleGeneratedQuizSubmit(payload: any) {
+		try {
+			const res = await fetch('/api/generator', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					mode: 'grade',
+					answers: payload.answers,
+					timeTaken: payload.timeTaken
+				})
+			});
+			return await res.json();
+		} catch {
+			return { error: 'تعذر حفظ النتيجة' };
+		}
+	}
+
+	async function generatePdf() {
+		generatingPdf = true;
+		errorMsg = null;
+		pdfResult = null;
+		try {
+			const res = await fetch('/api/generator', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					mode: 'pdf',
+					yearSubjectId: selectedYsId,
+					trimesterId,
+					docType,
+					exerciseCount
+				})
+			});
+			const out = await res.json();
+			if (!res.ok) throw new Error(out.error || 'تعذر توليد ملف PDF');
+			pdfResult = out;
+		} catch (e: any) {
+			errorMsg = e.message;
+		} finally {
+			generatingPdf = false;
+		}
+	}
+</script>
+
+<svelte:head>
+	<title>المولّد الذكي للفروض والاختبارات - SujetStore</title>
+</svelte:head>
+
+{#if generatedQuizData}
+	<div class="mb-4 flex items-center justify-between">
+		<button
+			onclick={() => (generatedQuizData = null)}
+			class="bg-card inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm font-bold hover:bg-accent"
+		>
+			<RotateCcw size={15} /> توليد تمرين جديد
+		</button>
+	</div>
+	<QuizPlayer
+		quiz={generatedQuizData.quiz}
+		rawQuestions={generatedQuizData.questions}
+		onSubmit={handleGeneratedQuizSubmit}
+	/>
+{:else}
+	<div class="space-y-6">
+		<div class="bg-card rounded-2xl border p-6 shadow-sm">
+			<div class="mb-5 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+				<div>
+					<h2 class="flex items-center gap-2 text-xl font-extrabold">
+						<Sparkles size={22} class="text-purple-500" /> المولّد الذكي للتمارين والمواضيع
+					</h2>
+					<p class="text-muted-foreground mt-1 text-sm">
+						كوّن اختباراً تفاعلياً مخصصاً من بنك الأسئلة أو قم بتوليد موضوع فرض/اختبار رسمي بصيغة PDF مع الحل النموذجي.
+					</p>
+				</div>
+
+				<div class="bg-muted flex shrink-0 rounded-xl p-1 text-xs font-bold">
+					<button
+						onclick={() => {
+							activeTab = 'quiz';
+							errorMsg = null;
+						}}
+						class="flex items-center gap-1.5 rounded-lg px-4 py-2 transition {activeTab === 'quiz'
+							? 'bg-background text-purple-500 shadow'
+							: 'text-muted-foreground'}"
+					>
+						<Brain size={15} /> تمرين تفاعلي
+					</button>
+					<button
+						onclick={() => {
+							activeTab = 'pdf';
+							errorMsg = null;
+						}}
+						class="flex items-center gap-1.5 rounded-lg px-4 py-2 transition {activeTab === 'pdf'
+							? 'bg-background text-blue-500 shadow'
+							: 'text-muted-foreground'}"
+					>
+						<FileText size={15} /> موضوع PDF + الحل
+					</button>
+				</div>
+			</div>
+
+			{#if errorMsg}
+				<div class="mb-5 flex items-center gap-2 rounded-xl border border-red-500/30 bg-red-500/10 p-3 text-sm font-semibold text-red-500">
+					<AlertCircle size={18} />
+					<span>{errorMsg}</span>
+				</div>
+			{/if}
+
+			{#if data.yearSubjects.length === 0}
+				<p class="text-muted-foreground py-8 text-center text-sm">
+					لا توجد مواد منشورة حالياً.
+				</p>
+			{:else if activeTab === 'quiz'}
+				<div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+					<div>
+						<label for="gen-ys-quiz" class="mb-1.5 block text-xs font-bold">السنة والمادة</label>
+						<select
+							id="gen-ys-quiz"
+							bind:value={selectedYsId}
+							class="bg-background w-full rounded-xl border px-3 py-2.5 text-sm outline-none focus:border-purple-500"
+						>
+							{#each data.yearSubjects as ys}
+								<option value={ys.yearSubjectId}>
+									{ys.yearName} — {ys.subjectName}
+								</option>
+							{/each}
+						</select>
+					</div>
+
+					<div>
+						<label for="gen-diff" class="mb-1.5 block text-xs font-bold">مستوى الصعوبة</label>
+						<select
+							id="gen-diff"
+							bind:value={difficulty}
+							class="bg-background w-full rounded-xl border px-3 py-2.5 text-sm outline-none focus:border-purple-500"
+						>
+							<option value="all">جميع المستويات</option>
+							<option value="easy">سهل</option>
+							<option value="medium">متوسط</option>
+							<option value="hard">صعب</option>
+						</select>
+					</div>
+
+					<div>
+						<label for="gen-count" class="mb-1.5 block text-xs font-bold">عدد الأسئلة</label>
+						<select
+							id="gen-count"
+							bind:value={questionCount}
+							class="bg-background w-full rounded-xl border px-3 py-2.5 text-sm outline-none focus:border-purple-500"
+						>
+							<option value={3}>3 أسئلة</option>
+							<option value={5}>5 أسئلة</option>
+							<option value={10}>10 أسئلة</option>
+							<option value={15}>15 سؤالاً</option>
+						</select>
+					</div>
+				</div>
+
+				<button
+					onclick={generateQuiz}
+					disabled={generatingQuiz}
+					class="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-l from-purple-600 to-indigo-600 px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:opacity-95 disabled:opacity-50"
+				>
+					{#if generatingQuiz}
+						<Loader2 size={18} class="animate-spin" /> جاري تحضير الأسئلة...
+					{:else}
+						<Sparkles size={18} /> ابدأ التمرين المخصّص الآن
+					{/if}
+				</button>
+			{:else}
+				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+					<div>
+						<label for="gen-ys-pdf" class="mb-1.5 block text-xs font-bold">السنة والمادة</label>
+						<select
+							id="gen-ys-pdf"
+							bind:value={selectedYsId}
+							class="bg-background w-full rounded-xl border px-3 py-2.5 text-sm outline-none focus:border-blue-500"
+						>
+							{#each data.yearSubjects as ys}
+								<option value={ys.yearSubjectId}>
+									{ys.yearName} — {ys.subjectName}
+								</option>
+							{/each}
+						</select>
+					</div>
+
+					<div>
+						<label for="gen-trim" class="mb-1.5 block text-xs font-bold">الفصل الدراسي</label>
+						<select
+							id="gen-trim"
+							bind:value={trimesterId}
+							class="bg-background w-full rounded-xl border px-3 py-2.5 text-sm outline-none focus:border-blue-500"
+						>
+							{#each data.trimesters as t}
+								<option value={t.id}>{t.name_ar}</option>
+							{/each}
+						</select>
+					</div>
+
+					<div>
+						<label for="gen-doctype" class="mb-1.5 block text-xs font-bold">نوع الموضوع</label>
+						<select
+							id="gen-doctype"
+							bind:value={docType}
+							class="bg-background w-full rounded-xl border px-3 py-2.5 text-sm outline-none focus:border-blue-500"
+						>
+							<option value="exam">اختبار فصلي</option>
+							<option value="test">فرض محروس</option>
+						</select>
+					</div>
+
+					<div>
+						<label for="gen-excount" class="mb-1.5 block text-xs font-bold">عدد التمارين</label>
+						<select
+							id="gen-excount"
+							bind:value={exerciseCount}
+							class="bg-background w-full rounded-xl border px-3 py-2.5 text-sm outline-none focus:border-blue-500"
+						>
+							<option value={2}>تمرينان</option>
+							<option value={3}>3 تمارين</option>
+							<option value={4}>4 تمارين</option>
+						</select>
+					</div>
+				</div>
+
+				<button
+					onclick={generatePdf}
+					disabled={generatingPdf}
+					class="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-l from-blue-600 to-cyan-600 px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:opacity-95 disabled:opacity-50"
+				>
+					{#if generatingPdf}
+						<Loader2 size={18} class="animate-spin" /> جاري تركيب وتوليد ملف PDF...
+					{:else}
+						<FileText size={18} /> توليد موضوع PDF + التصحيح النموذجي
+					{/if}
+				</button>
+
+				{#if pdfResult}
+					<div class="mt-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-5">
+						<div class="mb-4 flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
+							<div class="flex items-center gap-2 font-extrabold text-emerald-600 dark:text-emerald-400">
+								<CheckCircle2 size={20} />
+								<span>تم توليد الموضوع: {pdfResult.title}</span>
+							</div>
+							<div class="flex flex-wrap gap-2">
+								<a
+									href={pdfResult.pdfUrl}
+									target="_blank"
+									download
+									class="inline-flex items-center gap-1.5 rounded-xl bg-blue-600 px-4 py-2 text-xs font-bold text-white hover:bg-blue-700"
+								>
+									<Download size={14} /> تحميل الموضوع (PDF)
+								</a>
+								<a
+									href={pdfResult.solutionUrl}
+									target="_blank"
+									download
+									class="inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 px-4 py-2 text-xs font-bold text-white hover:bg-emerald-700"
+								>
+									<Eye size={14} /> تحميل التصحيح (PDF)
+								</a>
+							</div>
+						</div>
+
+						<div class="overflow-hidden rounded-xl border bg-neutral-900">
+							<iframe
+								src={`${pdfResult.pdfUrl}#view=FitH`}
+								title={pdfResult.title}
+								class="h-[520px] w-full"
+							></iframe>
+						</div>
+					</div>
+				{/if}
+			{/if}
+		</div>
+	</div>
+{/if}

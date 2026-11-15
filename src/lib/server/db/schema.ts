@@ -17,6 +17,15 @@ export const users = sqliteTable('users', {
 		.default('student')
 		.notNull(),
 	isActive: integer('is_active', { mode: 'boolean' }).default(true).notNull(),
+	yearId: text('year_id'),
+	streamId: text('stream_id'),
+	wilaya: text('wilaya'),
+	subscriptionTier: text('subscription_tier', { enum: ['free', 'premium'] })
+		.default('free')
+		.notNull(),
+	subscriptionExpiresAt: text('subscription_expires_at'),
+	streakDays: integer('streak_days').default(0).notNull(),
+	lastActiveDate: text('last_active_date'),
 	createdAt: text('created_at').default('CURRENT_TIMESTAMP').notNull(),
 	updatedAt: text('updated_at')
 });
@@ -37,6 +46,7 @@ export const sessions = sqliteTable('sessions', {
 export const comments = sqliteTable('comments', {
 	id: integer('id').primaryKey({ autoIncrement: true }),
 	documentId: integer('document_id').notNull(),
+	userId: integer('user_id').references(() => users.id, { onDelete: 'set null' }),
 	authorName: text('author_name').notNull(),
 	content: text('content').notNull(),
 	createdAt: text('created_at').default(sql`(datetime('now'))`).notNull()
@@ -48,6 +58,7 @@ export const comments = sqliteTable('comments', {
 export const ratings = sqliteTable('ratings', {
 	id: integer('id').primaryKey({ autoIncrement: true }),
 	documentId: integer('document_id').notNull(),
+	userId: integer('user_id').references(() => users.id, { onDelete: 'set null' }),
 	fingerprint: text('fingerprint').notNull(), // cookie-based
 	rating: integer('rating').notNull(), // 1-5
 	createdAt: text('created_at').default(sql`(datetime('now'))`).notNull()
@@ -84,6 +95,7 @@ export const quizAttempts = sqliteTable(
 	{
 		id: integer('id').primaryKey({ autoIncrement: true }),
 		quizId: integer('quiz_id').notNull(),
+		userId: integer('user_id').references(() => users.id, { onDelete: 'set null' }),
 		fingerprint: text('fingerprint').notNull(),
 		score: integer('score').default(0),
 		totalPoints: integer('total_points').default(0),
@@ -93,7 +105,8 @@ export const quizAttempts = sqliteTable(
 		createdAt: text('created_at').default(sql`(datetime('now'))`).notNull()
 	},
 	(table) => ({
-		quizIdx: index('idx_attempts_quiz').on(table.quizId)
+		quizIdx: index('idx_attempts_quiz').on(table.quizId),
+		userIdx: index('idx_attempts_user').on(table.userId)
 	})
 );
 
@@ -132,6 +145,7 @@ export const badgeDefinitions = sqliteTable('badge_definitions', {
 // ============================================
 export const userBadges = sqliteTable('user_badges', {
 	id: integer('id').primaryKey({ autoIncrement: true }),
+	userId: integer('user_id').references(() => users.id, { onDelete: 'set null' }),
 	fingerprint: text('fingerprint').notNull(),
 	badgeId: integer('badge_id')
 		.references(() => badgeDefinitions.id, { onDelete: 'cascade' })
@@ -144,6 +158,7 @@ export const userBadges = sqliteTable('user_badges', {
 // ============================================
 export const userPoints = sqliteTable('user_points', {
 	id: integer('id').primaryKey({ autoIncrement: true }),
+	userId: integer('user_id').references(() => users.id, { onDelete: 'set null' }),
 	fingerprint: text('fingerprint').notNull(),
 	points: integer('points').notNull(),
 	reason: text('reason').notNull(), // 'quiz_complete', 'perfect_score', 'badge_earned'
@@ -152,10 +167,79 @@ export const userPoints = sqliteTable('user_points', {
 });
 
 // ============================================
+// STUDENT BOOKMARKS & MISTAKE NOTEBOOK
+// ============================================
+export const userBookmarks = sqliteTable('user_bookmarks', {
+	id: integer('id').primaryKey({ autoIncrement: true }),
+	userId: integer('user_id')
+		.references(() => users.id, { onDelete: 'cascade' })
+		.notNull(),
+	itemType: text('item_type', { enum: ['document', 'quiz'] }).notNull(),
+	itemId: integer('item_id').notNull(),
+	createdAt: text('created_at').default(sql`(datetime('now'))`).notNull()
+});
+
+export const userMistakes = sqliteTable('user_mistakes', {
+	id: integer('id').primaryKey({ autoIncrement: true }),
+	userId: integer('user_id').references(() => users.id, { onDelete: 'cascade' }),
+	fingerprint: text('fingerprint'),
+	questionId: integer('question_id').notNull(),
+	quizId: integer('quiz_id'),
+	wrongCount: integer('wrong_count').default(1).notNull(),
+	lastAttemptAt: text('last_attempt_at').default(sql`(datetime('now'))`).notNull(),
+	resolved: integer('resolved', { mode: 'boolean' }).default(false).notNull()
+});
+
+// ============================================
+// VOUCHERS & SUBSCRIPTION PAYMENTS
+// ============================================
+export const voucherCodes = sqliteTable('voucher_codes', {
+	id: integer('id').primaryKey({ autoIncrement: true }),
+	code: text('code').notNull().unique(),
+	planDays: integer('plan_days').default(30).notNull(),
+	maxUses: integer('max_uses').default(1).notNull(),
+	usedCount: integer('used_count').default(0).notNull(),
+	isActive: integer('is_active', { mode: 'boolean' }).default(true).notNull(),
+	createdBy: integer('created_by').references(() => users.id, { onDelete: 'set null' }),
+	expiresAt: text('expires_at'),
+	createdAt: text('created_at').default(sql`(datetime('now'))`).notNull()
+});
+
+export const voucherRedemptions = sqliteTable('voucher_redemptions', {
+	id: integer('id').primaryKey({ autoIncrement: true }),
+	voucherId: integer('voucher_id')
+		.references(() => voucherCodes.id, { onDelete: 'cascade' })
+		.notNull(),
+	userId: integer('user_id')
+		.references(() => users.id, { onDelete: 'cascade' })
+		.notNull(),
+	redeemedAt: text('redeemed_at').default(sql`(datetime('now'))`).notNull()
+});
+
+export const paymentOrders = sqliteTable('payment_orders', {
+	id: integer('id').primaryKey({ autoIncrement: true }),
+	userId: integer('user_id')
+		.references(() => users.id, { onDelete: 'cascade' })
+		.notNull(),
+	provider: text('provider', { enum: ['chargily', 'ccp_receipt', 'manual'] }).notNull(),
+	amountDzd: integer('amount_dzd').notNull(),
+	planDays: integer('plan_days').default(30).notNull(),
+	status: text('status', { enum: ['pending', 'paid', 'failed', 'canceled'] })
+		.default('pending')
+		.notNull(),
+	checkoutId: text('checkout_id'),
+	receiptUrl: text('receipt_url'),
+	metadata: text('metadata'),
+	createdAt: text('created_at').default(sql`(datetime('now'))`).notNull(),
+	updatedAt: text('updated_at')
+});
+
+// ============================================
 // TYPE EXPORTS
 // ============================================
 
 export type Role = 'superadmin' | 'admin' | 'editor' | 'student';
+export type SubscriptionTier = 'free' | 'premium';
 export type User = typeof users.$inferSelect;
 export type NewUser = typeof users.$inferInsert;
 export type Session = typeof sessions.$inferSelect;
@@ -177,3 +261,20 @@ export type NewQuizAttempt = typeof quizAttempts.$inferInsert;
 
 export type AttemptAnswer = typeof attemptAnswers.$inferSelect;
 export type NewAttemptAnswer = typeof attemptAnswers.$inferInsert;
+
+export type BadgeDefinition = typeof badgeDefinitions.$inferSelect;
+export type UserBadge = typeof userBadges.$inferSelect;
+export type UserPoint = typeof userPoints.$inferSelect;
+
+export type UserBookmark = typeof userBookmarks.$inferSelect;
+export type NewUserBookmark = typeof userBookmarks.$inferInsert;
+
+export type UserMistake = typeof userMistakes.$inferSelect;
+export type NewUserMistake = typeof userMistakes.$inferInsert;
+
+export type VoucherCode = typeof voucherCodes.$inferSelect;
+export type NewVoucherCode = typeof voucherCodes.$inferInsert;
+
+export type VoucherRedemption = typeof voucherRedemptions.$inferSelect;
+export type PaymentOrder = typeof paymentOrders.$inferSelect;
+export type NewPaymentOrder = typeof paymentOrders.$inferInsert;

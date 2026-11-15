@@ -1,315 +1,108 @@
-# 📘 الوثيقة التقنية التأسيسية: مشروع "أفدنا" (الجيل الثاني)
+# 📘 الوثيقة المعمارية لمنصة SujetStore (الإصدار 3.0)
 
-**التاريخ:** 10 ديسمبر 2025  
-**الإصدار:** 2.0 (Bun Migration)  
-**الهدف:** بناء منصة تعليمية فائقة الأداء، اقتصادية، ومستقلة تقنياً.
-
----
-
-## 1. الفلسفة المعمارية: "المونوليث المدمج" (Compact Monolith)
-
-بدلاً من تعقيدات الخدمات المصغرة (Microservices) أو فصل الواجهة عن الخلفية (Headless)، سنعتمد هيكلية **"الوحدة الواحدة المدمجة"**.
-
-| المبدأ       | التفصيل                                                                   |
-| ------------ | ------------------------------------------------------------------------- |
-| **الوحدة**   | التطبيق يعمل كوحدة واحدة (Frontend + Backend) داخل إطار عمل SvelteKit     |
-| **المحرك**   | الاعتماد الكلي على بيئة Bun Runtime لاستغلال السرعة وكفاءة الذاكرة        |
-| **البيانات** | التخلي عن خوادم قواعد البيانات المنفصلة (PostgreSQL) لصالح SQLite المدمجة |
+**الإصدار:** 3.0 (Zero-Runtime Static Public + Dynamic Student Portal)  
+**الهدف:** تقديم منصة تعليمية جزائرية فائقة السرعة تفصل بين **الموقع العام الثابت** (بدون خادم runtime أو قاعدة بيانات للجمهور) و**الخادم التفاعلي المستقل** للمتعلمين المسجلين والمشتركين والإدارة.
 
 ---
 
-## 2. مكدس التكنولوجيا (The Tech Stack)
+## 1. مكدس التكنولوجيا (Tech Stack)
 
-| المكون        | التقنية المختارة   | السبب التقني الحاسم                                             |
-| ------------- | ------------------ | --------------------------------------------------------------- |
-| **Runtime**   | Bun (v1.1+)        | أسرع بـ 3 أضعاف من Node.js، أدوات مدمجة (Bundler, Test, SQLite) |
-| **Framework** | SvelteKit          | يوحد لغة البرمجة (TypeScript) ويلغي الحاجة لطبقة API وسيطة      |
-| **Database**  | SQLite (Native)    | استخدام `bun:sqlite` للاستفادة القصوى من سرعة الـ I/O           |
-| **ORM**       | Drizzle ORM        | أخف مكتبة ORM، تدعم TypeScript بالكامل                          |
-| **Auth**      | Native Custom Auth | نظام مصادقة محلي يعتمد على الجلسات في SQLite                    |
-| **Proxy**     | Caddy              | خادم ويب لإدارة HTTPS تلقائياً وتوجيه الترافيك                  |
-
----
-
-## 3. استراتيجية البيانات: "الفصل الذكي" (Dual-Database Strategy)
-
-لحل مشكلة "تحديث المحتوى دون فقدان بيانات الطلاب"، سنفصل النظام إلى قاعدتي بيانات مستقلتين:
-
-### أ. قاعدة بيانات المحتوى (`content.db`) - 🟢 Read-Only
-
-| الخاصية         | التفصيل                                                   |
-| --------------- | --------------------------------------------------------- |
-| **المحتوى**     | الدروس، المسارات، النصوص المفرغة، روابط الفيديو، الفهارس  |
-| **دورة الحياة** | يتم توليدها "أوفلاين" على جهازك المحلي، ثم ترفع كملف واحد |
-| **التحديث**     | يتم استبدال الملف بالكامل عند وجود دروس جديدة             |
-
-### ب. قاعدة بيانات المستخدمين (`users.db`) - 🔴 Read-Write
-
-| الخاصية             | التفصيل                                                                |
-| ------------------- | ---------------------------------------------------------------------- |
-| **المحتوى**         | جدول المستخدمين (User)، الجلسات (Session)، سجل التقدم (LessonProgress) |
-| **الأداء**          | تفعيل وضع WAL Mode للقراءة والكتابة المتزامنة                          |
-| **النسخ الاحتياطي** | هذا الملف الوحيد الذي يحتاج نسخ احتياطي دوري                           |
-
-```sql
--- تفعيل WAL Mode
-PRAGMA journal_mode = WAL;
-PRAGMA busy_timeout = 5000;
-PRAGMA synchronous = NORMAL;
-```
+| المكون | التقنية / الإصدار | الدور المعماري |
+| :--- | :--- | :--- |
+| **Runtime** | Bun `1.4.4` | تشغيل الخادم، إدارة العمليات، وتنفيذ SQLite الأصلي عبر `bun:sqlite` |
+| **Framework** | SvelteKit `3.2` + `@sveltejs/adapter-bun` | التوجيه الهجين (SSR/API للخادم الديناميكي + تصدير ثابت للموقع العام) |
+| **UI & Styling** | Svelte `5.57` (Runes) + Vite `8` + Tailwind CSS `v4.3` | واجهة تفاعلية RTL بالكامل (`$props()`, `$state()`, `$derived()`) |
+| **ORM & Data** | Drizzle ORM `0.45` (`bun:sqlite`) | إدارة قاعدتي البيانات بوضع `WAL` |
+| **PDF Engine** | Typst `0.15.1` CLI (`src/lib/server/typst.ts`) | توليد مواضيع الفروض والاختبارات والحلول بصيغة PDF عربياً |
+| **Proxy & Ops** | Caddy + systemd (`deploy.sh`) | إنهاء HTTPS وإدارة الخادم الديناميكي في الإنتاج |
 
 ---
 
-## 4. المنطق البيداغو-تقني (Business Logic)
+## 2. طوبولوجيا النشر المزدوجة (Split Deployment Architecture)
 
-### قاعدة "الـ 10 دقائق" (The 10-Minute Rule)
+تم تصميم المنصة لتعمل بطريقتين متكاملتين حسب طبيعة الترافيك:
 
-لحماية السيرفر من ضغط الكتابة غير الضروري، وفرض الجدية على الطلاب:
-
-| المرحلة                | التفصيل                                                         |
-| ---------------------- | --------------------------------------------------------------- |
-| **فلترة الواجهة**      | المتصفح لا يرسل طلب تحديث إلا بعد 600 ثانية من المشاهدة الفعلية |
-| **الفيديوهات القصيرة** | أقل من 10 دقائق = طلب تحديث واحد عند النهاية (`on:ended`)       |
-| **تقنية UPSERT**       | أمر SQL واحد لحفظ التقدم، يوفر 50% من الاستعلامات               |
-
-```sql
--- UPSERT للتقدم
-INSERT INTO lesson_progress (user_id, lesson_id, watched_seconds, updated_at)
-VALUES (?, ?, ?, datetime('now'))
-ON CONFLICT(user_id, lesson_id) DO UPDATE SET
-    watched_seconds = excluded.watched_seconds,
-    updated_at = excluded.updated_at;
+```text
+                الزوار والجمهور (أغلبية الترافيك)
+                             │
+                             ▼
+      ┌──────────────────────────────────────────────┐
+      │   1) الموقع العام الثابت (build-static/)     │
+      │      Zero-Runtime · Zero-Database (CDN)      │
+      │  • HTML + __data.json للصفحات المنشورة فقط   │
+      │  • /static-api/search-index.json (بحث محلي)   │
+      │  • /static-api/notifications.json            │
+      │  • ملفات public المنشورة فقط + sitemap.xml    │
+      └──────────────────────┬───────────────────────┘
+                             │ تحويل المسجلين/المشتركين
+                             │ عبر dynamic_portal_url
+                             ▼
+      ┌──────────────────────────────────────────────┐
+      │   2) الخادم التفاعلي المستقل (build/index.js) │
+      │        Bun + SvelteKit 3 + Dual SQLite        │
+      │  • حسابات التلاميذ (/student/*, /auth/*)     │
+      │  • تصحيح التمارين التفاعلية + Gamification   │
+      │  • المولّد الذكي Typst PDF (/student/generator) │
+      │  • الاشتراكات والدفع (/student/activate)      │
+      │  • لوحة التحكم والإدارة (/admin/*)            │
+      └──────────────────────────────────────────────┘
 ```
 
-### شرط الاكتمال (Completion Criteria)
-
-الدرس لا يعتبر "مكتملاً" ✅ إلا بتحقق الشرطين:
-
-```typescript
-const isCompleted = lesson.video_completed && lesson.quiz_passed;
-```
+### آلية التوليد الثابت (`build-static/`)
+- يتم تشغيله عبر `bun run build:static` أو من لوحة التحكم `POST /api/admin/build-static` (المسؤولون فقط).
+- يعتمد على `src/lib/server/static-exporter.ts` و`scripts/build-static.ts` مع ضبط `SUJET_STATIC_BUILD=1` والترويسة الداخلية `x-sujet-static-export: 1`.
+- يستبعد تماماً المستويات والمواد المخفية (`hidden`)، كما يحجب روابط ومحتوى وملفات PDF الخاصة بفئتي `registered` و`premium` (تظهر كصفحات تشويق مقفولة تحيل للبوابة التفاعلية `dynamic_portal_url`)، ولا ينسخ مجلدات `wasm/` أو `generated/`.
 
 ---
 
-## 5. نظام المصادقة (Authentication)
+## 3. استراتيجية قواعد البيانات المزدوجة
 
-تم التخلي عن المكتبات الخارجية لصالح نظام محلي "مضاد للزمن":
-
-| المكون      | التقنية                                            |
-| ----------- | -------------------------------------------------- |
-| **التشفير** | `Bun.password.hash()` و `verify()` - مدمج وسريع    |
-| **الجلسات** | تخزين `session_id` في جدول `sessions`              |
-| **الكوكيز** | `HttpOnly`, `Secure`, `SameSite=Lax` عبر SvelteKit |
-
-```typescript
-// مثال على التشفير
-const hash = await Bun.password.hash(password, {
-	algorithm: 'argon2id',
-	memoryCost: 4,
-	timeCost: 3
-});
-
-const isValid = await Bun.password.verify(password, hash);
-```
-
-### تنظيف الجلسات المنتهية
-
-```sql
--- تشغيل يومياً عبر cron
-DELETE FROM sessions WHERE expires_at < datetime('now');
-```
+| القاعدة | المسار | وضع التشغيل | أبرز الجداول |
+| :--- | :--- | :--- | :--- |
+| **المحتوى** | `data/content.db` | قراءة في المسارات العامة، كتابة في `/admin` | `education_levels`, `years`, `streams`, `level_streams`, `subjects`, `stream_subjects`, `year_subjects`, `documents`, `quizzes`, `questions`, `quiz_questions`, `bank_exercises`, `site_settings` |
+| **المستخدمين والتقدم** | `data/users.db` | `WAL` + `busy_timeout = 5000` | `users`, `sessions`, `quiz_attempts`, `attempt_answers`, `user_points`, `user_badges`, `badge_definitions`, `user_bookmarks`, `user_mistakes`, `voucher_codes`, `voucher_redemptions`, `payment_orders`, `notifications`, `comments`, `ratings`, `view_stats` |
 
 ---
 
-## 6. البنية التحتية (Infrastructure)
+## 4. التحكم في الظهور ونموذج الصلاحيات ثلاثي الطبقات
 
-### السيرفر
+### أ. التحكم التدريجي في الظهور (`src/lib/server/visibility.ts`)
+- لكل طور (`education_levels`)، سنة (`years`)، شعبة (`level_streams`)، ومادة (`year_subjects` / `stream_subjects`) حالة ظهور مستقلة: `published` | `coming_soon` | `hidden`.
+- **الوضع الافتراضي المفعّل:** الطور المتوسط (`moyen`: `1am`–`4am`) لمادة الرياضيات (`MAT-B`) فقط في حالة `published`، بينما الطور الابتدائي والثانوي وبقية المواد في حالة `hidden` ويمكن فتح أي مادة أو طور لحظياً من `/admin/visibility`.
 
-- **المزود:** Contabo VPS
-- **المواصفات:** 12 vCPU, 48GB RAM, NVMe
+### ب. طبقات الوصول للمحتوى (`access_tier`)
+1. `public`: متاح مجاناً للجميع (في الموقع الثابت والديناميكي، وتشمل ملفات PDF الخاصة به في `build-static/`).
+2. `registered`: يتطلب حساب تلميذ مجاني مسجّل (`locals.user`).
+3. `premium`: يتطلب اشتراكاً سارياً (`isEffectivePremium(user)`).
 
-### مخطط النشر (Deployment Diagram)
+---
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                      Internet                           │
-└─────────────────────────┬───────────────────────────────┘
-                          ▼
-┌─────────────────────────────────────────────────────────┐
-│           Caddy Web Server                              │
-│           (Reverse Proxy + Auto SSL)                    │
-└─────────────────────────┬───────────────────────────────┘
-                          ▼ Port 3000
-┌─────────────────────────────────────────────────────────┐
-│           Bun Runtime (SvelteKit App)                   │
-│  ┌─────────────────────────────────────────────────┐    │
-│  │  Frontend (Svelte 5 + Shadcn-Svelte)            │    │
-│  └─────────────────────────────────────────────────┘    │
-│  ┌─────────────────────────────────────────────────┐    │
-│  │  Backend (/api routes)                          │    │
-│  └─────────────────────────────────────────────────┘    │
-│           │                    │                        │
-│           ▼                    ▼                        │
-│  ┌─────────────────┐  ┌─────────────────┐               │
-│  │  users.db       │  │  content.db     │               │
-│  │  (WAL - R/W)    │  │  (Read-Only)    │               │
-│  └─────────────────┘  └─────────────────┘               │
-└─────────────────────────────────────────────────────────┘
-                          │
-                          ▼ (Future)
-┌─────────────────────────────────────────────────────────┐
-│           Cloudflare R2 (PDF, Images)                   │
-└─────────────────────────────────────────────────────────┘
-```
+## 5. الوحدات والمزايا الرئيسية في الإصدار 3.0
 
-### إدارة العمليات (systemd)
+1. **بوابة التلميذ ودفتر الأخطاء (`/student`, `/student/mistakes`):**
+   - لوحة متابعة شاملة للنقاط (XP)، السلسلة اليومية (Streak)، الشارات، المحاولات، والمفضلة.
+   - ترحيل تلقائي لإنجازات الزائر المجهول (`sujet_fp`) إلى حسابه عند التسجيل أو الدخول (`migrateAnonymousProgressToUser`).
+   - تسجيل الأسئلة الخاطئة في `user_mistakes` وإتاحتها للمراجعة التفاعلية الفورية حتى يتقنها التلميذ (`resolved = 1`).
+2. **محرك تصحيح التمارين التفاعلية في الخادم (`src/lib/server/quiz-grading.ts`):**
+   - تصحيح حتمي في الخادم لجميع أنواع الأسئلة الـ 14 (بما فيها الأسئلة الحسابية عبر محلل آمن بدون `eval` أو `Function` على الخادم) ومنع التلاعب بالعلامات من المتصفح.
+3. **المولّد الذكي للتمارين والاختبارات (`/student/generator`, `/api/generator`):**
+   - توليد تمارين تفاعلية مخصّصة من بنك الأسئلة حسب المادة والصعوبة والعدد، أو تجميع فرض/اختبار من بنك التمارين وتصييره إلى ملفات PDF باللغة العربية والحلول النموذجية عبر Typst.
+4. **حاسبة المعدل ومحاكاة BEM وBAC (`/simulator`):**
+   - حساب المعدل الفصلي (صيغة التقويم المستمر + الفرض + الاختبار)، مع حساب العلامة المطلوبة في الاختبار لبلوغ هدف معين، ومحاكاة معدلات شهادة التعليم المتوسط (BEM) وشهادة البكالوريا (BAC — 5 شعب) بمعاملات المنهاج الجزائري.
+5. **نظام الاشتراكات والقسائم وبوابة الدفع (`/student/activate`, `/admin/vouchers`):**
+   - تفعيل فوري عبر أكواد القسائم (معاملات ذرية في SQLite)، رفع وصل بريدي موب/CCP للمراجعة الإدارية، وتكامل Chargily Pay v2 عبر `/api/payments/chargily` وويب هوك موثق بـ `HMAC-SHA256` (`/api/payments/chargily/webhook`).
+6. **الإشعارات وإدارة المستخدمين والصلاحيات (`/admin/notifications`, `/admin/users`):**
+   - أدوار متدرجة: `superadmin`, `admin`, `editor`, `student`.
+   - حماية `/api/*` و`/admin/*` و`/student/*` في `src/hooks.server.ts` مع تشفير Argon2id، تحديد المعدل (`src/lib/server/rate-limit.ts`)، وفحص Magic Bytes للمرفوعات وحفظها خارج `static/` داخل `data/uploads/` وتقديمها عبر `src/routes/uploads/[...path]/+server.ts`.
 
-```ini
-# /etc/systemd/system/sujetstore.service
-[Unit]
-Description=SujetStore Educational Platform
-After=network.target
+---
 
-[Service]
-Type=simple
-User=www-data
-WorkingDirectory=/var/www/sujetstore
-ExecStart=/usr/local/bin/bun run build/index.js
-Restart=always
-RestartSec=3
-Environment=NODE_ENV=production
-
-[Install]
-WantedBy=multi-user.target
-```
-
-### النسخ الاحتياطي
+## 6. الأوامر الأساسية
 
 ```bash
-#!/bin/bash
-# /etc/cron.daily/backup-sujetstore
-
-BACKUP_DIR="/backup/sujetstore"
-DATE=$(date +%Y%m%d_%H%M)
-
-# نسخ users.db
-sqlite3 /var/www/sujetstore/data/users.db ".backup ${BACKUP_DIR}/users_${DATE}.db"
-
-# حذف النسخ الأقدم من 7 أيام
-find ${BACKUP_DIR} -name "*.db" -mtime +7 -delete
+bun run dev                  # خادم التطوير المحلي
+bun run check                # فحص الأنواع وقوالب Svelte (svelte-check)
+bun run db:migrate           # تطبيق ترقيات قواعد البيانات والبذور الأولية v3
+bun run build:static         # بناء الإنتاج (build/) وتوليد الموقع العام الثابت (build-static/)
+bun run scripts/verify-v3.ts # اختبار التحقق الشامل End-to-End على خادم الإنتاج المبني
 ```
-
----
-
-## 7. الأمان (Security)
-
-| الطبقة            | الحماية                                 |
-| ----------------- | --------------------------------------- |
-| **Transport**     | HTTPS إجباري عبر Caddy                  |
-| **Cookies**       | `HttpOnly`, `Secure`, `SameSite=Lax`    |
-| **Passwords**     | Argon2id عبر `Bun.password`             |
-| **SQL**           | استخدام Prepared Statements عبر Drizzle |
-| **Rate Limiting** | حماية `/api/auth/*` من brute force      |
-
-```typescript
-// Rate limiting middleware (hooks.server.ts)
-const loginAttempts = new Map<string, { count: number; resetAt: number }>();
-
-const MAX_ATTEMPTS = 5;
-const WINDOW_MS = 15 * 60 * 1000; // 15 minutes
-```
-
----
-
-## 8. خارطة التنفيذ (Implementation Roadmap)
-
-### المرحلة 0: التأسيس (Setup) ⏱️ 2-3 ساعات
-
-- [ ] `bun init` + SvelteKit
-- [ ] تكوين Drizzle للاتصال بملفين (`users.db`, `content.db`)
-- [ ] إعداد هيكل المجلدات
-
-### المرحلة 1: نواة النظام (Core) ⏱️ 4-5 ساعات
-
-- [ ] بناء نظام المصادقة المحلي (`auth.ts`)
-- [ ] بناء Schema المستخدمين والجلسات
-- [ ] إعداد middleware للحماية
-
-### المرحلة 2: المحتوى (Content) ⏱️ 3-4 ساعات
-
-- [ ] برمجة سكربت الترحيل (Migration Script)
-- [ ] بناء واجهة عرض الدروس
-- [ ] ربط المسارات والدروس
-
-### المرحلة 3: التفاعل (Progress Logic) ⏱️ 4-5 ساعات
-
-- [ ] برمجة مشغل الفيديو الذكي (Svelte Component)
-- [ ] تنفيذ منطق الـ 10 دقائق
-- [ ] نظام الأسئلة والاختبارات
-
-### المرحلة 4: النشر (Deploy) ⏱️ 2-3 ساعات
-
-- [ ] إعداد السيرفر وتشغيل Caddy
-- [ ] تكوين systemd
-- [ ] إعداد النسخ الاحتياطي والمراقبة
-
----
-
-## 9. هيكل المجلدات المقترح
-
-```
-sujetstore/
-├── src/
-│   ├── lib/
-│   │   ├── server/
-│   │   │   ├── db/
-│   │   │   │   ├── users.ts      # اتصال users.db
-│   │   │   │   ├── content.ts    # اتصال content.db
-│   │   │   │   └── schema.ts     # Drizzle schemas
-│   │   │   ├── auth.ts           # نظام المصادقة
-│   │   │   └── utils.ts
-│   │   └── components/
-│   │       ├── VideoPlayer.svelte
-│   │       ├── QuizCard.svelte
-│   │       └── ProgressTracker.svelte
-│   ├── routes/
-│   │   ├── +layout.svelte
-│   │   ├── +page.svelte
-│   │   ├── api/
-│   │   │   ├── auth/
-│   │   │   │   ├── login/+server.ts
-│   │   │   │   ├── register/+server.ts
-│   │   │   │   └── logout/+server.ts
-│   │   │   └── progress/+server.ts
-│   │   ├── tracks/
-│   │   ├── lessons/
-│   │   └── dashboard/
-│   └── hooks.server.ts           # Auth middleware
-├── data/
-│   ├── users.db                  # إنتاج
-│   └── content.db                # إنتاج
-├── drizzle/
-│   └── migrations/
-├── static/
-├── ARCHITECTURE.md
-├── package.json
-└── drizzle.config.ts
-```
-
----
-
-## 10. المراجع والأدوات
-
-| الأداة        | الرابط                         |
-| ------------- | ------------------------------ |
-| Bun           | https://bun.sh                 |
-| SvelteKit     | https://kit.svelte.dev         |
-| Drizzle ORM   | https://orm.drizzle.team       |
-| Shadcn-Svelte | https://next.shadcn-svelte.com |
-| Caddy         | https://caddyserver.com        |
-
----
-
-> **آخر تحديث:** 10 ديسمبر 2025  
-> **المؤلف:** فريق أفدنا  
-> **الحالة:** ✅ مُصادق عليه للتنفيذ

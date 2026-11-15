@@ -1,0 +1,149 @@
+import { spawn } from 'child_process';
+import { existsSync } from 'fs';
+import { mkdir, readFile, rm, writeFile } from 'fs/promises';
+import { join, resolve } from 'path';
+import { randomUUID } from 'crypto';
+
+const PROJECT_ROOT = resolve('.');
+const TYPST_ROOT = join(PROJECT_ROOT, 'src/lib/modules/SujetBuilder/typst');
+const FONT_PATH = join(PROJECT_ROOT, 'static', 'fonts');
+
+const TYPST_MATH_WORDS = new Set([
+	'sin', 'cos', 'tan', 'cot', 'sec', 'csc', 'arcsin', 'arccos', 'arctan', 'sinh', 'cosh', 'tanh',
+	'log', 'ln', 'exp', 'lim', 'liminf', 'limsup', 'max', 'min', 'inf', 'sup', 'det', 'dim', 'ker',
+	'hom', 'mod', 'gcd', 'lcm', 'arg', 'deg',
+	'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda',
+	'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
+	'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda',
+	'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega',
+	'cal', 'bb', 'frak', 'bold', 'italic', 'serif', 'sans', 'mono', 'text', 'op', 'upright', 'math',
+	'sqrt', 'root', 'abs', 'norm', 'floor', 'ceil', 'round', 'vec', 'hat', 'bar', 'tilde', 'dot', 'ddot',
+	'rightarrow', 'leftarrow', 'leftrightarrow', 'Rightarrow', 'Leftarrow', 'Leftrightarrow', 'times',
+	'div', 'approx', 'neq', 'leq', 'geq', 'in', 'notin', 'subset', 'supset', 'cup', 'cap', 'emptyset',
+	'infty', 'nabla', 'partial', 'sum', 'prod', 'int', 'oint', 'frac'
+]);
+
+/** Sanitize math tokens inside Typst `$ ... $` expressions. */
+export function sanitizeMathInner(inner: string): string {
+	if (!inner) return inner;
+	let fixed = inner.replace(/[a-zA-Z]{2,}/g, (word: string) => {
+		if (TYPST_MATH_WORDS.has(word)) return word;
+		return word.split('').join(' ');
+	});
+	fixed = fixed.replace(/[\u0600-\u06FF]{2,}/g, (word: string) => `"${word}"`);
+	fixed = fixed.replace(/(\d)([a-zA-Z\u0600-\u06FF])/g, '$1 $2');
+	return fixed;
+}
+
+/** Sanitize inline `$...$` delimiters inside Arabic text blocks for Typst. */
+export function sanitizeForTypst(text: string): string {
+	if (!text || typeof text !== 'string') return text;
+	return text.replace(/\$([^$]+)\$/g, (_match, inner) => `$${sanitizeMathInner(inner)}$`);
+}
+
+function sanitizeImagePath(src: unknown): unknown {
+	if (typeof src !== 'string') return src;
+	if (src.startsWith('/uploads/')) {
+		const dataCandidate = join(PROJECT_ROOT, 'data', src.slice(1));
+		if (existsSync(dataCandidate)) return dataCandidate;
+		return join(PROJECT_ROOT, 'static', src.slice(1));
+	}
+	if (src.startsWith('/')) {
+		const staticCandidate = join(PROJECT_ROOT, 'static', src.slice(1));
+		if (existsSync(staticCandidate)) return staticCandidate;
+	}
+	return src;
+}
+
+/** Deep-clone and prepare a SujetBuilder document payload for Typst compilation. */
+export function sanitizeTypstDocument<T extends Record<string, any>>(examDoc: T): T {
+	const processed = JSON.parse(JSON.stringify(examDoc)) as T;
+	if (Array.isArray(processed.exercises)) {
+		for (const ex of processed.exercises) {
+			if (typeof ex.instruction === 'string') {
+				ex.instruction = sanitizeForTypst(ex.instruction);
+			}
+			const blocks = ex.blocks || ex.content || [];
+			for (const block of blocks) {
+				if (block.type === 'math' && typeof block.content === 'string') {
+					block.content = sanitizeMathInner(block.content);
+				} else {
+					if (typeof block.content === 'string') block.content = sanitizeForTypst(block.content);
+					if (typeof block.answer === 'string') block.answer = sanitizeForTypst(block.answer);
+				}
+				if (block.type === 'image' && block.src) {
+					block.src = sanitizeImagePath(block.src);
+				}
+				if (block.type === 'image_grid' && Array.isArray(block.items)) {
+					for (const it of block.items) {
+						if (it?.src) it.src = sanitizeImagePath(it.src);
+					}
+				}
+			}
+		}
+	}
+	return processed;
+}
+
+/**
+ * Compile a SujetBuilder document JSON to PDF (subject and optionally solution) using Typst CLI.
+ */
+export async function compileTypstPdf(options: {
+	examDoc: Record<string, any>;
+	outputPath: string;
+	templateId?: string;
+	isSolution?: boolean;
+}): Promise<{ success: boolean; size?: number; error?: string }> {
+	const { examDoc, outputPath, templateId = 'middle/exam', isSolution = false } = options;
+	const processedDoc = sanitizeTypstDocument(examDoc);
+
+	await mkdir(join(outputPath, '..'), { recursive: true });
+	const tempDataFile = join(TYPST_ROOT, `.tmp-${randomUUID()}.json`);
+	await writeFile(tempDataFile, JSON.stringify(processedDoc), 'utf-8');
+	const relDataFile = tempDataFile.slice(TYPST_ROOT.length + 1);
+
+	try {
+		const compileResult = await new Promise<{ success: boolean; error?: string }>((resolvePromise) => {
+			const args = [
+				'compile',
+				'main.typ',
+				outputPath,
+				'--root',
+				PROJECT_ROOT,
+				'--font-path',
+				FONT_PATH,
+				'--input',
+				`template-id=${templateId}`,
+				'--input',
+				`data-file=${relDataFile}`,
+				'--input',
+				`is-solution=${isSolution}`
+			];
+			const proc = spawn('typst', args, {
+				cwd: TYPST_ROOT,
+				timeout: 20000,
+				stdio: ['ignore', 'pipe', 'pipe']
+			});
+			let stderr = '';
+			proc.stderr.on('data', (d) => {
+				stderr += d.toString();
+			});
+			proc.on('close', (code) => {
+				resolvePromise(
+					code === 0
+						? { success: true }
+						: { success: false, error: stderr || `Typst exited with code ${code}` }
+				);
+			});
+			proc.on('error', (err) => {
+				resolvePromise({ success: false, error: `Failed to spawn typst: ${err.message}` });
+			});
+		});
+
+		if (!compileResult.success) return compileResult;
+		const buf = await readFile(outputPath);
+		return { success: true, size: buf.length };
+	} finally {
+		await rm(tempDataFile, { force: true }).catch(() => {});
+	}
+}

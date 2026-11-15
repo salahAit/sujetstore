@@ -104,6 +104,8 @@ deploy() {
         --exclude 'ssh_key.pub' \
         --exclude '*.log' \
         --exclude 'data' \
+        --exclude 'static/uploads' \
+        --exclude 'build-static' \
         --exclude '.env' \
         ./ $SERVER_USER@$SERVER_IP:$REMOTE_DIR
 
@@ -151,7 +153,7 @@ $DOMAIN, www.$DOMAIN {
     # Security headers
     header {
         X-Content-Type-Options nosniff
-        X-Frame-Options DENY
+        X-Frame-Options SAMEORIGIN
         Referrer-Policy strict-origin-when-cross-origin
     }
     

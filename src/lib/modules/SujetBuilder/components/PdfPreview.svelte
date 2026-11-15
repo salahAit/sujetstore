@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { Loader2, AlertCircle, Printer, Download, ZoomIn, ZoomOut, Maximize } from 'lucide-svelte';
-	import { Button } from '$lib/components/ui/button';
+	import { Button } from '#lib/components/ui/button';
 
 	let {
 		svgPages = [],

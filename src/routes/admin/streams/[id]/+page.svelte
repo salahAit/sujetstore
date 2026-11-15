@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { Plus, Trash2, Edit, X, ArrowRight } from 'lucide-svelte';
-	import ConfirmModal from '$lib/components/ConfirmModal.svelte';
+	import ConfirmModal from '#lib/components/ConfirmModal.svelte';
 	import type { ActionData } from './$types';
 
-	let { data, form } = $props<{ data: any; form: ActionData }>();
+	let { data, form }: { data: any; form: ActionData } = $props();
 
 	let isCreateModalOpen = $state(false);
 
@@ -86,7 +86,7 @@
 				</tr>
 			</thead>
 			<tbody class="divide-y divide-border">
-				{#each data.linkedSubjects.sort((a,b) => a.order - b.order) as subject}
+				{#each [...data.linkedSubjects].sort((a: any, b: any) => (a.order ?? 0) - (b.order ?? 0)) as subject}
 					<tr class="transition-colors hover:bg-muted/50">
 						<td class="px-6 py-4 font-medium whitespace-nowrap text-foreground/80" dir="ltr"
 							>{subject.order}</td
@@ -346,5 +346,5 @@
 	bind:isOpen={isDeleteModalOpen}
 	onConfirm={performDelete}
 	title="إلغاء الربط"
-	message="هل أنت متأكد من رغبتك في إزالة هذه المادة من الشعبة؟ لن تُحذف المادة نفسها بل سيتم فك ارتباطها පමණ."
+	message="هل أنت متأكد من رغبتك في إزالة هذه المادة من الشعبة؟ لن تُحذف المادة نفسها بل سيتم فك ارتباطها فقط."
 />

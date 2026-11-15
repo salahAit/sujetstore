@@ -1,6 +1,6 @@
 import { json, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { usersDatabase, userSchema } from '$lib/server/db';
+import { usersDatabase, userSchema } from '#lib/server/db';
 import { desc } from 'drizzle-orm';
 
 export const GET: RequestHandler = async () => {

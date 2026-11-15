@@ -16,23 +16,23 @@
 		Copy
 	} from 'lucide-svelte';
 
-	import MCQ from '$lib/modules/QuizBuilder/components/player/questions/MCQ.svelte';
-	import TrueFalse from '$lib/modules/QuizBuilder/components/player/questions/TrueFalse.svelte';
-	import Ordering from '$lib/modules/QuizBuilder/components/player/questions/Ordering.svelte';
-	import DragDrop from '$lib/modules/QuizBuilder/components/player/questions/DragDrop.svelte';
-	import Matching from '$lib/modules/QuizBuilder/components/player/questions/Matching.svelte';
-	import FillBlank from '$lib/modules/QuizBuilder/components/player/questions/FillBlank.svelte';
-	import ShortAnswer from '$lib/modules/QuizBuilder/components/player/questions/ShortAnswer.svelte';
-	import Cloze from '$lib/modules/QuizBuilder/components/player/questions/Cloze.svelte';
-	import Calculated from '$lib/modules/QuizBuilder/components/player/questions/Calculated.svelte';
-	import SentenceReorder from '$lib/modules/QuizBuilder/components/player/questions/SentenceReorder.svelte';
-	import Hotspot from '$lib/modules/QuizBuilder/components/player/questions/Hotspot.svelte';
-	import DragToImage from '$lib/modules/QuizBuilder/components/player/questions/DragToImage.svelte';
-	import Matrix from '$lib/modules/QuizBuilder/components/player/questions/Matrix.svelte';
-	import Essay from '$lib/modules/QuizBuilder/components/player/questions/Essay.svelte';
-	import { QUESTION_TYPES, getQuestionType } from '$lib/modules/QuizBuilder'; // Added new import
-	import QuestionPreviewModal from '$lib/admin/components/QuestionPreviewModal.svelte';
-	import Pagination from '$lib/admin/components/Pagination.svelte';
+	import MCQ from '#lib/modules/QuizBuilder/components/player/questions/MCQ.svelte';
+	import TrueFalse from '#lib/modules/QuizBuilder/components/player/questions/TrueFalse.svelte';
+	import Ordering from '#lib/modules/QuizBuilder/components/player/questions/Ordering.svelte';
+	import DragDrop from '#lib/modules/QuizBuilder/components/player/questions/DragDrop.svelte';
+	import Matching from '#lib/modules/QuizBuilder/components/player/questions/Matching.svelte';
+	import FillBlank from '#lib/modules/QuizBuilder/components/player/questions/FillBlank.svelte';
+	import ShortAnswer from '#lib/modules/QuizBuilder/components/player/questions/ShortAnswer.svelte';
+	import Cloze from '#lib/modules/QuizBuilder/components/player/questions/Cloze.svelte';
+	import Calculated from '#lib/modules/QuizBuilder/components/player/questions/Calculated.svelte';
+	import SentenceReorder from '#lib/modules/QuizBuilder/components/player/questions/SentenceReorder.svelte';
+	import Hotspot from '#lib/modules/QuizBuilder/components/player/questions/Hotspot.svelte';
+	import DragToImage from '#lib/modules/QuizBuilder/components/player/questions/DragToImage.svelte';
+	import Matrix from '#lib/modules/QuizBuilder/components/player/questions/Matrix.svelte';
+	import Essay from '#lib/modules/QuizBuilder/components/player/questions/Essay.svelte';
+	import { QUESTION_TYPES, getQuestionType } from '#lib/modules/QuizBuilder'; // Added new import
+	import QuestionPreviewModal from '#lib/admin/components/QuestionPreviewModal.svelte';
+	import Pagination from '#lib/admin/components/Pagination.svelte';
 
 	let questions = $state<any[]>([]);
 	let loading = $state(true);

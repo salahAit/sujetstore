@@ -192,7 +192,7 @@
 										{/if}
 									</td>
 									<td class="p-3 font-semibold">
-										{player.fingerprint?.substring(0, 8)}...
+										{player.display_name || `${player.fingerprint?.substring(0, 8)}...`}
 									</td>
 									<td class="text-muted-foreground p-3 text-center">{player.quizzes}</td>
 									<td class="p-3 text-center font-bold text-amber-500">{player.total_points}</td>

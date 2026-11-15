@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { Plus, Trash2, Edit, X } from 'lucide-svelte';
-	import ConfirmModal from '$lib/components/ConfirmModal.svelte';
+	import ConfirmModal from '#lib/components/ConfirmModal.svelte';
 	import type { ActionData } from './$types';
 
-	let { data, form } = $props<{ data: any; form: ActionData }>();
+	let { data, form }: { data: any; form: ActionData } = $props();
 
 	let isCreateModalOpen = $state(false);
 
@@ -66,7 +66,7 @@
 	</div>
 {/if}
 
-<div class="bg-backgroundard text-card-foreground border-border overflow-hidden rounded-2xl border shadow-sm">
+<div class="bg-card text-card-foreground border-border overflow-hidden rounded-2xl border shadow-sm">
 	<div class="overflow-x-auto">
 		<table class="w-full text-right text-sm">
 			<thead class="border-b border-border bg-muted/50 text-xs text-muted-foreground">
@@ -141,7 +141,7 @@
 		}}
 	>
 		<div
-			class="bg-backgroundard text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
+			class="bg-card text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
 		>
 			<div class="mb-6 flex items-center justify-between">
 				<h2 class="text-xl font-bold">إضافة مرحلة تعليمية</h2>
@@ -271,7 +271,7 @@
 		}}
 	>
 		<div
-			class="bg-backgroundard text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
+			class="bg-card text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
 		>
 			<div class="mb-6 flex items-center justify-between">
 				<h2 class="text-primary text-xl font-bold">تعديل المرحلة التعليمية</h2>

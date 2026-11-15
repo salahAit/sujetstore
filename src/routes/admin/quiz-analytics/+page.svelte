@@ -56,7 +56,7 @@
 	{:else if stats}
 		<!-- Overview Cards -->
 		<div class="mb-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
-			<div class="bg-backgroundard rounded-xl border p-5 shadow-sm">
+			<div class="bg-card rounded-xl border p-5 shadow-sm">
 				<div class="flex items-center gap-3">
 					<div
 						class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400"
@@ -69,7 +69,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="bg-backgroundard rounded-xl border p-5 shadow-sm">
+			<div class="bg-card rounded-xl border p-5 shadow-sm">
 				<div class="flex items-center gap-3">
 					<div
 						class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-400"
@@ -82,7 +82,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="bg-backgroundard rounded-xl border p-5 shadow-sm">
+			<div class="bg-card rounded-xl border p-5 shadow-sm">
 				<div class="flex items-center gap-3">
 					<div
 						class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10 text-blue-400"
@@ -95,7 +95,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="bg-backgroundard rounded-xl border p-5 shadow-sm">
+			<div class="bg-card rounded-xl border p-5 shadow-sm">
 				<div class="flex items-center gap-3">
 					<div
 						class="flex h-10 w-10 items-center justify-center rounded-lg bg-backgroundmber-500/10 text-amber-400"
@@ -112,7 +112,7 @@
 
 		<!-- Score Distribution -->
 		{#if stats.distribution.length > 0}
-			<div class="bg-backgroundard mb-8 rounded-xl border p-6 shadow-sm">
+			<div class="bg-card mb-8 rounded-xl border p-6 shadow-sm">
 				<h2 class="mb-4 flex items-center gap-2 text-lg font-bold">
 					<TrendingUp size={20} class="text-purple-400" /> توزيع الدرجات
 				</h2>
@@ -137,7 +137,7 @@
 
 		<!-- Per-Quiz Stats Table -->
 		{#if stats.quizStats.length > 0}
-			<div class="bg-backgroundard mb-8 overflow-hidden rounded-xl border shadow-sm">
+			<div class="bg-card mb-8 overflow-hidden rounded-xl border shadow-sm">
 				<div class="border-b p-4">
 					<h2 class="flex items-center gap-2 text-lg font-bold">
 						<Trophy size={20} class="text-amber-400" /> أداء كل تمرين
@@ -193,7 +193,7 @@
 
 		<!-- Recent Attempts -->
 		{#if stats.recentAttempts.length > 0}
-			<div class="bg-backgroundard overflow-hidden rounded-xl border shadow-sm">
+			<div class="bg-card overflow-hidden rounded-xl border shadow-sm">
 				<div class="border-b p-4">
 					<h2 class="flex items-center gap-2 text-lg font-bold">
 						<Clock size={20} class="text-blue-400" /> آخر المحاولات

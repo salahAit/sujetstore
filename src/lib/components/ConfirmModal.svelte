@@ -8,14 +8,14 @@
 		confirmText = 'نعم، احذف',
 		cancelText = 'إلغاء',
 		onConfirm
-	} = $props<{
+	}: {
 		isOpen: boolean;
 		title?: string;
 		message?: string;
 		confirmText?: string;
 		cancelText?: string;
 		onConfirm: () => void;
-	}>();
+	} = $props();
 
 	function handleConfirm() {
 		onConfirm();

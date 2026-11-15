@@ -49,6 +49,7 @@ export interface ExamMetadata {
 
 /** نص عادي مع إمكانية الإجابة والتنقيط */
 export interface TextBlock {
+	id?: string;
 	type: 'text';
 	content: string;
 	/** Solution answer (shown in blue in solution mode) */
@@ -59,6 +60,7 @@ export interface TextBlock {
 
 /** معادلة رياضية */
 export interface MathBlock {
+	id?: string;
 	type: 'math';
 	content: string;
 	display?: boolean;
@@ -76,6 +78,7 @@ export interface TableCell {
 
 /** جدول مع خانات قابلة للتنقيط ومزايا دمج متقدمة */
 export interface TableBlock {
+	id?: string;
 	type: 'table';
 	headers: (string | TableCell)[];
 	/** Cells can be simple strings or objects with content/answer/mark/colspan/bold */
@@ -92,6 +95,7 @@ export interface TableBlock {
 
 /** صورة */
 export interface ImageBlock {
+	id?: string;
 	type: 'image';
 	src: string;
 	caption?: string;
@@ -100,6 +104,7 @@ export interface ImageBlock {
 
 /** صح أو خطأ مع التصحيح */
 export interface TrueFalseBlock {
+	id?: string;
 	type: 'true_false';
 	items: {
 		/** السؤال */
@@ -115,6 +120,7 @@ export interface TrueFalseBlock {
 
 /** اختيار متعدد (QCM) */
 export interface MultipleChoiceBlock {
+	id?: string;
 	type: 'multiple_choice';
 	groups: {
 		/** عنوان المجموعة */
@@ -130,6 +136,7 @@ export interface MultipleChoiceBlock {
 
 /** مخطط تدفقي (سلسلة عمليات) */
 export interface DiagramFlowBlock {
+	id?: string;
 	type: 'diagram_flow';
 	/** 3 عناصر: [مخرج, عملية, مدخل] */
 	flow: [string, string, string];
@@ -138,6 +145,7 @@ export interface DiagramFlowBlock {
 
 /** وضع تسميات / ملء فراغات */
 export interface LabelingBlock {
+	id?: string;
 	type: 'labeling';
 	labels: string[];
 	mark?: string;
@@ -145,6 +153,7 @@ export interface LabelingBlock {
 
 /** كتابة Typst حرة */
 export interface TypstRawBlock {
+	id?: string;
 	type: 'typst_raw';
 	content: string;
 	/** Solution answer */
@@ -155,6 +164,7 @@ export interface TypstRawBlock {
 
 /** شبكة صور مع تسميات */
 export interface ImageGridBlock {
+	id?: string;
 	type: 'image_grid';
 	columns: number;
 	items: {
@@ -167,6 +177,7 @@ export interface ImageGridBlock {
 
 /** كتلة أعمدة: تعرض كتل متعددة جنباً إلى جنب */
 export interface ColumnsBlock {
+	id?: string;
 	type: 'columns';
 	/** The blocks to display side by side */
 	children: ContentBlock[];

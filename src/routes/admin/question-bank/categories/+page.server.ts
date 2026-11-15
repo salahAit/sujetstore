@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
-import { contentDatabase } from '$lib/server/db';
-import { questionCategories } from '$lib/server/db/schema-content';
+import { contentDatabase } from '#lib/server/db';
+import { questionCategories } from '#lib/server/db/schema-content';
 
 export async function load({ locals }) {
     if (!locals.user || !['superadmin', 'admin'].includes(locals.user.role)) {

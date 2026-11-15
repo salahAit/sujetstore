@@ -19,11 +19,12 @@
 		Star,
 		PlusCircle,
 		FilePlus2,
-		Share2
+		Share2,
+		Lock
 	} from 'lucide-svelte';
-	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
-	import ShareModal from '$lib/components/ShareModal.svelte';
-	import { toggleBookmark, isBookmarked } from '$lib/stores/bookmarks.svelte';
+	import DynamicIcon from '#lib/components/DynamicIcon.svelte';
+	import ShareModal from '#lib/components/ShareModal.svelte';
+	import { toggleBookmark, isBookmarked } from '#lib/stores/bookmarks.svelte';
 
 	let { data }: { data: any } = $props();
 
@@ -227,7 +228,7 @@
 			</span>
 		</nav>
 
-		{#if data.user && data.user.role === 'admin' && data.mode === 'subject'}
+		{#if data.user && ['superadmin', 'admin', 'editor'].includes(data.user.role) && data.mode === 'subject'}
 			<div
 				class="flex items-center gap-3 rounded-full border border-indigo-500/20 bg-indigo-500/10 px-4 py-2 shadow-inner"
 			>
@@ -274,7 +275,7 @@
 			<div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
 				{#each data.subjects as subject}
 					<a
-						href="/{data.level.slug}/{data.year.slug}/{subject.slug}"
+						href="/{data.level.slug}/{data.year.slug}/{subject.slug}?stream={data.stream.id}"
 						class="glass-card group block border-black/5 dark:border-white/10"
 					>
 						<div class="flex items-center gap-4">
@@ -532,7 +533,23 @@
 				<div class="min-w-0 flex-1">
 					<div class="mb-1.5 flex flex-wrap items-center gap-2">
 						<h3 class="truncate text-base font-bold sm:text-lg">
-							{doc.title_ar || doc.title}
+							{#if doc._itemType === 'quiz'}
+								<a
+									href={doc.isLocked ? `${data.dynamicPortalUrl || ''}/quizzes/${doc.slug}` : `/quizzes/${doc.slug}`}
+									class="hover:text-primary transition-colors"
+								>
+									{doc.title_ar || doc.title}
+								</a>
+							{:else}
+								<a
+									href={doc.isLocked
+										? `${data.dynamicPortalUrl || ''}/${data.level.slug}/${data.year.slug}/${data.subject.slug}/${doc.slug}`
+										: `/${data.level.slug}/${data.year.slug}/${data.subject.slug}/${doc.slug}`}
+									class="hover:text-primary transition-colors"
+								>
+									{doc.title_ar || doc.title}
+								</a>
+							{/if}
 						</h3>
 						<span
 							class="badge-{doc.type} shrink-0 rounded border px-1.5 py-0.5 text-[10px] font-medium sm:text-xs {doc._itemType ===
@@ -562,11 +579,17 @@
 								مخفي عن الطلاب
 							</span>
 						{/if}
-						{#if doc.isPremium}
+						{#if doc.accessTier === 'premium' || doc.isPremium}
 							<span
 								class="flex items-center gap-1.5 rounded bg-amber-500/10 px-2 py-0.5 font-bold text-amber-400"
 							>
 								<Star size={12} class="fill-current" /> للمشتركين فقط
+							</span>
+						{:else if doc.accessTier === 'registered'}
+							<span
+								class="flex items-center gap-1.5 rounded bg-blue-500/10 px-2 py-0.5 font-bold text-blue-400"
+							>
+								<Lock size={12} /> مجاني للمسجلين
 							</span>
 						{/if}
 					</div>
@@ -589,12 +612,22 @@
 				</button>
 
 				{#if doc._itemType === 'quiz'}
-					<a
-						href={`/quizzes/${doc.slug}`}
-						class="relative flex flex-1 items-center justify-center gap-1 overflow-hidden rounded-lg bg-emerald-600 py-2 text-[11px] font-semibold text-white shadow-md shadow-emerald-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-700 hover:shadow-lg hover:shadow-emerald-600/30 sm:flex-none sm:px-4 sm:py-2 sm:text-sm"
-					>
-						<Gamepad2 size={14} class="sm:h-4 sm:w-4" /> ابدأ التمرين
-					</a>
+					{#if doc.isLocked}
+						<a
+							href={`${data.dynamicPortalUrl || ''}/quizzes/${doc.slug}`}
+							class="relative flex flex-1 items-center justify-center gap-1.5 overflow-hidden rounded-lg bg-amber-500/15 px-3 py-2 text-[11px] font-bold text-amber-500 border border-amber-500/30 transition-all hover:bg-amber-500 hover:text-white sm:flex-none sm:px-4 sm:py-2 sm:text-sm"
+						>
+							<Lock size={14} class="sm:h-4 sm:w-4" />
+							{doc.lockReason === 'premium_required' ? 'للمشتركين فقط' : 'سجّل مجاناً للبدء'}
+						</a>
+					{:else}
+						<a
+							href={`/quizzes/${doc.slug}`}
+							class="relative flex flex-1 items-center justify-center gap-1 overflow-hidden rounded-lg bg-emerald-600 py-2 text-[11px] font-semibold text-white shadow-md shadow-emerald-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-700 hover:shadow-lg hover:shadow-emerald-600/30 sm:flex-none sm:px-4 sm:py-2 sm:text-sm"
+						>
+							<Gamepad2 size={14} class="sm:h-4 sm:w-4" /> ابدأ التمرين
+						</a>
+					{/if}
 
 					{#if isEditingMode}
 						<a
@@ -606,26 +639,36 @@
 						</a>
 					{/if}
 				{:else}
-					<button
-						onclick={(e) => {
-							e.preventDefault();
-							openDoc(doc, 'exam');
-						}}
-						class="relative flex flex-1 items-center justify-center gap-1 overflow-hidden rounded-lg bg-blue-600 py-2 text-[11px] font-semibold text-white shadow-md shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/30 sm:flex-none sm:px-4 sm:py-2 sm:text-sm"
-					>
-						<FileText size={14} class="sm:h-4 sm:w-4" /> الموضوع
-					</button>
-
-					{#if doc.has_solution}
+					{#if doc.isLocked}
+						<a
+							href={`${data.dynamicPortalUrl || ''}/${data.level.slug}/${data.year.slug}/${data.subject.slug}/${doc.slug}`}
+							class="relative flex flex-1 items-center justify-center gap-1.5 overflow-hidden rounded-lg bg-amber-500/15 px-3 py-2 text-[11px] font-bold text-amber-500 border border-amber-500/30 transition-all hover:bg-amber-500 hover:text-white sm:flex-none sm:px-4 sm:py-2 sm:text-sm"
+						>
+							<Lock size={14} class="sm:h-4 sm:w-4" />
+							{doc.lockReason === 'premium_required' ? 'للمشتركين فقط' : 'سجّل مجاناً للعرض'}
+						</a>
+					{:else}
 						<button
 							onclick={(e) => {
 								e.preventDefault();
-								openDoc(doc, 'solution');
+								openDoc(doc, 'exam');
 							}}
-							class="relative flex flex-1 items-center justify-center gap-1 overflow-hidden rounded-lg bg-emerald-500 py-2 text-[11px] font-semibold text-white shadow-md shadow-emerald-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/30 sm:flex-none sm:px-4 sm:py-2 sm:text-sm"
+							class="relative flex flex-1 items-center justify-center gap-1 overflow-hidden rounded-lg bg-blue-600 py-2 text-[11px] font-semibold text-white shadow-md shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/30 sm:flex-none sm:px-4 sm:py-2 sm:text-sm"
 						>
-							<CheckCircle size={14} class="sm:h-4 sm:w-4" /> الحل
+							<FileText size={14} class="sm:h-4 sm:w-4" /> الموضوع
 						</button>
+
+						{#if doc.has_solution}
+							<button
+								onclick={(e) => {
+									e.preventDefault();
+									openDoc(doc, 'solution');
+								}}
+								class="relative flex flex-1 items-center justify-center gap-1 overflow-hidden rounded-lg bg-emerald-500 py-2 text-[11px] font-semibold text-white shadow-md shadow-emerald-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/30 sm:flex-none sm:px-4 sm:py-2 sm:text-sm"
+							>
+								<CheckCircle size={14} class="sm:h-4 sm:w-4" /> الحل
+							</button>
+						{/if}
 					{/if}
 
 					{#if isEditingMode}
@@ -684,6 +727,12 @@
 							href={selectedDoc.pdf_url}
 							download
 							target="_blank"
+							onclick={() =>
+								fetch('/api/stats', {
+									method: 'POST',
+									headers: { 'Content-Type': 'application/json' },
+									body: JSON.stringify({ docId: selectedDoc.id, action: 'download' })
+								}).catch(() => {})}
 							class="flex h-9 items-center justify-center rounded-lg bg-blue-600 px-3 text-sm font-semibold text-white shadow-md shadow-blue-600/20 transition-all hover:bg-blue-700 hover:shadow-lg"
 							title="تحميل الموضوع"
 							><Download size={16} /> <span class="hidden sm:mr-1 sm:inline">تحميل</span></a
@@ -704,6 +753,12 @@
 							href={selectedDoc.solution_url}
 							download
 							target="_blank"
+							onclick={() =>
+								fetch('/api/stats', {
+									method: 'POST',
+									headers: { 'Content-Type': 'application/json' },
+									body: JSON.stringify({ docId: selectedDoc.id, action: 'download' })
+								}).catch(() => {})}
 							class="flex h-9 items-center justify-center rounded-lg bg-emerald-500 px-3 text-sm font-semibold text-white shadow-md shadow-emerald-500/20 transition-all hover:bg-emerald-600 hover:shadow-lg"
 							title="تحميل التصحيح"
 							><Download size={16} /> <span class="hidden sm:mr-1 sm:inline">تحميل</span></a

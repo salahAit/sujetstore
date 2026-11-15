@@ -1,17 +1,17 @@
 <script lang="ts">
 	import { onMount, createEventDispatcher } from 'svelte';
 	import { Search, Plus, Check, X, Database, Filter } from 'lucide-svelte';
-	import { getQuestionType } from '$lib/modules/QuizBuilder';
+	import { getQuestionType } from '#lib/modules/QuizBuilder';
 
 	let {
 		isOpen = $bindable(false),
 		quizId,
 		onImportSuccess
-	} = $props<{
+	}: {
 		isOpen: boolean;
 		quizId: number;
 		onImportSuccess: () => void;
-	}>();
+	} = $props();
 
 	let questions = $state<any[]>([]);
 	let loading = $state(true);

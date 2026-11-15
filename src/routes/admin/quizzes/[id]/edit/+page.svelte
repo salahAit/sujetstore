@@ -12,7 +12,10 @@
 	let difficulty = $state('medium');
 	let timeLimit = $state(0);
 	let passingScore = $state(60);
-	let isPremium = $state(false);
+	let accessTier = $state<'public' | 'registered' | 'premium'>('public');
+	let shuffleOptions = $state(true);
+	let showAnswers = $state(true);
+	let maxAttempts = $state(0);
 	let isPublished = $state(false);
 
 	let loadingData = $state(true);
@@ -30,7 +33,10 @@
 				difficulty = data.difficulty || 'medium';
 				timeLimit = data.timeLimit || 0;
 				passingScore = data.passingScore || 60;
-				isPremium = data.isPremium || false;
+				accessTier = data.accessTier || (data.isPremium ? 'premium' : 'public');
+				shuffleOptions = data.shuffleOptions ?? true;
+				showAnswers = data.showAnswers ?? true;
+				maxAttempts = data.maxAttempts ?? 0;
 				isPublished = data.isPublished || false;
 			} else {
 				error = 'التمرين غير موجود';
@@ -62,7 +68,11 @@
 					difficulty,
 					timeLimit,
 					passingScore,
-					isPremium,
+					accessTier,
+					isPremium: accessTier === 'premium',
+					shuffleOptions,
+					showAnswers,
+					maxAttempts,
 					isPublished
 				})
 			});
@@ -116,16 +126,18 @@
 			<!-- Titles (YearSubject cannot be easily changed after creation without huge refactor, kept disabled/hidden here for simplicity) -->
 			<div class="grid gap-6 sm:grid-cols-2">
 				<div class="space-y-2 text-right">
-					<label class="text-sm font-semibold text-foreground/80">العنوان (عربي) *</label>
+					<label for="edit-quiz-title-ar" class="text-sm font-semibold text-foreground/80">العنوان (عربي) *</label>
 					<input
+						id="edit-quiz-title-ar"
 						type="text"
 						bind:value={titleAr}
 						class="w-full rounded-xl border border-border bg-background p-3 text-right text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 					/>
 				</div>
 				<div class="space-y-2 text-left">
-					<label class="text-sm font-semibold text-foreground/80">* Title (FR/EN)</label>
+					<label for="edit-quiz-title" class="text-sm font-semibold text-foreground/80">* Title (FR/EN)</label>
 					<input
+						id="edit-quiz-title"
 						type="text"
 						bind:value={title}
 						dir="ltr"
@@ -136,8 +148,9 @@
 
 			<!-- Description -->
 			<div class="space-y-2 text-right">
-				<label class="text-sm font-semibold text-foreground/80">الوصف</label>
+				<label for="edit-quiz-desc" class="text-sm font-semibold text-foreground/80">الوصف</label>
 				<textarea
+					id="edit-quiz-desc"
 					bind:value={description}
 					rows="3"
 					class="w-full resize-none rounded-xl border border-border bg-background p-3 text-right text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
@@ -147,8 +160,9 @@
 			<!-- Settings Grid -->
 			<div class="grid gap-6 sm:grid-cols-3">
 				<div class="space-y-2 text-right">
-					<label class="text-sm font-semibold text-foreground/80">مستوى الصعوبة</label>
+					<label for="edit-quiz-diff" class="text-sm font-semibold text-foreground/80">مستوى الصعوبة</label>
 					<select
+						id="edit-quiz-diff"
 						bind:value={difficulty}
 						class="w-full rounded-xl border border-border bg-background p-3 text-right text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 					>
@@ -158,8 +172,9 @@
 					</select>
 				</div>
 				<div class="space-y-2 text-right">
-					<label class="text-sm font-semibold text-foreground/80">الوقت المخصص (بالثواني)</label>
+					<label for="edit-quiz-time" class="text-sm font-semibold text-foreground/80">الوقت المخصص (بالثواني)</label>
 					<input
+						id="edit-quiz-time"
 						type="number"
 						bind:value={timeLimit}
 						min="0"
@@ -168,8 +183,9 @@
 					<p class="text-xs text-foreground/40">استخدم 0 لوقت غير محدود</p>
 				</div>
 				<div class="space-y-2 text-right">
-					<label class="text-sm font-semibold text-foreground/80">نسبة النجاح (%)</label>
+					<label for="edit-quiz-pass" class="text-sm font-semibold text-foreground/80">نسبة النجاح (%)</label>
 					<input
+						id="edit-quiz-pass"
 						type="number"
 						bind:value={passingScore}
 						min="0"
@@ -179,23 +195,53 @@
 				</div>
 			</div>
 
-			<!-- Toggles -->
-			<div class="flex items-center gap-6 rounded-xl border border-border bg-background p-4">
+			<!-- Access Tier & Toggles -->
+			<div class="grid grid-cols-1 gap-4 rounded-xl border border-border bg-background p-4 sm:grid-cols-2">
+				<div class="space-y-2 text-right">
+					<label for="edit-quiz-tier" class="text-sm font-semibold text-foreground/80">مستوى الوصول</label>
+					<select
+						id="edit-quiz-tier"
+						bind:value={accessTier}
+						class="w-full rounded-xl border border-border bg-card p-2.5 text-sm outline-none focus:border-primary"
+					>
+						<option value="public">مجاني للجميع (عام)</option>
+						<option value="registered">للمسجلين فقط (حساب مجاني)</option>
+						<option value="premium">للمشتركين المميزين (Premium)</option>
+					</select>
+				</div>
+				<div class="space-y-2 text-right">
+					<label for="edit-quiz-attempts" class="text-sm font-semibold text-foreground/80">الحد الأقصى للمحاولات (0 = غير محدود)</label>
+					<input
+						id="edit-quiz-attempts"
+						type="number"
+						min="0"
+						bind:value={maxAttempts}
+						class="w-full rounded-xl border border-border bg-card p-2.5 text-sm outline-none focus:border-primary"
+					/>
+				</div>
 				<label class="flex cursor-pointer items-center gap-3">
 					<input
 						type="checkbox"
-						bind:checked={isPremium}
-						class="h-5 w-5 rounded border-border accent-amber-500"
+						bind:checked={shuffleOptions}
+						class="h-5 w-5 rounded border-border accent-blue-500"
 					/>
-					<span class="font-semibold text-foreground/80">محتوى مدفوع (Premium)</span>
+					<span class="font-semibold text-foreground/80">خلط ترتيب الخيارات عشوائياً</span>
 				</label>
 				<label class="flex cursor-pointer items-center gap-3">
+					<input
+						type="checkbox"
+						bind:checked={showAnswers}
+						class="h-5 w-5 rounded border-border accent-blue-500"
+					/>
+					<span class="font-semibold text-foreground/80">عرض التصحيح والشرح بعد الإرسال</span>
+				</label>
+				<label class="flex cursor-pointer items-center gap-3 sm:col-span-2">
 					<input
 						type="checkbox"
 						bind:checked={isPublished}
 						class="h-5 w-5 rounded border-border accent-emerald-500"
 					/>
-					<span class="font-semibold text-foreground/80">مباشر (Published)</span>
+					<span class="font-semibold text-foreground/80">مباشر ومنشور للطلاب (Published)</span>
 				</label>
 			</div>
 

@@ -2,6 +2,8 @@
 	import { Search, X, FileText, FileEdit, BookOpen, Loader2, Brain } from 'lucide-svelte';
 	import { goto } from '$app/navigation';
 
+	let { staticMode = false }: { staticMode?: boolean } = $props();
+
 	let isOpen = $state(false);
 	let query = $state('');
 	let results = $state<any[]>([]);
@@ -9,6 +11,7 @@
 	let selectedIndex = $state(-1);
 	let inputRef = $state<HTMLInputElement | null>(null);
 	let debounceTimer: ReturnType<typeof setTimeout>;
+	let staticIndex = $state<any[] | null>(null);
 
 	const typeLabels: Record<string, string> = {
 		exam: 'اختبار',
@@ -41,9 +44,25 @@
 		}
 		isLoading = true;
 		try {
-			const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
-			const data = await res.json();
-			results = data.results;
+			if (staticMode) {
+				if (!staticIndex) {
+					const res = await fetch('/static-api/search-index.json');
+					const data = await res.json();
+					staticIndex = Array.isArray(data) ? data : data.results || [];
+				}
+				const needle = q.trim().toLowerCase();
+				results = (staticIndex || [])
+					.filter((item) =>
+						`${item.title_ar || ''} ${item.title || ''} ${item.subject_name || ''} ${item.year_name || ''} ${item.level_name || ''}`
+							.toLowerCase()
+							.includes(needle)
+					)
+					.slice(0, 20);
+			} else {
+				const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
+				const data = await res.json();
+				results = data.results;
+			}
 			selectedIndex = -1;
 		} catch (e) {
 			results = [];
@@ -76,6 +95,8 @@
 		close();
 		if (doc.type === 'quiz') {
 			goto(`/quizzes/${doc.slug}`);
+		} else if (doc.slug) {
+			goto(`/${doc.level_slug}/${doc.year_slug}/${doc.subject_slug}/${doc.slug}`);
 		} else {
 			goto(`/${doc.level_slug}/${doc.year_slug}/${doc.subject_slug}`);
 		}

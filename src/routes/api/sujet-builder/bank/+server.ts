@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
-import { contentDatabase } from '$lib/server/db';
-import { bankExercises, yearSubjects } from '$lib/server/db/schema-content';
+import { contentDatabase } from '#lib/server/db';
+import { bankExercises, yearSubjects } from '#lib/server/db/schema-content';
 import { eq, and, isNull, desc } from 'drizzle-orm';
 
 // GET: Fetch exercises from the bank

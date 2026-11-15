@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { BookOpen, FileText } from 'lucide-svelte';
-	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
+	import DynamicIcon from '#lib/components/DynamicIcon.svelte';
 	let { data }: { data: any } = $props();
 
 	const levelColors: Record<string, string> = {
@@ -47,6 +47,14 @@
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<h2 class="mb-8 text-center text-2xl font-bold">اختر السنة الدراسية</h2>
 
+		{#if data.level.visibility === 'coming_soon'}
+			<div class="glass-card mx-auto max-w-xl rounded-2xl border p-10 text-center">
+				<div class="mb-3 text-3xl font-extrabold text-amber-500">قريباً</div>
+				<p class="text-muted-foreground text-sm leading-relaxed">
+					يجري حالياً تجهيز ومراجعة مواضيع وفروض <strong>{data.level.name_ar}</strong>. تابعنا أو تصفح الأطوار المتاحة الآن!
+				</p>
+			</div>
+		{:else}
 		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{#each data.years as year, i}
 				<a
@@ -70,6 +78,9 @@
 						<div class="min-w-0 flex-1">
 							<h3 class="mb-1 text-lg font-bold group-hover:text-{color}-400 transition-colors">
 								{year.name_ar}
+								{#if year.visibility === 'coming_soon'}
+									<span class="mr-1 rounded bg-amber-500/15 px-1.5 py-0.5 text-[10px] text-amber-500">قريباً</span>
+								{/if}
 							</h3>
 							<p class="text-muted-foreground mb-3 text-sm">{year.name_fr}</p>
 
@@ -103,5 +114,6 @@
 				</a>
 			{/each}
 		</div>
+		{/if}
 	</div>
 </section>

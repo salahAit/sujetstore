@@ -43,7 +43,7 @@
 <!-- Stats Grid -->
 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 	{#each stats as stat}
-		<div class="bg-backgroundard text-card-foreground border-border rounded-2xl border p-6 shadow-sm">
+		<div class="bg-card text-card-foreground border-border rounded-2xl border p-6 shadow-sm">
 			<div class="flex items-center justify-between">
 				<div>
 					<p class="text-muted-foreground text-sm font-medium">{stat.name}</p>
@@ -63,7 +63,7 @@
 	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 		<a
 			href="/admin/documents"
-			class="group bg-backgroundard text-card-foreground border-border hover:bg-secondary flex items-center gap-4 rounded-xl border p-4 transition-all"
+			class="group bg-card text-card-foreground border-border hover:bg-secondary flex items-center gap-4 rounded-xl border p-4 transition-all"
 		>
 			<div class="bg-primary/20 text-primary flex h-10 w-10 items-center justify-center rounded-lg">
 				<FileText size={20} />
@@ -75,7 +75,7 @@
 		</a>
 		<a
 			href="/admin/subjects"
-			class="group bg-backgroundard text-card-foreground border-border hover:bg-secondary flex items-center gap-4 rounded-xl border p-4 transition-all"
+			class="group bg-card text-card-foreground border-border hover:bg-secondary flex items-center gap-4 rounded-xl border p-4 transition-all"
 		>
 			<div
 				class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/20 text-purple-500"
@@ -89,7 +89,7 @@
 		</a>
 		<a
 			href="/admin/years"
-			class="group bg-backgroundard text-card-foreground border-border hover:bg-secondary flex items-center gap-4 rounded-xl border p-4 transition-all"
+			class="group bg-card text-card-foreground border-border hover:bg-secondary flex items-center gap-4 rounded-xl border p-4 transition-all"
 		>
 			<div
 				class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20 text-blue-500"

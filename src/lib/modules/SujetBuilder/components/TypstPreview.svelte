@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { Loader2, AlertCircle, ZoomIn, ZoomOut, Maximize, WifiOff, Check, RefreshCw } from 'lucide-svelte';
-	import { Button } from '$lib/components/ui/button';
-	import type { ExamDocument } from '$lib/modules/SujetBuilder/types';
+	import { Button } from '#lib/components/ui/button';
+	import type { ExamDocument } from '#lib/modules/SujetBuilder/types';
 
 	let {
 		document: examDocument,

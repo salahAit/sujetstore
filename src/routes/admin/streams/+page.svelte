@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { Plus, Trash2, Edit, X, Settings } from 'lucide-svelte';
-	import ConfirmModal from '$lib/components/ConfirmModal.svelte';
+	import ConfirmModal from '#lib/components/ConfirmModal.svelte';
 	import type { ActionData } from './$types';
 
-	let { data, form } = $props<{ data: any; form: ActionData }>();
+	let { data, form }: { data: any; form: ActionData } = $props();
 
 	let isCreateModalOpen = $state(false);
 

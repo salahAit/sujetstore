@@ -4,7 +4,7 @@
 		LevelId,
 		ExamType,
 		TrimesterId
-	} from '$lib/modules/SujetBuilder/types';
+	} from '#lib/modules/SujetBuilder/types';
 	import { ChevronDown } from 'lucide-svelte';
 
 	type LevelRow = { id: string; nameAr: string; slug: string; order: number };

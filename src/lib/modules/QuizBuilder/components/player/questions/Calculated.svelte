@@ -21,13 +21,17 @@
 		}
 		vars = v;
 
-		// Evaluate formula to get correct answer
+		// Evaluate formula (or fixed numeric answer) to get correct answer
 		try {
-			let expr = data.formula || '';
-			for (const [key, val] of Object.entries(vars)) {
-				expr = expr.replaceAll(`{${key}}`, String(val));
+			if (data.formula) {
+				let expr = data.formula;
+				for (const [key, val] of Object.entries(vars)) {
+					expr = expr.replaceAll(`{${key}}`, String(val));
+				}
+				correctAnswer = Function('"use strict"; return (' + expr + ')')();
+			} else if (data.answer !== undefined && data.answer !== null) {
+				correctAnswer = Number(data.answer) || 0;
 			}
-			correctAnswer = Function('"use strict"; return (' + expr + ')')();
 		} catch {
 			correctAnswer = 0;
 		}
@@ -43,11 +47,13 @@
 	});
 
 	function handleInput() {
-		const num = parseFloat(userAnswer);
-		if (!isNaN(num)) {
-			const tolerance = data.tolerance || 0;
+		const raw = String(userAnswer ?? '').trim();
+		if (raw === '') return;
+		const num = Number(raw);
+		if (!Number.isNaN(num) && Number.isFinite(num)) {
+			const tolerance = data.tolerance ?? 0;
 			const correct = Math.abs(num - correctAnswer) <= tolerance;
-			onAnswer?.({ value: num, correct, expected: correctAnswer });
+			onAnswer?.({ value: num, vars: { ...vars }, correct, expected: correctAnswer });
 		}
 	}
 </script>

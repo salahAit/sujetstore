@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { FilePlus2, Trash2, Edit, FileText, ExternalLink, Eye, Search, Filter } from 'lucide-svelte';
-	import ConfirmModal from '$lib/components/ConfirmModal.svelte';
-	import Pagination from '$lib/admin/components/Pagination.svelte';
+	import ConfirmModal from '#lib/components/ConfirmModal.svelte';
+	import Pagination from '#lib/admin/components/Pagination.svelte';
 	import type { ActionData } from './$types';
 
-	let { data } = $props<{ data: any }>();
+	let { data }: { data: any } = $props();
 
 	// Search and Filter state
 	let searchQuery = $state('');
@@ -129,7 +129,7 @@
 							</span>
 						</td>
 						<td class="text-muted-foreground px-6 py-4 text-xs whitespace-nowrap">
-							{new Date(doc.createdAt).toLocaleDateString('ar-DZ')}
+							{doc.createdAt ? new Date(doc.createdAt).toLocaleDateString('ar-DZ') : '-'}
 						</td>
 						<td class="px-6 py-4 whitespace-nowrap">
 							<div class="flex justify-center gap-3">

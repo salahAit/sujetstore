@@ -5,81 +5,77 @@
 
 declare const self: ServiceWorkerGlobalScope;
 
-import { build, files, version } from '$service-worker';
+import { assets, immutable } from '$app/manifest';
+import { version } from '$app/env';
 
 const CACHE = `cache-${version}`;
-const ASSETS = [...build, ...files];
 
-// Install: cache all static assets and force the waiting service worker to become the active service worker
+const toUrlPath = (p: string) => (p.startsWith('/') ? p : `/${p}`);
+
+const EXCLUDED_ASSET_PREFIXES = ['/wasm/', '/uploads/', '/documents/', '/generated/', '/fonts/'];
+
+const ASSETS = [
+	...immutable.map((item) => toUrlPath(item.path)),
+	...assets
+		.map((item) => toUrlPath(item.path))
+		.filter((path) => !EXCLUDED_ASSET_PREFIXES.some((prefix) => path.startsWith(prefix)))
+];
+
+const BYPASS_PREFIXES = ['/api/', '/admin', '/auth', '/student', '/uploads/', '/wasm/'];
+
 self.addEventListener('install', (event) => {
 	async function addFilesToCache() {
 		const cache = await caches.open(CACHE);
 		await cache.addAll(ASSETS);
 	}
-	event.waitUntil(
-		addFilesToCache().then(() => {
-			// Skip waiting ensures the new service worker activates immediately
-			return self.skipWaiting();
-		})
-	);
+	event.waitUntil(addFilesToCache().then(() => self.skipWaiting()));
 });
 
-// Activate: claim clients and remove old caches
 self.addEventListener('activate', (event) => {
 	async function deleteOldCachesAndClaim() {
 		for (const key of await caches.keys()) {
 			if (key !== CACHE) await caches.delete(key);
 		}
-		// Claim clients ensures the service worker controls all open pages immediately
 		await self.clients.claim();
 	}
 	event.waitUntil(deleteOldCachesAndClaim());
 });
 
-// Fetch: Stale-While-Revalidate strategy for better auto-updating
 self.addEventListener('fetch', (event) => {
 	if (event.request.method !== 'GET') return;
 
-	// Don't intercept API requests or extension requests
 	const url = new URL(event.request.url);
-	if (url.pathname.startsWith('/api/') || !url.protocol.startsWith('http')) return;
+	if (!url.protocol.startsWith('http') || url.origin !== self.location.origin) return;
+	if (BYPASS_PREFIXES.some((prefix) => url.pathname.startsWith(prefix))) return;
 
 	async function respond() {
 		const cache = await caches.open(CACHE);
 
-		// Serve build files and static assets from cache FIRST (Fast response)
 		if (ASSETS.includes(url.pathname)) {
 			const cachedResponse = await cache.match(url.pathname);
 			if (cachedResponse) {
-				// In the background, fetch the latest version and update the cache (Stale-While-Revalidate)
 				event.waitUntil(
-					fetch(event.request).then((networkResponse) => {
-						if (networkResponse.ok) {
-							cache.put(event.request, networkResponse.clone());
-						}
-					}).catch(() => {
-						// Offline, ignore fetch error
-					})
+					fetch(event.request)
+						.then((networkResponse) => {
+							if (networkResponse.ok) {
+								cache.put(event.request, networkResponse.clone());
+							}
+						})
+						.catch(() => {})
 				);
 				return cachedResponse;
 			}
 		}
 
-		// For dynamic pages/content: Network First, fallback to cache
 		try {
 			const response = await fetch(event.request);
 			if (response.status === 200 && url.origin === self.location.origin) {
-				// We only cache valid local responses
 				event.waitUntil(cache.put(event.request, response.clone()));
 			}
 			return response;
-		} catch (err) {
-			// If network fails (Offline or Aborted), try the cache
+		} catch {
 			const cachedResponse = await cache.match(event.request);
-			if (cachedResponse) {
-				return cachedResponse;
-			}
-			// If neither network nor cache has the resource, safely return a network error
+			if (cachedResponse) return cachedResponse;
 			return Response.error();
 		}
 	}
@@ -87,7 +83,6 @@ self.addEventListener('fetch', (event) => {
 	event.respondWith(respond());
 });
 
-// Listen for message from clients to force an update
 self.addEventListener('message', (event) => {
 	if (event.data && event.data.type === 'SKIP_WAITING') {
 		self.skipWaiting();

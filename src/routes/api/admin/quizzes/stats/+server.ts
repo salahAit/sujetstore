@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
-import { contentDatabase } from '$lib/server/db';
-import { quizzes, questions, questionCategories } from '$lib/server/db/schema-content';
+import { contentDatabase } from '#lib/server/db';
+import { quizzes, questions, questionCategories } from '#lib/server/db/schema-content';
 import { sql } from 'drizzle-orm';
 
 export async function GET({ locals }) {

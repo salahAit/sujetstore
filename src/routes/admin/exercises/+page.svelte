@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { Plus, Trash2, Edit, Search, Filter, BookOpen, Calendar, Database, FileText, Upload, Loader2 } from 'lucide-svelte';
-	import ConfirmModal from '$lib/components/ConfirmModal.svelte';
-	import Pagination from '$lib/admin/components/Pagination.svelte';
+	import ConfirmModal from '#lib/components/ConfirmModal.svelte';
+	import Pagination from '#lib/admin/components/Pagination.svelte';
 	
-	let { data } = $props<{ data: any }>();
+	let { data }: { data: any } = $props();
 	
 	import { enhance } from '$app/forms';
 
@@ -347,7 +347,7 @@
 						</td>
 						<td class="px-6 py-4 font-bold">{ex.points}ن</td>
 						<td class="px-6 py-4 text-xs text-muted-foreground">
-							{new Date(ex.createdAt).toLocaleDateString('ar-DZ')}
+							{ex.createdAt ? new Date(ex.createdAt).toLocaleDateString('ar-DZ') : '-'}
 						</td>
 						<td class="px-6 py-4">
 							<div class="flex justify-center gap-3">

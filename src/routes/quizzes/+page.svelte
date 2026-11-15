@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Brain, Clock, Star, Lock, Sparkles } from 'lucide-svelte';
-	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
+	import DynamicIcon from '#lib/components/DynamicIcon.svelte';
 
 	let { data }: { data: any } = $props();
 

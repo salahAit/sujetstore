@@ -26,7 +26,10 @@ export const educationLevels = sqliteTable('education_levels', {
 	description: text('description'),
 	icon: text('icon'), // 🎒 📚 🎓
 	color: text('color'), // لون البطاقة
-	order: integer('order').notNull().default(0)
+	order: integer('order').notNull().default(0),
+	visibility: text('visibility', { enum: ['published', 'coming_soon', 'hidden'] })
+		.default('published')
+		.notNull()
 });
 
 /**
@@ -44,7 +47,10 @@ export const years = sqliteTable('years', {
 	slug: text('slug').notNull().unique(),
 	order: integer('order').notNull().default(0),
 	// للثانوي: الشعبة (علوم تجريبية، آداب...)
-	stream: text('stream') // null للابتدائي والمتوسط
+	stream: text('stream'), // null للابتدائي والمتوسط
+	visibility: text('visibility', { enum: ['published', 'coming_soon', 'hidden'] })
+		.default('published')
+		.notNull()
 });
 
 /**
@@ -70,6 +76,9 @@ export const levelStreams = sqliteTable('level_streams', {
 		.notNull(),
 	streamId: text('stream_id')
 		.references(() => streams.id)
+		.notNull(),
+	visibility: text('visibility', { enum: ['published', 'coming_soon', 'hidden'] })
+		.default('published')
 		.notNull()
 });
 
@@ -103,7 +112,10 @@ export const streamSubjects = sqliteTable('stream_subjects', {
 	yearId: text('year_id')
 		.references(() => years.id), // null = لجميع مستويات هذه الشعبة
 	coefficient: integer('coefficient'),
-	order: integer('order').notNull().default(0)
+	order: integer('order').notNull().default(0),
+	visibility: text('visibility', { enum: ['published', 'coming_soon', 'hidden'] })
+		.default('published')
+		.notNull()
 });
 
 /**
@@ -121,7 +133,10 @@ export const yearSubjects = sqliteTable('year_subjects', {
 	streamId: text('stream_id')
 		.references(() => streams.id), // ربط اختياري بالشعبة
 	coefficient: integer('coefficient'),
-	order: integer('order').notNull().default(0)
+	order: integer('order').notNull().default(0),
+	visibility: text('visibility', { enum: ['published', 'coming_soon', 'hidden'] })
+		.default('published')
+		.notNull()
 });
 
 /**
@@ -169,6 +184,9 @@ export const documents = sqliteTable('documents', {
 
 	// تتبع
 	downloadCount: integer('download_count').default(0),
+	accessTier: text('access_tier', { enum: ['public', 'registered', 'premium'] })
+		.default('public')
+		.notNull(),
 	isPublished: integer('is_published', { mode: 'boolean' }).default(true),
 	createdAt: text('created_at').default(sql`(datetime('now'))`),
 	updatedAt: text('updated_at')
@@ -201,6 +219,9 @@ export const quizzes = sqliteTable('quizzes', {
 	showAnswers: integer('show_answers', { mode: 'boolean' }).default(true),
 	practiceMode: integer('practice_mode', { mode: 'boolean' }).default(false),
 
+	accessTier: text('access_tier', { enum: ['public', 'registered', 'premium'] })
+		.default('public')
+		.notNull(),
 	isPremium: integer('is_premium', { mode: 'boolean' }).default(false).notNull(),
 	isPublished: integer('is_published', { mode: 'boolean' }).default(false).notNull(),
 	createdAt: text('created_at').default(sql`(datetime('now'))`),
@@ -328,9 +349,24 @@ export const quizQuestions = sqliteTable('quiz_questions', {
 	order: integer('order').default(0).notNull() // ترتيب السؤال في هذا الاختبار
 });
 
+/**
+ * 13. إعدادات الموقع وسياسات النشر (Site Settings)
+ */
+export const siteSettings = sqliteTable('site_settings', {
+	key: text('key').primaryKey(),
+	value: text('value').notNull(),
+	updatedAt: text('updated_at').default(sql`(datetime('now'))`)
+});
+
 // ============================================
 // TYPE EXPORTS
 // ============================================
+
+export type VisibilityState = 'published' | 'coming_soon' | 'hidden';
+export type AccessTier = 'public' | 'registered' | 'premium';
+
+export type SiteSetting = typeof siteSettings.$inferSelect;
+export type NewSiteSetting = typeof siteSettings.$inferInsert;
 
 export type EducationLevel = typeof educationLevels.$inferSelect;
 export type NewEducationLevel = typeof educationLevels.$inferInsert;

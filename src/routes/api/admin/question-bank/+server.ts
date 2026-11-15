@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
-import { contentDatabase } from '$lib/server/db';
-import { questions, questionCategories, yearSubjects, subjects, years, educationLevels } from '$lib/server/db/schema-content';
+import { contentDatabase } from '#lib/server/db';
+import { questions, questionCategories, yearSubjects, subjects, years, educationLevels } from '#lib/server/db/schema-content';
 import { eq, desc } from 'drizzle-orm';
 
 // Fetch all questions for the bank

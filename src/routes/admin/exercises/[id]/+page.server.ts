@@ -1,4 +1,4 @@
-import { contentDatabase, contentSchema } from '$lib/server/db/index';
+import { contentDatabase, contentSchema } from '#lib/server/db/index';
 import { eq } from 'drizzle-orm';
 import type { PageServerLoad, Actions } from './$types';
 import { error, redirect, fail } from '@sveltejs/kit';

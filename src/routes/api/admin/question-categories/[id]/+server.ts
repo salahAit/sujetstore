@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
-import { contentDatabase } from '$lib/server/db';
-import { questionCategories, questions } from '$lib/server/db/schema-content';
+import { contentDatabase } from '#lib/server/db';
+import { questionCategories, questions } from '#lib/server/db/schema-content';
 import { eq } from 'drizzle-orm';
 
 // Update a category (rename or move)

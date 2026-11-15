@@ -1,4 +1,4 @@
-import { contentDatabase, contentSchema } from '$lib/server/db/index';
+import { contentDatabase, contentSchema } from '#lib/server/db/index';
 import { eq, isNotNull, and } from 'drizzle-orm';
 import type { PageServerLoad } from './$types';
 

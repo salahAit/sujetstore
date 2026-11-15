@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import {
 		LayoutDashboard,
 		GraduationCap,
@@ -12,15 +12,20 @@
 		LogOut,
 		Menu,
 		X,
-		FilePlus2
+		FilePlus2,
+		Eye,
+		Ticket,
+		Bell,
+		Users
 	} from 'lucide-svelte';
 
 	let { data, children } = $props();
 
 	let isMobileMenuOpen = $state(false);
 
-	const navigation = [
+	const navigation = $derived([
 		{ name: 'الرئيسية', href: '/admin', icon: LayoutDashboard },
+		{ name: 'التحكم في الظهور والنشر', href: '/admin/visibility', icon: Eye },
 		{ name: 'المراحل التعليمية', href: '/admin/levels', icon: GraduationCap },
 		{ name: 'المستويات الدراسية', href: '/admin/years', icon: CalendarDays },
 		{ name: 'الشعب الدراسية', href: '/admin/streams', icon: BookOpen },
@@ -31,12 +36,17 @@
 		{ name: 'بنك التمارين المطبوعة', href: '/admin/exercises', icon: FileText },
 		{ name: 'بنك المواضيع المنشأة', href: '/admin/sujet-bank', icon: FilePlus2 },
 		{ name: 'إحصائيات التمارين', href: '/admin/quiz-analytics', icon: BarChart3 },
-		{ name: 'الوثائق المرفوعة', href: '/admin/documents', icon: FileText }
-	];
-	let isSujetBuilder = $derived($page.url.pathname.startsWith('/admin/sujet-builder'));
+		{ name: 'الوثائق المرفوعة', href: '/admin/documents', icon: FileText },
+		{ name: 'أكواد التفعيل والاشتراكات', href: '/admin/vouchers', icon: Ticket },
+		{ name: 'الإشعارات العامة', href: '/admin/notifications', icon: Bell },
+		...(data.user?.role === 'superadmin'
+			? [{ name: 'المستخدمون والصلاحيات', href: '/admin/users', icon: Users }]
+			: [])
+	]);
+	let isSujetBuilder = $derived(page.url.pathname.startsWith('/admin/sujet-builder'));
 </script>
 
-{#if $page.url.pathname === '/admin/login' || isSujetBuilder}
+{#if page.url.pathname === '/admin/login' || isSujetBuilder}
 	{@render children()}
 {:else}
 	<div class="font-cairo bg-background text-foreground flex min-h-screen" dir="rtl">
@@ -73,8 +83,8 @@
 			<nav class="flex-1 space-y-1 overflow-y-auto px-4 py-6">
 				{#each navigation as item}
 					{@const isActive =
-						$page.url.pathname === item.href ||
-						($page.url.pathname.startsWith(item.href) && item.href !== '/admin')}
+						page.url.pathname === item.href ||
+						(page.url.pathname.startsWith(item.href) && item.href !== '/admin')}
 					<a
 						href={item.href}
 						class="group flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium transition-all {isActive
@@ -120,7 +130,7 @@
 		<!-- Main Content -->
 		<div class="flex flex-1 flex-col overflow-hidden">
 			<!-- Top header (Mobile only) -->
-			<header class="bg-backgroundard flex h-16 items-center border-b border-black/5 px-4 dark:border-border lg:hidden">
+			<header class="bg-card flex h-16 items-center border-b border-black/5 px-4 dark:border-border lg:hidden">
 				<button class="text-muted-foreground hover:text-foreground" onclick={() => (isMobileMenuOpen = true)}>
 					<Menu size={24} />
 				</button>

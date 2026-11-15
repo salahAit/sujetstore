@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { getBookmarkedIds, toggleBookmark, isBookmarked } from '$lib/stores/bookmarks.svelte';
+	import { getBookmarkedIds, toggleBookmark, isBookmarked } from '#lib/stores/bookmarks.svelte';
 	import { BookmarkX, Bookmark, FileText, Loader2, Inbox } from 'lucide-svelte';
 
 	let docs = $state<any[]>([]);

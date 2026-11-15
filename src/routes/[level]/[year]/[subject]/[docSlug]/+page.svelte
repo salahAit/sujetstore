@@ -2,28 +2,34 @@
 	import {
 		Printer,
 		Download,
-		X,
+		Maximize2,
+		Minimize2,
 		Share2,
 		FileText,
 		FileEdit,
 		CheckCircle,
 		Star,
 		MessageCircle,
-		Send
+		Send,
+		Lock,
+		ArrowRight,
+		LogIn,
+		Sparkles
 	} from 'lucide-svelte';
-	import { goto } from '$app/navigation';
-	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 
 	let { data }: { data: any } = $props();
 
-	let activeTab = $state<'exam' | 'solution'>('exam'); // 'exam' or 'solution'
+	let activeTab = $state<'exam' | 'solution'>('exam');
+	let isFullscreen = $state(false);
 
 	let doc = $derived(data.document);
 	let subject = $derived(data.subject);
 	let year = $derived(data.year);
 	let level = $derived(data.level);
 	let relatedDocs = $derived(data.relatedDocs || []);
+	let accessCheck = $derived(data.accessCheck || { allowed: true, tier: 'public', dynamicPortalUrl: '' });
+	let dynamicBase = $derived(accessCheck.dynamicPortalUrl || '');
 
 	const typeLabels: Record<string, string> = {
 		exam: 'اختبار',
@@ -47,13 +53,12 @@
 		};
 	}
 
-	function closeDoc() {
-		const subjectPath = `/${level.slug}/${year.slug}/${subject.slug}`;
-		if (window.history.length > 2) {
-			window.history.back();
-		} else {
-			goto(subjectPath);
-		}
+	function trackDownload() {
+		fetch('/api/stats', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ docId: doc.id, action: 'download' })
+		}).catch(() => {});
 	}
 
 	async function shareDoc() {
@@ -62,7 +67,7 @@
 		if (navigator.share) {
 			try {
 				await navigator.share({ title, url });
-			} catch (e) {}
+			} catch {}
 		} else {
 			await navigator.clipboard.writeText(url);
 		}
@@ -77,20 +82,23 @@
 	async function loadRating() {
 		try {
 			const res = await fetch(`/api/ratings?docId=${doc.id}`);
-			const data = await res.json();
-			avgRating = data.average;
-			totalRatings = data.total;
-		} catch (e) {}
+			if (!res.ok) return;
+			const payload = await res.json();
+			avgRating = payload.average || 0;
+			totalRatings = payload.total || 0;
+		} catch {}
 	}
 
 	async function submitRating(value: number) {
 		userRating = value;
-		await fetch('/api/ratings', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ docId: doc.id, rating: value })
-		});
-		await loadRating();
+		try {
+			await fetch('/api/ratings', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ docId: doc.id, rating: value })
+			});
+			await loadRating();
+		} catch {}
 	}
 
 	// === Comments ===
@@ -102,26 +110,30 @@
 	async function loadComments() {
 		try {
 			const res = await fetch(`/api/comments?docId=${doc.id}`);
-			const data = await res.json();
-			comments = data.comments || [];
-		} catch (e) {}
+			if (!res.ok) return;
+			const payload = await res.json();
+			comments = payload.comments || [];
+		} catch {}
 	}
 
 	async function postComment() {
 		if (!commentAuthor.trim() || !commentText.trim()) return;
 		posting = true;
-		await fetch('/api/comments', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({
-				docId: doc.id,
-				authorName: commentAuthor.trim(),
-				content: commentText.trim()
-			})
-		});
-		commentText = '';
-		posting = false;
-		await loadComments();
+		try {
+			await fetch('/api/comments', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					docId: doc.id,
+					authorName: commentAuthor.trim(),
+					content: commentText.trim()
+				})
+			});
+			commentText = '';
+			await loadComments();
+		} finally {
+			posting = false;
+		}
 	}
 
 	function timeAgo(dateStr: string): string {
@@ -135,7 +147,6 @@
 	}
 
 	onMount(() => {
-		// Track view
 		fetch('/api/stats', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
@@ -152,169 +163,245 @@
 	<meta property="og:title" content="{doc.titleAr || doc.title} - SujetStore" />
 	<meta
 		property="og:description"
-		content="{doc.titleAr || doc.title} | {subject.name_ar} - {year.name_ar}"
+		content="{doc.titleAr || doc.title} | {subject.nameAr} - {year.nameAr}"
 	/>
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<!-- Fullscreen Modal-like Viewer (covers entire page layout including navbar) -->
-<div class="bg-background/95 fixed inset-0 z-50 flex flex-col backdrop-blur-sm sm:p-4 md:p-8">
-	<div
-		class="mx-auto flex w-full max-w-5xl items-center justify-between border border-white/10 bg-black/10 px-4 py-3 shadow-sm sm:rounded-t-xl dark:bg-white/5"
-	>
-		<div class="text-foreground/90 flex items-center gap-3 truncate">
-			<h2
-				class="inline-block max-w-[150px] truncate align-middle text-sm font-bold sm:max-w-md sm:text-lg"
+<!-- Breadcrumb & Header -->
+<div class="border-b border-black/5 bg-black/[0.02] dark:border-white/10 dark:bg-white/[0.02]">
+	<div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
+		<nav class="text-muted-foreground flex flex-wrap items-center gap-2 text-sm">
+			<a href="/" class="hover:text-foreground transition-colors">الرئيسية</a>
+			<span class="opacity-50">/</span>
+			<a href="/{level.slug}" class="hover:text-foreground transition-colors">{level.nameAr}</a>
+			<span class="opacity-50">/</span>
+			<a href="/{level.slug}/{year.slug}" class="hover:text-foreground transition-colors">{year.nameAr}</a>
+			<span class="opacity-50">/</span>
+			<a
+				href="/{level.slug}/{year.slug}/{subject.slug}"
+				class="hover:text-foreground transition-colors">{subject.nameAr}</a
 			>
-				{doc.title_ar || doc.title}
-			</h2>
-			<span
-				class="badge-{doc.type} mx-2 inline-block rounded-full border px-2 py-0.5 align-middle text-xs"
-			>
-				{activeTab === 'exam' ? 'الموضوع' : 'التصحيح'}
-			</span>
-		</div>
+			<span class="opacity-50">/</span>
+			<span class="text-foreground max-w-[220px] truncate font-semibold">{doc.titleAr || doc.title}</span>
+		</nav>
 
-		<div class="flex items-center gap-2">
-			{#if activeTab === 'exam' && doc.pdfUrl}
-				<button
-					onclick={(e) => {
-						e.preventDefault();
-						printDoc(doc.pdfUrl);
-					}}
-					class="border-primary/30 bg-primary/10 text-primary hover:bg-primary/30 flex h-9 w-9 items-center justify-center rounded-lg border transition-colors"
-					title="طباعة الموضوع"
-				>
-					<Printer size={18} />
-				</button>
-				<a
-					href={doc.pdfUrl}
-					download
-					target="_blank"
-					class="from-primary to-primary/80 text-primary-foreground hover:shadow-primary/25 flex h-9 items-center justify-center gap-2 rounded-lg bg-gradient-to-r px-4 text-sm font-semibold shadow-md transition-all hover:-translate-y-0.5"
-					title="تحميل الموضوع"
-				>
-					<Download size={16} /> <span class="hidden sm:inline">تحميل الموضوع</span>
-				</a>
-			{/if}
-			{#if activeTab === 'solution' && doc.solutionUrl}
-				<button
-					onclick={(e) => {
-						e.preventDefault();
-						printDoc(doc.solutionUrl);
-					}}
-					class="flex h-9 w-9 items-center justify-center rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-500 transition-colors hover:bg-emerald-500/30 dark:text-emerald-400"
-					title="طباعة التصحيح"
-				>
-					<Printer size={18} />
-				</button>
-				<a
-					href={doc.solutionUrl}
-					download
-					target="_blank"
-					class="flex h-9 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-emerald-500 to-emerald-400 px-4 text-sm font-semibold text-white shadow-md shadow-emerald-500/25 transition-all hover:-translate-y-0.5"
-					title="تحميل التصحيح"
-				>
-					<Download size={16} /> <span class="hidden sm:inline">تحميل التصحيح</span>
-				</a>
-			{/if}
-
-			<button
-				onclick={shareDoc}
-				class="border-primary/30 bg-primary/10 text-primary hover:bg-primary/30 flex h-9 w-9 items-center justify-center rounded-lg border transition-colors"
-				title="مشاركة"
-			>
-				<Share2 size={18} />
-			</button>
-
-			<button
-				onclick={closeDoc}
-				class="text-destructive hover:bg-destructive hover:text-destructive-foreground border-destructive/20 bg-destructive/10 flex h-9 w-9 items-center justify-center rounded-lg border transition-colors"
-				title="إغلاق"
-			>
-				<X size={20} />
-			</button>
-		</div>
+		<a
+			href="/{level.slug}/{year.slug}/{subject.slug}"
+			class="text-muted-foreground hover:text-foreground inline-flex items-center gap-1.5 text-xs font-bold"
+		>
+			<ArrowRight size={15} />
+			العودة إلى المادة
+		</a>
 	</div>
+</div>
 
+<!-- Document Viewer Section -->
+<section class="mx-auto max-w-6xl px-4 py-6 sm:px-6">
 	<div
-		class="relative mx-auto w-full max-w-5xl flex-1 overflow-hidden border-x border-b border-white/10 bg-white shadow-2xl sm:rounded-b-xl"
+		class={isFullscreen
+			? 'bg-background/95 fixed inset-0 z-50 flex flex-col p-2 backdrop-blur-sm sm:p-6'
+			: 'bg-card border-border flex flex-col overflow-hidden rounded-2xl border shadow-lg'}
 	>
-		{#if activeTab === 'exam' && doc.pdfUrl}
-			<iframe
-				src={doc.pdfUrl + '#toolbar=0&view=FitH'}
-				title="قارئ الوثيقة"
-				class="absolute inset-0 h-full w-full border-0"
-			></iframe>
-		{:else if activeTab === 'solution' && doc.solutionUrl}
-			<iframe
-				src={doc.solutionUrl + '#toolbar=0&view=FitH'}
-				title="قارئ الوثيقة"
-				class="absolute inset-0 h-full w-full border-0"
-			></iframe>
+		<!-- Toolbar -->
+		<div
+			class="border-border bg-muted/40 flex flex-wrap items-center justify-between gap-3 border-b px-4 py-3"
+		>
+			<div class="flex min-w-0 flex-wrap items-center gap-2">
+				<h1 class="truncate text-base font-extrabold sm:text-lg">
+					{doc.titleAr || doc.title}
+				</h1>
+				<span class="badge-{doc.type} rounded-full border px-2 py-0.5 text-xs font-semibold">
+					{typeLabels[doc.type] || doc.type}
+				</span>
+				{#if doc.accessTier === 'premium'}
+					<span class="rounded-full border border-amber-500/30 bg-amber-500/15 px-2.5 py-0.5 text-xs font-bold text-amber-500">
+						مشترك مميز
+					</span>
+				{:else if doc.accessTier === 'registered'}
+					<span class="rounded-full border border-blue-500/30 bg-blue-500/15 px-2.5 py-0.5 text-xs font-bold text-blue-500">
+						للمسجلين
+					</span>
+				{:else}
+					<span class="rounded-full border border-emerald-500/30 bg-emerald-500/15 px-2.5 py-0.5 text-xs font-bold text-emerald-500">
+						مجاني
+					</span>
+				{/if}
+			</div>
+
+			<div class="flex flex-wrap items-center gap-2">
+				{#if accessCheck.allowed}
+					{#if doc.hasSolution && doc.solutionUrl}
+						<div class="border-border bg-background flex items-center rounded-xl border p-1">
+							<button
+								onclick={() => (activeTab = 'exam')}
+								class="rounded-lg px-3 py-1 text-xs font-bold transition {activeTab === 'exam'
+									? 'bg-primary text-primary-foreground'
+									: 'text-muted-foreground hover:text-foreground'}"
+							>
+								الموضوع
+							</button>
+							<button
+								onclick={() => (activeTab = 'solution')}
+								class="rounded-lg px-3 py-1 text-xs font-bold transition {activeTab === 'solution'
+									? 'bg-emerald-600 text-white'
+									: 'text-muted-foreground hover:text-foreground'}"
+							>
+								التصحيح
+							</button>
+						</div>
+					{/if}
+
+					{#if activeTab === 'exam' && doc.pdfUrl}
+						<button
+							onclick={() => printDoc(doc.pdfUrl)}
+							class="border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 flex h-9 w-9 items-center justify-center rounded-lg border transition"
+							title="طباعة الموضوع"
+						>
+							<Printer size={18} />
+						</button>
+						<a
+							href={doc.pdfUrl}
+							download
+							target="_blank"
+							onclick={trackDownload}
+							class="bg-primary text-primary-foreground flex h-9 items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold shadow-sm transition hover:opacity-90"
+						>
+							<Download size={16} /> <span class="hidden sm:inline">تحميل الموضوع</span>
+						</a>
+					{:else if activeTab === 'solution' && doc.solutionUrl}
+						<button
+							onclick={() => printDoc(doc.solutionUrl)}
+							class="flex h-9 w-9 items-center justify-center rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-500 transition hover:bg-emerald-500/20"
+							title="طباعة التصحيح"
+						>
+							<Printer size={18} />
+						</button>
+						<a
+							href={doc.solutionUrl}
+							download
+							target="_blank"
+							onclick={trackDownload}
+							class="flex h-9 items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700"
+						>
+							<Download size={16} /> <span class="hidden sm:inline">تحميل التصحيح</span>
+						</a>
+					{/if}
+
+					<button
+						onclick={() => (isFullscreen = !isFullscreen)}
+						class="border-border bg-background hover:bg-muted flex h-9 w-9 items-center justify-center rounded-lg border transition"
+						title={isFullscreen ? 'تصغير العرض' : 'ملء الشاشة'}
+					>
+						{#if isFullscreen}
+							<Minimize2 size={17} />
+						{:else}
+							<Maximize2 size={17} />
+						{/if}
+					</button>
+				{/if}
+
+				<button
+					onclick={shareDoc}
+					class="border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 flex h-9 w-9 items-center justify-center rounded-lg border transition"
+					title="مشاركة"
+				>
+					<Share2 size={17} />
+				</button>
+			</div>
+		</div>
+
+		<!-- Body -->
+		{#if !accessCheck.allowed}
+			<div class="flex min-h-[420px] flex-col items-center justify-center p-8 text-center">
+				<div
+					class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl {accessCheck.reason === 'premium_required'
+						? 'bg-amber-500/15 text-amber-500'
+						: 'bg-blue-500/15 text-blue-500'}"
+				>
+					<Lock size={32} />
+				</div>
+
+				{#if accessCheck.reason === 'premium_required'}
+					<h2 class="mb-2 text-2xl font-extrabold">محتوى مخصص للمشتركين المميزين</h2>
+					<p class="text-muted-foreground mb-6 max-w-md text-sm leading-relaxed">
+						هذا الموضوع وتصحيحه النموذجي متاح لأصحاب الاشتراك المميز (أو عبر كود التفعيل). اشترك الآن للاستفادة من جميع المواضيع والاختبارات الحصرية.
+					</p>
+					<div class="flex flex-wrap justify-center gap-3">
+						<a
+							href={`${dynamicBase}/student/activate`}
+							class="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-6 py-3 text-sm font-bold text-white shadow transition hover:bg-amber-600"
+						>
+							<Sparkles size={17} />
+							تفعيل الاشتراك أو كود البطاقة
+						</a>
+						<a
+							href={`${dynamicBase}/auth/login`}
+							class="border-border bg-muted inline-flex items-center gap-2 rounded-xl border px-5 py-3 text-sm font-bold transition hover:opacity-80"
+						>
+							<LogIn size={17} />
+							تسجيل الدخول
+						</a>
+					</div>
+				{:else}
+					<h2 class="mb-2 text-2xl font-extrabold">محتوى متاح مجاناً للتلاميذ المسجلين</h2>
+					<p class="text-muted-foreground mb-6 max-w-md text-sm leading-relaxed">
+						أنشئ حساباً مجانياً خلال ثوانٍ أو سجل الدخول لفتح وتحميل هذا الموضوع وحفظ تقدمك ونتائجك.
+					</p>
+					<div class="flex flex-wrap justify-center gap-3">
+						<a
+							href={`${dynamicBase}/auth/register`}
+							class="bg-primary text-primary-foreground inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-bold shadow transition hover:opacity-90"
+						>
+							إنشاء حساب مجاني
+						</a>
+						<a
+							href={`${dynamicBase}/auth/login`}
+							class="border-border bg-muted inline-flex items-center gap-2 rounded-xl border px-5 py-3 text-sm font-bold transition hover:opacity-80"
+						>
+							<LogIn size={17} />
+							لدي حساب بالفعل
+						</a>
+					</div>
+				{/if}
+			</div>
 		{:else}
-			<div class="flex h-full w-full items-center justify-center text-black/50">
-				لا يوجد ملف لعرضه بصيغة PDF
+			<div class="relative w-full bg-white {isFullscreen ? 'flex-1' : 'h-[78vh] min-h-[520px]'}">
+				{#if activeTab === 'exam' && doc.pdfUrl}
+					<iframe
+						src={doc.pdfUrl + '#toolbar=0&view=FitH'}
+						title="قارئ الموضوع"
+						class="h-full w-full border-0"
+					></iframe>
+				{:else if activeTab === 'solution' && doc.solutionUrl}
+					<iframe
+						src={doc.solutionUrl + '#toolbar=0&view=FitH'}
+						title="قارئ التصحيح"
+						class="h-full w-full border-0"
+					></iframe>
+				{:else}
+					<div class="flex h-full w-full items-center justify-center text-zinc-500">
+						لا يوجد ملف لعرضه بصيغة PDF
+					</div>
+				{/if}
 			</div>
 		{/if}
 	</div>
-
-	<!-- Mobile/Desktop Toggle inside Fullscreen -->
-	{#if doc.hasSolution && doc.solutionUrl}
-		<div class="fixed bottom-6 left-1/2 z-[60] -translate-x-1/2">
-			<div
-				class="flex items-center gap-1 rounded-full border border-white/10 bg-black/80 p-1.5 shadow-2xl backdrop-blur-xl"
-			>
-				<button
-					onclick={() => {
-						activeTab = 'exam';
-					}}
-					class="relative flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-bold tracking-wide transition-all duration-300 {activeTab ===
-					'exam'
-						? 'text-primary-foreground shadow-lg'
-						: 'text-white/60 hover:text-white'}"
-				>
-					{#if activeTab === 'exam'}
-						<div class="bg-primary absolute inset-0 rounded-full"></div>
-					{/if}
-					<span class="relative z-10">الموضوع</span>
-				</button>
-				<button
-					onclick={() => {
-						activeTab = 'solution';
-					}}
-					class="relative flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-bold tracking-wide transition-all duration-300 {activeTab ===
-					'solution'
-						? 'text-white shadow-lg shadow-emerald-500/20'
-						: 'text-white/60 hover:text-white'}"
-				>
-					{#if activeTab === 'solution'}
-						<div class="absolute inset-0 rounded-full bg-emerald-500"></div>
-					{/if}
-					<span class="relative z-10">التصحيح</span>
-				</button>
-			</div>
-		</div>
-	{/if}
-</div>
+</section>
 
 <!-- Related Documents -->
 {#if relatedDocs.length > 0}
-	<section class="py-8">
-		<div class="mx-auto max-w-5xl px-4">
+	<section class="py-6">
+		<div class="mx-auto max-w-6xl px-4 sm:px-6">
 			<h3 class="mb-4 text-lg font-bold">وثائق ذات صلة</h3>
 			<div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
 				{#each relatedDocs as rdoc}
 					<a
 						href="/{level.slug}/{year.slug}/{subject.slug}/{rdoc.slug}"
-						class="bg-card flex items-center gap-3 rounded-xl border p-3 transition-all hover:bg-white/5"
+						class="bg-card border-border flex items-center gap-3 rounded-xl border p-3 transition-all hover:bg-muted/50"
 					>
-						<div
-							class="text-muted-foreground flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/5"
-						>
-							{#if rdoc.type === 'exam'}
-								<FileText size={18} />
-							{:else if rdoc.type === 'test'}
+						<div class="text-muted-foreground bg-muted flex h-10 w-10 shrink-0 items-center justify-center rounded-lg">
+							{#if rdoc.type === 'test'}
 								<FileEdit size={18} />
 							{:else}
 								<FileText size={18} />
@@ -322,9 +409,14 @@
 						</div>
 						<div class="min-w-0 flex-1">
 							<p class="truncate text-sm font-bold">{rdoc.titleAr || rdoc.title}</p>
-							<span class="badge-{rdoc.type} rounded border px-1.5 py-0.5 text-[10px]">
-								{typeLabels[rdoc.type] || rdoc.type}
-							</span>
+							<div class="mt-0.5 flex items-center gap-1.5">
+								<span class="badge-{rdoc.type} rounded border px-1.5 py-0.5 text-[10px]">
+									{typeLabels[rdoc.type] || rdoc.type}
+								</span>
+								{#if rdoc.accessTier !== 'public'}
+									<Lock size={11} class="text-amber-500" />
+								{/if}
+							</div>
 						</div>
 					</a>
 				{/each}
@@ -333,10 +425,9 @@
 	</section>
 {/if}
 
-<!-- Ratings & Comments Section (below the fullscreen viewer) -->
-<section class="mx-auto max-w-5xl px-4 py-8">
-	<!-- Star Rating -->
-	<div class="bg-card mb-8 rounded-2xl border p-6 shadow-sm">
+<!-- Ratings & Comments Section -->
+<section class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+	<div class="bg-card border-border mb-8 rounded-2xl border p-6 shadow-sm">
 		<h3 class="mb-4 flex items-center gap-2 text-lg font-bold">
 			<Star size={20} class="text-yellow-500" /> قيّم هذه الوثيقة
 		</h3>
@@ -364,19 +455,17 @@
 		</div>
 	</div>
 
-	<!-- Comments -->
-	<div class="bg-card rounded-2xl border p-6 shadow-sm">
+	<div class="bg-card border-border rounded-2xl border p-6 shadow-sm">
 		<h3 class="mb-6 flex items-center gap-2 text-lg font-bold">
 			<MessageCircle size={20} class="text-blue-500" /> التعليقات ({comments.length})
 		</h3>
 
-		<!-- Comment Form -->
-		<div class="mb-6 space-y-3 border-b pb-6">
+		<div class="border-border mb-6 space-y-3 border-b pb-6">
 			<input
 				bind:value={commentAuthor}
 				type="text"
 				placeholder="اسمك..."
-				class="bg-muted w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:border-blue-500"
+				class="bg-muted border-border w-full rounded-lg border px-4 py-2.5 text-sm outline-none focus:border-blue-500"
 				maxlength="50"
 			/>
 			<div class="flex gap-2">
@@ -384,7 +473,7 @@
 					bind:value={commentText}
 					type="text"
 					placeholder="أضف تعليقاً..."
-					class="bg-muted flex-1 rounded-lg border px-4 py-2.5 text-sm outline-none focus:border-blue-500"
+					class="bg-muted border-border flex-1 rounded-lg border px-4 py-2.5 text-sm outline-none focus:border-blue-500"
 					maxlength="1000"
 					onkeydown={(e) => e.key === 'Enter' && postComment()}
 				/>
@@ -398,7 +487,6 @@
 			</div>
 		</div>
 
-		<!-- Comment List -->
 		{#if comments.length === 0}
 			<p class="text-muted-foreground py-8 text-center text-sm">
 				لا توجد تعليقات بعد. كن أول من يعلّق!
@@ -406,7 +494,7 @@
 		{:else}
 			<div class="space-y-4">
 				{#each comments as c}
-					<div class="border-b pb-4 last:border-0 last:pb-0">
+					<div class="border-border border-b pb-4 last:border-0 last:pb-0">
 						<div class="flex items-center justify-between">
 							<span class="text-sm font-bold text-blue-500">{c.authorName}</span>
 							<span class="text-muted-foreground text-[11px]">{timeAgo(c.createdAt)}</span>

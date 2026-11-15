@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
-	import type { ExamMetadata, ExerciseBlock, TemplateId, ExamType, TrimesterId, LevelId } from '$lib/modules/SujetBuilder/types';
-	import MetadataPanel from '$lib/modules/SujetBuilder/components/MetadataPanel.svelte';
-	import ExerciseEditor from '$lib/modules/SujetBuilder/components/ExerciseEditor.svelte';
-	import TypstPreview from '$lib/modules/SujetBuilder/components/TypstPreview.svelte';
-	import { Button } from '$lib/components/ui/button';
+	import type { ExamMetadata, ExerciseBlock, TemplateId, ExamType, TrimesterId, LevelId } from '#lib/modules/SujetBuilder/types';
+	import MetadataPanel from '#lib/modules/SujetBuilder/components/MetadataPanel.svelte';
+	import ExerciseEditor from '#lib/modules/SujetBuilder/components/ExerciseEditor.svelte';
+	import TypstPreview from '#lib/modules/SujetBuilder/components/TypstPreview.svelte';
+	import { Button } from '#lib/components/ui/button';
 	import { ArrowRight, Eye, Download, Upload, RotateCcw, PanelLeft, Columns, PanelRight, ExternalLink, FileText, Sun, Moon, Printer, Save, Copy, ChevronUp, ChevronDown } from 'lucide-svelte';
 	import { toggleMode } from 'mode-watcher';
 
@@ -103,6 +103,7 @@
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({
+					docId: editingDocId,
 					templateId: activeTemplate,
 					document: {
 						metadata: $state.snapshot(metadata),
@@ -114,6 +115,9 @@
 			});
 			const data = await res.json();
 			if (data.success) {
+				if (data.document?.id) {
+					editingDocId = data.document.id;
+				}
 				alert(isPublished ? 'تم نشر الموضوع بنجاح للحفظ والعرض للطلاب!' : 'تم حفظ المسودة بنجاح في قاعدة البيانات.');
 			} else {
 				alert('حدث خطأ: ' + (data.error || 'غير معروف'));

@@ -1,52 +1,35 @@
 import { json } from '@sveltejs/kit';
-import { resolve, join } from 'path';
-import { mkdir, writeFile } from 'fs/promises';
-import { randomUUID } from 'crypto';
 import type { RequestHandler } from './$types';
+import { saveValidatedUpload } from '#lib/server/uploads';
+import { isStaffRole } from '#lib/server/auth';
 
-const UPLOAD_DIR = resolve('static/uploads/sujet');
+const MAX_IMAGE_SIZE = 5 * 1024 * 1024; // 5MB
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, locals }) => {
+	if (!locals.user || !isStaffRole(locals.user.role)) {
+		return json({ success: false, error: 'غير مصرح' }, { status: 401 });
+	}
+
 	try {
 		const formData = await request.formData();
-		const file = formData.get('file') as File;
-
-		if (!file || !file.size) {
-			return json({ success: false, error: 'No file provided' }, { status: 400 });
+		const file = formData.get('file');
+		if (!(file instanceof File)) {
+			return json({ success: false, error: 'لم يتم تحديد صورة' }, { status: 400 });
 		}
 
-		// Validate file type
-		const allowedTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/svg+xml'];
-		if (!allowedTypes.includes(file.type)) {
-			return json({ success: false, error: 'نوع الملف غير مدعوم. يُسمح بـ PNG, JPEG, WebP, SVG' }, { status: 400 });
-		}
-
-		// Limit file size (5MB)
-		if (file.size > 5 * 1024 * 1024) {
-			return json({ success: false, error: 'حجم الملف يتجاوز 5 ميغابايت' }, { status: 400 });
-		}
-
-		// Ensure upload directory exists
-		await mkdir(UPLOAD_DIR, { recursive: true });
-
-		// Generate unique filename
-		const ext = file.name.split('.').pop() || 'png';
-		const filename = `${randomUUID()}.${ext}`;
-		const filepath = join(UPLOAD_DIR, filename);
-
-		// Write file
-		const buffer = Buffer.from(await file.arrayBuffer());
-		await writeFile(filepath, buffer);
-
-		// Return the public URL
-		const url = `/uploads/sujet/${filename}`;
+		const saved = await saveValidatedUpload({
+			file,
+			kind: 'sujet',
+			accept: 'image',
+			maxBytes: MAX_IMAGE_SIZE
+		});
 
 		return json({
 			success: true,
-			url,
-			filename
+			url: saved.url,
+			filename: saved.filename
 		});
 	} catch (err: any) {
-		return json({ success: false, error: err.message || 'Upload failed' }, { status: 500 });
+		return json({ success: false, error: err.message || 'Upload failed' }, { status: 400 });
 	}
 };

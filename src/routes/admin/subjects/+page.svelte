@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { Plus, Trash2, Edit, X } from 'lucide-svelte';
-	import ConfirmModal from '$lib/components/ConfirmModal.svelte';
-	import Pagination from '$lib/admin/components/Pagination.svelte';
+	import ConfirmModal from '#lib/components/ConfirmModal.svelte';
+	import Pagination from '#lib/admin/components/Pagination.svelte';
 	import type { ActionData } from './$types';
 
-	let { data, form } = $props<{ data: any; form: ActionData }>();
+	let { data, form }: { data: any; form: ActionData } = $props();
 
 	// Pagination state
 	let currentPage = $state(1);
@@ -223,7 +223,7 @@
 		}}
 	>
 		<div
-			class="bg-backgroundard text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
+			class="bg-card text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
 		>
 			<div class="mb-6 flex items-center justify-between">
 				<h2 class="text-xl font-bold">إضافة مادة دراسية</h2>
@@ -353,7 +353,7 @@
 		}}
 	>
 		<div
-			class="bg-backgroundard text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
+			class="bg-card text-card-foreground border-border max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border p-6 shadow-2xl"
 		>
 			<div class="mb-6 flex items-center justify-between">
 				<h2 class="text-primary text-xl font-bold">تعديل مادة دراسية</h2>

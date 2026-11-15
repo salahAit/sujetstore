@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { Plus, Trash2, Edit, FileText, CheckCircle, ExternalLink, X, Eye } from 'lucide-svelte';
-	import ConfirmModal from '$lib/components/ConfirmModal.svelte';
-	import Pagination from '$lib/admin/components/Pagination.svelte';
+	import ConfirmModal from '#lib/components/ConfirmModal.svelte';
+	import Pagination from '#lib/admin/components/Pagination.svelte';
 	import type { ActionData } from './$types';
 
-	let { data, form } = $props<{ data: any; form: ActionData }>();
+	let { data, form }: { data: any; form: ActionData } = $props();
 
 	// Pagination state
 	let currentPage = $state(1);
@@ -91,7 +91,7 @@
 	</div>
 {/if}
 
-<div class="bg-backgroundard text-card-foreground border-border overflow-hidden rounded-2xl border shadow-sm">
+<div class="bg-card text-card-foreground border-border overflow-hidden rounded-2xl border shadow-sm">
 	<div class="overflow-x-auto">
 		<table class="w-full text-right text-sm">
 			<thead
@@ -101,7 +101,7 @@
 					<th class="px-6 py-4 font-medium tracking-wider uppercase">ID</th>
 					<th class="px-6 py-4 font-medium tracking-wider uppercase">العنوان</th>
 					<th class="px-6 py-4 font-medium tracking-wider uppercase">السنة والمادة</th>
-					<th class="px-6 py-4 font-medium tracking-wider uppercase">النوع</th>
+					<th class="px-6 py-4 font-medium tracking-wider uppercase">النوع والوصول</th>
 					<th class="px-6 py-4 font-medium tracking-wider uppercase">الملفات</th>
 					<th class="px-6 py-4 text-center font-medium tracking-wider uppercase">إجراءات</th>
 				</tr>
@@ -120,9 +120,29 @@
 							{getYearSubjectLabel(doc.yearSubjectId)}
 						</td>
 						<td class="px-6 py-4 whitespace-nowrap">
-							<span class="rounded-full border px-2 py-1 text-xs badge-{doc.type}">
-								{typeLabels[doc.type] || doc.type}
-							</span>
+							<div class="flex flex-wrap items-center gap-1.5">
+								<span class="rounded-full border px-2 py-1 text-xs badge-{doc.type}">
+									{typeLabels[doc.type] || doc.type}
+								</span>
+								<span
+									class="rounded-full border px-2 py-0.5 text-[11px] font-bold {doc.accessTier === 'premium'
+										? 'border-amber-500/30 bg-amber-500/10 text-amber-500'
+										: doc.accessTier === 'registered'
+											? 'border-blue-500/30 bg-blue-500/10 text-blue-500'
+											: 'border-emerald-500/30 bg-emerald-500/10 text-emerald-500'}"
+								>
+									{doc.accessTier === 'premium'
+										? 'مدفوع'
+										: doc.accessTier === 'registered'
+											? 'للمسجلين'
+											: 'مجاني'}
+								</span>
+								{#if !doc.isPublished}
+									<span class="rounded-full border border-zinc-500/30 bg-zinc-500/10 px-2 py-0.5 text-[11px] text-zinc-400">
+										مسودة
+									</span>
+								{/if}
+							</div>
 						</td>
 						<td class="px-6 py-4 text-xs whitespace-nowrap">
 							<div class="flex flex-col gap-1">
@@ -214,7 +234,7 @@
 		}}
 	>
 		<div
-			class="bg-backgroundard text-card-foreground border-border max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border p-6 shadow-2xl"
+			class="bg-card text-card-foreground border-border max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border p-6 shadow-2xl"
 		>
 			<div class="mb-6 flex items-center justify-between">
 				<h2 class="text-xl font-bold">إضافة وثيقة جديدة</h2>
@@ -353,6 +373,28 @@
 					</div>
 				</div>
 
+				<div class="grid grid-cols-1 gap-4 rounded-xl border border-border bg-muted/30 p-3 sm:grid-cols-2">
+					<div>
+						<label for="create_accessTier" class="mb-1 block text-sm font-medium">مستوى الوصول</label>
+						<select
+							id="create_accessTier"
+							name="accessTier"
+							class="bg-background border-input text-foreground w-full rounded-xl border px-3 py-2 text-sm"
+						>
+							<option value="public">مجاني للجميع (عام)</option>
+							<option value="registered">للمسجلين فقط</option>
+							<option value="premium">مشترك مميز (Premium)</option>
+						</select>
+					</div>
+					<div class="flex items-center pt-5">
+						<input type="hidden" name="isPublishedPresent" value="1" />
+						<label class="flex cursor-pointer items-center gap-2 text-sm font-semibold">
+							<input type="checkbox" name="isPublished" checked class="h-4 w-4 accent-emerald-500" />
+							منشور للعرض
+						</label>
+					</div>
+				</div>
+
 				<div class="mt-8 flex gap-3">
 					<button
 						type="button"
@@ -387,7 +429,7 @@
 		tabindex="0"
 	>
 		<div
-			class="bg-backgroundard text-card-foreground border-border relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border p-6 shadow-2xl"
+			class="bg-card text-card-foreground border-border relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border p-6 shadow-2xl"
 		>
 			<div class="mb-6 flex items-center justify-between">
 				<h2 class="text-emerald-500 text-xl font-bold">تعديل وثيقة</h2>
@@ -530,6 +572,34 @@
 							bind:value={editingItem.source}
 							class="w-full rounded-xl border bg-background border-input text-foreground px-3 py-2 focus:ring-ring focus:border-primary focus:ring-1 focus:ring-primary focus:ring-1 focus:ring-primary focus:outline-none"
 						/>
+					</div>
+				</div>
+
+				<div class="grid grid-cols-1 gap-4 rounded-xl border border-border bg-muted/30 p-3 sm:grid-cols-2">
+					<div>
+						<label for="edit_accessTier" class="mb-1 block text-sm font-medium">مستوى الوصول</label>
+						<select
+							id="edit_accessTier"
+							name="accessTier"
+							bind:value={editingItem.accessTier}
+							class="bg-background border-input text-foreground w-full rounded-xl border px-3 py-2 text-sm"
+						>
+							<option value="public">مجاني للجميع (عام)</option>
+							<option value="registered">للمسجلين فقط</option>
+							<option value="premium">مشترك مميز (Premium)</option>
+						</select>
+					</div>
+					<div class="flex items-center pt-5">
+						<input type="hidden" name="isPublishedPresent" value="1" />
+						<label class="flex cursor-pointer items-center gap-2 text-sm font-semibold">
+							<input
+								type="checkbox"
+								name="isPublished"
+								bind:checked={editingItem.isPublished}
+								class="h-4 w-4 accent-emerald-500"
+							/>
+							منشور للعرض
+						</label>
 					</div>
 				</div>
 

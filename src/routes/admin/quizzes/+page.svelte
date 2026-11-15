@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
 	import { Brain, Plus, Edit, Trash2, Eye, EyeOff, Lock, CheckCircle, Search, Copy, SaveAll, Hash, FolderTree } from 'lucide-svelte';
-	import Pagination from '$lib/admin/components/Pagination.svelte';
+	import Pagination from '#lib/admin/components/Pagination.svelte';
 
 	let quizzes = $state<any[]>([]);
 	let stats = $state({ totalQuizzes: 0, totalQuestions: 0, totalCategories: 0 });

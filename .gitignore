@@ -8,6 +8,7 @@ node_modules/
 # Build outputs
 .svelte-kit/
 build/
+build-static/
 dist/
 
 # Environment files
@@ -16,13 +17,19 @@ dist/
 .env.*.local
 !.env.example
 
-# SQLite databases (production only - keep in version control for development)
-# Uncomment for production:
-# data/*.db
+# SQLite databases & uploads
+data/*.db
 data/*.db-wal
 data/*.db-shm
 data/backups/
+data/uploads/
 data/*_remote.db
+/content.db
+*apiKey*.csv
+
+# Test reports
+playwright-report/
+test-results/
 
 # IDE and editor
 .vscode/

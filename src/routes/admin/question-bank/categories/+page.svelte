@@ -14,8 +14,12 @@
 	let { data } = $props();
 
 	// We use the flat map for quick lookups and building the reactive state
-	let categories = $state<any[]>(data.tree || []);
-	let flatCategories = $state<any[]>(data.categories || []);
+	let categories = $state<any[]>([]);
+	let flatCategories = $state<any[]>([]);
+	$effect(() => {
+		categories = data.tree || [];
+		flatCategories = data.categories || [];
+	});
 
 	let isAdding = $state(false);
 	let newCatName = $state('');

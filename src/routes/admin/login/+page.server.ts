@@ -1,58 +1,74 @@
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
-import { usersDatabase, userSchema } from '$lib/server/db/index';
-import { createSession, setSessionTokenCookie } from '$lib/server/auth';
-import { eq } from 'drizzle-orm';
-import bcrypt from 'bcryptjs';
+import { usersDatabase, userSchema } from '#lib/server/db/index';
+import { createSession, setSessionTokenCookie, verifyPassword, hashPassword, isStaffRole } from '#lib/server/auth';
+import { eq, or } from 'drizzle-orm';
 
 export const load: PageServerLoad = async ({ locals }) => {
-    // Already caught in hooks.server.ts but just in case
-    if (locals.user) throw redirect(302, '/admin');
-    return {};
+	if (locals.user) {
+		throw redirect(302, isStaffRole(locals.user.role) ? '/admin' : '/student');
+	}
+	return {};
 };
 
 export const actions: Actions = {
-    default: async (event) => {
-        const formData = await event.request.formData();
-        const username = formData.get('username');
-        const password = formData.get('password');
+	default: async (event) => {
+		const formData = await event.request.formData();
+		const identifier = formData.get('username');
+		const password = formData.get('password');
 
-        if (
-            typeof username !== 'string' ||
-            username.length < 3 ||
-            typeof password !== 'string' ||
-            password.length < 6
-        ) {
-            return fail(400, {
-                error: true,
-                message: 'يجب إدخال اسم مستخدم وكلمة مرور صالحة.'
-            });
-        }
+		if (
+			typeof identifier !== 'string' ||
+			identifier.trim().length < 3 ||
+			typeof password !== 'string' ||
+			password.length < 6
+		) {
+			return fail(400, {
+				error: true,
+				message: 'يجب إدخال اسم مستخدم أو بريد إلكتروني وكلمة مرور صالحة.'
+			});
+		}
 
-        const existingUser = await usersDatabase
-            .select()
-            .from(userSchema.users)
-            .where(eq(userSchema.users.username, username))
-            .get();
+		const trimmed = identifier.trim();
+		const existingUser = await usersDatabase
+			.select()
+			.from(userSchema.users)
+			.where(or(eq(userSchema.users.username, trimmed), eq(userSchema.users.email, trimmed)))
+			.get();
 
-        if (!existingUser) {
-            return fail(400, {
-                error: true,
-                message: 'اسم المستخدم أو كلمة المرور غير صحيحة.'
-            });
-        }
+		if (!existingUser || !existingUser.isActive) {
+			return fail(400, {
+				error: true,
+				message: 'بيانات الدخول غير صحيحة أو أن الحساب معطل.'
+			});
+		}
 
-        const validPassword = await bcrypt.compare(password, existingUser.passwordHash);
-        if (!validPassword) {
-            return fail(400, {
-                error: true,
-                message: 'اسم المستخدم أو كلمة المرور غير صحيحة.'
-            });
-        }
+		if (!isStaffRole(existingUser.role)) {
+			return fail(403, {
+				error: true,
+				message: 'هذا الدخول مخصص لفريق الإدارة والمحررين فقط. يمكنك الدخول من بوابة التلميذ.'
+			});
+		}
 
-        const session = await createSession(existingUser.id);
-        setSessionTokenCookie(event, session.id, new Date(session.expiresAt));
+		const { valid, needsRehash } = await verifyPassword(password, existingUser.passwordHash);
+		if (!valid) {
+			return fail(400, {
+				error: true,
+				message: 'اسم المستخدم أو كلمة المرور غير صحيحة.'
+			});
+		}
 
-        throw redirect(302, '/admin');
-    }
+		if (needsRehash) {
+			const upgradedHash = await hashPassword(password);
+			await usersDatabase
+				.update(userSchema.users)
+				.set({ passwordHash: upgradedHash, updatedAt: new Date().toISOString() })
+				.where(eq(userSchema.users.id, existingUser.id));
+		}
+
+		const session = await createSession(existingUser.id);
+		setSessionTokenCookie(event, session.id, new Date(session.expiresAt));
+
+		throw redirect(302, '/admin');
+	}
 };

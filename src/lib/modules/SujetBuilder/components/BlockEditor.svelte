@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ContentBlock, ColumnsBlock } from '$lib/modules/SujetBuilder/types';
+	import type { ContentBlock, ColumnsBlock } from '#lib/modules/SujetBuilder/types';
 	import { Type, FunctionSquare, Table2, ImageIcon, Trash2, Upload, Loader2, Plus, CheckCircle, ListChecks, GitBranch, Tag, GripVertical, Copy, ArrowRightLeft, Code2, AlignLeft, AlignCenter, AlignRight, Grid3x3, Minus, Square, PaintBucket, Maximize2, Minimize2, Columns, ArrowUp, ArrowDown } from 'lucide-svelte';
 	import MathPalette from './MathPalette.svelte';
 	import Self from './BlockEditor.svelte';
@@ -1058,18 +1058,18 @@
 			<p class="text-xs text-muted-foreground">مخطط: مدخل ← عملية ← مخرج</p>
 			<div class="flex items-center gap-2">
 				<div class="flex-1">
-					<label class="text-[10px] text-amber-600">المدخل</label>
-					<input type="text" class="w-full rounded border border-amber-200 bg-amber-50 px-2 py-1 text-xs focus:outline-none dark:border-amber-800 dark:bg-amber-900/20" placeholder="المدخل" bind:value={block.flow[2]} oninput={() => onchange?.()} />
+					<label for="flow-in-{block.id}" class="text-[10px] text-amber-600">المدخل</label>
+					<input id="flow-in-{block.id}" type="text" class="w-full rounded border border-amber-200 bg-amber-50 px-2 py-1 text-xs focus:outline-none dark:border-amber-800 dark:bg-amber-900/20" placeholder="المدخل" bind:value={block.flow[2]} oninput={() => onchange?.()} />
 				</div>
 				<span class="mt-4 text-lg text-muted-foreground">←</span>
 				<div class="flex-1">
-					<label class="text-[10px] text-blue-600">العملية</label>
-					<input type="text" class="w-full rounded border border-blue-300 bg-blue-50 px-2 py-1 text-xs font-bold focus:outline-none dark:border-blue-800 dark:bg-blue-900/20" placeholder="العملية" bind:value={block.flow[1]} oninput={() => onchange?.()} />
+					<label for="flow-op-{block.id}" class="text-[10px] text-blue-600">العملية</label>
+					<input id="flow-op-{block.id}" type="text" class="w-full rounded border border-blue-300 bg-blue-50 px-2 py-1 text-xs font-bold focus:outline-none dark:border-blue-800 dark:bg-blue-900/20" placeholder="العملية" bind:value={block.flow[1]} oninput={() => onchange?.()} />
 				</div>
 				<span class="mt-4 text-lg text-muted-foreground">←</span>
 				<div class="flex-1">
-					<label class="text-[10px] text-amber-600">المخرج</label>
-					<input type="text" class="w-full rounded border border-amber-200 bg-amber-50 px-2 py-1 text-xs focus:outline-none dark:border-amber-800 dark:bg-amber-900/20" placeholder="المخرج" bind:value={block.flow[0]} oninput={() => onchange?.()} />
+					<label for="flow-out-{block.id}" class="text-[10px] text-amber-600">المخرج</label>
+					<input id="flow-out-{block.id}" type="text" class="w-full rounded border border-amber-200 bg-amber-50 px-2 py-1 text-xs focus:outline-none dark:border-amber-800 dark:bg-amber-900/20" placeholder="المخرج" bind:value={block.flow[0]} oninput={() => onchange?.()} />
 				</div>
 			</div>
 			<input type="text" class="w-20 rounded border border-red-200 bg-red-50 px-2 py-1 text-xs text-red-700 focus:outline-none dark:border-red-800 dark:bg-red-900/30 dark:text-red-300" placeholder="النقاط" bind:value={block.mark} oninput={() => onchange?.()} />

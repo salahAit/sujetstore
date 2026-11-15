@@ -30,26 +30,45 @@
 	import DragToImage from './questions/DragToImage.svelte';
 	import Matrix from './questions/Matrix.svelte';
 	import Essay from './questions/Essay.svelte';
-	import ShareModal from '$lib/components/ShareModal.svelte';
+	import ShareModal from '#lib/components/ShareModal.svelte';
 	import { onMount, onDestroy } from 'svelte';
 	import { page } from '$app/state';
 
-	let { quiz, rawQuestions, onSubmit, onShare }: { quiz: any; rawQuestions: any[]; onSubmit?: (data: any) => void; onShare?: () => void } = $props();
+	let {
+		quiz,
+		rawQuestions,
+		examDisabled = false,
+		onSubmit,
+		onShare
+	}: {
+		quiz: any;
+		rawQuestions: any[];
+		examDisabled?: boolean;
+		onSubmit?: (data: any) => Promise<any> | any;
+		onShare?: () => void;
+	} = $props();
 
-		
-	// Shuffle questions' MCQ options if enabled
-	let questions = $derived.by(() => {
-		if (!quiz?.shuffleOptions) return rawQuestions;
-		return rawQuestions.map((q: any) => {
-			if (q.type !== 'mcq' || !q.questionData?.options) return q;
-			const opts = [...q.questionData.options];
-			// Fisher-Yates shuffle
+	function prepareQuestions(list: any[], shuffle: boolean) {
+		if (!shuffle) return list || [];
+		return (list || []).map((q: any) => {
+			if (q.type !== 'mcq' || !Array.isArray(q.questionData?.options)) return q;
+			const opts = q.questionData.options.map((opt: any, idx: number) =>
+				typeof opt === 'string'
+					? { text: opt, originalIndex: idx }
+					: { ...opt, originalIndex: opt.originalIndex ?? idx }
+			);
 			for (let i = opts.length - 1; i > 0; i--) {
 				const j = Math.floor(Math.random() * (i + 1));
 				[opts[i], opts[j]] = [opts[j], opts[i]];
 			}
 			return { ...q, questionData: { ...q.questionData, options: opts } };
 		});
+	}
+
+	let shuffleSeed = $state(0);
+	let questions = $derived.by(() => {
+		void shuffleSeed;
+		return prepareQuestions(rawQuestions, Boolean(quiz?.shuffleOptions));
 	});
 
 	// Mode: 'choose' | 'exam' | 'practice'
@@ -59,7 +78,10 @@
 	let currentIndex = $state(0);
 	let answers = $state<Record<number, any>>({});
 	let submitted = $state(false);
+	let isSubmitting = $state(false);
+	let submitError = $state<string | null>(null);
 	let results = $state<{ score: number; total: number; details: any[] } | null>(null);
+	let reward = $state<{ xpEarned: number; newBadges: any[]; streakDays: number } | null>(null);
 	let startTime = $state(Date.now());
 	let elapsed = $state(0);
 	let timerInterval: any;
@@ -72,10 +94,20 @@
 	let practiceResults = $state<Record<number, boolean>>({});
 
 	let currentQuestion = $derived(questions[currentIndex]);
-	let progress = $derived(((currentIndex + 1) / questions.length) * 100);
-	let allAnswered = $derived(Object.keys(answers).length === questions.length);
-	let percentage = $derived(results ? Math.round((results.score / results.total) * 100) : 0);
+	let progress = $derived(questions.length > 0 ? ((currentIndex + 1) / questions.length) * 100 : 0);
+	let allAnswered = $derived(questions.length > 0 && Object.keys(answers).length === questions.length);
+	let percentage = $derived(results && results.total > 0 ? Math.round((results.score / results.total) * 100) : 0);
 	let passed = $derived(percentage >= (quiz?.passingScore || 60));
+	let canPractice = $derived(Boolean(quiz?.practiceMode) || !quiz?.maxAttempts);
+	let allowShowAnswers = $derived(quiz?.showAnswers !== false);
+
+	onMount(() => {
+		import('mobile-drag-drop')
+			.then(({ polyfill }) => {
+				polyfill();
+			})
+			.catch(() => {});
+	});
 
 	// Smart timer
 	let hasTimeLimit = $derived(quiz?.timeLimit && quiz.timeLimit > 0);
@@ -157,7 +189,13 @@
 				const opts = qd.options || [];
 				if (qd.correctIndexes) {
 					return qd.correctIndexes
-						.map((i: number) => (typeof opts[i] === 'string' ? opts[i] : opts[i]?.text))
+						.map((origIdx: number) => {
+							const match = opts.find((o: any, idx: number) =>
+								typeof o === 'object' ? (o.originalIndex ?? idx) === origIdx : idx === origIdx
+							);
+							return typeof match === 'string' ? match : match?.text;
+						})
+						.filter(Boolean)
 						.join(', ');
 				}
 				const correct = opts.filter((o: any) => typeof o === 'object' && o.isCorrect);
@@ -166,11 +204,11 @@
 			case 'true_false':
 				return qd.correctAnswer ? 'صحيح ✓' : 'خطأ ✗';
 			case 'fill_blank':
-				return qd.answers?.join(' أو ') || '';
+				return (qd.answers || qd.acceptedAnswers)?.join(' أو ') || '';
 			case 'ordering':
 				return qd.correctOrder?.map((i: number) => qd.items?.[i]).join(' → ') || '';
 			case 'short_answer':
-				return qd.keywords?.join(', ') || '';
+				return (qd.keywords || qd.acceptedKeywords)?.join(', ') || '';
 			case 'cloze':
 				return qd.options?.[qd.correctIndex] || '';
 			case 'calculated':
@@ -202,7 +240,13 @@
 				const opts = qd.options || [];
 				if (answer.selectedIndexes) {
 					return answer.selectedIndexes
-						.map((i: number) => (typeof opts[i] === 'string' ? opts[i] : opts[i]?.text))
+						.map((origIdx: number) => {
+							const match = opts.find((o: any, idx: number) =>
+								typeof o === 'object' ? (o.originalIndex ?? idx) === origIdx : idx === origIdx
+							);
+							return typeof match === 'string' ? match : match?.text;
+						})
+						.filter(Boolean)
 						.join(', ');
 				}
 				return 'لم تتم الإجابة';
@@ -249,45 +293,53 @@
 		const qd = question.questionData;
 		switch (question.type) {
 			case 'mcq': {
+				const opts = qd.options || [];
 				const correctIdx = qd.correctIndexes
-					? qd.correctIndexes
-					: (qd.options || [])
-							.map((opt: any, i: number) => (typeof opt === 'object' && opt.isCorrect ? i : -1))
-							.filter((i: number) => i >= 0);
-				return JSON.stringify(answer?.selectedIndexes) === JSON.stringify(correctIdx);
+					? [...qd.correctIndexes].map(Number).sort((a, b) => a - b)
+					: opts
+							.map((opt: any, i: number) =>
+								typeof opt === 'object' && opt.isCorrect ? (opt.originalIndex ?? i) : -1
+							)
+							.filter((i: number) => i >= 0)
+							.sort((a: number, b: number) => a - b);
+				const picked = [...(answer?.selectedIndexes || [])].map(Number).sort((a, b) => a - b);
+				return correctIdx.length > 0 && JSON.stringify(picked) === JSON.stringify(correctIdx);
 			}
 			case 'true_false':
 				return answer?.value === qd.correctAnswer;
 			case 'ordering':
 				if (!answer?.order) return false;
-				const correctItems = qd.correctOrder.map((idx: number) => qd.items[idx]);
+				const correctItems = (qd.correctOrder || []).map((idx: number) => qd.items?.[idx]);
 				return JSON.stringify(answer.order) === JSON.stringify(correctItems);
 			case 'drag_drop':
-				if (!answer?.assignments) return false;
+				if (!answer?.assignments || !qd.items?.length) return false;
 				return qd.items.every((item: any) => {
 					const assignedIdx = answer.assignments[item.text];
 					if (assignedIdx === null || assignedIdx === undefined) return false;
-					return qd.categories[assignedIdx] === item.category;
+					if (typeof item.category === 'number') return Number(assignedIdx) === item.category;
+					return qd.categories?.[assignedIdx] === item.category;
 				});
 			case 'matching':
-				if (!answer?.matches) return false;
-				return Object.entries(answer.matches).every(
-					([left, right]) => Number(left) === Number(right)
-				);
-			case 'fill_blank':
+				if (!answer?.matches || !qd.pairs?.length) return false;
+				if (Object.keys(answer.matches).length !== qd.pairs.length) return false;
+				return Object.entries(answer.matches).every(([left, right]) => Number(left) === Number(right));
+			case 'fill_blank': {
 				if (!answer?.text) return false;
-				return qd.answers.some(
-					(a: string) => a.toLowerCase().trim() === answer.text.toLowerCase().trim()
-				);
-			case 'short_answer':
+				const accepted = qd.answers || qd.acceptedAnswers || [];
+				return accepted.some((a: string) => a.toLowerCase().trim() === answer.text.toLowerCase().trim());
+			}
+			case 'short_answer': {
 				if (!answer?.text) return false;
-				const matchCount = qd.keywords.filter((kw: string) => answer.text.includes(kw)).length;
+				const kws = qd.keywords || qd.acceptedKeywords || [];
+				if (kws.length === 0) return false;
+				const matchCount = kws.filter((kw: string) => answer.text.toLowerCase().includes(kw.toLowerCase())).length;
 				return matchCount >= (qd.minKeywords || 1);
+			}
 			case 'cloze':
 				return answer?.selectedIndex === qd.correctIndex;
 			case 'calculated':
-				if (answer?.value === undefined) return false;
-				return Math.abs(answer.value - answer.expected) <= (qd.tolerance || 0);
+				if (answer?.value === undefined || answer?.value === null) return false;
+				return Math.abs(Number(answer.value) - Number(answer.expected)) <= (qd.tolerance ?? 0);
 			case 'sentence_reorder':
 				if (!answer?.order) return false;
 				return JSON.stringify(answer.order) === JSON.stringify(qd.correctOrder);
@@ -314,9 +366,13 @@
 		practiceResults = { ...practiceResults, [q.id]: correct };
 	}
 
-	function submit() {
+	async function submit() {
+		if (submitted || isSubmitting) return;
+		isSubmitting = true;
+		submitError = null;
 		clearInterval(timerInterval);
-		const details = questions.map((q: any) => {
+
+		let details = questions.map((q: any) => {
 			const answer = answers[q.id] || null;
 			const correct = checkAnswer(q, answer);
 			return {
@@ -329,35 +385,73 @@
 			};
 		});
 
-		const score = details.reduce((sum: number, d: any) => sum + d.points, 0);
-		const total = questions.reduce((sum: number, q: any) => sum + q.points, 0);
-		const pct = Math.round((score / total) * 100);
+		let score = details.reduce((sum: number, d: any) => sum + d.points, 0);
+		let total = questions.reduce((sum: number, q: any) => sum + q.points, 0);
+		const pct = total > 0 ? Math.round((score / total) * 100) : 0;
+
+		if (mode === 'exam' && onSubmit) {
+			try {
+				const serverRes = await onSubmit({
+					quizId: quiz.id,
+					answers,
+					score,
+					totalPoints: total,
+					percentage: pct,
+					timeTaken: elapsed,
+					details
+				});
+				if (serverRes?.error) {
+					submitError = serverRes.error;
+				} else if (serverRes && typeof serverRes.score === 'number') {
+					score = serverRes.score;
+					total = serverRes.totalPoints ?? total;
+					if (Array.isArray(serverRes.gradedDetails)) {
+						const byKey = new Map(
+							serverRes.gradedDetails.map((gd: any) => [gd.quizQuestionId ?? gd.questionId, gd])
+						);
+						details = details.map((d: any) => {
+							const gd: any = byKey.get(d.question.id) ?? byKey.get(d.question.questionId);
+							if (!gd) return d;
+							return {
+								...d,
+								correct: gd.correct,
+								points: gd.pointsEarned,
+								correctAnswer: gd.correctAnswerDisplay ?? d.correctAnswer,
+								userAnswer: gd.userAnswerDisplay ?? d.userAnswer
+							};
+						});
+					}
+					if (serverRes.xpEarned || (serverRes.newBadges && serverRes.newBadges.length > 0)) {
+						reward = {
+							xpEarned: serverRes.xpEarned || 0,
+							newBadges: serverRes.newBadges || [],
+							streakDays: serverRes.streakDays || 0
+						};
+					}
+				}
+			} catch {
+				// keep client feedback if offline
+			}
+		}
 
 		results = { score, total, details };
 		submitted = true;
-
-		// Only save in exam mode
-		if (mode === 'exam' && onSubmit) {
-			onSubmit({
-				quizId: quiz.id,
-				score,
-				totalPoints: total,
-				percentage: pct,
-				timeTaken: elapsed,
-				details
-			});
-		}
+		isSubmitting = false;
 	}
 
 	function restart() {
 		currentIndex = 0;
 		answers = {};
 		submitted = false;
+		isSubmitting = false;
+		submitError = null;
 		results = null;
+		reward = null;
 		autoSubmitted = false;
 		showReview = false;
 		practiceChecked = {};
 		practiceResults = {};
+		shuffleSeed += 1;
 		startTime = Date.now();
 		elapsed = 0;
 		timerInterval = setInterval(() => {
@@ -408,24 +502,27 @@
 				<!-- Exam Mode -->
 				<button
 					onclick={() => startQuiz('exam')}
-					class="group flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-4 text-lg font-bold text-white shadow-xl shadow-purple-600/25 transition-all hover:-translate-y-0.5 hover:shadow-2xl"
+					disabled={examDisabled}
+					class="group flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-4 text-lg font-bold text-white shadow-xl shadow-purple-600/25 transition-all hover:-translate-y-0.5 hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0"
 				>
 					<Trophy size={22} class="transition-transform group-hover:scale-110" />
-					وضع الامتحان
+					{examDisabled ? 'تم استنفاد المحاولات المسجلة' : 'وضع الامتحان'}
 				</button>
 				<p class="text-muted-foreground -mt-1 text-xs">
 					يتم حفظ النتيجة • مؤقت {hasTimeLimit ? 'محدود' : 'غير محدود'}
 				</p>
 
-				<!-- Practice Mode -->
-				<button
-					onclick={() => startQuiz('practice')}
-					class="group flex items-center justify-center gap-3 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 px-8 py-4 text-lg font-bold text-emerald-600 transition-all hover:-translate-y-0.5 hover:bg-emerald-500/20 dark:text-emerald-400"
-				>
-					<BookOpen size={22} class="transition-transform group-hover:scale-110" />
-					وضع التدريب
-				</button>
-				<p class="text-muted-foreground -mt-1 text-xs">تحقق فوري لكل سؤال • بدون حفظ النتيجة</p>
+				{#if canPractice}
+					<!-- Practice Mode -->
+					<button
+						onclick={() => startQuiz('practice')}
+						class="group flex items-center justify-center gap-3 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 px-8 py-4 text-lg font-bold text-emerald-600 transition-all hover:-translate-y-0.5 hover:bg-emerald-500/20 dark:text-emerald-400"
+					>
+						<BookOpen size={22} class="transition-transform group-hover:scale-110" />
+						وضع التدريب
+					</button>
+					<p class="text-muted-foreground -mt-1 text-xs">تحقق فوري لكل سؤال • بدون حفظ النتيجة</p>
+				{/if}
 			</div>
 
 			<!-- Share -->
@@ -727,20 +824,53 @@
 				{passed ? 'لقد اجتزت التمرين بنجاح!' : `تحتاج ${quiz.passingScore || 60}% للنجاح`}
 			</p>
 
-			<!-- Toggle Review -->
-			<button
-				onclick={() => (showReview = !showReview)}
-				class="mb-6 inline-flex items-center gap-2 rounded-xl border border-black/10 bg-black/5 px-6 py-2.5 text-sm font-bold transition-all hover:bg-black/10 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-			>
-				{#if showReview}
-					<EyeOff size={16} /> إخفاء مراجعة الإجابات
-				{:else}
-					<Eye size={16} /> مراجعة الإجابات المفصّلة
-				{/if}
-			</button>
+			{#if submitError}
+				<div class="mx-auto mb-6 max-w-md rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-semibold text-red-500">
+					{submitError}
+				</div>
+			{/if}
+
+			{#if reward}
+				<div class="mx-auto mb-6 max-w-md rounded-2xl border border-amber-500/30 bg-gradient-to-l from-amber-500/10 to-emerald-500/10 p-4 text-center">
+					<div class="flex flex-wrap items-center justify-center gap-4 text-sm font-bold">
+						<span class="flex items-center gap-1.5 text-amber-500">
+							<Zap size={16} /> +{reward.xpEarned} نقطة XP
+						</span>
+						{#if reward.streakDays > 0}
+							<span class="text-orange-500">🔥 سلسلة {reward.streakDays} أيام</span>
+						{/if}
+					</div>
+					{#if reward.newBadges.length > 0}
+						<div class="mt-3 border-t border-amber-500/20 pt-2.5">
+							<p class="mb-2 text-xs font-bold text-emerald-500">🎉 شارات جديدة مكتسبة!</p>
+							<div class="flex flex-wrap justify-center gap-2">
+								{#each reward.newBadges as badge}
+									<span class="rounded-full bg-amber-500/15 px-3 py-1 text-xs font-bold text-amber-500">
+										{badge.name_ar} (+{badge.points})
+									</span>
+								{/each}
+							</div>
+						</div>
+					{/if}
+				</div>
+			{/if}
+
+			{#if allowShowAnswers}
+				<!-- Toggle Review -->
+				<button
+					onclick={() => (showReview = !showReview)}
+					class="mb-6 inline-flex items-center gap-2 rounded-xl border border-black/10 bg-black/5 px-6 py-2.5 text-sm font-bold transition-all hover:bg-black/10 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
+				>
+					{#if showReview}
+						<EyeOff size={16} /> إخفاء مراجعة الإجابات
+					{:else}
+						<Eye size={16} /> مراجعة الإجابات المفصّلة
+					{/if}
+				</button>
+			{/if}
 
 			<!-- Detailed Answer Review -->
-			{#if showReview}
+			{#if allowShowAnswers && showReview}
 				<div class="mb-8 space-y-4 text-right">
 					{#each results.details as detail, i}
 						<div

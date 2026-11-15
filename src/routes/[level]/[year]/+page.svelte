@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Inbox, GraduationCap } from 'lucide-svelte';
-	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
+	import DynamicIcon from '#lib/components/DynamicIcon.svelte';
 	let { data }: { data: any } = $props();
 
 	// Stream colors for visual distinction
@@ -68,7 +68,18 @@
 	</div>
 </section>
 
-{#if data.isSecondary && data.streams.length > 0}
+{#if data.comingSoon}
+	<section class="py-16">
+		<div class="mx-auto max-w-xl px-4">
+			<div class="glass-card rounded-2xl border p-10 text-center">
+				<div class="mb-3 text-3xl font-extrabold text-amber-500">قريباً</div>
+				<p class="text-muted-foreground text-sm">
+					محتوى <strong>{data.year.name_ar}</strong> قيد الإعداد والنشر التدريجي.
+				</p>
+			</div>
+		</div>
+	</section>
+{:else if data.isSecondary && data.streams.length > 0}
 	<!-- Secondary: Stream Selection Cards -->
 	<section class="py-12 lg:py-16">
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -149,6 +160,11 @@
 											>{subject.docCount}</span
 										>
 										<span class="text-muted-foreground text-[10px]">وثيقة</span>
+										{#if subject.quizCount > 0}
+											<span class="text-muted-foreground">·</span>
+											<span class="text-sm font-bold text-emerald-500">{subject.quizCount}</span>
+											<span class="text-muted-foreground text-[10px]">تمرين</span>
+										{/if}
 									</div>
 								</div>
 								<p class="text-muted-foreground text-sm">{subject.name_fr}</p>

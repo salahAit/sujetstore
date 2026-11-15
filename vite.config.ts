@@ -1,9 +1,17 @@
+import adapter from '@sveltejs/adapter-bun';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit()],
+	plugins: [
+		tailwindcss(),
+		sveltekit({
+			adapter: adapter(),
+			preprocess: vitePreprocess()
+		})
+	],
 	server: {
 		fs: {
 			// السماح بالوصول لملفات قاعدة البيانات
@@ -16,8 +24,8 @@ export default defineConfig({
 		exclude: ['bun:sqlite']
 	},
 	build: {
-		rollupOptions: {
-			// إخبار Rollup بأن bun:sqlite خارجية
+		rolldownOptions: {
+			// إخبار Rolldown بأن bun:sqlite خارجية
 			external: ['bun:sqlite']
 		}
 	}

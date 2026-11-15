@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { ExerciseBlock, ContentBlock, ColumnsBlock } from '$lib/modules/SujetBuilder/types';
-	import type { ExamMetadata } from '$lib/modules/SujetBuilder/types';
+	import type { ExerciseBlock, ContentBlock, ColumnsBlock } from '#lib/modules/SujetBuilder/types';
+	import type { ExamMetadata } from '#lib/modules/SujetBuilder/types';
 	import BlockEditor from './BlockEditor.svelte';
 	import { dndzone, SHADOW_ITEM_MARKER_PROPERTY_NAME } from 'svelte-dnd-action';
 	import {
@@ -42,7 +42,9 @@
 	const flipDurationMs = 250;
 
 	function generateId() {
-		return Math.random().toString(36).substring(2, 9);
+		return typeof crypto !== 'undefined' && crypto.randomUUID
+			? crypto.randomUUID()
+			: Math.random().toString(36).substring(2, 11);
 	}
 
 	// Ensure all initial exercises and their blocks have IDs for dnd-action
@@ -473,7 +475,7 @@
 				onconsider={(e) => handleBlockDndConsider(exercises.indexOf(exercise), e)}
 				onfinalize={(e) => handleBlockDndFinalize(exercises.indexOf(exercise), e)}
 			>
-				{#each exercise.content as block, bi (block.id)}
+				{#each exercise.content as block, bi (block.id ?? bi)}
 					<BlockEditor
 						bind:block={exercises[exercises.indexOf(exercise)].content[bi]}
 						onremove={() => removeBlock(exercises.indexOf(exercise), bi)}

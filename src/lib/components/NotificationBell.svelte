@@ -2,6 +2,8 @@
 	import { Bell, X } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 
+	let { staticMode = false }: { staticMode?: boolean } = $props();
+
 	let notifications = $state<any[]>([]);
 	let open = $state(false);
 	let readIds = $state<Set<number>>(new Set());
@@ -19,9 +21,10 @@
 
 	async function fetchNotifications() {
 		try {
-			const res = await fetch('/api/notifications');
+			const endpoint = staticMode ? '/static-api/notifications.json' : '/api/notifications';
+			const res = await fetch(endpoint);
 			const data = await res.json();
-			notifications = data.notifications || [];
+			notifications = Array.isArray(data) ? data : data.notifications || [];
 		} catch (e) {}
 	}
 
@@ -89,7 +92,7 @@
 							<div class="flex items-start justify-between gap-2">
 								<p class="text-sm font-semibold">{notif.title}</p>
 								<span class="text-muted-foreground shrink-0 text-[10px]"
-									>{formatDate(notif.createdAt)}</span
+									>{formatDate(notif.createdAt || notif.created_at)}</span
 								>
 							</div>
 							{#if notif.body}

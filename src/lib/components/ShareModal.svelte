@@ -1,17 +1,17 @@
 <script lang="ts">
 	import { Copy, Check, Facebook, Send, MessageCircle, Share2 } from 'lucide-svelte';
-	import * as Dialog from '$lib/components/ui/dialog/index.js';
-	import { Button } from '$lib/components/ui/button/index.js';
+	import * as Dialog from '#lib/components/ui/dialog/index.js';
+	import { Button } from '#lib/components/ui/button/index.js';
 
 	let {
 		isOpen = $bindable(false),
 		url = '',
 		title = 'شارك هذا التمرين'
-	} = $props<{
+	}: {
 		isOpen: boolean;
 		url: string;
 		title?: string;
-	}>();
+	} = $props();
 
 	let copied = $state(false);
 

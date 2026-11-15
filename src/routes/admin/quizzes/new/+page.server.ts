@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { contentDatabase, contentSchema } from '$lib/server/db/index';
+import { contentDatabase, contentSchema } from '#lib/server/db/index';
 import { eq } from 'drizzle-orm';
 
 export const load: PageServerLoad = async () => {

@@ -3,12 +3,11 @@
 		Ruler,
 		Microscope,
 		BookOpen,
-		Backpack,
-		GraduationCap,
+		Calculator,
 		MapPin,
 		ClipboardList
 	} from 'lucide-svelte';
-	import DynamicIcon from '$lib/components/DynamicIcon.svelte';
+	import DynamicIcon from '#lib/components/DynamicIcon.svelte';
 	let { data }: { data: any } = $props();
 </script>
 
@@ -52,26 +51,24 @@
 		</p>
 
 		<div class="flex flex-wrap justify-center gap-4">
+			{#each data.levels as lvl}
+				<a
+					href="/{lvl.slug}"
+					class="group border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 inline-flex items-center gap-3 rounded-xl border px-6 py-3 font-bold transition-all duration-300 hover:scale-105"
+				>
+					<DynamicIcon name={lvl.icon} size={22} />
+					<span>{lvl.name_ar}</span>
+					{#if lvl.visibility === 'coming_soon'}
+						<span class="rounded bg-amber-500/20 px-2 py-0.5 text-xs text-amber-500">قريباً</span>
+					{/if}
+				</a>
+			{/each}
 			<a
-				href="/primaire"
-				class="group inline-flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-6 py-3 font-bold text-emerald-600 transition-all duration-300 hover:scale-105 hover:bg-emerald-500/20 dark:bg-emerald-500/20 dark:text-emerald-400 dark:hover:bg-emerald-500/30"
+				href="/simulator"
+				class="group inline-flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-6 py-3 font-bold text-emerald-600 transition-all duration-300 hover:scale-105 hover:bg-emerald-500/20 dark:text-emerald-400"
 			>
-				<Backpack size={24} />
-				ابتدائي
-			</a>
-			<a
-				href="/moyen"
-				class="group inline-flex items-center gap-3 rounded-xl border border-blue-500/30 bg-blue-500/10 px-6 py-3 font-bold text-blue-600 transition-all duration-300 hover:scale-105 hover:bg-blue-500/20 dark:bg-blue-500/20 dark:text-blue-400 dark:hover:bg-blue-500/30"
-			>
-				<BookOpen size={24} />
-				متوسط
-			</a>
-			<a
-				href="/secondaire"
-				class="group inline-flex items-center gap-3 rounded-xl border border-purple-500/30 bg-purple-500/10 px-6 py-3 font-bold text-purple-600 transition-all duration-300 hover:scale-105 hover:bg-purple-500/20 dark:bg-purple-500/20 dark:text-purple-400 dark:hover:bg-purple-500/30"
-			>
-				<GraduationCap size={24} />
-				ثانوي
+				<Calculator size={22} />
+				حاسبة المعدل ومحاكي الشهادات
 			</a>
 		</div>
 	</div>

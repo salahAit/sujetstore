@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { Save, ArrowRight, AlertCircle } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 
-	let questionId = $derived($page.params.id);
+	let questionId = $derived(page.params.id);
 
-	import { QuestionForm } from '$lib/modules/QuizBuilder';
-	import { QUESTION_TYPES } from '$lib/modules/QuizBuilder';
+	import { QuestionForm } from '#lib/modules/QuizBuilder';
+	import { QUESTION_TYPES } from '#lib/modules/QuizBuilder';
 
 	let categoryId = $state<number | null>(null);
 	let difficulty = $state('medium');

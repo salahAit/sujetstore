@@ -13,9 +13,9 @@
 		Eye
 	} from 'lucide-svelte';
 	import { onMount, tick } from 'svelte';
-	import { QuestionForm, QUESTION_TYPES, getQuestionType, getDefaultDataForType } from '$lib/modules/QuizBuilder';
+	import { QuestionForm, QUESTION_TYPES, getQuestionType, getDefaultDataForType } from '#lib/modules/QuizBuilder';
 	import QuestionBankModal from './QuestionBankModal.svelte';
-	import QuestionPreviewModal from '$lib/admin/components/QuestionPreviewModal.svelte';
+	import QuestionPreviewModal from '#lib/admin/components/QuestionPreviewModal.svelte';
 
 	let quizId = $derived(page.params.id);
 	let quiz = $state<any>(null);

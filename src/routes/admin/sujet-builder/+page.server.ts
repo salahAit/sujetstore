@@ -1,5 +1,5 @@
-import { contentDatabase } from '$lib/server/db';
-import { educationLevels, years, streams, subjects, streamSubjects, trimesters } from '$lib/server/db/schema-content';
+import { contentDatabase } from '#lib/server/db';
+import { educationLevels, years, streams, subjects, streamSubjects, trimesters } from '#lib/server/db/schema-content';
 import { eq, asc } from 'drizzle-orm';
 import type { PageServerLoad } from './$types';
 

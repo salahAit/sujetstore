@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
-import { contentDatabase } from '$lib/server/db';
-import { quizQuestions, questions } from '$lib/server/db/schema-content';
+import { contentDatabase } from '#lib/server/db';
+import { quizQuestions, questions } from '#lib/server/db/schema-content';
 import { eq, and } from 'drizzle-orm';
 
 // Get all questions for a specific quiz
