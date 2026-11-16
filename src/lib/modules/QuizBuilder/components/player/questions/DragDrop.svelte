@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { X } from 'lucide-svelte';
+	import MathRenderer from '../../shared/MathRenderer.svelte';
 	let { data, onAnswer }: { data: any; onAnswer: (answer: any) => void } = $props();
 	let categories: string[] = $derived(data.categories || []);
 	let items: { text: string; category: number }[] = $derived(data.items || []);
@@ -57,7 +58,7 @@
 				onclick={() => selectItem(item.text)}
 				class="relative cursor-grab select-none rounded-xl border border-border border-b-4 bg-card px-5 py-2.5 text-sm font-bold text-card-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md active:translate-y-[2px] active:border-b-2 active:shadow-sm active:cursor-grabbing {selectedItem === item.text ? 'border-primary border-b-primary bg-primary/5 text-primary shadow-md ring-2 ring-primary/20 ring-offset-1' : ''}"
 			>
-				{item.text}
+				<MathRenderer content={item.text} inline />
 			</button>
 		{/each}
 		{#if unassigned.length === 0}
@@ -76,7 +77,7 @@
 			<div class="flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all {selectedItem ? 'ring-2 ring-primary/40 ring-offset-1' : ''}">
 				<!-- Category Header (Solid) -->
 				<div class="border-b border-border bg-muted/50 px-4 py-3 text-center">
-					<h4 class="text-base font-extrabold text-foreground">{cat}</h4>
+					<h4 class="text-base font-extrabold text-foreground"><MathRenderer content={cat} inline /></h4>
 				</div>
 				
 				<!-- Drop Area (Dashed internally if empty, solid background if items exist) -->
@@ -95,7 +96,7 @@
 							<div
 								class="group relative flex select-none items-center gap-2 rounded-xl border border-border border-b-[3px] bg-card px-3 py-2 text-sm font-bold shadow-sm transition-all hover:border-destructive/40"
 							>
-								<span class="text-foreground">{assigned.text}</span>
+								<span class="text-foreground"><MathRenderer content={assigned.text} inline /></span>
 								<button
 									type="button"
 									class="flex h-5 w-5 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-destructive hover:text-white"

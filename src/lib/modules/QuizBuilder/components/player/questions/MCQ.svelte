@@ -53,7 +53,7 @@
 				{/if}
 				{#if option.text}
 					<div class="font-medium">
-						<MathRenderer content={option.text} />
+						<MathRenderer content={option.text} inline />
 					</div>
 				{/if}
 			</div>

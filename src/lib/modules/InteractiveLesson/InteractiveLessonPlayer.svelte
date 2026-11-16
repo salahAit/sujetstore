@@ -845,7 +845,7 @@
 										{optionLetters[optIdx] || optIdx + 1}
 									</span>
 									<div class="text-foreground flex-1 pt-0.5 text-sm font-medium">
-										<MathRenderer content={optText} />
+										<MathRenderer content={optText} inline />
 									</div>
 									{#if isThisCorrect}
 										<CheckCircle size={18} class="mt-0.5 shrink-0 text-emerald-600" />

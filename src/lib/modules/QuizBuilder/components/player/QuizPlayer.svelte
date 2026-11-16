@@ -636,7 +636,7 @@
 							{/if}
 						</div>
 					{/if}
-					<MathRenderer content={currentQuestion.questionTextAr || currentQuestion.questionText} />
+					<MathRenderer content={currentQuestion.questionTextAr || currentQuestion.questionText} inline />
 					</h2>
 
 					<!-- Dynamic Question Component -->
@@ -703,7 +703,7 @@
 									<span class="font-semibold text-emerald-600 dark:text-emerald-400"
 										>الإجابة الصحيحة:</span
 									>
-									{getCorrectAnswer(currentQuestion)}
+									<MathRenderer content={getCorrectAnswer(currentQuestion)} inline />
 								</p>
 							{/if}
 							{#if currentQuestion.explanation}
@@ -711,7 +711,7 @@
 									class="mt-2 rounded-lg bg-amber-500/10 p-3 text-sm text-amber-700 dark:text-amber-300"
 								>
 									💡 <span class="font-semibold">شرح:</span>
-									{currentQuestion.explanation}
+									<MathRenderer content={currentQuestion.explanation} inline />
 								</p>
 							{/if}
 						</div>
@@ -888,7 +888,7 @@
 								</div>
 								<div class="min-w-0 flex-1">
 									<p class="font-semibold">
-										{i + 1}. {detail.question.questionTextAr || detail.question.questionText}
+										{i + 1}. <MathRenderer content={detail.question.questionTextAr || detail.question.questionText} inline />
 									</p>
 									<span class="text-muted-foreground text-xs">
 										{typeLabels[detail.question.type]} • {detail.points}/{detail.question.points} نقطة
@@ -907,13 +907,15 @@
 													: 'text-red-400'}">إجابتك:</span
 											>
 											<span class="text-sm {detail.correct ? 'text-emerald-300' : 'text-red-300'}"
-												>{detail.userAnswer}</span
+												><MathRenderer content={String(detail.userAnswer ?? '')} inline /></span
 											>
 										</div>
 										{#if !detail.correct}
 											<div class="flex items-start gap-2 rounded-lg bg-emerald-500/5 p-2">
 												<span class="shrink-0 text-xs font-bold text-emerald-400">الصحيحة:</span>
-												<span class="text-sm text-emerald-300">{detail.correctAnswer}</span>
+												<span class="text-sm text-emerald-300"
+													><MathRenderer content={String(detail.correctAnswer ?? '')} inline /></span
+												>
 											</div>
 										{/if}
 									</div>
@@ -921,7 +923,7 @@
 									<!-- Explanation (always shown) -->
 									{#if detail.question.explanation}
 										<p class="mt-2 rounded-lg bg-amber-500/10 p-2 text-sm text-amber-300">
-											💡 {detail.question.explanation}
+											💡 <MathRenderer content={detail.question.explanation} inline />
 										</p>
 									{/if}
 								</div>

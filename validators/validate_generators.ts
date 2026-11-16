@@ -9,6 +9,8 @@
 
 import { existsSync, readdirSync, readFileSync, unlinkSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import { Marked } from 'marked';
+import markedKatex from 'marked-katex-extension';
 import type { ContentBlock, TableCell, TrimesterId } from '../src/lib/modules/SujetBuilder/types';
 import type {
 	Difficulty,
@@ -34,6 +36,23 @@ const DIFFICULTIES: readonly Difficulty[] = ['easy', 'medium', 'hard'];
 const EASTERN_DIGITS_RE = /[\u0660-\u0669\u06F0-\u06F9]/;
 const RAW_LATEX_IN_TYPST_RE = /\\(?:frac|times|div)(?![a-zA-Z])|\\sqrt\{/;
 const MAX_DIAGNOSTICS = 30;
+
+const katexChecker = new Marked(
+	markedKatex({
+		throwOnError: false,
+		output: 'html',
+		nonStandard: true,
+		strict: 'ignore'
+	})
+);
+
+function checkKatexRenderError(text: unknown, label: string, issues: string[]): void {
+	if (typeof text !== 'string' || !text.includes('$')) return;
+	const html = katexChecker.parseInline(text) as string;
+	if (html.includes('katex-error')) {
+		issues.push(`KaTeX render error in ${label}: ${text.slice(0, 100)}`);
+	}
+}
 
 interface ValidationFailure {
 	check: 'lessons' | 'templates_meta' | 'templates_sweep' | 'determinism';
@@ -482,6 +501,7 @@ function validateLessons(): {
 			if (typeof val === 'string' && countUnescapedDollars(val) % 2 !== 0) {
 				lessonFailures.push(`Unbalanced $ delimiter in ${field}: ${val.slice(0, 80)}`);
 			}
+			checkKatexRenderError(val, field, lessonFailures);
 		}
 
 		const serialized = JSON.stringify(lesson);
@@ -713,6 +733,30 @@ function validateTemplatesSweep(): {
 				if (q.imageUrl) {
 					checkSvgAssetRef(q.imageUrl, 'quizQuestion.imageUrl', runIssues);
 				}
+
+				checkKatexRenderError(q.questionText, 'quizQuestion.questionText', runIssues);
+				checkKatexRenderError(q.questionTextAr, 'quizQuestion.questionTextAr', runIssues);
+				checkKatexRenderError(q.explanation, 'quizQuestion.explanation', runIssues);
+				if (Array.isArray(q.questionData.options)) {
+					q.questionData.options.forEach((opt: unknown, oi: number) =>
+						checkKatexRenderError(getOptionText(opt), `quizQuestion.options[${oi}]`, runIssues)
+					);
+				}
+				if (Array.isArray(q.questionData.items)) {
+					q.questionData.items.forEach((it: unknown, ii: number) =>
+						checkKatexRenderError(getOptionText(it), `quizQuestion.items[${ii}]`, runIssues)
+					);
+				}
+				if (Array.isArray(q.questionData.pairs)) {
+					q.questionData.pairs.forEach((pair: { left?: unknown; right?: unknown }, pi: number) => {
+						checkKatexRenderError(pair?.left, `quizQuestion.pairs[${pi}].left`, runIssues);
+						checkKatexRenderError(pair?.right, `quizQuestion.pairs[${pi}].right`, runIssues);
+					});
+				}
+				inst.hints.forEach((h, hi) => checkKatexRenderError(h, `hints[${hi}]`, runIssues));
+				inst.solutionStepsAr.forEach((st, si) =>
+					checkKatexRenderError(st, `solutionStepsAr[${si}]`, runIssues)
+				);
 			}
 
 			// 3. Recursive sujetExercise checks (Typst LaTeX leaks & SVG assets)

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { GripVertical } from 'lucide-svelte';
+	import MathRenderer from '../../shared/MathRenderer.svelte';
 
 	let { data, onAnswer }: { data: any; onAnswer: (answer: any) => void } = $props();
 	let items = $state<string[]>([]);
@@ -65,7 +66,7 @@
 				>
 					{i + 1}
 				</span>
-				<span class="font-medium">{item}</span>
+				<span class="font-medium"><MathRenderer content={item} inline /></span>
 			</div>
 
 			{#if dragIndex !== null && dropIndex === i && i > dragIndex}

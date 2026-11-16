@@ -1,4 +1,5 @@
 <script lang="ts">
+	import MathRenderer from '../../shared/MathRenderer.svelte';
 	/**
 	 * Matrix — Multi-row true/false or selection grid
 	 * Data: { statements: string[], columns: string[], correctAnswers: number[] }
@@ -36,14 +37,14 @@
 			<tr class="border-b">
 				<th class="text-muted-foreground p-3 text-right font-bold">العبارة</th>
 				{#each data.columns || [] as col}
-					<th class="text-muted-foreground p-3 text-center font-bold">{col}</th>
+					<th class="text-muted-foreground p-3 text-center font-bold"><MathRenderer content={col} inline /></th>
 				{/each}
 			</tr>
 		</thead>
 		<tbody>
 			{#each data.statements || [] as stmt, rowIdx}
 				<tr class="hover:bg-muted/50 border-b transition-colors last:border-0">
-					<td class="text-foreground/90 p-3 font-semibold">{stmt}</td>
+					<td class="text-foreground/90 p-3 font-semibold"><MathRenderer content={stmt} inline /></td>
 					{#each data.columns || [] as _, colIdx}
 						<td class="p-3 text-center">
 							<button
@@ -63,7 +64,7 @@
 					{#if showResult && selected[rowIdx] !== undefined && selected[rowIdx] !== data.correctAnswers?.[rowIdx]}
 						<td class="p-2">
 							<span class="text-[10px] text-emerald-400"
-								>← {data.columns?.[data.correctAnswers?.[rowIdx]]}</span
+								>← <MathRenderer content={data.columns?.[data.correctAnswers?.[rowIdx]]} inline /></span
 							>
 						</td>
 					{/if}

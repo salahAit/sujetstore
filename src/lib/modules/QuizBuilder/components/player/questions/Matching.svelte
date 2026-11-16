@@ -1,4 +1,6 @@
 <script lang="ts">
+	import MathRenderer from '../../shared/MathRenderer.svelte';
+
 	let { data, onAnswer }: { data: any; onAnswer: (answer: any) => void } = $props();
 	let pairs: { left: string; right: string }[] = $derived(data.pairs || []);
 
@@ -93,7 +95,7 @@
 					onclick={() => selectLeft(i)}
 					class="w-full rounded-xl border-2 p-3 text-right font-semibold transition-all duration-200 {getLeftColorClass(i)}"
 				>
-					{pair.left}
+					<MathRenderer content={pair.left} inline />
 				</button>
 			{/each}
 		</div>
@@ -104,7 +106,7 @@
 					onclick={() => selectRight(ri)}
 					class="w-full rounded-xl border-2 p-3 text-right font-semibold transition-all duration-200 {getRightColorClass(ri)}"
 				>
-					{pairs[ri].right}
+					<MathRenderer content={pairs[ri].right} inline />
 				</button>
 			{/each}
 		</div>

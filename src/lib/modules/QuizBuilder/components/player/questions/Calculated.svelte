@@ -7,6 +7,7 @@
 	let { data, onAnswer, disabled = false, showResult, isCorrect }: any = $props();
 
 	import { onMount } from 'svelte';
+	import MathRenderer from '../../shared/MathRenderer.svelte';
 
 	let vars = $state<Record<string, number>>({});
 	let correctAnswer = $state(0);
@@ -63,7 +64,16 @@
 		class="border-border bg-secondary/50 rounded-xl border p-4 text-center dark:border-white/10 dark:bg-white/5"
 		dir="ltr"
 	>
-		<p class="font-mono text-lg font-bold text-blue-600 dark:text-blue-400">{displayText}</p>
+		<p class="font-mono text-lg font-bold text-blue-600 dark:text-blue-400">
+			{#if displayText.includes('$') || displayText.includes('\\')}
+				<MathRenderer
+					content={displayText.includes('$') ? displayText : `$${displayText}$`}
+					inline
+				/>
+			{:else}
+				{displayText}
+			{/if}
+		</p>
 	</div>
 
 	<div class="flex items-center justify-center gap-3">
