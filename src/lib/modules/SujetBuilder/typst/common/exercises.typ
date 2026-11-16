@@ -179,8 +179,16 @@
     })
   ] else if b.type == "image" [
     #if b.at("src", default: "") != "" {
+      let img-w-raw = b.at("width", default: 80%)
+      let img-w = if type(img-w-raw) == int or type(img-w-raw) == float {
+        calc.min(calc.max(img-w-raw * 0.72, 110), 400) * 1pt
+      } else if type(img-w-raw) == str {
+        if img-w-raw == "full" { 95% } else if img-w-raw == "half" { 50% } else if img-w-raw == "auto" { auto } else if img-w-raw.find(regex("^\\d+(?:\\.\\d+)?(?:%|pt|cm|mm|em)$")) != none { eval(img-w-raw) } else { 80% }
+      } else {
+        img-w-raw
+      }
       align(center)[
-        #image(b.src, width: b.at("width", default: 80%))
+        #image(b.src, width: img-w)
         #if b.at("caption", default: "") != "" {
           text(size: 10pt, style: "italic")[#eval(b.caption, mode: "markup", scope: scope)]
         }

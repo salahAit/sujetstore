@@ -7,6 +7,7 @@ import {
 	type AssembleExamOptions
 } from '../src/lib/server/exam-assembler';
 import {
+	ALL_GRADE_IDS,
 	GRADE_METADATA,
 	type Difficulty,
 	type GradeId
@@ -53,7 +54,7 @@ interface GeneratedManifest {
 const CONCURRENCY_LIMIT = 8;
 const MIN_PDF_BYTES = 20_480;
 
-const GRADES: readonly GradeId[] = ['1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am'];
+const GRADES: readonly GradeId[] = ALL_GRADE_IDS;
 const TRIMESTERS: readonly TrimesterId[] = ['t1', 't2', 't3'];
 
 const TRIMESTER_LABELS_AR: Record<TrimesterId, string> = {
@@ -90,9 +91,10 @@ const TEST_SAMPLES: readonly SampleVariantSpec[] = [
 function buildPaperSpecs(): SamplePaperSpec[] {
 	const specs: SamplePaperSpec[] = [];
 
-	// 81 trimester exams + 81 supervised tests (9 grades x 3 trimesters x 3 exclusive models each)
+	// 288 trimester exams + supervised tests (16 tracks x 3 trimesters x 3 exclusive models each)
 	for (const grade of GRADES) {
-		const yearName = GRADE_METADATA[grade].yearName;
+		const meta = GRADE_METADATA[grade];
+		const trackLabel = meta.streamName ? `${meta.yearName} (${meta.streamName})` : meta.yearName;
 		const testLabelAr = grade.endsWith('ap') ? 'تقويم مرحلي' : 'فرض محروس';
 		for (const trimesterId of TRIMESTERS) {
 			const trimesterName = TRIMESTER_LABELS_AR[trimesterId];
@@ -105,7 +107,7 @@ function buildPaperSpecs(): SamplePaperSpec[] {
 					variant: 'trimester_exam',
 					difficulty: sample.difficulty,
 					seed: sample.seed,
-					titleAr: `اختبار ${trimesterName} في الرياضيات — ${yearName} (${sample.labelAr} — مستوى ${DIFFICULTY_LABELS_AR[sample.difficulty]})`
+					titleAr: `اختبار ${trimesterName} في الرياضيات — ${trackLabel} (${sample.labelAr} — مستوى ${DIFFICULTY_LABELS_AR[sample.difficulty]})`
 				});
 			}
 			for (const sample of TEST_SAMPLES) {
@@ -117,7 +119,7 @@ function buildPaperSpecs(): SamplePaperSpec[] {
 					variant: 'supervised_test',
 					difficulty: sample.difficulty,
 					seed: sample.seed,
-					titleAr: `${testLabelAr} ${trimesterName} في الرياضيات — ${yearName} (${sample.labelAr} — مستوى ${DIFFICULTY_LABELS_AR[sample.difficulty]})`
+					titleAr: `${testLabelAr} ${trimesterName} في الرياضيات — ${trackLabel} (${sample.labelAr} — مستوى ${DIFFICULTY_LABELS_AR[sample.difficulty]})`
 				});
 			}
 		}
@@ -178,8 +180,33 @@ function buildPaperSpecs(): SamplePaperSpec[] {
 		});
 	}
 
-	if (specs.length !== 170) {
-		throw new Error(`Expected 170 sample exam specs, built ${specs.length}`);
+	// 15 exclusive proposed BAC mock exams for 3AS Scientific Streams (5 each x 3 streams, T3)
+	const bacGrades: readonly GradeId[] = ['3as_se', '3as_tm', '3as_math'];
+	const bacConfigs: readonly { n: 1 | 2 | 3 | 4 | 5; seed: number; difficulty: Difficulty }[] = [
+		{ n: 1, seed: 901, difficulty: 'medium' },
+		{ n: 2, seed: 902, difficulty: 'medium' },
+		{ n: 3, seed: 903, difficulty: 'hard' },
+		{ n: 4, seed: 904, difficulty: 'hard' },
+		{ n: 5, seed: 905, difficulty: 'hard' }
+	];
+	for (const grade of bacGrades) {
+		const streamName = GRADE_METADATA[grade].streamName || GRADE_METADATA[grade].yearName;
+		for (const cfg of bacConfigs) {
+			specs.push({
+				slug: `${grade}-math-t3-bac-mock-${cfg.n}`,
+				grade,
+				trimesterId: 't3',
+				docType: 'exam',
+				variant: 'bac_mock',
+				difficulty: cfg.difficulty,
+				seed: cfg.seed,
+				titleAr: `امتحان بكالوريا تجريبي مقترح في الرياضيات — ${streamName} (النموذج ${cfg.n})`
+			});
+		}
+	}
+
+	if (specs.length !== 311) {
+		throw new Error(`Expected 311 sample exam specs, built ${specs.length}`);
 	}
 
 	return specs;

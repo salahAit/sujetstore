@@ -19,10 +19,10 @@
   "properties": {
     "templateId": { "type": "string", "minLength": 5 },
     "seed": { "type": "integer" },
-    "grade": { "type": "string", "enum": ["1ap", "2ap", "3ap", "4ap", "5ap", "1am", "2am", "3am", "4am"] },
+    "grade": { "type": "string", "enum": ["1ap", "2ap", "3ap", "4ap", "5ap", "1am", "2am", "3am", "4am", "1as_tcst", "2as_se", "2as_tm", "2as_math", "3as_se", "3as_tm", "3as_math"] },
     "trimesterId": { "type": "string", "enum": ["t1", "t2", "t3"] },
     "difficulty": { "type": "string", "enum": ["easy", "medium", "hard"] },
-    "domain": { "type": "string", "enum": ["numeric", "geometry", "measurement", "proportionality", "integration"] },
+    "domain": { "type": "string", "enum": ["numeric", "geometry", "measurement", "proportionality", "integration", "analysis", "algebra", "complex", "probability", "arithmetic_z"] },
     "titleAr": { "type": "string" },
     "quizQuestion": {
       "type": "object",

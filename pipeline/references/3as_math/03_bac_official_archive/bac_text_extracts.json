@@ -1,0 +1,87 @@
+{
+  "grade": "3as_math",
+  "stream_ar": "شعبة رياضيات",
+  "subject_ar": "الرياضيات",
+  "bac_coeff": 7,
+  "bac_duration": "4h30",
+  "focus_years": [
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+  ],
+  "documents": {
+    "bac_math_2023_sujet.pdf": {
+      "file_name": "bac_math_2023_sujet.pdf",
+      "year": "2023",
+      "category": "official_exam",
+      "extraction_mode": "digital_text",
+      "extraction_tool": "pdftotext",
+      "char_count": 9830,
+      "preview": "‫اﳉﻤﻬﻮرﻳﺔ اﳉﺰاﺋﺮﻳﺔ اﻟﺪﳝﻘﺮاﻃﻴﺔ اﻟﺸﻌﺒﻴﺔ‬\n‫اﻣﺘﺤﺎن ﺑﻜﺎﻟﻮر� اﻟﺘﻌﻠﻴﻢ اﻟﺜﺎﻧﻮي‬\n‫اﻟﺸﻌﺒﺔ‪ :‬ر�ﺿﻴﺎت‬\n‫اﺧﺘﺒﺎر ﰲ ﻣﺎدة‪ :‬اﻟﺮ�ﺿﻴﺎت‬\n\n‫وزارة اﻟﱰﺑﻴﺔ اﻟﻮﻃﻨﻴﺔ‬\n‫اﻟﺪﻳﻮان اﻟﻮﻃﲏ ﻟﻼﻣﺘﺤﺎ�ت واﳌﺴﺎﺑﻘﺎت‬\n\n‫ﻋﻠﻰ اﻟﻤﺘرﺸﺢ أن ﯿﺨﺘﺎر أﺤد اﻟﻤوﻀوﻋﯿن اﻵﺘﯿﯿن‪:‬‬\n\n‫دورة‪2023 :‬‬\n‫اﳌﺪة‪ 04 :‬ﺳﺎ و‪ 30‬د‬\n\n‫اﻟﻤوﻀوع اﻷول‬\n\n‫�ﺤﺘوي اﻟﻤوﻀوع ﻋﻠﻰ )‪ (03‬ﺼﻔﺤﺎت ) ﻤن اﻟﺼﻔﺤﺔ ‪ 1‬ﻤن ‪ 5‬إﻟﻰ اﻟﺼﻔﺤﺔ ‪ 3‬ﻤن ‪( 5‬‬\n\n‫اﻟﺘﻤر�ن اﻷول‪ 04) :‬ﻨﻘﺎط(‬\n\n‫ﻨﻔرق ﺒﯿﻨﻬﺎ �ﺎﻟّﻠﻤس‪ ،‬ﻤﻨﻬﺎ كر�ﺘﺎن ﺤﻤ اروان ﻤرﻗﻤﺘﺎن ﺒــ‪− 3 ، 2 :‬‬\n‫�ﺤﺘوي ك�س ﻋﻠﻰ ‪ 10‬كر�ﺎت ﻤﺘﻤﺎﺜﻠﺔ وﻻ ّ‬"
+    },
+    "bac_math_2023_correction.pdf": {
+      "file_name": "bac_math_2023_correction.pdf",
+      "year": "2023",
+      "category": "exam_solution",
+      "extraction_mode": "digital_text",
+      "extraction_tool": "pdftotext",
+      "char_count": 3913,
+      "preview": "2023\n\n.\n\n.\n\n)\n04)\n2\n2.25\n\n0.5\n\nP B\n\n0.5\n\nC51\n\nC31 C21\n3\nC10\n\n3;1;2\n\n1;1; 2\nP C\n\nPC A\n\n1\n3\n\nC11\n\nP A\n\nC\n\nC\n\nP A C\nP C\n\n1\n9\n\n(\n\nC32 C11\n3\nC10\n\nC31\n\nC31\n\nC11\n\n3\n20\n\nC22\n\nC11\n3\nC10\n\nC11\n\nC11\n\n1\n60\n\n1\n\nC11\n\n1 ; 2; 3\n\n11\n120\n79\nP X 2 1 P X 1 P X 3\n120\n11\n79\n30 259\nE X 1\n2\n3\n120\n120\n120 120\n\n0.25\n\nP X\n\n0.25\n0.25\n0.25\n\n0.5\n\n11\n120\n\n0;2; 2\n\n1\n2\n\n0.25\n1.25\n\nP A\n\nC53 C33\n3\nC10\n\n1;1; 2 :\n\n0; 2; 2\n0.25+0.5\n\nC\n\n1\n4\n\n0.5\n\nP\n\n3\n\n30\n120\n\nP 1 P\n\n04)\n\nP X\n\n1\n\n83\n1\n103\n\n61\n125\n\n2\n\n3\n\n0.5\n\n1\n\n1\n\n2\n\n0.25\n\n.\n8\n\n1\n\nun\n"
+    },
+    "bac_math_2024_sujet.pdf": {
+      "file_name": "bac_math_2024_sujet.pdf",
+      "year": "2024",
+      "category": "official_exam",
+      "extraction_mode": "scanned_ocr",
+      "extraction_tool": "tesseract_ocr",
+      "char_count": 8101,
+      "preview": "--- [الصفحة 1] ---\nد \"سبلن اسه\n\nالجمهورية الجزائرية الدبمقراطية الشعبية\nوزارة التربية الوطنية\nالدبوان الوطني للامتحانات والمسابقات\n\nامتحان بكالوريا التعليم ‎SP‏\n‏الشعبة: رياصيات دورة: 2024\n‎J jl!‏ مادة: الرباضيات\nعلى المترشح أن يختار أحد الموضوعين الآتبين:\nالموضوع الأول\nيحنوي الموضوع على (03) صفحات (من الصفحة 1 من 6 إلى الصفحة 3 من 6)\n\nالمدة: 04 سا و30 د\n\nالتمرين الأول: (04 نقاط)\nيحنوي ‎UL) Gp‏ على 5 بطافات متمائلة مرقمة ب: | ؛ 1 ‎٠ 3 ٠ 2 ٠‏ 3 ويحتوي صندوق ‎Uy‏ على\n6 كرتات متماثنة موزعة كما يلي:"
+    },
+    "bac_math_2024_correction.pdf": {
+      "file_name": "bac_math_2024_correction.pdf",
+      "year": "2024",
+      "category": "exam_solution",
+      "extraction_mode": "scanned_ocr",
+      "extraction_tool": "tesseract_ocr",
+      "char_count": 6106,
+      "preview": "--- [الصفحة 1] ---\nqi\n\n(2\n\n3\n\n(4\n\n(1\n\n(i (I\n\n(2\n\nالإجابة النموذجية // مادة: الرياضيات // الشعبة: رياضيات // بكالوريا 2024\n\nعناصر الإجابة ( الموضوع الأول )\n\nالتمرين الأول ( 04 نقاط )\n\n1 62 4 تعبامبلويةه\nات ‎ea‏ مهد 3 م\n‎(B)=—4 == )١‏ ,% °° 2ه 2 ‎(D)=—4‏ رمه\n\n‎GE 62 15‏\nب) شجرة الاحتمالات: ‎2—A‏\n‏وك 6 17\n‎a 4A‏\n‎Ca is—B‏ -—4\n‎ip‏\n‎Nec 35‏\nواد\n2 2ح ل ورهن ذو ركيد\n) دج »2 دج »ع +ع »ع -(4)م\n1.11 ,211 32 _4 8\n‎PUB)= $515 \"15\" 75‏ | ع2 +55 ‎P(D)=‏\n‎P(ANG) _ 3 2‏\n‎P,(G)= P(A) “Te * P(ANG)=35‏\nقانون الاح"
+    },
+    "bac_math_2025_sujet.pdf": {
+      "file_name": "bac_math_2025_sujet.pdf",
+      "year": "2025",
+      "category": "official_exam",
+      "extraction_mode": "scanned_ocr",
+      "extraction_tool": "tesseract_ocr",
+      "char_count": 8011,
+      "preview": "--- [الصفحة 1] ---\n1) news naa ee ey\n\nfo) BACI025/4125/HCHOTROSA\n‏الجمهورية الجزائرية الديمقراطية الشعبية‎ 0202020200\n‏وزارة التربية الوطنية‎\n\nالديوان الوطني للامتحانات والمسابقات\nامتحان بكالوريا التعليم الثانوي دورة 2025\nالشعبة: رياضيات\n\nاختبار في مادة: الرياضيات المدة: 04 سا و30 د\n\nعلى المترشح أن يختار ‎dal‏ الموضوعين الآتبين:\nالموضوع الأؤل\n\nيحتوي الموضوع على (03) صفحات (من الصفحة 1. من 5 إلى الصفحة 3 من 5)\nالتمرين الأول: ( 04 نقاط )\nيحتوي صندوق ‎UW,‏ على 12 كرتّة منها: 3 كرنات حمراء ‎٠‏ 4 كرا"
+    },
+    "bac_math_2025_correction.pdf": {
+      "file_name": "bac_math_2025_correction.pdf",
+      "year": "2025",
+      "category": "exam_solution",
+      "extraction_mode": "scanned_ocr",
+      "extraction_tool": "tesseract_ocr",
+      "char_count": 6653,
+      "preview": "--- [الصفحة 1] ---\n| )2\n\n(3\n\n{a\n\n(2\n\n5 Np 0 ‏شجرة الاحتمالات:‎\n1 1B\n2\n‏در‎\n‏ب8)م‎ 0-33 ٠ ‏0-2)م « كقةِ-رص)م‎ ٠ ‏)م‎ 8( - 35\n12229 ‏ا4_‎ as\n_ _ P(ANB)= 5x 43*34 66\n‏)م‎ ACB) _ 287\nPB; (A)=e—S = ‏ج)‎\n‎B P(B) 419\nXj 1 2 | 3 xj €{ 1:2:3(\n=yx,) | ‏تك‎ | 335. | 84 = 965,\nP(X=3i) | 365 | Ger 12 E(X)= 365\n\n| ج) النقط ‎Cy Be A‏ تنتمي إلى الّائرة ‎(C)‏ التي مركزها ‎co‏ منتصف ‎[AB]‏\n\n‎sli BY Je‏ 0 لد |- ”له|+..+ [ه| - وى\n\n‎sin(28)=2sinO.cos0 » cos(20)=2cos’@ -1 ‏ألدينا:‎ 6\n\n‏الإجابة التموذجية | مادة: الريا"
+    },
+    "bac_math_2026_sujet.pdf": {
+      "file_name": "bac_math_2026_sujet.pdf",
+      "year": "2026",
+      "category": "official_exam",
+      "extraction_mode": "digital_text",
+      "extraction_tool": "pdftotext",
+      "char_count": 9958,
+      "preview": "‫«‬\n\n‫اﳉﻤﻬﻮرﻳﺔ اﳉﺰاﺋﺮﻳﺔ اﻟﺪﳝﻘﺮاﻃﻴﺔ اﻟﺸﻌﺒﻴﺔ‬\n‫وزارة اﻟﱰﺑﻴﺔ اﻟﻮﻃﻨﻴﺔ‬\n‫اﻟﺪﻳﻮان اﻟﻮﻃﲏ ﻟﻼﻣﺘﺤﺎ ت واﳌﺴﺎﺑﻘﺎت‬\n\n‫اﻟﺪورة‪2026 :‬‬\n\n‫اﻣﺘﺤﺎن ﺑﻜﺎﻟﻮر اﻟﺘﻌﻠﻴﻢ اﻟﺜﺎﻧﻮي‬\n‫اﻟﺸﻌﺒﺔ‪ :‬ر ﺿﻴﺎت‬\n‫اﺧﺘﺒﺎر ﰲ ﻣﺎدة‪ :‬اﻟﺮ ﺿﻴﺎت‬\n‫ﻋﻠﻰ اﻟﻣﺗرﺷﺢ أن ﯾﺧﺗﺎر أﺣد اﻟﻣوﺿوﻋﯾن اﻵﺗﯾﯾن‪:‬‬\n\n‫اﳌﺪة‪ 04 :‬ﺳﺎ و‪ 30‬د‬\n\n‫اﻷول‬\n‫اﻟﻣوﺿوع ّ‬\n\n‫ﺣﺗو اﻟﻣوﺿوع ﻋﻠﻰ )‪ (03‬ﺻﻔﺣﺎت ) ﻣن اﻟﺻﻔﺣﺔ ‪ 1‬ﻣن ‪ 5‬إﻟﻰ اﻟﺻﻔﺣﺔ ‪ 3‬ﻣن ‪(5‬‬\n\n‫اﻷول‪ 04 ) :‬ﻧﻘﺎط (‬\n‫اﻟﺗﻣر ن ّ‬\n‫ﺣﺗو‬\n\n‫س ‪ U‬ﻋﻠﻰ ‪ 4‬رّﺎت ﺣﻣراء و ‪ 3‬رّﺎت ﺧﺿراء و ﺣﺗو‬\n\n‫ﻧﻔرق ﺑﯾﻧﻬﺎ ﺎﻟّﻠﻣس‪.‬‬\n‫ّﻞ اﻟﻛرّﺎت ﻣﺗ"
+    },
+    "bac_math_2026_correction.pdf": {
+      "file_name": "bac_math_2026_correction.pdf",
+      "year": "2026",
+      "category": "exam_solution",
+      "extraction_mode": "digital_text",
+      "extraction_tool": "pdftotext",
+      "char_count": 7204,
+      "preview": "2026 ‫ ﺑﻜﺎﻟﻮر‬.‫ ر ﺿﻴﺎت‬:‫ اﻟﺸﻌﺒﺔ‬.‫ اﻟﺮ ﺿﻴﺎت‬:‫ ﻣﺎدة‬.‫اﻹﺟﺎﺑﺔ اﻟﻨﻤﻮذﺟﻴﺔ‬\n‫اﻟﻌﻼﻣﺔ‬\n‫اﻟﻌﻼﻣﺔ‬\n\n( ‫ﻋﻧﺎﺻر اﻹﺟﺎ ﺔ ) اﻟﻣوﺿوع اﻷول‬\n\n‫ﻣﺟزأة‬\n\n( ‫ ﻧﻘﺎط‬04 ) ‫اﻟﺗﻣر ن اﻷول‬\n\n0,75\n\n0,25  3\n\n1,5\n\n0,5  3\n\n0,5\n\n0,5\n\n1,25\n\n0,25  5\n\n(1\n\nP  C   66  22 ، P  B   29 ، P  A  49  7\n105\n\n210 30\nP R  B 4\nPB  R  \n\n29\nP B\n\n35\n\n210\n\nE  X   19\n21\nE  21X  1428   1447\n\n0,25  3\n\n2,25\n\n\n\nS  1i ; 1 i ; 1 i \n\n\n\n\n\n\n    \n    \nz  6  2  cos  43π   i sin  43π  \n2\nD\n\n0,25"
+    }
+  }
+}

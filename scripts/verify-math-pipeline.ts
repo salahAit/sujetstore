@@ -4,6 +4,7 @@ import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
 import { createSession, SESSION_COOKIE_NAME } from '#lib/server/auth';
 import { evaluateSafeFormula } from '#lib/server/quiz-grading';
+import { ALL_GRADE_IDS, GRADE_METADATA } from '../src/lib/modules/MathTemplates/types';
 
 const PORT = 4181;
 const BASE_URL = `http://127.0.0.1:${PORT}`;
@@ -245,6 +246,7 @@ async function main() {
 			const homeHtml = await rHome.text();
 			assert.ok(homeHtml.includes('/primaire'), 'Home page must contain /primaire link');
 			assert.ok(homeHtml.includes('/moyen'), 'Home page must contain /moyen link');
+			assert.ok(homeHtml.includes('/secondaire'), 'Home page must contain /secondaire link');
 
 			const rPrim = await httpReq('/primaire');
 			assert.equal(rPrim.status, 200, 'GET /primaire must return 200');
@@ -260,33 +262,66 @@ async function main() {
 			}
 
 			const rSec = await httpReq('/secondaire');
-			assert.equal(rSec.status, 404, 'Hidden level GET /secondaire must return 404');
-			console.log('✅ 1. Visibility & curriculum routes passed (all 9 primary + middle grades)');
+			assert.equal(rSec.status, 200, 'Published level GET /secondaire must return 200');
+
+			for (const url of [
+				'/secondaire/1as/tcst',
+				'/secondaire/2as/se',
+				'/secondaire/2as/tm',
+				'/secondaire/2as/math',
+				'/secondaire/3as/se',
+				'/secondaire/3as/tm',
+				'/secondaire/3as/math',
+				'/secondaire/1as/mat-se?stream=TCST',
+				'/secondaire/2as/mat-se?stream=SE',
+				'/secondaire/2as/mat-tm?stream=TM',
+				'/secondaire/2as/mat-math?stream=MATH',
+				'/secondaire/3as/mat-se?stream=SE',
+				'/secondaire/3as/mat-tm?stream=TM',
+				'/secondaire/3as/mat-math?stream=MATH'
+			]) {
+				const rTrack = await httpReq(url);
+				assert.equal(rTrack.status, 200, `GET ${url} must return 200`);
+				if (url === '/secondaire/3as/mat-math?stream=MATH') {
+					const html = await rTrack.text();
+					assert.ok(
+						html.includes('bac-2025-3as-math-math.pdf'),
+						'3AS Math page must render Official BAC 2025 archive link'
+					);
+				}
+			}
+
+			const rHiddenLit = await httpReq('/secondaire/2as/lp');
+			assert.equal(rHiddenLit.status, 404, 'Unpublished literary stream GET /secondaire/2as/lp must return 404');
+			console.log('✅ 1. Visibility & curriculum routes passed (all 16 Primary + Middle + Secondary scientific tracks)');
 		}
 
-		// 2. Interactive Lessons SSR Checks (1 published lesson per grade across all 9 grades)
+		// 2. Interactive Lessons SSR Checks (1 published lesson per track across all 16 tracks)
 		{
 			const lessonStmt = contentDb.query(`
-				SELECT d.slug, d.title_ar as titleAr, y.slug as yearSlug, el.slug as levelSlug
+				SELECT d.slug, d.title_ar as titleAr, y.slug as yearSlug, el.slug as levelSlug, s.slug as subjectSlug
 				FROM documents d
 				JOIN year_subjects ys ON d.year_subject_id = ys.id
+				JOIN subjects s ON ys.subject_id = s.id
 				JOIN years y ON ys.year_id = y.id
 				JOIN education_levels el ON y.level_id = el.id
-				WHERE y.id = ? AND ys.subject_id = 'MAT-B' AND d.type = 'lesson' AND d.is_published = 1
+				WHERE ys.id = ? AND d.type = 'lesson' AND d.is_published = 1
 				ORDER BY d.id ASC
 				LIMIT 1
 			`);
 
-			for (const grade of ['1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am'] as const) {
-				const row = lessonStmt.get(grade) as {
+			for (const grade of ALL_GRADE_IDS) {
+				const ysId = GRADE_METADATA[grade].yearSubjectId;
+				const row = lessonStmt.get(ysId) as {
 					slug: string;
 					titleAr: string;
 					yearSlug: string;
 					levelSlug: string;
+					subjectSlug: string;
 				} | null;
-				assert.ok(row, `Published lesson must exist in content.db for ${grade}`);
+				assert.ok(row, `Published lesson must exist in content.db for ${grade} (ysId=${ysId})`);
 
-				const lessonUrl = `/${row.levelSlug}/${row.yearSlug}/mat-b/${row.slug}`;
+				const lessonUrl = `/${row.levelSlug}/${row.yearSlug}/${row.subjectSlug}/${row.slug}`;
 				const rLesson = await httpReq(lessonUrl);
 				assert.equal(rLesson.status, 200, `GET ${lessonUrl} must return 200`);
 				const html = await rLesson.text();
@@ -295,7 +330,7 @@ async function main() {
 				assert.ok(html.includes('2. أفهم وأتذكر'), `${lessonUrl} must include stage marker "2. أفهم وأتذكر"`);
 				assert.ok(html.includes('3. أتمرن الآن'), `${lessonUrl} must include stage marker "3. أتمرن الآن"`);
 			}
-			console.log('✅ 2. Interactive lessons SSR checks passed (all 9 grades)');
+			console.log('✅ 2. Interactive lessons SSR checks passed (all 16 tracks)');
 		}
 
 		// 3. Quizzes Pages & Deterministic Server-Side Grading
@@ -308,83 +343,98 @@ async function main() {
 				'3ap-math-t2-quiz-pack-2',
 				'5ap-math-t3-cinq-simulator',
 				'1am-math-t1-quiz-pack-1',
-				'4am-math-t3-bem-simulator'
+				'4am-math-t3-bem-simulator',
+				'1as_tcst-math-t1-quiz-pack-1',
+				'2as_math-math-t2-quiz-pack-2',
+				'3as-se-bac-simulator',
+				'3as-tm-bac-simulator',
+				'3as-math-bac-simulator'
 			];
 			for (const slug of quizSlugs) {
 				const rQuizPage = await httpReq(`/quizzes/${slug}`);
 				assert.equal(rQuizPage.status, 200, `GET /quizzes/${slug} must return 200`);
 			}
 
-			const quizRow = contentDb
-				.query("SELECT id FROM quizzes WHERE slug = '1ap-math-t1-quiz-pack-1' LIMIT 1")
-				.get() as { id: number } | null;
-			assert.ok(quizRow, 'Quiz 1ap-math-t1-quiz-pack-1 must exist in content.db');
+			for (const targetSlug of ['1ap-math-t1-quiz-pack-1', '3as-math-bac-simulator']) {
+				const quizRow = contentDb
+					.query('SELECT id FROM quizzes WHERE slug = ? LIMIT 1')
+					.get(targetSlug) as { id: number } | null;
+				assert.ok(quizRow, `Quiz ${targetSlug} must exist in content.db`);
 
-			const rawQuestions = contentDb
-				.query(
+				const rawQuestions = contentDb
+					.query(
+						`
+						SELECT qq.id, qq.question_id as questionId, qq.points, q.type, q.question_data as questionData
+						FROM quiz_questions qq
+						JOIN questions q ON qq.question_id = q.id
+						WHERE qq.quiz_id = ?
+						ORDER BY qq."order"
 					`
-					SELECT qq.id, qq.question_id as questionId, qq.points, q.type, q.question_data as questionData
-					FROM quiz_questions qq
-					JOIN questions q ON qq.question_id = q.id
-					WHERE qq.quiz_id = ?
-					ORDER BY qq."order"
-				`
-				)
-				.all(quizRow.id) as Array<{
-				id: number;
-				questionId: number;
-				points: number;
-				type: string;
-				questionData: string;
-			}>;
-			assert.ok(rawQuestions.length > 1, 'Quiz must have linked questions');
+					)
+					.all(quizRow.id) as Array<{
+					id: number;
+					questionId: number;
+					points: number;
+					type: string;
+					questionData: string;
+				}>;
+				assert.ok(rawQuestions.length > 1, `Quiz ${targetSlug} must have linked questions`);
 
-			// Answer all except the last question correctly; omit the last to verify deterministic partial score
-			const answers: Record<number, any> = {};
-			let expectedScore = 0;
-			let expectedTotal = 0;
-			for (let i = 0; i < rawQuestions.length; i++) {
-				const rq = rawQuestions[i];
-				const pts = rq.points || 1;
-				expectedTotal += pts;
-				if (i < rawQuestions.length - 1) {
-					answers[rq.id] = buildCorrectAnswer(rq.type, rq.questionData);
-					expectedScore += pts;
+				// Answer all except the last question correctly; omit the last to verify deterministic partial score
+				const answers: Record<number, any> = {};
+				let expectedScore = 0;
+				let expectedTotal = 0;
+				for (let i = 0; i < rawQuestions.length; i++) {
+					const rq = rawQuestions[i];
+					const pts = rq.points || 1;
+					expectedTotal += pts;
+					if (i < rawQuestions.length - 1) {
+						answers[rq.id] = buildCorrectAnswer(rq.type, rq.questionData);
+						expectedScore += pts;
+					}
 				}
-			}
-			const expectedPct = Math.round((expectedScore / expectedTotal) * 100);
+				const expectedPct = Math.round((expectedScore / expectedTotal) * 100);
 
-			const quizJar = new CookieJar();
-			const rSubmit = await httpReq(`/api/quizzes/${quizRow.id}/submit`, {
-				method: 'POST',
-				jar: quizJar,
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					score: 999,
-					percentage: 100,
-					timeTaken: 60,
-					answers
-				})
-			});
-			testFingerprint = quizJar.get('sujet_fp');
-			assert.equal(rSubmit.status, 200, `POST /api/quizzes/${quizRow.id}/submit must return 200`);
-			const submitJson = (await rSubmit.json()) as any;
-			assert.equal(submitJson.success, true, 'Quiz submit must return success=true');
-			assert.equal(
-				submitJson.score,
-				expectedScore,
-				`Server must deterministically grade score=${expectedScore} ignoring spoofed 999`
-			);
-			assert.equal(submitJson.totalPoints, expectedTotal);
-			assert.equal(submitJson.percentage, expectedPct);
-			assert.equal(submitJson.gradedDetails?.length, rawQuestions.length);
-			console.log('✅ 3. Quizzes routes & deterministic server grading passed');
+				const quizJar = new CookieJar();
+				const rSubmit = await httpReq(`/api/quizzes/${quizRow.id}/submit`, {
+					method: 'POST',
+					jar: quizJar,
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						score: 999,
+						percentage: 100,
+						timeTaken: 60,
+						answers
+					})
+				});
+				if (!testFingerprint) testFingerprint = quizJar.get('sujet_fp');
+				else {
+					const fp = quizJar.get('sujet_fp');
+					if (fp && fp !== testFingerprint) {
+						usersDb.query('DELETE FROM attempt_answers WHERE attempt_id IN (SELECT id FROM quiz_attempts WHERE user_id IS NULL AND fingerprint = ?)').run(fp);
+						usersDb.query('DELETE FROM quiz_attempts WHERE user_id IS NULL AND fingerprint = ?').run(fp);
+						usersDb.query('DELETE FROM user_points WHERE user_id IS NULL AND fingerprint = ?').run(fp);
+					}
+				}
+				assert.equal(rSubmit.status, 200, `POST /api/quizzes/${quizRow.id}/submit must return 200`);
+				const submitJson = (await rSubmit.json()) as any;
+				assert.equal(submitJson.success, true, 'Quiz submit must return success=true');
+				assert.equal(
+					submitJson.score,
+					expectedScore,
+					`Server must deterministically grade ${targetSlug} score=${expectedScore} ignoring spoofed 999`
+				);
+				assert.equal(submitJson.totalPoints, expectedTotal);
+				assert.equal(submitJson.percentage, expectedPct);
+				assert.equal(submitJson.gradedDetails?.length, rawQuestions.length);
+			}
+			console.log('✅ 3. Quizzes routes & deterministic server grading passed (incl. 3as-math-bac-simulator)');
 		}
 
-		// 4. Static Generated Sample PDFs across all 9 grades
+		// 4. Static Generated Sample PDFs across all 16 tracks + Official ONEC BAC PDFs (18 files)
 		{
 			const samplePdfUrls: string[] = [];
-			for (const g of ['1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am'] as const) {
+			for (const g of ALL_GRADE_IDS) {
 				samplePdfUrls.push(
 					`/documents/generated_samples/${g}/${g}-math-t1-exam-sample-1.pdf`,
 					`/documents/generated_samples/${g}/${g}-math-t1-exam-sample-1-sol.pdf`,
@@ -396,8 +446,22 @@ async function main() {
 				'/documents/generated_samples/5ap/5ap-math-t3-cinq-mock-1.pdf',
 				'/documents/generated_samples/5ap/5ap-math-t3-cinq-mock-1-sol.pdf',
 				'/documents/generated_samples/4am/4am-math-t3-bem-mock-1.pdf',
-				'/documents/generated_samples/4am/4am-math-t3-bem-mock-1-sol.pdf'
+				'/documents/generated_samples/4am/4am-math-t3-bem-mock-1-sol.pdf',
+				'/documents/generated_samples/3as_se/3as_se-math-t3-bac-mock-1.pdf',
+				'/documents/generated_samples/3as_se/3as_se-math-t3-bac-mock-1-sol.pdf',
+				'/documents/generated_samples/3as_tm/3as_tm-math-t3-bac-mock-1.pdf',
+				'/documents/generated_samples/3as_tm/3as_tm-math-t3-bac-mock-1-sol.pdf',
+				'/documents/generated_samples/3as_math/3as_math-math-t3-bac-mock-1.pdf',
+				'/documents/generated_samples/3as_math/3as_math-math-t3-bac-mock-1-sol.pdf'
 			);
+			for (const yr of ['2023', '2024', '2025'] as const) {
+				for (const stream of ['se', 'tm', 'math'] as const) {
+					samplePdfUrls.push(
+						`/documents/official_bac/3as_${stream}/bac-${yr}-3as-${stream}-math.pdf`,
+						`/documents/official_bac/3as_${stream}/bac-${yr}-3as-${stream}-math-sol.pdf`
+					);
+				}
+			}
 
 			for (const pdfUrl of samplePdfUrls) {
 				const rPdf = await httpReq(pdfUrl);
@@ -406,10 +470,10 @@ async function main() {
 				const header = new TextDecoder().decode(bytes.slice(0, 5));
 				assert.equal(header, '%PDF-', `${pdfUrl} must have valid %PDF- magic header`);
 			}
-			console.log(`✅ 4. Static sample PDFs checks passed (${samplePdfUrls.length} PDFs across all 9 grades)`);
+			console.log(`✅ 4. Static PDF checks passed (${samplePdfUrls.length} sample + official BAC PDFs across all 16 tracks)`);
 		}
 
-		// 5. Smart Generator API (mode: 'quiz' & mode: 'pdf' across primary & middle grades)
+		// 5. Smart Generator API (mode: 'quiz' & mode: 'pdf' across primary, middle & secondary tracks)
 		{
 			const activeUser = usersDb
 				.query('SELECT id FROM users WHERE is_active = 1 ORDER BY id ASC LIMIT 1')
@@ -422,10 +486,12 @@ async function main() {
 
 			const quizCases = [
 				{ grade: '1ap', yearSubjectId: 581 },
-				{ grade: '3ap', yearSubjectId: 591 },
 				{ grade: '5ap', yearSubjectId: 606 },
 				{ grade: '1am', yearSubjectId: 614 },
-				{ grade: '4am', yearSubjectId: 644 }
+				{ grade: '4am', yearSubjectId: 644 },
+				{ grade: '1as_tcst', yearSubjectId: 654 },
+				{ grade: '3as_se', yearSubjectId: 682 },
+				{ grade: '3as_math', yearSubjectId: 702 }
 			];
 
 			for (const tc of quizCases) {
@@ -447,6 +513,13 @@ async function main() {
 					Array.isArray(genQuizJson.questions) && genQuizJson.questions.length > 0,
 					`Generated quiz for ${tc.grade} must contain questions`
 				);
+				if (tc.grade === '3as_se') {
+					const raw = JSON.stringify(genQuizJson);
+					assert.ok(
+						!/بيزو|غوص|ديوفانتية|الموافقات في|التشابه المباشر|التشابهات المباشرة|فيرما/.test(raw),
+						'3AS SE generated quiz must not contain TM/MATH arithmetic or direct similitude terms'
+					);
+				}
 			}
 
 			const pdfCases: Array<{
@@ -457,10 +530,12 @@ async function main() {
 				variant?: string;
 			}> = [
 				{ grade: '1ap', yearSubjectId: 581, trimesterId: 't1', docType: 'test' },
-				{ grade: '1ap', yearSubjectId: 581, trimesterId: 't2', docType: 'exam' },
 				{ grade: '4ap', yearSubjectId: 598, trimesterId: 't1', docType: 'test' },
 				{ grade: '1am', yearSubjectId: 614, trimesterId: 't2', docType: 'test' },
-				{ grade: '4am', yearSubjectId: 644, trimesterId: 't3', docType: 'exam', variant: 'bem_mock' }
+				{ grade: '4am', yearSubjectId: 644, trimesterId: 't3', docType: 'exam', variant: 'bem_mock' },
+				{ grade: '1as_tcst', yearSubjectId: 654, trimesterId: 't1', docType: 'exam' },
+				{ grade: '2as_tm', yearSubjectId: 712, trimesterId: 't2', docType: 'exam' },
+				{ grade: '3as_math', yearSubjectId: 702, trimesterId: 't3', docType: 'exam', variant: 'bac_mock' }
 			];
 
 			for (const tc of pdfCases) {

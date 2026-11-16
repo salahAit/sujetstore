@@ -7,6 +7,8 @@ export const load: PageServerLoad = async () => {
 			`
 		SELECT
 			ys.id as yearSubjectId, ys.year_id as yearId, ys.subject_id as subjectId,
+			ys.stream_id as streamId, ys.coefficient as coefficient,
+			st.name_ar as streamName,
 			y.name_ar as yearName, y.slug as yearSlug,
 			el.id as levelId, el.name_ar as levelName,
 			s.name_ar as subjectName, s.slug as subjectSlug,
@@ -23,11 +25,12 @@ export const load: PageServerLoad = async () => {
 		JOIN years y ON ys.year_id = y.id
 		JOIN education_levels el ON y.level_id = el.id
 		JOIN subjects s ON ys.subject_id = s.id
+		LEFT JOIN streams st ON ys.stream_id = st.id
 		WHERE el.visibility = 'published'
 			AND y.visibility = 'published'
 			AND ys.visibility = 'published'
-		GROUP BY ys.year_id, ys.subject_id
-		ORDER BY el."order", y."order", s.name_ar
+		GROUP BY ys.id
+		ORDER BY el."order", y."order", ys."order", s.name_ar
 	`
 		)
 		.all();

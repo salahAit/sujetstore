@@ -1,10 +1,10 @@
 #!/usr/bin/env bun
 /**
  * Comprehensive verification harness for SujetStore MathTemplates:
- * - Check 1: All 189 Interactive Lessons (ALL_LESSONS, 9 grades x 21)
- * - Check 2: All 162 Parameterized Templates (ALL_TEMPLATES, 9 grades x 18) across seeds 1..100 (16,200 runs)
+ * - Check 1: All 336 Interactive Lessons (ALL_LESSONS, 16 tracks x 21)
+ * - Check 2: All 288 Parameterized Templates (ALL_TEMPLATES, 16 tracks x 18) across seeds 1..100 (28,800 runs)
  * - Check 3: Determinism across repeated runs at (seed=42, difficulty='medium')
- * - Check 4: Exam & test assembler smoke checks across all 9 grades + special variants
+ * - Check 4: Exam & test assembler smoke checks across all 16 tracks + special variants (incl. bac_mock)
  * - Check 5: Cleanup of newly created SVG assets in static/generated/math-svg/
  */
 
@@ -13,13 +13,14 @@ import { join, resolve } from 'node:path';
 import { Marked } from 'marked';
 import markedKatex from 'marked-katex-extension';
 import type { ContentBlock, TableCell, TrimesterId } from '../src/lib/modules/SujetBuilder/types';
-import type {
-	Difficulty,
-	GeneratedExerciseInstance,
-	GradeId,
-	InteractiveLessonData,
-	ParameterizedTemplate,
-	QuizQuestionPayload
+import {
+	ALL_GRADE_IDS,
+	type Difficulty,
+	type GeneratedExerciseInstance,
+	type GradeId,
+	type InteractiveLessonData,
+	type ParameterizedTemplate,
+	type QuizQuestionPayload
 } from '../src/lib/modules/MathTemplates/types';
 
 const REPO_ROOT = resolve(import.meta.dir, '..');
@@ -31,9 +32,12 @@ const SVG_DIR = resolve(REPO_ROOT, 'static/generated/math-svg');
 const { ALL_LESSONS, ALL_TEMPLATES } = await import('../src/lib/modules/MathTemplates/index');
 const { evaluateSafeFormula, gradeQuestion } = await import('../src/lib/server/quiz-grading');
 
-const GRADES: readonly GradeId[] = ['1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am'];
+const GRADES: readonly GradeId[] = ALL_GRADE_IDS;
 const TRIMESTERS: readonly TrimesterId[] = ['t1', 't2', 't3'];
 const DIFFICULTIES: readonly Difficulty[] = ['easy', 'medium', 'hard'];
+
+const SE_FORBIDDEN_RE = /بيزو|غوص|ديوفانتية|الموافقات في|التشابهات المباشرة|التشابه المباشر|مبرهنة فيرما/;
+const TM_FORBIDDEN_RE = /التشابهات المباشرة|التشابه المباشر|مبرهنة فيرما/;
 
 function makeZeroGradeCounts(): Record<GradeId, number> {
 	return {
@@ -45,7 +49,14 @@ function makeZeroGradeCounts(): Record<GradeId, number> {
 		'1am': 0,
 		'2am': 0,
 		'3am': 0,
-		'4am': 0
+		'4am': 0,
+		'1as_tcst': 0,
+		'2as_se': 0,
+		'2as_tm': 0,
+		'2as_math': 0,
+		'3as_se': 0,
+		'3as_tm': 0,
+		'3as_math': 0
 	};
 }
 
@@ -409,11 +420,11 @@ function validateLessons(): {
 	const byGrade: Record<string, number> = makeZeroGradeCounts();
 	const byGradeTrim = new Map<string, number>();
 
-	if (ALL_LESSONS.length !== 189) {
+	if (ALL_LESSONS.length !== 336) {
 		recordFailure({
 			check: 'lessons',
 			target: 'ALL_LESSONS',
-			reason: `Expected 189 lessons, found ${ALL_LESSONS.length}`
+			reason: `Expected 336 lessons, found ${ALL_LESSONS.length}`
 		});
 	}
 
@@ -525,6 +536,15 @@ function validateLessons(): {
 		if (EASTERN_DIGITS_RE.test(serialized)) {
 			lessonFailures.push('Contains Eastern Arabic-Indic digits');
 		}
+		if (
+			(lesson.grade === '1as_tcst' || lesson.grade === '2as_se' || lesson.grade === '3as_se') &&
+			SE_FORBIDDEN_RE.test(serialized)
+		) {
+			lessonFailures.push(`Stream isolation violation in ${lesson.grade}: forbidden TM/MATH topic detected`);
+		}
+		if (lesson.grade === '3as_tm' && TM_FORBIDDEN_RE.test(serialized)) {
+			lessonFailures.push('Stream isolation violation in 3as_tm: forbidden MATH topic detected');
+		}
 
 		if (lessonFailures.length > 0) {
 			failedLessons++;
@@ -567,11 +587,11 @@ function validateTemplateMetadata(): { total: number; byGrade: Record<string, nu
 	const byGroup = new Map<string, { total: number; integration: number; nonIntegration: number }>();
 	const seenIds = new Set<string>();
 
-	if (ALL_TEMPLATES.length !== 162) {
+	if (ALL_TEMPLATES.length !== 288) {
 		recordFailure({
 			check: 'templates_meta',
 			target: 'ALL_TEMPLATES',
-			reason: `Expected 162 templates, found ${ALL_TEMPLATES.length}`
+			reason: `Expected 288 templates, found ${ALL_TEMPLATES.length}`
 		});
 	}
 
@@ -830,6 +850,21 @@ function validateTemplatesSweep(): {
 				}
 			}
 
+			// Secondary scientific stream isolation guardrails
+			if (
+				(tpl.grade === '1as_tcst' || tpl.grade === '2as_se' || tpl.grade === '3as_se') &&
+				SE_FORBIDDEN_RE.test(serialized)
+			) {
+				runIssues.push(
+					`Stream isolation violation in ${tpl.grade}: forbidden TM/MATH topic keyword in generated instance`
+				);
+			}
+			if (tpl.grade === '3as_tm' && TM_FORBIDDEN_RE.test(serialized)) {
+				runIssues.push(
+					`Stream isolation violation in 3as_tm: forbidden MATH topic keyword in generated instance`
+				);
+			}
+
 			if (runIssues.length > 0) {
 				failedRuns++;
 				failingTemplateSet.add(tpl.id);
@@ -911,6 +946,18 @@ async function validateExamAssembler(): Promise<{ checked: number; passed: numbe
 					reason: `Points mismatch: sum=${sumPoints}, paper.totalPoints=${paper.totalPoints}, expected=${expectedTotalPoints}`
 				});
 			}
+			if (opts.grade.includes('as')) {
+				const docStr = JSON.stringify(paper.examDoc);
+				if (docStr.includes('الوضعية الإدماجية') || docStr.includes('شبكة التقييم')) {
+					failed++;
+					recordFailure({
+						check: 'assembler',
+						target: label,
+						seed: opts.seed,
+						reason: `Secondary exam (${opts.grade}) must not contain BEM/Primary rubric labels`
+					});
+				}
+			}
 		} catch (err) {
 			failed++;
 			recordFailure({
@@ -932,6 +979,9 @@ async function validateExamAssembler(): Promise<{ checked: number; passed: numbe
 	runCase('5ap:cinq_mock', { grade: '5ap', trimesterId: 't3', seed: 701, docType: 'exam', variant: 'cinq_mock', difficulty: 'medium' }, 10);
 	runCase('5ap:competency_eval', { grade: '5ap', trimesterId: 't3', seed: 801, docType: 'exam', variant: 'competency_eval', difficulty: 'medium' }, 10);
 	runCase('4am:bem_mock', { grade: '4am', trimesterId: 't3', seed: 901, docType: 'exam', variant: 'bem_mock', difficulty: 'hard' }, 20);
+	runCase('3as_se:bac_mock', { grade: '3as_se', trimesterId: 't3', seed: 901, docType: 'exam', variant: 'bac_mock', difficulty: 'hard' }, 20);
+	runCase('3as_tm:bac_mock', { grade: '3as_tm', trimesterId: 't3', seed: 901, docType: 'exam', variant: 'bac_mock', difficulty: 'hard' }, 20);
+	runCase('3as_math:bac_mock', { grade: '3as_math', trimesterId: 't3', seed: 901, docType: 'exam', variant: 'bac_mock', difficulty: 'hard' }, 20);
 
 	return { checked, passed: checked - failed, failed };
 }

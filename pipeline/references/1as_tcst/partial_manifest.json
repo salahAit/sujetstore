@@ -1,0 +1,116 @@
+{
+  "grade": "1as_tcst",
+  "documents": [
+    {
+      "id": "ref_1as_tcst_curriculum_math",
+      "grade": "1as_tcst",
+      "title_ar": "منهاج مادة الرياضيات - الجذع المشترك علوم وتكنولوجيا (وزارة التربية الوطنية - اللجنة الوطنية للمناهج)",
+      "category": "curriculum",
+      "year": "2005",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1as_tcst/01_curriculum/1as_tcst_curriculum.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=0B8KI6tIW5APTbHFCQi1JUjRYMFU"
+    },
+    {
+      "id": "ref_1as_tcst_accompanying_doc_math",
+      "grade": "1as_tcst",
+      "title_ar": "الوثيقة المرافقة لمنهاج مادة الرياضيات - الجذع المشترك علوم وتكنولوجيا (وزارة التربية الوطنية - اللجنة الوطنية للمناهج)",
+      "category": "curriculum",
+      "year": "2005",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1as_tcst/01_curriculum/1as_tcst_accompanying_doc_math.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1GSQHDCLI5-lV4PhmpHI6hvKMF6kyI2rD"
+    },
+    {
+      "id": "ref_1as_tcst_annual_progression_math",
+      "grade": "1as_tcst",
+      "title_ar": "التدرجات السنوية لمادة الرياضيات - السنة الأولى ثانوي جذع مشترك علوم وتكنولوجيا (وزارة التربية الوطنية / المفتشية العامة للتربية الوطنية - طبعة سبتمبر 2022 المعمول بها)",
+      "category": "progression",
+      "year": "2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1as_tcst/01_curriculum/1as_tcst_annual_progression_math.pdf",
+      "source_url": "https://up.educafile.com/do.php?downf=166361412767045.zip"
+    },
+    {
+      "id": "ref_1as_tcst_textbook_math_onps",
+      "grade": "1as_tcst",
+      "title_ar": "كتاب الرياضيات المدرسي الرسمي - السنة الأولى من التعليم الثانوي جذع مشترك علوم وتكنولوجيا (الديوان الوطني للمطبوعات المدرسية ONPS)",
+      "category": "textbook",
+      "year": "2020",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1as_tcst/02_textbook/1as_tcst_textbook_math_onps.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2014/books/1AS/math_scientifique_1as.pdf"
+    },
+    {
+      "id": "ref_1as_tcst_teacher_guide_math",
+      "grade": "1as_tcst",
+      "title_ar": "دليل الأستاذ وحلول تمارين الكتاب المدرسي لمادة الرياضيات - 1 ثانوي جذع مشترك علوم وتكنولوجيا (وزارة التربية الوطنية / الديوان الوطني للمطبوعات المدرسية)",
+      "category": "textbook",
+      "year": "2014",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1as_tcst/02_textbook/1as_tcst_teacher_guide_math.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2014/01/math-1as-teacherbook.pdf"
+    },
+    {
+      "id": "ref_1as_tcst_test_t1_sample_solution",
+      "grade": "1as_tcst",
+      "title_ar": "فرض محروس في الرياضيات للفصل الأول سنة أولى ثانوي جذع مشترك علوم وتكنولوجيا مع التصحيح النموذجي (ثانوية العقيد لطفي بوقطب)",
+      "category": "sample_exam",
+      "year": "2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1as_tcst/03_sample_exams/1as_tcst_test_t1_sample_solution.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/11/eddirasa.com-%D9%81%D8%B1%D8%B6-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%AB%D8%A7%D9%86%D9%88%D9%8A-%D8%AC-%D9%85-%D8%B9-%D8%B1%D9%82%D9%85-191-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD.pdf"
+    },
+    {
+      "id": "ref_1as_tcst_exam_t1_sample_solution",
+      "grade": "1as_tcst",
+      "title_ar": "اختبار الفصل الأول في مادة الرياضيات سنة أولى ثانوي جذع مشترك علوم وتكنولوجيا مع التصحيح النموذجي وسلم التنقيط المفصل",
+      "category": "sample_exam",
+      "year": "2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1as_tcst/03_sample_exams/1as_tcst_exam_t1_sample_solution.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%AB%D8%A7%D9%86%D9%88%D9%8A-%D8%AC-%D9%85-%D8%B9-%D8%B1%D9%82%D9%85-112-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_1as_tcst_test_t2_sample_solution",
+      "grade": "1as_tcst",
+      "title_ar": "فرض محروس في الرياضيات للفصل الثاني سنة أولى ثانوي جذع مشترك علوم وتكنولوجيا مع التصحيح النموذجي (مديرية التربية لولاية باتنة)",
+      "category": "sample_exam",
+      "year": "2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1as_tcst/03_sample_exams/1as_tcst_test_t2_sample_solution.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D9%81%D8%B1%D8%B6-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%AB%D8%A7%D9%86%D9%88%D9%8A-%D8%AC-%D9%85-%D8%B9-%D8%B1%D9%82%D9%85-39-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_1as_tcst_exam_t2_sample_solution",
+      "grade": "1as_tcst",
+      "title_ar": "اختبار الفصل الثاني في الرياضيات سنة أولى ثانوي جذع مشترك علوم وتكنولوجيا مع التصحيح النموذجي وسلم التنقيط الكامل (6 صفحات)",
+      "category": "sample_exam",
+      "year": "2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1as_tcst/03_sample_exams/1as_tcst_exam_t2_sample_solution.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%AB%D8%A7%D9%86%D9%88%D9%8A-%D8%AC-%D9%85-%D8%B9-%D8%B1%D9%82%D9%85-83-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_1as_tcst_test_t3_sample_solution",
+      "grade": "1as_tcst",
+      "title_ar": "فرض محروس في الرياضيات للفصل الثالث سنة أولى ثانوي جذع مشترك علوم وتكنولوجيا مع التصحيح النموذجي وسلم التنقيط",
+      "category": "sample_exam",
+      "year": "2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1as_tcst/03_sample_exams/1as_tcst_test_t3_sample_solution.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D9%81%D8%B1%D8%B6-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%AB%D8%A7%D9%86%D9%88%D9%8A-%D8%AC-%D9%85-%D8%B9-%D8%B1%D9%82%D9%85-29-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_1as_tcst_exam_t3_sample_solution",
+      "grade": "1as_tcst",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات سنة أولى ثانوي جذع مشترك علوم وتكنولوجيا مع التصحيح النموذجي المفصل (5 صفحات)",
+      "category": "sample_exam",
+      "year": "2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1as_tcst/03_sample_exams/1as_tcst_exam_t3_sample_solution.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%AB%D8%A7%D9%86%D9%88%D9%8A-%D8%AC-%D9%85-%D8%B9-%D8%B1%D9%82%D9%85-31-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    }
+  ],
+  "missing_references": []
+}

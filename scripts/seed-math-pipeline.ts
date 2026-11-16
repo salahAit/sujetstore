@@ -2,6 +2,7 @@ import { Database } from 'bun:sqlite';
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import {
+	ALL_GRADE_IDS,
 	ALL_LESSONS,
 	ALL_TEMPLATES,
 	GRADE_METADATA,
@@ -27,7 +28,27 @@ interface GeneratedManifest {
 	items: GeneratedManifestItem[];
 }
 
-const GRADES: readonly GradeId[] = ['1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am'];
+interface OfficialBacManifestItem {
+	slug: string;
+	grade: GradeId;
+	yearSubjectId: number;
+	streamId: 'SE' | 'TM' | 'MATH';
+	academicYear: string;
+	sessionAr: string;
+	coefficient: number;
+	duration: string;
+	titleAr: string;
+	pdfUrl: string;
+	solutionUrl: string;
+	fileSize: number;
+	solutionFileSize: number;
+}
+
+interface OfficialBacManifest {
+	items: OfficialBacManifestItem[];
+}
+
+const GRADES: readonly GradeId[] = ALL_GRADE_IDS;
 const TRIMESTERS: readonly TrimesterId[] = ['t1', 't2', 't3'];
 const TRIMESTER_NAMES: Record<TrimesterId, string> = {
 	t1: 'الفصل الأول',
@@ -52,7 +73,14 @@ const PACK_COUNTS_BY_GRADE: Record<GradeId, readonly [number, number, number]> =
 	'1am': [10, 10, 15],
 	'2am': [10, 10, 15],
 	'3am': [10, 10, 15],
-	'4am': [10, 10, 15]
+	'4am': [10, 10, 15],
+	'1as_tcst': [12, 12, 18],
+	'2as_se': [12, 12, 18],
+	'2as_tm': [12, 12, 18],
+	'2as_math': [12, 12, 18],
+	'3as_se': [12, 12, 18],
+	'3as_tm': [12, 12, 18],
+	'3as_math': [12, 12, 18]
 };
 
 function parseCliArgs(argv: string[]): { dbPath: string; skipExams: boolean } {
@@ -95,10 +123,26 @@ function loadGeneratedManifest(manifestPath: string): GeneratedManifest {
 	return parsed as GeneratedManifest;
 }
 
+function loadOfficialBacManifest(manifestPath: string): OfficialBacManifest {
+	if (!existsSync(manifestPath)) {
+		throw new Error(
+			`Official BAC manifest not found at ${manifestPath}. Compile official BAC archive first or pass --skip-exams.`
+		);
+	}
+	const raw = readFileSync(manifestPath, 'utf-8');
+	const parsed = JSON.parse(raw) as Partial<OfficialBacManifest>;
+	if (!parsed || !Array.isArray(parsed.items)) {
+		throw new Error(`Invalid official BAC manifest at ${manifestPath}: expected { items: [...] }`);
+	}
+	return parsed as OfficialBacManifest;
+}
+
 function main() {
 	const { dbPath, skipExams } = parseCliArgs(process.argv.slice(2));
 	const manifestPath = resolve(process.cwd(), 'pipeline/generated_exams/generated_manifest.json');
+	const officialBacManifestPath = resolve(process.cwd(), 'pipeline/official_bac/official_bac_manifest.json');
 	const manifest = skipExams ? null : loadGeneratedManifest(manifestPath);
+	const officialBacManifest = skipExams ? null : loadOfficialBacManifest(officialBacManifestPath);
 
 	const db = new Database(dbPath);
 	db.exec('PRAGMA journal_mode = WAL; PRAGMA busy_timeout = 5000; PRAGMA foreign_keys = ON;');
@@ -113,44 +157,72 @@ function main() {
 		questionsInserted: 0,
 		quizQuestionsLinked: 0,
 		bankExercisesInserted: 0,
-		examsUpserted: 0
+		examsUpserted: 0,
+		officialBacUpserted: 0
 	};
 
 	try {
 		db.exec('BEGIN');
 
-		// 1. Publish visibility for all 9 Primary (1ap..5ap) & Middle (1am..4am) grades in Mathematics (MAT-B)
-		const ALL_YEAR_IDS_SQL = "('1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am')";
-		db.exec("UPDATE education_levels SET visibility = 'published' WHERE id IN ('primaire', 'moyen')");
-		db.exec(`UPDATE years SET visibility = 'published' WHERE id IN ${ALL_YEAR_IDS_SQL}`);
-		db.exec(`UPDATE level_streams SET visibility = 'published' WHERE year_id IN ${ALL_YEAR_IDS_SQL}`);
+		// 1. Publish visibility for Primary (1ap..5ap), Middle (1am..4am) in MAT-B,
+		//    and Secondary Scientific Streams (1as_tcst, 2as/3as SE/TM/MATH) ONLY.
+		const PRIM_MID_YEARS_SQL = "('1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am')";
+		const SEC_YEARS_SQL = "('1as', '2as', '3as')";
+		db.exec("UPDATE education_levels SET visibility = 'published' WHERE id IN ('primaire', 'moyen', 'secondaire')");
+		db.exec(`UPDATE years SET visibility = 'published' WHERE id IN ('1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am', '1as', '2as', '3as')`);
+		db.exec(`UPDATE level_streams SET visibility = 'published' WHERE year_id IN ${PRIM_MID_YEARS_SQL}`);
 		db.exec(
-			`UPDATE stream_subjects SET visibility = 'published' WHERE subject_id = 'MAT-B' AND (year_id IS NULL OR year_id IN ${ALL_YEAR_IDS_SQL})`
+			`UPDATE stream_subjects SET visibility = 'published' WHERE subject_id = 'MAT-B' AND (year_id IS NULL OR year_id IN ${PRIM_MID_YEARS_SQL})`
 		);
 		db.exec(
-			`UPDATE year_subjects SET visibility = 'published' WHERE subject_id = 'MAT-B' AND year_id IN ${ALL_YEAR_IDS_SQL}`
+			`UPDATE year_subjects SET visibility = 'published' WHERE subject_id = 'MAT-B' AND year_id IN ${PRIM_MID_YEARS_SQL}`
 		);
 
-		const ysRows = db
-			.query(
-				`SELECT id, year_id FROM year_subjects WHERE subject_id = 'MAT-B' AND year_id IN ${ALL_YEAR_IDS_SQL} ORDER BY id ASC`
-			)
-			.all() as Array<{ id: number; year_id: GradeId }>;
+		db.exec(`
+			UPDATE level_streams SET visibility = 'published'
+			WHERE (year_id = '1as' AND stream_id = 'TCST')
+			   OR (year_id IN ('2as', '3as') AND stream_id IN ('SE', 'TM', 'MATH'))
+		`);
+		db.exec(`
+			UPDATE stream_subjects SET visibility = 'published',
+				coefficient = CASE subject_id
+					WHEN 'MAT-SE' THEN 5
+					WHEN 'MAT-TM' THEN 6
+					WHEN 'MAT-MATH' THEN 7
+					ELSE coefficient
+				END
+			WHERE (year_id = '1as' AND stream_id = 'TCST' AND subject_id = 'MAT-SE')
+			   OR (year_id IN ('2as', '3as') AND (
+					(stream_id = 'SE' AND subject_id = 'MAT-SE') OR
+					(stream_id = 'TM' AND subject_id = 'MAT-TM') OR
+					(stream_id = 'MATH' AND subject_id = 'MAT-MATH')
+			   ))
+		`);
+		db.exec(`
+			UPDATE year_subjects SET visibility = 'published',
+				coefficient = CASE subject_id
+					WHEN 'MAT-SE' THEN 5
+					WHEN 'MAT-TM' THEN 6
+					WHEN 'MAT-MATH' THEN 7
+					ELSE coefficient
+				END
+			WHERE id IN (654, 672, 712, 692, 682, 725, 702)
+		`);
+		void SEC_YEARS_SQL;
 
-		const ysByGrade: Record<GradeId, number> = {
-			'1ap': GRADE_METADATA['1ap'].yearSubjectId,
-			'2ap': GRADE_METADATA['2ap'].yearSubjectId,
-			'3ap': GRADE_METADATA['3ap'].yearSubjectId,
-			'4ap': GRADE_METADATA['4ap'].yearSubjectId,
-			'5ap': GRADE_METADATA['5ap'].yearSubjectId,
-			'1am': GRADE_METADATA['1am'].yearSubjectId,
-			'2am': GRADE_METADATA['2am'].yearSubjectId,
-			'3am': GRADE_METADATA['3am'].yearSubjectId,
-			'4am': GRADE_METADATA['4am'].yearSubjectId
-		};
-		for (const row of ysRows) {
-			if (GRADES.includes(row.year_id)) {
-				ysByGrade[row.year_id] = row.id;
+		const ysByGrade = Object.fromEntries(
+			GRADES.map((g) => [g, GRADE_METADATA[g].yearSubjectId])
+		) as Record<GradeId, number>;
+		const existingYsIds = new Set(
+			(
+				db
+					.query(`SELECT id FROM year_subjects WHERE id IN (${Object.values(ysByGrade).join(', ')})`)
+					.all() as Array<{ id: number }>
+			).map((r) => r.id)
+		);
+		for (const g of GRADES) {
+			if (!existingYsIds.has(ysByGrade[g])) {
+				throw new Error(`Expected year_subjects.id=${ysByGrade[g]} for grade ${g} not found in ${dbPath}`);
 			}
 		}
 		summary.yearSubjectIds = ysByGrade;
@@ -162,7 +234,7 @@ function main() {
 				year_subject_id, trimester_id, title, title_ar, slug, type, content,
 				pdf_url, solution_url, file_size, source, academic_year, has_solution,
 				difficulty, origin_type, download_count, access_tier, is_published, updated_at
-			) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, '2025/2026', ?, ?, 'exclusive', 0, 'public', 1, datetime('now'))
+			) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, 'public', 1, datetime('now'))
 		`);
 		const updateDocStmt = db.query(`
 			UPDATE documents SET
@@ -176,10 +248,10 @@ function main() {
 				solution_url = ?,
 				file_size = ?,
 				source = ?,
-				academic_year = '2025/2026',
+				academic_year = ?,
 				has_solution = ?,
 				difficulty = ?,
-				origin_type = 'exclusive',
+				origin_type = ?,
 				is_published = 1,
 				access_tier = 'public',
 				updated_at = datetime('now')
@@ -198,9 +270,13 @@ function main() {
 			solutionUrl: string | null;
 			fileSize: number;
 			source: string;
+			academicYear?: string;
+			originType?: 'exclusive' | 'official_certificate';
 			hasSolution: number;
 			difficulty: 'easy' | 'medium' | 'hard';
 		}) => {
+			const academicYear = params.academicYear ?? '2025/2026';
+			const originType = params.originType ?? 'exclusive';
 			const existing = findDocBySlug.get(params.slug) as { id: number } | null;
 			if (existing) {
 				updateDocStmt.run(
@@ -214,8 +290,10 @@ function main() {
 					params.solutionUrl,
 					params.fileSize,
 					params.source,
+					academicYear,
 					params.hasSolution,
 					params.difficulty,
+					originType,
 					existing.id
 				);
 			} else {
@@ -231,13 +309,15 @@ function main() {
 					params.solutionUrl,
 					params.fileSize,
 					params.source,
+					academicYear,
 					params.hasSolution,
-					params.difficulty
+					params.difficulty,
+					originType
 				);
 			}
 		};
 
-		// 2. Upsert 189 Interactive Lessons into documents
+		// 2. Upsert 336 Interactive Lessons into documents
 		for (const lesson of ALL_LESSONS) {
 			const serialized = JSON.stringify(lesson);
 			upsertDocument({
@@ -251,7 +331,9 @@ function main() {
 				pdfUrl: null,
 				solutionUrl: null,
 				fileSize: Buffer.byteLength(serialized, 'utf-8'),
-				source: 'منهاج الجيل الثاني — SujetStore',
+				source: lesson.grade.includes('as')
+					? 'المنهاج الرسمي للتعليم الثانوي — SujetStore'
+					: 'منهاج الجيل الثاني — SujetStore',
 				hasSolution: 0,
 				difficulty: 'medium'
 			});
@@ -284,7 +366,7 @@ function main() {
 				year_subject_id, trimester_id, title, title_ar, slug, description,
 				difficulty, time_limit, question_count, passing_score, shuffle_options,
 				show_answers, practice_mode, is_premium, is_published, access_tier, updated_at
-			) VALUES (?, ?, ?, ?, ?, ?, ?, 0, 0, 60, 0, 1, 1, 0, 1, 'public', datetime('now'))
+			) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0, 60, 0, 1, 1, 0, 1, 'public', datetime('now'))
 		`);
 		const updateQuizStmt = db.query(`
 			UPDATE quizzes SET
@@ -294,7 +376,7 @@ function main() {
 				title_ar = ?,
 				description = ?,
 				difficulty = ?,
-				time_limit = 0,
+				time_limit = ?,
 				passing_score = 60,
 				shuffle_options = 0,
 				show_answers = 1,
@@ -342,8 +424,10 @@ function main() {
 			title: string;
 			description: string;
 			difficulty: 'easy' | 'medium' | 'hard';
+			timeLimit?: number;
 			questionIds: number[];
 		}) => {
+			const timeLimit = params.timeLimit ?? 0;
 			const existingQuiz = findQuizBySlugStmt.get(params.slug) as { id: number } | null;
 			let quizId: number;
 			if (existingQuiz) {
@@ -354,6 +438,7 @@ function main() {
 					params.title,
 					params.description,
 					params.difficulty,
+					timeLimit,
 					existingQuiz.id
 				);
 				quizId = existingQuiz.id;
@@ -365,7 +450,8 @@ function main() {
 					params.title,
 					params.slug,
 					params.description,
-					params.difficulty
+					params.difficulty,
+					timeLimit
 				);
 				quizId = Number(qzRes.lastInsertRowid);
 			}
@@ -420,14 +506,15 @@ function main() {
 
 		for (const grade of GRADES) {
 			const yearSubjectId = ysByGrade[grade];
-			const yearName = GRADE_METADATA[grade].yearName;
+			const meta = GRADE_METADATA[grade];
+			const trackLabel = meta.streamName ? `${meta.yearName} (${meta.streamName})` : meta.yearName;
 			seededByGradeTrim[grade] = { t1: [], t2: [], t3: [] };
 
 			for (const trimesterId of TRIMESTERS) {
 				const trimesterAr = TRIMESTER_NAMES[trimesterId];
 				const marker = `[math_pipeline:${grade}:${trimesterId}]`;
-				const catName = `بنك تمارين الرياضيات التوليدية — ${yearName} (${trimesterAr}) ${marker}`;
-				const catDesc = `بنك الأسئلة التوليدية لمنهاج الجيل الثاني في الرياضيات — ${yearName} (${trimesterAr})`;
+				const catName = `بنك تمارين الرياضيات التوليدية — ${trackLabel} (${trimesterAr}) ${marker}`;
+				const catDesc = `بنك الأسئلة التوليدية لمنهاج الرياضيات الرسمي — ${trackLabel} (${trimesterAr})`;
 
 				const existingCat = findCategoryStmt.get(marker) as { id: number } | null;
 				let categoryId: number;
@@ -483,21 +570,23 @@ function main() {
 					{
 						packNum: 1,
 						label: 'التدريب الأساسي والتحضير للفرض',
-						desc: `حزمة التدريب الأساسي لبناء المفاهيم والتحضير للفرض — ${yearName} (${trimesterAr}).`,
+						desc: `حزمة التدريب الأساسي لبناء المفاهيم والتحضير للفرض — ${trackLabel} (${trimesterAr}).`,
 						difficulty: 'easy',
 						ids: pack1Ids
 					},
 					{
 						packNum: 2,
 						label: 'تحدي الفهم والتطبيق',
-						desc: `تمارين متوسطة لتعميق الفهم وربط المعارف — ${yearName} (${trimesterAr}).`,
+						desc: `تمارين متوسطة لتعميق الفهم وربط المعارف — ${trackLabel} (${trimesterAr}).`,
 						difficulty: 'medium',
 						ids: pack2Ids
 					},
 					{
 						packNum: 3,
 						label: 'المراجعة الشاملة للاختبار الفصلي',
-						desc: `مراجعة شاملة متدرجة نحو الاختبار الفصلي مع الوضعيات الإدماجية — ${yearName} (${trimesterAr}).`,
+						desc: grade.includes('as')
+							? `مراجعة شاملة متدرجة نحو الاختبار الفصلي مع مسائل إدماجية مركّبة — ${trackLabel} (${trimesterAr}).`
+							: `مراجعة شاملة متدرجة نحو الاختبار الفصلي مع الوضعيات الإدماجية — ${trackLabel} (${trimesterAr}).`,
 						difficulty: 'hard',
 						ids: pack3Ids
 					}
@@ -508,7 +597,7 @@ function main() {
 						yearSubjectId,
 						trimesterId,
 						slug: `${grade}-math-${trimesterId}-quiz-pack-${pd.packNum}`,
-						title: `${pd.label} — ${yearName} (${trimesterAr})`,
+						title: `${pd.label} — ${trackLabel} (${trimesterAr})`,
 						description: pd.desc,
 						difficulty: pd.difficulty,
 						questionIds: pd.ids
@@ -560,6 +649,58 @@ function main() {
 				difficulty: 'hard',
 				questionIds: bemIds
 			});
+
+			// 3 Secondary BAC Simulator Quizzes (3AS SE, TM, MATH — 20 questions each, 90 min)
+			const bacSimConfigs = [
+				{
+					grade: '3as_se' as const,
+					slug: '3as-se-bac-simulator',
+					title: 'محاكي بكالوريا الرياضيات — شعبة علوم تجريبية',
+					desc: 'محاكي تفاعلي شامل من 20 سؤالاً بمستوى امتحان البكالوريا الرسمي (الدوال الأسية واللوغاريتمية، المتتاليات، الأعداد المركبة، الاحتمالات والتكامل).'
+				},
+				{
+					grade: '3as_tm' as const,
+					slug: '3as-tm-bac-simulator',
+					title: 'محاكي بكالوريا الرياضيات — شعبة تقني رياضي',
+					desc: 'محاكي تفاعلي شامل من 20 سؤالاً بمستوى البكالوريا (التحليل، الحساب في ℤ والموافقات وبيزو وغوص، الأعداد المركبة والاحتمالات).'
+				},
+				{
+					grade: '3as_math' as const,
+					slug: '3as-math-bac-simulator',
+					title: 'محاكي بكالوريا الرياضيات — شعبة رياضيات',
+					desc: 'محاكي تفاعلي شامل من 20 سؤالاً بمستوى بكالوريا شعبة الرياضيات (التحليل، الحساب ومبرهنة فيرما، التشابهات المباشرة والتكامل والهندسة في الفضاء).'
+				}
+			];
+
+			for (const sim of bacSimConfigs) {
+				const bacIds: number[] = [];
+				for (const tid of TRIMESTERS) {
+					const hardQs = seededByGradeTrim[sim.grade][tid]
+						.filter((q) => q.seedIdx === 4)
+						.sort((a, b) => a.templateIdx - b.templateIdx);
+					for (const q of hardQs) {
+						bacIds.push(q.questionId);
+					}
+					if (tid === 't2' || tid === 't3') {
+						const extra =
+							seededByGradeTrim[sim.grade][tid].find((q) => q.seedIdx === 3 && q.templateIdx === 5) ??
+							seededByGradeTrim[sim.grade][tid].find((q) => q.seedIdx === 3);
+						if (extra && !bacIds.includes(extra.questionId)) {
+							bacIds.push(extra.questionId);
+						}
+					}
+				}
+				upsertAndLinkQuiz({
+					yearSubjectId: ysByGrade[sim.grade],
+					trimesterId: 't3',
+					slug: sim.slug,
+					title: sim.title,
+					description: sim.desc,
+					difficulty: 'hard',
+					timeLimit: 5400,
+					questionIds: bacIds
+				});
+			}
 		}
 
 		// 4. Upsert 162 bank_exercises
@@ -613,10 +754,47 @@ function main() {
 					solutionUrl: item.solutionUrl,
 					fileSize: Number(item.fileSize) || 0,
 					source: 'المولّد الآلي SujetStore',
+					academicYear: '2025/2026',
+					originType: 'exclusive',
 					hasSolution: 1,
 					difficulty: item.difficulty ?? 'medium'
 				});
 				summary.examsUpserted++;
+			}
+		}
+
+		// 5b. Upsert 9 Official ONEC BAC Papers (2023–2025) into documents
+		if (officialBacManifest) {
+			const officialSlugs = officialBacManifest.items.map((it) => it.slug);
+			if (officialSlugs.length > 0) {
+				const placeholders = officialSlugs.map(() => '?').join(', ');
+				db.query(
+					`DELETE FROM documents WHERE origin_type = 'official_certificate' AND slug NOT IN (${placeholders})`
+				).run(...officialSlugs);
+			}
+			for (const item of officialBacManifest.items) {
+				const ysId = ysByGrade[item.grade] ?? Number(item.yearSubjectId);
+				if (!ysId || !Number.isFinite(ysId)) {
+					throw new Error(`Official BAC item "${item.slug}" is missing a valid yearSubjectId`);
+				}
+				upsertDocument({
+					yearSubjectId: ysId,
+					trimesterId: 't3',
+					title: item.titleAr,
+					titleAr: item.titleAr,
+					slug: item.slug,
+					type: 'exam',
+					content: null,
+					pdfUrl: item.pdfUrl,
+					solutionUrl: item.solutionUrl,
+					fileSize: Number(item.fileSize) || 0,
+					source: 'الديوان الوطني للامتحانات والمسابقات (ONEC) — رسمي',
+					academicYear: item.academicYear,
+					originType: 'official_certificate',
+					hasSolution: 1,
+					difficulty: 'hard'
+				});
+				summary.officialBacUpserted++;
 			}
 		}
 
@@ -636,7 +814,7 @@ function main() {
 			pipelineQuizzes: (
 				db
 					.query(
-						"SELECT COUNT(*) as n FROM quizzes WHERE (slug LIKE '%-math-t_-quiz-pack-%' OR slug IN ('5ap-math-t3-cinq-simulator', '4am-math-t3-bem-simulator')) AND is_published = 1"
+						"SELECT COUNT(*) as n FROM quizzes WHERE (slug LIKE '%-math-t_-quiz-pack-%' OR slug IN ('5ap-math-t3-cinq-simulator', '4am-math-t3-bem-simulator', '3as-se-bac-simulator', '3as-tm-bac-simulator', '3as-math-bac-simulator')) AND is_published = 1"
 					)
 					.get() as { n: number }
 			).n,
@@ -648,6 +826,11 @@ function main() {
 			generatedExamsAndTests: (
 				db
 					.query("SELECT COUNT(*) as n FROM documents WHERE source = 'المولّد الآلي SujetStore'")
+					.get() as { n: number }
+			).n,
+			officialBacPapers: (
+				db
+					.query("SELECT COUNT(*) as n FROM documents WHERE origin_type = 'official_certificate' AND is_published = 1")
 					.get() as { n: number }
 			).n
 		};

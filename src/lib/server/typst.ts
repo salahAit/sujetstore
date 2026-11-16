@@ -20,13 +20,36 @@ const TYPST_MATH_WORDS = new Set([
 	'sqrt', 'root', 'abs', 'norm', 'floor', 'ceil', 'round', 'vec', 'hat', 'bar', 'tilde', 'dot', 'ddot',
 	'rightarrow', 'leftarrow', 'leftrightarrow', 'Rightarrow', 'Leftarrow', 'Leftrightarrow', 'times',
 	'div', 'approx', 'neq', 'leq', 'geq', 'in', 'notin', 'subset', 'supset', 'cup', 'cap', 'emptyset',
-	'infty', 'nabla', 'partial', 'sum', 'prod', 'int', 'oint', 'frac'
+	'infty', 'infinity', 'oo', 'nabla', 'partial', 'sum', 'prod', 'int', 'integral', 'oint', 'frac',
+	'binom', 'cases', 'mat', 'cancel', 'lr', 'overbrace', 'underbrace', 'dif', 'equiv', 'Re', 'Im',
+	'PGCD', 'PPCM', 'pgcd', 'ppcm', 'Card', 'card', 'conj', 'arrow', 'plus', 'minus', 'double',
+	'mapsto', 'to', 'implies', 'iff', 'forall', 'exists', 'over',
+	'not', 'eq', 'sect', 'union', 'inter', 'parallel', 'perp', 'degree', 'vect'
 ]);
 
 /** Sanitize math tokens inside Typst `$ ... $` expressions. */
 export function sanitizeMathInner(inner: string): string {
 	if (!inner) return inner;
-	let fixed = inner.replace(/[a-zA-Z]{2,}/g, (word: string) => {
+	let normalized = inner
+		.replace(/\\mathbb\{([RNZCQ])\}/g, 'bb($1)')
+		.replace(/\\mathcal\{([A-Z])\}/g, 'cal($1)')
+		.replace(/\\infty\b/g, 'infinity')
+		.replace(/\\equiv\b/g, 'equiv')
+		.replace(/\\neq\b/g, '!=')
+		.replace(/\\leq\b/g, '<=')
+		.replace(/\\geq\b/g, '>=')
+		.replace(/\\pm\b/g, 'plus.minus')
+		.replace(/\\mp\b/g, 'minus.plus')
+		.replace(/\\mapsto\b/g, 'arrow.r.bar')
+		.replace(/\\implies\b/g, 'arrow.r.double')
+		.replace(/\\iff\b/g, 'arrow.l.r.double')
+		.replace(/\\to\b/g, 'arrow.r')
+		.replace(/\\int\b/g, 'integral')
+		.replace(/\\det\b/g, 'det')
+		.replace(/\\vec\{([^}]+)\}/g, 'arrow($1)')
+		.replace(/\\(alpha|beta|gamma|delta|theta|lambda|mu|pi|sigma|omega|Delta|Omega)\b/g, '$1');
+
+	let fixed = normalized.replace(/[a-zA-Z]{2,}/g, (word: string) => {
 		if (TYPST_MATH_WORDS.has(word)) return word;
 		return word.split('').join(' ');
 	});

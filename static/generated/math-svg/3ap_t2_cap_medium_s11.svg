@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 140" width="340" height="140" style="background:#ffffff;font-family:Arial,sans-serif">
+<rect x="6" y="6" width="328" height="128" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="46" y="24" width="90" height="92" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<rect x="49" y="46" width="84" height="67" rx="5" fill="#38bdf8" opacity="0.45"/>
+<text x="91" y="84" text-anchor="middle" font-size="16" font-weight="bold" fill="#0c4a6e" direction="ltr">6 L</text>
+<text x="170" y="76" text-anchor="middle" font-size="22" font-weight="bold" fill="#0f172a">+</text>
+<rect x="204" y="46" width="86" height="70" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<rect x="207" y="64" width="80" height="49" rx="5" fill="#38bdf8" opacity="0.45"/>
+<text x="247" y="94" text-anchor="middle" font-size="15" font-weight="bold" fill="#0c4a6e" direction="ltr">15 cL</text>
+</svg>

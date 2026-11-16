@@ -54,6 +54,7 @@
 	let filterSource = $state('all');
 	let filterYear = $state('all');
 	let filterHasSolution = $state(false);
+	let filterOfficialArchiveOnly = $state(false);
 
 	// Combine documents and quizzes into a single activities array (only for subject mode)
 	let allActivities = $derived(
@@ -63,6 +64,11 @@
 					...data.quizzes.map((q: any) => ({ ...q, _itemType: 'quiz', type: 'interactive_quiz' }))
 				]
 			: []
+	);
+
+	let hasOfficialArchiveDocs = $derived(
+		data.mode === 'subject' &&
+			data.documents.some((d: any) => d.origin_type === 'official_certificate')
 	);
 
 	// Reactive filtered documents
@@ -75,6 +81,10 @@
 				d.trimesterId === activeTrimesterTab ||
 				d.trimesterId === null
 		);
+
+		if (filterOfficialArchiveOnly) {
+			docs = docs.filter((d: any) => d.origin_type === 'official_certificate');
+		}
 
 		if (filterType !== 'all') {
 			if (filterType === 'lesson_summary') {
@@ -223,6 +233,14 @@
 				>{data.year.name_ar}</a
 			>
 			<span class="opacity-50">/</span>
+			{#if data.mode === 'subject' && data.streamInfo}
+				<a
+					href="/{data.level.slug}/{data.year.slug}/{data.streamInfo.id.toLowerCase()}"
+					class="hover:text-foreground transition-colors"
+					>{data.streamInfo.name_ar}</a
+				>
+				<span class="opacity-50">/</span>
+			{/if}
 			<span class="text-foreground font-semibold">
 				{data.mode === 'stream' ? data.stream.name_ar : data.subject.name_ar}
 			</span>
@@ -291,13 +309,25 @@
 									<h3 class="group-hover:text-primary truncate text-lg font-bold transition-colors">
 										{subject.name_ar}
 									</h3>
-									<div
-										class="flex items-center gap-1.5 rounded-lg bg-black/5 px-2 py-1 dark:bg-white/5"
-									>
-										<span class="text-sm font-bold" style="color: {subject.color}"
-											>{subject.docCount}</span
+									<div class="flex flex-wrap items-center gap-1.5">
+										<div
+											class="flex items-center gap-1 rounded-lg bg-black/5 px-2 py-1 dark:bg-white/5"
 										>
-										<span class="text-muted-foreground text-[10px]">وثيقة</span>
+											<span class="text-sm font-bold" style="color: {subject.color}"
+												>{subject.docCount}</span
+											>
+											<span class="text-muted-foreground text-[10px]">وثيقة</span>
+										</div>
+										{#if subject.quizCount > 0}
+											<div
+												class="flex items-center gap-1 rounded-lg bg-emerald-500/10 px-2 py-1"
+											>
+												<span class="text-sm font-bold text-emerald-400"
+													>{subject.quizCount}</span
+												>
+												<span class="text-muted-foreground text-[10px]">تمرين</span>
+											</div>
+										{/if}
 									</div>
 								</div>
 								<p class="text-muted-foreground text-sm">{subject.name_fr}</p>
@@ -339,7 +369,17 @@
 				</div>
 				<div class="text-center sm:text-right">
 					<h1 class="text-3xl font-extrabold lg:text-4xl">{data.subject.name_ar}</h1>
-					<p class="text-muted-foreground">{data.year.name_ar}</p>
+					<p class="text-muted-foreground">
+						{data.year.name_ar}
+						{#if data.streamInfo}
+							— شعبة {data.streamInfo.name_ar}
+							{#if data.yearSubject?.coefficient}
+								<span class="mr-2 inline-block rounded-full bg-blue-500/15 px-2.5 py-0.5 text-xs font-bold text-blue-400">
+									المعامل: {data.yearSubject.coefficient}
+								</span>
+							{/if}
+						{/if}
+					</p>
 				</div>
 			</div>
 
@@ -435,10 +475,24 @@
 						class="bg-background text-foreground hover:bg-accent hover:text-accent-foreground focus:ring-ring w-full rounded-md border px-4 py-2 text-sm font-medium transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none sm:w-auto"
 					>
 						<option value="all">السنة: الكل</option>
+						<option value="2025/2026">2025/2026</option>
+						<option value="2025">2025</option>
 						<option value="2024">2024</option>
 						<option value="2023">2023</option>
 						<option value="2022">2022</option>
 					</select>
+
+					{#if hasOfficialArchiveDocs}
+						<button
+							type="button"
+							onclick={() => (filterOfficialArchiveOnly = !filterOfficialArchiveOnly)}
+							class="rounded-md border px-3 py-2 text-xs font-bold transition-colors {filterOfficialArchiveOnly
+								? 'border-amber-500 bg-amber-500/20 text-amber-300'
+								: 'border-amber-500/30 bg-amber-500/10 text-amber-400 hover:bg-amber-500/20'}"
+						>
+							أرشيف البكالوريا الرسمي (ONEC)
+						</button>
+					{/if}
 
 					<!-- Has Solution Toggle -->
 					<label

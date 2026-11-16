@@ -23,6 +23,29 @@
 		}
 	});
 
+	let selectedYsObj = $derived(
+		data.yearSubjects.find((ys: any) => ys.yearSubjectId === selectedYsId)
+	);
+
+	const SECONDARY_COEFFS: Record<string, number> = {
+		'1as:MAT-SE:TCST': 5,
+		'2as:MAT-SE:SE': 5,
+		'2as:MAT-TM:TM': 6,
+		'2as:MAT-MATH:MATH': 7,
+		'3as:MAT-SE:SE': 5,
+		'3as:MAT-TM:TM': 6,
+		'3as:MAT-MATH:MATH': 7
+	};
+
+	function formatYsLabel(ys: any): string {
+		if (ys.streamName && ys.streamId !== 'GEN') {
+			const coeff = ys.coefficient ?? SECONDARY_COEFFS[`${ys.yearId}:${ys.subjectId}:${ys.streamId}`];
+			const coeffPart = coeff ? ` (معامل ${coeff})` : '';
+			return `${ys.yearName} — ${ys.streamName} — ${ys.subjectName}${coeffPart}`;
+		}
+		return `${ys.yearName} — ${ys.subjectName}`;
+	}
+
 	// Quiz mode options
 	let difficulty = $state<'all' | 'easy' | 'medium' | 'hard'>('all');
 	let questionCount = $state(5);
@@ -34,6 +57,7 @@
 	let docType = $state<'exam' | 'test'>('exam');
 	let pdfDifficulty = $state<'easy' | 'medium' | 'hard'>('medium');
 	let exerciseCount = $state(2);
+	let pdfVariant = $state<'trimester_exam' | 'bac_mock'>('trimester_exam');
 	let generatingPdf = $state(false);
 	let pdfResult = $state<{ pdfUrl: string; solutionUrl: string; title: string } | null>(null);
 
@@ -86,17 +110,19 @@
 		errorMsg = null;
 		pdfResult = null;
 		try {
+			const payload: Record<string, any> = {
+				mode: 'pdf',
+				yearSubjectId: selectedYsId,
+				trimesterId,
+				docType,
+				difficulty: pdfDifficulty,
+				exerciseCount,
+				...(selectedYsObj?.yearId === '3as' ? { variant: pdfVariant } : {})
+			};
 			const res = await fetch('/api/generator', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					mode: 'pdf',
-					yearSubjectId: selectedYsId,
-					trimesterId,
-					docType,
-					difficulty: pdfDifficulty,
-					exerciseCount
-				})
+				body: JSON.stringify(payload)
 			});
 			const out = await res.json();
 			if (!res.ok) throw new Error(out.error || 'تعذر توليد ملف PDF');
@@ -188,7 +214,7 @@
 						>
 							{#each data.yearSubjects as ys}
 								<option value={ys.yearSubjectId}>
-									{ys.yearName} — {ys.subjectName}
+									{formatYsLabel(ys)}
 								</option>
 							{/each}
 						</select>
@@ -235,7 +261,7 @@
 					{/if}
 				</button>
 			{:else}
-				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 {selectedYsObj?.yearId === '3as' ? 'lg:grid-cols-3 xl:grid-cols-6' : 'lg:grid-cols-5'}">
 					<div>
 						<label for="gen-ys-pdf" class="mb-1.5 block text-xs font-bold">السنة والمادة</label>
 						<select
@@ -245,11 +271,25 @@
 						>
 							{#each data.yearSubjects as ys}
 								<option value={ys.yearSubjectId}>
-									{ys.yearName} — {ys.subjectName}
+									{formatYsLabel(ys)}
 								</option>
 							{/each}
 						</select>
 					</div>
+
+					{#if selectedYsObj?.yearId === '3as'}
+						<div>
+							<label for="gen-pdf-variant" class="mb-1.5 block text-xs font-bold">صيغة الامتحان</label>
+							<select
+								id="gen-pdf-variant"
+								bind:value={pdfVariant}
+								class="bg-background w-full rounded-xl border px-3 py-2.5 text-sm outline-none focus:border-blue-500"
+							>
+								<option value="trimester_exam">اختبار فصلي عادي</option>
+								<option value="bac_mock">بكالوريا تجريبية (ONEC)</option>
+							</select>
+						</div>
+					{/if}
 
 					<div>
 						<label for="gen-trim" class="mb-1.5 block text-xs font-bold">الفصل الدراسي</label>

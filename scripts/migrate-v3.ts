@@ -47,22 +47,50 @@ async function migrateContentDb() {
 		CREATE INDEX IF NOT EXISTS idx_ss_stream_sub ON stream_subjects(stream_id, subject_id);
 	`);
 
-	// 3. Configure initial visibility: ONLY Middle School (moyen, 1am-4am) -> Mathematics (MAT-B) published!
+	// 3. Configure visibility across Primary (1ap-5ap), Middle (1am-4am), and Secondary Scientific Streams (1as-3as)
 	db.exec('BEGIN');
 	try {
-		db.exec("UPDATE education_levels SET visibility = CASE WHEN id = 'moyen' THEN 'published' ELSE 'hidden' END");
 		db.exec(
-			"UPDATE years SET visibility = CASE WHEN id IN ('1am', '2am', '3am', '4am') THEN 'published' ELSE 'hidden' END"
+			"UPDATE education_levels SET visibility = CASE WHEN id IN ('primaire', 'moyen', 'secondaire') THEN 'published' ELSE 'hidden' END"
 		);
 		db.exec(
-			"UPDATE level_streams SET visibility = CASE WHEN year_id IN ('1am', '2am', '3am', '4am') THEN 'published' ELSE 'hidden' END"
+			"UPDATE years SET visibility = CASE WHEN id IN ('1ap','2ap','3ap','4ap','5ap','1am','2am','3am','4am','1as','2as','3as') THEN 'published' ELSE 'hidden' END"
 		);
 		db.exec(
-			"UPDATE stream_subjects SET visibility = CASE WHEN subject_id = 'MAT-B' AND (year_id IS NULL OR year_id IN ('1am', '2am', '3am', '4am')) THEN 'published' ELSE 'hidden' END"
+			`UPDATE level_streams SET visibility = CASE
+				WHEN year_id IN ('1ap','2ap','3ap','4ap','5ap','1am','2am','3am','4am') AND stream_id = 'GEN' THEN 'published'
+				WHEN year_id = '1as' AND stream_id = 'TCST' THEN 'published'
+				WHEN year_id IN ('2as','3as') AND stream_id IN ('SE','TM','MATH') THEN 'published'
+				ELSE 'hidden'
+			END`
 		);
 		db.exec(
-			"UPDATE year_subjects SET visibility = CASE WHEN year_id IN ('1am', '2am', '3am', '4am') AND subject_id = 'MAT-B' THEN 'published' ELSE 'hidden' END"
+			`UPDATE stream_subjects SET visibility = CASE
+				WHEN subject_id = 'MAT-B' AND (year_id IS NULL OR year_id IN ('1ap','2ap','3ap','4ap','5ap','1am','2am','3am','4am')) THEN 'published'
+				WHEN year_id = '1as' AND stream_id = 'TCST' AND subject_id = 'MAT-SE' THEN 'published'
+				WHEN year_id IN ('2as','3as') AND stream_id = 'SE' AND subject_id = 'MAT-SE' THEN 'published'
+				WHEN year_id IN ('2as','3as') AND stream_id = 'TM' AND subject_id = 'MAT-TM' THEN 'published'
+				WHEN year_id IN ('2as','3as') AND stream_id = 'MATH' AND subject_id = 'MAT-MATH' THEN 'published'
+				ELSE 'hidden'
+			END`
 		);
+		db.exec(
+			`UPDATE year_subjects SET visibility = CASE
+				WHEN year_id IN ('1ap','2ap','3ap','4ap','5ap','1am','2am','3am','4am') AND subject_id = 'MAT-B' THEN 'published'
+				WHEN year_id = '1as' AND stream_id = 'TCST' AND subject_id = 'MAT-SE' THEN 'published'
+				WHEN year_id IN ('2as','3as') AND stream_id = 'SE' AND subject_id = 'MAT-SE' THEN 'published'
+				WHEN year_id IN ('2as','3as') AND stream_id = 'TM' AND subject_id = 'MAT-TM' THEN 'published'
+				WHEN year_id IN ('2as','3as') AND stream_id = 'MATH' AND subject_id = 'MAT-MATH' THEN 'published'
+				ELSE 'hidden'
+			END`
+		);
+		// Sync official Algerian secondary math coefficients (5/6/7)
+		db.exec("UPDATE stream_subjects SET coefficient = 5 WHERE subject_id = 'MAT-SE' AND stream_id IN ('TCST', 'SE')");
+		db.exec("UPDATE stream_subjects SET coefficient = 6 WHERE subject_id = 'MAT-TM' AND stream_id = 'TM'");
+		db.exec("UPDATE stream_subjects SET coefficient = 7 WHERE subject_id = 'MAT-MATH' AND stream_id = 'MATH'");
+		db.exec("UPDATE year_subjects SET coefficient = 5 WHERE subject_id = 'MAT-SE' AND stream_id IN ('TCST', 'SE')");
+		db.exec("UPDATE year_subjects SET coefficient = 6 WHERE subject_id = 'MAT-TM' AND stream_id = 'TM'");
+		db.exec("UPDATE year_subjects SET coefficient = 7 WHERE subject_id = 'MAT-MATH' AND stream_id = 'MATH'");
 
 		// Sync access_tier from legacy is_premium
 		db.exec("UPDATE quizzes SET access_tier = 'premium' WHERE is_premium = 1 AND access_tier = 'public'");

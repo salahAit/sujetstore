@@ -86,13 +86,15 @@ export const POST: RequestHandler = async (event) => {
 	const ys = contentSqlite
 		.query(
 			`
-		SELECT ys.id, ys.year_id, ys.subject_id,
+		SELECT ys.id, ys.year_id, ys.subject_id, ys.stream_id, ys.coefficient,
+			st.name_ar as stream_name,
 			y.name_ar as year_name, el.id as level_id, el.name_ar as level_name,
 			s.name_ar as subject_name
 		FROM year_subjects ys
 		JOIN years y ON ys.year_id = y.id
 		JOIN education_levels el ON y.level_id = el.id
 		JOIN subjects s ON ys.subject_id = s.id
+		LEFT JOIN streams st ON ys.stream_id = st.id
 		WHERE ys.id = ?
 			AND el.visibility = 'published'
 			AND y.visibility = 'published'
@@ -111,9 +113,9 @@ export const POST: RequestHandler = async (event) => {
 		const diff = ['easy', 'medium', 'hard'].includes(body.difficulty) ? body.difficulty : null;
 
 		const diffFilter = diff ? 'AND q.difficulty = ?' : '';
-		const paramsWithDiff: any[] = diff ? [ys.year_id, ys.subject_id, diff, count] : [ys.year_id, ys.subject_id, count];
+		const exactParams: any[] = diff ? [ys.id, diff, count] : [ys.id, count];
 
-		// 1. Pick from question categories linked to this year+subject
+		// 1. Pick strictly from question categories linked to this exact year_subject_id (ys.id)
 		let rows = contentSqlite
 			.query(
 				`
@@ -122,19 +124,16 @@ export const POST: RequestHandler = async (event) => {
 				q.image_caption as imageCaption, q.question_data as questionData, q.explanation
 			FROM questions q
 			JOIN question_categories qc ON q.category_id = qc.id
-			JOIN year_subjects ys2 ON qc.year_subject_id = ys2.id
-			WHERE ys2.year_id = ? AND ys2.subject_id = ? ${diffFilter}
+			WHERE qc.year_subject_id = ? ${diffFilter}
 			ORDER BY RANDOM()
 			LIMIT ?
 		`
 			)
-			.all(...paramsWithDiff) as any[];
+			.all(...exactParams) as any[];
 
-		// 2. Fallback to questions attached to quizzes of this subject/year
+		// 2. Fallback to questions attached to quizzes of this exact year_subject_id (ys.id)
 		if (rows.length === 0) {
-			const fallbackParams: any[] = diff
-				? [ys.year_id, ys.subject_id, diff, count]
-				: [ys.year_id, ys.subject_id, count];
+			const exactQuizParams: any[] = diff ? [ys.id, diff, count] : [ys.id, count];
 			rows = contentSqlite
 				.query(
 					`
@@ -144,17 +143,27 @@ export const POST: RequestHandler = async (event) => {
 				FROM questions q
 				JOIN quiz_questions qq ON qq.question_id = q.id
 				JOIN quizzes qz ON qq.quiz_id = qz.id
-				JOIN year_subjects ys2 ON qz.year_subject_id = ys2.id
-				WHERE ys2.year_id = ? AND ys2.subject_id = ? ${diffFilter}
+				WHERE qz.year_subject_id = ? ${diffFilter}
 				ORDER BY RANDOM()
 				LIMIT ?
 			`
 				)
-				.all(...fallbackParams) as any[];
+				.all(...exactQuizParams) as any[];
 		}
 
-		// 3. Fallback across same subject (ignoring year/diff if needed)
+		// 3. Fallback across matching (ys2.year_id, ys2.subject_id, ys2.stream_id) if ys.id returned 0
 		if (rows.length === 0) {
+			const streamClause = ys.stream_id
+				? 'AND ys2.stream_id = ?'
+				: 'AND (ys2.stream_id IS NULL OR ys2.stream_id = "")';
+			const fallbackParams: any[] = diff
+				? (ys.stream_id
+						? [ys.year_id, ys.subject_id, ys.stream_id, diff, count]
+						: [ys.year_id, ys.subject_id, diff, count])
+				: (ys.stream_id
+						? [ys.year_id, ys.subject_id, ys.stream_id, count]
+						: [ys.year_id, ys.subject_id, count]);
+
 			rows = contentSqlite
 				.query(
 					`
@@ -164,12 +173,31 @@ export const POST: RequestHandler = async (event) => {
 				FROM questions q
 				JOIN question_categories qc ON q.category_id = qc.id
 				JOIN year_subjects ys2 ON qc.year_subject_id = ys2.id
-				WHERE ys2.subject_id = ?
+				WHERE ys2.year_id = ? AND ys2.subject_id = ? ${streamClause} ${diffFilter}
 				ORDER BY RANDOM()
 				LIMIT ?
 			`
 				)
-				.all(ys.subject_id, count) as any[];
+				.all(...fallbackParams) as any[];
+
+			if (rows.length === 0) {
+				rows = contentSqlite
+					.query(
+						`
+					SELECT DISTINCT q.id, q.type, q.difficulty, q.question_text as questionText,
+						q.question_text_ar as questionTextAr, q.image_url as imageUrl,
+						q.image_caption as imageCaption, q.question_data as questionData, q.explanation
+					FROM questions q
+					JOIN quiz_questions qq ON qq.question_id = q.id
+					JOIN quizzes qz ON qq.quiz_id = qz.id
+					JOIN year_subjects ys2 ON qz.year_subject_id = ys2.id
+					WHERE ys2.year_id = ? AND ys2.subject_id = ? ${streamClause} ${diffFilter}
+					ORDER BY RANDOM()
+					LIMIT ?
+				`
+					)
+					.all(...fallbackParams) as any[];
+			}
 		}
 
 		if (rows.length === 0) {
@@ -194,11 +222,16 @@ export const POST: RequestHandler = async (event) => {
 			};
 		});
 
+		const hasStream = Boolean(ys.stream_name && ys.stream_id && ys.stream_id !== 'GEN');
+		const streamPart = hasStream ? ` — ${ys.stream_name}` : '';
+
 		return json({
 			quiz: {
 				id: 0,
-				title: `تمرين مخصّص — ${ys.subject_name}`,
-				titleAr: `تمرين ذكي مخصّص — ${ys.year_name} (${ys.subject_name})`,
+				title: hasStream
+					? `تمرين مخصّص — ${ys.stream_name} (${ys.subject_name})`
+					: `تمرين مخصّص — ${ys.subject_name}`,
+				titleAr: `تمرين ذكي مخصّص — ${ys.year_name}${streamPart} (${ys.subject_name})`,
 				description: `تم توليده تلقائياً من ${questions.length} أسئلة`,
 				timeLimit: 0,
 				passingScore: 60,
@@ -211,7 +244,7 @@ export const POST: RequestHandler = async (event) => {
 	}
 
 	if (mode === 'pdf') {
-		const pipelineGrade = yearSubjectToGrade(ys.year_id, ys.subject_id);
+		const pipelineGrade = yearSubjectToGrade(ys.year_id, ys.subject_id, ys.stream_id);
 		if (pipelineGrade !== null) {
 			const trimesterId = (['t1', 't2', 't3'].includes(body.trimesterId)
 				? body.trimesterId
@@ -221,9 +254,14 @@ export const POST: RequestHandler = async (event) => {
 				? body.difficulty
 				: 'medium') as 'easy' | 'medium' | 'hard';
 			const variant = (
-				['trimester_exam', 'supervised_test', 'cinq_mock', 'competency_eval', 'bem_mock'].includes(
-					body.variant
-				)
+				[
+					'trimester_exam',
+					'supervised_test',
+					'cinq_mock',
+					'competency_eval',
+					'bem_mock',
+					'bac_mock'
+				].includes(body.variant)
 					? body.variant
 					: undefined
 			) as AssembleExamOptions['variant'];
@@ -256,15 +294,20 @@ export const POST: RequestHandler = async (event) => {
 			}
 
 			const docLabel =
-				paper.docType === 'test'
-					? paper.grade.endsWith('ap')
-						? 'تقويم مرحلي'
-						: 'فرض محروس'
-					: 'اختبار';
+				paper.variant === 'bac_mock' || variant === 'bac_mock'
+					? 'بكالوريا تجريبية'
+					: paper.docType === 'test'
+						? paper.grade.endsWith('ap')
+							? 'تقويم مرحلي'
+							: 'فرض محروس'
+						: 'اختبار';
+
+			const hasStream = Boolean(ys.stream_name && ys.stream_id && ys.stream_id !== 'GEN');
+			const streamPart = hasStream ? ` — ${ys.stream_name}` : '';
 
 			return json({
 				success: true,
-				title: `${docLabel} مقترح — ${ys.year_name} (${ys.subject_name}) [البذرة #${seed}]`,
+				title: `${docLabel} مقترح — ${ys.year_name}${streamPart} (${ys.subject_name}) [البذرة #${seed}]`,
 				seed,
 				totalPoints: paper.totalPoints,
 				pdfUrl: `/uploads/sujet/${fileId}.pdf`,
@@ -323,6 +366,8 @@ export const POST: RequestHandler = async (event) => {
 				levelId: ys.level_id,
 				yearId: ys.year_id,
 				yearName: ys.year_name,
+				streamId: ys.stream_id,
+				streamName: ys.stream_name,
 				subjectId: ys.subject_id,
 				subjectName: ys.subject_name,
 				trimesterId,
@@ -363,9 +408,12 @@ export const POST: RequestHandler = async (event) => {
 			return json({ error: `تعذر توليد ملف PDF: ${subjRes.error}` }, { status: 500 });
 		}
 
+		const hasStream = Boolean(ys.stream_name && ys.stream_id && ys.stream_id !== 'GEN');
+		const streamPart = hasStream ? ` — ${ys.stream_name}` : '';
+
 		return json({
 			success: true,
-			title: `${docType === 'test' ? 'فرض' : 'اختبار'} مقترح — ${ys.year_name} (${ys.subject_name})`,
+			title: `${docType === 'test' ? 'فرض' : 'اختبار'} مقترح — ${ys.year_name}${streamPart} (${ys.subject_name})`,
 			pdfUrl: `/uploads/sujet/${fileId}.pdf`,
 			solutionUrl: solRes.success ? `/uploads/sujet/${fileId}-sol.pdf` : `/uploads/sujet/${fileId}.pdf`
 		});

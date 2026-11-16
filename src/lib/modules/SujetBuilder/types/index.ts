@@ -22,7 +22,9 @@ export type TemplateId =
 	| 'middle/solution'
 	| 'secondary/quiz'
 	| 'secondary/exam'
-	| 'secondary/solution';
+	| 'secondary/solution'
+	| 'secondary/bac_official'
+	| 'secondary/lycee_exam';
 
 /**
  * Exam metadata — injected into the Typst header.
@@ -44,6 +46,9 @@ export interface ExamMetadata {
 	siteUrl: string;
 	font?: string;
 	customDocTitle?: string;
+	coefficient?: number;
+	examSessionAr?: string;
+	topicNumber?: 1 | 2;
 }
 
 // --- Content Blocks (all exercise patterns for 1AM مادة الرياضيات) ---

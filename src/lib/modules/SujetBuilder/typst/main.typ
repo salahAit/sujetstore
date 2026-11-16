@@ -2,6 +2,8 @@
 // يتلقى template-id و data من sys.inputs
 
 #import "common/template.typ": official-template
+#import "templates/secondary/bac_official.typ": bac-official-template
+#import "templates/secondary/lycee_exam.typ": lycee-exam-template
 
 #let template-id = sys.inputs.at("template-id", default: "middle/quiz")
 #let raw-data = sys.inputs.at("data", default: "{}")
@@ -15,5 +17,10 @@
 #let is-solution-input = sys.inputs.at("is-solution", default: "false") == "true"
 #let is-solution = is-solution-input or template-id.ends-with("_solution") or template-id.ends-with("/solution")
 
-// Use the unified official template for all levels
-#official-template(data, is-solution: is-solution)
+#if template-id == "secondary/bac_official" [
+  #bac-official-template(data, is-solution: is-solution)
+] else if template-id == "secondary/lycee_exam" or template-id == "secondary/exam" or template-id == "secondary/quiz" or template-id == "secondary/solution" [
+  #lycee-exam-template(data, is-solution: is-solution)
+] else [
+  #official-template(data, is-solution: is-solution)
+]

@@ -704,3 +704,5 @@ export function svgCartesianPlane(opts: {
 
 	return wrapSvg(w, h, parts.join(''));
 }
+
+export * from './svg-secondary';

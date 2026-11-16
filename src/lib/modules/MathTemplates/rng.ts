@@ -80,6 +80,33 @@ export function roundTo(value: number, decimals: number): number {
 	return Math.round((value + Number.EPSILON) * factor) / factor;
 }
 
+/**
+ * Perturb a numeric literal inside a math/KaTeX option without touching
+ * exponents (^n), subscripts (_n), or TeX command prefixes.
+ */
+function perturbNumberInOptionText(text: string, bump: number): string | null {
+	const tokenRe = /(?<![a-zA-Z0-9_.^\\])(-?\d+(?:\.\d+)?)(?![a-zA-Z0-9_.])/g;
+	const matches: Array<{ index: number; raw: string; val: number }> = [];
+	let m: RegExpExecArray | null;
+	while ((m = tokenRe.exec(text)) !== null) {
+		const num = Number(m[1]);
+		if (Number.isFinite(num)) {
+			matches.push({ index: m.index, raw: m[1], val: num });
+		}
+	}
+	if (matches.length === 0) return null;
+	const chosen = matches[matches.length - 1];
+	let nextVal = roundTo(chosen.val + bump, 2);
+	if (chosen.index > 0 && text[chosen.index - 1] === '{' && nextVal === 0) {
+		nextVal = bump > 0 ? bump + 1 : bump - 1;
+	}
+	return (
+		text.slice(0, chosen.index) +
+		String(nextVal) +
+		text.slice(chosen.index + chosen.raw.length)
+	);
+}
+
 /** Ensures all MCQ options are unique strings and returns updated correctIndex. */
 export function buildUniqueMcqOptions(
 	correctText: string,
@@ -101,9 +128,18 @@ export function buildUniqueMcqOptions(
 	}
 	// Safety fallback if numeric distractors collided
 	let bump = 1;
-	while (uniqueDistractors.length < 3) {
-		const num = Number(correctText);
-		const candidate = Number.isFinite(num) ? String(roundTo(num + bump, 2)) : `${correctText} (${bump})`;
+	let guard = 0;
+	while (uniqueDistractors.length < 3 && guard < 40) {
+		guard++;
+		const trimmed = correctText.trim();
+		const num = Number(trimmed);
+		let candidate: string;
+		if (Number.isFinite(num)) {
+			candidate = String(roundTo(num + bump, 2));
+		} else {
+			const perturbed = perturbNumberInOptionText(trimmed, bump);
+			candidate = perturbed && !seen.has(perturbed) ? perturbed : `${trimmed} + ${Math.abs(bump)}`;
+		}
 		if (!seen.has(candidate)) {
 			seen.add(candidate);
 			uniqueDistractors.push({

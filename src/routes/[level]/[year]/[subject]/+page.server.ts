@@ -33,7 +33,7 @@ export const load: PageServerLoad = async ({ params, url, locals }) => {
 		const subjects = db
 			.query(
 				`
-			SELECT s.*, ss.coefficient, ss.order as sort_order,
+			SELECT s.*, ss.coefficient, ss."order" as sort_order,
 				(
 					SELECT COUNT(d.id) FROM documents d
 					JOIN year_subjects ys ON d.year_subject_id = ys.id
@@ -92,6 +92,10 @@ export const load: PageServerLoad = async ({ params, url, locals }) => {
 	const ysIds = yearSubjectRows.map((r) => r.id);
 	const placeholders = ysIds.map(() => '?').join(',');
 	const primaryYearSubject = yearSubjectRows[0];
+	const resolvedStreamId = streamParam || (primaryYearSubject.stream_id && primaryYearSubject.stream_id !== 'GEN' ? primaryYearSubject.stream_id : null);
+	const streamInfo = resolvedStreamId
+		? (db.query('SELECT * FROM streams WHERE LOWER(id) = LOWER(?) LIMIT 1').get(resolvedStreamId) as any)
+		: null;
 
 	const trimesters = db.query('SELECT * FROM trimesters ORDER BY "order"').all();
 
@@ -149,6 +153,7 @@ export const load: PageServerLoad = async ({ params, url, locals }) => {
 		subject,
 		yearSubject: primaryYearSubject,
 		streamFilter: streamParam,
+		streamInfo,
 		trimesters,
 		documents,
 		quizzes,

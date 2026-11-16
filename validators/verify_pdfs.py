@@ -148,7 +148,12 @@ def merge_manifests() -> int:
         "total_verified": len(all_docs),
         "counts_by_grade": {
             g: sum(1 for d in all_docs if d["grade"] == g)
-            for g in ("1ap", "2ap", "3ap", "4ap", "5ap", "1am", "2am", "3am", "4am")
+            for g in (
+                "1ap", "2ap", "3ap", "4ap", "5ap",
+                "1am", "2am", "3am", "4am",
+                "1as_tcst", "2as_se", "2as_tm", "2as_math",
+                "3as_se", "3as_tm", "3as_math",
+            )
         },
         "documents": all_docs,
         "missing_references": missing_refs,

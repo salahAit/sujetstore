@@ -15,10 +15,10 @@
     "practice"
   ],
   "properties": {
-    "id": { "type": "string", "pattern": "^lesson_(1ap|2ap|3ap|4ap|5ap|1am|2am|3am|4am)_t[123]_[a-z0-9_]+$" },
+    "id": { "type": "string", "pattern": "^lesson_(1ap|2ap|3ap|4ap|5ap|1am|2am|3am|4am|1as_tcst|2as_se|2as_tm|2as_math|3as_se|3as_tm|3as_math)_t[123]_[a-z0-9_]+$" },
     "slug": { "type": "string", "minLength": 4 },
-    "grade": { "type": "string", "enum": ["1ap", "2ap", "3ap", "4ap", "5ap", "1am", "2am", "3am", "4am"] },
-    "yearSubjectId": { "type": "integer", "enum": [581, 586, 591, 598, 606, 614, 624, 634, 644] },
+    "grade": { "type": "string", "enum": ["1ap", "2ap", "3ap", "4ap", "5ap", "1am", "2am", "3am", "4am", "1as_tcst", "2as_se", "2as_tm", "2as_math", "3as_se", "3as_tm", "3as_math"] },
+    "yearSubjectId": { "type": "integer", "enum": [581, 586, 591, 598, 606, 614, 624, 634, 644, 654, 672, 692, 712, 682, 702, 725] },
     "trimesterId": { "type": "string", "enum": ["t1", "t2", "t3"] },
     "sequenceId": { "type": "string" },
     "sequenceTitleAr": { "type": "string" },

@@ -12,21 +12,38 @@ import {
 	type AssembledMiddlePaper,
 	type MiddleVariant
 } from './assemblers/exam-middle';
+import {
+	assembleSecondaryExam,
+	type AssembledSecondaryPaper,
+	type SecondaryVariant
+} from './assemblers/exam-secondary';
 import { compileTypstPdf } from './typst';
-import type { Difficulty, GradeId } from '../modules/MathTemplates/types';
+import {
+	SECONDARY_TRACK_IDS,
+	type Difficulty,
+	type GradeId,
+	type SecondaryTrackId
+} from '../modules/MathTemplates/types';
 import type { TrimesterId } from '../modules/SujetBuilder/types';
 
 export type UnifiedAssembledExam =
 	| AssembledPrimaryLowerPaper
 	| AssembledPrimaryUpperPaper
-	| AssembledMiddlePaper;
+	| AssembledMiddlePaper
+	| AssembledSecondaryPaper;
 
 export interface AssembleExamOptions {
 	grade: GradeId;
 	trimesterId: TrimesterId;
 	seed: number;
 	docType?: 'exam' | 'test';
-	variant?: 'trimester_exam' | 'supervised_test' | 'cinq_mock' | 'competency_eval' | 'bem_mock';
+	variant?:
+		| 'trimester_exam'
+		| 'supervised_test'
+		| 'cinq_mock'
+		| 'competency_eval'
+		| 'bem_mock'
+		| 'bac_mock';
 	difficulty?: Difficulty;
 	academicYear?: string;
 	schoolName?: string;
@@ -44,10 +61,33 @@ const PIPELINE_GRADES: ReadonlySet<string> = new Set<GradeId>([
 	'4am'
 ]);
 
-export function yearSubjectToGrade(yearId: string, subjectId: string): GradeId | null {
+export function yearSubjectToGrade(
+	yearId: string,
+	subjectId: string,
+	streamId?: string | null
+): GradeId | null {
 	if (subjectId === 'MAT-B' && PIPELINE_GRADES.has(yearId)) {
 		return yearId as GradeId;
 	}
+
+	if (yearId === '1as' && subjectId === 'MAT-SE') {
+		if (!streamId || streamId === 'TCST' || streamId === 'tcst' || streamId === 'GEN') {
+			return '1as_tcst';
+		}
+	}
+
+	if (yearId === '2as') {
+		if (subjectId === 'MAT-SE') return '2as_se';
+		if (subjectId === 'MAT-TM') return '2as_tm';
+		if (subjectId === 'MAT-MATH') return '2as_math';
+	}
+
+	if (yearId === '3as') {
+		if (subjectId === 'MAT-SE') return '3as_se';
+		if (subjectId === 'MAT-TM') return '3as_tm';
+		if (subjectId === 'MAT-MATH') return '3as_math';
+	}
+
 	return null;
 }
 
@@ -104,6 +144,32 @@ export function assembleExam(opts: AssembleExamOptions): UnifiedAssembledExam {
 				grade: opts.grade,
 				trimesterId: opts.trimesterId,
 				seed: opts.seed,
+				variant,
+				difficulty: opts.difficulty,
+				academicYear: opts.academicYear,
+				schoolName: opts.schoolName
+			});
+		}
+		case '1as_tcst':
+		case '2as_se':
+		case '2as_tm':
+		case '2as_math':
+		case '3as_se':
+		case '3as_tm':
+		case '3as_math': {
+			let variant: SecondaryVariant;
+			if (opts.variant === 'bac_mock' && opts.grade.startsWith('3as_')) {
+				variant = 'bac_mock';
+			} else if (opts.docType === 'test' || opts.variant === 'supervised_test') {
+				variant = 'supervised_test';
+			} else {
+				variant = 'trimester_exam';
+			}
+			return assembleSecondaryExam({
+				grade: opts.grade,
+				trimesterId: opts.trimesterId,
+				seed: opts.seed,
+				docType: opts.docType,
 				variant,
 				difficulty: opts.difficulty,
 				academicYear: opts.academicYear,
