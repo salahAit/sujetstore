@@ -1,0 +1,121 @@
+{
+  "id": "lesson_1am_t3_percentages_scale_unit_conversions",
+  "slug": "1am-t3-percentages-scale-unit-conversions",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t3",
+  "sequenceId": "seq8",
+  "sequenceTitleAr": "المقطع الثامن: التناسبية وتطبيقاتها وتنظيم المعطيات",
+  "order": 4,
+  "titleAr": "تطبيقات التناسبية: النسبة المئوية والمقياس وتحويل وحدات القياس",
+  "objectives": [
+    "حساب وتطبيق نسبة مئوية من عدد في حالات بسيطة (التخفيضات، الزيادات، ونسب النجاح)",
+    "استعمال مفهوم المقياس في وضعيات بسيطة للتكبير أو التصغير، وتوظيف مقياس مخطط أو خريطة لتعيين مسافة على التصميم أو مسافة حقيقية",
+    "إجراء تحويلات لوحدات قياس الأطوال والمساحات والحجوم بدقة"
+  ],
+  "keywordsAr": [
+    "النسبة المئوية",
+    "تطبيق نسبة مئوية",
+    "مقياس خريطة أو مخطط",
+    "التكبير والتصغير",
+    "تحويل وحدات القياس"
+  ],
+  "discover": {
+    "scenarioAr": "خلال التحضير للعودة المدرسية، وجد رضا حقيبة ظهر سعرها الأصلي $3200\\text{ DA}$ عليها **تخفيض** بنسبة $25\\%$ . وفي رحلة مدرسية، قاس على خريطة بمقياس $\\frac{1}{500000}$ المسافة بين مدينتين فوجدها $6\\text{ cm}$ . كيف يحسب رضا السعر الجديد للحقيبة، وما هي المسافة الحقيقية بين المدينتين بالكيلومتر؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"216\" height=\"174\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"116\" y=\"28\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1e40af\">النسبة المئوية: تخفيض 25%</text><rect x=\"24\" y=\"42\" width=\"184\" height=\"26\" rx=\"5\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><rect x=\"162\" y=\"42\" width=\"46\" height=\"26\" rx=\"4\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"93\" y=\"59\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">75% (المبلغ المدفوع)</text><text x=\"185\" y=\"59\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#991b1b\">25%</text><text x=\"116\" y=\"86\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">100%  ←  3200 DA</text><text x=\"116\" y=\"108\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">التخفيض = 3200 × (25 ÷ 100)</text><text x=\"116\" y=\"128\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">= 800 DA</text><rect x=\"28\" y=\"140\" width=\"176\" height=\"32\" rx=\"6\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"116\" y=\"160\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#166534\">السعر الجديد: 3200 - 800 = ?</text><rect x=\"236\" y=\"8\" width=\"216\" height=\"174\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"344\" y=\"28\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#166534\">مقياس الخريطة 1 / 500 000</text><circle cx=\"268\" cy=\"72\" r=\"6\" fill=\"#2563eb\"/><circle cx=\"420\" cy=\"72\" r=\"6\" fill=\"#dc2626\"/><line x1=\"274\" y1=\"72\" x2=\"414\" y2=\"72\" stroke=\"#0f172a\" stroke-width=\"2.2\" stroke-dasharray=\"5 3\"/><text x=\"268\" y=\"56\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#1e40af\">المدينة A</text><text x=\"420\" y=\"56\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#dc2626\">المدينة B</text><text x=\"344\" y=\"65\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">6 cm على الخريطة</text><rect x=\"250\" y=\"92\" width=\"188\" height=\"52\" rx=\"6\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.3\"/><text x=\"344\" y=\"111\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">1 cm  ←  500 000 cm (5 km)</text><text x=\"344\" y=\"132\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">6 cm  ←  6 × 500 000 = 3 000 000 cm</text><text x=\"344\" y=\"166\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\">بالتحويل إلى km  ←  ؟ km</text></svg>",
+    "steps": [
+      {
+        "promptAr": "قيمة التخفيض على الحقيبة هي $25\\%$ من $3200\\text{ DA}$ أي $3200 \\times \\frac{25}{100} = 800\\text{ DA}$ . ما هو السعر الجديد للحقيبة بعد التخفيض بالدينار؟",
+        "hintAr": "اطرح قيمة التخفيض ($800\\text{ DA}$) من السعر الأصلي ($3200\\text{ DA}$).",
+        "expectedInput": "2400",
+        "revealAr": "السعر الجديد هو $3200 - 800 = 2400\\text{ DA}$ ."
+      },
+      {
+        "promptAr": "بمقياس الخريطة $\\frac{1}{500000}$ ، كل $1\\text{ cm}$ على الخريطة يمثل $500000\\text{ cm}$ في الواقع. حوّل المسافة الحقيقية الناتجة $3000000\\text{ cm}$ إلى الكيلومتر ($\\text{km}$).",
+        "hintAr": "تذكّر أن $1\\text{ m} = 100\\text{ cm}$ و $1\\text{ km} = 1000\\text{ m}$ ، إذن $1\\text{ km} = 100000\\text{ cm}$ .",
+        "expectedInput": "30",
+        "revealAr": "بقسمة $3000000\\text{ cm}$ على $100000$ نجد أن المسافة الحقيقية هي $30\\text{ km}$ ."
+      },
+      {
+        "promptAr": "حوّل المساحة $3.4\\text{ m}^2$ إلى الديسيمتر المربع ($\\text{dm}^2$)، ثم حوّل الحجم $2.5\\text{ dm}^3$ إلى السنتيمتر المكعب ($\\text{cm}^3$).",
+        "hintAr": "في المساحات نضرب في $100$ لكل رتبة، وفي الحجوم نضرب في $1000$ لكل رتبة.",
+        "revealAr": "لدينا $3.4\\text{ m}^2 = 3.4 \\times 100 = 340\\text{ dm}^2$ ، و $2.5\\text{ dm}^3 = 2.5 \\times 1000 = 2500\\text{ cm}^3$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**تطبيق نسبة مئوية**: النسبة المئوية $p\\%$ هي حالة خاصة من التناسبية تعبر عن الكسر $\\frac{p}{100}$ . لحساب $p\\%$ من عدد $A$ نضرب $A \\times \\frac{p}{100}$ . في حالة **تخفيض** نطرح قيمة التخفيض من السعر الأصلي، وفي حالة **زيادة** نضيف قيمة الزيادة إلى السعر الأصلي.",
+      "**حساب نسبة مئوية**: لإيجاد النسبة المئوية لجزء $a$ من كل $b$ ، نعبّر عن الحصة بالكسر $\\frac{a}{b}$ ثم نحسب $\\frac{a}{b} \\times 100$ (أو نحوّل المقام إلى $100$).",
+      "**مقياس مخطط أو خريطة**: المقياس $e$ هو معامل التناسبية الذي يُحسب بقسمة المسافة على التصميم $d$ على المسافة الحقيقية $D$ **بنفس الوحدة**: $e = \\frac{d}{D}$ . إذا كان البسط أصغر من المقام (مثل $\\frac{1}{200}$) فهو **تصغير**، وإذا كان البسط أكبر من المقام (مثل $\\frac{10}{1}$) فهو **تكبير**.",
+      "**تحويل وحدات القياس**: عند الانتقال من وحدة إلى الوحدة التي تليها مباشرة نحو اليمين (وحدة أصغر): في **الأطوال** نضرب في $10$ ؛ في **المساحات** نضرب في $100$ (علماً أن $1\\text{ ha} = 1\\text{ hm}^2 = 10000\\text{ m}^2$ و $1\\text{ a} = 100\\text{ m}^2$)؛ وفي **الحجوم** نضرب في $1000$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"140\" height=\"179\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"78\" y=\"28\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">النسبة المئوية</text><text x=\"78\" y=\"56\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">p% = p ÷ 100</text><rect x=\"18\" y=\"72\" width=\"120\" height=\"44\" rx=\"6\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><text x=\"78\" y=\"91\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#1e3a8a\">حساب p% من A:</text><text x=\"78\" y=\"108\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">A × (p ÷ 100)</text><text x=\"78\" y=\"138\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#166534\" font-weight=\"bold\">زيادة ← نجمع</text><text x=\"78\" y=\"158\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#dc2626\" font-weight=\"bold\">تخفيض ← نطرح</text><rect x=\"158\" y=\"8\" width=\"144\" height=\"179\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"230\" y=\"28\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">المقياس (نفس الوحدة)</text><text x=\"230\" y=\"52\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">الطول على التصميم</text><line x1=\"176\" y1=\"59\" x2=\"284\" y2=\"59\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><text x=\"230\" y=\"74\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">الطول الحقيقي</text><rect x=\"168\" y=\"88\" width=\"124\" height=\"42\" rx=\"6\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.2\"/><text x=\"230\" y=\"106\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#1e40af\">1 / 100 ← تصغير</text><text x=\"230\" y=\"123\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#7c3aed\">5 / 1 ← تكبير</text><text x=\"230\" y=\"154\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">نوحد الوحدة قبل القسمة</text><text x=\"230\" y=\"170\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">(مثلاً كل الأطوال بـ cm)</text><rect x=\"312\" y=\"8\" width=\"140\" height=\"179\" rx=\"8\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"382\" y=\"28\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\">تحويل الوحدات</text><rect x=\"322\" y=\"42\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#ffffff\" stroke=\"#fcd34d\" stroke-width=\"1.2\"/><text x=\"382\" y=\"59\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">الأطوال (m → dm)</text><text x=\"382\" y=\"75\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">× 10 لكل رتبة</text><rect x=\"322\" y=\"90\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#ffffff\" stroke=\"#fcd34d\" stroke-width=\"1.2\"/><text x=\"382\" y=\"107\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">المساحات (m² → dm²)</text><text x=\"382\" y=\"123\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">× 100 لكل رتبة</text><rect x=\"322\" y=\"138\" width=\"120\" height=\"40\" rx=\"6\" fill=\"#ffffff\" stroke=\"#fcd34d\" stroke-width=\"1.2\"/><text x=\"382\" y=\"155\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">الحجوم (m³ → dm³)</text><text x=\"382\" y=\"171\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">× 1000 لكل رتبة</text></svg>",
+    "visualCaptionAr": "قوانين تطبيقات التناسبية: النسبة المئوية، المقياس، ومعاملات التحويل بين وحدات الطول والمساحة والحجم",
+    "examples": [
+      {
+        "problemAr": "في متوسطة تضم $450$ تلميذاً، يرتدي $18\\%$ منهم النظارات الطبية. ما عدد التلاميذ الذين يرتدون النظارات؟",
+        "solutionAr": "نحسب $18\\%$ من $450$ :\n\n$450 \\times \\frac{18}{100} = \\frac{8100}{100} = 81$ تلميذاً."
+      },
+      {
+        "problemAr": "طول حشرة حقيقية هو $6\\text{ mm}$ ، ورسمها تلميذ على كراسه بطول $3\\text{ cm}$ . ما هو مقياس هذا التكبير؟",
+        "solutionAr": "نوحد الوحدة إلى $\\text{mm}$ : $3\\text{ cm} = 30\\text{ mm}$ .\n\nإذن المقياس هو $\\frac{30}{6} = \\frac{5}{1}$ (تكبير بمقدار $5$ مرات)."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: حساب المقياس دون توحيد وحدتي الطول في البسط والمقام! مثلاً إذا كان طول حائط $8\\text{ m}$ ورُسم بـ $4\\text{ cm}$ فالمقياس ليس $\\frac{4}{8}$ ، بل نحول أولاً $8\\text{ m} = 800\\text{ cm}$ فيكون المقياس $\\frac{4}{800} = \\frac{1}{200}$ . وكذلك عند تحويل المساحات والحجوم: كل رتبة مساحة تحتل **عمودين** ($\\times 100$) وكل رتبة حجم تحتل **ثلاثة أعمدة** ($\\times 1000$)."
+  },
+  "practice": [
+    {
+      "questionAr": "بلغ ثمن معطف $4500\\text{ DA}$ ، فخفّض البائع سعره بنسبة $20\\%$ . ما هو **السعر الجديد** للمعطف بعد التخفيض؟",
+      "options": [
+        "$900\\text{ DA}$",
+        "$3600\\text{ DA}$",
+        "$5400\\text{ DA}$",
+        "$4480\\text{ DA}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$900\\text{ DA}$ هي **قيمة التخفيض** فقط ($4500 \\times \\frac{20}{100}$) وليست السعر الجديد بعد التخفيض!",
+        "أحسنت! قيمة التخفيض $4500 \\times \\frac{20}{100} = 900\\text{ DA}$ ، ومنه السعر الجديد $4500 - 900 = 3600\\text{ DA}$ .",
+        "انتبه: هذا تخفيض وليس زيادة! نطرح $900\\text{ DA}$ من $4500\\text{ DA}$ ولا نجمعها.",
+        "النسبة المئوية $20\\%$ تعني $20\\text{ DA}$ عن كل $100\\text{ DA}$ ، وليس طرح $20\\text{ DA}$ من السعر الكلي."
+      ],
+      "explanationAr": "نحسب أولاً قيمة التخفيض: $4500 \\times \\frac{20}{100} = 900\\text{ DA}$ . ثم نطرح التخفيض من السعر الأصلي فنجد السعر الجديد: $4500 - 900 = 3600\\text{ DA}$ ."
+    },
+    {
+      "questionAr": "يمثّل الشكل المقابل مخطط قاعة مستطيلة بمقياس $\\frac{1}{200}$ ، حيث أبعادها على التصميم هي $4\\text{ cm}$ و $3\\text{ cm}$ . ما هما الطول والعرض **الحقيقيان** لهذه القاعة بالمتر؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 145\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"264\" height=\"129\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"140\" y=\"27\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">مخطط قاعة بمقياس 1 / 200</text><rect x=\"70\" y=\"42\" width=\"120\" height=\"66\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"130\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\">القاعة</text><text x=\"130\" y=\"124\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\">4 cm</text><text x=\"212\" y=\"79\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\">3 cm</text></svg>",
+      "options": [
+        "الطول $8\\text{ m}$ والعرض $6\\text{ m}$",
+        "الطول $80\\text{ m}$ والعرض $60\\text{ m}$",
+        "الطول $50\\text{ m}$ والعرض $66\\text{ m}$",
+        "الطول $800\\text{ m}$ والعرض $600\\text{ m}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! $4 \\times 200 = 800\\text{ cm} = 8\\text{ m}$ ، و $3 \\times 200 = 600\\text{ cm} = 6\\text{ m}$ .",
+        "تحقق من التحويل من السنتيمتر إلى المتر: $1\\text{ m} = 100\\text{ cm}$ ، إذن $800\\text{ cm} = 8\\text{ m}$ وليس $80\\text{ m}$ .",
+        "لإيجاد المسافة الحقيقية نضرب في المقام $200$ ولا نقسم $200$ على الطول على التصميم.",
+        "العددان $800$ و $600$ هما الطول والعرض بوحدة **السنتيمتر** ($\\text{cm}$) وليس المتر ($\\text{m}$)!"
+      ],
+      "explanationAr": "نضرب كل بعد على التصميم في $200$ : الطول الحقيقي $4 \\times 200 = 800\\text{ cm} = 8\\text{ m}$ ، والعرض الحقيقي $3 \\times 200 = 600\\text{ cm} = 6\\text{ m}$ ."
+    },
+    {
+      "questionAr": "أي سطر يضم **تحويلات صحيحة بالكامل** لوحدات الطول والمساحة والحجم؟",
+      "options": [
+        "$0.35\\text{ km} = 35\\text{ m}$ و $2.4\\text{ m}^2 = 240\\text{ dm}^2$ و $1.5\\text{ dm}^3 = 1500\\text{ cm}^3$",
+        "$0.35\\text{ km} = 350\\text{ m}$ و $2.4\\text{ m}^2 = 24\\text{ dm}^2$ و $1.5\\text{ dm}^3 = 1500\\text{ cm}^3$",
+        "$0.35\\text{ km} = 350\\text{ m}$ و $2.4\\text{ m}^2 = 240\\text{ dm}^2$ و $1.5\\text{ dm}^3 = 1500\\text{ cm}^3$",
+        "$0.35\\text{ km} = 350\\text{ m}$ و $2.4\\text{ m}^2 = 240\\text{ dm}^2$ و $1.5\\text{ dm}^3 = 150\\text{ cm}^3$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "بما أن $1\\text{ km} = 1000\\text{ m}$ ، فإن $0.35\\text{ km} = 0.35 \\times 1000 = 350\\text{ m}$ وليس $35\\text{ m}$ .",
+        "في وحدات المساحة نضرب في $100$ وليس في $10$ : $2.4\\text{ m}^2 = 2.4 \\times 100 = 240\\text{ dm}^2$ .",
+        "أحسنت! التحويلات الثلاثة دقيقة: الطول $\\times 1000$ من $\\text{km}$ إلى $\\text{m}$ ، المساحة $\\times 100$ ، والحجم $\\times 1000$ .",
+        "في وحدات الحجم نضرب في $1000$ للانتقال من $\\text{dm}^3$ إلى $\\text{cm}^3$ ، إذن $1.5\\text{ dm}^3 = 1500\\text{ cm}^3$ وليس $150\\text{ cm}^3$ ."
+      ],
+      "explanationAr": "التحويلات الصحيحة هي: $0.35\\text{ km} = 0.35 \\times 1000 = 350\\text{ m}$ ، و $2.4\\text{ m}^2 = 2.4 \\times 100 = 240\\text{ dm}^2$ ، و $1.5\\text{ dm}^3 = 1.5 \\times 1000 = 1500\\text{ cm}^3$ ."
+    }
+  ]
+}

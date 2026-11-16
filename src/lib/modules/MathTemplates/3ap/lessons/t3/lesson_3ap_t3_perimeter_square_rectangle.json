@@ -1,0 +1,123 @@
+{
+  "id": "lesson_3ap_t3_perimeter_square_rectangle",
+  "slug": "3ap-t3-perimeter-square-rectangle",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع السادس: حفل نهاية السنة (المحيط، التناظر المحوري، المجسمات ومنهجية حل المشكلات)",
+  "order": 4,
+  "titleAr": "محيط المربع والمستطيل والمضلعات المألوفة",
+  "objectives": [
+    "إدراك مفهوم محيط مضلع كطول الخط المغلق الخارجي وحساب محيط أي مضلع بجمع أطوال أضلاعه",
+    "حساب محيط المربع باستعمال القاعدة (طول الضلع $\\times 4$) ومحيط المستطيل باستعمال القاعدة ((الطول $+$ العرض) $\\times 2$) بأعداد طبيعية",
+    "توظيف حساب المحيط في وضعيات يومية (تسييج حديقة، تزيين إطار، طول الشريط المحيط بشكل) مع احترام وحدة الطول"
+  ],
+  "keywordsAr": [
+    "المحيط",
+    "محيط المربع",
+    "محيط المستطيل",
+    "محيط المضلع",
+    "مجموع أطوال الأضلاع"
+  ],
+  "discover": {
+    "scenarioAr": "لتزيين ساحة الحفل، أراد التلاميذ إحاطة لافتة **مربعة** طول ضلعها **$5\\text{ m}$**، وإطار صورة **مستطيل** طوله **$8\\text{ cm}$** وعرضه **$5\\text{ cm}$**، بشريط ملون يدور حول الحافة الخارجية لكل شكل.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 205\" width=\"520\" height=\"205\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"520\" height=\"205\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(16,14)\"><rect width=\"226\" height=\"177\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"113\" y=\"22\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">1. محيط اللافتة المربعة</text><rect x=\"68\" y=\"46\" width=\"90\" height=\"90\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"3.5\"/><text x=\"113\" y=\"39\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">5 m</text><text x=\"113\" y=\"151\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">5 m</text><text x=\"50\" y=\"95\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">5 m</text><text x=\"176\" y=\"95\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">5 m</text><text x=\"113\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">مربع</text><text x=\"113\" y=\"169\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">4 أضلاع متقايسة: 5 × 4</text></g><g transform=\"translate(258,14)\"><rect width=\"246\" height=\"177\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"123\" y=\"22\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">2. محيط الإطار المستطيل</text><rect x=\"50\" y=\"52\" width=\"146\" height=\"80\" fill=\"#ecfdf5\" stroke=\"#059669\" stroke-width=\"3.5\"/><text x=\"123\" y=\"44\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">8 cm (الطول)</text><text x=\"123\" y=\"148\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">8 cm</text><text x=\"28\" y=\"96\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">5 cm</text><text x=\"220\" y=\"96\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">5 cm</text><text x=\"123\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\">مستطيل</text><text x=\"123\" y=\"169\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">المحيط = (8 + 5) × 2</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "لإحاطة اللافتة المربعة بالشريط، نجمع أطوال أضلاعها الأربعة المتقايسة ($5 + 5 + 5 + 5$) أو نضرب: $5 \\times 4$. ما هو محيط اللافتة المربعة بالمتر؟ (اكتب العدد فقط)",
+        "hintAr": "احسب $5 \\times 4$.",
+        "expectedInput": "20",
+        "revealAr": "محيط اللافتة المربعة يساوي $20\\text{ m}$؛ لأن $5 \\times 4 = 20$."
+      },
+      {
+        "promptAr": "ننتقل إلى الإطار المستطيل (طوله $8\\text{ cm}$ وعرضه $5\\text{ cm}$). لنحسب أولاً مجموع طول واحد وعرض واحد ($8 + 5$). كم يساوي هذا المجموع بالسنتيمتر؟ (اكتب العدد فقط)",
+        "hintAr": "اجمع الطول $+$ العرض: $8 + 5$.",
+        "expectedInput": "13",
+        "revealAr": "مجموع الطول والعرض (نصف المحيط) يساوي $8 + 5 = 13\\text{ cm}$."
+      },
+      {
+        "promptAr": "للمستطيل طولان وعرضان، لذلك نضرب نصف المحيط ($13\\text{ cm}$) في $2$: $(8 + 5) \\times 2$. ما هو محيط الإطار المستطيل بالسنتيمتر؟ (اكتب العدد فقط)",
+        "hintAr": "احسب $13 \\times 2$ (أو $13 + 13$).",
+        "expectedInput": "26",
+        "revealAr": "محيط الإطار المستطيل يساوي $26\\text{ cm}$؛ لأن $(8 + 5) \\times 2 = 13 \\times 2 = 26\\text{ cm}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**محيط أي مضلع** هو طول الخط المغلق الخارجي الذي يحيط به، ويُحسب بجمع أطوال جميع أضلاعه بنفس الوحدة.",
+      "**محيط المربع** $=$ طول الضلع $\\times 4$ (لأن أضلاعه الأربعة متقايسة). مثال: مربع ضلعه $6\\text{ cm}$ محيطه $6 \\times 4 = 24\\text{ cm}$.",
+      "**محيط المستطيل** $=$ (الطول $+$ العرض) $\\times 2$ (لأن كل ضلعين متقابلين متقايسان). مثال: مستطيل طوله $9\\text{ cm}$ وعرضه $4\\text{ cm}$ محيطه $(9 + 4) \\times 2 = 26\\text{ cm}$.",
+      "في وضعيات التسييج أو إحاطة شكل بشريط، نتأكد أولاً أن جميع الأبعاد معبّر عنها **بنفس وحدة الطول** ($\\text{m}$ أو $\\text{cm}$) قبل الجمع والضرب."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\" width=\"520\" height=\"190\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(14,14)\"><rect width=\"156\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"78\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#d97706\">محيط مضلع (مثلث)</text><polygon points=\"78,42 32,112 124,112\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2.5\"/><text x=\"46\" y=\"75\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#92400e\">5 cm</text><text x=\"110\" y=\"75\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#92400e\">6 cm</text><text x=\"78\" y=\"127\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#92400e\">4 cm</text><text x=\"78\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">5 + 6 + 4 = 15 cm</text></g><g transform=\"translate(182,14)\"><rect width=\"156\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"78\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">محيط المربع</text><rect x=\"44\" y=\"42\" width=\"68\" height=\"68\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"74\" y1=\"38\" x2=\"82\" y2=\"46\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"74\" y1=\"106\" x2=\"82\" y2=\"114\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"40\" y1=\"72\" x2=\"48\" y2=\"80\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"108\" y1=\"72\" x2=\"116\" y2=\"80\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"78\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">7 cm</text><text x=\"78\" y=\"132\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">طول الضلع × 4</text><text x=\"78\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">7 × 4 = 28 cm</text></g><g transform=\"translate(350,14)\"><rect width=\"156\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"78\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">محيط المستطيل</text><rect x=\"26\" y=\"50\" width=\"104\" height=\"56\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"2.5\"/><text x=\"78\" y=\"44\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#047857\">9 cm</text><text x=\"142\" y=\"82\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#047857\">4 cm</text><text x=\"78\" y=\"132\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">(الطول + العرض) × 2</text><text x=\"78\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">(9 + 4) × 2 = 26 cm</text></g></svg>",
+    "visualCaptionAr": "قواعد حساب محيط المضلع والمربع والمستطيل باستعمال أطوال الأضلاع الخارجية.",
+    "examples": [
+      {
+        "problemAr": "مثلث أطوال أضلاعه $7\\text{ cm}$، و $9\\text{ cm}$، و $6\\text{ cm}$. ما هو محيطه؟",
+        "solutionAr": "محيط المثلث يساوي مجموع أطوال أضلاعه: $7 + 9 + 6 = 22\\text{ cm}$."
+      },
+      {
+        "problemAr": "حديقة مستطيلة الشكل طولها $15\\text{ m}$ وعرضها $10\\text{ m}$. نريد تسييجها بسلك معدني. ما طول السلك اللازم؟",
+        "solutionAr": "طول السلك يساوي محيط الحديقة: نحسب أولاً $(15 + 10) = 25\\text{ m}$، ثم نضرب في $2$: $25 \\times 2 = 50\\text{ m}$."
+      }
+    ],
+    "watchOutAr": "انتبه! في محيط المستطيل، لا تكتفِ بجمع الطول والعرض فقط ($15 + 10 = 25$) وتنسى الضرب في $2$! وفي محيط المربع اضرب طول الضلع في $4$ ولا تضف $4$ بالجمع."
+  },
+  "practice": [
+    {
+      "questionAr": "احسب محيط المضلع الرباعي المرسوم أمامك بجمع أطوال أضلاعه:",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 155\" width=\"360\" height=\"155\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"360\" height=\"155\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><polygon points=\"105,38 235,38 275,112 85,112\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"170\" y=\"30\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">7 cm</text><text x=\"272\" y=\"76\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">9 cm</text><text x=\"180\" y=\"132\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">12 cm</text><text x=\"76\" y=\"76\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">6 cm</text></svg>",
+      "options": [
+        "$28\\text{ cm}$",
+        "$34\\text{ cm}$",
+        "$32\\text{ cm}$",
+        "$25\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "نسيت أحد الأضلاع (مثل $6\\text{ cm}$) عند الجمع! أضف جميع الأضلاع الأربعة.",
+        "أحسنت! مجموع أطوال الأضلاع الأربعة هو: $7 + 9 + 12 + 6 = 34\\text{ cm}$.",
+        "راجع عملية الجمع: $7 + 9 = 16$، و $16 + 12 = 28$، و $28 + 6 = 34$.",
+        "جمعت ثلاثة أضلاع فقط ($7 + 12 + 6 = 25$) ونسيت الضلع الذي طوله $9\\text{ cm}$."
+      ],
+      "explanationAr": "محيط أي مضلع هو مجموع أطوال أضلاعه الخارجية: $7 + 9 + 12 + 6 = 34\\text{ cm}$."
+    },
+    {
+      "questionAr": "لوحة مربعة الشكل طول ضلعها $30\\text{ cm}$. أردنا تزيين حوافها الخارجية بشريط. ما هو طول الشريط اللازم؟",
+      "options": [
+        "$34\\text{ cm}$",
+        "$60\\text{ cm}$",
+        "$120\\text{ cm}$",
+        "$90\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "لقد جمعت $30 + 4 = 34$! لحساب محيط المربع نضرب طول الضلع في $4$ ولا نجمع $4$.",
+        "ضربت في $2$ فقط ($30 \\times 2 = 60$)، بينما للمربع $4$ أضلاع متقايسة!",
+        "ممتاز! محيط المربع يساوي طول الضلع $\\times 4$: $30 \\times 4 = 120\\text{ cm}$.",
+        "جمعت $3$ أضلاع فقط ($30 \\times 3 = 90$) ونسيت الضلع الرابع!"
+      ],
+      "explanationAr": "الشريط يحيط باللوحة المربعة من جميع الجهات، إذن طوله يساوي محيط المربع: $30 \\times 4 = 120\\text{ cm}$."
+    },
+    {
+      "questionAr": "ملعب مستطيل الشكل طوله $40\\text{ m}$ وعرضه $25\\text{ m}$. ركض أمين دورة كاملة حول حافة الملعب. ما المسافة التي قطعها؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 150\" width=\"360\" height=\"150\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"360\" height=\"150\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><rect x=\"80\" y=\"34\" width=\"200\" height=\"82\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"3\"/><text x=\"180\" y=\"26\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\">40 m</text><text x=\"180\" y=\"135\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\">40 m</text><text x=\"55\" y=\"79\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\">25 m</text><text x=\"305\" y=\"79\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\">25 m</text><text x=\"180\" y=\"79\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\">دورة كاملة = المحيط</text></svg>",
+      "options": [
+        "$65\\text{ m}$",
+        "$105\\text{ m}$",
+        "$80\\text{ m}$",
+        "$130\\text{ m}$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "$65\\text{ m}$ هو نصف المحيط ($40 + 25$) فقط! يجب أن نضرب في $2$ لإتمام الدورة الكاملة.",
+        "جمعت طولين وعرضاً واحداً ($40 + 40 + 25 = 105$) ونسيت العرض الثاني ($25\\text{ m}$)!",
+        "حسبت الطولين فقط ($40 + 40 = 80$) ونسيت العرضين ($25 + 25 = 50$)!",
+        "أحسنت! محيط المستطيل يساوي $(40 + 25) \\times 2 = 65 \\times 2 = 130\\text{ m}$."
+      ],
+      "explanationAr": "دورة كاملة حول الملعب المستطيل تساوي محيطه: نحسب نصف المحيط $40 + 25 = 65\\text{ m}$، ثم نضرب في $2$: $65 \\times 2 = 130\\text{ m}$."
+    }
+  ]
+}

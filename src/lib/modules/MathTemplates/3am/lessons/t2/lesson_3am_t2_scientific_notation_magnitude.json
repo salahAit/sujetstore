@@ -1,0 +1,128 @@
+{
+  "id": "lesson_3am_t2_scientific_notation_magnitude",
+  "slug": "3am-t2-scientific-notation-magnitude",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: الكتابة العلمية ورتبة مقدار وقوى عدد نسبي",
+  "order": 1,
+  "titleAr": "الكتابة العلمية لعدد عشري والحصر ورتبة مقدار عدد",
+  "objectives": [
+    "تعيين الكتابة العلمية لعدد عشري موجب على الشكل $a \\times 10^{n}$ حيث $1 \\le a < 10$ و $n$ عدد صحيح نسبي للتعبير عن مقادير كبيرة جدا أو صغيرة جدا",
+    "استعمال الكتابة العلمية لحصر عدد عشري موجب بين قوتين متتاليتين للعدد $10$",
+    "إيجاد رتبة مقدار عدد انطلاقا من كتابته العلمية بتدوير العدد العشري إلى العدد الصحيح الأقرب منه والاحتفاظ بقوة $10$ وتوظيفها لتقدير نتائج حسابات"
+  ],
+  "keywordsAr": [
+    "الكتابة العلمية",
+    "الحصر بين قوتين متتاليتين للعدد 10",
+    "رتبة مقدار",
+    "التدوير إلى الوحدة",
+    "تقدير نتيجة حساب"
+  ],
+  "discover": {
+    "scenarioAr": "تبلغ المسافة المتوسطة بين الأرض والشمس نحو $149600000\\text{ km}$، بينما يقدّر قطر خلية مجهرية بـ $0.000085\\text{ m}$. لكي يسهل العلماء قراءة هذه المقادير الضخمة أو المتناهية الصغر ومقارنتها وتقدير نواتج العمليات عليها، يعبرون عنها بـ **الكتابة العلمية** ثم يحصرونها بين قوتين متتاليتين للعدد $10$ ويعينون **رتبة مقدارها**.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 205\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"205\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"12\" y=\"12\" width=\"222\" height=\"181\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"123\" y=\"33\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">عدد كبير جداً (إزاحة الفاصلة يساراً)</text><text x=\"123\" y=\"62\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#0f172a\">149600000.</text><path d=\"M 172 72 Q 123 92 75 72\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><polygon points=\"75,72 82,69 80,77\" fill=\"#dc2626\"/><text x=\"123\" y=\"98\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#dc2626\" direction=\"rtl\" unicode-bidi=\"plaintext\">8 مراتب نحو اليسار (أس موجب)</text><text x=\"123\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"800\" fill=\"#1d4ed8\">1.496 × 10^8</text><text x=\"123\" y=\"153\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#334155\">10^8 &lt; 1.496 × 10^8 &lt; 10^9</text><text x=\"123\" y=\"177\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#15803d\" direction=\"rtl\" unicode-bidi=\"plaintext\">رتبة المقدار: 1 × 10^8</text><rect x=\"246\" y=\"12\" width=\"222\" height=\"181\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"357\" y=\"33\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">عدد صغير جداً (إزاحة الفاصلة يميناً)</text><text x=\"357\" y=\"62\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#0f172a\">0.000085</text><path d=\"M 326 72 Q 355 92 383 72\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><polygon points=\"383,72 376,69 378,77\" fill=\"#dc2626\"/><text x=\"357\" y=\"98\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#dc2626\" direction=\"rtl\" unicode-bidi=\"plaintext\">5 مراتب نحو اليمين (أس سالب)</text><text x=\"357\" y=\"128\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"800\" fill=\"#15803d\">8.5 × 10^-5</text><text x=\"357\" y=\"153\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#334155\">10^-5 &lt; 8.5 × 10^-5 &lt; 10^-4</text><text x=\"357\" y=\"177\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">رتبة المقدار: 9 × 10^-5</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في العدد $149600000$، نزيح الفاصلة نحو اليسار لنحصل على العدد العشري $a = 1.496$ المحصور بين $1$ و $10$. ما قيمة الأس الصحيح $n$ في الكتابة العلمية $1.496 \\times 10^{n}$؟",
+        "hintAr": "عدّ الأرقام التي تقفز عليها الفاصلة من يمين الرقم $0$ الأخير إلى يمين الرقم $1$.",
+        "expectedInput": "8",
+        "revealAr": "أزحنا الفاصلة $8$ مراتب نحو اليسار، إذن $149600000 = 1.496 \\times 10^{8}$ حيث $1 \\le 1.496 < 10$."
+      },
+      {
+        "promptAr": "في العدد الصغير $0.000085$، نزيح الفاصلة نحو اليمين لنحصل على $a = 8.5$. ما قيمة الأس الصحيح النسبي $n$ في الكتابة العلمية $8.5 \\times 10^{n}$؟",
+        "hintAr": "الإزاحة نحو اليمين تعطي أساً سالباً؛ عدّ المراتب من بعد الفاصلة حتى يمين الرقم $8$.",
+        "expectedInput": "-5",
+        "revealAr": "أزحنا الفاصلة $5$ مراتب نحو اليمين، إذن الأس سالب وهو $-5$، وتصبح الكتابة العلمية $8.5 \\times 10^{-5}$."
+      },
+      {
+        "promptAr": "لإيجاد رتبة مقدار العدد $1.496 \\times 10^{8}$، ندوّر الجزء العشري $1.496$ إلى العدد الصحيح الأقرب منه (الوحدة). ما هو هذا العدد الصحيح؟",
+        "hintAr": "الرقم الأول بعد الفاصلة في $1.496$ هو $4$ وهو أصغر من $5$.",
+        "expectedInput": "1",
+        "revealAr": "مدوّر $1.496$ إلى الوحدة هو $1$، وبالتالي رتبة مقدار العدد هي $1 \\times 10^{8} = 10^{8}$."
+      },
+      {
+        "promptAr": "لحصر العدد $A = 8.5 \\times 10^{-5}$ بين قوتين متتاليتين للعدد $10$ على الشكل $10^{-5} < A < 10^{k}$، ما قيمة الأس $k$؟",
+        "hintAr": "لدينا $1 < 8.5 < 10$، وبضرب المتباينة في $10^{-5}$ نضيف $1$ إلى الأس $-5$ في الطرف الأيمن.",
+        "expectedInput": "-4",
+        "revealAr": "بما أن $1 < 8.5 < 10$ فإن $10^{-5} < 8.5 \\times 10^{-5} < 10^{-5+1}$ أي $10^{-5} < A < 10^{-4}$، ومنه $k = -4$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الكتابة العلمية لعدد عشري موجب**: هي كتابته على الشكل $a \\times 10^{n}$ حيث $a$ عدد عشري يحقق $1 \\le a < 10$ (رقم واحد غير معدوم قبل الفاصلة) و $n$ عدد صحيح نسبي.",
+      "**طريقة التحويل**: إذا أزحنا الفاصلة نحو **اليسار** بـ $p$ مرتبة نضرب في $10^{p}$، وإذا أزحناها نحو **اليمين** بـ $p$ مرتبة نضرب في $10^{-p}$. وعند وجود قوة $10$ مسبقة مثل $c \\times 10^{m}$، نكتب $c$ كتابة علمية ثم نطبق قاعدة جمع الأسس.",
+      "**الحصر بين قوتين متتاليتين للعدد $10$**: انطلاقاً من الكتابة العلمية $A = a \\times 10^{n}$ وبما أن $1 \\le a < 10$، نحصل مباشرة على الحصر $10^{n} \\le A < 10^{n+1}$ (وإذا كان $a > 1$ يكون الحصر تماماً $10^{n} < A < 10^{n+1}$).",
+      "**رتبة مقدار عدد**: لإيجاد رتبة مقدار عدد مكتوب كتابة علمية $a \\times 10^{n}$، ندوّر العدد العشري $a$ إلى العدد الصحيح الأقرب منه (إلى الوحدة) $a'$ ونحتفظ بقوة $10$، فتكون رتبة المقدار هي $a' \\times 10^{n}$. وتُستعمل رتب المقدار لتقدير نواتج الحسابات ومراقبة معقوليتها."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"190\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"16\" y=\"16\" width=\"136\" height=\"158\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"84\" y=\"40\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">1. الكتابة العلمية</text><text x=\"84\" y=\"76\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"800\" fill=\"#0f172a\">A = a × 10^n</text><text x=\"84\" y=\"104\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#2563eb\">1 ≤ a &lt; 10</text><text x=\"84\" y=\"132\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\" unicode-bidi=\"plaintext\">رقم واحد غير معدوم</text><text x=\"84\" y=\"152\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\" unicode-bidi=\"plaintext\">قبل الفاصلة</text><polygon points=\"156,95 168,89 168,101\" fill=\"#64748b\"/><rect x=\"172\" y=\"16\" width=\"140\" height=\"158\" rx=\"8\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"242\" y=\"40\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#854d0e\" direction=\"rtl\" unicode-bidi=\"plaintext\">2. الحصر بقوتي 10</text><text x=\"242\" y=\"76\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13.5\" font-weight=\"800\" fill=\"#0f172a\">10^n ≤ A &lt; 10^(n+1)</text><text x=\"242\" y=\"108\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" fill=\"#713f12\" direction=\"rtl\" unicode-bidi=\"plaintext\">انتبه للأس السالب:</text><text x=\"242\" y=\"132\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#b45309\">-5 + 1 = -4</text><text x=\"242\" y=\"152\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">10^-5 &lt; 6.4 × 10^-5 &lt; 10^-4</text><polygon points=\"316,95 328,89 328,101\" fill=\"#64748b\"/><rect x=\"332\" y=\"16\" width=\"132\" height=\"158\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"398\" y=\"40\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">3. رتبة مقدار</text><text x=\"398\" y=\"76\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"800\" fill=\"#0f172a\">a' × 10^n</text><text x=\"398\" y=\"106\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" fill=\"#15803d\" direction=\"rtl\" unicode-bidi=\"plaintext\">a' مدوّر a إلى الوحدة</text><text x=\"398\" y=\"132\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#334155\">3.42 → 3 | 3.75 → 4</text><text x=\"398\" y=\"152\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\" unicode-bidi=\"plaintext\">تستعمل لتقدير الجداءات</text></svg>",
+    "visualCaptionAr": "الانتقال المنهجي من الكتابة العلمية $a \\times 10^{n}$ إلى الحصر بين قوتين متتاليتين للعدد $10$ ورتبة المقدار",
+    "examples": [
+      {
+        "problemAr": "أعط الكتابة العلمية والحصر بين قوتين متتاليتين للعدد $10$ ثم رتبة مقدار كل من العددين $B = 0.000372$ و $C = 45.8 \\times 10^{-6}$.",
+        "solutionAr": "بالنسبة إلى $B$: نزيح الفاصلة $4$ مراتب يميناً فنجد الكتابة العلمية $B = 3.72 \\times 10^{-4}$.\n\nالحصر: $10^{-4} < B < 10^{-3}$. وبما أن مدوّر $3.72$ إلى الوحدة هو $4$، فإن رتبة مقدار $B$ هي $4 \\times 10^{-4}$.\n\nبالنسبة إلى $C$: $C = (4.58 \\times 10^{1}) \\times 10^{-6} = 4.58 \\times 10^{-5}$.\n\nالحصر: $10^{-5} < C < 10^{-4}$. ومدوّر $4.58$ إلى الوحدة هو $5$، إذن رتبة مقدار $C$ هي $5 \\times 10^{-5}$."
+      },
+      {
+        "problemAr": "قدّر باستعمال رتب المقدار نتيجة الجداء $P = (3.1 \\times 10^{5}) \\times (6.8 \\times 10^{-2})$ ثم قارنها بالكتابة العلمية للنتيجة المضبوطة.",
+        "solutionAr": "رتبة مقدار العامل الأول هي $3 \\times 10^{5}$ ورتبة مقدار العامل الثاني هي $7 \\times 10^{-2}$.\n\nتقدير الجداء: $(3 \\times 10^{5}) \\times (7 \\times 10^{-2}) = 21 \\times 10^{3} = 2.1 \\times 10^{4}$، ورتبة مقداره هي $2 \\times 10^{4}$.\n\nوبالحساب المضبوط: $P = (3.1 \\times 6.8) \\times 10^{5 - 2} = 21.08 \\times 10^{3} = 2.108 \\times 10^{4}$، وهو قريب جداً من التقدير $2 \\times 10^{4}$."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: ترك الجزء العشري أكبر من أو يساوي $10$ أو أصغر من $1$، مثل كتابة $24.5 \\times 10^{3}$ أو $0.42 \\times 10^{-2}$ على أنها كتابة علمية! يجب أن يكون $1 \\le a < 10$. كما يجب الحذر عند حصر القوى السالبة: العدد الذي يلي $10^{-5}$ بالزيادة هو $10^{-4}$ وليس $10^{-6}$ لأن $-4 > -5$."
+  },
+  "practice": [
+    {
+      "questionAr": "ما هي الكتابة العلمية للعدد $C = 0.000042 \\times 10^{3}$؟",
+      "options": [
+        "$42 \\times 10^{-3}$",
+        "$4.2 \\times 10^{-2}$",
+        "$4.2 \\times 10^{-8}$",
+        "$0.42 \\times 10^{-1}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "العدد $42$ أكبر من $10$؛ في الكتابة العلمية يجب أن يكون الجزء العشري محصوراً بين $1$ و $10$.",
+        "أحسنت! $0.000042 = 4.2 \\times 10^{-5}$، وعند ضربه في $10^{3}$ نجمع الأسين: $-5 + 3 = -2$.",
+        "انتبه لجمع الأسس: $-5 + 3 = -2$ وليس $-5 - 3 = -8$.",
+        "العدد $0.42$ أصغر من $1$ ولا يحقق الشرط $1 \\le a < 10$."
+      ],
+      "explanationAr": "نكتب أولاً $0.000042 = 4.2 \\times 10^{-5}$، ثم نضرب في $10^{3}$ باستعمال قواعد قوى $10$: $C = 4.2 \\times 10^{-5} \\times 10^{3} = 4.2 \\times 10^{-5+3} = 4.2 \\times 10^{-2}$."
+    },
+    {
+      "questionAr": "في التدريج المقابل لقوى العدد $10$، ما هو الحصر الصحيح للعدد $D = 6.35 \\times 10^{-4}$ بين قوتين متتاليتين للعدد $10$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 110\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"380\" height=\"110\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><line x1=\"30\" y1=\"60\" x2=\"350\" y2=\"60\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"350,60 342,56 342,64\" fill=\"#0f172a\"/><line x1=\"70\" y1=\"52\" x2=\"70\" y2=\"68\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"70\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1e40af\">10^-5</text><line x1=\"160\" y1=\"52\" x2=\"160\" y2=\"68\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"160\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1e40af\">10^-4</text><line x1=\"250\" y1=\"52\" x2=\"250\" y2=\"68\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"250\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1e40af\">10^-3</text><line x1=\"320\" y1=\"52\" x2=\"320\" y2=\"68\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"320\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1e40af\">10^-2</text><circle cx=\"218\" cy=\"60\" r=\"5\" fill=\"#dc2626\"/><text x=\"218\" y=\"38\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"800\" fill=\"#dc2626\">D = 6.35 × 10^-4</text></svg>",
+      "options": [
+        "$10^{-5} < D < 10^{-4}$",
+        "$10^{-3} < D < 10^{-2}$",
+        "$10^{-4} < D < 10^{-3}$",
+        "$10^{4} < D < 10^{5}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$10^{-4}$ أصغر من $6.35 \\times 10^{-4}$ لأن $6.35 > 1$؛ إذن $D$ يقع على يمين $10^{-4}$ وليس على يساره.",
+        "العدد $10^{-3} = 10 \\times 10^{-4}$ أكبر من $6.35 \\times 10^{-4}$، لذا يقع $D$ قبله.",
+        "ممتاز! بما أن $1 < 6.35 < 10$، فإن $10^{-4} < 6.35 \\times 10^{-4} < 10^{-4+1} = 10^{-3}$.",
+        "إشارة الأس سالبة وليست موجبة."
+      ],
+      "explanationAr": "لدينا $1 < 6.35 < 10$. بضرب أطراف هذه المتباينة في العدد الموجب $10^{-4}$ نجد $10^{-4} < 6.35 \\times 10^{-4} < 10^{1} \\times 10^{-4}$، أي $10^{-4} < D < 10^{-3}$."
+    },
+    {
+      "questionAr": "ما هي رتبة مقدار الجداء $P = (2.8 \\times 10^{5}) \\times (3.1 \\times 10^{-2})$؟",
+      "options": [
+        "$6 \\times 10^{3}$",
+        "$8 \\times 10^{3}$",
+        "$9 \\times 10^{7}$",
+        "$9 \\times 10^{3}$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "مدوّر $2.8$ إلى الوحدة هو $3$ وليس $2$، لذا نضرب $3 \\times 3 = 9$ وليس $2 \\times 3 = 6$.",
+        "نتيجة الجداء المضبوطة هي $8.68 \\times 10^{3}$، وعند تدوير $8.68$ إلى الوحدة نحصل على $9$ وليس $8$.",
+        "انتبه لجمع الأسين: $5 + (-2) = 3$ وليس $7$.",
+        "صحيح تماماً! رتبتا مقدار العاملين هما $3 \\times 10^{5}$ و $3 \\times 10^{-2}$، وجداؤهما يعطي $9 \\times 10^{3}$."
+      ],
+      "explanationAr": "ندوّر كل عامل إلى أقرب عدد صحيح: $2.8 \\approx 3$ و $3.1 \\approx 3$. نحسب جداء رتبتي المقدار: $(3 \\times 10^{5}) \\times (3 \\times 10^{-2}) = 9 \\times 10^{5-2} = 9 \\times 10^{3}$ (كما أن الجداء المضبوط $8.68 \\times 10^{3}$ مدوّره $9 \\times 10^{3}$)."
+    }
+  ]
+}

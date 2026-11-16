@@ -1,0 +1,96 @@
+{
+  "documents": [
+    {
+      "id": "ref_4am_curriculum_math_gen2",
+      "grade": "4am",
+      "title_ar": "المنهاج الرسمي لمادة الرياضيات لمرحلة التعليم المتوسط (وزارة التربية الوطنية - الجيل الثاني 2016)",
+      "category": "curriculum",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4am/01_curriculum/4am_curriculum_math_moyen_2016.pdf",
+      "source_url": "https://www.dzeducative.com/wp-content/uploads/2024/09/%D9%85%D9%86%DA%BE%D8%A7%D8%AC-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA.pdf",
+      "pages_count": 48,
+      "extraction_mode": "digital_text",
+      "sha256": "25adb22fbbde61eebeec9f6ab3b52c70a1331113c815694a8212bb3d2507a9db",
+      "size_bytes": 1389518
+    },
+    {
+      "id": "ref_4am_accompanying_doc_math_gen2",
+      "grade": "4am",
+      "title_ar": "الوثيقة المرافقة لمنهاج الرياضيات في مرحلة التعليم المتوسط (اللجنة الوطنية للمناهج - الجيل الثاني 2016)",
+      "category": "accompanying_doc",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4am/01_curriculum/4am_accompanying_doc_math_moyen_2016.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1snzUKkm_BHEgDLC1W--dJrrZvwcK4Ca4",
+      "pages_count": 102,
+      "extraction_mode": "digital_text",
+      "sha256": "c513bf73c0878e0873c015c55279f68f7068759892f9b11fc56995f85f91dceb",
+      "size_bytes": 3368243
+    },
+    {
+      "id": "ref_4am_progression_mechanisms_2021_2022",
+      "grade": "4am",
+      "title_ar": "المخطط السنوي للتعلمات وآليات تنفيذه لمادة الرياضيات للسنة الرابعة متوسط (وزارة التربية الوطنية / المفتشية العامة للتربية الوطنية - 2021/2022)",
+      "category": "progression",
+      "year": "2021-2022",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4am/01_curriculum/4am_annual_plan_mechanisms_math_2021_2022.pdf",
+      "source_url": "https://elbassair.net/achatri/chat2014/cour/moyene/1am/manahidj/PLANT%20ANNUEL%20%202022%20AM/MATH%20AM%202022/PLAN%20ANNUEL%204AM%20MATH%20%202022%20elbassair.net.pdf",
+      "pages_count": 13,
+      "extraction_mode": "digital_text",
+      "sha256": "32495de737c21ee5a79a8ad5f7616b8fcb64adfedff244d63a5987aa0a2d0c11",
+      "size_bytes": 459695
+    },
+    {
+      "id": "ref_4am_progression_ministry_2022_2023",
+      "grade": "4am",
+      "title_ar": "المخططات السنوية لمادة الرياضيات للسنة الرابعة من التعليم المتوسط (وزارة التربية الوطنية / المفتشية العامة للتربية الوطنية - طبعة سبتمبر 2022 المعمول بها)",
+      "category": "progression",
+      "year": "2022-2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4am/01_curriculum/4am_annual_plan_math_ministry_2022_2023.pdf",
+      "source_url": "https://elbassair.net/achatri/chat2014/cour/moyene/4am/MNAHIDJ%204AM/PLAN%20ANNUEL%204AM%202023/PLAN%20ANNUEL%204AM%20%20MATH%20%20%20%202022%20elbassair.net.pdf",
+      "pages_count": 10,
+      "extraction_mode": "digital_text",
+      "sha256": "3817ab5f01c71f23239e812d731b805a38f20f7a59cbb34d2640417e1b306bc4",
+      "size_bytes": 1557113
+    },
+    {
+      "id": "ref_4am_progression_weekly_2025_2026",
+      "grade": "4am",
+      "title_ar": "التدرج السنوي لمادة الرياضيات للسنة الرابعة متوسط (العام الدراسي 2025-2026)",
+      "category": "progression",
+      "year": "2025-2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4am/01_curriculum/4am_annual_progression_math_2025_2026.pdf",
+      "source_url": "https://www.dzeducative.com/wp-content/uploads/2025/08/4am.pdf",
+      "pages_count": 2,
+      "extraction_mode": "digital_text",
+      "sha256": "c95a5f0612dbbf147e4452752b516e55a4825b2c052c471d7194c6b598092e5e",
+      "size_bytes": 229891
+    },
+    {
+      "id": "ref_4am_progression_weekly_2026_2027",
+      "grade": "4am",
+      "title_ar": "التدرج السنوي لمادة الرياضيات للسنة الرابعة متوسط (السنة الدراسية 2026/2027)",
+      "category": "progression",
+      "year": "2026-2027",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4am/01_curriculum/4am_annual_progression_math_2026_2027.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1xTRe8GLvKF2YXZIYWpI1cmf_O_kAIoY0",
+      "pages_count": 5,
+      "extraction_mode": "digital_text",
+      "sha256": "cda4fc19868f8f5c145c8e5e1545b4c7770a5b0c1dcb8c98a6cc91da8af85b46",
+      "size_bytes": 2538811
+    }
+  ],
+  "missing_references": [
+    {
+      "grade": "4am",
+      "title_ar": "دليل بناء اختبار مادة الرياضيات في امتحان شهادة التعليم المتوسط (الديوان الوطني للامتحانات والمسابقات - الجيل الثاني)",
+      "reason": "no_unblocked_accessible_pdf_mirror (scribd.com hosts copies under anti-bot/login gates; dzexams.com returned HTTP 403 Cloudflare challenge; onec.dz timed out after 10s; 9rayadz.com Google Drive file 1P12ibx5RVbgSu-k7bbb9xpfy64Gayibs is a single JPEG image rather than a PDF; up.educafile.com 166963542598463.pdf is Civic Education; mathencem.blogspot.com Drive ID 1Iy3yIxXnNEWtP0DeotNj8J_VQpGElSFc is actually Primary 5AP Oct 2017)",
+      "source_url": "https://www.9rayadz.com/2024/11/Dalilexamcem.html"
+    }
+  ]
+}

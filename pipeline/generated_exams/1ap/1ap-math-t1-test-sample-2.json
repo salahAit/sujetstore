@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "1ap",
+    "yearName": "السنة الأولى ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t1",
+    "trimesterName": "الفصل الأول",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "أَنْجِزْ عَمَلِيّاتِ الجَمْعِ التّالِيَةَ بِدِقَّةٍ:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.25fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) احْسُبِ المَجْمُوعَ المُمَثَّلَ في الصُّورَةِ:   $4 + 3 =$ .....",
+              "answer": "$ 4 + 3 = 7 $",
+              "mark": "1"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/1ap_t1_add_s432939_medium.svg",
+              "caption": "ضَمُّ مَجْمُوعَتَيْنِ"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) احْسُبْ ما يَلي:   $6 + 1 =$ .....",
+          "answer": "$ 6 + 1 = 7 $",
+          "mark": "1"
+        },
+        {
+          "type": "text",
+          "content": "3) أَكْمِلْ بِالْعَدَدِ المُنَاسِبِ:   $1 +$ ..... $= 5$",
+          "answer": "$ 1 + 4 = 5 $",
+          "mark": "1"
+        }
+      ],
+      "id": "ex_test_1_1ap_t1_addition_sums_under_10",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "لاحِظِ الصُّورَةَ ثُمَّ حَدِّدْ مَوْقِعَ كُلِّ شَيْءٍ:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.25fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) أَكْمِلْ بِـ (فَوْقَ أَوْ تَحْتَ):\nتَقَعُ الكُرَةُ الزَّرْقاءُ .................... الطّاوِلَةِ.",
+              "answer": "تَقَعُ الكُرَةُ الزَّرْقاءُ فَوْقَ الطّاوِلَةِ.",
+              "mark": "1.5"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/1ap_t1_spatial_s65839_medium.svg",
+              "caption": "مَواقِعُ الأَشْياءِ"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) أَكْمِلْ بِـ (داخِلَ أَوْ خارِجَ):\nتَقَعُ النَّجْمَةُ الصَّفْراءُ .................... الصُّنْدُوقِ.",
+          "answer": "تَقَعُ النَّجْمَةُ الصَّفْراءُ خارِجَ الصُّنْدُوقِ.",
+          "mark": "1.5"
+        }
+      ],
+      "id": "ex_test_2_1ap_t1_spatial_and_lengths",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "اقْرَأِ الوَضْعِيَّةَ جَيِّدًا وَلاحِظِ الصُّورَةَ، ثُمَّ أَجِبْ:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.3fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "في القِسْمِ، تَمْلِكُ مَرْيَمُ $3$ أَقْلامٍ، وَتَمْلِكُ سارَةُ $4$ أَقْلامٍ."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/1ap_t1_integ_s880252_medium.svg",
+              "caption": "تَمْثِيلُ الوَضْعِيَّةِ"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) قارِنْ بَيْنَ عَدَدَيْ مَرْيَمَ وَسارَةَ باستِعْمالِ ($<$ أَوْ $>$ أَوْ $=$):   $3$ ..... $4$",
+          "answer": "$ 3 < 4 $",
+          "mark": "1"
+        },
+        {
+          "type": "text",
+          "content": "2) اكْتُبْ عَمَلِيَّةَ الجَمْعِ لِحِسابِ المَجْمُوعِ الكُلِّيِّ:   ..... $+$ ..... $=$ .....",
+          "answer": "$ 3 + 4 = 7 $",
+          "mark": "2"
+        },
+        {
+          "type": "text",
+          "content": "3) أَكْمِلْ جُمْلَةَ الإِجابَةِ: المَجْمُوعُ الكُلِّيُّ هُوَ .....",
+          "answer": "المَجْمُوعُ الكُلِّيُّ هُوَ $7$ أَقْلامٍ.",
+          "mark": "1"
+        }
+      ],
+      "id": "ex_integration_1ap_t1_integration_word"
+    }
+  ]
+}

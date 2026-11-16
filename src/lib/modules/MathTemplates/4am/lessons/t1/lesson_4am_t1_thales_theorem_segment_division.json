@@ -1,0 +1,131 @@
+{
+  "id": "lesson_4am_t1_thales_theorem_segment_division",
+  "slug": "4am-t1-thales-theorem-segment-division",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني: خاصية طالس والخاصية العكسية وتطبيقاتها",
+  "order": 4,
+  "titleAr": "خاصية طالس في شكلي المثلث والفراشة، حساب الأطوال وتقسيم قطعة مستقيم",
+  "objectives": [
+    "معرفة خاصية طالس في الحالتين الهندسيتين (شكل المثلث وشكل الفراشة) وكتابة تساوي النسب الثلاث بصورة سليمة",
+    "استعمال خاصية طالس لحساب أطوال مجهولة في وضعيات هندسية ووضعيات من الحياة اليومية (قياس ارتفاعات ومسافات والتكبير والتصغير)",
+    "توظيف خاصية طالس في إنشاءات هندسية بسيطة لتقسيم قطعة مستقيم إلى أجزاء متقايسة أو بنسبة معلومة"
+  ],
+  "keywordsAr": [
+    "خاصية طالس",
+    "شكل المثلث",
+    "شكل الفراشة",
+    "تناسبية الأطوال",
+    "حساب أطوال",
+    "تقسيم قطعة مستقيم"
+  ],
+  "discover": {
+    "scenarioAr": "في تصميم هيكل معدني لسقف مثلثي الشكل $ABC$ ، وضع المهندس عارضة أفقية $[MN]$ موازية للقاعدة $[BC]$ حيث $M \\in [AB]$ و $N \\in [AC]$ ، بالأطوال: $AM = 4\\text{ m}$ ، $AB = 10\\text{ m}$ ، $AC = 15\\text{ m}$ ، $BC = 12\\text{ m}$ . كيف نطبّق خاصية طالس لحساب $AN$ و $MN$ ، وكيف تبقى الصيغة نفسها صالحة في شكل الفراشة؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"215\" height=\"175\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"117\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">شكل المثلث: (MN) // (BC)</text><polygon points=\"118,42 44,142 192,142\" fill=\"#dbeafe\" fill-opacity=\"0.35\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"88.4\" y1=\"82\" x2=\"147.6\" y2=\"82\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><line x1=\"44\" y1=\"142\" x2=\"192\" y2=\"142\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><circle cx=\"118\" cy=\"42\" r=\"3.2\" fill=\"#dc2626\"/><circle cx=\"88.4\" cy=\"82\" r=\"3\" fill=\"#16a34a\"/><circle cx=\"147.6\" cy=\"82\" r=\"3\" fill=\"#16a34a\"/><text x=\"118\" y=\"37\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">A</text><text x=\"34\" y=\"147\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"202\" y=\"147\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"76\" y=\"85\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">M</text><text x=\"159\" y=\"85\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">N</text><text x=\"87\" y=\"63\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">4</text><text x=\"55\" y=\"116\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\">AB=10</text><text x=\"180\" y=\"100\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\">AC=15</text><text x=\"118\" y=\"158\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\">BC = 12 m</text><text x=\"118\" y=\"176\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">نبدأ النسب دائماً من الرأس A</text><rect x=\"235\" y=\"10\" width=\"215\" height=\"175\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"342\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">شكل الفراشة: (MN) // (BC)</text><line x1=\"384\" y1=\"62\" x2=\"272\" y2=\"142\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"300\" y1=\"62\" x2=\"412\" y2=\"142\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"300\" y1=\"62\" x2=\"384\" y2=\"62\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><line x1=\"272\" y1=\"142\" x2=\"412\" y2=\"142\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><circle cx=\"342\" cy=\"92\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"384\" cy=\"62\" r=\"3\" fill=\"#2563eb\"/><circle cx=\"300\" cy=\"62\" r=\"3\" fill=\"#2563eb\"/><circle cx=\"272\" cy=\"142\" r=\"3\" fill=\"#0f172a\"/><circle cx=\"412\" cy=\"142\" r=\"3\" fill=\"#0f172a\"/><text x=\"355\" y=\"96\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">A</text><text x=\"396\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">M</text><text x=\"288\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">N</text><text x=\"260\" y=\"147\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"424\" y=\"147\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"342\" y=\"172\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">AM/AB = AN/AC = MN/BC</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في المثلث $ABC$ ، لدينا $(MN) \\parallel (BC)$ و $M \\in [AB]$ و $N \\in [AC]$ . تعطي خاصية طالس تساوي النسب الثلاث: $\\frac{AM}{AB} = \\frac{AN}{AC} = \\frac{MN}{BC}$ . ما القيمة العشرية للنسبة الأولى $\\frac{AM}{AB} = \\frac{4}{10}$ ؟",
+        "hintAr": "اقسم $4$ على $10$ .",
+        "expectedInput": "0.4",
+        "revealAr": "النسبة المعلومة هي $\\frac{AM}{AB} = \\frac{4}{10} = 0.4$ (وتمثل معامل التصغير من المثلث الكبير $ABC$ إلى المثلث الصغير $AMN$ )."
+      },
+      {
+        "promptAr": "نستعمل المساواة $\\frac{AN}{AC} = \\frac{AM}{AB}$ أي $\\frac{AN}{15} = \\frac{4}{10}$ . ما طول الضلع $AN$ بالمتر؟",
+        "hintAr": "استعمل الجداء المتصالب: $AN = \\frac{4 \\times 15}{10}$ .",
+        "expectedInput": "6",
+        "revealAr": "$AN = \\frac{4 \\times 15}{10} = \\frac{60}{10} = 6\\text{ m}$ ."
+      },
+      {
+        "promptAr": "نستعمل الآن المساواة $\\frac{MN}{BC} = \\frac{4}{10}$ أي $\\frac{MN}{12} = 0.4$ . ما طول العارضة $MN$ بالمتر؟",
+        "hintAr": "احسب $12 \\times 0.4$ (أو $\\frac{4 \\times 12}{10}$).",
+        "expectedInput": "4.8",
+        "revealAr": "$MN = \\frac{4 \\times 12}{10} = \\frac{48}{10} = 4.8\\text{ m}$ ."
+      },
+      {
+        "promptAr": "لتقسيم قطعة مستقيم $[EF]$ إلى $5$ أجزاء متقايسة هندسياً، نرسم نصف مستقيم $[Ex)$ ونعيّن عليه بالمدور $5$ نقط متساوية البعد $E_1, E_2, E_3, E_4, E_5$ . بأي نقطة رقم $n$ من النقط $E_n$ نربط الطرف $F$ قبل رسم المستقيمات الموازية؟",
+        "hintAr": "نصل آخر نقطة مقسمة على نصف المستقيم بالطرف $F$ .",
+        "expectedInput": "5",
+        "revealAr": "نصل النقطة $E_5$ بالنقطة $F$ ، ثم نرسم من $E_1, E_2, E_3, E_4$ مستقيمات موازية للمستقيم $(E_5 F)$ فتقطع $[EF]$ إلى $5$ أجزاء متقايسة بفضل خاصية طالس."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**نص خاصية طالس**: ليكن $(d)$ و $(d')$ مستقيمين متقاطعين في نقطة $A$ . لتكن $B$ و $M$ نقطتين من $(d)$ تختلفان عن $A$ ، ولتكن $C$ و $N$ نقطتين من $(d')$ تختلفان عن $A$ . إذا كان المستقيمان $(MN)$ و $(BC)$ **متوازيين**، فإن: $\\frac{AM}{AB} = \\frac{AN}{AC} = \\frac{MN}{BC}$ .",
+      "**الوضعيتان الهندسيتان (المثلث والفراشة)**: تبقى المساواة الثلاثية صالحة سواء كانت النقطتان $M$ و $N$ في نفس جهة $B$ و $C$ بالنسبة إلى $A$ (**شكل المثلث**) أو في جهتين متعاكستين حول $A$ (**شكل الفراشة**).",
+      "**منهجية حساب طول مجهول**: (1) نذكر شرطي طالس (تقاطع المستقيمين في $A$ والتوازي $(MN) \\parallel (BC)$)؛ (2) نكتب تساوي النسب الثلاث انطلاقاً من نقطة التقاطع $A$ ؛ (3) نعوض الأطوال المعلومة ونختار نسبتين لحساب الطول المجهول بالجداء المتصالب (الرابع المتناسب).",
+      "**تقسيم قطعة مستقيم هندسياً**: لتقسيم $[AB]$ إلى $n$ أجزاء متقايسة، ننشئ نصف مستقيم $[Ax)$ لا ينطبق على $(AB)$ ، ونعين عليه بالمدور $n$ تدريجات متقايسة $A_1, A_2, \\dots, A_n$ ، ثم نرسم $(A_n B)$ والمستقيمات الموازية له المارة من $A_1, \\dots, A_{n-1}$ فتقطع $[AB]$ وفق النسب المطلوبة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"238\" height=\"175\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"129\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\">تقسيم قطعة [AB] إلى 3 أجزاء متقايسة</text><line x1=\"40\" y1=\"64\" x2=\"220\" y2=\"64\" stroke=\"#0f172a\" stroke-width=\"2.4\"/><line x1=\"40\" y1=\"64\" x2=\"215\" y2=\"169\" stroke=\"#64748b\" stroke-width=\"1.6\"/><line x1=\"190\" y1=\"154\" x2=\"220\" y2=\"64\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"140\" y1=\"124\" x2=\"160\" y2=\"64\" stroke=\"#16a34a\" stroke-width=\"1.8\" stroke-dasharray=\"4,3\"/><line x1=\"90\" y1=\"94\" x2=\"100\" y2=\"64\" stroke=\"#16a34a\" stroke-width=\"1.8\" stroke-dasharray=\"4,3\"/><circle cx=\"40\" cy=\"64\" r=\"3.2\" fill=\"#0f172a\"/><circle cx=\"100\" cy=\"64\" r=\"3.2\" fill=\"#16a34a\"/><circle cx=\"160\" cy=\"64\" r=\"3.2\" fill=\"#16a34a\"/><circle cx=\"220\" cy=\"64\" r=\"3.2\" fill=\"#0f172a\"/><circle cx=\"90\" cy=\"94\" r=\"3\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"124\" r=\"3\" fill=\"#2563eb\"/><circle cx=\"190\" cy=\"154\" r=\"3\" fill=\"#dc2626\"/><line x1=\"68\" y1=\"59\" x2=\"72\" y2=\"69\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><line x1=\"128\" y1=\"59\" x2=\"132\" y2=\"69\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><line x1=\"188\" y1=\"59\" x2=\"192\" y2=\"69\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"34\" y=\"56\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"100\" y=\"54\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\">M1</text><text x=\"160\" y=\"54\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\">M2</text><text x=\"225\" y=\"56\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"76\" y=\"107\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">A1</text><text x=\"126\" y=\"137\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">A2</text><text x=\"176\" y=\"167\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\">A3</text><text x=\"222\" y=\"174\" font-size=\"11\" font-weight=\"bold\" fill=\"#475569\">x</text><rect x=\"258\" y=\"10\" width=\"192\" height=\"175\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"354\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">مفتاح كتابة النسب</text><rect x=\"272\" y=\"48\" width=\"164\" height=\"42\" rx=\"7\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.2\"/><text x=\"354\" y=\"66\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">البسط: أضلاع المثلث AMN</text><text x=\"354\" y=\"82\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">AM , AN , MN</text><rect x=\"272\" y=\"98\" width=\"164\" height=\"42\" rx=\"7\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"354\" y=\"116\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">المقام: أضلاع المثلث ABC</text><text x=\"354\" y=\"132\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">AB , AC , BC</text><text x=\"354\" y=\"164\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">حافظ على نفس الترتيب!</text></svg>",
+    "visualCaptionAr": "تطبيق خاصية طالس في تقسيم قطعة مستقيم هندسياً إلى 3 أجزاء متقايسة، وقاعدة ترتيب البسط والمقام",
+    "examples": [
+      {
+        "problemAr": "في مثلث $ABC$ ، النقطة $M \\in [AB]$ والنقطة $N \\in [AC]$ بحيث $(MN) \\parallel (BC)$ . إذا كان $AM = 3\\text{ cm}$ ، $MB = 6\\text{ cm}$ ، $AN = 4\\text{ cm}$ و $BC = 12\\text{ cm}$ ، احسب الطولين $AC$ و $MN$ .",
+        "solutionAr": "أولاً نحسب $AB = AM + MB = 3 + 6 = 9\\text{ cm}$ .\n\nفي المثلث $ABC$ لدينا $(MN) \\parallel (BC)$ ، وحسب خاصية طالس: $\\frac{AM}{AB} = \\frac{AN}{AC} = \\frac{MN}{BC}$ .\n\nبالتعويض: $\\frac{3}{9} = \\frac{4}{AC} = \\frac{MN}{12}$ .\n\nومنه: $AC = \\frac{4 \\times 9}{3} = 12\\text{ cm}$ و $MN = \\frac{3 \\times 12}{9} = 4\\text{ cm}$ ."
+      },
+      {
+        "problemAr": "(شكل الفراشة) يتقاطع المستقيمان $(BD)$ و $(CE)$ في النقطة $A$ حيث $(BC) \\parallel (DE)$ . نُعطي $AB = 4\\text{ cm}$ ، $AD = 6\\text{ cm}$ ، $AC = 5\\text{ cm}$ و $DE = 9\\text{ cm}$ . احسب $AE$ و $BC$ .",
+        "solutionAr": "بما أن $(BD)$ و $(CE)$ متقاطعان في $A$ و $(BC) \\parallel (DE)$ ، فحسب خاصية طالس:\n\n$\\frac{AB}{AD} = \\frac{AC}{AE} = \\frac{BC}{DE}$\n\nبالتعويض: $\\frac{4}{6} = \\frac{5}{AE} = \\frac{BC}{9}$ .\n\nإذن: $AE = \\frac{5 \\times 6}{4} = 7.5\\text{ cm}$ و $BC = \\frac{4 \\times 9}{6} = 6\\text{ cm}$ ."
+      }
+    ],
+    "watchOutAr": "خطأان شائعان يجب تجنبهما: (1) كتابة $\\frac{AM}{MB} = \\frac{MN}{BC}$ ! هذا خطأ فادح لأن النسب الثلاث تبدأ دائماً من نقطة التقاطع $A$ ($\\frac{AM}{AB}$ وليس $\\frac{AM}{MB}$). (2) قلب إحدى النسب عن البقية؛ ضع دوماً أطوال أحد المثلثين في البسط وأطوال المثلث الآخر في المقام."
+  },
+  "practice": [
+    {
+      "questionAr": "في الشكل المقابل، $M \\in [AB]$ و $N \\in [AC]$ مع $(MN) \\parallel (BC)$ ، حيث $AM = 3\\text{ cm}$ و $MB = 5\\text{ cm}$ و $BC = 16\\text{ cm}$ . ما هو الطول $MN$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 165\" width=\"280\" height=\"165\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><polygon points=\"140,22 44,142 236,142\" fill=\"#eff6ff\" fill-opacity=\"0.4\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"104\" y1=\"67\" x2=\"176\" y2=\"67\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><line x1=\"44\" y1=\"142\" x2=\"236\" y2=\"142\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><text x=\"140\" y=\"16\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">A</text><text x=\"32\" y=\"148\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"248\" y=\"148\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"91\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">M</text><text x=\"189\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">N</text><text x=\"105\" y=\"46\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">3 cm</text><text x=\"58\" y=\"107\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">5 cm</text><text x=\"140\" y=\"83\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">?</text><text x=\"140\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">16 cm</text></svg>",
+      "options": [
+        "$9.6\\text{ cm}$",
+        "$6\\text{ cm}$",
+        "$10\\text{ cm}$",
+        "$4.8\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "لقد كتبت النسبة $\\frac{AM}{MB} = \\frac{3}{5}$ بدلاً من $\\frac{AM}{AB}$ ! انتبه: $AB = AM + MB = 3 + 5 = 8\\text{ cm}$ .",
+        "ممتاز! لدينا $AB = 3 + 5 = 8\\text{ cm}$ ، وبتطبيق خاصية طالس: $\\frac{3}{8} = \\frac{MN}{16}$ ، ومنه $MN = \\frac{3 \\times 16}{8} = 6\\text{ cm}$ .",
+        "$10\\text{ cm}$ ينتج عن استعمال $\\frac{MB}{AB} = \\frac{5}{8}$ بدلاً من $\\frac{AM}{AB} = \\frac{3}{8}$ .",
+        "تحقق من المقام: $AB = 8\\text{ cm}$ وليس $10\\text{ cm}$ !"
+      ],
+      "explanationAr": "نحسب أولاً الطول الكلي $AB = AM + MB = 3 + 5 = 8\\text{ cm}$ . وبما أن $(MN) \\parallel (BC)$ فحسب خاصية طالس: $\\frac{AM}{AB} = \\frac{MN}{BC}$ أي $\\frac{3}{8} = \\frac{MN}{16}$ ، ومنه $MN = \\frac{3 \\times 16}{8} = 6\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "في شكل الفراشة المقابل، يتقاطع $(RS)$ و $(UT)$ في $O$ مع $(RU) \\parallel (ST)$ . إذا كان $OR = 4\\text{ cm}$ ، $OS = 10\\text{ cm}$ و $OT = 15\\text{ cm}$ ، فما هو الطول $OU$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 165\" width=\"280\" height=\"165\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"172\" y1=\"58\" x2=\"60\" y2=\"142\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"108\" y1=\"58\" x2=\"220\" y2=\"142\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"108\" y1=\"58\" x2=\"172\" y2=\"58\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><line x1=\"60\" y1=\"142\" x2=\"220\" y2=\"142\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><circle cx=\"140\" cy=\"82\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"153\" y=\"85\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">O</text><text x=\"182\" y=\"56\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">R</text><text x=\"96\" y=\"56\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">U</text><text x=\"48\" y=\"147\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">S</text><text x=\"232\" y=\"147\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">T</text><text x=\"166\" y=\"76\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\">4</text><text x=\"87\" y=\"109\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\">10</text><text x=\"190\" y=\"109\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\">15</text><text x=\"112\" y=\"76\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\">?</text></svg>",
+      "options": [
+        "$37.5\\text{ cm}$",
+        "$9\\text{ cm}$",
+        "$4\\text{ cm}$",
+        "$6\\text{ cm}$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "لقد قلبت إحدى النسبتين ($\\frac{10}{4} = \\frac{OU}{15}$)! تذكر أن $OR$ و $OU$ في نفس المثلث $ORU$ ، و $OS$ و $OT$ في المثلث $OST$ .",
+        "تحقق من الحساب: $\\frac{4 \\times 15}{10} = \\frac{60}{10} = 6$ وليس $9$ .",
+        "$OU$ لا يساوي بالضرورة $OR$ لأن المثلثين غير متساويي الساقين بالمعطيات.",
+        "أحسنت! بتطبيق طالس انطلاقاً من $O$ : $\\frac{OR}{OS} = \\frac{OU}{OT}$ أي $\\frac{4}{10} = \\frac{OU}{15}$ ، ومنه $OU = 6\\text{ cm}$ ."
+      ],
+      "explanationAr": "بما أن $(RS)$ و $(UT)$ يتقاطعان في $O$ و $(RU) \\parallel (ST)$ ، فحسب خاصية طالس: $\\frac{OR}{OS} = \\frac{OU}{OT}$ . بالتعويض: $\\frac{4}{10} = \\frac{OU}{15}$ ، ومنه $OU = \\frac{4 \\times 15}{10} = 6\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "لتقسيم القطعة $[AB]$ إلى $5$ أجزاء متقايسة وتعيين النقطة $M \\in [AB]$ بحيث $AM = \\frac{2}{5}AB$ ، رسمنا نصف المستقيم $[Ax)$ وعيّنا $5$ نقاط متساوية البعد $A_1, A_2, A_3, A_4, A_5$ ثم رسمنا $(A_5 B)$ . نرسم الموازي لـ $(A_5 B)$ المار من أي نقطة لتعيين $M$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 290 155\" width=\"290\" height=\"155\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"40\" y1=\"46\" x2=\"240\" y2=\"46\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"40\" y1=\"46\" x2=\"228\" y2=\"146\" stroke=\"#64748b\" stroke-width=\"1.6\"/><line x1=\"210\" y1=\"136\" x2=\"240\" y2=\"46\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"108\" y1=\"82\" x2=\"120\" y2=\"46\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"4,3\"/><circle cx=\"40\" cy=\"46\" r=\"3\" fill=\"#0f172a\"/><circle cx=\"120\" cy=\"46\" r=\"3.5\" fill=\"#16a34a\"/><circle cx=\"240\" cy=\"46\" r=\"3\" fill=\"#0f172a\"/><circle cx=\"74\" cy=\"64\" r=\"2.8\" fill=\"#2563eb\"/><circle cx=\"108\" cy=\"82\" r=\"3.2\" fill=\"#16a34a\"/><circle cx=\"142\" cy=\"100\" r=\"2.8\" fill=\"#2563eb\"/><circle cx=\"176\" cy=\"118\" r=\"2.8\" fill=\"#2563eb\"/><circle cx=\"210\" cy=\"136\" r=\"3\" fill=\"#dc2626\"/><text x=\"36\" y=\"36\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"120\" y=\"36\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">M</text><text x=\"244\" y=\"36\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"64\" y=\"77\" font-size=\"10\" fill=\"#1d4ed8\">A1</text><text x=\"98\" y=\"95\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\">A2</text><text x=\"132\" y=\"113\" font-size=\"10\" fill=\"#1d4ed8\">A3</text><text x=\"166\" y=\"131\" font-size=\"10\" fill=\"#1d4ed8\">A4</text><text x=\"200\" y=\"149\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\">A5</text></svg>",
+      "options": [
+        "النقطة $A_2$",
+        "النقطة $A_3$",
+        "النقطة $A_5$",
+        "النقطة $A_1$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! حسب خاصية طالس: $\\frac{AM}{AB} = \\frac{AA_2}{AA_5} = \\frac{2}{5}$ ، ومنه $AM = \\frac{2}{5}AB$ .",
+        "الموازي المار من $A_3$ يعطي $\\frac{AM}{AB} = \\frac{3}{5}$ وليس $\\frac{2}{5}$ .",
+        "$A_5$ هي التي تنشئ المستقيم $(A_5 B)$ نفسه فتقطع $[AB]$ في $B$ (أي $\\frac{5}{5} = 1$).",
+        "الموازي المار من $A_1$ يعطي $\\frac{1}{5}AB$ فقط."
+      ],
+      "explanationAr": "لأن المستقيمين $(MA_2)$ و $(BA_5)$ متوازيان، فحسب خاصية طالس في المثلث $AA_5B$ : $\\frac{AM}{AB} = \\frac{AA_2}{AA_5} = \\frac{2}{5}$ . إذن نرسم الموازي لـ $(A_5 B)$ المار من $A_2$ ."
+    }
+  ]
+}

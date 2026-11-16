@@ -32,6 +32,7 @@
 	// PDF mode options
 	let trimesterId = $state('t1');
 	let docType = $state<'exam' | 'test'>('exam');
+	let pdfDifficulty = $state<'easy' | 'medium' | 'hard'>('medium');
 	let exerciseCount = $state(2);
 	let generatingPdf = $state(false);
 	let pdfResult = $state<{ pdfUrl: string; solutionUrl: string; title: string } | null>(null);
@@ -93,6 +94,7 @@
 					yearSubjectId: selectedYsId,
 					trimesterId,
 					docType,
+					difficulty: pdfDifficulty,
 					exerciseCount
 				})
 			});
@@ -233,7 +235,7 @@
 					{/if}
 				</button>
 			{:else}
-				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
 					<div>
 						<label for="gen-ys-pdf" class="mb-1.5 block text-xs font-bold">السنة والمادة</label>
 						<select
@@ -270,7 +272,20 @@
 							class="bg-background w-full rounded-xl border px-3 py-2.5 text-sm outline-none focus:border-blue-500"
 						>
 							<option value="exam">اختبار فصلي</option>
-							<option value="test">فرض محروس</option>
+							<option value="test">تقويم مرحلي / فرض محروس</option>
+						</select>
+					</div>
+
+					<div>
+						<label for="gen-pdf-diff" class="mb-1.5 block text-xs font-bold">مستوى الصعوبة</label>
+						<select
+							id="gen-pdf-diff"
+							bind:value={pdfDifficulty}
+							class="bg-background w-full rounded-xl border px-3 py-2.5 text-sm outline-none focus:border-blue-500"
+						>
+							<option value="easy">سهل</option>
+							<option value="medium">متوسط</option>
+							<option value="hard">صعب</option>
 						</select>
 					</div>
 

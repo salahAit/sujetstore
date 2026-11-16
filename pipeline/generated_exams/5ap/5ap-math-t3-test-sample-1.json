@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "5ap",
+    "yearName": "السنة الخامسة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "أجب عن السؤالين الآتيين مع إبراز خطوات القسمة العشرية التامة:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب الحاصل العشري التام للعملية الآتية: $5 div 2$",
+          "answer": "1) حساب الحاصل العشري التام: $5 div 2 = 2.5$ (الحاصل الصحيح $2$ والباقي $1$ ثم تحويل الباقي إلى أعشار).",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "2) أتمم المساويات الآتية بالكتابة العشرية المناسبة: $frac(1, 2) = ...$  ،  $2 + frac(1, 2) = ...$  ،  $frac(3, 5) = ...$",
+          "answer": "2) إتمام المساويات: $frac(1, 2) = 0.5$  ،  $2 + frac(1, 2) = 2.5$  ،  $frac(3, 5) = 0.6$",
+          "mark": "1.5"
+        }
+      ],
+      "id": "exam-5ap-supervised_test-t3-easy-401-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "تسير سيارة بين قسنطينة وعنابة بسرعة منتظمة قدرها #text(dir: ltr)[120 km/h]. أتمم جدول التناسبية واحسب المسافة المقطوعة خلال #text(dir: ltr)[2 h]:",
+      "content": [
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "المدة الزمنية (بالدقائق)",
+            "المسافة المقطوعة (km)"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "$60$ min ($1$ h)",
+              "$120$"
+            ],
+            [
+              "$120$ min (#text(dir: ltr)[2 h])",
+              {
+                "content": "$...$",
+                "answer": "$240$",
+                "mark": "1.5"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "content": "احسب المسافة المقطوعة بـ km.",
+          "answer": "المسافة خلال $2$ ساعات: $120 times 2 = 240$ km.",
+          "mark": "1.5"
+        }
+      ],
+      "id": "exam-5ap-supervised_test-t3-easy-401-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "اقرأ السندات بعناية ثم أجب عن المطالب الثلاثة مع وضع العمليات العمودية والتعبير عن الوحدة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "يمتلك فلاح في واحات بسكرة بستانا مستطيل الشكل طوله #text(dir: ltr)[30 m] وعرضه #text(dir: ltr)[23 m]. جنى منه محصولا من التمور كتلته #text(dir: ltr)[19 q]، ووضعه في صناديق يسع كل صندوق #text(dir: ltr)[20 kg]. باع $50%$ من الصناديق بسعر $7000$ دج للصندوق، ودفع $7000$ دج كمصاريف للنقل والعمال."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap_t3_integ_s687102_easy.svg",
+              "caption": "مخطط البستان"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "المحصول الكلي",
+            "سعة الصندوق",
+            "نسبة المبيعات",
+            "سعر الصندوق",
+            "المصاريف"
+          ],
+          "cells": [
+            "#text(dir: ltr)[19 q]",
+            "#text(dir: ltr)[20 kg]",
+            "50%",
+            "7000 دج",
+            "7000 دج"
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب مساحة هذا البستان بالمتر المربع.",
+          "answer": "1) مساحة البستان: $30 times 23 = 690$ #text(dir: ltr)[m²]",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "2) حوّل كتلة المحصول إلى الكيلوغرام، ثم احسب عدد كل الصناديق وعدد الصناديق المباعة.",
+          "answer": "2) التحويل: #text(dir: ltr)[19 q = 1900 kg].\n\nعدد الصناديق: $1900 div 20 = 95$ صندوقا.\n\nالصناديق المباعة: $(95 times 50) div 100 = 48$ صندوقا.",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب ثمن بيع الصناديق، ثم استنتج صافي المبلغ المتبقي لدى الفلاح بعد طرح المصاريف.",
+          "answer": "3) ثمن البيع: $48 times 7000 = 336000$ دج.\n\nصافي المبلغ المتبقي: $336000 - 7000 = 329000$ دج.",
+          "mark": "1.5"
+        }
+      ],
+      "id": "exam-5ap-supervised_test-t3-easy-401-ex-3"
+    }
+  ]
+}

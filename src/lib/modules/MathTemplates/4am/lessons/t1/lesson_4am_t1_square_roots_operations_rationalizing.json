@@ -1,0 +1,128 @@
+{
+  "id": "lesson_4am_t1_square_roots_operations_rationalizing",
+  "slug": "4am-t1-square-roots-operations-rationalizing",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t1",
+  "sequenceId": "seq1",
+  "sequenceTitleAr": "المقطع الأول: الأعداد الطبيعية والأعداد الناطقة والحساب على الجذور",
+  "order": 3,
+  "titleAr": "العمليات على الجذور التربيعية، التبسيط وتنطيق المقام",
+  "objectives": [
+    "معرفة وتطبيق قواعد الحساب على الجذور التربيعية في الضرب والقسمة والتمييز بينها وبين الجمع والطرح",
+    "كتابة عدد غير ناطق على الشكل $a\\sqrt{b}$ وتبسيط عبارات عددية وحرفية تتضمن جذورا تربيعية باختيار الكتابة الأنسب للمشكل المطروح",
+    "جعل مقام نسبة عددا ناطقا (تنطيق المقام) وحساب قيم عبارات تتضمن جذورا تربيعية"
+  ],
+  "keywordsAr": [
+    "العمليات على الجذور التربيعية",
+    "التبسيط إلى الشكل a√b",
+    "جعل مقام نسبة عددا ناطقا",
+    "تنطيق المقام",
+    "تبسيط عبارات جذرية"
+  ],
+  "discover": {
+    "scenarioAr": "صمّم مصمم لوحة مستطيلة الشكل طولا ضلعيها $L = \\sqrt{50}\\text{ cm}$ و $\\ell = \\sqrt{18}\\text{ cm}$ . يريد حساب محيطها المضبوط $P = 2(L + \\ell)$ على الشكل $a\\sqrt{b}$ ، وحساب مساحتها المضبوطة $\\mathcal{A} = L \\times \\ell$ ، ثم تبسيط النسبة $\\frac{12}{\\sqrt{2}}$ بجعل مقامها عدداً ناطقاً. كيف ننجز هذه الحسابات؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"224\" height=\"175\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"122\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">اللوحة المستطيلة والجذور</text><rect x=\"36\" y=\"52\" width=\"140\" height=\"84\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"106\" y=\"46\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">L = √50 = 5√2 cm</text><text x=\"204\" y=\"96\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">ℓ = √18</text><text x=\"204\" y=\"111\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">= 3√2 cm</text><text x=\"106\" y=\"98\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">A = √50 × √18</text><text x=\"122\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">نجمع الحدود المتشابهة: 5√2 + 3√2</text><text x=\"122\" y=\"174\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">ونضرب ما تحت الجذرين في الجداء</text><rect x=\"244\" y=\"10\" width=\"206\" height=\"175\" rx=\"10\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"347\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\">انتبه في الجمع!</text><rect x=\"258\" y=\"48\" width=\"178\" height=\"44\" rx=\"8\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"347\" y=\"67\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">√(9 + 16) = √25 = 5</text><text x=\"347\" y=\"84\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">نجمع أولاً داخل الجذر</text><rect x=\"258\" y=\"102\" width=\"178\" height=\"44\" rx=\"8\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><text x=\"347\" y=\"121\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">√9 + √16 = 3 + 4 = 7</text><text x=\"347\" y=\"138\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">جذران منفصلان</text><text x=\"347\" y=\"170\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\">5 ≠ 7 ⇐ √(a + b) ≠ √a + √b</text></svg>",
+    "steps": [
+      {
+        "promptAr": "نكتب $50$ على شكل جداء أكبر مربع تام في عدد: $50 = 25 \\times 2$ . باستعمال القاعدة $\\sqrt{a \\times b} = \\sqrt{a} \\times \\sqrt{b}$ ، نكتب $\\sqrt{50} = k\\sqrt{2}$ . ما قيمة $k$ ؟",
+        "hintAr": "احسب $\\sqrt{25}$ لأن $\\sqrt{50} = \\sqrt{25} \\times \\sqrt{2}$ .",
+        "expectedInput": "5",
+        "revealAr": "$\\sqrt{50} = \\sqrt{25 \\times 2} = \\sqrt{25} \\times \\sqrt{2} = 5\\sqrt{2}$ ، إذن $k = 5$ ."
+      },
+      {
+        "promptAr": "وبالطريقة نفسها، نكتب $18 = 9 \\times 2$ . بسّط $\\sqrt{18}$ على الشكل $m\\sqrt{2}$ . ما قيمة $m$ ؟",
+        "hintAr": "احسب $\\sqrt{9}$ لأن $\\sqrt{18} = \\sqrt{9} \\times \\sqrt{2}$ .",
+        "expectedInput": "3",
+        "revealAr": "$\\sqrt{18} = \\sqrt{9 \\times 2} = \\sqrt{9} \\times \\sqrt{2} = 3\\sqrt{2}$ ، إذن $m = 3$ ."
+      },
+      {
+        "promptAr": "لحساب نصف المحيط $L + \\ell = 5\\sqrt{2} + 3\\sqrt{2}$ نُخرج $\\sqrt{2}$ عاملاً مشتركاً: $(5 + 3)\\sqrt{2} = n\\sqrt{2}$ . ما قيمة $n$ ؟",
+        "hintAr": "اجمع المعاملين $5 + 3$ .",
+        "expectedInput": "8",
+        "revealAr": "نصف المحيط هو $8\\sqrt{2}\\text{ cm}$ ، ومنه المحيط الكامل للوحة هو $P = 2 \\times 8\\sqrt{2} = 16\\sqrt{2}\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "احسب مساحة اللوحة $\\mathcal{A} = \\sqrt{50} \\times \\sqrt{18} = \\sqrt{50 \\times 18} = \\sqrt{900}$ . ما المساحة بالسنتيمتر المربع؟",
+        "hintAr": "ما العدد الموجب الذي مربعه $900$ (أو احسب $(5 \\times 3) \\times (\\sqrt{2})^2$)؟",
+        "expectedInput": "30",
+        "revealAr": "$\\mathcal{A} = \\sqrt{900} = 30\\text{ cm}^2$ (أو $5\\sqrt{2} \\times 3\\sqrt{2} = 15 \\times 2 = 30\\text{ cm}^2$). كما يمكن تنطيق $\\frac{12}{\\sqrt{2}} = \\frac{12 \\times \\sqrt{2}}{\\sqrt{2} \\times \\sqrt{2}} = \\frac{12\\sqrt{2}}{2} = 6\\sqrt{2}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**قواعد الضرب والقسمة على الجذور التربيعية**: من أجل كل عددين موجبين $a \\ge 0$ و $b > 0$ : $\\sqrt{a \\times b} = \\sqrt{a} \\times \\sqrt{b}$ و $\\sqrt{\\frac{a}{b}} = \\frac{\\sqrt{a}}{\\sqrt{b}}$ . وبصفة خاصة: $\\sqrt{a^2 \\times b} = a\\sqrt{b}$ (من أجل $a \\ge 0$ ).",
+      "**التبسيط إلى الشكل $a\\sqrt{b}$**: لتبسيط $\\sqrt{N}$ نُظهر أكبر مربع تام يقسم $N$ (مثل $4, 9, 16, 25, 36, 49, 64, 81, 100$) داخل الجذر ثم نخرجه؛ ولجمع أو طرح حدود تحتوي نفس الجذر نستعمل التوزيعية: $m\\sqrt{b} + n\\sqrt{b} = (m + n)\\sqrt{b}$ .",
+      "**تنطيق المقام (جعل مقام نسبة عدداً ناطقاً)**: إذا كان مقام نسبة من الشكل $\\sqrt{a}$ أو $b\\sqrt{a}$ ($a > 0$ و $b \\ne 0$)، نضرب كلاً من البسط والمقام في $\\sqrt{a}$ لأن $\\sqrt{a} \\times \\sqrt{a} = a$ ، فنحصل على مقام عدد ناطق.",
+      "**تحذير جوهري في الجمع والطرح**: لا توجد قاعدة توزيع الجذر على الجمع أو الطرح! أي بصفة عامة: $\\sqrt{a + b} \\ne \\sqrt{a} + \\sqrt{b}$ و $\\sqrt{a - b} \\ne \\sqrt{a} - \\sqrt{b}$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"212\" height=\"175\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"116\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">التبسيط إلى الشكل a√b</text><rect x=\"34\" y=\"48\" width=\"164\" height=\"28\" rx=\"6\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.2\"/><text x=\"116\" y=\"66\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">√72 = √(36 × 2)</text><text x=\"116\" y=\"92\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\">↓</text><rect x=\"34\" y=\"98\" width=\"164\" height=\"28\" rx=\"6\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.2\"/><text x=\"116\" y=\"116\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">= √36 × √2</text><text x=\"116\" y=\"142\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\">↓</text><rect x=\"34\" y=\"148\" width=\"164\" height=\"28\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"116\" y=\"166\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">= 6√2</text><rect x=\"238\" y=\"10\" width=\"212\" height=\"175\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"344\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">جعل مقام نسبة عدداً ناطقاً</text><text x=\"272\" y=\"76\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">10</text><line x1=\"256\" y1=\"83\" x2=\"288\" y2=\"83\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><text x=\"272\" y=\"101\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\">√5</text><text x=\"312\" y=\"72\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">× √5</text><text x=\"312\" y=\"88\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4ed8\">=</text><text x=\"312\" y=\"104\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">× √5</text><text x=\"364\" y=\"76\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">10√5</text><line x1=\"340\" y1=\"83\" x2=\"388\" y2=\"83\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><text x=\"364\" y=\"101\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#16a34a\">5</text><text x=\"416\" y=\"88\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">= 2√5</text><rect x=\"254\" y=\"132\" width=\"180\" height=\"38\" rx=\"7\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.2\"/><text x=\"344\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">نضرب البسط والمقام في √a فقط</text></svg>",
+    "visualCaptionAr": "منهجية التبسيط إلى الشكل a√b ومنهجية تنطيق مقام من الشكل √a أو b√a",
+    "examples": [
+      {
+        "problemAr": "اكتب العبارة $A = \\sqrt{75} - 2\\sqrt{12} + \\sqrt{27}$ على الشكل $a\\sqrt{3}$ حيث $a$ عدد طبيعي.",
+        "solutionAr": "نبسّط كل جذر بإظهار العامل $3$ :\n\n$\\sqrt{75} = \\sqrt{25 \\times 3} = 5\\sqrt{3}$\n\n$2\\sqrt{12} = 2\\sqrt{4 \\times 3} = 2 \\times 2\\sqrt{3} = 4\\sqrt{3}$\n\n$\\sqrt{27} = \\sqrt{9 \\times 3} = 3\\sqrt{3}$\n\nومنه: $A = (5 - 4 + 3)\\sqrt{3} = 4\\sqrt{3}$ ."
+      },
+      {
+        "problemAr": "اكتب النسبتين الآتيتين بمقام ناطق: $B = \\frac{15}{\\sqrt{3}}$ و $C = \\frac{\\sqrt{6} + 3}{2\\sqrt{3}}$ .",
+        "solutionAr": "بالنسبة لـ $B$ نضرب البسط والمقام في $\\sqrt{3}$ : $B = \\frac{15\\sqrt{3}}{\\sqrt{3} \\times \\sqrt{3}} = \\frac{15\\sqrt{3}}{3} = 5\\sqrt{3}$ .\n\nوبالنسبة لـ $C$ نضرب البسط والمقام في $\\sqrt{3}$ (لا ننسى الأقواس في البسط):\n\n$C = \\frac{(\\sqrt{6} + 3)\\sqrt{3}}{2\\sqrt{3} \\times \\sqrt{3}} = \\frac{\\sqrt{18} + 3\\sqrt{3}}{2 \\times 3} = \\frac{3\\sqrt{2} + 3\\sqrt{3}}{6} = \\frac{\\sqrt{2} + \\sqrt{3}}{2}$ ."
+      }
+    ],
+    "watchOutAr": "احذر خطأين شائعين: (1) كتابة $\\sqrt{9 + 16} = \\sqrt{9} + \\sqrt{16}$ (خطأ: الجذر التربيعي لا يتوزع على الجمع أو الطرح!)؛ (2) عند تنطيق نسبة بسطها مجموع مثل $\\frac{\\sqrt{6} + 3}{2\\sqrt{3}}$ ، نسيان ضرب **كل** حدود البسط في $\\sqrt{3}$ !"
+  },
+  "practice": [
+    {
+      "questionAr": "ما الكتابة المبسطة للعبارة $E = \\sqrt{80} - \\sqrt{20} + 2\\sqrt{5}$ على الشكل $a\\sqrt{5}$ ؟",
+      "options": [
+        "$4\\sqrt{5}$",
+        "$8\\sqrt{5}$",
+        "$\\sqrt{70}$",
+        "$2\\sqrt{5}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! $\\sqrt{80} = 4\\sqrt{5}$ و $\\sqrt{20} = 2\\sqrt{5}$ ، إذن $E = (4 - 2 + 2)\\sqrt{5} = 4\\sqrt{5}$ .",
+        "تحقق من إشارة الطرح في $-\\sqrt{20}$ : لدينا $4 - 2 + 2 = 4$ وليس $4 + 2 + 2 = 8$ .",
+        "لا يمكن جمع وطرح ما تحت الجذور مباشرة ($80 - 20 + 10$ غير صحيح).",
+        "لقد نسيت الحد الأخير $+2\\sqrt{5}$ أو اعتبرت معامله $0$ ."
+      ],
+      "explanationAr": "نكتب $80 = 16 \\times 5$ فنجد $\\sqrt{80} = 4\\sqrt{5}$ ، ونكتب $20 = 4 \\times 5$ فنجد $\\sqrt{20} = 2\\sqrt{5}$ . ومنه $E = 4\\sqrt{5} - 2\\sqrt{5} + 2\\sqrt{5} = (4 - 2 + 2)\\sqrt{5} = 4\\sqrt{5}$ ."
+    },
+    {
+      "questionAr": "عند كتابة النسبة $\\frac{14}{3\\sqrt{7}}$ على شكل نسبة مقامها عدد ناطق وأصغر ما يمكن، ماذا نحصل؟",
+      "options": [
+        "$\\frac{2}{3}$",
+        "$\\frac{14\\sqrt{7}}{7}$",
+        "$\\frac{2\\sqrt{7}}{3}$",
+        "$2\\sqrt{7}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "أين ذهب $\\sqrt{7}$ في البسط بعد ضرب البسط والمقام في $\\sqrt{7}$ ؟ البسط يصبح $14\\sqrt{7}$ وليس $14$ .",
+        "انتبه: نسيت العدد $3$ المضروب في المقام ($3\\sqrt{7} \\times \\sqrt{7} = 3 \\times 7 = 21$ وليس $7$)، كما لم تختزل الكسر.",
+        "ممتاز! $\\frac{14\\sqrt{7}}{3 \\times \\sqrt{7} \\times \\sqrt{7}} = \\frac{14\\sqrt{7}}{21}$ ، وبقسمة $14$ و $21$ على $7$ نحصل على $\\frac{2\\sqrt{7}}{3}$ .",
+        "لقد نسيت القسمة على المعامل $3$ الموجود في المقام!"
+      ],
+      "explanationAr": "نضرب البسط والمقام في $\\sqrt{7}$ : $\\frac{14}{3\\sqrt{7}} = \\frac{14\\sqrt{7}}{3 \\times 7} = \\frac{14\\sqrt{7}}{21} = \\frac{2\\sqrt{7}}{3}$ (بالاختزال على $7$)."
+    },
+    {
+      "questionAr": "يُراد إحاطة حديقة مستطيلة بُعداها $L = \\sqrt{12}\\text{ m}$ و $\\ell = \\sqrt{3}\\text{ m}$ بسياج. ما مساحتها المضبوطة $\\mathcal{A}$ وما محيطها المبسط $P$ على الترتيب؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 290 145\" width=\"290\" height=\"145\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"48\" y=\"34\" width=\"170\" height=\"78\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><text x=\"133\" y=\"25\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">L = √12 m</text><text x=\"248\" y=\"77\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">ℓ = √3 m</text><text x=\"133\" y=\"77\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\">A = L × ℓ</text><text x=\"133\" y=\"132\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#475569\">P = 2(L + ℓ)</text></svg>",
+      "options": [
+        "$\\mathcal{A} = 6\\text{ m}^2$ و $P = 2\\sqrt{15}\\text{ m}$",
+        "$\\mathcal{A} = 6\\text{ m}^2$ و $P = 6\\sqrt{3}\\text{ m}$",
+        "$\\mathcal{A} = 36\\text{ m}^2$ و $P = 6\\sqrt{3}\\text{ m}$",
+        "$\\mathcal{A} = 3\\sqrt{2}\\text{ m}^2$ و $P = 3\\sqrt{3}\\text{ m}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "المساحة $6\\text{ m}^2$ صحيحة، لكن في المحيط جمعت $\\sqrt{12} + \\sqrt{3} = \\sqrt{15}$ وهذا خطأ! يجب تبسيط $\\sqrt{12} = 2\\sqrt{3}$ أولاً.",
+        "ممتاز! $\\mathcal{A} = \\sqrt{12 \\times 3} = \\sqrt{36} = 6\\text{ m}^2$ ، و $L = 2\\sqrt{3}$ فيكون $P = 2(2\\sqrt{3} + \\sqrt{3}) = 6\\sqrt{3}\\text{ m}$ .",
+        "تذكّر حساب الجذر التربيعي في المساحة: $\\sqrt{12} \\times \\sqrt{3} = \\sqrt{36} = 6$ وليس $36$ !",
+        "$3\\sqrt{3}\\text{ m}$ هو نصف المحيط فقط وليس المحيط الكامل، كما أن جداء $\\sqrt{12} \\times \\sqrt{3}$ يساوي $\\sqrt{36} = 6$ ."
+      ],
+      "explanationAr": "المساحة: $\\mathcal{A} = \\sqrt{12} \\times \\sqrt{3} = \\sqrt{12 \\times 3} = \\sqrt{36} = 6\\text{ m}^2$ . ولتبسيط المحيط نكتب $\\sqrt{12} = \\sqrt{4 \\times 3} = 2\\sqrt{3}$ ، ومنه $P = 2(2\\sqrt{3} + \\sqrt{3}) = 2 \\times 3\\sqrt{3} = 6\\sqrt{3}\\text{ m}$ ."
+    }
+  ]
+}

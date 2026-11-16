@@ -1,0 +1,251 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "5ap",
+    "yearName": "السنة الخامسة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "تجريبي لنهاية مرحلة التعليم الابتدائي",
+    "docType": "exam",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة ونصف",
+    "customDocTitle": "امتحان تجريبي لنهاية مرحلة التعليم الابتدائي (Cinq)",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 1.5,
+      "instruction": "في قسمة إقليدية، القاسم هو $35$، والحاصل هو $160$، والباقي هو $32$:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) تحقق من أن الباقي أصغر من القاسم، ثم احسب المقسوم بوضع العملية المناسبة.",
+          "answer": "1) لدينا $32 < 35$، والمقسوم يساوي: $35 times 160 + 32 = 5600 + 32 = 5632$.",
+          "mark": "1"
+        },
+        {
+          "type": "text",
+          "content": "2) اكتب المساواة المعبرة عن هذه القسمة الإقليدية.",
+          "answer": "2) المساواة هي: $5632 = 35 times 160 + 32$.",
+          "mark": "0.5"
+        }
+      ],
+      "id": "exam-5ap-cinq_mock-t3-hard-703-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 1.5,
+      "instruction": "تأمّل الشكل الهندسي المقابل (تحقّق باستعمال المسطرة والكوس أو القالب دون استعمال المنقلة)، ثم أجب بـ صحيح أو خطأ مع تصحيح الخطأ:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.6fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "true_false",
+              "items": [
+                {
+                  "q": "المستقيمان $(L)$ و $(L')$ متوازيان.",
+                  "a": "صحيح",
+                  "c": "العبارة صحيحة لأن البعد بينهما ثابت.",
+                  "mark": "0.5"
+                },
+                {
+                  "q": "الزاوية $(1)$ زاوية منفرجة أكبر من الزاوية القائمة.",
+                  "a": "خطأ",
+                  "c": "الزاوية $(1)$ زاوية حادة لأنها أصغر من الزاوية القائمة.",
+                  "mark": "0.5"
+                },
+                {
+                  "q": "الزاوية $(2)$ زاوية منفرجة أكبر من الزاوية القائمة.",
+                  "a": "صحيح",
+                  "c": "العبارة صحيحة لأن فتحتها أوسع من الزاوية القائمة.",
+                  "mark": "0.5"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap-t1-geom-hard-s547183.svg"
+            }
+          ]
+        }
+      ],
+      "id": "exam-5ap-cinq_mock-t3-hard-703-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "points": 1.5,
+      "instruction": "اشترت مريم أقلاما متماثلة من المكتبة. أكمل جدول التناسبية التالي باستعمال المرور بالوحدة:",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "عدد الأقلام",
+            "$8$",
+            "$1$",
+            "$5$",
+            "$12$"
+          ],
+          "cells": [
+            "الثمن (دج)",
+            "$516$",
+            {
+              "content": "...",
+              "answer": "$64.5$",
+              "mark": "0.5"
+            },
+            {
+              "content": "...",
+              "answer": "$322.5$",
+              "mark": "0.5"
+            },
+            {
+              "content": "...",
+              "answer": "$774$",
+              "mark": "0.5"
+            }
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        },
+        {
+          "type": "text",
+          "content": "وضح طريقة حساب قيمة الوحدة وقيمة $5$:",
+          "answer": "قيمة الوحدة: $516 div 8 = 64.5$ دج، ومنه قيمة $5$ هي: $64.5 times 5 = 322.5$ دج.",
+          "mark": ""
+        }
+      ],
+      "id": "exam-5ap-cinq_mock-t3-hard-703-ex-3",
+      "num": "الثالث"
+    },
+    {
+      "points": 1.5,
+      "instruction": "أكمل جدول التحويلات الآتي بالعدد المناسب في كل خانة:",
+      "content": [
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "القياس المعطى",
+            "الوحدة المطلوبة",
+            "القياس المحوّل"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "#text(dir: ltr)[5 t 6 q 50 kg]",
+              "#text(dir: ltr)[kg]",
+              {
+                "content": "#text(dir: ltr)[...... kg]",
+                "answer": "#text(dir: ltr)[5650 kg]",
+                "mark": "0.5"
+              }
+            ],
+            [
+              "#text(dir: ltr)[2 L 75 cL]",
+              "#text(dir: ltr)[mL]",
+              {
+                "content": "#text(dir: ltr)[...... mL]",
+                "answer": "#text(dir: ltr)[2750 mL]",
+                "mark": "0.25"
+              }
+            ],
+            [
+              "#text(dir: ltr)[1 m² 75 dm²]",
+              "#text(dir: ltr)[dm²]",
+              {
+                "content": "#text(dir: ltr)[...... dm²]",
+                "answer": "#text(dir: ltr)[175 dm²]",
+                "mark": "0.25"
+              }
+            ],
+            [
+              "#text(dir: ltr)[1 ha 25 a]",
+              "#text(dir: ltr)[m²]",
+              {
+                "content": "#text(dir: ltr)[...... m²]",
+                "answer": "#text(dir: ltr)[12500 m²]",
+                "mark": "0.5"
+              }
+            ]
+          ]
+        }
+      ],
+      "id": "exam-5ap-cinq_mock-t3-hard-703-ex-4",
+      "num": "الرابع"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "اقرأ السندات بعناية ثم أجب عن المطالب الثلاثة مع وضع العمليات العمودية والتعبير عن الوحدة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "يمتلك فلاح في هضاب سطيف بستانا مستطيل الشكل طوله #text(dir: ltr)[87 m] وعرضه #text(dir: ltr)[29 m]. جنى منه محصولا من البطاطا كتلته #text(dir: ltr)[43 q]، ووضعه في صناديق يسع كل صندوق #text(dir: ltr)[20 kg]. باع $80%$ من الصناديق بسعر $1000$ دج للصندوق، ودفع $6500$ دج كمصاريف للنقل والعمال."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap_t3_integ_s251994_hard.svg",
+              "caption": "مخطط البستان"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "المحصول الكلي",
+            "سعة الصندوق",
+            "نسبة المبيعات",
+            "سعر الصندوق",
+            "المصاريف"
+          ],
+          "cells": [
+            "#text(dir: ltr)[43 q]",
+            "#text(dir: ltr)[20 kg]",
+            "80%",
+            "1000 دج",
+            "6500 دج"
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب مساحة هذا البستان بالمتر المربع.",
+          "answer": "1) مساحة البستان: $87 times 29 = 2523$ #text(dir: ltr)[m²]",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "2) حوّل كتلة المحصول إلى الكيلوغرام، ثم احسب عدد كل الصناديق وعدد الصناديق المباعة.",
+          "answer": "2) التحويل: #text(dir: ltr)[43 q = 4300 kg].\n\nعدد الصناديق: $4300 div 20 = 215$ صندوقا.\n\nالصناديق المباعة: $(215 times 80) div 100 = 172$ صندوقا.",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب ثمن بيع الصناديق، ثم استنتج صافي المبلغ المتبقي لدى الفلاح بعد طرح المصاريف.",
+          "answer": "3) ثمن البيع: $172 times 1000 = 172000$ دج.\n\nصافي المبلغ المتبقي: $172000 - 6500 = 165500$ دج.",
+          "mark": "1.5"
+        }
+      ],
+      "id": "exam-5ap-cinq_mock-t3-hard-703-ex-5"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "lesson_3ap_t2_integration",
+  "slug": "lesson-3ap-t2-integration",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: في محلات الصناعة التقليدية (الكتل والسعات، المضلعات والدائرة وإدماج الفصل الثاني)",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الثاني: مشكلات جمعية وطرحية وضربية في القياس والهندسة",
+  "objectives": [
+    "توظيف الأعداد إلى 99 999 والعمليات العمودية (جمع، طرح، ضرب في رقم واحد) والضرب في 10 و100 و1000 لحل وضعيات شراء وحساب تكاليف",
+    "استثمار تحويلات الكتل (kg، g) والسعات (L، cL) وخواص المضلعات المألوفة والدائرة في مشكلات تطبيقية",
+    "بناء حل منظم متعدد المراحل مع كتابة العمليات العمودية والأفقية وجمل الإجابة بالوحدات المناسبة"
+  ],
+  "keywordsAr": [
+    "إدماج",
+    "حصيلة الفصل الثاني",
+    "وضعية إدماجية",
+    "الأعداد إلى 99 999",
+    "الدينار الجزائري (DA)"
+  ],
+  "discover": {
+    "scenarioAr": "بمناسبة معرض المدرسة للصناعة التقليدية، جمع التلاميذ مبلغا قدره $18\\,500\\text{ DA}$. اشتروا $6$ أوانٍ فخارية بسعر $1250\\text{ DA}$ للواحدة، وكمية من التمر كتلتها $2\\text{ kg } 450\\text{ g}$، وصنعوا لافتة تتضمن مستطيلا ودائرة نصف قطرها $5\\text{ cm}$.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">معطيات معرض الصناعة التقليدية</text><rect x=\"24\" y=\"48\" width=\"176\" height=\"162\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"112\" y=\"72\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">الميزانية والمشتريات</text><text x=\"112\" y=\"100\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"rtl\">المبلغ المتاح:</text><text x=\"112\" y=\"122\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">18 500 DA</text><text x=\"112\" y=\"152\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"rtl\">6 أوانٍ فخارية:</text><text x=\"112\" y=\"174\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">1250 DA x 6</text><rect x=\"212\" y=\"48\" width=\"176\" height=\"162\" rx=\"10\" fill=\"#ffffff\" stroke=\"#ea580c\" stroke-width=\"1.5\"/><text x=\"300\" y=\"72\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"rtl\">الكتلة والسعة</text><rect x=\"230\" y=\"90\" width=\"140\" height=\"42\" rx=\"8\" fill=\"#fff7ed\" stroke=\"#fdba74\"/><text x=\"300\" y=\"116\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">2 kg 450 g</text><rect x=\"230\" y=\"146\" width=\"140\" height=\"42\" rx=\"8\" fill=\"#e0f2fe\" stroke=\"#7dd3fc\"/><text x=\"300\" y=\"172\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0369a1\" direction=\"ltr\">3 L 50 cL</text><rect x=\"400\" y=\"48\" width=\"176\" height=\"162\" rx=\"10\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"488\" y=\"72\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">زخرفة اللافتة</text><rect x=\"424\" y=\"88\" width=\"128\" height=\"52\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><rect x=\"424\" y=\"88\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><rect x=\"544\" y=\"88\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><rect x=\"424\" y=\"132\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><rect x=\"544\" y=\"132\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><circle cx=\"488\" cy=\"174\" r=\"24\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"488\" y1=\"174\" x2=\"512\" y2=\"174\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><circle cx=\"488\" cy=\"174\" r=\"3\" fill=\"#0f172a\"/><text x=\"500\" y=\"169\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">5 cm</text></svg>",
+    "steps": [
+      {
+        "promptAr": "أولا: احسب ثمن الأواني الفخارية الستة باستعمال الضرب العمودي: $1250 \\times 6$. (اكتب العدد فقط)",
+        "hintAr": "$6 \\times 0 = 0$، $6 \\times 5 = 30$ (نكتب $0$ ونحتفظ بـ $3$)، $6 \\times 2 + 3 = 15$، $6 \\times 1 + 1 = 7$.",
+        "expectedInput": "7500",
+        "revealAr": "ثمن الأواني الستة هو $1250 \\times 6 = 7500\\text{ DA}$."
+      },
+      {
+        "promptAr": "ثانيا: كم دينارا بقي للتلاميذ من مبلغ $18\\,500\\text{ DA}$ بعد دفع $7500\\text{ DA}$؟ (اكتب العدد بدون فراغ)",
+        "hintAr": "اطرح $18\\,500 - 7500$.",
+        "expectedInput": "11000",
+        "revealAr": "المبلغ المتبقي هو $18\\,500 - 7500 = 11\\,000\\text{ DA}$."
+      },
+      {
+        "promptAr": "ثالثا: ما هي كتلة التمر ($2\\text{ kg } 450\\text{ g}$) بالغرام ($\\text{g}$)؟ (اكتب العدد فقط)",
+        "hintAr": "تذكر أن $1\\text{ kg} = 1000\\text{ g}$، إذن $2\\text{ kg} = 2000\\text{ g}$.",
+        "expectedInput": "2450",
+        "revealAr": "كتلة التمر بالغرام هي $2000 + 450 = 2450\\text{ g}$، وطول قطر الدائرة في اللافتة هو $5 \\times 2 = 10\\text{ cm}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**أفهم وأنتقي المعطيات**: أقرأ نص الوضعية الإدماجية جيدا، وأستخرج الأعداد بالوحدات المناسبة، وأرتب مراحل الحل.",
+      "**أختار العملية**: الضرب ($\\times$) لتكرار كمية متساوية، والجمع ($+$) للضم والمجموع، والطرح ($-$) للفرق والباقي ضمن الأعداد إلى $99\\,999$.",
+      "**أوحد وحدات القياس**: في الكتل $1\\text{ kg} = 1000\\text{ g}$، وفي السعات $1\\text{ L} = 100\\text{ cL}$ قبل الجمع أو المقارنة.",
+      "**أستثمر الهندسة**: أميز بين المربع والمعين والمستطيل والمثلث القائم بالمسطرة والكوس، وأتذكر أن القطر يساوي ضعف نصف القطر (فتحة المدور).",
+      "**أحرر الحل**: أضع العملية العمودية باحترام المراتب والاحتفاظ، ثم أكتب العملية الأفقية وجملة الإجابة مرفقة بالوحدة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">حصيلة مكتسبات الفصل الثاني (السنة الثالثة ابتدائي)</text><rect x=\"448\" y=\"48\" width=\"126\" height=\"162\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"511\" y=\"76\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">1. الأعداد</text><text x=\"511\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">0 .. 99 999</text><text x=\"511\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">تفكيك وحصر</text><text x=\"511\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">مقارنة وترتيب</text><text x=\"511\" y=\"186\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">جدول المراتب</text><rect x=\"308\" y=\"48\" width=\"126\" height=\"162\" rx=\"10\" fill=\"#fff7ed\" stroke=\"#f97316\" stroke-width=\"1.5\"/><text x=\"371\" y=\"76\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"rtl\">2. الضرب</text><text x=\"371\" y=\"104\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">الجداول من 2 إلى 9</text><text x=\"371\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">x 10, x 100, x 1000</text><text x=\"371\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">الضرب العمودي</text><text x=\"371\" y=\"186\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">في رقم واحد</text><rect x=\"168\" y=\"48\" width=\"126\" height=\"162\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#22c55e\" stroke-width=\"1.5\"/><text x=\"231\" y=\"76\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">3. القياس</text><text x=\"231\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">1 kg = 1000 g</text><text x=\"231\" y=\"134\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">1 L = 100 cL</text><text x=\"231\" y=\"162\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">توحيد الوحدات</text><text x=\"231\" y=\"186\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">مقارنة وجمع</text><rect x=\"28\" y=\"48\" width=\"126\" height=\"162\" rx=\"10\" fill=\"#faf5ff\" stroke=\"#a855f7\" stroke-width=\"1.5\"/><text x=\"91\" y=\"76\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#581c87\" direction=\"rtl\">4. الهندسة</text><text x=\"91\" y=\"104\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">المربع والمستطيل</text><text x=\"91\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">المعين والمثلث القائم</text><text x=\"91\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" fill=\"#6d28d9\" font-weight=\"bold\" direction=\"rtl\">الدائرة والمدور</text><text x=\"91\" y=\"186\" text-anchor=\"middle\" font-size=\"11\" fill=\"#581c87\" direction=\"rtl\">القطر = ضعف ن. القطر</text></svg>",
+    "visualCaptionAr": "خريطة شاملة لموارد الفصل الثاني: الأعداد إلى $99\\,999$، الضرب، الكتل والسعات، والمضلعات والدائرة.",
+    "examples": [
+      {
+        "problemAr": "مع سليم $5000\\text{ DA}$. اشترى $4$ علب عصير بسعر $280\\text{ DA}$ للعلبة وقطعة حلوى بـ $1200\\text{ DA}$. كم دفع وكم بقي له؟",
+        "solutionAr": "ثمن العصير: $280 \\times 4 = 1120\\text{ DA}$. مجموع المشتريات: $1120 + 1200 = 2320\\text{ DA}$. المبلغ المتبقي: $5000 - 2320 = 2680\\text{ DA}$."
+      },
+      {
+        "problemAr": "في قارورة $3\\text{ L } 25\\text{ cL}$ من الماء، أفرغنا فيها $75\\text{ cL}$ إضافية. كم لترا أصبح في القارورة؟ وإذا رسمنا دائرة نصف قطرها $7\\text{ cm}$ فما طول قطرها؟",
+        "solutionAr": "السعة بـ $\\text{cL}$: $325 + 75 = 400\\text{ cL} = 4\\text{ L}$. وطول قطر الدائرة: $7 \\times 2 = 14\\text{ cm}$."
+      }
+    ],
+    "watchOutAr": "لا تنس التحقق من المعقولية ومن الوحدات ($\\text{DA}$، $\\text{kg}$، $\\text{g}$، $\\text{L}$، $\\text{cL}$، $\\text{cm}$) في كل إجابة، وانتبه للاحتفاظ في العمليات العمودية."
+  },
+  "practice": [
+    {
+      "questionAr": "يملك حرفي في صندوقه $15\\,000\\text{ DA}$. باع في الصباح $8$ أطباق تقليدية بسعر $1450\\text{ DA}$ للطبق الواحد. كم أصبح يملك في المجموع؟",
+      "options": [
+        "$11\\,600\\text{ DA}$",
+        "$16\\,450\\text{ DA}$",
+        "$26\\,600\\text{ DA}$",
+        "$23\\,600\\text{ DA}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$11\\,600\\text{ DA}$ هو ثمن الأطباق الثمانية فقط ($1450 \\times 8$)؛ لا تنس جمعها مع المبلغ الأول ($15\\,000\\text{ DA}$).",
+        "لقد جمعت سعر طبق واحد ($1450\\text{ DA}$) مع $15\\,000\\text{ DA}$ بدل حساب ثمن $8$ أطباق بالضرب.",
+        "رائع! ثمن البيع: $1450 \\times 8 = 11\\,600\\text{ DA}$، والمجموع الكلي: $15\\,000 + 11\\,600 = 26\\,600\\text{ DA}$.",
+        "تحقق من الاحتفاظ في الضرب العمودي $1450 \\times 8$: لدينا $8 \\times 4 + 4 = 36$ فنحتفظ بـ $3$ للآلاف ($8 \\times 1 + 3 = 11$)."
+      ],
+      "explanationAr": "نحسب أولا ثمن الأطباق الثمانية: $1450 \\times 8 = 11\\,600\\text{ DA}$. ثم نضيف المبلغ الذي كان يملكه: $15\\,000 + 11\\,600 = 26\\,600\\text{ DA}$."
+    },
+    {
+      "questionAr": "يحتوي وعاء على $4\\text{ L } 60\\text{ cL}$ من زيت الزيتون، وأفرغنا فيه قارورة سعتها $140\\text{ cL}$. ما السعة الكلية للزيت الآن باللتر ($\\text{L}$)؟",
+      "options": [
+        "$6\\text{ L}$",
+        "$600\\text{ L}$",
+        "$5\\text{ L}$",
+        "$200\\text{ L}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! $4\\text{ L } 60\\text{ cL} = 460\\text{ cL}$، ونجمع $460 + 140 = 600\\text{ cL} = 6\\text{ L}$.",
+        "المجموع هو $600\\text{ cL}$ وليس $600\\text{ L}$! تذكر أن $100\\text{ cL} = 1\\text{ L}$.",
+        "أعد الجمع بدقة: $460 + 140 = 600\\text{ cL}$ وليس $500\\text{ cL}$.",
+        "لقد جمعت $60 + 140 = 200$ وتجاهلت $4\\text{ L}$ ثم كتبت الوحدة $\\text{L}$ بدل $\\text{cL}$."
+      ],
+      "explanationAr": "نوحد الوحدة إلى السنتيلتر: $4\\text{ L } 60\\text{ cL} = 460\\text{ cL}$. نجمع: $460 + 140 = 600\\text{ cL}$. وبما أن $100\\text{ cL} = 1\\text{ L}$، فإن $600\\text{ cL} = 6\\text{ L}$."
+    },
+    {
+      "questionAr": "تأمل الشكل الهندسي المقابل: ما نوع المضلع الأزرق، وما طول قطر الدائرة الحمراء التي نصف قطرها $3\\text{ cm}$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 140\" width=\"380\" height=\"140\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"364\" height=\"124\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"36\" y=\"34\" width=\"136\" height=\"72\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><rect x=\"36\" y=\"34\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"162\" y=\"34\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"36\" y=\"96\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"162\" y=\"96\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"104\" y=\"25\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">8 cm</text><text x=\"189\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">5 cm</text><circle cx=\"290\" cy=\"70\" r=\"42\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><line x1=\"290\" y1=\"70\" x2=\"332\" y2=\"70\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><circle cx=\"290\" cy=\"70\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"282\" y=\"84\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><text x=\"311\" y=\"63\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">3 cm</text></svg>",
+      "options": [
+        "مستطيل، وطول قطر الدائرة $6\\text{ cm}$",
+        "معين، وطول قطر الدائرة $6\\text{ cm}$",
+        "مستطيل، وطول قطر الدائرة $3\\text{ cm}$",
+        "مربع، وطول قطر الدائرة $9\\text{ cm}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! المضلع له $4$ زوايا قائمة وضلعاه $8\\text{ cm}$ و $5\\text{ cm}$ فهو مستطيل، والقطر ضعف نصف القطر ($3 \\times 2 = 6\\text{ cm}$).",
+        "المعين ليس فيه زوايا قائمة وأضلاعه الأربعة متقايسة، أما هذا الشكل فله $4$ زوايا قائمة وطولاه مختلفان ($8$ و $5$).",
+        "المضلع مستطيل فعلا، لكن $3\\text{ cm}$ هو نصف القطر فقط، أما القطر الكامل فهو ضعفه ($6\\text{ cm}$).",
+        "المربع أضلاعه الأربعة متقايسة (وهنا $8 \\neq 5$)، وطول القطر هو $3 \\times 2 = 6\\text{ cm}$ وليس $9\\text{ cm}$."
+      ],
+      "explanationAr": "الشكل الأزرق له $4$ زوايا قائمة وضلعاه متجاوران غير متقايسين ($8\\text{ cm}$ و $5\\text{ cm}$)، إذن هو **مستطيل**. وطول قطر الدائرة هو ضعف نصف قطرها: $3 \\times 2 = 6\\text{ cm}$."
+    }
+  ]
+}

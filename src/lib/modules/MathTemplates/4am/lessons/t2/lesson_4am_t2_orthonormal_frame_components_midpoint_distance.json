@@ -1,0 +1,129 @@
+{
+  "id": "lesson_4am_t2_orthonormal_frame_components_midpoint_distance",
+  "slug": "4am-t2-orthonormal-frame-components-midpoint-distance",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t2",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع السادس: المعالم وإدماج الفصل الثاني",
+  "order": 6,
+  "titleAr": "المعالم: مركبتا شعاع، إحداثيتا منتصف قطعة والمسافة AB في معلم متعامد ومتجانس",
+  "objectives": [
+    "قراءة مركبتي شعاع في معلم متعامد ومتجانس وتمثيله وحساب مركبتي شعاع بمعلومية إحداثيي بدايته ونهايته",
+    "توظيف تساوي مركبتي شعاعين متساويين لإيجاد إحداثيي نقطة أو إثبات متوازي أضلاع أو صورة نقطة بانسحاب",
+    "حساب إحداثيتي منتصف قطعة مستقيم وحساب المسافة بين نقطتين AB في معلم متعامد ومتجانس وإثبات طبيعة مثلث أو رباعي"
+  ],
+  "keywordsAr": [
+    "معلم متعامد ومتجانس",
+    "مركبتا شعاع",
+    "إحداثيتا منتصف قطعة",
+    "المسافة بين نقطتين",
+    "طبيعة مثلث ورباعي"
+  ],
+  "discover": {
+    "scenarioAr": "على خريطة مزودة بمعلم متعامد ومتجانس $(O; I, J)$ وحدته $1\\text{ km}$، تنطلق طائرة استطلاع من النقطة $A(-1; 2)$ نحو النقطة $B(3; 5)$، وتقع محطة إرسال $M$ في منتصف القطعة $[AB]$. كيف نحسب مركبتي الشعاع $\\overrightarrow{AB}$ وإحداثيتي المنتصف $M$ والمسافة الدقيقة $AB$؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 250\" width=\"460\" height=\"250\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect width=\"460\" height=\"250\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g stroke=\"#e2e8f0\" stroke-width=\"1\"><line x1=\"40\" y1=\"35\" x2=\"40\" y2=\"230\"/><line x1=\"70\" y1=\"35\" x2=\"70\" y2=\"230\"/><line x1=\"100\" y1=\"35\" x2=\"100\" y2=\"230\"/><line x1=\"160\" y1=\"35\" x2=\"160\" y2=\"230\"/><line x1=\"190\" y1=\"35\" x2=\"190\" y2=\"230\"/><line x1=\"220\" y1=\"35\" x2=\"220\" y2=\"230\"/><line x1=\"250\" y1=\"35\" x2=\"250\" y2=\"230\"/><line x1=\"280\" y1=\"35\" x2=\"280\" y2=\"230\"/><line x1=\"32\" y1=\"50\" x2=\"286\" y2=\"50\"/><line x1=\"32\" y1=\"80\" x2=\"286\" y2=\"80\"/><line x1=\"32\" y1=\"110\" x2=\"286\" y2=\"110\"/><line x1=\"32\" y1=\"140\" x2=\"286\" y2=\"140\"/><line x1=\"32\" y1=\"170\" x2=\"286\" y2=\"170\"/><line x1=\"32\" y1=\"230\" x2=\"286\" y2=\"230\"/></g><line x1=\"28\" y1=\"200\" x2=\"292\" y2=\"200\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"296,200 288,196 288,204\" fill=\"#334155\"/><line x1=\"130\" y1=\"236\" x2=\"130\" y2=\"22\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"130,16 126,24 134,24\" fill=\"#334155\"/><text x=\"292\" y=\"192\" font-size=\"12\" font-style=\"italic\" font-weight=\"bold\" fill=\"#334155\">x</text><text x=\"139\" y=\"28\" font-size=\"12\" font-style=\"italic\" font-weight=\"bold\" fill=\"#334155\">y</text><text x=\"100\" y=\"214\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">-1</text><text x=\"122\" y=\"214\" text-anchor=\"end\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"160\" y=\"214\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">1</text><text x=\"190\" y=\"214\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">2</text><text x=\"220\" y=\"214\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">3</text><text x=\"250\" y=\"214\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">4</text><text x=\"122\" y=\"174\" text-anchor=\"end\" font-size=\"10.5\" fill=\"#475569\">1</text><text x=\"122\" y=\"144\" text-anchor=\"end\" font-size=\"10.5\" fill=\"#475569\">2</text><text x=\"122\" y=\"114\" text-anchor=\"end\" font-size=\"10.5\" fill=\"#475569\">3</text><text x=\"122\" y=\"84\" text-anchor=\"end\" font-size=\"10.5\" fill=\"#475569\">4</text><text x=\"122\" y=\"54\" text-anchor=\"end\" font-size=\"10.5\" fill=\"#475569\">5</text><circle cx=\"160\" cy=\"200\" r=\"2.8\" fill=\"#0f172a\"/><text x=\"160\" y=\"194\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\">I</text><circle cx=\"130\" cy=\"170\" r=\"2.8\" fill=\"#0f172a\"/><text x=\"138\" y=\"173\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\">J</text><line x1=\"100\" y1=\"140\" x2=\"220\" y2=\"140\" stroke=\"#d97706\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/><line x1=\"220\" y1=\"140\" x2=\"220\" y2=\"50\" stroke=\"#d97706\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/><path d=\"M 210 140 L 210 130 L 220 130\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"1.5\"/><text x=\"160\" y=\"155\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">+4</text><text x=\"234\" y=\"98\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">+3</text><line x1=\"100\" y1=\"140\" x2=\"212.8\" y2=\"55.4\" stroke=\"#2563eb\" stroke-width=\"2.8\"/><polygon points=\"220,50 208.5,53 213.9,60.2\" fill=\"#2563eb\"/><circle cx=\"100\" cy=\"140\" r=\"4.2\" fill=\"#1e40af\"/><circle cx=\"220\" cy=\"50\" r=\"4.2\" fill=\"#1e40af\"/><circle cx=\"160\" cy=\"95\" r=\"4.2\" fill=\"#16a34a\"/><text x=\"82\" y=\"138\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">A(-1;2)</text><text x=\"226\" y=\"46\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">B(3;5)</text><text x=\"151\" y=\"85\" text-anchor=\"end\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">M</text><rect x=\"306\" y=\"20\" width=\"142\" height=\"210\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"377\" y=\"44\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">بيانات المعلم</text><text x=\"377\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">A(-1 ; 2)  ,  B(3 ; 5)</text><line x1=\"318\" y1=\"86\" x2=\"436\" y2=\"86\" stroke=\"#e2e8f0\" stroke-width=\"1.2\"/><text x=\"377\" y=\"107\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#b45309\">الانتقال الأفقي: 4+</text><text x=\"377\" y=\"127\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#b45309\">الانتقال العمودي: 3+</text><line x1=\"318\" y1=\"141\" x2=\"436\" y2=\"141\" stroke=\"#e2e8f0\" stroke-width=\"1.2\"/><text x=\"377\" y=\"162\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#16a34a\">المنتصف: M(1 ; 3.5)</text><line x1=\"318\" y1=\"176\" x2=\"436\" y2=\"176\" stroke=\"#e2e8f0\" stroke-width=\"1.2\"/><text x=\"377\" y=\"198\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">AB = √(4² + 3²)</text><text x=\"377\" y=\"216\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">AB = 5 km</text></svg>",
+    "steps": [
+      {
+        "promptAr": "للانتقال من $A(-1; 2)$ إلى $B(3; 5)$، نحسب فرق الفواصل $x_B - x_A = 3 - (-1)$ وفرق التراتيب $y_B - y_A = 5 - 2$. ما المركبة الأولى (الأفقية) للشعاع $\\overrightarrow{AB}$؟",
+        "hintAr": "تذكر أن $3 - (-1) = 3 + 1$.",
+        "expectedInput": "4",
+        "revealAr": "المركبة الأفقية هي $3 - (-1) = 4$ والمركبة العمودية هي $5 - 2 = 3$، فنكتب $\\overrightarrow{AB}\\begin{pmatrix} 4 \\\\ 3 \\end{pmatrix}$."
+      },
+      {
+        "promptAr": "يشكّل الانتقال الأفقي ($4$) والانتقال العمودي ($3$) مثلثا قائما وتره القطعة $[AB]$. احسب المسافة $AB = \\sqrt{4^2 + 3^2}$ بالكيلومتر.",
+        "hintAr": "احسب $\\sqrt{16 + 9}$.",
+        "expectedInput": "5",
+        "revealAr": "$AB = \\sqrt{16 + 9} = \\sqrt{25} = 5\\text{ km}$. وهذه هي قاعدة المسافة بين نقطتين في معلم متعامد ومتجانس: $AB = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$."
+      },
+      {
+        "promptAr": "تقع المحطة $M$ في منتصف $[AB]$. نستعمل قاعدة المتوسط الحسابي: $x_M = \\frac{x_A + x_B}{2}$ و$y_M = \\frac{y_A + y_B}{2}$. ما فاصلة النقطة $M$؟",
+        "hintAr": "احسب $\\frac{-1 + 3}{2}$.",
+        "expectedInput": "1",
+        "revealAr": "$x_M = \\frac{-1 + 3}{2} = \\frac{2}{2} = 1$ و$y_M = \\frac{2 + 5}{2} = 3.5$، إذن $M(1; 3.5)$."
+      },
+      {
+        "promptAr": "نريد تعيين النقطة $D$ بحيث يكون $\\overrightarrow{CD} = \\overrightarrow{AB}$ حيث $C(2; -1)$. بما أن لهما نفس المركبتين فإن $x_D - 2 = 4$ و$y_D - (-1) = 3$. ما فاصلة النقطة $D$؟",
+        "hintAr": "حل المعادلة $x_D - 2 = 4$.",
+        "expectedInput": "6",
+        "revealAr": "$x_D = 2 + 4 = 6$ و$y_D = -1 + 3 = 2$، إذن $D(6; 2)$ ويكون الرباعي $ABDC$ متوازي أضلاع."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**مركبتا شعاع**: إذا كانت $A(x_A; y_A)$ و$B(x_B; y_B)$ نقطتين في معلم، فإن مركبتي الشعاع $\\overrightarrow{AB}$ هما: $\\overrightarrow{AB}\\begin{pmatrix} x_B - x_A \\\\ y_B - y_A \\end{pmatrix}$ (دائما إحداثيا **النهاية** ناقص إحداثيا **البداية**).",
+      "**تساوي شعاعين بالمركبات**: $\\overrightarrow{AB} = \\overrightarrow{CD}$ يكافئ $x_B - x_A = x_D - x_C$ و$y_B - y_A = y_D - y_C$. تُستعمل هذه المساواة لحساب إحداثيي صورة نقطة بانسحاب أو الرأس الرابع لمتوازي أضلاع.",
+      "**إحداثيتا منتصف قطعة**: إذا كانت $M$ منتصف $[AB]$ فإن $x_M = \\frac{x_A + x_B}{2}$ و$y_M = \\frac{y_A + y_B}{2}$.",
+      "**المسافة بين نقطتين**: في معلم **متعامد ومتجانس** حصرا: $AB = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$، أو بدلالة مركبتي $\\overrightarrow{AB}\\begin{pmatrix} x \\\\ y \\end{pmatrix}$: $AB = \\sqrt{x^2 + y^2}$.",
+      "**إثبات طبيعة مثلث أو رباعي**: نحسب أطوال الأضلاع والأقطار بقاعدة المسافة، ثم نطبق الخاصية العكسية لفيثاغورس (مثلث قائم، مستطيل، مربع) أو تساوي الأضلاع (مثلث متساوي الساقين/متقايس الأضلاع، معين) أو تساوي شعاعين (متوازي أضلاع)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 235\" width=\"480\" height=\"235\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect width=\"480\" height=\"235\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g stroke=\"#e2e8f0\" stroke-width=\"1\"><line x1=\"40\" y1=\"25\" x2=\"40\" y2=\"217\"/><line x1=\"104\" y1=\"25\" x2=\"104\" y2=\"217\"/><line x1=\"136\" y1=\"25\" x2=\"136\" y2=\"217\"/><line x1=\"168\" y1=\"25\" x2=\"168\" y2=\"217\"/><line x1=\"200\" y1=\"25\" x2=\"200\" y2=\"217\"/><line x1=\"232\" y1=\"25\" x2=\"232\" y2=\"217\"/><line x1=\"32\" y1=\"25\" x2=\"244\" y2=\"25\"/><line x1=\"32\" y1=\"57\" x2=\"244\" y2=\"57\"/><line x1=\"32\" y1=\"89\" x2=\"244\" y2=\"89\"/><line x1=\"32\" y1=\"121\" x2=\"244\" y2=\"121\"/><line x1=\"32\" y1=\"153\" x2=\"244\" y2=\"153\"/><line x1=\"32\" y1=\"217\" x2=\"244\" y2=\"217\"/></g><line x1=\"26\" y1=\"185\" x2=\"248\" y2=\"185\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"252,185 244,181 244,189\" fill=\"#334155\"/><line x1=\"72\" y1=\"223\" x2=\"72\" y2=\"18\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"72,12 68,20 76,20\" fill=\"#334155\"/><text x=\"64\" y=\"199\" text-anchor=\"end\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">O</text><line x1=\"104\" y1=\"153\" x2=\"232\" y2=\"153\" stroke=\"#d97706\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><line x1=\"232\" y1=\"153\" x2=\"232\" y2=\"57\" stroke=\"#d97706\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><path d=\"M 222 153 L 222 143 L 232 143\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"1.4\"/><text x=\"168\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">xB - xA</text><text x=\"236\" y=\"110\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">yB - yA</text><line x1=\"104\" y1=\"153\" x2=\"224.8\" y2=\"62.4\" stroke=\"#2563eb\" stroke-width=\"2.6\"/><polygon points=\"232,57 220.5,60 225.9,67.2\" fill=\"#2563eb\"/><circle cx=\"104\" cy=\"153\" r=\"4\" fill=\"#1e40af\"/><circle cx=\"232\" cy=\"57\" r=\"4\" fill=\"#1e40af\"/><circle cx=\"168\" cy=\"105\" r=\"4\" fill=\"#16a34a\"/><text x=\"92\" y=\"166\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\">A</text><text x=\"236\" y=\"52\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\">B</text><text x=\"159\" y=\"96\" text-anchor=\"end\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#16a34a\">M</text><rect x=\"272\" y=\"14\" width=\"196\" height=\"62\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"370\" y=\"34\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\">مركبتا الشعاع AB</text><text x=\"370\" y=\"60\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#0f172a\">(xB - xA  ;  yB - yA)</text><rect x=\"272\" y=\"86\" width=\"196\" height=\"62\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"370\" y=\"106\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#166534\">منتصف قطعة [AB]</text><text x=\"370\" y=\"132\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">M( (xA+xB)/2 ; (yA+yB)/2 )</text><rect x=\"272\" y=\"158\" width=\"196\" height=\"62\" rx=\"8\" fill=\"#faf5ff\" stroke=\"#7c3aed\" stroke-width=\"1.4\"/><text x=\"370\" y=\"178\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#5b21b6\">المسافة بين نقطتين</text><text x=\"370\" y=\"204\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">AB = √((xB-xA)² + (yB-yA)²)</text></svg>",
+    "visualCaptionAr": "قوانين مركبتي شعاع وإحداثيتي منتصف قطعة والمسافة بين نقطتين في معلم متعامد ومتجانس",
+    "examples": [
+      {
+        "problemAr": "في معلم متعامد ومتجانس، لتكن النقط $A(-2; 1)$، $B(2; 3)$، $C(1; -1)$. احسب مركبتي $\\overrightarrow{AB}$ وإحداثيتي $I$ منتصف $[AC]$، ثم أوجد إحداثيتي $D$ بحيث يكون $ABCD$ متوازي أضلاع.",
+        "solutionAr": "1) مركبتا $\\overrightarrow{AB}$: $\\begin{pmatrix} 2 - (-2) \\\\ 3 - 1 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix}$.\n\n2) منتصف $[AC]$: $x_I = \\frac{-2 + 1}{2} = -0.5$ و$y_I = \\frac{1 + (-1)}{2} = 0$، إذن $I(-0.5; 0)$.\n\n3) يكون $ABCD$ متوازي أضلاع إذا وفقط إذا كان $\\overrightarrow{AB} = \\overrightarrow{DC}$، أي $1 - x_D = 4 \\implies x_D = -3$ و$-1 - y_D = 2 \\implies y_D = -3$، ومنه $D(-3; -3)$."
+      },
+      {
+        "problemAr": "في معلم متعامد ومتجانس، نعتبر $E(1; 2)$، $F(4; 3)$، $G(2; -1)$. احسب الأطوال $EF$ و$EG$ و$FG$ واستنتج طبيعة المثلث $EFG$.",
+        "solutionAr": "$EF = \\sqrt{(4 - 1)^2 + (3 - 2)^2} = \\sqrt{3^2 + 1^2} = \\sqrt{10}$.\n\n$EG = \\sqrt{(2 - 1)^2 + (-1 - 2)^2} = \\sqrt{1^2 + (-3)^2} = \\sqrt{10}$.\n\n$FG = \\sqrt{(2 - 4)^2 + (-1 - 3)^2} = \\sqrt{(-2)^2 + (-4)^2} = \\sqrt{20}$.\n\nلدينا $EF^2 + EG^2 = 10 + 10 = 20 = FG^2$، وبما أن $EF = EG$ أيضا، فإن المثلث $EFG$ **قائم في $E$ ومتساوي الساقين**."
+      }
+    ],
+    "watchOutAr": "احذر من الخلط بين قانوني المركبات والمنتصف: في مركبتي $\\overrightarrow{AB}$ نطرح **النهاية ناقص البداية** $(x_B - x_A)$، أما في منتصف $[AB]$ فنجمع **ونقسم على $2$** $\\frac{x_A + x_B}{2}$! وكذلك في حساب المسافة ضع الأقواس حول الأعداد السالبة قبل التربيع مثل $(-3)^2 = +9$ وليس $-9$."
+  },
+  "practice": [
+    {
+      "questionAr": "في المعلم المتعامد والمتجانس المقابل، ما هما مركبتا الشعاع $\\overrightarrow{EF}$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 235\" width=\"340\" height=\"235\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect width=\"340\" height=\"235\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.4\"/><g stroke=\"#e2e8f0\" stroke-width=\"1\"><line x1=\"71\" y1=\"25\" x2=\"71\" y2=\"222\"/><line x1=\"103\" y1=\"25\" x2=\"103\" y2=\"222\"/><line x1=\"167\" y1=\"25\" x2=\"167\" y2=\"222\"/><line x1=\"199\" y1=\"25\" x2=\"199\" y2=\"222\"/><line x1=\"231\" y1=\"25\" x2=\"231\" y2=\"222\"/><line x1=\"263\" y1=\"25\" x2=\"263\" y2=\"222\"/><line x1=\"55\" y1=\"30\" x2=\"282\" y2=\"30\"/><line x1=\"55\" y1=\"62\" x2=\"282\" y2=\"62\"/><line x1=\"55\" y1=\"94\" x2=\"282\" y2=\"94\"/><line x1=\"55\" y1=\"126\" x2=\"282\" y2=\"126\"/><line x1=\"55\" y1=\"158\" x2=\"282\" y2=\"158\"/><line x1=\"55\" y1=\"222\" x2=\"282\" y2=\"222\"/></g><line x1=\"46\" y1=\"190\" x2=\"290\" y2=\"190\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"296,190 288,186 288,194\" fill=\"#334155\"/><line x1=\"135\" y1=\"228\" x2=\"135\" y2=\"18\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"135,12 131,20 139,20\" fill=\"#334155\"/><text x=\"292\" y=\"182\" font-size=\"12\" font-style=\"italic\" font-weight=\"bold\" fill=\"#334155\">x</text><text x=\"144\" y=\"24\" font-size=\"12\" font-style=\"italic\" font-weight=\"bold\" fill=\"#334155\">y</text><text x=\"71\" y=\"204\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">-2</text><text x=\"103\" y=\"204\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">-1</text><text x=\"128\" y=\"204\" text-anchor=\"end\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"167\" y=\"204\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">1</text><text x=\"199\" y=\"204\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">2</text><text x=\"231\" y=\"204\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">3</text><text x=\"263\" y=\"204\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">4</text><text x=\"128\" y=\"162\" text-anchor=\"end\" font-size=\"10.5\" fill=\"#475569\">1</text><text x=\"128\" y=\"130\" text-anchor=\"end\" font-size=\"10.5\" fill=\"#475569\">2</text><text x=\"128\" y=\"98\" text-anchor=\"end\" font-size=\"10.5\" fill=\"#475569\">3</text><text x=\"128\" y=\"66\" text-anchor=\"end\" font-size=\"10.5\" fill=\"#475569\">4</text><line x1=\"231\" y1=\"158\" x2=\"231\" y2=\"190\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"231\" y1=\"158\" x2=\"135\" y2=\"158\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"103\" y1=\"62\" x2=\"103\" y2=\"190\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"103\" y1=\"62\" x2=\"135\" y2=\"62\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"231\" y1=\"158\" x2=\"111\" y2=\"68\" stroke=\"#2563eb\" stroke-width=\"2.8\"/><polygon points=\"103,62 109.1,72.2 114.5,65\" fill=\"#2563eb\"/><circle cx=\"231\" cy=\"158\" r=\"4.2\" fill=\"#1e40af\"/><circle cx=\"103\" cy=\"62\" r=\"4.2\" fill=\"#dc2626\"/><text x=\"240\" y=\"158\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">E</text><text x=\"87\" y=\"58\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">F</text></svg>",
+      "options": [
+        "$\\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix}$",
+        "$\\begin{pmatrix} -4 \\\\ 3 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 3 \\\\ -4 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "حسبتَ مركبتي $\\overrightarrow{FE}$ (البداية ناقص النهاية) بدلا من $\\overrightarrow{EF}$! انظر إلى اتجاه السهم من $E$ نحو $F$: ننتقل يسارا بـ $4$ وأعلى بـ $3$.",
+        "أحسنت! من $E(3; 1)$ إلى $F(-1; 4)$ لدينا $x_F - x_E = -1 - 3 = -4$ و$y_F - y_E = 4 - 1 = 3$.",
+        "بدّلتَ بين المركبة الأفقية والمركبة العمودية! المركبة الأولى تُقرأ أفقيا والثانية عموديا.",
+        "جمعتَ إحداثيي $E$ و$F$ بدل طرح إحداثيات البداية $E$ من إحداثيات النهاية $F$."
+      ],
+      "explanationAr": "نقرأ من المعلم $E(3; 1)$ و$F(-1; 4)$. ومنه مركبتا $\\overrightarrow{EF}$ هما: $x_F - x_E = -1 - 3 = -4$ و$y_F - y_E = 4 - 1 = 3$، أي $\\begin{pmatrix} -4 \\\\ 3 \\end{pmatrix}$."
+    },
+    {
+      "questionAr": "في معلم متعامد ومتجانس، لتكن النقطتان $A(-3; 4)$ و$B(5; -2)$. ما هما إحداثيتا النقطة $M$ منتصف القطعة $[AB]$؟",
+      "options": [
+        "$M(4; -3)$",
+        "$M(2; 2)$",
+        "$M(1; 1)$",
+        "$M(-4; 3)$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "طرحتَ الإحداثيات $(x_B - x_A)/2$ بدلا من جمعها! قانون المنتصف يستعمل **الجمع**.",
+        "جمعتَ الإحداثيات $-3 + 5 = 2$ و$4 - 2 = 2$، لكنك نسيتَ القسمة على $2$!",
+        "ممتاز! $x_M = \\frac{-3 + 5}{2} = 1$ و$y_M = \\frac{4 + (-2)}{2} = 1$.",
+        "حسبتَ $(x_A - x_B)/2$ بدلا من $(x_A + x_B)/2$."
+      ],
+      "explanationAr": "نطبق قاعدة إحداثيتي منتصف قطعة: $x_M = \\frac{-3 + 5}{2} = \\frac{2}{2} = 1$ و$y_M = \\frac{4 + (-2)}{2} = \\frac{2}{2} = 1$، إذن $M(1; 1)$."
+    },
+    {
+      "questionAr": "في معلم متعامد ومتجانس، نعتبر النقط $P(-1; 0)$، $Q(3; 3)$، $R(6; -1)$. علما أن $QR = 5$ و$PR = \\sqrt{50}$، ما طول $PQ$ وما نوع المثلث $PQR$؟",
+      "options": [
+        "$PQ = \\sqrt{13}$ والمثلث متساوي الساقين فقط",
+        "$PQ = 5$ والمثلث متقايس الأضلاع",
+        "$PQ = 7$ والمثلث كيفي",
+        "$PQ = 5$ والمثلث قائم في $Q$ ومتساوي الساقين"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "انتبه للإشارات في $x_Q - x_P = 3 - (-1) = 4$ وليس $3 - 1 = 2$!",
+        "الطول $PQ = 5 = QR$، لكن الضلع الثالث $PR = \\sqrt{50} \\neq 5$، فالمثلث ليس متقايس الأضلاع.",
+        "لا نجمع الجذرين $\\sqrt{4^2 + 3^2} \\neq 4 + 3$؛ نحسب أولا $16 + 9 = 25$ ثم نأخذ الجذر التربيعي.",
+        "صحيح تماما! $PQ = 5 = QR$، كما أن $PQ^2 + QR^2 = 25 + 25 = 50 = PR^2$، فالمثلث قائم في $Q$ ومتساوي الساقين."
+      ],
+      "explanationAr": "نحسب $PQ = \\sqrt{(3 - (-1))^2 + (3 - 0)^2} = \\sqrt{4^2 + 3^2} = \\sqrt{25} = 5$. لدينا $PQ = QR = 5$ و$PQ^2 + QR^2 = 25 + 25 = 50 = PR^2$، وحسب الخاصية العكسية لفيثاغورس فالمثلث $PQR$ قائم في $Q$ ومتساوي الساقين."
+    }
+  ]
+}

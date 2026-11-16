@@ -1,6 +1,7 @@
 import type { ExerciseBlock, LevelId, TrimesterId } from '../SujetBuilder/types';
 
-export type GradeId = '2ap' | '5ap' | '2am';
+export type GradeId = '1ap' | '2ap' | '3ap' | '4ap' | '5ap' | '1am' | '2am' | '3am' | '4am';
+export type PipelineYearSubjectId = 581 | 586 | 591 | 598 | 606 | 614 | 624 | 634 | 644;
 export type Difficulty = 'easy' | 'medium' | 'hard';
 export type MathDomain = 'numeric' | 'geometry' | 'measurement' | 'proportionality' | 'integration';
 
@@ -11,10 +12,19 @@ export interface GradeMeta {
 	yearName: string;
 	subjectId: 'MAT-B';
 	subjectName: 'الرياضيات';
-	yearSubjectId: 586 | 606 | 624;
+	yearSubjectId: PipelineYearSubjectId;
 }
 
 export const GRADE_METADATA: Record<GradeId, GradeMeta> = {
+	'1ap': {
+		grade: '1ap',
+		levelId: 'primaire',
+		yearId: '1ap',
+		yearName: 'السنة الأولى ابتدائي',
+		subjectId: 'MAT-B',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 581
+	},
 	'2ap': {
 		grade: '2ap',
 		levelId: 'primaire',
@@ -23,6 +33,24 @@ export const GRADE_METADATA: Record<GradeId, GradeMeta> = {
 		subjectId: 'MAT-B',
 		subjectName: 'الرياضيات',
 		yearSubjectId: 586
+	},
+	'3ap': {
+		grade: '3ap',
+		levelId: 'primaire',
+		yearId: '3ap',
+		yearName: 'السنة الثالثة ابتدائي',
+		subjectId: 'MAT-B',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 591
+	},
+	'4ap': {
+		grade: '4ap',
+		levelId: 'primaire',
+		yearId: '4ap',
+		yearName: 'السنة الرابعة ابتدائي',
+		subjectId: 'MAT-B',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 598
 	},
 	'5ap': {
 		grade: '5ap',
@@ -33,6 +61,15 @@ export const GRADE_METADATA: Record<GradeId, GradeMeta> = {
 		subjectName: 'الرياضيات',
 		yearSubjectId: 606
 	},
+	'1am': {
+		grade: '1am',
+		levelId: 'moyen',
+		yearId: '1am',
+		yearName: 'السنة الأولى متوسط',
+		subjectId: 'MAT-B',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 614
+	},
 	'2am': {
 		grade: '2am',
 		levelId: 'moyen',
@@ -41,6 +78,24 @@ export const GRADE_METADATA: Record<GradeId, GradeMeta> = {
 		subjectId: 'MAT-B',
 		subjectName: 'الرياضيات',
 		yearSubjectId: 624
+	},
+	'3am': {
+		grade: '3am',
+		levelId: 'moyen',
+		yearId: '3am',
+		yearName: 'السنة الثالثة متوسط',
+		subjectId: 'MAT-B',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 634
+	},
+	'4am': {
+		grade: '4am',
+		levelId: 'moyen',
+		yearId: '4am',
+		yearName: 'السنة الرابعة متوسط (BEM)',
+		subjectId: 'MAT-B',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 644
 	}
 };
 
@@ -64,7 +119,7 @@ export interface InteractiveLessonData {
 	id: string;
 	slug: string;
 	grade: GradeId;
-	yearSubjectId: 586 | 606 | 624;
+	yearSubjectId: PipelineYearSubjectId;
 	trimesterId: TrimesterId;
 	sequenceId: string;
 	sequenceTitleAr: string;

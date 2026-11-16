@@ -249,21 +249,22 @@ async function main() {
 			const rPrim = await httpReq('/primaire');
 			assert.equal(rPrim.status, 200, 'GET /primaire must return 200');
 
-			const r2ap = await httpReq('/primaire/2ap/mat-b');
-			assert.equal(r2ap.status, 200, 'GET /primaire/2ap/mat-b must return 200');
+			for (const g of ['1ap', '2ap', '3ap', '4ap', '5ap'] as const) {
+				const rPrimGrade = await httpReq(`/primaire/${g}/mat-b`);
+				assert.equal(rPrimGrade.status, 200, `GET /primaire/${g}/mat-b must return 200`);
+			}
 
-			const r5ap = await httpReq('/primaire/5ap/mat-b');
-			assert.equal(r5ap.status, 200, 'GET /primaire/5ap/mat-b must return 200');
-
-			const r2am = await httpReq('/moyen/2am/mat-b');
-			assert.equal(r2am.status, 200, 'GET /moyen/2am/mat-b must return 200');
+			for (const g of ['1am', '2am', '3am', '4am'] as const) {
+				const rMidGrade = await httpReq(`/moyen/${g}/mat-b`);
+				assert.equal(rMidGrade.status, 200, `GET /moyen/${g}/mat-b must return 200`);
+			}
 
 			const rSec = await httpReq('/secondaire');
 			assert.equal(rSec.status, 404, 'Hidden level GET /secondaire must return 404');
-			console.log('✅ 1. Visibility & curriculum routes passed');
+			console.log('✅ 1. Visibility & curriculum routes passed (all 9 primary + middle grades)');
 		}
 
-		// 2. Interactive Lessons SSR Checks (1 published lesson per grade: 2ap, 5ap, 2am)
+		// 2. Interactive Lessons SSR Checks (1 published lesson per grade across all 9 grades)
 		{
 			const lessonStmt = contentDb.query(`
 				SELECT d.slug, d.title_ar as titleAr, y.slug as yearSlug, el.slug as levelSlug
@@ -276,7 +277,7 @@ async function main() {
 				LIMIT 1
 			`);
 
-			for (const grade of ['2ap', '5ap', '2am'] as const) {
+			for (const grade of ['1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am'] as const) {
 				const row = lessonStmt.get(grade) as {
 					slug: string;
 					titleAr: string;
@@ -294,7 +295,7 @@ async function main() {
 				assert.ok(html.includes('2. أفهم وأتذكر'), `${lessonUrl} must include stage marker "2. أفهم وأتذكر"`);
 				assert.ok(html.includes('3. أتمرن الآن'), `${lessonUrl} must include stage marker "3. أتمرن الآن"`);
 			}
-			console.log('✅ 2. Interactive lessons SSR checks passed (2ap, 5ap, 2am)');
+			console.log('✅ 2. Interactive lessons SSR checks passed (all 9 grades)');
 		}
 
 		// 3. Quizzes Pages & Deterministic Server-Side Grading
@@ -303,9 +304,11 @@ async function main() {
 			assert.equal(rQuizzesIndex.status, 200, 'GET /quizzes must return 200');
 
 			const quizSlugs = [
-				'2ap-math-t1-interactive-quiz',
-				'5ap-math-t2-interactive-quiz',
-				'2am-math-t3-interactive-quiz'
+				'1ap-math-t1-quiz-pack-1',
+				'3ap-math-t2-quiz-pack-2',
+				'5ap-math-t3-cinq-simulator',
+				'1am-math-t1-quiz-pack-1',
+				'4am-math-t3-bem-simulator'
 			];
 			for (const slug of quizSlugs) {
 				const rQuizPage = await httpReq(`/quizzes/${slug}`);
@@ -313,9 +316,9 @@ async function main() {
 			}
 
 			const quizRow = contentDb
-				.query("SELECT id FROM quizzes WHERE slug = '2ap-math-t1-interactive-quiz' LIMIT 1")
+				.query("SELECT id FROM quizzes WHERE slug = '1ap-math-t1-quiz-pack-1' LIMIT 1")
 				.get() as { id: number } | null;
-			assert.ok(quizRow, 'Quiz 2ap-math-t1-interactive-quiz must exist in content.db');
+			assert.ok(quizRow, 'Quiz 1ap-math-t1-quiz-pack-1 must exist in content.db');
 
 			const rawQuestions = contentDb
 				.query(
@@ -378,16 +381,23 @@ async function main() {
 			console.log('✅ 3. Quizzes routes & deterministic server grading passed');
 		}
 
-		// 4. Static Generated Sample PDFs
+		// 4. Static Generated Sample PDFs across all 9 grades
 		{
-			const samplePdfUrls = [
-				'/documents/generated_samples/2ap/2ap-math-t1-exam-sample-1.pdf',
-				'/documents/generated_samples/2ap/2ap-math-t1-exam-sample-1-sol.pdf',
-				'/documents/generated_samples/5ap/5ap-math-t1-exam-sample-1.pdf',
-				'/documents/generated_samples/5ap/5ap-math-t1-exam-sample-1-sol.pdf',
-				'/documents/generated_samples/2am/2am-math-t1-exam-sample-1.pdf',
-				'/documents/generated_samples/2am/2am-math-t1-exam-sample-1-sol.pdf'
-			];
+			const samplePdfUrls: string[] = [];
+			for (const g of ['1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am'] as const) {
+				samplePdfUrls.push(
+					`/documents/generated_samples/${g}/${g}-math-t1-exam-sample-1.pdf`,
+					`/documents/generated_samples/${g}/${g}-math-t1-exam-sample-1-sol.pdf`,
+					`/documents/generated_samples/${g}/${g}-math-t2-test-sample-1.pdf`,
+					`/documents/generated_samples/${g}/${g}-math-t2-test-sample-1-sol.pdf`
+				);
+			}
+			samplePdfUrls.push(
+				'/documents/generated_samples/5ap/5ap-math-t3-cinq-mock-1.pdf',
+				'/documents/generated_samples/5ap/5ap-math-t3-cinq-mock-1-sol.pdf',
+				'/documents/generated_samples/4am/4am-math-t3-bem-mock-1.pdf',
+				'/documents/generated_samples/4am/4am-math-t3-bem-mock-1-sol.pdf'
+			);
 
 			for (const pdfUrl of samplePdfUrls) {
 				const rPdf = await httpReq(pdfUrl);
@@ -396,10 +406,10 @@ async function main() {
 				const header = new TextDecoder().decode(bytes.slice(0, 5));
 				assert.equal(header, '%PDF-', `${pdfUrl} must have valid %PDF- magic header`);
 			}
-			console.log('✅ 4. Static sample PDFs checks passed (2ap, 5ap, 2am + solutions)');
+			console.log(`✅ 4. Static sample PDFs checks passed (${samplePdfUrls.length} PDFs across all 9 grades)`);
 		}
 
-		// 5. Smart Generator API (mode: 'quiz' & mode: 'pdf' across 2ap=586, 5ap=606, 2am=624)
+		// 5. Smart Generator API (mode: 'quiz' & mode: 'pdf' across primary & middle grades)
 		{
 			const activeUser = usersDb
 				.query('SELECT id FROM users WHERE is_active = 1 ORDER BY id ASC LIMIT 1')
@@ -411,9 +421,11 @@ async function main() {
 			const sessionCookie = `${SESSION_COOKIE_NAME}=${session.id}`;
 
 			const quizCases = [
-				{ grade: '2ap', yearSubjectId: 586 },
+				{ grade: '1ap', yearSubjectId: 581 },
+				{ grade: '3ap', yearSubjectId: 591 },
 				{ grade: '5ap', yearSubjectId: 606 },
-				{ grade: '2am', yearSubjectId: 624 }
+				{ grade: '1am', yearSubjectId: 614 },
+				{ grade: '4am', yearSubjectId: 644 }
 			];
 
 			for (const tc of quizCases) {
@@ -442,11 +454,13 @@ async function main() {
 				yearSubjectId: number;
 				trimesterId: 't1' | 't2' | 't3';
 				docType: 'test' | 'exam';
+				variant?: string;
 			}> = [
-				{ grade: '2ap', yearSubjectId: 586, trimesterId: 't1', docType: 'exam' },
-				{ grade: '5ap', yearSubjectId: 606, trimesterId: 't2', docType: 'exam' },
-				{ grade: '2am', yearSubjectId: 624, trimesterId: 't1', docType: 'test' },
-				{ grade: '2am', yearSubjectId: 624, trimesterId: 't3', docType: 'exam' }
+				{ grade: '1ap', yearSubjectId: 581, trimesterId: 't1', docType: 'test' },
+				{ grade: '1ap', yearSubjectId: 581, trimesterId: 't2', docType: 'exam' },
+				{ grade: '4ap', yearSubjectId: 598, trimesterId: 't1', docType: 'test' },
+				{ grade: '1am', yearSubjectId: 614, trimesterId: 't2', docType: 'test' },
+				{ grade: '4am', yearSubjectId: 644, trimesterId: 't3', docType: 'exam', variant: 'bem_mock' }
 			];
 
 			for (const tc of pdfCases) {
@@ -461,7 +475,8 @@ async function main() {
 						yearSubjectId: tc.yearSubjectId,
 						trimesterId: tc.trimesterId,
 						docType: tc.docType,
-						exerciseCount: 2
+						...(tc.variant ? { variant: tc.variant } : {}),
+						difficulty: 'medium'
 					})
 				});
 				assert.equal(

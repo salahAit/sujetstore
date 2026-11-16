@@ -1,0 +1,123 @@
+{
+  "id": "lesson_4ap_t1_metric_units_length_mass_capacity",
+  "slug": "4ap-t1-metric-units-length-mass-capacity",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t1",
+  "sequenceId": "seq1",
+  "sequenceTitleAr": "المقطع الأول: الأعداد إلى 999 999 والعمليات والمقادير والقياس",
+  "order": 3,
+  "titleAr": "وحدات قياس الأطوال والكتل والسعات والتحويل بينها",
+  "objectives": [
+    "معرفة واستعمال وحدات قياس الطول (km، m، dm، cm، mm) والكتلة (t، q، kg، g) والسعة (L، dL، cL، mL) والتمييز بينها في وضعيات واقعية",
+    "استعمال جدول التحويلات المتري والعلاقات العشرية بين الوحدات للتحويل من وحدة إلى أخرى",
+    "التعبير عن مقادير بنفس الوحدة قبل مقارنتها أو ترتيبها أو جمعها وطرحها في مشكلات يومية"
+  ],
+  "keywordsAr": [
+    "قياس الأطوال",
+    "وحدات قياس الكتل",
+    "وحدات قياس السعات",
+    "جدول التحويلات",
+    "النظام المتري"
+  ],
+  "discover": {
+    "scenarioAr": "في قافلة تضامن مدرسية، قطعت شاحنة مسافة $4\\text{ km } 250\\text{ m}$ محملة بـ $1\\text{ t } 5\\text{ q}$ من الدقيق، وبها قارورات عصير سعة كل منها $2\\text{ L } 50\\text{ cL}$ . نريد تحويل هذه المقادير باستعمال جداول القياس المترية.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 218\" width=\"580\" height=\"218\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"482\" y=\"12\" width=\"82\" height=\"56\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.4\"/><text x=\"523\" y=\"45\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">الأطوال</text><g font-size=\"12\" font-weight=\"bold\"><rect x=\"20\" y=\"12\" width=\"64\" height=\"26\" fill=\"#eff6ff\" stroke=\"#64748b\"/><text x=\"52\" y=\"29\" text-anchor=\"middle\" fill=\"#1e3a8a\">km</text><rect x=\"84\" y=\"12\" width=\"64\" height=\"26\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"116\" y=\"29\" text-anchor=\"middle\" fill=\"#475569\">hm</text><rect x=\"148\" y=\"12\" width=\"64\" height=\"26\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"180\" y=\"29\" text-anchor=\"middle\" fill=\"#475569\">dam</text><rect x=\"212\" y=\"12\" width=\"64\" height=\"26\" fill=\"#dcfce7\" stroke=\"#15803d\"/><text x=\"244\" y=\"29\" text-anchor=\"middle\" fill=\"#14532d\">m</text><rect x=\"276\" y=\"12\" width=\"64\" height=\"26\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"308\" y=\"29\" text-anchor=\"middle\" fill=\"#475569\">dm</text><rect x=\"340\" y=\"12\" width=\"64\" height=\"26\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"372\" y=\"29\" text-anchor=\"middle\" fill=\"#475569\">cm</text><rect x=\"404\" y=\"12\" width=\"64\" height=\"26\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"436\" y=\"29\" text-anchor=\"middle\" fill=\"#475569\">mm</text></g><g font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"20\" y=\"38\" width=\"64\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/><text x=\"52\" y=\"59\" text-anchor=\"middle\" fill=\"#1d4ed8\">4</text><rect x=\"84\" y=\"38\" width=\"64\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/><text x=\"116\" y=\"59\" text-anchor=\"middle\">2</text><rect x=\"148\" y=\"38\" width=\"64\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/><text x=\"180\" y=\"59\" text-anchor=\"middle\">5</text><rect x=\"212\" y=\"38\" width=\"64\" height=\"30\" fill=\"#f0fdf4\" stroke=\"#15803d\"/><text x=\"244\" y=\"59\" text-anchor=\"middle\" fill=\"#15803d\">0</text><rect x=\"276\" y=\"38\" width=\"64\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"340\" y=\"38\" width=\"64\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"404\" y=\"38\" width=\"64\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/></g><rect x=\"482\" y=\"82\" width=\"82\" height=\"56\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.4\"/><text x=\"523\" y=\"115\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\" direction=\"rtl\">الكتل</text><g font-size=\"12\" font-weight=\"bold\"><rect x=\"20\" y=\"82\" width=\"64\" height=\"26\" fill=\"#eff6ff\" stroke=\"#64748b\"/><text x=\"52\" y=\"99\" text-anchor=\"middle\" fill=\"#1e3a8a\">t</text><rect x=\"84\" y=\"82\" width=\"64\" height=\"26\" fill=\"#eff6ff\" stroke=\"#64748b\"/><text x=\"116\" y=\"99\" text-anchor=\"middle\" fill=\"#1e3a8a\">q</text><rect x=\"148\" y=\"82\" width=\"64\" height=\"26\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"180\" y=\"99\" text-anchor=\"middle\" fill=\"#b45309\">•</text><rect x=\"212\" y=\"82\" width=\"64\" height=\"26\" fill=\"#dcfce7\" stroke=\"#15803d\"/><text x=\"244\" y=\"99\" text-anchor=\"middle\" fill=\"#14532d\">kg</text><rect x=\"276\" y=\"82\" width=\"64\" height=\"26\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"308\" y=\"99\" text-anchor=\"middle\" fill=\"#475569\">hg</text><rect x=\"340\" y=\"82\" width=\"64\" height=\"26\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"372\" y=\"99\" text-anchor=\"middle\" fill=\"#475569\">dag</text><rect x=\"404\" y=\"82\" width=\"64\" height=\"26\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"436\" y=\"99\" text-anchor=\"middle\" fill=\"#475569\">g</text></g><g font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"20\" y=\"108\" width=\"64\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/><text x=\"52\" y=\"129\" text-anchor=\"middle\" fill=\"#1d4ed8\">1</text><rect x=\"84\" y=\"108\" width=\"64\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/><text x=\"116\" y=\"129\" text-anchor=\"middle\">5</text><rect x=\"148\" y=\"108\" width=\"64\" height=\"30\" fill=\"#fffbeb\" stroke=\"#d97706\"/><text x=\"180\" y=\"129\" text-anchor=\"middle\" fill=\"#b45309\">0</text><rect x=\"212\" y=\"108\" width=\"64\" height=\"30\" fill=\"#f0fdf4\" stroke=\"#15803d\"/><text x=\"244\" y=\"129\" text-anchor=\"middle\" fill=\"#15803d\">0</text><rect x=\"276\" y=\"108\" width=\"64\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"340\" y=\"108\" width=\"64\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"404\" y=\"108\" width=\"64\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/></g><rect x=\"482\" y=\"152\" width=\"82\" height=\"56\" rx=\"6\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.4\"/><text x=\"523\" y=\"185\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">السعات</text><g font-size=\"12\" font-weight=\"bold\"><rect x=\"20\" y=\"152\" width=\"112\" height=\"26\" fill=\"#dcfce7\" stroke=\"#15803d\"/><text x=\"76\" y=\"169\" text-anchor=\"middle\" fill=\"#14532d\">L</text><rect x=\"132\" y=\"152\" width=\"112\" height=\"26\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"188\" y=\"169\" text-anchor=\"middle\" fill=\"#475569\">dL</text><rect x=\"244\" y=\"152\" width=\"112\" height=\"26\" fill=\"#eff6ff\" stroke=\"#1d4ed8\"/><text x=\"300\" y=\"169\" text-anchor=\"middle\" fill=\"#1e3a8a\">cL</text><rect x=\"356\" y=\"152\" width=\"112\" height=\"26\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"412\" y=\"169\" text-anchor=\"middle\" fill=\"#475569\">mL</text></g><g font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"20\" y=\"178\" width=\"112\" height=\"30\" fill=\"#f0fdf4\" stroke=\"#15803d\"/><text x=\"76\" y=\"199\" text-anchor=\"middle\" fill=\"#15803d\">2</text><rect x=\"132\" y=\"178\" width=\"112\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/><text x=\"188\" y=\"199\" text-anchor=\"middle\">5</text><rect x=\"244\" y=\"178\" width=\"112\" height=\"30\" fill=\"#eff6ff\" stroke=\"#1d4ed8\"/><text x=\"300\" y=\"199\" text-anchor=\"middle\" fill=\"#1d4ed8\">0</text><rect x=\"356\" y=\"178\" width=\"112\" height=\"30\" fill=\"#ffffff\" stroke=\"#64748b\"/></g></svg>",
+    "steps": [
+      {
+        "promptAr": "انظر إلى جدول الأطوال: كم تساوي المسافة $4\\text{ km } 250\\text{ m}$ بوحدة المتر ( `m` )؟ (اكتب العدد بالأرقام بدون فراغات)",
+        "hintAr": "نضع $4$ في خانة `km` و $250$ بحيث يكون الآحاد $0$ في خانة `m` .",
+        "expectedInput": "4250",
+        "revealAr": "$4\\text{ km } 250\\text{ m} = 4\\,000\\text{ m} + 250\\text{ m} = 4\\,250\\text{ m}$ ."
+      },
+      {
+        "promptAr": "انظر إلى جدول الكتل: تزن الحمولة $1\\text{ t } 5\\text{ q}$ . كم تساوي بوحدة الكيلوغرام ( `kg` )؟ (اكتب العدد بالأرقام بدون فراغات)",
+        "hintAr": "تذكر أن $1\\text{ t} = 1\\,000\\text{ kg}$ و $1\\text{ q} = 100\\text{ kg}$ ، وأن بين `q` و `kg` خانة فارغة (عشرات الكيلوغرام).",
+        "expectedInput": "1500",
+        "revealAr": "$1\\text{ t } 5\\text{ q} = 1\\,000\\text{ kg} + 500\\text{ kg} = 1\\,500\\text{ kg}$ ."
+      },
+      {
+        "promptAr": "انظر إلى جدول السعات: كم تساوي سعة القارورة $2\\text{ L } 50\\text{ cL}$ بوحدة السنتيلتر ( `cL` )؟",
+        "hintAr": "كل $1\\text{ L} = 100\\text{ cL}$ ، اقرأ العدد المتكون حتى خانة `cL` .",
+        "expectedInput": "250",
+        "revealAr": "$2\\text{ L } 50\\text{ cL} = 200\\text{ cL} + 50\\text{ cL} = 250\\text{ cL}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**وحدات قياس الأطوال**: الوحدة الأساسية هي المتر ( `m` ). العلاقات الأساسية: $1\\text{ km} = 1\\,000\\text{ m}$ ، $1\\text{ m} = 10\\text{ dm} = 100\\text{ cm} = 1\\,000\\text{ mm}$ ، و $1\\text{ cm} = 10\\text{ mm}$ .",
+      "**وحدات قياس الكتل**: للكتل الثقيلة نستعمل الطن ( `t` ) والقنطار ( `q` )، وللكتل المألوفة الكيلوغرام ( `kg` ) والغرام ( `g` ): $1\\text{ t} = 1\\,000\\text{ kg} = 10\\text{ q}$ ، $1\\text{ q} = 100\\text{ kg}$ ، و $1\\text{ kg} = 1\\,000\\text{ g}$ .",
+      "**وحدات قياس السعات**: الوحدة الأساسية هي اللتر ( `L` ) وأجزاؤه: $1\\text{ L} = 10\\text{ dL} = 100\\text{ cL} = 1\\,000\\text{ mL}$ .",
+      "**طريقة التحويل والمقارنة**: في جدول التحويلات نضع رقم الآحاد في خانة الوحدة المعطاة ونكمل بالأصفار نحو اليمين حتى الوحدة المطلوبة. ولا نقارن أو نجمع أو نطرح مقادير إلا بعد **توحيد وحداتها**."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 220\" width=\"580\" height=\"220\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"18\" y=\"12\" width=\"544\" height=\"58\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"1.4\"/><text x=\"490\" y=\"46\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">الأطوال</text><text x=\"235\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1 km = 1 000 m   |   1 m = 10 dm = 100 cm = 1 000 mm</text><text x=\"235\" y=\"56\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1 cm = 10 mm</text><rect x=\"18\" y=\"80\" width=\"544\" height=\"58\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#15803d\" stroke-width=\"1.4\"/><text x=\"490\" y=\"114\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\" direction=\"rtl\">الكتل</text><text x=\"235\" y=\"102\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1 t = 10 q = 1 000 kg   |   1 q = 100 kg</text><text x=\"235\" y=\"124\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">1 kg = 1 000 g</text><rect x=\"18\" y=\"148\" width=\"544\" height=\"58\" rx=\"8\" fill=\"#fffbeb\" stroke=\"#d97706\" stroke-width=\"1.4\"/><text x=\"490\" y=\"182\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">السعات</text><text x=\"235\" y=\"170\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1 L = 10 dL = 100 cL = 1 000 mL</text><text x=\"235\" y=\"192\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">نحول دائما إلى نفس الوحدة قبل المقارنة أو الجمع أو الطرح</text></svg>",
+    "visualCaptionAr": "العلاقات المترية الأساسية بين وحدات قياس الأطوال والكتل والسعات في السنة الرابعة ابتدائي.",
+    "examples": [
+      {
+        "problemAr": "حول إلى الوحدة المطلوبة: $3\\text{ m } 7\\text{ cm}$ إلى `cm` ، و $4\\text{ L } 5\\text{ mL}$ إلى `mL` .",
+        "solutionAr": "نملأ الخانات الخالية بالأصفار: $3\\text{ m } 7\\text{ cm} = 307\\text{ cm}$ (نضع $0$ في خانة `dm` ). و $4\\text{ L } 5\\text{ mL} = 4\\,005\\text{ mL}$ (نضع أصفارا في `dL` و `cL` )."
+      },
+      {
+        "problemAr": "قارن بين الكتلتين: $2\\text{ q } 35\\text{ kg}$ و $250\\,000\\text{ g}$ .",
+        "solutionAr": "نوحد إلى الكيلوغرام: $2\\text{ q } 35\\text{ kg} = 235\\text{ kg}$ ، و $250\\,000\\text{ g} = 250\\text{ kg}$ . بما أن $235 < 250$ فإن $2\\text{ q } 35\\text{ kg} < 250\\,000\\text{ g}$ ."
+      }
+    ],
+    "watchOutAr": "لا تنس الخانات الفارغة بين الوحدات! بين `q` و `kg` توجد خانة عشرات الكيلوغرام ( `•` )، لذلك $3\\text{ q } 5\\text{ kg} = 305\\text{ kg}$ وليس $35\\text{ kg}$ . وبالمثل $2\\text{ m } 4\\text{ cm} = 204\\text{ cm}$ وليس $24\\text{ cm}$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "انظر إلى جدول الأطوال المقابل: ما هو التحويل الصحيح للطول $5\\text{ m } 6\\text{ cm}$ إلى المليمتر ( `mm` )؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 112\" width=\"520\" height=\"112\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><g font-size=\"13\" font-weight=\"bold\"><rect x=\"20\" y=\"14\" width=\"68\" height=\"32\" fill=\"#eff6ff\" stroke=\"#64748b\"/><text x=\"54\" y=\"35\" text-anchor=\"middle\" fill=\"#1e3a8a\">km</text><rect x=\"88\" y=\"14\" width=\"68\" height=\"32\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"122\" y=\"35\" text-anchor=\"middle\" fill=\"#475569\">hm</text><rect x=\"156\" y=\"14\" width=\"68\" height=\"32\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"190\" y=\"35\" text-anchor=\"middle\" fill=\"#475569\">dam</text><rect x=\"224\" y=\"14\" width=\"68\" height=\"32\" fill=\"#dcfce7\" stroke=\"#15803d\"/><text x=\"258\" y=\"35\" text-anchor=\"middle\" fill=\"#14532d\">m</text><rect x=\"292\" y=\"14\" width=\"68\" height=\"32\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"326\" y=\"35\" text-anchor=\"middle\" fill=\"#b45309\">dm</text><rect x=\"360\" y=\"14\" width=\"68\" height=\"32\" fill=\"#eff6ff\" stroke=\"#1d4ed8\"/><text x=\"394\" y=\"35\" text-anchor=\"middle\" fill=\"#1e3a8a\">cm</text><rect x=\"428\" y=\"14\" width=\"72\" height=\"32\" fill=\"#fef2f2\" stroke=\"#dc2626\"/><text x=\"464\" y=\"35\" text-anchor=\"middle\" fill=\"#b91c1c\">mm</text></g><g font-size=\"18\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"20\" y=\"46\" width=\"68\" height=\"42\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"88\" y=\"46\" width=\"68\" height=\"42\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"156\" y=\"46\" width=\"68\" height=\"42\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"224\" y=\"46\" width=\"68\" height=\"42\" fill=\"#f0fdf4\" stroke=\"#15803d\"/><text x=\"258\" y=\"74\" text-anchor=\"middle\" fill=\"#15803d\">5</text><rect x=\"292\" y=\"46\" width=\"68\" height=\"42\" fill=\"#fffbeb\" stroke=\"#d97706\"/><text x=\"326\" y=\"74\" text-anchor=\"middle\" fill=\"#b45309\">؟</text><rect x=\"360\" y=\"46\" width=\"68\" height=\"42\" fill=\"#ffffff\" stroke=\"#1d4ed8\"/><text x=\"394\" y=\"74\" text-anchor=\"middle\" fill=\"#1d4ed8\">6</text><rect x=\"428\" y=\"46\" width=\"72\" height=\"42\" fill=\"#fef2f2\" stroke=\"#dc2626\"/><text x=\"464\" y=\"74\" text-anchor=\"middle\" fill=\"#dc2626\">؟</text></g></svg>",
+      "options": [
+        "$560\\text{ mm}$",
+        "$5\\,006\\text{ mm}$",
+        "$5\\,060\\text{ mm}$",
+        "$5\\,600\\text{ mm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "نسيت خانة الديسمتر ( `dm` ) الفارغة بين `m` و `cm` فكتبت $560$ بدل $5\\,060$ .",
+        "وضعت $6$ في خانة `mm` بدل `cm` ؛ تذكر أن $6\\text{ cm} = 60\\text{ mm}$ .",
+        "أحسنت! نضع $5$ في `m` ، $0$ في `dm` ، $6$ في `cm` ، و $0$ في `mm` فنحصل على $5\\,060\\text{ mm}$ .",
+        "وضعت $6$ في خانة `dm` بدل `cm` ؛ كل $1\\text{ dm} = 100\\text{ mm}$ بينما $1\\text{ cm} = 10\\text{ mm}$ ."
+      ],
+      "explanationAr": "$5\\text{ m} = 5\\,000\\text{ mm}$ ، و $6\\text{ cm} = 60\\text{ mm}$ . إذن $5\\text{ m } 6\\text{ cm} = 5\\,000 + 60 = 5\\,060\\text{ mm}$ ."
+    },
+    {
+      "questionAr": "انظر إلى الحمولة الموضحة في الرسم: ما هي الكتلة الإجمالية للحمولة بوحدة الكيلوغرام ( `kg` )؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 116\" width=\"430\" height=\"116\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"20\" y=\"22\" width=\"92\" height=\"58\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.6\"/><text x=\"66\" y=\"57\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">3 t</text><text x=\"128\" y=\"57\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#334155\">+</text><rect x=\"144\" y=\"22\" width=\"92\" height=\"58\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.6\"/><text x=\"190\" y=\"57\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#14532d\" direction=\"ltr\">4 q</text><text x=\"252\" y=\"57\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#334155\">+</text><rect x=\"268\" y=\"22\" width=\"92\" height=\"58\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.6\"/><text x=\"314\" y=\"57\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#92400e\" direction=\"ltr\">50 kg</text><text x=\"388\" y=\"57\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">= ؟ kg</text><text x=\"215\" y=\"102\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\" direction=\"rtl\">تذكر: 1 t = 1 000 kg و 1 q = 100 kg</text></svg>",
+      "options": [
+        "$3\\,450\\text{ kg}$",
+        "$345\\text{ kg}$",
+        "$30\\,450\\text{ kg}$",
+        "$3\\,405\\text{ kg}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! $3\\text{ t} = 3\\,000\\text{ kg}$ و $4\\text{ q} = 400\\text{ kg}$ ، ومع $50\\text{ kg}$ يصبح المجموع $3\\,450\\text{ kg}$ .",
+        "جمعت الأرقام مباشرة دون ضرب الطن في $1\\,000$ والقنطار في $100$ .",
+        "$1\\text{ t} = 1\\,000\\text{ kg}$ وليس $10\\,000\\text{ kg}$ ؛ أضفت صفرا زائدا للطن.",
+        "وضعت $5$ في خانة آحاد الكيلوغرام بدل $50\\text{ kg}$ ."
+      ],
+      "explanationAr": "نحول كل مقدار إلى الكيلوغرام: $3\\text{ t} = 3\\,000\\text{ kg}$ ، $4\\text{ q} = 400\\text{ kg}$ . ثم نجمع: $3\\,000 + 400 + 50 = 3\\,450\\text{ kg}$ ."
+    },
+    {
+      "questionAr": "يحتوي دلو على $6\\text{ L}$ من الماء. أفرغنا منه $2\\,400\\text{ mL}$ ، ثم أضفنا إليه $85\\text{ cL}$ . كم بقي في الدلو بالمليلتر ( `mL` )؟",
+      "options": [
+        "$3\\,685\\text{ mL}$",
+        "$4\\,450\\text{ mL}$",
+        "$4\\,550\\text{ mL}$",
+        "$2\\,750\\text{ mL}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "نسيت تحويل $85\\text{ cL}$ إلى المليلتر ( $850\\text{ mL}$ ) فأضفت $85$ فقط!",
+        "أحسنت! $6\\text{ L} = 6\\,000\\text{ mL}$ ، نطرح $2\\,400$ فنجد $3\\,600\\text{ mL}$ ، ثم نضيف $85\\text{ cL} = 850\\text{ mL}$ ليكون الناتج $4\\,450\\text{ mL}$ .",
+        "تحقق من جمع $3\\,600 + 850$ : خانة المئات $6 + 8 = 14$ وليس $15$ .",
+        "طرحت $850\\text{ mL}$ بدل إضافتها في الخطوة الثانية!"
+      ],
+      "explanationAr": "نوحد جميع السعات إلى المليلتر: $6\\text{ L} = 6\\,000\\text{ mL}$ و $85\\text{ cL} = 850\\text{ mL}$ . أولا نطرح: $6\\,000 - 2\\,400 = 3\\,600\\text{ mL}$ . ثانيا نضيف: $3\\,600 + 850 = 4\\,450\\text{ mL}$ ."
+    }
+  ]
+}

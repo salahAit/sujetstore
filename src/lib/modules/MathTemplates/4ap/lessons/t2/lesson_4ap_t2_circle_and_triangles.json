@@ -1,0 +1,129 @@
+{
+  "id": "lesson_4ap_t2_circle_and_triangles",
+  "slug": "lesson-4ap-t2-circle-and-triangles",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: الزوايا والدائرة والمثلثات الخاصة وإدماج الفصل الثاني",
+  "order": 6,
+  "titleAr": "الدائرة والمثلثات الخاصة: الخواص والإنشاء بالمدور والكوس",
+  "objectives": [
+    "التعرف على عناصر الدائرة (المركز، نصف القطر، القطر، الوتر) ورسم دائرة أو قوس بالمدور بمعلومية المركز ونصف القطر أو القطر.",
+    "التعرف على المثلثات الخاصة (المثلث القائم، المثلث متساوي الساقين، المثلث متقايس الأضلاع، المثلث القائم متساوي الساقين) والتمييز بينها بالخواص.",
+    "إنشاء المثلثات الخاصة والدوائر وفق برنامج إنشاء بسيط باستعمال المسطرة والكوس والمدور."
+  ],
+  "keywordsAr": [
+    "الدائرة",
+    "المركز والقطر ونصف القطر",
+    "الوتر والمدور",
+    "المثلثات الخاصة",
+    "مثلث قائم",
+    "مثلث متساوي الساقين",
+    "مثلث متقايس الأضلاع"
+  ],
+  "discover": {
+    "scenarioAr": "صمّمت سارة ميدالية هندسية للنشاط المدرسي في قسنطينة: رسمت بالمدور دائرة مركزها $O$ وطول نصف قطرها $3\\text{ cm}$ ، وعيّنت نقطتين $A$ و $B$ على الدائرة بحيث يتعامد $[OA]$ و $[OB]$ ، ثم رسمت القطر $[AC]$ ووصلت بين $A$ و $B$ لتحصل على المثلث $OAB$.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 225\" width=\"540\" height=\"225\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"209\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"270\" y=\"29\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">عناصر الدائرة والمثلث القائم متساوي الساقين OAB</text><circle cx=\"150\" cy=\"120\" r=\"72\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><polygon points=\"150,120 150,48 222,120\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"150\" y1=\"120\" x2=\"150\" y2=\"192\" stroke=\"#7c3aed\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><rect x=\"150\" y=\"107\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"144\" y1=\"84\" x2=\"156\" y2=\"84\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"186\" y1=\"114\" x2=\"186\" y2=\"126\" stroke=\"#15803d\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"120\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"136\" y=\"124\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">O</text><circle cx=\"150\" cy=\"48\" r=\"3.5\" fill=\"#1d4ed8\"/><text x=\"150\" y=\"41\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">A</text><circle cx=\"222\" cy=\"120\" r=\"3.5\" fill=\"#1d4ed8\"/><text x=\"232\" y=\"124\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">B</text><circle cx=\"150\" cy=\"192\" r=\"3.5\" fill=\"#7c3aed\"/><text x=\"150\" y=\"207\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#7c3aed\">C</text><rect x=\"272\" y=\"48\" width=\"244\" height=\"152\" rx=\"10\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.3\"/><text x=\"394\" y=\"72\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1e3a8a\">ملاحظات من الرسم:</text><text x=\"394\" y=\"98\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">OA = OB = 3 cm (نصفا قطر)</text><text x=\"394\" y=\"124\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#7c3aed\">[AC] قطر يمر بالمركز O</text><text x=\"394\" y=\"150\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">الزاوية عند O قائمة (بالكوس)</text><text x=\"394\" y=\"176\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">[AB] وتر لا يمر بالمركز O</text></svg>",
+    "steps": [
+      {
+        "promptAr": "القطعة $[OA]$ هي نصف قطر الدائرة وطولها $3\\text{ cm}$. ما طول القطر $[AC]$ كاملا بالسنتيمتر؟",
+        "hintAr": "القطر يساوي ضعف نصف القطر ($2 \\times 3$ ).",
+        "expectedInput": "6",
+        "revealAr": "طول القطر $[AC]$ هو $3 \\times 2 = 6\\text{ cm}$."
+      },
+      {
+        "promptAr": "تقع النقطة $B$ على نفس الدائرة التي مركزها $O$. ما طول نصف القطر $[OB]$ بالسنتيمتر؟",
+        "hintAr": "جميع نقط الدائرة تبعد نفس المسافة (نصف القطر) عن المركز $O$.",
+        "expectedInput": "3",
+        "revealAr": "طول $[OB]$ يساوي $3\\text{ cm}$ لأن كل أنصاف أقطار الدائرة الواحدة متقايسة ($OA = OB$ )."
+      },
+      {
+        "promptAr": "في المثلث $OAB$ ، لدينا ضلعان متقايسان ($OA = OB$ ) وزاوية قائمة عند $O$. ما نوع المثلث $OAB$ ؟",
+        "hintAr": "يجمع هذا المثلث بين صفتين: وجود زاوية قائمة وتقايس ضلعين.",
+        "revealAr": "المثلث $OAB$ **مثلث قائم ومتساوي الساقين** في الرأس $O$."
+      },
+      {
+        "promptAr": "ماذا نسمي القطعة $[AB]$ التي تصل بين نقطتين من الدائرة ولا تمر بالمركز $O$ ؟",
+        "hintAr": "القطعة التي تصل نقطتين من الدائرة وتمر بالمركز تسمى قطرا، والتي لا تمر بالمركز لها اسم خاص.",
+        "revealAr": "تسمى القطعة $[AB]$ **وترا** في الدائرة."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الدائرة** هي مجموعة النقط التي تبعد نفس المسافة (**نصف القطر**) عن نقطة ثابتة تسمى **المركز** $O$. نرسمها بـ **المدور** بفتحة تساوي نصف القطر.",
+      "**القطر** يصل بين نقطتين من الدائرة ويمر بالمركز $O$ وطوله ضعف نصف القطر (القطر $= 2 \\times$ نصف القطر). أما **الوتر** فيصل بين نقطتين من الدائرة دون أن يمر بالمركز.",
+      "**المثلث القائم** له زاوية قائمة (نتحقق بالكوس)؛ **المثلث متساوي الساقين** له ضلعان متقايسان؛ **المثلث متقايس الأضلاع** أضلاعه الثلاثة متقايسة.",
+      "**المثلث القائم ومتساوي الساقين** له زاوية قائمة والضلعان المحيطان بها متقايسان؛ ونستعمل **المدور** لنقل الأطوال المتقايسة بدقة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 225\" width=\"540\" height=\"225\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"209\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"20\" y=\"18\" width=\"500\" height=\"86\" rx=\"10\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.3\"/><circle cx=\"100\" cy=\"61\" r=\"34\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"66\" y1=\"61\" x2=\"134\" y2=\"61\" stroke=\"#7c3aed\" stroke-width=\"2\"/><line x1=\"100\" y1=\"61\" x2=\"124\" y2=\"37\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"74\" y1=\"39\" x2=\"120\" y2=\"33\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><circle cx=\"100\" cy=\"61\" r=\"3\" fill=\"#0f172a\"/><text x=\"96\" y=\"75\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"325\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1e3a8a\">عناصر الدائرة</text><text x=\"325\" y=\"65\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#15803d\">نصف القطر (فتحة المدور)  |  القطر = 2 × نصف القطر</text><text x=\"325\" y=\"88\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#dc2626\">الوتر: يصل نقطتين من الدائرة</text><rect x=\"20\" y=\"114\" width=\"118\" height=\"92\" rx=\"8\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><polygon points=\"42,178 42,128 104,178\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"1.8\"/><rect x=\"42\" y=\"168\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"79\" y=\"197\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">مثلث قائم</text><rect x=\"147\" y=\"114\" width=\"118\" height=\"92\" rx=\"8\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.2\"/><polygon points=\"206,126 176,178 236,178\" fill=\"#f0fdf4\" stroke=\"#15803d\" stroke-width=\"1.8\"/><line x1=\"186\" y1=\"150\" x2=\"196\" y2=\"155\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"226\" y1=\"150\" x2=\"216\" y2=\"155\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"206\" y=\"197\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#14532d\">متساوي الساقين</text><rect x=\"274\" y=\"114\" width=\"118\" height=\"92\" rx=\"8\" fill=\"#ffffff\" stroke=\"#fcd34d\" stroke-width=\"1.2\"/><polygon points=\"333,126 301,178 365,178\" fill=\"#fefce8\" stroke=\"#b45309\" stroke-width=\"1.8\"/><line x1=\"312\" y1=\"150\" x2=\"322\" y2=\"156\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><line x1=\"354\" y1=\"150\" x2=\"344\" y2=\"156\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><line x1=\"333\" y1=\"172\" x2=\"333\" y2=\"184\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><text x=\"333\" y=\"197\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#92400e\">متقايس الأضلاع</text><rect x=\"401\" y=\"114\" width=\"119\" height=\"92\" rx=\"8\" fill=\"#ffffff\" stroke=\"#d8b4fe\" stroke-width=\"1.2\"/><polygon points=\"426,178 426,128 476,178\" fill=\"#faf5ff\" stroke=\"#7c3aed\" stroke-width=\"1.8\"/><rect x=\"426\" y=\"168\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"421\" y1=\"153\" x2=\"431\" y2=\"153\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"451\" y1=\"173\" x2=\"451\" y2=\"183\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"460\" y=\"197\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#5b21b6\">قائم ومتساوي الساقين</text></svg>",
+    "visualCaptionAr": "عناصر الدائرة الأساسية وأصناف المثلثات الخاصة الأربعة مع تشفيرها.",
+    "examples": [
+      {
+        "problemAr": "دائرة مركزها $O$ وطول قطرها $10\\text{ cm}$. ما طول نصف قطرها، وعلى أيّ فتحة نفتح المدور لرسمها؟",
+        "solutionAr": "نصف القطر يساوي نصف طول القطر، أي $10 \\div 2 = 5\\text{ cm}$. إذن نفتح المدور على فتحة طولها $5\\text{ cm}$ ونضع إبرته على المركز $O$."
+      },
+      {
+        "problemAr": "المثلث $EFG$ أطوال أضلاعه $EF = 4\\text{ cm}$ و $EG = 4\\text{ cm}$ و $FG = 4\\text{ cm}$. ما نوعه وما الأداة التي تساعدنا على إنشاء الرأس $G$ ؟",
+        "solutionAr": "أضلاعه الثلاثة متساوية الطول، فهو **مثلث متقايس الأضلاع**. ننشئ الرأس $G$ بفتح **المدور** على $4\\text{ cm}$ ورسم قوسين متقاطعين انطلاقا من $E$ و $F$."
+      }
+    ],
+    "watchOutAr": "احذر عند رسم دائرة بـ **المدور** إذا أُعطي لك **طول القطر**! فإذا كان القطر $8\\text{ cm}$ ، لا تفتح المدور على $8\\text{ cm}$ ، بل قسّمه على $2$ أوّلا لتفتح المدور على **نصف القطر** ($4\\text{ cm}$ )."
+  },
+  "practice": [
+    {
+      "questionAr": "في الدائرة المقابلة التي مركزها $O$ وطول نصف قطرها $OM = 4\\text{ cm}$ ، ما طول القطر $[AB]$ وماذا تسمى القطعة $[CD]$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 170\" width=\"320\" height=\"170\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"304\" height=\"154\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><circle cx=\"160\" cy=\"88\" r=\"58\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><line x1=\"102\" y1=\"88\" x2=\"218\" y2=\"88\" stroke=\"#7c3aed\" stroke-width=\"2.2\"/><line x1=\"160\" y1=\"88\" x2=\"198\" y2=\"44\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"116\" y1=\"50\" x2=\"174\" y2=\"32\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"88\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"156\" y=\"104\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"88\" y=\"92\" font-size=\"12\" font-weight=\"bold\" fill=\"#7c3aed\">A</text><text x=\"224\" y=\"92\" font-size=\"12\" font-weight=\"bold\" fill=\"#7c3aed\">B</text><text x=\"204\" y=\"42\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">M</text><text x=\"104\" y=\"46\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">C</text><text x=\"176\" y=\"26\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">D</text><text x=\"188\" y=\"73\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#15803d\">4 cm</text></svg>",
+      "options": [
+        "طول القطر $8\\text{ cm}$ ، و $[CD]$ وتر",
+        "طول القطر $4\\text{ cm}$ ، و $[CD]$ نصف قطر",
+        "طول القطر $2\\text{ cm}$ ، و $[CD]$ قطر",
+        "طول القطر $8\\text{ cm}$ ، و $[CD]$ قطر"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! القطر $[AB]$ طوله ضعف نصف القطر ($2 \\times 4 = 8\\text{ cm}$ )، والقطعة $[CD]$ تصل بين نقطتين من الدائرة ولا تمر بالمركز فهي وتر.",
+        "طول نصف القطر هو $4\\text{ cm}$ ، أما القطر فيساوي ضعفه ($8\\text{ cm}$ )، كما أن $[CD]$ لا ينطلق من المركز $O$.",
+        "أنت قسمت نصف القطر على $2$ بدلا من ضربه في $2$ ، والقطعة $[CD]$ لا تمر بالمركز $O$ لذا ليست قطرا.",
+        "طول القطر $8\\text{ cm}$ صحيح، لكن $[CD]$ لا يمر بالمركز $O$ ، لذا يسمى وترا وليس قطرا."
+      ],
+      "explanationAr": "طول القطر $[AB]$ هو ضعف نصف القطر $OM$ ، أي $4 \\times 2 = 8\\text{ cm}$. والقطعة $[CD]$ تصل بين نقطتين على الدائرة دون المرور بالمركز $O$ ، لذا تسمى وترا."
+    },
+    {
+      "questionAr": "انظر إلى التشفير على أضلاع المثلث $KLM$ في الشكل المقابل. ما نوع هذا المثلث؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 155\" width=\"280\" height=\"155\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"264\" height=\"139\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><polygon points=\"140,34 84,124 196,124\" fill=\"#fefce8\" stroke=\"#b45309\" stroke-width=\"2.2\"/><line x1=\"107\" y1=\"76\" x2=\"118\" y2=\"83\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"173\" y1=\"76\" x2=\"162\" y2=\"83\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"140\" y1=\"117\" x2=\"140\" y2=\"131\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"140\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">K</text><text x=\"72\" y=\"132\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">L</text><text x=\"202\" y=\"132\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">M</text></svg>",
+      "options": [
+        "مثلث قائم فقط",
+        "مثلث متساوي الساقين فقط",
+        "مثلث متقايس الأضلاع",
+        "مثلث قائم ومتساوي الساقين"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "لا توجد علامة زاوية قائمة في المثلث $KLM$ ، بل علامات تقايس على الأضلاع الثلاثة.",
+        "التشفير الأحمر موجود على الأضلاع الثلاثة جميعا ($KL = LM = KM$ ) وليس على ضلعين فقط.",
+        "ممتاز! يشير التشفير المتطابق على الأضلاع الثلاثة إلى أن $KL = LM = KM$ ، فهو مثلث متقايس الأضلاع.",
+        "ليست هناك زاوية قائمة في الشكل، والتشفير على الأضلاع الثلاثة معا."
+      ],
+      "explanationAr": "يحمل كل ضلع من أضلاع المثلث $KLM$ نفس علامة التقايس الحمراء، مما يدل على تساوي أطوال أضلاعه الثلاثة، إذن هو مثلث متقايس الأضلاع."
+    },
+    {
+      "questionAr": "أراد تلميذ إنشاء دائرة مركزها $O$ وقطرها $12\\text{ cm}$ باستعمال المدور. على أيّ طول يفتح المدور؟",
+      "options": [
+        "$12\\text{ cm}$",
+        "$6\\text{ cm}$",
+        "$24\\text{ cm}$",
+        "$3\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "لو فتحت المدور على $12\\text{ cm}$ فسيكون هذا هو **نصف القطر**، وسيصبح قطر الدائرة $24\\text{ cm}$ !",
+        "أحسنت! فتحة المدور تساوي نصف القطر، وبما أن القطر $12\\text{ cm}$ فإن نصف القطر هو $12 \\div 2 = 6\\text{ cm}$.",
+        "$24\\text{ cm}$ يساوي ضعف القطر؛ لإنشاء الدائرة بالمدور نقسم القطر على $2$.",
+        "للحصول على نصف القطر نقسم القطر $12\\text{ cm}$ على $2$ فنجد $6\\text{ cm}$ وليس على $4$."
+      ],
+      "explanationAr": "نفتح المدور دائما بمقدار **نصف القطر**. بما أن طول القطر $12\\text{ cm}$ ، فإن نصف القطر يساوي $12 \\div 2 = 6\\text{ cm}$."
+    }
+  ]
+}

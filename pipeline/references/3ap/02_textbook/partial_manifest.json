@@ -1,0 +1,47 @@
+{
+  "documents": [
+    {
+      "id": "ref_3ap_math_textbook_onps_gen2",
+      "grade": "3ap",
+      "title_ar": "كتابي في الرياضيات - السنة الثالثة من التعليم الابتدائي (الديوان الوطني للمطبوعات المدرسية - الجيل الثاني)",
+      "category": "textbook",
+      "year": "2020-2021",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3ap/02_textbook/3ap_math_textbook_onps_gen2.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1t1LAUB7dTppxBAoUOSd2DmOtGp09Juus",
+      "pages_count": 128,
+      "extraction_mode": "digital_text",
+      "sha256": "2deaff3ca2db3edeed91ac01eb33bbaea33d396a5667c96369fdb31a3dd97f7a",
+      "size_bytes": 43807536
+    },
+    {
+      "id": "ref_3ap_math_workbook_onps_gen2",
+      "grade": "3ap",
+      "title_ar": "كراس النشاطات في الرياضيات - السنة الثالثة من التعليم الابتدائي (الديوان الوطني للمطبوعات المدرسية - الجيل الثاني)",
+      "category": "workbook",
+      "year": "2021-2022",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3ap/02_textbook/3ap_math_workbook_onps_gen2.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1wy2HQ0YLB0-sBffAiuCwmGpgNeO8kUXC",
+      "pages_count": 80,
+      "extraction_mode": "digital_text",
+      "sha256": "05840898c6f6a0648e5039a3a0d157b48e15c8450fce11ed832ccd18f1d56acb",
+      "size_bytes": 24295509
+    },
+    {
+      "id": "ref_3ap_math_teacher_guide_onps_gen2",
+      "grade": "3ap",
+      "title_ar": "دليل استخدام كتاب الرياضيات - السنة الثالثة من التعليم الابتدائي (وزارة التربية الوطنية / الجيل الثاني)",
+      "category": "teacher_guide",
+      "year": "2017-2018",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3ap/02_textbook/3ap_math_teacher_guide_onps_gen2.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2022/05/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D9%8A-%D9%84%D9%85%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-3-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A.pdf",
+      "pages_count": 136,
+      "extraction_mode": "digital_text",
+      "sha256": "9fe34dea5e91861a98e5621c51cc82510da816cb149d6b329f6b9e8c82bde7f4",
+      "size_bytes": 1566485
+    }
+  ],
+  "missing_references": []
+}

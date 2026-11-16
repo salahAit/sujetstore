@@ -1,0 +1,33 @@
+{
+  "documents": [
+    {
+      "id": "ref_1am_textbook_math_gen2",
+      "grade": "1am",
+      "title_ar": "الكتاب المدرسي الرسمي لمادة الرياضيات (كتابي في الرياضيات) - السنة الأولى متوسط (وزارة التربية الوطنية / المؤسسة الوطنية للفنون المطبعية ENAG - الجيل الثاني)",
+      "category": "textbook",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/02_textbook/1am_math_textbook_gen2.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2016/2G/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA%20%D8%B3%D9%86%D8%A9%20%D8%A3%D9%88%D9%84%D9%89%20%D9%85%D8%AA%D9%88%D8%B3%D8%B7%20%D8%A7%D9%84%D8%AC%D9%8A%D9%84%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A.pdf",
+      "pages_count": 238,
+      "extraction_mode": "scanned_ocr",
+      "sha256": "50a30dd4c576e42e2323de11ebd72c1c1da639ee07eaf22c12056ee58f02ee34",
+      "size_bytes": 37081504
+    },
+    {
+      "id": "ref_1am_teacher_guide_math_gen2",
+      "grade": "1am",
+      "title_ar": "دليل الأستاذ لمادة الرياضيات (دليل استخدام كتاب الرياضيات) - السنة الأولى من التعليم المتوسط (وزارة التربية الوطنية / موفم للنشر - الجيل الثاني)",
+      "category": "teacher_guide",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/02_textbook/1am_math_teacher_guide_gen2.pdf",
+      "source_url": "https://www.dzeducative.com/wp-content/uploads/2024/09/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0-%D9%84%D9%85%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA.pdf",
+      "pages_count": 144,
+      "extraction_mode": "digital_text",
+      "sha256": "7f268940bfc6436e25c1ffb2de796f14a6271b967753fd9d9d3356e4a7721eb3",
+      "size_bytes": 2559324
+    }
+  ],
+  "missing_references": []
+}

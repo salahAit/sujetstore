@@ -1,0 +1,122 @@
+{
+  "id": "lesson_3ap_t2_vertical_multiplication_1digit",
+  "slug": "lesson-3ap-t2-vertical-multiplication-1digit",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t2",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثالث: في ملعب كرة القدم (الأعداد إلى 99 999، جداول الضرب والضرب العمودي)",
+  "order": 3,
+  "titleAr": "الضرب العمودي في عدد مكون من رقم واحد وخاصية التوزيع",
+  "objectives": [
+    "توظيف خاصية توزيع الضرب على الجمع لتفكيك وحساب جداء عدد من رقمين أو ثلاثة في عدد مكون من رقم واحد",
+    "وضع وإنجاز عملية الضرب العمودي في عدد مكون من رقم واحد مع الاحتفاظ بدقة",
+    "التمييز بين الوضعيات الجمعية والطرحية والضربية وحل مشكلات مركبة من الحياة اليومية"
+  ],
+  "keywordsAr": [
+    "الضرب العمودي",
+    "الضرب في رقم واحد",
+    "خاصية التوزيع",
+    "الاحتفاظ في الضرب",
+    "مشكلات ضربية"
+  ],
+  "discover": {
+    "scenarioAr": "اشترى مدرب فريق المدرسة $4$ كرات قدم متماثلة بسعر $324\\text{ DA}$ للكرة الواحدة. نريد حساب الثمن الإجمالي للكرات بطريقتين: خاصية التوزيع والضرب العمودي.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">طريقتا حساب الجداء: 324 × 4</text><rect x=\"24\" y=\"46\" width=\"308\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"178\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">1) خاصية توزيع الضرب على الجمع</text><text x=\"178\" y=\"96\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">324 = 300 + 20 + 4</text><rect x=\"38\" y=\"110\" width=\"86\" height=\"42\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/><text x=\"81\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e3a8a\" direction=\"ltr\">300 x 4</text><text x=\"81\" y=\"144\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">= 1200</text><rect x=\"135\" y=\"110\" width=\"86\" height=\"42\" rx=\"6\" fill=\"#fff7ed\" stroke=\"#fdba74\"/><text x=\"178\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" fill=\"#9a3412\" direction=\"ltr\">20 x 4</text><text x=\"178\" y=\"144\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">= ?</text><rect x=\"232\" y=\"110\" width=\"86\" height=\"42\" rx=\"6\" fill=\"#f0fdf4\" stroke=\"#86efac\"/><text x=\"275\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" fill=\"#166534\" direction=\"ltr\">4 x 4</text><text x=\"275\" y=\"144\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">= 16</text><text x=\"178\" y=\"188\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1200 + 80 + 16 = 1296</text><rect x=\"348\" y=\"46\" width=\"228\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"462\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">2) الضرب العمودي</text><circle cx=\"462\" cy=\"90\" r=\"11\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><text x=\"462\" y=\"94\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">+1</text><text x=\"422\" y=\"122\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"462\" y=\"122\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">2</text><text x=\"502\" y=\"122\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">4</text><text x=\"388\" y=\"152\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">x</text><text x=\"502\" y=\"152\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">4</text><line x1=\"378\" y1=\"162\" x2=\"524\" y2=\"162\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"388\" y=\"194\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">1</text><text x=\"422\" y=\"194\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">2</text><text x=\"462\" y=\"194\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">?</text><text x=\"502\" y=\"194\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">6</text></svg>",
+    "steps": [
+      {
+        "promptAr": "باستعمال خاصية التوزيع، فككنا $324 = 300 + 20 + 4$. ما ناتج الجزء الأوسط $20 \\times 4$؟ (اكتب العدد فقط)",
+        "hintAr": "احسب $2 \\times 4 = 8$ ثم أضف صفرا على اليمين.",
+        "expectedInput": "80",
+        "revealAr": "$20 \\times 4 = 80$، وبجمع الأجزاء الثلاثة نجد: $1200 + 80 + 16 = 1296$."
+      },
+      {
+        "promptAr": "في الضرب العمودي: بدأنا بالوحدات $4 \\times 4 = 16$ (كتبنا $6$ واحتفظنا بـ $1$ فوق العشرات). الآن اضرب $4 \\times 2$ وأضف الاحتفاظ $1$. ما رقم العشرات في الناتج؟ (اكتب الرقم فقط)",
+        "hintAr": "نضرب أولا ($4 \\times 2 = 8$)، ثم نضيف الاحتفاظ ($+ 1$).",
+        "expectedInput": "9",
+        "revealAr": "$4 \\times 2 = 8$ ثم $8 + 1 = 9$، إذن نكتب $9$ في خانة العشرات."
+      },
+      {
+        "promptAr": "أخيرا نضرب المئات: $4 \\times 3 = 12$. ما هو الثمن الإجمالي للكرات الأربع بالدينار الجزائري؟ (اكتب العدد فقط)",
+        "hintAr": "اقرأ الناتج كاملا بعد كتابة $12$ على يسار $96$.",
+        "expectedInput": "1296",
+        "revealAr": "ثمن الكرات الأربع هو $324 \\times 4 = 1296\\text{ DA}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**خاصية التوزيع**: لحساب جداء مثل $245 \\times 3$ ذهنيا، نفكك العدد ثم نضرب كل جزء ونجمع: $(200 \\times 3) + (40 \\times 3) + (5 \\times 3) = 600 + 120 + 15 = 735$.",
+      "**وضع الضرب العمودي**: نكتب العدد الكبير في الأعلى والعدد ذا الرقم الواحد تحته في خانة الوحدات، ثم نضرب بدءا من **اليمين إلى اليسار**.",
+      "**قاعدة الاحتفاظ**: نضرب الرقم في المرتبة أولا، ثم **نضيف الاحتفاظ** بعد الضرب (مثلا $6 \\times 1 + 4 = 10$).",
+      "في المشكلات: نختار الضرب عند تكرار نفس المقدار، والجمع عند الضم، والطرح عند البحث عن الباقي."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">خطوات الضرب العمودي بالاحتفاظ: 1426 × 3 = 4278</text><rect x=\"36\" y=\"48\" width=\"232\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.5\"/><circle cx=\"106\" cy=\"74\" r=\"11\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><text x=\"106\" y=\"78\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">+1</text><circle cx=\"186\" cy=\"74\" r=\"11\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><text x=\"186\" y=\"78\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">+1</text><text x=\"106\" y=\"108\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1</text><text x=\"146\" y=\"108\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">4</text><text x=\"186\" y=\"108\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">2</text><text x=\"226\" y=\"108\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">6</text><text x=\"66\" y=\"142\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">x</text><text x=\"226\" y=\"142\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">3</text><line x1=\"56\" y1=\"154\" x2=\"246\" y2=\"154\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"106\" y=\"188\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#7c3aed\" direction=\"ltr\">4</text><text x=\"146\" y=\"188\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">2</text><text x=\"186\" y=\"188\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">7</text><text x=\"226\" y=\"188\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">8</text><rect x=\"288\" y=\"48\" width=\"284\" height=\"166\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"430\" y=\"76\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">ترتيب الضرب من اليمين إلى اليسار:</text><text x=\"430\" y=\"106\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1d4ed8\" direction=\"rtl\">1) الوحدات: 3 × 6 = 18 (نكتب 8 ونحتفظ بـ 1)</text><text x=\"430\" y=\"134\" text-anchor=\"middle\" font-size=\"12\" fill=\"#c2410c\" direction=\"rtl\">2) العشرات: 3 × 2 + 1 = 7</text><text x=\"430\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#15803d\" direction=\"rtl\">3) المئات: 3 × 4 = 12 (نكتب 2 ونحتفظ بـ 1)</text><text x=\"430\" y=\"190\" text-anchor=\"middle\" font-size=\"12\" fill=\"#7c3aed\" direction=\"rtl\">4) الآلاف: 3 × 1 + 1 = 4</text></svg>",
+    "visualCaptionAr": "الطريقة العمودية لحساب $1426 \\times 3 = 4278$ مع تتبع الاحتفاظ في كل مرتبة.",
+    "examples": [
+      {
+        "problemAr": "احسب الجداء $46 \\times 5$ باستعمال خاصية التوزيع.",
+        "solutionAr": "نفكك $46 = 40 + 6$، ثم نضرب: $46 \\times 5 = (40 \\times 5) + (6 \\times 5) = 200 + 30 = 230$."
+      },
+      {
+        "problemAr": "أنجز العملية العمودية: $518 \\times 6$.",
+        "solutionAr": "الوحدات: $6 \\times 8 = 48$ (نكتب $8$ ونحتفظ بـ $4$)؛ العشرات: $6 \\times 1 + 4 = 10$ (نكتب $0$ ونحتفظ بـ $1$)؛ المئات: $6 \\times 5 + 1 = 31$. النتيجة: $3108$."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: لا تضف رقم الاحتفاظ إلى الرقم قبل ضربه! ننفذ الضرب أولا ثم نجمع الاحتفاظ (مثلا في $518 \\times 6$: نحسب $6 \\times 1 = 6$ ثم نضيف $4$ لنحصل على $10$)."
+  },
+  "practice": [
+    {
+      "questionAr": "ما هي العبارة الصحيحة لحساب $238 \\times 5$ باستعمال **خاصية التوزيع**؟",
+      "options": [
+        "$(200 \\times 5) + (30 \\times 5) + (8 \\times 5)$",
+        "$(200 \\times 5) + (3 \\times 5) + (8 \\times 5)$",
+        "$(200 + 5) + (30 + 5) + (8 + 5)$",
+        "$200 + 30 + (8 \\times 5)$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! فككت $238$ إلى $200 + 30 + 8$ وضربت كل مرتبة في $5$ ثم جمعت النواتج.",
+        "انتبه لقيمة الرقم $3$ في العشرات: إنه يساوي $30$ وليس $3$.",
+        "العملية هي ضرب في $5$ وليس جمع $+ 5$ لكل جزء.",
+        "يجب ضرب المئات ($200$) والعشرات ($30$) أيضا في $5$، وليس الوحدات فقط."
+      ],
+      "explanationAr": "نكتب التفكيك النموذجي $238 = 200 + 30 + 8$، ثم نوزع الضرب في $5$ على جميع الحدود: $(200 \\times 5) + (30 \\times 5) + (8 \\times 5) = 1000 + 150 + 40 = 1190$."
+    },
+    {
+      "questionAr": "تأمل العملية العمودية المقابلة: ما هو ناتج $437 \\times 6$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 155\" width=\"320\" height=\"155\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"304\" height=\"139\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"60\" y=\"20\" width=\"200\" height=\"115\" rx=\"8\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"130\" y=\"56\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">4</text><text x=\"170\" y=\"56\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"210\" y=\"56\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">7</text><text x=\"92\" y=\"90\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">x</text><text x=\"210\" y=\"90\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">6</text><line x1=\"80\" y1=\"100\" x2=\"236\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"160\" y=\"126\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">?</text></svg>",
+      "options": [
+        "$2482$",
+        "$2422$",
+        "$2622$",
+        "$2582$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "نسيت الاحتفاظ نهائيا في العشرات والمئات! راجع $6 \\times 7 = 42$ نحتفظ بـ $4$.",
+        "حسبت الوحدات والعشرات بدقة ($22$)، لكنك نسيت إضافة الاحتفاظ $2$ في المئات ($6 \\times 4 + 2 = 26$).",
+        "ممتاز! $6 \\times 7 = 42$، ثم $6 \\times 3 + 4 = 22$، ثم $6 \\times 4 + 2 = 26$، فالناتج $2622$.",
+        "نسيت إضافة الاحتفاظ $4$ في خانة العشرات عند حساب $6 \\times 3$."
+      ],
+      "explanationAr": "نضرب من اليمين: $6 \\times 7 = 42$ (نكتب $2$ ونحتفظ بـ $4$)؛ ثم $6 \\times 3 + 4 = 22$ (نكتب $2$ ونحتفظ بـ $2$)؛ ثم $6 \\times 4 + 2 = 26$. النتيجة: $2622$."
+    },
+    {
+      "questionAr": "اشترى نادٍ رياضي $7$ أقمصة بسعر $1250\\text{ DA}$ للقميص الواحد، وكرة بسعر $850\\text{ DA}$. ما المبلغ الكلي الذي دفعه النادي؟",
+      "options": [
+        "$8750\\text{ DA}$",
+        "$2100\\text{ DA}$",
+        "$8600\\text{ DA}$",
+        "$9600\\text{ DA}$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "$8750\\text{ DA}$ هو ثمن الأقمصة السبعة فقط ($1250 \\times 7$)؛ لا تنس إضافة ثمن الكرة ($850\\text{ DA}$).",
+        "لقد جمعت ثمن قميص واحد مع ثمن الكرة ($1250 + 850$) بدل ضرب ثمن القميص في $7$.",
+        "تحقق من الاحتفاظ عند ضرب الآلاف في $1250 \\times 7$: لدينا $7 \\times 2 + 3 = 17$ فنحتفظ بـ $1$ للآلاف ($7 \\times 1 + 1 = 8$).",
+        "رائع! ثمن الأقمصة: $1250 \\times 7 = 8750\\text{ DA}$، والمجموع مع الكرة: $8750 + 850 = 9600\\text{ DA}$."
+      ],
+      "explanationAr": "أولا نحسب ثمن $7$ أقمصة: $1250 \\times 7 = 8750\\text{ DA}$. ثانيا نجمع ثمن الأقمصة وثمن الكرة: $8750 + 850 = 9600\\text{ DA}$."
+    }
+  ]
+}

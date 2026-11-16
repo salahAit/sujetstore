@@ -1,0 +1,122 @@
+{
+  "id": "lesson_1ap_t2_solids_familiar",
+  "slug": "lesson-1ap-t2-solids-familiar",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الثالث والرابع (الجزء الأول): الأشكال المستوية، المجسمات وقراءة الساعة",
+  "order": 5,
+  "titleAr": "التعرّف على المجسمات المألوفة (المكعب، البلاطة القائمة، الكرة والأسطوانة)",
+  "objectives": [
+    "التعرّف على المجسمات المألوفة: المكعب، البلاطة القائمة، الكرة، الأسطوانة، المخروط والهرم",
+    "وصف المكعب والبلاطة القائمة (6 وجوه، 8 رؤوس، 12 حرفًا) وتمييز المجسمات التي تتدحرج",
+    "ربط أشياء من المحيط القريب بالمجسمات المألوفة الموافقة لها"
+  ],
+  "keywordsAr": [
+    "المجسمات المألوفة",
+    "المكعب",
+    "البلاطة القائمة",
+    "الكرة والأسطوانة",
+    "وجه ورأس وحرف"
+  ],
+  "discover": {
+    "scenarioAr": "أَحْضَرَ كَرِيمٌ أَشْياءَ إلى القِسْمِ: حَجَرَ نَرْدٍ (**مُكَعَّبٌ**)، وَعُلْبَةَ دَواءٍ (**بَلاطَةٌ قائِمَةٌ**)، وَ**كُرَةً**، وَعُلْبَةَ عَصِيرٍ (**أُسْطُوانَةٌ**). ثُمَّ جَرَّبَ دَحْرَجَتَها عَلى الطّاوِلَةِ.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 195\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"179\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><g transform=\"translate(18,18)\"><rect width=\"126\" height=\"159\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"63\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"rtl\">مُكَعَّبٌ</text><polygon points=\"32,62 78,62 78,108 32,108\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><polygon points=\"32,62 50,44 96,44 78,62\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"2\"/><polygon points=\"78,62 96,44 96,90 78,108\" fill=\"#93c5fd\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"32\" y1=\"108\" x2=\"78\" y2=\"108\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"32\" cy=\"62\" r=\"4\" fill=\"#059669\"/><text x=\"16\" y=\"59\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#059669\" direction=\"rtl\">رَأْسٌ</text><text x=\"55\" y=\"89\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">وَجْهٌ</text><text x=\"55\" y=\"124\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"rtl\">حَرْفٌ</text><text x=\"63\" y=\"146\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"rtl\">وُجُوهُهُ مُرَبَّعاتٌ</text></g><g transform=\"translate(154,18)\"><rect width=\"136\" height=\"159\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"68\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#059669\" direction=\"rtl\">بَلاطَةٌ قائِمَةٌ</text><polygon points=\"18,70 96,70 96,110 18,110\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"2\"/><polygon points=\"18,70 38,50 116,50 96,70\" fill=\"#bbf7d0\" stroke=\"#059669\" stroke-width=\"2\"/><polygon points=\"96,70 116,50 116,90 96,110\" fill=\"#86efac\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"57\" y=\"94\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">وَجْهٌ مُسْتَطِيلٌ</text><text x=\"68\" y=\"146\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"rtl\">لا تَتَدَحْرَجُ</text></g><g transform=\"translate(300,18)\"><rect width=\"106\" height=\"159\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"53\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#d97706\" direction=\"rtl\">كُرَةٌ</text><circle cx=\"53\" cy=\"80\" r=\"31\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/><ellipse cx=\"53\" cy=\"80\" rx=\"31\" ry=\"9\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"1.2\" stroke-dasharray=\"4,3\"/><text x=\"53\" y=\"146\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">تَتَدَحْرَجُ</text></g><g transform=\"translate(416,18)\"><rect width=\"106\" height=\"159\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"53\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#7c3aed\" direction=\"rtl\">أُسْطُوانَةٌ</text><path d=\"M 28 56 L 28 106 A 25 8 0 0 0 78 106 L 78 56 Z\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"2\"/><ellipse cx=\"53\" cy=\"56\" rx=\"25\" ry=\"8\" fill=\"#ddd6fe\" stroke=\"#7c3aed\" stroke-width=\"2\"/><text x=\"53\" y=\"146\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#6d28d9\" direction=\"rtl\">تَتَدَحْرَجُ</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "تَأَمَّلِ المُكَعَّبَ (حَجَرَ النَّرْدِ): لَهُ وَجْهٌ أَمامِيٌّ وَخَلْفِيٌّ، وَعُلْوِيٌّ وَسُفْلِيٌّ، وَأَيْمَنُ وَأَيْسَرُ. كَمْ وَجْهًا لِلْمُكَعَّبِ؟",
+        "hintAr": "عُدَّ أَرْقامَ حَجَرِ النَّرْدِ: مِنْ $1$ إلى $\\dots$.",
+        "expectedInput": "6",
+        "revealAr": "لِلْمُكَعَّبِ $6$ وُجُوهٍ مُسْتَوِيَةٍ، وَكُلُّها مُرَبَّعاتٌ."
+      },
+      {
+        "promptAr": "انْظُرْ إلى الزَّوايا المُدَبَّبَةِ (الرُّؤُوسِ): هُناكَ $4$ رُؤُوسٍ في الأَعْلى وَ $4$ رُؤُوسٍ في الأَسْفَلِ. كَمْ رَأْسًا لِلْمُكَعَّبِ؟",
+        "hintAr": "احْسُبْ $4 + 4$.",
+        "expectedInput": "8",
+        "revealAr": "لِلْمُكَعَّبِ $8$ رُؤُوسٍ (وَلِلْبَلاطَةِ القائِمَةِ $8$ رُؤُوسٍ أَيْضًا)."
+      },
+      {
+        "promptAr": "الخُطُوطُ التِي تَفْصِلُ بَيْنَ الوُجُوهِ تُسَمّى **الأَحْرُفَ**: $4$ في الأَعْلى، وَ $4$ في الأَسْفَلِ، وَ $4$ عَمُودِيَّةٌ. كَمْ حَرْفًا لِلْمُكَعَّبِ ($4 + 4 + 4$)؟",
+        "hintAr": "احْسُبْ $4 + 4 = 8$، ثُمَّ $8 + 4$.",
+        "expectedInput": "12",
+        "revealAr": "أَحْسَنْتَ! لِلْمُكَعَّبِ وَلِلْبَلاطَةِ القائِمَةِ $12$ حَرْفًا."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**المُكَعَّبُ** و**البَلاطَةُ القائِمَةُ** مُجَسَّمانِ لا يَتَدَحْرَجانِ؛ لِكُلٍّ مِنْهُما: $6$ وُجُوهٍ مُسْتَوِيَةٍ، وَ $8$ رُؤُوسٍ، وَ $12$ حَرْفًا.",
+      "وُجُوهُ **المُكَعَّبِ** السِّتَّةُ كُلُّها **مُرَبَّعاتٌ** (مِثْلُ حَجَرِ النَّرْدِ)، أَمّا وُجُوهُ **البَلاطَةِ القائِمَةِ** فَهِيَ **مُسْتَطِيلاتٌ** (مِثْلُ عُلْبَةِ الدَّواءِ أَوِ الأَحْذِيَةِ).",
+      "**الكُرَةُ** و**الأُسْطُوانَةُ** (مِثْلُ عُلْبَةِ العَصِيرِ) و**المَخْرُوطُ** (مِثْلُ قُبَّعَةِ الحَفْلِ) مُجَسَّماتٌ يَسْتَطِيعُ كُلٌّ مِنْها أَنْ يَتَدَحْرَجَ.",
+      "**الهَرَمُ** لَهُ وُجُوهٌ مُثَلَّثَةٌ تَلْتَقِي في رَأْسٍ واحِدٍ في الأَعْلى، وَهُوَ لا يَتَدَحْرَجُ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 215\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"199\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><g transform=\"translate(18,18)\"><rect width=\"160\" height=\"84\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><polygon points=\"22,34 50,34 50,62 22,62\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><polygon points=\"22,34 34,22 62,22 50,34\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><polygon points=\"50,34 62,22 62,50 50,62\" fill=\"#93c5fd\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"112\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">مُكَعَّبٌ</text><text x=\"112\" y=\"58\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">لا يَتَدَحْرَجُ</text></g><g transform=\"translate(190,18)\"><rect width=\"160\" height=\"84\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><polygon points=\"14,40 60,40 60,64 14,64\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"1.6\"/><polygon points=\"14,40 26,28 72,28 60,40\" fill=\"#bbf7d0\" stroke=\"#059669\" stroke-width=\"1.6\"/><polygon points=\"60,40 72,28 72,52 60,64\" fill=\"#86efac\" stroke=\"#059669\" stroke-width=\"1.6\"/><text x=\"116\" y=\"38\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">بَلاطَةٌ قائِمَةٌ</text><text x=\"116\" y=\"58\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">لا تَتَدَحْرَجُ</text></g><g transform=\"translate(362,18)\"><rect width=\"160\" height=\"84\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><polygon points=\"42,18 18,62 56,62\" fill=\"#ffe4e6\" stroke=\"#e11d48\" stroke-width=\"1.6\"/><polygon points=\"42,18 56,62 68,50\" fill=\"#fecdd3\" stroke=\"#e11d48\" stroke-width=\"1.6\"/><text x=\"114\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#be123c\" direction=\"rtl\">هَرَمٌ</text><text x=\"114\" y=\"58\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">لا يَتَدَحْرَجُ</text></g><g transform=\"translate(18,112)\"><rect width=\"160\" height=\"84\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><circle cx=\"42\" cy=\"42\" r=\"22\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.6\"/><ellipse cx=\"42\" cy=\"42\" rx=\"22\" ry=\"7\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/><text x=\"112\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">كُرَةٌ</text><text x=\"112\" y=\"58\" text-anchor=\"middle\" font-size=\"11\" fill=\"#15803d\" direction=\"rtl\">تَتَدَحْرَجُ</text></g><g transform=\"translate(190,112)\"><rect width=\"160\" height=\"84\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><path d=\"M 24 26 L 24 60 A 18 6 0 0 0 60 60 L 60 26 Z\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"1.6\"/><ellipse cx=\"42\" cy=\"26\" rx=\"18\" ry=\"6\" fill=\"#ddd6fe\" stroke=\"#7c3aed\" stroke-width=\"1.6\"/><text x=\"112\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#6d28d9\" direction=\"rtl\">أُسْطُوانَةٌ</text><text x=\"112\" y=\"58\" text-anchor=\"middle\" font-size=\"11\" fill=\"#15803d\" direction=\"rtl\">تَتَدَحْرَجُ</text></g><g transform=\"translate(362,112)\"><rect width=\"160\" height=\"84\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><path d=\"M 42 16 L 22 58 A 20 6 0 0 0 62 58 Z\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"1.6\"/><ellipse cx=\"42\" cy=\"58\" rx=\"20\" ry=\"6\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"1.2\" stroke-dasharray=\"3,2\"/><text x=\"114\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">مَخْرُوطٌ</text><text x=\"114\" y=\"58\" text-anchor=\"middle\" font-size=\"11\" fill=\"#15803d\" direction=\"rtl\">يَتَدَحْرَجُ</text></g></svg>",
+    "visualCaptionAr": "المُجَسَّماتُ المَأْلُوفَةُ: المُكَعَّبُ وَالبَلاطَةُ القائِمَةُ وَالهَرَمُ لا تَتَدَحْرَجُ، بَيْنَما الكُرَةُ وَالأُسْطُوانَةُ وَالمَخْرُوطُ تَتَدَحْرَجُ.",
+    "examples": [
+      {
+        "problemAr": "ارْبِطْ كُلَّ شَيْءٍ بِالمُجَسَّمِ المُوافِقِ لَهُ: حَجَرُ النَّرْدِ، عُلْبَةُ الأَحْذِيَةِ، عُلْبَةُ عَصِيرٍ، قُبَّعَةُ الحَفْلِ.",
+        "solutionAr": "حَجَرُ النَّرْدِ: مُكَعَّبٌ؛ عُلْبَةُ الأَحْذِيَةِ: بَلاطَةٌ قائِمَةٌ؛ عُلْبَةُ العَصِيرِ: أُسْطُوانَةٌ؛ قُبَّعَةُ الحَفْلِ: مَخْرُوطٌ."
+      },
+      {
+        "problemAr": "ما عَدَدُ وُجُوهِ وَرُؤُوسِ وَأَحْرُفِ البَلاطَةِ القائِمَةِ؟",
+        "solutionAr": "لِلْبَلاطَةِ القائِمَةِ $6$ وُجُوهٍ، وَ $8$ رُؤُوسٍ، وَ $12$ حَرْفًا، مِثْلُ المُكَعَّبِ تَمامًا."
+      }
+    ],
+    "watchOutAr": "لا تَخْلِطْ بَيْنَ الشَّكْلِ المُسْتَوِي وَالمُجَسَّمِ: المُرَبَّعُ شَكْلٌ مُسْتَوٍ نَرْسُمُهُ عَلى الوَرَقَةِ، أَمّا المُكَعَّبُ فَمُجَسَّمٌ نُمْسِكُهُ بِيَدِنا!"
+  },
+  "practice": [
+    {
+      "questionAr": "تُشْبِهُ عُلْبَةُ الدَّواءِ أَوْ عُلْبَةُ الأَحْذِيَةِ مُجَسَّمًا مَأْلُوفًا. ما اسْمُ هَذا المُجَسَّمِ؟",
+      "options": [
+        "المُكَعَّبُ",
+        "البَلاطَةُ القائِمَةُ",
+        "الأُسْطُوانَةُ",
+        "الكُرَةُ"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "المُكَعَّبُ وُجُوهُهُ كُلُّها مُرَبَّعاتٌ مِثْلُ حَجَرِ النَّرْدِ، أَمّا عُلْبَةُ الدَّواءِ فَوُجُوهُها مُسْتَطِيلاتٌ.",
+        "أَحْسَنْتَ! عُلْبَةُ الدَّواءِ وَعُلْبَةُ الأَحْذِيَةِ عَلى شَكْلِ بَلاطَةٍ قائِمَةٍ.",
+        "الأُسْطُوانَةُ تَتَدَحْرَجُ وَلَها قاعِدَتانِ دائِرِيَّتانِ مِثْلُ عُلْبَةِ العَصِيرِ.",
+        "الكُرَةُ مُسْتَدِيرَةٌ وَتَتَدَحْرَجُ في كُلِّ اتِّجاهٍ وَلَيْسَ لَها وُجُوهٌ مُسْتَطِيلَةٌ."
+      ],
+      "explanationAr": "عُلْبَةُ الدَّواءِ وَعُلْبَةُ الأَحْذِيَةِ وُجُوهُها مُسْتَطِيلاتٌ، فَهِيَ تُشْبِهُ البَلاطَةَ القائِمَةَ."
+    },
+    {
+      "questionAr": "كَمْ وَجْهًا وَكَمْ رَأْسًا لِلْمُكَعَّبِ؟",
+      "options": [
+        "$4$ وُجُوهٍ وَ $4$ رُؤُوسٍ",
+        "$8$ وُجُوهٍ وَ $6$ رُؤُوسٍ",
+        "$6$ وُجُوهٍ وَ $8$ رُؤُوسٍ",
+        "$6$ وُجُوهٍ وَ $12$ رَأْسًا"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$4$ وُجُوهٍ عَدَدٌ ناقِصٌ؛ تَذَكَّرْ أَرْقامَ حَجَرِ النَّرْدِ مِنْ $1$ إلى $6$.",
+        "انْتَبِهْ! عَكَسْتَ بَيْنَ عَدَدِ الوُجُوهِ ($6$) وَعَدَدِ الرُّؤُوسِ ($8$).",
+        "مُمْتازٌ! لِلْمُكَعَّبِ $6$ وُجُوهٍ مُرَبَّعَةٍ وَ $8$ رُؤُوسٍ (و $12$ حَرْفًا).",
+        "$12$ هُوَ عَدَدُ الأَحْرُفِ وَلَيْسَ عَدَدَ الرُّؤُوسِ!"
+      ],
+      "explanationAr": "يَتَكَوَّنُ المُكَعَّبُ مِنْ $6$ وُجُوهٍ، وَ $8$ رُؤُوسٍ، وَ $12$ حَرْفًا."
+    },
+    {
+      "questionAr": "تَأَمَّلِ المُجَسَّماتِ الأَرْبَعَةَ في الرَّسْمِ: أَيُّ مُجَسَّمٍ يَسْتَطِيعُ أَنْ يَتَدَحْرَجَ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 125\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"424\" height=\"109\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"60\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#7c3aed\" direction=\"ltr\">A</text><path d=\"M 40 44 L 40 94 A 20 7 0 0 0 80 94 L 80 44 Z\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"2\"/><ellipse cx=\"60\" cy=\"44\" rx=\"20\" ry=\"7\" fill=\"#ddd6fe\" stroke=\"#7c3aed\" stroke-width=\"2\"/><text x=\"160\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">B</text><polygon points=\"134,54 174,54 174,94 134,94\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><polygon points=\"134,54 148,40 188,40 174,54\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"2\"/><polygon points=\"174,54 188,40 188,80 174,94\" fill=\"#93c5fd\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"272\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">C</text><polygon points=\"226,60 294,60 294,94 226,94\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"2\"/><polygon points=\"226,60 242,44 310,44 294,60\" fill=\"#bbf7d0\" stroke=\"#059669\" stroke-width=\"2\"/><polygon points=\"294,60 310,44 310,78 294,94\" fill=\"#86efac\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"378\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#e11d48\" direction=\"ltr\">D</text><polygon points=\"378,38 350,94 392,94\" fill=\"#ffe4e6\" stroke=\"#e11d48\" stroke-width=\"2\"/><polygon points=\"378,38 392,94 408,78\" fill=\"#fecdd3\" stroke=\"#e11d48\" stroke-width=\"2\"/></svg>",
+      "options": [
+        "المُجَسَّمُ A (الأُسْطُوانَةُ)",
+        "المُجَسَّمُ B (المُكَعَّبُ)",
+        "المُجَسَّمُ C (البَلاطَةُ القائِمَةُ)",
+        "المُجَسَّمُ D (الهَرَمُ)"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أَحْسَنْتَ! الأُسْطُوانَةُ (A) لَها جانِبٌ مُنْحَنٍ، لِذا تَسْتَطِيعُ أَنْ تَتَدَحْرَجَ عَلى الطّاوِلَةِ.",
+        "المُكَعَّبُ (B) كُلُّ وُجُوهِهِ مُسْتَوِيَةٌ وَلا يَتَدَحْرَجُ.",
+        "البَلاطَةُ القائِمَةُ (C) كُلُّ وُجُوهِها مُسْتَوِيَةٌ وَلا تَتَدَحْرَجُ.",
+        "الهَرَمُ (D) وُجُوهُهُ مُثَلَّثَةٌ مُسْتَوِيَةٌ، فَهُوَ يَثْبُتُ وَلا يَتَدَحْرَجُ."
+      ],
+      "explanationAr": "الأُسْطُوانَةُ (A) جِسْمُها مُنْحَنٍ مِنْ جانِبِها فَتَتَدَحْرَجُ، أَمّا المُكَعَّبُ وَالبَلاطَةُ القائِمَةُ وَالهَرَمُ فَلَها وُجُوهٌ مُسْتَوِيَةٌ لا تَتَدَحْرَجُ."
+    }
+  ]
+}

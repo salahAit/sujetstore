@@ -1,0 +1,123 @@
+{
+  "id": "lesson_3ap_t1_right_angle_set_square",
+  "slug": "lesson-3ap-t1-right-angle-set-square",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني: الاستقامية والزاوية القائمة وتنظيم المعطيات وإدماج الفصل الأول",
+  "order": 5,
+  "titleAr": "الزاوية القائمة: التحقق منها ورسمها باستعمال الكوس",
+  "objectives": [
+    "التعرف على الزاوية القائمة في أشكال مستوية والتحقق منها باستعمال القالب أو الكوس وتشفيرها",
+    "رسم زاوية قائمة باستعمال المسطرة والكوس في وضعيات وأوضاع مختلفة",
+    "التعرف على التعامد بين مستقيمين أو ضلعين بالاعتماد على الكوس والتحقق من الزوايا القائمة في شكل هندسي"
+  ],
+  "keywordsAr": [
+    "الزاوية القائمة",
+    "الكوس",
+    "القالب",
+    "تشفير الزاوية القائمة",
+    "المستقيمان المتعامدان"
+  ],
+  "discover": {
+    "scenarioAr": "لاحظ التلاميذ في القسم ثلاث زوايا مرسومة على السبورة، واستعملوا **الكوس** للتحقق من الزاوية القائمة وتشفيرها بمربع صغير في الرأس، وكذلك للتعرف على المستقيمين المتعامدين.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 225\" width=\"600\" height=\"225\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"209\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"29\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">التحقق من الزاوية القائمة باستعمال الكوس</text><rect x=\"24\" y=\"42\" width=\"174\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"111\" y=\"62\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">زاوية 1</text><polygon points=\"56,158 134,158 56,82\" fill=\"#fef08a\" fill-opacity=\"0.85\" stroke=\"#ca8a04\" stroke-width=\"1.6\"/><line x1=\"56\" y1=\"158\" x2=\"170\" y2=\"158\" stroke=\"#16a34a\" stroke-width=\"2.6\"/><line x1=\"56\" y1=\"158\" x2=\"56\" y2=\"70\" stroke=\"#16a34a\" stroke-width=\"2.6\"/><rect x=\"56\" y=\"144\" width=\"14\" height=\"14\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"111\" y=\"192\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">تنطبق على الكوس</text><rect x=\"213\" y=\"42\" width=\"174\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"300\" y=\"62\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"rtl\">زاوية 2</text><polygon points=\"246,158 324,158 246,82\" fill=\"#fef08a\" fill-opacity=\"0.75\" stroke=\"#ca8a04\" stroke-width=\"1.6\"/><line x1=\"246\" y1=\"158\" x2=\"360\" y2=\"158\" stroke=\"#dc2626\" stroke-width=\"2.6\"/><line x1=\"246\" y1=\"158\" x2=\"312\" y2=\"74\" stroke=\"#dc2626\" stroke-width=\"2.6\"/><text x=\"300\" y=\"192\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"rtl\">أصغر من القائمة</text><rect x=\"402\" y=\"42\" width=\"174\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"489\" y=\"62\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">زاوية 3</text><polygon points=\"466,158 538,158 466,86\" fill=\"#fef08a\" fill-opacity=\"0.75\" stroke=\"#ca8a04\" stroke-width=\"1.6\"/><line x1=\"466\" y1=\"158\" x2=\"562\" y2=\"158\" stroke=\"#ea580c\" stroke-width=\"2.6\"/><line x1=\"466\" y1=\"158\" x2=\"420\" y2=\"78\" stroke=\"#ea580c\" stroke-width=\"2.6\"/><text x=\"489\" y=\"192\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">أكبر من القائمة</text></svg>",
+    "steps": [
+      {
+        "promptAr": "انظر إلى الزوايا الثلاث مع الكوس الأصفر: أي زاوية ينطبق ضلعاها تماماً على الزاوية القائمة للكوس؟ (اكتب الرقم فقط: `1` أو `2` أو `3`)",
+        "hintAr": "ابحث عن الزاوية التي يلامس ضلعاها الخضراوان حافتي الكوس القائمة ويظهر فيها المربع الأحمر.",
+        "expectedInput": "1",
+        "revealAr": "الزاوية $1$ هي الزاوية القائمة لأن ضلعيها ينطبقان تماماً على الزاوية القائمة للكوس."
+      },
+      {
+        "promptAr": "لاحظ شكل الكوس الأصفر نفسه: كم زاوية قائمة توجد في الكوس الواحد؟ (اكتب العدد فقط)",
+        "hintAr": "المثلث القائم الذي يشكّل الكوس فيه $3$ زوايا، واحدة منها فقط قائمة.",
+        "expectedInput": "1",
+        "revealAr": "للكوس زاوية قائمة واحدة ($1$) فقط، ونستعملها للتحقق من الزوايا القائمة وتشفيرها بمربع صغير."
+      },
+      {
+        "promptAr": "في شكل هندسي مربع، كل ضلعين متجاورين متعامدان ويشكلان زاوية قائمة. كم زاوية قائمة نُشفّرها بالكوس في المربع؟ (اكتب العدد فقط)",
+        "hintAr": "للمربع $4$ رؤوس متطابقة كلها قائمة.",
+        "expectedInput": "4",
+        "revealAr": "في المربع توجد $4$ زوايا قائمة، وعندما يشكل مستقيمان أو ضلعان زاوية قائمة نقول إنهما متعامدان."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الزاوية القائمة** هي الزاوية التي تنطبق تماماً على الزاوية القائمة لـ **الكوس** (أو قالب زاوية قائمة)، ونرمز لها بمربع صغير عند الرأس يسمى **تشفير الزاوية القائمة**.",
+      "للتحقق من زاوية باستعمال الكوس: نطابق رأس الزاوية القائمة للكوس على رأس الزاوية، وأحد ضلعي الكوس على أحد الضلعين، ثم نراقب انطباق الضلع الثاني.",
+      "لرسم زاوية قائمة: نرسم مستقيماً بالمسطرة، ثم نضع ضلع الزاوية القائمة للكوس على المستقيم ونرسم المستقيم الثاني بمحاذاة الضلع القائم الآخر، ونضع التشفير.",
+      "نقول عن مستقيمين (أو ضلعين) إنهما **متعامدان** إذا تقاطعا وشكّلا زاوية قائمة نتحقق منها بالكوس، وتبقى الزاوية قائمة مهما كان وضع الشكل مائلاً."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 225\" width=\"600\" height=\"225\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"209\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الكوس والتعامد وتشفير الزاوية القائمة</text><rect x=\"24\" y=\"44\" width=\"174\" height=\"164\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><polygon points=\"56,152 162,152 56,68\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><rect x=\"56\" y=\"138\" width=\"14\" height=\"14\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"111\" y=\"178\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">الكوس</text><text x=\"111\" y=\"197\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">زاوية قائمة واحدة فقط</text><rect x=\"213\" y=\"44\" width=\"174\" height=\"164\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"245\" y1=\"136\" x2=\"355\" y2=\"81\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><line x1=\"272\" y1=\"56\" x2=\"328\" y2=\"168\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><polygon points=\"300,109 311.6,103.2 305.8,91.6 294.2,97.4\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"300\" y=\"182\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">مستقيمان متعامدان</text><text x=\"300\" y=\"199\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">يشكلان زاوية قائمة</text><rect x=\"402\" y=\"44\" width=\"174\" height=\"164\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><polygon points=\"434,74 518,74 552,150 434,150\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><rect x=\"434\" y=\"74\" width=\"12\" height=\"12\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"434\" y=\"138\" width=\"12\" height=\"12\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"489\" y=\"178\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">التشفير في مضلع</text><text x=\"489\" y=\"197\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">نختبر كل رأس بالكوس</text></svg>",
+    "visualCaptionAr": "تحديد الزاوية القائمة في الكوس، والتعامد بين مستقيمين مائلين، وتشفير الزوايا القائمة في المضلع.",
+    "examples": [
+      {
+        "problemAr": "اختبر زوايا مثلث قائم بالكوس. كم زاوية قائمة تجد فيه؟",
+        "solutionAr": "نجد زاوية قائمة واحدة فقط نُشفّرها بمربع صغير، أما الزاويتان الأخريان فكل منهما أصغر من القائمة."
+      },
+      {
+        "problemAr": "رسم خالد زاويتين قائمتين مائلتين، هل تتغير الزاوية القائمة إذا أدرنا الورقة أو الشكل؟",
+        "solutionAr": "لا تتغير الزاوية القائمة أبداً عند دوران الشكل؛ نُدير الكوس فقط لنطابق زاويته القائمة مع ضلعي الزاوية."
+      }
+    ],
+    "watchOutAr": "لا تحكم على الزاوية بالعين المجردة أبداً خاصة إذا كانت مائلة! واستعمل دائماً الزاوية القائمة للكوس وليس إحدى زاويتيه الحادتين."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل الوضعيات الأربع لاستعمال الكوس: أي زاوية هي **زاوية قائمة**؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 165\" width=\"560\" height=\"165\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"544\" height=\"149\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"20\" y=\"22\" width=\"120\" height=\"122\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"80\" y=\"40\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الزاوية 1</text><polygon points=\"42,122 104,122 42,60\" fill=\"#fef08a\" fill-opacity=\"0.8\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><line x1=\"42\" y1=\"122\" x2=\"120\" y2=\"122\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><line x1=\"42\" y1=\"122\" x2=\"92\" y2=\"58\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><rect x=\"152\" y=\"22\" width=\"120\" height=\"122\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"212\" y=\"40\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الزاوية 2</text><polygon points=\"194,122 254,122 194,62\" fill=\"#fef08a\" fill-opacity=\"0.8\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><line x1=\"194\" y1=\"122\" x2=\"262\" y2=\"122\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><line x1=\"194\" y1=\"122\" x2=\"164\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><rect x=\"284\" y=\"22\" width=\"120\" height=\"122\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"344\" y=\"40\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الزاوية 3</text><polygon points=\"326,126 382,106 306,70\" fill=\"#fef08a\" fill-opacity=\"0.85\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><line x1=\"326\" y1=\"126\" x2=\"392\" y2=\"102\" stroke=\"#16a34a\" stroke-width=\"2.6\"/><line x1=\"326\" y1=\"126\" x2=\"302\" y2=\"60\" stroke=\"#16a34a\" stroke-width=\"2.6\"/><rect x=\"416\" y=\"22\" width=\"124\" height=\"122\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"478\" y=\"40\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الزاوية 4</text><polygon points=\"442,122 518,122 442,64\" fill=\"#fef08a\" fill-opacity=\"0.8\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><line x1=\"442\" y1=\"122\" x2=\"526\" y2=\"122\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><line x1=\"442\" y1=\"122\" x2=\"472\" y2=\"58\" stroke=\"#2563eb\" stroke-width=\"2.4\"/></svg>",
+      "options": [
+        "الزاوية 1",
+        "الزاوية 2",
+        "الزاوية 3",
+        "الزاوية 4"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "في الزاوية 1، الضلع العلوي يدخل داخل الكوس، فهي أصغر من الزاوية القائمة.",
+        "في الزاوية 2، الضلع يبتعد نحو الخارج خارج حافة الكوس، فهي أكبر من القائمة.",
+        "أحسنت! رغم أن الزاوية 3 مائلة قليلاً، فإن ضلعيها ينطبقان تماماً على الزاوية القائمة للكوس.",
+        "في الزاوية 4، الضلع يقع داخل الكوس ولا ينطبق على حافته العمودية."
+      ],
+      "explanationAr": "نلاحظ أن في الزاوية 3 فقط ينطبق الضلعان تماماً على حافتي الزاوية القائمة للكوس رغم ميلانها، بينما الزاويتان 1 و 4 أصغر من القائمة والزاوية 2 أكبر من القائمة."
+    },
+    {
+      "questionAr": "تأمل الشكل الرباعي المقابل وتحقق من زواياه: كم زاوية قائمة توجد في هذا الشكل؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 150\" width=\"360\" height=\"150\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"134\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><polygon points=\"95,34 205,34 265,118 95,118\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"180\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"rtl\">تحقق من الرؤوس الأربعة</text></svg>",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "تحقق من الرأسين على اليسار: الضلع العمودي يتعامد مع الضلع العلوي والسفلي معاً، فتوجد أكثر من زاوية قائمة واحدة.",
+        "ممتاز! الضلع العمودي على اليسار متعامد مع الضلع العلوي والسفلي، فتوجد زاويتان قائمتان فقط.",
+        "لا يمكن لشكل رباعي أن يملك $3$ زوايا قائمة فقط دون أن تكون الرابعة قائمة أيضاً.",
+        "انظر إلى الضلع المائل على اليمين: زاويتاه ليستا قائمتين، واحدة أكبر من القائمة والأخرى أصغر."
+      ],
+      "explanationAr": "على الجهة اليسرى يتعامد الضلع العمودي مع الضلع الأفقي العلوي ومع الضلع الأفقي السفلي فيشكلان زاويتين قائمتين ($2$)، أما الضلع المائل على اليمين فلا يشكل زوايا قائمة."
+    },
+    {
+      "questionAr": "أراد أمين التحقق هل ضلعا شكل هندسي متعامدان باستعمال الكوس. ما الطريقة الصحيحة؟",
+      "options": [
+        "يضع رأس الزاوية القائمة للكوس على رأس الزاوية ويطابق ضلعي الكوس على الضلعين",
+        "يقيس طول الضلعين بالمسطرة ويجمع الطولين معاً",
+        "يستعمل أي رأس من رؤوس الكوس الثلاثة دون تمييز",
+        "يحكم على التعامد بالنظر بالعين فقط دون وضع الكوس"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! نطابق دائماً الزاوية القائمة للكوس على رأس الزاوية وضلعيه للتأكد من التعامد.",
+        "قياس الأطوال بالمسطرة لا يكفي لمعرفة الزاوية القائمة أو التعامد.",
+        "للكوس زاويتان حادتان وزاوية قائمة واحدة فقط، ويجب استعمال الزاوية القائمة بالذات.",
+        "العين المجردة قد تخطئ، خاصة في الأشكال المائلة؛ لذا نتحقق بالكوس دائماً."
+      ],
+      "explanationAr": "للتحقق من تعامد ضلعين أو زاوية قائمة، نضع رأس الزاوية القائمة للكوس على رأس الزاوية ونطابق ضلعيه على ضلعي الشكل."
+    }
+  ]
+}

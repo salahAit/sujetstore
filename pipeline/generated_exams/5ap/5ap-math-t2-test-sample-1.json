@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "5ap",
+    "yearName": "السنة الخامسة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t2",
+    "trimesterName": "الفصل الثاني",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "أنجز العمليات التالية بدقة:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب ذهنيا: $2.9 times 10 = \"...\"$",
+          "answer": "1) $2.9 times 10 = 29$ (إزاحة الفاصلة يمينا بـ $1$ مراتب).",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "2) ضع ثم أنجز عموديا: $4.6 times 9$",
+          "answer": "2) $4.6 times 9 = 41.4$.",
+          "mark": "1.5"
+        }
+      ],
+      "id": "exam-5ap-supervised_test-t2-easy-401-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "اشترت مريم أقلاما متماثلة من المكتبة. أكمل جدول التناسبية التالي باستعمال المرور بالوحدة:",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "عدد الأقلام",
+            "$4$",
+            "$1$",
+            "$8$",
+            "$10$"
+          ],
+          "cells": [
+            "الثمن (دج)",
+            "$280$",
+            {
+              "content": "...",
+              "answer": "$70$",
+              "mark": "1"
+            },
+            {
+              "content": "...",
+              "answer": "$560$",
+              "mark": "1"
+            },
+            {
+              "content": "...",
+              "answer": "$700$",
+              "mark": "1"
+            }
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        },
+        {
+          "type": "text",
+          "content": "وضح طريقة حساب قيمة الوحدة وقيمة $8$:",
+          "answer": "قيمة الوحدة: $280 div 4 = 70$ دج، ومنه قيمة $8$ هي: $70 times 8 = 560$ دج.",
+          "mark": ""
+        }
+      ],
+      "id": "exam-5ap-supervised_test-t2-easy-401-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "أجب عن الأسئلة الثلاثة التالية مع توضيح العمليات العمودية والأفقية وذكر الوحدات:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "يملك العم صالح قطعة أرض مستطيلة الشكل لتهيئة بستان عائلي، طولها $16$ m وعرضها $12$ m. أراد إحاطتها بسياج ثمن المتر الواحد منه $135.5$ DA، وتخصيص مساحتها لغرس أشجار الزيتون بحيث تحتاج كل واحدة إلى $9$ m²."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap-t2-garden-easy-49927.svg",
+              "caption": "بستان عائلي"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب مساحة قطعة الأرض المستطيلة.",
+          "answer": "1) مساحة الأرض: $16 times 12 = 192$ m².",
+          "mark": "1"
+        },
+        {
+          "type": "text",
+          "content": "2) ما هو أكبر عدد من أشجار الزيتون يمكن تهيئته في هذه المساحة، وما هي المساحة المتبقية؟",
+          "answer": "2) بالقسمة الإقليدية: $192 = 9 times 21 + 3$، إذن العدد هو $21$ شجرة وتبقى $3$ m².",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب محيط الأرض ثم احسب تكلفة السياج بالدينار الجزائري.",
+          "answer": "3) المحيط: $2 times (16 + 12) = 56$ m. تكلفة السياج: $56 times 135.5 = 7588$ DA.",
+          "mark": "1.5"
+        }
+      ],
+      "id": "exam-5ap-supervised_test-t2-easy-401-ex-3"
+    }
+  ]
+}

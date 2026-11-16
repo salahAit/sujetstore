@@ -1,0 +1,128 @@
+{
+  "id": "lesson_4am_t2_factorization_common_factor_identities",
+  "slug": "4am-t2-factorization-common-factor-identities",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: الحساب الحرفي والمتطابقات الشهيرة والمعادلات والمتراجحات",
+  "order": 2,
+  "titleAr": "تحليل عبارات جبرية بالعامل المشترك وبالمتطابقات الشهيرة",
+  "objectives": [
+    "تحليل عبارة جبرية إلى جداء عاملين من الدرجة الأولى باستخراج عامل مشترك ظاهر (أحادي الحد أو عبارة جبرية)",
+    "توظيف المتطابقات الشهيرة الثلاث في التحليل إلى جداء عاملين بما في ذلك التحليل المركب على مرحلتين",
+    "اختيار الصيغة الأنسب لعبارة جبرية (الأصلية أو المنشورة أو المحللة) لحساب قيمها بأعداد ناطقة أو بأعداد تتضمن جذورا"
+  ],
+  "keywordsAr": [
+    "تحليل عبارة جبرية",
+    "العامل المشترك",
+    "التحليل بالمتطابقات الشهيرة",
+    "جداء عاملين من الدرجة الأولى"
+  ],
+  "discover": {
+    "scenarioAr": "لدى صانع صفيحة معدنية مربعة طول ضلعها $(x + 5)\\text{ cm}$، اقتطع من إحدى زواياها مربعا طول ضلعه $3\\text{ cm}$ فبقيت مساحة $S = (x + 5)^2 - 9$. ومن جهة أخرى، يريد كتابة العبارة $A = (x + 2)(3x - 1) + (x + 2)(x + 5)$ على شكل جداء عاملين. كيف نُحوّل هذه المجاميع والفروق إلى جداء عاملين من الدرجة الأولى؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 205\" width=\"460\" height=\"205\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect width=\"460\" height=\"205\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"12\" y=\"12\" width=\"204\" height=\"181\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><rect x=\"54\" y=\"36\" width=\"116\" height=\"116\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><rect x=\"128\" y=\"110\" width=\"42\" height=\"42\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><text x=\"112\" y=\"27\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">x + 5</text><text x=\"30\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">x + 5</text><text x=\"96\" y=\"78\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1d4ed8\">(x + 5)² - 9</text><text x=\"149\" y=\"135\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">3 × 3 = 9</text><text x=\"114\" y=\"178\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">S = (x + 2)(x + 8)</text><rect x=\"228\" y=\"12\" width=\"220\" height=\"181\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"338\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\">استخراج العامل المشترك</text><text x=\"338\" y=\"72\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#0f172a\"><tspan fill=\"#2563eb\" font-weight=\"bold\">(x + 2)</tspan>(3x - 1) + <tspan fill=\"#2563eb\" font-weight=\"bold\">(x + 2)</tspan>(x + 5)</text><text x=\"338\" y=\"108\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#334155\">= <tspan fill=\"#2563eb\">(x + 2)</tspan>[(3x - 1) + (x + 5)]</text><text x=\"338\" y=\"142\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#166534\">= (x + 2)(4x + 4)</text><text x=\"338\" y=\"176\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\">تحويل مجموع إلى جداء عاملين</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في العبارة $A = (x + 2)(3x - 1) + (x + 2)(x + 5)$، نستخرج العامل المشترك $(x + 2)$ فنكتب $A = (x + 2)[(3x - 1) + (x + 5)]$. ما معامل $x$ بعد تبسيط ما داخل العارضتين؟",
+        "hintAr": "اجمع حدود $x$: $3x + x$.",
+        "expectedInput": "4",
+        "revealAr": "نبسط ما داخل العارضتين: $(3x - 1) + (x + 5) = 3x + x - 1 + 5 = 4x + 4$، فتصبح العبارة $A = (x + 2)(4x + 4)$."
+      },
+      {
+        "promptAr": "لتحليل العبارة $B = (2x - 3)^2 - (2x - 3)$، نكتب الحد الثاني $(2x - 3) \\times 1$ ثم نستخرج العامل المشترك $(2x - 3)$. ما الحد الثابت في العامل الثاني $[(2x - 3) - 1]$ (مع إشارته)؟",
+        "hintAr": "احسب $-3 - 1$.",
+        "expectedInput": "-4",
+        "revealAr": "$B = (2x - 3)(2x - 3) - (2x - 3) \\times 1 = (2x - 3)(2x - 3 - 1) = (2x - 3)(2x - 4)$."
+      },
+      {
+        "promptAr": "لتحليل المساحة $S = (x + 5)^2 - 9$ باستعمال متطابقة فرق مربعين $a^2 - b^2 = (a - b)(a + b)$، نضع $a = x + 5$ و$b = 3$ فنجد $S = (x + 2)(x + 8)$. ما قيمة $S$ من أجل $x = 2$؟",
+        "hintAr": "عوض $x = 2$ في الصيغة المحللة $(x + 2)(x + 8)$، أي $4 \\times 10$.",
+        "expectedInput": "40",
+        "revealAr": "من أجل $x = 2$، نجد $S = (2 + 2)(2 + 8) = 4 \\times 10 = 40\\text{ cm}^2$، وهي تساوي $(2 + 5)^2 - 9 = 49 - 9 = 40$."
+      },
+      {
+        "promptAr": "في التحليل على مرحلتين: نعتبر العبارة $C = (x^2 - 9) + (x - 3)(2x + 1)$. نحلّل أولا $x^2 - 9 = (x - 3)(x + 3)$ ليظهر العامل المشترك $(x - 3)$. بعد إخراجه وجمع $(x + 3) + (2x + 1)$، ما الحد الثابت في العامل الثاني؟",
+        "hintAr": "احسب $3 + 1$.",
+        "expectedInput": "4",
+        "revealAr": "$C = (x - 3)(x + 3) + (x - 3)(2x + 1) = (x - 3)[(x + 3) + (2x + 1)] = (x - 3)(3x + 4)$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**مفهوم التحليل**: تحليل عبارة جبرية هو كتابتها على شكل **جداء** (عكس النشر)، وغالبا إلى جداء عاملين من الدرجة الأولى.",
+      "**التحليل باستخراج العامل المشترك**: نستخرج العامل المكرر $k$ فنكتب $ka + kb = k(a + b)$ و$ka - kb = k(a - b)$. قد يكون العامل المشترك عددا أو حرفا أو قوسا مثل $(2x + 1)$. انتبه لحالة العامل المخفي $1$: $A^2 - A = A(A - 1)$.",
+      "**التحليل بالمتطابقات الشهيرة**: $a^2 + 2ab + b^2 = (a + b)^2$، و$a^2 - 2ab + b^2 = (a - b)^2$، و$a^2 - b^2 = (a - b)(a + b)$ (تحديد الجذرين الموجبين $a$ و$b$ أولا مثل $9x^2 - 16 = (3x)^2 - 4^2$).",
+      "**التحليل المركب على مرحلتين**: عند غياب عامل مشترك ظاهر، نحلل جزءا من العبارة أولا (بمتطابقة شهيرة أو بإخراج عدد) ليظهر العامل المشترك، ثم نستخرجه في المرحلة الثانية.",
+      "**اختيار الصيغة الأنسب للحساب**: للحساب من أجل $x = 0$ نستعمل الصيغة المنشورة؛ ولقيم تعدم أحد الأقواس نستعمل الصيغة المحللة؛ ولقيم جذرية مثل $x = \\sqrt{3}$ نختار الصيغة التي تمنح أبسط تربيع (غالبا المنشورة)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 210\" width=\"480\" height=\"210\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect width=\"480\" height=\"210\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"120\" y=\"12\" width=\"240\" height=\"32\" rx=\"16\" fill=\"#0f172a\"/><text x=\"240\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#ffffff\">منهجية تحليل عبارة جبرية</text><rect x=\"324\" y=\"58\" width=\"142\" height=\"138\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"395\" y=\"82\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1e40af\">1. العامل المشترك</text><text x=\"395\" y=\"112\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">ka ± kb = k(a ± b)</text><text x=\"395\" y=\"142\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1d4ed8\">A² - A = A(A - 1)</text><text x=\"395\" y=\"174\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">احذر الإشارة السالبة قبل القوس</text><rect x=\"169\" y=\"58\" width=\"142\" height=\"138\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"240\" y=\"82\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#166534\">2. المتطابقات الشهيرة</text><text x=\"240\" y=\"112\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">a² - b² = (a-b)(a+b)</text><text x=\"240\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">a² ± 2ab + b² = (a ± b)²</text><text x=\"240\" y=\"174\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">تحقق من معامل المربع مثل 9x²</text><rect x=\"14\" y=\"58\" width=\"142\" height=\"138\" rx=\"8\" fill=\"#faf5ff\" stroke=\"#7c3aed\" stroke-width=\"1.6\"/><text x=\"85\" y=\"82\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#5b21b6\">3. تحليل على مرحلتين</text><text x=\"85\" y=\"112\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">تحليل جزئي أولا</text><text x=\"85\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#6d28d9\">(x² - 4) + (x - 2)(...)</text><text x=\"85\" y=\"174\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">يظهر (x - 2) ثم نستخرجه</text></svg>",
+    "visualCaptionAr": "الخطوات الثلاث المتدرجة لاختيار طريقة تحليل عبارة جبرية",
+    "examples": [
+      {
+        "problemAr": "لتكن العبارة $E = (2x - 1)^2 - 16$. حلّل $E$ إلى جداء عاملين من الدرجة الأولى، ثم احسب $E$ بالصيغة الأنسب من أجل $x = \\frac{5}{2}$ ومن أجل $x = \\sqrt{3}$ (علما أن الصيغة المنشورة هي $E = 4x^2 - 4x - 15$).",
+        "solutionAr": "نستعمل متطابقة فرق مربعين $a^2 - b^2 = (a - b)(a + b)$ بوضع $a = 2x - 1$ و$b = 4$:\n\n$E = ((2x - 1) - 4)((2x - 1) + 4) = (2x - 5)(2x + 3)$.\n\nمن أجل $x = \\frac{5}{2}$ نختار الصيغة المحللة: $E = (2 \\times \\frac{5}{2} - 5)(2 \\times \\frac{5}{2} + 3) = 0 \\times 8 = 0$.\n\nمن أجل $x = \\sqrt{3}$ نختار الصيغة المنشورة: $E = 4(\\sqrt{3})^2 - 4\\sqrt{3} - 15 = 12 - 4\\sqrt{3} - 15 = -3 - 4\\sqrt{3}$."
+      },
+      {
+        "problemAr": "حلّل كلا من العبارتين: $F = (3x + 2)^2 - (3x + 2)(x - 5)$ و$G = (9x^2 - 1) + (3x - 1)(x + 4)$.",
+        "solutionAr": "في $F$ نستخرج العامل المشترك $(3x + 2)$ مع عكس إشارات القوس بعد الطرح:\n\n$F = (3x + 2)[(3x + 2) - (x - 5)] = (3x + 2)(3x + 2 - x + 5) = (3x + 2)(2x + 7)$.\n\nفي $G$ نحلّل أولا $9x^2 - 1 = (3x - 1)(3x + 1)$:\n\n$G = (3x - 1)(3x + 1) + (3x - 1)(x + 4) = (3x - 1)[(3x + 1) + (x + 4)] = (3x - 1)(4x + 5)$."
+      }
+    ],
+    "watchOutAr": "خطأ شائع جدا: عند استخراج عامل مشترك مسبوق بإشارة طرح كما في $(3x + 2)^2 - (3x + 2)(x - 5)$، ينسى البعض عكس إشارة $-5$ داخل العارضتين فيكتبون $3x + 2 - x - 5$ بدل $3x + 2 - x + 5$! كما يجب الانتباه إلى أن $9x^2 - 1 = (3x)^2 - 1^2$ وليس $(9x)^2 - 1$."
+  },
+  "practice": [
+    {
+      "questionAr": "ما هو التحليل الصحيح للعبارة $A = (2x + 5)(x - 1) - (2x + 5)(3x - 4)$ إلى جداء عاملين؟",
+      "options": [
+        "$(2x + 5)(-2x + 3)$",
+        "$(2x + 5)(-2x - 5)$",
+        "$(2x + 5)(4x - 5)$",
+        "$(2x + 5)(2x - 3)$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! استخرجت $(2x + 5)$ وغيرت إشارة $(3x - 4)$ لتصبح $-3x + 4$، فنتج $-2x + 3$.",
+        "نسيت تغيير إشارة $-4$ بعد الطرح! لدينا $-(3x - 4) = -3x + 4$ وبالتالي $-1 + 4 = +3$ وليس $-5$.",
+        "الإشارة بين الحدين هي طرح وليست جمعا، لذا نطرح $(3x - 4)$ من $(x - 1)$.",
+        "طرحتَ بالترتيب المعكوس $(3x - 4) - (x - 1)$ بدل $(x - 1) - (3x - 4)$."
+      ],
+      "explanationAr": "نستخرج العامل المشترك $(2x + 5)$: $A = (2x + 5)[(x - 1) - (3x - 4)] = (2x + 5)(x - 1 - 3x + 4) = (2x + 5)(-2x + 3)$."
+    },
+    {
+      "questionAr": "يمثل الشكل المقابل صفيحة مربعة طول ضلعها $(2x + 3)$ اقتُطع منها مربع طول ضلعه $5$ (حيث $x > 1$). ما هو تحليل المساحة المتبقية $S = (2x + 3)^2 - 25$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 175\" width=\"360\" height=\"175\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect width=\"360\" height=\"175\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.4\"/><rect x=\"54\" y=\"30\" width=\"114\" height=\"114\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><rect x=\"124\" y=\"100\" width=\"44\" height=\"44\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><text x=\"111\" y=\"21\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">2x + 3</text><text x=\"30\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">2x + 3</text><text x=\"146\" y=\"95\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">5</text><text x=\"146\" y=\"126\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">25</text><rect x=\"186\" y=\"42\" width=\"158\" height=\"90\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"265\" y=\"67\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\">المساحة المتبقية:</text><text x=\"265\" y=\"94\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">S = (2x + 3)² - 25</text><text x=\"265\" y=\"118\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">S = ?</text></svg>",
+      "options": [
+        "$(2x - 22)(2x + 28)$",
+        "$(2x - 2)(2x + 8)$",
+        "$(2x - 2)^2$",
+        "$(2x - 2)(2x + 2)$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "استعملتَ $25$ بدل جذره التربيعي $5$! تذكر أن $25 = 5^2$ فالقيمة $b$ هي $5$ وليست $25$.",
+        "ممتاز! $25 = 5^2$، ومنه $((2x + 3) - 5)((2x + 3) + 5) = (2x - 2)(2x + 8)$.",
+        "هذه متطابقة فرق مربعين $a^2 - b^2 = (a - b)(a + b)$ وليست مربع فرق $(a - b)^2$.",
+        "في العامل الثاني نجمع $3 + 5 = +8$ وليس $-3 + 5 = +2$."
+      ],
+      "explanationAr": "نكتب $S = (2x + 3)^2 - 5^2$ ونطبق متطابقة فرق مربعين: $S = ((2x + 3) - 5)((2x + 3) + 5) = (2x - 2)(2x + 8)$."
+    },
+    {
+      "questionAr": "نعتبر العبارة $B = (4x^2 - 1) + (2x - 1)(x + 3)$. ما هو تحليل $B$ إلى جداء عاملين من الدرجة الأولى؟",
+      "options": [
+        "$(2x - 1)(3x + 2)$",
+        "$(4x - 1)(3x + 4)$",
+        "$(2x + 1)(3x + 4)$",
+        "$(2x - 1)(3x + 4)$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "تحقق من جمع الثوابت داخل العارضتين: لدينا $+1 + 3 = +4$ وليس $+2$.",
+        "لاحظ أن $4x^2 - 1 = (2x)^2 - 1^2 = (2x - 1)(2x + 1)$ وليس $(4x - 1)(4x + 1)$.",
+        "العامل المشترك الذي يظهر في الحدين بعد تحليل $4x^2 - 1$ هو $(2x - 1)$ وليس $(2x + 1)$.",
+        "صحيح تماما! حللتَ $4x^2 - 1$ أولا ثم استخرجتَ $(2x - 1)$ وجمعتَ $(2x + 1) + (x + 3) = 3x + 4$."
+      ],
+      "explanationAr": "في المرحلة الأولى نحلّل $4x^2 - 1 = (2x)^2 - 1^2 = (2x - 1)(2x + 1)$. في المرحلة الثانية نستخرج $(2x - 1)$: $B = (2x - 1)[(2x + 1) + (x + 3)] = (2x - 1)(3x + 4)$."
+    }
+  ]
+}

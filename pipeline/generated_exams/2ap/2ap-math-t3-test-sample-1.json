@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "2ap",
+    "yearName": "السنة الثانية ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "احسب الجداء التالي مستعملاً الطريقة المناسبة (الضرب في 10 أو التفكيك النموذجي):",
+      "content": [
+        {
+          "type": "text",
+          "content": "احسب الجداء: $28 times 10 = \"...........\"$",
+          "answer": "الجداء هو: $28 times 10 = 280$",
+          "mark": "2"
+        },
+        {
+          "type": "text",
+          "content": "أكمل بالعدد المناسب: $\"...........\" times 10 = 500$",
+          "answer": "العدد المناسب هو: $50 times 10 = 500$",
+          "mark": "1"
+        }
+      ],
+      "id": "ex_test_1_2ap_t3_mult_tens_2digit",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "تأمّل المرصوفة ثم أجب عن السؤالين حول التناظر والمجسمات (المكعب والبلاطة القائمة):",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.15fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) حدّد موقع الخانة المناظرة للخانة البرتقالية (العمود 2، السطر D) بالنسبة لمحور التناظر الأزرق: ..............",
+              "answer": "الموقع المناظر هو: العمود 5، السطر D",
+              "mark": "1"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/2ap_t3_sym_easy_s687102.svg",
+              "caption": "المرصوفة ومحور التناظر"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "المجسم",
+            "عدد الوجوه",
+            "عدد الأحرف",
+            "عدد الرؤوس",
+            "شكل الوجوه"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "المكعب",
+              {
+                "content": "........",
+                "answer": "$6$",
+                "mark": "0.5"
+              },
+              "$12$",
+              {
+                "content": "........",
+                "answer": "$8$",
+                "mark": "0.5"
+              },
+              "مربع"
+            ],
+            [
+              "متوازي المستطيلات",
+              "$6$",
+              {
+                "content": "........",
+                "answer": "$12$",
+                "mark": "0.5"
+              },
+              "$8$",
+              {
+                "content": "........",
+                "answer": "مستطيل",
+                "mark": "0.5"
+              }
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        }
+      ],
+      "id": "ex_test_2_2ap_t3_grid_symmetry_solids",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "أثناء التسوق في متجر الحي، تملك مريم مبلغ $650$ دج (DA). اشترت $4$ علب بسكويت بثمن $30$ دج للواحدة، وقارورة ماء كبيرة بثمن $100$ دج.",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب ثمن علب البسكويت ثم احسب المبلغ الإجمالي للمشتريات.",
+          "answer": "ثمن علب البسكويت: $30 times 4 = 120$ دج، والمجموع: $120 + 100 = 220$ دج.",
+          "mark": "2"
+        },
+        {
+          "type": "text",
+          "content": "2) كم ديناراً بقي مع مريم؟",
+          "answer": "الباقي مع مريم: $650 - 220 = 430$ دج.",
+          "mark": "2"
+        }
+      ],
+      "id": "ex_integration_2ap_t3_integration_purchase_change"
+    }
+  ]
+}

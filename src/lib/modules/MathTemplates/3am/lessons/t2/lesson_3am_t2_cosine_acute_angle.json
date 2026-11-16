@@ -1,0 +1,130 @@
+{
+  "id": "lesson_3am_t2_cosine_acute_angle",
+  "slug": "3am-t2-cosine-acute-angle",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t2",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: المثلث القائم والدائرة وخاصية فيثاغورس وجيب تمام زاوية حادة",
+  "order": 5,
+  "titleAr": "جيب تمام زاوية حادة في مثلث قائم (cos) وحساب الأطوال وأقياس الزوايا",
+  "objectives": [
+    "تعريف جيب تمام زاوية حادة في مثلث قائم ($\\cos$ يساوي طول الضلع المجاور على طول الوتر) وإدراك أن قيمته محصورة بين $0$ و $1$ ولا تتعلق إلا بانفراج الزاوية",
+    "تعيين القيمة المضبوطة أو القيمة المقربة لجيب تمام زاوية حادة أو تحديد قيس زاوية بمعرفة جيب التمام لها باستعمال الآلة الحاسبة ($\\cos$ و $\\cos^{-1}$)",
+    "حساب أطوال أضلاع وأقياس زوايا في مثلثات قائمة وأشكال مركبة بتوظيف جيب تمام زاوية حادة فقط"
+  ],
+  "keywordsAr": [
+    "جيب تمام زاوية حادة",
+    "cos",
+    "الضلع المجاور",
+    "الوتر",
+    "حساب أطوال وزوايا",
+    "الآلة الحاسبة العلمية"
+  ],
+  "discover": {
+    "scenarioAr": "رسم تلميذ مثلثين قائمين لهما نفس قيس الزاوية الحادة $\\widehat{B} = \\widehat{B'}$ (حوالي $53^\\circ$): في المثلث الصغير $ABC$ القائم في $A$ لدينا $AB = 3\\text{ cm}$ و $BC = 5\\text{ cm}$، وفي المثلث الكبير $A'B'C'$ القائم في $A'$ لدينا $A'B' = 6\\text{ cm}$ و $B'C' = 10\\text{ cm}$. لنكتشف خاصية النسبة بين طول الضلع المجاور للزاوية الحادة وطول الوتر، المسماة **جيب تمام زاوية حادة** ($\\cos$).",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 205\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"205\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"12\" y=\"12\" width=\"202\" height=\"181\" rx=\"8\" fill=\"#ffffff\" stroke=\"#bfdbfe\" stroke-width=\"1.4\"/><text x=\"113\" y=\"31\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">المثلث الأول ABC (قائم في A)</text><polygon points=\"146,148 74,148 146,52\" fill=\"#eff6ff\" stroke=\"#0f172a\" stroke-width=\"2\"/><polyline points=\"136,148 136,138 146,138\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><path d=\"M 96 148 A 22 22 0 0 0 87.2 130.4\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"102\" y=\"137\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#dc2626\">B</text><text x=\"151\" y=\"156\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">A</text><text x=\"59\" y=\"156\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\">B</text><text x=\"151\" y=\"54\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">C</text><text x=\"110\" y=\"166\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#16a34a\">AB = 3 cm</text><text x=\"92\" y=\"96\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2563eb\">BC = 5 cm</text><text x=\"113\" y=\"184\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"800\" fill=\"#dc2626\">AB / BC = 3 / 5 = 0.6</text><rect x=\"224\" y=\"12\" width=\"244\" height=\"181\" rx=\"8\" fill=\"#ffffff\" stroke=\"#bbf7d0\" stroke-width=\"1.4\"/><text x=\"346\" y=\"31\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">المثلث الثاني A'B'C' (نفس الزاوية)</text><polygon points=\"400,152 292,152 400,44\" fill=\"#f0fdf4\" stroke=\"#0f172a\" stroke-width=\"2\"/><polyline points=\"390,152 390,142 400,142\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><path d=\"M 316 152 A 24 24 0 0 0 309 135\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"406\" y=\"158\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">A'</text><text x=\"272\" y=\"158\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\">B'</text><text x=\"406\" y=\"48\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">C'</text><text x=\"346\" y=\"169\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#16a34a\">A'B' = 6 cm</text><text x=\"316\" y=\"88\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2563eb\">B'C' = 10 cm</text><text x=\"346\" y=\"185\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"800\" fill=\"#15803d\">A'B' / B'C' = 6 / 10 = 0.6</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في المثلث $ABC$ القائم في $A$، احسب النسبة $\\frac{AB}{BC}$ (طول الضلع المجاور للزاوية $\\widehat{B}$ قسمة طول الوتر) عندما $AB = 3\\text{ cm}$ و $BC = 5\\text{ cm}$ على شكل عدد عشري.",
+        "hintAr": "اقسم $3$ على $5$.",
+        "expectedInput": "0.6",
+        "revealAr": "$\\frac{AB}{BC} = \\frac{3}{5} = 0.6$. نسمي هذه النسبة **جيب تمام الزاوية الحادة $\\widehat{B}$** ونكتب $\\cos \\widehat{B} = 0.6$."
+      },
+      {
+        "promptAr": "في المثلث الأكبر $A'B'C'$ القائم في $A'$ والذي له نفس الزاوية الحادة $\\widehat{B'} = \\widehat{B}$، لدينا $A'B' = 6\\text{ cm}$ و $B'C' = 10\\text{ cm}$. ما قيمة $\\cos \\widehat{B'} = \\frac{A'B'}{B'C'}$؟",
+        "hintAr": "اقسم $6$ على $10$.",
+        "expectedInput": "0.6",
+        "revealAr": "نجد $\\frac{6}{10} = 0.6$ أيضاً! نستنتج أن جيب تمام زاوية حادة **لا يتعلق بأطوال أضلاع المثلث**، بل بانفراج الزاوية فقط."
+      },
+      {
+        "promptAr": "في مثلث $EFG$ قائم في $E$، لدينا $\\cos \\widehat{F} = 0.5$ وطول الوتر $FG = 14\\text{ cm}$. احسب طول الضلع المجاور $EF$ بالسنتيمتر.",
+        "hintAr": "بما أن $\\cos \\widehat{F} = \\frac{EF}{FG}$، فإن $EF = FG \\times \\cos \\widehat{F}$.",
+        "expectedInput": "7",
+        "revealAr": "نضرب طول الوتر في جيب التمام: $EF = 14 \\times 0.5 = 7\\text{ cm}$."
+      },
+      {
+        "promptAr": "في مثلث $IJK$ قائم في $I$، طول الضلع المجاور للزاوية $\\widehat{J}$ هو $IJ = 4\\text{ cm}$ وقيسها $\\widehat{J} = 60^\\circ$ (حيث $\\cos 60^\\circ = 0.5$). ما طول الوتر $JK$ بالسنتيمتر؟",
+        "hintAr": "من العلاقة $\\cos \\widehat{J} = \\frac{IJ}{JK}$ نجد $JK = \\frac{IJ}{\\cos \\widehat{J}}$.",
+        "expectedInput": "8",
+        "revealAr": "نقسم طول الضلع المجاور على جيب التمام: $JK = \\frac{4}{0.5} = 8\\text{ cm}$ (نلاحظ أن الوتر أطول من الضلع القائم $IJ$)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**تعريف جيب تمام زاوية حادة**: في مثلث $ABC$ قائم في $A$، جيب تمام الزاوية الحادة $\\widehat{B}$ (يُرمز له $\\cos \\widehat{B}$) يساوي حاصل قسمة طول الضلع المجاور للزاوية $\\widehat{B}$ على طول الوتر: $\\cos \\widehat{B} = \\frac{AB}{BC}$، وبالمثل $\\cos \\widehat{C} = \\frac{AC}{BC}$.",
+      "**خصائص أساسية**: جيب تمام أي زاوية حادة هو عدد دون وحدة محصور دوماً بين $0$ و $1$ ($0 < \\cos \\alpha < 1$) لأن الضلع المجاور أصغر من الوتر، وقيمته لا تتعلق إلا بقيس الزاوية (مثلاً $\\cos 60^\\circ = 0.5$).",
+      "**حساب أطوال باستعمال $\\cos$**: في المثلث $ABC$ القائم في $A$: لحساب الضلع المجاور نستعمل الضرب $AB = BC \\times \\cos \\widehat{B}$، ولحساب الوتر نستعمل القسمة $BC = \\frac{AB}{\\cos \\widehat{B}}$.",
+      "**توظيف الآلة الحاسبة العلمية**: نتأكد أولاً أن الآلة مضبوطة على نظام **الدرجات (`DEG`)**. لحساب $\\cos$ زاوية نضغط `cos` ثم قيس الزاوية، ولتعيين قيس زاوية علم جيب تمامها نستعمل اللمسة العكسية $\\cos^{-1}$ (أو `Shift` ثم `cos`)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 195\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"195\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"14\" y=\"14\" width=\"232\" height=\"167\" rx=\"8\" fill=\"#ffffff\" stroke=\"#bfdbfe\" stroke-width=\"1.4\"/><polygon points=\"56,144 206,144 206,48\" fill=\"#eff6ff\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"56\" y1=\"144\" x2=\"206\" y2=\"144\" stroke=\"#16a34a\" stroke-width=\"3.2\"/><line x1=\"56\" y1=\"144\" x2=\"206\" y2=\"48\" stroke=\"#2563eb\" stroke-width=\"3\"/><polyline points=\"196,144 196,134 206,134\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><path d=\"M 86 144 A 30 30 0 0 0 81.3 127.8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"42\" y=\"152\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#dc2626\">B</text><text x=\"212\" y=\"152\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">A</text><text x=\"212\" y=\"52\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">C</text><text x=\"131\" y=\"166\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#16a34a\" direction=\"rtl\" unicode-bidi=\"plaintext\">الضلع المجاور [AB]</text><text x=\"115\" y=\"84\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\" direction=\"rtl\" unicode-bidi=\"plaintext\">الوتر [BC]</text><rect x=\"258\" y=\"14\" width=\"208\" height=\"167\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"362\" y=\"38\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">العلاقات الثلاث للزاوية B</text><text x=\"362\" y=\"68\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"800\" fill=\"#0f172a\">cos(B) = AB / BC</text><text x=\"362\" y=\"96\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13.5\" font-weight=\"700\" fill=\"#15803d\">AB = BC × cos(B)</text><text x=\"362\" y=\"124\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13.5\" font-weight=\"700\" fill=\"#1d4ed8\">BC = AB / cos(B)</text><text x=\"362\" y=\"158\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"800\" fill=\"#dc2626\">0 &lt; cos(B) &lt; 1</text></svg>",
+    "visualCaptionAr": "تعيين الوتر والضلع المجاور للزاوية الحادة $\\widehat{B}$ في المثلث القائم والعلاقات المستعملة لحساب الأطوال",
+    "examples": [
+      {
+        "problemAr": "مثلث $MNP$ قائم في $N$ حيث $MN = 9\\text{ cm}$ و $\\widehat{M} = 37^\\circ$ (نأخذ $\\cos 37^\\circ \\approx 0.8$). احسب طول الوتر $MP$.",
+        "solutionAr": "في المثلث $MNP$ القائم في $N$، الضلع المجاور للزاوية $\\widehat{M}$ هو $[MN]$ والوتر هو $[MP]$.\n\nإذن $\\cos \\widehat{M} = \\frac{MN}{MP}$، ومنه $MP = \\frac{MN}{\\cos \\widehat{M}} \\approx \\frac{9}{0.8} = 11.25\\text{ cm}$."
+      },
+      {
+        "problemAr": "مثلث $EFG$ قائم في $E$ حيث $EF = 4.5\\text{ cm}$ و $FG = 9\\text{ cm}$. احسب $\\cos \\widehat{F}$ ثم استنتج قيس الزاوية $\\widehat{F}$ وقيس الزاوية $\\widehat{G}$.",
+        "solutionAr": "الضلع المجاور للزاوية $\\widehat{F}$ هو $[EF]$ والوتر هو $[FG]$، إذن $\\cos \\widehat{F} = \\frac{EF}{FG} = \\frac{4.5}{9} = 0.5$.\n\nباستعمال اللمسة $\\cos^{-1}$ في الآلة الحاسبة نجد $\\widehat{F} = 60^\\circ$.\n\nوبما أن الزاويتين الحادتين في المثلث القائم متتامتان، فإن $\\widehat{G} = 90^\\circ - 60^\\circ = 30^\\circ$."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: الضرب بدل القسمة عند حساب الوتر! تذكر أن الوتر هو **أطول ضلع** في المثلث القائم؛ فإذا حصلت على وتر أصغر من الضلع القائم فاعلم أنك ضربت في $\\cos$ بدل القسمة عليه. وتأكد أيضاً من وضع الدرجات (`DEG`) في الآلة الحاسبة."
+  },
+  "practice": [
+    {
+      "questionAr": "في المثلث $KLM$ القائم في $L$ المقابل، لدينا $KL = 8\\text{ cm}$ و $LM = 6\\text{ cm}$ و $KM = 10\\text{ cm}$. ما قيمة $\\cos \\widehat{K}$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 175\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"300\" height=\"175\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><polygon points=\"85,134 205,134 85,44\" fill=\"#eff6ff\" stroke=\"#0f172a\" stroke-width=\"2\"/><polyline points=\"85,122 97,122 97,134\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><path d=\"M 178 134 A 27 27 0 0 0 183.4 117.8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"72\" y=\"144\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">L</text><text x=\"212\" y=\"144\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\">K</text><text x=\"72\" y=\"46\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">M</text><text x=\"145\" y=\"154\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#16a34a\">8 cm</text><text x=\"58\" y=\"92\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#64748b\">6 cm</text><text x=\"162\" y=\"82\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#2563eb\">10 cm</text></svg>",
+      "options": [
+        "$0.6$",
+        "$0.8$",
+        "$1.25$",
+        "$0.75$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$0.6 = \\frac{6}{10}$ استعمل الضلع المقابل $[LM]$ بدل الضلع المجاور $[KL]$ للزاوية $\\widehat{K}$.",
+        "ممتاز! الضلع المجاور للزاوية $\\widehat{K}$ هو $[KL] = 8\\text{ cm}$ والوتر هو $[KM] = 10\\text{ cm}$، إذن $\\cos \\widehat{K} = \\frac{8}{10} = 0.8$.",
+        "$1.25 = \\frac{10}{8}$ قلبَ البسط والمقام! تذكر أن جيب تمام زاوية حادة دائماً أصغر من $1$.",
+        "$0.75 = \\frac{6}{8}$ قسم ضلعي الزاوية القائمة على بعضهما دون استعمال الوتر $[KM]$."
+      ],
+      "explanationAr": "المثلث $KLM$ قائم في $L$، فوتره هو $[KM] = 10\\text{ cm}$، والضلع المجاور للزاوية $\\widehat{K}$ هو $[KL] = 8\\text{ cm}$. ومنه $\\cos \\widehat{K} = \\frac{KL}{KM} = \\frac{8}{10} = 0.8$."
+    },
+    {
+      "questionAr": "في المثلث $ABC$ القائم في $A$ المقابل، لدينا $AB = 12\\text{ cm}$ و $\\widehat{B} = 37^\\circ$ (نأخذ $\\cos 37^\\circ = 0.8$). ما طول الوتر $BC$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 175\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"300\" height=\"175\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><polygon points=\"230,138 70,138 230,34\" fill=\"#f0fdf4\" stroke=\"#0f172a\" stroke-width=\"2\"/><polyline points=\"218,138 218,126 230,126\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><path d=\"M 102 138 A 32 32 0 0 0 96.8 120.5\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"108\" y=\"128\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#dc2626\">37°</text><text x=\"236\" y=\"145\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">A</text><text x=\"55\" y=\"145\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#dc2626\">B</text><text x=\"236\" y=\"38\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">C</text><text x=\"150\" y=\"158\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#16a34a\">12 cm</text><text x=\"132\" y=\"76\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"800\" fill=\"#2563eb\">BC = ?</text></svg>",
+      "options": [
+        "$9.6\\text{ cm}$",
+        "$12.8\\text{ cm}$",
+        "$15\\text{ cm}$",
+        "$16\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "لقد ضربت $12 \\times 0.8 = 9.6\\text{ cm}$! لا يمكن أن يكون الوتر $BC$ أقصر من الضلع القائم $AB = 12\\text{ cm}$.",
+        "انتبه: العلاقة هي $BC = \\frac{12}{0.8}$ وليست $12 + 0.8$.",
+        "أحسنت! من العلاقة $\\cos 37^\\circ = \\frac{AB}{BC}$ نجد $BC = \\frac{12}{0.8} = 15\\text{ cm}$.",
+        "تحقق من القسمة: $\\frac{12}{0.8} = \\frac{120}{8} = 15$ وليس $16$."
+      ],
+      "explanationAr": "لدينا $\\cos \\widehat{B} = \\frac{AB}{BC}$، أي $0.8 = \\frac{12}{BC}$. ومنه $BC = \\frac{12}{0.8} = 15\\text{ cm}$."
+    },
+    {
+      "questionAr": "مثلث $PQR$ قائم في $P$ حيث $PQ = 7\\text{ cm}$ وطول الوتر $QR = 14\\text{ cm}$. ما قيس كل من الزاويتين الحادتين $\\widehat{Q}$ و $\\widehat{R}$؟",
+      "options": [
+        "$\\widehat{Q} = 30^\\circ$ و $\\widehat{R} = 60^\\circ$",
+        "$\\widehat{Q} = 45^\\circ$ و $\\widehat{R} = 45^\\circ$",
+        "$\\widehat{Q} = 60^\\circ$ و $\\widehat{R} = 60^\\circ$",
+        "$\\widehat{Q} = 60^\\circ$ و $\\widehat{R} = 30^\\circ$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "عكستَ القيسين! الضلع $PQ = 7\\text{ cm}$ مجاور للزاوية $\\widehat{Q}$ إذن $\\cos \\widehat{Q} = 0.5$ ومنه $\\widehat{Q} = 60^\\circ$.",
+        "يكون القيس $45^\\circ$ فقط عندما يتساوى الضلعان القائمان ($PQ = PR$)، وهنا $\\cos 45^\\circ \\neq 0.5$.",
+        "مجموع قيسي الزاويتين الحادتين في مثلث قائم هو $90^\\circ$ وليس $120^\\circ$.",
+        "ممتاز! $\\cos \\widehat{Q} = \\frac{7}{14} = 0.5$ يعطي $\\widehat{Q} = 60^\\circ$، وبالتالي $\\widehat{R} = 90^\\circ - 60^\\circ = 30^\\circ$."
+      ],
+      "explanationAr": "الضلع $[PQ]$ مجاور للزاوية $\\widehat{Q}$ والوتر هو $[QR]$، إذن $\\cos \\widehat{Q} = \\frac{PQ}{QR} = \\frac{7}{14} = 0.5$. باستعمال $\\cos^{-1}(0.5)$ نجد $\\widehat{Q} = 60^\\circ$، ومنه $\\widehat{R} = 90^\\circ - 60^\\circ = 30^\\circ$."
+    }
+  ]
+}

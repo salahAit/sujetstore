@@ -1,0 +1,128 @@
+{
+  "id": "lesson_4am_t3_integration",
+  "slug": "4am-t3-integration",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t3",
+  "sequenceId": "seq9",
+  "sequenceTitleAr": "المقطع التاسع: الإحصاء وإدماج الفصل الثالث والتحضير لشهادة التعليم المتوسط",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الثالث والتحضير الشامل لشهادة التعليم المتوسط (BEM)",
+  "objectives": [
+    "تجنيد جمل المعادلات والدوال الخطية والتآلفية والنسب المئوية في حل مسائل التمثيل البياني ومقارنة العروض",
+    "توظيف الدوران والزوايا والمجسمات والإحصاء بتكامل مع مكتسبات الفصلين الأول والثاني في تمارين شاملة",
+    "تحرير حل مواضيع شاملة من نمط شهادة التعليم المتوسط (12 نقطة تقويم موارد + 8 نقاط وضعية إدماجية) باحترام شبكة المعايير الأربعة"
+  ],
+  "keywordsAr": [
+    "وضعية إدماجية",
+    "شهادة التعليم المتوسط BEM",
+    "حصيلة سنوية",
+    "تجنيد الموارد"
+  ],
+  "discover": {
+    "scenarioAr": "في مشروع حديقة علمية، تبيع الحديقة تذكرتين: للكبار بسعر $x$ وللصغار بسعر $y$ ، حيث دفعت عائلة $1150\\text{ DA}$ لـ $2$ كبار و $3$ صغار، ودفعت أخرى $1550\\text{ DA}$ لـ $4$ كبار وصغير واحد. كما تقترح صيغتين للزيارة الشهرية ($z$ زيارة): الصيغة (أ) $f(z) = 200z$ والصيغة (ب) $g(z) = 100z + 800$ ، وتضم الحديقة نافورة كروية نصف قطرها $R = 3\\text{ m}$ . كيف نجنّد موارد الفصل الثالث لحل هذه الوضعية؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 245\" width=\"580\" height=\"245\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"229\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">وضعية إدماجية شاملة: مقارنة العروض، جملة التذاكر، وحجم الكرة</text><rect x=\"20\" y=\"44\" width=\"292\" height=\"180\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"166\" y=\"62\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">تمثيل تسعيرتي الزيارة f(z) و g(z)</text><line x1=\"56\" y1=\"200\" x2=\"294\" y2=\"200\" stroke=\"#334155\" stroke-width=\"1.6\"/><polygon points=\"294,200 287,196 287,204\" fill=\"#334155\"/><line x1=\"65\" y1=\"208\" x2=\"65\" y2=\"70\" stroke=\"#334155\" stroke-width=\"1.6\"/><polygon points=\"65,70 61,77 69,77\" fill=\"#334155\"/><text x=\"55\" y=\"212\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><text x=\"300\" y=\"204\" font-size=\"10\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">z</text><text x=\"137\" y=\"214\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"#475569\" direction=\"ltr\">4</text><text x=\"209\" y=\"214\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">8</text><text x=\"281\" y=\"214\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"#475569\" direction=\"ltr\">12</text><text x=\"59\" y=\"152\" text-anchor=\"end\" font-size=\"9\" fill=\"#059669\" direction=\"ltr\">800</text><text x=\"59\" y=\"100\" text-anchor=\"end\" font-size=\"9\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">1600</text><line x1=\"209\" y1=\"96\" x2=\"209\" y2=\"200\" stroke=\"#dc2626\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"65\" y1=\"96\" x2=\"209\" y2=\"96\" stroke=\"#dc2626\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"65\" y1=\"200\" x2=\"245\" y2=\"70\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"65\" y1=\"148\" x2=\"281\" y2=\"70\" stroke=\"#059669\" stroke-width=\"2.2\"/><circle cx=\"209\" cy=\"96\" r=\"4\" fill=\"#dc2626\"/><text x=\"215\" y=\"114\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">I(8 ; 1600)</text><text x=\"184\" y=\"76\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">f(z)=200z</text><text x=\"246\" y=\"96\" font-size=\"10\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">g(z)</text><rect x=\"326\" y=\"44\" width=\"234\" height=\"86\" rx=\"10\" fill=\"#ffffff\" stroke=\"#d97706\" stroke-width=\"1.4\"/><text x=\"443\" y=\"65\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">جملة معادلتين للتذاكر</text><text x=\"443\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">2x + 3y = 1150</text><text x=\"443\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">4x + y = 1550</text><rect x=\"326\" y=\"140\" width=\"234\" height=\"84\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.4\"/><circle cx=\"376\" cy=\"182\" r=\"28\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><path d=\"M 348 182 A 28 8 0 0 0 404 182\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.2\"/><line x1=\"376\" y1=\"182\" x2=\"404\" y2=\"182\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"390\" y=\"177\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">3 m</text><text x=\"482\" y=\"174\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">النافورة الكروية</text><text x=\"482\" y=\"198\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">V = (4/3)πR³</text></svg>",
+    "steps": [
+      {
+        "promptAr": "حلّ جملة التذاكر $\\begin{cases} 2x + 3y = 1150 \\\\ 4x + y = 1550 \\end{cases}$ لإيجاد ثمن تذكرة الكبار $x$ بالدينار.",
+        "hintAr": "اضرب المعادلة الأولى في $2$ لتصبح $4x + 6y = 2300$ ثم اطرح الثانية فتجد $5y = 750$ أي $y = 150$ ، ومنه احسب $x$ .",
+        "expectedInput": "350",
+        "revealAr": "نجد $y = 150\\text{ DA}$ ، وبالتعويض في $4x + 150 = 1550 \\implies 4x = 1400 \\implies x = 350\\text{ DA}$ ."
+      },
+      {
+        "promptAr": "من البيان أو بحل المعادلة $200z = 100z + 800$ ، ما هو عدد الزيارات $z$ الذي يتساوى عنده مبلغ الصيغتين (أ) و (ب)؟",
+        "hintAr": "اطرح $100z$ من الطرفين: $100z = 800$ .",
+        "expectedInput": "8",
+        "revealAr": "يتساوى العرضان عند $z = 8$ زيارات بمبلغ $1600\\text{ DA}$ (نقطة التقاطع $I(8 ; 1600)$ )."
+      },
+      {
+        "promptAr": "احسب القيمة المضبوطة لحجم الكرة التي نصف قطرها $R = 3\\text{ m}$ باستعمال $V = \\frac{4}{3}\\pi R^3$ . أدخل العدد المضروب في $\\pi$ فقط.",
+        "hintAr": "احسب $\\frac{4}{3} \\times 3^3 = \\frac{4}{3} \\times 27$ .",
+        "expectedInput": "36",
+        "revealAr": "$V = \\frac{4}{3} \\pi \\times 27 = 36\\pi\\text{ m}^3$ (أي حوالي $113.04\\text{ m}^3$ بأخذ $\\pi \\approx 3.14$ )."
+      },
+      {
+        "promptAr": "لـ $12$ زيارة في الشهر ($z = 12$)، كم سيدفع الزائر بالدينار إذا اختار الصيغة **الأوفر**؟",
+        "hintAr": "من أجل $z > 8$ ، الصيغة (ب) $g(z) = 100z + 800$ هي الأوفر. احسب $g(12)$ .",
+        "expectedInput": "2000",
+        "revealAr": "$g(12) = 100(12) + 800 = 2000\\text{ DA}$ ، وهو أوفر من الصيغة (أ) التي تكلف $f(12) = 200(12) = 2400\\text{ DA}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**هيكلة موضوع شهادة التعليم المتوسط (BEM)**: يتكون الامتحان من **الجزء الأول (12 نقطة)** فيه $4$ تمارين مستقلة (حساب عددي وحرفي، دوال وإحصاء، هندسة مستوية وفضائية)، و**الجزء الثاني: الوضعية الإدماجية (8 نقاط)** قليلة التوجيه.",
+      "**شبكة معايير تصحيح الوضعية الإدماجية (8 نقاط)**: 1) **الوجاهة / التفسير السليم** ($3$ ن): اختيار الأدوات الرياضية المناسبة؛ 2) **الاستعمال السليم لأدوات المادة** ($3$ ن): صحة الحسابات والإنشاءات والبراهين؛ 3) **الانسجام** ($1$ ن): تسلسل الخطوات ومعقولية النتائج والوحدات؛ 4) **الإتقان** ($1$ ن): تنظيم الورقة والتصريح بالنتائج.",
+      "**تكامل جمل المعادلات والدوال**: كل جملة $\\begin{cases} y = a_1 x + b_1 \\\\ y = a_2 x + b_2 \\end{cases}$ تُحل جبرياً (بالتعويض أو الجمع) وبيانياً بنقطة تقاطع مستقيمين؛ والنسب المئوية تُنمذج بدوال خطية $x \\mapsto \\left(1 \\pm \\frac{t}{100}\\right)x$ .",
+      "**تكامل الهندسة والإحصاء**: استغل خواص الدوران والزاويتين المركزية والمحيطية مع فيثاغورس والنسب المثلثية، ومقاطع الكرة والمجسمات مع التكبير/التصغير ($k, k^2, k^3$)، ورتّب دوماً السلسلة الإحصائية قبل حساب الوسيط."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\" width=\"600\" height=\"245\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"229\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">خريطة موارد الفصل الثالث والتحضير لشهادة التعليم المتوسط (BEM)</text><rect x=\"20\" y=\"44\" width=\"272\" height=\"86\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"156\" y=\"66\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">1. الجمل والدوال والعروض</text><text x=\"156\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\" direction=\"rtl\">التعويض والجمع ↔ نقطة تقاطع مستقيمين</text><text x=\"156\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">f(x) = ax   |   g(x) = ax + b</text><rect x=\"308\" y=\"44\" width=\"272\" height=\"86\" rx=\"10\" fill=\"#ecfdf5\" stroke=\"#059669\" stroke-width=\"1.4\"/><text x=\"444\" y=\"66\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">2. الدوران، الزوايا والمضلعات</text><text x=\"444\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\" direction=\"rtl\">الدوران يحفظ الأطوال والأقياس والتوازي</text><text x=\"444\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">∠مركزية = 2×∠محيطية | 360° ÷ n</text><rect x=\"20\" y=\"140\" width=\"272\" height=\"86\" rx=\"10\" fill=\"#fefce8\" stroke=\"#d97706\" stroke-width=\"1.4\"/><text x=\"156\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">3. الكرة، المقاطع والتكبير</text><text x=\"156\" y=\"184\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\" direction=\"rtl\">فيثاغورس في مقطع الكرة: r² = R² - d²</text><text x=\"156\" y=\"206\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">A=4πR² | V=(4/3)πR³ | (k, k², k³)</text><rect x=\"308\" y=\"140\" width=\"272\" height=\"86\" rx=\"10\" fill=\"#fdf2f8\" stroke=\"#db2777\" stroke-width=\"1.4\"/><text x=\"444\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#9d174d\" direction=\"rtl\">4. الإحصاء ومعايير BEM (12 + 8)</text><text x=\"444\" y=\"184\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\" direction=\"rtl\">التكرارات المجمعة، المتوسط، الوسيط، المدى</text><text x=\"444\" y=\"206\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#9d174d\" direction=\"rtl\">الوجاهة + الاستعمال السليم + الانسجام + الإتقان</text></svg>",
+    "visualCaptionAr": "الأركان الأربعة لمحاور الفصل الثالث وهيكلة تقويم شهادة التعليم المتوسط",
+    "examples": [
+      {
+        "problemAr": "$ABCDEF$ سداسي منتظم مرسوم داخل دائرة مركزها $O$ ونصف قطرها $R = 4\\text{ cm}$ . احسب قيس $\\widehat{AOB}$ ثم استنتج $\\widehat{ADB}$ ، وبعدها احسب القيمة المضبوطة لمساحة المثلث $ABD$ .",
+        "solutionAr": "1. $\\widehat{AOB} = \\frac{360^\\circ}{6} = 60^\\circ$ ، وبما أن $\\widehat{ADB}$ محيطية تحصر نفس القوس $AB$ فإن $\\widehat{ADB} = 30^\\circ$ .\n\n2. $[AD]$ قطر الدائرة ($AD = 8\\text{ cm}$)، إذن المثلث $ABD$ قائم في $B$ حيث $AB = R = 4\\text{ cm}$ .\n\n3. بمبرهنة فيثاغورس: $BD = \\sqrt{8^2 - 4^2} = \\sqrt{48} = 4\\sqrt{3}\\text{ cm}$ . ومنه المساحة $S = \\frac{4 \\times 4\\sqrt{3}}{2} = 8\\sqrt{3}\\text{ cm}^2$ ."
+      },
+      {
+        "problemAr": "في قسم يضم $30$ تلميذاً، تحصل $18$ تلميذاً على معدل يساوي أو يفوق $12$ . وكانت علامات الخمسة الأوائل في القسم: $14$ ، $16$ ، $16$ ، $18$ ، $19$ . ما النسبة المئوية للناجحين بمعدل $\\ge 12$ ، وما وسيط ومدى علامات الأوائل الخمسة؟",
+        "solutionAr": "1. النسبة المئوية: $\\frac{18}{30} \\times 100 = 60\\%$ .\n\n2. علامات الأوائل الخمسة مرتبة، وبما أن عددها $5$ فردي فالوسيط هو القيمة الثالثة $M = 16$ ، والمدى هو $e = 19 - 14 = 5$ ."
+      }
+    ],
+    "watchOutAr": "في امتحان شهادة التعليم المتوسط (BEM): لا تُقرّب النتائج الوسيطة مثل $\\pi$ أو $\\sqrt{3}$ عندما يُطلب منك **القيمة المضبوطة**! واكتب دائماً اسم الخاصية المستعملة في البرهان الهندسي (الدوران، الزاوية المحيطية والمركزية، فيثاغورس، طالس) ولا تنسَ وحدة القياس في الجواب النهائي."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل المستقيمين $(d_1)$ و $(d_2)$ المرسومين في المعلم المتعامد والمتجانس المقابل، حيث يتقاطعان في $I(2 ; 2)$ . أي جملة معادلتين يمثل حلّها البياني هذا التقاطع؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 230\" width=\"360\" height=\"230\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"214\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><line x1=\"106\" y1=\"36\" x2=\"106\" y2=\"210\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"154\" y1=\"36\" x2=\"154\" y2=\"210\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"178\" y1=\"36\" x2=\"178\" y2=\"210\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"202\" y1=\"36\" x2=\"202\" y2=\"210\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"226\" y1=\"36\" x2=\"226\" y2=\"210\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"250\" y1=\"36\" x2=\"250\" y2=\"210\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"96\" y1=\"64\" x2=\"260\" y2=\"64\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"96\" y1=\"88\" x2=\"260\" y2=\"88\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"96\" y1=\"112\" x2=\"260\" y2=\"112\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"96\" y1=\"136\" x2=\"260\" y2=\"136\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"96\" y1=\"184\" x2=\"260\" y2=\"184\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"96\" y1=\"208\" x2=\"260\" y2=\"208\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"88\" y1=\"160\" x2=\"268\" y2=\"160\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"268,160 260,156 260,164\" fill=\"#334155\"/><line x1=\"130\" y1=\"214\" x2=\"130\" y2=\"28\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"130,28 126,36 134,36\" fill=\"#334155\"/><text x=\"274\" y=\"164\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">x</text><text x=\"138\" y=\"36\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">y</text><text x=\"120\" y=\"173\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><text x=\"154\" y=\"173\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"#475569\" direction=\"ltr\">1</text><text x=\"178\" y=\"173\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">2</text><text x=\"226\" y=\"173\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"#475569\" direction=\"ltr\">4</text><text x=\"124\" y=\"116\" text-anchor=\"end\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">2</text><text x=\"124\" y=\"68\" text-anchor=\"end\" font-size=\"9.5\" fill=\"#059669\" direction=\"ltr\">4</text><text x=\"124\" y=\"210\" text-anchor=\"end\" font-size=\"9.5\" fill=\"#2563eb\" direction=\"ltr\">-2</text><line x1=\"178\" y1=\"112\" x2=\"178\" y2=\"160\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/><line x1=\"130\" y1=\"112\" x2=\"178\" y2=\"112\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/><line x1=\"130\" y1=\"208\" x2=\"202\" y2=\"64\" stroke=\"#2563eb\" stroke-width=\"2.3\"/><line x1=\"130\" y1=\"64\" x2=\"250\" y2=\"184\" stroke=\"#059669\" stroke-width=\"2.3\"/><circle cx=\"178\" cy=\"112\" r=\"4.2\" fill=\"#dc2626\"/><text x=\"186\" y=\"110\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">I(2 ; 2)</text><text x=\"208\" y=\"62\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">(d1)</text><text x=\"254\" y=\"186\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">(d2)</text></svg>",
+      "options": [
+        "$\\begin{cases} 2x - y = 2 \\\\ x + y = 4 \\end{cases}$",
+        "$\\begin{cases} 2x + y = 2 \\\\ x - y = 4 \\end{cases}$",
+        "$\\begin{cases} x - 2y = 2 \\\\ x + y = 4 \\end{cases}$",
+        "$\\begin{cases} 2x - y = -2 \\\\ x + y = 2 \\end{cases}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! $(d_1)$ يمر بـ $(0 ; -2)$ و $(1 ; 0)$ أي $y = 2x - 2$ ($2x - y = 2$)، و $(d_2)$ يمر بـ $(0 ; 4)$ و $(4 ; 0)$ أي $y = -x + 4$ ($x + y = 4$).",
+        "اختبر الثنائية $(2 ; 2)$ في المعادلة الأولى: $2(2) + 2 = 6 \\neq 2$ !",
+        "تحقق من $(2 ; 2)$ في $x - 2y = 2$: $2 - 4 = -2 \\neq 2$ .",
+        "انظر إلى تقاطع $(d_1)$ و $(d_2)$ مع محور التراتيب: عند $x = 0$ نجد $y_1 = -2$ و $y_2 = 4$ وليس $2$ ."
+      ],
+      "explanationAr": "المستقيم $(d_1)$ يقطع محور التراتيب في $(0 ; -2)$ ويمر بـ $(2 ; 2)$ إذن معادلته $y = 2x - 2$ أي $2x - y = 2$ . والمستقيم $(d_2)$ يمر بـ $(0 ; 4)$ و $(4 ; 0)$ إذن معادلته $y = -x + 4$ أي $x + y = 4$ . والثنائية $(2 ; 2)$ تحقق المعادلتين معاً."
+    },
+    {
+      "questionAr": "في الشكل المقابل، $[AB]$ قطر لدائرة مركزها $O$ وطوله $10\\text{ cm}$ ، والنقطة $M$ من الدائرة بحيث قيس الزاوية المركزية $\\widehat{AOM} = 60^\\circ$ . ما قيس الزاوية المحيطية $\\widehat{ABM}$ وما طول الوتر $AM$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 205\" width=\"320\" height=\"205\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"304\" height=\"189\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><circle cx=\"155\" cy=\"112\" r=\"72\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"1.8\"/><line x1=\"83\" y1=\"112\" x2=\"227\" y2=\"112\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"155\" y1=\"112\" x2=\"191\" y2=\"49.6\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"227\" y1=\"112\" x2=\"191\" y2=\"49.6\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"83\" y1=\"112\" x2=\"191\" y2=\"49.6\" stroke=\"#059669\" stroke-width=\"1.8\"/><path d=\"M 177 112 A 22 22 0 0 0 166 92.9\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><path d=\"M 111 112 A 28 28 0 0 0 107.2 98\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/><circle cx=\"155\" cy=\"112\" r=\"3.2\" fill=\"#0f172a\"/><circle cx=\"227\" cy=\"112\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"83\" cy=\"112\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"191\" cy=\"49.6\" r=\"3.5\" fill=\"#2563eb\"/><text x=\"153\" y=\"128\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><text x=\"236\" y=\"116\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"69\" y=\"116\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"195\" y=\"43\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">M</text><text x=\"180\" y=\"101\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">60°</text><text x=\"117\" y=\"103\" font-size=\"10\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">?</text><text x=\"142\" y=\"144\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">AB = 10 cm</text></svg>",
+      "options": [
+        "$\\widehat{ABM} = 60^\\circ$ و $AM = 5\\text{ cm}$",
+        "$\\widehat{ABM} = 30^\\circ$ و $AM = 10\\text{ cm}$",
+        "$\\widehat{ABM} = 30^\\circ$ و $AM = 5\\text{ cm}$",
+        "$\\widehat{ABM} = 120^\\circ$ و $AM = 5\\sqrt{3}\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "الطول $AM = 5\\text{ cm}$ صحيح، لكن الزاوية المحيطية $\\widehat{ABM}$ تساوي **نصف** المركزية $\\widehat{AOM}$ وليس مساوية لها.",
+        "القيس $\\widehat{ABM} = 30^\\circ$ صحيح، لكن $10\\text{ cm}$ هو طول القطر $AB$ بينما $AM = OA = 5\\text{ cm}$ .",
+        "ممتاز! $\\widehat{ABM} = \\frac{1}{2}\\widehat{AOM} = 30^\\circ$ ، والمثلث $OAM$ متقايس الأضلاع لأن $OA = OM = 5\\text{ cm}$ و $\\widehat{AOM} = 60^\\circ$ ، ومنه $AM = 5\\text{ cm}$ .",
+        "انتبه: الزاوية المحيطية تساوي نصف المركزية ($30^\\circ$)، و $5\\sqrt{3}\\text{ cm}$ هو طول الضلع $BM$ وليس $AM$ ."
+      ],
+      "explanationAr": "1. الزاوية المحيطية $\\widehat{ABM}$ والزاوية المركزية $\\widehat{AOM} = 60^\\circ$ تحصران نفس القوس $AM$ ، إذن $\\widehat{ABM} = \\frac{60^\\circ}{2} = 30^\\circ$ . 2. لأن $OA = OM = \\frac{10}{2} = 5\\text{ cm}$ و $\\widehat{AOM} = 60^\\circ$ فإن المثلث $OAM$ متقايس الأضلاع، وبالتالي $AM = 5\\text{ cm}$ (ويمكن التحقق في المثلث القائم $ABM$ بـ $\\sin 30^\\circ = \\frac{AM}{10} = 0.5$ )."
+    },
+    {
+      "questionAr": "سجّلنا استهلاك الماء لـ $20$ عائلة (بالمتر المكعب): $10\\text{ m}^3$ ($4$ عائلات)، $12\\text{ m}^3$ ($6$ عائلات)، $15\\text{ m}^3$ ($7$ عائلات)، $18\\text{ m}^3$ ($3$ عائلات). ما هو **وسيط** هذه السلسلة وما **التواتر المجمع الصاعد** (كنسبة مئوية) للعائلات التي تستهلك $12\\text{ m}^3$ على الأكثر؟",
+      "options": [
+        "الوسيط $12\\text{ m}^3$ والتواتر المجمع الصاعد $30\\%$",
+        "الوسيط $13.5\\text{ m}^3$ والتواتر المجمع الصاعد $30\\%$",
+        "الوسيط $13.55\\text{ m}^3$ والتواتر المجمع الصاعد $50\\%$",
+        "الوسيط $13.5\\text{ m}^3$ والتواتر المجمع الصاعد $50\\%$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "بما أن $N = 20$ زوجي، فالوسيط هو معدل الرتبتين $10$ ($12$) و $11$ ($15$). كما أن $30\\%$ هو التواتر البسيط للقيمة $12$ وليس التواتر المجمع الصاعد.",
+        "الوسيط $13.5\\text{ m}^3$ صحيح، لكن التواتر المجمع الصاعد يجمع التكرارين $4 + 6 = 10$ من $20$ أي $50\\%$ .",
+        "احذر! $13.55\\text{ m}^3$ هو **المتوسط الحسابي** للسلسلة وليس **الوسيط**!",
+        "أحسنت! الرتبة $10$ هي $12$ والرتبة $11$ هي $15$ فالوسيط $\\frac{12 + 15}{2} = 13.5\\text{ m}^3$ ، والتكرار المجمع الصاعد لـ $12$ هو $4 + 6 = 10$ أي $\\frac{10}{20} = 50\\%$ ."
+      ],
+      "explanationAr": "التكرارات المجمعة الصاعدة هي $4, 10, 17, 20$ . لأن $N = 20$ زوجي، فالوسيط هو معدل القيمتين ذاتي الرتبتين $10$ ($12$) و $11$ ($15$): $M = \\frac{12 + 15}{2} = 13.5\\text{ m}^3$ . والتواتر المجمع الصاعد للقيمة $12$ هو $\\frac{4 + 6}{20} = \\frac{10}{20} = 0.50 = 50\\%$ ."
+    }
+  ]
+}

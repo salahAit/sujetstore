@@ -1,0 +1,123 @@
+{
+  "id": "lesson_4ap_t3_simple_proportionality",
+  "slug": "4ap-t3-simple-proportionality",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t3",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: العمليات على الأعداد العشرية والتناسبية البسيطة",
+  "order": 3,
+  "titleAr": "التناسبية البسيطة: الخواص الخطية ومعامل التناسبية",
+  "objectives": [
+    "تمييز وضعية تناسبية عن وضعية غير تناسبية انطلاقا من نص أو جدول عددي",
+    "إتمام جدول تناسبية وحل مشكلات تناسبية بسيطة باستعمال الخواص الخطية (خواص الجمع والضرب والضعف والنصف)",
+    "إيجاد وتوظيف معامل التناسبية البسيط (عدد طبيعي صغير مثل الضرب أو القسمة على 2، 3، 4، 5، 10) لإتمام جدول تناسبية"
+  ],
+  "keywordsAr": [
+    "التناسبية",
+    "جدول التناسبية",
+    "الخواص الخطية",
+    "معامل التناسبية",
+    "مشكلات تناسبية"
+  ],
+  "discover": {
+    "scenarioAr": "تحتوي $3$ علب أقلام متماثلة على $15$ قلما ملونا. نريد إكمال جدول التناسبية التالي لمعرفة عدد الأقلام الموجودة في $6$ علب، ثم في $9$ علب، ثم في $10$ علب.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 165\" width=\"460\" height=\"165\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"149\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><path d=\"M 192 38 Q 228 16 262 36\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><polygon points=\"265,38 257,37 261,30\" fill=\"#2563eb\"/><text x=\"228\" y=\"23\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">× 2</text><rect x=\"16\" y=\"42\" width=\"392\" height=\"70\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"16\" y1=\"77\" x2=\"408\" y2=\"77\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"156\" y1=\"42\" x2=\"156\" y2=\"112\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"219\" y1=\"42\" x2=\"219\" y2=\"112\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"282\" y1=\"42\" x2=\"282\" y2=\"112\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"345\" y1=\"42\" x2=\"345\" y2=\"112\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"16\" y=\"42\" width=\"140\" height=\"35\" fill=\"#eff6ff\"/><rect x=\"16\" y=\"77\" width=\"140\" height=\"35\" fill=\"#f0fdf4\"/><text x=\"86\" y=\"64\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1e3a8a\">عدد العلب</text><text x=\"86\" y=\"99\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#14532d\">عدد الأقلام</text><text x=\"187\" y=\"64\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">3</text><text x=\"250\" y=\"64\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">6</text><text x=\"313\" y=\"64\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">9</text><text x=\"376\" y=\"64\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">10</text><text x=\"187\" y=\"99\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">15</text><text x=\"250\" y=\"99\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\">؟</text><text x=\"313\" y=\"99\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\">؟</text><text x=\"376\" y=\"99\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\">؟</text><path d=\"M 412 58 C 436 58, 436 96, 412 96\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2\"/><polygon points=\"409,96 417,91 417,101\" fill=\"#d97706\"/><text x=\"434\" y=\"81\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">× 5</text><text x=\"230\" y=\"138\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">15 ÷ 3 = 5 : معامل التناسبية</text></svg>",
+    "steps": [
+      {
+        "promptAr": "بما أن $6$ علب هي ضعف $3$ علب ($3 \\times 2 = 6$)، فإن عدد الأقلام يتضاعف أيضا. كم قلما يوجد في $6$ علب؟ (اكتب العدد فقط)",
+        "hintAr": "اضرب عدد أقلام $3$ علب ($15$) في $2$.",
+        "expectedInput": "30",
+        "revealAr": "باستعمال خاصية الضرب (الضعف): $15 \\times 2 = 30$ قلما."
+      },
+      {
+        "promptAr": "نلاحظ أن $9 = 3 + 6$. باستعمال خاصية الجمع في جدول التناسبية، نجمع عدد أقلام $3$ علب ($15$) وعدد أقلام $6$ علب ($30$). كم قلما في $9$ علب؟ (اكتب العدد فقط)",
+        "hintAr": "اجمع $15 + 30$.",
+        "expectedInput": "45",
+        "revealAr": "باستعمال خاصية الجمع: $15 + 30 = 45$ قلما (أو $15 \\times 3 = 45$)."
+      },
+      {
+        "promptAr": "في العلبة الواحدة يوجد $15 \\div 3 = 5$ أقلام (معامل التناسبية هو $\\times 5$). باستعمال معامل التناسبية، كم قلما يوجد في $10$ علب؟ (اكتب العدد فقط)",
+        "hintAr": "اضرب عدد العلب ($10$) في معامل التناسبية ($5$).",
+        "expectedInput": "50",
+        "revealAr": "باستعمال معامل التناسبية: $10 \\times 5 = 50$ قلما."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "تكون الوضعية وضعية تناسبية إذا تغيّر مقداران معا بنفس النسبة (مثلا: إذا تضاعف المقدار الأول تضاعف الثاني، وإذا أخذنا نصف الأول أخذنا نصف الثاني).",
+      "لإتمام جدول تناسبية بالخواص الخطية: يمكننا ضرب (أو قسمة) خانتي عمود في نفس العدد، أو جمع عمودين متناسبين للحصول على عمود ثالث.",
+      "معامل التناسبية هو العدد الثابت الذي نضرب فيه أعداد السطر الأول للانتقال إلى السطر الثاني (مثل الضرب في $2$ أو $3$ أو $4$ أو $5$ أو $10$)، ونقسم عليه للانتقال في الاتجاه المعاكس.",
+      "ليست كل الجداول جداول تناسبية: إذا لم يبقَ معامل الضرب ثابتا بين جميع الأعمدة، فالوضعية غير تناسبية."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 185\" width=\"460\" height=\"185\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"169\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"18\" y=\"20\" width=\"424\" height=\"64\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"18\" y1=\"52\" x2=\"442\" y2=\"52\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"154\" y1=\"20\" x2=\"154\" y2=\"84\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"226\" y1=\"20\" x2=\"226\" y2=\"84\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"298\" y1=\"20\" x2=\"298\" y2=\"84\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"370\" y1=\"20\" x2=\"370\" y2=\"84\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"18\" y=\"20\" width=\"136\" height=\"32\" fill=\"#eff6ff\"/><rect x=\"18\" y=\"52\" width=\"136\" height=\"32\" fill=\"#f0fdf4\"/><text x=\"86\" y=\"41\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">عدد الصناديق</text><text x=\"86\" y=\"73\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\">عدد الكتب</text><text x=\"190\" y=\"41\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">2</text><text x=\"262\" y=\"41\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">4</text><text x=\"334\" y=\"41\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">6</text><text x=\"406\" y=\"41\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">5</text><text x=\"190\" y=\"73\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#15803d\">8</text><text x=\"262\" y=\"73\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#15803d\">16</text><text x=\"334\" y=\"73\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#15803d\">24</text><text x=\"406\" y=\"73\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#b45309\">20</text><rect x=\"18\" y=\"96\" width=\"136\" height=\"68\" rx=\"7\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.2\"/><text x=\"86\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\">1. الضرب (الضعف)</text><text x=\"86\" y=\"136\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#0f172a\" direction=\"ltr\">2 × 2 = 4</text><text x=\"86\" y=\"153\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">8 × 2 = 16</text><rect x=\"162\" y=\"96\" width=\"136\" height=\"68\" rx=\"7\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"230\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#166534\">2. الجمع بين الأعمدة</text><text x=\"230\" y=\"136\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#0f172a\" direction=\"ltr\">2 + 4 = 6</text><text x=\"230\" y=\"153\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#14532d\" direction=\"ltr\">8 + 16 = 24</text><rect x=\"306\" y=\"96\" width=\"136\" height=\"68\" rx=\"7\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.2\"/><text x=\"374\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#92400e\">3. معامل التناسبية</text><text x=\"374\" y=\"136\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#0f172a\" direction=\"ltr\">8 ÷ 2 = 4 (× 4)</text><text x=\"374\" y=\"153\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#92400e\" direction=\"ltr\">5 × 4 = 20</text></svg>",
+    "visualCaptionAr": "طرق إتمام جدول التناسبية: الضرب (أو القسمة)، الجمع بين الأعمدة، ومعامل التناسبية.",
+    "examples": [
+      {
+        "problemAr": "هل الجدول التالي يمثل وضعية تناسبية؟ (السن بالسنوات: $4$ ثم $8$، والقامة بالسنتيمتر: $100\\text{ cm}$ ثم $125\\text{ cm}$).",
+        "solutionAr": "تضاعف السن من $4$ إلى $8$ ($4 \\times 2 = 8$)، لكن القامة لم تتضاعف ($100 \\times 2 = 200 \\ne 125$). إذن القامة لا تتناسب مع السن، والجدول لا يمثل وضعية تناسبية."
+      },
+      {
+        "problemAr": "ثمن $4$ تذاكر حافلة هو $40\\text{ DA}$. ما معامل التناسبية، وما ثمن $7$ تذاكر؟",
+        "solutionAr": "نقسم $40 \\div 4 = 10$، إذن معامل التناسبية هو $\\times 10$ (ثمن التذكرة الواحدة $10\\text{ DA}$). وعليه ثمن $7$ تذاكر هو $7 \\times 10 = 70\\text{ DA}$."
+      }
+    ],
+    "watchOutAr": "احذر من الخطأ الشائع: إضافة نفس العدد إلى السطرين! فإذا انتقلنا من $2$ علبة إلى $5$ علب بإضافة $3$، لا نضيف $3$ إلى السطر الثاني، بل نضرب في معامل التناسبية أو نستعمل الخواص الخطية."
+  },
+  "practice": [
+    {
+      "questionAr": "يمثل الجدول المقابل جدول تناسبية لكمية السكر اللازمة لصنع الكعك. ما كمية السكر اللازمة لصنع $6$ كعكات؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 100\" width=\"380\" height=\"100\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"15\" y=\"14\" width=\"350\" height=\"72\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"15\" y1=\"50\" x2=\"365\" y2=\"50\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"155\" y1=\"14\" x2=\"155\" y2=\"86\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"225\" y1=\"14\" x2=\"225\" y2=\"86\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"295\" y1=\"14\" x2=\"295\" y2=\"86\" stroke=\"#475569\" stroke-width=\"1.6\"/><rect x=\"15\" y=\"14\" width=\"140\" height=\"36\" fill=\"#eff6ff\"/><rect x=\"15\" y=\"50\" width=\"140\" height=\"36\" fill=\"#f0fdf4\"/><text x=\"85\" y=\"37\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">عدد الكعكات</text><text x=\"85\" y=\"73\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\">السكر (g)</text><text x=\"190\" y=\"37\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">2</text><text x=\"260\" y=\"37\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">4</text><text x=\"330\" y=\"37\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">6</text><text x=\"190\" y=\"73\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">50</text><text x=\"260\" y=\"73\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">100</text><text x=\"330\" y=\"73\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#dc2626\">؟</text></svg>",
+      "options": [
+        "$102\\text{ g}$",
+        "$200\\text{ g}$",
+        "$150\\text{ g}$",
+        "$125\\text{ g}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "انتبه: الانتقال من $4$ إلى $6$ بإضافة كعكتين لا يعني إضافة $2\\text{ g}$ إلى السكر، بل إضافة كمية كعكتين ($50\\text{ g}$).",
+        "الكمية $200\\text{ g}$ هي ضعف $100\\text{ g}$ وتناسب $8$ كعكات ($4 \\times 2$) وليس $6$ كعكات.",
+        "أحسنت! باستعمال خاصية الجمع: $2 + 4 = 6$، إذن $50 + 100 = 150\\text{ g}$ (أو $50 \\times 3 = 150\\text{ g}$).",
+        "راجع الجمع: كمية $2$ كعكات ($50\\text{ g}$) تضاف إلى كمية $4$ كعكات ($100\\text{ g}$)، وليس $25\\text{ g}$."
+      ],
+      "explanationAr": "باستعمال خاصية الجمع في جدول التناسبية: $2 + 4 = 6$، إذن نجمع كميتي السكر الموافقتين: $50 + 100 = 150\\text{ g}$."
+    },
+    {
+      "questionAr": "توجد $20$ حبة برتقال موزّعة بالتساوي في $5$ أكياس. ما معامل التناسبية البسيط، وكم حبة برتقال توجد في $9$ أكياس مماثلة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 100\" width=\"360\" height=\"100\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"10\" y=\"10\" width=\"340\" height=\"80\" rx=\"10\" fill=\"#fff7ed\" stroke=\"#f97316\" stroke-width=\"1.5\"/><rect x=\"24\" y=\"24\" width=\"136\" height=\"52\" rx=\"8\" fill=\"#ffffff\" stroke=\"#fdba74\" stroke-width=\"1.5\"/><text x=\"92\" y=\"46\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#9a3412\">5 أكياس</text><text x=\"92\" y=\"67\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c2410c\">20 حبة برتقال</text><text x=\"180\" y=\"56\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#0f172a\">←</text><rect x=\"200\" y=\"24\" width=\"136\" height=\"52\" rx=\"8\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.5\"/><text x=\"268\" y=\"46\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\">9 أكياس</text><text x=\"268\" y=\"67\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">؟ حبة برتقال</text></svg>",
+      "options": [
+        "معامل التناسبية $\\times 5$، والعدد $45$ حبة",
+        "معامل التناسبية $\\times 4$، والعدد $36$ حبة",
+        "معامل التناسبية $\\times 4$، والعدد $24$ حبة",
+        "معامل التناسبية $\\times 3$، والعدد $27$ حبة"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "العدد $5$ هو عدد الأكياس وليس عدد الحبات في الكيس الواحد ($20 \\div 5 = 4$).",
+        "ممتاز! في الكيس الواحد $20 \\div 5 = 4$ حبات (معامل التناسبية $\\times 4$)، وفي $9$ أكياس توجد $9 \\times 4 = 36$ حبة.",
+        "أصبت في معامل التناسبية ($4$)، ولكن لإيجاد عدد الحبات في $9$ أكياس نضرب $9 \\times 4 = 36$ ولا نضيف $4$ إلى $20$.",
+        "راجع قسمة $20 \\div 5$: الحاصل هو $4$ وليس $3$."
+      ],
+      "explanationAr": "نجد أولا معامل التناسبية بقسمة عدد الحبات على عدد الأكياس: $20 \\div 5 = 4$ (أي $\\times 4$). ثم نضرب $9 \\times 4 = 36$ حبة."
+    },
+    {
+      "questionAr": "أيّ من الوضعيات الآتية **لا تمثّل** وضعية تناسبية؟",
+      "options": [
+        "عدد علب الحليب وثمنها الإجمالي بسعر ثابت للعلبة",
+        "عدد الأسابيع وعدد الأيام ($1$ أسبوع = $7$ أيام)",
+        "عدد الكيلوغرامات من التفاح وثمنها بسعر ثابت للكيلوغرام",
+        "طول قامة طفل بالسنتيمتر وعمره بالسنوات"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "عند شراء عدد مضاعف من العلب بسعر ثابت يتضاعف الثمن بنفس النسبة، إذن هي وضعية تناسبية.",
+        "عدد الأيام يساوي دائما عدد الأسابيع مضروبا في $7$ (معامل التناسبية ثابت وهو $7$).",
+        "سعر التفاح مرتبط بالكتلة بمعامل تناسبية ثابت هو سعر الكيلوغرام الواحد.",
+        "أحسنت! طول قامة الطفل لا يتضاعف بتضاعف عمره، لذا لا يوجد معامل تناسبية ثابت بين العمر والقامة."
+      ],
+      "explanationAr": "في وضعيات الشراء بسعر ثابت أو تحويل الأسابيع إلى أيام يوجد معامل تناسبية ثابت، بينما لا توجد علاقة تناسبية ثابتة بين عمر الطفل وطول قامته."
+    }
+  ]
+}

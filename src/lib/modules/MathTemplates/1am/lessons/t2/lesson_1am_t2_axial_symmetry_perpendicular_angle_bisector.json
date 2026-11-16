@@ -1,0 +1,130 @@
+{
+  "id": "lesson_1am_t2_axial_symmetry_perpendicular_angle_bisector",
+  "slug": "1am-t2-axial-symmetry-perpendicular-angle-bisector",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t2",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع السادس: التناظر المحوري وإدماج الفصل الثاني",
+  "order": 6,
+  "titleAr": "التناظر المحوري وخواصه: محور قطعة مستقيم ومنصف زاوية",
+  "objectives": [
+    "التعرف على أشكال متناظرة بالنسبة إلى مستقيم وتعيين ورسم محور أو محاور تناظر الأشكال الهندسية المألوفة",
+    "إنشاء نظائر نقطة ومستقيم وقطعة مستقيم ودائرة وشكل بسيط على ورق مرصوف وغير مسطر، ومعرفة وتوظيف خواص التناظر المحوري (حفظ المسافات والزوايا والأشكال)",
+    "التعرف على محور قطعة مستقيم ومنصف زاوية وإنشاؤهما بالمدور والمسطرة، وتوظيف التناظر المحوري لإنشاء المثلثات الخاصة والرباعيات المألوفة"
+  ],
+  "keywordsAr": [
+    "التناظر المحوري",
+    "محور تناظر",
+    "خواص التناظر المحوري",
+    "محور قطعة مستقيم",
+    "منصف زاوية",
+    "الورق المرصوف"
+  ],
+  "discover": {
+    "scenarioAr": "عند طيّ ورقة مرصوفة وفق المستقيم $(d)$ ، ينطبق المثلث $ABC$ تماماً على المثلث $A'B'C'$ ؛ فنقول إنهما متناظران بالنسبة إلى المستقيم $(d)$ . ومن جهة أخرى، عيّنا نقطة $M$ على محور القطعة $[AB]$ ، ورسمنا نصف المستقيم $[Oz)$ منصفاً للزاوية $\\widehat{xOy} = 74^\\circ$ . كيف ننشئ النظائر بالطيّ أو بالأدوات الهندسية، وما العلاقة بين التناظر المحوري والمحور والمنصف؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"236\" height=\"174\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><text x=\"126\" y=\"25\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">التناظر المحوري على ورق مرصوف</text><g stroke=\"#e2e8f0\" stroke-width=\"1\"><line x1=\"30\" y1=\"34\" x2=\"30\" y2=\"162\"/><line x1=\"46\" y1=\"34\" x2=\"46\" y2=\"162\"/><line x1=\"62\" y1=\"34\" x2=\"62\" y2=\"162\"/><line x1=\"78\" y1=\"34\" x2=\"78\" y2=\"162\"/><line x1=\"94\" y1=\"34\" x2=\"94\" y2=\"162\"/><line x1=\"110\" y1=\"34\" x2=\"110\" y2=\"162\"/><line x1=\"142\" y1=\"34\" x2=\"142\" y2=\"162\"/><line x1=\"158\" y1=\"34\" x2=\"158\" y2=\"162\"/><line x1=\"174\" y1=\"34\" x2=\"174\" y2=\"162\"/><line x1=\"190\" y1=\"34\" x2=\"190\" y2=\"162\"/><line x1=\"206\" y1=\"34\" x2=\"206\" y2=\"162\"/><line x1=\"222\" y1=\"34\" x2=\"222\" y2=\"162\"/><line x1=\"30\" y1=\"34\" x2=\"222\" y2=\"34\"/><line x1=\"30\" y1=\"50\" x2=\"222\" y2=\"50\"/><line x1=\"30\" y1=\"66\" x2=\"222\" y2=\"66\"/><line x1=\"30\" y1=\"82\" x2=\"222\" y2=\"82\"/><line x1=\"30\" y1=\"98\" x2=\"222\" y2=\"98\"/><line x1=\"30\" y1=\"114\" x2=\"222\" y2=\"114\"/><line x1=\"30\" y1=\"130\" x2=\"222\" y2=\"130\"/><line x1=\"30\" y1=\"146\" x2=\"222\" y2=\"146\"/><line x1=\"30\" y1=\"162\" x2=\"222\" y2=\"162\"/></g><line x1=\"126\" y1=\"32\" x2=\"126\" y2=\"166\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><polygon points=\"62,66 94,82 78,130\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><polygon points=\"190,66 158,82 174,130\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><line x1=\"62\" y1=\"66\" x2=\"190\" y2=\"66\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 2\"/><rect x=\"126\" y=\"66\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><circle cx=\"62\" cy=\"66\" r=\"3\" fill=\"#2563eb\"/><circle cx=\"190\" cy=\"66\" r=\"3\" fill=\"#16a34a\"/><text x=\"50\" y=\"64\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">A</text><text x=\"195\" y=\"64\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">A'</text><text x=\"98\" y=\"84\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#1e40af\">B</text><text x=\"146\" y=\"84\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#166534\">B'</text><text x=\"72\" y=\"144\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#1e40af\">C</text><text x=\"172\" y=\"144\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#166534\">C'</text><text x=\"134\" y=\"176\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">(d)</text><rect x=\"254\" y=\"8\" width=\"198\" height=\"174\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"353\" y=\"25\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#166534\">محور قطعة ومنصف زاوية</text><line x1=\"282\" y1=\"82\" x2=\"424\" y2=\"82\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"353\" y1=\"34\" x2=\"353\" y2=\"96\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><rect x=\"353\" y=\"74\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><line x1=\"282\" y1=\"82\" x2=\"353\" y2=\"44\" stroke=\"#2563eb\" stroke-width=\"1.4\" stroke-dasharray=\"3 2\"/><line x1=\"424\" y1=\"82\" x2=\"353\" y2=\"44\" stroke=\"#2563eb\" stroke-width=\"1.4\" stroke-dasharray=\"3 2\"/><circle cx=\"353\" cy=\"44\" r=\"3.2\" fill=\"#2563eb\"/><text x=\"272\" y=\"86\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"428\" y=\"86\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"361\" y=\"44\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#2563eb\">M</text><text x=\"360\" y=\"94\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\">(Δ)</text><line x1=\"282\" y1=\"162\" x2=\"426\" y2=\"162\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"282\" y1=\"162\" x2=\"378\" y2=\"106\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"282\" y1=\"162\" x2=\"420\" y2=\"130\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M 314 162 A 32 32 0 0 0 313 155\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><path d=\"M 313 155 A 32 32 0 0 0 310 146\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"270\" y=\"166\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"430\" y=\"166\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">x</text><text x=\"382\" y=\"107\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">y</text><text x=\"426\" y=\"133\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#16a34a\">z</text></svg>",
+    "steps": [
+      {
+        "promptAr": "على الورق المرصوف المقابل، تبعد النقطة $A$ عن المحور $(d)$ بـ $4$ تدريجات إلى اليسار. بكم تدريجة إلى اليمين تبعد نظيرتها $A'$ عن المحور $(d)$ ؟",
+        "hintAr": "المحور $(d)$ عمودي على القطعة $[AA']$ ويمر بمنتصفها تماماً.",
+        "expectedInput": "4",
+        "revealAr": "تبعد النقطة $A'$ بـ $4$ تدريجات إلى اليمين عن المحور $(d)$ لأن التناظر المحوري يحفظ المسافة إلى المحور."
+      },
+      {
+        "promptAr": "إذا كان طول الضلع $AB = 5\\text{ cm}$ ، فما طول نظيره الضلع $[A'B']$ بالسنتيمتر؟",
+        "hintAr": "التناظر المحوري يحفظ المسافات (أطوال القطع).",
+        "expectedInput": "5",
+        "revealAr": "بما أن التناظر المحوري يحفظ الأطوال، فإن $A'B' = AB = 5\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "النقطة $M$ تنتمي إلى محور القطعة $[AB]$ بحيث $MA = 6.5\\text{ cm}$ . ما هو طول المسافة $MB$ بالسنتيمتر؟",
+        "hintAr": "كل نقطة من محور قطعة مستقيم متساوية البعد عن طرفيها.",
+        "expectedInput": "6.5",
+        "revealAr": "بما أن $M$ تنتمي إلى محور $[AB]$ ، فإن $MB = MA = 6.5\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "نصف المستقيم $[Oz)$ منصف للزاوية $\\widehat{xOy} = 74^\\circ$ . ما قيس الزاوية $\\widehat{xOz}$ بالدرجات؟",
+        "hintAr": "منصف الزاوية هو محور تناظرها ويقسمها إلى زاويتين متقايستين.",
+        "expectedInput": "37",
+        "revealAr": "$\\widehat{xOz} = \\widehat{zOy} = 74^\\circ \\div 2 = 37^\\circ$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**التناظر المحوري ونظير نقطة**: نقول إن شكلين متناظران بالنسبة إلى مستقيم $(d)$ إذا تطابقا عند طيّ الورقة وفق $(d)$ . وتكون $A'$ نظيرة $A$ بالنسبة إلى $(d)$ إذا كان $(d)$ **محور القطعة** $[AA']$ (عمودي عليها في منتصفها)؛ وإذا كانت $A \\in (d)$ فإن نظيرتها هي نفسها $A$ .",
+      "**خواص التناظر المحوري**: التناظر المحوري **يحفظ**: الأطوال (المسافات)، الاستقامية، أقياس الزوايا، والمحيطات والمساحات. فنظير قطعة مستقيم هو قطعة مستقيم تقايسها، ونظير زاوية هو زاوية تقايسها، ونظير دائرة مركزها $O$ ونصف قطرها $R$ هو دائرة مركزها $O'$ (نظير $O$ ) ولها **نفس نصف القطر $R$**.",
+      "**محور قطعة مستقيم ومنصف زاوية**: محور القطعة $[AB]$ هو محور تناظرها (العمودي عليها في منتصفها)، وكل نقطة منه متساوية البعد عن $A$ و $B$ . ومنصف زاوية هو محور تناظرها الذي يقسمها إلى زاويتين متقايستين. يُنشأ كل منهما بالمدور والمسطرة.",
+      "**محاور تناظر الأشكال المألوفة**: للمثلث المتساوي الساقين **محور واحد**؛ للمثلث المتقايس الأضلاع **$3$ محاور**؛ للمستطيل **محوران** (محورا الأضلاع المتقابلة)؛ للمعين **محوران** (حاملا القطرين)؛ للمربع **$4$ محاور**؛ وللدائرة عدد غير منتهٍ من المحاور (كل مستقيم يمر بمركزها)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"10\" width=\"104\" height=\"170\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"60\" y=\"30\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">متساوي الساقين</text><polygon points=\"60,48 26,126 94,126\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.8\"/><line x1=\"60\" y1=\"38\" x2=\"60\" y2=\"138\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 2\"/><text x=\"60\" y=\"164\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#dc2626\">1 محور تناظر</text><rect x=\"120\" y=\"10\" width=\"106\" height=\"170\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"173\" y=\"30\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">المستطيل</text><rect x=\"134\" y=\"56\" width=\"78\" height=\"52\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.8\"/><line x1=\"173\" y1=\"44\" x2=\"173\" y2=\"120\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 2\"/><line x1=\"126\" y1=\"82\" x2=\"220\" y2=\"82\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 2\"/><text x=\"173\" y=\"164\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#dc2626\">2 محورا تناظر</text><rect x=\"234\" y=\"10\" width=\"106\" height=\"170\" rx=\"8\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><text x=\"287\" y=\"30\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#854d0e\">المعين</text><polygon points=\"287,46 328,86 287,126 246,86\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"1.8\"/><line x1=\"287\" y1=\"38\" x2=\"287\" y2=\"134\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 2\"/><line x1=\"238\" y1=\"86\" x2=\"336\" y2=\"86\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 2\"/><text x=\"287\" y=\"164\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#dc2626\">2 محورا تناظر</text><rect x=\"348\" y=\"10\" width=\"104\" height=\"170\" rx=\"8\" fill=\"#fdf2f8\" stroke=\"#db2777\" stroke-width=\"1.4\"/><text x=\"400\" y=\"30\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#9d174d\">المربع</text><rect x=\"366\" y=\"52\" width=\"68\" height=\"68\" fill=\"#fce7f3\" stroke=\"#be185d\" stroke-width=\"1.8\"/><line x1=\"400\" y1=\"42\" x2=\"400\" y2=\"130\" stroke=\"#dc2626\" stroke-width=\"1.6\" stroke-dasharray=\"4 2\"/><line x1=\"356\" y1=\"86\" x2=\"444\" y2=\"86\" stroke=\"#dc2626\" stroke-width=\"1.6\" stroke-dasharray=\"4 2\"/><line x1=\"360\" y1=\"46\" x2=\"440\" y2=\"126\" stroke=\"#dc2626\" stroke-width=\"1.6\" stroke-dasharray=\"4 2\"/><line x1=\"440\" y1=\"46\" x2=\"360\" y2=\"126\" stroke=\"#dc2626\" stroke-width=\"1.6\" stroke-dasharray=\"4 2\"/><text x=\"400\" y=\"164\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#dc2626\">4 محاور تناظر</text></svg>",
+    "visualCaptionAr": "محاور التناظر المرسومة بالأحمر المتقطع للأشكال المألوفة: المثلث المتساوي الساقين، المستطيل، المعين والمربع",
+    "examples": [
+      {
+        "problemAr": "قطعة مستقيم $[EF]$ طولها $8\\text{ cm}$ والمستقيم $(d)$ محورها يقطعها في $I$ . إذا كانت $P$ نقطة من $(d)$ حيث $PE = 5\\text{ cm}$ ، استنتج الطولين $EI$ و $PF$ .",
+        "solutionAr": "بما أن $(d)$ محور $[EF]$ فإنه يقطعها في منتصفها $I$ ، إذن $EI = 8 \\div 2 = 4\\text{ cm}$ .\n\nوبما أن $P$ تنتمي إلى المحور $(d)$ فإنها متساوية البعد عن طرفي القطعة، ومنه $PF = PE = 5\\text{ cm}$ ."
+      },
+      {
+        "problemAr": "زاوية $\\widehat{AOB} = 68^\\circ$ أنشأنا نظيرتها $\\widehat{A'O'B'}$ بالنسبة إلى مستقيم $(d)$ ، ثم رسمنا $[O't')$ منصف الزاوية $\\widehat{A'O'B'}$ . ما قيس كل من $\\widehat{A'O'B'}$ و $\\widehat{A'O't'}$ ؟",
+        "solutionAr": "بما أن التناظر المحوري يحفظ أقياس الزوايا، فإن $\\widehat{A'O'B'} = \\widehat{AOB} = 68^\\circ$ .\n\nوبما أن $[O't')$ منصف $\\widehat{A'O'B'}$ ، فإن $\\widehat{A'O't'} = 68^\\circ \\div 2 = 34^\\circ$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: الاعتقاد أن **قطري المستطيل** (غير المربع) هما محورا تناظر له! لو طويت مستطيلاً طوله $8\\text{ cm}$ وعرضه $4\\text{ cm}$ وفق قطره فلن ينطبق نصفاه على بعضهما. للمستطيل محورا تناظر فقط هما **محورا أضلاعه المتقابلة**."
+  },
+  "practice": [
+    {
+      "questionAr": "في الشكل المقابل، الدائرة $(C')$ هي نظيرة الدائرة $(C)$ التي مركزها $O$ ونصف قطرها $R = 2\\text{ cm}$ بالنسبة إلى المستقيم $(d)$ . ما الوصف الصحيح للدائرة النظيرة $(C')$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 140\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"140\" y1=\"14\" x2=\"140\" y2=\"128\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><circle cx=\"76\" cy=\"70\" r=\"28\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"76\" cy=\"70\" r=\"3\" fill=\"#0f172a\"/><line x1=\"76\" y1=\"70\" x2=\"104\" y2=\"70\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><circle cx=\"204\" cy=\"70\" r=\"28\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><circle cx=\"204\" cy=\"70\" r=\"3\" fill=\"#166534\"/><line x1=\"76\" y1=\"70\" x2=\"204\" y2=\"70\" stroke=\"#94a3b8\" stroke-width=\"1.1\" stroke-dasharray=\"3 2\"/><rect x=\"140\" y=\"62\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><text x=\"72\" y=\"63\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"202\" y=\"63\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">O'</text><text x=\"46\" y=\"40\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">(C)</text><text x=\"224\" y=\"40\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">(C')</text><text x=\"88\" y=\"84\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#1e40af\">2 cm</text><text x=\"148\" y=\"25\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">(d)</text></svg>",
+      "options": [
+        "دائرة مركزها $O'$ (نظيرة $O$ ) ونصف قطرها $2\\text{ cm}$",
+        "دائرة مركزها $O'$ (نظيرة $O$ ) ونصف قطرها $4\\text{ cm}$",
+        "دائرة مركزها $O$ نفسه ونصف قطرها $2\\text{ cm}$",
+        "قطعة مستقيم طولها $4\\text{ cm}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! التناظر المحوري يحفظ الأطوال والأشكال، لذا نظيرة الدائرة هي دائرة مركزها نظير المركز ولها نفس نصف القطر $2\\text{ cm}$ .",
+        "التناظر المحوري يحفظ نصف القطر كما هو ولا يضاعفه.",
+        "المركز $O$ لا ينتمي إلى المحور $(d)$ ، لذا ينتقل مركز الدائرة النظيرة إلى النقطة $O'$ نظيرة $O$ .",
+        "نظير دائرة بالتناظر المحوري هو دائرة تقايسها وليس قطعة مستقيم."
+      ],
+      "explanationAr": "لإنشاء نظيرة دائرة مركزها $O$ ونصف قطرها $R = 2\\text{ cm}$ بالنسبة إلى مستقيم $(d)$ ، نُنشئ $O'$ نظيرة $O$ بالنسبة إلى $(d)$ ثم نرسم الدائرة التي مركزها $O'$ ونصف قطرها $2\\text{ cm}$ لأن التناظر المحوري يحفظ الأطوال."
+    },
+    {
+      "questionAr": "تأمّل المستطيل غير المربع $ABCD$ المقابل والخطوط المتقطعة $(d_1)$ و $(d_2)$ و $[AC]$ . أي عبارة حول محاور تناظره صحيحة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 145\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"50\" y=\"32\" width=\"160\" height=\"80\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"130\" y1=\"18\" x2=\"130\" y2=\"126\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/><line x1=\"34\" y1=\"72\" x2=\"226\" y2=\"72\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/><line x1=\"50\" y1=\"32\" x2=\"210\" y2=\"112\" stroke=\"#64748b\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><text x=\"42\" y=\"28\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"214\" y=\"28\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"214\" y=\"124\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"42\" y=\"124\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">D</text><text x=\"136\" y=\"24\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">(d1)</text><text x=\"228\" y=\"76\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">(d2)</text></svg>",
+      "options": [
+        "للمستطيل $4$ محاور تناظر تشمل القطرين",
+        "قطرا المستطيل هما محورا تناظره الوحيدان",
+        "للمستطيل محورا تناظر فقط هما $(d_1)$ و $(d_2)$ (محورا الأضلاع المتقابلة)",
+        "ليس للمستطيل أي محور تناظر"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "المربع فقط هو الذي يملك $4$ محاور تناظر؛ أما المستطيل غير المربع فلا ينطبق على نفسه عند طيّه حول القطر $[AC]$ .",
+        "عكستَ القاعدة! القطران هما محورا تناظر **المعين**، بينما للمستطيل محورا الأضلاع المتقابلة.",
+        "ممتاز! للمستطيل غير المربع محوران فقط هما $(d_1)$ و $(d_2)$ ، وهما محورا الأضلاع المتقابلة.",
+        "للمستطيل محورا تناظر واضحان هما $(d_1)$ و $(d_2)$ ينطبق عليهما عند الطيّ."
+      ],
+      "explanationAr": "عند طيّ المستطيل وفق $(d_1)$ أو وفق $(d_2)$ ينطبق نصفاه تماماً، أما الطيّ وفق القطر $[AC]$ فلا يطابق الرأس $B$ على $D$ لأن الطول يختلف عن العرض. إذن للمستطيل محورا تناظر فقط هما $(d_1)$ و $(d_2)$ ."
+    },
+    {
+      "questionAr": "قطعة المستقيم $[AB]$ طولها $9\\text{ cm}$ ، وتنتمي النقطة $M$ إلى محورها $(\\Delta)$ بحيث $MA = 6\\text{ cm}$ . ما هو محيط المثلث $MAB$ ؟",
+      "options": [
+        "$15\\text{ cm}$",
+        "$21\\text{ cm}$",
+        "$18\\text{ cm}$",
+        "$24\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "جمعتَ طولي ضلعين فقط ( $9 + 6$ ) ونسيتَ الضلع الثالث $[MB]$ !",
+        "أحسنت! بما أن $M \\in (\\Delta)$ محور $[AB]$ فإن $MB = MA = 6\\text{ cm}$ ، ومحيط المثلث $MAB$ هو $9 + 6 + 6 = 21\\text{ cm}$ .",
+        "تذكّر أن طول القاعدة $AB = 9\\text{ cm}$ وليس $6\\text{ cm}$ (فالمثلث متساوي الساقين وليس متقايس الأضلاع).",
+        "جمعت $9 + 9 + 6$ عن طريق الخطأ؛ الضلعان المتقايسان هما $MA = MB = 6\\text{ cm}$ ."
+      ],
+      "explanationAr": "لأن $M$ تنتمي إلى محور القطعة $[AB]$ فهي متساوية البعد عن طرفيها، إذن $MB = MA = 6\\text{ cm}$ . وبذلك يكون محيط المثلث $MAB$ هو: $P = AB + MA + MB = 9 + 6 + 6 = 21\\text{ cm}$ ."
+    }
+  ]
+}

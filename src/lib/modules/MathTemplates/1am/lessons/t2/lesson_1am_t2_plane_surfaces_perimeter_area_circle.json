@@ -1,0 +1,130 @@
+{
+  "id": "lesson_1am_t2_plane_surfaces_perimeter_area_circle",
+  "slug": "1am-t2-plane-surfaces-perimeter-area-circle",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t2",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: المثلثات الخاصة والأشكال المستوية والمساحات والمحيطات",
+  "order": 5,
+  "titleAr": "السطوح المستوية: محيط ومساحة المستطيل والمثلث القائم ومحيط الدائرة والقرص",
+  "objectives": [
+    "تعيين مساحة سطح مستو باستعمال رصف بسيط ومقارنة مساحات ومحيطات سطوح مستوية مع التمييز بين المحيط والمساحة",
+    "حساب محيط ومساحة المستطيل والمربع، وحساب محيط ومساحة المثلث القائم وحساب مساحة سطح بالتجزئة إلى سطوح مألوفة",
+    "التعرف على العدد π (≈ 3.14) وحساب طول الدائرة ومحيط القرص باستعمال القطر أو نصف القطر، وإجراء تحويلات لوحدات الأطوال والمساحات"
+  ],
+  "keywordsAr": [
+    "السطوح المستوية",
+    "محيط ومساحة مستطيل",
+    "مساحة مثلث قائم",
+    "طول الدائرة ومحيط القرص",
+    "التجزئة والرصف",
+    "تحويل وحدات المساحة"
+  ],
+  "discover": {
+    "scenarioAr": "تتألف حديقة بلدية من مسطّح عشبي مستطيل الشكل $ABCD$ طوله $10\\text{ m}$ وعرضه $6\\text{ m}$ ، يلاصقه حوض زهور على شكل مثلث قائم $BCE$ (قائم في $C$ حيث $BC = 6\\text{ m}$ و $CE = 4\\text{ m}$ )، وفي وسط العشب توجد نافورة دائرية نصف قطرها $R = 2\\text{ m}$ نريد إحاطتها بحافة حجرية. كيف نحسب مساحة الحديقة بالتجزئة وطول حافة النافورة؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"244\" height=\"174\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"130\" y=\"27\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">تجزئة الحديقة والنافورة الدائرية</text><rect x=\"24\" y=\"48\" width=\"120\" height=\"80\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><polygon points=\"144,48 144,128 214,128\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><rect x=\"144\" y=\"117\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><circle cx=\"84\" cy=\"88\" r=\"24\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"84\" y1=\"88\" x2=\"108\" y2=\"88\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><circle cx=\"84\" cy=\"88\" r=\"2.5\" fill=\"#0f172a\"/><text x=\"96\" y=\"83\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#dc2626\">R = 2 m</text><text x=\"84\" y=\"145\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#14532d\">10 m</text><text x=\"179\" y=\"145\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#854d0e\">4 m</text><text x=\"157\" y=\"84\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#15803d\">6 m</text><text x=\"19\" y=\"45\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"146\" y=\"44\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"144\" y=\"143\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"19\" y=\"143\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">D</text><text x=\"218\" y=\"132\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">E</text><text x=\"130\" y=\"169\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0f172a\">المساحة الكلية = مستطيل + مثلث قائم</text><rect x=\"262\" y=\"8\" width=\"190\" height=\"174\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"357\" y=\"27\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">تعيين المساحة بالرصف</text><rect x=\"288\" y=\"42\" width=\"34\" height=\"34\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"322\" y=\"42\" width=\"34\" height=\"34\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"356\" y=\"42\" width=\"34\" height=\"34\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"390\" y=\"42\" width=\"34\" height=\"34\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"288\" y=\"76\" width=\"34\" height=\"34\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"322\" y=\"76\" width=\"34\" height=\"34\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"356\" y=\"76\" width=\"34\" height=\"34\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"288\" y=\"110\" width=\"34\" height=\"34\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"357\" y=\"164\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">المساحة = 8 وحدات مربعة</text><text x=\"357\" y=\"178\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#dc2626\">المحيط = 14 وحدة طول</text></svg>",
+    "steps": [
+      {
+        "promptAr": "احسب مساحة الجزء المستطيل $ABCD$ (طوله $10\\text{ m}$ وعرضه $6\\text{ m}$ ) بالمتر المربع.",
+        "hintAr": "مساحة المستطيل تساوي جداء الطول في العرض: $L \\times \\ell$ .",
+        "expectedInput": "60",
+        "revealAr": "مساحة المستطيل $ABCD$ هي $S_1 = 10 \\times 6 = 60\\text{ m}^2$ ."
+      },
+      {
+        "promptAr": "احسب مساحة حوض الزهور المثلث القائم $BCE$ (طولا ضلعيه القائمين $6\\text{ m}$ و $4\\text{ m}$ ) بالمتر المربع.",
+        "hintAr": "مساحة المثلث القائم هي نصف جداء الضلعين القائمين: $(a \\times b) \\div 2$ .",
+        "expectedInput": "12",
+        "revealAr": "مساحة المثلث القائم $BCE$ هي $S_2 = (6 \\times 4) \\div 2 = 24 \\div 2 = 12\\text{ m}^2$ ."
+      },
+      {
+        "promptAr": "بالتجزئة، ما هي المساحة الكلية للحديقة (المستطيل مع المثلث القائم) بالمتر المربع؟",
+        "hintAr": "اجمع مساحتي الجزأين غير المتداخلين: $S_1 + S_2$ .",
+        "expectedInput": "72",
+        "revealAr": "المساحة الكلية للحديقة هي $S = 60 + 12 = 72\\text{ m}^2$ ."
+      },
+      {
+        "promptAr": "لإحاطة النافورة الدائرية التي نصف قطرها $R = 2\\text{ m}$ ، احسب طول الدائرة (محيط القرص) باستعمال $\\pi \\approx 3.14$ والقانون $P = 2 \\times \\pi \\times R$ .",
+        "hintAr": "اضرب $2 \\times 3.14 \\times 2$ ، أي $4 \\times 3.14$ .",
+        "expectedInput": "12.56",
+        "revealAr": "طول حافة النافورة الدائرية هو $P \\approx 2 \\times 3.14 \\times 2 = 12.56\\text{ m}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**التمييز بين المحيط والمساحة**: **المحيط** هو طول الخط المغلق الذي يحد الشكل (يُقاس بوحدات الطول مثل $\\text{cm}$ و $\\text{m}$ ). أما **المساحة** فهي قياس السطح الداخلي (تُقاس بوحدات المساحة مثل $\\text{cm}^2$ و $\\text{m}^2$ )، ويمكن تعيينها بالرصف أو بالتجزئة إلى سطوح مألوفة.",
+      "**محيطات ومساحات المضلعات المألوفة**:\n- **المربع** (طول ضلعه $c$ ): المحيط $P = 4 \\times c$ ، والمساحة $S = c \\times c$ .\n- **المستطيل** (طوله $L$ وعرضه $\\ell$ ): المحيط $P = 2 \\times (L + \\ell)$ ، والمساحة $S = L \\times \\ell$ .\n- **المثلث القائم** (طولا ضلعيه القائمين $a$ و $b$ ووتره $c$ ): المحيط $P = a + b + c$ ، والمساحة $S = \\frac{a \\times b}{2}$ .",
+      "**طول الدائرة (محيط القرص)**: نسبة طول أي دائرة إلى قطرها ثابتة وتُرمز بالعدد $\\pi$ (حيث $\\pi \\approx 3.14$ ). إذن طول دائرة قطرها $D$ أو نصف قطرها $R$ هو: $P = D \\times \\pi = 2 \\times R \\times \\pi$ .",
+      "**تحويل وحدات الأطوال والمساحات**: في وحدات الطول نضرب أو نقسم على $10$ عند كل رتبة، أما في وحدات المساحة فلكل وحدة **خانتان** فنضرب أو نقسم على $100$ عند كل رتبة: $1\\text{ m}^2 = 100\\text{ dm}^2 = 10000\\text{ cm}^2$ ، وفي الوحدات الفلاحية $1\\text{ a} = 100\\text{ m}^2$ و $1\\text{ ha} = 100\\text{ a} = 10000\\text{ m}^2$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"140\" height=\"122\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"78\" y=\"26\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">المستطيل والمربع</text><rect x=\"36\" y=\"38\" width=\"84\" height=\"44\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.8\"/><text x=\"78\" y=\"64\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">L × ℓ</text><text x=\"78\" y=\"100\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">P = 2 × (L + ℓ)</text><text x=\"78\" y=\"118\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#16a34a\">S = L × ℓ</text><rect x=\"158\" y=\"8\" width=\"144\" height=\"122\" rx=\"8\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><text x=\"230\" y=\"26\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\">المثلث القائم</text><polygon points=\"186,38 186,84 268,84\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.8\"/><rect x=\"186\" y=\"75\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"176\" y=\"64\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">a</text><text x=\"227\" y=\"97\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">b</text><text x=\"236\" y=\"56\" font-size=\"11\" font-weight=\"bold\" fill=\"#64748b\">c</text><text x=\"230\" y=\"118\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">S = (a × b) ÷ 2</text><rect x=\"312\" y=\"8\" width=\"140\" height=\"122\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"382\" y=\"26\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">طول الدائرة (القرص)</text><circle cx=\"382\" cy=\"62\" r=\"24\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.8\"/><line x1=\"382\" y1=\"62\" x2=\"406\" y2=\"62\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><circle cx=\"382\" cy=\"62\" r=\"2.2\" fill=\"#0f172a\"/><text x=\"394\" y=\"57\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\">R</text><text x=\"382\" y=\"102\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">P = 2 × π × R = π × D</text><text x=\"382\" y=\"118\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#166534\">π ≈ 3.14</text><rect x=\"8\" y=\"138\" width=\"444\" height=\"48\" rx=\"8\" fill=\"#f1f5f9\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><text x=\"230\" y=\"158\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">تحويلات المساحة (×100 لكل مرتبة): 1 m² = 100 dm² = 10000 cm²</text><text x=\"230\" y=\"177\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">الوحدات الفلاحية: 1 a = 100 m²  |  1 ha = 100 a = 10000 m²</text></svg>",
+    "visualCaptionAr": "قوانين المحيطات والمساحات للمستطيل والمثلث القائم وطول الدائرة وتحويل وحدات المساحة",
+    "examples": [
+      {
+        "problemAr": "احسب طول دائرة قطرها $D = 10\\text{ cm}$ بأخذ $\\pi \\approx 3.14$ ، ثم حوّل المساحة $3.5\\text{ m}^2$ إلى $\\text{dm}^2$ و $\\text{cm}^2$ .",
+        "solutionAr": "- طول الدائرة: $P = D \\times \\pi \\approx 10 \\times 3.14 = 31.4\\text{ cm}$ .\n\n- التحويل: نضرب في $100$ عند كل رتبة مساحة: $3.5\\text{ m}^2 = 350\\text{ dm}^2 = 35000\\text{ cm}^2$ ."
+      },
+      {
+        "problemAr": "يتكون سطح مستوٍ من مربع طول ضلعه $5\\text{ cm}$ ملتصق بمثلث قائم طولا ضلعيه القائمين $5\\text{ cm}$ و $4\\text{ cm}$ . احسب مساحته الكلية.",
+        "solutionAr": "مساحة المربع: $S_1 = 5 \\times 5 = 25\\text{ cm}^2$ .\n\nمساحة المثلث القائم: $S_2 = (5 \\times 4) \\div 2 = 10\\text{ cm}^2$ .\n\nالمساحة الكلية بالتجزئة: $S = 25 + 10 = 35\\text{ cm}^2$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: الخلط بين **القطر $D$** و**نصف القطر $R$** عند حساب طول الدائرة؛ فإذا أُعطي القطر $D = 10\\text{ cm}$ نحسب مباشرة $D \\times \\pi = 10 \\times 3.14$ ولا نضرب في $2$ مرة أخرى! وكذلك تذكر في التحويلات أن $1\\text{ m}^2 = 100\\text{ dm}^2$ وليس $10\\text{ dm}^2$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "ما هو طول الدائرة (محيط القرص) التي قطرها $D = 6\\text{ cm}$ الموضحة في الشكل المقابل (بأخذ $\\pi \\approx 3.14$ )؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 140\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><circle cx=\"120\" cy=\"70\" r=\"48\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><line x1=\"72\" y1=\"70\" x2=\"168\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"#0f172a\"/><text x=\"120\" y=\"62\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"120\" y=\"88\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#dc2626\">D = 6 cm</text></svg>",
+      "options": [
+        "$9.42\\text{ cm}$",
+        "$37.68\\text{ cm}$",
+        "$18.84\\text{ cm}$",
+        "$12.56\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$9.42 = 3 \\times 3.14$ وهو نصف طول الدائرة فقط (استعملت نصف القطر $3$ دون الضرب في $2$ ).",
+        "انتبه! $6\\text{ cm}$ هو **القطر $D$** وليس نصف القطر $R$ ، فلا نضرب $6$ في $2$ قبل الضرب في $\\pi$ .",
+        "أحسنت! بما أن القطر $D = 6\\text{ cm}$ ، فإن طول الدائرة هو $P = D \\times \\pi \\approx 6 \\times 3.14 = 18.84\\text{ cm}$ .",
+        "القيمة $12.56\\text{ cm}$ توافق قطراً طوله $4\\text{ cm}$ وليس $6\\text{ cm}$ ."
+      ],
+      "explanationAr": "نستعمل قانون طول الدائرة بدلالة القطر: $P = D \\times \\pi$ . وبالتعويض نحصل على: $P \\approx 6 \\times 3.14 = 18.84\\text{ cm}$ (ولو استعملنا نصف القطر $R = 3\\text{ cm}$ نجد نفس النتيجة: $2 \\times 3.14 \\times 3 = 18.84\\text{ cm}$ )."
+    },
+    {
+      "questionAr": "يتكون السطح الموضح في الشكل المقابل من مستطيل طوله $7\\text{ cm}$ وعرضه $4\\text{ cm}$ ومثلث قائم طولا ضلعيه القائمين $4\\text{ cm}$ و $3\\text{ cm}$ . ما هي مساحته الكلية؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 140\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"45\" y=\"35\" width=\"126\" height=\"72\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><polygon points=\"171,35 171,107 225,107\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/><rect x=\"171\" y=\"96\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"108\" y=\"124\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">7 cm</text><text x=\"25\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">4 cm</text><text x=\"198\" y=\"124\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">3 cm</text></svg>",
+      "options": [
+        "$34\\text{ cm}^2$",
+        "$40\\text{ cm}^2$",
+        "$28\\text{ cm}^2$",
+        "$35\\text{ cm}^2$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! مساحة المستطيل $7 \\times 4 = 28\\text{ cm}^2$ ومساحة المثلث القائم $(4 \\times 3) \\div 2 = 6\\text{ cm}^2$ ، والمجموع $34\\text{ cm}^2$ .",
+        "نسيت القسمة على $2$ عند حساب مساحة المثلث القائم (حسبت $4 \\times 3 = 12$ بدلاً من $6$ ).",
+        "$28\\text{ cm}^2$ هي مساحة المستطيل فقط دون إضافة مساحة المثلث القائم.",
+        "راجِع حساب مساحة المثلث القائم: $(4 \\times 3) \\div 2 = 6\\text{ cm}^2$ وليس $7\\text{ cm}^2$ ."
+      ],
+      "explanationAr": "نجزئ الشكل إلى مستطيل ومثلث قائم: مساحة المستطيل $7 \\times 4 = 28\\text{ cm}^2$ ، ومساحة المثلث القائم $(4 \\times 3) \\div 2 = 6\\text{ cm}^2$ . إذن المساحة الكلية هي $28 + 6 = 34\\text{ cm}^2$ ."
+    },
+    {
+      "questionAr": "ما هي القيمة الصحيحة لتحويل المساحة $4.2\\text{ m}^2$ إلى الديسيمتر المربع ( $\\text{dm}^2$ ) وإلى السنتيمتر المربع ( $\\text{cm}^2$ )؟",
+      "options": [
+        "$42\\text{ dm}^2$ و $420\\text{ cm}^2$",
+        "$420\\text{ dm}^2$ و $4200\\text{ cm}^2$",
+        "$4200\\text{ dm}^2$ و $42000\\text{ cm}^2$",
+        "$420\\text{ dm}^2$ و $42000\\text{ cm}^2$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "لقد ضربت في $10$ بدلاً من $100$ عند كل مرتبة؛ تذكّر أن وحدات المساحة تتحول بالضرب في $100$ .",
+        "التحويل إلى $\\text{dm}^2$ صحيح ( $420$ )، لكن من $\\text{dm}^2$ إلى $\\text{cm}^2$ نضرب أيضاً في $100$ وليس في $10$ .",
+        "للتحويل من $\\text{m}^2$ إلى $\\text{dm}^2$ نضرب في $100$ وليس في $1000$ : $4.2 \\times 100 = 420$ .",
+        "أحسنت! بما أن $1\\text{ m}^2 = 100\\text{ dm}^2$ و $1\\text{ dm}^2 = 100\\text{ cm}^2$ ، فإن $4.2\\text{ m}^2 = 420\\text{ dm}^2 = 42000\\text{ cm}^2$ ."
+      ],
+      "explanationAr": "في جدول وحدات المساحة نضرب في $100$ عند الانتقال إلى الوحدة الأصغر مباشرة: $4.2\\text{ m}^2 = 4.2 \\times 100\\text{ dm}^2 = 420\\text{ dm}^2$ ، ثم $420 \\times 100 = 42000\\text{ cm}^2$ ."
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "5ap",
+    "yearName": "السنة الخامسة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "تقييم مكتسبات مرحلة التعليم الابتدائي",
+    "docType": "exam",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة ونصف",
+    "customDocTitle": "تقييم المكتسبات في مادة الرياضيات",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 1.5,
+      "instruction": "ضع ثم أنجز عمودياً العمليات الآتية:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) الجمع: $\"1 601 634\" + \"2 369 795\" = $ ........................................",
+          "answer": "1) الجمع: $\"1 601 634\" + \"2 369 795\" = \"3 971 429\"$",
+          "mark": "0.5"
+        },
+        {
+          "type": "text",
+          "content": "2) الطرح: $\"9 020 224\" - \"4 800 672\" = $ ........................................",
+          "answer": "2) الطرح: $\"9 020 224\" - \"4 800 672\" = \"4 219 552\"$",
+          "mark": "0.5"
+        },
+        {
+          "type": "text",
+          "content": "3) الضرب: $\"2 676\" times 308 = $ ........................................",
+          "answer": "3) الضرب: $\"2 676\" times 308 = \"824 208\"$",
+          "mark": "0.5"
+        }
+      ],
+      "id": "exam-5ap-competency_eval-t3-hard-802-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 1.5,
+      "instruction": "أجب بـ (صحيح) أو (خطأ) مع تصحيح الخطأ إن وُجد:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "الشكل المقابل مربع $A B C D$ طول ضلعه $11$ cm."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap_t3_geom_s162097_hard.svg"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "items": [
+            {
+              "q": "للمربع أربعة أضلاع متقايسة لكن زواياه ليست قائمة.",
+              "a": "خطأ",
+              "c": "خطأ، المربع له أربع زوايا قائمة (الذي زواياه ليست قائمة هو المعين).",
+              "mark": "0.5"
+            },
+            {
+              "q": "في دائرة طول قطرها #text(dir: ltr)[6.5 cm]، يكون طول نصف قطرها يساوي #text(dir: ltr)[13 cm].",
+              "a": "خطأ",
+              "c": "خطأ، نصف القطر يساوي نصف طول القطر أي #text(dir: ltr)[6.5 ÷ 2 = 3.25 cm].",
+              "mark": "0.5"
+            },
+            {
+              "q": "جميع أوجه متوازي المستطيلات مثلثات.",
+              "a": "خطأ",
+              "c": "خطأ، أوجه متوازي المستطيلات مستطيلات (أو أربعة مستطيلات ومربعان).",
+              "mark": "0.5"
+            }
+          ]
+        }
+      ],
+      "id": "exam-5ap-competency_eval-t3-hard-802-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "points": 1.5,
+      "instruction": "تستهلك سيارة كمية بنزين متناسبة مع المسافة المقطوعة. أكمل جدول التناسبية التالي باستعمال المرور بالوحدة:",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "كمية البنزين (L)",
+            "$8$",
+            "$1$",
+            "$11$",
+            "$10$"
+          ],
+          "cells": [
+            "المسافة (km)",
+            "$468$",
+            {
+              "content": "...",
+              "answer": "$58.5$",
+              "mark": "0.5"
+            },
+            {
+              "content": "...",
+              "answer": "$643.5$",
+              "mark": "0.5"
+            },
+            {
+              "content": "...",
+              "answer": "$585$",
+              "mark": "0.5"
+            }
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        },
+        {
+          "type": "text",
+          "content": "وضح طريقة حساب قيمة الوحدة وقيمة $11$:",
+          "answer": "قيمة الوحدة: $468 div 8 = 58.5$ km، ومنه قيمة $11$ هي: $58.5 times 11 = 643.5$ km.",
+          "mark": ""
+        }
+      ],
+      "id": "exam-5ap-competency_eval-t3-hard-802-ex-3",
+      "num": "الثالث"
+    },
+    {
+      "points": 1.5,
+      "instruction": "أكمل جدول التحويلات الآتي بالعدد المناسب في كل خانة:",
+      "content": [
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "القياس المعطى",
+            "الوحدة المطلوبة",
+            "القياس المحوّل"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "#text(dir: ltr)[5 t 5 q 50 kg]",
+              "#text(dir: ltr)[kg]",
+              {
+                "content": "#text(dir: ltr)[...... kg]",
+                "answer": "#text(dir: ltr)[5550 kg]",
+                "mark": "0.5"
+              }
+            ],
+            [
+              "#text(dir: ltr)[3 L 75 cL]",
+              "#text(dir: ltr)[mL]",
+              {
+                "content": "#text(dir: ltr)[...... mL]",
+                "answer": "#text(dir: ltr)[3750 mL]",
+                "mark": "0.25"
+              }
+            ],
+            [
+              "#text(dir: ltr)[3 m² 50 dm²]",
+              "#text(dir: ltr)[dm²]",
+              {
+                "content": "#text(dir: ltr)[...... dm²]",
+                "answer": "#text(dir: ltr)[350 dm²]",
+                "mark": "0.25"
+              }
+            ],
+            [
+              "#text(dir: ltr)[1 ha 75 a]",
+              "#text(dir: ltr)[m²]",
+              {
+                "content": "#text(dir: ltr)[...... m²]",
+                "answer": "#text(dir: ltr)[17500 m²]",
+                "mark": "0.5"
+              }
+            ]
+          ]
+        }
+      ],
+      "id": "exam-5ap-competency_eval-t3-hard-802-ex-4",
+      "num": "الرابع"
+    },
+    {
+      "customTitle": "تقييم المكتسبات — الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "استعن بالساعة والجدول للإجابة عن المطالب الثلاثة بكتابة العمليات والوحدات:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "نظمت مدرسة رحلة لفائدة $50$ تلميذا إلى متحف المجاهد بالجزائر. انطلقت الحافلة على الساعة #text(dir: ltr)[07 h 15 min] (كما توضح الساعة المقابلة) بسرعة منتظمة قدرها #text(dir: ltr)[80 km/h]، ووصلت على الساعة #text(dir: ltr)[08 h 45 min]."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap_t3_integ_s801620_hard.svg",
+              "caption": "#text(dir: ltr)[07 h 15 min]"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "كراء الحافلة",
+            "سعر التذكرة",
+            "تخفيض التلاميذ",
+            "إعانة الجمعية",
+            "عدد التلاميذ"
+          ],
+          "cells": [
+            "12000 دج",
+            "400 دج",
+            "50%",
+            "5000 دج",
+            "$50$"
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب مدة السير، ثم استنتج المسافة المقطوعة بين المدرسة ومتحف المجاهد بالجزائر.",
+          "answer": "1) المدة: #text(dir: ltr)[08 h 45 min - 07 h 15 min = 1 h 30 min] (#text(dir: ltr)[90 min]).\n\nالمسافة: #text(dir: ltr)[80 km] في #text(dir: ltr)[60 min]، إذن المسافة في #text(dir: ltr)[90 min] هي #text(dir: ltr)[120 km].",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب سعر التذكرة بعد التخفيض، ثم التكلفة الإجمالية للرحلة (كراء الحافلة + التذاكر).",
+          "answer": "2) قيمة التخفيض: $(400 times 50) div 100 = 200$ دج، وسعر التذكرة المخفض: $200$ دج.\n\nثمن التذاكر: $50 times 200 = 10000$ دج، والتكلفة الإجمالية: $10000 + 12000 = 22000$ دج.",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "3) اطرح إعانة الجمعية من التكلفة الإجمالية، ثم احسب مساهمة التلميذ الواحد.",
+          "answer": "3) المبلغ المتبقي: $22000 - 5000 = 17000$ دج.\n\nمساهمة التلميذ الواحد: $17000 div 50 = 340$ دج.",
+          "mark": "1.5"
+        }
+      ],
+      "id": "exam-5ap-competency_eval-t3-hard-802-ex-5"
+    }
+  ]
+}

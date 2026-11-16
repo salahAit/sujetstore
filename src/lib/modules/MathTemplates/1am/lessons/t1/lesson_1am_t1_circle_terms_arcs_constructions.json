@@ -1,0 +1,126 @@
+{
+  "id": "lesson_1am_t1_circle_terms_arcs_constructions",
+  "slug": "1am-t1-circle-terms-arcs-constructions",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني: الإنشاءات الهندسية الأولية والدائرة",
+  "order": 5,
+  "titleAr": "الدائرة ومصطلحاتها وإنشاء مثيل قوس ونقل الأطوال بالمدور",
+  "objectives": [
+    "التعرف على الدائرة كمجموعة نقط متساوية المسافة عن نقطة معطاة (المركز) والاستعمال السليم لمصطلحات: مركز، نصف قطر، قطر، وتر، قوس دائرة",
+    "رسم دائرة علم مركزها ونصف قطرها أو قطرها باستعمال المدور وإنجاز مثيل لقوس معطاة",
+    "نقل ومقارنة أطوال قطع مستقيم وإنشاء أشكال بسيطة بالاستعانة بالمدور والمسطرة"
+  ],
+  "keywordsAr": [
+    "الدائرة",
+    "المركز ونصف القطر",
+    "القطر والوتر",
+    "قوس دائرة",
+    "المدور",
+    "نقل الأطوال"
+  ],
+  "discover": {
+    "scenarioAr": "في ساحة المدرسة، ثبتت ليلى وتداً عند النقطة $O$ وربطت به حبلاً طوله $3\\text{ m}$ لترسم دائرة $(\\mathcal{C})$ ، ثم عيّنت النقط $A$ و $B$ و $C$ و $E$ و $F$ على الدائرة بحيث يمرّ $[AB]$ من المركز $O$ بينما لا يمرّ $[EF]$ من $O$ . كيف نميّز بين هذه القطع، وكيف ننقل طولاً أو ننشئ مثيلاً للقوس $\\overset{\\frown}{EF}$ باستعمال المدور فقط؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 215\" width=\"520\" height=\"215\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"245\" height=\"195\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><circle cx=\"135\" cy=\"112\" r=\"76\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 86.1 170.2 A 76 76 0 0 0 197.3 155.6\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/><line x1=\"59\" y1=\"112\" x2=\"211\" y2=\"112\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"135\" y1=\"112\" x2=\"178.6\" y2=\"49.7\" stroke=\"#7c3aed\" stroke-width=\"2\"/><line x1=\"86.1\" y1=\"170.2\" x2=\"197.3\" y2=\"155.6\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"135\" cy=\"112\" r=\"3.8\" fill=\"#0f172a\"/><circle cx=\"59\" cy=\"112\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"211\" cy=\"112\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"178.6\" cy=\"49.7\" r=\"3.5\" fill=\"#7c3aed\"/><circle cx=\"86.1\" cy=\"170.2\" r=\"3.5\" fill=\"#16a34a\"/><circle cx=\"197.3\" cy=\"155.6\" r=\"3.5\" fill=\"#16a34a\"/><text x=\"128\" y=\"104\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"46\" y=\"116\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">A</text><text x=\"216\" y=\"116\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">B</text><text x=\"184\" y=\"46\" font-size=\"12\" font-weight=\"bold\" fill=\"#7c3aed\">C</text><text x=\"72\" y=\"178\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">E</text><text x=\"202\" y=\"166\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">F</text><text x=\"96\" y=\"106\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">قطر</text><text x=\"170\" y=\"88\" font-size=\"11\" font-weight=\"bold\" fill=\"#7c3aed\">r</text><text x=\"142\" y=\"156\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">وتر</text><text x=\"142\" y=\"199\" font-size=\"11\" font-weight=\"bold\" fill=\"#ea580c\">القوس EF</text><text x=\"204\" y=\"58\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">(C)</text><rect x=\"265\" y=\"10\" width=\"245\" height=\"195\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"387\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">إنشاء مثيل القوس بالمدور</text><text x=\"387\" y=\"52\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">1) نفتح المدور على نصف القطر r</text><text x=\"387\" y=\"70\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">2) ننقل طول الوتر EF بالمدور من 'E</text><circle cx=\"385\" cy=\"118\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"381\" y=\"110\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">O'</text><path d=\"M 332 152 A 64 64 0 0 0 434 156\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><path d=\"M 410 132 A 76 76 0 0 1 430 176\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><line x1=\"346\" y1=\"168\" x2=\"424\" y2=\"165\" stroke=\"#16a34a\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/><circle cx=\"346\" cy=\"168\" r=\"3.5\" fill=\"#16a34a\"/><circle cx=\"424\" cy=\"165\" r=\"3.5\" fill=\"#ea580c\"/><text x=\"336\" y=\"182\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">E'</text><text x=\"428\" y=\"180\" font-size=\"12\" font-weight=\"bold\" fill=\"#ea580c\">F'</text><text x=\"387\" y=\"196\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">E'F' = EF  و  O'E' = OE = r</text></svg>",
+    "steps": [
+      {
+        "promptAr": "إذا كان نصف قطر الدائرة $r = OC = 3\\text{ cm}$ ، فما طول القطر $AB$ بالسنتيمتر؟",
+        "hintAr": "القطر يساوي ضعف نصف القطر، أي $d = 2 \\times r$ .",
+        "expectedInput": "6",
+        "revealAr": "بما أن المركز $O$ منتصف القطر $[AB]$ فإن $AB = OA + OB = 3 + 3 = 6\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "ماذا نسمي القطعة $[EF]$ التي طرفاها $E$ و $F$ من الدائرة ولا تشمل المركز $O$ ؟ وما اسم الجزء الملون بالبرتقالي من الدائرة المحصور بين $E$ و $F$ ؟",
+        "hintAr": "القطعة التي تصل نقطتين من الدائرة تسمى وتراً، والجزء المنحني من الدائرة يسمى قوساً.",
+        "revealAr": "القطعة $[EF]$ هي **وتر** للدائرة، والجزء المنحني المحصور بين $E$ و $F$ هو **القوس** $\\overset{\\frown}{EF}$ . أما القطر $[AB]$ فهو أطول وتر في الدائرة لأنه يمر من المركز."
+      },
+      {
+        "promptAr": "عيّنا نقطتين $K$ و $L$ بحيث $OK = 3\\text{ cm}$ و $OL = 2.5\\text{ cm}$ (علماً أن نصف القطر $3\\text{ cm}$). هل تنتمي $K$ إلى الدائرة $(\\mathcal{C})$ ؟ وماذا عن $L$ ؟",
+        "hintAr": "تنتمي النقطة إلى الدائرة $(\\mathcal{C})$ إذا وفقط إذا كانت مسافتها عن المركز تساوي نصف القطر تماماً ($OM = r$).",
+        "revealAr": "النقطة $K$ تنتمي إلى الدائرة ($K \\in (\\mathcal{C})$) لأن $OK = 3\\text{ cm} = r$ . أمّا $L$ فلا تنتمي إلى الدائرة ($L \\notin (\\mathcal{C})$) لأن $OL = 2.5\\text{ cm} < 3\\text{ cm}$ (تقع داخل الدائرة)."
+      },
+      {
+        "promptAr": "لإنشاء مثيل للقوس $\\overset{\\frown}{EF}$ دون منقلة، بعد رسم قوس مركزه $O'$ ونصف قطره $r$ وتعيين نقطة $E'$ عليه، ما المسافة التي ننقلها بالمدور من $E'$ لتحديد $F'$ ؟",
+        "hintAr": "انظر إلى المسافة المستقيمة بين $E$ و $F$ (الوتر $[EF]$).",
+        "revealAr": "نفتح المدور على طول الوتر $EF$ ، ثم نضع الشوكة في $E'$ ونرسم قوساً يقطع القوس الأول في $F'$ . بذلك نكون قد أنشأنا مثيلاً للقوس $\\overset{\\frown}{E'F'}$ باستعمال المدور والمسطرة فقط."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**تعريف الدائرة**: الدائرة $(\\mathcal{C})$ ذات المركز $O$ ونصف القطر $r$ هي مجموعة كل نقط المستوي التي تبعد عن $O$ بنفس المسافة $r$ . أي $M \\in (\\mathcal{C})$ معناه $OM = r$ .",
+      "**المصطلحات الأساسية**: **نصف القطر** هو قطعة تصل المركز بنقطة من الدائرة (وطوله $r$). **الوتر** هو قطعة طرفاها نقطتان من الدائرة. **القطر** هو وتر يمر من المركز $O$ ، وطوله $d = 2 \\times r$ (أي $r = d \\div 2$). **القوس** $\\overset{\\frown}{EF}$ هو جزء من الدائرة محصور بين نقطتين منها.",
+      "**نقل ومقارنة الأطوال بالمدور**: يسمح المدور بنقل طول قطعة مستقيم $[AB]$ على نصف مستقيم $[Ox)$ بدقة دون الحاجة لقياسه بالمسطرة المدرجة، كما يسمح بمقارنة أطوال قطع مختلفة.",
+      "**إنشاء مثيل قوس**: لرسم مثيل لقوس $\\overset{\\frown}{EF}$ مركزها $O$ ونصف قطرها $r$ ، نرسم أولاً قوساً مركزه $O'$ بنفس نصف القطر $r$ ونعيّن عليه نقطة $E'$ ، ثم نأخذ بالمدور فتحة الوتر $EF$ ونقطع القوس انطلاقاً من $E'$ لنحصل على $F'$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 205\" width=\"540\" height=\"205\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"256\" height=\"181\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"140\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">عناصر ومصطلحات الدائرة (C)</text><circle cx=\"136\" cy=\"112\" r=\"68\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 88 160 A 68 68 0 0 0 191.7 151\" fill=\"none\" stroke=\"#ea580c\" stroke-width=\"4\"/><line x1=\"68\" y1=\"112\" x2=\"204\" y2=\"112\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"136\" y1=\"112\" x2=\"179.7\" y2=\"59.9\" stroke=\"#7c3aed\" stroke-width=\"2\"/><line x1=\"88\" y1=\"160\" x2=\"191.7\" y2=\"151\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"136\" cy=\"112\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"68\" cy=\"112\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"204\" cy=\"112\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"179.7\" cy=\"59.9\" r=\"3\" fill=\"#7c3aed\"/><circle cx=\"88\" cy=\"160\" r=\"3\" fill=\"#16a34a\"/><circle cx=\"191.7\" cy=\"151\" r=\"3\" fill=\"#16a34a\"/><text x=\"127\" y=\"105\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"56\" y=\"116\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">A</text><text x=\"208\" y=\"116\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">B</text><text x=\"184\" y=\"56\" font-size=\"11\" font-weight=\"bold\" fill=\"#7c3aed\">M</text><text x=\"76\" y=\"170\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">E</text><text x=\"196\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">F</text><text x=\"98\" y=\"106\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\">القطر d = 2r</text><text x=\"168\" y=\"92\" font-size=\"10\" font-weight=\"bold\" fill=\"#7c3aed\">r</text><text x=\"142\" y=\"149\" font-size=\"10\" font-weight=\"bold\" fill=\"#16a34a\">الوتر</text><text x=\"140\" y=\"188\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#ea580c\">القوس EF جزء من الدائرة</text><rect x=\"280\" y=\"12\" width=\"248\" height=\"181\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.4\"/><text x=\"404\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">نقل طول قطعة بالمدور</text><line x1=\"315\" y1=\"72\" x2=\"425\" y2=\"72\" stroke=\"#dc2626\" stroke-width=\"2.4\"/><circle cx=\"315\" cy=\"72\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"425\" cy=\"72\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"315\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"425\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"370\" y=\"62\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">فتحة المدور = AB</text><line x1=\"305\" y1=\"138\" x2=\"505\" y2=\"138\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"320\" cy=\"138\" r=\"3.5\" fill=\"#16a34a\"/><circle cx=\"430\" cy=\"138\" r=\"3.5\" fill=\"#dc2626\"/><path d=\"M 424 114 A 110 110 0 0 1 426 162\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 2\"/><text x=\"320\" y=\"158\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">C</text><text x=\"430\" y=\"158\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">D</text><text x=\"498\" y=\"130\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">x</text><text x=\"404\" y=\"180\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">نحصل على قطعة [CD] بحيث CD = AB</text></svg>",
+    "visualCaptionAr": "مصطلحات الدائرة (المركز، القطر، نصف القطر، الوتر، القوس) ونقل الأطوال بالمدور",
+    "examples": [
+      {
+        "problemAr": "دائرة $(\\mathcal{C})$ مركزها $O$ وقطرها $AB = 9\\text{ cm}$ . ما نصف قطرها؟ وهل تنتمي النقط $P$ و $Q$ و $S$ إلى $(\\mathcal{C})$ إذا كان $OP = 4.5\\text{ cm}$ ، $OQ = 3.8\\text{ cm}$ ، $OS = 5\\text{ cm}$ ؟",
+        "solutionAr": "نصف القطر هو $r = 9 \\div 2 = 4.5\\text{ cm}$ .\n\n- $OP = 4.5\\text{ cm} = r$ ، إذن $P \\in (\\mathcal{C})$ .\n\n- $OQ = 3.8\\text{ cm} < r$ ، إذن $Q \\notin (\\mathcal{C})$ (تقع داخل الدائرة).\n\n- $OS = 5\\text{ cm} > r$ ، إذن $S \\notin (\\mathcal{C})$ (تقع خارج الدائرة)."
+      },
+      {
+        "problemAr": "أنشئ بالمدور مثلثاً $ABC$ حيث $AB = 5\\text{ cm}$ و $AC = 4\\text{ cm}$ و $BC = 3\\text{ cm}$ .",
+        "solutionAr": "1) نرسم قطعة المستقيم $[AB]$ طولها $5\\text{ cm}$ .\n\n2) نفتح المدور بفتحة $4\\text{ cm}$ ونضع الشوكة في $A$ ونرسم قوساً.\n\n3) نفتح المدور بفتحة $3\\text{ cm}$ ونضع الشوكة في $B$ ونرسم قوساً يقطع القوس الأول في $C$ ، ثم نصل $[AC]$ و $[BC]$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: عند طلب رسم دائرة **قطرها** $8\\text{ cm}$ ، يفتح بعض التلاميذ المدور على $8\\text{ cm}$ فيرسمون دائرة قطرها $16\\text{ cm}$ ! تذكّر دائماً: فتحة المدور تمثل **نصف القطر** ($8 \\div 2 = 4\\text{ cm}$) وليس القطر. كما أن النقطة داخل الدائرة ($OM < r$) تنتمي للقرص ولا تنتمي للدائرة."
+  },
+  "practice": [
+    {
+      "questionAr": "في الشكل المقابل، دائرة $(\\mathcal{C})$ مركزها $O$ وقطرها $AB = 10\\text{ cm}$ ، و $M \\in (\\mathcal{C})$ ، و $[EF]$ وتر طوله $7\\text{ cm}$ ، و $OK = 4\\text{ cm}$ . أي عبارة صحيحة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 165\" width=\"280\" height=\"165\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><circle cx=\"140\" cy=\"82\" r=\"62\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"78\" y1=\"82\" x2=\"202\" y2=\"82\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"140\" y1=\"82\" x2=\"175.6\" y2=\"31.2\" stroke=\"#7c3aed\" stroke-width=\"1.8\"/><line x1=\"92.5\" y1=\"121.9\" x2=\"187.5\" y2=\"121.9\" stroke=\"#16a34a\" stroke-width=\"2\"/><line x1=\"140\" y1=\"82\" x2=\"112\" y2=\"56\" stroke=\"#d97706\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/><circle cx=\"140\" cy=\"82\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"78\" cy=\"82\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"202\" cy=\"82\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"175.6\" cy=\"31.2\" r=\"3.5\" fill=\"#7c3aed\"/><circle cx=\"92.5\" cy=\"121.9\" r=\"3\" fill=\"#16a34a\"/><circle cx=\"187.5\" cy=\"121.9\" r=\"3\" fill=\"#16a34a\"/><circle cx=\"112\" cy=\"56\" r=\"3.5\" fill=\"#d97706\"/><text x=\"144\" y=\"96\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"65\" y=\"86\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">A</text><text x=\"207\" y=\"86\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">B</text><text x=\"180\" y=\"28\" font-size=\"11\" font-weight=\"bold\" fill=\"#7c3aed\">M</text><text x=\"80\" y=\"128\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">E</text><text x=\"191\" y=\"128\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">F</text><text x=\"101\" y=\"52\" font-size=\"11\" font-weight=\"bold\" fill=\"#d97706\">K</text><text x=\"140\" y=\"135\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">EF = 7 cm</text><text x=\"115\" y=\"75\" font-size=\"10\" font-weight=\"bold\" fill=\"#d97706\">4 cm</text></svg>",
+      "options": [
+        "نصف القطر $OM = 5\\text{ cm}$ و $K \\notin (\\mathcal{C})$",
+        "نصف القطر $OM = 10\\text{ cm}$ و $K \\in (\\mathcal{C})$",
+        "القطعة $[EF]$ قطر للدائرة و $OK = 5\\text{ cm}$",
+        "المسافة $OE = 10\\text{ cm}$ لأن $E \\in (\\mathcal{C})$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! بما أن القطر $10\\text{ cm}$ فنصف القطر $OM = 5\\text{ cm}$ ، ولأن $OK = 4\\text{ cm} < 5\\text{ cm}$ فإن $K \\notin (\\mathcal{C})$ .",
+        "العدد $10\\text{ cm}$ هو القطر وليس نصف القطر! كما أن $OK = 4\\text{ cm} \\neq 5\\text{ cm}$ فلا تنتمي $K$ إلى الدائرة.",
+        "القطعة $[EF]$ لا تمر من المركز $O$ فهي وتر وليست قطراً، وطول $OK$ معطى بـ $4\\text{ cm}$ .",
+        "النقطة $E$ تقع على الدائرة، فالمسافة $OE$ تساوي نصف القطر $5\\text{ cm}$ وليس القطر $10\\text{ cm}$ ."
+      ],
+      "explanationAr": "نصف قطر الدائرة يساوي نصف القطرين $r = 10 \\div 2 = 5\\text{ cm}$ ، وبما أن $M \\in (\\mathcal{C})$ فإن $OM = 5\\text{ cm}$ . أما النقطة $K$ فتبعد $4\\text{ cm}$ عن $O$ (أصغر من $5\\text{ cm}$ )، فهي داخل الدائرة ولا تنتمي إليها ($K \\notin (\\mathcal{C})$)."
+    },
+    {
+      "questionAr": "نريد رسم دائرة **قطرها** $d = 7\\text{ cm}$ باستعمال المدور. ما هي فتحة المدور المناسبة على المسطرة؟",
+      "options": [
+        "$7\\text{ cm}$",
+        "$14\\text{ cm}$",
+        "$3.5\\text{ cm}$",
+        "$5\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "إذا فتحت المدور على $7\\text{ cm}$ ستحصل على دائرة نصف قطرها $7\\text{ cm}$ أي قطرها $14\\text{ cm}$ !",
+        "ضربتَ القطر في $2$ بدلاً من قسمته على $2$ ! تذكّر أن $r = d \\div 2$ .",
+        "ممتاز! فتحة المدور هي نصف القطر: $r = 7 \\div 2 = 3.5\\text{ cm}$ .",
+        "نصف القطر يساوي نصف $7\\text{ cm}$ ، أي $3.5\\text{ cm}$ وليس $5\\text{ cm}$ ."
+      ],
+      "explanationAr": "تساوي فتحة المدور دائماً **نصف قطر** الدائرة. وبما أن القطر $d = 7\\text{ cm}$ فإن نصف القطر هو $r = 7 \\div 2 = 3.5\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "لإنشاء مثيل للقوس $\\overset{\\frown}{AB}$ مركزها $O$ ونصف قطرها $r$ باستعمال المدور والمسطرة غير المدرجة فقط، رسمنا قوساً مركزه $O'$ ونصف قطره $r$ وعيّنا عليه $A'$ . ما الطول الذي نأخذه بالمدور من $A'$ لتحديد النقطة $B'$ ؟",
+      "options": [
+        "طول القطر $2 \\times r$",
+        "طول الوتر $AB$",
+        "نصف طول الوتر $AB \\div 2$",
+        "ضعف طول الوتر $2 \\times AB$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "القوسان المتطابقان لهما نفس نصف القطر ونفس طول الوتر $AB$ ، وليس طول القطر.",
+        "صحيح تماماً! نقيس فتحة الوتر $AB$ بالمدور وننقلها انطلاقاً من $A'$ لنحدد $B'$ .",
+        "نقل نصف الوتر يعطي قوساً أصغر من القوس الأصلي $\\overset{\\frown}{AB}$ .",
+        "ضرب طول الوتر في $2$ لا يعطي مثيل القوس بل يغير فتحة الزاوية."
+      ],
+      "explanationAr": "يتحدد مثيل القوس $\\overset{\\frown}{AB}$ بعنصرين: نفس نصف القطر $r$ ونفس فتحة الوتر $AB$ . لذا نأخذ بالمدور طول الوتر $AB$ وننطلق من $A'$ لنحدد $B'$ ."
+    }
+  ]
+}

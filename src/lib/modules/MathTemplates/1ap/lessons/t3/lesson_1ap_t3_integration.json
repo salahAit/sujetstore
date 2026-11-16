@@ -1,0 +1,122 @@
+{
+  "id": "lesson_1ap_t3_integration",
+  "slug": "1ap-t3-integration",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع الخامس (الجزء الثاني): العملة الجزائرية، الحساب بتمعّن والجمع دون احتفاظ",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الثالث: الأعداد إلى 99 والنقود والمرصوفة والحساب",
+  "objectives": [
+    "تجنيد الأعداد إلى 99 والجمع دون احتفاظ والطرح البسيط والحساب بتمعّن في مشكلات يومية",
+    "استعمال القطع النقدية (DA) وجداول الأسعار والمرصوفة لاستخراج معطيات وتوظيفها",
+    "إنجاز وضعية إدماجية بسيطة تتضمن العملية الأفقية والعمودية وصياغة جملة الإجابة"
+  ],
+  "keywordsAr": [
+    "إدماج",
+    "حصيلة الفصل الثالث",
+    "الدينار الجزائري (DA)",
+    "وضعية إدماجية"
+  ],
+  "discover": {
+    "scenarioAr": "في مَعْرِضِ المَدْرَسَةِ، يَمْلِكُ أَمِينُ قِطَعًا نَقْدِيَّةً جَزائِرِيَّةً، وَيُرِيدُ شِراءَ عَصِيرٍ وَكَعْكَةٍ مِنْ رُكْنِ المَأْكُولاتِ المُعَلَّمِ عَلى المَرْصُوفَةِ.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 205\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"10\" width=\"160\" height=\"185\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"88\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">نُقُودُ أَمِين (DA)</text><circle cx=\"56\" cy=\"74\" r=\"24\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2.2\"/><text x=\"56\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">50</text><text x=\"56\" y=\"88\" text-anchor=\"middle\" font-size=\"8\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"120\" cy=\"74\" r=\"22\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"120\" y=\"75\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">20</text><text x=\"120\" y=\"87\" text-anchor=\"middle\" font-size=\"8\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"56\" cy=\"140\" r=\"20\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"56\" y=\"141\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">10</text><text x=\"56\" y=\"152\" text-anchor=\"middle\" font-size=\"8\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"120\" cy=\"140\" r=\"18\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"120\" y=\"141\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">5</text><text x=\"120\" y=\"151\" text-anchor=\"middle\" font-size=\"8\" fill=\"#475569\" direction=\"ltr\">DA</text><rect x=\"176\" y=\"10\" width=\"154\" height=\"185\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"253\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">جَدْوَلُ الأَسْعارِ</text><g stroke=\"#94a3b8\" stroke-width=\"1.2\" fill=\"#fff\"><rect x=\"186\" y=\"46\" width=\"67\" height=\"40\"/><rect x=\"253\" y=\"46\" width=\"67\" height=\"40\"/><rect x=\"186\" y=\"86\" width=\"67\" height=\"40\"/><rect x=\"253\" y=\"86\" width=\"67\" height=\"40\"/><rect x=\"186\" y=\"126\" width=\"67\" height=\"40\"/><rect x=\"253\" y=\"126\" width=\"67\" height=\"40\"/></g><text x=\"286\" y=\"71\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">عَصِيرٌ</text><text x=\"219\" y=\"71\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">32 DA</text><text x=\"286\" y=\"111\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">كَعْكَةٌ</text><text x=\"219\" y=\"111\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">41 DA</text><text x=\"286\" y=\"151\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">حَلْوى</text><text x=\"219\" y=\"151\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">14 DA</text><rect x=\"338\" y=\"10\" width=\"134\" height=\"185\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"405\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">المَرْصُوفَةُ</text><g stroke=\"#64748b\" stroke-width=\"1.2\" fill=\"#fff\"><rect x=\"364\" y=\"48\" width=\"30\" height=\"30\"/><rect x=\"394\" y=\"48\" width=\"30\" height=\"30\" fill=\"#fde047\"/><rect x=\"424\" y=\"48\" width=\"30\" height=\"30\"/><rect x=\"364\" y=\"78\" width=\"30\" height=\"30\"/><rect x=\"394\" y=\"78\" width=\"30\" height=\"30\"/><rect x=\"424\" y=\"78\" width=\"30\" height=\"30\"/><rect x=\"364\" y=\"108\" width=\"30\" height=\"30\"/><rect x=\"394\" y=\"108\" width=\"30\" height=\"30\"/><rect x=\"424\" y=\"108\" width=\"30\" height=\"30\"/></g><g font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" text-anchor=\"middle\" direction=\"ltr\"><text x=\"352\" y=\"67\">3</text><text x=\"352\" y=\"97\">2</text><text x=\"352\" y=\"127\">1</text><text x=\"379\" y=\"154\">A</text><text x=\"409\" y=\"154\">B</text><text x=\"439\" y=\"154\">C</text></g><text x=\"409\" y=\"67\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">رُكْن</text><text x=\"405\" y=\"178\" text-anchor=\"middle\" font-size=\"10\" fill=\"#15803d\" direction=\"rtl\">الرُّكْنُ في (B, 3)</text></svg>",
+    "steps": [
+      {
+        "promptAr": "احْسُبْ مَجْمُوعَ النُّقُودِ الَّتِي يَمْلِكُها أَمِينُ: $50 + 20 + 10 + 5$. كَمْ دِينارًا مَعَهُ؟",
+        "hintAr": "اجْمَعِ العَشَراتِ ($50 + 20 + 10$) ثُمَّ أَضِفْ $5$.",
+        "expectedInput": "85",
+        "revealAr": "يَمْلِكُ أَمِينُ $50 + 20 + 10 + 5 = 85\\text{ DA}$."
+      },
+      {
+        "promptAr": "اسْتَخْرِجْ مِنَ الجَدْوَلِ ثَمَنَ العَصِيرِ ($32\\text{ DA}$) وَثَمَنَ الكَعْكَةِ ($41\\text{ DA}$)، ثُمَّ احْسُبْ ثَمَنَهما مَعًا ($32 + 41$).",
+        "hintAr": "اجْمَعِ الوَحَداتِ ($2 + 1$) ثُمَّ العَشَراتِ ($3 + 4$).",
+        "expectedInput": "73",
+        "revealAr": "$32 + 41 = 73$؛ ثَمَنُ العَصِيرِ وَالكَعْكَةِ مَعًا هُوَ $73\\text{ DA}$."
+      },
+      {
+        "promptAr": "دَفَعَ أَمِينُ $73\\text{ DA}$ مِنْ مَبْلَغِ $85\\text{ DA}$. كَمْ دِينارًا بَقِيَ مَعَهُ ($85 - 73$)؟",
+        "hintAr": "اطْرَحِ الوَحَداتِ ($5 - 3$) ثُمَّ العَشَراتِ ($8 - 7$).",
+        "expectedInput": "12",
+        "revealAr": "$85 - 73 = 12$؛ بَقِيَ مَعَ أَمِين $12\\text{ DA}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لِحَلِّ وَضْعِيَّةٍ إِدْماجِيَّةٍ، نَقْرَأُ النَّصَّ بِتَرْكِيزٍ وَنَسْتَخْرِجُ الأَعْدادَ مِنَ النَّصِّ أَوِ الجَدْوَلِ أَوِ القِطَعِ النَّقْدِيَّةِ أَوِ المَرْصُوفَةِ.",
+      "نَخْتارُ العَمَلِيَّةَ المُناسِبَةَ ($+$ لِلْمَجْمُوعِ وَ $-$ لِلْباقِي)، وَنُجْرِي الحِسابَ ذِهْنِيًّا أَوْ عَمُودِيًّا دُونَ احْتِفاظٍ أوِ اسْتِلافٍ.",
+      "نُقارِنُ المَبالِغَ وَالأَعْدادَ إلى $99$، وَنَحْصُرُها بَيْنَ عَشَرَتَيْنِ مُتَتالِيَتَيْنِ (مِثْلَ: $70 < 73 < 80$).",
+      "في كُلِّ مَسْأَلَةٍ نَكْتُبُ العَمَلِيَّةَ الأُفُقِيَّةَ وَالعَمُودِيَّةَ ثُمَّ جُمْلَةَ الإِجابَةِ واضِحَةً مَعَ الوَحْدَةِ (مِثْلَ: $\\text{DA}$)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 190\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"354\" y=\"16\" width=\"114\" height=\"66\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"411\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">1. أَقْرَأُ</text><text x=\"411\" y=\"64\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">أَسْتَخْرِجُ المُعْطَياتِ</text><line x1=\"352\" y1=\"49\" x2=\"332\" y2=\"49\" stroke=\"#64748b\" stroke-width=\"2\"/><rect x=\"218\" y=\"16\" width=\"114\" height=\"66\" rx=\"8\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"275\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">2. أَخْتارُ</text><text x=\"275\" y=\"64\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">(+) / (-)</text><line x1=\"216\" y1=\"49\" x2=\"196\" y2=\"49\" stroke=\"#64748b\" stroke-width=\"2\"/><rect x=\"82\" y=\"16\" width=\"114\" height=\"66\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"139\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">3. أَحْسُبُ</text><text x=\"139\" y=\"64\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">عَمُودِيًّا وَأُفُقِيًّا</text><rect x=\"14\" y=\"100\" width=\"218\" height=\"76\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"123\" y=\"124\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">32 + 41 = 73 DA</text><text x=\"123\" y=\"148\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">85 - 73 = 12 DA</text><text x=\"123\" y=\"168\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">70 &lt; 73 &lt; 80</text><rect x=\"248\" y=\"100\" width=\"220\" height=\"76\" rx=\"8\" fill=\"#fff7ed\" stroke=\"#ea580c\" stroke-width=\"1.5\"/><text x=\"358\" y=\"132\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"rtl\">4. أَكْتُبُ جُمْلَةَ الإِجابَةِ</text><text x=\"358\" y=\"158\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"rtl\">«بَقِيَ مَعَ أَمِين 12 DA»</text></svg>",
+    "visualCaptionAr": "خُطُواتُ حَلِّ الوَضْعِيَّةِ الإِدْماجِيَّةِ مَعَ اسْتِثْمارِ النُّقُودِ وَالجَدْوَلِ وَالحَصْرِ.",
+    "examples": [
+      {
+        "problemAr": "ادَّخَرَتْ سارَةُ قِطْعَةَ $50\\text{ DA}$ وَقِطْعَةَ $20\\text{ DA}$ وَ $6$ دَنانِيرَ. اشْتَرَتْ مِقْلَمَةً بِـ $64\\text{ DA}$. كَمْ بَقِيَ مَعَها، وَما حَصْرُ مَبْلَغِها الأَصْلِيِّ بَيْنَ عَشَرَتَيْنِ؟",
+        "solutionAr": "مَبْلَغُ سارَةَ: $50 + 20 + 6 = 76\\text{ DA}$. الباقِي بَعْدَ الشِّراءِ: $76 - 64 = 12\\text{ DA}$. وَحَصْرُ $76$ بَيْنَ عَشَرَتَيْنِ هُوَ: $70 < 76 < 80$."
+      },
+      {
+        "problemAr": "عَلى مَرْصُوفَةٍ، تَحَرَّكَ رُوبُوتٌ مِنْ $(A, 1)$ إلى $(C, 1)$ ثُمَّ صَعِدَ إلى $(C, 3)$. كَمْ خانَةً تَحَرَّكَ في المَجْمُوعِ؟ وَإِذا سَجَّلَ $58$ نُقْطَةً، فَكَمْ يَنْقُصُهُ لِيَصِلَ إلى $60$؟",
+        "solutionAr": "تَحَرَّكَ $2$ خانَتَيْنِ يَمِينًا وَ $2$ خانَتَيْنِ أَعْلى، أَيْ $2 + 2 = 4$ خاناتٍ. وَمُتَمِّمُ $58$ إلى العَشَرَةِ المُوالِيَةِ $60$ هُوَ $2$ ($58 + 2 = 60$)."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! في الوَضْعِيَّةِ الإِدْماجِيَّةِ ذاتِ السُّؤالَيْنِ، حُلَّ السُّؤالَ الأَوَّلَ بِدِقَّةٍ ثُمَّ اسْتَعْمِلْ نَتِيجَتَهُ في السُّؤالِ الثّانِي، وَلا تَنْسَ كِتابَةَ جُمْلَةِ الإِجابَةِ وَالوَحْدَةِ ($\\text{DA}$ أَوْ خانَةً)."
+  },
+  "practice": [
+    {
+      "questionAr": "تَمْلِكُ مَرْيَمُ $78\\text{ DA}$. اشْتَرَتْ عُلْبَةَ أَلْوانٍ وَمِسْطَرَةً مِنَ الجَدْوَلِ. كَمْ دَفَعَتْ وَكَمْ بَقِيَ مَعَها؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 110\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"15\" y=\"12\" width=\"390\" height=\"86\" rx=\"8\" fill=\"#fff\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"15\" y=\"12\" width=\"390\" height=\"40\" rx=\"6\" fill=\"#eff6ff\"/><line x1=\"15\" y1=\"52\" x2=\"405\" y2=\"52\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"145\" y1=\"12\" x2=\"145\" y2=\"98\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"275\" y1=\"12\" x2=\"275\" y2=\"98\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"340\" y=\"37\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">عُلْبَةُ أَلْوانٍ</text><text x=\"210\" y=\"37\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">مِسْطَرَةٌ</text><text x=\"80\" y=\"37\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">مِمْحاةٌ</text><text x=\"340\" y=\"79\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">43 DA</text><text x=\"210\" y=\"79\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">22 DA</text><text x=\"80\" y=\"79\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">12 DA</text></svg>",
+      "options": [
+        "دَفَعَتْ $65\\text{ DA}$ وَبَقِيَ $23\\text{ DA}$",
+        "دَفَعَتْ $55\\text{ DA}$ وَبَقِيَ $23\\text{ DA}$",
+        "دَفَعَتْ $65\\text{ DA}$ وَبَقِيَ $13\\text{ DA}$",
+        "دَفَعَتْ $65\\text{ DA}$ وَبَقِيَ $14\\text{ DA}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "ثَمَنُ المُشْتَرَياتِ ($65\\text{ DA}$) صَحِيحٌ، لَكِنْ راجِعِ العَشَراتِ في الطَّرْحِ: $7 - 6 = 1$ وَلَيْسَ $2$.",
+        "راجِعْ جَمْعَ العَشَراتِ في الثَّمَنِ: $4 + 2 = 6$ وَلَيْسَ $5$.",
+        "أَحْسَنْتَ! الثَّمَنُ $43 + 22 = 65\\text{ DA}$، وَالباقِي $78 - 65 = 13\\text{ DA}$.",
+        "راجِعْ طَرْحَ الوَحَداتِ: $8 - 5 = 3$ وَلَيْسَ $4$."
+      ],
+      "explanationAr": "نَحْسُبُ أَوَّلًا ثَمَنَ الأَلْوانِ وَالمِسْطَرَةِ: $43 + 22 = 65\\text{ DA}$. ثُمَّ نَحْسُبُ الباقِيَ: $78 - 65 = 13\\text{ DA}$."
+    },
+    {
+      "questionAr": "عَلى المَرْصُوفَةِ، يَقَعُ البَيْتُ في $(A, 1)$. يَتَّجِهُ أَمِينُ إلى المَدْرَسَةِ عَبْرَ الخَطِّ الأَخْضَرِ. ما مَوْقِعُ المَدْرَسَةِ وَكَمْ خانَةً يَمْشِي أَمِينُ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 165\" style=\"background:#fff;font-family:Arial,sans-serif\"><g stroke=\"#64748b\" stroke-width=\"1.4\" fill=\"#fff\"><rect x=\"70\" y=\"15\" width=\"52\" height=\"36\"/><rect x=\"122\" y=\"15\" width=\"52\" height=\"36\"/><rect x=\"174\" y=\"15\" width=\"52\" height=\"36\"/><rect x=\"226\" y=\"15\" width=\"52\" height=\"36\" fill=\"#fef08a\"/><rect x=\"70\" y=\"51\" width=\"52\" height=\"36\"/><rect x=\"122\" y=\"51\" width=\"52\" height=\"36\"/><rect x=\"174\" y=\"51\" width=\"52\" height=\"36\"/><rect x=\"226\" y=\"51\" width=\"52\" height=\"36\"/><rect x=\"70\" y=\"87\" width=\"52\" height=\"36\" fill=\"#dbeafe\"/><rect x=\"122\" y=\"87\" width=\"52\" height=\"36\"/><rect x=\"174\" y=\"87\" width=\"52\" height=\"36\"/><rect x=\"226\" y=\"87\" width=\"52\" height=\"36\"/></g><g font-size=\"13\" font-weight=\"bold\" fill=\"#334155\" text-anchor=\"middle\" direction=\"ltr\"><text x=\"52\" y=\"38\">3</text><text x=\"52\" y=\"74\">2</text><text x=\"52\" y=\"110\">1</text><text x=\"96\" y=\"144\">A</text><text x=\"148\" y=\"144\">B</text><text x=\"200\" y=\"144\">C</text><text x=\"252\" y=\"144\">D</text></g><text x=\"96\" y=\"109\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">بَيْت</text><text x=\"252\" y=\"37\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">مَدْرَسَة</text><path d=\"M114 105 L252 105 L252 48\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.8\" stroke-dasharray=\"5,3\"/><polygon points=\"252,44 247,52 257,52\" fill=\"#16a34a\"/></svg>",
+      "options": [
+        "$(3, D)$ وَيَمْشِي $5$ خاناتٍ",
+        "$(D, 3)$ وَيَمْشِي $5$ خاناتٍ",
+        "$(D, 3)$ وَيَمْشِي $6$ خاناتٍ",
+        "$(C, 3)$ وَيَمْشِي $4$ خاناتٍ"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "نَذْكُرُ العَمُودَ ($D$) أَوَّلًا ثُمَّ السَّطْرَ ($3$)، فَالْخانَةُ هِيَ $(D, 3)$.",
+        "مُمْتازٌ! المَدْرَسَةُ في $(D, 3)$، وَالمَسْلَكُ هُوَ $3$ خاناتٍ يَمِينًا + $2$ خانَتَيْنِ أَعْلى = $5$ خاناتٍ.",
+        "لا تَعُدَّ خانَةَ الانْطِلاقِ $(A, 1)$ كَخُطْوَةٍ: القَفَزاتُ هِيَ $3 + 2 = 5$ خاناتٍ.",
+        "انْظُرْ أَسْفَلَ المَدْرَسَةِ: هِيَ في العَمُودِ $D$ وَلَيْسَ $C$."
+      ],
+      "explanationAr": "تَقَعُ المَدْرَسَةُ في العَمُودِ $D$ وَالسَّطْرِ $3$ أَيْ $(D, 3)$. وَيَمْشِي أَمِينُ $3$ خاناتٍ يَمِينًا ($A \\rightarrow D$) ثُمَّ خانَتَيْنِ ($2$) إلى الأَعْلى ($1 \\rightarrow 3$)، إِذَنْ $3 + 2 = 5$ خاناتٍ."
+    },
+    {
+      "questionAr": "في صُنْدُوقٍ $84$ كُرَيَّةً. ما الحَصْرُ الصَّحِيحُ لِـ $84$ بَيْنَ عَشَرَتَيْنِ مُتَتالِيَتَيْنِ، وَكَمْ نُضِيفُ لِـ $84$ لِنَصِلَ إلى $90$؟",
+      "options": [
+        "$80 < 84 < 90$ وَنُضِيفُ $6$",
+        "$83 < 84 < 85$ وَنُضِيفُ $6$",
+        "$80 < 84 < 90$ وَنُضِيفُ $4$",
+        "$70 < 84 < 80$ وَنُضِيفُ $16$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أَحْسَنْتَ! الحَصْرُ هُوَ $80 < 84 < 90$، وَمُتَمِّمُ $84$ إلى $90$ هُوَ $6$.",
+        "$83$ و $85$ عَدَدانِ مُتَتالِيانِ وَلَيْسا عَشَرَتَيْنِ مُتَتالِيَتَيْنِ!",
+        "الحَصْرُ صَحِيحٌ، لَكِنَّ $84 + 4 = 88$؛ نَحْنُ نَحْتاجُ $6$ لِلْوُصُولِ إلى $90$.",
+        "$84$ أَكْبَرُ مِنْ $80$، لِذا يَقَعُ بَيْنَ $80$ و $90$ وَلَيْسَ بَيْنَ $70$ و $80$."
+      ],
+      "explanationAr": "العَشَرَتانِ المُتَتالِيَتانِ اللَّتانِ تَحْصُرانِ $84$ هُما $80$ و $90$ ($80 < 84 < 90$). وَمُتَمِّمُ $4$ إلى $10$ هُوَ $6$، إِذَنْ نُضِيفُ $6$ لِنَصِلَ إلى $90$ ($84 + 6 = 90$)."
+    }
+  ]
+}

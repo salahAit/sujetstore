@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "2ap",
+    "yearName": "السنة الثانية ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "احسب الجداء التالي مستعملاً الطريقة المناسبة (الضرب في 10 أو التفكيك النموذجي):",
+      "content": [
+        {
+          "type": "text",
+          "content": "أكمل الحساب بالتفكيك النموذجي: $33 times 3 = (30 + 3) times 3 = \"...........\"$",
+          "answer": "الحساب: $(30 times 3) + (3 times 3) = 90 + 9 = 99$",
+          "mark": "3"
+        }
+      ],
+      "id": "ex_test_1_2ap_t3_mult_tens_2digit",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "لاحظ المنشور المرسوم على المرصوفة ثم أكمل ملء الجدول حول المجسمات (المكعب والبلاطة القائمة):",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.15fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) ما اسم المجسم الذي يمثله هذا المنشور على المرصوفة؟ ..............",
+              "answer": "المكعب (لأن وجوهه الستة كلها مربعات متقايسة).",
+              "mark": "1"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/2ap_t3_solid_medium_s65839.svg",
+              "caption": "منشور مجسم على المرصوفة"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "المجسم",
+            "عدد الوجوه",
+            "عدد الأحرف",
+            "عدد الرؤوس",
+            "شكل الوجوه"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "المكعب",
+              {
+                "content": "........",
+                "answer": "$6$",
+                "mark": "0.5"
+              },
+              {
+                "content": "........",
+                "answer": "$12$",
+                "mark": "0.5"
+              },
+              "$8$",
+              "مربع"
+            ],
+            [
+              "متوازي المستطيلات",
+              "$6$",
+              "$12$",
+              {
+                "content": "........",
+                "answer": "$8$",
+                "mark": "0.5"
+              },
+              {
+                "content": "........",
+                "answer": "مستطيل",
+                "mark": "0.5"
+              }
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        }
+      ],
+      "id": "ex_test_2_2ap_t3_grid_symmetry_solids",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "بمناسبة التحضير لحفل نهاية السنة، يملك أمين مبلغ $600$ دج (DA). اشترى $5$ علب عصير بثمن $45$ دج للواحدة، وكعكة صغيرة بثمن $285$ دج.",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب ثمن علب العصير ثم احسب المبلغ الإجمالي للمشتريات.",
+          "answer": "ثمن علب العصير: $45 times 5 = 225$ دج، والمجموع: $225 + 285 = 510$ دج.",
+          "mark": "2"
+        },
+        {
+          "type": "text",
+          "content": "2) كم ديناراً بقي مع أمين؟",
+          "answer": "الباقي مع أمين: $600 - 510 = 90$ دج.",
+          "mark": "2"
+        }
+      ],
+      "id": "ex_integration_2ap_t3_integration_purchase_change"
+    }
+  ]
+}

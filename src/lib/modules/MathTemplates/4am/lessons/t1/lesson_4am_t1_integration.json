@@ -1,0 +1,128 @@
+{
+  "id": "lesson_4am_t1_integration",
+  "slug": "4am-t1-integration",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t1",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثالث: حساب المثلثات في المثلث القائم وإدماج الفصل الأول",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الأول: القاسم المشترك الأكبر والجذور وخاصية طالس والنسب المثلثية",
+  "objectives": [
+    "تجنيد القاسم المشترك الأكبر (PGCD) وتبسيط الجذور التربيعية وتنطيق المقام وحل المعادلة $x^2 = b$ في تمارين مركبة",
+    "توظيف خاصية طالس وعكسها والنسب المثلثية وخاصية فيثاغورس في حل مشكلات هندسية وحساب الأطوال والأقياس",
+    "تحرير حل وضعيات إدماجية متكاملة وفق معايير التقويم الرسمية (الوجاهة، الاستعمال السليم، الانسجام، الإتقان)"
+  ],
+  "keywordsAr": [
+    "وضعية إدماجية",
+    "حصيلة الفصل الأول",
+    "تجنيد الموارد",
+    "تمارين نمط BEM"
+  ],
+  "discover": {
+    "scenarioAr": "لتنظيم معرض علمي ورياضي بالمتوسطة، تتولى لجنة التنظيم جزأين متكاملين:\n\n1) **الجزء العددي**: توزيع $252$ كراساً و $180$ قلماً على أكبر عدد ممكن من العلب المتماثلة دون باقٍ؛ وحساب أبعاد لافتة عرضها $W = \\sqrt{45} + \\sqrt{20}$ وارتفاعها $H = \\frac{10}{\\sqrt{5}}$ (بالديسيمتر).\n\n2) **الجزء الهندسي**: تصميم منحدر عرض يمثله المثلث $ABC$ القائم في $A$ حيث $AB = 8\\text{ m}$ و $AC = 6\\text{ m}$ ($BC = 10\\text{ m}$) مع وضع دعامة $[MN]$ موازية لـ $[AC]$ ($M \\in [AB]$ على بُعد $BM = 6\\text{ m}$ و $N \\in [BC]$). كيف نجنّد موارد الفصل الأول لحل هذه الوضعية؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"215\" height=\"175\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"117\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">الجانب العددي: PGCD والجذور</text><rect x=\"24\" y=\"42\" width=\"187\" height=\"42\" rx=\"7\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.2\"/><text x=\"117\" y=\"59\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">252 كراساً  و  180 قلماً</text><text x=\"117\" y=\"76\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">أكبر عدد علب = PGCD(252 ; 180)</text><rect x=\"24\" y=\"92\" width=\"187\" height=\"42\" rx=\"7\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"117\" y=\"110\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">W = √45 + √20 = k√5</text><text x=\"117\" y=\"126\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">تبسيط إلى الشكل a√b</text><rect x=\"24\" y=\"142\" width=\"187\" height=\"32\" rx=\"7\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"117\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">H = 10 / √5 (تنطيق المقام)</text><rect x=\"235\" y=\"10\" width=\"215\" height=\"175\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"342\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">الجانب الهندسي: طالس والمثلثات</text><polygon points=\"280,142 416,142 280,40\" fill=\"#dcfce7\" fill-opacity=\"0.4\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"314\" y1=\"142\" x2=\"314\" y2=\"65.5\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><polyline points=\"280,130 292,130 292,142\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><path d=\"M 392 142 A 24 24 0 0 1 396.8 127.6\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"268\" y=\"152\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"424\" y=\"152\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">B</text><text x=\"268\" y=\"40\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"314\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">M</text><text x=\"318\" y=\"59\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">N</text><text x=\"260\" y=\"96\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\">6 m</text><text x=\"365\" y=\"156\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">BM = 6 m</text><text x=\"362\" y=\"84\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#7c3aed\">BC = 10 m</text><text x=\"342\" y=\"174\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#166534\">(MN) // (AC) و BA = 8 m</text></svg>",
+    "steps": [
+      {
+        "promptAr": "لحساب أكبر عدد من العلب المتماثلة، نطبّق خوارزمية إقليدس على $252$ و $180$ : $252 = 180 \\times 1 + 72$ ، ثم $180 = 72 \\times 2 + 36$ ، ثم $72 = 36 \\times 2 + 0$ . ما قيمة $\\text{PGCD}(252; 180)$ ؟",
+        "hintAr": "انظر إلى آخر باقٍ غير معدوم في القسمات المتتالية.",
+        "expectedInput": "36",
+        "revealAr": "$\\text{PGCD}(252; 180) = 36$ ، إذن يمكن تحضير $36$ علبة متماثلة تضم كل علبة $252 \\div 36 = 7$ كراريس و $180 \\div 36 = 5$ أقلام."
+      },
+      {
+        "promptAr": "نكتب عرض اللافتة $W = \\sqrt{45} + \\sqrt{20}$ على الشكل $k\\sqrt{5}$ . ما قيمة المعامل $k$ ؟",
+        "hintAr": "بسّط $\\sqrt{45} = \\sqrt{9 \\times 5} = 3\\sqrt{5}$ و $\\sqrt{20} = \\sqrt{4 \\times 5} = 2\\sqrt{5}$ ثم اجمع.",
+        "expectedInput": "5",
+        "revealAr": "$W = 3\\sqrt{5} + 2\\sqrt{5} = 5\\sqrt{5}\\text{ dm}$ ، ومنه $k = 5$ . وبتنطيق المقام في الارتفاع: $H = \\frac{10}{\\sqrt{5}} = \\frac{10\\sqrt{5}}{5} = 2\\sqrt{5}\\text{ dm}$ ."
+      },
+      {
+        "promptAr": "في المثلث $ABC$ ، لدينا $(MN) \\parallel (AC)$ مع $BM = 6\\text{ m}$ و $BA = 8\\text{ m}$ و $AC = 6\\text{ m}$ . بتطبيق خاصية طالس من $B$ : $\\frac{BM}{BA} = \\frac{MN}{AC}$ . ما طول الدعامة $MN$ بالمتر؟",
+        "hintAr": "احسب $MN = \\frac{6 \\times 6}{8}$ .",
+        "expectedInput": "4.5",
+        "revealAr": "$\\frac{6}{8} = \\frac{MN}{6}$ ومنه $MN = \\frac{36}{8} = 4.5\\text{ m}$ ."
+      },
+      {
+        "promptAr": "في المثلث $ABC$ القائم في $A$ حيث $AC = 6\\text{ m}$ و $BC = 10\\text{ m}$ ، ما هي قيمة جيب زاوية ميل المنحدر $\\sin \\widehat{B} = \\frac{AC}{BC}$ في شكل عدد عشري؟",
+        "hintAr": "اقسم الضلع المقابل $6$ على الوتر $10$ .",
+        "expectedInput": "0.6",
+        "revealAr": "$\\sin \\widehat{B} = \\frac{6}{10} = 0.6$ ، وبالحاسبة (بوضع **DEG**) نجد قيس الزاوية $\\widehat{B} \\approx 37^\\circ$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**ركيزة الحساب العددي (PGCD والجذور)**: نطبّق خوارزمية إقليدس أو الفروق المتتابعة في مسائل التوزيع والتبليط واختزال الكسور إلى أبسط شكل ($\\text{PGCD} = 1$)؛ ونميّز في المعادلة $x^2 = b$ بين الحلين $\\pm\\sqrt{b}$ ($b > 0$) والطول الموجب فقط، كما نبسّط إلى $a\\sqrt{b}$ وننطّق مقاماً من الشكل $\\sqrt{a}$ أو $b\\sqrt{a}$ .",
+      "**ركيزة خاصية طالس والخاصية العكسية**: عند توفر التوازي نحسب الأطوال من المساواة الثلاثية انطلاقاً من نقطة التقاطع (شكلا المثلث والفراشة)؛ ولإثبات التوازي نقارن النسب المضبوطة (دون تقريب) ونتأكد من استقامية وترتيب النقط لتطبيق الخاصية العكسية.",
+      "**ركيزة النسب المثلثية في المثلث القائم**: نوظّف $\\sin, \\cos, \\tan$ (الحاسبة بوضع **DEG** فقط) لحساب أطوال وزوايا حادة، ونستعمل العلاقتين $\\cos^2 x + \\sin^2 x = 1$ و $\\tan x = \\frac{\\sin x}{\\cos x}$ بالتكامل مع خاصية فيثاغورس.",
+      "**شبكة تقويم الوضعية الإدماجية (BEM - 8 نقاط)**: راعِ المعايير الأربعة: (1) **الوجاهة** (اختيار الأداة الرياضية الصحيحة)؛ (2) **الاستعمال السليم لأدوات المادة** (دقة الحساب والبرهان)؛ (3) **انسجام الإجابة** (ترتيب الخطوات ووحدات القياس)؛ (4) **الإتقان** (تنظيم الورقة والتصريح بالنتيجة)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"14\" y=\"14\" width=\"206\" height=\"76\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"117\" y=\"38\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">1. القواسم و PGCD والكسور</text><text x=\"117\" y=\"59\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">إقليدس والفروق المتتابعة</text><text x=\"117\" y=\"76\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">أوليان فيما بينهما ⇐ PGCD = 1</text><rect x=\"240\" y=\"14\" width=\"206\" height=\"76\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"343\" y=\"38\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">2. الجذور التربيعية و x² = b</text><text x=\"343\" y=\"59\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">تبسيط إلى a√b وتنطيق √a و b√a</text><text x=\"343\" y=\"76\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">b &gt; 0 ⇐ حلان: √b و -√b</text><rect x=\"14\" y=\"105\" width=\"206\" height=\"76\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.6\"/><text x=\"117\" y=\"129\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\">3. خاصية طالس وعكسها</text><text x=\"117\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">المثلث والفراشة، تقسيم قطعة</text><text x=\"117\" y=\"167\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#a16207\">نسب مضبوطة + نفس الترتيب ⇐ //</text><rect x=\"240\" y=\"105\" width=\"206\" height=\"76\" rx=\"10\" fill=\"#fdf2f8\" stroke=\"#db2777\" stroke-width=\"1.6\"/><text x=\"343\" y=\"129\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#9d174d\">4. حساب المثلثات في القائم</text><text x=\"343\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">sin, cos, tan (بوضع الدرجة DEG)</text><text x=\"343\" y=\"167\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#be185d\">cos²x + sin²x = 1 ، tan x = sin/cos</text></svg>",
+    "visualCaptionAr": "الركائز الأربع لموارد الفصل الأول المجندة في تمارين ومسائل شهادة التعليم المتوسط (BEM)",
+    "examples": [
+      {
+        "problemAr": "(تمرين عددي نمط BEM) اكتب الكسر $A = \\frac{315}{225}$ على الشكل غير القابل للاختزال، ثم بسّط العدد $B = \\sqrt{125} - 2\\sqrt{20} + \\frac{10}{\\sqrt{5}}$ إلى الشكل $a\\sqrt{5}$ .",
+        "solutionAr": "1) نحسب $\\text{PGCD}(315; 225) = 45$ بخوارزمية إقليدس، ومنه $A = \\frac{315 \\div 45}{225 \\div 45} = \\frac{7}{5}$ .\n\n2) نبسط الحدود: $\\sqrt{125} = 5\\sqrt{5}$ ، و $2\\sqrt{20} = 4\\sqrt{5}$ ، وبتنطيق المقام $\\frac{10}{\\sqrt{5}} = \\frac{10\\sqrt{5}}{5} = 2\\sqrt{5}$ .\n\nومنه: $B = (5 - 4 + 2)\\sqrt{5} = 3\\sqrt{5}$ ."
+      },
+      {
+        "problemAr": "(تمرين هندسي نمط BEM) $EFG$ مثلث أطواله $EF = 6\\text{ cm}$ ، $EG = 8\\text{ cm}$ ، $FG = 10\\text{ cm}$ . عيّن $M \\in [EF]$ و $N \\in [EG]$ حيث $EM = 4.5\\text{ cm}$ و $EN = 6\\text{ cm}$ . أثبت أن $EFG$ قائم في $E$ ، ثم أثبت أن $(MN) \\parallel (FG)$ واحسب $\\cos \\widehat{F}$ .",
+        "solutionAr": "1) $FG^2 = 100$ و $EF^2 + EG^2 = 36 + 64 = 100$ ، إذن المثلث $EFG$ قائم في $E$ حسب الخاصية العكسية لفيثاغورس.\n\n2) $\\frac{EM}{EF} = \\frac{4.5}{6} = \\frac{3}{4}$ و $\\frac{EN}{EG} = \\frac{6}{8} = \\frac{3}{4}$ ، والنقط $E, M, F$ و $E, N, G$ بنفس الترتيب، إذن $(MN) \\parallel (FG)$ بالخاصية العكسية لطالس.\n\n3) في المثلث القائم $EFG$ : $\\cos \\widehat{F} = \\frac{EF}{FG} = \\frac{6}{10} = 0.6$ (ومنه $\\widehat{F} \\approx 53^\\circ$)."
+      }
+    ],
+    "watchOutAr": "في اختبارات الفصل الأول وشهادة التعليم المتوسط: (1) لا تطبّق النسب المثلثية قبل التأكد من أن المثلث **قائم** وذكر رأس الزاوية القائمة؛ (2) لا تستنتج التوازي بالخاصية العكسية لطالس دون التحقق من **تساوي نسبتين مضبوطتين** و**نفس ترتيب النقط**؛ (3) تحقّق من كتابة الوحدات وتصريح الإجابة بوضوح."
+  },
+  "practice": [
+    {
+      "questionAr": "لتكن العبارة $C = \\sqrt{98} - \\frac{12}{\\sqrt{2}}$ . ما الكتابة المبسطة للعدد $C$ ، وما حلول المعادلة $x^2 = C^2$ (أي $x^2 = 2$)؟",
+      "options": [
+        "$C = 1$ وحلا المعادلة هما $1$ و $-1$",
+        "$C = \\sqrt{2}$ وحل المعادلة هو $\\sqrt{2}$ فقط",
+        "$C = \\sqrt{2}$ وحلا المعادلة هما $\\sqrt{2}$ و $-\\sqrt{2}$",
+        "$C = 13\\sqrt{2}$ وحلا المعادلة هما $\\sqrt{2}$ و $-\\sqrt{2}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "تحقق من التبسيط: $\\sqrt{98} = 7\\sqrt{2}$ و $\\frac{12}{\\sqrt{2}} = 6\\sqrt{2}$ ، والفرق بينهما $7\\sqrt{2} - 6\\sqrt{2} = \\sqrt{2}$ وليس $1$ .",
+        "تبسيط $C = \\sqrt{2}$ صحيح، لكن المعادلة $x^2 = 2$ ($b = 2 > 0$) تقبل **حلين** متعاكسين هما $\\sqrt{2}$ و $-\\sqrt{2}$ .",
+        "ممتاز! $C = 7\\sqrt{2} - 6\\sqrt{2} = \\sqrt{2}$ ، وللمعادلة $x^2 = 2$ حلان هما $\\sqrt{2}$ و $-\\sqrt{2}$ .",
+        "في عبارة $C$ توجد عملية **طرح** ($7\\sqrt{2} - 6\\sqrt{2}$) وليس جمعاً ($7 + 6$)."
+      ],
+      "explanationAr": "نبسّط $\\sqrt{98} = \\sqrt{49 \\times 2} = 7\\sqrt{2}$ ، وننطّق المقام $\\frac{12}{\\sqrt{2}} = \\frac{12\\sqrt{2}}{2} = 6\\sqrt{2}$ . إذن $C = 7\\sqrt{2} - 6\\sqrt{2} = \\sqrt{2}$ . وبما أن $C^2 = (\\sqrt{2})^2 = 2 > 0$ فإن للمعادلة $x^2 = 2$ حلين هما $x = \\sqrt{2}$ و $x = -\\sqrt{2}$ ."
+    },
+    {
+      "questionAr": "في المثلث $ABC$ القائم في $A$ المقابل، $AB = 12\\text{ cm}$ ، $AC = 5\\text{ cm}$ ، $BC = 13\\text{ cm}$ . النقطة $M \\in [BA]$ حيث $BM = 9\\text{ cm}$ و $N \\in [BC]$ بحيث $(MN) \\parallel (AC)$ . ما قيمة الطول $MN$ وما قيمة $\\tan \\widehat{B}$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 160\" width=\"280\" height=\"160\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><polygon points=\"68,134 236,134 68,64\" fill=\"#eff6ff\" fill-opacity=\"0.4\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"110\" y1=\"134\" x2=\"110\" y2=\"81.5\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><polyline points=\"68,122 80,122 80,134\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><path d=\"M 210 134 A 26 26 0 0 1 212 124\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"57\" y=\"144\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"242\" y=\"144\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">B</text><text x=\"57\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"110\" y=\"149\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">M</text><text x=\"114\" y=\"76\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">N</text><text x=\"42\" y=\"103\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">5 cm</text><text x=\"173\" y=\"149\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\">BM = 9 cm</text><text x=\"164\" y=\"88\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#7c3aed\">BC = 13 cm</text><text x=\"152\" y=\"124\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\">AB = 12 cm</text></svg>",
+      "options": [
+        "$MN = 3.75\\text{ cm}$ و $\\tan \\widehat{B} = \\frac{5}{12}$",
+        "$MN = 1.25\\text{ cm}$ و $\\tan \\widehat{B} = \\frac{12}{5}$",
+        "$MN = 3.75\\text{ cm}$ و $\\tan \\widehat{B} = \\frac{5}{13}$",
+        "$MN = 4\\text{ cm}$ و $\\tan \\widehat{B} = \\frac{5}{12}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! بتطبيق طالس من $B$ : $\\frac{9}{12} = \\frac{MN}{5}$ ومنه $MN = 3.75\\text{ cm}$ ، وفي المثلث القائم $ABC$ : $\\tan \\widehat{B} = \\frac{AC}{AB} = \\frac{5}{12}$ .",
+        "لقد استعملت $AM = 12 - 9 = 3$ في البسط بدلاً من $BM = 9$ انطلاقاً من الرأس $B$ ، كما قلبت نسبة $\\tan \\widehat{B}$ .",
+        "طول $MN = 3.75\\text{ cm}$ صحيح، لكن $\\frac{5}{13}$ هو $\\sin \\widehat{B}$ (المقابل على الوتر) وليس $\\tan \\widehat{B}$ (المقابل على المجاور).",
+        "حساب $\\tan \\widehat{B} = \\frac{5}{12}$ صحيح، لكن تحقق من الجداء المتصالب: $\\frac{9 \\times 5}{12} = \\frac{45}{12} = 3.75$ وليس $4$ ."
+      ],
+      "explanationAr": "في المثلث $ABC$ القائم في $A$ : بما أن $(MN) \\parallel (AC)$ ، فحسب خاصية طالس انطلاقاً من $B$ : $\\frac{BM}{BA} = \\frac{MN}{AC}$ أي $\\frac{9}{12} = \\frac{MN}{5}$ ، ومنه $MN = \\frac{45}{12} = 3.75\\text{ cm}$ . وبالنسبة للزاوية $\\widehat{B}$ : $\\tan \\widehat{B} = \\frac{AC}{AB} = \\frac{5}{12}$ ."
+    },
+    {
+      "questionAr": "لتجهيز جوائز المسابقة من $210$ كراساً و $126$ قلماً في أكبر عدد ممكن من العلب المتماثلة $N$ دون باقٍ، وللتحقق من توازي شريطين $[AC]$ و $[BD]$ في الشعار الموضح حيث $OA = 14\\text{ cm}$ ، $OB = 21\\text{ cm}$ ، $OC = 10\\text{ cm}$ ، $OD = 15\\text{ cm}$ (بنفس الترتيب من $O$): ما هي قيمة $N$ وما الاستنتاج عن $(AC)$ و $(BD)$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 160\" width=\"280\" height=\"160\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><polygon points=\"140,26 50,134 230,134\" fill=\"#f0fdf4\" fill-opacity=\"0.4\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"80\" y1=\"98\" x2=\"200\" y2=\"98\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><line x1=\"50\" y1=\"134\" x2=\"230\" y2=\"134\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><text x=\"140\" y=\"19\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">O</text><text x=\"67\" y=\"100\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">A</text><text x=\"212\" y=\"100\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">C</text><text x=\"38\" y=\"139\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"242\" y=\"139\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">D</text><text x=\"94\" y=\"56\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">OA=14</text><text x=\"46\" y=\"120\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\">OB=21</text><text x=\"186\" y=\"56\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">OC=10</text><text x=\"236\" y=\"120\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\">OD=15</text></svg>",
+      "options": [
+        "$N = 21$ علبة، و $(AC)$ و $(BD)$ غير متوازيين",
+        "$N = 42$ علبة، و $(AC) \\parallel (BD)$ حسب الخاصية العكسية لطالس",
+        "$N = 84$ علبة، و $(AC) \\parallel (BD)$ حسب خاصية طالس المباشرة",
+        "$N = 42$ علبة، و $(AC)$ و $(BD)$ متعامدان لأن $\\frac{14}{21} = \\frac{10}{15}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$21$ قاسم مشترك لكنه ليس الأكبر ($42$ يقسم كلاهما)، كما أن $\\frac{14}{21} = \\frac{2}{3} = \\frac{10}{15}$ بنفس الترتيب فيعطي التوازي.",
+        "ممتاز! $\\text{PGCD}(210; 126) = 42$ علبة، وتساوي النسبتين $\\frac{OA}{OB} = \\frac{OC}{OD} = \\frac{2}{3}$ مع نفس ترتيب النقط يثبت $(AC) \\parallel (BD)$ بالخاصية العكسية لطالس.",
+        "$84$ هو الباقي الأول في خوارزمية إقليدس ($210 = 126 \\times 1 + 84$) وليس القاسم المشترك الأكبر، كما أن إثبات التوازي يستعمل الخاصية **العكسية** لطالس وليس المباشرة.",
+        "عدد العلب $42$ صحيح، لكن تساوي نسب طالس مع نفس الترتيب يثبت **التوازي** وليس التعامد!"
+      ],
+      "explanationAr": "نحسب $\\text{PGCD}(210; 126)$ : $210 = 126 \\times 1 + 84$ ، ثم $126 = 84 \\times 1 + 42$ ، ثم $84 = 42 \\times 2 + 0$ ، إذن $N = 42$ علبة. وفي الشكل: $\\frac{OA}{OB} = \\frac{14}{21} = \\frac{2}{3}$ و $\\frac{OC}{OD} = \\frac{10}{15} = \\frac{2}{3}$ ، وبما أن النقط $O, A, B$ و $O, C, D$ في استقامية وبنفس الترتيب فإن $(AC) \\parallel (BD)$ حسب الخاصية العكسية لطالس."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "levelId": "moyen",
+    "yearId": "4am",
+    "yearName": "السنة الرابعة متوسط (BEM)",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t1",
+    "trimesterName": "الفصل الأول",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة واحدة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 7,
+      "instruction": "أجب عن الأسئلة التالية مع توضيح مراحل الحساب:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب القاسم المشترك الأكبر $upright(\"PGCD\")(390 ; 240)$ باستعمال خوارزمية إقليدس.",
+          "answer": "1) $390 = 240 times 1 + 150$ ، $240 = 150 times 1 + 90$ ، $150 = 90 times 1 + 60$ ، $90 = 60 times 1 + 30$ ، $60 = 30 times 2 + 0$. إذن $upright(\"PGCD\")(390 ; 240) = 30$.",
+          "mark": "2.5"
+        },
+        {
+          "type": "text",
+          "content": "2) اكتب الكسر $frac(390, 240)$ على الشكل غير القابل للاختزال.",
+          "answer": "2) $frac(390, 240) = frac(390 div 30, 240 div 30) = frac(13, 8)$.",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب العدد $A = frac(390, 240) + frac(3, 4)$ واكتب النتيجة على شكل كسر غير قابل للاختزال.",
+          "answer": "3) $A = frac(13, 8) + frac(3, 4) = frac(52 + 24, 32) = frac(76, 32) = frac(19, 8)$.",
+          "mark": "2.25"
+        }
+      ],
+      "id": "ex_test_1_4am_t1_pgcd_irreducible_fraction",
+      "num": "الأول"
+    },
+    {
+      "points": 7,
+      "instruction": "تمرين يدمج تنطيق المقام والقاسم المشترك الأكبر:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) اكتب النسبة $F = frac(1 + sqrt(7), sqrt(5))$ بمقام عدد ناطق.",
+          "answer": "1) $F = frac((1 + sqrt(7)) sqrt(5), (sqrt(5))^2) = frac(sqrt(5) + sqrt(35), 5)$.",
+          "mark": "2.5"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب $upright(\"PGCD\")(750 ; 270)$، ثم اختزل الكسر $frac(750, 270)$.",
+          "answer": "2) $750 = 270 times 2 + 210$ ، $270 = 210 times 1 + 60$ ، $210 = 60 times 3 + 30$ ، $60 = 30 times 2 + 0$، إذن $upright(\"PGCD\")(750 ; 270) = 30$، ومنه $frac(750, 270) = frac(25, 9)$.",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "3) بسّط العبارة $sqrt(750) - sqrt(270)$ إلى الشكل $p sqrt(q)$، ثم احسب القيمة المضبوطة للعدد $sqrt(frac(750, 270))$.",
+          "answer": "3) $sqrt(750) - sqrt(270) = 5 sqrt(30) - 3 sqrt(30) = 2 sqrt(30)$، و $sqrt(frac(750, 270)) = sqrt(frac(25, 9)) = frac(5, 3)$.",
+          "mark": "2.25"
+        }
+      ],
+      "id": "ex_test_2_4am_t1_rationalizing_combined",
+      "num": "الثاني"
+    },
+    {
+      "points": 6,
+      "instruction": "يتكوّن هذا التمرين من جزأين مستقلين:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.5fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) في المثلث $E F G$ القائم في $E$ المقابل، $F G = 12$ سم و $hat(G) = 38°$. احسب الطولين $E F$ و $E G$ مدورين إلى $0.1$ سم.",
+              "answer": "1) $E F = F G times sin(38°) = 12 times sin(38°) approx 7.4$ سم، و $E G = F G times cos(38°) = 12 times cos(38°) approx 9.5$ سم.",
+              "mark": "3"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/4am_t1_trig_medium_700433.svg",
+              "caption": "المثلث القائم EFG"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) ليكن $x$ قيس زاوية حادة بحيث $cos x = frac(12, 13)$. باستعمال العلاقتين المثلثيتين، احسب القيمة المضبوطة لكل من $sin x$ و $tan x$.",
+          "answer": "2) لدينا $cos^2 x + sin^2 x = 1$، ومنه $sin^2 x = 1 - (frac(12, 13))^2 = 1 - frac(144, 169) = frac(25, 169)$.\n\nبما أن $x$ زاوية حادة ($sin x > 0$)، فإن $sin x = frac(5, 13)$.\n\nثم $tan x = frac(sin x, cos x) = frac(5 slash 13, 12 slash 13) = frac(5, 12)$.",
+          "mark": "3"
+        }
+      ],
+      "id": "ex_test_3_4am_t1_trigonometry_right_triangle",
+      "num": "الثالث"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "lesson_4ap_t3_durations_calculation",
+  "slug": "4ap-t3-durations-calculation",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع السادس: المحيط والمساحة والمدد وتصميم المجسمات وإدماج الفصل الثالث",
+  "order": 5,
+  "titleAr": "قياس وحساب المدد الزمنية والتحويل بين وحدات الزمن",
+  "objectives": [
+    "معرفة العلاقات بين وحدات الزمن (1 min = 60 s، 1 h = 60 min، 1 يوم = 24 h، والشهر والسنة والقرن) والتحويل بينها",
+    "توظيف التحويل بين الساعات والدقائق والثواني (مثل 145 min = 2 h 25 min) في جمع وطرح المدد الزمنية",
+    "حساب المدة الزمنية المستغرقة أو وقت الانطلاق أو وقت الوصول في وضعيات يومية متنوعة"
+  ],
+  "keywordsAr": [
+    "قياس المدد",
+    "حساب المدد الزمنية",
+    "الساعة والدقيقة والثانية",
+    "تحويل المدد",
+    "وقت الانطلاق والوصول"
+  ],
+  "discover": {
+    "scenarioAr": "انطلقت حافلة الرحلة المدرسية على الساعة $08\\text{ h } 40\\text{ min}$، واستغرقت الرحلة مدة $1\\text{ h } 35\\text{ min}$. وفي المساء شاهد التلاميذ شريطا وثائقيا مدته $145\\text{ min}$.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 165\" width=\"460\" height=\"165\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"149\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"230\" y=\"30\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">08 h 40 min + 1 h 35 min : التدرج على خط الزمن</text><line x1=\"32\" y1=\"96\" x2=\"420\" y2=\"96\" stroke=\"#1e293b\" stroke-width=\"2.2\"/><polygon points=\"426,96 416,91 416,101\" fill=\"#1e293b\"/><circle cx=\"56\" cy=\"96\" r=\"5\" fill=\"#1d4ed8\"/><text x=\"56\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">08 h 40 min</text><circle cx=\"170\" cy=\"96\" r=\"5\" fill=\"#475569\"/><text x=\"170\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">09 h 00 min</text><circle cx=\"296\" cy=\"96\" r=\"5\" fill=\"#475569\"/><text x=\"296\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">10 h 00 min</text><circle cx=\"394\" cy=\"96\" r=\"5\" fill=\"#15803d\"/><text x=\"394\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">؟</text><path d=\"M 56 90 Q 113 46 170 90\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"113\" y=\"58\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">+ 20 min</text><path d=\"M 170 90 Q 233 42 296 90\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"233\" y=\"55\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">+ 1 h</text><path d=\"M 296 90 Q 345 46 394 90\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"1.8\"/><text x=\"345\" y=\"58\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">+ 15 min</text><text x=\"230\" y=\"145\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">40 min + 35 min = 75 min = 1 h 15 min</text></svg>",
+    "steps": [
+      {
+        "promptAr": "لجمع $08\\text{ h } 40\\text{ min} + 1\\text{ h } 35\\text{ min}$، نجمع الدقائق أولا فنجد $40 + 35 = 75\\text{ min}$. نبادل $60\\text{ min}$ بساعة واحدة ($1\\text{ h}$). كم دقيقة تبقى بعد طرح $60\\text{ min}$؟ (اكتب العدد فقط)",
+        "hintAr": "احسب $75 - 60$.",
+        "expectedInput": "15",
+        "revealAr": "$75\\text{ min} = 1\\text{ h } 15\\text{ min}$، إذن تبقى $15$ دقيقة بعد مبادلة ساعة واحدة."
+      },
+      {
+        "promptAr": "أضف الساعة الناتجة عن المبادلة ($1\\text{ h}$) إلى مجموع الساعات ($8 + 1 = 9\\text{ h}$). ما رقم ساعة وصول الحافلة (اكتب عدد الساعات فقط)؟",
+        "hintAr": "اجمع $9 + 1$ في خانة الساعات.",
+        "expectedInput": "10",
+        "revealAr": "تصل الحافلة على الساعة $10\\text{ h } 15\\text{ min}$."
+      },
+      {
+        "promptAr": "مدة الشريط الوثائقي هي $145\\text{ min}$. نعلم أن $2\\text{ h} = 120\\text{ min}$. عند كتابة $145\\text{ min}$ على الشكل $2\\text{ h}$ وعدد من الدقائق، كم دقيقة تبقى؟ (اكتب العدد فقط)",
+        "hintAr": "اطرح $120$ دقيقة من $145$ دقيقة: $145 - 120$.",
+        "expectedInput": "25",
+        "revealAr": "نجد أن $145\\text{ min} = 120\\text{ min} + 25\\text{ min} = 2\\text{ h } 25\\text{ min}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "العلاقات بين وحدات الزمن: $1\\text{ min} = 60\\text{ s}$ ، $1\\text{ h} = 60\\text{ min}$ ، $1$ يوم = $24\\text{ h}$ ، أسبوع = $7$ أيام، سنة = $12$ شهرا ($365$ أو $366$ يوما)، والقرن = $100$ سنة.",
+      "للتحويل من الدقائق إلى الساعات والدقائق نستعمل مضاعفات $60$ (مثل $145\\text{ min} = 2\\text{ h } 25\\text{ min}$)، وللتحويل من الساعات إلى الدقائق نضرب في $60$ (مثل $3\\text{ h } 15\\text{ min} = 3 \\times 60 + 15 = 195\\text{ min}$).",
+      "في جمع المدد نبادل كل $60\\text{ min}$ بـ $1\\text{ h}$ وكل $60\\text{ s}$ بـ $1\\text{ min}$. وفي الطرح، إذا كانت الدقائق في الأعلى أصغر، نستعير $1\\text{ h}$ ونضيف $60\\text{ min}$ إلى الدقائق.",
+      "لحساب وقت الوصول نجمع وقت الانطلاق + المدة؛ ولحساب المدة المستغرقة نطرح وقت الانطلاق من وقت الوصول؛ ولحساب وقت الانطلاق نطرح المدة من وقت الوصول."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 185\" width=\"460\" height=\"185\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"169\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"20\" y=\"20\" width=\"198\" height=\"145\" rx=\"8\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.5\"/><text x=\"119\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#15803d\">وحدات الزمن والتحويل</text><text x=\"119\" y=\"68\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1 min = 60 s</text><text x=\"119\" y=\"92\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1 h = 60 min</text><text x=\"119\" y=\"116\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#0f172a\">1 يوم = 24 h  |  1 قرن = 100 سنة</text><text x=\"119\" y=\"144\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">145 min = 2 h 25 min</text><rect x=\"232\" y=\"20\" width=\"208\" height=\"145\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/><text x=\"336\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1d4ed8\">الطرح بالاستلاف الستيني</text><text x=\"336\" y=\"65\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#475569\">11 h 10 min ← نستلف 1 h = 60 min</text><text x=\"336\" y=\"90\" text-anchor=\"middle\" font-size=\"14.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">10 h 70 min</text><text x=\"336\" y=\"112\" text-anchor=\"middle\" font-size=\"14.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">- 09 h 45 min</text><line x1=\"268\" y1=\"121\" x2=\"404\" y2=\"121\" stroke=\"#1e293b\" stroke-width=\"1.8\"/><text x=\"336\" y=\"146\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">= 1 h 25 min</text></svg>",
+    "visualCaptionAr": "العلاقات بين وحدات الزمن وآلية الطرح بالاستلاف الستيني ($1\\text{ h} = 60\\text{ min}$).",
+    "examples": [
+      {
+        "problemAr": "حوّل $200\\text{ s}$ إلى دقائق وثوانٍ، ثم حوّل $2$ يوم و $6\\text{ h}$ إلى ساعات.",
+        "solutionAr": "بما أن $1\\text{ min} = 60\\text{ s}$ و $3 \\times 60 = 180$، فإن $200\\text{ s} = 180\\text{ s} + 20\\text{ s} = 3\\text{ min } 20\\text{ s}$. وللأيام: $2 \\times 24 + 6 = 48 + 6 = 54\\text{ h}$."
+      },
+      {
+        "problemAr": "بدأت حصة التربية البدنية على الساعة $14\\text{ h } 20\\text{ min}$ وانتهت على الساعة $15\\text{ h } 05\\text{ min}$. ما مدة الحصة؟",
+        "solutionAr": "نستلف $1\\text{ h} = 60\\text{ min}$ من $15\\text{ h } 05\\text{ min}$ فتصبح $14\\text{ h } 65\\text{ min}$. نطرح: $65 - 20 = 45\\text{ min}$ و $14 - 14 = 0\\text{ h}$. إذن مدة الحصة هي $45\\text{ min}$."
+      }
+    ],
+    "watchOutAr": "حذار من استعمال النظام العشري ($100$) عند حساب الساعات والدقائق! فالساعة تساوي $60$ دقيقة لا $100$؛ وعند استعارة ساعة واحدة نضيف $60$ دقيقة إلى الدقائق."
+  },
+  "practice": [
+    {
+      "questionAr": "توضح الساعة المقابلة وقت انطلاق قطار ($09\\text{ h } 20\\text{ min}$). إذا وصل القطار إلى وجهته على الساعة $11\\text{ h } 05\\text{ min}$، فما المدة المستغرقة في الرحلة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 210 192\" width=\"210\" height=\"192\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><circle cx=\"105\" cy=\"88\" r=\"70\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"2.6\"/><line x1=\"137.0\" y1=\"32.6\" x2=\"140.0\" y2=\"27.4\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"132.0\" y=\"45.2\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">1</text><line x1=\"160.4\" y1=\"56.0\" x2=\"165.6\" y2=\"53.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"151.8\" y=\"65.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">2</text><line x1=\"169.0\" y1=\"88.0\" x2=\"175.0\" y2=\"88.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"159.0\" y=\"92.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">3</text><line x1=\"160.4\" y1=\"120.0\" x2=\"165.6\" y2=\"123.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"151.8\" y=\"119.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">4</text><line x1=\"137.0\" y1=\"143.4\" x2=\"140.0\" y2=\"148.6\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"132.0\" y=\"138.8\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">5</text><line x1=\"105.0\" y1=\"152.0\" x2=\"105.0\" y2=\"158.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"105.0\" y=\"146.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">6</text><line x1=\"73.0\" y1=\"143.4\" x2=\"70.0\" y2=\"148.6\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"78.0\" y=\"138.8\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">7</text><line x1=\"49.6\" y1=\"120.0\" x2=\"44.4\" y2=\"123.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"58.2\" y=\"119.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">8</text><line x1=\"41.0\" y1=\"88.0\" x2=\"35.0\" y2=\"88.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"51.0\" y=\"92.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">9</text><line x1=\"49.6\" y1=\"56.0\" x2=\"44.4\" y2=\"53.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"58.2\" y=\"65.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">10</text><line x1=\"73.0\" y1=\"32.6\" x2=\"70.0\" y2=\"27.4\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"78.0\" y=\"45.2\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">11</text><line x1=\"105.0\" y1=\"24.0\" x2=\"105.0\" y2=\"18.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"105.0\" y=\"38.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">12</text><line x1=\"105\" y1=\"88\" x2=\"70.5\" y2=\"81.9\" stroke=\"#dc2626\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"105\" y1=\"88\" x2=\"150.0\" y2=\"114.0\" stroke=\"#2563eb\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><circle cx=\"105\" cy=\"88\" r=\"4\" fill=\"#0f172a\"/><text x=\"105\" y=\"180\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">الانطلاق: 09 h 20 min</text></svg>",
+      "options": [
+        "$2\\text{ h } 15\\text{ min}$",
+        "$1\\text{ h } 85\\text{ min}$",
+        "$1\\text{ h } 45\\text{ min}$",
+        "$2\\text{ h } 45\\text{ min}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "طرحت $20 - 5 = 15$ بالعكس ونسيت أنك استعرت ساعة من الساعات!",
+        "استعرت $100$ دقيقة بدلا من $60$ دقيقة ($105 - 20 = 85$)؛ تذكر أن $1\\text{ h} = 60\\text{ min}$ فقط.",
+        "أحسنت! استعرت ساعة ($60\\text{ min}$) فأصبحت $10\\text{ h } 65\\text{ min}$، ثم $10\\text{ h } 65\\text{ min} - 09\\text{ h } 20\\text{ min} = 1\\text{ h } 45\\text{ min}$.",
+        "بعد استعارة ساعة واحدة من $11\\text{ h}$ تتبقى $10\\text{ h}$، و $10 - 9 = 1\\text{ h}$ وليس $2\\text{ h}$."
+      ],
+      "explanationAr": "نحسب $11\\text{ h } 05\\text{ min} - 09\\text{ h } 20\\text{ min}$. لأن $5 < 20$ نستعير $1\\text{ h} = 60\\text{ min}$ فتصبح $10\\text{ h } 65\\text{ min}$. نطرح: $65 - 20 = 45\\text{ min}$ و $10 - 9 = 1\\text{ h}$، فتكون المدة $1\\text{ h } 45\\text{ min}$."
+    },
+    {
+      "questionAr": "استغرق سباق للدراجات مدة $3\\text{ h } 15\\text{ min}$. كم تساوي هذه المدة بالدقائق فقط؟",
+      "options": [
+        "$195\\text{ min}$",
+        "$315\\text{ min}$",
+        "$185\\text{ min}$",
+        "$135\\text{ min}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! $3\\text{ h} = 3 \\times 60 = 180\\text{ min}$، ونضيف $15\\text{ min}$ فنجد $195\\text{ min}$.",
+        "تذكر أن الساعة تساوي $60$ دقيقة وليس $100$ دقيقة!",
+        "تحقق من الجمع: $180 + 15 = 195$ وليس $185$.",
+        "العدد $135\\text{ min}$ يوافق $2\\text{ h } 15\\text{ min}$، بينما المدة المعطاة هي $3\\text{ h } 15\\text{ min}$."
+      ],
+      "explanationAr": "بما أن $1\\text{ h} = 60\\text{ min}$، نحسب أولا $3 \\times 60 = 180\\text{ min}$، ثم نضيف الدقائق: $180 + 15 = 195\\text{ min}$."
+    },
+    {
+      "questionAr": "وصلت طائرة إلى المطار على الساعة $16\\text{ h } 15\\text{ min}$ بعد رحلة دامت $2\\text{ h } 40\\text{ min}$. في أي ساعة أقلعت الطائرة؟",
+      "options": [
+        "$14\\text{ h } 25\\text{ min}$",
+        "$14\\text{ h } 35\\text{ min}$",
+        "$13\\text{ h } 75\\text{ min}$",
+        "$13\\text{ h } 35\\text{ min}$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "طرحت $40 - 15 = 25$ في الدقائق وهذا عكس المطلوب، كما نسيت الاستعارة من الساعات.",
+        "بعد استعارة ساعة من $16\\text{ h}$ تتبقى $15\\text{ h}$، و $15 - 2 = 13\\text{ h}$ وليس $14\\text{ h}$.",
+        "أضفت $100$ دقيقة عند الاستعارة بدلا من $60$ دقيقة ($115 - 40 = 75$)؛ الصحيح إضافة $60\\text{ min}$.",
+        "رائع! استعرت ساعة ($60\\text{ min}$) فأصبحت $15\\text{ h } 75\\text{ min}$، ثم طرحت $2\\text{ h } 40\\text{ min}$ فحصلت على $13\\text{ h } 35\\text{ min}$."
+      ],
+      "explanationAr": "لحساب وقت الانطلاق نطرح المدة من وقت الوصول: $16\\text{ h } 15\\text{ min} - 2\\text{ h } 40\\text{ min}$. نستعير ساعة ($60\\text{ min}$) فتصبح $15\\text{ h } 75\\text{ min}$، ثم نطرح فنجد $13\\text{ h } 35\\text{ min}$."
+    }
+  ]
+}

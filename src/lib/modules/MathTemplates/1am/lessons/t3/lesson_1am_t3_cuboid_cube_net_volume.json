@@ -1,0 +1,123 @@
+{
+  "id": "lesson_1am_t3_cuboid_cube_net_volume",
+  "slug": "1am-t3-cuboid-cube-net-volume",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t3",
+  "sequenceId": "seq9",
+  "sequenceTitleAr": "المقطع التاسع: متوازي المستطيلات والمكعب وإدماج الفصل الثالث",
+  "order": 6,
+  "titleAr": "متوازي المستطيلات والمكعب: الوصف والتصميم والمنظور وحساب الحجم",
+  "objectives": [
+    "وصف متوازي المستطيلات والمكعب واستعمال المصطلحات (وجه، حرف، رأس) بشكل سليم ورسم تمثيل له بالمنظور متساوي القياس",
+    "تمثيل تصميم لمتوازي مستطيلات أو مكعب ذي أبعاد معطاة وصنعه بأبعاد مفروضة والربط بين التصميم والمجسم",
+    "حساب حجم متوازي المستطيلات والمكعب وتوظيف العلاقة بين وحدات الحجم ووحدات السعة (1 dm³ = 1 L)"
+  ],
+  "keywordsAr": [
+    "متوازي المستطيلات",
+    "المكعب",
+    "المنظور متساوي القياس",
+    "تصميم متوازي المستطيلات",
+    "حساب الحجم",
+    "الحجم والسعة"
+  ],
+  "discover": {
+    "scenarioAr": "يريد صانع علب ورقية تصميم علبة على شكل **متوازي مستطيلات** أبعاده $L = 5\\text{ cm}$ و $\\ell = 3\\text{ cm}$ و $h = 2\\text{ cm}$ ، ثم ملؤها بمكعبات صغيرة حجم كل منها $1\\text{ cm}^3$ . كما صمّم خزاناً صغيراً لماء الأسماك أبعاده $4\\text{ dm}$ و $3\\text{ dm}$ و $2\\text{ dm}$ . كيف نمثل هذا المجسم بالمنظور والتصميم، وكيف نحسب حجمه وسعته باللترات؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"212\" height=\"174\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"114\" y=\"26\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">المنظور متساوي القياس</text><polygon points=\"42,78 134,78 134,126 42,126\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><polygon points=\"42,78 72,54 164,54 134,78\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><polygon points=\"134,78 164,54 164,102 134,126\" fill=\"#60a5fa\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"72\" y1=\"54\" x2=\"72\" y2=\"102\" stroke=\"#1e40af\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"42\" y1=\"126\" x2=\"72\" y2=\"102\" stroke=\"#1e40af\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"72\" y1=\"102\" x2=\"164\" y2=\"102\" stroke=\"#1e40af\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><circle cx=\"134\" cy=\"78\" r=\"4\" fill=\"#dc2626\"/><text x=\"88\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">L = 5 cm</text><text x=\"166\" y=\"122\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">ℓ = 3 cm</text><text x=\"184\" y=\"82\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">h = 2 cm</text><text x=\"114\" y=\"160\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#dc2626\">الأحرف المخفية ترسم بخط متقطع</text><text x=\"114\" y=\"175\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">6 أوجه ، 12 حرفاً ، 8 رؤوس</text><rect x=\"232\" y=\"8\" width=\"220\" height=\"174\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"342\" y=\"26\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">تصميم متوازي المستطيلات</text><rect x=\"288\" y=\"38\" width=\"60\" height=\"24\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\"/><rect x=\"264\" y=\"62\" width=\"24\" height=\"36\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.5\"/><rect x=\"288\" y=\"62\" width=\"60\" height=\"36\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"348\" y=\"62\" width=\"24\" height=\"36\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.5\"/><rect x=\"372\" y=\"62\" width=\"60\" height=\"36\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"288\" y=\"98\" width=\"60\" height=\"24\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.5\"/><text x=\"318\" y=\"54\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#92400e\">5 × 2</text><text x=\"318\" y=\"84\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#1e40af\">5 × 3</text><text x=\"276\" y=\"84\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#166534\">2×3</text><text x=\"360\" y=\"84\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#166534\">2×3</text><text x=\"402\" y=\"84\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#1e40af\">5 × 3</text><text x=\"318\" y=\"114\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#92400e\">5 × 2</text><text x=\"342\" y=\"144\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#166534\">كل وجهين متقابلين متقايسان</text><text x=\"342\" y=\"164\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0f172a\">الأضلاع المتقابلة عند الطي متساوية</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في الطبقة السفلية من العلبة ($L = 5\\text{ cm}$ ، $\\ell = 3\\text{ cm}$)، كم مكعباً صغيراً طول حرفه $1\\text{ cm}$ نضع في صف واحد على الطول، وكم مكعباً في الطبقة السفلية كلها؟",
+        "hintAr": "نضع $5$ مكعبات في كل صف، ولدينا $3$ صفوف في القاعدة: احسب $5 \\times 3$ .",
+        "expectedInput": "15",
+        "revealAr": "تتسع الطبقة السفلية لـ $5 \\times 3 = 15$ مكعباً حجم كل منها $1\\text{ cm}^3$ ."
+      },
+      {
+        "promptAr": "بما أن الارتفاع هو $h = 2\\text{ cm}$ (طبقتان)، فما هو الحجم الكلي للعلبة بـ $\\text{cm}^3$ ؟",
+        "hintAr": "اضرب عدد مكعبات الطبقة الواحدة ($15$) في عدد الطبقات ($2$).",
+        "expectedInput": "30",
+        "revealAr": "الحجم الكلي هو $V = 5 \\times 3 \\times 2 = 30\\text{ cm}^3$ ."
+      },
+      {
+        "promptAr": "خزان الأسماك أبعاده $4\\text{ dm}$ و $3\\text{ dm}$ و $2\\text{ dm}$ . احسب حجمه بـ $\\text{dm}^3$ ثم استنتج سعته باللتر ($\\text{L}$) علماً أن $1\\text{ dm}^3 = 1\\text{ L}$ .",
+        "hintAr": "احسب $4 \\times 3 \\times 2$ بوحدة $\\text{dm}^3$ ، وهو نفس العدد باللتر.",
+        "expectedInput": "24",
+        "revealAr": "حجم الخزان $4 \\times 3 \\times 2 = 24\\text{ dm}^3$ ، وبما أن $1\\text{ dm}^3 = 1\\text{ L}$ فإن سعته $24\\text{ L}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**وصف متوازي المستطيلات والمكعب**: لكل من متوازي المستطيلات والمكعب **$6$ أوجه** و **$12$ حرفاً** و **$8$ رؤوس**. في متوازي المستطيلات كل الأوجه مستطيلات (وكل وجهين متقابلين متقايسان)، أما في **المكعب** فكل الأوجه الستة مربعات متقايسة وأحرفه الاثنا عشر متساوية الطول.",
+      "**المنظور متساوي القياس والتصميم**: في التمثيل بالمنظور نرسم الوجه الأمامي بشكله الحقيقي، والأحرف المائلة المتوازية بنفس الطول والاتجاه، والأحرف المخفية **بخطوط متقطعة**. وفي **التصميم** يجب أن يكون كل وجهين متقابلين متقايسين وأن تتطابق أطوال الحواف التي تلتقي عند الطي.",
+      "**حساب الحجم**: حجم متوازي المستطيلات أبعاده $L$ و $\\ell$ و $h$ (بنفس وحدة الطول) هو $V = L \\times \\ell \\times h$ . وحجم المكعب الذي طول حرفه $a$ هو $V = a \\times a \\times a$ .",
+      "**وحدات الحجم والسعة**: للتحويل بين وحدات الحجم المتتالية نضرب أو نقسم على $1000$ ($1\\text{ m}^3 = 1000\\text{ dm}^3$ و $1\\text{ dm}^3 = 1000\\text{ cm}^3$). والربط الأساسي مع وحدات السعة هو: **$1\\text{ dm}^3 = 1\\text{ L}$** ، ومنه $1\\text{ m}^3 = 1000\\text{ L}$ و $1\\text{ cm}^3 = 1\\text{ mL}$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"148\" height=\"179\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"82\" y=\"27\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\">متوازي المستطيلات</text><polygon points=\"30,68 106,68 106,112 30,112\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.8\"/><polygon points=\"30,68 54,48 130,48 106,68\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.8\"/><polygon points=\"106,68 130,48 130,92 106,112\" fill=\"#60a5fa\" stroke=\"#1d4ed8\" stroke-width=\"1.8\"/><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"92\" stroke=\"#1e40af\" stroke-dasharray=\"3 2\" stroke-width=\"1.2\"/><line x1=\"30\" y1=\"112\" x2=\"54\" y2=\"92\" stroke=\"#1e40af\" stroke-dasharray=\"3 2\" stroke-width=\"1.2\"/><line x1=\"54\" y1=\"92\" x2=\"130\" y2=\"92\" stroke=\"#1e40af\" stroke-dasharray=\"3 2\" stroke-width=\"1.2\"/><text x=\"68\" y=\"128\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">L , ℓ , h</text><text x=\"82\" y=\"154\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">V = L × ℓ × h</text><text x=\"82\" y=\"174\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">بنفس وحدة الطول</text><rect x=\"166\" y=\"8\" width=\"136\" height=\"179\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"234\" y=\"27\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#166534\">المكعب</text><polygon points=\"196,64 248,64 248,116 196,116\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.8\"/><polygon points=\"196,64 218,46 270,46 248,64\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.8\"/><polygon points=\"248,64 270,46 270,98 248,116\" fill=\"#86efac\" stroke=\"#15803d\" stroke-width=\"1.8\"/><text x=\"222\" y=\"132\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\">حرفه a</text><text x=\"234\" y=\"154\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">V = a × a × a</text><text x=\"234\" y=\"174\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">6 مربعات متقايسة</text><rect x=\"312\" y=\"8\" width=\"140\" height=\"179\" rx=\"8\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><text x=\"382\" y=\"27\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#854d0e\">الحجم والسعة</text><rect x=\"324\" y=\"46\" width=\"116\" height=\"36\" rx=\"6\" fill=\"#ffffff\" stroke=\"#d97706\" stroke-width=\"1.4\"/><text x=\"382\" y=\"69\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#dc2626\">1 dm³ = 1 L</text><rect x=\"324\" y=\"92\" width=\"116\" height=\"36\" rx=\"6\" fill=\"#ffffff\" stroke=\"#fcd34d\" stroke-width=\"1.2\"/><text x=\"382\" y=\"114\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">1 m³ = 1000 L</text><rect x=\"324\" y=\"138\" width=\"116\" height=\"36\" rx=\"6\" fill=\"#ffffff\" stroke=\"#fcd34d\" stroke-width=\"1.2\"/><text x=\"382\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">1 cm³ = 1 mL</text></svg>",
+    "visualCaptionAr": "قوانين حساب حجم متوازي المستطيلات والمكعب والعلاقة بين وحدات الحجم والسعة",
+    "examples": [
+      {
+        "problemAr": "احسب حجم علبة حليب على شكل متوازي مستطيلات أبعادها $10\\text{ cm}$ و $6\\text{ cm}$ و $15\\text{ cm}$ ، ثم عبّر عن سعتها باللتر.",
+        "solutionAr": "نحسب الحجم بـ $\\text{cm}^3$ : $V = 10 \\times 6 \\times 15 = 900\\text{ cm}^3$ .\n\nنحول إلى $\\text{dm}^3$ بالقسمة على $1000$ : $900\\text{ cm}^3 = 0.9\\text{ dm}^3 = 0.9\\text{ L}$ ."
+      },
+      {
+        "problemAr": "خزان مكعب الشكل طول حرفه $5\\text{ dm}$ مملوء بالماء إلى ارتفاع $3\\text{ dm}$ فقط. ما حجم الماء الموجود فيه باللترات؟",
+        "solutionAr": "الماء يأخذ شكل متوازي مستطيلات قاعدته مربعة ($5\\text{ dm} \\times 5\\text{ dm}$) وارتفاعه $3\\text{ dm}$ :\n\n$V = 5 \\times 5 \\times 3 = 75\\text{ dm}^3 = 75\\text{ L}$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: ضرب أبعاد بوحدات مختلفة دون تحويلها أولاً (مثل ضرب $\\text{m}$ في $\\text{cm}$)! يجب توحيد جميع الأبعاد إلى **نفس وحدة الطول** قبل حساب الحجم. وكذلك ينبغي التمييز بين حجم المكعب $a \\times a \\times a$ وجمع الأحرف أو ضربها في $3$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "أي من التصاميم الأربعة الموضحة في الشكل يمثل تصميماً **صحيحاً** لمتوازي مستطيلات أبعاده $5\\text{ cm}$ و $3\\text{ cm}$ و $2\\text{ cm}$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 155\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"4\" y=\"6\" width=\"206\" height=\"68\" rx=\"6\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"20\" y=\"24\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">(أ)</text><rect x=\"54\" y=\"14\" width=\"35\" height=\"14\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><rect x=\"103\" y=\"14\" width=\"35\" height=\"14\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><rect x=\"40\" y=\"28\" width=\"14\" height=\"21\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><rect x=\"54\" y=\"28\" width=\"35\" height=\"21\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><rect x=\"89\" y=\"28\" width=\"14\" height=\"21\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><rect x=\"103\" y=\"28\" width=\"35\" height=\"21\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><text x=\"172\" y=\"42\" font-size=\"9\" fill=\"#991b1b\">5×2، 5×2</text><rect x=\"220\" y=\"6\" width=\"206\" height=\"68\" rx=\"6\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"236\" y=\"24\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">(ب)</text><rect x=\"270\" y=\"10\" width=\"35\" height=\"21\" fill=\"#fef3c7\" stroke=\"#b45309\" stroke-width=\"1.2\"/><rect x=\"256\" y=\"31\" width=\"14\" height=\"21\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.2\"/><rect x=\"270\" y=\"31\" width=\"35\" height=\"21\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.2\"/><rect x=\"305\" y=\"31\" width=\"14\" height=\"21\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.2\"/><rect x=\"319\" y=\"31\" width=\"35\" height=\"21\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.2\"/><rect x=\"270\" y=\"52\" width=\"35\" height=\"21\" fill=\"#fef3c7\" stroke=\"#b45309\" stroke-width=\"1.2\"/><text x=\"390\" y=\"42\" font-size=\"9\" fill=\"#92400e\">4 أوجه 5×3!</text><rect x=\"4\" y=\"82\" width=\"206\" height=\"68\" rx=\"6\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"20\" y=\"100\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">(ج)</text><rect x=\"58\" y=\"90\" width=\"35\" height=\"14\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.3\"/><rect x=\"44\" y=\"104\" width=\"14\" height=\"21\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.3\"/><rect x=\"58\" y=\"104\" width=\"35\" height=\"21\" fill=\"#86efac\" stroke=\"#15803d\" stroke-width=\"1.3\"/><rect x=\"93\" y=\"104\" width=\"14\" height=\"21\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.3\"/><rect x=\"107\" y=\"104\" width=\"35\" height=\"21\" fill=\"#86efac\" stroke=\"#15803d\" stroke-width=\"1.3\"/><rect x=\"58\" y=\"125\" width=\"35\" height=\"14\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.3\"/><text x=\"176\" y=\"114\" font-size=\"9\" font-weight=\"bold\" fill=\"#166534\">5×3 و 2×3</text><text x=\"176\" y=\"128\" font-size=\"9\" font-weight=\"bold\" fill=\"#166534\">و 5×2</text><rect x=\"220\" y=\"82\" width=\"206\" height=\"68\" rx=\"6\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"236\" y=\"100\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">(د)</text><rect x=\"270\" y=\"104\" width=\"35\" height=\"21\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.2\"/><rect x=\"305\" y=\"104\" width=\"14\" height=\"21\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.2\"/><rect x=\"319\" y=\"104\" width=\"35\" height=\"21\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.2\"/><rect x=\"354\" y=\"104\" width=\"14\" height=\"21\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.2\"/><rect x=\"270\" y=\"125\" width=\"35\" height=\"14\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"1.2\"/><text x=\"398\" y=\"118\" font-size=\"9\" fill=\"#1e40af\">5 أوجه فقط</text></svg>",
+      "options": [
+        "التصميم (أ)",
+        "التصميم (ب)",
+        "التصميم (ج)",
+        "التصميم (د)"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "في التصميم (أ) يقع الوجهان الجانبيان ($5 \\times 2$) في الجهة العلوية نفسها، لذا يتراكبان فوق بعضهما وتبقى القاعدة مفتوحة!",
+        "في التصميم (ب) يوجد $4$ مستطيلات $5 \\times 3$ ووجهان $2 \\times 3$ ، فالجناحان لا يطابقان حافة العرض $2\\text{ cm}$ !",
+        "أحسنت! التصميم (ج) يضم بالضبط زوجين من كل وجه ($5\\times 3$ ، $2\\times 3$ ، $5\\times 2$) موزعة على جهتي الشريط الوسطي بحيث تنطبق الحواف المتساوية تماماً.",
+        "التصميم (د) يحتوي على $5$ أوجه فقط وينقصه الوجه السادس لإغلاق المجسم."
+      ],
+      "explanationAr": "يتكوّن متوازي المستطيلات من $6$ أوجه متقايسة مثنى مثنى: وجهان $5 \\times 3$ ، وجهان $2 \\times 3$ ، ووجهان $5 \\times 2$ ، مع وضع كل وجه من الزوج الثالث على جهة مختلفة من الشريط الوسطي، وهذا يتحقق فقط في التصميم (ج)."
+    },
+    {
+      "questionAr": "حوض ماء زجاجي على شكل متوازي مستطيلات أبعاده الداخلية $L = 6\\text{ dm}$ ، $\\ell = 4\\text{ dm}$ ، $h = 3\\text{ dm}$ . مُلئ بالماء إلى ارتفاع $2.5\\text{ dm}$ فقط. ما حجم الماء الموجود في الحوض باللتر؟",
+      "options": [
+        "$72\\text{ L}$",
+        "$60\\text{ L}$",
+        "$12.5\\text{ L}$",
+        "$600\\text{ L}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$72\\text{ L}$ هو حجم الحوض الكلي لو كان مملوءاً حتى ارتفاع $3\\text{ dm}$ ، لكن ارتفاع الماء هنا $2.5\\text{ dm}$ فقط!",
+        "ممتاز! حجم الماء هو $6 \\times 4 \\times 2.5 = 60\\text{ dm}^3$ ، وبما أن $1\\text{ dm}^3 = 1\\text{ L}$ فالحجم $60\\text{ L}$ .",
+        "لحساب الحجم نضرب الأبعاد الثلاثة ($6 \\times 4 \\times 2.5$) ولا نجمعها ($6 + 4 + 2.5 = 12.5$).",
+        "بما أن الأبعاد بوحدة $\\text{dm}$ فإن الناتج مباشرة بـ $\\text{dm}^3$ يساوي اللتر ($1\\text{ dm}^3 = 1\\text{ L}$)، فلا نضرب في $10$ ."
+      ],
+      "explanationAr": "يشغل الماء متوازي مستطيلات طوله $6\\text{ dm}$ وعرضه $4\\text{ dm}$ وارتفاعه $2.5\\text{ dm}$ . إذن حجم الماء $V = 6 \\times 4 \\times 2.5 = 60\\text{ dm}^3 = 60\\text{ L}$ ."
+    },
+    {
+      "questionAr": "خزان مكعب الشكل طول حرفه $20\\text{ cm}$ . ما حجمه بالسنتيمتر المكعب ($\\text{cm}^3$) وما سعته باللتر ($\\text{L}$)؟",
+      "options": [
+        "$8000\\text{ cm}^3$ وسعته $80\\text{ L}$",
+        "$60\\text{ cm}^3$ وسعته $0.06\\text{ L}$",
+        "$8000\\text{ cm}^3$ وسعته $8\\text{ L}$",
+        "$400\\text{ cm}^3$ وسعته $0.4\\text{ L}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "الحجم $8000\\text{ cm}^3$ صحيح، لكن $1\\text{ dm}^3 = 1000\\text{ cm}^3$ ، لذا نقسم $8000$ على $1000$ فنجد $8\\text{ dm}^3 = 8\\text{ L}$ وليس $80\\text{ L}$ .",
+        "لحساب حجم المكعب نضرب الحرف في نفسه ثلاث مرات ($20 \\times 20 \\times 20$) وليس $20 \\times 3$ .",
+        "أحسنت! $V = 20 \\times 20 \\times 20 = 8000\\text{ cm}^3$ ، وبالتحويل $8000\\text{ cm}^3 = 8\\text{ dm}^3 = 8\\text{ L}$ .",
+        "العدد $400 = 20 \\times 20$ هو مساحة وجه واحد من المكعب وليس حجمه."
+      ],
+      "explanationAr": "حجم المكعب هو $V = 20 \\times 20 \\times 20 = 8000\\text{ cm}^3$ . وللتحويل إلى $\\text{dm}^3$ نقسم على $1000$ فنجد $8\\text{ dm}^3$ ، وبما أن $1\\text{ dm}^3 = 1\\text{ L}$ فإن سعته $8\\text{ L}$ ."
+    }
+  ]
+}

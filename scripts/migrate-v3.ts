@@ -31,6 +31,8 @@ async function migrateContentDb() {
 	for (const tbl of ['documents', 'quizzes']) {
 		addColumnIfMissing(db, tbl, 'access_tier', "TEXT NOT NULL DEFAULT 'public'");
 	}
+	addColumnIfMissing(db, 'documents', 'origin_type', "TEXT NOT NULL DEFAULT 'exclusive'");
+	addColumnIfMissing(db, 'documents', 'origin_metadata', 'TEXT');
 
 	// 2. Create site_settings & indexes
 	db.exec(`

@@ -1,0 +1,128 @@
+{
+  "id": "lesson_1am_t1_addition_subtraction_magnitude",
+  "slug": "1am-t1-addition-subtraction-magnitude",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t1",
+  "sequenceId": "seq1",
+  "sequenceTitleAr": "المقطع الأول: الأعداد الطبيعية والأعداد العشرية (الكتابة والعمليات)",
+  "order": 2,
+  "titleAr": "جمع وطرح الأعداد الطبيعية والعشرية وتحديد رتبة مقدار",
+  "objectives": [
+    "إنجاز عمليتي الجمع والطرح على أعداد طبيعية وعشرية ذهنيا وبالتقنية العمودية مع احترام وضع الفواصل والمراتب",
+    "اختيار العملية المناسبة (جمع أو طرح) لحل مشكلات ملموسة من الحياة اليومية",
+    "تحديد رتبة مقدار مجموع أو فرق أو جداء لتوقع نتيجة حساب ومراقبة معقوليتها"
+  ],
+  "keywordsAr": [
+    "جمع أعداد عشرية",
+    "طرح أعداد عشرية",
+    "الحساب العمودي",
+    "رتبة مقدار",
+    "تقدير نتيجة حساب"
+  ],
+  "discover": {
+    "scenarioAr": "ذهبت ياسمين إلى المكتبة ومعها ورقة نقدية من فئة $500\\text{ DA}$ . اشترت علبة هندسة بسعر $185.25\\text{ DA}$ ، وكراساً بسعر $74.75\\text{ DA}$ ، وقلماً بسعر $38.6\\text{ DA}$ . قبل الوصول إلى الصندوق، أرادت ياسمين تقدير المجموع ذهنياً باستعمال **رتبة مقدار**، ثم حساب المبلغ الدقيق والمبلغ المتبقي لها.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 195\" width=\"520\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"246\" height=\"171\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"135\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">تقدير رتبة مقدار المجموع</text><text x=\"135\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">185.25  →  190</text><text x=\"135\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\"> 74.75  →   70</text><text x=\"135\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\"> 38.60  →   40</text><line x1=\"55\" y1=\"126\" x2=\"215\" y2=\"126\" stroke=\"#1e40af\" stroke-width=\"1.6\"/><text x=\"135\" y=\"148\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">190 + 70 + 40 = 300 DA</text><text x=\"135\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\">تقدير سريع للتحقق من معقولية الناتج</text><rect x=\"272\" y=\"12\" width=\"236\" height=\"171\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"390\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\">التقنية العمودية للجمع</text><g font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" font-family=\"monospace\" direction=\"ltr\"><text x=\"435\" y=\"62\" text-anchor=\"end\">185.25</text><text x=\"330\" y=\"86\" text-anchor=\"start\">+</text><text x=\"435\" y=\"86\" text-anchor=\"end\"> 74.75</text><text x=\"330\" y=\"110\" text-anchor=\"start\">+</text><text x=\"435\" y=\"110\" text-anchor=\"end\"> 38.60</text><line x1=\"325\" y1=\"122\" x2=\"445\" y2=\"122\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><text x=\"435\" y=\"146\" text-anchor=\"end\" fill=\"#2563eb\">298.60</text></g><line x1=\"409\" y1=\"46\" x2=\"409\" y2=\"154\" stroke=\"#dc2626\" stroke-width=\"1.2\" stroke-dasharray=\"3 2\"/><text x=\"390\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">الفاصلة تحت الفاصلة تماماً</text></svg>",
+    "steps": [
+      {
+        "promptAr": "لتقدير **رتبة مقدار** المجموع، نقرّب الأسعار إلى أقرب عشرة: $185.25 \\approx 190$ ، و $74.75 \\approx 70$ ، و $38.6 \\approx 40$ . احسب رتبة مقدار المجموع بالدينار.",
+        "hintAr": "اجمع الأعداد المقربة ذهنياً: $190 + 70 + 40$ .",
+        "expectedInput": "300",
+        "revealAr": "رتبة مقدار المجموع هي: $190 + 70 + 40 = 300\\text{ DA}$ . وهذا يعني أن الناتج الدقيق يجب أن يكون قريباً من $300$ ."
+      },
+      {
+        "promptAr": "لحساب المجموع الدقيق ذهنياً، نجمع أولاً ثمن العلبة والكراس لأن جزأيهما العشريين متكاملان: $185.25 + 74.75$ . كم يساوي هذا المجموع؟",
+        "hintAr": "لاحظ أن $0.25 + 0.75 = 1$ ثم اجمع الأجزاء الصحيحة $185 + 74 + 1$ .",
+        "expectedInput": "260",
+        "revealAr": "$185.25 + 74.75 = 260\\text{ DA}$ (لأن $0.25 + 0.75 = 1$ و $185 + 74 = 259$ )."
+      },
+      {
+        "promptAr": "أضف الآن ثمن القلم $38.6\\text{ DA}$ إلى $260\\text{ DA}$ لإيجاد الثمن الإجمالي الدقيق.",
+        "hintAr": "اجمع $260 + 38.6$ (تأكد أن الثمن قريب جداً من رتبة المقدار $300$).",
+        "expectedInput": "298.6",
+        "revealAr": "الثمن الإجمالي الدقيق هو $260 + 38.6 = 298.6\\text{ DA}$ ، وهو قريب جداً من رتبة المقدار $300\\text{ DA}$ ."
+      },
+      {
+        "promptAr": "دفعت ياسمين $500\\text{ DA}$ . أنجز الطرح العمودي $500.0 - 298.6$ لإيجاد المبلغ المتبقي لها بالدينار.",
+        "hintAr": "اكتب $500$ على شكل $500.0$ لتضع الفاصلة تحت الفاصلة ثم أنجز الطرح عمودياً.",
+        "expectedInput": "201.4",
+        "revealAr": "المبلغ المتبقي هو $500.0 - 298.6 = 201.4\\text{ DA}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الجمع والطرح العمودي**: لإنجاز جمع أو طرح أعداد عشرية عمودياً، نكتب الحدود بحيث تكون **الفاصلة تحت الفاصلة** (الآحاد تحت الآحاد، والأعشار تحت الأعشار...)، ونكمل المنازل العشرية الناقصة بأصفار غير ضرورية مثل كتابة $64.2 = 64.20$ أو $500 = 500.0$ .",
+      "**الحساب الذهني وتجميع الحدود**: في الجمع يمكن تغيير ترتيب الحدود وتجميع الحدود التي يُسهل جمعها ذهنياً (مثل $0.25 + 0.75 = 1$ أو $0.4 + 0.6 = 1$). أما **الطرح فليس تبديلياً** ($a - b \\neq b - a$).",
+      "**البحث عن المجهول بالاعتماد على معنى العمليات**: لحل مساواة من الشكل $a + \\square = b$ ننجز الطرح $\\square = b - a$ ؛ ولحل $a - \\square = b$ ننجز $\\square = a - b$ ؛ ولحل $\\square - a = b$ ننجز $\\square = b + a$ .",
+      "**رتبة مقدار**: لتحديد رتبة مقدار مجموع أو فرق أو جداء، نعوّض كل عدد بعدد قريب منه يسهل حسابه ذهنياً، فتسمح لنا رتبة المقدار بتوقع النتيجة ومراقبة معقوليتها."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 205\" width=\"540\" height=\"205\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"246\" height=\"181\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"135\" y=\"34\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">الطرح العمودي: ملء المنازل بالأصفار</text><g font-size=\"15\" font-weight=\"bold\" font-family=\"monospace\" direction=\"ltr\"><text x=\"190\" y=\"68\" text-anchor=\"end\" fill=\"#0f172a\">64.2<tspan fill=\"#dc2626\">0</tspan></text><text x=\"85\" y=\"96\" text-anchor=\"start\" fill=\"#0f172a\">-</text><text x=\"190\" y=\"96\" text-anchor=\"end\" fill=\"#0f172a\">19.75</text><line x1=\"80\" y1=\"108\" x2=\"200\" y2=\"108\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><text x=\"190\" y=\"134\" text-anchor=\"end\" fill=\"#16a34a\">44.45</text></g><line x1=\"164\" y1=\"48\" x2=\"164\" y2=\"142\" stroke=\"#dc2626\" stroke-width=\"1.2\" stroke-dasharray=\"3 2\"/><text x=\"135\" y=\"164\" text-anchor=\"middle\" font-size=\"11\" fill=\"#dc2626\">نضيف الصفر 0 في 64.20 قبل الطرح</text><text x=\"135\" y=\"182\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\">رتبة مقدار: 60 - 20 = 40</text><rect x=\"270\" y=\"12\" width=\"258\" height=\"181\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.4\"/><text x=\"399\" y=\"34\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">العدد المجهول بالمخطط (a + □ = b)</text><rect x=\"292\" y=\"52\" width=\"214\" height=\"26\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"399\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">45.0 (الكل)</text><rect x=\"292\" y=\"84\" width=\"88\" height=\"28\" rx=\"4\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.5\"/><text x=\"336\" y=\"102\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\">18.4</text><rect x=\"380\" y=\"84\" width=\"126\" height=\"28\" rx=\"4\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"443\" y=\"102\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">□ = ?</text><text x=\"399\" y=\"142\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">□ = 45.0 - 18.4 = 26.6</text><text x=\"399\" y=\"168\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\">نستنتج المجهول مباشرة من معنى الجمع والطرح</text></svg>",
+    "visualCaptionAr": "احترام وضع الفواصل والأصفار في الطرح العمودي، وإيجاد العدد المجهول بالمخطط",
+    "examples": [
+      {
+        "problemAr": "أنجز الطرح العمودي $64.2 - 19.75$ وتحقّق من معقولية النتيجة باستعمال رتبة مقدار.",
+        "solutionAr": "نكتب $64.2$ على شكل $64.20$ مع وضع الفاصلة تحت الفاصلة:\n\n$64.20 - 19.75 = 44.45$ .\n\n**التحقق برتبة مقدار**: $64.2 \\approx 60$ و $19.75 \\approx 20$ ، ومنه $60 - 20 = 40$ ، والناتج $44.45$ معقول وقريب من $40$ ."
+      },
+      {
+        "problemAr": "أوجد العدد المجهول في كل حالة: (1) $35.6 + \\square = 80$ ، (2) $52 - \\square = 17.4$ ، واحسب ذهنياً $13.8 + 25 + 6.2$ .",
+        "solutionAr": "1) $\\square = 80 - 35.6 = 44.4$ .\n\n2) $\\square = 52 - 17.4 = 34.6$ .\n\n3) بالتجميع الذهني: $(13.8 + 6.2) + 25 = 20 + 25 = 45$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: يرتب بعض التلاميذ الأعداد العشرية من اليمين كما في الأعداد الطبيعية بدلاً من وضع الفاصلة تحت الفاصلة! كما ينسون إضافة الصفر في $42.30$ عند طرح $15.84$ فيُنزِلون الرقم $4$ مباشرة وهذا خطأ فادح."
+  },
+  "practice": [
+    {
+      "questionAr": "ما ناتج عملية الطرح: $42.3 - 15.84$ ؟",
+      "options": [
+        "$26.46$",
+        "$27.54$",
+        "$26.56$",
+        "$36.46$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! بكتابة $42.30 - 15.84$ ومراعاة الاستلاف نجد $26.46$ .",
+        "انتبه: عند طرح $4$ من $0$ في أجزاء المئة نستلف من $3$ فتصبح $2$ (أي $42.30 - 15.84$ وليس طرح الصغير من الكبير عموداً بعمود).",
+        "تحقق من مرتبة الأعشار بعد الاستلاف: بقي $2$ أعشار واستلفنا عشرة، فـ $12 - 8 = 4$ أعشار وليس $5$ .",
+        "تحقق من مرتبة العشرات بعد الاستلاف: استلفنا $1$ من $4$ فتبقى $3 - 1 = 2$ في العشرات وليس $3$ ."
+      ],
+      "explanationAr": "نكتب $42.3$ على شكل $42.30$ ثم نضع الفاصلة تحت الفاصلة: في أجزاء المئة $10 - 4 = 6$ ، في الأعشار $12 - 8 = 4$ ، في الآحاد $11 - 5 = 6$ ، وفي العشرات $3 - 1 = 2$ . الناتج $26.46$ ."
+    },
+    {
+      "questionAr": "بدون إجراء الحساب الدقيق، ما هي **رتبة مقدار** المجموع الآتي: $198.4 + 302.7 + 97.2$ ؟",
+      "options": [
+        "$500$",
+        "$600$",
+        "$700$",
+        "$598.3$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "قدّرتَ الحد الأول بـ $100$ أو نسيت الحد الثالث $97.2 \\approx 100$ .",
+        "ممتاز! $198.4 \\approx 200$ ، $302.7 \\approx 300$ ، و $97.2 \\approx 100$ ، فيكون المجموع التقريبي $600$ .",
+        "التقدير مبالغ فيه: $302.7$ أقرب إلى $300$ وليس $400$ .",
+        "$598.3$ هو الناتج الدقيق وليس رتبة مقدار؛ المطلوب عدد سهل الحساب الذهني للتقدير هو $600$ ."
+      ],
+      "explanationAr": "نستبدل كل عدد بأقرب مئة سهلة الحساب: $198.4 \\approx 200$ ، $302.7 \\approx 300$ ، و $97.2 \\approx 100$ . فتكون رتبة مقدار المجموع هي $200 + 300 + 100 = 600$ ."
+    },
+    {
+      "questionAr": "انظر إلى مخطط الطول المقابل الذي يمثل المساواة $28.75 + \\square = 75.5$ : ما طول الجزء المجهول $\\square$ بالمتر؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 125\" width=\"460\" height=\"125\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"25\" y=\"18\" width=\"410\" height=\"34\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"230\" y=\"40\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">75.5 m (الطول الكلي)</text><rect x=\"25\" y=\"64\" width=\"156\" height=\"38\" rx=\"6\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.8\"/><text x=\"103\" y=\"88\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\" direction=\"ltr\">28.75 m</text><rect x=\"181\" y=\"64\" width=\"254\" height=\"38\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"308\" y=\"88\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#166534\">□ = ?</text></svg>",
+      "options": [
+        "$104.25\\text{ m}$",
+        "$47.25\\text{ m}$",
+        "$46.75\\text{ m}$",
+        "$56.75\\text{ m}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "لقد جمعتَ $75.5 + 28.75$ بدلاً من الطرح! المجهول $\\square$ جزء من الكل $75.5$ .",
+        "تحقق من وضع الصفر في $75.50$ : لا نطرح $5 - 7$ ثم نترك أجزاء المئة $25$ ، بل $50 - 75$ مع الاستلاف يعطي $.75$ ويُنقص الآحاد.",
+        "أحسنت! $\\square = 75.50 - 28.75 = 46.75\\text{ m}$ .",
+        "تحقق من منزلة العشرات بعد الاستلاف: $6 - 2 = 4$ وليس $5$ ."
+      ],
+      "explanationAr": "لإيجاد الجزء المجهول من الطول الكلي، نطرح الجزء المعلوم من الكل: $\\square = 75.50 - 28.75 = 46.75\\text{ m}$ . وبالفعل: $28.75 + 46.75 = 75.50$ ."
+    }
+  ]
+}

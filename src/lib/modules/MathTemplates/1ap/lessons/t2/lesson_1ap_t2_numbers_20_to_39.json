@@ -1,0 +1,122 @@
+{
+  "id": "lesson_1ap_t2_numbers_20_to_39",
+  "slug": "lesson-1ap-t2-numbers-20-to-39",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t2",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثاني والثالث: الأعداد من 10 إلى 19 ثم إلى 39 والتفكيك والمقارنة",
+  "order": 2,
+  "titleAr": "الأعداد من 20 إلى 39: التجميع بالعشرات، القراءة والكتابة والمقارنة",
+  "objectives": [
+    "تطبيق التجميع بالعشرات والاستبدال لقراءة وكتابة الأعداد من 20 إلى 39 بالأرقام والحروف",
+    "التمييز بين رقم الوحدات ورقم العشرات وإنتاج التفكيك الجمعي لأعداد إلى 39",
+    "مقارنة الأعداد الأصغر من 40 وترتيبها تصاعديًا وتنازليًا وإدراجها على الشريط العددي"
+  ],
+  "keywordsAr": [
+    "الأعداد من 20 إلى 39",
+    "التجميع والاستبدال",
+    "الوحدات والعشرات",
+    "مقارنة الأعداد",
+    "ترتيب الأعداد"
+  ],
+  "discover": {
+    "scenarioAr": "جَمَعَ سامِي قَصَباتٍ وَرَبَطَ كُلَّ $10$ قَصَباتٍ في حُزْمَةٍ واحِدَةٍ: كَوَّنَ $3$ حُزَمٍ مِنْ $10$ وَبَقِيَتْ $4$ قَصَباتٍ مُفْرَدَةٍ. وَعِنْدَ أُخْتِهِ لِينا $28$ قَصَبَةً.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 195\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"484\" height=\"179\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"22\" y=\"20\" width=\"210\" height=\"124\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"127\" y=\"40\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">3 حُزَمٍ مِنْ 10 (عَشَراتٌ)</text><rect x=\"42\" y=\"52\" width=\"38\" height=\"76\" rx=\"6\" fill=\"#16a34a\"/><text x=\"61\" y=\"96\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">10</text><rect x=\"108\" y=\"52\" width=\"38\" height=\"76\" rx=\"6\" fill=\"#16a34a\"/><text x=\"127\" y=\"96\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">10</text><rect x=\"174\" y=\"52\" width=\"38\" height=\"76\" rx=\"6\" fill=\"#16a34a\"/><text x=\"193\" y=\"96\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">10</text><rect x=\"248\" y=\"20\" width=\"130\" height=\"124\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><text x=\"313\" y=\"40\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">4 وَحَداتٍ</text><rect x=\"266\" y=\"62\" width=\"14\" height=\"58\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"292\" y=\"62\" width=\"14\" height=\"58\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"318\" y=\"62\" width=\"14\" height=\"58\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"344\" y=\"62\" width=\"14\" height=\"58\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"392\" y=\"20\" width=\"86\" height=\"124\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"435\" y=\"44\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">لِينا</text><text x=\"435\" y=\"94\" text-anchor=\"middle\" font-size=\"26\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">28</text><text x=\"435\" y=\"126\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">قَصَبَةً</text><text x=\"195\" y=\"170\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"rtl\">قَصَباتُ سامِي: 3 عَشَراتٍ وَ 4 وَحَداتٍ</text></svg>",
+    "steps": [
+      {
+        "promptAr": "عِنْدَ سامِي $3$ حُزَمٍ، في كُلِّ حُزْمَةٍ $10$ قَصَباتٍ. كَمْ قَصَبَةً في الحُزَمِ الثَّلاثِ مَعًا؟",
+        "hintAr": "عُدَّ بِالعَشَراتِ: $10 + 10 + 10$.",
+        "expectedInput": "30",
+        "revealAr": "ثَلاثُ حُزَمٍ مِنْ $10$ تُساوي $30$ قَصَبَةً (ثَلاثُونَ)."
+      },
+      {
+        "promptAr": "أَضِفِ القَصَباتِ الـ $4$ المُفْرَدَةَ إلى $30$. ما العَدَدُ الكُلِّيُّ لِقَصَباتِ سامِي؟",
+        "hintAr": "احْسُبْ $30 + 4$.",
+        "expectedInput": "34",
+        "revealAr": "العَدَدُ الكُلِّيُّ هُوَ $34$ قَصَبَةً (أَرْبَعَةٌ وَثَلاثُونَ)، وَنَكْتُبُ: $34 = 30 + 4$."
+      },
+      {
+        "promptAr": "عِنْدَ لِينا $28$ قَصَبَةً. ما رَقْمُ العَشَراتِ في العَدَدِ $28$؟",
+        "hintAr": "رَقْمُ العَشَراتِ هُوَ الرَّقْمُ الَّذِي عَلى اليَسارِ.",
+        "expectedInput": "2",
+        "revealAr": "رَقْمُ العَشَراتِ في $28$ هُوَ $2$ (أَيْ $20$)، وَفِي $34$ هُوَ $3$ (أَيْ $30$). لِذا $34 > 28$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "التَّجْمِيعُ بِالعَشَراتِ وَالِاسْتِبْدالُ: كُلَّما جَمَعْنا $10$ وَحَداتٍ نَسْتَبْدِلُها بِعَشَرَةٍ واحِدَةٍ؛ فَعَشَرَتانِ $= 20$ (عِشْرُونَ)، وَثَلاثُ عَشَراتٍ $= 30$ (ثَلاثُونَ).",
+      "في الأَعْدادِ مِنْ $20$ إلى $39$: الرَّقْمُ عَلى اليَمِينِ هُوَ رَقْمُ **الوَحَداتِ**، وَالرَّقْمُ عَلى اليَسارِ هُوَ رَقْمُ **العَشَراتِ**، مِثْلُ: $37 = 30 + 7$.",
+      "لِمُقارَنَةِ عَدَدَيْنِ نُقارِنُ العَشَراتِ أَوَّلًا ($31 > 29$ لِأَنَّ $3 > 2$). وَإِذا تَساوَتِ العَشَراتُ نُقارِنُ الوَحَداتِ ($24 < 27$).",
+      "التَّرْتِيبُ التَّصاعُدِيُّ يَبْدَأُ مِنَ الأَصْغَرِ إلى الأَكْبَرِ، وَالتَّرْتِيبُ التَّنازُلِيُّ يَبْدَأُ مِنَ الأَكْبَرِ إلى الأَصْغَرِ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 205\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"484\" height=\"189\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"22\" y=\"20\" width=\"218\" height=\"112\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"131\" y=\"42\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">34 = 30 + 4</text><rect x=\"42\" y=\"54\" width=\"16\" height=\"64\" rx=\"3\" fill=\"#16a34a\"/><rect x=\"64\" y=\"54\" width=\"16\" height=\"64\" rx=\"3\" fill=\"#16a34a\"/><rect x=\"86\" y=\"54\" width=\"16\" height=\"64\" rx=\"3\" fill=\"#16a34a\"/><rect x=\"126\" y=\"100\" width=\"16\" height=\"16\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"148\" y=\"100\" width=\"16\" height=\"16\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"170\" y=\"100\" width=\"16\" height=\"16\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"192\" y=\"100\" width=\"16\" height=\"16\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"72\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">3 عَشَراتٍ</text><text x=\"168\" y=\"86\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">4 وَحَداتٍ</text><rect x=\"256\" y=\"20\" width=\"222\" height=\"112\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><rect x=\"302\" y=\"34\" width=\"64\" height=\"28\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><rect x=\"366\" y=\"34\" width=\"64\" height=\"28\" fill=\"#fef3c7\" stroke=\"#ca8a04\"/><rect x=\"302\" y=\"62\" width=\"64\" height=\"32\" fill=\"#ffffff\" stroke=\"#2563eb\"/><rect x=\"366\" y=\"62\" width=\"64\" height=\"32\" fill=\"#ffffff\" stroke=\"#ca8a04\"/><text x=\"334\" y=\"53\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">عَشَراتٌ</text><text x=\"398\" y=\"53\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">وَحَداتٌ</text><text x=\"334\" y=\"84\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">3</text><text x=\"398\" y=\"84\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">4</text><text x=\"367\" y=\"118\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"rtl\">أَرْبَعَةٌ وَثَلاثُونَ</text><rect x=\"22\" y=\"144\" width=\"456\" height=\"40\" rx=\"8\" fill=\"#fff7ed\" stroke=\"#ea580c\" stroke-width=\"1.5\"/><text x=\"250\" y=\"169\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"ltr\">25  &lt;  28  &lt;  31  &lt;  34  &lt;  39</text></svg>",
+    "visualCaptionAr": "تَمْثِيلُ العَدَدِ $34$ في جَدْوَلِ المَنازِلِ، وَتَرْتِيبُ الأَعْدادِ عَلى الشَّرِيطِ العَدَدِيِّ.",
+    "examples": [
+      {
+        "problemAr": "فَكِّكِ العَدَدَ $26$ إلى عَشَراتٍ وَوَحَداتٍ، ثُمَّ اكْتُبْهُ بِالحُرُوفِ.",
+        "solutionAr": "في $26$ يُوجَدُ عَشَرَتانِ ($20$) وَ $6$ وَحَداتٍ، إِذَنْ $26 = 20 + 6 = 10 + 10 + 6$، وَيُكْتَبُ: سِتَّةٌ وَعِشْرُونَ."
+      },
+      {
+        "problemAr": "رَتِّبِ الأَعْدادَ التّالِيَةَ تَصاعُدِيًّا (مِنَ الأَصْغَرِ إلى الأَكْبَرِ): $35$، $29$، $31$.",
+        "solutionAr": "العَدَدُ $29$ لَهُ عَشَرَتانِ فَهُوَ الأَصْغَرُ، ثُمَّ بَيْنَ $31$ وَ $35$ نَجِدُ $31 < 35$. التَّرْتِيبُ: $29 < 31 < 35$."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! لا تَعْكِسْ رَقْمَيِ الوَحَداتِ وَالعَشَراتِ: العَدَدُ $23$ (ثَلاثَةٌ وَعِشْرُونَ) يَخْتَلِفُ عَنِ العَدَدِ $32$ (اثْنانِ وَثَلاثُونَ)!"
+  },
+  "practice": [
+    {
+      "questionAr": "انْظُرْ إلى الرَّسْمِ: ما العَدَدُ المُمَثَّلُ بِأَعْمِدَةِ العَشَراتِ وَمُرَبَّعاتِ الوَحَداتِ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 130\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"364\" height=\"114\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"28\" y=\"24\" width=\"24\" height=\"82\" rx=\"4\" fill=\"#16a34a\"/><text x=\"40\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">10</text><rect x=\"64\" y=\"24\" width=\"24\" height=\"82\" rx=\"4\" fill=\"#16a34a\"/><text x=\"76\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">10</text><rect x=\"100\" y=\"24\" width=\"24\" height=\"82\" rx=\"4\" fill=\"#16a34a\"/><text x=\"112\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">10</text><rect x=\"156\" y=\"56\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#f59e0b\"/><rect x=\"186\" y=\"56\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#f59e0b\"/><rect x=\"216\" y=\"56\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#f59e0b\"/><rect x=\"246\" y=\"56\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#f59e0b\"/><rect x=\"276\" y=\"56\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#f59e0b\"/><rect x=\"306\" y=\"56\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#f59e0b\"/></svg>",
+      "options": [
+        "$26$",
+        "$35$",
+        "$36$",
+        "$63$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "عُدَّ الأَعْمِدَةَ الخَضْراءَ جَيِّدًا؛ هُناكَ $3$ عَشَراتٍ وَلَيْسَ عَشَرَتانِ.",
+        "عُدَّ المُرَبَّعاتِ الصَّفْراءَ جَيِّدًا؛ عَدَدُها $6$ وَحَداتٍ وَلَيْسَ $5$.",
+        "أَحْسَنْتَ! $3$ عَشَراتٍ ($30$) وَ $6$ وَحَداتٍ تُساوي $36$.",
+        "انْتَبِهْ إلى المَنازِلِ: العَشَراتُ $3$ عَلى اليَسارِ وَالوَحَداتُ $6$ عَلى اليَمِينِ، إِذَنْ $36$ وَلَيْسَ $63$."
+      ],
+      "explanationAr": "يُوجَدُ $3$ عَشَراتٍ ($10 + 10 + 10 = 30$) وَ $6$ وَحَداتٍ، فَيَكُونُ العَدَدُ هُوَ $30 + 6 = 36$."
+    },
+    {
+      "questionAr": "ما التَّفْكِيكُ الجَمْعِيُّ الصَّحِيحُ لِلْعَدَدِ $29$؟",
+      "options": [
+        "$2 + 9$",
+        "$20 + 9$",
+        "$10 + 9$",
+        "$30 + 9$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$2 + 9 = 11$ وَلَيْسَ $29$؛ الرَّقْمُ $2$ في مَنْزِلَةِ العَشَراتِ قِيمَتُهُ $20$.",
+        "مُمْتازٌ! العَدَدُ $29$ فِيهِ عَشَرَتانِ ($20$) وَ $9$ وَحَداتٍ: $29 = 20 + 9$.",
+        "$10 + 9 = 19$ وَلَيْسَ $29$؛ هُناكَ عَشَرَتانِ ($20$).",
+        "$30 + 9 = 39$ وَلَيْسَ $29$؛ رَقْمُ العَشَراتِ هُوَ $2$."
+      ],
+      "explanationAr": "في العَدَدِ $29$، رَقْمُ العَشَراتِ $2$ يُمَثِّلُ $20$ وَرَقْمُ الوَحَداتِ $9$، إِذَنْ $29 = 20 + 9$."
+    },
+    {
+      "questionAr": "ما التَّرْتِيبُ التَّصاعُدِيُّ الصَّحِيحُ (مِنَ الأَصْغَرِ إلى الأَكْبَرِ) لِلْأَعْدادِ: $33$، $27$، $38$؟",
+      "options": [
+        "$38 < 33 < 27$",
+        "$33 < 27 < 38$",
+        "$27 < 38 < 33$",
+        "$27 < 33 < 38$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "هَذا تَرْتِيبٌ خاطِئٌ في اتِّجاهِ الرَّمْزِ وَيَبْدَأُ بِالأَكْبَرِ.",
+        "العَدَدُ $27$ أَصْغَرُ مِن $33$ لِأَنَّ عَشَراتِهِ $2$ وَعَشَراتِ $33$ هِيَ $3$.",
+        "انْتَبِهْ! بَيْنَ $33$ وَ $38$، العَدَدُ $33$ أَصْغَرُ مِن $38$.",
+        "رائِعٌ! نَبْدَأُ بِالأَصْغَرِ $27$، ثُمَّ $33$، ثُمَّ الأَكْبَرِ $38$: $27 < 33 < 38$."
+      ],
+      "explanationAr": "نُقارِنُ العَشَراتِ: $27$ أَصْغَرُها ($2$ عَشَراتٍ)، ثُمَّ $33 < 38$، إِذَنْ التَّرْتِيبُ التَّصاعُدِيُّ: $27 < 33 < 38$."
+    }
+  ]
+}

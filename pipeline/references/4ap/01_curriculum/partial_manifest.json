@@ -1,0 +1,110 @@
+{
+  "documents": [
+    {
+      "id": "ref_4ap_cur_primary_gen2_2016",
+      "grade": "4ap",
+      "title_ar": "مناهج مرحلة التعليم الابتدائي - الجيل الثاني (يتضمن الإطار العام ومنهاج الرياضيات للطور الثاني / السنة الرابعة)",
+      "category": "curriculum",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4ap/01_curriculum/4ap_curriculum_primary_gen2_2016.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2018/03/primaire_gen2-manahij.pdf",
+      "pages_count": 353,
+      "extraction_mode": "digital_text",
+      "sha256": "de6cf2a5186a70a86b0d8a624138a6c2a3a274d62f483b9ebb9db717f3458c21",
+      "size_bytes": 6924516
+    },
+    {
+      "id": "ref_4ap_acc_doc_math_primary_2016",
+      "grade": "4ap",
+      "title_ar": "الوثيقة المرافقة لمنهاج الرياضيات لمرحلة التعليم الابتدائي (الجيل الثاني)",
+      "category": "accompanying_doc",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4ap/01_curriculum/4ap_accompanying_doc_math_primary_2016.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2022/05/%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%A5%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%A7%D9%84%D9%88%D8%AB%D9%8A%D9%82%D8%A9-%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D9%81%D9%82%D8%A9-%D9%84%D9%85%D9%86%D9%87%D8%A7%D8%AC-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA.pdf",
+      "pages_count": 90,
+      "extraction_mode": "digital_text",
+      "sha256": "7736bee028844f9ccc55f409e52655fea54511c7b428d0fe51f0b36946c75c15",
+      "size_bytes": 5591490
+    },
+    {
+      "id": "ref_4ap_prog_math_units_2017",
+      "grade": "4ap",
+      "title_ar": "مخطط المقاطع التعلمية لمادة الرياضيات - السنة الرابعة ابتدائي (الجيل الثاني)",
+      "category": "progression",
+      "year": "2017",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4ap/01_curriculum/4ap_progression_math_units_gen2_2017.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2022/08/%D9%85%D8%AE%D8%B7%D8%B7-%D8%A7%D9%84%D9%85%D9%82%D8%A7%D8%B7%D8%B9-%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%85%D9%8A%D8%A9-%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-4-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A.pdf",
+      "pages_count": 8,
+      "extraction_mode": "digital_text",
+      "sha256": "f790b332b24031a89d98ef435e40a4ea5255c1b4e8e59fdcb252721783f75462",
+      "size_bytes": 1629667
+    },
+    {
+      "id": "ref_4ap_prog_annual_men_2022_2023",
+      "grade": "4ap",
+      "title_ar": "المخططات السنوية للسنة الرابعة من التعليم الابتدائي 2022-2023 (وزارة التربية الوطنية - المفتشية العامة للتربية الوطنية - يتضمن مخطط الرياضيات)",
+      "category": "progression",
+      "year": "2022-2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4ap/01_curriculum/4ap_progression_annual_plans_men_2022_2023.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_de179b8d4e92412b9ee830bb06fbb172.pdf?index=true",
+      "pages_count": 69,
+      "extraction_mode": "digital_text",
+      "sha256": "ba28fa863af9660f6488bbb539d8a51f0b4b309d8f473850c38068a749a6878a",
+      "size_bytes": 2503966
+    },
+    {
+      "id": "ref_4ap_prog_annual_2023_2024",
+      "grade": "4ap",
+      "title_ar": "المخطط السنوي لبناء التعلمات للسنة الرابعة من التعليم الابتدائي 2023-2024 (يتضمن التدرج الأسبوعي للرياضيات)",
+      "category": "progression",
+      "year": "2023-2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4ap/01_curriculum/4ap_progression_annual_plan_2023_2024.pdf",
+      "source_url": "https://drive.google.com/uc?authuser=0&id=1ulEZD8FdtM7BNdYfewS2yJHK4fG_62n7&export=download",
+      "pages_count": 3,
+      "extraction_mode": "digital_text",
+      "sha256": "e623e739fa97a1c7f1f3eb873489eec829af0342bcadce6a24d8df54377677ed",
+      "size_bytes": 1079256
+    },
+    {
+      "id": "ref_4ap_prog_annual_2024_2025",
+      "grade": "4ap",
+      "title_ar": "المخطط السنوي لبناء التعلمات للسنة الرابعة ابتدائي 2024-2025 (يتضمن التدرج الأسبوعي للرياضيات)",
+      "category": "progression",
+      "year": "2024-2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4ap/01_curriculum/4ap_progression_annual_plan_2024_2025.pdf",
+      "source_url": "https://www.mediafire.com/file/418442l20eea439/%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D8%B7+%D8%A7%D9%84%D8%B3%D9%86%D9%88%D9%8A+%D9%84%D9%84%D8%AA%D8%B9%D9%84%D9%85%D8%A7%D8%AA+%D8%B34+++2024+-2025.pdf/file",
+      "pages_count": 4,
+      "extraction_mode": "digital_text",
+      "sha256": "40c1284cae6884bebbc5e7cc01ff5c8e06c943646e369a65e523360905086220",
+      "size_bytes": 976164
+    },
+    {
+      "id": "ref_4ap_prog_annual_2026_2027",
+      "grade": "4ap",
+      "title_ar": "المخطط السنوي لبناء التعلمات للسنة الرابعة ابتدائي 2026-2027 (يتضمن التدرج الأسبوعي للرياضيات)",
+      "category": "progression",
+      "year": "2026-2027",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4ap/01_curriculum/4ap_progression_annual_plan_2026_2027.pdf",
+      "source_url": "https://exams.elkhadra.com/wp-content/uploads/2026/09/%D8%A7%D9%84%D9%85%D8%AE%D8%B7%D8%B7-%D8%A7%D9%84%D8%B3%D9%86%D9%88%D9%8A-%D9%84%D9%84%D8%AA%D8%B9%D9%84%D9%85%D8%A7%D8%AA-%D8%B34-%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF-2026-.pdf",
+      "pages_count": 4,
+      "extraction_mode": "digital_text",
+      "sha256": "fca3e2a52364acd0b15f29d96b2b6555cb947105e889abccd8d5c598c16a4033",
+      "size_bytes": 968698
+    }
+  ],
+  "missing_references": [
+    {
+      "grade": "4ap",
+      "title_ar": "المخطط السنوي لبناء التعلمات للسنة الرابعة ابتدائي 2025-2026 (نسخة مستقلة)",
+      "reason": "Only hosted on login/paywall-gated Scribd mirrors; 2022-2023 (official MEN base), 2023-2024, 2024-2025, and 2026-2027 annual progressions are verified locally.",
+      "source_url": "https://ar.scribd.com/document/962846577/"
+    }
+  ]
+}

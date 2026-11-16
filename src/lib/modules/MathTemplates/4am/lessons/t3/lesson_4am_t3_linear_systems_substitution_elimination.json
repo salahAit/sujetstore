@@ -1,0 +1,128 @@
+{
+  "id": "lesson_4am_t3_linear_systems_substitution_elimination",
+  "slug": "4am-t3-linear-systems-substitution-elimination",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t3",
+  "sequenceId": "seq7",
+  "sequenceTitleAr": "المقطع السابع: جمل معادلتين والدوال الخطية والتآلفية وتطبيقات التناسبية",
+  "order": 1,
+  "titleAr": "جملة معادلتين من الدرجة الأولى بمجهولين: الحل بالتعويض والجمع والترييض",
+  "objectives": [
+    "اختبار كون ثنائية (x ; y) حلا لجملة معادلتين من الدرجة الأولى بمجهولين",
+    "حل جملة معادلتين من الدرجة الأولى بمجهولين جبريا بطريقتي التعويض والجمع مع التحقق من صحة الثنائية الحل",
+    "ترييض مشكلات متنوعة من الحياة اليومية ومن الهندسة والحساب بجملة معادلتين بمجهولين وحلها وتفسير النتائج"
+  ],
+  "keywordsAr": [
+    "جملة معادلتين",
+    "طريقة التعويض",
+    "طريقة الجمع",
+    "حل جملة معادلتين جبريا",
+    "ترييض مشكلة"
+  ],
+  "discover": {
+    "scenarioAr": "اشترى سمير من مكتبة الحي $3$ كراريس وقلمين بمبلغ $410\\text{ DA}$ ، واشترت أخته مريم كراساً واحداً و $4$ أقلام من نفس النوع بمبلغ $270\\text{ DA}$ . نرمز لسعر الكراس الواحد بـ $x$ ولسعر القلم الواحد بـ $y$ ، فنحصل على جملة المعادلتين: $\\begin{cases} 3x + 2y = 410 \\\\ x + 4y = 270 \\end{cases}$ . كيف نجد ثمن الكراس وثمن القلم جبرياً؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 235\" width=\"580\" height=\"235\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"219\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"32\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">ترييض وضعية الشراء وحل جملة معادلتين بالتعويض</text><rect x=\"22\" y=\"48\" width=\"258\" height=\"78\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"151\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">مشتريات سمير — المعادلة (1)</text><text x=\"151\" y=\"93\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3x + 2y = 410</text><text x=\"151\" y=\"114\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">3 كراريس + قلمان = 410 DA</text><rect x=\"22\" y=\"136\" width=\"258\" height=\"78\" rx=\"10\" fill=\"#ecfdf5\" stroke=\"#059669\" stroke-width=\"1.6\"/><text x=\"151\" y=\"157\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">مشتريات مريم — المعادلة (2)</text><text x=\"151\" y=\"181\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">x + 4y = 270</text><text x=\"151\" y=\"202\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">كراس واحد + 4 أقلام = 270 DA</text><path d=\"M 282 175 L 306 175\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.2\"/><polygon points=\"306,175 298,170 298,180\" fill=\"#059669\"/><rect x=\"312\" y=\"48\" width=\"246\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#d97706\" stroke-width=\"1.6\"/><text x=\"435\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">فكرة طريقة التعويض</text><rect x=\"328\" y=\"82\" width=\"214\" height=\"32\" rx=\"6\" fill=\"#fef3c7\"/><text x=\"435\" y=\"103\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">(2) ⇒ x = 270 - 4y</text><path d=\"M 435 116 L 435 130\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2\"/><polygon points=\"435,132 431,125 439,125\" fill=\"#d97706\"/><rect x=\"328\" y=\"134\" width=\"214\" height=\"32\" rx=\"6\" fill=\"#eff6ff\"/><text x=\"435\" y=\"155\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">3(270 - 4y) + 2y = 410</text><rect x=\"328\" y=\"174\" width=\"214\" height=\"28\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.2\"/><text x=\"435\" y=\"193\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">نعوّض فنجد y ثم نحسب x</text></svg>",
+    "steps": [
+      {
+        "promptAr": "نختبر أولاً الثنائية $(70 ; 50)$ : فهي تحقق المعادلة الثانية لأن $70 + 4 \\times 50 = 270$ . احسب قيمة الطرف الأيسر للمعادلة الأولى $3x + 2y$ من أجل $x = 70$ و $y = 50$ لتتحقق هل هي حل للجملة؟",
+        "hintAr": "عوّض $x$ بـ $70$ و $y$ بـ $50$ في العبارة $3 \\times 70 + 2 \\times 50$ .",
+        "expectedInput": "310",
+        "revealAr": "$3(70) + 2(50) = 210 + 100 = 310 \\neq 410$ . إذن الثنائية $(70 ; 50)$ **ليست** حلاً للجملة لأنها لم تحقق المعادلة الأولى (يجب أن تتحقق المعادلتان معاً في آن واحد)."
+      },
+      {
+        "promptAr": "نستعمل **طريقة التعويض**: من المعادلة الثانية $x + 4y = 270$ نكتب $x = 270 - 4y$ ، ثم نعوّض في المعادلة الأولى: $3(270 - 4y) + 2y = 410$ . بسّط المعادلة وأوجد ثمن القلم الواحد $y$ بالدينار.",
+        "hintAr": "انشر القوس: $810 - 12y + 2y = 410$ ، أي $810 - 10y = 410$ .",
+        "expectedInput": "40",
+        "revealAr": "لدينا $810 - 10y = 410$ ، ومنه $10y = 810 - 410 = 400$ ، إذن $y = \\frac{400}{10} = 40\\text{ DA}$ ."
+      },
+      {
+        "promptAr": "بعد إيجاد $y = 40$ ، عوّض في العبارة $x = 270 - 4y$ لحساب ثمن الكراس الواحد $x$ بالدينار.",
+        "hintAr": "احسب $270 - 4 \\times 40$ .",
+        "expectedInput": "110",
+        "revealAr": "$x = 270 - 4(40) = 270 - 160 = 110\\text{ DA}$ . نتحقق في المعادلتين: $3(110) + 2(40) = 410$ و $110 + 4(40) = 270$ . إذن حل الجملة هو الثنائية $(110 ; 40)$ ."
+      },
+      {
+        "promptAr": "يمكن الحل أيضاً بـ **طريقة الجمع**: نضرب المعادلة (1) في $2$ فتصبح $6x + 4y = 820$ ، ثم نطرح منها المعادلة (2) $x + 4y = 270$ طرفاً لطرف لحذف $y$ . ما قيمة $5x$ الناتجة؟",
+        "hintAr": "اطرح الطرفين الأيمنين: $820 - 270$ .",
+        "expectedInput": "550",
+        "revealAr": "$(6x + 4y) - (x + 4y) = 820 - 270 \\implies 5x = 550 \\implies x = 110\\text{ DA}$ ، ثم بالتعويض نجد $y = 40\\text{ DA}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**جملة معادلتين وحلّها**: حل جملة معادلتين من الدرجة الأولى بمجهولين $x$ و $y$ يعني إيجاد كل الثنائيات $(x ; y)$ التي **تحقق المعادلتين معاً** في آن واحد.",
+      "**طريقة التعويض**: نعبّر عن أحد المجهولين بدلالة الآخر انطلاقاً من إحدى المعادلتين (نختار المجهول ذا المعامل $1$ أو $-1$ إن أمكن)، ثم نعوّضه في المعادلة الثانية فنحصل على معادلة بمجهول واحد نحلّها، وبعدها نحسب قيمة المجهول الثاني.",
+      "**طريقة الجمع**: نضرب طرفي إحدى المعادلتين (أو كلتيهما) في أعداد مناسبة غير معدومة حتى يصبح معاملا أحد المجهولين **متعاكسين**، ثم نجمع المعادلتين طرفاً لطرف لحذف هذا المجهول وحساب المجهول الآخر، ثم نعوّض أو نكرر الطريقة لإيجاد المجهول الثاني.",
+      "**منهجية ترييض مشكلة بجملة معادلتين**: 1) اختيار المجهولين $x$ و $y$ بدقة مع تحديد الوحدات؛ 2) ترجمة معطيات النص إلى معادلتين؛ 3) حل الجملة جبرياً؛ 4) **التحقق** من الثنائية في الجملة وتفسير النتيجة في سياق المشكلة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\" width=\"600\" height=\"245\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"229\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"33\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">طريقتا الحل الجبري لجملة معادلتين من الدرجة الأولى بمجهولين</text><rect x=\"22\" y=\"48\" width=\"268\" height=\"174\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><rect x=\"22\" y=\"48\" width=\"268\" height=\"32\" rx=\"8\" fill=\"#eff6ff\"/><text x=\"156\" y=\"69\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">1. طريقة التعويض</text><text x=\"156\" y=\"100\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">① استخرج مجهولاً بدلالة الآخر</text><text x=\"156\" y=\"119\" text-anchor=\"middle\" font-size=\"12\" fill=\"#2563eb\" direction=\"ltr\">x = c - by</text><text x=\"156\" y=\"147\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">② عوّض في المعادلة الثانية</text><text x=\"156\" y=\"166\" text-anchor=\"middle\" font-size=\"12\" fill=\"#475569\" direction=\"rtl\">معادلة بمجهول واحد ← نجد y</text><text x=\"156\" y=\"194\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">③ ارجع واحسب x ثم تحقق</text><text x=\"156\" y=\"212\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">(x ; y)</text><rect x=\"310\" y=\"48\" width=\"268\" height=\"174\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.6\"/><rect x=\"310\" y=\"48\" width=\"268\" height=\"32\" rx=\"8\" fill=\"#ecfdf5\"/><text x=\"444\" y=\"69\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">2. طريقة الجمع (الحذف)</text><text x=\"444\" y=\"100\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">① اجعل معاملَي مجهول متعاكسين</text><text x=\"444\" y=\"119\" text-anchor=\"middle\" font-size=\"12\" fill=\"#059669\" direction=\"ltr\">+4y   و   -4y</text><text x=\"444\" y=\"147\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">② اجمع المعادلتين طرفاً لطرف</text><text x=\"444\" y=\"166\" text-anchor=\"middle\" font-size=\"12\" fill=\"#475569\" direction=\"rtl\">يُحذف المجهول الأول ← نجد الآخر</text><text x=\"444\" y=\"194\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">③ استنتج المجهول الثاني وتحقق</text><text x=\"444\" y=\"212\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">تحقق في (1) و (2)</text></svg>",
+    "visualCaptionAr": "مقارنة بين خطوات طريقة التعويض وخطوات طريقة الجمع لحل جملة معادلتين",
+    "examples": [
+      {
+        "problemAr": "حلّ بطريقة التعويض الجملة: $\\begin{cases} x - 2y = -1 \\\\ 3x + y = 11 \\end{cases}$ .",
+        "solutionAr": "1. من المعادلة (1) نجد: $x = 2y - 1$ .\n\n2. نعوّض $x$ في المعادلة (2): $3(2y - 1) + y = 11 \\implies 6y - 3 + y = 11 \\implies 7y = 14 \\implies y = 2$ .\n\n3. نحسب $x$: $x = 2(2) - 1 = 3$ .\n\n4. التحقق: $3 - 2(2) = -1$ و $3(3) + 2 = 11$ . إذن الحل هو الثنائية $(3 ; 2)$ ."
+      },
+      {
+        "problemAr": "محيط مستطيل يساوي $34\\text{ cm}$ ، وطوله يزيد عن عرضه بـ $5\\text{ cm}$ . أوجد بُعدي هذا المستطيل.",
+        "solutionAr": "نرمز للطول بـ $x$ وللعرض بـ $y$ ($\\text{cm}$)، فنكتب الجملة:\n\n$\\begin{cases} 2(x + y) = 34 \\\\ x - y = 5 \\end{cases}$ أي $\\begin{cases} x + y = 17 \\\\ x - y = 5 \\end{cases}$ .\n\nبجمع المعادلتين طرفاً لطرف يُحذف $y$: $2x = 22 \\implies x = 11\\text{ cm}$ .\n\nومنه $y = 17 - 11 = 6\\text{ cm}$ . التحقق: $2(11 + 6) = 34$ و $11 - 6 = 5$ ."
+      }
+    ],
+    "watchOutAr": "احذر من ثلاثة أخطاء متكررة: (1) الاكتفاء بالتحقق من معادلة واحدة فقط؛ يجب أن تحقق الثنائية المعادلتين معاً. (2) نسيان ضرب الطرف الثاني عند ضرب معادلة في عدد في طريقة الجمع! (3) عكس الترتيب عند كتابة الثنائية الحل: نكتب دوماً $(x ; y)$ وليس $(y ; x)$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "أي ثنائية $(x ; y)$ هي حل لجملة المعادلتين: $\\begin{cases} 2x + y = 5 \\\\ x - 3y = 13 \\end{cases}$ ؟",
+      "options": [
+        "$(4 ; -3)$",
+        "$(1 ; 3)$",
+        "$(7 ; -2)$",
+        "$(-3 ; 4)$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! بتعويض $x = 4$ و $y = -3$ نجد $2(4) + (-3) = 5$ و $4 - 3(-3) = 13$ ، فالمعادلتان محققتان.",
+        "انتبه: الثنائية $(1 ; 3)$ تحقق المعادلة الأولى ($2(1)+3=5$) لكنها لا تحقق الثانية ($1 - 9 = -8 \\neq 13$).",
+        "الثنائية $(7 ; -2)$ تحقق المعادلة الثانية ($7 - 3(-2) = 13$) لكنها تفشل في الأولى ($14 - 2 = 12 \\neq 5$).",
+        "عكستَ ترتيب الإحداثيين! نكتب دوماً $(x ; y)$ حيث $x = 4$ أولاً ثم $y = -3$ ثانياً."
+      ],
+      "explanationAr": "نختبر الثنائية $(4 ; -3)$: في (1) $2(4) + (-3) = 8 - 3 = 5$ (محققة)، وفي (2) $4 - 3(-3) = 4 + 9 = 13$ (محققة). كما يمكن إيجادها بضرب (2) في $-2$ والجمع: $7y = -21 \\implies y = -3$ ثم $x = 4$."
+    },
+    {
+      "questionAr": "تأمل المستطيل $ABCD$ المقابل الذي محيطه $36\\text{ cm}$ ، حيث طوله $x$ وعرضه $y$ يحققان $x - 2y = 3$ . ما هما بُعدا المستطيل؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 180\" width=\"380\" height=\"180\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"364\" height=\"164\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><rect x=\"64\" y=\"42\" width=\"170\" height=\"86\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><text x=\"52\" y=\"38\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"240\" y=\"38\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"240\" y=\"142\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"52\" y=\"142\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">D</text><text x=\"149\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">x</text><text x=\"252\" y=\"90\" text-anchor=\"start\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">y</text><rect x=\"270\" y=\"44\" width=\"92\" height=\"82\" rx=\"8\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"316\" y=\"68\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">المعطيات:</text><text x=\"316\" y=\"90\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">المحيط = 36 cm</text><text x=\"316\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">x - 2y = 3</text></svg>",
+      "options": [
+        "$x = 12\\text{ cm}$ و $y = 6\\text{ cm}$",
+        "$x = 25\\text{ cm}$ و $y = 11\\text{ cm}$",
+        "$x = 13\\text{ cm}$ و $y = 5\\text{ cm}$",
+        "$x = 5\\text{ cm}$ و $y = 13\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "نصف المحيط $12 + 6 = 18$ صحيح، لكن $x - 2y = 12 - 12 = 0 \\neq 3$ !",
+        "نسيت قسمة المحيط على $2$ ! المحيط هو $2(x + y) = 36$ ومنه نصف المحيط $x + y = 18$ وليس $36$ .",
+        "ممتاز! نصف المحيط $x + y = 18$ ومع $x - 2y = 3$ نجد بالطرح $3y = 15 \\implies y = 5\\text{ cm}$ و $x = 13\\text{ cm}$ .",
+        "الطول أكبر من العرض في الشكل المعطى ($x > y$)، والترتيب الصحيح هو $x = 13\\text{ cm}$ و $y = 5\\text{ cm}$ ."
+      ],
+      "explanationAr": "محيط المستطيل $2(x + y) = 36$ يعطي $x + y = 18$ . نحل الجملة $\\begin{cases} x + y = 18 \\\\ x - 2y = 3 \\end{cases}$ بطرح الثانية من الأولى: $(x + y) - (x - 2y) = 18 - 3 \\implies 3y = 15 \\implies y = 5\\text{ cm}$ ، ومنه $x = 18 - 5 = 13\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "يضم موقف للسيارات والدراجات النارية $25$ مركبة بمجموع $80$ عجلة (للسيارة $4$ عجلات وللدراجة عجلتان). ما الجملة الموافقة وما عدد السيارات $x$ وعدد الدراجات $y$ ؟",
+      "options": [
+        "$\\begin{cases} x + y = 80 \\\\ 4x + 2y = 25 \\end{cases}$ والحل $(15 ; 10)$",
+        "$\\begin{cases} x + y = 25 \\\\ 4x + 2y = 80 \\end{cases}$ والحل $(15 ; 10)$",
+        "$\\begin{cases} x + y = 25 \\\\ 4x + 2y = 80 \\end{cases}$ والحل $(10 ; 15)$",
+        "$\\begin{cases} x + y = 25 \\\\ 2x + 4y = 80 \\end{cases}$ والحل $(15 ; 10)$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "عكستَ طرفي المعادلتين! مجموع المركبات هو $25$ ومجموع العجلات هو $80$ .",
+        "أحسنت! ترجمة سليمة للمسألة، وبحذف $y$ نجد $2x = 30 \\implies x = 15$ سيارة و $y = 10$ دراجات.",
+        "الجملة صحيحة لكنك عكستَ القيمتين: $4(10) + 2(15) = 70 \\neq 80$ . السيارات $x = 15$ والدراجات $y = 10$ .",
+        "للسيارة $x$ أربع عجلات ($4x$) وليس عجلتين ($2x$)!"
+      ],
+      "explanationAr": "عدد المركبات يعطي $x + y = 25$ وعدد العجلات يعطي $4x + 2y = 80$ . بقسمة المعادلة الثانية على $2$ نجد $2x + y = 40$ ، وبالتعويض أو الطرح: $(2x + y) - (x + y) = 40 - 25 \\implies x = 15$ سيارة، و $y = 25 - 15 = 10$ دراجات نارية."
+    }
+  ]
+}

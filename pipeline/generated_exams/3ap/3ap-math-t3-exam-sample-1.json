@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "3ap",
+    "yearName": "السنة الثالثة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "exam",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة وربع",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 1.5,
+      "instruction": "وظّف معكوس جداول الضرب لإتمام الجدول وحل مسألة التوزيع المتساوي:",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "المساواة الضربية",
+            "القسمة التامة الأولى",
+            "المقسوم / القسمة الثانية"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              {
+                "content": "$2 times \".....\" = 12$",
+                "answer": "$2 times 6 = 12$",
+                "mark": "0.25"
+              },
+              {
+                "content": "$12 div 2 = \".....\"$",
+                "answer": "$12 div 2 = 6$",
+                "mark": "0.25"
+              },
+              "$12$"
+            ],
+            [
+              "$8 times 9 = 72$",
+              {
+                "content": "$72 div 8 = \".....\"$",
+                "answer": "$72 div 8 = 9$",
+                "mark": "0.25"
+              },
+              {
+                "content": "$72 div 9 = \".....\"$",
+                "answer": "$72 div 9 = 8$",
+                "mark": "0.25"
+              }
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        },
+        {
+          "type": "text",
+          "content": "2) يملك ياسين $12$ من الـكرات، أراد توزيعها بالتساوي على $2$ سلات. اكتب عملية القسمة التامة وأوجد نصيب كل سلة.",
+          "answer": "عملية القسمة: $12 div 2 = 6$ (لأن $2 times 6 = 12$). نصيب كل سلة: $6$.",
+          "mark": "0.5"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t3-easy-101-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 1.5,
+      "instruction": "أكمل جدول الضعف والنصف، ثم أتمم العلاقات الحسابية التالية:",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "العدد",
+            "نصفه",
+            "ضعفه"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "$740$",
+              {
+                "content": "........",
+                "answer": "$370$",
+                "mark": "0.25"
+              },
+              {
+                "content": "........",
+                "answer": "$1480$",
+                "mark": "0.25"
+              }
+            ],
+            [
+              {
+                "content": "........",
+                "answer": "$580$",
+                "mark": "0.25"
+              },
+              "$290$",
+              {
+                "content": "........",
+                "answer": "$1160$",
+                "mark": "0.25"
+              }
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        },
+        {
+          "type": "text",
+          "content": "أكمل المساويات التالية:\n\n- $760 + \".....\" = 1000$\n\n- $28 times 30 = \".....\"$",
+          "answer": "- $760 + 240 = 1000$\n\n- $28 times 30 = 840$",
+          "mark": "0.5"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t3-easy-101-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "points": 1.5,
+      "instruction": "تأمّل المرصوفة ذات محور التناظر، ثم أكمل جدول خصائص المجسمات المألوفة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.3fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) ما هي النقطة النظيرة للنقطة $A$ بالنسبة إلى الخط الأزرق (محور التناظر)؟ ولماذا؟\n\nالنقطة هي: ............\n\n2) كم محور تناظر للمربع؟ ............ وكم محور تناظر للمستطيل؟ ............",
+              "answer": "1) النظيرة هي النقطة $M$ لأنها تقع على نفس السطر وتبعد بنفس المسافة ($1$ مربعات) عن المحور.\n\n2) للمربع $4$ محاور تناظر، وللمستطيل محورا ($2$) تناظر فقط.",
+              "mark": "0.75"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t3_geom_easy_s229364.svg",
+              "caption": "محور التناظر على المرصوفة"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "المجسم",
+            "عدد الوجوه",
+            "عدد الأحرف",
+            "عدد الرؤوس",
+            "يتدحرج؟"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "المكعب",
+              {
+                "content": "......",
+                "answer": "$6$",
+                "mark": "0.25"
+              },
+              "$12$",
+              "$8$",
+              "لا"
+            ],
+            [
+              "الهرم (قاعدته مربعة)",
+              "$5$",
+              {
+                "content": "......",
+                "answer": "$8$",
+                "mark": "0.25"
+              },
+              {
+                "content": "......",
+                "answer": "$5$",
+                "mark": "0.25"
+              },
+              "لا"
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t3-easy-101-ex-3",
+      "num": "الثالث"
+    },
+    {
+      "points": 1.5,
+      "instruction": "لاحظ الشكل المرسوم وأجب عن أسئلة حساب المحيط مع كتابة القانون والوحدة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) احسب محيط المربع #text(dir: ltr)[ABCD] المرسوم أمامك، إذا كان طول ضلعه #text(dir: ltr)[8 cm].",
+              "answer": "محيط المربع: $8 times 4 = 32$ cm.",
+              "mark": "1"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t3_perim_easy_s78588.svg",
+              "caption": "المربع ABCD"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) احسب محيط مثلث أطوال أضلاعه #text(dir: ltr)[7 cm] و #text(dir: ltr)[11 cm] و #text(dir: ltr)[4 cm].",
+          "answer": "محيط المثلث = مجموع أطوال أضلاعه: $7 + 11 + 4 = 22$ cm.",
+          "mark": "0.5"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t3-easy-101-ex-4",
+      "num": "الرابع"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "اقرأ الوضعية وتأمل المخطط المرفق ثم أجب عن الأسئلة الثلاثة بكتابة العمليات والوحدة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "تعاون عدة إخوة على إحاطة بستانهم المستطيل بسياج معدني، طولها #text(dir: ltr)[8 m] وعرضها #text(dir: ltr)[4 m]. اشتروا السياج بسعر #text(dir: ltr)[200 DA] للمتر الواحد، وتقاسموا التكلفة الإجمالية بالتساوي بين $6$ إخوة."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t3_integ_easy_s386342.svg",
+              "caption": "مخطط بستان العائلة"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب محيط بستان العائلة بالمتر (طول السياج اللازم).",
+          "answer": "1) محيط المستطيل: $(8 + 4) times 2 = 12 times 2 = 24$ #text(dir: ltr)[m].",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب ثمن السياج (التكلفة الإجمالية) بالدينار الجزائري.",
+          "answer": "2) ثمن السياج: $24 times 200 = 4800$ #text(dir: ltr)[DA].",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "3) ما هو المبلغ الذي يدفعه كل أخ؟",
+          "answer": "3) حصة كل أخ: $4800 div 6 = 800$ #text(dir: ltr)[DA].",
+          "mark": "1.25"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t3-easy-101-ex-5"
+    }
+  ]
+}

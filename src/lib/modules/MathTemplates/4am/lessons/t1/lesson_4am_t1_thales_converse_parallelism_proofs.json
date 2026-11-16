@@ -1,0 +1,130 @@
+{
+  "id": "lesson_4am_t1_thales_converse_parallelism_proofs",
+  "slug": "4am-t1-thales-converse-parallelism-proofs",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني: خاصية طالس والخاصية العكسية وتطبيقاتها",
+  "order": 5,
+  "titleAr": "الخاصية العكسية لخاصية طالس وإثبات التوازي أو عدمه",
+  "objectives": [
+    "معرفة الخاصية العكسية لخاصية طالس والتحقق بدقة من استقامية وترتيب النقط قبل استنتاج التوازي",
+    "توظيف الخاصية العكسية لطالس لإثبات توازي مستقيمين وتوظيف عدم تساوي النسب لإثبات عدم توازي مستقيمين",
+    "الربط بين خاصية طالس وعكسها ومكتسبات المثلث القائم وخاصية فيثاغورس في تحرير براهين هندسية متكاملة"
+  ],
+  "keywordsAr": [
+    "الخاصية العكسية لطالس",
+    "ترتيب النقط",
+    "إثبات التوازي",
+    "إثبات عدم التوازي",
+    "برهان هندسي"
+  ],
+  "discover": {
+    "scenarioAr": "للتحقق من توازي دعامتين في هيكل هندسي، نقيس في المثلث $ABC$ النقطتين $M \\in [AB]$ و $N \\in [AC]$ حيث $AM = 6\\text{ cm}$ ، $AB = 9\\text{ cm}$ ، $AN = 8\\text{ cm}$ و $AC = 12\\text{ cm}$ . كما نتحقق من دعامة ثانية $[EF]$ ($E \\in [AB]$ و $F \\in [AC]$) حيث $AE = 4\\text{ cm}$ و $AF = 5\\text{ cm}$ . كيف نثبت التوازي أو عدمه دون منقلة؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"215\" height=\"175\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"117\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">تساوي النسب + نفس الترتيب</text><polygon points=\"117,40 46,138 188,138\" fill=\"#dcfce7\" fill-opacity=\"0.4\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"69.7\" y1=\"105.3\" x2=\"164.3\" y2=\"105.3\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><line x1=\"46\" y1=\"138\" x2=\"188\" y2=\"138\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><text x=\"117\" y=\"35\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">A</text><text x=\"34\" y=\"143\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"200\" y=\"143\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"57\" y=\"106\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">M</text><text x=\"177\" y=\"106\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">N</text><text x=\"75\" y=\"73\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">AM=6, AB=9</text><text x=\"164\" y=\"73\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">AN=8, AC=12</text><text x=\"117\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">6/9 = 8/12 = 2/3</text><text x=\"117\" y=\"177\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">⇐ (MN) // (BC)</text><rect x=\"235\" y=\"10\" width=\"215\" height=\"175\" rx=\"10\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"342\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\">انتبه: اختلال الترتيب!</text><line x1=\"372\" y1=\"54.7\" x2=\"272\" y2=\"148\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"332\" y1=\"92\" x2=\"412\" y2=\"148\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"272\" y1=\"148\" x2=\"412\" y2=\"148\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"372\" y1=\"54.7\" x2=\"385.3\" y2=\"129.3\" stroke=\"#dc2626\" stroke-width=\"2.2\" stroke-dasharray=\"4,3\"/><circle cx=\"332\" cy=\"92\" r=\"3.2\" fill=\"#dc2626\"/><circle cx=\"372\" cy=\"54.7\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"385.3\" cy=\"129.3\" r=\"3\" fill=\"#dc2626\"/><text x=\"319\" y=\"93\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">A</text><text x=\"383\" y=\"56\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">M'</text><text x=\"396\" y=\"130\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">N</text><text x=\"260\" y=\"152\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"424\" y=\"152\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"342\" y=\"166\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#b91c1c\">AM'/AB = AN/AC لكن الترتيب مختلف</text><text x=\"342\" y=\"180\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">⇐ (M'N) و (BC) غير متوازيين</text></svg>",
+    "steps": [
+      {
+        "promptAr": "نحسب النسبة المضبوطة الأولى $\\frac{AM}{AB} = \\frac{6}{9}$ على الشكل غير القابل للاختزال $\\frac{p}{3}$ . ما قيمة البسط $p$ ؟",
+        "hintAr": "اقسم البسط والمقام في $\\frac{6}{9}$ على $3$ .",
+        "expectedInput": "2",
+        "revealAr": "$\\frac{AM}{AB} = \\frac{6}{9} = \\frac{2}{3}$ ."
+      },
+      {
+        "promptAr": "نحسب الآن النسبة المضبوطة الثانية $\\frac{AN}{AC} = \\frac{8}{12}$ على الشكل غير القابل للاختزال $\\frac{q}{3}$ . ما قيمة البسط $q$ ؟",
+        "hintAr": "اقسم البسط والمقام في $\\frac{8}{12}$ على $4$ .",
+        "expectedInput": "2",
+        "revealAr": "$\\frac{AN}{AC} = \\frac{8}{12} = \\frac{2}{3}$ . لدينا $\\frac{AM}{AB} = \\frac{AN}{AC}$ والنقط $A, M, B$ و $A, N, C$ في استقامية وبنفس الترتيب، إذن حسب **الخاصية العكسية لخاصية طالس** فإن $(MN) \\parallel (BC)$ ."
+      },
+      {
+        "promptAr": "للتحقق من الدعامة الثانية $[EF]$ ($AE = 4\\text{ cm}$, $AB = 9\\text{ cm}$, $AF = 5\\text{ cm}$, $AC = 12\\text{ cm}$)، نقارن الجداءين المتصالبين للنسبتين $\\frac{4}{9}$ و $\\frac{5}{12}$ . لدينا $5 \\times 9 = 45$ ؛ فما قيمة $4 \\times 12$ ؟",
+        "hintAr": "اضرب $4$ في $12$ .",
+        "expectedInput": "48",
+        "revealAr": "بما أن $4 \\times 12 = 48 \\ne 45 = 5 \\times 9$ ، فإن $\\frac{AE}{AB} \\ne \\frac{AF}{AC}$ ؛ ومنه المستقيمان $(EF)$ و $(BC)$ **غير متوازيين** (لأن تساوي النسب شرط لازم للتوازي حسب خاصية طالس)."
+      },
+      {
+        "promptAr": "في حالة وجود مثلث $ABC$ قائم في $A$ بحيث $AB = 9\\text{ cm}$ و $AC = 12\\text{ cm}$ ، كم يساوي طول الوتر $BC$ بالسنتيمتر حسب خاصية فيثاغورس؟",
+        "hintAr": "احسب $BC^2 = 9^2 + 12^2 = 81 + 144$ ثم استخرج الجذر التربيعي.",
+        "expectedInput": "15",
+        "revealAr": "$BC^2 = 81 + 144 = 225$ ومنه $BC = \\sqrt{225} = 15\\text{ cm}$ . وبما أن $(MN) \\parallel (BC)$ أمكننا أيضاً حساب $MN = \\frac{2}{3} \\times 15 = 10\\text{ cm}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**نص الخاصية العكسية لخاصية طالس**: ليكن $(BM)$ و $(CN)$ مستقيمين متقاطعين في نقطة $A$ . إذا كان $\\frac{AM}{AB} = \\frac{AN}{AC}$ ، **و** كانت النقط $A, M, B$ والنقط $A, N, C$ مرتبة **بنفس الترتيب** على المستقيمين، فإن المستقيمين $(MN)$ و $(BC)$ **متوازيان**.",
+      "**إثبات عدم التوازي**: إذا كان المستقيمان $(BM)$ و $(CN)$ متقاطعين في $A$ وكان $\\frac{AM}{AB} \\ne \\frac{AN}{AC}$ ، فإن المستقيمين $(MN)$ و $(BC)$ **غير متوازيين** (لأنه لو كانا متوازيين لتساوت النسبتان حسب خاصية طالس).",
+      "**المقارنة المضبوطة للنسب**: لا تقارن النسب أبداً بقيم عشرية مقربة بالحاسبة! استعمل دوماً إما **اختزال الكسرين** إلى أبسط شكل، أو **الجداء المتصالب** بمقارنة $AM \\times AC$ و $AN \\times AB$ .",
+      "**تكامل البراهين الهندسية**: في تمارين شهادة التعليم المتوسط، يُطلب غالباً حساب طول أولاً بخاصية فيثاغورس أو طالس، ثم إثبات التوازي بالخاصية العكسية لطالس مع ذكر شرطيها (تساوي النسبتين + نفس ترتيب النقط)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"8\" width=\"440\" height=\"179\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><rect x=\"125\" y=\"18\" width=\"210\" height=\"34\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"230\" y=\"39\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">مقارنة النسبتين المضبوطتين AM/AB و AN/AC</text><line x1=\"165\" y1=\"52\" x2=\"115\" y2=\"78\" stroke=\"#475569\" stroke-width=\"1.8\"/><line x1=\"295\" y1=\"52\" x2=\"345\" y2=\"78\" stroke=\"#475569\" stroke-width=\"1.8\"/><rect x=\"22\" y=\"78\" width=\"190\" height=\"34\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"117\" y=\"99\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">متساويتان: AM×AC = AN×AB</text><rect x=\"248\" y=\"78\" width=\"190\" height=\"34\" rx=\"8\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"343\" y=\"99\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\">غير متساويتين: AM×AC ≠ AN×AB</text><line x1=\"343\" y1=\"112\" x2=\"343\" y2=\"136\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><rect x=\"248\" y=\"136\" width=\"190\" height=\"38\" rx=\"8\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"343\" y=\"159\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\">(MN) و (BC) غير متوازيين</text><line x1=\"82\" y1=\"112\" x2=\"66\" y2=\"136\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><line x1=\"152\" y1=\"112\" x2=\"168\" y2=\"136\" stroke=\"#ca8a04\" stroke-width=\"1.8\"/><rect x=\"18\" y=\"136\" width=\"104\" height=\"38\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"70\" y=\"152\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#166534\">نفس الترتيب ✓</text><text x=\"70\" y=\"166\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\">(MN) // (BC)</text><rect x=\"130\" y=\"136\" width=\"104\" height=\"38\" rx=\"8\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"1.6\"/><text x=\"182\" y=\"152\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#854d0e\">ترتيب مختلف ✗</text><text x=\"182\" y=\"166\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#a16207\">ليس بالضرورة موازياً</text></svg>",
+    "visualCaptionAr": "مخطط القرار الهندسي لإثبات التوازي (بالخاصية العكسية لطالس) أو عدم التوازي",
+    "examples": [
+      {
+        "problemAr": "(برهان توازي في وضع الفراشة) يتقاطع المستقيمان $(RS)$ و $(UT)$ في $O$ حيث النقط $R, O, S$ والنقط $U, O, T$ في استقامية وبنفس الترتيب، مع $OR = 4.5\\text{ cm}$ ، $OS = 6\\text{ cm}$ ، $OU = 6\\text{ cm}$ و $OT = 8\\text{ cm}$ . أثبت أن $(RU) \\parallel (ST)$ .",
+        "solutionAr": "نحسب النسبتين بشكل مستقل ونبسطهما:\n\n$\\frac{OR}{OS} = \\frac{4.5}{6} = \\frac{9}{12} = \\frac{3}{4}$ ، و $\\frac{OU}{OT} = \\frac{6}{8} = \\frac{3}{4}$ .\n\nبما أن $\\frac{OR}{OS} = \\frac{OU}{OT}$ والنقط $R, O, S$ و $U, O, T$ في استقامية وبنفس الترتيب، فإن المستقيمين $(RU)$ و $(ST)$ **متوازيان** حسب الخاصية العكسية لطالس."
+      },
+      {
+        "problemAr": "(إثبات عدم التوازي) في المثلث $ABC$ ، لدينا $M \\in [AB]$ و $N \\in [AC]$ بحيث $AM = 2\\text{ cm}$ ، $AB = 3\\text{ cm}$ ، $AN = 4.6\\text{ cm}$ و $AC = 7\\text{ cm}$ . هل $(MN) \\parallel (BC)$ ؟",
+        "solutionAr": "نقارن النسبتين $\\frac{AM}{AB} = \\frac{2}{3}$ و $\\frac{AN}{AC} = \\frac{4.6}{7}$ باستعمال الجداء المتصالب:\n\n$2 \\times 7 = 14$ بينما $3 \\times 4.6 = 13.8$ .\n\nبما أن $14 \\ne 13.8$ فإن $\\frac{AM}{AB} \\ne \\frac{AN}{AC}$ . إذن المستقيمان $(MN)$ و $(BC)$ **غير متوازيين** (تنبّه إلى أن $\\frac{2}{3} \\approx 0.67$ و $\\frac{4.6}{7} \\approx 0.66$ قريبان لكنهما غير متساويين!)."
+      }
+    ],
+    "watchOutAr": "خطأان يضيعان النقاط في الامتحان: (1) نسيان ذكر عبارة «**والنقط في استقامية وبنفس الترتيب**» عند تطبيق الخاصية العكسية لطالس! (2) الاعتماد على قيم عشرية مقربة مثل $0.66 \\approx 0.66$ لاستنتاج تساوي النسب؛ يجب دائماً مقارنة كسرين مختزلين أو مقارنة الجداءين المتصالبين."
+  },
+  "practice": [
+    {
+      "questionAr": "في شكل الفراشة المقابل، يتقاطع $(BD)$ و $(CE)$ في $A$ بالترتيب $B, A, D$ و $C, A, E$ حيث $AB = 4\\text{ cm}$ ، $AD = 10\\text{ cm}$ ، $AC = 6\\text{ cm}$ و $AE = 15\\text{ cm}$ . ما الاستنتاج الصحيح حول $(BC)$ و $(DE)$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 165\" width=\"280\" height=\"165\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"176\" y1=\"58\" x2=\"50\" y2=\"142\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"104\" y1=\"58\" x2=\"230\" y2=\"142\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"104\" y1=\"58\" x2=\"176\" y2=\"58\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><line x1=\"50\" y1=\"142\" x2=\"230\" y2=\"142\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><circle cx=\"140\" cy=\"82\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"153\" y=\"85\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">A</text><text x=\"186\" y=\"56\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">B</text><text x=\"92\" y=\"56\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">C</text><text x=\"38\" y=\"147\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">D</text><text x=\"242\" y=\"147\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">E</text><text x=\"169\" y=\"75\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">4</text><text x=\"109\" y=\"75\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">6</text><text x=\"84\" y=\"110\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\">10</text><text x=\"195\" y=\"110\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\">15</text></svg>",
+      "options": [
+        "غير متوازيين لأن $\\frac{4}{10} \\ne \\frac{6}{15}$",
+        "متوازيان حسب خاصية طالس المباشرة",
+        "متوازيان حسب الخاصية العكسية لطالس لأن $\\frac{AB}{AD} = \\frac{AC}{AE} = \\frac{2}{5}$ والنقط بنفس الترتيب",
+        "لا يمكن الحكم لأن طولي $BC$ و $DE$ غير معطيين"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "تحقق من الاختزال: $\\frac{4}{10} = \\frac{2}{5}$ و $\\frac{6}{15} = \\frac{2}{5}$ ، فالنسبتان متساويتان تماماً ($4 \\times 15 = 60 = 6 \\times 10$).",
+        "خاصية طالس المباشرة تُستعمل لحساب الأطوال عندما يكون التوازي معطى، أما هنا التوازي مطلوب إثباته فنستعمل **الخاصية العكسية**.",
+        "ممتاز! لدينا $\\frac{AB}{AD} = \\frac{AC}{AE} = \\frac{2}{5}$ والنقط $B, A, D$ و $C, A, E$ بنفس الترتيب، إذن $(BC) \\parallel (DE)$ بالخاصية العكسية لطالس.",
+        "يكفي في الخاصية العكسية لطالس تساوي نسبتين اثنتين (مثل $\\frac{AB}{AD}$ و $\\frac{AC}{AE}$) مع نفس ترتيب النقط، ولا نحتاج للنسبة الثالثة."
+      ],
+      "explanationAr": "نحسب: $\\frac{AB}{AD} = \\frac{4}{10} = \\frac{2}{5}$ و $\\frac{AC}{AE} = \\frac{6}{15} = \\frac{2}{5}$ . بما أن $\\frac{AB}{AD} = \\frac{AC}{AE}$ والنقط $B, A, D$ و $C, A, E$ في استقامية وبنفس الترتيب، فإن $(BC) \\parallel (DE)$ حسب الخاصية العكسية لطالس."
+    },
+    {
+      "questionAr": "في مثلث $ABC$ ، تقع النقطتان $M \\in [AB]$ و $N \\in [AC]$ بحيث $AM = 5\\text{ cm}$ ، $AB = 7\\text{ cm}$ ، $AN = 7\\text{ cm}$ و $AC = 10\\text{ cm}$ . ماذا نستنتج عن $(MN)$ و $(BC)$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 165\" width=\"280\" height=\"165\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><polygon points=\"140,22 44,142 236,142\" fill=\"#fef2f2\" fill-opacity=\"0.35\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"71.5\" y1=\"107.7\" x2=\"207.2\" y2=\"106\" stroke=\"#dc2626\" stroke-width=\"2.2\" stroke-dasharray=\"4,3\"/><line x1=\"44\" y1=\"142\" x2=\"236\" y2=\"142\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><text x=\"140\" y=\"16\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">A</text><text x=\"32\" y=\"148\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"248\" y=\"148\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"58\" y=\"109\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">M</text><text x=\"220\" y=\"107\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">N</text><text x=\"88\" y=\"62\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">AM=5, AB=7</text><text x=\"196\" y=\"62\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">AN=7, AC=10</text><text x=\"140\" y=\"158\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#b91c1c\">5 × 10 = 50  ≠  7 × 7 = 49</text></svg>",
+      "options": [
+        "المستقيمان $(MN)$ و $(BC)$ غير متوازيين لأن $5 \\times 10 \\ne 7 \\times 7$",
+        "المستقيمان متوازيان لأن $\\frac{5}{7} \\approx 0.7$ و $\\frac{7}{10} = 0.7$",
+        "المستقيمان متوازيان حسب الخاصية العكسية لطالس",
+        "المستقيمان متعامدان لأن $50 - 49 = 1$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! باستعمال الجداء المتصالب، $5 \\times 10 = 50 \\ne 49 = 7 \\times 7$ ، إذن $\\frac{AM}{AB} \\ne \\frac{AN}{AC}$ وبالتالي هما غير متوازيين.",
+        "انتبه: $\\frac{5}{7} = 0.714\\dots$ قيمة مقربة، ولا يجوز أبداً الاعتماد على التقريب لإثبات تساوي نسبتين!",
+        "الخاصية العكسية تشترط التساوي التام للنسبتين، وهنا $\\frac{5}{7} \\ne \\frac{7}{10}$ .",
+        "الاختلاف في الجداء المتصالب يثبت عدم التوازي فقط، ولا علاقة له بالتعامد."
+      ],
+      "explanationAr": "نقارن $\\frac{AM}{AB} = \\frac{5}{7}$ و $\\frac{AN}{AC} = \\frac{7}{10}$ بالجداء المتصالب: $5 \\times 10 = 50$ بينما $7 \\times 7 = 49$ . لأن $50 \\ne 49$ فالنسبتان غير متساويتين، إذن $(MN)$ و $(BC)$ غير متوازيين."
+    },
+    {
+      "questionAr": "في الشكل المقابل، النقط $M, A, B$ على استقامة واحدة بحيث $A$ بين $M$ و $B$ ، بينما النقط $A, N, C$ بالترتيب $N \\in [AC]$ ، مع $\\frac{AM}{AB} = \\frac{AN}{AC} = \\frac{1}{2}$ . لماذا لا يمكننا استنتاج أن $(MN) \\parallel (BC)$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 165\" width=\"280\" height=\"165\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"160\" y1=\"41\" x2=\"70\" y2=\"140\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"130\" y1=\"74\" x2=\"220\" y2=\"140\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"70\" y1=\"140\" x2=\"220\" y2=\"140\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"160\" y1=\"41\" x2=\"175\" y2=\"107\" stroke=\"#dc2626\" stroke-width=\"2.2\" stroke-dasharray=\"4,3\"/><circle cx=\"130\" cy=\"74\" r=\"3.2\" fill=\"#dc2626\"/><circle cx=\"160\" cy=\"41\" r=\"3.2\" fill=\"#dc2626\"/><circle cx=\"175\" cy=\"107\" r=\"3.2\" fill=\"#dc2626\"/><text x=\"117\" y=\"76\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">A</text><text x=\"170\" y=\"40\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">M</text><text x=\"186\" y=\"108\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">N</text><text x=\"58\" y=\"145\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"232\" y=\"145\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"145\" y=\"158\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#b91c1c\">AM/AB = AN/AC = 1/2</text></svg>",
+      "options": [
+        "لأن النسبة $\\frac{1}{2}$ أصغر من $1$",
+        "لأن المثلث $ABC$ ليس متساوي الساقين",
+        "لأن وضع الفراشة لا يقبل التوازي",
+        "لأن النقط $A, M, B$ و $A, N, C$ ليست مرتبة بنفس الترتيب"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "النسبة $\\frac{1}{2}$ مقبولة تماماً في خاصية طالس وعكسها عندما يكون $M \\in [AB]$ و $N \\in [AC]$ .",
+        "الخاصية العكسية لطالس تنطبق على أي مثلث ولا تشترط تساوي الساقين.",
+        "في وضع الفراشة يكون $A$ بين $M, B$ **وأيضاً** بين $N, C$ ، أما هنا فـ $A$ بين $M, B$ فقط وليس بين $N, C$ !",
+        "أحسنت! الترتيب على المستقيم الأول هو $M, A, B$ بينما على المستقيم الثاني هو $A, N, C$ ، فاختل شرط «نفس الترتيب» اللازم لتطبيق الخاصية العكسية لطالس."
+      ],
+      "explanationAr": "رغم تساوي النسبتين $\\frac{AM}{AB} = \\frac{AN}{AC} = \\frac{1}{2}$ ، فإن النقطتين $M$ و $N$ تقعان في وضعيتين غير متناظرتين بالنسبة إلى $A$ ($A$ بين $M$ و $B$ بينما $N$ بين $A$ و $C$)، لذا اختل شرط **نفس الترتيب** ولا يتوازى $(MN)$ و $(BC)$ ."
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "lesson_1am_t2_euclidean_division_divisibility",
+  "slug": "1am-t2-euclidean-division-divisibility",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: القسمة الإقليدية والعشرية والكتابات الكسرية",
+  "order": 1,
+  "titleAr": "القسمة الإقليدية وقواعد قابلية القسمة على 2، 3، 4، 5، 9",
+  "objectives": [
+    "تعيين حاصل وباقي القسمة الإقليدية لعدد طبيعي على عدد طبيعي غير معدوم مكتوب برقم واحد أو رقمين",
+    "التعبير عن القسمة الإقليدية بالمساواة (المقسوم = القاسم × الحاصل + الباقي، مع الباقي أصغر من القاسم) وتوظيفها في حل مشكلات",
+    "معرفة واستعمال قواعد قابلية القسمة على الأعداد (2، 3، 4، 5، 9) في تصنيف الأعداد وحسابات بسيطة"
+  ],
+  "keywordsAr": [
+    "القسمة الإقليدية",
+    "الحاصل والباقي",
+    "المساواة الإقليدية",
+    "قواعد قابلية القسمة",
+    "مضاعف وقاسم"
+  ],
+  "discover": {
+    "scenarioAr": "جنت تعاونية فلاحية $175$ علبة تمر من نوع دقلة نور، وأرادت توضيبها في صناديق يسع كل منها $12$ علبة. ومن جهة أخرى، تريد توزيع $252$ حبة تفاح بالتساوي في سلال تسع $9$ حبات أو $4$ حبات دون أن يبقى أي باقٍ. كيف نعيّن عدد الصناديق والعلب المتبقية، وكيف نتحقق بسرعة من قابلية قسمة $252$ على $9$ و $4$ و $2$ و $5$ ؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"210\" height=\"170\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"115\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">القسمة الإقليدية</text><text x=\"72\" y=\"64\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">175</text><line x1=\"112\" y1=\"46\" x2=\"112\" y2=\"120\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"112\" y1=\"72\" x2=\"186\" y2=\"72\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"148\" y=\"64\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">12</text><text x=\"148\" y=\"96\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#16a34a\">14</text><text x=\"72\" y=\"88\" text-anchor=\"middle\" font-size=\"13\" fill=\"#475569\">- 168</text><line x1=\"46\" y1=\"95\" x2=\"98\" y2=\"95\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"72\" y=\"114\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#dc2626\">7</text><text x=\"115\" y=\"144\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">175 = 12 × 14 + 7</text><text x=\"115\" y=\"166\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">7 &lt; 12</text><rect x=\"232\" y=\"10\" width=\"218\" height=\"170\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"341\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\">قابلية قسمة العدد 252</text><rect x=\"296\" y=\"42\" width=\"90\" height=\"32\" rx=\"8\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"341\" y=\"64\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#0f172a\">2 5 2</text><text x=\"341\" y=\"94\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\">مجموع الأرقام: 2 + 5 + 2 = 9</text><text x=\"341\" y=\"112\" text-anchor=\"middle\" font-size=\"11\" fill=\"#166534\">يقبل القسمة على 3 و 9</text><text x=\"341\" y=\"136\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#7c3aed\">الرقمان الأخيران: 52 = 4 × 13</text><text x=\"341\" y=\"154\" text-anchor=\"middle\" font-size=\"11\" fill=\"#166534\">يقبل القسمة على 4 و 2</text><text x=\"341\" y=\"171\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#dc2626\">رقم الآحاد 2: لا يقبل على 5</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في القسمة الإقليدية للعدد $175$ على $12$ ، ما هو حاصل القسمة (عدد الصناديق المملوءة تماماً)؟",
+        "hintAr": "ابحث عن أكبر مضاعف للعدد $12$ لا يتجاوز $175$ : احسب $12 \\times 14$ .",
+        "expectedInput": "14",
+        "revealAr": "بما أن $12 \\times 14 = 168$ والباقي $175 - 168 = 7$ (مع $7 < 12$ )، فإن حاصل القسمة هو $14$ والباقي هو $7$ ."
+      },
+      {
+        "promptAr": "إذا أرادت التعاونية شحن **جميع** العلب الـ $175$ في صناديق يسع كل منها $12$ علبة، فكم صندوقاً تحتاج إليه على الأقل؟",
+        "hintAr": "الصناديق الـ $14$ المملوءة تترك $7$ علب دون صندوق؛ هل تحتاج العلب المتبقية إلى صندوق إضافي؟",
+        "expectedInput": "15",
+        "revealAr": "تحتاج التعاونية إلى $14 + 1 = 15$ صندوقاً ( $14$ صندوقاً مملوءاً وصندوقاً أخير فيه $7$ علب فقط)."
+      },
+      {
+        "promptAr": "لنختبر قابلية قسمة $252$ على $9$ و $3$ : ما مجموع أرقام العدد $252$ ؟",
+        "hintAr": "اجمع الأرقام الثلاثة: $2 + 5 + 2$ .",
+        "expectedInput": "9",
+        "revealAr": "مجموع الأرقام هو $2 + 5 + 2 = 9$ ، وبما أن $9$ مضاعف لـ $9$ ولـ $3$ ، فإن $252$ يقبل القسمة على $9$ وعلى $3$ ."
+      },
+      {
+        "promptAr": "هل يقبل العدد $252$ القسمة على $4$ وعلى $5$ ؟ علّل إجابتك انطلاقاً من أرقامه.",
+        "hintAr": "انظر إلى العدد المكوّن من آخر رقمين ( $52$ ) لقابلية القسمة على $4$ ، وإلى رقم الآحاد ( $2$ ) لقابلية القسمة على $5$ .",
+        "revealAr": "يقبل $252$ القسمة على $4$ لأن آخر رقمين يكوّنان $52 = 4 \\times 13$ ، ولا يقبل القسمة على $5$ لأن رقم آحاده $2$ (ليس $0$ ولا $5$ )."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**القسمة الإقليدية**: قسمة عدد طبيعي $a$ (المقسوم) على عدد طبيعي غير معدوم $b$ (القاسم) هي إيجاد عددين طبيعيين $q$ (الحاصل) و $r$ (الباقي) بحيث: $a = b \\times q + r$ و $r < b$ .",
+      "**المضاعف والقاسم**: إذا كان باقي القسمة الإقليدية معدوماً ( $r = 0$ )، نكتب $a = b \\times q$ ، ونقول إن $a$ **مضاعف** للعدد $b$ ، و $b$ **قاسم** للعدد $a$ (أو $a$ يقبل القسمة على $b$ ).",
+      "**قابلية القسمة على 2 و 5 و 4**: يقبل عدد طبيعي القسمة على $2$ إذا كان رقم آحاده زوجياً ( $0, 2, 4, 6, 8$ )؛ وعلى $5$ إذا كان رقم آحاده $0$ أو $5$ ؛ وعلى $4$ إذا كان العدد المشكّل من رقمي آحاده وعشراته يقبل القسمة على $4$ .",
+      "**قابلية القسمة على 3 و 9**: يقبل عدد طبيعي القسمة على $3$ إذا كان مجموع أرقامه مضاعفاً للعدد $3$ ؛ وعلى $9$ إذا كان مجموع أرقامه مضاعفاً للعدد $9$ (وكل عدد يقبل القسمة على $9$ يقبل حتماً القسمة على $3$ )."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"44\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"230\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">المساواة الإقليدية: المقسوم = القاسم × الحاصل + الباقي</text><text x=\"230\" y=\"44\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">a = b × q + r   (0 ≤ r &lt; b)</text><rect x=\"8\" y=\"62\" width=\"444\" height=\"125\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"230\" y=\"82\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#0f172a\">قواعد قابلية القسمة المختصرة</text><rect x=\"18\" y=\"90\" width=\"80\" height=\"86\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"1.2\"/><text x=\"58\" y=\"110\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e40af\">على 2</text><text x=\"58\" y=\"130\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0f172a\">آحاده زوجي</text><text x=\"58\" y=\"147\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">0,2,4,6,8</text><text x=\"58\" y=\"166\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">418</text><rect x=\"104\" y=\"90\" width=\"80\" height=\"86\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"144\" y=\"110\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#166534\">على 5</text><text x=\"144\" y=\"130\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0f172a\">رقم آحاده</text><text x=\"144\" y=\"147\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">0 أو 5</text><text x=\"144\" y=\"166\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">645</text><rect x=\"190\" y=\"90\" width=\"80\" height=\"86\" rx=\"6\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.2\"/><text x=\"230\" y=\"110\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#92400e\">على 4</text><text x=\"230\" y=\"130\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0f172a\">آخر رقمين</text><text x=\"230\" y=\"147\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">مضاعف 4</text><text x=\"230\" y=\"166\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">316 (16)</text><rect x=\"276\" y=\"90\" width=\"80\" height=\"86\" rx=\"6\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"1.2\"/><text x=\"316\" y=\"110\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#5b21b6\">على 3</text><text x=\"316\" y=\"130\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0f172a\">مجموع الأرقام</text><text x=\"316\" y=\"147\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">مضاعف 3</text><text x=\"316\" y=\"166\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#6d28d9\">516 (12)</text><rect x=\"362\" y=\"90\" width=\"80\" height=\"86\" rx=\"6\" fill=\"#fce7f3\" stroke=\"#db2777\" stroke-width=\"1.2\"/><text x=\"402\" y=\"110\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#9d174d\">على 9</text><text x=\"402\" y=\"130\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#0f172a\">مجموع الأرقام</text><text x=\"402\" y=\"147\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">مضاعف 9</text><text x=\"402\" y=\"166\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#be185d\">837 (18)</text></svg>",
+    "visualCaptionAr": "شروط المساواة الإقليدية وجدول قواعد قابلية القسمة على 2، 5، 4، 3، 9 مع أمثلة",
+    "examples": [
+      {
+        "problemAr": "أنجز القسمة الإقليدية للعدد $347$ على $15$ ، ثم عبّر عنها بالمساواة المناسبة.",
+        "solutionAr": "بقسمة $347$ على $15$ نجد $15 \\times 23 = 345$ والباقي $347 - 345 = 2$ .\n\nإذن المساواة الإقليدية هي: $347 = 15 \\times 23 + 2$ حيث الحاصل $23$ والباقي $2$ (ونتحقق من الشرط $2 < 15$ )."
+      },
+      {
+        "problemAr": "اختبر قابلية قسمة كل من العددين $720$ و $416$ على الأعداد $2$ و $3$ و $4$ و $5$ و $9$ .",
+        "solutionAr": "- العدد $720$ : رقم آحاده $0$ فهو يقبل القسمة على $2$ و $5$ ؛ آخر رقمين $20 = 4 \\times 5$ فهو يقبل على $4$ ؛ ومجموع أرقامه $7 + 2 + 0 = 9$ فهو يقبل على $3$ و $9$ .\n\n- العدد $416$ : رقم آحاده $6$ (يقبل على $2$ ولا يقبل على $5$ )؛ آخر رقمين $16 = 4 \\times 4$ (يقبل على $4$ )؛ ومجموع أرقامه $4 + 1 + 6 = 11$ (لا يقبل على $3$ ولا على $9$ )."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: كتابة $85 = 9 \\times 8 + 13$ على أنها قسمة إقليدية! هذا خطأ لأن الباقي $13$ أكبر من القاسم $9$ (يجب دائماً $r < b$ ، والصواب $85 = 9 \\times 9 + 4$ ). كذلك في قابلية القسمة على $4$ ننظر إلى **العدد المشكّل من آخر رقمين** وليس إلى مجموع الأرقام."
+  },
+  "practice": [
+    {
+      "questionAr": "أي مساواة تعبّر بشكل صحيح عن القسمة الإقليدية للعدد $137$ على $11$ ؟",
+      "options": [
+        "$137 = 11 \\times 11 + 16$",
+        "$137 = 11 \\times 12 + 5$",
+        "$137 = 11 \\times 13 - 6$",
+        "$137 = 11 \\times 12.45$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "تحقق من شرط الباقي: هنا $16 > 11$ ، والباقي يجب أن يكون دائماً أصغر تماماً من القاسم $11$ .",
+        "أحسنت! لأن $11 \\times 12 + 5 = 132 + 5 = 137$ والباقي $5$ يحقق الشرط $0 \\le 5 < 11$ .",
+        "في القسمة الإقليدية نضيف الباقي الموجب أو المعدوم، ولا نطرح!",
+        "الحاصل في القسمة الإقليدية عدد طبيعي وليس عدداً عشرياً."
+      ],
+      "explanationAr": "لدينا $11 \\times 12 = 132$ و $137 - 132 = 5$ مع $5 < 11$ ، إذن المساواة الإقليدية الصحيحة هي $137 = 11 \\times 12 + 5$ ."
+    },
+    {
+      "questionAr": "أي عدد من الأعداد المكتوبة على البطاقات المقابلة يقبل القسمة على **$4$ و $9$ معاً**؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 90\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"12\" y=\"18\" width=\"70\" height=\"52\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"47\" y=\"50\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e3a8a\">435</text><rect x=\"94\" y=\"18\" width=\"70\" height=\"52\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"129\" y=\"50\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#14532d\">724</text><rect x=\"176\" y=\"18\" width=\"70\" height=\"52\" rx=\"8\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.6\"/><text x=\"211\" y=\"50\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#713f12\">612</text><rect x=\"258\" y=\"18\" width=\"70\" height=\"52\" rx=\"8\" fill=\"#fdf2f8\" stroke=\"#db2777\" stroke-width=\"1.6\"/><text x=\"293\" y=\"50\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#831843\">518</text></svg>",
+      "options": [
+        "$435$",
+        "$724$",
+        "$612$",
+        "$518$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "العدد $435$ رقم آحاده فردي ( $5$ ) فلا يقبل القسمة على $4$ ، ومجموع أرقامه $12$ لا يقبل على $9$ .",
+        "العدد $724$ يقبل القسمة على $4$ لأن $24 = 4 \\times 6$ ، لكن مجموع أرقامه $7 + 2 + 4 = 13$ لا يقبل على $9$ .",
+        "ممتاز! في $612$ آخر رقمين $12 = 4 \\times 3$ (يقبل على $4$ ) ومجموع أرقامه $6 + 1 + 2 = 9$ (يقبل على $9$ ).",
+        "العدد $518$ آخر رقمين فيه $18$ لا يقبل على $4$ ، ومجموع أرقامه $14$ لا يقبل على $9$ ."
+      ],
+      "explanationAr": "نختبر $612$ : العدد المكوّن من آخر رقمين هو $12$ وهو مضاعف لـ $4$ ، ومجموع أرقامه $6 + 1 + 2 = 9$ وهو مضاعف لـ $9$ ، إذن $612$ يقبل القسمة على $4$ و $9$ معاً."
+    },
+    {
+      "questionAr": "يشارك $158$ كشافاً في مخيم صيفي، وتتسع الخيمة الواحدة لـ $14$ كشافاً. ما هو أقل عدد من الخيام اللازمة لإيواء **جميع** الكشافين؟",
+      "options": [
+        "$12$ خيمة",
+        "$11$ خيمة",
+        "$4$ خيام",
+        "$13$ خيمة"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "صحيح! لأن $158 = 14 \\times 11 + 4$ ، فالـ $4$ كشافين المتبقين يحتاجون إلى خيمة إضافية، أي $11 + 1 = 12$ خيمة.",
+        "$11$ خيمة لا تأوي إلا $14 \\times 11 = 154$ كشافاً، وسيبقى $4$ كشافين دون خيمة!",
+        "$4$ هو باقي القسمة (عدد الكشافين المتبقين بعد ملء $11$ خيمة) وليس عدد الخيام.",
+        "ناتج القسمة الإقليدية هو $11$ مع باقٍ $4$ ، لذا نضيف خيمة واحدة فقط ليصبح العدد $12$ ."
+      ],
+      "explanationAr": "بإجراء القسمة الإقليدية للعدد $158$ على $14$ نجد: $158 = 14 \\times 11 + 4$ . تملأ $11$ خيمة كلياً ويبقى $4$ كشافين، فنحتاج إلى خيمة إضافية ليصبح أقل عدد من الخيام $11 + 1 = 12$ خيمة."
+    }
+  ]
+}

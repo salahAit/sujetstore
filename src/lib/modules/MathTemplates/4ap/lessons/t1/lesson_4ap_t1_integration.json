@@ -1,0 +1,122 @@
+{
+  "id": "lesson_4ap_t1_integration",
+  "slug": "4ap-t1-integration",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني: التوازي والتعامد والمضلعات وتنظيم المعطيات",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الأول: الأعداد الكبيرة والقياس والهندسة والبيانات",
+  "objectives": [
+    "تجنيد الأعداد إلى 999 999 وعمليتي الجمع والطرح والتحويلات المترية (الأطوال والكتل والسعات) في حل مشكلات متدرجة",
+    "استثمار معطيات مستخرجة من جداول أو مخططات بيانية والخواص الهندسية للتوازي والتعامد والرباعيات الخاصة",
+    "تحرير حل منظم لوضعية إدماجية تتطلب ربط المعطيات واختيار العمليات المناسبة وصياغة جمل الإجابة"
+  ],
+  "keywordsAr": [
+    "إدماج",
+    "حصيلة الفصل الأول",
+    "وضعية إدماجية",
+    "منهجية حل المشكلات"
+  ],
+  "discover": {
+    "scenarioAr": "خصصت بلدية مشروعا لتهيئة حديقة عمومية: يوضح الجدول المرفق معطيات الميزانية والتجهيز، بينما يبين المخطط الهندسي شكل الحديقة `ABCD` والممر المستقيم `EF` .",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 195\" width=\"580\" height=\"195\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"18\" y=\"14\" width=\"272\" height=\"166\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"154\" y=\"34\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\" direction=\"rtl\">مخطط الحديقة (ABCD)</text><rect x=\"58\" y=\"52\" width=\"192\" height=\"92\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2.2\"/><rect x=\"58\" y=\"52\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"239\" y=\"52\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"58\" y=\"133\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"239\" y=\"133\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"154\" y1=\"42\" x2=\"154\" y2=\"156\" stroke=\"#1d4ed8\" stroke-width=\"2\" stroke-dasharray=\"4 3\"/><rect x=\"154\" y=\"52\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"46\" y=\"55\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"260\" y=\"55\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"260\" y=\"150\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"46\" y=\"150\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">D</text><text x=\"144\" y=\"46\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">E</text><text x=\"144\" y=\"166\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">F</text><g font-size=\"12\" font-weight=\"bold\"><rect x=\"308\" y=\"14\" width=\"124\" height=\"32\" fill=\"#dbeafe\" stroke=\"#64748b\"/><text x=\"370\" y=\"35\" text-anchor=\"middle\" fill=\"#1e3a8a\" direction=\"rtl\">القيمة</text><rect x=\"432\" y=\"14\" width=\"130\" height=\"32\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><text x=\"497\" y=\"35\" text-anchor=\"middle\" fill=\"#0f172a\" direction=\"rtl\">البيان</text></g><g font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"308\" y=\"46\" width=\"124\" height=\"33\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"370\" y=\"67\" text-anchor=\"middle\" direction=\"ltr\">250 000 DA</text><rect x=\"432\" y=\"46\" width=\"130\" height=\"33\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"497\" y=\"67\" text-anchor=\"middle\" direction=\"rtl\">ميزانية البلدية</text><rect x=\"308\" y=\"79\" width=\"124\" height=\"33\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"370\" y=\"100\" text-anchor=\"middle\" direction=\"ltr\">134 500 DA</text><rect x=\"432\" y=\"79\" width=\"130\" height=\"33\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"497\" y=\"100\" text-anchor=\"middle\" direction=\"rtl\">ثمن الشجيرات</text><rect x=\"308\" y=\"112\" width=\"124\" height=\"33\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"370\" y=\"133\" text-anchor=\"middle\" direction=\"ltr\">78 800 DA</text><rect x=\"432\" y=\"112\" width=\"130\" height=\"33\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"497\" y=\"133\" text-anchor=\"middle\" direction=\"rtl\">ثمن السياج</text><rect x=\"308\" y=\"145\" width=\"124\" height=\"33\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"370\" y=\"166\" text-anchor=\"middle\" fill=\"#92400e\" direction=\"ltr\">1 km 250 m</text><rect x=\"432\" y=\"145\" width=\"130\" height=\"33\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"497\" y=\"166\" text-anchor=\"middle\" direction=\"rtl\">طول السياج</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "استخرج من الجدول ثمن الشجيرات وثمن السياج، ثم احسب المصاريف الإجمالية ( $134\\,500 + 78\\,800$ ) بالأرقام بدون فراغات.",
+        "hintAr": "ضع العملية عموديا برص الآحاد تحت الآحاد واحسب مع الاحتفاظ.",
+        "expectedInput": "213300",
+        "revealAr": "المصاريف الإجمالية: $134\\,500 + 78\\,800 = 213\\,300$ دج."
+      },
+      {
+        "promptAr": "بقي من الميزانية ( $250\\,000$ دج) مبلغ بعد دفع المصاريف ( $213\\,300$ دج). احسب المبلغ المتبقي بالأرقام بدون فراغات.",
+        "hintAr": "اطرح المصاريف الإجمالية من الميزانية: $250\\,000 - 213\\,300$ .",
+        "expectedInput": "36700",
+        "revealAr": "$250\\,000 - 213\\,300 = 36\\,700$ دج، إذن بقي في ميزانية المشروع $36\\,700$ دج."
+      },
+      {
+        "promptAr": "حول طول السياج المجهز $1\\text{ km } 250\\text{ m}$ إلى المتر ( `m` ) بالأرقام بدون فراغات، ثم حدد طبيعة الرباعي `ABCD` .",
+        "hintAr": "تذكر أن $1\\text{ km} = 1\\,000\\text{ m}$ ، ولاحظ زوايا وأضلاع الشكل `ABCD` في المخطط.",
+        "expectedInput": "1250",
+        "revealAr": "طول السياج بالمتر: $1\\,000 + 250 = 1\\,250\\text{ m}$ . والرباعي `ABCD` له $4$ زوايا قائمة وكل ضلعين متقابلين متوازيان ومتقايسان، فهو **مستطيل**."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**أولا — الفهم والاستخراج**: نقرأ نص الوضعية الإدماجية والجدول أو المخطط البياني والشكل الهندسي بتركيز، ونحدد المعطيات المفيدة لكل سؤال بالترتيب.",
+      "**ثانيا — الحساب وتوحيد الوحدات**: ننجز الجمع والطرح العمودي لأعداد أصغر من $1\\,000\\,000$ ، ونوحد وحدات الأطوال أو الكتل أو السعات باستعمال جدول التحويلات قبل المقارنة أو الحساب.",
+      "**ثالثا — الهندسة**: نتحقق من الاستقامية بالمسطرة ومن التعامد والتوازي بالكوس، ونميز المربع والمستطيل والمعين اعتمادا على الأضلاع والزوايا القائمة والأقطار.",
+      "**رابعا — التنظيم والتحقق**: نكتب الحل في خطوات واضحة مع وضع العمليات العمودية وصياغة جملة الإجابة مرفقة بالوحدة، ثم نتحقق بالعملية العكسية أو بالحصر."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 175\" width=\"580\" height=\"175\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"435\" y=\"20\" width=\"127\" height=\"104\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"1.6\"/><text x=\"498\" y=\"48\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">1. أقرأ وأستخرج</text><text x=\"498\" y=\"74\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">معطيات النص</text><text x=\"498\" y=\"94\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">والجدول والمخطط</text><text x=\"429\" y=\"76\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#64748b\">←</text><rect x=\"296\" y=\"20\" width=\"127\" height=\"104\" rx=\"10\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.6\"/><text x=\"359\" y=\"48\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">2. أوحد الوحدات</text><text x=\"359\" y=\"74\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">جدول التحويلات</text><text x=\"359\" y=\"94\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">km-m | t-kg | L-mL</text><text x=\"290\" y=\"76\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#64748b\">←</text><rect x=\"157\" y=\"20\" width=\"127\" height=\"104\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#15803d\" stroke-width=\"1.6\"/><text x=\"220\" y=\"48\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\" direction=\"rtl\">3. أحسب بدقة</text><text x=\"220\" y=\"74\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">الجمع والطرح</text><text x=\"220\" y=\"94\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">وخواص الهندسة</text><text x=\"151\" y=\"76\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#64748b\">←</text><rect x=\"18\" y=\"20\" width=\"127\" height=\"104\" rx=\"10\" fill=\"#ede9fe\" stroke=\"#6d28d9\" stroke-width=\"1.6\"/><text x=\"81\" y=\"48\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#4c1d95\" direction=\"rtl\">4. أتحقق وأجيب</text><text x=\"81\" y=\"74\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">جملة الإجابة</text><text x=\"81\" y=\"94\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">مع الوحدة المناسبة</text><rect x=\"40\" y=\"138\" width=\"500\" height=\"26\" rx=\"6\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"290\" y=\"156\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#334155\" direction=\"rtl\">أعداد &lt; 1 000 000  •  تحويلات مترية  •  توازٍ وتعامد ورباعيات  •  تنظيم معطيات</text></svg>",
+    "visualCaptionAr": "مراحل المنهجية السليمة لحل الوضعية الإدماجية الشاملة لمكتسبات الفصل الأول.",
+    "examples": [
+      {
+        "problemAr": "أنتج بستان $3\\text{ t } 200\\text{ kg}$ من البرتقال في الأسبوع الأول و $2\\,850\\text{ kg}$ في الأسبوع الثاني. ما هي الكتلة الإجمالية بالكيلوغرام، وما حصرها بين ألفين متتاليين؟",
+        "solutionAr": "نحول إلى الكيلوغرام: $3\\text{ t } 200\\text{ kg} = 3\\,200\\text{ kg}$ . المجموع: $3\\,200 + 2\\,850 = 6\\,050\\text{ kg}$ . الحصر بين ألفين متتاليين: $6\\,000 < 6\\,050 < 7\\,000$ ."
+      },
+      {
+        "problemAr": "خزان يسع $2\\,000\\text{ L}$ من الماء، به حاليا $1\\,250\\text{ L}$ ، أفرغنا فيه $450\\text{ L}$ إضافية. كم لترا ينقص ليمتلئ الخزان تماما؟",
+        "solutionAr": "الكمية الموجودة بعد الإضافة: $1\\,250 + 450 = 1\\,700\\text{ L}$ . الكمية الناقصة: $2\\,000 - 1\\,700 = 300\\text{ L}$ ."
+      }
+    ],
+    "watchOutAr": "لا تجمع أبدا مقدارين مكتوبين بوحدتين مختلفتين (مثل طن وقنطار أو كيلومتر ومتر) قبل توحيد الوحدة في الجدول! وتأكد من كتابة الوحدة في جملة الإجابة النهائية."
+  },
+  "practice": [
+    {
+      "questionAr": "يوضح الجدول المقابل كتل ثلاث شحنات من القمح. ما هي الكتلة الإجمالية للشحنات الثلاث بوحدة الكيلوغرام ( `kg` )؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 126\" width=\"480\" height=\"126\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><g font-size=\"13\" font-weight=\"bold\"><rect x=\"20\" y=\"14\" width=\"146\" height=\"34\" fill=\"#fef3c7\" stroke=\"#64748b\"/><text x=\"93\" y=\"36\" text-anchor=\"middle\" fill=\"#92400e\" direction=\"rtl\">الشحنة 3</text><rect x=\"166\" y=\"14\" width=\"146\" height=\"34\" fill=\"#dcfce7\" stroke=\"#64748b\"/><text x=\"239\" y=\"36\" text-anchor=\"middle\" fill=\"#14532d\" direction=\"rtl\">الشحنة 2</text><rect x=\"312\" y=\"14\" width=\"148\" height=\"34\" fill=\"#dbeafe\" stroke=\"#64748b\"/><text x=\"386\" y=\"36\" text-anchor=\"middle\" fill=\"#1e3a8a\" direction=\"rtl\">الشحنة 1</text></g><g font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"20\" y=\"48\" width=\"146\" height=\"46\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"93\" y=\"77\" text-anchor=\"middle\" direction=\"ltr\">800 kg</text><rect x=\"166\" y=\"48\" width=\"146\" height=\"46\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"239\" y=\"77\" text-anchor=\"middle\" direction=\"ltr\">18 q</text><rect x=\"312\" y=\"48\" width=\"148\" height=\"46\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"386\" y=\"77\" text-anchor=\"middle\" direction=\"ltr\">2 t 400 kg</text></g><text x=\"240\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\" direction=\"rtl\">المطلوب: الكتلة الإجمالية بالكيلوغرام (kg)</text></svg>",
+      "options": [
+        "$3\\,218\\text{ kg}$",
+        "$4\\,200\\text{ kg}$",
+        "$5\\,000\\text{ kg}$",
+        "$4\\,000\\text{ kg}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "جمعت $2\\,400 + 18 + 800$ دون تحويل $18\\text{ q}$ إلى الكيلوغرام ( $1\\,800\\text{ kg}$ ).",
+        "تحقق من جمع كل الشحنات الثلاث؛ لقد أغفلت الشحنة الثالثة ( $800\\text{ kg}$ ) عند الجمع مع $2\\,400 + 1\\,800$ .",
+        "أحسنت! $2\\text{ t } 400\\text{ kg} = 2\\,400\\text{ kg}$ و $18\\text{ q} = 1\\,800\\text{ kg}$ ، والمجموع $2\\,400 + 1\\,800 + 800 = 5\\,000\\text{ kg}$ .",
+        "أخطأت في الاحتفاظ عند جمع المئات والآلاف؛ تأكد أن $2\\,400 + 1\\,800 = 4\\,200$ وليس $3\\,200$ ."
+      ],
+      "explanationAr": "نوحد كل الكتل إلى الكيلوغرام: $2\\text{ t } 400\\text{ kg} = 2\\,400\\text{ kg}$ ، $18\\text{ q} = 1\\,800\\text{ kg}$ ، والشحنة الثالثة $800\\text{ kg}$ . المجموع الكلي: $2\\,400 + 1\\,800 + 800 = 5\\,000\\text{ kg}$ ."
+    },
+    {
+      "questionAr": "تأمل مخطط قطعة الأرض `ABCD` والتشفير المرسوم عليه: أي جملة **صحيحة**؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 168\" width=\"380\" height=\"168\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"68\" y=\"38\" width=\"244\" height=\"94\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><rect x=\"68\" y=\"38\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"301\" y=\"38\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"68\" y=\"121\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"301\" y=\"121\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"190\" y1=\"16\" x2=\"190\" y2=\"154\" stroke=\"#15803d\" stroke-width=\"2.2\"/><rect x=\"190\" y=\"38\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"190\" y=\"122\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"55\" y=\"40\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"320\" y=\"40\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"320\" y=\"138\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"55\" y=\"138\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">D</text><text x=\"202\" y=\"25\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\">(h)</text><text x=\"176\" y=\"32\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">E</text><text x=\"176\" y=\"148\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">F</text></svg>",
+      "options": [
+        "الشكل `ABCD` معين، والمستقيمان `(h)` و `(DC)` متوازيان",
+        "الشكل `ABCD` مستطيل، والمستقيمان `(AB)` و `(DC)` متوازيان",
+        "الشكل `ABCD` مربع، والمستقيمان `(AB)` و `(h)` متوازيان",
+        "المستقيمان `(AD)` و `(BC)` متعامدان"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "الشكل فيه $4$ زوايا قائمة وضلعان طويلان وضلعان قصيران، فهو مستطيل وليس معينا، والمستقيم `(h)` عمودي على `(DC)` وليس موازيا له.",
+        "أحسنت! `ABCD` مستطيل ( $4$ زوايا قائمة)، و `(AB)` و `(DC)` عموديان على `(h)` (وعلى `(AD)` ) فهما متوازيان.",
+        "أضلاع `ABCD` غير متقايسة كلها فليس مربعا، والمستقيم `(h)` عمودي على `(AB)` وليس موازيا له.",
+        "المستقيمان `(AD)` و `(BC)` متقابلان في المستطيل وهما عموديان على `(DC)` ، إذن هما متوازيان وليس متعامدين."
+      ],
+      "explanationAr": "نلاحظ $4$ زوايا قائمة وأضلاعا متقابلة غير متساوية مع المجاورة لها، إذن `ABCD` مستطيل. والمستقيمان `(AB)` و `(DC)` عموديان على نفس المستقيم `(h)` ، لذا فهما متوازيان."
+    },
+    {
+      "questionAr": "بلغت مداخيل معرض صناعة تقليدية $345\\,600$ دج في اليوم الأول، و $289\\,750$ دج في اليوم الثاني. ما هو مجموع المداخيل، وما حصره بين **عشرتي آلاف متتاليتين**؟",
+      "options": [
+        "$635\\,350$ دج، والحصر: $630\\,000 < 635\\,350 < 640\\,000$",
+        "$625\\,350$ دج، والحصر: $620\\,000 < 625\\,350 < 630\\,000$",
+        "$635\\,350$ دج، والحصر: $635\\,000 < 635\\,350 < 636\\,000$",
+        "$535\\,350$ دج، والحصر: $530\\,000 < 535\\,350 < 540\\,000$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! المجموع $345\\,600 + 289\\,750 = 635\\,350$ دج، وبما أن عدد عشرات الآلاف هو $63$ فالحصر الصحيح هو $630\\,000 < 635\\,350 < 640\\,000$ .",
+        "نسيت الاحتفاظ في منزلة عشرات الآلاف: بعد جمع الآلاف $5 + 9 + 1 = 15$ نحتفظ بـ $1$ إلى $4 + 8 + 1 = 13$ وليس $12$ .",
+        "المجموع صحيح، لكن هذا الحصر هو بين **ألفين متتاليين** وليس بين **عشرتي آلاف متتاليتين**!",
+        "نسيت الاحتفاظ بـ $1$ إلى منزلة مئات الآلاف عند جمع $3 + 2 + 1 = 6$ ."
+      ],
+      "explanationAr": "نجمع عموديا: $345\\,600 + 289\\,750 = 635\\,350$ دج. عدد عشرات الآلاف في $635\\,350$ هو $63$ ، إذن يحصر بين $630\\,000$ و $640\\,000$ ."
+    }
+  ]
+}

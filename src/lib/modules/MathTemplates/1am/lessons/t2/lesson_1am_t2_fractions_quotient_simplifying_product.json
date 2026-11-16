@@ -1,0 +1,129 @@
+{
+  "id": "lesson_1am_t2_fractions_quotient_simplifying_product",
+  "slug": "1am-t2-fractions-quotient-simplifying-product",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: القسمة الإقليدية والعشرية والكتابات الكسرية",
+  "order": 3,
+  "titleAr": "الكتابات الكسرية: الكسر كحاصل قسمة، الاختزال وحساب k × a/b",
+  "objectives": [
+    "فهم الكسر a/b كحاصل قسمة العدد الطبيعي a على العدد الطبيعي غير المعدوم b، وتحديد موضعه على نصف مستقيم مدرج",
+    "التعرف على الكتابات الكسرية المتساوية لعدد واختزال كسر إلى أبسط شكل ممكن باستخدام قواعد قابلية القسمة",
+    "حساب جداء عدد في كسر (k × a/b) دون إجراء القسمة في وضعيات حسابية، وإنجاز جمع وطرح وضرب كسور عشرية"
+  ],
+  "keywordsAr": [
+    "الكتابة الكسرية",
+    "الكسر كحاصل قسمة",
+    "نصف مستقيم مدرج",
+    "اختزال كسر",
+    "ضرب عدد في كسر",
+    "كسور عشرية"
+  ],
+  "discover": {
+    "scenarioAr": "تقاسم $4$ أصدقاء $3$ فطائر متماثلة بالتساوي، فنال كل صديق $\\frac{3}{4}$ من الفطيرة. ومن جهة أخرى، سجّل $30$ تلميذاً في الدورة الرياضية للمتوسطة، واختار $\\frac{2}{5}$ منهم كرة القدم. كيف نعيّن الكسر $\\frac{3}{4}$ على نصف مستقيم مدرج، وكيف نختزل $\\frac{18}{24}$ ونحسب $30 \\times \\frac{2}{5}$ ذهنياً؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"8\" width=\"440\" height=\"86\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"230\" y=\"27\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1e40af\">تعيين الكسر على نصف مستقيم مدرج (الوحدة مقسومة إلى 4 أجزاء)</text><line x1=\"42\" y1=\"56\" x2=\"424\" y2=\"56\" stroke=\"#1e293b\" stroke-width=\"2\"/><polygon points=\"424,52 434,56 424,60\" fill=\"#1e293b\"/><line x1=\"55\" y1=\"46\" x2=\"55\" y2=\"66\" stroke=\"#0f172a\" stroke-width=\"2.4\"/><line x1=\"95\" y1=\"50\" x2=\"95\" y2=\"62\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"135\" y1=\"50\" x2=\"135\" y2=\"62\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"175\" y1=\"50\" x2=\"175\" y2=\"62\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"215\" y1=\"46\" x2=\"215\" y2=\"66\" stroke=\"#0f172a\" stroke-width=\"2.4\"/><line x1=\"255\" y1=\"50\" x2=\"255\" y2=\"62\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"295\" y1=\"50\" x2=\"295\" y2=\"62\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"335\" y1=\"50\" x2=\"335\" y2=\"62\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"375\" y1=\"46\" x2=\"375\" y2=\"66\" stroke=\"#0f172a\" stroke-width=\"2.4\"/><circle cx=\"175\" cy=\"56\" r=\"4.5\" fill=\"#2563eb\"/><circle cx=\"335\" cy=\"56\" r=\"4.5\" fill=\"#dc2626\"/><text x=\"55\" y=\"82\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">0</text><text x=\"215\" y=\"82\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">1</text><text x=\"375\" y=\"82\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">2</text><text x=\"175\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">3/4</text><text x=\"335\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">7/4</text><rect x=\"10\" y=\"104\" width=\"214\" height=\"78\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"117\" y=\"124\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">اختزال الكسر</text><text x=\"117\" y=\"148\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">18/24 = (18÷6)/(24÷6)</text><text x=\"117\" y=\"169\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#15803d\">= 3/4</text><rect x=\"236\" y=\"104\" width=\"214\" height=\"78\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"343\" y=\"124\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\">ضرب عدد في كسر</text><text x=\"343\" y=\"148\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">30 × 2/5 = (30 ÷ 5) × 2</text><text x=\"343\" y=\"169\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#b45309\">= 6 × 2 = 12</text></svg>",
+    "steps": [
+      {
+        "promptAr": "بما أن $\\frac{3}{4}$ هو حاصل قسمة $3$ على $4$ ، فما العدد الذي يكمل المساواة $4 \\times \\frac{3}{4} = \\square$ ؟",
+        "hintAr": "الكسر $\\frac{a}{b}$ هو العدد الذي إذا ضُرب في $b$ أعطى $a$ .",
+        "expectedInput": "3",
+        "revealAr": "$4 \\times \\frac{3}{4} = 3$ لأن $\\frac{3}{4}$ يمثل حصة واحدة عندما نقسّم $3$ وحدات على $4$ أجزاء متساوية."
+      },
+      {
+        "promptAr": "على نصف المستقيم المدرج المقابل (حيث قُسّمت كل وحدة إلى $4$ أجزاء متساوية)، في أي تدريجة بعد الصفر يقع الكسر $\\frac{7}{4}$ ؟",
+        "hintAr": "عدّ التدريجات انطلاقاً من $0$ بحيث تساوي كل تدريجة $\\frac{1}{4}$ .",
+        "expectedInput": "7",
+        "revealAr": "يقع الكسر $\\frac{7}{4}$ في التدريجة رقم $7$ بعد الصفر (أي $\\frac{7}{4} = 1 + \\frac{3}{4}$ )."
+      },
+      {
+        "promptAr": "نريد اختزال الكسر $\\frac{18}{24}$ بقسمة البسط والمقام على $6$ لكتابته على أبسط شكل ممكن. ما هو البسط الجديد؟",
+        "hintAr": "اقسم البسط $18$ على $6$ والمقام $24$ على $6$ .",
+        "expectedInput": "3",
+        "revealAr": "$\\frac{18}{24} = \\frac{18 \\div 6}{24 \\div 6} = \\frac{3}{4}$ ، وهو نفس الموضع على نصف المستقيم المدرج!"
+      },
+      {
+        "promptAr": "احسب عدد التلاميذ المسجلين في كرة القدم: $30 \\times \\frac{2}{5}$ باستعمال الطريقة الأسهل $(30 \\div 5) \\times 2$ .",
+        "hintAr": "اقسم $30$ على $5$ أولاً ثم اضرب الناتج في $2$ .",
+        "expectedInput": "12",
+        "revealAr": "$(30 \\div 5) \\times 2 = 6 \\times 2 = 12$ تلميذاً. لقد حسبنا الجداء دون الحاجة لحساب $2 \\div 5$ !"
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الكسر كحاصل قسمة**: إذا كان $a$ و $b$ عددين طبيعيين مع $b \\neq 0$ ، فإن الكسر $\\frac{a}{b}$ هو حاصل قسمة $a$ على $b$ ، أي هو العدد الذي يحقق $b \\times \\frac{a}{b} = a$ . ولتعيين $\\frac{a}{b}$ على نصف مستقيم مدرج، نقسّم كل وحدة إلى $b$ أجزاء متساوية ونأخذ $a$ جزءاً بدءاً من الصفر.",
+      "**الكتابات الكسرية المتساوية والاختزال**: لا تتغير قيمة الكسر إذا ضربنا بسطه ومقامه في نفس العدد غير المعدوم أو قسمناهما على نفس القاسم المشترك: $\\frac{a}{b} = \\frac{a \\times m}{b \\times m} = \\frac{a \\div m}{b \\div m}$ . **اختزال كسر** يعني كتابته ببسط ومقام أصغر ما يمكن بالاستعانة بقواعد قابلية القسمة.",
+      "**حساب $k \\times \\frac{a}{b}$ بثلاث طرائق**: يمكن حساب $k \\times \\frac{a}{b}$ عبر: $(k \\times a) \\div b$ ، أو $(k \\div b) \\times a$ (وهي المثلى عندما يقبل $k$ القسمة على $b$ خاصة إذا كانت قسمة $a \\div b$ غير منتهية!)، أو $k \\times (a \\div b)$ عندما تكون $a \\div b$ قسمة مضبوطة.",
+      "**العمليات على الكسور العشرية**: لجمع أو طرح كسور عشرية (مقاماتها $10$ أو $100$ أو $1000$ )، نكتبها بالمقام العشري المشترك نفسه أو على شكل أعداد عشرية ثم نجمع أو نطرح؛ وفي الضرب نضرب البسطين والمقامين (مثل $\\frac{3}{10} + \\frac{25}{100} = \\frac{30}{100} + \\frac{25}{100} = \\frac{55}{100}$ )."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"214\" height=\"170\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"117\" y=\"32\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1e40af\">كسور متساوية في نفس الموضع</text><line x1=\"32\" y1=\"76\" x2=\"202\" y2=\"76\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"42\" y1=\"66\" x2=\"42\" y2=\"86\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"92\" y1=\"68\" x2=\"92\" y2=\"84\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"142\" y1=\"68\" x2=\"142\" y2=\"84\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"192\" y1=\"66\" x2=\"192\" y2=\"86\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"142\" cy=\"76\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"42\" y=\"102\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">0</text><text x=\"192\" y=\"102\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">1</text><text x=\"142\" y=\"56\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">2/3</text><line x1=\"32\" y1=\"134\" x2=\"202\" y2=\"134\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"42\" y1=\"124\" x2=\"42\" y2=\"144\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"67\" y1=\"128\" x2=\"67\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"1.3\"/><line x1=\"92\" y1=\"128\" x2=\"92\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"1.3\"/><line x1=\"117\" y1=\"128\" x2=\"117\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"1.3\"/><line x1=\"142\" y1=\"128\" x2=\"142\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"1.3\"/><line x1=\"167\" y1=\"128\" x2=\"167\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"1.3\"/><line x1=\"192\" y1=\"124\" x2=\"192\" y2=\"144\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"142\" cy=\"134\" r=\"4.5\" fill=\"#16a34a\"/><text x=\"142\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">4/6 = 2/3</text><rect x=\"236\" y=\"10\" width=\"214\" height=\"170\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"343\" y=\"32\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#166534\">حساب 21 × 4/7 بذكاء</text><text x=\"343\" y=\"62\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#0f172a\">(21 ÷ 7) × 4 = 3 × 4 = 12</text><text x=\"343\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" fill=\"#15803d\">أسرع لأن 21 مضاعف لـ 7</text><line x1=\"256\" y1=\"98\" x2=\"430\" y2=\"98\" stroke=\"#bbf7d0\" stroke-width=\"1.4\"/><text x=\"343\" y=\"120\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#0f172a\">(21 × 4) ÷ 7 = 84 ÷ 7 = 12</text><line x1=\"256\" y1=\"134\" x2=\"430\" y2=\"134\" stroke=\"#bbf7d0\" stroke-width=\"1.4\"/><text x=\"343\" y=\"156\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#dc2626\">4 ÷ 7 غير منتهية!</text><text x=\"343\" y=\"172\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">نتفادى القسمة التقريبية هنا</text></svg>",
+    "visualCaptionAr": "تساوي الكسرين 2/3 و 4/6 على نصف مستقيم مدرج، وأفضل طريقة لحساب k × a/b",
+    "examples": [
+      {
+        "problemAr": "اختزل الكسر $\\frac{45}{60}$ إلى أبسط شكل ممكن باستعمال قواعد قابلية القسمة.",
+        "solutionAr": "نلاحظ أن $45$ و $60$ آحادهما $5$ و $0$ فهما يقبلان القسمة على $5$ : $\\frac{45}{60} = \\frac{45 \\div 5}{60 \\div 5} = \\frac{9}{12}$ .\n\nثم نلاحظ أن $9$ و $12$ يقبلان القسمة على $3$ : $\\frac{9}{12} = \\frac{9 \\div 3}{12 \\div 3} = \\frac{3}{4}$ (أو نقسم مباشرة على $15$ فنحصل على $\\frac{3}{4}$ )."
+      },
+      {
+        "problemAr": "احسب ما يلي بأبسط طريقة: $A = 35 \\times \\frac{4}{7}$ و $B = \\frac{7}{10} + \\frac{15}{100}$ .",
+        "solutionAr": "- $A = (35 \\div 7) \\times 4 = 5 \\times 4 = 20$ (لأن $35$ مضاعف لـ $7$ ).\n\n- $B = \\frac{7 \\times 10}{10 \\times 10} + \\frac{15}{100} = \\frac{70}{100} + \\frac{15}{100} = \\frac{85}{100} = 0.85$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: عند حساب $5 \\times \\frac{2}{3}$ يضرب بعض التلاميذ **البسط والمقام معاً** في $5$ فيكتبون $\\frac{10}{15}$ ! انتبه: ضرب البسط والمقام في $5$ يعطي كسراً **مساوياً** لـ $\\frac{2}{3}$ وليس $5$ أمثاله! الصواب: $5 \\times \\frac{2}{3} = \\frac{5 \\times 2}{3} = \\frac{10}{3}$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "ما هو الكسر الذي يمثل فاصلة النقطة $M$ على نصف المستقيم المدرج المقابل؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 95\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"24\" y1=\"52\" x2=\"306\" y2=\"52\" stroke=\"#1e293b\" stroke-width=\"2\"/><polygon points=\"306,48 316,52 306,56\" fill=\"#1e293b\"/><line x1=\"35\" y1=\"42\" x2=\"35\" y2=\"62\" stroke=\"#0f172a\" stroke-width=\"2.4\"/><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"58\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"85\" y1=\"46\" x2=\"85\" y2=\"58\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"58\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"135\" y1=\"46\" x2=\"135\" y2=\"58\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"160\" y1=\"42\" x2=\"160\" y2=\"62\" stroke=\"#0f172a\" stroke-width=\"2.4\"/><line x1=\"185\" y1=\"46\" x2=\"185\" y2=\"58\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"210\" y1=\"46\" x2=\"210\" y2=\"58\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"235\" y1=\"46\" x2=\"235\" y2=\"58\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"260\" y1=\"46\" x2=\"260\" y2=\"58\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"285\" y1=\"42\" x2=\"285\" y2=\"62\" stroke=\"#0f172a\" stroke-width=\"2.4\"/><circle cx=\"235\" cy=\"52\" r=\"5\" fill=\"#dc2626\"/><text x=\"35\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">0</text><text x=\"160\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">1</text><text x=\"285\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">2</text><text x=\"235\" y=\"34\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\">M</text></svg>",
+      "options": [
+        "$\\frac{8}{5}$",
+        "$\\frac{3}{5}$",
+        "$\\frac{5}{8}$",
+        "$\\frac{7}{5}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! كل وحدة مقسومة إلى $5$ أجزاء متساوية، والنقطة $M$ تقع في التدريجة الثامنة بعد الصفر، أي $\\frac{8}{5}$ .",
+        "$\\frac{3}{5}$ يقع قبل العدد $1$ ، بينما النقطة $M$ تقع بعد $1$ بـ $3$ تدريجات ( $1 + \\frac{3}{5} = \\frac{8}{5}$ ).",
+        "انتبه: المقام يمثل عدد أجزاء الوحدة ( $5$ ) والبسط يمثل عدد التدريجات من الصفر ( $8$ ) وليس العكس.",
+        "عدّ التدريجات بدقة من الصفر: من $0$ إلى $1$ توجد $5$ تدريجات، ثم نضيف $3$ تدريجات فيكون البسط $8$ وليس $7$ ."
+      ],
+      "explanationAr": "الوحدة من $0$ إلى $1$ مقسّمة إلى $5$ أجزاء متساوية، إذن كل تدريجة تمثل $\\frac{1}{5}$ . بعد العدد $1$ (الذي يساوي $\\frac{5}{5}$ ) تعدّ النقطة $M$ بثلاث تدريجات إضافية، فتكون فاصلتها $\\frac{5}{5} + \\frac{3}{5} = \\frac{8}{5}$ ."
+    },
+    {
+      "questionAr": "ما هو الكسر المختزل إلى **أبسط شكل ممكن** والمساوي للكسر $\\frac{36}{45}$ ؟",
+      "options": [
+        "$\\frac{12}{15}$",
+        "$\\frac{4}{5}$",
+        "$\\frac{6}{9}$",
+        "$\\frac{9}{10}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "القسمة على $3$ تعطي $\\frac{12}{15}$ وهو صحيح لكنه **ليس أبسط شكل** لأن $12$ و $15$ لا يزالان يقبلان القسمة على $3$ !",
+        "ممتاز! بقسمة البسط والمقام على $9$ نجد $\\frac{36 \\div 9}{45 \\div 9} = \\frac{4}{5}$ وهو غير قابل للاختزال أكثر.",
+        "انتبه لقابلية القسمة: $36 \\div 6 = 6$ صحيح، لكن $45$ لا يقبل القسمة على $5$ ليعطي $9$ ( $45 \\div 5 = 9$ و $45 \\div 6$ ليس طبيعياً).",
+        "قسمت $36$ على $4$ فقط، ولم تقسم $45$ على نفس العدد!"
+      ],
+      "explanationAr": "العددان $36$ و $45$ كلاهما يقبل القسمة على $9$ (مجموع أرقام كل منهما $9$ )، إذن $\\frac{36}{45} = \\frac{36 \\div 9}{45 \\div 9} = \\frac{4}{5}$ ، ولا يوجد قاسم مشترك أكبر من $1$ بين $4$ و $5$ ."
+    },
+    {
+      "questionAr": "خزان ماء سعته $42\\text{ L}$ ، استُهلك منه $\\frac{5}{7}$ في السقي. ما هي كمية الماء المستهلكة باللتر؟",
+      "options": [
+        "$35\\text{ L}$",
+        "$25\\text{ L}$",
+        "$30\\text{ L}$",
+        "$12\\text{ L}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$35 = 7 \\times 5$ ، لكنه لم يراعِ تقسيم $42$ على $7$ أولاً ( $42 \\div 7 = 6$ ).",
+        "راجِع جدول الضرب: $42 \\div 7 = 6$ وليس $5$ ( $6 \\times 5 = 30$ وليس $25$ ).",
+        "أحسنت! نحسب $42 \\times \\frac{5}{7} = (42 \\div 7) \\times 5 = 6 \\times 5 = 30\\text{ L}$ .",
+        "$12\\text{ L}$ هو كمية الماء **المتبقي** ( $42 - 30 = 12\\text{ L}$ ) وليس المستهلك!"
+      ],
+      "explanationAr": "لإيجاد $\\frac{5}{7}$ من $42\\text{ L}$ نحسب الجداء $42 \\times \\frac{5}{7}$ : نقسم $42$ على $7$ أولاً فنجد $6\\text{ L}$ (تمثل $\\frac{1}{7}$ من الخزان)، ثم نضرب في $5$ فنجد $6 \\times 5 = 30\\text{ L}$ ."
+    }
+  ]
+}

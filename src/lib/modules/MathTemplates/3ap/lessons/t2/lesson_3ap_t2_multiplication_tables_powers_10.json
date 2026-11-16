@@ -1,0 +1,122 @@
+{
+  "id": "lesson_3ap_t2_multiplication_tables_powers_10",
+  "slug": "lesson-3ap-t2-multiplication-tables-powers-10",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t2",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثالث: في ملعب كرة القدم (الأعداد إلى 99 999، جداول الضرب والضرب العمودي)",
+  "order": 2,
+  "titleAr": "جداول الضرب الكاملة من 2 إلى 9 والضرب في 10 و100 و1000",
+  "objectives": [
+    "ربط الضرب بالجمع المتكرر وبناء وحفظ جداول الضرب الكاملة من 2 إلى 9 وتوظيف خاصية التبديل",
+    "حساب جداء عدد في 10 أو 100 أو 1000 ذهنيا بتمعن وإدراك أثر إضافة الأصفار على المراتب",
+    "استثمار جداول الضرب والضرب في 10 و100 و1000 لإتمام مساويات ضربية سريعة وحل مشكلات بسيطة"
+  ],
+  "keywordsAr": [
+    "جداول الضرب من 2 إلى 9",
+    "الضرب في 10 و100 و1000",
+    "الحساب بتمعن",
+    "الجمع المتكرر",
+    "الجداء"
+  ],
+  "discover": {
+    "scenarioAr": "لإعداد المشروبات والأعلام للمتفرجين في الملعب، نظم العمال $6$ صفوف متساوية في كل صف $8$ قارورات ماء، ثم جهزوا $35$ رزمة من الأعلام تحتوي كل رزمة على $10$ أو $100$ علم.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 230\" width=\"600\" height=\"230\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"214\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">ترتيب القارورات في شبكة والضرب في 10 و 100</text><rect x=\"24\" y=\"46\" width=\"276\" height=\"160\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"162\" y=\"68\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">6 صفوف × 8 قارورات في كل صف</text><g fill=\"#3b82f6\" stroke=\"#1d4ed8\" stroke-width=\"1\"><circle cx=\"62\" cy=\"88\" r=\"7\"/><circle cx=\"90\" cy=\"88\" r=\"7\"/><circle cx=\"118\" cy=\"88\" r=\"7\"/><circle cx=\"146\" cy=\"88\" r=\"7\"/><circle cx=\"174\" cy=\"88\" r=\"7\"/><circle cx=\"202\" cy=\"88\" r=\"7\"/><circle cx=\"230\" cy=\"88\" r=\"7\"/><circle cx=\"258\" cy=\"88\" r=\"7\"/><circle cx=\"62\" cy=\"108\" r=\"7\"/><circle cx=\"90\" cy=\"108\" r=\"7\"/><circle cx=\"118\" cy=\"108\" r=\"7\"/><circle cx=\"146\" cy=\"108\" r=\"7\"/><circle cx=\"174\" cy=\"108\" r=\"7\"/><circle cx=\"202\" cy=\"108\" r=\"7\"/><circle cx=\"230\" cy=\"108\" r=\"7\"/><circle cx=\"258\" cy=\"108\" r=\"7\"/><circle cx=\"62\" cy=\"128\" r=\"7\"/><circle cx=\"90\" cy=\"128\" r=\"7\"/><circle cx=\"118\" cy=\"128\" r=\"7\"/><circle cx=\"146\" cy=\"128\" r=\"7\"/><circle cx=\"174\" cy=\"128\" r=\"7\"/><circle cx=\"202\" cy=\"128\" r=\"7\"/><circle cx=\"230\" cy=\"128\" r=\"7\"/><circle cx=\"258\" cy=\"128\" r=\"7\"/><circle cx=\"62\" cy=\"148\" r=\"7\"/><circle cx=\"90\" cy=\"148\" r=\"7\"/><circle cx=\"118\" cy=\"148\" r=\"7\"/><circle cx=\"146\" cy=\"148\" r=\"7\"/><circle cx=\"174\" cy=\"148\" r=\"7\"/><circle cx=\"202\" cy=\"148\" r=\"7\"/><circle cx=\"230\" cy=\"148\" r=\"7\"/><circle cx=\"258\" cy=\"148\" r=\"7\"/><circle cx=\"62\" cy=\"168\" r=\"7\"/><circle cx=\"90\" cy=\"168\" r=\"7\"/><circle cx=\"118\" cy=\"168\" r=\"7\"/><circle cx=\"146\" cy=\"168\" r=\"7\"/><circle cx=\"174\" cy=\"168\" r=\"7\"/><circle cx=\"202\" cy=\"168\" r=\"7\"/><circle cx=\"230\" cy=\"168\" r=\"7\"/><circle cx=\"258\" cy=\"168\" r=\"7\"/><circle cx=\"62\" cy=\"188\" r=\"7\"/><circle cx=\"90\" cy=\"188\" r=\"7\"/><circle cx=\"118\" cy=\"188\" r=\"7\"/><circle cx=\"146\" cy=\"188\" r=\"7\"/><circle cx=\"174\" cy=\"188\" r=\"7\"/><circle cx=\"202\" cy=\"188\" r=\"7\"/><circle cx=\"230\" cy=\"188\" r=\"7\"/><circle cx=\"258\" cy=\"188\" r=\"7\"/></g><rect x=\"318\" y=\"46\" width=\"258\" height=\"160\" rx=\"10\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"447\" y=\"72\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">تغير المراتب بإضافة الأصفار</text><rect x=\"336\" y=\"88\" width=\"222\" height=\"42\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#86efac\" stroke-width=\"1.2\"/><text x=\"447\" y=\"114\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#166534\" direction=\"ltr\">35 x 10 = 350</text><rect x=\"336\" y=\"144\" width=\"222\" height=\"42\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><text x=\"447\" y=\"170\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">35 x 100 = ?</text></svg>",
+    "steps": [
+      {
+        "promptAr": "انظر إلى شبكة القارورات: لدينا $6$ صفوف، وفي كل صف $8$ قارورات ($8 + 8 + 8 + 8 + 8 + 8$). ما هو جداء $6 \\times 8$؟ (اكتب العدد فقط)",
+        "hintAr": "يمكنك العد بـ $8$ ست مرات، أو تذكر أن $5 \\times 8 = 40$ ثم أضف $8$ واحدة.",
+        "expectedInput": "48",
+        "revealAr": "$6 \\times 8 = 8 \\times 6 = 48$ قارورة؛ الضرب تبديلي ويختصر الجمع المتكرر."
+      },
+      {
+        "promptAr": "الآن نحسب عدد الأعلام في $35$ رزمة، إذا كان في كل رزمة $10$ أعلام: ما ناتج $35 \\times 10$؟ (اكتب العدد فقط)",
+        "hintAr": "عند الضرب في $10$، نكتب العدد $35$ ونضيف صفرا واحدا على يمينه.",
+        "expectedInput": "350",
+        "revealAr": "$35 \\times 10 = 350$ علما؛ انتقل كل رقم مرتبة واحدة نحو اليسار."
+      },
+      {
+        "promptAr": "إذا وضعت كل $100$ علم في رزمة كبيرة، فكم علما في $35$ رزمة ($35 \\times 100$)؟ (اكتب العدد فقط)",
+        "hintAr": "في $100$ يوجد صفران؛ نكتب $35$ ونضيف صفرين على اليمين.",
+        "expectedInput": "3500",
+        "revealAr": "$35 \\times 100 = 3500$ علم؛ وبنفس الطريقة في $1000$ نضيف ثلاثة أصفار: $35 \\times 1000 = 35\\,000$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "الضرب عملية تختصر الجمع المتكرر، وهو **تبديلي**: $7 \\times 9 = 9 \\times 7 = 63$، و $6 \\times 8 = 8 \\times 6 = 48$.",
+      "جداول الضرب من $2$ إلى $9$ تساعدنا على الحساب السريع وعلى إكمال المساويات الناقصة (مثل $9 \\times \\dots = 72$ إذن العدد هو $8$).",
+      "عند ضرب عدد طبيعي في $10$ نكتب العدد ونضيف $0$ على يمينه ($24 \\times 10 = 240$)، وفي $100$ نضيف $00$ ($24 \\times 100 = 2400$)، وفي $1000$ نضيف $000$ ($24 \\times 1000 = 24\\,000$).",
+      "إذا كان العدد نفسه ينتهي بصفر (مثل $30$) وضربناه في $100$، نحافظ على الصفر الأصلي ونضيف صفرين: $30 \\times 100 = 3000$."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">جداءات أساسية والضرب في 10 و 100 و 1000</text><rect x=\"26\" y=\"46\" width=\"266\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><text x=\"159\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#5b21b6\" direction=\"rtl\">خاصية التبديل في الجداول</text><rect x=\"42\" y=\"84\" width=\"234\" height=\"32\" rx=\"6\" fill=\"#f5f3ff\" stroke=\"#c4b5fd\"/><text x=\"159\" y=\"105\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#4c1d95\" direction=\"ltr\">6 x 7 = 7 x 6 = 42</text><rect x=\"42\" y=\"124\" width=\"234\" height=\"32\" rx=\"6\" fill=\"#f5f3ff\" stroke=\"#c4b5fd\"/><text x=\"159\" y=\"145\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#4c1d95\" direction=\"ltr\">7 x 8 = 8 x 7 = 56</text><rect x=\"42\" y=\"164\" width=\"234\" height=\"32\" rx=\"6\" fill=\"#f5f3ff\" stroke=\"#c4b5fd\"/><text x=\"159\" y=\"185\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#4c1d95\" direction=\"ltr\">8 x 9 = 9 x 8 = 72</text><rect x=\"308\" y=\"46\" width=\"266\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#0284c7\" stroke-width=\"1.5\"/><text x=\"441\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0369a1\" direction=\"rtl\">إضافة الأصفار على اليمين</text><rect x=\"324\" y=\"84\" width=\"234\" height=\"32\" rx=\"6\" fill=\"#e0f2fe\" stroke=\"#7dd3fc\"/><text x=\"441\" y=\"105\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0c4a6e\" direction=\"ltr\">42 x 10 = 420</text><rect x=\"324\" y=\"124\" width=\"234\" height=\"32\" rx=\"6\" fill=\"#e0f2fe\" stroke=\"#7dd3fc\"/><text x=\"441\" y=\"145\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0c4a6e\" direction=\"ltr\">42 x 100 = 4 200</text><rect x=\"324\" y=\"164\" width=\"234\" height=\"32\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#86efac\"/><text x=\"441\" y=\"185\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#166534\" direction=\"ltr\">42 x 1000 = 42 000</text></svg>",
+    "visualCaptionAr": "تطبيق خاصية التبديل في جداول الضرب وقاعدة الأصفار عند الضرب في $10$ و $100$ و $1000$.",
+    "examples": [
+      {
+        "problemAr": "في حافلة سياحية $9$ صفوف، في كل صف $4$ مقاعد، وفي حافلة أخرى $7$ صفوف في كل صف $8$ مقاعد. احسب عدد المقاعد في كل حافلة.",
+        "solutionAr": "في الحافلة الأولى: $9 \\times 4 = 36$ مقعدا. وفي الحافلة الثانية: $7 \\times 8 = 56$ مقعدا."
+      },
+      {
+        "problemAr": "احسب ذهنيا: $48 \\times 100$ و $27 \\times 1000$ و $50 \\times 10$.",
+        "solutionAr": "$48 \\times 100 = 4800$ (نضيف صفرين)، و $27 \\times 1000 = 27\\,000$ (نضيف $3$ أصفار)، و $50 \\times 10 = 500$."
+      }
+    ],
+    "watchOutAr": "لا تخلط بين الضرب والجمع! مثلا $46 \\times 100 = 4600$ وليس $146$، ولا تخلط بين $7 \\times 8 = 56$ و $6 \\times 9 = 54$."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل ترتيب الكراسي في مدرج الملعب: لدينا $7$ صفوف، في كل صف $9$ كراسي. ما العدد الكلي للكراسي؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 125\" width=\"420\" height=\"125\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"404\" height=\"109\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"28\" y=\"24\" width=\"210\" height=\"76\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"133\" y=\"54\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">7 صفوف</text><text x=\"133\" y=\"80\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">في كل صف 9 كراسي</text><rect x=\"256\" y=\"36\" width=\"136\" height=\"52\" rx=\"8\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"324\" y=\"68\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">7 x 9 = ?</text></svg>",
+      "options": [
+        "$63$",
+        "$56$",
+        "$16$",
+        "$72$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! $7 \\times 9 = 63$، ويمكن تذكرها بـ $7 \\times 10 - 7 = 70 - 7 = 63$.",
+        "العدد $56$ هو ناتج $7 \\times 8$ وليس $7 \\times 9$.",
+        "انتبه! قمت بجمع العددين ($7 + 9 = 16$) بدل ضربهما ($7 \\times 9$).",
+        "العدد $72$ هو ناتج $8 \\times 9$ وليس $7 \\times 9$."
+      ],
+      "explanationAr": "لإيجاد العدد الكلي نضرب عدد الصفوف في عدد الكراسي بكل صف: $7 \\times 9 = 63$ كرسيا."
+    },
+    {
+      "questionAr": "ما هو ناتج الحساب الذهني: $46 \\times 1000$ ؟",
+      "options": [
+        "$4600$",
+        "$46\\,000$",
+        "$460$",
+        "$1046$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$4600$ هو ناتج الضرب في $100$ (صفران فقط)، بينما المطلوب الضرب في $1000$.",
+        "ممتاز! للضرب في $1000$ نكتب $46$ ونضيف ثلاثة أصفار على اليمين فنحصل على $46\\,000$.",
+        "$460$ هو ناتج $46 \\times 10$ وليس $46 \\times 1000$.",
+        "لقد أضفت $1000$ بالجمع ($46 + 1000$) بدل عملية الضرب!"
+      ],
+      "explanationAr": "عند الضرب في $1000$ نكتب العدد $46$ ونضيف على يمينه $3$ أصفار، فيصبح $46\\,000$."
+    },
+    {
+      "questionAr": "أكمل المساواة الضربية التالية: $8 \\times \\dots = 72$",
+      "options": [
+        "$8$",
+        "$7$",
+        "$9$",
+        "$64$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$8 \\times 8 = 64$ وليس $72$.",
+        "$8 \\times 7 = 56$؛ جرب العدد الذي يلي $8$ في جدول الضرب.",
+        "صحيح! في جدول ضرب $8$ نجد أن $8 \\times 9 = 72$.",
+        "العدد $64$ هو ناتج $72 - 8$ أو $8 \\times 8$، لكننا نبحث عن العامل الثاني في الجداء."
+      ],
+      "explanationAr": "نستحضر جدول ضرب $8$: $8 \\times 8 = 64$ و $8 \\times 9 = 72$، إذن العدد الناقص هو $9$."
+    }
+  ]
+}

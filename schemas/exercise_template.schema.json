@@ -19,7 +19,7 @@
   "properties": {
     "templateId": { "type": "string", "minLength": 5 },
     "seed": { "type": "integer" },
-    "grade": { "type": "string", "enum": ["2ap", "5ap", "2am"] },
+    "grade": { "type": "string", "enum": ["1ap", "2ap", "3ap", "4ap", "5ap", "1am", "2am", "3am", "4am"] },
     "trimesterId": { "type": "string", "enum": ["t1", "t2", "t3"] },
     "difficulty": { "type": "string", "enum": ["easy", "medium", "hard"] },
     "domain": { "type": "string", "enum": ["numeric", "geometry", "measurement", "proportionality", "integration"] },

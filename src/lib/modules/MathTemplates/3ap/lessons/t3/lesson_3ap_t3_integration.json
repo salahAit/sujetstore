@@ -1,0 +1,122 @@
+{
+  "id": "lesson_3ap_t3_integration",
+  "slug": "3ap-t3-integration",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع السادس: حفل نهاية السنة (المحيط، التناظر المحوري، المجسمات ومنهجية حل المشكلات)",
+  "order": 7,
+  "titleAr": "منهجية حل المشكلات وإدماج وحصيلة الفصل الثالث: وضعيات إدماجية شاملة",
+  "objectives": [
+    "تطبيق خطوات منهجية حل المشكلات: قراءة النص بتمعن، انتقاء المعطيات المفيدة واستبعاد المعطيات المشوشة، واختيار العملية المناسبة",
+    "تمثيل معطيات مشكلة بمخطط بسيط وتنظيم الحسابات بالعمليات الأربع (بما فيها القسمة التامة والضرب العمودي والضرب في مضاعفات $10$ و $100$)",
+    "حل وضعيات إدماجية شاملة تجند المدد الزمنية (ساعات، دقائق، ثوانٍ) ومحيط المربع والمستطيل والتناظر والمجسمات مع صياغة جمل الإجابة والتحقق من المعقولية"
+  ],
+  "keywordsAr": [
+    "منهجية حل المشكلات",
+    "المعطيات المفيدة",
+    "إدماج",
+    "حصيلة الفصل الثالث",
+    "وضعية إدماجية"
+  ],
+  "discover": {
+    "scenarioAr": "لتنظيم **حفل نهاية السنة** في مدرسة تضم **$350$** تلميذاً: اشترت الجمعية **$30$** علبة عصير بسعر **$200\\text{ DA}$** للعلبة، ووزعت **$48$** كعكة بالتساوي على **$6$** أطباق، وأحاطت منصة الحفل المستطيلة (طولها **$9\\text{ m}$** وعرضها **$6\\text{ m}$**) بشريط ملون، وانطلق الحفل على الساعة **$09:30$** ليدوم **$1\\text{ h } 45\\text{ min}$**.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 205\" width=\"540\" height=\"205\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"540\" height=\"205\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><text x=\"270\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">لوحة تحضير حفل نهاية السنة (عدد تلاميذ المدرسة: 350 تلميذاً)</text><g transform=\"translate(14,38)\"><rect width=\"120\" height=\"118\" rx=\"8\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.8\"/><text x=\"60\" y=\"22\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">1. شراء العصير</text><rect x=\"18\" y=\"36\" width=\"84\" height=\"32\" rx=\"5\" fill=\"#eff6ff\"/><text x=\"60\" y=\"56\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">30 علبة</text><text x=\"60\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">السعر للعلبة:</text><text x=\"60\" y=\"105\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">200 DA</text></g><g transform=\"translate(144,38)\"><rect width=\"120\" height=\"118\" rx=\"8\" fill=\"#ffffff\" stroke=\"#6ee7b7\" stroke-width=\"1.8\"/><text x=\"60\" y=\"22\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">2. توزيع الكعك</text><rect x=\"18\" y=\"36\" width=\"84\" height=\"32\" rx=\"5\" fill=\"#ecfdf5\"/><text x=\"60\" y=\"56\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">48 كعكة</text><text x=\"60\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">بالتساوي على:</text><text x=\"60\" y=\"105\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\">6 أطباق</text></g><g transform=\"translate(274,38)\"><rect width=\"122\" height=\"118\" rx=\"8\" fill=\"#ffffff\" stroke=\"#fdba74\" stroke-width=\"1.8\"/><text x=\"61\" y=\"22\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\">3. تزيين المنصة</text><rect x=\"24\" y=\"42\" width=\"74\" height=\"42\" fill=\"#fff7ed\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"61\" y=\"67\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#9a3412\">9 m × 6 m</text><text x=\"61\" y=\"105\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\">شريط المحيط</text></g><g transform=\"translate(406,38)\"><rect width=\"120\" height=\"118\" rx=\"8\" fill=\"#ffffff\" stroke=\"#c4b5fd\" stroke-width=\"1.8\"/><text x=\"60\" y=\"22\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#6d28d9\">4. توقيت الحفل</text><rect x=\"16\" y=\"38\" width=\"88\" height=\"30\" rx=\"5\" fill=\"#f5f3ff\"/><text x=\"60\" y=\"57\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#5b21b6\">البداية: 09:30</text><text x=\"60\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">المدة:</text><text x=\"60\" y=\"105\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#6d28d9\">1 h 45 min</text></g><rect x=\"60\" y=\"166\" width=\"420\" height=\"26\" rx=\"6\" fill=\"#fef2f2\" stroke=\"#fecaca\"/><text x=\"270\" y=\"183\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#991b1b\">منهجية الحل: استخراج المعطيات المفيدة فقط ← اختيار العملية ← الحساب بالوحدة</text></svg>",
+    "steps": [
+      {
+        "promptAr": "لحساب **ثمن علب العصير** ($30$ علبة بسعر $200\\text{ DA}$ للعلبة)، نستبعد المعطى المشوش ($350$ تلميذاً) ونضرب في مضاعف $100$. ما هو ثمن العصير بالدينار؟ (اكتب العدد فقط دون فراغ)",
+        "hintAr": "احسب $200 \\times 30$: اضرب $2 \\times 3$ ثم أضف ثلاثة أصفار على اليمين.",
+        "expectedInput": "6000",
+        "revealAr": "ثمن العصير هو $200 \\times 30 = 6\\,000\\text{ DA}$ (ولم نستعمل العدد $350$ لأنه معطى مشوش لا يلزمنا لحساب ثمن العصير)."
+      },
+      {
+        "promptAr": "لتوزيع $48$ كعكة بالتساوي على $6$ أطباق، نبحث في معكوس جدول الضرب: $6 \\times ? = 48$. كم كعكة توضع في كل طبق؟ (اكتب العدد فقط)",
+        "hintAr": "احسب $48 \\div 6$.",
+        "expectedInput": "8",
+        "revealAr": "توضع $8$ كعكات في كل طبق؛ لأن $6 \\times 8 = 48$، إذن $48 \\div 6 = 8$."
+      },
+      {
+        "promptAr": "لحساب طول الشريط الملون الذي يحيط بالمنصة المستطيلة (طولها $9\\text{ m}$ وعرضها $6\\text{ m}$)، نحسب محيط المستطيل: $(9 + 6) \\times 2$. ما هو طول الشريط بالمتر؟ (اكتب العدد فقط)",
+        "hintAr": "اجمع $9 + 6 = 15$، ثم اضرب الناتج في $2$.",
+        "expectedInput": "30",
+        "revealAr": "طول الشريط يساوي $(9 + 6) \\times 2 = 15 \\times 2 = 30\\text{ m}$، وينتهي الحفل على الساعة $11:15$ ($09:30 + 1\\text{ h } 45\\text{ min}$)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**منهجية حل المشكلات** في $4$ خطوات: (1) قراءة النص بتمعن وفهم المطلوب، (2) انتقاء **المعطيات المفيدة** واستبعاد **المعطيات المشوشة**، (3) اختيار العملية أو رسم مخطط بسيط، (4) الحساب بدقة وصياغة **جملة الإجابة بالوحدة** والتحقق من المعقولية.",
+      "أختار **الضرب** عند تكرار كمية متساوية (مثل شراء عدة علب بنفس السعر)، و**القسمة التامة** عند التوزيع بالتساوي أو التجميع في حصص متساوية.",
+      "في وضعيات **القياس**: أميّز بين **المحيط** (طول الخط الخارجي بالمتر أو السنتيمتر: محيط المربع $=$ الضلع $\\times 4$، ومحيط المستطيل $=$ (الطول $+$ العرض) $\\times 2$) وبين **المدد الزمنية** ($1\\text{ h} = 60\\text{ min}$ و $1\\text{ min} = 60\\text{ s}$).",
+      "في وضعيات **الهندسة**: أستعين بالمرصوفة لإيجاد نظير شكل حول **محور التناظر**، وأستثمر خصائص **المجسمات** (الوجوه، الرؤوس، الأحرف) في الحل."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 185\" width=\"520\" height=\"185\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"520\" height=\"185\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><text x=\"260\" y=\"22\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">خطوات منهجية حل المشكلات (من اليمين إلى اليسار)</text><g transform=\"translate(392,34)\"><rect width=\"112\" height=\"56\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"56\" y=\"24\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">1. أقرأ وأفهم</text><text x=\"56\" y=\"42\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1e3a8a\">تحديد المطلوب</text></g><path d=\"M 390 62 L 374 62\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"376,57 368,62 376,67\" fill=\"#475569\"/><g transform=\"translate(260,34)\"><rect width=\"108\" height=\"56\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.8\"/><text x=\"54\" y=\"24\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">2. أفرز المعطيات</text><text x=\"54\" y=\"42\" text-anchor=\"middle\" font-size=\"10\" fill=\"#92400e\">استبعاد المشوشة</text></g><path d=\"M 258 62 L 242 62\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"244,57 236,62 244,67\" fill=\"#475569\"/><g transform=\"translate(128,34)\"><rect width=\"108\" height=\"56\" rx=\"8\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"1.8\"/><text x=\"54\" y=\"24\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#5b21b6\">3. أخطط وأختار</text><text x=\"54\" y=\"42\" text-anchor=\"middle\" font-size=\"10\" fill=\"#4c1d95\">العملية أو المخطط</text></g><path d=\"M 126 62 L 110 62\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"112,57 104,62 112,67\" fill=\"#475569\"/><g transform=\"translate(16,34)\"><rect width=\"88\" height=\"56\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"1.8\"/><text x=\"44\" y=\"24\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">4. أحسب</text><text x=\"44\" y=\"42\" text-anchor=\"middle\" font-size=\"10\" fill=\"#065f46\">الإجابة بالوحدة</text></g><rect x=\"16\" y=\"108\" width=\"488\" height=\"62\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"260\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">ميادين الفصل الثالث المدمجة:</text><rect x=\"28\" y=\"136\" width=\"108\" height=\"24\" rx=\"5\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/><text x=\"82\" y=\"152\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e40af\">القسمة والمضاعفات</text><rect x=\"146\" y=\"136\" width=\"108\" height=\"24\" rx=\"5\" fill=\"#ecfdf5\" stroke=\"#6ee7b7\"/><text x=\"200\" y=\"152\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#047857\">المدد الزمنية</text><rect x=\"264\" y=\"136\" width=\"108\" height=\"24\" rx=\"5\" fill=\"#fff7ed\" stroke=\"#fdba74\"/><text x=\"318\" y=\"152\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c2410c\">محيط المضلعات</text><rect x=\"382\" y=\"136\" width=\"110\" height=\"24\" rx=\"5\" fill=\"#f5f3ff\" stroke=\"#c4b5fd\"/><text x=\"437\" y=\"152\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#5b21b6\">التناظر والمجسمات</text></svg>",
+    "visualCaptionAr": "منهجية حل المشكلات ذات المراحل الأربع وتكاملها مع موارد الفصل الثالث.",
+    "examples": [
+      {
+        "problemAr": "في مكتبة المدرسة $25$ رفاً، في كل رف $40$ كتاباً، وعمر المكتبة $12$ سنة. ما هو العدد الكلي للكتب؟",
+        "solutionAr": "نستبعد المعطى المشوش ($12$ سنة). عدد الكتب يساوي: $25 \\times 40 = (25 \\times 4) \\times 10 = 100 \\times 10 = 1\\,000$ كتاب."
+      },
+      {
+        "problemAr": "حديقة مربعة طول ضلعها $8\\text{ m}$، أحاطها البستاني بسياج، واستغرق عمله من $08:20$ إلى $10:05$. ما طول السياج؟ وما مدة العمل؟",
+        "solutionAr": "طول السياج $=$ محيط المربع $= 8 \\times 4 = 32\\text{ m}$. مدة العمل بالمخطط الزمني: من $08:20$ إلى $09:00$ توجد $40\\text{ min}$، ومن $09:00$ إلى $10:05$ توجد $1\\text{ h } 5\\text{ min}$، فالمجموع $1\\text{ h } 45\\text{ min}$."
+      }
+    ],
+    "watchOutAr": "انتبه! لا تحاول إدخال جميع الأرقام الواردة في النص في عملياتك الحسابية؛ فبعض الأرقام تكون **معطيات مشوشة** (مثل العمر أو عدد الأقسام أو التاريخ)، واحرص دائماً على كتابة **الوحدة** في جملة الإجابة!"
+  },
+  "practice": [
+    {
+      "questionAr": "اشترى مدير المدرسة $7$ علب أقلام بسعر $120\\text{ DA}$ للعلبة الواحدة، علماً أن في المدرسة $18$ قسماً. إذا وزّع محتوى العلب وهو $56$ قلماً بالتساوي على $8$ متفوقين، كم قلماً يأخذ كل متفوق؟",
+      "options": [
+        "$7$ أقلام",
+        "$8$ أقلام",
+        "$15$ قلماً",
+        "$48$ قلماً"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! استبعدت المعطيات المشوشة ($120\\text{ DA}$ و $18$ قسماً) وقسمت $56 \\div 8 = 7$ أقلام لكل متفوق.",
+        "$8$ هو عدد التلاميذ المتفوقين (القاسم) وليس حصة كل تلميذ!",
+        "استعملت السعر ($120 \\div 8 = 15$) بدلاً من عدد الأقلام ($56$ قلماً)!",
+        "طرحت $8$ من $56$ ($56 - 8 = 48$)؛ التوزيع بالتساوي يتطلب عملية القسمة ($56 \\div 8$)."
+      ],
+      "explanationAr": "المعطى المفيد لإيجاد حصة كل متفوق هو عدد الأقلام الكلي ($56$) وعدد المتفوقين ($8$)، أما السعر وعدد الأقسام وعدد العلب فمعطيات لا نحتاجها هنا: $56 \\div 8 = 7$ أقلام."
+    },
+    {
+      "questionAr": "انظر إلى المخطط: يمشي عليّ دورة كاملة حول ملعب مستطيل طوله $50\\text{ m}$ وعرضه $30\\text{ m}$، وينطلق على الساعة $07:45$ فيستغرق $25\\text{ min}$. ما المسافة التي يقطعها، ومتى ينهي مشيه؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 140\" width=\"420\" height=\"140\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"420\" height=\"140\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><g transform=\"translate(16,14)\"><rect width=\"184\" height=\"112\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"92\" y=\"20\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#059669\">1. دورة حول الملعب</text><rect x=\"36\" y=\"34\" width=\"112\" height=\"56\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"2.5\"/><text x=\"92\" y=\"30\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#047857\">50 m</text><text x=\"164\" y=\"65\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#047857\">30 m</text><text x=\"92\" y=\"66\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\">المحيط = ?</text></g><g transform=\"translate(212,14)\"><rect width=\"192\" height=\"112\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"96\" y=\"20\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">2. المخطط الزمني</text><line x1=\"18\" y1=\"76\" x2=\"172\" y2=\"76\" stroke=\"#1e293b\" stroke-width=\"2\"/><polygon points=\"176,76 168,72 168,80\" fill=\"#1e293b\"/><circle cx=\"34\" cy=\"76\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"34\" y=\"96\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">07:45</text><circle cx=\"150\" cy=\"76\" r=\"4.5\" fill=\"#059669\"/><text x=\"150\" y=\"96\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">?</text><path d=\"M 34 68 Q 92 32 150 68\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"92\" y=\"44\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">+ 25 min</text></g></svg>",
+      "options": [
+        "المسافة $80\\text{ m}$ وينتهي على $08:10$",
+        "المسافة $160\\text{ m}$ وينتهي على $07:70$",
+        "المسافة $160\\text{ m}$ وينتهي على $08:10$",
+        "المسافة $160\\text{ m}$ وينتهي على $08:05$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "التوقيت صحيح ($08:10$)، لكن $80\\text{ m}$ هو نصف المحيط ($50 + 30$) فقط! اضرب في $2$ لإتمام الدورة الكاملة.",
+        "المحيط صحيح ($160\\text{ m}$)، لكن لا نكتب $07:70$ لأن $60\\text{ min} = 1\\text{ h}$؛ إذن $70\\text{ min} = 1\\text{ h } 10\\text{ min}$.",
+        "ممتاز! محيط المستطيل $(50 + 30) \\times 2 = 160\\text{ m}$، ومن $07:45$ نضيف $15\\text{ min}$ لنبلغ $08:00$ ثم $10\\text{ min}$ فنصل إلى $08:10$.",
+        "المسافة صحيحة ($160\\text{ m}$)، لكن بعد بلوغ $08:00$ (بإضافة $15\\text{ min}$) تبقى $25 - 15 = 10\\text{ min}$ وليس $5\\text{ min}$!"
+      ],
+      "explanationAr": "المسافة هي محيط المستطيل: $(50 + 30) \\times 2 = 80 \\times 2 = 160\\text{ m}$. ونضيف $25\\text{ min}$ إلى $07:45$: نضيف $15\\text{ min}$ للوصول إلى $08:00$ ثم نضيف $10\\text{ min}$ الباقية فننتهي على الساعة $08:10$."
+    },
+    {
+      "questionAr": "صمّم سامي علبة هدايا على شكل **مكعب**، ثم زيّن كل وجه من وجوهها بنجوم متناظرة بحيث وضع في كل وجه $4$ ملصقات. كم ملصقاً احتاج لتزيين جميع وجوه المكعب؟",
+      "options": [
+        "$10$ ملصقات",
+        "$24$ ملصقاً",
+        "$32$ ملصقاً",
+        "$48$ ملصقاً"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "لقد جمعت $6 + 4 = 10$! كل وجه من الوجوه الستة فيه $4$ ملصقات، فنستعمل الضرب ($6 \\times 4$).",
+        "أحسنت! للمكعب $6$ وجوه مربعة، وإذا وضع $4$ ملصقات في كل وجه فإن المجموع $6 \\times 4 = 24$ ملصقاً.",
+        "استعملت عدد الرؤوس ($8 \\times 4 = 32$) بدلاً من عدد الوجوه ($6$)!",
+        "استعملت عدد الأحرف ($12 \\times 4 = 48$) بدلاً من عدد الوجوه ($6$)!"
+      ],
+      "explanationAr": "نعلم أن للمكعب $6$ وجوه مربعة. وبما أن كل وجه يحتاج إلى $4$ ملصقات، فإن العدد الكلي هو $6 \\times 4 = 24$ ملصقاً."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "levelId": "moyen",
+    "yearId": "3am",
+    "yearName": "السنة الثالثة متوسط",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t1",
+    "trimesterName": "الفصل الأول",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة واحدة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 7,
+      "instruction": "احسب العبارات التالية باحترام أولوية العمليات واكتب كل نتيجة في أبسط شكل:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) $A = frac(2, 3) + -frac(4, 3) div frac(2, 5)$",
+          "answer": "1) الأولوية للقسمة: $A = frac(2, 3) + (-frac(10, 3)) = -frac(8, 3)$.",
+          "mark": "2.5"
+        },
+        {
+          "type": "text",
+          "content": "2) $B = (-frac(2, 2) - frac(3, 3)) times frac(5, 2)$",
+          "answer": "2) الأولوية للأقواس: $B = (-2) times frac(5, 2) = -5$.",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "3) $C = frac(frac(4, 5), -frac(3, 2))$",
+          "answer": "3) $C = frac(4, 5) div (-frac(3, 2)) = frac(4, 5) times (-frac(2, 3)) = -frac(8, 15)$.",
+          "mark": "2.25"
+        }
+      ],
+      "id": "ex_test_1_3am_t1_rational_operations",
+      "num": "الأول"
+    },
+    {
+      "points": 7,
+      "instruction": "احسب بتمعّن سلاسل العمليات التالية مبرزاً مراحل الحساب:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) $A = 5 - (-3) times 2 + (-30) div (-5)$",
+          "answer": "1) $A = 5 - (-6) + 6 = 5 + 6 + 6 = 17$",
+          "mark": "2.5"
+        },
+        {
+          "type": "text",
+          "content": "2) $B = [(-6) + (+3)] times (-3) - (-12)$",
+          "answer": "2) $B = (-3) times (-3) + 12 = 9 + 12 = 21$",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "3) $C = frac((-6) times (-12) times (+4), (-2) times (+3))$",
+          "answer": "3) البسط $= 288$ والمقام $= -6$، إذن $C = -48$.",
+          "mark": "2.25"
+        }
+      ],
+      "id": "ex_test_2_3am_t1_signed_mult_div",
+      "num": "الثاني"
+    },
+    {
+      "points": 6,
+      "instruction": "في المثلث $A B C$ المقابل، $M in [A B]$ و $N in [A C]$ و $(M N) parallel (B C)$ ($A M = 6$ سم، $M B = 4$ سم، $A C = 15$ سم، $B C = 20$ سم):",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.5fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) احسب الطول الكلي للضلع $A B$، ثم اكتب نسب طالس الثلاث في المثلث $A B C$.\n\n2) استنتج الطولين $M N$ و $A N$.\n\n3) احسب محيط المثلث $A M N$ ومحيط المثلث $A B C$، ثم قارن النسبة $frac(P_(A M N), P_(A B C))$ بالنسب السابقة.",
+              "answer": "1) $A B = A M + M B = 6 + 4 = 10$ سم. حسب خاصية طالس: $frac(A M, A B) = frac(A N, A C) = frac(M N, B C)$.\n\n2) $M N = frac(6 times 20, 10) = 12$ سم، و $A N = frac(6 times 15, 10) = 9$ سم.\n\n3) محيط $A M N$: $P_1 = 6 + 9 + 12 = 27$ سم. محيط $A B C$: $P_2 = 10 + 15 + 20 = 45$ سم. نلاحظ أن $frac(27, 45) = frac(3, 5) = frac(A M, A B)$.",
+              "mark": "6"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3am_t1_thales_hard_164159.svg",
+              "caption": "المثلث ABC مع أطوال AM و MB"
+            }
+          ]
+        }
+      ],
+      "id": "ex_test_3_3am_t1_midsegment_thales",
+      "num": "الثالث"
+    }
+  ]
+}

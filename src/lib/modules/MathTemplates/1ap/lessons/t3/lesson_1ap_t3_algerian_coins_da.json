@@ -1,0 +1,122 @@
+{
+  "id": "lesson_1ap_t3_algerian_coins_da",
+  "slug": "1ap-t3-algerian-coins-da",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع الخامس (الجزء الثاني): العملة الجزائرية، الحساب بتمعّن والجمع دون احتفاظ",
+  "order": 4,
+  "titleAr": "العملة الجزائرية: القطع النقدية (1، 2، 5، 10، 20، 50 DA) وتشكيل مبالغ",
+  "objectives": [
+    "التعرّف على قيم القطع النقدية الجزائرية: 1 و2 و5 و10 و20 و50 دينارًا جزائريًا (DA)",
+    "عدّ وتشكيل مبالغ مالية أصغر من 100 DA باستعمال القطع النقدية المناسبة",
+    "قراءة أسعار من جدول بسيط والتحقق من كفاية المبلغ المالي للشراء"
+  ],
+  "keywordsAr": [
+    "الدينار الجزائري (DA)",
+    "القطع النقدية",
+    "تشكيل مبلغ مالي",
+    "جدول أسعار"
+  ],
+  "discover": {
+    "scenarioAr": "تُرِيدُ لَيْلى شِراءَ كُرّاسٍ وَقَلَمٍ مِنَ المَكْتَبَةِ. تَمْلِكُ لَيْلى قِطَعًا نَقْدِيَّةً جَزائِرِيَّةً بِالدِّينارِ الجَزائِرِيِّ ($\\text{DA}$)، وَأَمامَها جَدْوَلُ الأَسْعارِ.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 200\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"245\" height=\"180\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"132\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">نُقُودُ لَيْلى (DA)</text><circle cx=\"68\" cy=\"78\" r=\"28\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2.5\"/><text x=\"68\" y=\"78\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">50</text><text x=\"68\" y=\"92\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"142\" cy=\"78\" r=\"25\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"2.5\"/><text x=\"142\" y=\"78\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">20</text><text x=\"142\" y=\"91\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"206\" cy=\"78\" r=\"21\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"206\" y=\"78\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">5</text><text x=\"206\" y=\"90\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"132\" cy=\"144\" r=\"19\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"132\" y=\"144\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">2</text><text x=\"132\" y=\"156\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><rect x=\"268\" y=\"10\" width=\"202\" height=\"180\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"369\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">جَدْوَلُ الأَسْعارِ</text><g stroke=\"#94a3b8\" stroke-width=\"1.2\" fill=\"#fff\"><rect x=\"282\" y=\"48\" width=\"86\" height=\"38\"/><rect x=\"368\" y=\"48\" width=\"86\" height=\"38\"/><rect x=\"282\" y=\"86\" width=\"86\" height=\"38\"/><rect x=\"368\" y=\"86\" width=\"86\" height=\"38\"/><rect x=\"282\" y=\"124\" width=\"86\" height=\"38\"/><rect x=\"368\" y=\"124\" width=\"86\" height=\"38\"/></g><text x=\"411\" y=\"72\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">كُرّاسٌ</text><text x=\"325\" y=\"72\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">50 DA</text><text x=\"411\" y=\"110\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">قَلَمٌ</text><text x=\"325\" y=\"110\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">25 DA</text><text x=\"411\" y=\"148\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">مِمْحاةٌ</text><text x=\"325\" y=\"148\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">15 DA</text></svg>",
+    "steps": [
+      {
+        "promptAr": "اِجْمَعْ قِيمَتَيِ القِطْعَتَيْنِ الكَبِيرَتَيْنِ مَعَ لَيْلى: $50 + 20$. كَمْ يَكُونُ النّاتِجُ؟",
+        "hintAr": "اجْمَعِ العَشَراتِ: $5$ عَشَراتٍ مَعَ $2$ عَشَراتٍ.",
+        "expectedInput": "70",
+        "revealAr": "$50 + 20 = 70\\text{ DA}$."
+      },
+      {
+        "promptAr": "أَضِفِ القِطْعَتَيْنِ الصَّغِيرَتَيْنِ ($5\\text{ DA}$ وَ $2\\text{ DA}$) إلى $70\\text{ DA}$. كَمْ دِينارًا تَمْلِكُ لَيْلى في المَجْمُوعِ؟",
+        "hintAr": "احْسُبْ $70 + 5 + 2$.",
+        "expectedInput": "77",
+        "revealAr": "تَمْلِكُ لَيْلى $70 + 7 = 77\\text{ DA}$."
+      },
+      {
+        "promptAr": "مِنْ جَدْوَلِ الأَسْعارِ، ثَمَنُ الكُرّاسِ $50\\text{ DA}$ وَثَمَنُ القَلَمِ $25\\text{ DA}$. كَمْ ثَمَنُهما مَعًا ($50 + 25$)؟",
+        "hintAr": "اجْمَعْ $50 + 20$ ثُمَّ أَضِفْ $5$.",
+        "expectedInput": "75",
+        "revealAr": "ثَمَنُ الكُرّاسِ وَالقَلَمِ مَعًا هُوَ $50 + 25 = 75\\text{ DA}$، وَلِأَنَّ $77 > 75$ فَالمَبْلَغُ يَكْفِي لِلشِّراءِ!"
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "العُمْلَةُ الجَزائِرِيَّةُ هِيَ الدِّينارُ الجَزائِرِيُّ، وَنَرْمُزُ لَهُ بِـ $\\text{DA}$.",
+      "القِطَعُ النَّقْدِيَّةُ الَّتِي نَسْتَعْمِلُها هِيَ: $1\\text{ DA}$، $2\\text{ DA}$، $5\\text{ DA}$، $10\\text{ DA}$، $20\\text{ DA}$، وَ $50\\text{ DA}$.",
+      "لِعَدِّ مَبْلَغٍ مالِيٍّ بِسُهُولَةٍ، نَرَتِّبُ القِطَعَ مِنَ الأَكْبَرِ قِيمَةً إلى الأَصْغَرِ ثُمَّ نَجْمَعُ (مِثْلَ: $50 + 20 + 10 + 5 = 85\\text{ DA}$).",
+      "لِلتَّحَقُّقِ مِنْ كِفايَةِ المَبْلَغِ لِلشِّراءِ، نَقْرَأُ الثَّمَنَ مِنَ الجَدْوَلِ وَنُقارِنُهُ بِما نَمْلِكُهُ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 200\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"460\" height=\"180\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"240\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">القِطَعُ النَّقْدِيَّةُ الجَزائِرِيَّةُ (DA)</text><circle cx=\"60\" cy=\"84\" r=\"30\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2.5\"/><text x=\"60\" y=\"84\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">50</text><text x=\"60\" y=\"99\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"136\" cy=\"84\" r=\"26\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"2.5\"/><text x=\"136\" y=\"84\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">20</text><text x=\"136\" y=\"98\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"206\" cy=\"84\" r=\"23\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"206\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">10</text><text x=\"206\" y=\"97\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"272\" cy=\"84\" r=\"21\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"272\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">5</text><text x=\"272\" y=\"96\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"334\" cy=\"84\" r=\"19\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"334\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">2</text><text x=\"334\" y=\"96\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"392\" cy=\"84\" r=\"17\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"392\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1</text><text x=\"392\" y=\"95\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><rect x=\"36\" y=\"132\" width=\"408\" height=\"44\" rx=\"8\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.5\"/><text x=\"240\" y=\"159\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#065f46\" direction=\"ltr\">50 DA + 20 DA + 10 DA + 5 DA = 85 DA</text></svg>",
+    "visualCaptionAr": "القِطَعُ النَّقْدِيَّةُ السِّتُّ ($50, 20, 10, 5, 2, 1\\text{ DA}$) وَمِثالٌ عَلى تَشْكِيلِ المَبْلَغِ $85\\text{ DA}$.",
+    "examples": [
+      {
+        "problemAr": "شَكِّلِ المَبْلَغَ $65\\text{ DA}$ بِاسْتِعْمالِ أَقَلِّ عَدَدٍ مُمْكِنٍ مِنَ القِطَعِ النَّقْدِيَّةِ.",
+        "solutionAr": "نَخْتارُ أَكْبَرَ القِطَعِ المُمْكِنَةِ: قِطْعَةَ $50\\text{ DA}$ وَقِطْعَةَ $10\\text{ DA}$ وَقِطْعَةَ $5\\text{ DA}$، فَيَكُونُ $50 + 10 + 5 = 65\\text{ DA}$."
+      },
+      {
+        "problemAr": "يَمْلِكُ أَمِينُ $45\\text{ DA}$، وَثَمَنُ قِصَّةٍ هُوَ $48\\text{ DA}$. هَلْ يَكْفِي المَبْلَغُ لِشِرائِها؟",
+        "solutionAr": "نُقارِنُ: $45 < 48$، إِذَنْ المَبْلَغُ لا يَكْفِي، يَنْقُصُهُ $3\\text{ DA}$ لِأَنَّ $45 + 3 = 48$."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! لا تُوجَدُ قِطْعَةٌ نَقْدِيَّةٌ بِقِيمَةِ $15\\text{ DA}$ أَوْ $30\\text{ DA}$ أَوْ $40\\text{ DA}$! لِتَشْكِيلِ $30\\text{ DA}$ مَثَلًا نَسْتَعْمِلُ $20\\text{ DA} + 10\\text{ DA}$ أَوْ ثَلاثَ قِطَعٍ مِنْ فِئَةِ $10\\text{ DA}$."
+  },
+  "practice": [
+    {
+      "questionAr": "تَأَمَّلِ القِطَعَ النَّقْدِيَّةَ في الصُّورَةِ. ما هُوَ المَبْلَغُ الكُلِّيُّ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 115\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"404\" height=\"99\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><circle cx=\"62\" cy=\"58\" r=\"28\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2.5\"/><text x=\"62\" y=\"58\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">50</text><text x=\"62\" y=\"72\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"142\" cy=\"58\" r=\"23\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"142\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">10</text><text x=\"142\" y=\"70\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"212\" cy=\"58\" r=\"23\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"212\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">10</text><text x=\"212\" y=\"70\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"282\" cy=\"58\" r=\"19\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"282\" y=\"58\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">2</text><text x=\"282\" y=\"69\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"348\" cy=\"58\" r=\"17\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"348\" y=\"58\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1</text><text x=\"348\" y=\"68\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text></svg>",
+      "options": [
+        "$63\\text{ DA}$",
+        "$73\\text{ DA}$",
+        "$83\\text{ DA}$",
+        "$71\\text{ DA}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انْتَبِهْ! هُناكَ قِطْعَتانِ مِنْ فِئَةِ $10\\text{ DA}$ وَلَيْسَتْ قِطْعَةً واحِدَةً.",
+        "أَحْسَنْتَ! $50 + 10 + 10 + 2 + 1 = 73\\text{ DA}$.",
+        "تَحَقَّقْ مِنْ عَدَدِ قِطَعِ $10\\text{ DA}$: هِيَ قِطْعَتانِ ($20$) وَلَيْسَتْ ثَلاثَ قِطَعٍ ($30$).",
+        "نَسِيتَ إِضافَةَ قِطْعَةِ $2\\text{ DA}$ عِنْدَ الجَمْعِ."
+      ],
+      "explanationAr": "نَجْمَعُ قِيَمَ القِطَعِ مِنَ الأَكْبَرِ إلى الأَصْغَرِ: $50 + 10 + 10 = 70$، ثُمَّ نُضِيفُ $2 + 1 = 3$، فَالْمَجْمُوعُ $73\\text{ DA}$."
+    },
+    {
+      "questionAr": "أَيُّ مَجْمُوعَةٍ مِنَ القِطَعِ النَّقْدِيَّةِ تُشَكِّلُ المَبْلَغَ $47\\text{ DA}$؟",
+      "options": [
+        "$20 + 20 + 5 + 2$",
+        "$50 + 5 + 2$",
+        "$20 + 10 + 5 + 2$",
+        "$20 + 20 + 10$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "مُمْتازٌ! $20 + 20 = 40$ وَ $5 + 2 = 7$، إِذَنْ $40 + 7 = 47\\text{ DA}$.",
+        "$50 + 5 + 2 = 57\\text{ DA}$ وَهُوَ أَكْبَرُ مِنْ $47\\text{ DA}$.",
+        "$20 + 10 + 5 + 2 = 37\\text{ DA}$ فَقَطْ، نَقَصَتْ $10\\text{ DA}$.",
+        "$20 + 20 + 10 = 50\\text{ DA}$ وَهُوَ أَكْبَرُ مِنْ $47\\text{ DA}$."
+      ],
+      "explanationAr": "لِتَشْكِيلِ $47\\text{ DA}$ نَخْتارُ $20 + 20 = 40\\text{ DA}$ ثُمَّ $5 + 2 = 7\\text{ DA}$، فَيَكُونُ المَجْمُوعُ $47\\text{ DA}$."
+    },
+    {
+      "questionAr": "يَمْلِكُ ياسِينُ $60\\text{ DA}$. انْظُرْ إلى جَدْوَلِ الأَسْعارِ: هَلْ يَكْفِي مَبْلَغُهُ لِشِراءِ مِسْطَرَةٍ وَقَلَمٍ مَعًا؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 110\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"15\" y=\"12\" width=\"390\" height=\"86\" rx=\"8\" fill=\"#fff\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"15\" y=\"12\" width=\"390\" height=\"40\" rx=\"6\" fill=\"#eff6ff\"/><line x1=\"15\" y1=\"52\" x2=\"405\" y2=\"52\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"145\" y1=\"12\" x2=\"145\" y2=\"98\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"275\" y1=\"12\" x2=\"275\" y2=\"98\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"340\" y=\"37\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">مِسْطَرَةٌ</text><text x=\"210\" y=\"37\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">دَفْتَرٌ</text><text x=\"80\" y=\"37\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">قَلَمٌ</text><text x=\"340\" y=\"79\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">30 DA</text><text x=\"210\" y=\"79\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">45 DA</text><text x=\"80\" y=\"79\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">15 DA</text></svg>",
+      "options": [
+        "لا، لِأَنَّ الثَّمَنَ $75\\text{ DA}$",
+        "نَعَمْ، لِأَنَّ الثَّمَنَ $35\\text{ DA}$",
+        "نَعَمْ، لِأَنَّ الثَّمَنَ $45\\text{ DA}$",
+        "لا، لِأَنَّ الثَّمَنَ $65\\text{ DA}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$75\\text{ DA}$ هُوَ ثَمَنُ المِسْطَرَةِ وَالدَّفْتَرِ ($30 + 45$)، وَالسُّؤالُ عَنِ المِسْطَرَةِ وَالقَلَمِ.",
+        "راجِعْ جَمْعَ $30 + 15$: العَشَراتُ $3 + 1 = 4$ فَالنّاتِجُ $45$ وَلَيْسَ $35$.",
+        "أَحْسَنْتَ! ثَمَنُ المِسْطَرَةِ وَالقَلَمِ $30 + 15 = 45\\text{ DA}$، وَبِما أَنَّ $60 > 45$ فَالْمَبْلَغُ يَكْفِي.",
+        "ثَمَنُ المِسْطَرَةِ $30\\text{ DA}$ وَثَمَنُ القَلَمِ $15\\text{ DA}$ فَمَجْمُوعُهما $45\\text{ DA}$ وَلَيْسَ $65\\text{ DA}$."
+      ],
+      "explanationAr": "نَسْتَخْرِجُ مِنَ الجَدْوَلِ ثَمَنَ المِسْطَرَةِ ($30\\text{ DA}$) وَالقَلَمِ ($15\\text{ DA}$)، ثُمَّ نَجْمَعُ: $30 + 15 = 45\\text{ DA}$. وَبِما أَنَّ $60 > 45$ فَإِنَّ المَبْلَغَ يَكْفِي."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "lesson_1ap_t1_numbers_0_to_5",
+  "slug": "1ap-t1-numbers-0-to-5",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t1",
+  "sequenceId": "seq1",
+  "sequenceTitleAr": "المقطع الأول (الجزء الأول): الدخول المدرسي (التموقع في الفضاء والأعداد من 0 إلى 5)",
+  "order": 2,
+  "titleAr": "الأعداد من 0 إلى 5: العدّ والقراءة والكتابة بالأرقام",
+  "objectives": [
+    "عدّ كميات صغيرة منظمة أو مبعثرة من 1 إلى 5 واكتشاف العدد 0 للتعبير عن مجموعة فارغة",
+    "قراءة وكتابة الأعداد من 0 إلى 5 بالأرقام وربط كل عدد بالكمية المناسبة له",
+    "تشكيل كميات وتعيين رتبة شيء في صفّ باستعمال الأعداد من 1 إلى 5"
+  ],
+  "keywordsAr": [
+    "الأعداد من 0 إلى 5",
+    "العدد 0",
+    "عدّ كميات صغيرة",
+    "تشكيل كميات"
+  ],
+  "discover": {
+    "scenarioAr": "رَتَّبَتْ مَرْيَمُ أَدَواتِها المَدْرَسِيَّةَ في ثَلاثِ سِلالٍ مُلَوَّنَةٍ: سَلَّةٌ خَضْراءُ لِلْأَقْلامِ، وَسَلَّةٌ زَرْقاءُ لِلْمَماحِي، وَسَلَّةٌ صَفْراءُ فارِغَةٌ.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 185\" width=\"460\" height=\"185\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"18\" y=\"18\" width=\"132\" height=\"148\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"84\" y=\"40\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">السَّلَّةُ الخَضْراءُ</text><rect x=\"38\" y=\"62\" width=\"12\" height=\"76\" rx=\"3\" fill=\"#f97316\" stroke=\"#c2410c\"/><rect x=\"62\" y=\"62\" width=\"12\" height=\"76\" rx=\"3\" fill=\"#f97316\" stroke=\"#c2410c\"/><rect x=\"86\" y=\"62\" width=\"12\" height=\"76\" rx=\"3\" fill=\"#f97316\" stroke=\"#c2410c\"/><rect x=\"110\" y=\"62\" width=\"12\" height=\"76\" rx=\"3\" fill=\"#f97316\" stroke=\"#c2410c\"/><text x=\"84\" y=\"156\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">أَقْلامٌ</text><rect x=\"164\" y=\"18\" width=\"132\" height=\"148\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"230\" y=\"40\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">السَّلَّةُ الزَّرْقاءُ</text><rect x=\"190\" y=\"84\" width=\"30\" height=\"32\" rx=\"5\" fill=\"#ec4899\" stroke=\"#be185d\"/><rect x=\"240\" y=\"84\" width=\"30\" height=\"32\" rx=\"5\" fill=\"#ec4899\" stroke=\"#be185d\"/><text x=\"230\" y=\"156\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">مَماحٍ</text><rect x=\"310\" y=\"18\" width=\"132\" height=\"148\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"376\" y=\"40\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">السَّلَّةُ الصَّفْراءُ</text><rect x=\"336\" y=\"64\" width=\"80\" height=\"66\" rx=\"8\" fill=\"#fff\" stroke=\"#eab308\" stroke-dasharray=\"4,4\"/><text x=\"376\" y=\"101\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#a16207\" direction=\"rtl\">فارِغَةٌ</text><text x=\"376\" y=\"156\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">لا يُوجَدُ شَيْءٌ</text></svg>",
+    "steps": [
+      {
+        "promptAr": "عُدَّ الأَقْلامَ في السَّلَّةِ الخَضْراءِ: كَمْ قَلَمًا يُوجَدُ فيها؟",
+        "hintAr": "أَشِرْ بِإِصْبَعِكَ إلى كُلِّ قَلَمٍ وَعُدَّ: $1$، $2$، $3$، ...",
+        "expectedInput": "4",
+        "revealAr": "يُوجَدُ في السَّلَّةِ الخَضْراءِ $4$ أَقْلامٍ (أَرْبَعَةٌ)."
+      },
+      {
+        "promptAr": "كَمْ مِمْحاةً في السَّلَّةِ الزَّرْقاءِ؟",
+        "hintAr": "اُنْظُرْ إلى السَّلَّةِ الزَّرْقاءِ في الوَسَطِ وَعُدَّ المَماحِيَ.",
+        "expectedInput": "2",
+        "revealAr": "يُوجَدُ في السَّلَّةِ الزَّرْقاءِ $2$ مِمْحاتانِ (اثْنانِ)."
+      },
+      {
+        "promptAr": "السَّلَّةُ الصَّفْراءُ فارِغَةٌ لا يُوجَدُ فيها أَيُّ شَيْءٍ. ما العَدَدُ الَّذِي يُعَبِّرُ عَنْ مَجْمُوعَةٍ فارِغَةٍ؟",
+        "hintAr": "عِنْدَما لا يَكُونُ هُناكَ أَيُّ عُنْصُرٍ، نَكْتُبُ العَدَدَ صِفْر.",
+        "expectedInput": "0",
+        "revealAr": "العَدَدُ هُوَ $0$ (صِفْرٌ)، وَهُوَ يُعَبِّرُ عَنْ مَجْمُوعَةٍ فارِغَةٍ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "الأَعْدادُ الأُولى هِيَ: $0$، $1$، $2$، $3$، $4$، $5$، وَنَسْتَعْمِلُها لِعَدِّ العَناصِرِ في مَجْمُوعَةٍ أَوْ لِتَشْكِيلِ كَمِّيَّةٍ.",
+      "العَدَدُ $0$ (صِفْرٌ) يُعَبِّرُ عَنْ مَجْمُوعَةٍ فارِغَةٍ لا يَتَواجَدُ فيها أَيُّ عُنْصُرٍ.",
+      "عِنْدَ العَدِّ نُشِيرُ إلى كُلِّ عُنْصُرٍ مَرَّةً واحِدَةً فَقَطْ، وَآخِرُ عَدَدٍ نَنْطِقُهُ هُوَ عَدَدُ عَناصِرِ المَجْمُوعَةِ.",
+      "نَسْتَعْمِلُ الأَعْدادَ مِنْ $1$ إلى $5$ أَيْضًا لِتَعْيِينِ رُتْبَةِ شَيْءٍ في صَفٍّ: الأَوَّلُ ($1$)، الثّانِي ($2$)، الثّالِثُ ($3$)، الرّابِعُ ($4$)، الخامِسُ ($5$)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" width=\"460\" height=\"190\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"14\" y=\"18\" width=\"68\" height=\"154\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"48\" y=\"48\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#475569\">0</text><text x=\"48\" y=\"158\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\" direction=\"rtl\">صِفْرٌ</text><rect x=\"88\" y=\"18\" width=\"68\" height=\"154\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"122\" y=\"48\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1d4ed8\">1</text><circle cx=\"122\" cy=\"100\" r=\"9\" fill=\"#2563eb\"/><text x=\"122\" y=\"158\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">واحِدٌ</text><rect x=\"162\" y=\"18\" width=\"68\" height=\"154\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#22c55e\" stroke-width=\"1.5\"/><text x=\"196\" y=\"48\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#15803d\">2</text><circle cx=\"183\" cy=\"100\" r=\"8\" fill=\"#16a34a\"/><circle cx=\"209\" cy=\"100\" r=\"8\" fill=\"#16a34a\"/><text x=\"196\" y=\"158\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">اثْنانِ</text><rect x=\"236\" y=\"18\" width=\"68\" height=\"154\" rx=\"8\" fill=\"#fefce8\" stroke=\"#eab308\" stroke-width=\"1.5\"/><text x=\"270\" y=\"48\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#a16207\">3</text><circle cx=\"257\" cy=\"88\" r=\"7\" fill=\"#ca8a04\"/><circle cx=\"283\" cy=\"88\" r=\"7\" fill=\"#ca8a04\"/><circle cx=\"270\" cy=\"112\" r=\"7\" fill=\"#ca8a04\"/><text x=\"270\" y=\"158\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#a16207\" direction=\"rtl\">ثَلاثَةٌ</text><rect x=\"310\" y=\"18\" width=\"68\" height=\"154\" rx=\"8\" fill=\"#fff7ed\" stroke=\"#f97316\" stroke-width=\"1.5\"/><text x=\"344\" y=\"48\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#c2410c\">4</text><circle cx=\"331\" cy=\"88\" r=\"7\" fill=\"#ea580c\"/><circle cx=\"357\" cy=\"88\" r=\"7\" fill=\"#ea580c\"/><circle cx=\"331\" cy=\"112\" r=\"7\" fill=\"#ea580c\"/><circle cx=\"357\" cy=\"112\" r=\"7\" fill=\"#ea580c\"/><text x=\"344\" y=\"158\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">أَرْبَعَةٌ</text><rect x=\"384\" y=\"18\" width=\"64\" height=\"154\" rx=\"8\" fill=\"#fef2f2\" stroke=\"#ef4444\" stroke-width=\"1.5\"/><text x=\"416\" y=\"48\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#b91c1c\">5</text><circle cx=\"402\" cy=\"84\" r=\"6.5\" fill=\"#dc2626\"/><circle cx=\"430\" cy=\"84\" r=\"6.5\" fill=\"#dc2626\"/><circle cx=\"416\" cy=\"100\" r=\"6.5\" fill=\"#dc2626\"/><circle cx=\"402\" cy=\"116\" r=\"6.5\" fill=\"#dc2626\"/><circle cx=\"430\" cy=\"116\" r=\"6.5\" fill=\"#dc2626\"/><text x=\"416\" y=\"158\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"rtl\">خَمْسَةٌ</text></svg>",
+    "visualCaptionAr": "الأَعْدادُ مِنْ 0 إلى 5 بِالأَرْقامِ وَالحُرُوفِ وَتَمْثِيلُها بِالأَقْراصِ.",
+    "examples": [
+      {
+        "problemAr": "في طَبَقٍ $5$ حَبّاتِ تَمْرٍ، وَفي طَبَقٍ آخَرَ لا تُوجَدُ أَيُّ حَبَّةِ تَمْرٍ. كَمْ حَبَّةَ تَمْرٍ في كُلِّ طَبَقٍ؟",
+        "solutionAr": "في الطَّبَقِ الأَوَّلِ $5$ حَبّاتِ تَمْرٍ (خَمْسَةٌ)، وَفي الطَّبَقِ الفارِغِ $0$ حَبَّةٍ (صِفْرٌ)."
+      },
+      {
+        "problemAr": "تَقِفُ $5$ سَيّاراتٍ في صَفٍّ واحِدٍ مِنَ اليَمِينِ: السَّيّارَةُ الأُولى خَضْراءُ، وَالثّانِيَةُ زَرْقاءُ، وَالثّالِثَةُ حَمْراءُ. ما رُتْبَةُ السَّيّارَةِ الحَمْراءِ؟",
+        "solutionAr": "نَعُدُّ مِنَ اليَمِينِ: الأُولى ($1$)، الثّانِيَةُ ($2$)، الثّالِثَةُ ($3$)؛ إِذَنْ رُتْبَةُ السَّيّارَةِ الحَمْراءِ هِيَ الثّالِثَةُ ($3$)."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! لا تَعُدَّ الشَّيْءَ نَفْسَهُ مَرَّتَيْنِ عِنْدَما تَكُونُ الأَشْياءُ مُبَعْثَرَةً، وَتَذَكَّرْ أَنَّ المَجْمُوعَةَ الفارِغَةَ يُمَثِّلُها العَدَدُ $0$."
+  },
+  "practice": [
+    {
+      "questionAr": "عُدَّ النُّجُومَ الخَضْراءَ في الصُّورَةِ: ما العَدَدُ الصَّحِيحُ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 120\" width=\"360\" height=\"120\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"20\" y=\"12\" width=\"320\" height=\"96\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><polygon points=\"70,28 74,38 85,38 76,44 79,54 70,48 61,54 64,44 55,38 66,38\" fill=\"#16a34a\"/><polygon points=\"145,62 149,72 160,72 151,78 154,88 145,82 136,88 139,78 130,72 141,72\" fill=\"#16a34a\"/><polygon points=\"185,24 189,34 200,34 191,40 194,50 185,44 176,50 179,40 170,34 181,34\" fill=\"#16a34a\"/><polygon points=\"245,60 249,70 260,70 251,76 254,86 245,80 236,86 239,76 230,70 241,70\" fill=\"#16a34a\"/><polygon points=\"295,28 299,38 310,38 301,44 304,54 295,48 286,54 289,44 280,38 291,38\" fill=\"#16a34a\"/></svg>",
+      "options": [
+        "$3$",
+        "$5$",
+        "$4$",
+        "$2$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "عُدَّ النُّجُومَ بِتَأَنٍّ مِنْ جِهَةٍ إلى أُخْرى؛ هُناكَ أَكْثَرُ مِنْ $3$ نُجُومٍ.",
+        "أَحْسَنْتَ! يُوجَدُ في الصُّورَةِ $5$ نُجُومٍ خَضْراءَ.",
+        "لَقَدْ نَسِيتَ نَجْمَةً واحِدَةً! أَعِدِ العَدَّ مِنْ جَدِيدٍ لِتَجِدَ $5$.",
+        "يُوجَدُ نَجْمَتانِ في الأَسْفَلِ وَ $3$ نُجُومٍ في الأَعْلى، المَجْمُوعُ هُوَ $5$."
+      ],
+      "explanationAr": "نَعُدُّ كُلَّ نَجْمَةٍ مَرَّةً واحِدَةً: $1$، $2$، $3$، $4$، $5$؛ إِذَنْ عَدَدُ النُّجُومِ هُوَ $5$."
+    },
+    {
+      "questionAr": "هذا الصُّنْدُوقُ فارِغٌ تَمامًا. ما العَدَدُ الَّذِي يُعَبِّرُ عَنْ عَدَدِ الكُراتِ داخِلَهُ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 110\" width=\"320\" height=\"110\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"85\" y=\"18\" width=\"150\" height=\"74\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"160\" y=\"60\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">صُنْدُوقٌ فارِغٌ</text></svg>",
+      "options": [
+        "$0$",
+        "$1$",
+        "$5$",
+        "$2$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "مُمْتازٌ! العَدَدُ $0$ يُعَبِّرُ عَنْ مَجْمُوعَةٍ فارِغَةٍ لا شَيْءَ فيها.",
+        "الصُّنْدُوقُ لا يَحْتَوِي عَلى أَيِّ كُرَةٍ، فَالْعَدَدُ لَيْسَ $1$.",
+        "الصُّنْدُوقُ فارِغٌ تَمامًا، فَالْعَدَدُ هُوَ $0$ وَلَيْسَ $5$.",
+        "لا تُوجَدُ كُرَتانِ في الصُّنْدُوقِ؛ إِنَّهُ فارِغٌ وَعَدَدُهُ $0$."
+      ],
+      "explanationAr": "عِنْدَما تَكُونُ المَجْمُوعَةُ فارِغَةً لا يُوجَدُ فيها أَيُّ عُنْصُرٍ، نَكْتُبُ العَدَدَ $0$."
+    },
+    {
+      "questionAr": "تَتَّجِهُ الدَّوائِرُ مِنْ البِدايَةِ عَلى اليَمِينِ. ما رُتْبَةُ الدّائِرَةِ البُرْتُقالِيَّةِ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 110\" width=\"360\" height=\"110\" style=\"background:#fff;font-family:Arial,sans-serif\"><circle cx=\"50\" cy=\"55\" r=\"16\" fill=\"#e2e8f0\" stroke=\"#64748b\" stroke-width=\"1.5\"/><circle cx=\"115\" cy=\"55\" r=\"16\" fill=\"#f97316\" stroke=\"#c2410c\" stroke-width=\"2\"/><circle cx=\"180\" cy=\"55\" r=\"16\" fill=\"#e2e8f0\" stroke=\"#64748b\" stroke-width=\"1.5\"/><circle cx=\"245\" cy=\"55\" r=\"16\" fill=\"#e2e8f0\" stroke=\"#64748b\" stroke-width=\"1.5\"/><circle cx=\"310\" cy=\"55\" r=\"16\" fill=\"#e2e8f0\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"310\" y=\"92\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">البِدايَةُ (1)</text></svg>",
+      "options": [
+        "الأُولى ($1$)",
+        "الثّانِيَةُ ($2$)",
+        "الخامِسَةُ ($5$)",
+        "الرّابِعَةُ ($4$)"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "البِدايَةُ مِنَ اليَمِينِ، والدّائِرَةُ الأُولى ($1$) رَمادِيَّةٌ وَلَيْسَتْ بُرْتُقالِيَّةً.",
+        "انْتَبِهْ إلى اتِّجاهِ العَدِّ! البِدايَةُ مِنَ اليَمِينِ وَلَيْسَ مِنَ اليَسارِ.",
+        "الدّائِرَةُ الخامِسَةُ ($5$) هِيَ الَّتِي في أَقْصَى اليَسارِ.",
+        "أَحْسَنْتَ! نَعُدُّ مِنَ اليَمِينِ: $1$، $2$، $3$، $4$، فَرُتْبَتُها هِيَ الرّابِعَةُ ($4$)."
+      ],
+      "explanationAr": "نَبْدَأُ العَدَّ مِنَ اليَمِينِ حَيْثُ كُتِبَتِ البِدايَةُ ($1$): الأُولى ($1$)، الثّانِيَةُ ($2$)، الثّالِثَةُ ($3$)، الرّابِعَةُ ($4$) هِيَ البُرْتُقالِيَّةُ."
+    }
+  ]
+}

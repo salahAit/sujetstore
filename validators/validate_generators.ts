@@ -1,10 +1,11 @@
 #!/usr/bin/env bun
 /**
  * Comprehensive verification harness for SujetStore MathTemplates:
- * - Check 1: All 63 Interactive Lessons (ALL_LESSONS)
- * - Check 2: All 54 Parameterized Templates (ALL_TEMPLATES) across seeds 1..100 (5,400 runs)
+ * - Check 1: All 189 Interactive Lessons (ALL_LESSONS, 9 grades x 21)
+ * - Check 2: All 162 Parameterized Templates (ALL_TEMPLATES, 9 grades x 18) across seeds 1..100 (16,200 runs)
  * - Check 3: Determinism across repeated runs at (seed=42, difficulty='medium')
- * - Check 4: Cleanup of newly created SVG assets in static/generated/math-svg/
+ * - Check 4: Exam & test assembler smoke checks across all 9 grades + special variants
+ * - Check 5: Cleanup of newly created SVG assets in static/generated/math-svg/
  */
 
 import { existsSync, readdirSync, readFileSync, unlinkSync } from 'node:fs';
@@ -15,6 +16,7 @@ import type { ContentBlock, TableCell, TrimesterId } from '../src/lib/modules/Su
 import type {
 	Difficulty,
 	GeneratedExerciseInstance,
+	GradeId,
 	InteractiveLessonData,
 	ParameterizedTemplate,
 	QuizQuestionPayload
@@ -29,9 +31,23 @@ const SVG_DIR = resolve(REPO_ROOT, 'static/generated/math-svg');
 const { ALL_LESSONS, ALL_TEMPLATES } = await import('../src/lib/modules/MathTemplates/index');
 const { evaluateSafeFormula, gradeQuestion } = await import('../src/lib/server/quiz-grading');
 
-const GRADES = ['2ap', '5ap', '2am'] as const;
+const GRADES: readonly GradeId[] = ['1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am'];
 const TRIMESTERS: readonly TrimesterId[] = ['t1', 't2', 't3'];
 const DIFFICULTIES: readonly Difficulty[] = ['easy', 'medium', 'hard'];
+
+function makeZeroGradeCounts(): Record<GradeId, number> {
+	return {
+		'1ap': 0,
+		'2ap': 0,
+		'3ap': 0,
+		'4ap': 0,
+		'5ap': 0,
+		'1am': 0,
+		'2am': 0,
+		'3am': 0,
+		'4am': 0
+	};
+}
 
 const EASTERN_DIGITS_RE = /[\u0660-\u0669\u06F0-\u06F9]/;
 const RAW_LATEX_IN_TYPST_RE = /\\(?:frac|times|div)(?![a-zA-Z])|\\sqrt\{/;
@@ -55,7 +71,7 @@ function checkKatexRenderError(text: unknown, label: string, issues: string[]): 
 }
 
 interface ValidationFailure {
-	check: 'lessons' | 'templates_meta' | 'templates_sweep' | 'determinism';
+	check: 'lessons' | 'templates_meta' | 'templates_sweep' | 'determinism' | 'assembler';
 	target: string;
 	seed?: number;
 	difficulty?: Difficulty;
@@ -374,12 +390,13 @@ function inspectContentBlock(block: ContentBlock, path: string, issues: string[]
 	}
 }
 
-function check2apStandaloneLargeInteger(text: string): string | null {
+function checkStandaloneDigitsAbove(text: string, minDigits: number): string | null {
 	const cleaned = text
 		.replace(/#[0-9a-fA-F]{3,8}\b/g, '')
 		.replace(/\b\d+px\b/g, '')
 		.replace(/(?<!\d)(?:2024|2025|2026)(?!\d)/g, '');
-	const match = cleaned.match(/(?<!\d)\d{4,}(?!\d)/);
+	const re = new RegExp(`(?<!\\d)\\d{${minDigits},}(?!\\d)`);
+	const match = cleaned.match(re);
 	return match ? match[0] : null;
 }
 
@@ -389,14 +406,14 @@ function validateLessons(): {
 	passed: number;
 	failed: number;
 } {
-	const byGrade: Record<string, number> = { '2ap': 0, '5ap': 0, '2am': 0 };
+	const byGrade: Record<string, number> = makeZeroGradeCounts();
 	const byGradeTrim = new Map<string, number>();
 
-	if (ALL_LESSONS.length !== 63) {
+	if (ALL_LESSONS.length !== 189) {
 		recordFailure({
 			check: 'lessons',
 			target: 'ALL_LESSONS',
-			reason: `Expected 63 lessons, found ${ALL_LESSONS.length}`
+			reason: `Expected 189 lessons, found ${ALL_LESSONS.length}`
 		});
 	}
 
@@ -546,15 +563,15 @@ function validateLessons(): {
 }
 
 function validateTemplateMetadata(): { total: number; byGrade: Record<string, number> } {
-	const byGrade: Record<string, number> = { '2ap': 0, '5ap': 0, '2am': 0 };
+	const byGrade: Record<string, number> = makeZeroGradeCounts();
 	const byGroup = new Map<string, { total: number; integration: number; nonIntegration: number }>();
 	const seenIds = new Set<string>();
 
-	if (ALL_TEMPLATES.length !== 54) {
+	if (ALL_TEMPLATES.length !== 162) {
 		recordFailure({
 			check: 'templates_meta',
 			target: 'ALL_TEMPLATES',
-			reason: `Expected 54 templates, found ${ALL_TEMPLATES.length}`
+			reason: `Expected 162 templates, found ${ALL_TEMPLATES.length}`
 		});
 	}
 
@@ -771,24 +788,45 @@ function validateTemplatesSweep(): {
 			}
 
 			// 4. Pedagogical guardrails
-			if (tpl.grade === '2ap') {
-				const fieldsToCheck: [string, string][] = [
-					['quizQuestion.questionText', q?.questionText ?? ''],
-					['finalAnswer', inst.finalAnswer ?? ''],
-					['sujetExercise.instruction', ex?.instruction ?? '']
-				];
-				for (const [label, txt] of fieldsToCheck) {
-					const bigNum = check2apStandaloneLargeInteger(txt);
-					if (bigNum) {
-						runIssues.push(`2AP guardrail: integer >= 1000 ("${bigNum}") found in ${label}`);
+			if (
+				tpl.grade === '1ap' ||
+				tpl.grade === '2ap' ||
+				tpl.grade === '3ap' ||
+				tpl.grade === '4ap' ||
+				tpl.grade === '5ap'
+			) {
+				if (/^-\d/.test((inst.finalAnswer ?? '').trim())) {
+					runIssues.push(`${tpl.grade.toUpperCase()} guardrail: negative finalAnswer "${inst.finalAnswer}"`);
+				}
+				const minDigitsMap: Partial<Record<GradeId, number>> = {
+					'1ap': 3, // >= 100
+					'2ap': 4, // >= 1000
+					'3ap': 6, // >= 100000
+					'4ap': 7 // >= 1000000
+				};
+				const minDigits = minDigitsMap[tpl.grade];
+				if (minDigits) {
+					const fieldsToCheck: [string, string][] = [
+						['quizQuestion.questionText', q?.questionText ?? ''],
+						['finalAnswer', inst.finalAnswer ?? ''],
+						['sujetExercise.instruction', ex?.instruction ?? '']
+					];
+					for (const [label, txt] of fieldsToCheck) {
+						const bigNum = checkStandaloneDigitsAbove(txt, minDigits);
+						if (bigNum) {
+							runIssues.push(
+								`${tpl.grade.toUpperCase()} guardrail: integer >= 10^${minDigits - 1} ("${bigNum}") found in ${label}`
+							);
+						}
 					}
 				}
-				if (/^-\d/.test((inst.finalAnswer ?? '').trim())) {
-					runIssues.push(`2AP guardrail: negative finalAnswer "${inst.finalAnswer}"`);
-				}
-			} else if (tpl.grade === '5ap') {
-				if (/^-\d/.test((inst.finalAnswer ?? '').trim())) {
-					runIssues.push(`5AP guardrail: negative finalAnswer "${inst.finalAnswer}"`);
+				if (
+					(tpl.grade === '1ap' || tpl.grade === '2ap' || tpl.grade === '3ap') &&
+					/^-?\d+[.,]\d+$/.test((inst.finalAnswer ?? '').trim())
+				) {
+					runIssues.push(
+						`${tpl.grade.toUpperCase()} guardrail: decimal finalAnswer "${inst.finalAnswer}"`
+					);
 				}
 			}
 
@@ -850,7 +888,55 @@ function validateDeterminism(): { checked: number; passed: number; failed: numbe
 	};
 }
 
-function main(): number {
+async function validateExamAssembler(): Promise<{ checked: number; passed: number; failed: number }> {
+	const { assembleExam } = await import('../src/lib/server/exam-assembler');
+	let checked = 0;
+	let failed = 0;
+
+	const runCase = (
+		label: string,
+		opts: Parameters<typeof assembleExam>[0],
+		expectedTotalPoints: number
+	) => {
+		checked++;
+		try {
+			const paper = assembleExam(opts);
+			const sumPoints = paper.examDoc.exercises.reduce((s, e) => s + Number(e.points || 0), 0);
+			if (Math.abs(sumPoints - expectedTotalPoints) > 1e-6 || paper.totalPoints !== expectedTotalPoints) {
+				failed++;
+				recordFailure({
+					check: 'assembler',
+					target: label,
+					seed: opts.seed,
+					reason: `Points mismatch: sum=${sumPoints}, paper.totalPoints=${paper.totalPoints}, expected=${expectedTotalPoints}`
+				});
+			}
+		} catch (err) {
+			failed++;
+			recordFailure({
+				check: 'assembler',
+				target: label,
+				seed: opts.seed,
+				reason: `assembleExam threw: ${err instanceof Error ? err.message : String(err)}`
+			});
+		}
+	};
+
+	for (const grade of GRADES) {
+		const expectedPts = grade.endsWith('ap') ? 10 : 20;
+		for (const trimesterId of TRIMESTERS) {
+			runCase(`${grade}:${trimesterId}:test`, { grade, trimesterId, seed: 101, docType: 'test', difficulty: 'medium' }, expectedPts);
+			runCase(`${grade}:${trimesterId}:exam`, { grade, trimesterId, seed: 202, docType: 'exam', difficulty: 'hard' }, expectedPts);
+		}
+	}
+	runCase('5ap:cinq_mock', { grade: '5ap', trimesterId: 't3', seed: 701, docType: 'exam', variant: 'cinq_mock', difficulty: 'medium' }, 10);
+	runCase('5ap:competency_eval', { grade: '5ap', trimesterId: 't3', seed: 801, docType: 'exam', variant: 'competency_eval', difficulty: 'medium' }, 10);
+	runCase('4am:bem_mock', { grade: '4am', trimesterId: 't3', seed: 901, docType: 'exam', variant: 'bem_mock', difficulty: 'hard' }, 20);
+
+	return { checked, passed: checked - failed, failed };
+}
+
+async function main(): Promise<number> {
 	const initialSvgSnapshot = existsSync(SVG_DIR)
 		? new Set<string>(readdirSync(SVG_DIR))
 		: new Set<string>();
@@ -859,6 +945,7 @@ function main(): number {
 	let templatesMeta: ReturnType<typeof validateTemplateMetadata> | null = null;
 	let sweepSummary: ReturnType<typeof validateTemplatesSweep> | null = null;
 	let determinismSummary: ReturnType<typeof validateDeterminism> | null = null;
+	let assemblerSummary: Awaited<ReturnType<typeof validateExamAssembler>> | null = null;
 	let deletedSvgCount = 0;
 	let remainingSvgCount = initialSvgSnapshot.size;
 
@@ -867,6 +954,7 @@ function main(): number {
 		templatesMeta = validateTemplateMetadata();
 		sweepSummary = validateTemplatesSweep();
 		determinismSummary = validateDeterminism();
+		assemblerSummary = await validateExamAssembler();
 	} finally {
 		if (existsSync(SVG_DIR)) {
 			const afterEntries = readdirSync(SVG_DIR);
@@ -900,6 +988,7 @@ function main(): number {
 			...(sweepSummary ?? {})
 		},
 		determinism: determinismSummary,
+		assembler: assemblerSummary,
 		svgCleanup: {
 			initialCount: initialSvgSnapshot.size,
 			deletedCount: deletedSvgCount,
@@ -915,4 +1004,4 @@ function main(): number {
 	return allFailures.length === 0 ? 0 : 1;
 }
 
-process.exit(main());
+process.exit(await main());

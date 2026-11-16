@@ -1,0 +1,128 @@
+{
+  "id": "lesson_4am_t3_linear_functions_percentages_graphs",
+  "slug": "4am-t3-linear-functions-percentages-graphs",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t3",
+  "sequenceId": "seq7",
+  "sequenceTitleAr": "المقطع السابع: جمل معادلتين والدوال الخطية والتآلفية وتطبيقات التناسبية",
+  "order": 2,
+  "titleAr": "الدالة الخطية وتطبيقات التناسبية (النسبة المئوية والمقادير المركبة) وتمثيلها بيانياً",
+  "objectives": [
+    "معرفة الترميز x ↦ ax للدالة الخطية وتعيين صورة عدد أو عدد علمت صورته، وتعيين الدالة الخطية انطلاقا من عدد غير معدوم وصورته",
+    "تمثيل دالة خطية بيانيا بمستقيم يشمل مبدأ المعلم وقراءة تمثيلها البياني وحساب معاملها انطلاقا من التمثيل البياني",
+    "ترجمة مشكلات النسبة المئوية (أخذ t%، زيادة بـ t%، خفض بـ t%) والمقادير المركبة (السرعة، الكتلة الحجمية، الاستهلاك) بدوال خطية وحلها"
+  ],
+  "keywordsAr": [
+    "الدالة الخطية",
+    "معامل الدالة الخطية",
+    "التمثيل البياني لدالة خطية",
+    "النسبة المئوية",
+    "المقادير المركبة"
+  ],
+  "discover": {
+    "scenarioAr": "بمناسبة الدخول المدرسي، أعلن متجر عن **تخفيض بنسبة $20\\%$** على جميع المحافظ والحقائب. إذا كان السعر الأصلي لمحفظة هو $x$ دينار، نريد التعبير عن سعرها الجديد $p(x)$ بعد التخفيض بعملية ضرب واحدة، ثم تمثيل هذه الوضعية بيانياً.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 240\" width=\"580\" height=\"240\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"224\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"31\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">تخفيض 20%: جدول التناسبية والتمثيل البياني للدالة الخطية</text><rect x=\"20\" y=\"46\" width=\"245\" height=\"172\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"142\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">جدول الأسعار بعد التخفيض</text><rect x=\"32\" y=\"78\" width=\"221\" height=\"84\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"32\" y1=\"106\" x2=\"253\" y2=\"106\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"32\" y1=\"134\" x2=\"253\" y2=\"134\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"98\" y1=\"78\" x2=\"98\" y2=\"162\" stroke=\"#94a3b8\" stroke-width=\"1.1\"/><line x1=\"150\" y1=\"78\" x2=\"150\" y2=\"162\" stroke=\"#94a3b8\" stroke-width=\"1.1\"/><line x1=\"202\" y1=\"78\" x2=\"202\" y2=\"162\" stroke=\"#94a3b8\" stroke-width=\"1.1\"/><text x=\"65\" y=\"96\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">السعر x</text><text x=\"124\" y=\"96\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\" direction=\"ltr\">1000</text><text x=\"176\" y=\"96\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\" direction=\"ltr\">2000</text><text x=\"227\" y=\"96\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\" direction=\"ltr\">3000</text><text x=\"65\" y=\"124\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">الجديد p(x)</text><text x=\"124\" y=\"124\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">800</text><text x=\"176\" y=\"124\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">1600</text><text x=\"227\" y=\"124\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">2400</text><text x=\"65\" y=\"152\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">p(x) / x</text><text x=\"176\" y=\"152\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">= 0.8 (ثابت)</text><rect x=\"32\" y=\"174\" width=\"221\" height=\"32\" rx=\"7\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.2\"/><text x=\"142\" y=\"195\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">p(x) = (1 - 20/100)x = 0.8x</text><rect x=\"278\" y=\"46\" width=\"282\" height=\"172\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.4\"/><line x1=\"320\" y1=\"194\" x2=\"540\" y2=\"194\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"540,194 532,190 532,198\" fill=\"#334155\"/><line x1=\"325\" y1=\"200\" x2=\"325\" y2=\"58\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"325,58 321,66 329,66\" fill=\"#334155\"/><text x=\"314\" y=\"208\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><text x=\"546\" y=\"198\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">x</text><text x=\"336\" y=\"67\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">p(x)</text><line x1=\"385\" y1=\"190\" x2=\"385\" y2=\"198\" stroke=\"#475569\" stroke-width=\"1.4\"/><text x=\"385\" y=\"211\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">1000</text><line x1=\"445\" y1=\"190\" x2=\"445\" y2=\"198\" stroke=\"#475569\" stroke-width=\"1.4\"/><text x=\"445\" y=\"211\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">2000</text><line x1=\"505\" y1=\"190\" x2=\"505\" y2=\"198\" stroke=\"#475569\" stroke-width=\"1.4\"/><text x=\"505\" y=\"211\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">3000</text><line x1=\"321\" y1=\"154\" x2=\"329\" y2=\"154\" stroke=\"#475569\" stroke-width=\"1.4\"/><text x=\"318\" y=\"158\" text-anchor=\"end\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">800</text><line x1=\"321\" y1=\"114\" x2=\"329\" y2=\"114\" stroke=\"#475569\" stroke-width=\"1.4\"/><text x=\"318\" y=\"118\" text-anchor=\"end\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">1600</text><line x1=\"321\" y1=\"74\" x2=\"329\" y2=\"74\" stroke=\"#475569\" stroke-width=\"1.4\"/><text x=\"318\" y=\"78\" text-anchor=\"end\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">2400</text><line x1=\"505\" y1=\"74\" x2=\"505\" y2=\"194\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/><line x1=\"325\" y1=\"74\" x2=\"505\" y2=\"74\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/><line x1=\"325\" y1=\"194\" x2=\"526\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><circle cx=\"325\" cy=\"194\" r=\"3.8\" fill=\"#0f172a\"/><circle cx=\"385\" cy=\"154\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"445\" cy=\"114\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"505\" cy=\"74\" r=\"4\" fill=\"#dc2626\"/><text x=\"435\" y=\"92\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">p(x) = 0.8x</text></svg>",
+    "steps": [
+      {
+        "promptAr": "ثمن محفظة قبل التخفيض هو $2500\\text{ DA}$ . احسب قيمة التخفيض (أي $20\\%$ من $2500\\text{ DA}$ ) بالدينار.",
+        "hintAr": "لحساب $20\\%$ من عدد نضربه في $\\frac{20}{100}$ .",
+        "expectedInput": "500",
+        "revealAr": "مبلغ التخفيض هو $2500 \\times \\frac{20}{100} = 500\\text{ DA}$ ، وتمثّله الدالة الخطية $x \\mapsto 0.20x$ ."
+      },
+      {
+        "promptAr": "ما هو السعر الجديد للمحفظة بالدينار بعد خصم التخفيض؟",
+        "hintAr": "اطرح مبلغ التخفيض ($500$) من السعر الأصلي ($2500$).",
+        "expectedInput": "2000",
+        "revealAr": "السعر الجديد هو $2500 - 500 = 2000\\text{ DA}$ . ونلاحظ أن $2000 = 2500 \\times (1 - 0.20) = 2500 \\times 0.8$ ."
+      },
+      {
+        "promptAr": "نعبّر عن السعر الجديد بالدالة الخطية $p(x) = a x$ . ما قيمة المعامل $a$ في حالة تخفيض $20\\%$ ؟",
+        "hintAr": "احسب $1 - \\frac{20}{100}$ أو اقسم $2000$ على $2500$ .",
+        "expectedInput": "0.8",
+        "revealAr": "المعامل هو $a = 1 - \\frac{20}{100} = 0.8$ ، فتُكتب الدالة الخطية: $p: x \\mapsto 0.8x$ ، وتمثيلها البياني مستقيم يشمل المبدأ $O(0 ; 0)$ ."
+      },
+      {
+        "promptAr": "اشترت سارة حقيبة سعرها **بعد التخفيض** $2400\\text{ DA}$ . ما هو سعرها **الأصلي** $x$ قبل التخفيض (أي العدد الذي صورته $2400$ بالدالة $p$ )؟",
+        "hintAr": "حل المعادلة $0.8x = 2400$ بقسمة $2400$ على $0.8$ .",
+        "expectedInput": "3000",
+        "revealAr": "نحل $0.8x = 2400 \\implies x = \\frac{2400}{0.8} = 3000\\text{ DA}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**تعريف الدالة الخطية**: لكل عدد معلوم $a$ ، الدالة التي ترفق بكل عدد $x$ الجداء $ax$ تسمى **دالة خطية** معاملها $a$ ، ونرمز لها $f: x \\mapsto ax$ أو $f(x) = ax$ . تُترجم الدالة الخطية وضعية **تناسبية** معامل تناسبها هو $a$ .",
+      "**الصورة، السابقة، وتعيين المعامل**: صورة $x$ هي $f(x) = ax$ . لإيجاد العدد $x$ الذي صورته $y$ (السابقة) نحل المعادلة $ax = y$ فنجد $x = \\frac{y}{a}$ ($a \\neq 0$). ولتعيين المعامل $a$ انطلاقاً من عدد غير معدوم $x_0$ وصورته $f(x_0)$ نطبق: $a = \\frac{f(x_0)}{x_0}$ .",
+      "**التمثيل البياني للدالة الخطية**: هو **مستقيم يشمل مبدأ المعلم** $O(0 ; 0)$ والنقطة ذات الإحداثيات $(1 ; a)$ . لقراءة $a$ من التمثيل البياني، نختار نقطة $M(x_0 ; y_0)$ من المستقيم ($x_0 \\neq 0$) ثم نحسب $a = \\frac{y_0}{x_0}$ .",
+      "**النسبة المئوية والمقادير المركبة**: أخذ $t\\%$ من $x$ يوافقه $x \\mapsto \\frac{t}{100}x$ ؛ الزيادة بـ $t\\%$ توافقها $x \\mapsto \\left(1 + \\frac{t}{100}\\right)x$ ؛ والتخفيض بـ $t\\%$ يوافقه $x \\mapsto \\left(1 - \\frac{t}{100}\\right)x$ . كما تُنمذج المقادير المركبة بدوال خطية مثل المسافة $d(t) = v \\times t$ (بسرعة ثابتة $v$) والكتلة $m(V) = \\rho \\times V$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\" width=\"600\" height=\"245\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"229\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"31\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الحوصلة البصرية: التمثيل البياني للدالة الخطية وتطبيقاتها</text><rect x=\"20\" y=\"46\" width=\"288\" height=\"178\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.3\"/><line x1=\"68\" y1=\"139\" x2=\"268\" y2=\"139\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"268,139 261,135 261,143\" fill=\"#334155\"/><line x1=\"164\" y1=\"215\" x2=\"164\" y2=\"58\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"164,58 160,65 168,65\" fill=\"#334155\"/><text x=\"276\" y=\"143\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">x</text><text x=\"174\" y=\"67\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">y</text><text x=\"153\" y=\"153\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><line x1=\"188\" y1=\"91\" x2=\"188\" y2=\"139\" stroke=\"#93c5fd\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"164\" y1=\"91\" x2=\"188\" y2=\"91\" stroke=\"#93c5fd\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"212\" y1=\"139\" x2=\"212\" y2=\"163\" stroke=\"#fca5a5\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"164\" y1=\"163\" x2=\"212\" y2=\"163\" stroke=\"#fca5a5\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"128\" y1=\"211\" x2=\"200\" y2=\"67\" stroke=\"#2563eb\" stroke-width=\"2.3\"/><line x1=\"92\" y1=\"103\" x2=\"236\" y2=\"175\" stroke=\"#dc2626\" stroke-width=\"2.3\"/><circle cx=\"164\" cy=\"139\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"188\" cy=\"91\" r=\"4\" fill=\"#2563eb\"/><text x=\"195\" y=\"87\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">(1 ; 2)</text><text x=\"216\" y=\"69\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">f(x) = 2x</text><circle cx=\"212\" cy=\"163\" r=\"4\" fill=\"#dc2626\"/><text x=\"218\" y=\"178\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">(2 ; -1)</text><text x=\"106\" y=\"96\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">g(x) = -0.5x</text><text x=\"164\" y=\"216\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#475569\" direction=\"rtl\">كل تمثيل خطي يمر بالمبدأ O(0 ; 0)</text><rect x=\"322\" y=\"46\" width=\"258\" height=\"52\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.3\"/><text x=\"451\" y=\"66\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">زيادة بنسبة t%</text><text x=\"451\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">f(x) = (1 + t/100) × x</text><rect x=\"322\" y=\"108\" width=\"258\" height=\"52\" rx=\"8\" fill=\"#ecfdf5\" stroke=\"#059669\" stroke-width=\"1.3\"/><text x=\"451\" y=\"128\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">تخفيض بنسبة t%</text><text x=\"451\" y=\"150\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">f(x) = (1 - t/100) × x</text><rect x=\"322\" y=\"170\" width=\"258\" height=\"54\" rx=\"8\" fill=\"#fefce8\" stroke=\"#d97706\" stroke-width=\"1.3\"/><text x=\"451\" y=\"190\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">المقادير المركبة</text><text x=\"451\" y=\"211\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">d = v × t   |   m = ρ × V</text></svg>",
+    "visualCaptionAr": "التمثيل البياني لدالتين خطيتين يمران بالمبدأ، ونمذجة النسب المئوية والمقادير المركبة",
+    "examples": [
+      {
+        "problemAr": "$f$ دالة خطية بحيث $f(-3) = 12$ . عيّن عبارة $f(x)$ ، ثم احسب $f(5)$ وأوجد العدد $x$ الذي صورته $-28$ .",
+        "solutionAr": "1. نكتب $f(x) = ax$ ، ومنه $a = \\frac{f(-3)}{-3} = \\frac{12}{-3} = -4$ ، إذن $f(x) = -4x$ .\n\n2. صورة $5$ هي: $f(5) = -4 \\times 5 = -20$ .\n\n3. لإيجاد $x$ الذي صورته $-28$ نحل $-4x = -28 \\implies x = \\frac{-28}{-4} = 7$ ."
+      },
+      {
+        "problemAr": "ارتفع سعر منتج بنسبة $15\\%$ فأصبح $2070\\text{ DA}$ (والنسبة المئوية للزيادة ممثلة بدالة خطية). ما هو السعر الأصلي قبل الزيادة؟",
+        "solutionAr": "زيادة بـ $15\\%$ تُترجم بالدالة الخطية $f(x) = \\left(1 + \\frac{15}{100}\\right)x = 1.15x$ .\n\nنحل المعادلة $1.15x = 2070 \\implies x = \\frac{2070}{1.15} = 1800\\text{ DA}$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: بعد تخفيض بنسبة $20\\%$ ، لا يمكنك إضافة $20\\%$ من السعر **الجديد** لاسترجاع السعر الأصلي! بل تقسم السعر الجديد على المعامل $(1 - 0.20) = 0.8$ . وانتبه أيضاً إلى الفرق بين حساب **صورة** عدد ($f(3)$) وإيجاد **العدد الذي صورته** $3$ (حل $ax = 3$)."
+  },
+  "practice": [
+    {
+      "questionAr": "$f$ دالة خطية بحيث $f(4) = -10$ . ما هي عبارتها الجبرية، وما هو العدد $x$ الذي صورته $15$ بالدالة $f$ ؟",
+      "options": [
+        "$f(x) = -0.4x$ والعدد هو $-37.5$",
+        "$f(x) = -2.5x$ والعدد هو $-6$",
+        "$f(x) = -2.5x$ والعدد هو $-37.5$",
+        "$f(x) = -2.5x$ والعدد هو $6$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "قلبتَ القسمة! المعامل هو $a = \\frac{f(4)}{4} = \\frac{-10}{4} = -2.5$ وليس $\\frac{4}{-10}$ .",
+        "ممتاز! حسبتَ $a = \\frac{-10}{4} = -2.5$ ثم حللتَ المعادلة $-2.5x = 15$ فوجدتَ $x = -6$ .",
+        "العبارة $f(x) = -2.5x$ صحيحة، لكنك حسبتَ $f(15)$ بدلاً من إيجاد العدد الذي صورته $15$ .",
+        "انتبه للإشارة عند القسمة: $x = \\frac{15}{-2.5} = -6$ وليس $+6$ ."
+      ],
+      "explanationAr": "المعامل هو $a = \\frac{f(4)}{4} = \\frac{-10}{4} = -2.5$ ، إذن $f(x) = -2.5x$ . لإيجاد العدد $x$ الذي صورته $15$ نحل $-2.5x = 15 \\implies x = \\frac{15}{-2.5} = -6$ ."
+    },
+    {
+      "questionAr": "التمثيل البياني المقابل يمثل دالة خطية $f$ تمر بالمبدأ $O$ والنقطة $A(2 ; 3)$ . ما هي عبارة $f(x)$ وما قيمة $f(-2)$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 235\" width=\"360\" height=\"235\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"219\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><line x1=\"89\" y1=\"36\" x2=\"89\" y2=\"208\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"111\" y1=\"36\" x2=\"111\" y2=\"208\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"133\" y1=\"36\" x2=\"133\" y2=\"208\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"177\" y1=\"36\" x2=\"177\" y2=\"208\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"199\" y1=\"36\" x2=\"199\" y2=\"208\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"221\" y1=\"36\" x2=\"221\" y2=\"208\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"243\" y1=\"36\" x2=\"243\" y2=\"208\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"67\" y1=\"46\" x2=\"265\" y2=\"46\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"67\" y1=\"68\" x2=\"265\" y2=\"68\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"67\" y1=\"90\" x2=\"265\" y2=\"90\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"67\" y1=\"112\" x2=\"265\" y2=\"112\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"67\" y1=\"156\" x2=\"265\" y2=\"156\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"67\" y1=\"178\" x2=\"265\" y2=\"178\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"67\" y1=\"200\" x2=\"265\" y2=\"200\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"60\" y1=\"134\" x2=\"272\" y2=\"134\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"272,134 264,130 264,138\" fill=\"#334155\"/><line x1=\"155\" y1=\"214\" x2=\"155\" y2=\"28\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"155,28 151,36 159,36\" fill=\"#334155\"/><text x=\"278\" y=\"138\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">x</text><text x=\"164\" y=\"36\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">y</text><text x=\"145\" y=\"147\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><text x=\"111\" y=\"147\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">-2</text><text x=\"177\" y=\"147\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">1</text><text x=\"199\" y=\"147\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">2</text><text x=\"221\" y=\"147\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">3</text><text x=\"149\" y=\"116\" text-anchor=\"end\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">1</text><text x=\"149\" y=\"72\" text-anchor=\"end\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">3</text><text x=\"149\" y=\"204\" text-anchor=\"end\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">-3</text><line x1=\"199\" y1=\"68\" x2=\"199\" y2=\"134\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><line x1=\"155\" y1=\"68\" x2=\"199\" y2=\"68\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><line x1=\"105\" y1=\"209\" x2=\"212\" y2=\"48\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><circle cx=\"155\" cy=\"134\" r=\"3.8\" fill=\"#0f172a\"/><circle cx=\"199\" cy=\"68\" r=\"4.5\" fill=\"#dc2626\"/><text x=\"208\" y=\"65\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">A(2 ; 3)</text></svg>",
+      "options": [
+        "$f(x) = \\frac{2}{3}x$ و $f(-2) = -\\frac{4}{3}$",
+        "$f(x) = 1.5x$ و $f(-2) = 3$",
+        "$f(x) = 1.5x$ و $f(-2) = -3$",
+        "$f(x) = x + 1$ و $f(-2) = -1$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "المعامل هو $\\frac{y_A}{x_A} = \\frac{3}{2} = 1.5$ وليس $\\frac{x_A}{y_A} = \\frac{2}{3}$ .",
+        "عبارة الدالة $f(x) = 1.5x$ صحيحة، لكن ضرب موجب في سالب يعطي سالباً: $1.5 \\times (-2) = -3$ .",
+        "أحسنت! من النقطة $A(2 ; 3)$ نجد $a = \\frac{3}{2} = 1.5$ ، ومنه $f(-2) = 1.5 \\times (-2) = -3$ .",
+        "المستقيم يشمل المبدأ $O(0 ; 0)$ لذا الدالة خطية من الشكل $ax$ وليست $x + 1$ ."
+      ],
+      "explanationAr": "بما أن المستقيم يمر بالمبدأ $O$ وبالنقطة $A(2 ; 3)$ فإن $f(x) = ax$ مع $a = \\frac{3}{2} = 1.5$ ، أي $f(x) = 1.5x$ . وبالتالي $f(-2) = 1.5 \\times (-2) = -3$ (كما يظهر على البيان عند الفاصلة $-2$)."
+    },
+    {
+      "questionAr": "بعد **تخفيض بنسبة $15\\%$** ، أصبح سعر معطف شتوي $3400\\text{ DA}$ . ما هو سعره الأصلي قبل التخفيض؟",
+      "options": [
+        "$3910\\text{ DA}$",
+        "$2890\\text{ DA}$",
+        "$4250\\text{ DA}$",
+        "$4000\\text{ DA}$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "احذر الفخ! $3400 \\times 1.15 = 3910$ تضيف $15\\%$ من السعر المخفّض، وهذا لا يرجعك إلى السعر الأصلي.",
+        "لقد طبقتَ تخفيضاً ثانياً ($3400 \\times 0.85 = 2890$) بدلاً من عكس عملية التخفيض.",
+        "تخفيض $15\\%$ يعني الضرب في $1 - 0.15 = 0.85$ وليس في $0.80$ .",
+        "ممتاز! السعر الأصلي $x$ يحقق $0.85x = 3400$ ، ومنه $x = \\frac{3400}{0.85} = 4000\\text{ DA}$ ."
+      ],
+      "explanationAr": "ننمذج التخفيض بـ $15\\%$ بالدالة الخطية $p(x) = \\left(1 - \\frac{15}{100}\\right)x = 0.85x$ . لدينا $0.85x = 3400$ ، إذن السعر الأصلي هو $x = \\frac{3400}{0.85} = 4000\\text{ DA}$ . (تحقق: $4000 - 15\\% \\times 4000 = 4000 - 600 = 3400\\text{ DA}$ )."
+    }
+  ]
+}

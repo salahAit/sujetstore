@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "2ap",
+    "yearName": "السنة الثانية ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "احسب الجداء التالي مستعملاً الطريقة المناسبة (الضرب في 10 أو التفكيك النموذجي):",
+      "content": [
+        {
+          "type": "text",
+          "content": "أكمل الحساب بالتفكيك النموذجي: $28 times 3 = (20 + 8) times 3 = \"...........\"$",
+          "answer": "الحساب: $(20 times 3) + (8 times 3) = 60 + 24 = 84$",
+          "mark": "3"
+        }
+      ],
+      "id": "ex_test_1_2ap_t3_mult_tens_2digit",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "لاحظ المنشور المرسوم على المرصوفة ثم أكمل ملء الجدول حول المجسمات (المكعب والبلاطة القائمة):",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.15fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) ما اسم المجسم الذي يمثله هذا المنشور على المرصوفة؟ ..............",
+              "answer": "المكعب (لأن وجوهه الستة كلها مربعات متقايسة).",
+              "mark": "1"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/2ap_t3_solid_hard_s218149.svg",
+              "caption": "منشور مجسم على المرصوفة"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "المجسم",
+            "عدد الوجوه",
+            "عدد الأحرف",
+            "عدد الرؤوس",
+            "شكل الوجوه"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "المكعب",
+              {
+                "content": "........",
+                "answer": "$6$",
+                "mark": "0.5"
+              },
+              {
+                "content": "........",
+                "answer": "$12$",
+                "mark": "0.5"
+              },
+              "$8$",
+              "مربع"
+            ],
+            [
+              "متوازي المستطيلات",
+              "$6$",
+              "$12$",
+              {
+                "content": "........",
+                "answer": "$8$",
+                "mark": "0.5"
+              },
+              {
+                "content": "........",
+                "answer": "مستطيل",
+                "mark": "0.5"
+              }
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        }
+      ],
+      "id": "ex_test_2_2ap_t3_grid_symmetry_solids",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "أثناء التسوق في متجر الحي، تملك نور مبلغ $300$ دج (DA). اشترت $4$ علب بسكويت بثمن $26$ دج للواحدة، وقارورة ماء كبيرة بثمن $140$ دج.",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب ثمن علب البسكويت ثم احسب المبلغ الإجمالي للمشتريات.",
+          "answer": "ثمن علب البسكويت: $26 times 4 = 104$ دج، والمجموع: $104 + 140 = 244$ دج.",
+          "mark": "2"
+        },
+        {
+          "type": "text",
+          "content": "2) كم ديناراً بقي مع نور؟",
+          "answer": "الباقي مع نور: $300 - 244 = 56$ دج.",
+          "mark": "2"
+        }
+      ],
+      "id": "ex_integration_2ap_t3_integration_purchase_change"
+    }
+  ]
+}

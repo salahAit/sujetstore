@@ -1,0 +1,127 @@
+{
+  "id": "lesson_3am_t2_powers_of_rational_numbers",
+  "slug": "3am-t2-powers-of-rational-numbers",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: الكتابة العلمية ورتبة مقدار وقوى عدد نسبي",
+  "order": 2,
+  "titleAr": "قوى ذات أسس صحيحة نسبية لعدد نسبي وقواعد الحساب عليها",
+  "objectives": [
+    "حساب قوة عدد نسبي غير معدوم ذات أس صحيح نسبي موجب أو سالب ($a^{n}$ و $a^{-n} = \\frac{1}{a^{n}}$) والتمييز بين $(-a)^{n}$ و $-a^{n}$",
+    "معرفة وتوظيف قواعد الحساب على قوى عدد نسبي (الجداء، حاصل القسمة، قوة قوة، قوة جداء، وقوة حاصل قسمة) في وضعيات بسيطة",
+    "إجراء سلاسل حسابات تتضمن قوى باحترام قواعد الأولوية (الأقواس ثم القوى ثم الضرب والقسمة ثم الجمع والطرح)"
+  ],
+  "keywordsAr": [
+    "قوة عدد نسبي",
+    "الأس السالب لعدد نسبي",
+    "قواعد الحساب على القوى",
+    "أولوية القوى",
+    "حساب يتضمن قوى"
+  ],
+  "discover": {
+    "scenarioAr": "في تحدّي الحساب السريع، لاحظ تلاميذ الثالثة متوسط نمطاً منتظماً عند قسمة كل قوة للعدد $2$ على $2$ للوصول إلى الأسس السالبة. كما اختلفوا حول مقارنة $(-3)^{2}$ مع $-3^{2}$ وحول ترتيب العمليات في عبارة تضم قوى. لنكتشف أسرار القوى ذات الأسس الصحيحة النسبية وقواعد الحساب عليها.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 200\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"200\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"12\" y=\"12\" width=\"248\" height=\"176\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"136\" y=\"33\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">القوى السالبة = مقلوب القوة الموجبة</text><text x=\"136\" y=\"58\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">2^3 = 8  →  (÷ 2)  →  2^2 = 4</text><text x=\"136\" y=\"83\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">2^1 = 2  →  (÷ 2)  →  2^0 = 1</text><text x=\"136\" y=\"110\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"800\" fill=\"#1d4ed8\">2^-1 = 1/2   |   2^-2 = 1/4</text><text x=\"136\" y=\"137\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"800\" fill=\"#1d4ed8\">2^-3 = 1 / 2^3 = 1/8</text><text x=\"136\" y=\"169\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#15803d\" direction=\"rtl\" unicode-bidi=\"plaintext\">تنبيه: 2^-3 عدد موجب تماماً!</text><rect x=\"272\" y=\"12\" width=\"196\" height=\"176\" rx=\"8\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"370\" y=\"33\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#991b1b\" direction=\"rtl\" unicode-bidi=\"plaintext\">التمييز بين (-a)^n و -a^n</text><rect x=\"284\" y=\"48\" width=\"172\" height=\"56\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"370\" y=\"71\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"800\" fill=\"#166534\">(-3)^2 = (-3) × (-3) = +9</text><text x=\"370\" y=\"93\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"10.5\" fill=\"#15803d\" direction=\"rtl\" unicode-bidi=\"plaintext\">الأس يشمل الإشارة (الأس زوجي ← +)</text><rect x=\"284\" y=\"116\" width=\"172\" height=\"58\" rx=\"6\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><text x=\"370\" y=\"140\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"800\" fill=\"#991b1b\">-3^2 = -(3 × 3) = -9</text><text x=\"370\" y=\"162\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"10.5\" fill=\"#b91c1c\" direction=\"rtl\" unicode-bidi=\"plaintext\">الأس يخص العدد 3 فقط دون الإشارة</text></svg>",
+    "steps": [
+      {
+        "promptAr": "باستعمال تعريف الأس السالب $2^{-3} = \\frac{1}{2^{3}}$، ما هو مقام هذا الكسر (أي قيمة $2^{3}$)؟",
+        "hintAr": "$2^{3}$ تعني جداء ثلاثة عوامل كلها تساوي $2$: $2 \\times 2 \\times 2$.",
+        "expectedInput": "8",
+        "revealAr": "$2^{3} = 2 \\times 2 \\times 2 = 8$، إذن $2^{-3} = \\frac{1}{8}$ (وهو مقلوب $2^{3}$ ويساوي $0.125$)."
+      },
+      {
+        "promptAr": "قارن بين $(-3)^{2}$ و $-3^{2}$. ما قيمة العبارة $(-3)^{2}$؟",
+        "hintAr": "الأقواس تعني أن الأساس هو $(-3)$ نفسه: $(-3) \\times (-3)$.",
+        "expectedInput": "9",
+        "revealAr": "$(-3)^{2} = (-3) \\times (-3) = +9$، بينما $-3^{2} = -(3 \\times 3) = -9$. انتبه دائماً لوجود الأقواس!"
+      },
+      {
+        "promptAr": "لتبسيط الجداء $5^{3} \\times 5^{4}$ على شكل قوة واحدة للعدد $5$ أي $5^{k}$، ما قيمة الأس $k$؟",
+        "hintAr": "في جداء قوتين لهما نفس الأساس، نجمع الأسين.",
+        "expectedInput": "7",
+        "revealAr": "نطبق قاعدة جداء قوتين بنفس الأساس: $5^{3} \\times 5^{4} = 5^{3+4} = 5^{7}$."
+      },
+      {
+        "promptAr": "احسب قيمة السلسلة $A = 3 + 2 \\times 5^{2}$ باحترام أولوية العمليات.",
+        "hintAr": "أولوية القوى تسبق الضرب، والضرب يسبق الجمع: احسب $5^{2}$ أولاً.",
+        "expectedInput": "53",
+        "revealAr": "أولاً القوة: $5^{2} = 25$، ثم الضرب: $2 \\times 25 = 50$، وأخيراً الجمع: $A = 3 + 50 = 53$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**القوى ذات أسس موجبة وسالبة**: من أجل كل عدد نسبي $a$ غير معدوم وعدد طبيعي $n \\ge 1$: $a^{n} = \\underbrace{a \\times a \\times \\dots \\times a}_{n}$، و $a^{1} = a$، و $a^{0} = 1$، و $a^{-n} = \\frac{1}{a^{n}}$ (وهو مقلوب $a^{n}$). وبصفة خاصة $\\left(\\frac{a}{b}\\right)^{-n} = \\left(\\frac{b}{a}\\right)^{n}$.",
+      "**إشارة قوة عدد نسبي**: القوة $(-a)^{n}$ تكون **موجبة** إذا كان الأس $n$ **زوجياً**، و**سالبة** إذا كان الأس $n$ **فردياً** (لأن عدد العوامل السالبة يحدد إشارة الجداء). أما $-a^{n} = -(a^{n})$ فتكون سالبة دوماً عندما $a > 0$.",
+      "**قواعد الحساب على القوى** (من أجل $a \\neq 0$ و $b \\neq 0$ و $n$ و $m$ عددين صحيحين نسبيين): $a^{n} \\times a^{m} = a^{n+m}$، و $\\frac{a^{n}}{a^{m}} = a^{n-m}$، و $(a^{n})^{m} = a^{n \\times m}$، و $(a \\times b)^{n} = a^{n} \\times b^{n}$، و $\\left(\\frac{a}{b}\\right)^{n} = \\frac{a^{n}}{b^{n}}$.",
+      "**أولوية العمليات في سلسلة تتضمن قوى**: نحسب بالترتيب: **1. الأقواس** (من الداخلية إلى الخارجية) $\\leftarrow$ **2. القوى** $\\leftarrow$ **3. الضرب والقسمة** (من اليسار إلى اليمين) $\\leftarrow$ **4. الجمع والطرح** (من اليسار إلى اليمين)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 195\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"195\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"14\" y=\"14\" width=\"246\" height=\"167\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"137\" y=\"35\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">قواعد الحساب على القوى</text><text x=\"137\" y=\"60\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">a^n × a^m = a^(n+m)</text><text x=\"137\" y=\"84\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">a^n / a^m = a^(n-m)</text><text x=\"137\" y=\"108\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">(a^n)^m = a^(n × m)</text><text x=\"137\" y=\"132\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">(a × b)^n = a^n × b^n</text><text x=\"137\" y=\"158\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#1d4ed8\">a^-n = 1 / a^n   |   a^0 = 1</text><rect x=\"274\" y=\"14\" width=\"192\" height=\"167\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"370\" y=\"35\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">ترتيب أولوية العمليات</text><rect x=\"292\" y=\"48\" width=\"156\" height=\"26\" rx=\"6\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><text x=\"370\" y=\"65\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#991b1b\" direction=\"rtl\" unicode-bidi=\"plaintext\">1. ما داخل الأقواس</text><rect x=\"292\" y=\"80\" width=\"156\" height=\"26\" rx=\"6\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"1.2\"/><text x=\"370\" y=\"97\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#5b21b6\" direction=\"rtl\" unicode-bidi=\"plaintext\">2. حساب القوى a^n</text><rect x=\"292\" y=\"112\" width=\"156\" height=\"26\" rx=\"6\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.2\"/><text x=\"370\" y=\"129\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#92400e\" direction=\"rtl\" unicode-bidi=\"plaintext\">3. الضرب والقسمة</text><rect x=\"292\" y=\"144\" width=\"156\" height=\"26\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"370\" y=\"161\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">4. الجمع والطرح</text></svg>",
+    "visualCaptionAr": "ملخص قواعد القوى ذات الأسس الصحيحة النسبية وترتيب أولوية العمليات الحسابية",
+    "examples": [
+      {
+        "problemAr": "اكتب العبارة $B = \\frac{3^{5} \\times 3^{-2}}{(3^{2})^{2}}$ على شكل قوة واحدة للعدد $3$، ثم احسب قيمة $\\left(\\frac{2}{5}\\right)^{-2}$.",
+        "solutionAr": "نبسط البسط والمقام أولاً: $B = \\frac{3^{5 + (-2)}}{3^{2 \\times 2}} = \\frac{3^{3}}{3^{4}} = 3^{3 - 4} = 3^{-1}$ (ويساوي $\\frac{1}{3}$).\n\nولحساب $\\left(\\frac{2}{5}\\right)^{-2}$ نأخذ مقلوب الكسر مع أس موجب: $\\left(\\frac{2}{5}\\right)^{-2} = \\left(\\frac{5}{2}\\right)^{2} = \\frac{5^{2}}{2^{2}} = \\frac{25}{4}$."
+      },
+      {
+        "problemAr": "احسب بتمعّن السلسلة $C = 50 - 3 \\times (-2)^{3} + (-1)^{2026}$.",
+        "solutionAr": "نبدأ بحساب القوى: $(-2)^{3} = -8$ (الأس فردي فالناتج سالب) و $(-1)^{2026} = +1$ (الأس زوجي فالناتج موجب).\n\nنعوض: $C = 50 - 3 \\times (-8) + 1$.\n\nنجري الضرب: $-3 \\times (-8) = +24$، ثم الجمع: $C = 50 + 24 + 1 = 75$."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: الخلط بين الأس السالب والإشارة السالبة! فالعدد $2^{-3} = \\frac{1}{8}$ موجب تماماً وليس $-8$ ولا $-6$. كذلك، لا تنطبق قاعدة جمع الأسس على الجمع والطرح: $2^{3} + 2^{2} = 8 + 4 = 12$ وليس $2^{5} = 32$!"
+  },
+  "practice": [
+    {
+      "questionAr": "ما هي القيمة الصحيحة للعبارة $D = -4^{2} + (-2)^{4}$؟",
+      "options": [
+        "$-32$",
+        "$0$",
+        "$32$",
+        "$-8$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه للأقواس في $(-2)^{4}$: بما أن الأس $4$ زوجي والإشارة السالبة داخل القوسين، فإن $(-2)^{4} = +16$ وليس $-16$.",
+        "ممتاز! لدينا $-4^{2} = -(4 \\times 4) = -16$ و $(-2)^{4} = +16$، إذن $-16 + 16 = 0$.",
+        "في الحد الأول $-4^{2}$ لا توجد أقواس، فالأس يطبق على $4$ فقط دون الإشارة: $-4^{2} = -16$ وليس $+16$.",
+        "تذكر أن القوة تعني ضرب الأساس في نفسه $n$ مرة وليس ضرب الأساس في الأس ($4^{2} = 4 \\times 4 = 16$ وليس $4 \\times 2 = 8$)."
+      ],
+      "explanationAr": "في الحد $-4^{2}$ الأساس هو $4$ فتكون القيمة $-16$، أما في $(-2)^{4}$ فالأساس هو $(-2)$ والأس زوجي فتكون القيمة $(-2)\\times(-2)\\times(-2)\\times(-2) = +16$. ومنه $D = -16 + 16 = 0$."
+    },
+    {
+      "questionAr": "بسط العبارة $E = \\frac{7^{4} \\times (7^{-2})^{3}}{7^{-5}}$ على شكل قوة واحدة للعدد $7$:",
+      "options": [
+        "$7^{-7}$",
+        "$7^{-3}$",
+        "$7^{3}$",
+        "$7^{7}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "في القسمة نطرح أس المقام: $-2 - (-5) = -2 + 5 = +3$، وليس $-2 - 5 = -7$.",
+        "تأكد من إشارة البسط: $(7^{-2})^{3} = 7^{-6}$ ثم $7^{4} \\times 7^{-6} = 7^{-2}$، وليس ناتجاً يمنح $-3$ بعد القسمة.",
+        "أحسنت! البسط يساوي $7^{4} \\times 7^{-6} = 7^{-2}$، وبقسمته على $7^{-5}$ نجد $7^{-2 - (-5)} = 7^{3}$.",
+        "في $(7^{-2})^{3}$ نضرب الأسين $(-2 \\times 3 = -6)$ ولا نجمعهما."
+      ],
+      "explanationAr": "نطبق أولاً قوة القوة: $(7^{-2})^{3} = 7^{-6}$. ثم جداء القوى في البسط: $7^{4} \\times 7^{-6} = 7^{4-6} = 7^{-2}$. وأخيراً قسمة القوتين: $\\frac{7^{-2}}{7^{-5}} = 7^{-2 - (-5)} = 7^{-2+5} = 7^{3}$."
+    },
+    {
+      "questionAr": "ما قيمة السلسلة الحسابية $F = 4 \\times (3 - 5)^{2} - 2 \\times 3^{2}$؟",
+      "options": [
+        "$-2$",
+        "$34$",
+        "$-20$",
+        "$46$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "صحيح تماماً! نحسب القوس $(3-5) = -2$ ثم القوتين $(-2)^{2} = 4$ و $3^{2} = 9$، ثم الضرب $16 - 18 = -2$.",
+        "العملية بين $16$ و $18$ هي طرح وليست جمعاً: $16 - 18 = -2$ وليس $34$.",
+        "انتبه لأولوية القوى قبل الضرب: $2 \\times 3^{2} = 2 \\times 9 = 18$ وليس $(2 \\times 3)^{2} = 36$.",
+        "لا تضرب $4$ في $(-2)$ قبل حساب القوة: القوى تسبق الضرب!"
+      ],
+      "explanationAr": "نبدأ بما داخل القوسين: $3 - 5 = -2$. نحسب القوى: $(-2)^{2} = 4$ و $3^{2} = 9$. ننجز الضرب: $4 \\times 4 = 16$ و $2 \\times 9 = 18$. أخيراً نطرح: $F = 16 - 18 = -2$."
+    }
+  ]
+}

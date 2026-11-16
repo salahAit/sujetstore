@@ -1,0 +1,122 @@
+{
+  "id": "lesson_4ap_t3_integration",
+  "slug": "4ap-t3-integration",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع السادس: المحيط والمساحة والمدد وتصميم المجسمات وإدماج الفصل الثالث",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الثالث: الأعداد العشرية، المساحة والمحيط، التناسبية والمدد",
+  "objectives": [
+    "تجنيد جمع وطرح الأعداد العشرية والضرب والقسمة على 10 و100 و1000 في وضعيات قياس ونقود",
+    "حل مشكلات مركبة تجمع بين محيط ومساحة المربع والمستطيل والتناسبية البسيطة وحساب المدد والمجسمات",
+    "تنظيم مراحل الحل وتبرير الإجراءات المستعملة في وضعية إدماجية شاملة لنهاية السنة الرابعة ابتدائي"
+  ],
+  "keywordsAr": [
+    "إدماج",
+    "حصيلة الفصل الثالث",
+    "وضعية إدماجية",
+    "التقويم التحصيلي"
+  ],
+  "discover": {
+    "scenarioAr": "نظّمت مدرسة نشاطا لتشجير حديقة **مربعة** الشكل طول ضلعها $10\\text{ m}$. اشترى النادي $10$ شتلات بسعر $85.5\\text{ DA}$ للشتلة الواحدة، وكيس سماد بسعر $245.75\\text{ DA}$. بدأ التلاميذ العمل على الساعة $09\\text{ h } 30\\text{ min}$ وأنهوا النشاط على الساعة $11\\text{ h } 15\\text{ min}$.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 165\" width=\"460\" height=\"165\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"149\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"20\" y=\"22\" width=\"130\" height=\"121\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"85\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\">1. الحديقة المربعة</text><rect x=\"57\" y=\"52\" width=\"56\" height=\"56\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.8\"/><text x=\"85\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\" direction=\"ltr\">10 m</text><text x=\"85\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">المساحة = ؟ m²</text><rect x=\"165\" y=\"22\" width=\"136\" height=\"121\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"233\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">2. المصاريف</text><text x=\"233\" y=\"72\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">10 × 85.5 DA</text><text x=\"233\" y=\"96\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">+ 245.75 DA</text><text x=\"233\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">المجموع = ؟ DA</text><rect x=\"316\" y=\"22\" width=\"124\" height=\"121\" rx=\"8\" fill=\"#fefce8\" stroke=\"#eab308\" stroke-width=\"1.5\"/><text x=\"378\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\">3. المدة الزمنية</text><text x=\"378\" y=\"72\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">09 h 30 min</text><text x=\"378\" y=\"96\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">← 11 h 15 min</text><text x=\"378\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">المدة = ؟ min</text></svg>",
+    "steps": [
+      {
+        "promptAr": "أولا نحسب مساحة الحديقة المربعة التي طول ضلعها $10\\text{ m}$ ($10 \\times 10$). ما مساحة الحديقة بالمتر المربع؟ (اكتب العدد فقط)",
+        "hintAr": "اضرب طول الضلع في نفسه: $10 \\times 10$.",
+        "expectedInput": "100",
+        "revealAr": "مساحة الحديقة المربعة هي $10 \\times 10 = 100\\text{ m}^2$ (ومحيطها $4 \\times 10 = 40\\text{ m}$)."
+      },
+      {
+        "promptAr": "ثانيا نحسب ثمن $10$ شتلات بإزاحة الفاصلة في $85.5$ رتبة واحدة يمينا ($85.5 \\times 10 = 855\\text{ DA}$)، ثم نضيف ثمن السماد ($245.75\\text{ DA}$). ما المصروف الإجمالي بالدينار؟ (اكتب العدد فقط)",
+        "hintAr": "اجمع عموديا $855.00 + 245.75$ بمحاذاة الفاصلة.",
+        "expectedInput": "1100.75",
+        "revealAr": "المصروف الإجمالي هو $855.00 + 245.75 = 1100.75\\text{ DA}$."
+      },
+      {
+        "promptAr": "ثالثا بدأ التلاميذ على الساعة $09\\text{ h } 30\\text{ min}$ وأنهوا على الساعة $11\\text{ h } 15\\text{ min}$. كم دقيقة استغرق العمل إجمالا (بالدقائق فقط)؟",
+        "hintAr": "من $09\\text{ h } 30\\text{ min}$ إلى $10\\text{ h } 00\\text{ min}$ توجد $30\\text{ min}$، ومن $10\\text{ h } 00\\text{ min}$ إلى $11\\text{ h } 15\\text{ min}$ توجد $75\\text{ min}$.",
+        "expectedInput": "105",
+        "revealAr": "استغرق العمل $30 + 75 = 105\\text{ min}$ (أي $1\\text{ h } 45\\text{ min}$)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "في الوضعيات الإدماجية للنقود والقياسات العشرية: نستخدم الضرب والقسمة على $10$ و $100$ و $1000$ للتحويل والحساب الذهني، ونحاذي الفاصلة تحت الفاصلة في الجمع والطرح العمودي.",
+      "في التناسبية البسيطة: نختار بين الخواص الخطية (الجمع والضعف والنصف) أو معامل التناسبية لإكمال الجداول وحساب الكميات المطلوبة.",
+      "في الهندسة والقياس: نفرّق بين محيط الشكل المستوي (وحدة الطول) ومساحته (الوحدة المربعة)، ونتأكد من مطابقة المجسم (مكعب أو متوازي مستطيلات) لتصميمه الصحيح.",
+      "في حساب المدد الزمنية: نستخدم دائما النظام الستيني ($1\\text{ h} = 60\\text{ min}$ و $1\\text{ min} = 60\\text{ s}$) عند الجمع والطرح والتحويل."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 185\" width=\"460\" height=\"185\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"169\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"230\" y=\"30\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">خريطة حصيلة الفصل الثالث — السنة الرابعة ابتدائي</text><rect x=\"20\" y=\"42\" width=\"204\" height=\"58\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"122\" y=\"63\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">1. الأعداد العشرية</text><text x=\"122\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\">جمع وطرح بمحاذاة الفاصلة | × و ÷ 10، 100، 1000</text><rect x=\"236\" y=\"42\" width=\"204\" height=\"58\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"338\" y=\"63\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\">2. التناسبية البسيطة</text><text x=\"338\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\">الخواص الخطية ومعامل التناسبية البسيط</text><rect x=\"20\" y=\"108\" width=\"204\" height=\"58\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.4\"/><text x=\"122\" y=\"129\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\">3. المحيط والمساحة</text><text x=\"122\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\">المربع والمستطيل (الطول cm، المساحة cm²)</text><rect x=\"236\" y=\"108\" width=\"204\" height=\"58\" rx=\"8\" fill=\"#fae8ff\" stroke=\"#a855f7\" stroke-width=\"1.4\"/><text x=\"338\" y=\"129\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#6b21a8\">4. المدد والمجسمات</text><text x=\"338\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\">المبادلة الستينية (60) وتصميم المكعب والمتوازي</text></svg>",
+    "visualCaptionAr": "الربط بين ميادين الفصل الثالث الأربعة لحل الوضعيات الإدماجية بنجاح.",
+    "examples": [
+      {
+        "problemAr": "قاعة مستطيلة طولها $12\\text{ m}$ وعرضها $8\\text{ m}$. نريد تبليطها بحيث كل $2\\text{ m}^2$ تتطلب $20$ بلاطة. ما مساحة القاعة، وكم بلاطة نحتاج لتبليطها؟",
+        "solutionAr": "مساحة القاعة $= 12 \\times 8 = 96\\text{ m}^2$. وبما أن $2\\text{ m}^2$ تحتاج $20$ بلاطة، فإن معامل التناسبية هو $\\times 10$ ($20 \\div 2 = 10$)، إذن نحتاج $96 \\times 10 = 960$ بلاطة."
+      },
+      {
+        "problemAr": "اشترى تاجر $100$ علبة شاي تزن الواحدة $0.25\\text{ kg}$، وباع منها $14.75\\text{ kg}$. كم كيلوغراما بقي لديه؟",
+        "solutionAr": "الكتلة الكلية $= 0.25 \\times 100 = 25\\text{ kg}$. الكتلة المتبقية $= 25.00 - 14.75 = 10.25\\text{ kg}$."
+      }
+    ],
+    "watchOutAr": "في الوضعية الإدماجية تحقق دائما من تنظيم الحل: اكتب العملية الأفقية، أنجز العملية العمودية بدقة (بمحاذاة الفاصلة أو الاستعارة بـ $60$ دقيقة)، واكتب جملة الإجابة مع الوحدة الصحيحة."
+  },
+  "practice": [
+    {
+      "questionAr": "يريد فلاح تسييج بستان مستطيل الشكل طوله $15\\text{ m}$ وعرضه $8\\text{ m}$ مع ترك مدخل غير مسيّج عرضه $2.5\\text{ m}$. ما طول السياج اللازم بالمتر؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 135\" width=\"340\" height=\"135\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"10\" y=\"10\" width=\"320\" height=\"115\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"65\" y=\"26\" width=\"190\" height=\"72\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2.2\"/><line x1=\"138\" y1=\"98\" x2=\"182\" y2=\"98\" stroke=\"#dcfce7\" stroke-width=\"4\"/><line x1=\"138\" y1=\"98\" x2=\"182\" y2=\"98\" stroke=\"#dc2626\" stroke-dasharray=\"4 2\" stroke-width=\"2\"/><text x=\"160\" y=\"44\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\">بستان مستطيل</text><text x=\"160\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">15 m</text><text x=\"278\" y=\"66\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">8 m</text><text x=\"160\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">مدخل: 2.5 m</text></svg>",
+      "options": [
+        "$46\\text{ m}$",
+        "$43.5\\text{ m}$",
+        "$20.5\\text{ m}$",
+        "$44.5\\text{ m}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "العدد $46\\text{ m}$ هو المحيط الكامل للبستان، وقد نسيت طرح عرض المدخل غير المسيّج ($2.5\\text{ m}$).",
+        "أحسنت! محيط البستان $= 2 \\times (15 + 8) = 46\\text{ m}$، وبعد طرح المدخل نجد $46.0 - 2.5 = 43.5\\text{ m}$.",
+        "استعملت نصف المحيط ($15 + 8 = 23\\text{ m}$) بدلا من المحيط الكامل ($46\\text{ m}$) قبل طرح $2.5\\text{ m}$.",
+        "انتبه عند الاستعارة في $46.0 - 2.5$: بعد استعارة وحدة يصبح الصحيح $45$، و $45 - 2 = 43$ وليس $44$."
+      ],
+      "explanationAr": "نحسب أولا محيط المستطيل: $2 \\times (15 + 8) = 2 \\times 23 = 46\\text{ m}$. ثم نطرح عرض المدخل بمحاذاة الفاصلة: $46.0 - 2.5 = 43.5\\text{ m}$."
+    },
+    {
+      "questionAr": "اشترى مدير مدرسة $100$ قلم بسعر $18.5\\text{ DA}$ للقلم الواحد، وأضاف إليها علبة طباشير بسعر $150.25\\text{ DA}$. ما المبلغ الإجمالي الذي دفعه؟",
+      "options": [
+        "$335.25\\text{ DA}$",
+        "$168.75\\text{ DA}$",
+        "$2000.25\\text{ DA}$",
+        "$1950.25\\text{ DA}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "ضربت $18.5 \\times 10 = 185$ بدلا من الضرب في $100$ ($18.5 \\times 100 = 1850$).",
+        "جمعت سعر قلم واحد فقط ($18.5\\text{ DA}$) ونسيت أنه اشترى $100$ قلم.",
+        "ممتاز! ثمن $100$ قلم هو $18.5 \\times 100 = 1850\\text{ DA}$، والمجموع هو $1850.00 + 150.25 = 2000.25\\text{ DA}$.",
+        "راجع الجمع العمودي: $1850 + 150 = 2000$ مع الاحتفاظ في المئات وليس $1950$."
+      ],
+      "explanationAr": "نحسب ثمن $100$ قلم بإزاحة الفاصلة رتبتين يمينا: $18.5 \\times 100 = 1850\\text{ DA}$. ثم نجمع مع ثمن علبة الطباشير: $1850.00 + 150.25 = 2000.25\\text{ DA}$."
+    },
+    {
+      "questionAr": "يصنع تلميذ مجسمات مكعبة من الورق المقوى بوتيرة ثابتة كما في جدول التناسبية المقابل. إذا بدأ في صنع $6$ مكعبات على الساعة $10\\text{ h } 25\\text{ min}$، ففي أي ساعة ينتهي؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 100\" width=\"380\" height=\"100\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"15\" y=\"14\" width=\"350\" height=\"72\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"15\" y1=\"50\" x2=\"365\" y2=\"50\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"155\" y1=\"14\" x2=\"155\" y2=\"86\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"225\" y1=\"14\" x2=\"225\" y2=\"86\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"295\" y1=\"14\" x2=\"295\" y2=\"86\" stroke=\"#475569\" stroke-width=\"1.6\"/><rect x=\"15\" y=\"14\" width=\"140\" height=\"36\" fill=\"#eff6ff\"/><rect x=\"15\" y=\"50\" width=\"140\" height=\"36\" fill=\"#f0fdf4\"/><text x=\"85\" y=\"37\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">عدد المكعبات</text><text x=\"85\" y=\"73\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\">المدة (min)</text><text x=\"190\" y=\"37\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">2</text><text x=\"260\" y=\"37\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">4</text><text x=\"330\" y=\"37\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">6</text><text x=\"190\" y=\"73\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">15</text><text x=\"260\" y=\"73\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">30</text><text x=\"330\" y=\"73\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#dc2626\">؟</text></svg>",
+      "options": [
+        "$11\\text{ h } 10\\text{ min}$",
+        "$10\\text{ h } 70\\text{ min}$",
+        "$10\\text{ h } 55\\text{ min}$",
+        "$11\\text{ h } 05\\text{ min}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "رائع! لصنع $6$ مكعبات يلزم $15 + 30 = 45\\text{ min}$، ثم $10\\text{ h } 25\\text{ min} + 45\\text{ min} = 10\\text{ h } 70\\text{ min} = 11\\text{ h } 10\\text{ min}$.",
+        "يجب مبادلة $60\\text{ min}$ بساعة واحدة! فـ $70\\text{ min} = 1\\text{ h } 10\\text{ min}$ لتصبح الساعة $11\\text{ h } 10\\text{ min}$.",
+        "المدة $30\\text{ min}$ تخص صنع $4$ مكعبات فقط، بينما صنع $6$ مكعبات يستغرق $45\\text{ min}$.",
+        "تأكد من المجموع: $25 + 45 = 70\\text{ min}$، وبعد طرح $60\\text{ min}$ يتبقى $10\\text{ min}$ وليس $5\\text{ min}$."
+      ],
+      "explanationAr": "من جدول التناسبية: $2 + 4 = 6$، إذن المدة اللازمة لصنع $6$ مكعبات هي $15 + 30 = 45\\text{ min}$. نضيفها إلى وقت البداية: $10\\text{ h } 25\\text{ min} + 45\\text{ min} = 10\\text{ h } 70\\text{ min} = 11\\text{ h } 10\\text{ min}$."
+    }
+  ]
+}

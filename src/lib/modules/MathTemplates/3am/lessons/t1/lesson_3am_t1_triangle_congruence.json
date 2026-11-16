@@ -1,0 +1,127 @@
+{
+  "id": "lesson_3am_t1_triangle_congruence",
+  "slug": "3am-t1-triangle-congruence",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني: قوى العدد 10 وتقايس المثلثات ومستقيم المنتصفين وطالس في المثلث",
+  "order": 4,
+  "titleAr": "حالات تقايس مثلثين وتطبيقاتها في البراهين البسيطة",
+  "objectives": [
+    "التعرف على تقايس شكلين هندسيين واستحضار المتباينة المثلثية وحالات إنشاء مثلث",
+    "معرفة الحالات الثلاث لتقايس مثلثين (زاويتان وضلع محصور بينهما، ضلعان وزاوية محصورة بينهما، الأضلاع الثلاثة) وحالة تقايس مثلثين قائمين",
+    "توظيف حالات تقايس مثلثين لإثبات تقايس أضلاع أو زوايا متماثلة وبناء وتحرير براهين هندسية بسيطة"
+  ],
+  "keywordsAr": [
+    "تقايس مثلثين",
+    "حالات تقايس المثلثات",
+    "العناصر المتماثلة",
+    "المتباينة المثلثية",
+    "البرهان الهندسي"
+  ],
+  "discover": {
+    "scenarioAr": "في ورشة بناء، يصنع المهندس دعامات معدنية مثلثة الشكل $ABC$ و $EFG$ بحيث تكون متطابقة تماماً. ولتوفير الوقت، يريد التحقق من تقايسهما بقياس **ثلاثة عناصر فقط** بدلاً من قياس الأضلاع الثلاثة والزوايا الثلاث معاً! فقام بقياس $AB = EF = 7\\text{ cm}$ و $AC = EG = 5\\text{ cm}$ والزاوية المحصورة $\\widehat{BAC} = \\widehat{FEG} = 65^\\circ$ . هل يكفي هذا لإثبات تقايس المثلثين؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 220\" width=\"560\" height=\"220\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"540\" height=\"200\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"280\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">تقايس مثلثين: ضلعان والزاوية المحصورة بينهما</text><polygon points=\"56,172 224,172 122,62\" fill=\"#eff6ff\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><path d=\"M 84 172 A 28 28 0 0 0 70.4 148.0\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.4\"/><text x=\"98\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">65°</text><line x1=\"140\" y1=\"166\" x2=\"140\" y2=\"178\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"82.7\" y1=\"117.7\" x2=\"91.3\" y2=\"122.9\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><line x1=\"86.7\" y1=\"111.1\" x2=\"95.3\" y2=\"116.3\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><circle cx=\"56\" cy=\"172\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"224\" cy=\"172\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"122\" cy=\"62\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"42\" y=\"182\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"228\" y=\"182\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"122\" y=\"52\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"140\" y=\"193\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">7 cm</text><text x=\"66\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">5 cm</text><text x=\"184\" y=\"112\" font-size=\"11\" fill=\"#475569\" direction=\"ltr\">6.5 cm</text><polygon points=\"332,172 500,172 398,62\" fill=\"#f0fdf4\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><path d=\"M 360 172 A 28 28 0 0 0 346.4 148.0\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.4\"/><text x=\"374\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">65°</text><line x1=\"416\" y1=\"166\" x2=\"416\" y2=\"178\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"358.7\" y1=\"117.7\" x2=\"367.3\" y2=\"122.9\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><line x1=\"362.7\" y1=\"111.1\" x2=\"371.3\" y2=\"116.3\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><circle cx=\"332\" cy=\"172\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"500\" cy=\"172\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"398\" cy=\"62\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"318\" y=\"182\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">E</text><text x=\"504\" y=\"182\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">F</text><text x=\"398\" y=\"52\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">G</text><text x=\"416\" y=\"193\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">7 cm</text><text x=\"342\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">5 cm</text><text x=\"462\" y=\"112\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">FG = ?</text><text x=\"280\" y=\"124\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">≅</text></svg>",
+    "steps": [
+      {
+        "promptAr": "نستحضر أولاً المتباينة المثلثية: هل يمكن إنشاء مثلث أطوال أضلاعه $3\\text{ cm}$ و $4\\text{ cm}$ و $8\\text{ cm}$ ؟ برر إجابتك.",
+        "hintAr": "قارن مجموع طولي الضلعين الأصغرين ( $3 + 4$ ) بطول الضلع الأكبر ( $8$ ).",
+        "revealAr": "لا يمكن إنشاء هذا المثلث لأن $3 + 4 = 7 < 8$ ؛ في كل مثلث يجب أن يكون مجموع طولي أي ضلعين **أكبر تماماً** من طول الضلع الثالث."
+      },
+      {
+        "promptAr": "في الشكل المقابل، لدينا $AB = EF = 7\\text{ cm}$ و $AC = EG = 5\\text{ cm}$ و $\\widehat{BAC} = \\widehat{FEG} = 65^\\circ$ . ما حالة التقايس المحققة؟",
+        "hintAr": "الزاوية $65^\\circ$ محصورة بين الضلعين المعلومين في كل مثلث.",
+        "revealAr": "تحققت الحالة الثانية لتقايس مثلثين: **ضلعان والزاوية المحصورة بينهما**، إذن المثلثان $ABC$ و $EFG$ متقايسان."
+      },
+      {
+        "promptAr": "بما أن المثلثين $ABC$ و $EFG$ متقايسان، وكان $BC = 6.5\\text{ cm}$ ، فما طول الضلع المماثل له $FG$ بالسنتيمتر؟",
+        "hintAr": "العناصر المتماثلة في مثلثين متقايسين متقايسة.",
+        "expectedInput": "6.5",
+        "revealAr": "الرأس $F$ يماثل $B$ والرأس $G$ يماثل $C$ ، إذن $FG = BC = 6.5\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "إذا كان قيس الزاوية $\\widehat{ABC} = 45^\\circ$ ، فما قيس الزاوية المماثلة لها $\\widehat{EFG}$ بالدرجات؟",
+        "hintAr": "الزوايا المتماثلة في مثلثين متقايسين لها نفس القيس.",
+        "expectedInput": "45",
+        "revealAr": "بما أن المثلثين متقايسان، فالزاويتان المتماثلتان متقايستان: $\\widehat{EFG} = \\widehat{ABC} = 45^\\circ$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**مفهوم التقايس والمتباينة المثلثية**: يكون شكلان هندسيان **متقايسين** إذا كانا قابلين للتطابق. في مثلثين متقايسين، الأضلاع المتماثلة متقايسة والزوايا المتماثلة متقايسة. (ملاحظة: لا يُنشأ مثلث إلا إذا كان كل ضلع أصغر من مجموع الضلعين الآخرين).",
+      "**الحالات الثلاث لتقايس مثلثين كيفيين**:\n\n- **الحالة 1 (زاويتان وضلع محصور)**: يتقايس مثلثان إذا تقايس في أحدهما ضلع والزاويتان المجاورتان له مع نظائرها في الآخر.\n- **الحالة 2 (ضلعان وزاوية محصورة)**: يتقايس مثلثان إذا تقايس في أحدهما ضلعان والزاوية المحصورة بينهما مع نظائرها في الآخر.\n- **الحالة 3 (الأضلاع الثلاثة)**: يتقايس مثلثان إذا تقايست أضلاع أحدهما الثلاثة مع أضلاع الآخر مثنى مثنى.",
+      "**حالة تقايس مثلثين قائمين**: يتقايس مثلثان قائمان إذا تقايس في أحدهما **وتر وضلع قائم** مع وتر وضلع قائم في المثلث الآخر (أو وتر وزاوية حادة).",
+      "**توظيف التقايس في البرهان**: نكتب المعطيات الثلاثة لحالة التقايس، ثم نستنتج تقايس المثلثين، ومنه نستنتج تقايس الأضلاع أو الزوايا المتماثلة المطلوبة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 220\" width=\"560\" height=\"220\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"126\" height=\"196\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"75\" y=\"34\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">1. زاويتان وضلع</text><polygon points=\"30,148 120,148 64,66\" fill=\"#dbeafe\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"75\" y1=\"142\" x2=\"75\" y2=\"154\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><path d=\"M 52 148 A 22 22 0 0 0 42.3 129.8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><path d=\"M 107.4 130.0 A 22 22 0 0 0 98 148\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><text x=\"75\" y=\"178\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">ضلع + زاويتان مجاورتان</text><rect x=\"148\" y=\"12\" width=\"126\" height=\"196\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"211\" y=\"34\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">2. ضلعان وزاوية</text><polygon points=\"166,148 256,148 200,66\" fill=\"#dcfce7\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"211\" y1=\"142\" x2=\"211\" y2=\"154\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"178\" y1=\"104\" x2=\"188\" y2=\"110\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><path d=\"M 188 148 A 22 22 0 0 0 178.3 129.8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"211\" y=\"178\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">ضلعان + زاوية محصورة</text><rect x=\"284\" y=\"12\" width=\"126\" height=\"196\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"347\" y=\"34\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">3. الأضلاع الثلاثة</text><polygon points=\"302,148 392,148 336,66\" fill=\"#fef9c3\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"347\" y1=\"142\" x2=\"347\" y2=\"154\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"314\" y1=\"104\" x2=\"324\" y2=\"110\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><line x1=\"360\" y1=\"110\" x2=\"369\" y2=\"104\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><line x1=\"363\" y1=\"115\" x2=\"372\" y2=\"109\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"347\" y=\"178\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">تقايس الأضلاع الثلاثة</text><rect x=\"420\" y=\"12\" width=\"128\" height=\"196\" rx=\"10\" fill=\"#fdf2f8\" stroke=\"#db2777\" stroke-width=\"1.5\"/><text x=\"484\" y=\"34\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#9d174d\" direction=\"rtl\">4. مثلثان قائمان</text><polygon points=\"442,148 524,148 442,66\" fill=\"#fce7f3\" stroke=\"#0f172a\" stroke-width=\"2\"/><rect x=\"442\" y=\"138\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"436\" y1=\"107\" x2=\"448\" y2=\"107\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"479\" y1=\"103\" x2=\"487\" y2=\"111\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><line x1=\"483\" y1=\"99\" x2=\"491\" y2=\"107\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><text x=\"484\" y=\"178\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#9d174d\" direction=\"rtl\">زاوية قائمة + وتر + ضلع</text></svg>",
+    "visualCaptionAr": "الحالات الثلاث لتقايس مثلثين كيفيين والحالة الخاصة بتقايس مثلثين قائمين",
+    "examples": [
+      {
+        "problemAr": "تتقاطع القطعتان $[AC]$ و $[BD]$ في منتصفهما $O$ . أثبت أن المثلثين $OAB$ و $OCD$ متقايسان، ثم استنتج أن $AB = CD$ .",
+        "solutionAr": "في المثلثين $OAB$ و $OCD$ لدينا:\n\n1) $OA = OC$ (لأن $O$ منتصف $[AC]$ ).\n\n2) $OB = OD$ (لأن $O$ منتصف $[BD]$ ).\n\n3) $\\widehat{AOB} = \\widehat{COD}$ (زاويتان متقابلتان بالرأس).\n\nإذن يتقايس المثلثان $OAB$ و $OCD$ لتقايس **ضلعين والزاوية المحصورة بينهما**، ومنه نستنتج تقايس الضلعين المتماثلين: $AB = CD$ ."
+      },
+      {
+        "problemAr": "$ABC$ مثلث متساوي الساقين رأسه الأساسي $A$ ، و $M$ منتصف القاعدة $[BC]$ . أثبت أن المثلثين $ABM$ و $ACM$ متقايسان، واستنتج أن $[AM)$ منصف للزاوية $\\widehat{BAC}$ .",
+        "solutionAr": "في المثلثين $ABM$ و $ACM$ لدينا:\n\n1) $AB = AC$ (مثلث متساوي الساقين في $A$ ).\n\n2) $BM = CM$ (لأن $M$ منتصف $[BC]$ ).\n\n3) $[AM]$ ضلع مشترك.\n\nإذن يتقايس المثلثان $ABM$ و $ACM$ لتقايس **الأضلاع الثلاثة**، ومنه الزاويتان المتماثلتان متقايستان: $\\widehat{BAM} = \\widehat{CAM}$ ، أي أن $[AM)$ منصف للزاوية $\\widehat{BAC}$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: الاعتقاد أن تقايس **الزوايا الثلاث** يكفي لتقايس مثلثين! هذا غير صحيح (مثلثان متقايسا الأضلاع ضلع أحدهما $3\\text{ cm}$ والآخر $8\\text{ cm}$ لهما نفس الزوايا $60^\\circ$ لكنهما غير متقايسين). كما يجب الانتباه في الحالة الثانية إلى أن تكون الزاوية **محصورة** بين الضلعين المعلومين."
+  },
+  "practice": [
+    {
+      "questionAr": "في الشكل المقابل، تتقاطع القطعتان $[AC]$ و $[BD]$ في النقطة $O$ بحيث $OA = OC$ و $OB = OD$ . بأي حالة يتقايس المثلثان $OAB$ و $OCD$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 165\" width=\"360\" height=\"165\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"149\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><polygon points=\"68,36 98,134 180,82\" fill=\"#eff6ff\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"292,128 262,30 180,82\" fill=\"#f0fdf4\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"121\" y1=\"64\" x2=\"127\" y2=\"54\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"233\" y1=\"110\" x2=\"239\" y2=\"100\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"134\" y1=\"104\" x2=\"141\" y2=\"112\" stroke=\"#16a34a\" stroke-width=\"2\"/><line x1=\"138\" y1=\"101\" x2=\"145\" y2=\"109\" stroke=\"#16a34a\" stroke-width=\"2\"/><line x1=\"215\" y1=\"54\" x2=\"222\" y2=\"62\" stroke=\"#16a34a\" stroke-width=\"2\"/><line x1=\"219\" y1=\"51\" x2=\"226\" y2=\"59\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M 161.5 74.4 A 20 20 0 0 0 163.1 92.7\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><path d=\"M 198.5 89.6 A 20 20 0 0 0 196.9 71.3\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"180\" cy=\"82\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"54\" y=\"34\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"86\" y=\"148\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"298\" y=\"136\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"266\" y=\"28\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">D</text><text x=\"180\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">O</text></svg>",
+      "options": [
+        "تقايس ضلعين والزاوية المحصورة بينهما",
+        "تقايس زاويتين والضلع المحصور بينهما",
+        "تقايس الأضلاع الثلاثة",
+        "تقايس الزوايا الثلاث"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! لدينا ضلعان متقايسان ($OA = OC$ و $OB = OD$) والزاوية المحصورة بينهما $\\widehat{AOB} = \\widehat{COD}$ متقايسة بالتقابل بالرأس.",
+        "لدينا زاوية واحدة فقط معلومة التقايس (بالتقابل بالرأس عند $O$) وضلعان متقايسان.",
+        "لم يُعطَ في البداية أن $AB = CD$ بل هذا ما نستنتجه بعد التقايس!",
+        "تقايس الزوايا الثلاث ليس حالة تقايس، ولم تُعطَ إلا زاوية واحدة."
+      ],
+      "explanationAr": "لدينا $OA = OC$ و $OB = OD$ ، والزاويتان $\\widehat{AOB}$ و $\\widehat{COD}$ متقابلتان بالرأس فهما متقايستان ومحصورتان بين الضلعين. إذن يتقايس المثلثان بالحالة الثانية: ضلعان وزاوية محصورة بينهما."
+    },
+    {
+      "questionAr": "المثلثان $ABC$ القائم في $B$ و $EFG$ القائم في $F$ يحققان $AC = EG = 10\\text{ cm}$ و $AB = EF = 6\\text{ cm}$ كما في الشكل. ماذا نستنتج؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 155\" width=\"380\" height=\"155\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"364\" height=\"139\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><polygon points=\"50,42 50,126 162,126\" fill=\"#eff6ff\" stroke=\"#0f172a\" stroke-width=\"2\"/><rect x=\"50\" y=\"116\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"46\" y=\"34\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"36\" y=\"132\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"166\" y=\"132\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"28\" y=\"86\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">6 cm</text><text x=\"118\" y=\"76\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">10 cm</text><polygon points=\"220,42 220,126 332,126\" fill=\"#f0fdf4\" stroke=\"#0f172a\" stroke-width=\"2\"/><rect x=\"220\" y=\"116\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"216\" y=\"34\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">E</text><text x=\"206\" y=\"132\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">F</text><text x=\"336\" y=\"132\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">G</text><text x=\"198\" y=\"86\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">6 cm</text><text x=\"288\" y=\"76\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">10 cm</text></svg>",
+      "options": [
+        "لا يمكن الحكم لعدم معرفة أقياس الزوايا الحادة",
+        "يتقايسان لأن فيهما ضلعين متقايسين فقط",
+        "يتقايسان بحالة مثلثين قائمين (وتر وضلع قائم)، ومنه $BC = FG$",
+        "يتقايسان فقط إذا كان $BC = 10\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "المثلثان قائمان، وفي المثلثين القائمين يكفي تقايس وتر وضلع قائم لإثبات التقايس!",
+        "تقايس ضلعين فقط لا يكفي في مثلثين كيفيين، لكن المثلثين هنا **قائمان** في $B$ و $F$ وتقايس الوتران.",
+        "أحسنت! تحقق شرط تقايس مثلثين قائمين (وتر وضلع قائم)، لذا هما متقايسان ومنه $BC = FG$ .",
+        "الوتر $10\\text{ cm}$ هو أطول ضلع في المثلث القائم، ولا يمكن أن يساويه الضلع القائم $BC$ ."
+      ],
+      "explanationAr": "المثلثان $ABC$ و $EFG$ قائمان في $B$ و $F$ على الترتيب، ووتراهما متقايسان ($AC = EG = 10\\text{ cm}$) وضلعاهما القائمان متقايسان ($AB = EF = 6\\text{ cm}$). إذن يتقايسان بحالة تقايس مثلثين قائمين، ومنه $BC = FG$ ."
+    },
+    {
+      "questionAr": "أي مجموعة معطيات مما يلي **لا تكفي** لإثبات تقايس مثلثين $ABC$ و $IJK$ ؟",
+      "options": [
+        "$AB = IJ$ و $BC = JK$ و $AC = IK$",
+        "$\\widehat{A} = \\widehat{I}$ و $\\widehat{B} = \\widehat{J}$ و $\\widehat{C} = \\widehat{K}$",
+        "$AB = IJ$ و $\\widehat{A} = \\widehat{I}$ و $\\widehat{B} = \\widehat{J}$",
+        "$AC = IK$ و $BC = JK$ و $\\widehat{C} = \\widehat{K}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "هذه الحالة الثالثة (الأضلاع الثلاثة)، وهي كافية تماماً لإثبات تقايس المثلثين.",
+        "ممتاز! تقايس الزوايا الثلاث يعطي مثلثين متشابهين في الشكل فقط وقد يختلفان في الحجم (الأطوال)، لذا لا يكفي للتقايس.",
+        "هذه الحالة الأولى (ضلع والزاويتان المجاورتان له)، وهي كافية لإثبات التقايس.",
+        "هذه الحالة الثانية (ضلعان والزاوية المحصورة بينهما $\\widehat{C}$ و $\\widehat{K}$)، وهي كافية لإثبات التقايس."
+      ],
+      "explanationAr": "تقايس الزوايا الثلاث لا يضمن تطابق الأطوال (فمثلاً يمكن تكبير أو تصغير مثلث مع الحفاظ على زواياه)، ولذلك لا توجد حالة تقايس بالزوايا الثلاث وحدها."
+    }
+  ]
+}

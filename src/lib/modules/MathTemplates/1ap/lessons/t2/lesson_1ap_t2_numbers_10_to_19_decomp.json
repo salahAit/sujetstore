@@ -1,0 +1,123 @@
+{
+  "id": "lesson_1ap_t2_numbers_10_to_19_decomp",
+  "slug": "lesson-1ap-t2-numbers-10-to-19-decomp",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t2",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثاني والثالث: الأعداد من 10 إلى 19 ثم إلى 39 والتفكيك والمقارنة",
+  "order": 1,
+  "titleAr": "الأعداد من 10 إلى 19: القراءة والكتابة والتفكيك إلى (10 + وحدات)",
+  "objectives": [
+    "عدّ كميات من 10 إلى 19 وقراءة الأعداد وكتابتها بالأرقام والحروف",
+    "تفكيك الأعداد من 11 إلى 19 إلى عشرة ووحدات (مثل 14 = 10 + 4) وتركيبها",
+    "مقارنة وترتيب وحصر الأعداد إلى 19 باستعمال الشريط العددي"
+  ],
+  "keywordsAr": [
+    "الأعداد من 10 إلى 19",
+    "العدد 10",
+    "التفكيك الجمعي",
+    "مقارنة وترتيب",
+    "الشريط العددي"
+  ],
+  "discover": {
+    "scenarioAr": "رَتَّبَتْ إِيمَانُ أَقْلامَها المُلَوَّنَةَ: وَضَعَتْ $10$ أَقْلامٍ في عُلْبَةٍ، وَبَقِيَتْ $5$ أَقْلامٍ مُفْرَدَةٍ خارِجَ العُلْبَةِ. تَأَمَّلِ الرَّسْمَ وَالشَّرِيطَ العَدَدِيَّ.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 210\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"484\" height=\"194\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"22\" y=\"20\" width=\"230\" height=\"102\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"137\" y=\"40\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">عُلْبَةٌ فيها 10 أَقْلامٍ</text><rect x=\"37\" y=\"52\" width=\"10\" height=\"56\" rx=\"3\" fill=\"#3b82f6\"/><rect x=\"57\" y=\"52\" width=\"10\" height=\"56\" rx=\"3\" fill=\"#60a5fa\"/><rect x=\"77\" y=\"52\" width=\"10\" height=\"56\" rx=\"3\" fill=\"#3b82f6\"/><rect x=\"97\" y=\"52\" width=\"10\" height=\"56\" rx=\"3\" fill=\"#60a5fa\"/><rect x=\"117\" y=\"52\" width=\"10\" height=\"56\" rx=\"3\" fill=\"#3b82f6\"/><rect x=\"137\" y=\"52\" width=\"10\" height=\"56\" rx=\"3\" fill=\"#60a5fa\"/><rect x=\"157\" y=\"52\" width=\"10\" height=\"56\" rx=\"3\" fill=\"#3b82f6\"/><rect x=\"177\" y=\"52\" width=\"10\" height=\"56\" rx=\"3\" fill=\"#60a5fa\"/><rect x=\"197\" y=\"52\" width=\"10\" height=\"56\" rx=\"3\" fill=\"#3b82f6\"/><rect x=\"217\" y=\"52\" width=\"10\" height=\"56\" rx=\"3\" fill=\"#60a5fa\"/><rect x=\"272\" y=\"20\" width=\"206\" height=\"102\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><text x=\"375\" y=\"40\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">5 أَقْلامٍ مُفْرَدَةٍ</text><rect x=\"308\" y=\"52\" width=\"12\" height=\"56\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"336\" y=\"52\" width=\"12\" height=\"56\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"364\" y=\"52\" width=\"12\" height=\"56\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"392\" y=\"52\" width=\"12\" height=\"56\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"420\" y=\"52\" width=\"12\" height=\"56\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"25\" y=\"138\" width=\"450\" height=\"48\" rx=\"8\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"70\" y1=\"138\" x2=\"70\" y2=\"186\" stroke=\"#cbd5e1\"/><line x1=\"115\" y1=\"138\" x2=\"115\" y2=\"186\" stroke=\"#cbd5e1\"/><line x1=\"160\" y1=\"138\" x2=\"160\" y2=\"186\" stroke=\"#cbd5e1\"/><line x1=\"205\" y1=\"138\" x2=\"205\" y2=\"186\" stroke=\"#cbd5e1\"/><line x1=\"250\" y1=\"138\" x2=\"250\" y2=\"186\" stroke=\"#cbd5e1\"/><line x1=\"295\" y1=\"138\" x2=\"295\" y2=\"186\" stroke=\"#cbd5e1\"/><line x1=\"340\" y1=\"138\" x2=\"340\" y2=\"186\" stroke=\"#cbd5e1\"/><line x1=\"385\" y1=\"138\" x2=\"385\" y2=\"186\" stroke=\"#cbd5e1\"/><line x1=\"430\" y1=\"138\" x2=\"430\" y2=\"186\" stroke=\"#cbd5e1\"/><rect x=\"251\" y=\"139\" width=\"43\" height=\"46\" fill=\"#2563eb\"/><text x=\"47\" y=\"168\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">10</text><text x=\"92\" y=\"168\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">11</text><text x=\"137\" y=\"168\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">12</text><text x=\"182\" y=\"168\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">13</text><text x=\"227\" y=\"168\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">14</text><text x=\"272\" y=\"168\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">15</text><text x=\"317\" y=\"168\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">16</text><text x=\"362\" y=\"168\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#64748b\" direction=\"ltr\">?</text><text x=\"407\" y=\"168\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">18</text><text x=\"452\" y=\"168\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">19</text></svg>",
+    "steps": [
+      {
+        "promptAr": "عُدَّ الأَقْلامَ داخِلَ العُلْبَةِ مَعَ الأَقْلامِ الـ $5$ المُفْرَدَةِ: ما ناتِجُ $10 + 5$؟",
+        "hintAr": "ابْدَأْ مِنَ العَدَدِ $10$ ثُمَّ أَضِفْ $5$ أَقْلامٍ.",
+        "expectedInput": "15",
+        "revealAr": "عُلْبَةٌ مِنْ $10$ أَقْلامٍ وَ $5$ أَقْلامٍ مُفْرَدَةٍ تُساوي $10 + 5 = 15$ قَلَمًا (خَمْسَةَ عَشَرَ)."
+      },
+      {
+        "promptAr": "لَوْ كانَ عِنْدَ إِيمَانَ $18$ قَلَمًا، فَكِّكِ العَدَدَ إلى عَشَرَةٍ وَوَحَداتٍ: $18 = 10 + \\dots$؟ (اكْتُبِ العَدَدَ النّاقِصَ)",
+        "hintAr": "العَدَدُ $18$ يَتَكَوَّنُ مِنْ عَشَرَةٍ واحِدَةٍ ($10$) وَكَمْ وَحْدَةٍ؟",
+        "expectedInput": "8",
+        "revealAr": "أَحْسَنْتَ! نُفَكِّكُ العَدَدَ $18$ كَالتّالِي: $18 = 10 + 8$."
+      },
+      {
+        "promptAr": "انْظُرْ إلى الشَّرِيطِ العَدَدِيِّ في الأَسْفَلِ: ما العَدَدُ الَّذِي يَقَعُ بَيْنَ $16$ وَ $18$ مُباشَرَةً؟",
+        "hintAr": "عُدَّ بِالتَّرْتِيبِ بَعْدَ $16$: $16$، ثُمَّ $\\dots$، ثُمَّ $18$.",
+        "expectedInput": "17",
+        "revealAr": "العَدَدُ الَّذِي يَلِي $16$ وَيَسْبِقُ $18$ هُوَ $17$ (سَبْعَةَ عَشَرَ)، وَنَكْتُبُ: $16 < 17 < 18$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لِتَسْهِيلِ عَدِّ كَمِّيَّةٍ مِنْ $10$ إلى $19$، نُكَوِّنُ عَشَرَةً واحِدَةً ($10$ عَناصِرَ)، ثُمَّ نَعُدُّ الوَحَداتِ الباقِيَةَ.",
+      "كُلُّ عَدَدٍ مِنْ $11$ إلى $19$ يُفَكَّكُ إلى عَشَرَةٍ وَوَحَداتٍ: مِثْلُ $14 = 10 + 4$ (أَرْبَعَةَ عَشَرَ) وَ $19 = 10 + 9$ (تِسْعَةَ عَشَرَ).",
+      "عَلى الشَّرِيطِ العَدَدِيِّ، تَكْبُرُ الأَعْدادُ تَدْرِيجِيًّا: $10$، $11$، $12$، $13$، $14$، $15$، $16$، $17$، $18$، $19$.",
+      "لِحَصْرِ عَدَدٍ بَيْنَ عَدَدَيْنِ مُتَتالِيَيْنِ، نَضَعُ السّابِقَ قَبْلَهُ وَالمُوالِيَ بَعْدَهُ، مِثْلُ: $13 < 14 < 15$."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 205\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"484\" height=\"189\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"25\" y=\"20\" width=\"450\" height=\"46\" rx=\"8\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.4\"/><rect x=\"160\" y=\"21\" width=\"45\" height=\"44\" fill=\"#dbeafe\"/><rect x=\"205\" y=\"21\" width=\"45\" height=\"44\" fill=\"#2563eb\"/><rect x=\"250\" y=\"21\" width=\"45\" height=\"44\" fill=\"#dbeafe\"/><text x=\"47\" y=\"49\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">10</text><text x=\"92\" y=\"49\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">11</text><text x=\"137\" y=\"49\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">12</text><text x=\"182\" y=\"49\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">13</text><text x=\"227\" y=\"49\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">14</text><text x=\"272\" y=\"49\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">15</text><text x=\"317\" y=\"49\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">16</text><text x=\"362\" y=\"49\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">17</text><text x=\"407\" y=\"49\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">18</text><text x=\"452\" y=\"49\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">19</text><rect x=\"25\" y=\"80\" width=\"220\" height=\"104\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"135\" y=\"103\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">14 = 10 + 4</text><rect x=\"45\" y=\"116\" width=\"18\" height=\"56\" rx=\"3\" fill=\"#16a34a\"/><text x=\"54\" y=\"149\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">10</text><rect x=\"85\" y=\"152\" width=\"16\" height=\"16\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"107\" y=\"152\" width=\"16\" height=\"16\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"129\" y=\"152\" width=\"16\" height=\"16\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"151\" y=\"152\" width=\"16\" height=\"16\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"126\" y=\"138\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">4 وَحَداتٍ</text><rect x=\"260\" y=\"80\" width=\"215\" height=\"104\" rx=\"10\" fill=\"#fff7ed\" stroke=\"#ea580c\" stroke-width=\"1.5\"/><text x=\"367\" y=\"105\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"rtl\">الحَصْرُ والمُقارَنَةُ</text><text x=\"367\" y=\"134\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">13 &lt; 14 &lt; 15</text><text x=\"367\" y=\"164\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#334155\" direction=\"rtl\">14: أَرْبَعَةَ عَشَرَ</text></svg>",
+    "visualCaptionAr": "تَمْثِيلُ العَدَدِ $14$ بِعَشَرَةٍ وَ $4$ وَحَداتٍ، وَحَصْرُهُ عَلى الشَّرِيطِ العَدَدِيِّ بَيْنَ $13$ وَ $15$.",
+    "examples": [
+      {
+        "problemAr": "فَكِّكِ العَدَدَ $17$ إلى عَشَرَةٍ وَوَحَداتٍ، ثُمَّ اكْتُبْهُ بِالحُرُوفِ.",
+        "solutionAr": "$17 = 10 + 7$، وَيُكْتَبُ بِالحُرُوفِ: سَبْعَةَ عَشَرَ."
+      },
+      {
+        "problemAr": "قارِنْ بَيْنَ $12$ وَ $16$، ثُمَّ احْصُرِ العَدَدَ $16$ بَيْنَ عَدَدَيْنِ مُتَتالِيَيْنِ.",
+        "solutionAr": "عَلى الشَّرِيطِ العَدَدِيِّ يَأْتي $16$ بَعْدَ $12$، إِذَنْ $16 > 12$. وَالحَصْرُ هُوَ: $15 < 16 < 17$."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! عِنْدَما نَضُمُّ $4$ وَحَداتٍ إلى $10$ نَحْصُلُ عَلى $14$ (أَرْبَعَةَ عَشَرَ)، وَلَيْسَ $1 + 4 = 5$. وَلا تَخْلِطْ بَيْنَ $13$ وَ $31$!"
+  },
+  "practice": [
+    {
+      "questionAr": "انْظُرْ إلى الرَّسْمِ: ما العَدَدُ الَّذِي يُمَثِّلُ المُرَبَّعاتِ كُلَّها؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 120\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"364\" height=\"104\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"28\" y=\"22\" width=\"74\" height=\"76\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"65\" y=\"66\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">10</text><rect x=\"130\" y=\"48\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#f59e0b\"/><rect x=\"162\" y=\"48\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#f59e0b\"/><rect x=\"194\" y=\"48\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#f59e0b\"/><rect x=\"226\" y=\"48\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#f59e0b\"/><rect x=\"258\" y=\"48\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#f59e0b\"/><rect x=\"290\" y=\"48\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#f59e0b\"/></svg>",
+      "options": [
+        "$61$",
+        "$16$",
+        "$15$",
+        "$7$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انْتَبِهْ إلى التَّرْتِيبِ: العَشَراتُ $1$ عَلى اليَسارِ وَالوَحَداتُ $6$ عَلى اليَمِينِ، إِذَنْ $16$ وَلَيْسَ $61$.",
+        "أَحْسَنْتَ! عَشَرَةٌ واحِدَةٌ ($10$) مَعَ $6$ وَحَداتٍ تُساوي $10 + 6 = 16$.",
+        "عُدَّ المُرَبَّعاتِ الصَّفْراءَ جَيِّدًا؛ عَدَدُها $6$ وَلَيْسَ $5$.",
+        "العُلْبَةُ الزَّرْقاءُ فيها $10$ وَلَيْسَ $1$؛ لا تَجْمَعْ $1 + 6$!"
+      ],
+      "explanationAr": "لَدَيْنا عَشَرَةٌ واحِدَةٌ ($10$) وَ $6$ وَحَداتٍ مُفْرَدَةٍ، فَيَكُونُ العَدَدُ $10 + 6 = 16$."
+    },
+    {
+      "questionAr": "ما التَّفْكِيكُ الصَّحِيحُ لِلْعَدَدِ $19$ إلى عَشَرَةٍ وَوَحَداتٍ؟",
+      "options": [
+        "$1 + 9$",
+        "$10 + 8$",
+        "$10 + 9$",
+        "$9 + 9$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$1 + 9 = 10$ وَلَيْسَ $19$؛ الرَّقْمُ $1$ في المَنْزِلَةِ اليُسْرى يُمَثِّلُ $10$.",
+        "احْسُبْ جَيِّدًا: $10 + 8 = 18$ وَلَيْسَ $19$.",
+        "مُمْتازٌ! العَدَدُ $19$ يَتَكَوَّنُ مِنْ عَشَرَةٍ واحِدَةٍ ($10$) وَ $9$ وَحَداتٍ: $19 = 10 + 9$.",
+        "احْسُبْ جَيِّدًا: $9 + 9 = 18$ وَلَيْسَ $19$."
+      ],
+      "explanationAr": "العَدَدُ $19$ يَحْتَوِي عَلى عَشَرَةٍ واحِدَةٍ ($10$) وَ $9$ وَحَداتٍ، إِذَنْ $19 = 10 + 9$."
+    },
+    {
+      "questionAr": "انْظُرْ إلى الشَّرِيطِ العَدَدِيِّ: ما العَدَدُ المَفْقُودُ في الخانَةِ المُلَوَّنَةِ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 90\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"20\" y=\"20\" width=\"320\" height=\"50\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"84\" y1=\"20\" x2=\"84\" y2=\"70\" stroke=\"#94a3b8\"/><line x1=\"148\" y1=\"20\" x2=\"148\" y2=\"70\" stroke=\"#94a3b8\"/><line x1=\"212\" y1=\"20\" x2=\"212\" y2=\"70\" stroke=\"#94a3b8\"/><line x1=\"276\" y1=\"20\" x2=\"276\" y2=\"70\" stroke=\"#94a3b8\"/><rect x=\"149\" y=\"21\" width=\"62\" height=\"48\" fill=\"#fef3c7\"/><text x=\"52\" y=\"51\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">11</text><text x=\"116\" y=\"51\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">12</text><text x=\"180\" y=\"52\" text-anchor=\"middle\" font-size=\"19\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">?</text><text x=\"244\" y=\"51\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">14</text><text x=\"308\" y=\"51\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">15</text></svg>",
+      "options": [
+        "$13$",
+        "$10$",
+        "$16$",
+        "$18$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أَحْسَنْتَ! العَدَدُ الَّذِي يَأْتي بَعْدَ $12$ وَقَبْلَ $14$ هُوَ $13$.",
+        "العَدَدُ $10$ يَأْتي قَبْلَ $11$ وَلَيْسَ بَيْنَ $12$ وَ $14$.",
+        "العَدَدُ $16$ يَأْتي بَعْدَ $15$ وَلَيْسَ بَيْنَ $12$ وَ $14$.",
+        "العَدَدُ $18$ أَكْبَرُ مِنْ $15$، وَالمَطْلُوبُ العَدَدُ المَحْصُورُ بَيْنَ $12$ وَ $14$."
+      ],
+      "explanationAr": "نَعُدُّ عَلى الشَّرِيطِ: $11$، $12$، $13$، $14$، $15$. إِذَنْ العَدَدُ المَفْقُودُ هُوَ $13$."
+    }
+  ]
+}

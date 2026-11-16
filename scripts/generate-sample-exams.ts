@@ -29,7 +29,7 @@ interface SamplePaperSpec {
 interface GeneratedManifestItem {
 	slug: string;
 	grade: GradeId;
-	yearSubjectId: 586 | 606 | 624;
+	yearSubjectId: number;
 	trimesterId: TrimesterId;
 	docType: ExamType;
 	variant: ExamVariant;
@@ -50,10 +50,10 @@ interface GeneratedManifest {
 	items: GeneratedManifestItem[];
 }
 
-const CONCURRENCY_LIMIT = 4;
+const CONCURRENCY_LIMIT = 8;
 const MIN_PDF_BYTES = 20_480;
 
-const GRADES: readonly GradeId[] = ['2ap', '5ap', '2am'];
+const GRADES: readonly GradeId[] = ['1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am'];
 const TRIMESTERS: readonly TrimesterId[] = ['t1', 't2', 't3'];
 
 const TRIMESTER_LABELS_AR: Record<TrimesterId, string> = {
@@ -68,29 +68,32 @@ const DIFFICULTY_LABELS_AR: Record<Difficulty, string> = {
 	hard: 'صعب'
 };
 
-const EXAM_SAMPLES: readonly {
+interface SampleVariantSpec {
 	sampleNum: 1 | 2 | 3;
 	seed: number;
 	difficulty: Difficulty;
 	labelAr: string;
-}[] = [
+}
+
+const EXAM_SAMPLES: readonly SampleVariantSpec[] = [
 	{ sampleNum: 1, seed: 101, difficulty: 'easy', labelAr: 'نموذج 1' },
 	{ sampleNum: 2, seed: 202, difficulty: 'medium', labelAr: 'نموذج 2' },
 	{ sampleNum: 3, seed: 303, difficulty: 'hard', labelAr: 'نموذج 3' }
 ];
 
-const TEST_SEEDS_2AM: Record<TrimesterId, number> = {
-	t1: 401,
-	t2: 402,
-	t3: 403
-};
+const TEST_SAMPLES: readonly SampleVariantSpec[] = [
+	{ sampleNum: 1, seed: 401, difficulty: 'easy', labelAr: 'نموذج 1' },
+	{ sampleNum: 2, seed: 502, difficulty: 'medium', labelAr: 'نموذج 2' },
+	{ sampleNum: 3, seed: 603, difficulty: 'hard', labelAr: 'نموذج 3' }
+];
 
 function buildPaperSpecs(): SamplePaperSpec[] {
 	const specs: SamplePaperSpec[] = [];
 
-	// 27 required trimester exams (3 grades x 3 trimesters x 3 samples)
+	// 81 trimester exams + 81 supervised tests (9 grades x 3 trimesters x 3 exclusive models each)
 	for (const grade of GRADES) {
 		const yearName = GRADE_METADATA[grade].yearName;
+		const testLabelAr = grade.endsWith('ap') ? 'تقويم مرحلي' : 'فرض محروس';
 		for (const trimesterId of TRIMESTERS) {
 			const trimesterName = TRIMESTER_LABELS_AR[trimesterId];
 			for (const sample of EXAM_SAMPLES) {
@@ -105,49 +108,78 @@ function buildPaperSpecs(): SamplePaperSpec[] {
 					titleAr: `اختبار ${trimesterName} في الرياضيات — ${yearName} (${sample.labelAr} — مستوى ${DIFFICULTY_LABELS_AR[sample.difficulty]})`
 				});
 			}
+			for (const sample of TEST_SAMPLES) {
+				specs.push({
+					slug: `${grade}-math-${trimesterId}-test-sample-${sample.sampleNum}`,
+					grade,
+					trimesterId,
+					docType: 'test',
+					variant: 'supervised_test',
+					difficulty: sample.difficulty,
+					seed: sample.seed,
+					titleAr: `${testLabelAr} ${trimesterName} في الرياضيات — ${yearName} (${sample.labelAr} — مستوى ${DIFFICULTY_LABELS_AR[sample.difficulty]})`
+				});
+			}
 		}
 	}
 
-	// 3 supervised tests (فرض محروس) for 2AM
-	for (const trimesterId of TRIMESTERS) {
-		const trimesterName = TRIMESTER_LABELS_AR[trimesterId];
+	// 5 end-of-cycle 5AP papers (3 Cinq mock exams + 2 competency evaluations)
+	const cinqConfigs: readonly { n: 1 | 2 | 3; seed: number; difficulty: Difficulty }[] = [
+		{ n: 1, seed: 701, difficulty: 'medium' },
+		{ n: 2, seed: 702, difficulty: 'hard' },
+		{ n: 3, seed: 703, difficulty: 'hard' }
+	];
+	for (const cfg of cinqConfigs) {
 		specs.push({
-			slug: `2am-math-${trimesterId}-test-sample-1`,
-			grade: '2am',
-			trimesterId,
-			docType: 'test',
-			variant: 'supervised_test',
-			difficulty: 'medium',
-			seed: TEST_SEEDS_2AM[trimesterId],
-			titleAr: `فرض ${trimesterName} في الرياضيات — ${GRADE_METADATA['2am'].yearName} (نموذج 1 — مستوى ${DIFFICULTY_LABELS_AR.medium})`
+			slug: `5ap-math-t3-cinq-mock-${cfg.n}`,
+			grade: '5ap',
+			trimesterId: 't3',
+			docType: 'exam',
+			variant: 'cinq_mock',
+			difficulty: cfg.difficulty,
+			seed: cfg.seed,
+			titleAr: `امتحان تجريبي لنهاية مرحلة التعليم الابتدائي (Cinq) في الرياضيات — النموذج ${cfg.n}`
 		});
 	}
 
-	// 2 end-of-cycle 5AP papers (T3)
-	specs.push({
-		slug: '5ap-math-t3-cinq-mock-1',
-		grade: '5ap',
-		trimesterId: 't3',
-		docType: 'exam',
-		variant: 'cinq_mock',
-		difficulty: 'hard',
-		seed: 505,
-		titleAr: 'امتحان تجريبي لنهاية مرحلة التعليم الابتدائي (Cinq) في الرياضيات — النموذج 1'
-	});
+	const competencyConfigs: readonly { n: 1 | 2; seed: number; difficulty: Difficulty }[] = [
+		{ n: 1, seed: 801, difficulty: 'medium' },
+		{ n: 2, seed: 802, difficulty: 'hard' }
+	];
+	for (const cfg of competencyConfigs) {
+		specs.push({
+			slug: `5ap-math-t3-competency-eval-${cfg.n}`,
+			grade: '5ap',
+			trimesterId: 't3',
+			docType: 'exam',
+			variant: 'competency_eval',
+			difficulty: cfg.difficulty,
+			seed: cfg.seed,
+			titleAr: `موضوع تقييم المكتسبات في الرياضيات — السنة الخامسة ابتدائي (النموذج ${cfg.n})`
+		});
+	}
 
-	specs.push({
-		slug: '5ap-math-t3-competency-eval-1',
-		grade: '5ap',
-		trimesterId: 't3',
-		docType: 'exam',
-		variant: 'competency_eval',
-		difficulty: 'medium',
-		seed: 606,
-		titleAr: 'موضوع تقييم المكتسبات في الرياضيات — السنة الخامسة ابتدائي'
-	});
+	// 3 BEM mock exams for 4AM (T3)
+	const bemConfigs: readonly { n: 1 | 2 | 3; seed: number; difficulty: Difficulty }[] = [
+		{ n: 1, seed: 901, difficulty: 'medium' },
+		{ n: 2, seed: 902, difficulty: 'hard' },
+		{ n: 3, seed: 903, difficulty: 'hard' }
+	];
+	for (const cfg of bemConfigs) {
+		specs.push({
+			slug: `4am-math-t3-bem-mock-${cfg.n}`,
+			grade: '4am',
+			trimesterId: 't3',
+			docType: 'exam',
+			variant: 'bem_mock',
+			difficulty: cfg.difficulty,
+			seed: cfg.seed,
+			titleAr: `امتحان تجريبي لشهادة التعليم المتوسط (BEM) في الرياضيات — النموذج ${cfg.n}`
+		});
+	}
 
-	if (specs.length !== 32) {
-		throw new Error(`Expected 32 sample exam specs, built ${specs.length}`);
+	if (specs.length !== 170) {
+		throw new Error(`Expected 170 sample exam specs, built ${specs.length}`);
 	}
 
 	return specs;

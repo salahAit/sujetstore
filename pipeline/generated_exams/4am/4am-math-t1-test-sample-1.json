@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "levelId": "moyen",
+    "yearId": "4am",
+    "yearName": "السنة الرابعة متوسط (BEM)",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t1",
+    "trimesterName": "الفصل الأول",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة واحدة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 7,
+      "instruction": "نعتبر العددين الطبيعيين $220$ و $140$:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) دون حساب، برّر لماذا العددان $220$ و $140$ ليسا أوليين فيما بينهما.",
+          "answer": "1) العددان $220$ و $140$ زوجيان (رقم آحادهما زوجي)، فكلاهما يقبل القسمة على $2$، إذن قاسمهما المشترك الأكبر أكبر من $1$.",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب القاسم المشترك الأكبر $upright(\"PGCD\")(220 ; 140)$ باستعمال خوارزمية إقليدس (القسمات المتتالية).",
+          "answer": "2) بتطبيق خوارزمية إقليدس: $220 = 140 times 1 + 80$ ، $140 = 80 times 1 + 60$ ، $80 = 60 times 1 + 20$ ، $60 = 20 times 3 + 0$. إذن $upright(\"PGCD\")(220 ; 140) = 20$.",
+          "mark": "3.5"
+        },
+        {
+          "type": "text",
+          "content": "3) اكتب الكسر $frac(220, 140)$ على الشكل غير القابل للاختزال.",
+          "answer": "3) نقسم البسط والمقام على $upright(\"PGCD\")(220 ; 140) = 20$: $frac(220, 140) = frac(220 div 20, 140 div 20) = frac(11, 7)$.",
+          "mark": "2.25"
+        }
+      ],
+      "id": "ex_test_1_4am_t1_pgcd_irreducible_fraction",
+      "num": "الأول"
+    },
+    {
+      "points": 7,
+      "instruction": "اكتب كل نسبة مما يلي بمقام عدد ناطق ثم بسّط:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) اجعل مقام النسبة $E = frac(18, sqrt(3))$ عدداً ناطقاً وبسّطها.",
+          "answer": "1) $E = frac(18 times sqrt(3), sqrt(3) times sqrt(3)) = frac(18 sqrt(3), 3) = 6 sqrt(3)$.",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "2) اجعل مقام النسبة $F = frac(9 + sqrt(3), sqrt(3))$ عدداً ناطقاً وبيّن أن $F = 3 sqrt(3) + 1$.",
+          "answer": "2) $F = frac((9 + sqrt(3)) sqrt(3), (sqrt(3))^2) = frac(9 sqrt(3) + 3, 3) = 3 sqrt(3) + 1$.",
+          "mark": "3.5"
+        },
+        {
+          "type": "text",
+          "content": "3) استنتج القيمة المبسطة للمجموع $E + F$.",
+          "answer": "3) $E + F = 6 sqrt(3) + 3 sqrt(3) + 1 = 9 sqrt(3) + 1$.",
+          "mark": "1.25"
+        }
+      ],
+      "id": "ex_test_2_4am_t1_rationalizing_combined",
+      "num": "الثاني"
+    },
+    {
+      "points": 6,
+      "instruction": "تأمّل المثلث $A B C$ القائم في $A$ الموضح في الشكل المقابل:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.5fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "نعطي $A B = 4$ سم و $A C = 3$ سم.\n\n1) احسب طول الوتر $B C$ بتطبيق خاصية فيثاغورس.\n\n2) احسب القيم المضبوطة لـ $sin hat(B)$ و $cos hat(B)$ و $tan hat(B)$ على شكل كسور غير قابلة للاختزال.\n\n3) استنتج قيس الزاوية $hat(B)$ مدوراً إلى الوحدة بالدرجة.",
+              "answer": "1) المثلث $A B C$ قائم في $A$، وحسب خاصية فيثاغورس: $B C^2 = A B^2 + A C^2 = 4^2 + 3^2 = 25$، ومنه $B C = sqrt(25) = 5$ سم.\n\n2) $sin hat(B) = frac(A C, B C) = frac(3, 5)$، $cos hat(B) = frac(A B, B C) = frac(4, 5)$، $tan hat(B) = frac(A C, A B) = frac(3, 4)$.\n\n3) باستعمال الحاسبة (وضع DEG) نجد $hat(B) approx 37°$.",
+              "mark": "6"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/4am_t1_trig_easy_895782.svg",
+              "caption": "المثلث القائم ABC"
+            }
+          ]
+        }
+      ],
+      "id": "ex_test_3_4am_t1_trigonometry_right_triangle",
+      "num": "الثالث"
+    }
+  ]
+}

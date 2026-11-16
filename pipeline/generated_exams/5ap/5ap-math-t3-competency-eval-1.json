@@ -10,60 +10,139 @@
     "docType": "exam",
     "academicYear": "2025 / 2026",
     "duration": "ساعة ونصف",
+    "customDocTitle": "تقييم المكتسبات في مادة الرياضيات",
     "siteUrl": "sujetstore.com"
   },
   "exercises": [
     {
       "points": 1.5,
-      "instruction": "لاحظ الساعة المرفقة ثم أجب عن المطلوب مع إظهار الحساب في النظام الستيني:",
+      "instruction": "أكمل جدول التحويلات الآتي بالعدد المناسب في كل خانة:",
       "content": [
         {
-          "type": "columns",
-          "widths": [
-            "2fr",
-            "1fr"
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "القياس المعطى",
+            "الوحدة المطلوبة",
+            "القياس المحوّل"
           ],
-          "children": [
-            {
-              "type": "text",
-              "content": "انطلقت حافلة المسافرين صباحا على الساعة #text(dir: ltr)[08 h 35 min] (الساعة المقابلة) ووصلت إلى وجهتها على الساعة #text(dir: ltr)[10 h 05 min]."
-            },
-            {
-              "type": "image",
-              "src": "/generated/math-svg/5ap_t3_clock_s903636450_medium.svg",
-              "caption": "#text(dir: ltr)[08 h 35 min]"
-            }
+          "cells": [],
+          "rows": [
+            [
+              "#text(dir: ltr)[3.2 t]",
+              "#text(dir: ltr)[kg]",
+              {
+                "content": "#text(dir: ltr)[...... kg]",
+                "answer": "#text(dir: ltr)[3200 kg]",
+                "mark": "0.5"
+              }
+            ],
+            [
+              "#text(dir: ltr)[2.4 L]",
+              "#text(dir: ltr)[mL]",
+              {
+                "content": "#text(dir: ltr)[...... mL]",
+                "answer": "#text(dir: ltr)[2400 mL]",
+                "mark": "0.25"
+              }
+            ],
+            [
+              "#text(dir: ltr)[5 m²]",
+              "#text(dir: ltr)[cm²]",
+              {
+                "content": "#text(dir: ltr)[...... cm²]",
+                "answer": "#text(dir: ltr)[50000 cm²]",
+                "mark": "0.25"
+              }
+            ],
+            [
+              "#text(dir: ltr)[2.5 ha]",
+              "#text(dir: ltr)[m²]",
+              {
+                "content": "#text(dir: ltr)[...... m²]",
+                "answer": "#text(dir: ltr)[25000 m²]",
+                "mark": "0.5"
+              }
+            ]
           ]
-        },
-        {
-          "type": "text",
-          "content": "احسب المدة المستغرقة في هذه الرحلة.",
-          "answer": "احسب المدة المستغرقة في هذه الرحلة.\n\nالمدة المستغرقة: #text(dir: ltr)[10 h 05 min - 08 h 35 min]. نستعمل المبادلة الستينية (#text(dir: ltr)[1 h = 60 min]) عند الحاجة. المدة المستغرقة هي: #text(dir: ltr)[1 h 30 min].",
-          "mark": "1.5"
         }
       ],
-      "id": "exam-5ap-competency_eval-t3-medium-606-ex-1",
+      "id": "exam-5ap-competency_eval-t3-medium-801-ex-1",
       "num": "الأول"
     },
     {
       "points": 1.5,
-      "instruction": "أجب عن السؤالين الآتيين مع إبراز خطوات القسمة العشرية التامة:",
+      "instruction": "اشترى تلميذ كراريس من نفس النوع بسعر موحد. أكمل جدول التناسبية التالي باستعمال المرور بالوحدة:",
       "content": [
         {
-          "type": "text",
-          "content": "1) احسب الحاصل العشري التام للعملية الآتية: $436 div 20$",
-          "answer": "1) حساب الحاصل العشري التام: $436 div 20 = 21.8$ (الحاصل الصحيح $21$ والباقي $16$ ثم تحويل الباقي إلى أعشار).",
-          "mark": "0.75"
+          "type": "table",
+          "headers": [
+            "عدد الكراريس",
+            "$5$",
+            "$1$",
+            "$7$",
+            "$13$"
+          ],
+          "cells": [
+            "الثمن (دج)",
+            "$95$",
+            {
+              "content": "...",
+              "answer": "$19$",
+              "mark": "0.5"
+            },
+            {
+              "content": "...",
+              "answer": "$133$",
+              "mark": "0.5"
+            },
+            {
+              "content": "...",
+              "answer": "$247$",
+              "mark": "0.5"
+            }
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
         },
         {
           "type": "text",
-          "content": "2) أتمم المساويات الآتية بالكتابة العشرية المناسبة: $frac(4, 5) = ...$  ،  $21 + frac(4, 5) = ...$  ،  $frac(2, 5) = ...$",
-          "answer": "2) إتمام المساويات: $frac(4, 5) = 0.8$  ،  $21 + frac(4, 5) = 21.8$  ،  $frac(2, 5) = 0.4$",
-          "mark": "0.75"
+          "content": "وضح طريقة حساب قيمة الوحدة وقيمة $7$:",
+          "answer": "قيمة الوحدة: $95 div 5 = 19$ دج، ومنه قيمة $7$ هي: $19 times 7 = 133$ دج.",
+          "mark": ""
         }
       ],
-      "id": "exam-5ap-competency_eval-t3-medium-606-ex-2",
+      "id": "exam-5ap-competency_eval-t3-medium-801-ex-2",
       "num": "الثاني"
+    },
+    {
+      "points": 1.5,
+      "instruction": "لاحظ المستقيم المدرج التالي جيدا ثم أجب عن السؤالين:",
+      "content": [
+        {
+          "type": "image",
+          "src": "/generated/math-svg/5ap-t2-numline-medium-304181.svg",
+          "caption": "المستقيم المدرج"
+        },
+        {
+          "type": "text",
+          "content": "1) اقرأ فاصلتي النقطتين $A$ و $B$ ثم قارن بينهما باستعمال الرمز المناسب ($<$ أو $>$).",
+          "answer": "1) فاصلة $A$ هي $7.3$ وفاصلة $B$ هي $7.58$، والمقارنة: $7.3 < 7.58$ (أو $7.58 > 7.3$).",
+          "mark": "0.5"
+        },
+        {
+          "type": "text",
+          "content": "2) ضع ثم أنجز عموديا مع محاذاة الفاصلة: $7.58 - 7.3$",
+          "answer": "2) نكتب $7.3 = 7.30$ ثم نطرح: $7.58 - 7.30 = 0.28$.",
+          "mark": "1"
+        }
+      ],
+      "id": "exam-5ap-competency_eval-t3-medium-801-ex-3",
+      "num": "الثالث"
     },
     {
       "points": 1.5,
@@ -80,80 +159,33 @@
               "type": "true_false",
               "items": [
                 {
-                  "q": "المستقيمان $(M N)$ و $(Q P)$ متوازيان.",
+                  "q": "المستقيمان $(A B)$ و $(D C)$ متوازيان.",
                   "a": "صحيح",
                   "c": "العبارة صحيحة لأن الضلعين المتقابلين في المستطيل متوازيان.",
                   "mark": "0.5"
                 },
                 {
-                  "q": "المستقيمان $(M N)$ و $(M Q)$ متعامدان.",
+                  "q": "المستقيمان $(A B)$ و $(A D)$ متعامدان.",
                   "a": "صحيح",
                   "c": "العبارة صحيحة لأن الضلعين المتجاورين في المستطيل متعامدان.",
                   "mark": "0.5"
                 },
                 {
-                  "q": "الزاوية التي رأسها $N$ زاوية حادة أصغر من الزاوية القائمة.",
+                  "q": "الزاوية التي رأسها $B$ زاوية حادة أصغر من الزاوية القائمة.",
                   "a": "خطأ",
-                  "c": "الزاوية التي رأسها $N$ زاوية قائمة (جميع زوايا المستطيل قائمة).",
+                  "c": "الزاوية التي رأسها $B$ زاوية قائمة (جميع زوايا المستطيل قائمة).",
                   "mark": "0.5"
                 }
               ]
             },
             {
               "type": "image",
-              "src": "/generated/math-svg/5ap-t1-geom-medium-s510424534.svg"
+              "src": "/generated/math-svg/5ap-t1-geom-medium-s309452.svg"
             }
           ]
         }
       ],
-      "id": "exam-5ap-competency_eval-t3-medium-606-ex-3",
-      "num": "الثالث"
-    },
-    {
-      "points": 1.5,
-      "instruction": "تستهلك سيارة كمية بنزين متناسبة مع المسافة المقطوعة. أكمل جدول التناسبية التالي باستعمال المرور بالوحدة:",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "كمية البنزين (L)",
-            "$3$",
-            "$1$",
-            "$7$",
-            "$19$"
-          ],
-          "cells": [
-            "المسافة (km)",
-            "$147$",
-            {
-              "content": "...",
-              "answer": "$49$",
-              "mark": "0.5"
-            },
-            {
-              "content": "...",
-              "answer": "$343$",
-              "mark": "0.5"
-            },
-            {
-              "content": "...",
-              "answer": "$931$",
-              "mark": "0.5"
-            }
-          ],
-          "align": "center",
-          "borders": "grid",
-          "headerBackground": true,
-          "width": "full"
-        },
-        {
-          "type": "text",
-          "content": "وضح طريقة حساب قيمة الوحدة وقيمة $7$:",
-          "answer": "قيمة الوحدة: $147 div 3 = 49$ km، ومنه قيمة $7$ هي: $49 times 7 = 343$ km.",
-          "mark": ""
-        }
-      ],
-      "id": "exam-5ap-competency_eval-t3-medium-606-ex-4",
+      "id": "exam-5ap-competency_eval-t3-medium-801-ex-4",
       "num": "الرابع"
     },
     {
@@ -170,12 +202,12 @@
           "children": [
             {
               "type": "text",
-              "content": "نظمت مدرسة رحلة لفائدة $30$ تلميذا إلى المدينة الأثرية بتيبازة. انطلقت الحافلة على الساعة #text(dir: ltr)[07 h 15 min] (كما توضح الساعة المقابلة) بسرعة منتظمة قدرها #text(dir: ltr)[60 km/h]، ووصلت على الساعة #text(dir: ltr)[08 h 45 min]."
+              "content": "نظمت مدرسة رحلة لفائدة $40$ تلميذا إلى متحف المجاهد بالجزائر. انطلقت الحافلة على الساعة #text(dir: ltr)[08 h 15 min] (كما توضح الساعة المقابلة) بسرعة منتظمة قدرها #text(dir: ltr)[60 km/h]، ووصلت على الساعة #text(dir: ltr)[09 h 45 min]."
             },
             {
               "type": "image",
-              "src": "/generated/math-svg/5ap_t3_integ_s692740403_medium.svg",
-              "caption": "#text(dir: ltr)[07 h 15 min]"
+              "src": "/generated/math-svg/5ap_t3_integ_s559757_medium.svg",
+              "caption": "#text(dir: ltr)[08 h 15 min]"
             }
           ]
         },
@@ -193,32 +225,32 @@
           ],
           "cells": [
             "10000 دج",
-            "300 دج",
+            "400 دج",
             "25%",
-            "6000 دج",
-            "$30$"
+            "5000 دج",
+            "$40$"
           ]
         },
         {
           "type": "text",
-          "content": "1) احسب مدة السير، ثم استنتج المسافة المقطوعة بين المدرسة والمدينة الأثرية بتيبازة.",
-          "answer": "1) المدة: #text(dir: ltr)[08 h 45 min - 07 h 15 min = 1 h 30 min] (#text(dir: ltr)[90 min]).\n\nالمسافة: #text(dir: ltr)[60 km] في #text(dir: ltr)[60 min]، إذن المسافة في #text(dir: ltr)[90 min] هي #text(dir: ltr)[90 km].",
+          "content": "1) احسب مدة السير، ثم استنتج المسافة المقطوعة بين المدرسة ومتحف المجاهد بالجزائر.",
+          "answer": "1) المدة: #text(dir: ltr)[09 h 45 min - 08 h 15 min = 1 h 30 min] (#text(dir: ltr)[90 min]).\n\nالمسافة: #text(dir: ltr)[60 km] في #text(dir: ltr)[60 min]، إذن المسافة في #text(dir: ltr)[90 min] هي #text(dir: ltr)[90 km].",
           "mark": "1.25"
         },
         {
           "type": "text",
           "content": "2) احسب سعر التذكرة بعد التخفيض، ثم التكلفة الإجمالية للرحلة (كراء الحافلة + التذاكر).",
-          "answer": "2) قيمة التخفيض: $(300 times 25) div 100 = 75$ دج، وسعر التذكرة المخفض: $225$ دج.\n\nثمن التذاكر: $30 times 225 = 6750$ دج، والتكلفة الإجمالية: $6750 + 10000 = 16750$ دج.",
+          "answer": "2) قيمة التخفيض: $(400 times 25) div 100 = 100$ دج، وسعر التذكرة المخفض: $300$ دج.\n\nثمن التذاكر: $40 times 300 = 12000$ دج، والتكلفة الإجمالية: $12000 + 10000 = 22000$ دج.",
           "mark": "1.25"
         },
         {
           "type": "text",
           "content": "3) اطرح إعانة الجمعية من التكلفة الإجمالية، ثم احسب مساهمة التلميذ الواحد.",
-          "answer": "3) المبلغ المتبقي: $16750 - 6000 = 10750$ دج.\n\nمساهمة التلميذ الواحد: $10750 div 30 = 358.33$ دج.",
+          "answer": "3) المبلغ المتبقي: $22000 - 5000 = 17000$ دج.\n\nمساهمة التلميذ الواحد: $17000 div 40 = 425$ دج.",
           "mark": "1.5"
         }
       ],
-      "id": "exam-5ap-competency_eval-t3-medium-606-ex-5"
+      "id": "exam-5ap-competency_eval-t3-medium-801-ex-5"
     }
   ]
 }

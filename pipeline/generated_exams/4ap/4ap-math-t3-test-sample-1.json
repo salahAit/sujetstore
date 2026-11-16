@@ -1,0 +1,181 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "4ap",
+    "yearName": "السنة الرابعة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "أنجز العمليات الآتية ذهنيا بإزاحة الفاصلة، ثم أكمل التحويلات:",
+      "content": [
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "العملية",
+            "النتيجة"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "$3.7 div 100$",
+              {
+                "content": "....................",
+                "answer": "$0.037$",
+                "mark": "0.5"
+              }
+            ],
+            [
+              "$6.3 times 1000$",
+              {
+                "content": "....................",
+                "answer": "$6300$",
+                "mark": "0.5"
+              }
+            ],
+            [
+              "$4.85 times 100$",
+              {
+                "content": "....................",
+                "answer": "$485$",
+                "mark": "0.5"
+              }
+            ],
+            [
+              "$8.5 div 100$",
+              {
+                "content": "....................",
+                "answer": "$0.085$",
+                "mark": "0.5"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "content": "أكمل التحويلين الآتيين باستعمال الضرب أو القسمة على $1000$:\n\nأ) #text(dir: ltr)[0.43 km = ........ m]  ،  ب) #text(dir: ltr)[690 g = ........ kg]",
+          "answer": "أ) #text(dir: ltr)[0.43 km = 430 m]  ،  ب) #text(dir: ltr)[690 g = 0.69 kg]",
+          "mark": "1"
+        }
+      ],
+      "id": "exam-4ap-supervised_test-t3-easy-401-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "تبيع مكتبة كراريس متماثلة بسعر متناسب مع عددها. أكمل جدول التناسبية الآتي باستعمال الخواص الخطية ومعامل التناسبية:",
+      "content": [
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "عدد الكراريس",
+            "$3$",
+            "$6$",
+            "$9$",
+            "$10$"
+          ],
+          "cells": [
+            "الثمن (دج)",
+            "$90$",
+            "$180$",
+            {
+              "content": ".....",
+              "answer": "$270$",
+              "mark": "1"
+            },
+            {
+              "content": ".....",
+              "answer": "$300$",
+              "mark": "1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "أوجد معامل التناسبية ثم وضّح طريقة إكمال الجدول.",
+          "answer": "معامل التناسبية: $90 div 3 = 30$ (نضرب السطر الأول في $30$ أو نقسم السطر الثاني على $30$).\n\nباستعمال الخواص الخطية: $6 = 3 times 2$، و $9 = 3 + 6$ إذن $90 + 180 = 270$.",
+          "mark": "1"
+        }
+      ],
+      "id": "exam-4ap-supervised_test-t3-easy-401-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "استعن بالمعطيات والجدول والمخطط المقابل لحل هذه الوضعية الإدماجية مع تنظيم الإجابة وكتابة الوحدات:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.6fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "قرّرت التعاونية المدرسية تهيئة ساحة المدرسة المستطيلة الشكل التي طولها #text(dir: ltr)[13 m] وعرضها #text(dir: ltr)[8 m]، وإحاطتها بسياج مع ترك مدخل عرضه #text(dir: ltr)[2.5 m]. خصّصت المدرسة ميزانية قدرها #text(dir: ltr)[2000 DA]، واشترت $10$ من مصابيح إنارة صغيرة بسعر #text(dir: ltr)[82.5 DA] لـالمصباح الواحد، ودلو طلاء للجدران بسعر #text(dir: ltr)[337.5 DA]."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/4ap_t3_garden_easy_s49927.svg"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "الميزانية المخصّصة",
+            "سعر المصباح الواحد",
+            "الكمية المشتراة",
+            "ثمن دلو طلاء للجدران",
+            "عرض المدخل"
+          ],
+          "cells": [
+            "#text(dir: ltr)[2000 DA]",
+            "#text(dir: ltr)[82.5 DA]",
+            "$10$",
+            "#text(dir: ltr)[337.5 DA]",
+            "#text(dir: ltr)[2.5 m]"
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب مساحة ساحة المدرسة بالمتر المربع، ثم احسب محيطها واستنتج طول السياج اللازم بعد ترك المدخل.",
+          "answer": "1) المساحة: $13 times 8 = 104$ #text(dir: ltr)[m²].\n\nالمحيط: $2 times (13 + 8) = 42$ #text(dir: ltr)[m].\n\nطول السياج: $42 - 2.5 = 39.5$ #text(dir: ltr)[m].",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب ثمن 10 من مصابيح إنارة صغيرة، ثم احسب المصروف الإجمالي للمقتنيات.",
+          "answer": "2) ثمن مصابيح إنارة صغيرة: $82.5 times 10 = 825$ #text(dir: ltr)[DA].\n\nالمصروف الإجمالي: $825 + 337.5 = 1162.5$ #text(dir: ltr)[DA].",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب المبلغ المالي المتبقي لدى التعاونية المدرسية بعد دفع المصاريف.",
+          "answer": "3) المبلغ المتبقي: $2000.00 - 1162.5 = 837.5$ #text(dir: ltr)[DA].",
+          "mark": "1.25"
+        }
+      ],
+      "id": "exam-4ap-supervised_test-t3-easy-401-ex-3"
+    }
+  ]
+}

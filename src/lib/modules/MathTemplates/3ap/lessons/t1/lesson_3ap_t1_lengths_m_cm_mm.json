@@ -1,0 +1,124 @@
+{
+  "id": "lesson_3ap_t1_lengths_m_cm_mm",
+  "slug": "lesson-3ap-t1-lengths-m-cm-mm",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t1",
+  "sequenceId": "seq1",
+  "sequenceTitleAr": "المقطع الأول: التحضير للدخول المدرسي (الأعداد إلى 9 999، الجمع والطرح والأطوال)",
+  "order": 3,
+  "titleAr": "قياس الأطوال: المتر (m) والسنتيمتر (cm) والمليمتر (mm) والتحويلات",
+  "objectives": [
+    "قراءة تدريجات المسطرة المدرجة بالسنتيمتر (cm) والمليمتر (mm) وقياس أطوال قطع وأشياء بدقة",
+    "اختيار الوحدة المناسبة لتقدير وقياس أطوال (m، cm، mm) وتوظيف العلاقات (1 m = 100 cm، 1 cm = 10 mm، 1 m = 1000 mm)",
+    "التحويل بين وحدات الطول (m، cm، mm) ومقارنة وترتيب وجمع أطوال بعد التعبير عنها بنفس الوحدة"
+  ],
+  "keywordsAr": [
+    "قياس الأطوال",
+    "المتر (m)",
+    "السنتيمتر (cm)",
+    "المليمتر (mm)",
+    "تحويل الأطوال",
+    "المسطرة المدرجة"
+  ],
+  "discover": {
+    "scenarioAr": "في حصة الأشغال اليدوية، قاس ياسين طول شريط ورقي باستعمال المسطرة المدرجة بالسنتيمتر (`cm`) والمليمتر (`mm`) فوصلت نهايته إلى $6\\text{ cm}$ و $4\\text{ mm}$ . بينما قاس طول طاولة القسم فكان $1\\text{ m}$ و $35\\text{ cm}$ . لنتعلم قراءة التدريجات والتحويل بين الوحدات.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 220\" width=\"600\" height=\"220\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"204\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">قراءة المسطرة المدرجة بالسنتيمتر (cm) والمليمتر (mm)</text><rect x=\"50\" y=\"58\" width=\"448\" height=\"22\" rx=\"4\" fill=\"#3b82f6\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"274\" y=\"73\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"rtl\">شريط ورقي</text><rect x=\"35\" y=\"92\" width=\"530\" height=\"52\" rx=\"5\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"1.6\"/><g stroke=\"#1e293b\"><line x1=\"50\" y1=\"92\" x2=\"50\" y2=\"114\" stroke-width=\"2\"/><line x1=\"57\" y1=\"92\" x2=\"57\" y2=\"102\" stroke-width=\"1\"/><line x1=\"64\" y1=\"92\" x2=\"64\" y2=\"102\" stroke-width=\"1\"/><line x1=\"71\" y1=\"92\" x2=\"71\" y2=\"102\" stroke-width=\"1\"/><line x1=\"78\" y1=\"92\" x2=\"78\" y2=\"102\" stroke-width=\"1\"/><line x1=\"85\" y1=\"92\" x2=\"85\" y2=\"107\" stroke-width=\"1.3\"/><line x1=\"92\" y1=\"92\" x2=\"92\" y2=\"102\" stroke-width=\"1\"/><line x1=\"99\" y1=\"92\" x2=\"99\" y2=\"102\" stroke-width=\"1\"/><line x1=\"106\" y1=\"92\" x2=\"106\" y2=\"102\" stroke-width=\"1\"/><line x1=\"113\" y1=\"92\" x2=\"113\" y2=\"102\" stroke-width=\"1\"/><line x1=\"120\" y1=\"92\" x2=\"120\" y2=\"114\" stroke-width=\"2\"/><line x1=\"127\" y1=\"92\" x2=\"127\" y2=\"102\" stroke-width=\"1\"/><line x1=\"134\" y1=\"92\" x2=\"134\" y2=\"102\" stroke-width=\"1\"/><line x1=\"141\" y1=\"92\" x2=\"141\" y2=\"102\" stroke-width=\"1\"/><line x1=\"148\" y1=\"92\" x2=\"148\" y2=\"102\" stroke-width=\"1\"/><line x1=\"155\" y1=\"92\" x2=\"155\" y2=\"107\" stroke-width=\"1.3\"/><line x1=\"162\" y1=\"92\" x2=\"162\" y2=\"102\" stroke-width=\"1\"/><line x1=\"169\" y1=\"92\" x2=\"169\" y2=\"102\" stroke-width=\"1\"/><line x1=\"176\" y1=\"92\" x2=\"176\" y2=\"102\" stroke-width=\"1\"/><line x1=\"183\" y1=\"92\" x2=\"183\" y2=\"102\" stroke-width=\"1\"/><line x1=\"190\" y1=\"92\" x2=\"190\" y2=\"114\" stroke-width=\"2\"/><line x1=\"197\" y1=\"92\" x2=\"197\" y2=\"102\" stroke-width=\"1\"/><line x1=\"204\" y1=\"92\" x2=\"204\" y2=\"102\" stroke-width=\"1\"/><line x1=\"211\" y1=\"92\" x2=\"211\" y2=\"102\" stroke-width=\"1\"/><line x1=\"218\" y1=\"92\" x2=\"218\" y2=\"102\" stroke-width=\"1\"/><line x1=\"225\" y1=\"92\" x2=\"225\" y2=\"107\" stroke-width=\"1.3\"/><line x1=\"232\" y1=\"92\" x2=\"232\" y2=\"102\" stroke-width=\"1\"/><line x1=\"239\" y1=\"92\" x2=\"239\" y2=\"102\" stroke-width=\"1\"/><line x1=\"246\" y1=\"92\" x2=\"246\" y2=\"102\" stroke-width=\"1\"/><line x1=\"253\" y1=\"92\" x2=\"253\" y2=\"102\" stroke-width=\"1\"/><line x1=\"260\" y1=\"92\" x2=\"260\" y2=\"114\" stroke-width=\"2\"/><line x1=\"267\" y1=\"92\" x2=\"267\" y2=\"102\" stroke-width=\"1\"/><line x1=\"274\" y1=\"92\" x2=\"274\" y2=\"102\" stroke-width=\"1\"/><line x1=\"281\" y1=\"92\" x2=\"281\" y2=\"102\" stroke-width=\"1\"/><line x1=\"288\" y1=\"92\" x2=\"288\" y2=\"102\" stroke-width=\"1\"/><line x1=\"295\" y1=\"92\" x2=\"295\" y2=\"107\" stroke-width=\"1.3\"/><line x1=\"302\" y1=\"92\" x2=\"302\" y2=\"102\" stroke-width=\"1\"/><line x1=\"309\" y1=\"92\" x2=\"309\" y2=\"102\" stroke-width=\"1\"/><line x1=\"316\" y1=\"92\" x2=\"316\" y2=\"102\" stroke-width=\"1\"/><line x1=\"323\" y1=\"92\" x2=\"323\" y2=\"102\" stroke-width=\"1\"/><line x1=\"330\" y1=\"92\" x2=\"330\" y2=\"114\" stroke-width=\"2\"/><line x1=\"337\" y1=\"92\" x2=\"337\" y2=\"102\" stroke-width=\"1\"/><line x1=\"344\" y1=\"92\" x2=\"344\" y2=\"102\" stroke-width=\"1\"/><line x1=\"351\" y1=\"92\" x2=\"351\" y2=\"102\" stroke-width=\"1\"/><line x1=\"358\" y1=\"92\" x2=\"358\" y2=\"102\" stroke-width=\"1\"/><line x1=\"365\" y1=\"92\" x2=\"365\" y2=\"107\" stroke-width=\"1.3\"/><line x1=\"372\" y1=\"92\" x2=\"372\" y2=\"102\" stroke-width=\"1\"/><line x1=\"379\" y1=\"92\" x2=\"379\" y2=\"102\" stroke-width=\"1\"/><line x1=\"386\" y1=\"92\" x2=\"386\" y2=\"102\" stroke-width=\"1\"/><line x1=\"393\" y1=\"92\" x2=\"393\" y2=\"102\" stroke-width=\"1\"/><line x1=\"400\" y1=\"92\" x2=\"400\" y2=\"114\" stroke-width=\"2\"/><line x1=\"407\" y1=\"92\" x2=\"407\" y2=\"102\" stroke-width=\"1\"/><line x1=\"414\" y1=\"92\" x2=\"414\" y2=\"102\" stroke-width=\"1\"/><line x1=\"421\" y1=\"92\" x2=\"421\" y2=\"102\" stroke-width=\"1\"/><line x1=\"428\" y1=\"92\" x2=\"428\" y2=\"102\" stroke-width=\"1\"/><line x1=\"435\" y1=\"92\" x2=\"435\" y2=\"107\" stroke-width=\"1.3\"/><line x1=\"442\" y1=\"92\" x2=\"442\" y2=\"102\" stroke-width=\"1\"/><line x1=\"449\" y1=\"92\" x2=\"449\" y2=\"102\" stroke-width=\"1\"/><line x1=\"456\" y1=\"92\" x2=\"456\" y2=\"102\" stroke-width=\"1\"/><line x1=\"463\" y1=\"92\" x2=\"463\" y2=\"102\" stroke-width=\"1\"/><line x1=\"470\" y1=\"92\" x2=\"470\" y2=\"114\" stroke-width=\"2\"/><line x1=\"477\" y1=\"92\" x2=\"477\" y2=\"102\" stroke-width=\"1\"/><line x1=\"484\" y1=\"92\" x2=\"484\" y2=\"102\" stroke-width=\"1\"/><line x1=\"491\" y1=\"92\" x2=\"491\" y2=\"102\" stroke-width=\"1\"/><line x1=\"498\" y1=\"92\" x2=\"498\" y2=\"105\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><line x1=\"505\" y1=\"92\" x2=\"505\" y2=\"107\" stroke-width=\"1.3\"/><line x1=\"512\" y1=\"92\" x2=\"512\" y2=\"102\" stroke-width=\"1\"/><line x1=\"519\" y1=\"92\" x2=\"519\" y2=\"102\" stroke-width=\"1\"/><line x1=\"526\" y1=\"92\" x2=\"526\" y2=\"102\" stroke-width=\"1\"/><line x1=\"533\" y1=\"92\" x2=\"533\" y2=\"102\" stroke-width=\"1\"/><line x1=\"540\" y1=\"92\" x2=\"540\" y2=\"114\" stroke-width=\"2\"/></g><line x1=\"498\" y1=\"54\" x2=\"498\" y2=\"92\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"3,2\"/><g font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\" text-anchor=\"middle\"><text x=\"50\" y=\"134\">0</text><text x=\"120\" y=\"134\">1</text><text x=\"190\" y=\"134\">2</text><text x=\"260\" y=\"134\">3</text><text x=\"330\" y=\"134\">4</text><text x=\"400\" y=\"134\">5</text><text x=\"470\" y=\"134\" fill=\"#dc2626\">6</text><text x=\"540\" y=\"134\">7</text></g><text x=\"554\" y=\"134\" font-size=\"12\" font-weight=\"bold\" fill=\"#78350f\" direction=\"ltr\">cm</text><rect x=\"50\" y=\"160\" width=\"190\" height=\"34\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.2\"/><text x=\"145\" y=\"182\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">1 cm = 10 mm</text><rect x=\"270\" y=\"160\" width=\"270\" height=\"34\" rx=\"8\" fill=\"#fef2f2\" stroke=\"#ef4444\" stroke-width=\"1.2\"/><text x=\"405\" y=\"182\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"ltr\">6 cm + 4 mm = ? mm</text></svg>",
+    "steps": [
+      {
+        "promptAr": "تأمل المسطرة: كل سنتيمتر واحد مقسم إلى $10$ تدريجات صغيرة متساوية. كم مليمتر (`mm`) يساوي $1\\text{ cm}$ ؟ (اكتب العدد فقط)",
+        "hintAr": "عدّ التدريجات الصغيرة المحصورة بين $0$ و $1$ على المسطرة.",
+        "expectedInput": "10",
+        "revealAr": "$1\\text{ cm} = 10\\text{ mm}$ ."
+      },
+      {
+        "promptAr": "ينتهي الشريط الورقي عند $6\\text{ cm}$ و $4\\text{ mm}$ إضافية. كم يساوي طول الشريط بالمليمتر (`mm`)؟ (اكتب العدد فقط)",
+        "hintAr": "$6\\text{ cm}$ تساوي $60\\text{ mm}$ ، أضف إليها $4\\text{ mm}$ .",
+        "expectedInput": "64",
+        "revealAr": "$6\\text{ cm } 4\\text{ mm} = 60\\text{ mm} + 4\\text{ mm} = 64\\text{ mm}$ ."
+      },
+      {
+        "promptAr": "طول طاولة القسم $1\\text{ m } 35\\text{ cm}$ . علماً أن $1\\text{ m} = 100\\text{ cm}$ ، كم يساوي طول الطاولة بالسنتيمتر (`cm`)؟ (اكتب العدد فقط)",
+        "hintAr": "حول $1\\text{ m}$ إلى $100\\text{ cm}$ ثم أضف $35\\text{ cm}$ .",
+        "expectedInput": "135",
+        "revealAr": "$1\\text{ m } 35\\text{ cm} = 100\\text{ cm} + 35\\text{ cm} = 135\\text{ cm}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "نستعمل وحدة الطول المناسبة لكل جسم: **المليمتر** (`mm`) للأطوال الصغيرة جداً (كسمك كتاب أو سن قلم)، و**السنتيمتر** (`cm`) للأشياء المتوسطة (كقلم أو كراس)، و**المتر** (`m`) للأطوال الكبيرة (كطول القسم أو باب).",
+      "علاقات التحويل الأساسية بين وحدات الطول: $1\\text{ cm} = 10\\text{ mm}$ ، و $1\\text{ m} = 100\\text{ cm}$ ، و $1\\text{ m} = 1\\,000\\text{ mm}$ .",
+      "للتحويل من وحدة أكبر إلى وحدة أصغر نفكك القيمة ثم نجمع بنفس الوحدة، مثال: $3\\text{ m } 5\\text{ cm} = 300\\text{ cm} + 5\\text{ cm} = 305\\text{ cm}$ .",
+      "لجمع أطوال أو طرحها أو مقارنتها وترتيبها، يجب دائماً **تحويلها إلى الوحدة نفسها** أولاً."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 225\" width=\"600\" height=\"225\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"209\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">العلاقات بين وحدات الطول: المتر والسنتيمتر والمليمتر</text><path d=\"M 110 72 Q 300 32 490 72\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><polygon points=\"486,67 495,73 484,76\" fill=\"#dc2626\"/><rect x=\"255\" y=\"38\" width=\"90\" height=\"24\" rx=\"6\" fill=\"#fee2e2\" stroke=\"#dc2626\"/><text x=\"300\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"ltr\">× 1 000</text><rect x=\"50\" y=\"74\" width=\"120\" height=\"50\" rx=\"10\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"110\" y=\"100\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">m</text><text x=\"110\" y=\"118\" text-anchor=\"middle\" font-size=\"11\" fill=\"#166534\" direction=\"rtl\">المتر</text><line x1=\"174\" y1=\"99\" x2=\"234\" y2=\"99\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><polygon points=\"232,94 242,99 232,104\" fill=\"#2563eb\"/><text x=\"207\" y=\"91\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">× 100</text><rect x=\"244\" y=\"74\" width=\"120\" height=\"50\" rx=\"10\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"304\" y=\"100\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">cm</text><text x=\"304\" y=\"118\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e3a8a\" direction=\"rtl\">السنتيمتر</text><line x1=\"368\" y1=\"99\" x2=\"428\" y2=\"99\" stroke=\"#d97706\" stroke-width=\"2.2\"/><polygon points=\"426,94 436,99 426,104\" fill=\"#d97706\"/><text x=\"401\" y=\"91\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">× 10</text><rect x=\"438\" y=\"74\" width=\"120\" height=\"50\" rx=\"10\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2\"/><text x=\"498\" y=\"100\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">mm</text><text x=\"498\" y=\"118\" text-anchor=\"middle\" font-size=\"11\" fill=\"#9a3412\" direction=\"rtl\">المليمتر</text><rect x=\"35\" y=\"144\" width=\"255\" height=\"56\" rx=\"9\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.3\"/><text x=\"162\" y=\"166\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">3 m 5 cm = 300 cm + 5 cm</text><text x=\"162\" y=\"188\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">= 305 cm</text><rect x=\"310\" y=\"144\" width=\"255\" height=\"56\" rx=\"9\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.3\"/><text x=\"437\" y=\"166\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">4 cm 8 mm = 40 mm + 8 mm</text><text x=\"437\" y=\"188\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">= 48 mm</text></svg>",
+    "visualCaptionAr": "مخطط التحويلات بين المتر (`m`) والسنتيمتر (`cm`) والمليمتر (`mm`) مع أمثلة تطبيقية.",
+    "examples": [
+      {
+        "problemAr": "شريط طوله $2\\text{ m } 40\\text{ cm}$ وشريط آخر طوله $160\\text{ cm}$ . ما مجموع طوليهما بالسنتيمتر (`cm`)؟",
+        "solutionAr": "نحول الطول الأول إلى السنتيمتر: $2\\text{ m } 40\\text{ cm} = 200 + 40 = 240\\text{ cm}$ . ثم نجمع: $240 + 160 = 400\\text{ cm}$ (ويساوي $4\\text{ m}$ )."
+      },
+      {
+        "problemAr": "رتب الأطوال التالية تصاعدياً: $85\\text{ mm}$ ، $12\\text{ cm}$ ، $1\\text{ m}$ .",
+        "solutionAr": "نحول الجميع إلى المليمتر: $12\\text{ cm} = 120\\text{ mm}$ ، و $1\\text{ m} = 1\\,000\\text{ mm}$ . إذن الترتيب التصاعدي: $85\\text{ mm} < 12\\text{ cm} < 1\\text{ m}$ ."
+      }
+    ],
+    "watchOutAr": "احذر عند تحويل مثل $3\\text{ m } 5\\text{ cm}$ إلى السنتيمتر: لا تكتب $35\\text{ cm}$ خطأً! فالمتر الواحد يساوي $100\\text{ cm}$ ، إذن $3\\text{ m} = 300\\text{ cm}$ والمجموع هو $305\\text{ cm}$ . وتأكد دائماً من بدء القياس من التدريجة $0$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "انظر إلى المسطرة المدرجة: ما طول القلم الأخضر بالمليمتر (`mm`)؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 135\" width=\"460\" height=\"135\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"119\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"40\" y=\"26\" width=\"326\" height=\"16\" rx=\"3\" fill=\"#16a34a\"/><polygon points=\"366,26 382,34 366,42\" fill=\"#f59e0b\"/><rect x=\"25\" y=\"58\" width=\"410\" height=\"50\" rx=\"4\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><g stroke=\"#0f172a\"><line x1=\"40\" y1=\"58\" x2=\"40\" y2=\"78\" stroke-width=\"2\"/><line x1=\"46\" y1=\"58\" x2=\"46\" y2=\"67\"/><line x1=\"52\" y1=\"58\" x2=\"52\" y2=\"67\"/><line x1=\"58\" y1=\"58\" x2=\"58\" y2=\"67\"/><line x1=\"64\" y1=\"58\" x2=\"64\" y2=\"67\"/><line x1=\"70\" y1=\"58\" x2=\"70\" y2=\"72\" stroke-width=\"1.2\"/><line x1=\"76\" y1=\"58\" x2=\"76\" y2=\"67\"/><line x1=\"82\" y1=\"58\" x2=\"82\" y2=\"67\"/><line x1=\"88\" y1=\"58\" x2=\"88\" y2=\"67\"/><line x1=\"94\" y1=\"58\" x2=\"94\" y2=\"67\"/><line x1=\"100\" y1=\"58\" x2=\"100\" y2=\"78\" stroke-width=\"2\"/><line x1=\"106\" y1=\"58\" x2=\"106\" y2=\"67\"/><line x1=\"112\" y1=\"58\" x2=\"112\" y2=\"67\"/><line x1=\"118\" y1=\"58\" x2=\"118\" y2=\"67\"/><line x1=\"124\" y1=\"58\" x2=\"124\" y2=\"67\"/><line x1=\"130\" y1=\"58\" x2=\"130\" y2=\"72\" stroke-width=\"1.2\"/><line x1=\"136\" y1=\"58\" x2=\"136\" y2=\"67\"/><line x1=\"142\" y1=\"58\" x2=\"142\" y2=\"67\"/><line x1=\"148\" y1=\"58\" x2=\"148\" y2=\"67\"/><line x1=\"154\" y1=\"58\" x2=\"154\" y2=\"67\"/><line x1=\"160\" y1=\"58\" x2=\"160\" y2=\"78\" stroke-width=\"2\"/><line x1=\"166\" y1=\"58\" x2=\"166\" y2=\"67\"/><line x1=\"172\" y1=\"58\" x2=\"172\" y2=\"67\"/><line x1=\"178\" y1=\"58\" x2=\"178\" y2=\"67\"/><line x1=\"184\" y1=\"58\" x2=\"184\" y2=\"67\"/><line x1=\"190\" y1=\"58\" x2=\"190\" y2=\"72\" stroke-width=\"1.2\"/><line x1=\"196\" y1=\"58\" x2=\"196\" y2=\"67\"/><line x1=\"202\" y1=\"58\" x2=\"202\" y2=\"67\"/><line x1=\"208\" y1=\"58\" x2=\"208\" y2=\"67\"/><line x1=\"214\" y1=\"58\" x2=\"214\" y2=\"67\"/><line x1=\"220\" y1=\"58\" x2=\"220\" y2=\"78\" stroke-width=\"2\"/><line x1=\"226\" y1=\"58\" x2=\"226\" y2=\"67\"/><line x1=\"232\" y1=\"58\" x2=\"232\" y2=\"67\"/><line x1=\"238\" y1=\"58\" x2=\"238\" y2=\"67\"/><line x1=\"244\" y1=\"58\" x2=\"244\" y2=\"67\"/><line x1=\"250\" y1=\"58\" x2=\"250\" y2=\"72\" stroke-width=\"1.2\"/><line x1=\"256\" y1=\"58\" x2=\"256\" y2=\"67\"/><line x1=\"262\" y1=\"58\" x2=\"262\" y2=\"67\"/><line x1=\"268\" y1=\"58\" x2=\"268\" y2=\"67\"/><line x1=\"274\" y1=\"58\" x2=\"274\" y2=\"67\"/><line x1=\"280\" y1=\"58\" x2=\"280\" y2=\"78\" stroke-width=\"2\"/><line x1=\"286\" y1=\"58\" x2=\"286\" y2=\"67\"/><line x1=\"292\" y1=\"58\" x2=\"292\" y2=\"67\"/><line x1=\"298\" y1=\"58\" x2=\"298\" y2=\"67\"/><line x1=\"304\" y1=\"58\" x2=\"304\" y2=\"67\"/><line x1=\"310\" y1=\"58\" x2=\"310\" y2=\"72\" stroke-width=\"1.2\"/><line x1=\"316\" y1=\"58\" x2=\"316\" y2=\"67\"/><line x1=\"322\" y1=\"58\" x2=\"322\" y2=\"67\"/><line x1=\"328\" y1=\"58\" x2=\"328\" y2=\"67\"/><line x1=\"334\" y1=\"58\" x2=\"334\" y2=\"67\"/><line x1=\"340\" y1=\"58\" x2=\"340\" y2=\"78\" stroke-width=\"2\"/><line x1=\"346\" y1=\"58\" x2=\"346\" y2=\"67\"/><line x1=\"352\" y1=\"58\" x2=\"352\" y2=\"67\"/><line x1=\"358\" y1=\"58\" x2=\"358\" y2=\"67\"/><line x1=\"364\" y1=\"58\" x2=\"364\" y2=\"67\"/><line x1=\"370\" y1=\"58\" x2=\"370\" y2=\"72\" stroke-width=\"1.2\"/><line x1=\"376\" y1=\"58\" x2=\"376\" y2=\"67\"/><line x1=\"382\" y1=\"58\" x2=\"382\" y2=\"74\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"388\" y1=\"58\" x2=\"388\" y2=\"67\"/><line x1=\"394\" y1=\"58\" x2=\"394\" y2=\"67\"/><line x1=\"400\" y1=\"58\" x2=\"400\" y2=\"78\" stroke-width=\"2\"/></g><line x1=\"382\" y1=\"34\" x2=\"382\" y2=\"58\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"3,2\"/><g font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"40\" y=\"96\">0</text><text x=\"100\" y=\"96\">1</text><text x=\"160\" y=\"96\">2</text><text x=\"220\" y=\"96\">3</text><text x=\"280\" y=\"96\">4</text><text x=\"340\" y=\"96\" fill=\"#dc2626\">5</text><text x=\"400\" y=\"96\">6</text></g><text x=\"420\" y=\"96\" font-size=\"11\" font-weight=\"bold\" fill=\"#78350f\" direction=\"ltr\">cm</text></svg>",
+      "options": [
+        "$57\\text{ mm}$",
+        "$507\\text{ mm}$",
+        "$75\\text{ mm}$",
+        "$12\\text{ mm}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! القلم يصل إلى $5\\text{ cm}$ و $7\\text{ mm}$ ، وبما أن $5\\text{ cm} = 50\\text{ mm}$ فإن الطول هو $57\\text{ mm}$ .",
+        "تذكر أن $1\\text{ cm} = 10\\text{ mm}$ وليس $100\\text{ mm}$ ، لذا $5\\text{ cm} = 50\\text{ mm}$ وليس $500\\text{ mm}$ .",
+        "عكست بين السنتيمترات والمليمترات: رأس القلم بعد $5\\text{ cm}$ بـ $7$ تدريجات وليس بعد $7\\text{ cm}$ .",
+        "جمعت $5 + 7 = 12$ مباشرة دون تحويل $5\\text{ cm}$ إلى $50\\text{ mm}$ !"
+      ],
+      "explanationAr": "يبدأ القلم عند $0$ وينتهي بعد $5\\text{ cm}$ بـ $7$ تدريجات صغيرة ($7\\text{ mm}$). وبما أن $5\\text{ cm} = 50\\text{ mm}$ ، فإن الطول الإجمالي هو $50 + 7 = 57\\text{ mm}$ ."
+    },
+    {
+      "questionAr": "طول سلك كهربائي هو $6\\text{ m } 8\\text{ cm}$ . كم يساوي طوله بالسنتيمتر (`cm`)؟",
+      "options": [
+        "$68\\text{ cm}$",
+        "$680\\text{ cm}$",
+        "$608\\text{ cm}$",
+        "$6\\,008\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "أهملت صفر العشرات: $6\\text{ m} = 600\\text{ cm}$ وليس $60\\text{ cm}$ .",
+        "جعلت $8\\text{ cm}$ في مرتبة العشرات ($80$) مع أنها $8$ وحدات فقط في السنتيمتر.",
+        "ممتاز! $6\\text{ m} = 600\\text{ cm}$ ، نضيف إليها $8\\text{ cm}$ فنحصل على $608\\text{ cm}$ .",
+        "حولت $6\\text{ m}$ إلى المليمتر ($6\\,000$) بدل السنتيمتر ($600$)!"
+      ],
+      "explanationAr": "نعلم أن $1\\text{ m} = 100\\text{ cm}$ ، إذن $6\\text{ m} = 600\\text{ cm}$ . نجمع: $600\\text{ cm} + 8\\text{ cm} = 608\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "ربط نجار لوحين خشبيين: طول الأول $2\\text{ m } 50\\text{ cm}$ وطول الثاني $75\\text{ cm}$ . ما الطول الإجمالي للوحين معاً بالسنتيمتر (`cm`)؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 110\" width=\"460\" height=\"110\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"94\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"30\" y=\"36\" width=\"280\" height=\"28\" rx=\"4\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1.6\"/><text x=\"170\" y=\"55\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\" direction=\"ltr\">2 m 50 cm</text><rect x=\"312\" y=\"36\" width=\"118\" height=\"28\" rx=\"4\" fill=\"#fed7aa\" stroke=\"#ea580c\" stroke-width=\"1.6\"/><text x=\"371\" y=\"55\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"ltr\">75 cm</text><text x=\"230\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"rtl\">ما الطول الإجمالي بالسنتيمتر؟</text></svg>",
+      "options": [
+        "$125\\text{ cm}$",
+        "$2\\,575\\text{ cm}$",
+        "$275\\text{ cm}$",
+        "$325\\text{ cm}$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "جمعت $50 + 75 = 125$ ونسيت تحويل $2\\text{ m}$ ($200\\text{ cm}$ )!",
+        "تذكر أن $2\\text{ m } 50\\text{ cm} = 250\\text{ cm}$ وليس $2\\,500\\text{ cm}$ .",
+        "تحقق من جمع العشرات والمئات: $250 + 75 = 325$ وليس $275$ .",
+        "أحسنت! حولت الطول الأول إلى $250\\text{ cm}$ ثم جمعت: $250 + 75 = 325\\text{ cm}$ ."
+      ],
+      "explanationAr": "نوحد الوحدة إلى السنتيمتر: طول اللوح الأول $2\\text{ m } 50\\text{ cm} = 250\\text{ cm}$ . نجمع الطولين: $250 + 75 = 325\\text{ cm}$ ."
+    }
+  ]
+}

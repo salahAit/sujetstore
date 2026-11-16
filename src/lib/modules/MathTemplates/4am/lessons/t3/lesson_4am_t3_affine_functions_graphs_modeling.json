@@ -1,0 +1,129 @@
+{
+  "id": "lesson_4am_t3_affine_functions_graphs_modeling",
+  "slug": "4am-t3-affine-functions-graphs-modeling",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t3",
+  "sequenceId": "seq7",
+  "sequenceTitleAr": "المقطع السابع: جمل معادلتين والدوال الخطية والتآلفية وتطبيقات التناسبية",
+  "order": 3,
+  "titleAr": "الدالة التآلفية: تعيينها، تمثيلها البياني، وتطبيقاتها وحل جملة معادلتين بيانياً",
+  "objectives": [
+    "معرفة الترميز x ↦ ax + b للدالة التآلفية وتعيين صورة عدد أو عدد علمت صورته، وتعيين المعاملين a و b انطلاقا من عددين وصورتيهما وتناسبية التزايدات",
+    "تمثيل دالة تآلفية بيانيا وقراءة التمثيل البياني وتعيين معامل التوجيه a والترتيب عند المبدأ b من البيان",
+    "تفسير حل جملة معادلتين بيانيا كنقطة تقاطع مستقيمين وإنجاز تمثيلات بيانية لوضعيات مقارنة العروض والتسعيرات وتفسيرها"
+  ],
+  "keywordsAr": [
+    "الدالة التآلفية",
+    "معامل التوجيه",
+    "الترتيب عند المبدأ",
+    "التمثيل البياني لدالة تآلفية",
+    "الحل البياني لجملة معادلتين",
+    "مقارنة العروض"
+  ],
+  "discover": {
+    "scenarioAr": "يقترح نادٍ رياضي صيغتين للدخول خلال شهر واحد حيث يمثل $x$ عدد الحصص: **العرض الأول** (دون اشتراك): $300\\text{ DA}$ للحصة الواحدة، أي $f(x) = 300x$ . **العرض الثاني** (باشتراك شهري): بطاقة اشتراك بسعر $900\\text{ DA}$ ثم $150\\text{ DA}$ لكل حصة، أي $g(x) = 150x + 900$ . كيف نقارن بين العرضين حسابياً وبيانياً؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 245\" width=\"580\" height=\"245\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"229\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"31\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">مقارنة تسعيرتين بيانياً ونقطة التقاطع</text><rect x=\"20\" y=\"44\" width=\"352\" height=\"180\" rx=\"10\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"74\" y1=\"200\" x2=\"352\" y2=\"200\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"352,200 344,196 344,204\" fill=\"#334155\"/><line x1=\"95\" y1=\"210\" x2=\"95\" y2=\"50\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"95,50 91,58 99,58\" fill=\"#334155\"/><text x=\"85\" y=\"212\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><text x=\"358\" y=\"204\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">x</text><text x=\"106\" y=\"60\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">DA</text><line x1=\"143\" y1=\"196\" x2=\"143\" y2=\"204\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"143\" y=\"216\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">2</text><line x1=\"191\" y1=\"196\" x2=\"191\" y2=\"204\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"191\" y=\"216\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">4</text><line x1=\"239\" y1=\"196\" x2=\"239\" y2=\"204\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"239\" y=\"216\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">6</text><line x1=\"287\" y1=\"196\" x2=\"287\" y2=\"204\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"287\" y=\"216\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">8</text><line x1=\"335\" y1=\"196\" x2=\"335\" y2=\"204\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"335\" y=\"216\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">10</text><line x1=\"91\" y1=\"164\" x2=\"99\" y2=\"164\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"87\" y=\"168\" text-anchor=\"end\" font-size=\"9.5\" fill=\"#475569\" direction=\"ltr\">600</text><line x1=\"91\" y1=\"146\" x2=\"99\" y2=\"146\" stroke=\"#059669\" stroke-width=\"1.6\"/><text x=\"87\" y=\"150\" text-anchor=\"end\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">900</text><line x1=\"91\" y1=\"128\" x2=\"99\" y2=\"128\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"87\" y=\"132\" text-anchor=\"end\" font-size=\"9.5\" fill=\"#475569\" direction=\"ltr\">1200</text><line x1=\"91\" y1=\"92\" x2=\"99\" y2=\"92\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"87\" y=\"96\" text-anchor=\"end\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">1800</text><line x1=\"239\" y1=\"92\" x2=\"239\" y2=\"200\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><line x1=\"95\" y1=\"92\" x2=\"239\" y2=\"92\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><line x1=\"95\" y1=\"200\" x2=\"287\" y2=\"56\" stroke=\"#2563eb\" stroke-width=\"2.3\"/><line x1=\"95\" y1=\"146\" x2=\"335\" y2=\"56\" stroke=\"#059669\" stroke-width=\"2.3\"/><circle cx=\"95\" cy=\"146\" r=\"3.8\" fill=\"#059669\"/><circle cx=\"239\" cy=\"92\" r=\"4.5\" fill=\"#dc2626\"/><text x=\"247\" y=\"107\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">I(6 ; 1800)</text><text x=\"212\" y=\"68\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">f(x)=300x</text><text x=\"308\" y=\"84\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">g(x)=150x+900</text><rect x=\"384\" y=\"44\" width=\"176\" height=\"82\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.3\"/><text x=\"472\" y=\"65\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">العرض 1 (خطية)</text><text x=\"472\" y=\"87\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">f(x) = 300x</text><text x=\"472\" y=\"110\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#334155\" direction=\"rtl\">أوفر عندما x &lt; 6</text><rect x=\"384\" y=\"136\" width=\"176\" height=\"88\" rx=\"8\" fill=\"#ecfdf5\" stroke=\"#059669\" stroke-width=\"1.3\"/><text x=\"472\" y=\"157\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">العرض 2 (تآلفية)</text><text x=\"472\" y=\"179\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">g(x) = 150x + 900</text><text x=\"472\" y=\"203\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#334155\" direction=\"rtl\">أوفر عندما x &gt; 6</text></svg>",
+    "steps": [
+      {
+        "promptAr": "احسب تكلفة $4$ حصص بالعرض الثاني $g(4) = 150 \\times 4 + 900$ بالدينار.",
+        "hintAr": "احسب أولاً $150 \\times 4$ ثم أضف $900$ .",
+        "expectedInput": "1500",
+        "revealAr": "$g(4) = 600 + 900 = 1500\\text{ DA}$ ، بينما بالعرض الأول $f(4) = 300 \\times 4 = 1200\\text{ DA}$ . إذن من أجل $4$ حصص، العرض الأول أرخص."
+      },
+      {
+        "promptAr": "تُكتب الدالة التآلفية على الشكل $g(x) = ax + b$ حيث $b = g(0) = 900$ هو الترتيب عند المبدأ. احسب **معامل التوجيه** $a = \\frac{g(6) - g(2)}{6 - 2}$ علماً أن $g(6) = 1800$ و $g(2) = 1200$ .",
+        "hintAr": "احسب $\\frac{1800 - 1200}{6 - 2}$ .",
+        "expectedInput": "150",
+        "revealAr": "$a = \\frac{1800 - 1200}{6 - 2} = \\frac{600}{4} = 150$ ، وهو سعر الحصة الإضافية في العرض الثاني (تناسبية التزايدات)."
+      },
+      {
+        "promptAr": "من التمثيل البياني (أو بحل المعادلة $300x = 150x + 900$ )، عند أي عدد حصص $x$ يتساوى مبلغ العرضين؟",
+        "hintAr": "انظر إلى فاصلة نقطة التقاطع $I$ في الرسم، أو اطرح $150x$ من الطرفين: $150x = 900$ .",
+        "expectedInput": "6",
+        "revealAr": "يتساوى العرضان عند $x = 6$ حصص بمبلغ $1800\\text{ DA}$ ، ونقطة التقاطع $I(6 ; 1800)$ هي **الحل البياني** لجملة المعادلتين $\\begin{cases} y = 300x \\\\ y = 150x + 900 \\end{cases}$ ."
+      },
+      {
+        "promptAr": "إذا خطّط تلميذ لحضور $10$ حصص في الشهر، فكم سيدفع بالدينار إذا اختار العرض **الأوفر**؟",
+        "hintAr": "بما أن $10 > 6$ ، المستقيم الأخضر ($g$) هو الأسفل (الأوفر). احسب $g(10) = 150 \\times 10 + 900$ .",
+        "expectedInput": "2400",
+        "revealAr": "بالعرض الثاني سيدفع $g(10) = 1500 + 900 = 2400\\text{ DA}$ ، وهو أوفر من العرض الأول ($f(10) = 3000\\text{ DA}$ )."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**تعريف الدالة التآلفية**: لكل عددين معلومين $a$ و $b$ ، الدالة $f: x \\mapsto ax + b$ تسمى **دالة تآلفية**؛ العدد $a$ هو **معامل التوجيه** والعدد $b = f(0)$ هو **الترتيب عند المبدأ**. (إذا كان $b = 0$ نحصل على دالة خطية، وإذا كان $a = 0$ نحصل على دالة ثابتة $f(x) = b$).",
+      "**تناسبية التزايدات وتعيين $a$ و $b$**: إذا كان $x_1 \\neq x_2$ فإن التزايدات متناسبة: $a = \\frac{f(x_2) - f(x_1)}{x_2 - x_1}$ . وبعد إيجاد $a$ نحسب $b$ بتعويض إحدى القيمتين: $b = f(x_1) - a x_1$ .",
+      "**التمثيل البياني لدالة تآلفية**: هو **مستقيم** يشمل النقطة $(0 ; b)$ على محور التراتيب. عند التقدم أفقياً بـ $+1$ على المستقيم، نتغير عمودياً بمقدار $a$ (صعوداً إذا كان $a > 0$ ونزولاً إذا كان $a < 0$).",
+      "**الحل البياني لجملة معادلتين ومقارنة العروض**: نكتب معادلتي الجملة على الشكل $\\begin{cases} y = a_1 x + b_1 \\\\ y = a_2 x + b_2 \\end{cases}$ ونمثل المستقيمين في نفس المعلم؛ إحداثيا نقطة تقاطعهما $M(x_0 ; y_0)$ هما حل الجملة. في مقارنة التسعيرات، المستقيم الذي يقع **أسفل** الآخر يعبر عن العرض الأقل تكلفة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\" width=\"600\" height=\"245\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"229\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"31\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">معامل التوجيه والترتيب عند المبدأ، والحل البياني لجملة معادلتين</text><rect x=\"20\" y=\"45\" width=\"282\" height=\"178\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"161\" y=\"63\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">قراءة a و b لتمثيل f(x) = 2x + 1</text><line x1=\"62\" y1=\"175\" x2=\"268\" y2=\"175\" stroke=\"#334155\" stroke-width=\"1.6\"/><polygon points=\"268,175 261,171 261,179\" fill=\"#334155\"/><line x1=\"120\" y1=\"214\" x2=\"120\" y2=\"70\" stroke=\"#334155\" stroke-width=\"1.6\"/><polygon points=\"120,70 116,77 124,77\" fill=\"#334155\"/><text x=\"109\" y=\"188\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><text x=\"274\" y=\"179\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">x</text><text x=\"129\" y=\"80\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">y</text><line x1=\"96\" y1=\"199\" x2=\"176\" y2=\"39\" stroke=\"#2563eb\" stroke-width=\"2.3\"/><line x1=\"120\" y1=\"151\" x2=\"144\" y2=\"151\" stroke=\"#d97706\" stroke-width=\"2\" stroke-dasharray=\"3 2\"/><line x1=\"144\" y1=\"151\" x2=\"144\" y2=\"103\" stroke=\"#059669\" stroke-width=\"2\" stroke-dasharray=\"3 2\"/><circle cx=\"120\" cy=\"151\" r=\"4.2\" fill=\"#dc2626\"/><circle cx=\"144\" cy=\"103\" r=\"3.8\" fill=\"#2563eb\"/><text x=\"66\" y=\"147\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">(0 ; b=1)</text><text x=\"132\" y=\"164\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#d97706\" direction=\"ltr\">+1</text><text x=\"151\" y=\"131\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">a = +2</text><text x=\"190\" y=\"86\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">f(x) = 2x + 1</text><rect x=\"316\" y=\"45\" width=\"264\" height=\"178\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.4\"/><text x=\"448\" y=\"63\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">الحل البياني لجملة معادلتين</text><line x1=\"346\" y1=\"175\" x2=\"556\" y2=\"175\" stroke=\"#334155\" stroke-width=\"1.6\"/><polygon points=\"556,175 549,171 549,179\" fill=\"#334155\"/><line x1=\"378\" y1=\"196\" x2=\"378\" y2=\"74\" stroke=\"#334155\" stroke-width=\"1.6\"/><polygon points=\"378,74 374,81 382,81\" fill=\"#334155\"/><line x1=\"362\" y1=\"178\" x2=\"534\" y2=\"86\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"362\" y1=\"86\" x2=\"534\" y2=\"170\" stroke=\"#059669\" stroke-width=\"2.2\"/><line x1=\"452\" y1=\"130\" x2=\"452\" y2=\"175\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/><line x1=\"378\" y1=\"130\" x2=\"452\" y2=\"130\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/><circle cx=\"452\" cy=\"130\" r=\"4.5\" fill=\"#dc2626\"/><text x=\"452\" y=\"190\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">x0</text><text x=\"369\" y=\"134\" text-anchor=\"end\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">y0</text><text x=\"456\" y=\"116\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">M(x0 ; y0)</text><text x=\"534\" y=\"100\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">(d1)</text><text x=\"534\" y=\"160\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">(d2)</text><text x=\"448\" y=\"212\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">التقاطع M هو الحل الوحيد (x0 ; y0)</text></svg>",
+    "visualCaptionAr": "تحديد معامل التوجيه a والترتيب عند المبدأ b، وتفسير نقطة التقاطع كحل لجملة معادلتين",
+    "examples": [
+      {
+        "problemAr": "$f$ دالة تآلفية بحيث $f(1) = 5$ و $f(4) = -1$ . عيّن العبارة الجبرية للدالة $f$ .",
+        "solutionAr": "1. نحسب معامل التوجيه $a$ باستعمال تناسبية التزايدات:\n\n$a = \\frac{f(4) - f(1)}{4 - 1} = \\frac{-1 - 5}{3} = \\frac{-6}{3} = -2$ .\n\n2. نحسب $b$ بتعويض $x = 1$: $f(1) = -2(1) + b = 5 \\implies b = 5 + 2 = 7$ .\n\nإذن: $f(x) = -2x + 7$ ."
+      },
+      {
+        "problemAr": "حلّ بيانياً (ثم تحقق جبرياً) الجملة: $\\begin{cases} 2x - y = 1 \\\\ x + y = 5 \\end{cases}$ .",
+        "solutionAr": "نعبّر عن $y$ بدلالة $x$ في كل معادلة:\n\n$(d_1): y = 2x - 1$  و  $(d_2): y = -x + 5$ .\n\nمن أجل $x = 2$ نجد في $(d_1)$: $y = 2(2) - 1 = 3$ ، وفي $(d_2)$: $y = -2 + 5 = 3$ . إذن يتقاطع المستقيمان في النقطة $I(2 ; 3)$ ، وحل الجملة هو الثنائية $(2 ; 3)$ ."
+      }
+    ],
+    "watchOutAr": "احذر عند حساب $a = \\frac{f(x_2) - f(x_1)}{x_2 - x_1}$ من قلب الترتيب في المقام دون البسط! كما يجب الانتباه إلى أن **الترتيب عند المبدأ** $b$ يُقرأ عند تقاطع المستقيم مع **محور التراتيب العمودي** (عند $x = 0$) وليس مع محور الفواصل."
+  },
+  "practice": [
+    {
+      "questionAr": "$f$ دالة تآلفية تحقق $f(-1) = -5$ و $f(3) = 7$ . ما هي العبارة الجبرية للدالة $f$ ؟",
+      "options": [
+        "$f(x) = 3x - 2$",
+        "$f(x) = -3x - 8$",
+        "$f(x) = 3x + 2$",
+        "$f(x) = 6x + 1$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! $a = \\frac{7 - (-5)}{3 - (-1)} = \\frac{12}{4} = 3$ ثم $b = 7 - 3(3) = -2$ ، ونتحقق: $f(-1) = 3(-1) - 2 = -5$ .",
+        "عكستَ إشارة المقام أو البسط! تأكد من نفس الترتيب: $\\frac{7 - (-5)}{3 - (-1)} = \\frac{12}{4} = +3$ .",
+        "معامل التوجيه $a = 3$ صحيح، لكن $3(3) + b = 7 \\implies b = 7 - 9 = -2$ وليس $+2$ .",
+        "انتبه للإشارات في المقام: $3 - (-1) = 3 + 1 = 4$ وليس $3 - 1 = 2$ !"
+      ],
+      "explanationAr": "نحسب أولاً معامل التوجيه: $a = \\frac{f(3) - f(-1)}{3 - (-1)} = \\frac{7 - (-5)}{3 + 1} = \\frac{12}{4} = 3$ . ثم نجد $b$: $f(3) = 3(3) + b = 7 \\implies b = 7 - 9 = -2$ . إذن $f(x) = 3x - 2$ ."
+    },
+    {
+      "questionAr": "في المعلم المتعامد والمتجانس المقابل، يمثل المستقيم $(d_1)$ دالة تآلفية $f$ (يمر بـ $(0 ; 1)$ و $I$) والمستقيم $(d_2)$ الدالة $g(x) = -2x + 7$ . من البيان، ما عبارة $f(x)$ وما الحل البياني للجملة الممثلة بـ $(d_1)$ و $(d_2)$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 235\" width=\"360\" height=\"235\" style=\"background:#ffffff;font-family:Cairo,system-ui,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"219\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><line x1=\"80\" y1=\"36\" x2=\"80\" y2=\"206\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"100\" y1=\"36\" x2=\"100\" y2=\"206\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"140\" y1=\"36\" x2=\"140\" y2=\"206\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"160\" y1=\"36\" x2=\"160\" y2=\"206\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"180\" y1=\"36\" x2=\"180\" y2=\"206\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"200\" y1=\"36\" x2=\"200\" y2=\"206\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"220\" y1=\"36\" x2=\"220\" y2=\"206\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"70\" y1=\"45\" x2=\"240\" y2=\"45\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"70\" y1=\"65\" x2=\"240\" y2=\"65\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"70\" y1=\"85\" x2=\"240\" y2=\"85\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"70\" y1=\"105\" x2=\"240\" y2=\"105\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"70\" y1=\"125\" x2=\"240\" y2=\"125\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"70\" y1=\"145\" x2=\"240\" y2=\"145\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"70\" y1=\"165\" x2=\"240\" y2=\"165\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"70\" y1=\"205\" x2=\"240\" y2=\"205\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"64\" y1=\"185\" x2=\"254\" y2=\"185\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"254,185 246,181 246,189\" fill=\"#334155\"/><line x1=\"120\" y1=\"214\" x2=\"120\" y2=\"28\" stroke=\"#334155\" stroke-width=\"1.8\"/><polygon points=\"120,28 116,36 124,36\" fill=\"#334155\"/><text x=\"260\" y=\"189\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">x</text><text x=\"129\" y=\"36\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">y</text><text x=\"110\" y=\"197\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><text x=\"140\" y=\"198\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"#475569\" direction=\"ltr\">1</text><text x=\"160\" y=\"198\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">2</text><text x=\"180\" y=\"198\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"#475569\" direction=\"ltr\">3</text><text x=\"200\" y=\"198\" text-anchor=\"middle\" font-size=\"9.5\" fill=\"#475569\" direction=\"ltr\">4</text><text x=\"114\" y=\"169\" text-anchor=\"end\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">1</text><text x=\"114\" y=\"129\" text-anchor=\"end\" font-size=\"9.5\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">3</text><text x=\"114\" y=\"89\" text-anchor=\"end\" font-size=\"9.5\" fill=\"#475569\" direction=\"ltr\">5</text><text x=\"114\" y=\"49\" text-anchor=\"end\" font-size=\"9.5\" fill=\"#059669\" direction=\"ltr\">7</text><line x1=\"160\" y1=\"125\" x2=\"160\" y2=\"185\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/><line x1=\"120\" y1=\"125\" x2=\"160\" y2=\"125\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/><line x1=\"80\" y1=\"205\" x2=\"220\" y2=\"65\" stroke=\"#2563eb\" stroke-width=\"2.3\"/><line x1=\"120\" y1=\"45\" x2=\"200\" y2=\"205\" stroke=\"#059669\" stroke-width=\"2.3\"/><circle cx=\"120\" cy=\"165\" r=\"3.8\" fill=\"#2563eb\"/><circle cx=\"160\" cy=\"125\" r=\"4.5\" fill=\"#dc2626\"/><text x=\"168\" y=\"120\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">I</text><text x=\"226\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">(d1)</text><text x=\"206\" y=\"206\" font-size=\"11\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">(d2)</text></svg>",
+      "options": [
+        "$f(x) = x - 1$ والحل هو $(3 ; 2)$",
+        "$f(x) = x + 1$ والحل هو $(2 ; 3)$",
+        "$f(x) = 2x + 1$ والحل هو $(2 ; 3)$",
+        "$f(x) = x + 1$ والحل هو $(0 ; 1)$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "يقطع $(d_1)$ محور التراتيب عند $+1$ وليس $-1$ ، كما أن نقطة التقاطع $I$ فاصلتها $2$ وترتيبها $3$ .",
+        "ممتاز! من $(0 ; 1)$ و $I(2 ; 3)$ نجد $b = 1$ و $a = \\frac{3 - 1}{2 - 0} = 1$ ، وحل الجملة هو نقطة التقاطع $(2 ; 3)$ .",
+        "التقاطع $(2 ; 3)$ صحيح، لكن معامل التوجيه هو $\\frac{3 - 1}{2 - 0} = 1$ وليس $2$ .",
+        "النقطة $(0 ; 1)$ هي تقاطع $(d_1)$ مع محور التراتيب وليست تقاطع المستقيمين $(d_1)$ و $(d_2)$ !"
+      ],
+      "explanationAr": "يمر $(d_1)$ بـ $(0 ; 1)$ إذن $b = 1$ ، ويمر بنقطة التقاطع $I(2 ; 3)$ إذن $a = \\frac{3 - 1}{2 - 0} = 1$ ، ومنه $f(x) = x + 1$ . والحل البياني للجملة هو إحداثيا نقطة التقاطع $I(2 ; 3)$ ."
+    },
+    {
+      "questionAr": "تقترح شركة توصيل صيغتين شهريتين لعدد الطلبات $x$ : الصيغة (أ) $f(x) = 50x + 600$ والصيغة (ب) $g(x) = 80x$ (بالدينار). متى تكون الصيغة **(أ) أوفر تماماً** من الصيغة (ب)؟",
+      "options": [
+        "عندما يكون $x < 20$",
+        "عندما يكون $x = 20$",
+        "عندما يكون $x > 12$",
+        "عندما يكون $x > 20$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "من أجل $x < 20$ (مثلاً $x = 10$): $f(10) = 1100$ بينما $g(10) = 800$ ، إذن الصيغة (ب) هي الأوفر هنا.",
+        "عند $x = 20$ تتساوى الصيغتان تماماً: $f(20) = g(20) = 1600\\text{ DA}$ .",
+        "انتبه: قسمتَ $600$ على $50$ بدلاً من حل المتراجحة $50x + 600 < 80x$ التي تعطي $30x > 600$ .",
+        "صحيح تماماً! نحل $50x + 600 < 80x \\implies 600 < 30x \\implies x > 20$ طلباً."
+      ],
+      "explanationAr": "تكون الصيغة (أ) أوفر تماماً عندما يكون $f(x) < g(x)$ ، أي $50x + 600 < 80x$ ، بطرح $50x$ من الطرفين نجد $600 < 30x$ ، وبالقسمة على $30$ الموجب نجد $x > 20$ ."
+    }
+  ]
+}

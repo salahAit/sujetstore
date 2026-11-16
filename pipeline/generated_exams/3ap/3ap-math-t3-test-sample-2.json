@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "3ap",
+    "yearName": "السنة الثالثة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "أكمل جدول الضعف والنصف، ثم أتمم العلاقات الحسابية التالية:",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "العدد",
+            "نصفه",
+            "ضعفه"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "$2720$",
+              {
+                "content": "........",
+                "answer": "$1360$",
+                "mark": "0.5"
+              },
+              {
+                "content": "........",
+                "answer": "$5440$",
+                "mark": "0.5"
+              }
+            ],
+            [
+              {
+                "content": "........",
+                "answer": "$3420$",
+                "mark": "0.5"
+              },
+              "$1710$",
+              {
+                "content": "........",
+                "answer": "$6840$",
+                "mark": "0.5"
+              }
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        },
+        {
+          "type": "text",
+          "content": "أكمل المساويات التالية:\n\n- $360 + \".....\" = 2000$\n\n- $34 times 30 = \".....\"$",
+          "answer": "- $360 + 1640 = 2000$\n\n- $34 times 30 = 1020$",
+          "mark": "1"
+        }
+      ],
+      "id": "exam-3ap-supervised_test-t3-medium-502-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "لاحظ الساعة المرفقة ثم أجب عن أسئلة قراءة الوقت والمدد والتحويل:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) تشير الساعة المقابلة إلى توقيت الانطلاق صباحاً. اكتب هذا التوقيت بالأرقام: ................\n\n2) إذا دامت الرحلة مدة #text(dir: ltr)[1 h 40 min]، فما هو وقت الوصول؟",
+              "answer": "1) وقت الانطلاق صباحاً هو: #text(dir: ltr)[10:50].\n\n2) وقت الوصول: #text(dir: ltr)[10:50 + 1 h 40 min = 12:30].",
+              "mark": "2"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t3_clock_medium_s880252.svg",
+              "caption": "ساعة الانطلاق"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "3) حوّل إلى الوحدة المطلوبة:\n\n- #text(dir: ltr)[3 h 20 min = ........ min]   ؛   #text(dir: ltr)[3 min = ........ s]",
+          "answer": "- #text(dir: ltr)[3 h 20 min = 200 min] (لأن #text(dir: ltr)[1 h = 60 min])\n\n- #text(dir: ltr)[3 min = 180 s] (لأن #text(dir: ltr)[1 min = 60 s])",
+          "mark": "1"
+        }
+      ],
+      "id": "exam-3ap-supervised_test-t3-medium-502-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "اقرأ الوضعية وتأمل المخطط المرفق ثم أجب عن الأسئلة الثلاثة بكتابة العمليات والوحدة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "اتفق مجموعة من الجيران على تسييج حديقة مستطيلة الشكل لحمايتها، طولها #text(dir: ltr)[15 m] وعرضها #text(dir: ltr)[8 m]، مع ترك مدخل عرضه #text(dir: ltr)[3 m] دون تسييج. سعر المتر الواحد من السياج هو #text(dir: ltr)[300 DA]، وثمن الباب الحديدي هو #text(dir: ltr)[7100 DA]. تقاسم $5$ جيران التكلفة الكلية بالتساوي."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t3_integ_medium_s700433.svg",
+              "caption": "مخطط حديقة تعاونية الحي"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب محيط حديقة تعاونية الحي، ثم استنتج طول السياج اللازم بعد ترك المدخل.",
+          "answer": "1) المحيط: $(15 + 8) times 2 = 23 times 2 = 46$ #text(dir: ltr)[m].\n\nطول السياج: $46 - 3 = 43$ #text(dir: ltr)[m].",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب ثمن السياج، ثم احسب التكلفة الإجمالية بعد إضافة ثمن الباب الحديدي.",
+          "answer": "2) ثمن السياج: $43 times 300 = 12900$ #text(dir: ltr)[DA].\n\nالتكلفة الإجمالية: $12900 + 7100 = 20000$ #text(dir: ltr)[DA].",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "3) ما هو المبلغ الذي يدفعه كل جار؟",
+          "answer": "3) حصة كل جار: $20000 div 5 = 4000$ #text(dir: ltr)[DA].",
+          "mark": "1.25"
+        }
+      ],
+      "id": "exam-3ap-supervised_test-t3-medium-502-ex-3"
+    }
+  ]
+}

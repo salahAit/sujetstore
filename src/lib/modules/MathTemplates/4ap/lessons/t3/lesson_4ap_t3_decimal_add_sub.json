@@ -1,0 +1,123 @@
+{
+  "id": "lesson_4ap_t3_decimal_add_sub",
+  "slug": "4ap-t3-decimal-add-sub",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t3",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: العمليات على الأعداد العشرية والتناسبية البسيطة",
+  "order": 1,
+  "titleAr": "جمع وطرح الأعداد العشرية",
+  "objectives": [
+    "وضع وإجراء عملية الجمع العمودي للأعداد العشرية (أو عدد طبيعي وعدد عشري) بمحاذاة الفاصلتين والأرقام من نفس الرتبة",
+    "وضع وإجراء عملية الطرح العمودي للأعداد العشرية مع إضافة الأصفار في الجزء العشري لتوحيد عدد الأرقام بعد الفاصلة",
+    "حل مشكلات من الحياة اليومية في سياقات الأطوال والكتل والسعات والنقود باستعمال جمع وطرح الأعداد العشرية"
+  ],
+  "keywordsAr": [
+    "جمع أعداد عشرية",
+    "طرح أعداد عشرية",
+    "الفاصلة",
+    "إضافة الأصفار",
+    "وضع العملية"
+  ],
+  "discover": {
+    "scenarioAr": "اشترى أمين من المخبزة قارورة عصير بسعر $65.50\\text{ DA}$ وكعكة بسعر $28.75\\text{ DA}$، ثم قدّم للبائع ورقة نقدية قيمتها $100\\text{ DA}$. نريد حساب المبلغ الذي دفعه أمين والمبلغ المتبقي له.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 170\" width=\"460\" height=\"170\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"154\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"20\" y=\"20\" width=\"202\" height=\"130\" rx=\"8\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/><text x=\"121\" y=\"40\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1d4ed8\">1. مجموع ثمن المشتريات</text><line x1=\"124\" y1=\"48\" x2=\"124\" y2=\"136\" stroke=\"#ef4444\" stroke-dasharray=\"3 2\" stroke-width=\"1.3\"/><text x=\"162\" y=\"70\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">65 . 50</text><text x=\"62\" y=\"96\" font-size=\"16\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">+</text><text x=\"162\" y=\"96\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">28 . 75</text><line x1=\"56\" y1=\"106\" x2=\"172\" y2=\"106\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><text x=\"162\" y=\"130\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">?? . ??</text><rect x=\"238\" y=\"20\" width=\"202\" height=\"130\" rx=\"8\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.5\"/><text x=\"339\" y=\"40\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#15803d\">2. الباقي من 100 DA</text><line x1=\"346\" y1=\"48\" x2=\"346\" y2=\"136\" stroke=\"#ef4444\" stroke-dasharray=\"3 2\" stroke-width=\"1.3\"/><text x=\"384\" y=\"70\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">100 . <tspan fill=\"#2563eb\">00</tspan></text><text x=\"266\" y=\"96\" font-size=\"16\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">-</text><text x=\"384\" y=\"96\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">94 . 25</text><line x1=\"260\" y1=\"106\" x2=\"394\" y2=\"106\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><text x=\"384\" y=\"130\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">? . ??</text></svg>",
+    "steps": [
+      {
+        "promptAr": "لجمع $65.50 + 28.75$ عموديا، نضع الفاصلة تحت الفاصلة والأرقام من نفس الرتبة تحت بعضها، ثم نبدأ الجمع من الأجزاء من مئة. ما مجموع ثمن العصير والكعكة بالدينار؟ (اكتب العدد فقط)",
+        "hintAr": "اجمع الأجزاء من مئة ($0 + 5$) ثم الأعشار ($5 + 7 = 12$، نكتب $2$ ونحتفظ بـ $1$) ثم $1 + 65 + 28$.",
+        "expectedInput": "94.25",
+        "revealAr": "نجد: $65.50 + 28.75 = 94.25\\text{ DA}$. لاحظ بقاء الفاصلة في نفس العمود."
+      },
+      {
+        "promptAr": "لحساب الباقي من $100\\text{ DA}$، نكتب العدد الطبيعي $100$ على الشكل $100.00$ بإضافة صفرين بعد الفاصلة. احسب الفرق $100.00 - 94.25$. كم دينارا بقي لأمين؟ (اكتب العدد فقط)",
+        "hintAr": "أكمل $94.25$ إلى $95$ بـ $0.75$، ثم أكمل من $95$ إلى $100$ بـ $5$.",
+        "expectedInput": "5.75",
+        "revealAr": "المبلغ المتبقي هو $100.00 - 94.25 = 5.75\\text{ DA}$."
+      },
+      {
+        "promptAr": "في يوم آخر اشترى أمين مقلمة بسعر $145.5\\text{ DA}$ وقلما بسعر $34.25\\text{ DA}$. نضيف صفرا على يمين $145.5$ لتصبح $145.50$ ثم نجمع. ما المجموع الكلي بالدينار؟ (اكتب العدد فقط)",
+        "hintAr": "احسب عموديا $145.50 + 34.25$ بمحاذاة الفاصلتين.",
+        "expectedInput": "179.75",
+        "revealAr": "المجموع هو $145.50 + 34.25 = 179.75\\text{ DA}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لجمع أو طرح عددين عشريين عموديا، نضع الفاصلة تحت الفاصلة، ثم نحاذي الآحاد تحت الآحاد، والأعشار تحت الأعشار، والأجزاء من مئة تحت الأجزاء من مئة.",
+      "لتوحيد عدد الأرقام بعد الفاصلة، نضيف أصفارا غير مؤثرة على يمين الجزء العشري (مثل: $18.4 = 18.40$)، ونكتب أي عدد طبيعي بفاصلة وأصفار (مثل: $20 = 20.00$).",
+      "ننجز الحساب من أقصى اليمين (أصغر رتبة عشرية) مع تطبيق الاحتفاظ في الجمع والاستعارة (المبادلة) في الطرح، ثم ننزل الفاصلة في مكانها في النتيجة.",
+      "في مشكلات الأطوال والكتل والسعات والنقود، نتأكد من التعبير عن المقادير بنفس الوحدة قبل الجمع أو الطرح."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"179\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"230\" y=\"30\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">18.4 - 5.65 = 12.75 : جدول المراتب في الطرح العمودي</text><rect x=\"50\" y=\"42\" width=\"360\" height=\"30\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"120\" y1=\"42\" x2=\"120\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"190\" y1=\"42\" x2=\"190\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"245\" y1=\"42\" x2=\"245\" y2=\"150\" stroke=\"#ef4444\" stroke-width=\"1.8\"/><line x1=\"325\" y1=\"42\" x2=\"325\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"85\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">العشرات</text><text x=\"155\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">الآحاد</text><text x=\"217\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">الفاصلة</text><text x=\"285\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">الأعشار</text><text x=\"367\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">أجزاء من 100</text><rect x=\"50\" y=\"72\" width=\"360\" height=\"78\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><rect x=\"190\" y=\"72\" width=\"55\" height=\"78\" fill=\"#fef2f2\"/><text x=\"85\" y=\"94\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">1</text><text x=\"155\" y=\"94\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">8</text><text x=\"217\" y=\"94\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#dc2626\">.</text><text x=\"285\" y=\"94\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">4</text><text x=\"367\" y=\"94\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#2563eb\">0</text><text x=\"35\" y=\"118\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#dc2626\">-</text><text x=\"155\" y=\"118\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">5</text><text x=\"217\" y=\"118\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#dc2626\">.</text><text x=\"285\" y=\"118\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">6</text><text x=\"367\" y=\"118\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">5</text><line x1=\"50\" y1=\"125\" x2=\"410\" y2=\"125\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><text x=\"85\" y=\"144\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#15803d\">1</text><text x=\"155\" y=\"144\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#15803d\">2</text><text x=\"217\" y=\"144\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#dc2626\">.</text><text x=\"285\" y=\"144\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#15803d\">7</text><text x=\"367\" y=\"144\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#15803d\">5</text><text x=\"230\" y=\"172\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">أضفنا صفرا أزرق في 18.40 لتوحيد الأرقام بعد الفاصلة</text></svg>",
+    "visualCaptionAr": "الوضع العمودي السليم لطرح عددين عشريين بمحاذاة الفاصلة وإضافة الأصفار.",
+    "examples": [
+      {
+        "problemAr": "احسب المجموع التالي عموديا: $42.7 + 15 + 3.85$.",
+        "solutionAr": "نكتب كل الأعداد برقمين بعد الفاصلة: $42.70 + 15.00 + 3.85$. نجمع الأجزاء من مئة ($5$)، ثم الأعشار ($7 + 8 = 15$، نكتب $5$ ونحتفظ بـ $1$)، ثم الجزء الصحيح ($1 + 42 + 15 + 3 = 61$). النتيجة هي $61.55$."
+      },
+      {
+        "problemAr": "يحتوي خزان على $45.5\\text{ L}$ من الماء، أفرغنا منه $18.75\\text{ L}$. كم لترا بقي في الخزان؟",
+        "solutionAr": "نوحد الأرقام بعد الفاصلة بكتابة $45.50 - 18.75$. بعد الاستعارة والحساب العمودي نجد: $45.50 - 18.75 = 26.75\\text{ L}$."
+      }
+    ],
+    "watchOutAr": "لا تحاذِ الأعداد العشرية من أقصى اليمين مثل الأعداد الطبيعية! فالكتابة $15 - 3.4$ لا تساوي $12.4$؛ الصحيح هو كتابة $15.0 - 3.4 = 11.6$."
+  },
+  "practice": [
+    {
+      "questionAr": "تظهر البطاقة المقابلة عملية جمع عددين عشريين بوضع الفاصلة تحت الفاصلة. ما هو ناتج العملية: $17.8 + 4.35$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 120\" width=\"320\" height=\"120\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"10\" y=\"10\" width=\"300\" height=\"100\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><line x1=\"182\" y1=\"20\" x2=\"182\" y2=\"100\" stroke=\"#ef4444\" stroke-dasharray=\"3 2\" stroke-width=\"1.4\"/><text x=\"222\" y=\"42\" text-anchor=\"end\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">17 . 8<tspan fill=\"#2563eb\">0</tspan></text><text x=\"122\" y=\"68\" font-size=\"17\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">+</text><text x=\"222\" y=\"68\" text-anchor=\"end\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">4 . 35</text><line x1=\"116\" y1=\"76\" x2=\"232\" y2=\"76\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><text x=\"222\" y=\"98\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">?? . ??</text></svg>",
+      "options": [
+        "$21.43$",
+        "$22.15$",
+        "$21.15$",
+        "$6.13$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه: جمعت $8 + 35 = 43$ دون محاذاة الأعشار، والصحيح أن $8$ أعشار ($0.80$) تُجمع مع $3$ أعشار.",
+        "أحسنت! نكتب $17.80 + 4.35$: في الأجزاء من مئة $5$، وفي الأعشار $8 + 3 = 11$ (نحتفظ بـ $1$)، ثم $1 + 17 + 4 = 22$، والنتيجة $22.15$.",
+        "تذكر الاحتفاظ! مجموع الأعشار $8 + 3 = 11$ يعطي عُشرا واحدا ووحدة كاملة تضاف إلى $17 + 4$ فتصبح $22$ وليس $21$.",
+        "لقد أزحت العدد $17.8$ ولم تحاذِ الفاصلتين (حسبت كأنك تجمع $1.78 + 4.35$)."
+      ],
+      "explanationAr": "نضع الفاصلة تحت الفاصلة ونضيف صفرا: $17.80 + 4.35$. نجمع $0 + 5 = 5$، ثم $8 + 3 = 11$ (نكتب $1$ ونحتفظ بـ $1$)، ثم $1 + 17 + 4 = 22$، فتكون النتيجة $22.15$."
+    },
+    {
+      "questionAr": "تملك سلمى شريطا طوله $15\\text{ m}$، قصّت منه قطعة طولها $6.35\\text{ m}$. ما الطول المتبقي من الشريط بالمتر؟",
+      "options": [
+        "$9.35\\text{ m}$",
+        "$9.65\\text{ m}$",
+        "$8.65\\text{ m}$",
+        "$8.75\\text{ m}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "لا يمكن إنزال $.35$ كما هي، لأننا نطرح $0.35$ من $0.00$ بالاستعارة من $15$.",
+        "عند استعارة وحدة كاملة من $15$ لتكوين $0.65$ يتبقى $14$ في الجزء الصحيح، و $14 - 6 = 8$ وليس $9$.",
+        "ممتاز! نكتب $15.00 - 6.35$، وبعد الاستعارة نجد $8.65\\text{ m}$ (تحقق: $8.65 + 6.35 = 15.00$).",
+        "راجع طرح الأعشار: بعد استعارة $10$ للأجزاء من مئة، يبقى $9$ في الأعشار و $9 - 3 = 6$ وليس $7$."
+      ],
+      "explanationAr": "نكتب العدد الطبيعي $15$ على الشكل $15.00$ ثم نطرح $6.35$ عموديا: $15.00 - 6.35 = 8.65\\text{ m}$."
+    },
+    {
+      "questionAr": "توضّح البطاقتان كتلة سلة التفاح ($4.85\\text{ kg}$) وكتلة سلة البرتقال ($3.4\\text{ kg}$). ما الفرق بين الكتلتين بالكيلوغرام؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 110\" width=\"380\" height=\"110\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"10\" y=\"10\" width=\"360\" height=\"90\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"24\" y=\"24\" width=\"148\" height=\"62\" rx=\"8\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"1.5\"/><text x=\"98\" y=\"48\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#991b1b\">سلة التفاح</text><text x=\"98\" y=\"71\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">4.85 kg</text><text x=\"190\" y=\"62\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">-</text><rect x=\"208\" y=\"24\" width=\"148\" height=\"62\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"282\" y=\"48\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\">سلة البرتقال</text><text x=\"282\" y=\"71\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">3.4 kg</text></svg>",
+      "options": [
+        "$1.45\\text{ kg}$",
+        "$4.51\\text{ kg}$",
+        "$1.81\\text{ kg}$",
+        "$8.25\\text{ kg}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "رائع! نكتب $3.4$ على الشكل $3.40$ ثم نطرح بمحاذاة الفاصلة: $4.85 - 3.40 = 1.45\\text{ kg}$.",
+        "لقد وضعت $3.4$ تحت الأجزاء من مئة دون محاذاة الفاصلة؛ الصحيح وضع $3$ تحت $4$ و $4$ تحت $8$.",
+        "انتبه: طرحت $4$ من $5$ في الأجزاء من مئة! يجب إضافة صفر في $3.40$ فتصبح $5 - 0 = 5$ و $8 - 4 = 4$.",
+        "السؤال يطلب **الفرق** بين الكتلتين (عملية طرح) وليس مجموعهما."
+      ],
+      "explanationAr": "لإيجاد الفرق ننجز الطرح $4.85 - 3.40$: في الأجزاء من مئة $5 - 0 = 5$، وفي الأعشار $8 - 4 = 4$، وفي الآحاد $4 - 3 = 1$، إذن الفرق هو $1.45\\text{ kg}$."
+    }
+  ]
+}

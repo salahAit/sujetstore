@@ -1,0 +1,95 @@
+{
+  "documents": [
+    {
+      "id": "ref_1am_test_t1_eddirasa_142_2026",
+      "grade": "1am",
+      "title_ar": "فرض الفصل الأول في مادة الرياضيات مع الحل النموذجي - السنة الأولى متوسط (نموذج 142، المدة ساعة واحدة، سلم التنقيط 20/20 - 2026/2027)",
+      "category": "official_exam",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/03_sample_exams/1am_math_t1_test_eddirasa_142_2026.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/11/eddirasa.com-%D9%81%D8%B1%D8%B6-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-142-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD.pdf"
+    },
+    {
+      "id": "ref_1am_exam_t1_ency_2025",
+      "grade": "1am",
+      "title_ar": "تقييم/اختبار الفصل الأول في مادة الرياضيات - السنة الأولى متوسط (الأستاذ بن الشيوخ طارق، 02 ديسمبر 2024، المدة ساعتان، 13 نقطة + الوضعية الإدماجية 7 نقاط)",
+      "category": "official_exam",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/03_sample_exams/1am_math_t1_exam_ency_2025.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_a6031e21ac7348d3b1acff266e709ea5.pdf?index=true"
+    },
+    {
+      "id": "ref_1am_solution_t1_eddirasa_96_2025",
+      "grade": "1am",
+      "title_ar": "اختبار الفصل الأول في مادة الرياضيات مع التصحيح النموذجي - السنة الأولى متوسط (ديسمبر 2024، المدة ساعتان، الجزء الأول 12 نقطة + الوضعية الإدماجية 8 نقاط)",
+      "category": "exam_solution",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/03_sample_exams/1am_math_t1_solution_eddirasa_96_2025.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2025/12/eddirasa.com-%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-96-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD.pdf"
+    },
+    {
+      "id": "ref_1am_test_t2_eddirasa_51_2025",
+      "grade": "1am",
+      "title_ar": "فرض الفصل الثاني في مادة الرياضيات مع التصحيح النموذجي - السنة الأولى متوسط (متوسطة عيسات إيدير، 2024/2025، المدة ساعة واحدة، سلم التنقيط 20/20)",
+      "category": "official_exam",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/03_sample_exams/1am_math_t2_test_eddirasa_51_2025.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D9%81%D8%B1%D8%B6-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-51-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_1am_exam_t2_ency_2025",
+      "grade": "1am",
+      "title_ar": "اختبار الفصل الثاني في مادة الرياضيات - السنة الأولى متوسط (المدرسة الخاصة علوم وحياة، المدة ساعتان، الجزء الأول 12 نقطة + المسألة 8 نقاط - 2024/2025)",
+      "category": "official_exam",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/03_sample_exams/1am_math_t2_exam_ency_2025.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_089f9f4d86514d6d9b517d1e748f5750.pdf?index=true"
+    },
+    {
+      "id": "ref_1am_solution_t2_eddirasa_82_2025",
+      "grade": "1am",
+      "title_ar": "اختبار الثلاثي الثاني في مادة الرياضيات مع التصحيح النموذجي - السنة الأولى متوسط (متوسطة درقاوي يونغ، مديرية التربية لولاية سعيدة، 04 مارس 2025، المدة ساعتان، الجزء الأول 12 نقطة + الوضعية الإدماجية 8 نقاط)",
+      "category": "exam_solution",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/03_sample_exams/1am_math_t2_solution_eddirasa_82_2025.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-82-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_1am_test_t3_eddirasa_33_2025",
+      "grade": "1am",
+      "title_ar": "فرض الفصل الثالث في مادة الرياضيات مع الحل النموذجي - السنة الأولى متوسط (متوسطة ابن خلدون الدبدابة، بشار، 30 أفريل 2025، سلم التنقيط 20/20)",
+      "category": "official_exam",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/03_sample_exams/1am_math_t3_test_eddirasa_33_2025.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D9%81%D8%B1%D8%B6-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-33-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_1am_exam_t3_ency_2026",
+      "grade": "1am",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات مع التصحيح النموذجي وسلم التنقيط - السنة الأولى متوسط (المدرسة الخاصة نسرين سكول، المدة ساعتان، الجزء الأول 12 نقطة + المسألة 8 نقاط - 2025/2026)",
+      "category": "official_exam",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/03_sample_exams/1am_math_t3_exam_ency_2026.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_467f3f71555f47cd9851d929e5312bc1.pdf?index=true"
+    },
+    {
+      "id": "ref_1am_solution_t3_dzmadrassa_40_2023",
+      "grade": "1am",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات مع التصحيح النموذجي - السنة الأولى متوسط (2022/2023، المدة ساعتان، الجزء الأول 12 نقطة + الوضعية الإدماجية 8 نقاط)",
+      "category": "exam_solution",
+      "year": "2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/03_sample_exams/1am_math_t3_solution_dzmadrassa_40_2023.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/1am/mathematiques/examens/dzmadrassa-1am-mathematiques-sujet-296225.pdf?download=true&docId=b94c2ada-7775-4b81-9071-f0686e88f9cc"
+    }
+  ],
+  "missing_references": []
+}

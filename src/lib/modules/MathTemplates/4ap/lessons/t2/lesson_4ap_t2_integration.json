@@ -1,0 +1,129 @@
+{
+  "id": "lesson_4ap_t2_integration",
+  "slug": "lesson-4ap-t2-integration",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: الزوايا والدائرة والمثلثات الخاصة وإدماج الفصل الثاني",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الثاني: الضرب والقسمة والكسور والأعداد العشرية والهندسة",
+  "objectives": [
+    "الربط بين الضرب في عدد ذي رقمين والقسمة الإقليدية على رقم واحد وحل مشكلات حسابية متعددة الخطوات.",
+    "توظيف الكسور البسيطة والعشرية ومقارنة الأعداد العشرية وتصنيف الزوايا والدائرة والمثلثات الخاصة في وضعيات مركبة.",
+    "صياغة خطة حل واضحة لوضعية إدماجية تتضمن عمليات متسلسلة والتحقق من معقولية النتائج."
+  ],
+  "keywordsAr": [
+    "إدماج",
+    "حصيلة الفصل الثاني",
+    "مشكلات ضربية وقسمة",
+    "وضعية إدماجية",
+    "منهجية الحل"
+  ],
+  "discover": {
+    "scenarioAr": "نظّمت مدرسة في ولاية بجاية معرضا علميا: طُبع $24$ ملصقا بسعر $145$ دج للملصق الواحد، ووزّع المنظمون $173$ شارة تذكارية بالتساوي على $5$ فرق، وعلقوا لافتة طولها $\\frac{185}{100}\\text{ m}$ ، كما صنعوا قرصا دائريا نصف قطره $15\\text{ cm}$ وزينة هندسية.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 220\" width=\"540\" height=\"220\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"204\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"270\" y=\"29\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">الوضعية الإدماجية للمعرض العلمي: أربع محطات</text><rect x=\"22\" y=\"42\" width=\"240\" height=\"76\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.3\"/><text x=\"142\" y=\"66\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1e3a8a\">1) الضرب في رقمين</text><text x=\"142\" y=\"92\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">145 × 24 = ؟ DA</text><rect x=\"278\" y=\"42\" width=\"240\" height=\"76\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.3\"/><text x=\"398\" y=\"66\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#14532d\">2) القسمة الإقليدية (على 5)</text><text x=\"398\" y=\"92\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\">173 = 5 × ( ؟ ) + ( ؟ )</text><rect x=\"22\" y=\"128\" width=\"240\" height=\"72\" rx=\"8\" fill=\"#f3e8ff\" stroke=\"#9333ea\" stroke-width=\"1.3\"/><text x=\"142\" y=\"152\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#581c87\">3) الكسر والعدد العشري</text><text x=\"142\" y=\"178\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#6b21a8\">185/100 = ؟ m</text><rect x=\"278\" y=\"128\" width=\"240\" height=\"72\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.3\"/><text x=\"398\" y=\"152\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#92400e\">4) الدائرة والمثلثات</text><text x=\"398\" y=\"178\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b45309\">نصف القطر 15 cm ← القطر ؟</text></svg>",
+    "steps": [
+      {
+        "promptAr": "نحسب تكلفة طباعة $24$ ملصقا بسعر $145$ دج للواحد ($145 \\times 24$ ). ما المبلغ الكلي بالدينار الجزائري؟",
+        "hintAr": "احسب $145 \\times 4 = 580$ ، ثم $145 \\times 20 = 2900$ ، ثم اجمعهما.",
+        "expectedInput": "3480",
+        "revealAr": "التكلفة الكلية للملصقات هي $580 + 2900 = 3480$ دج."
+      },
+      {
+        "promptAr": "نوزع $173$ شارة بالتساوي على $5$ فرق ($173 \\div 5$ ). كم شارة يأخذ كل فريق (الحاصل)؟",
+        "hintAr": "نقسم $17$ على $5$ فنجد $3$ والباقي $2$ ، ثم ننزل $3$ لنقسم $23$ على $5$.",
+        "expectedInput": "34",
+        "revealAr": "يأخذ كل فريق $34$ شارة، وتبقى $3$ شارات ($173 = 5 \\times 34 + 3$ )."
+      },
+      {
+        "promptAr": "طول اللافتة $\\frac{185}{100}\\text{ m}$. اكتب هذا الطول على شكل عدد عشري بالفاصلة (استعمل النقطة `.` مثل `1.25`):",
+        "hintAr": "فكك $\\frac{185}{100} = 1 + \\frac{8}{10} + \\frac{5}{100}$.",
+        "expectedInput": "1.85",
+        "revealAr": "طول اللافتة بالفاصلة هو $1.85\\text{ m}$."
+      },
+      {
+        "promptAr": "نصف قطر القرص الدائري يساوي $15\\text{ cm}$. ما طول قطره بالسنتيمتر؟",
+        "hintAr": "القطر يساوي ضعف نصف القطر ($15 \\times 2$ ).",
+        "expectedInput": "30",
+        "revealAr": "طول القطر هو $15 \\times 2 = 30\\text{ cm}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لحل وضعية إدماجية: نقرأ النص جيدا، نحدد المعطيات العددية ووحداتها، ثم نختار العملية المناسبة لكل سؤال (**الضرب** للتكرار، **القسمة الإقليدية** على رقم واحد للتوزيع).",
+      "ننتبه في الضرب العمودي لوضع صفر العشرات ($0$ ) في السطر الثاني، وفي القسمة الإقليدية للتحقق من أن الباقي أصغر من القاسم.",
+      "نحوّل الكسور العشرية (مقامها $10$ أو $100$ ) إلى أعداد عشرية عند المقارنة والترتيب، مع موازنة الأرقام بعد الفاصلة بالأصفار عند الحاجة.",
+      "في الهندسة، نستعمل **الكوس** لتمييز الزاوية القائمة (والحادة الأضيق والمنفرجة الأوسع باستعمال القالب والكوس)، و**المدور** للدوائر والمثلثات الخاصة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 215\" width=\"540\" height=\"215\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"199\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"270\" y=\"29\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">خريطة حصيلة مكتسبات الفصل الثاني (السنة الرابعة ابتدائي)</text><rect x=\"22\" y=\"42\" width=\"240\" height=\"72\" rx=\"8\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"142\" y=\"64\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1d4ed8\">الضرب العمودي في رقمين</text><text x=\"142\" y=\"88\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#334155\">تذكر وضع 0 تحت الآحاد في العشرات</text><text x=\"142\" y=\"105\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">24 × 100 = 2400</text><rect x=\"278\" y=\"42\" width=\"240\" height=\"72\" rx=\"8\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"398\" y=\"64\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#15803d\">القسمة الإقليدية على رقم واحد</text><text x=\"398\" y=\"88\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#334155\">المقسوم = القاسم × الحاصل + الباقي</text><text x=\"398\" y=\"105\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#b45309\">الشرط: الباقي &lt; القاسم</text><rect x=\"22\" y=\"124\" width=\"240\" height=\"72\" rx=\"8\" fill=\"#ffffff\" stroke=\"#7c3aed\" stroke-width=\"1.4\"/><text x=\"142\" y=\"146\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#6b21a8\">الكسور والأعداد العشرية</text><text x=\"142\" y=\"170\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#334155\">245/100 = 2 + 4/10 + 5/100 = 2.45</text><text x=\"142\" y=\"187\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">الحصر: 2 &lt; 2.45 &lt; 3</text><rect x=\"278\" y=\"124\" width=\"240\" height=\"72\" rx=\"8\" fill=\"#ffffff\" stroke=\"#ea580c\" stroke-width=\"1.4\"/><text x=\"398\" y=\"146\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#c2410c\">الهندسة (الزوايا والدائرة والمثلثات)</text><text x=\"398\" y=\"170\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#334155\">الزوايا بالكوس: قائمة، حادة، منفرجة</text><text x=\"398\" y=\"187\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">القطر = 2 × نصف القطر</text></svg>",
+    "visualCaptionAr": "خلاصة شاملة لميادين الفصل الثاني: الضرب والقسمة الإقليدية، الكسور والأعداد العشرية، والزوايا والدائرة والمثلثات.",
+    "examples": [
+      {
+        "problemAr": "اشترى تاجر $18$ صندوق عصير، في كل صندوق $24$ قارورة، ثم أراد وضع القارورات في علب تتسع كل علبة لـ $9$ قارورات. كم علبة يملأ وهل تبقى قارورات؟",
+        "solutionAr": "أولا نحسب عدد القارورات: $24 \\times 18$: نضرب $24 \\times 8 = 192$ و $24 \\times 10 = 240$ ، ومجموعهما $192 + 240 = 432$ قارورة. ثانيا نقسم $432$ على $9$: $43 \\div 9 = 4$ والباقي $7$ ، ننزل $2$ فنجد $72 \\div 9 = 8$ والباقي $0$. إذن يملأ $48$ علبة ولا تبقى أيّ قارورة ($432 = 9 \\times 48$ )."
+      },
+      {
+        "problemAr": "قارن بين طولي وثبتين: $\\frac{235}{100}\\text{ m}$ و $2.4\\text{ m}$ ، ثم سمّ نوع المثلث $ABC$ القائم في $A$ حيث $AB = AC = 4\\text{ cm}$.",
+        "solutionAr": "نحوّل الكسر العشري: $\\frac{235}{100} = 2.35$. نكتب $2.4 = 2.40$ فنقارن الأعشار: $3 < 4$ ، إذن $2.35 < 2.4$. والمثلث $ABC$ له زاوية قائمة وضلعان متقايسان فهو **مثلث قائم ومتساوي الساقين**."
+      }
+    ],
+    "watchOutAr": "في الوضعية الإدماجية، لا تتسرع في اختيار الجواب النهائي بعد القسمة الإقليدية؛ اقرأ السؤال بدقة، وتحقق من كل عملية باستعمال العملية العكسية أو التقدير، ولا تنس كتابة الوحدات!"
+  },
+  "practice": [
+    {
+      "questionAr": "اشترى أمين المكتبة $12$ رزمة ورق بسعر $135$ دج للرزمة الواحدة، وقرّر تقسيم دفع المبلغ الكلي بالتساوي على $5$ أقساط. ما قيمة كل قسط؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 110\" width=\"380\" height=\"110\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"364\" height=\"94\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><rect x=\"22\" y=\"26\" width=\"140\" height=\"58\" rx=\"8\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.3\"/><text x=\"92\" y=\"50\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">1) المبلغ الكلي</text><text x=\"92\" y=\"72\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#1d4ed8\">135 × 12 = ؟</text><text x=\"190\" y=\"62\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">←</text><rect x=\"218\" y=\"26\" width=\"140\" height=\"58\" rx=\"8\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.3\"/><text x=\"288\" y=\"50\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\">2) القسمة على 5</text><text x=\"288\" y=\"72\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#15803d\">المبلغ ÷ 5 = ؟</text></svg>",
+      "options": [
+        "$324$ دج",
+        "$81$ دج",
+        "$320$ دج",
+        "$1620$ دج"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! أولا $135 \\times 12 = 1620$ دج، ثم نقسم $1620 \\div 5 = 324$ دج لكل قسط.",
+        "انتبه! لقد نسيت صفر العشرات في الضرب ($270 + 135 = 405$ ثم قسمت على $5$ )؛ الصواب $270 + 1350 = 1620$.",
+        "تحقق من آخر خطوة في القسمة: بعد $12 \\div 5 = 2$ يبقى $2$ ، ننزل $0$ ليصبح $20 \\div 5 = 4$ وليس $0$.",
+        "$1620$ دج هو المبلغ الكلي فقط؛ بقي أن تقسمه على $5$ أقساط."
+      ],
+      "explanationAr": "نحسب المبلغ الكلي: $135 \\times 2 = 270$ و $135 \\times 10 = 1350$ ، فيكون المجموع $270 + 1350 = 1620$ دج. ثم نقسم على $5$: $1620 \\div 5 = 324$ دج."
+    },
+    {
+      "questionAr": "أيّ ترتيب تصاعدي (من الأصغر إلى الأكبر) صحيح للأعداد الآتية: $3.2$ ، $\\frac{315}{100}$ ، $3 + \\frac{9}{100}$ ، $\\frac{35}{10}$ ؟",
+      "options": [
+        "$3 + \\frac{9}{100} < \\frac{315}{100} < 3.2 < \\frac{35}{10}$",
+        "$3.2 < \\frac{35}{10} < 3 + \\frac{9}{100} < \\frac{315}{100}$",
+        "$\\frac{315}{100} < 3 + \\frac{9}{100} < 3.2 < \\frac{35}{10}$",
+        "$3 + \\frac{9}{100} < 3.2 < \\frac{315}{100} < \\frac{35}{10}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! بالتحويل إلى أعداد عشرية: $3 + \\frac{9}{100} = 3.09$ ، $\\frac{315}{100} = 3.15$ ، $3.2 = 3.20$ ، $\\frac{35}{10} = 3.50$ ، والترتيب صحيح.",
+        "لا نقارن الأرقام الظاهرة في البسوط دون تحويل إلى أعداد عشرية أو توحيد المقامات!",
+        "تذكر أن $3 + \\frac{9}{100} = 3.09$ (رقم الأعشار $0$ ) وليس $3.9$ ، لذا هو أصغر من $3.15$.",
+        "انتبه لمقارنة $3.2$ و $3.15$: نكتب $3.2 = 3.20$ فنجد أن رقم الأعشار $2 > 1$ ، إذن $3.15 < 3.2$."
+      ],
+      "explanationAr": "نحوّل الكسور إلى أعداد عشرية بمقامات موحدة ذهنيا: $3 + \\frac{9}{100} = 3.09$ ، $\\frac{315}{100} = 3.15$ ، $3.2 = 3.20$ ، $\\frac{35}{10} = 3.50$. الترتيب التصاعدي هو: $3.09 < 3.15 < 3.20 < 3.50$."
+    },
+    {
+      "questionAr": "في الدائرة المقابلة التي مركزها $O$ ونصف قطرها $5\\text{ cm}$ ، عيّنا النقطتين $A$ و $B$ بحيث يتعامد $[OA]$ و $[OB]$. ما طول قطر هذه الدائرة وما نوع المثلث $OAB$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 175\" width=\"320\" height=\"175\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"304\" height=\"159\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><circle cx=\"160\" cy=\"92\" r=\"62\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><polygon points=\"160,92 160,30 222,92\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/><rect x=\"160\" y=\"79\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"154\" y1=\"61\" x2=\"166\" y2=\"61\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"191\" y1=\"86\" x2=\"191\" y2=\"98\" stroke=\"#15803d\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"92\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"146\" y=\"96\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"160\" y=\"23\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1d4ed8\">A</text><text x=\"232\" y=\"96\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1d4ed8\">B</text><text x=\"130\" y=\"64\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">5 cm</text></svg>",
+      "options": [
+        "طول القطر $10\\text{ cm}$ ، والمثلث $OAB$ قائم ومتساوي الساقين",
+        "طول القطر $5\\text{ cm}$ ، والمثلث $OAB$ متقايس الأضلاع",
+        "طول القطر $10\\text{ cm}$ ، والمثلث $OAB$ قائم فقط",
+        "طول القطر $2.5\\text{ cm}$ ، والمثلث $OAB$ متساوي الساقين فقط"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! القطر يساوي ضعف نصف القطر ($2 \\times 5 = 10\\text{ cm}$ )، والمثلث $OAB$ له زاوية قائمة في $O$ وضلعان متقايسان ($OA = OB = 5\\text{ cm}$ ) فهو قائم ومتساوي الساقين.",
+        "$5\\text{ cm}$ هو نصف القطر وليس القطر، كما أن المثلث $OAB$ يحتوي على زاوية قائمة وضلعين متساويين وليس ثلاثة أضلاع متقايسة.",
+        "صحيح أن القطر $10\\text{ cm}$ والمثلث قائم في $O$ ، لكن لا تنس أن $OA = OB$ (نصفا قطر للدائرة نفسها) فهو متساوي الساقين أيضا.",
+        "طول القطر ضعف نصف القطر ($10\\text{ cm}$ ) وليس نصفه، ولا تهمل الزاوية القائمة في $O$."
+      ],
+      "explanationAr": "طول القطر يساوي $2 \\times 5 = 10\\text{ cm}$. وبما أن $[OA]$ و $[OB]$ نصفا قطر لنفس الدائرة فإن $OA = OB = 5\\text{ cm}$ ، ومع وجود زاوية قائمة في $O$ يكون المثلث $OAB$ قائما ومتساوي الساقين."
+    }
+  ]
+}

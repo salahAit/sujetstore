@@ -1,0 +1,35 @@
+{
+  "documents": [
+    {
+      "id": "ref_1ap_textbook_math_sci_onps_gen2",
+      "grade": "1ap",
+      "title_ar": "كتابي في الرياضيات والتربية العلمية والتكنولوجية - السنة الأولى من التعليم الابتدائي (الجيل الثاني - ONPS)",
+      "category": "textbook",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/02_textbook/1ap_textbook_math_sci_onps_gen2.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2016/2G/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B3%D9%86%D8%A9%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89%20%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A%20%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D9%8A%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA%20%D9%88%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9%20%D9%88%20%D8%A7%D9%84%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AC%D9%8A%D9%84%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A.pdf"
+    },
+    {
+      "id": "ref_1ap_workbook_math_sci_onps_gen2",
+      "grade": "1ap",
+      "title_ar": "دفتر الأنشطة في الرياضيات والتربية العلمية والتكنولوجية - السنة الأولى من التعليم الابتدائي (الجيل الثاني - ONPS)",
+      "category": "workbook",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/02_textbook/1ap_workbook_math_sci_onps_gen2.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2016/2G/%D8%AF%D9%81%D8%AA%D8%B1%20%D8%A7%D9%84%D8%A3%D9%86%D8%B4%D8%B7%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA%20%D9%88%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9%20%D9%88%20%D8%A7%D9%84%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A9%20%D8%A3%D9%88%D9%84%D9%89%20%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A%20%D8%A7%D9%84%D8%AC%D9%8A%D9%84%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A.pdf"
+    },
+    {
+      "id": "ref_1ap_teacher_guide_math_sci_onps_gen2",
+      "grade": "1ap",
+      "title_ar": "دليل الأستاذ في الرياضيات والتربية العلمية والتكنولوجية - السنة الأولى من التعليم الابتدائي (مطابق لمناهج الجيل الثاني 2016 - ONPS)",
+      "category": "teacher_guide",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/02_textbook/1ap_teacher_guide_math_sci_onps_gen2.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_158a83f1f25d422ca89bfc8f3e68ec5c.pdf"
+    }
+  ],
+  "missing_references": []
+}

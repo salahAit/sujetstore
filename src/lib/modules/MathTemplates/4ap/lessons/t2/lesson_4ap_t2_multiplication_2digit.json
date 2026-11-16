@@ -1,0 +1,129 @@
+{
+  "id": "lesson_4ap_t2_multiplication_2digit",
+  "slug": "lesson-4ap-t2-multiplication-2digit",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t2",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثالث: الضرب والقسمة الإقليدية والكسور البسيطة والعشرية",
+  "order": 1,
+  "titleAr": "الضرب العمودي في عدد ذي رقمين والضرب في 10 و100 و1000 ومضاعفاتها",
+  "objectives": [
+    "حساب جداء عدد طبيعي في $10$ و $100$ و $1000$ ومضاعفاتها ذهنيا وكتابيا.",
+    "وضع وإجراء عملية الضرب العمودي لعدد طبيعي مكون من رقمين أو ثلاثة أرقام في عدد ذي رقمين مع احترام منزلة العشرات.",
+    "توظيف الضرب العمودي والمتمعن فيه لحل مشكلات ضربية من الحياة اليومية."
+  ],
+  "keywordsAr": [
+    "الضرب العمودي",
+    "ضرب عدد في رقمين",
+    "الضرب في 10 و100 و1000",
+    "مضاعفات العشرة والمئة",
+    "مشكلات ضربية"
+  ],
+  "discover": {
+    "scenarioAr": "اشترى مدير مدرسة ابتدائية في ولاية وهران $24$ صندوقا من الأقلام لتوزيعها على التلاميذ المتفوقين، في كل صندوق $135$ قلما. نريد حساب العدد الكلي للأقلام بإنجاز عملية الضرب العمودي $135 \\times 24$.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 230\" width=\"540\" height=\"230\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"214\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"270\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">الضرب العمودي في عدد ذي رقمين: 135 × 24</text><rect x=\"24\" y=\"44\" width=\"226\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"190\" y=\"72\" text-anchor=\"end\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\" letter-spacing=\"4\">1 3 5</text><text x=\"108\" y=\"98\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#0f172a\">×</text><text x=\"190\" y=\"98\" text-anchor=\"end\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\" letter-spacing=\"4\">2 4</text><line x1=\"84\" y1=\"107\" x2=\"202\" y2=\"107\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"190\" y=\"131\" text-anchor=\"end\" font-size=\"19\" font-weight=\"bold\" fill=\"#1d4ed8\" letter-spacing=\"4\">5 4 0</text><text x=\"108\" y=\"158\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#0f172a\">+</text><text x=\"170\" y=\"158\" text-anchor=\"end\" font-size=\"19\" font-weight=\"bold\" fill=\"#15803d\" letter-spacing=\"4\">2 7 0</text><rect x=\"175\" y=\"140\" width=\"20\" height=\"23\" rx=\"4\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"185\" y=\"158\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#dc2626\">0</text><line x1=\"84\" y1=\"169\" x2=\"202\" y2=\"169\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"190\" y=\"196\" text-anchor=\"end\" font-size=\"21\" font-weight=\"bold\" fill=\"#7c3aed\" letter-spacing=\"4\">3 2 4 0</text><rect x=\"268\" y=\"44\" width=\"248\" height=\"166\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"392\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">نفكك العدد 24 = 20 + 4</text><rect x=\"282\" y=\"84\" width=\"220\" height=\"32\" rx=\"6\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><text x=\"392\" y=\"105\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">الآحاد: 135 × 4 = 540</text><rect x=\"282\" y=\"124\" width=\"220\" height=\"34\" rx=\"6\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.2\"/><text x=\"392\" y=\"145\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#15803d\">العشرات: 135 × 20 = 2700</text><rect x=\"282\" y=\"166\" width=\"220\" height=\"32\" rx=\"6\" fill=\"#f3e8ff\" stroke=\"#a855f7\" stroke-width=\"1.2\"/><text x=\"392\" y=\"187\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#6b21a8\">المجموع: 540 + 2700 = 3240</text></svg>",
+    "steps": [
+      {
+        "promptAr": "نبدأ بضرب $135$ في رقم الآحاد ($4$). ما ناتج $135 \\times 4$ ؟",
+        "hintAr": "اضرب $4 \\times 5 = 20$ (نكتب $0$ ونحتفظ بـ $2$ )، ثم $4 \\times 3 + 2 = 14$ ، ثم $4 \\times 1 + 1 = 5$.",
+        "expectedInput": "540",
+        "revealAr": "السطر الأول يساوي $135 \\times 4 = 540$."
+      },
+      {
+        "promptAr": "قبل الانتقال إلى ضرب $135$ في رقم العشرات ($2$ الذي يمثل $20$ )، ما الرقم الذي نكتبه أولا في خانة الآحاد بالسطر الثاني؟",
+        "hintAr": "لأننا نضرب في عشرات ($20$ )، نضع صفرا في منزلة الآحاد قبل حساب $135 \\times 2$.",
+        "expectedInput": "0",
+        "revealAr": "نضع الرقم $0$ في خانة الآحاد بالسطر الثاني لنحترم منزلة العشرات."
+      },
+      {
+        "promptAr": "الآن نحسب $135 \\times 20$ (نحسب $135 \\times 2 = 270$ ونضع الصفر على اليمين). ما ناتج السطر الثاني؟",
+        "hintAr": "اكتب $270$ وضع بجانبها $0$ في اليمين.",
+        "expectedInput": "2700",
+        "revealAr": "السطر الثاني يساوي $135 \\times 20 = 2700$."
+      },
+      {
+        "promptAr": "أخيرا نجمع السطرين: $540 + 2700$. ما العدد الكلي للأقلام التي اشتراها المدير؟",
+        "hintAr": "اجمع الآحاد مع الآحاد والعشرات مع العشرات والمئات مع المئات: $2700 + 540$.",
+        "expectedInput": "3240",
+        "revealAr": "العدد الكلي للأقلام هو $135 \\times 24 = 3240$ قلما."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لضرب عدد طبيعي في $10$ نكتب صفرا واحدا ($0$) على يمينه، وفي $100$ نكتب صفرين ($00$)، وفي $1000$ نكتب ثلاثة أصفار ($000$)، مثل $58 \\times 100 = 5800$.",
+      "لضرب عدد في مضاعف للعدد $10$ أو $100$ أو $1000$ (مثل $\\times 30$ أو $\\times 200$ )، نضرب في الرقم غير المعدوم أولا ثم نضيف الأصفار على اليمين، مثل $25 \\times 30 = (25 \\times 3) \\times 10 = 750$.",
+      "في الضرب العمودي في عدد ذي رقمين: نضرب العدد الأول في رقم الآحاد، ثم نضع صفرا ($0$) تحت الآحاد في السطر الثاني ونضرب في رقم العشرات، ثم نجمع الناتجين.",
+      "للتحقق من معقولية النتيجة نستعمل التقدير (مثلا $246 \\times 32$ قريب من $250 \\times 30 = 7500$ )."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 225\" width=\"540\" height=\"225\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"209\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"270\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">قاعدة الأصفار والضرب العمودي في رقمين</text><rect x=\"22\" y=\"44\" width=\"232\" height=\"158\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"138\" y=\"68\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">الضرب في 10 و 100 ومضاعفاتها</text><rect x=\"36\" y=\"82\" width=\"204\" height=\"30\" rx=\"6\" fill=\"#eff6ff\"/><text x=\"138\" y=\"102\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#1d4ed8\">36 × 10 = 360</text><rect x=\"36\" y=\"120\" width=\"204\" height=\"30\" rx=\"6\" fill=\"#eff6ff\"/><text x=\"138\" y=\"140\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#1d4ed8\">36 × 100 = 3600</text><rect x=\"36\" y=\"158\" width=\"204\" height=\"30\" rx=\"6\" fill=\"#fef3c7\"/><text x=\"138\" y=\"178\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#92400e\">36 × 30 = 1080</text><rect x=\"270\" y=\"44\" width=\"248\" height=\"158\" rx=\"10\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"394\" y=\"68\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\">مثال: 246 × 32 = 7872</text><text x=\"435\" y=\"96\" text-anchor=\"end\" font-size=\"18\" font-weight=\"bold\" fill=\"#0f172a\" letter-spacing=\"4\">2 4 6</text><text x=\"348\" y=\"118\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">×</text><text x=\"435\" y=\"118\" text-anchor=\"end\" font-size=\"18\" font-weight=\"bold\" fill=\"#0f172a\" letter-spacing=\"4\">3 2</text><line x1=\"330\" y1=\"125\" x2=\"445\" y2=\"125\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><text x=\"435\" y=\"146\" text-anchor=\"end\" font-size=\"17\" font-weight=\"bold\" fill=\"#1d4ed8\" letter-spacing=\"4\">4 9 2</text><text x=\"348\" y=\"168\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">+</text><text x=\"418\" y=\"168\" text-anchor=\"end\" font-size=\"17\" font-weight=\"bold\" fill=\"#15803d\" letter-spacing=\"4\">7 3 8</text><text x=\"435\" y=\"168\" text-anchor=\"end\" font-size=\"17\" font-weight=\"bold\" fill=\"#dc2626\">0</text><line x1=\"330\" y1=\"175\" x2=\"445\" y2=\"175\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><text x=\"435\" y=\"196\" text-anchor=\"end\" font-size=\"18\" font-weight=\"bold\" fill=\"#7c3aed\" letter-spacing=\"4\">7 8 7 2</text></svg>",
+    "visualCaptionAr": "قاعدة إضافة الأصفار عند الضرب في $10$ و $100$ ومضاعفاتها، ووضع عملية الضرب العمودي في عدد ذي رقمين.",
+    "examples": [
+      {
+        "problemAr": "احسب ذهنيا: $48 \\times 100$ و $15 \\times 400$.",
+        "solutionAr": "$48 \\times 100 = 4800$. ولحساب $15 \\times 400$: نضرب $15 \\times 4 = 60$ ثم نضيف صفرين على اليمين، فنجد $6000$."
+      },
+      {
+        "problemAr": "باع فلاح $36$ صندوقا من البرتقال، يزن كل صندوق $25\\text{ kg}$. ما الوزن الكلي للبرتقال؟",
+        "solutionAr": "نضع العملية العمودية $25 \\times 36$: نضرب $25 \\times 6 = 150$ ، ثم نضع $0$ ونضرب $25 \\times 3 = 75$ لنحصل على $750$. نجمع: $150 + 750 = 900\\text{ kg}$."
+      }
+    ],
+    "watchOutAr": "احذر من نسيان وضع الصفر ($0$) في خانة الآحاد عند الضرب في رقم العشرات! فلو حسبت $135 \\times 24$ وكتبت $540 + 270 = 810$ بدلا من $540 + 2700 = 3240$ لكان الجواب خاطئا تماما."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل العملية العمودية المقابلة: ما الناتج الصحيح للجداء $142 \\times 23$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 155\" width=\"320\" height=\"155\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"304\" height=\"139\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"195\" y=\"48\" text-anchor=\"end\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" letter-spacing=\"5\">1 4 2</text><text x=\"105\" y=\"80\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">×</text><text x=\"195\" y=\"80\" text-anchor=\"end\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" letter-spacing=\"5\">2 3</text><line x1=\"85\" y1=\"92\" x2=\"215\" y2=\"92\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"160\" y=\"124\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">؟</text></svg>",
+      "options": [
+        "$710$",
+        "$3266$",
+        "$3166$",
+        "$2846$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه! لقد جمعت $426 + 284 = 710$ لأنك نسيت وضع الصفر ($0$) في خانة الآحاد عند الضرب في العشرات ($20$).",
+        "أحسنت! نجد $142 \\times 3 = 426$ و $142 \\times 20 = 2840$ ، ومجموعهما $426 + 2840 = 3266$.",
+        "راجع جمع المئات: $4 + 8 = 12$ (نكتب $2$ ونحتفظ بـ $1$ )، ففي المئات يكون الرقم $2$ وليس $1$.",
+        "تحقق من ضرب رقم الآحاد أولا: $142 \\times 3 = 426$ وليس $6$ فقط، ثم نضيف $2840$."
+      ],
+      "explanationAr": "نضرب $142 \\times 3 = 426$ في السطر الأول، ثم نضع $0$ تحت الآحاد ونضرب $142 \\times 2 = 284$ فنحصل على $2840$ في السطر الثاني. بجمع السطرين: $426 + 2840 = 3266$."
+    },
+    {
+      "questionAr": "احسب ذهنيا ناتج الجداء الآتي: $25 \\times 300 = ?$",
+      "options": [
+        "$750$",
+        "$7500$",
+        "$75000$",
+        "$6500$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه إلى عدد الأصفار: في العدد $300$ يوجد صفران وليس صفرا واحدا.",
+        "ممتاز! نحسب $25 \\times 3 = 75$ ثم نضيف صفرين على اليمين، فيكون الناتج $7500$.",
+        "لقد أضفت ثلاثة أصفار بدلا من صفرين؛ العدد $300$ فيه صفران فقط.",
+        "تحقق من الحساب الذهني: $25 \\times 3 = 75$ وليس $65$."
+      ],
+      "explanationAr": "لضرب $25$ في $300$، نحسب $25 \\times 3 = 75$ ثم نضرب في $100$ بإضافة صفرين على اليمين، فنحصل على $7500$."
+    },
+    {
+      "questionAr": "اشترت جمعية أولياء التلاميذ $34$ كتابا للمطالعة بسعر $215$ دج للكتاب الواحد. ما المبلغ الكلي الذي دفعته الجمعية؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 120\" width=\"360\" height=\"120\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"104\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><rect x=\"22\" y=\"24\" width=\"145\" height=\"72\" rx=\"8\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.3\"/><text x=\"94\" y=\"52\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\">عدد الكتب: 34</text><text x=\"94\" y=\"76\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\">ثمن الكتاب: 215 DA</text><text x=\"190\" y=\"66\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">←</text><rect x=\"212\" y=\"24\" width=\"124\" height=\"72\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.3\"/><text x=\"274\" y=\"54\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#14532d\">215 × 34</text><text x=\"274\" y=\"78\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#1d4ed8\">= ؟ DA</text></svg>",
+      "options": [
+        "$1505$ دج",
+        "$7310$ دج",
+        "$7210$ دج",
+        "$6450$ دج"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "لقد نسيت وضع الصفر ($0$) في منزلة الآحاد عند ضرب $215$ في $3$ عشرات (فجمعت $860 + 645 = 1505$ ).",
+        "رائع! $215 \\times 4 = 860$ و $215 \\times 30 = 6450$ ، والمبلغ الكلي هو $860 + 6450 = 7310$ دج.",
+        "تحقق من الاحتفاظ عند الجمع: $6 + 5 = 11$ (نكتب $1$ ونحتفظ بـ $1$ )، ثم $1 + 8 + 4 = 13$ وليس $12$.",
+        "$6450$ دج هو ثمن $30$ كتابا فقط؛ لقد نسيت إضافة ثمن الكتب الـ $4$ المتبقية ($860$ دج)."
+      ],
+      "explanationAr": "ننجز عملية الضرب العمودي $215 \\times 34$: أولا $215 \\times 4 = 860$ ، ثانيا $215 \\times 30 = 6450$. نجمع السطرين: $860 + 6450 = 7310$ دج."
+    }
+  ]
+}

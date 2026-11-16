@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "levelId": "moyen",
+    "yearId": "3am",
+    "yearName": "السنة الثالثة متوسط",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t1",
+    "trimesterName": "الفصل الأول",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة واحدة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 7,
+      "instruction": "نظّم وبسّط ثم احسب العبارات التالية:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب الجداء بذكاء: $A = (-3.5) times (-2) times 2$",
+          "answer": "1) $A = [(-3.5) times (-2)] times 2 = (+7) times 2 = 14$",
+          "mark": "2.5"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب حاصل القسمة: $B = frac((-12) times (-5), (-4))$",
+          "answer": "2) $B = frac(60, -4) = -15$",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب باحترام الأولوية: $C = 9 + (-3) times (-5)$",
+          "answer": "3) $C = 9 + (+15) = 24$",
+          "mark": "2.25"
+        }
+      ],
+      "id": "ex_test_1_3am_t1_signed_mult_div",
+      "num": "الأول"
+    },
+    {
+      "points": 7,
+      "instruction": "وظّف قواعد الحساب على قوى العدد $10$ لحل ما يلي:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب العبارة $D = 0.37 times 10^3$ وأعطِ الناتج بالكتابة العشرية.",
+          "answer": "1) $D = 370$ (بإزاحة الفاصلة بـ $3$ مراتب نحو اليمين).",
+          "mark": "2.5"
+        },
+        {
+          "type": "text",
+          "content": "2) اكتب على شكل قوة واحدة للعدد $10$: $B = 10^4 times 10^2 times 10^1$",
+          "answer": "2) $B = 10^(4 + 2 + 1) = 10^7$",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "3) بسّط على الشكل $10^k$: $A = frac(10^7 times 10^(-5), 10^(-5))$",
+          "answer": "3) $A = frac(10^2, 10^(-5)) = 10^(2 - (-5)) = 10^7$",
+          "mark": "2.25"
+        }
+      ],
+      "id": "ex_test_2_3am_t1_powers_of_10",
+      "num": "الثاني"
+    },
+    {
+      "points": 6,
+      "instruction": "في الشكل المقابل، $M in [A B]$ و $N in [A C]$ بحيث $(M N) parallel (B C)$ ($A M = 6$ سم، $A B = 10$ سم، $A C = 10$ سم، $B C = 15$ سم):",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.5fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) اذكر شروط تطبيق خاصية تناسبية الأطوال (طالس في المثلث) واكتب النسب المتساوية الثلاث.\n\n2) احسب الطول $M N$.\n\n3) احسب الطول $A N$ ثم استنتج الطول $N C$.",
+              "answer": "1) في المثلث $A B C$: $M in [A B]$ و $N in [A C]$ و $(M N) parallel (B C)$، فحسب خاصية طالس في المثلث:\n$frac(A M, A B) = frac(A N, A C) = frac(M N, B C)$.\n\n2) $frac(6, 10) = frac(M N, 15)$ ومنه $M N = frac(6 times 15, 10) = 9$ سم.\n\n3) $frac(6, 10) = frac(A N, 10)$ ومنه $A N = frac(6 times 10, 10) = 6$ سم، ونستنتج $N C = A C - A N = 10 - 6 = 4$ سم.",
+              "mark": "6"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3am_t1_thales_med_700433.svg",
+              "caption": "تناسبية الأطوال في المثلث ABC"
+            }
+          ]
+        }
+      ],
+      "id": "ex_test_3_3am_t1_midsegment_thales",
+      "num": "الثالث"
+    }
+  ]
+}

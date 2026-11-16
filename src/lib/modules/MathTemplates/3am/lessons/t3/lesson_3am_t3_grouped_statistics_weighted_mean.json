@@ -1,0 +1,129 @@
+{
+  "id": "lesson_3am_t3_grouped_statistics_weighted_mean",
+  "slug": "3am-t3-grouped-statistics-weighted-mean",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t3",
+  "sequenceId": "seq9",
+  "sequenceTitleAr": "المقطع التاسع: التناسبية والحركة المنتظمة والإحصاء وإدماج الفصل الثالث",
+  "order": 6,
+  "titleAr": "الإحصاء وتنظيم المعطيات: الفئات، التكرار المجمع الصاعد والنازل، المدرج التكراري والمتوسط المتوازن",
+  "objectives": [
+    "تجميع معطيات إحصائية في فئات متساوية الطول وتنظيمها في جدول يتضمن مراكز الفئات والتكرارات والتكرارات النسبية (والنسب المئوية)",
+    "حساب التكرار المجمع الصاعد والتكرار المجمع النازل (والتواتر المجمع) لقيم أو فئات سلسلة إحصائية وتفسير مدلولها",
+    "تمثيل سلسلة إحصائية بمخطط بالأشرطة أو بالمدرج التكراري، وحساب المتوسط الحسابي والمتوسط الحسابي المتوازن بالتكرارات وتوظيف المجدول"
+  ],
+  "keywordsAr": [
+    "تجميع معطيات في فئات",
+    "التكرار والتواتر",
+    "التكرار المجمع الصاعد والنازل",
+    "المدرج التكراري",
+    "مراكز الفئات",
+    "المتوسط الحسابي المتوازن"
+  ],
+  "discover": {
+    "scenarioAr": "نظّم أستاذ الرياضيات في متوسطة بتلمسان علامات فرض لـ $25$ تلميذاً في $4$ فئات متساوية الطول ($5$ نقاط): $[0 ; 5[$ ($3$ تلاميذ)، $[5 ; 10[$ ($7$ تلاميذ)، $[10 ; 15[$ ($10$ تلاميذ)، و $[15 ; 20]$ ($5$ تلاميذ). نريد حساب **التكرار المجمع الصاعد والنازل**، وتمثيل المعطيات بـ **المدرج التكراري**، ثم حساب **المتوسط الحسابي المتوازن** للقسم انطلاقاً من مراكز الفئات.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 235\" width=\"580\" height=\"235\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"31\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الجدول الإحصائي والمدرج التكراري لعلامات 25 تلميذاً</text><rect x=\"20\" y=\"44\" width=\"308\" height=\"168\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><line x1=\"20\" y1=\"76\" x2=\"328\" y2=\"76\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"20\" y1=\"110\" x2=\"328\" y2=\"110\" stroke=\"#e2e8f0\" stroke-width=\"1.1\"/><line x1=\"20\" y1=\"144\" x2=\"328\" y2=\"144\" stroke=\"#e2e8f0\" stroke-width=\"1.1\"/><line x1=\"20\" y1=\"178\" x2=\"328\" y2=\"178\" stroke=\"#e2e8f0\" stroke-width=\"1.1\"/><line x1=\"96\" y1=\"44\" x2=\"96\" y2=\"212\" stroke=\"#cbd5e1\" stroke-width=\"1.1\"/><line x1=\"154\" y1=\"44\" x2=\"154\" y2=\"212\" stroke=\"#cbd5e1\" stroke-width=\"1.1\"/><line x1=\"210\" y1=\"44\" x2=\"210\" y2=\"212\" stroke=\"#cbd5e1\" stroke-width=\"1.1\"/><line x1=\"269\" y1=\"44\" x2=\"269\" y2=\"212\" stroke=\"#cbd5e1\" stroke-width=\"1.1\"/><text x=\"58\" y=\"64\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">الفئة</text><text x=\"125\" y=\"64\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">المركز</text><text x=\"182\" y=\"64\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">التكرار</text><text x=\"239\" y=\"64\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">صاعد</text><text x=\"298\" y=\"64\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">نازل</text><text x=\"58\" y=\"97\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">[0 ; 5[</text><text x=\"125\" y=\"97\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">2.5</text><text x=\"182\" y=\"97\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"239\" y=\"97\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">3</text><text x=\"298\" y=\"97\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">25</text><text x=\"58\" y=\"131\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">[5 ; 10[</text><text x=\"125\" y=\"131\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">7.5</text><text x=\"182\" y=\"131\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">7</text><text x=\"239\" y=\"131\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">10</text><text x=\"298\" y=\"131\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">22</text><text x=\"58\" y=\"165\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">[10 ; 15[</text><text x=\"125\" y=\"165\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">?</text><text x=\"182\" y=\"165\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">10</text><text x=\"239\" y=\"165\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">?</text><text x=\"298\" y=\"165\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">?</text><text x=\"58\" y=\"199\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">[15 ; 20]</text><text x=\"125\" y=\"199\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">17.5</text><text x=\"182\" y=\"199\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">5</text><text x=\"239\" y=\"199\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">25</text><text x=\"298\" y=\"199\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">5</text><rect x=\"340\" y=\"44\" width=\"220\" height=\"168\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.4\"/><text x=\"450\" y=\"63\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">المدرج التكراري (مستطيلات متلاصقة)</text><line x1=\"366\" y1=\"178\" x2=\"542\" y2=\"178\" stroke=\"#334155\" stroke-width=\"1.8\"/><line x1=\"366\" y1=\"178\" x2=\"366\" y2=\"74\" stroke=\"#334155\" stroke-width=\"1.8\"/><rect x=\"374\" y=\"151\" width=\"40\" height=\"27\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.3\"/><rect x=\"414\" y=\"115\" width=\"40\" height=\"63\" fill=\"#60a5fa\" stroke=\"#1d4ed8\" stroke-width=\"1.3\"/><rect x=\"454\" y=\"88\" width=\"40\" height=\"90\" fill=\"#3b82f6\" stroke=\"#1d4ed8\" stroke-width=\"1.3\"/><rect x=\"494\" y=\"133\" width=\"40\" height=\"45\" fill=\"#60a5fa\" stroke=\"#1d4ed8\" stroke-width=\"1.3\"/><text x=\"394\" y=\"146\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e3a8a\">3</text><text x=\"434\" y=\"110\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e3a8a\">7</text><text x=\"474\" y=\"83\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e3a8a\">10</text><text x=\"514\" y=\"128\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e3a8a\">5</text><text x=\"374\" y=\"193\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">0</text><text x=\"414\" y=\"193\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">5</text><text x=\"454\" y=\"193\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">10</text><text x=\"494\" y=\"193\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">15</text><text x=\"534\" y=\"193\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\">20</text></svg>",
+    "steps": [
+      {
+        "promptAr": "مركز الفئة $[a ; b[$ هو $\\frac{a + b}{2}$ . احسب مركز الفئة $[10 ; 15[$ . (أدخل العدد العشري فقط)",
+        "hintAr": "اجمع طرفي الفئة $10 + 15$ ثم اقسم على $2$ .",
+        "expectedInput": "12.5",
+        "revealAr": "مركز الفئة $[10 ; 15[$ هو $c = \\frac{10 + 15}{2} = \\frac{25}{2} = 12.5$ ."
+      },
+      {
+        "promptAr": "**التكرار المجمع الصاعد** لفئة هو مجموع تكرارها وتكرارات جميع الفئات السابقة لها (أي عدد التلاميذ الذين علامتهم أصغر تماماً من حدها الأعلى). احسب التكرار المجمع الصاعد للفئة $[10 ; 15[$ . (أدخل العدد فقط)",
+        "hintAr": "اجمع تكرارات الفئات الثلاث الأولى: $3 + 7 + 10$ .",
+        "expectedInput": "20",
+        "revealAr": "التكرار المجمع الصاعد للفئة $[10 ; 15[$ هو $3 + 7 + 10 = 20$ تلميذاً (أي $20$ تلميذاً علامتهم أقل من $15$ )."
+      },
+      {
+        "promptAr": "**التكرار المجمع النازل** لفئة هو مجموع تكرارها وتكرارات الفئات التي تليها (أي عدد التلاميذ الذين علامتهم تساوي حدها الأدنى على الأقل). احسب التكرار المجمع النازل للفئة $[10 ; 15[$ . (أدخل العدد فقط)",
+        "hintAr": "اجمع تكرار الفئة $[10 ; 15[$ وتكرار الفئة $[15 ; 20]$ : $10 + 5$ .",
+        "expectedInput": "15",
+        "revealAr": "التكرار المجمع النازل للفئة $[10 ; 15[$ هو $10 + 5 = 15$ تلميذاً (أي $15$ تلميذاً تحصلوا على علامة $10$ فأكثر)."
+      },
+      {
+        "promptAr": "باستعمال مراكز الفئات ($2.5$ و $7.5$ و $12.5$ و $17.5$) والتكرارات ($3$ و $7$ و $10$ و $5$)، احسب **المتوسط الحسابي المتوازن** للقسم: $\\bar{x} = \\frac{3 \\times 2.5 + 7 \\times 7.5 + 10 \\times 12.5 + 5 \\times 17.5}{25}$ . (أدخل العدد العشري فقط)",
+        "hintAr": "احسب المجموع $7.5 + 52.5 + 125 + 87.5 = 272.5$ ثم اقسمه على $25$ .",
+        "expectedInput": "10.9",
+        "revealAr": "مجموع الجداءات هو $272.5$ ، ومنه المتوسط المتوازن للقسم هو $\\bar{x} = \\frac{272.5}{25} = 10.9$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**تجميع المعطيات ومراكز الفئات**: ننظم المعطيات العديدة في **فئات متساوية الطول** $[a ; b[$ (طول الفئة هو $b - a$ ). ويُحسب **مركز الفئة** بالعلاقة $c = \\frac{a + b}{2}$ ليُمثّل الفئة في حساب المتوسط.",
+      "**التكرار المجمع الصاعد والنازل والتواتر المجمع**:\n- **التكرار المجمع الصاعد** لفئة هو مجموع تكرارها وتكرارات الفئات السابقة لها (عدد الأفراد بقيمة أصغر من الحد الأعلى)، وآخر قيمة تساوي التكرار الكلي $N$ .\n- **التكرار المجمع النازل** لفئة هو مجموع تكرارها وتكرارات الفئات الموالية لها (عدد الأفراد بقيمة أكبر من أو تساوي الحد الأدنى)، وأول قيمة تساوي $N$ .\n- وبقسمة التكرار المجمع على $N$ نحصل على **التواتر المجمع** (الصاعد أو النازل).",
+      "**المدرج التكراري**: نمثل السلسلة المجمعة في فئات متساوية الطول بمستطيلات **متلاصقة** قواعدها مجالات الفئات وارتفاعاتها متناسبة مع التكرارات (أو التواترات).",
+      "**المتوسط الحسابي المتوازن بالتكرارات**: إذا كانت القيم (أو مراكز الفئات) هي $x_1, x_2, \\dots, x_k$ بتكرارات $n_1, n_2, \\dots, n_k$ والمجموع $N$ ، فإن المتوسط الحسابي المتوازن هو:\n$$\\bar{x} = \\frac{n_1 x_1 + n_2 x_2 + \\dots + n_k x_k}{N}$$"
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 235\" width=\"580\" height=\"235\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"31\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الحوصلة: التكرار المجمع الصاعد والنازل والمتوسط المتوازن</text><rect x=\"24\" y=\"44\" width=\"532\" height=\"126\" rx=\"8\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.4\"/><rect x=\"24\" y=\"44\" width=\"532\" height=\"28\" rx=\"8\" fill=\"#eff6ff\"/><line x1=\"24\" y1=\"72\" x2=\"556\" y2=\"72\" stroke=\"#475569\" stroke-width=\"1.3\"/><line x1=\"24\" y1=\"96\" x2=\"556\" y2=\"96\" stroke=\"#e2e8f0\" stroke-width=\"1.1\"/><line x1=\"24\" y1=\"120\" x2=\"556\" y2=\"120\" stroke=\"#e2e8f0\" stroke-width=\"1.1\"/><line x1=\"24\" y1=\"144\" x2=\"556\" y2=\"144\" stroke=\"#e2e8f0\" stroke-width=\"1.1\"/><line x1=\"144\" y1=\"44\" x2=\"144\" y2=\"170\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"226\" y1=\"44\" x2=\"226\" y2=\"170\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"310\" y1=\"44\" x2=\"310\" y2=\"170\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"392\" y1=\"44\" x2=\"392\" y2=\"170\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"474\" y1=\"44\" x2=\"474\" y2=\"170\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"84\" y=\"62\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">مثال: العلامات</text><text x=\"185\" y=\"62\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">[0 ; 5[</text><text x=\"268\" y=\"62\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">[5 ; 10[</text><text x=\"351\" y=\"62\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">[10 ; 15[</text><text x=\"433\" y=\"62\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">[15 ; 20]</text><text x=\"515\" y=\"62\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">المجموع</text><text x=\"84\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"rtl\">مركز الفئة c</text><text x=\"185\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">2.5</text><text x=\"268\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">7.5</text><text x=\"351\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">12.5</text><text x=\"433\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">17.5</text><text x=\"515\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" fill=\"#94a3b8\">-</text><text x=\"84\" y=\"112\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">التكرار n</text><text x=\"185\" y=\"112\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">3</text><text x=\"268\" y=\"112\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">7</text><text x=\"351\" y=\"112\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">10</text><text x=\"433\" y=\"112\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">5</text><text x=\"515\" y=\"112\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">25</text><text x=\"84\" y=\"136\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">مجمع صاعد &#8594;</text><text x=\"185\" y=\"136\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">3</text><text x=\"268\" y=\"136\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">10</text><text x=\"351\" y=\"136\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">20</text><text x=\"433\" y=\"136\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">25</text><text x=\"515\" y=\"136\" text-anchor=\"middle\" font-size=\"10\" fill=\"#047857\" direction=\"rtl\">(أصغر من)</text><text x=\"84\" y=\"160\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">مجمع نازل &#8592;</text><text x=\"185\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">25</text><text x=\"268\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">22</text><text x=\"351\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">15</text><text x=\"433\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">5</text><text x=\"515\" y=\"160\" text-anchor=\"middle\" font-size=\"10\" fill=\"#b45309\" direction=\"rtl\">(أكبر أو يساوي)</text><rect x=\"46\" y=\"180\" width=\"488\" height=\"36\" rx=\"8\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.3\"/><text x=\"290\" y=\"203\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"ltr\">x&#772; = (3&#215;2.5 + 7&#215;7.5 + 10&#215;12.5 + 5&#215;17.5) &#247; 25 = 272.5 &#247; 25 = 10.9</text></svg>",
+    "visualCaptionAr": "تنظيم جدول الفئات ومراكز الفئات والتكرار المجمع الصاعد والنازل وحساب المتوسط المتوازن",
+    "examples": [
+      {
+        "problemAr": "تحصل تلميذ في مادة الرياضيات على العلامات التالية بمعاملاتها: الفرض الأول $14$ (معامل $1$ )، الفرض الثاني $12$ (معامل $1$ )، التقويم المستمر $15$ (معامل $1$ )، والاختبار $17$ (معامل $2$ ). احسب معدله الفصلي المتوازن.",
+        "solutionAr": "مجموع المعاملات هو $1 + 1 + 1 + 2 = 5$ .\n\nمجموع الجداءات هو $14 \\times 1 + 12 \\times 1 + 15 \\times 1 + 17 \\times 2 = 14 + 12 + 15 + 34 = 75$ .\n\nإذن المعدل الفصلي المتوازن هو $\\bar{x} = \\frac{75}{5} = 15$ ."
+      },
+      {
+        "problemAr": "في استطلاع حول مدة التنقل اليومي لـ $40$ تلميذاً بالدقائق: $[0 ; 10[$ تكرارها $8$ ، $[10 ; 20[$ تكرارها $16$ ، $[20 ; 30[$ تكرارها $12$ ، $[30 ; 40]$ تكرارها $4$ . ما نسبة التلاميذ الذين يستغرقون أقل من $20\\text{ min}$ ؟ وما التكرار المجمع النازل للفئة $[20 ; 30[$ ؟",
+        "solutionAr": "1) التكرار المجمع الصاعد عند الفئة $[10 ; 20[$ هو $8 + 16 = 24$ تلميذاً، ومنه التواتر المجمع الصاعد $\\frac{24}{40} = 0.60$ أي $60\\%$ يستغرقون أقل من $20\\text{ min}$ .\n\n2) التكرار المجمع النازل للفئة $[20 ; 30[$ هو $12 + 4 = 16$ تلميذاً (أي $16$ تلميذاً يستغرقون $20\\text{ min}$ فأكثر)."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: لحساب المتوسط المتوازن لسلسلة ذات تكرارات (أو معاملات) مختلفة، لا نجمع القيم ونقسم على عددها فقط! يجب ضرب كل قيمة (أو مركز فئة) في **تكرارها** ثم قسمة المجموع على **التكرار الكلي** $N$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "يمثّل المدرج التكراري المقابل كتل $20$ طرداً بالكيلوغرام في مركز بريد. ما هو **التكرار المجمع الصاعد** للفئة $[2 ; 4[$ ، وما النسبة المئوية للطرود التي تقل كتلتها عن $4\\text{ kg}$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 180\" width=\"380\" height=\"180\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"6\" y=\"6\" width=\"368\" height=\"168\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><line x1=\"55\" y1=\"140\" x2=\"340\" y2=\"140\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"55\" y1=\"140\" x2=\"55\" y2=\"24\" stroke=\"#334155\" stroke-width=\"2\"/><rect x=\"55\" y=\"92\" width=\"65\" height=\"48\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"120\" y=\"44\" width=\"65\" height=\"96\" fill=\"#3b82f6\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"185\" y=\"80\" width=\"65\" height=\"60\" fill=\"#60a5fa\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><rect x=\"250\" y=\"104\" width=\"65\" height=\"36\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"87\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">4</text><text x=\"152\" y=\"38\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">8</text><text x=\"217\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">5</text><text x=\"282\" y=\"98\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">3</text><text x=\"55\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">0</text><text x=\"120\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">2</text><text x=\"185\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">4</text><text x=\"250\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">6</text><text x=\"315\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">8</text><text x=\"344\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">kg</text></svg>",
+      "options": [
+        "التكرار المجمع الصاعد $12$ والنسبة $60\\%$",
+        "التكرار المجمع الصاعد $8$ والنسبة $40\\%$",
+        "التكرار المجمع الصاعد $16$ والنسبة $80\\%$",
+        "التكرار المجمع الصاعد $12$ والنسبة $12\\%$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! التكرار المجمع الصاعد للفئة $[2 ; 4[$ هو $4 + 8 = 12$ ، ونسبته من أصل $20$ هي $\\frac{12}{20} = 60\\%$ .",
+        "$8$ هو تكرار الفئة $[2 ; 4[$ وحدها؛ أما التكرار المجمع الصاعد فيجمعها مع الفئة السابقة $[0 ; 2[$ .",
+        "$16 = 8 + 5 + 3$ هو التكرار المجمع **النازل** وليس الصاعد.",
+        "العدد $12$ صحيح، لكن لحساب النسبة المئوية نقسم $12$ على التكرار الكلي $20$ ثم نضرب في $100$ ."
+      ],
+      "explanationAr": "التكرار المجمع الصاعد للفئة $[2 ; 4[$ هو مجموع تكراري الفئتين $[0 ; 2[$ و $[2 ; 4[$ أي $4 + 8 = 12$ طرداً. والنسبة المئوية للطرود الأقل من $4\\text{ kg}$ هي $\\frac{12}{20} \\times 100 = 60\\%$ ."
+    },
+    {
+      "questionAr": "سُجّلت مصاريف $10$ عائلات الأسبوعية في فئتين: الفئة $[200 ; 400[$ بتكرار $4$ ، والفئة $[400 ; 600]$ بتكرار $6$ (بالدينار). ما قيمة **المتوسط الحسابي المتوازن** لهذه المصاريف باستعمال مراكز الفئات؟",
+      "options": [
+        "$400\\text{ DA}$",
+        "$420\\text{ DA}$",
+        "$380\\text{ DA}$",
+        "$4200\\text{ DA}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$400$ هو المتوسط البسيط لمركزي الفئتين $(300 + 500) \\div 2$ دون مراعاة وزن التكرارات ($4$ و $6$).",
+        "ممتاز! مركزا الفئتين هما $300$ و $500$ ، والمتوسط المتوازن $\\frac{4 \\times 300 + 6 \\times 500}{10} = 420\\text{ DA}$ .",
+        "عكستَ التكرارات عند الضرب: الفئة الأولى ($300$) تكرارها $4$ لا $6$ .",
+        "$4200$ هو مجموع الجداءات $4 \\times 300 + 6 \\times 500$ ؛ نسيتَ القسمة على التكرار الكلي $10$ !"
+      ],
+      "explanationAr": "مركز الفئة الأولى هو $\\frac{200 + 400}{2} = 300$ ومركز الفئة الثانية هو $\\frac{400 + 600}{2} = 500$ . إذن المتوسط الحسابي المتوازن هو $\\bar{x} = \\frac{4 \\times 300 + 6 \\times 500}{4 + 6} = \\frac{1200 + 3000}{10} = \\frac{4200}{10} = 420\\text{ DA}$ ."
+    },
+    {
+      "questionAr": "في سلسلة إحصائية مجمّعة في $4$ فئات، التكرار الكلي يساوي $50$ ، وتكرارا الفئتين الأوليين هما $9$ و $13$ . ما هو **التكرار المجمع النازل** للفئة الثالثة؟",
+      "options": [
+        "$22$",
+        "$28$",
+        "$37$",
+        "$14$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$22 = 9 + 13$ هو التكرار المجمع **الصاعد** للفئة الثانية، وليس النازل للفئة الثالثة.",
+        "أحسنت! التكرار المجمع النازل للفئة الثالثة هو مجموع تكراري الفئتين الثالثة والرابعة، أي $50 - (9 + 13) = 28$ .",
+        "$37 = 50 - 13$ : نسيتَ طرح تكرار الفئة الأولى ($9$) من التكرار الكلي $50$ .",
+        "المطلوب مجموع تكراري الفئتين الثالثة والرابعة معاً ($n_3 + n_4 = 28$) وليس قيمة واحدة مفردة."
+      ],
+      "explanationAr": "ليكن $n_1 = 9$ و $n_2 = 13$ وتكرارا الفئتين الأخيرتين $n_3$ و $n_4$ . التكرار المجمع النازل للفئة الثالثة هو $n_3 + n_4$ . وبما أن $n_1 + n_2 + n_3 + n_4 = 50$ فإن $n_3 + n_4 = 50 - (9 + 13) = 50 - 22 = 28$ ."
+    }
+  ]
+}

@@ -6,8 +6,88 @@
 #let official-template(data, is-solution: false) = {
   let metadata = data.at("metadata", default: (:))
   let doc-type = metadata.at("docType", default: metadata.at("exam_type", default: "test"))
-  let exam-type-label = if doc-type == "exam" { "اختبار" } else { "فرض" }
-  let main-font = metadata.at("font", default: "KFGQPC Uthman Taha Naskh")
+  let level-id = metadata.at("levelId", default: "moyen")
+  let year-id = metadata.at("yearId", default: "2am")
+  let custom-doc-title = metadata.at("customDocTitle", default: "")
+
+  let exam-type-label = if level-id == "primaire" {
+    if doc-type == "exam" { "اختبار" } else { "تقويم مرحلي" }
+  } else {
+    if doc-type == "exam" { "اختبار" } else { "فرض محروس" }
+  }
+
+  let explicit-font = metadata.at("font", default: "")
+  let main-font = if explicit-font != "" {
+    (explicit-font, "Scheherazade", "Noto Naskh Arabic")
+  } else if year-id == "1ap" or year-id == "2ap" {
+    ("Arabic Transparent", "Scheherazade", "Scheherazade New", "Noto Naskh Arabic")
+  } else if year-id == "3ap" or year-id == "4ap" or year-id == "5ap" {
+    ("Arabic Transparent", "Noto Naskh Arabic", "Scheherazade", "Scheherazade New")
+  } else {
+    ("Traditional Arabic", "Amiri", "KFGQPC Uthman Taha Naskh", "Noto Naskh Arabic")
+  }
+
+  let body-size = if year-id == "1ap" {
+    17pt
+  } else if year-id == "2ap" {
+    15.5pt
+  } else if year-id == "3ap" {
+    14.5pt
+  } else if year-id == "4ap" or year-id == "5ap" {
+    13.5pt
+  } else {
+    12.5pt
+  }
+
+  let heading-size = if year-id == "1ap" {
+    18.5pt
+  } else if year-id == "2ap" {
+    17.5pt
+  } else if year-id == "3ap" {
+    16.5pt
+  } else if year-id == "4ap" or year-id == "5ap" {
+    15.5pt
+  } else {
+    14.5pt
+  }
+
+  let instr-size = if year-id == "1ap" {
+    15pt
+  } else if year-id == "2ap" {
+    14pt
+  } else if year-id == "3ap" {
+    13.5pt
+  } else if year-id == "4ap" or year-id == "5ap" {
+    12.5pt
+  } else {
+    12pt
+  }
+
+  let body-leading = if year-id == "1ap" {
+    1.15em
+  } else if year-id == "2ap" {
+    1.05em
+  } else if year-id == "3ap" {
+    0.95em
+  } else if year-id == "4ap" or year-id == "5ap" {
+    0.85em
+  } else {
+    0.78em
+  }
+
+  let table-inset = if year-id == "1ap" {
+    11pt
+  } else if year-id == "2ap" {
+    10pt
+  } else if year-id == "3ap" {
+    9pt
+  } else if year-id == "4ap" or year-id == "5ap" {
+    8pt
+  } else {
+    7pt
+  }
+
+  let show-pupil-box = year-id == "1ap" or year-id == "2ap" or year-id == "3ap"
 
   // ─────── إعداد الصفحة ───────
   set page(
@@ -30,7 +110,8 @@
     ],
   )
 
-  set text(font: main-font, lang: "ar", region: "dz", dir: rtl, size: 16pt, weight: "regular")
+  set text(font: main-font, lang: "ar", region: "dz", dir: rtl, size: body-size, weight: "regular")
+  set par(leading: body-leading)
   show math.equation: set text(font: "New Computer Modern Math", dir: ltr)
 
   // ═══════════ العناصر العائمة (أعلى الصفحة) ═══════════
@@ -73,16 +154,32 @@
   {
     let subject-label = metadata.at("subjectName", default: metadata.at("subject", default: ""))
     let solution-suffix = if is-solution { " - الإجابة النموذجية" } else { "" }
+    let banner-prefix = if custom-doc-title != "" { custom-doc-title } else { exam-type-label }
 
     align(center)[
       #line(length: 100%, stroke: 1pt)
       #v(-7pt)
-      #text(font: main-font, size: 16pt, weight: "bold", fill: rgb("2563EB"))[#exam-type-label في مادة: #subject-label #solution-suffix]
+      #text(font: main-font, size: 16pt, weight: "bold", fill: rgb("2563EB"))[#banner-prefix في مادة: #subject-label #solution-suffix]
       #v(-7pt)
       #line(length: 100%, stroke: 1pt)
     ]
   }
-  v(1pt)
+  v(2pt)
+
+  // ── خانة التلميذ (للأطوار الدنيا من الابتدائي في ورقة الموضوع) ──
+  if show-pupil-box and not is-solution {
+    box(width: 100%, stroke: 0.8pt + luma(140), radius: 5pt, inset: (x: 10pt, y: 7pt), fill: luma(250))[
+      #grid(
+        columns: (1.7fr, 1fr, 0.9fr),
+        gutter: 8pt,
+        align: right + horizon,
+        [#text(font: main-font, size: 12pt, weight: "bold")[الاسم واللقب: ...............................]],
+        [#text(font: main-font, size: 12pt, weight: "bold")[القسم: ..............]],
+        [#text(font: main-font, size: 12pt, weight: "bold")[العلامة: ....... / 10]]
+      )
+    ]
+    v(4pt)
+  }
 
   // ─────── التمارين ───────
   // Support both new format (data.exercises) and legacy format (data.topics.exercises)
@@ -103,32 +200,32 @@
     } else {
       "التمرين " + ex.at("num", default: ordinals.at(idx, default: str(idx + 1))) + " : (" + str(ex.at("points", default: "0")) + " نقاط)"
     }
-    v(2pt)
+    v(3pt)
     block(breakable: true, width: 100%)[
       #grid(
         columns: (auto, 1fr),
         gutter: 10pt,
         align: horizon,
-        text(size: 22pt, fill: if is-solution { green } else { blue })[▪],
-        text(font: main-font, weight: "bold", size: 17pt)[#eval(heading-text, mode: "markup")],
+        text(size: heading-size + 4pt, fill: if is-solution { green } else { blue })[▪],
+        text(font: main-font, weight: "bold", size: heading-size)[#eval(heading-text, mode: "markup")],
       )
       #v(2pt)
       
       #block(width: 100%, inset: (right: 15pt))[
         #if ex.keys().contains("instruction") and ex.instruction != "" [
-          #text(style: "italic", size: 13pt)[#eval(ex.instruction, mode: "markup")]
-          #v(2pt)
+          #text(font: main-font, weight: "bold", size: instr-size)[#eval(ex.instruction, mode: "markup")]
+          #v(3pt)
         ]
         
         // Support both "blocks" and "content" key names
         #let blocks = ex.at("blocks", default: ex.at("content", default: ()))
         #for b in blocks [
-          #render-block(b, is-solution)
-          #v(2pt)
+          #render-block(b, is-solution, body-size: body-size, table-inset: table-inset)
+          #v(3pt)
         ]
       ]
     ]
   }
   v(1fr)
-  align(center)[#text(weight: "bold")[#("انتهى الموضوع")]]
+  align(center)[#text(font: main-font, size: body-size, weight: "bold")[#("انتهى الموضوع")]]
 }

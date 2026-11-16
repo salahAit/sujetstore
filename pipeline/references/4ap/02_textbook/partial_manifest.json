@@ -1,0 +1,47 @@
+{
+  "documents": [
+    {
+      "id": "ref_4ap_onps_math_textbook_gen2",
+      "grade": "4ap",
+      "title_ar": "الكتاب المدرسي الرسمي لمادة الرياضيات - السنة الرابعة من التعليم الابتدائي (الديوان الوطني للمطبوعات المدرسية - الجيل الثاني)",
+      "category": "textbook",
+      "year": "2018-2019",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4ap/02_textbook/4ap_math_textbook_onps_gen2.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_52dec8ca1c154352a54f8547f0ab3e66.pdf?index=true",
+      "pages_count": 130,
+      "extraction_mode": "scanned_ocr",
+      "sha256": "0306816a5ef68e54585ddd6323c6c4e277ebd4f3bf28eff57f9d2529b5123d58",
+      "size_bytes": 22348351
+    },
+    {
+      "id": "ref_4ap_onps_math_workbook_gen2",
+      "grade": "4ap",
+      "title_ar": "كراس النشاطات في الرياضيات - السنة الرابعة من التعليم الابتدائي (الديوان الوطني للمطبوعات المدرسية - الجيل الثاني)",
+      "category": "workbook",
+      "year": "2018-2019",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4ap/02_textbook/4ap_math_workbook_onps_gen2.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_2b4d6a53b0e14a76930540a3712cd90b.pdf?index=true",
+      "pages_count": 91,
+      "extraction_mode": "scanned_ocr",
+      "sha256": "117a6ee065a15c6f42427d4f6c7db794e94555313d7cad795a81fe6d0acd8e44",
+      "size_bytes": 13998139
+    },
+    {
+      "id": "ref_4ap_onps_math_teacher_guide_gen2",
+      "grade": "4ap",
+      "title_ar": "دليل استخدام كتاب الرياضيات - السنة الرابعة من التعليم الابتدائي (الديوان الوطني للمطبوعات المدرسية - الجيل الثاني)",
+      "category": "teacher_guide",
+      "year": "2018-2019",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4ap/02_textbook/4ap_math_teacher_guide_onps_gen2.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2018/03/guide_book4ap_gen2-math.pdf",
+      "pages_count": 144,
+      "extraction_mode": "digital_text",
+      "sha256": "da86e2ca3066b9352049e84f1098239224031ca98157c7f94c81c8c5479607e8",
+      "size_bytes": 11611137
+    }
+  ],
+  "missing_references": []
+}

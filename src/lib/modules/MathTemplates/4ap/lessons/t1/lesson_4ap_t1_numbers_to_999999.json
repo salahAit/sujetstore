@@ -1,0 +1,125 @@
+{
+  "id": "lesson_4ap_t1_numbers_to_999999",
+  "slug": "4ap-t1-numbers-to-999999",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t1",
+  "sequenceId": "seq1",
+  "sequenceTitleAr": "المقطع الأول: الأعداد إلى 999 999 والعمليات والمقادير والقياس",
+  "order": 1,
+  "titleAr": "الأعداد إلى 999 999: القراءة، التفكيك، المقارنة والحصر",
+  "objectives": [
+    "قراءة وكتابة الأعداد الطبيعية الأصغر من 1 000 000 بالأرقام والحروف بالاستعانة بجدول المراتب (منزلة الوحدات البسيطة ومنزلة الآلاف)",
+    "التمييز بين رقم المرتبة وعدد المرتبة (مثل رقم الآلاف وعدد الآلاف، رقم المئات وعدد المئات) وإنجاز التفكيك الجمعي والتفكيك النموذجي",
+    "مقارنة وترتيب الأعداد إلى 999 999 تصاعديا وتنازليا باستعمال (<) و(>) وحصرها بين عشرتين أو مئتين أو ألفين أو عشرتي آلاف متتاليتين"
+  ],
+  "keywordsAr": [
+    "الأعداد الأصغر من مليون",
+    "الأعداد إلى 999 999",
+    "جدول المراتب",
+    "التفكيك النموذجي",
+    "مقارنة وترتيب الأعداد",
+    "الحصر"
+  ],
+  "discover": {
+    "scenarioAr": "تضم مكتبة بلدية في فرعها الأول $345\\,820$ كتابا، وتضم في فرعها الثاني $348\\,150$ كتابا. نريد قراءة هذين العددين وتحديد مراتب أرقامهما وتفكيكهما ومقارنتهما باستعمال جدول المراتب.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 165\" width=\"580\" height=\"165\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"20\" y=\"14\" width=\"270\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"155\" y=\"34\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">منزلة الآلاف</text><rect x=\"290\" y=\"14\" width=\"270\" height=\"30\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.5\"/><text x=\"425\" y=\"34\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#14532d\" direction=\"rtl\">منزلة الوحدات البسيطة</text><g font-size=\"13\" font-weight=\"bold\" fill=\"#334155\"><rect x=\"20\" y=\"44\" width=\"90\" height=\"28\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"65\" y=\"63\" text-anchor=\"middle\">م</text><rect x=\"110\" y=\"44\" width=\"90\" height=\"28\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"155\" y=\"63\" text-anchor=\"middle\">ع</text><rect x=\"200\" y=\"44\" width=\"90\" height=\"28\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"245\" y=\"63\" text-anchor=\"middle\" fill=\"#b45309\">و</text><rect x=\"290\" y=\"44\" width=\"90\" height=\"28\" fill=\"#dcfce7\" stroke=\"#15803d\"/><text x=\"335\" y=\"63\" text-anchor=\"middle\" fill=\"#14532d\">م</text><rect x=\"380\" y=\"44\" width=\"90\" height=\"28\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"425\" y=\"63\" text-anchor=\"middle\">ع</text><rect x=\"470\" y=\"44\" width=\"90\" height=\"28\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"515\" y=\"63\" text-anchor=\"middle\">و</text></g><g font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"20\" y=\"72\" width=\"90\" height=\"48\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"65\" y=\"104\" text-anchor=\"middle\" fill=\"#1d4ed8\">3</text><rect x=\"110\" y=\"72\" width=\"90\" height=\"48\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"155\" y=\"104\" text-anchor=\"middle\" fill=\"#1d4ed8\">4</text><rect x=\"200\" y=\"72\" width=\"90\" height=\"48\" fill=\"#fffbeb\" stroke=\"#d97706\" stroke-width=\"1.8\"/><text x=\"245\" y=\"104\" text-anchor=\"middle\" fill=\"#b45309\">5</text><rect x=\"290\" y=\"72\" width=\"90\" height=\"48\" fill=\"#f0fdf4\" stroke=\"#15803d\" stroke-width=\"1.8\"/><text x=\"335\" y=\"104\" text-anchor=\"middle\" fill=\"#15803d\">8</text><rect x=\"380\" y=\"72\" width=\"90\" height=\"48\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"425\" y=\"104\" text-anchor=\"middle\">2</text><rect x=\"470\" y=\"72\" width=\"90\" height=\"48\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"515\" y=\"104\" text-anchor=\"middle\">0</text></g><line x1=\"290\" y1=\"14\" x2=\"290\" y2=\"120\" stroke=\"#1e293b\" stroke-width=\"2.2\"/><text x=\"290\" y=\"148\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">345 820</text></svg>",
+    "steps": [
+      {
+        "promptAr": "انظر إلى جدول المراتب للعدد $345\\,820$ : ما هو **رقم الآلاف** (وحدات الآلاف) في هذا العدد؟",
+        "hintAr": "ابحث في منزلة الآلاف عن العمود المظلل بالأصفر الخاص بالوحدات (و).",
+        "expectedInput": "5",
+        "revealAr": "رقم الآلاف هو $5$ ، وقيمته في هذا العدد هي $5\\,000$ ، ونقرأ العدد: ثلاث مئة وخمسة وأربعون ألفا وثماني مئة وعشرون."
+      },
+      {
+        "promptAr": "في العدد نفسه $345\\,820$ ، ما هو **عدد المئات** الكلي (اكتب العدد بالأرقام بدون فراغات)؟",
+        "hintAr": "حدد خانة المئات ( $8$ ) ثم اقرأها مع جميع الأرقام الموجودة على يسارها.",
+        "expectedInput": "3458",
+        "revealAr": "عدد المئات هو $3\\,458$ مئة، لأن $345\\,820 = (3\\,458 \\times 100) + 20$ ."
+      },
+      {
+        "promptAr": "قارن بين عدد كتب الفرعين $345\\,820$ و $348\\,150$ بكتابة الرمز المناسب ( `<` أو `>` أو `=` ).",
+        "hintAr": "لكلا العددين $6$ أرقام: مئات الآلاف متساوية ( $3$ ) وعشرات الآلاف متساوية ( $4$ )، قارن رقم الآلاف ( $5$ و $8$ ).",
+        "expectedInput": "<",
+        "revealAr": "$345\\,820 < 348\\,150$ لأن رقم الآلاف $5$ أصغر من $8$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لقراءة وكتابة الأعداد الطبيعية الأصغر من $1\\,000\\,000$ بسهولة، نجزئ أرقامها ثلاثا ثلاثا بدءا من اليمين إلى منزلتين: **منزلة الوحدات البسيطة** ثم **منزلة الآلاف** (وحدات، عشرات، مئات الآلاف).",
+      "نميز بين **رقم المرتبة** (الرقم الواحد المكتوب في الخانة) و**عدد المرتبة** (العدد المكون من تلك الخانة وكل الخانات التي على يسارها). مثال: في $274\\,590$ رقم الآلاف هو $4$ ، بينما عدد الآلاف هو $274$ .",
+      "**التفكيك الجمعي** يكتب العدد كمجموع قيم أرقامه، و**التفكيك النموذجي** يكتبه كمجموع جداءات كل رقم غير معدوم في $10$ أو $100$ أو $1\\,000$ أو $10\\,000$ أو $100\\,000$ .",
+      "لمقارنة عددين طبيعيين: العدد الأكثر أرقاما هو الأكبر، وإذا تساوى عدد الأرقام نقارن من اليسار إلى اليمين منزلة بمنزلة باستعمال ($<$) و($>$).",
+      "لحصر عدد بين ألفين متتاليين (أو مئتين أو عشرتي آلاف)، نحتفظ بعدد المرتبة ونعوض ما على يمينها بأصفار للحد الأدنى، ثم نضيف $1$ إلى تلك المرتبة للحد الأعلى."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 222\" width=\"580\" height=\"222\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"20\" y=\"12\" width=\"270\" height=\"28\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"155\" y=\"31\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">منزلة الآلاف</text><rect x=\"290\" y=\"12\" width=\"270\" height=\"28\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.5\"/><text x=\"425\" y=\"31\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\" direction=\"rtl\">منزلة الوحدات البسيطة</text><g font-size=\"12\" font-weight=\"bold\" fill=\"#334155\"><rect x=\"20\" y=\"40\" width=\"90\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"65\" y=\"57\" text-anchor=\"middle\">م</text><rect x=\"110\" y=\"40\" width=\"90\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"155\" y=\"57\" text-anchor=\"middle\">ع</text><rect x=\"200\" y=\"40\" width=\"90\" height=\"26\" fill=\"#fee2e2\" stroke=\"#dc2626\"/><text x=\"245\" y=\"57\" text-anchor=\"middle\" fill=\"#b91c1c\">و</text><rect x=\"290\" y=\"40\" width=\"90\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"335\" y=\"57\" text-anchor=\"middle\">م</text><rect x=\"380\" y=\"40\" width=\"90\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"425\" y=\"57\" text-anchor=\"middle\">ع</text><rect x=\"470\" y=\"40\" width=\"90\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"515\" y=\"57\" text-anchor=\"middle\">و</text></g><g font-size=\"21\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"20\" y=\"66\" width=\"90\" height=\"42\" fill=\"#eff6ff\" stroke=\"#94a3b8\"/><text x=\"65\" y=\"95\" text-anchor=\"middle\" fill=\"#1d4ed8\">2</text><rect x=\"110\" y=\"66\" width=\"90\" height=\"42\" fill=\"#eff6ff\" stroke=\"#94a3b8\"/><text x=\"155\" y=\"95\" text-anchor=\"middle\" fill=\"#1d4ed8\">7</text><rect x=\"200\" y=\"66\" width=\"90\" height=\"42\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"245\" y=\"95\" text-anchor=\"middle\" fill=\"#dc2626\">4</text><rect x=\"290\" y=\"66\" width=\"90\" height=\"42\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"335\" y=\"95\" text-anchor=\"middle\" fill=\"#15803d\">5</text><rect x=\"380\" y=\"66\" width=\"90\" height=\"42\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"425\" y=\"95\" text-anchor=\"middle\" fill=\"#15803d\">9</text><rect x=\"470\" y=\"66\" width=\"90\" height=\"42\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"515\" y=\"95\" text-anchor=\"middle\" fill=\"#15803d\">0</text></g><line x1=\"290\" y1=\"12\" x2=\"290\" y2=\"108\" stroke=\"#1e293b\" stroke-width=\"2.2\"/><path d=\"M 24 114 L 24 126 L 286 126 L 286 114\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"155\" y1=\"126\" x2=\"155\" y2=\"140\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"155\" y=\"156\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">عدد الآلاف</text><text x=\"155\" y=\"174\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">274</text><path d=\"M 245 110 L 245 136 L 385 136\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"245\" cy=\"110\" r=\"3\" fill=\"#dc2626\"/><text x=\"415\" y=\"156\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"rtl\">رقم الآلاف</text><text x=\"415\" y=\"174\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">4</text><rect x=\"85\" y=\"184\" width=\"410\" height=\"28\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"1.2\"/><text x=\"290\" y=\"203\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">274 000 &lt; 274 590 &lt; 275 000</text></svg>",
+    "visualCaptionAr": "جدول المراتب للعدد $274\\,590$ يوضح الفرق بين رقم الآلاف ( $4$ ) وعدد الآلاف ( $274$ )، وحصره بين ألفين متتاليين.",
+    "examples": [
+      {
+        "problemAr": "اكتب بالأرقام العدد: أربع مئة وثمانية آلاف وخمسة وثمانون، ثم أنجز تفكيكه الجمعي والتفكيك النموذجي.",
+        "solutionAr": "الكتابة بالأرقام: $408\\,085$ . التفكيك الجمعي: $400\\,000 + 8\\,000 + 80 + 5$ . التفكيك النموذجي: $(4 \\times 100\\,000) + (8 \\times 1\\,000) + (8 \\times 10) + 5$ ."
+      },
+      {
+        "problemAr": "احصر العدد $632\\,470$ بين عشرتي آلاف متتاليتين، ثم بين مئتين متتاليتين.",
+        "solutionAr": "بين عشرتي آلاف متتاليتين: $630\\,000 < 632\\,470 < 640\\,000$ . وبين مئتين متتاليتين: $632\\,400 < 632\\,470 < 632\\,500$ ."
+      }
+    ],
+    "watchOutAr": "لا تترك الخانات الخالية بدون أصفار عند كتابة العدد بالأرقام! فالعدد «مئة واثنان ألفا وثلاثون» يكتب $102\\,030$ (بوضع صفر في عشرات الآلاف وصفر في المئات وصفر في الآحاد) وليس $12\\,30$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "انظر إلى جدول المراتب المقابل للعدد $750\\,642$ : ما هو **عدد المئات** في هذا العدد؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 128\" width=\"560\" height=\"128\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"20\" y=\"12\" width=\"260\" height=\"28\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.4\"/><text x=\"150\" y=\"31\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">منزلة الآلاف</text><rect x=\"280\" y=\"12\" width=\"260\" height=\"28\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.4\"/><text x=\"410\" y=\"31\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\" direction=\"rtl\">منزلة الوحدات البسيطة</text><g font-size=\"12\" font-weight=\"bold\" fill=\"#334155\"><rect x=\"20\" y=\"40\" width=\"86\" height=\"24\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"63\" y=\"56\" text-anchor=\"middle\">م</text><rect x=\"106\" y=\"40\" width=\"87\" height=\"24\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"149\" y=\"56\" text-anchor=\"middle\">ع</text><rect x=\"193\" y=\"40\" width=\"87\" height=\"24\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"236\" y=\"56\" text-anchor=\"middle\">و</text><rect x=\"280\" y=\"40\" width=\"86\" height=\"24\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"323\" y=\"56\" text-anchor=\"middle\" fill=\"#b45309\">م</text><rect x=\"366\" y=\"40\" width=\"87\" height=\"24\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"409\" y=\"56\" text-anchor=\"middle\">ع</text><rect x=\"453\" y=\"40\" width=\"87\" height=\"24\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"496\" y=\"56\" text-anchor=\"middle\">و</text></g><g font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"20\" y=\"64\" width=\"86\" height=\"42\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"63\" y=\"92\" text-anchor=\"middle\">7</text><rect x=\"106\" y=\"64\" width=\"87\" height=\"42\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"149\" y=\"92\" text-anchor=\"middle\">5</text><rect x=\"193\" y=\"64\" width=\"87\" height=\"42\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"236\" y=\"92\" text-anchor=\"middle\">0</text><rect x=\"280\" y=\"64\" width=\"86\" height=\"42\" fill=\"#fffbeb\" stroke=\"#d97706\" stroke-width=\"1.8\"/><text x=\"323\" y=\"92\" text-anchor=\"middle\" fill=\"#b45309\">6</text><rect x=\"366\" y=\"64\" width=\"87\" height=\"42\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"409\" y=\"92\" text-anchor=\"middle\">4</text><rect x=\"453\" y=\"64\" width=\"87\" height=\"42\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"496\" y=\"92\" text-anchor=\"middle\">2</text></g><line x1=\"280\" y1=\"12\" x2=\"280\" y2=\"106\" stroke=\"#1e293b\" stroke-width=\"2\"/></svg>",
+      "options": [
+        "$6$",
+        "$7\\,506$",
+        "$750$",
+        "$506$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه! $6$ هو **رقم** المئات في الخانة فقط، وليس **عدد** المئات في كل العدد.",
+        "أحسنت! نحدد خانة المئات ( $6$ ) ونأخذ معها جميع الأرقام التي على يسارها فنجد $7\\,506$ .",
+        "$750$ هو **عدد الآلاف** في العدد وليس عدد المئات.",
+        "توقفت عند عشرات الآلاف وأهملت رقم مئات الآلاف $7$ على اليسار."
+      ],
+      "explanationAr": "لتعيين عدد المئات في $750\\,642$ ، نحدد رقم المئات ( $6$ ) ثم نقرأه مع كل الأرقام الموجودة على يساره، فيكون عدد المئات هو $7\\,506$ ."
+    },
+    {
+      "questionAr": "ما هو العدد الطبيعي الذي تفكيكه النموذجي: $(5 \\times 100\\,000) + (3 \\times 1\\,000) + (7 \\times 100) + 9$ ؟",
+      "options": [
+        "$53\\,709$",
+        "$503\\,790$",
+        "$503\\,709$",
+        "$530\\,709$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "أغفلت الصفر في منزلة عشرات الآلاف، فصار $5$ في عشرات الآلاف بدل مئات الآلاف.",
+        "وضعت $9$ في منزلة العشرات بدل الآحاد؛ فالعدد $9$ وحيد بدون ضرب في $10$ .",
+        "أحسنت! نضع $5$ في مئات الآلاف، $0$ في عشرات الآلاف، $3$ في الآلاف، $7$ في المئات، $0$ في العشرات، و $9$ في الآحاد.",
+        "وضعت $3$ في منزلة عشرات الآلاف بدل الآلاف؛ فـ $3 \\times 1\\,000 = 3\\,000$ ."
+      ],
+      "explanationAr": "نرتب المراتب: $5$ مئات آلاف، $0$ عشرات آلاف، $3$ آلاف، $7$ مئات، $0$ عشرات، $9$ وحدات. إذن العدد هو $503\\,709$ ."
+    },
+    {
+      "questionAr": "تأمل موضع العدد $489\\,320$ على المستقيم المدرج: أي حصر له بين **ألفين متتاليين** هو الحصر الصحيح؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 102\" width=\"540\" height=\"102\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><line x1=\"30\" y1=\"54\" x2=\"510\" y2=\"54\" stroke=\"#475569\" stroke-width=\"2.2\"/><line x1=\"70\" y1=\"45\" x2=\"70\" y2=\"63\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"70\" y=\"83\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">488 000</text><line x1=\"210\" y1=\"43\" x2=\"210\" y2=\"65\" stroke=\"#1d4ed8\" stroke-width=\"2.4\"/><text x=\"210\" y=\"83\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">489 000</text><circle cx=\"258\" cy=\"54\" r=\"5.5\" fill=\"#dc2626\"/><rect x=\"214\" y=\"14\" width=\"88\" height=\"24\" rx=\"6\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><text x=\"258\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"ltr\">489 320</text><line x1=\"360\" y1=\"43\" x2=\"360\" y2=\"65\" stroke=\"#1d4ed8\" stroke-width=\"2.4\"/><text x=\"360\" y=\"83\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">490 000</text><line x1=\"490\" y1=\"45\" x2=\"490\" y2=\"63\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"490\" y=\"83\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">491 000</text></svg>",
+      "options": [
+        "$480\\,000 < 489\\,320 < 490\\,000$",
+        "$489\\,300 < 489\\,320 < 489\\,400$",
+        "$489\\,000 < 489\\,320 < 490\\,000$",
+        "$488\\,000 < 489\\,320 < 489\\,000$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "هذا حصر بين عشرتي آلاف متتاليتين وليس بين ألفين متتاليين.",
+        "هذا حصر بين مئتين متتاليتين وليس بين ألفين متتاليين.",
+        "أحسنت! عدد الآلاف هو $489$ ، لذا يحصر بين $489\\,000$ والألف الموالي $490\\,000$ .",
+        "العدد $489\\,320$ أكبر من $489\\,000$ فلا يمكن أن يكون أصغر منه."
+      ],
+      "explanationAr": "عدد الآلاف في $489\\,320$ هو $489$ ، فيكون الحد الأدنى $489\\,000$ والحد الأعلى بإضافة ألف واحد هو $490\\,000$ : $489\\,000 < 489\\,320 < 490\\,000$ ."
+    }
+  ]
+}

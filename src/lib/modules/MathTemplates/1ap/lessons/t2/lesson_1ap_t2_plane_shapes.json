@@ -1,0 +1,122 @@
+{
+  "id": "lesson_1ap_t2_plane_shapes",
+  "slug": "lesson-1ap-t2-plane-shapes",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الثالث والرابع (الجزء الأول): الأشكال المستوية، المجسمات وقراءة الساعة",
+  "order": 4,
+  "titleAr": "الأشكال المستوية المألوفة: المربع، المستطيل، المثلث والقرص",
+  "objectives": [
+    "التعرّف على الأشكال المستوية المألوفة: مربع، مستطيل، مثلث وقرص (دائرة) وتمييزها",
+    "وصف مربع ومستطيل ومثلث بذكر عدد الأضلاع وعدد الرؤوس",
+    "استعمال المسطرة لرسم خطوط مستقيمة وإتمام أشكال مستوية بسيطة"
+  ],
+  "keywordsAr": [
+    "مربع",
+    "مستطيل",
+    "مثلث",
+    "قرص",
+    "أشكال مستوية"
+  ],
+  "discover": {
+    "scenarioAr": "صَنَعَتْ سَلْمى لَوْحَةً بِالأَشْكالِ المُلَوَّنَةِ: سَقْفُ البَيْتِ عَلى شَكْلِ **مُثَلَّثٍ**، وَالبابُ **مُسْتَطِيلٌ**، وَالنّافِذَةُ **مُرَبَّعٌ**، وَالشَّمْسُ **قُرْصٌ** مُسْتَدِيرٌ.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 205\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"484\" height=\"189\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><circle cx=\"75\" cy=\"54\" r=\"26\" fill=\"#facc15\" stroke=\"#ca8a04\" stroke-width=\"2.5\"/><text x=\"75\" y=\"100\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#a16207\" direction=\"rtl\">قُرْصٌ</text><rect x=\"145\" y=\"82\" width=\"150\" height=\"96\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"130,82 220,22 310,82\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><circle cx=\"130\" cy=\"82\" r=\"3.5\" fill=\"#991b1b\"/><circle cx=\"220\" cy=\"22\" r=\"3.5\" fill=\"#991b1b\"/><circle cx=\"310\" cy=\"82\" r=\"3.5\" fill=\"#991b1b\"/><text x=\"220\" y=\"64\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#991b1b\" direction=\"rtl\">مُثَلَّثٌ</text><rect x=\"164\" y=\"106\" width=\"42\" height=\"42\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"164\" cy=\"106\" r=\"3\" fill=\"#1e3a8a\"/><circle cx=\"206\" cy=\"106\" r=\"3\" fill=\"#1e3a8a\"/><circle cx=\"164\" cy=\"148\" r=\"3\" fill=\"#1e3a8a\"/><circle cx=\"206\" cy=\"148\" r=\"3\" fill=\"#1e3a8a\"/><text x=\"185\" y=\"166\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">مُرَبَّعٌ</text><rect x=\"232\" y=\"102\" width=\"42\" height=\"76\" fill=\"#bbf7d0\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><text x=\"253\" y=\"144\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">مُسْتَطِيلٌ</text><rect x=\"336\" y=\"26\" width=\"142\" height=\"154\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"407\" y=\"52\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">مِفْتاحُ الرَّسْمِ</text><text x=\"407\" y=\"82\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"rtl\">السَّقْفُ: مُثَلَّثٌ</text><text x=\"407\" y=\"108\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"rtl\">النّافِذَةُ: مُرَبَّعٌ</text><text x=\"407\" y=\"134\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"rtl\">البابُ: مُسْتَطِيلٌ</text><text x=\"407\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#ca8a04\" direction=\"rtl\">الشَّمْسُ: قُرْصٌ</text></svg>",
+    "steps": [
+      {
+        "promptAr": "تَأَمَّلِ السَّقْفَ الأَحْمَرَ (المُثَلَّثَ): كَمْ ضِلْعًا مُسْتَقِيمًا لِلْمُثَلَّثِ؟",
+        "hintAr": "عُدَّ الحَوافَ المُسْتَقِيمَةَ الثَّلاثَ لِلسَّقْفِ.",
+        "expectedInput": "3",
+        "revealAr": "لِلْمُثَلَّثِ $3$ أَضْلاعٍ مُسْتَقِيمَةٍ وَ $3$ رُؤُوسٍ."
+      },
+      {
+        "promptAr": "تَأَمَّلِ النّافِذَةَ الزَّرْقاءَ (المُرَبَّعَ): كَمْ رَأْسًا لِلْمُرَبَّعِ؟",
+        "hintAr": "عُدَّ الزَّوايا المُدَبَّبَةَ الأَرْبَعَ لِلنّافِذَةِ.",
+        "expectedInput": "4",
+        "revealAr": "لِلْمُرَبَّعِ $4$ رُؤُوسٍ وَ $4$ أَضْلاعٍ مُتَساوِيَةِ الطُّولِ."
+      },
+      {
+        "promptAr": "تَأَمَّلِ الشَّمْسَ الصَّفْراءَ (القُرْصَ): كَمْ ضِلْعًا مُسْتَقِيمًا لِلْقُرْصِ؟",
+        "hintAr": "حافَةُ القُرْصِ مُنْحَنِيَةٌ وَلَيْسَ فِيهِ أَيُّ ضِلْعٍ مُسْتَقِيمٍ.",
+        "expectedInput": "0",
+        "revealAr": "لِلْقُرْصِ $0$ ضِلْعٍ وَ $0$ رَأْسٍ لِأَنَّهُ شَكْلٌ مُسْتَدِيرٌ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**المُرَبَّعُ**: شَكْلٌ مُسْتَوٍ لَهُ $4$ أَضْلاعٍ مُسْتَقِيمَةٍ مُتَساوِيَةٍ في الطُّولِ وَ $4$ رُؤُوسٍ.",
+      "**المُسْتَطِيلُ**: شَكْلٌ مُسْتَوٍ لَهُ $4$ أَضْلاعٍ وَ $4$ رُؤُوسٍ؛ فِيهِ ضِلْعانِ طَوِيلانِ مُتَقابِلانِ وَضِلْعانِ قَصِيرانِ مُتَقابِلانِ.",
+      "**المُثَلَّثُ**: شَكْلٌ مُسْتَوٍ لَهُ $3$ أَضْلاعٍ مُسْتَقِيمَةٍ وَ $3$ رُؤُوسٍ.",
+      "**القُرْصُ** (الدّائِرَةُ): شَكْلٌ مُسْتَوٍ مُنْحَنٍ لَيْسَ لَهُ أَضْلاعٌ مُسْتَقِيمَةٌ وَلا رُؤُوسٌ. نَسْتَعْمِلُ **المِسْطَرَةَ** لِرَسْمِ أَضْلاعِ المُرَبَّعِ وَالمُسْتَطِيلِ وَالمُثَلَّثِ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 185\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"484\" height=\"169\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"20\" y=\"22\" width=\"108\" height=\"140\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><rect x=\"48\" y=\"42\" width=\"52\" height=\"52\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><circle cx=\"48\" cy=\"42\" r=\"3.5\" fill=\"#1e40af\"/><circle cx=\"100\" cy=\"42\" r=\"3.5\" fill=\"#1e40af\"/><circle cx=\"48\" cy=\"94\" r=\"3.5\" fill=\"#1e40af\"/><circle cx=\"100\" cy=\"94\" r=\"3.5\" fill=\"#1e40af\"/><text x=\"74\" y=\"122\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">مُرَبَّعٌ</text><text x=\"74\" y=\"144\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">4 أَضْلاعٍ مُتَساوِيَةٍ</text><rect x=\"138\" y=\"22\" width=\"118\" height=\"140\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><rect x=\"156\" y=\"48\" width=\"82\" height=\"42\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><circle cx=\"156\" cy=\"48\" r=\"3.5\" fill=\"#15803d\"/><circle cx=\"238\" cy=\"48\" r=\"3.5\" fill=\"#15803d\"/><circle cx=\"156\" cy=\"90\" r=\"3.5\" fill=\"#15803d\"/><circle cx=\"238\" cy=\"90\" r=\"3.5\" fill=\"#15803d\"/><text x=\"197\" y=\"122\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">مُسْتَطِيلٌ</text><text x=\"197\" y=\"144\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">4 أَضْلاعٍ، 4 رُؤُوسٍ</text><rect x=\"266\" y=\"22\" width=\"108\" height=\"140\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><polygon points=\"320,40 288,94 352,94\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><circle cx=\"320\" cy=\"40\" r=\"3.5\" fill=\"#991b1b\"/><circle cx=\"288\" cy=\"94\" r=\"3.5\" fill=\"#991b1b\"/><circle cx=\"352\" cy=\"94\" r=\"3.5\" fill=\"#991b1b\"/><text x=\"320\" y=\"122\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"rtl\">مُثَلَّثٌ</text><text x=\"320\" y=\"144\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">3 أَضْلاعٍ، 3 رُؤُوسٍ</text><rect x=\"384\" y=\"22\" width=\"96\" height=\"140\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><circle cx=\"432\" cy=\"68\" r=\"27\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2.2\"/><text x=\"432\" y=\"122\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#a16207\" direction=\"rtl\">قُرْصٌ</text><text x=\"432\" y=\"144\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">دُونَ أَضْلاعٍ</text></svg>",
+    "visualCaptionAr": "الأَشْكالُ المُسْتَوِيَةُ الأَرْبَعَةُ وَعَدَدُ أَضْلاعِها وَرُؤُوسِها.",
+    "examples": [
+      {
+        "problemAr": "كَيْفَ نُمَيِّزُ بَيْنَ المُرَبَّعِ وَالمُسْتَطِيلِ، وَكِلاهُما لَهُ $4$ أَضْلاعٍ؟",
+        "solutionAr": "في المُرَبَّعِ كُلُّ الأَضْلاعِ الأَرْبَعَةِ مُتَساوِيَةٌ، أَمّا في المُسْتَطِيلِ فَيُوجَدُ ضِلْعانِ طَوِيلانِ وَضِلْعانِ قَصِيرانِ."
+      },
+      {
+        "problemAr": "تُرِيدُ لِينا إِتْمامَ رَسْمِ مُثَلَّثٍ عَلى دَفْتَرِها. ما الأَداةُ الَّتِي تَسْتَعْمِلُها لِرَسْمِ أَضْلاعِهِ؟",
+        "solutionAr": "تَسْتَعْمِلُ المِسْطَرَةَ لِأَنَّ أَضْلاعَ المُثَلَّثِ خُطُوطٌ مُسْتَقِيمَةٌ."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! المُرَبَّعُ وَالمُسْتَطِيلُ لَهُما $4$ أَضْلاعٍ وَ $4$ رُؤُوسٍ، لَكِنَّ أَضْلاعَ المُرَبَّعِ الأَرْبَعَةَ مُتَساوِيَةٌ في الطُّولِ! وَاسْتَعْمِلِ المِسْطَرَةَ دائِمًا لِرَسْمِ الأَضْلاعِ."
+  },
+  "practice": [
+    {
+      "questionAr": "انْظُرْ إلى الأَشْكالِ الأَرْبَعَةِ: أَيُّ شَكْلٍ هُوَ **المُسْتَطِيلُ**؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 115\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"404\" height=\"99\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"60\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">A</text><polygon points=\"60,36 30,86 90,86\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"155\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#ca8a04\" direction=\"ltr\">B</text><circle cx=\"155\" cy=\"61\" r=\"25\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"265\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">C</text><rect x=\"220\" y=\"40\" width=\"90\" height=\"42\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"365\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">D</text><rect x=\"342\" y=\"38\" width=\"46\" height=\"46\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/></svg>",
+      "options": [
+        "الشَّكْلُ A",
+        "الشَّكْلُ B",
+        "الشَّكْلُ C",
+        "الشَّكْلُ D"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "الشَّكْلُ A لَهُ $3$ أَضْلاعٍ وَ $3$ رُؤُوسٍ، فَهُوَ مُثَلَّثٌ وَلَيْسَ مُسْتَطِيلًا.",
+        "الشَّكْلُ B مُسْتَدِيرٌ وَلَيْسَ لَهُ أَضْلاعٌ، فَهُوَ قُرْصٌ.",
+        "أَحْسَنْتَ! الشَّكْلُ C هُوَ المُسْتَطِيلُ؛ لَهُ $4$ أَضْلاعٍ، ضِلْعانِ طَوِيلانِ وَضِلْعانِ قَصِيرانِ.",
+        "الشَّكْلُ D جَمِيعُ أَضْلاعِهِ الأَرْبَعَةِ مُتَساوِيَةٌ، فَهُوَ مُرَبَّعٌ وَلَيْسَ مُسْتَطِيلًا."
+      ],
+      "explanationAr": "الشَّكْلُ C مُسْتَطِيلٌ لِأَنَّ لَهُ $4$ أَضْلاعٍ (ضِلْعانِ طَوِيلانِ وَضِلْعانِ قَصِيرانِ) وَ $4$ رُؤُوسٍ."
+    },
+    {
+      "questionAr": "ما عَدَدُ أَضْلاعِ المُثَلَّثِ وَعَدَدُ رُؤُوسِهِ؟",
+      "options": [
+        "$3$ أَضْلاعٍ وَ $3$ رُؤُوسٍ",
+        "$4$ أَضْلاعٍ وَ $4$ رُؤُوسٍ",
+        "$3$ أَضْلاعٍ وَ $4$ رُؤُوسٍ",
+        "$0$ ضِلْعٍ وَ $0$ رَأْسٍ"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "مُمْتازٌ! المُثَلَّثُ لَهُ دائِمًا $3$ أَضْلاعٍ مُسْتَقِيمَةٍ وَ $3$ رُؤُوسٍ.",
+        "$4$ أَضْلاعٍ وَ $4$ رُؤُوسٍ هِيَ خَصائِصُ المُرَبَّعِ أَوِ المُسْتَطِيلِ.",
+        "في المُثَلَّثِ عَدَدُ الأَضْلاعِ يُساوي عَدَدَ الرُّؤُوسِ، وَهُوَ $3$ وَلَيْسَ $4$.",
+        "القُرْصُ هُوَ الَّذِي لَيْسَ لَهُ أَضْلاعٌ وَلا رُؤُوسٌ، أَمّا المُثَلَّثُ فَلَهُ $3$."
+      ],
+      "explanationAr": "لِكُلِّ مُثَلَّثٍ $3$ أَضْلاعٍ مُسْتَقِيمَةٍ وَ $3$ رُؤُوسٍ."
+    },
+    {
+      "questionAr": "ما اسْمُ الأَداةِ الَّتِي نَسْتَعْمِلُها لِرَسْمِ خُطُوطٍ مُسْتَقِيمَةٍ عِنْدَ إِتْمامِ المُرَبَّعِ أَوِ المُثَلَّثِ؟",
+      "options": [
+        "المِمْحاةُ",
+        "المِقَصُّ",
+        "الصَّمْغُ",
+        "المِسْطَرَةُ"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "المِمْحاةُ نَسْتَعْمِلُها لِمَحْوِ الأَخْطاءِ، لا لِرَسْمِ الخُطُوطِ المُسْتَقِيمَةِ.",
+        "المِقَصُّ لِقَصِّ الأَوْراقِ، لا لِرَسْمِ الخُطُوطِ المُسْتَقِيمَةِ.",
+        "الصَّمْغُ لِإِلْصاقِ الأَوْراقِ، وَلَيْسَ لِلرَّسْمِ.",
+        "أَحْسَنْتَ! نَسْتَعْمِلُ المِسْطَرَةَ لِرَسْمِ خُطُوطٍ مُسْتَقِيمَةٍ وَإِتْمامِ الأَشْكالِ المُسْتَوِيَةِ."
+      ],
+      "explanationAr": "تُساعدُنا المِسْطَرَةُ عَلى رَسْمِ خُطُوطٍ مُسْتَقِيمَةٍ دَقِيقَةٍ عِنْدَ رَسْمِ المُثَلَّثِ وَالمُرَبَّعِ وَالمُسْتَطِيلِ."
+    }
+  ]
+}

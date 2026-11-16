@@ -1,0 +1,122 @@
+{
+  "id": "lesson_3ap_t3_arithmetic_relations_calculator",
+  "slug": "3ap-t3-arithmetic-relations-calculator",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t3",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: المدخل إلى القسمة، العلاقات الحسابية وقياس المدد",
+  "order": 2,
+  "titleAr": "العلاقات الحسابية (الضعف والنصف)، الضرب في مضاعفات 10 و100 وتنظيم حساب والحاسبة",
+  "objectives": [
+    "تعيين ضعف ونصف الأعداد المألوفة إلى $99\\,999$ بالاعتماد على تفكيك المراتب",
+    "حساب جداء عدد في مضاعفات $10$ و $100$ (مثل $20$، $30$، $200$) ذهنيا وتنظيم حسابات سريعة (إضافة $9$ و $11$ وطرح $19$)",
+    "استعمال الحاسبة لإنجاز عمليات الجمع والطرح والضرب والقسمة التامة والتحقق من صحة النتائج"
+  ],
+  "keywordsAr": [
+    "الضعف والنصف",
+    "الضرب في مضاعفات 10 و100",
+    "تنظيم حساب",
+    "الحاسبة",
+    "علاقات حسابية"
+  ],
+  "discover": {
+    "scenarioAr": "في مسابقة الحساب الذهني، تلقى ياسين البطاقة العددية **$4\\,260$** ليحسب نصفها وضعفها بتفكيك المراتب، ثم يحسب ثمن **$30$** دفتراً بسعر **$200\\text{ DA}$** للدفتر الواحد، ويتحقق من النتيجة باستعمال الحاسبة.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 210\" width=\"520\" height=\"210\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"520\" height=\"210\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(14,14)\"><rect width=\"248\" height=\"182\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"124\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">1. تفكيك المراتب للعدد 4260</text><rect x=\"22\" y=\"32\" width=\"204\" height=\"28\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/><text x=\"124\" y=\"50\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">4260 = 4000 + 200 + 60</text><rect x=\"14\" y=\"72\" width=\"104\" height=\"96\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#6ee7b7\"/><text x=\"66\" y=\"90\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">النصف (÷ 2)</text><text x=\"66\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" fill=\"#065f46\">4000 ← 2000</text><text x=\"66\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" fill=\"#065f46\">200 ← 100</text><text x=\"66\" y=\"146\" text-anchor=\"middle\" font-size=\"11\" fill=\"#065f46\">60 ← 30</text><text x=\"66\" y=\"162\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">المجموع = ?</text><rect x=\"130\" y=\"72\" width=\"104\" height=\"96\" rx=\"6\" fill=\"#fff7ed\" stroke=\"#fdba74\"/><text x=\"182\" y=\"90\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\">الضعف (× 2)</text><text x=\"182\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" fill=\"#9a3412\">4000 ← 8000</text><text x=\"182\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" fill=\"#9a3412\">200 ← 400</text><text x=\"182\" y=\"146\" text-anchor=\"middle\" font-size=\"11\" fill=\"#9a3412\">60 ← 120</text><text x=\"182\" y=\"162\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\">المجموع = ?</text></g><g transform=\"translate(274,14)\"><rect width=\"232\" height=\"182\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"116\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#7c3aed\">2. الضرب في مضاعفات 100 والحاسبة</text><text x=\"116\" y=\"44\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">200 × 30 = (2 × 3) × 1000</text><g transform=\"translate(56,56)\"><rect width=\"120\" height=\"114\" rx=\"10\" fill=\"#e2e8f0\" stroke=\"#64748b\" stroke-width=\"1.8\"/><rect x=\"12\" y=\"10\" width=\"96\" height=\"24\" rx=\"4\" fill=\"#d1fae5\" stroke=\"#059669\"/><text x=\"98\" y=\"26\" text-anchor=\"end\" font-size=\"13\" font-weight=\"bold\" fill=\"#065f46\">200 × 30 =</text><g font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\"><rect x=\"12\" y=\"42\" width=\"21\" height=\"18\" rx=\"3\" fill=\"#fecaca\"/><text x=\"22\" y=\"55\" fill=\"#991b1b\">C</text><rect x=\"37\" y=\"42\" width=\"21\" height=\"18\" rx=\"3\" fill=\"#ffffff\"/><text x=\"47\" y=\"55\" fill=\"#1e293b\">÷</text><rect x=\"62\" y=\"42\" width=\"21\" height=\"18\" rx=\"3\" fill=\"#dbeafe\"/><text x=\"72\" y=\"55\" fill=\"#1e40af\">×</text><rect x=\"87\" y=\"42\" width=\"21\" height=\"18\" rx=\"3\" fill=\"#ffffff\"/><text x=\"97\" y=\"55\" fill=\"#1e293b\">-</text><rect x=\"12\" y=\"65\" width=\"21\" height=\"18\" rx=\"3\" fill=\"#ffffff\"/><text x=\"22\" y=\"78\" fill=\"#1e293b\">2</text><rect x=\"37\" y=\"65\" width=\"21\" height=\"18\" rx=\"3\" fill=\"#ffffff\"/><text x=\"47\" y=\"78\" fill=\"#1e293b\">3</text><rect x=\"62\" y=\"65\" width=\"21\" height=\"18\" rx=\"3\" fill=\"#ffffff\"/><text x=\"72\" y=\"78\" fill=\"#1e293b\">0</text><rect x=\"87\" y=\"65\" width=\"21\" height=\"18\" rx=\"3\" fill=\"#ffffff\"/><text x=\"97\" y=\"78\" fill=\"#1e293b\">+</text><rect x=\"12\" y=\"88\" width=\"46\" height=\"18\" rx=\"3\" fill=\"#ffffff\"/><text x=\"35\" y=\"101\" fill=\"#1e293b\">00</text><rect x=\"62\" y=\"88\" width=\"46\" height=\"18\" rx=\"3\" fill=\"#2563eb\"/><text x=\"85\" y=\"101\" fill=\"#ffffff\">=</text></g></g></g></svg>",
+    "steps": [
+      {
+        "promptAr": "لإيجاد **نصف** العدد $4\\,260$ بتفكيك المراتب، نحسب نصف كل مرتبة: $2\\,000 + 100 + 30$. ما هو نصف العدد $4\\,260$؟ (اكتب العدد فقط دون فراغ)",
+        "hintAr": "اجمع أنصاف المراتب الثلاثة: $2\\,000 + 100 + 30$.",
+        "expectedInput": "2130",
+        "revealAr": "نصف $4\\,260$ هو $2\\,130$؛ وللتحقق نجمع $2\\,130 + 2\\,130 = 4\\,260$."
+      },
+      {
+        "promptAr": "الآن احسب **ضعف** العدد $4\\,260$ باستعمال تفكيك المراتب: $8\\,000 + 400 + 120$. ما هو ضعف $4\\,260$؟ (اكتب العدد فقط دون فراغ)",
+        "hintAr": "احسب $8\\,000 + 400 + 120$ (انتبه: $400 + 120 = 520$).",
+        "expectedInput": "8520",
+        "revealAr": "ضعف $4\\,260$ هو $8\\,520$ (لأن $4\\,260 \\times 2 = 8\\,520$)."
+      },
+      {
+        "promptAr": "لحساب ثمن $30$ دفتراً بسعر $200\\text{ DA}$ للدفتر ($200 \\times 30$) ذهنياً: نضرب $2 \\times 3 = 6$ ثم نضيف مجموع الأصفار ($3$ أصفار). ما هو الثمن الكلي؟ (اكتب العدد فقط دون فراغ)",
+        "hintAr": "اكتب $6$ وبجانبه $3$ أصفار على اليمين.",
+        "expectedInput": "6000",
+        "revealAr": "الثمن الكلي هو $6\\,000\\text{ DA}$؛ وعند التحقق بالحاسبة نضغط على الأزرار بالترتيب ثم `=` فتظهر النتيجة `6000`."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لحساب **ضعف** عدد نضربه في $2$ (أو نجمعه إلى نفسه)، ولحساب **نصف** عدد نقسمه على $2$؛ ويسهّل **تفكيك المراتب** الحساب مع الأعداد الكبيرة حتى $99\\,999$.",
+      "**الضرب في مضاعفات $10$ و $100$**: نضرب الأرقام غير الصفرية أولاً، ثم نضيف مجموع عدد الأصفار على يمين الناتج، مثل: $34 \\times 200 = (34 \\times 2) \\times 100 = 6\\,800$.",
+      "**تنظيم الحساب السريع**: لإضافة $9$ نضيف $10$ ثم نطرح $1$؛ ولإضافة $11$ نضيف $10$ ثم نضيف $1$؛ ولطرح $19$ نطرح $20$ ثم نضيف $1$ (مثال: $64 - 19 = (64 - 20) + 1 = 45$).",
+      "تُستعمل **الحاسبة** لإنجاز العمليات الأربع ($+$, $-$, $\\times$, $\\div$) والتحقق من النتائج، مع الضغط على `C` أو `ON/C` لتصفير الشاشة قبل كل حساب جديد."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\" width=\"520\" height=\"190\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(14,14)\"><rect width=\"156\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"78\" y=\"22\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">الضعف والنصف</text><rect x=\"16\" y=\"36\" width=\"124\" height=\"32\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#10b981\"/><text x=\"78\" y=\"56\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#065f46\">العدد: 3680</text><text x=\"78\" y=\"92\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">نصفه: 1500+300+40</text><text x=\"78\" y=\"109\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">= 1840</text><text x=\"78\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\">ضعفه: 6000+1200+160</text><text x=\"78\" y=\"151\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#9a3412\">= 7360</text></g><g transform=\"translate(182,14)\"><rect width=\"160\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"80\" y=\"22\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">مضاعفات 10 و 100</text><rect x=\"14\" y=\"40\" width=\"132\" height=\"50\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">24 × 300</text><text x=\"80\" y=\"80\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">24 × 3 = 72 (+ صفرين)</text><rect x=\"24\" y=\"102\" width=\"112\" height=\"34\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><text x=\"80\" y=\"124\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e3a8a\">= 7200</text></g><g transform=\"translate(354,14)\"><rect width=\"152\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"76\" y=\"22\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#d97706\">تنظيم حساب سريع</text><rect x=\"12\" y=\"38\" width=\"128\" height=\"34\" rx=\"6\" fill=\"#fefce8\" stroke=\"#facc15\"/><text x=\"76\" y=\"59\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#854d0e\">53 + 9 = 53 + 10 - 1 = 62</text><rect x=\"12\" y=\"78\" width=\"128\" height=\"34\" rx=\"6\" fill=\"#fff7ed\" stroke=\"#fb923c\"/><text x=\"76\" y=\"99\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#9a3412\">47 + 11 = 47 + 10 + 1 = 58</text><rect x=\"12\" y=\"118\" width=\"128\" height=\"34\" rx=\"6\" fill=\"#fef2f2\" stroke=\"#fca5a5\"/><text x=\"76\" y=\"139\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#991b1b\">74 - 19 = 74 - 20 + 1 = 55</text></g></svg>",
+    "visualCaptionAr": "طرق الحساب السريع للضعف والنصف، والضرب في مضاعفات 10 و 100، وإضافة 9 و 11 وطرح 19.",
+    "examples": [
+      {
+        "problemAr": "احسب ذهنياً ناتج $78 - 19$، ثم ناتج $36 + 11$.",
+        "solutionAr": "لطرح $19$ نطرح $20$ ثم نضيف $1$: $78 - 20 = 58$، ثم $58 + 1 = 59$. ولإضافة $11$ نضيف $10$ ثم نضيف $1$: $36 + 10 = 46$، ثم $46 + 1 = 47$."
+      },
+      {
+        "problemAr": "أوجد ضعف العدد $12\\,400$ ونصف العدد $8\\,650$.",
+        "solutionAr": "ضعف $12\\,400$: ضعف $12\\,000$ هو $24\\,000$ وضعف $400$ هو $800$، فالناتج $24\\,800$. نصف $8\\,650$: نصف $8\\,000$ هو $4\\,000$، ونصف $600$ هو $300$، ونصف $50$ هو $25$، فالمجموع $4\\,325$."
+      }
+    ],
+    "watchOutAr": "انتبه! عند حساب $50 \\times 40$، فإن الجداء $5 \\times 4 = 20$ ينتهي بصفر أصلاً، وعندما نضيف صفري العاملين نحصل على $2\\,000$ (ثلاثة أصفار في المجموع وليس صفرين فقط)!"
+  },
+  "practice": [
+    {
+      "questionAr": "ما هو **نصف** العدد $14\\,680$؟",
+      "options": [
+        "$7\\,304$",
+        "$29\\,360$",
+        "$7\\,340$",
+        "$7\\,430$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "انتبه لرقم العشرات! نصف $80$ هو $40$ وليس $4$.",
+        "لقد حسبت **ضعف** العدد ($14\\,680 \\times 2$) بدلاً من **نصفه** ($14\\,680 \\div 2$)!",
+        "أحسنت! نصف $14\\,000$ هو $7\\,000$، ونصف $600$ هو $300$، ونصف $80$ هو $40$، فالناتج $7\\,340$.",
+        "عكست بين المئات والعشرات: نصف $600$ هو $300$، ونصف $80$ هو $40$."
+      ],
+      "explanationAr": "نفكك العدد إلى مراتب: $14\\,680 = 14\\,000 + 600 + 80$. نحسب نصف كل مرتبة: $7\\,000 + 300 + 40 = 7\\,340$."
+    },
+    {
+      "questionAr": "استعمل سليم الحاسبة للتحقق من الجداء $35 \\times 200$. ما النتيجة التي تظهر على الشاشة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 140\" width=\"360\" height=\"140\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"360\" height=\"140\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><rect x=\"45\" y=\"20\" width=\"270\" height=\"100\" rx=\"12\" fill=\"#334155\" stroke=\"#1e293b\" stroke-width=\"2\"/><rect x=\"62\" y=\"34\" width=\"236\" height=\"38\" rx=\"6\" fill=\"#d1fae5\" stroke=\"#059669\" stroke-width=\"1.5\"/><text x=\"180\" y=\"59\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#065f46\">35 × 200 = ?</text><rect x=\"62\" y=\"82\" width=\"52\" height=\"24\" rx=\"4\" fill=\"#e2e8f0\"/><text x=\"88\" y=\"98\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">35</text><rect x=\"122\" y=\"82\" width=\"38\" height=\"24\" rx=\"4\" fill=\"#bfdbfe\"/><text x=\"141\" y=\"98\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">×</text><rect x=\"168\" y=\"82\" width=\"58\" height=\"24\" rx=\"4\" fill=\"#e2e8f0\"/><text x=\"197\" y=\"98\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">200</text><rect x=\"234\" y=\"82\" width=\"64\" height=\"24\" rx=\"4\" fill=\"#2563eb\"/><text x=\"266\" y=\"98\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#ffffff\">=</text></svg>",
+      "options": [
+        "$700$",
+        "$7\\,000$",
+        "$3\\,500$",
+        "$70\\,000$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "نسيت صفراً واحداً! $35 \\times 2 = 70$، وعندما نضيف صفرين نجد $7\\,000$ وليس $700$.",
+        "ممتاز! $35 \\times 2 = 70$، وبإضافة صفرَي العدد $200$ نحصل على $7\\,000$.",
+        "$3\\,500$ هو ناتج $35 \\times 100$ وليس $35 \\times 200$.",
+        "أضفت صفراً زائداً! للعدد $200$ صفران فقط فنضيف صفرين يمين $70$."
+      ],
+      "explanationAr": "نضرب أولاً $35 \\times 2 = 70$، ثم نضرب في $100$ بإضافة صفرين على اليمين فنحصل على $7\\,000$."
+    },
+    {
+      "questionAr": "أرادت سلمى حساب $83 - 19$ ذهنياً بسرعة. أي طريقة تعطي النتيجة الصحيحة؟",
+      "options": [
+        "تطرح $20$ ثم تطرح $1$ فتحصل على $62$",
+        "تطرح $20$ ثم تضيف $1$ فتحصل على $64$",
+        "تطرح $10$ ثم تضيف $9$ فتحصل على $82$",
+        "تطرح $20$ ثم تضيف $1$ فتحصل على $63$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "إذا طرحت $20$ وطرحت $1$ تصبحين قد طرحت $21$ وليس $19$!",
+        "أحسنت! لأن $20$ أكبر من $19$ بواحد، نطرح $20$ ($83 - 20 = 63$) ثم نعيد $1$ ($63 + 1 = 64$).",
+        "طرح $10$ ثم إضافة $9$ يساوي طرح $1$ فقط وليس طرح $19$!",
+        "الطريقة صحيحة، لكن راجعي الحساب: $83 - 20 = 63$، وبعد إضافة $1$ تصبح النتيجة $64$."
+      ],
+      "explanationAr": "لطرح $19$ ذهنياً: نطرح $20$ ($83 - 20 = 63$)، وبما أننا طرحنا $1$ زيادة عن $19$ نضيف $1$ فنحصل على $63 + 1 = 64$."
+    }
+  ]
+}

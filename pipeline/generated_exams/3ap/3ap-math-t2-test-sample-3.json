@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "3ap",
+    "yearName": "السنة الثالثة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t2",
+    "trimesterName": "الفصل الثاني",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "أنجز العمليات التالية باحترام المراتب والاحتفاظ:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) ضع ثم أنجز عموديا العملية: $6375 times 8$.",
+              "answer": "1) ناتج الضرب العمودي:\n$ 6375 times 8 = 51000 $",
+              "mark": "2"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t2_vmult_hard_s874926.svg",
+              "caption": "عملية الضرب العمودي"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) احسب باستعمال خاصية توزيع الضرب على الجمع: $67 times 4$.",
+          "answer": "2) $67 times 4 = (60 times 4) + (7 times 4) = 240 + 28 = 268$.",
+          "mark": "1"
+        }
+      ],
+      "id": "exam-3ap-supervised_test-t2-hard-603-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "لاحظ المقادير التالية وأكمل التحويلات والمقارنة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) أكمل الفراغات في الجدول بالوحدة المناسبة:",
+              "answer": "1) راجع التحويلات المكتملة باللون الأزرق في الجدول أدناه.",
+              "mark": "1.25"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t2_cap_hard_s218149.svg",
+              "caption": "سعة السائل: 17 L و 7 cL"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "المقدار الأول",
+            "التحويل إلى الوحدة الصغرى"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              {
+                "content": "$36$ kg $40$ g",
+                "bold": true
+              },
+              {
+                "content": "..... g",
+                "answer": "$36040$ g",
+                "mark": "0.5"
+              }
+            ],
+            [
+              {
+                "content": "$17$ L $7$ cL",
+                "bold": true
+              },
+              {
+                "content": "..... cL",
+                "answer": "$1707$ cL",
+                "mark": "0.5"
+              }
+            ],
+            [
+              {
+                "content": "$7300$ g",
+                "bold": true
+              },
+              {
+                "content": "..... kg ..... g",
+                "answer": "$7$ kg $300$ g",
+                "mark": "0.5"
+              }
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        },
+        {
+          "type": "text",
+          "content": "2) قارن باستعمال أحد الرموز ($<$ أو $>$ أو $=$): $3$ kg $500$ g  .....  $3850$ g.",
+          "answer": "2) نحول إلى الغرام: $3500 < 3850$، إذن $3$ kg $500$ g $<$ $3850$ g.",
+          "mark": "0.25"
+        }
+      ],
+      "id": "exam-3ap-supervised_test-t2-hard-603-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "اقرأ الوضعية جيدا ثم أجب عن الأسئلة الثلاثة بوضع العمليات العمودية والأفقية:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "تملك إيناس مبلغا قدره $29500$ DA. اشترت من المكتبة $6$ رزم كراريس بسعر $2190$ DA للواحدة، و$6$ علب أقلام بسعر $2140$ DA للواحدة."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t2_integ_hard_s472969.svg",
+              "caption": "معطيات المشتريات"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب ثمن رزم كراريس ثم ثمن علب أقلام.",
+          "answer": "1) ثمن رزم كراريس: $2190 times 6 = 13140$ DA.\nثمن علب أقلام: $2140 times 6 = 12840$ DA.",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "2) ما هو الثمن الكلي لجميع المشتريات؟",
+          "answer": "2) الثمن الكلي:\n$ 13140 + 12840 = 25980 $\nدفع إيناس مبلغ $25980$ DA.",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "3) كم دينارا بقي معها؟",
+          "answer": "3) المبلغ المتبقي:\n$ 29500 - 25980 = 3520 $\nبقي معها مبلغ $3520$ DA.",
+          "mark": "1.25"
+        }
+      ],
+      "id": "exam-3ap-supervised_test-t2-hard-603-ex-3"
+    }
+  ]
+}

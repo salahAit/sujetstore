@@ -216,12 +216,14 @@ export const POST: RequestHandler = async (event) => {
 			const trimesterId = (['t1', 't2', 't3'].includes(body.trimesterId)
 				? body.trimesterId
 				: 't1') as 't1' | 't2' | 't3';
-			const docType = pipelineGrade === '2am' && body.docType === 'test' ? 'test' : 'exam';
+			const docType = body.docType === 'test' ? 'test' : 'exam';
 			const difficulty = (['easy', 'medium', 'hard'].includes(body.difficulty)
 				? body.difficulty
 				: 'medium') as 'easy' | 'medium' | 'hard';
 			const variant = (
-				['trimester_exam', 'supervised_test', 'cinq_mock', 'competency_eval'].includes(body.variant)
+				['trimester_exam', 'supervised_test', 'cinq_mock', 'competency_eval', 'bem_mock'].includes(
+					body.variant
+				)
 					? body.variant
 					: undefined
 			) as AssembleExamOptions['variant'];
@@ -253,9 +255,16 @@ export const POST: RequestHandler = async (event) => {
 				return json({ error: `تعذر توليد ملف PDF: ${subjectResult.error}` }, { status: 500 });
 			}
 
+			const docLabel =
+				paper.docType === 'test'
+					? paper.grade.endsWith('ap')
+						? 'تقويم مرحلي'
+						: 'فرض محروس'
+					: 'اختبار';
+
 			return json({
 				success: true,
-				title: `${paper.docType === 'test' ? 'فرض' : 'اختبار'} مقترح — ${ys.year_name} (${ys.subject_name}) [البذرة #${seed}]`,
+				title: `${docLabel} مقترح — ${ys.year_name} (${ys.subject_name}) [البذرة #${seed}]`,
 				seed,
 				totalPoints: paper.totalPoints,
 				pdfUrl: `/uploads/sujet/${fileId}.pdf`,

@@ -1,0 +1,123 @@
+{
+  "id": "lesson_3ap_t1_alignment_segment_midpoint",
+  "slug": "lesson-3ap-t1-alignment-segment-midpoint",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني: الاستقامية والزاوية القائمة وتنظيم المعطيات وإدماج الفصل الأول",
+  "order": 4,
+  "titleAr": "الاستقامية وطول قطعة مستقيم وتعيين منتصفها",
+  "objectives": [
+    "التحقق من استقامية نقط أو أشياء باستعمال المسطرة وتعيين نقط على استقامة واحدة",
+    "رسم قطعة مستقيم وقياس طولها باستعمال المسطرة المدرجة بالسنتيمتر والمليمتر ومقارنة أطوال قطع",
+    "تعيين منتصف قطعة مستقيم باستعمال المسطرة المدرجة أو طي شريط ورقي والتحقق من تساوي المسافة عن طرفيها"
+  ],
+  "keywordsAr": [
+    "الاستقامية",
+    "نقط على استقامة واحدة",
+    "قطعة مستقيم",
+    "طول قطعة مستقيم",
+    "منتصف قطعة مستقيم"
+  ],
+  "discover": {
+    "scenarioAr": "في ساحة المدرسة، وضع التلاميذ مخاريط عند النقط $A$ و $B$ و $C$ و $D$ للتحقق من استقاميتها باستعمال المسطرة. ثم رسموا قطعة المستقيم $[AB]$ التي طولها $8\\text{ cm}$ وعيّنوا النقطة $M$ في منتصفها تماماً.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 225\" width=\"600\" height=\"225\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"209\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"29\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">التحقق من الاستقامية وتعيين منتصف قطعة مستقيم</text><rect x=\"24\" y=\"38\" width=\"552\" height=\"72\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"55\" y1=\"86\" x2=\"545\" y2=\"86\" stroke=\"#2563eb\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><circle cx=\"115\" cy=\"86\" r=\"5.5\" fill=\"#16a34a\"/><text x=\"115\" y=\"72\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\">A</text><circle cx=\"280\" cy=\"86\" r=\"5.5\" fill=\"#16a34a\"/><text x=\"280\" y=\"72\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\">B</text><circle cx=\"485\" cy=\"86\" r=\"5.5\" fill=\"#16a34a\"/><text x=\"485\" y=\"72\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\">C</text><circle cx=\"380\" cy=\"54\" r=\"5.5\" fill=\"#dc2626\"/><text x=\"398\" y=\"58\" text-anchor=\"start\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">D</text><rect x=\"24\" y=\"118\" width=\"552\" height=\"88\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"80\" y1=\"148\" x2=\"520\" y2=\"148\" stroke=\"#0f172a\" stroke-width=\"3\"/><circle cx=\"80\" cy=\"148\" r=\"4.5\" fill=\"#1d4ed8\"/><text x=\"80\" y=\"136\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">A</text><circle cx=\"300\" cy=\"148\" r=\"5\" fill=\"#dc2626\"/><text x=\"300\" y=\"136\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">M</text><circle cx=\"520\" cy=\"148\" r=\"4.5\" fill=\"#1d4ed8\"/><text x=\"520\" y=\"136\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">B</text><line x1=\"187\" y1=\"142\" x2=\"187\" y2=\"154\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"193\" y1=\"142\" x2=\"193\" y2=\"154\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"407\" y1=\"142\" x2=\"407\" y2=\"154\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"413\" y1=\"142\" x2=\"413\" y2=\"154\" stroke=\"#059669\" stroke-width=\"2\"/><rect x=\"64\" y=\"164\" width=\"480\" height=\"32\" rx=\"4\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"1.3\"/><g stroke=\"#1e293b\" stroke-width=\"1.5\"><line x1=\"80\" y1=\"164\" x2=\"80\" y2=\"176\"/><line x1=\"135\" y1=\"164\" x2=\"135\" y2=\"174\"/><line x1=\"190\" y1=\"164\" x2=\"190\" y2=\"174\"/><line x1=\"245\" y1=\"164\" x2=\"245\" y2=\"174\"/><line x1=\"300\" y1=\"164\" x2=\"300\" y2=\"177\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"355\" y1=\"164\" x2=\"355\" y2=\"174\"/><line x1=\"410\" y1=\"164\" x2=\"410\" y2=\"174\"/><line x1=\"465\" y1=\"164\" x2=\"465\" y2=\"174\"/><line x1=\"520\" y1=\"164\" x2=\"520\" y2=\"176\"/></g><g font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\" text-anchor=\"middle\"><text x=\"80\" y=\"190\">0</text><text x=\"135\" y=\"190\">1</text><text x=\"190\" y=\"190\">2</text><text x=\"245\" y=\"190\">3</text><text x=\"300\" y=\"190\" fill=\"#dc2626\">4</text><text x=\"355\" y=\"190\">5</text><text x=\"410\" y=\"190\">6</text><text x=\"465\" y=\"190\">7</text><text x=\"520\" y=\"190\">8</text></g><text x=\"537\" y=\"190\" font-size=\"10\" font-weight=\"bold\" fill=\"#78350f\" direction=\"ltr\">cm</text></svg>",
+    "steps": [
+      {
+        "promptAr": "انظر إلى الشكل العلوي: النقط $A$ و $B$ و $C$ تقع على الخط المستقيم الأزرق. ما اسم النقطة التي **ليست** على استقامية معها؟ (اكتب الحرف اللاتيني فقط)",
+        "hintAr": "ابحث عن النقطة الحمراء البعيدة عن الخط المستقيم.",
+        "expectedInput": "D",
+        "revealAr": "النقطة $D$ ليست في استقامية مع $A$ و $B$ و $C$ ."
+      },
+      {
+        "promptAr": "انظر إلى القطعة $[AB]$ التي طولها $8\\text{ cm}$ : النقطة $M$ في المنتصف تقسمها إلى جزأين متساويين. ما هو طول $[AM]$ بالسنتيمتر (`cm`)؟ (اكتب العدد فقط)",
+        "hintAr": "اقرأ التدريجة الواقعة تحت النقطة الحمراء $M$ على المسطرة.",
+        "expectedInput": "4",
+        "revealAr": "طول $[AM]$ هو $4\\text{ cm}$ وطول $[MB]$ هو $4\\text{ cm}$ أيضاً، لأن $4 + 4 = 8$ ."
+      },
+      {
+        "promptAr": "إذا رسمنا قطعة مستقيم أخرى $[EF]$ طولها $12\\text{ cm}$ وعيّنا النقطة $O$ في منتصفها، فكم يكون طول القطعة $[OF]$ بالسنتيمتر (`cm`)؟ (اكتب العدد فقط)",
+        "hintAr": "نصف $12\\text{ cm}$ يعني العدد الذي إذا جمعناه مع نفسه أعطى $12$ .",
+        "expectedInput": "6",
+        "revealAr": "طول $[OF]$ هو $6\\text{ cm}$ لأن $6 + 6 = 12\\text{ cm}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "تكون ثلاث نقط أو أكثر في **استقامية** (على استقامة واحدة) إذا مرّ بها جميعاً خط مستقيم واحد عند وضع حافة المسطرة.",
+      "**قطعة المستقيم** $[AB]$ محدودة من طرفيها بالنقطتين $A$ و $B$ ، ونقيس طولها باستعمال المسطرة المدرجة انطلاقاً من التدريجة $0$ .",
+      "**منتصف قطعة مستقيم** $[AB]$ هو النقطة $M$ الواقعة على القطعة $[AB]$ بحيث تكون المسافة من $A$ إلى $M$ مساوية للمسافة من $M$ إلى $B$ .",
+      "لتعيين منتصف قطعة مستقيم، نقيس طولها بالمسطرة ثم نأخذ نصف الطول (أو نطوي شريطاً ورقياً بنفس طول القطعة على نفسه بدقة)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 220\" width=\"600\" height=\"220\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"204\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">ملخص: الاستقامية ومنتصف قطعة مستقيم</text><rect x=\"24\" y=\"44\" width=\"265\" height=\"158\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.3\"/><text x=\"156\" y=\"66\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">التحقق من الاستقامية بالمسطرة</text><polygon points=\"46,136 246,89 250,108 50,155\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><line x1=\"46\" y1=\"136\" x2=\"246\" y2=\"89\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"130\" r=\"4.5\" fill=\"#16a34a\"/><text x=\"66\" y=\"119\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">R</text><circle cx=\"145\" cy=\"113\" r=\"4.5\" fill=\"#16a34a\"/><text x=\"141\" y=\"102\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">S</text><circle cx=\"220\" cy=\"95\" r=\"4.5\" fill=\"#16a34a\"/><text x=\"216\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">T</text><circle cx=\"156\" cy=\"78\" r=\"4.5\" fill=\"#dc2626\"/><text x=\"170\" y=\"82\" text-anchor=\"start\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">K</text><text x=\"156\" y=\"186\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">R و S و T في استقامية واحدة</text><rect x=\"311\" y=\"44\" width=\"265\" height=\"158\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.3\"/><text x=\"443\" y=\"66\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">منتصف قطعة مستقيم [AB]</text><path d=\"M 340 94 L 340 84 L 546 84 L 546 94\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.4\"/><text x=\"443\" y=\"79\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">10 cm</text><line x1=\"340\" y1=\"118\" x2=\"546\" y2=\"118\" stroke=\"#0f172a\" stroke-width=\"3\"/><circle cx=\"340\" cy=\"118\" r=\"4.5\" fill=\"#1d4ed8\"/><text x=\"340\" y=\"107\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">A</text><circle cx=\"443\" cy=\"118\" r=\"5\" fill=\"#dc2626\"/><text x=\"443\" y=\"107\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">M</text><circle cx=\"546\" cy=\"118\" r=\"4.5\" fill=\"#1d4ed8\"/><text x=\"546\" y=\"107\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">B</text><line x1=\"391\" y1=\"111\" x2=\"391\" y2=\"125\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"495\" y1=\"111\" x2=\"495\" y2=\"125\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"391\" y=\"144\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">5 cm</text><text x=\"495\" y=\"144\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">5 cm</text><text x=\"443\" y=\"186\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">AM = MB = 5 cm</text></svg>",
+    "visualCaptionAr": "استعمال المسطرة للتحقق من استقامية النقط، وتعيين منتصف قطعة المستقيم عند تساوي الطولين.",
+    "examples": [
+      {
+        "problemAr": "طول القطعة $[AB]$ هو $14\\text{ cm}$ . وضعت سارة النقطة $M$ على القطعة على بعد $6\\text{ cm}$ من $A$ . هل $M$ منتصف $[AB]$ ؟",
+        "solutionAr": "طول $[MB]$ الباقي هو $14 - 6 = 8\\text{ cm}$ . وبما أن $6\\text{ cm}$ لا يساوي $8\\text{ cm}$ ، فليست $M$ منتصف القطعة؛ المنتصف الحقيقي يبعد $7\\text{ cm}$ عن كل طرف."
+      },
+      {
+        "problemAr": "النقطة $O$ منتصف القطعة $[CD]$ ، وطول $[CO]$ يساوي $9\\text{ cm}$ . ما هو طول القطعة $[CD]$ كلها؟",
+        "solutionAr": "بما أن $O$ في المنتصف فإن $[OD]$ طولها $9\\text{ cm}$ أيضاً، إذن طول $[CD]$ هو $9 + 9 = 18\\text{ cm}$ ."
+      }
+    ],
+    "watchOutAr": "لكي تكون النقطة $M$ منتصف قطعة المستقيم $[AB]$ ، لا يكفي أن تكون مسافتها عن $A$ وعن $B$ متساوية فقط، بل يجب أيضاً أن تكون $M$ **على استقامية** مع $A$ و $B$ (أي واقعة على القطعة نفسها)!"
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل المرصوفة المقابلة: أي ثلاث نقط تقع على **استقامة واحدة**؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 155\" width=\"420\" height=\"155\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"404\" height=\"139\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><g stroke=\"#e2e8f0\" stroke-width=\"1\"><line x1=\"40\" y1=\"30\" x2=\"380\" y2=\"30\"/><line x1=\"40\" y1=\"60\" x2=\"380\" y2=\"60\"/><line x1=\"40\" y1=\"90\" x2=\"380\" y2=\"90\"/><line x1=\"40\" y1=\"120\" x2=\"380\" y2=\"120\"/><line x1=\"60\" y1=\"20\" x2=\"60\" y2=\"135\"/><line x1=\"120\" y1=\"20\" x2=\"120\" y2=\"135\"/><line x1=\"180\" y1=\"20\" x2=\"180\" y2=\"135\"/><line x1=\"240\" y1=\"20\" x2=\"240\" y2=\"135\"/><line x1=\"300\" y1=\"20\" x2=\"300\" y2=\"135\"/><line x1=\"360\" y1=\"20\" x2=\"360\" y2=\"135\"/></g><circle cx=\"60\" cy=\"120\" r=\"5.5\" fill=\"#2563eb\"/><text x=\"46\" y=\"124\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">A</text><circle cx=\"150\" cy=\"35\" r=\"5.5\" fill=\"#ea580c\"/><text x=\"150\" y=\"25\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c2410c\">B</text><circle cx=\"180\" cy=\"90\" r=\"5.5\" fill=\"#2563eb\"/><text x=\"180\" y=\"78\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">C</text><circle cx=\"270\" cy=\"120\" r=\"5.5\" fill=\"#dc2626\"/><text x=\"270\" y=\"138\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b91c1c\">D</text><circle cx=\"300\" cy=\"60\" r=\"5.5\" fill=\"#2563eb\"/><text x=\"314\" y=\"64\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">E</text></svg>",
+      "options": [
+        "$A$ و $B$ و $C$",
+        "$A$ و $C$ و $E$",
+        "$B$ و $C$ و $D$",
+        "$C$ و $D$ و $E$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "إذا وضعت المسطرة على $A$ و $C$ ، ستلاحظ أن النقطة $B$ مرتفعة بعيداً عن الخط المستقيم.",
+        "أحسنت! النقط $A$ و $C$ و $E$ تصعد بنفس الخطوة على المرصوفة، لذا يمر بها خط مستقيم واحد.",
+        "النقطة $B$ في الأعلى و $D$ في الأسفل لا تشكلان خطاً مستقيماً مع $C$ بميل منتظم.",
+        "النقطة $D$ منخفضة إلى الأسفل وليست على الخط الذي يربط $C$ و $E$ ."
+      ],
+      "explanationAr": "عند وضع المسطرة من $A$ إلى $E$ نلاحظ أنها تمر تماماً بالنقطة $C$ لأن كل خطوة إلى اليمين بمربعين تصعد مربعاً واحداً للأعلى، إذن $A$ و $C$ و $E$ على استقامة واحدة."
+    },
+    {
+      "questionAr": "في الشكل المقابل، النقطة $M$ هي منتصف قطعة المستقيم $[PQ]$ ، وطول $[PM]$ يساوي $7\\text{ cm}$ . ما هو طول القطعة $[PQ]$ كلها؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 120\" width=\"400\" height=\"120\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"384\" height=\"104\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><line x1=\"56\" y1=\"64\" x2=\"344\" y2=\"64\" stroke=\"#0f172a\" stroke-width=\"3\"/><circle cx=\"56\" cy=\"64\" r=\"4.5\" fill=\"#1d4ed8\"/><text x=\"56\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">P</text><circle cx=\"200\" cy=\"64\" r=\"5\" fill=\"#dc2626\"/><text x=\"200\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">M</text><circle cx=\"344\" cy=\"64\" r=\"4.5\" fill=\"#1d4ed8\"/><text x=\"344\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">Q</text><line x1=\"125\" y1=\"57\" x2=\"125\" y2=\"71\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"131\" y1=\"57\" x2=\"131\" y2=\"71\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"269\" y1=\"57\" x2=\"269\" y2=\"71\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"275\" y1=\"57\" x2=\"275\" y2=\"71\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"128\" y=\"42\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#059669\" direction=\"ltr\">7 cm</text><text x=\"200\" y=\"96\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#334155\" direction=\"rtl\">ما طول [PQ]؟</text></svg>",
+      "options": [
+        "$7\\text{ cm}$",
+        "$12\\text{ cm}$",
+        "$14\\text{ cm}$",
+        "$21\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$7\\text{ cm}$ هو طول النصف $[PM]$ فقط، أما السؤال فيطلب طول القطعة كاملة $[PQ]$ .",
+        "تحقق من الجمع: $7 + 7 = 14$ وليس $12$ .",
+        "ممتاز! بما أن $M$ في المنتصف، فإن طول $[MQ]$ يساوي $7\\text{ cm}$ أيضاً، فيكون طول $[PQ]$ هو $7 + 7 = 14\\text{ cm}$ .",
+        "$21\\text{ cm}$ يساوي $3$ أضعاف $[PM]$ ، بينما القطعة مكونة من نصفين متساويين فقط."
+      ],
+      "explanationAr": "النقطة $M$ تقع في منتصف $[PQ]$ ، إذن طول $[PM]$ يساوي طول $[MQ]$ ويساوي $7\\text{ cm}$ . وبذلك يكون طول $[PQ]$ كاملاً هو $7 + 7 = 14\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "رسمت ليلى قطعة مستقيم طولها $16\\text{ cm}$ . عند أي تدريجة تبدأ من $0$ على المسطرة يجب أن تضع نقطة المنتصف؟",
+      "options": [
+        "$8\\text{ cm}$",
+        "$4\\text{ cm}$",
+        "$10\\text{ cm}$",
+        "$16\\text{ cm}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! نصف $16\\text{ cm}$ هو $8\\text{ cm}$ لأن $8 + 8 = 16$ ، فتكون المسافة متساوية عن الطرفين.",
+        "$4\\text{ cm}$ هو ربع القطعة وليس منتصفها، فسيبقى $12\\text{ cm}$ في الجهة الأخرى.",
+        "إذا وضعت النقطة عند $10\\text{ cm}$ سيبقى $6\\text{ cm}$ في الجهة الثانية، وهما غير متساويين.",
+        "التدريجة $16\\text{ cm}$ هي نهاية القطعة وليست منتصفها."
+      ],
+      "explanationAr": "لتعيين منتصف قطعة طولها $16\\text{ cm}$ ، نبحث عن نصف الطول: $8 + 8 = 16$ ، إذن نضع نقطة المنتصف عند التدريجة $8\\text{ cm}$ ."
+    }
+  ]
+}

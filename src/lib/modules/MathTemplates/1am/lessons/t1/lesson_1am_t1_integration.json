@@ -1,0 +1,127 @@
+{
+  "id": "lesson_1am_t1_integration",
+  "slug": "1am-t1-integration",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t1",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثالث: الزوايا وإدماج الفصل الأول",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الأول: الأعداد العشرية والإنشاءات الهندسية والزوايا",
+  "objectives": [
+    "تجنيد الكتابة العشرية والكسور العشرية ورتبة المقدار والجمع والطرح والضرب العشري في حل مشكلات عددية من الحياة اليومية",
+    "استثمار الإنشاءات الهندسية الأولية (التعامد والتوازي والقطع والدائرة والزوايا والمنصف) في رسم أشكال وتبرير علاقات بسيطة",
+    "تحرير حل وضعية إدماجية متكاملة باحترام معايير التقويم (الوجاهة، الاستعمال السليم، الانسجام، الإتقان)"
+  ],
+  "keywordsAr": [
+    "وضعية إدماجية",
+    "تجنيد الموارد",
+    "حصيلة الفصل الأول",
+    "الأعداد العشرية والهندسة"
+  ],
+  "discover": {
+    "scenarioAr": "لتهيئة حديقة المتوسطة، خصّصت الإدارة ميزانية قدرها $4000\\text{ DA}$ : اشترت $100$ بلاطة صغيرة بسعر $24.75\\text{ DA}$ للواحدة، و $3.5\\text{ kg}$ من بذور العشب بسعر $180.4\\text{ DA}$ للكيلوغرام الواحد. وفي المخطط الهندسي للحوض الدائري $(\\mathcal{C})$ ، قطره $[AB]$ طوله $12\\text{ m}$ ومركزه $M$ على الممر $(d)$ ، ورُسم ممرّ $(d_1)$ عمودياً على $(d)$ في $M$ ثم منصف الزاوية القائمة $\\widehat{BMd_1}$ هو $[Mz)$ . لنجنّد موارد الفصل الأول لحل هذه الوضعية!",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 205\" width=\"520\" height=\"205\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"246\" height=\"181\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"135\" y=\"34\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">الجانب العددي: ميزانية 4000 DA</text><text x=\"135\" y=\"64\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">100 × 24.75 DA = ?</text><text x=\"135\" y=\"92\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3.5 × 180.4 DA = ?</text><rect x=\"30\" y=\"110\" width=\"210\" height=\"32\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#3b82f6\"/><text x=\"135\" y=\"130\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">رتبة مقدار الكلفة ≈ 2500 + 600 = 3100</text><text x=\"135\" y=\"168\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">المتبقي = 4000 - المجموع</text><rect x=\"270\" y=\"12\" width=\"238\" height=\"181\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"389\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">المخطط الهندسي للحوض</text><circle cx=\"389\" cy=\"118\" r=\"58\" fill=\"#dcfce7\" fill-opacity=\"0.45\" stroke=\"#16a34a\" stroke-width=\"2\"/><line x1=\"312\" y1=\"118\" x2=\"466\" y2=\"118\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"389\" y1=\"42\" x2=\"389\" y2=\"186\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"389\" y1=\"118\" x2=\"442\" y2=\"65\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><rect x=\"389\" y=\"107\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><path d=\"M 417 118 A 28 28 0 0 0 408.8 98.2\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><path d=\"M 408.8 98.2 A 28 28 0 0 0 389 90\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"331\" cy=\"118\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"389\" cy=\"118\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"447\" cy=\"118\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"320\" y=\"134\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"377\" y=\"134\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">M</text><text x=\"450\" y=\"134\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"456\" y=\"111\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">(d)</text><text x=\"398\" y=\"52\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">(d1)</text><text x=\"446\" y=\"64\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">z</text><text x=\"346\" y=\"76\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">(C)</text></svg>",
+    "steps": [
+      {
+        "promptAr": "احسب ثمن $100$ بلاطة بسعر $24.75\\text{ DA}$ للواحدة.",
+        "hintAr": "الضرب في $100$ يزيح الفاصلة مرتبتين إلى اليمين.",
+        "expectedInput": "2475",
+        "revealAr": "ثمن البلاطات هو $24.75 \\times 100 = 2475\\text{ DA}$ ."
+      },
+      {
+        "promptAr": "احسب ثمن البذور $3.5 \\times 180.4$ ثم اجمعه مع $2475\\text{ DA}$ لإيجاد الكلفة الإجمالية بالدينار.",
+        "hintAr": "أنجز أولاً $35 \\times 1804 = 63140$ وضع الفاصلة بعد رقمين ($631.4\\text{ DA}$)، ثم أضف $2475$ .",
+        "expectedInput": "3106.4",
+        "revealAr": "ثمن البذور $3.5 \\times 180.4 = 631.4\\text{ DA}$ ، والكلفة الإجمالية هي $2475 + 631.4 = 3106.4\\text{ DA}$ (قريبة جداً من رتبة المقدار $3100\\text{ DA}$ !)."
+      },
+      {
+        "promptAr": "احسب المبلغ المتبقي من الميزانية $4000\\text{ DA}$ بعد دفع الكلفة الإجمالية $3106.4\\text{ DA}$ .",
+        "hintAr": "اكتب $4000$ على شكل $4000.0$ وضع الفاصلة تحت الفاصلة في الطرح العمودي.",
+        "expectedInput": "893.6",
+        "revealAr": "المبلغ المتبقي هو $4000.0 - 3106.4 = 893.6\\text{ DA}$ ."
+      },
+      {
+        "promptAr": "في المخطط الهندسي، ما نصف قطر الدائرة $(\\mathcal{C})$ التي قطرها $AB = 12\\text{ m}$ ؟ وما قيس الزاوية $\\widehat{BMz}$ الناتجة عن تنصيف الزاوية القائمة $(90^\\circ)$ بالدرجات؟",
+        "hintAr": "نصف القطر $12 \\div 2 = 6\\text{ m}$ ، واكتب في الخانة قيس الزاوية $\\widehat{BMz}$ بالدرجات ($90 \\div 2$).",
+        "expectedInput": "45",
+        "revealAr": "نصف قطر الدائرة هو $MA = 12 \\div 2 = 6\\text{ m}$ . وبما أن $[Mz)$ منصف الزاوية القائمة $\\widehat{BMd_1} = 90^\\circ$ ، فإن $\\widehat{BMz} = 90^\\circ \\div 2 = 45^\\circ$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الوجاهة (اختيار الأدوات الرياضية المناسبة)**: حدّد في كل سؤال العملية العددية المطلوبة (جمع، طرح، ضرب عشري، إزاحة فاصلة في $10/100/0.1$) أو الخاصية الهندسية الملائمة (التعامد والتوازي، المنتصف، الدائرة، تصنيف وتنصيف الزوايا).",
+      "**الاستعمال السليم لأدوات المادة**: ضع الفاصلة تحت الفاصلة في الجمع والطرح، وعدّ جميع الأرقام العشرية في الضرب العمودي. واحترم الرموز: $(AB)$ للمستقيم، $[AB)$ لنصف المستقيم، $[AB]$ للقطعة، و $AB$ للطول، و $\\perp$ للتعامد، و $\\parallel$ للتوازي.",
+      "**الانسجام ومعقولية النتائج**: راقب صحة نواتجك الحسابية بتقدير **رتبة مقدار** أولاً، وتحقق هندسياً من أن $d = 2 \\times r$ في الدائرة وأن قيس الزاوية يوافق نوعها (حادة $< 90^\\circ$ ، منفرجة $> 90^\\circ$).",
+      "**الإتقان في تحرير الوضعية الإدماجية**: نظّم الإجابة على مراحل مرقّمة، واكتب الوحدات ($\\text{DA}$ ، $\\text{m}$ ، $\\text{cm}$ ، ${}^\\circ$) ولا تنسَ تشفير الشكل الهندسي."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\" width=\"520\" height=\"190\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"14\" y=\"14\" width=\"236\" height=\"72\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"132\" y=\"38\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">1. الأعداد العشرية</text><text x=\"132\" y=\"60\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">كتابة كسرية، تفكيك، مقارنة، نصف مستقيم مدرج</text><rect x=\"270\" y=\"14\" width=\"236\" height=\"72\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"388\" y=\"38\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">2. العمليات ورتبة المقدار</text><text x=\"388\" y=\"60\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">جمع، طرح، ضرب عشري، إزاحة الفاصلة (10 و 0.1)</text><rect x=\"14\" y=\"104\" width=\"236\" height=\"72\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.6\"/><text x=\"132\" y=\"128\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\">3. المستقيمات والدائرة</text><text x=\"132\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">توازي (//)، تعامد (⊥)، منتصف، قطر d = 2r، قوس</text><rect x=\"270\" y=\"104\" width=\"236\" height=\"72\" rx=\"10\" fill=\"#fdf2f8\" stroke=\"#db2777\" stroke-width=\"1.6\"/><text x=\"388\" y=\"128\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#9d174d\">4. الزوايا والمنصف</text><text x=\"388\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">حادة، قائمة، منفرجة، مستقيمة، المنقلة والمنصف</text></svg>",
+    "visualCaptionAr": "خريطة موارد الفصل الأول المجندة لحل الوضعيات الإدماجية",
+    "examples": [
+      {
+        "problemAr": "اشترت عائلة $10\\text{ L}$ من زيت الزيتون بسعر $845.5\\text{ DA}$ للتر الواحد و $2.5\\text{ kg}$ من الجبن بسعر $620\\text{ DA}$ للكيلوغرام. دفعت العائلة $10000\\text{ DA}$ . احسب المبلغ المتبقي.",
+        "solutionAr": "1) ثمن الزيت: $845.5 \\times 10 = 8455\\text{ DA}$ .\n\n2) ثمن الجبن: $620 \\times 2.5 = 1550\\text{ DA}$ (لأن $62 \\times 25 = 1550$ أو $620 \\times 2 + 620 \\times 0.5 = 1240 + 310 = 1550$ ).\n\n3) المجموع: $8455 + 1550 = 10005\\text{ DA}$ . نلاحظ أن $10000\\text{ DA}$ لا يكفي بل ينقصه $5\\text{ DA}$ !"
+      },
+      {
+        "problemAr": "أنجزنا مستقيمين $(d_1)$ و $(d_2)$ عموديين على مستقيم $(\\Delta)$ في نقطتين $A$ و $B$ حيث $AB = 6\\text{ cm}$ ، وعيّنا $O$ منتصف $[AB]$ كمركز لدائرة تشمل $A$ و $B$ . ما وضع $(d_1)$ و $(d_2)$ ؟ وما طول نصف قطر الدائرة؟",
+        "solutionAr": "1) بما أن $(d_1) \\perp (\\Delta)$ و $(d_2) \\perp (\\Delta)$ فإن المستقيمين متوازيان: $(d_1) \\parallel (d_2)$ .\n\n2) بما أن $O$ منتصف $[AB]$ فإن $[AB]$ قطر للدائرة، ونصف قطرها هو $OA = 6 \\div 2 = 3\\text{ cm}$ ."
+      }
+    ],
+    "watchOutAr": "أكثر أخطاء الوضعيات الإدماجية شيوعاً: نسيان كتابة الوحدات في الأجوبة، أو الخلط بين القطر ونصف القطر، أو إهمال التحقق من معقولية النتيجة الحسابية باستعمال رتبة مقدار!"
+  },
+  "practice": [
+    {
+      "questionAr": "تدربت عدّاءة على مضمار طوله $0.45\\text{ km}$ ، فدارت حوله $10$ دورات يوم الاثنين، ثم قطعت مسافة $3.25\\text{ km}$ يوم الثلاثاء. كم كيلومتراً بقي لها لبلوغ هدف $10\\text{ km}$ ؟",
+      "options": [
+        "$7.75\\text{ km}$",
+        "$2.25\\text{ km}$",
+        "$5.25\\text{ km}$",
+        "$1.75\\text{ km}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$7.75\\text{ km}$ هي المسافة الإجمالية التي قطعتها في اليومين، لكن السؤال يطلب المسافة **المتبقية** لبلوغ $10\\text{ km}$ .",
+        "ممتاز! $10 \\times 0.45 = 4.5\\text{ km}$ ، والمجموع $4.5 + 3.25 = 7.75\\text{ km}$ ، والمتبقي $10 - 7.75 = 2.25\\text{ km}$ .",
+        "انتبه: $10 \\times 0.45 = 4.5\\text{ km}$ وليس $1.5\\text{ km}$ !",
+        "أخطأتَ في عملية الطرح العمودي: $10.00 - 7.75 = 2.25$ وليس $1.75$ ."
+      ],
+      "explanationAr": "المسافة المقطوعة يوم الاثنين: $10 \\times 0.45 = 4.5\\text{ km}$ . المجموع في اليومين: $4.50 + 3.25 = 7.75\\text{ km}$ . المسافة المتبقية: $10.00 - 7.75 = 2.25\\text{ km}$ ."
+    },
+    {
+      "questionAr": "اشترى خياط $2.2\\text{ m}$ من القماش بسعر $398.5\\text{ DA}$ للمتر الواحد ودفع ورقة $1000\\text{ DA}$ . ما هي **رتبة مقدار** ثمن القماش وما هو المبلغ **المتبقي** الدقيق؟",
+      "options": [
+        "رتبة مقدار الثمن $800\\text{ DA}$ والباقي $123.3\\text{ DA}$",
+        "رتبة مقدار الثمن $800\\text{ DA}$ والباقي $223.3\\text{ DA}$",
+        "رتبة مقدار الثمن $400\\text{ DA}$ والباقي $123.3\\text{ DA}$",
+        "رتبة مقدار الثمن $800\\text{ DA}$ والباقي $876.7\\text{ DA}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! رتبة المقدار $2 \\times 400 = 800\\text{ DA}$ ، والثمن الدقيق $2.2 \\times 398.5 = 876.7\\text{ DA}$ ، والباقي $1000 - 876.7 = 123.3\\text{ DA}$ .",
+        "رتبة المقدار $800\\text{ DA}$ صحيحة، لكن راجع الاستلاف في الطرح $1000.0 - 876.7 = 123.3$ وليس $223.3$ .",
+        "نسيت ضرب $400$ في $2$ عند تقدير رتبة المقدار ($2.2 \\approx 2$ و $398.5 \\approx 400$).",
+        "$876.7\\text{ DA}$ هو ثمن القماش نفسه وليس الباقي بعد طرحه من $1000\\text{ DA}$ ."
+      ],
+      "explanationAr": "رتبة مقدار الثمن: $2 \\times 400 = 800\\text{ DA}$ . الثمن الدقيق: $22 \\times 3985 = 87670$ وبوضع الفاصلة بعد رقمين نجد $876.70 = 876.7\\text{ DA}$ . الباقي: $1000.0 - 876.7 = 123.3\\text{ DA}$ ."
+    },
+    {
+      "questionAr": "في الشكل الهندسي المقابل: $(d_1) \\perp (\\Delta)$ في $A$ ، و $(d_2) \\perp (\\Delta)$ في $B$ بحيث $AB = 8\\text{ cm}$ ، و $O$ منتصف $[AB]$ ومركز الدائرة $(\\mathcal{C})$ التي تشمل $A$ و $B$ ، ونصف المستقيم $[Az)$ منصف الزاوية القائمة عند $A$ . أي إجابة صحيحة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 185\" width=\"320\" height=\"185\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><circle cx=\"160\" cy=\"96\" r=\"64\" fill=\"#eff6ff\" fill-opacity=\"0.5\" stroke=\"#16a34a\" stroke-width=\"2\"/><line x1=\"32\" y1=\"96\" x2=\"288\" y2=\"96\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"96\" y1=\"16\" x2=\"96\" y2=\"168\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"224\" y1=\"16\" x2=\"224\" y2=\"168\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"96\" y1=\"96\" x2=\"156\" y2=\"36\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><rect x=\"96\" y=\"85\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><rect x=\"224\" y=\"85\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><path d=\"M 124 96 A 28 28 0 0 0 115.8 76.2\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><path d=\"M 115.8 76.2 A 28 28 0 0 0 96 68\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"96\" cy=\"96\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"160\" cy=\"96\" r=\"3.5\" fill=\"#16a34a\"/><circle cx=\"224\" cy=\"96\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"81\" y=\"112\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"156\" y=\"112\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">O</text><text x=\"230\" y=\"112\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"72\" y=\"26\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">(d1)</text><text x=\"230\" y=\"26\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">(d2)</text><text x=\"272\" y=\"89\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">(Δ)</text><text x=\"160\" y=\"34\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">z</text><text x=\"195\" y=\"48\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">(C)</text></svg>",
+      "options": [
+        "$(d_1) \\perp (d_2)$ ، نصف القطر $4\\text{ cm}$ ، و $\\widehat{BAz} = 45^\\circ$",
+        "$(d_1) \\parallel (d_2)$ ، نصف القطر $8\\text{ cm}$ ، و $\\widehat{BAz} = 45^\\circ$",
+        "$(d_1) \\parallel (d_2)$ ، نصف القطر $4\\text{ cm}$ ، و $\\widehat{BAz} = 45^\\circ$",
+        "$(d_1) \\parallel (d_2)$ ، نصف القطر $4\\text{ cm}$ ، و $\\widehat{BAz} = 90^\\circ$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "المستقيمان $(d_1)$ و $(d_2)$ عموديان على نفس المستقيم $(\\Delta)$ ، فهما متوازيان وليسا متعامدين!",
+        "$8\\text{ cm}$ هو طول القطر $AB$ كاملاً، بينما نصف القطر $OA = 8 \\div 2 = 4\\text{ cm}$ .",
+        "ممتاز! العموديان على نفس المستقيم متوازيان، ونصف القطر $8 \\div 2 = 4\\text{ cm}$ ، ومنصف الزاوية القائمة يعطي $45^\\circ$ .",
+        "الزاوية الكلية قائمة ($90^\\circ$)، أمّا $[Az)$ فمنصفها لذا قيس $\\widehat{BAz}$ هو نصفها أي $45^\\circ$ ."
+      ],
+      "explanationAr": "بما أن $(d_1) \\perp (\\Delta)$ و $(d_2) \\perp (\\Delta)$ فإن $(d_1) \\parallel (d_2)$ . وبما أن $O$ منتصف القطر $[AB]$ فإن نصف القطر $r = 8 \\div 2 = 4\\text{ cm}$ . وبما أن $[Az)$ ينصف الزاوية القائمة عند $A$ فإن $\\widehat{BAz} = 90^\\circ \\div 2 = 45^\\circ$ ."
+    }
+  ]
+}

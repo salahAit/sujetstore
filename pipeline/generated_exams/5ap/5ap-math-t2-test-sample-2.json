@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "5ap",
+    "yearName": "السنة الخامسة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t2",
+    "trimesterName": "الفصل الثاني",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "أنجز العمليات التالية بدقة:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب ذهنيا: $7.2 div 1000 = \"...\"$",
+          "answer": "1) $7.2 div 1000 = 0.0072$.",
+          "mark": "1"
+        },
+        {
+          "type": "text",
+          "content": "2) ضع ثم أنجز العملية عموديا: $7.2 times 6$",
+          "answer": "2) $7.2 times 6 = 43.2$.",
+          "mark": "2"
+        }
+      ],
+      "id": "exam-5ap-supervised_test-t2-medium-502-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "اشترت مريم أقلاما متماثلة من المكتبة. أكمل جدول التناسبية التالي باستعمال المرور بالوحدة:",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "عدد الأقلام",
+            "$4$",
+            "$1$",
+            "$13$",
+            "$15$"
+          ],
+          "cells": [
+            "الثمن (دج)",
+            "$136$",
+            {
+              "content": "...",
+              "answer": "$34$",
+              "mark": "1"
+            },
+            {
+              "content": "...",
+              "answer": "$442$",
+              "mark": "1"
+            },
+            {
+              "content": "...",
+              "answer": "$510$",
+              "mark": "1"
+            }
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        },
+        {
+          "type": "text",
+          "content": "وضح طريقة حساب قيمة الوحدة وقيمة $13$:",
+          "answer": "قيمة الوحدة: $136 div 4 = 34$ دج، ومنه قيمة $13$ هي: $34 times 13 = 442$ دج.",
+          "mark": ""
+        }
+      ],
+      "id": "exam-5ap-supervised_test-t2-medium-502-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "أجب عن الأسئلة الثلاثة التالية مع توضيح العمليات العمودية والأفقية وذكر الوحدات:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "تعتزم جمعية أولياء التلاميذ تهيئة قطعة أرض مستطيلة الشكل لإنشاء حديقة المدرسة، طولها $24$ m وعرضها $16$ m. خصّصت كل $13$ m² لـ حوض زهور، ثم أحاطت القطعة بسياج ثمن المتر الواحد منه $209.25$ DA مع ترك مدخل غير مسيج عرضه $2$ m."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap-t2-garden-medium-880252.svg",
+              "caption": "حديقة المدرسة"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب مساحة قطعة الأرض المستطيلة.",
+          "answer": "1) المساحة: $24 times 16 = 384$ m².",
+          "mark": "1"
+        },
+        {
+          "type": "text",
+          "content": "2) ما هو أكبر عدد من أحواض الزهور يمكن تهيئته، وما المساحة المتبقية كممر؟",
+          "answer": "2) بالقسمة الإقليدية: $384 = 13 times 29 + 7$، إذن العدد هو $29$ حوضا وتبقى $7$ m².",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب طول السياج اللازم ثم احسب تكلفته بالدينار الجزائري.",
+          "answer": "3) المحيط: $2 times (24 + 16) = 80$ m، وطول السياج: $80 - 2 = 78$ m، والتكلفة: $78 times 209.25 = 16321.5$ DA.",
+          "mark": "1.5"
+        }
+      ],
+      "id": "exam-5ap-supervised_test-t2-medium-502-ex-3"
+    }
+  ]
+}

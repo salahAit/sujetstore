@@ -1,0 +1,128 @@
+{
+  "id": "lesson_3am_t3_first_degree_equations_modeling",
+  "slug": "3am-t3-first-degree-equations-modeling",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t3",
+  "sequenceId": "seq7",
+  "sequenceTitleAr": "المقطع السابع: المساويات والمتباينات والمعادلات من الدرجة الأولى بمجهول واحد",
+  "order": 2,
+  "titleAr": "حل معادلات من الدرجة الأولى بمجهول واحد (ax + b = cx + d) وترييض مشكلات",
+  "objectives": [
+    "التمييز بين المعادلة والعبارة الحرفية والتحقق مما إذا كان عدد معلوما حلا لمعادلة",
+    "تطبيق خوارزمية حل معادلات من الدرجة الأولى بمجهول واحد من الشكل $ax + b = cx + d$ (بما فيها المعادلات المتضمنة أقواسا أو معاملات كسرية)",
+    "ترييض مشكلات من الحياة اليومية ومن الهندسة وحلها جبريا عبر مراحل الحل (اختيار المجهول، صياغة المعادلة، حل المعادلة، التحقق والإجابة)"
+  ],
+  "keywordsAr": [
+    "معادلة من الدرجة الأولى بمجهول واحد",
+    "حل معادلة",
+    "ترييض مشكلات",
+    "اختيار المجهول",
+    "التحقق من الحل"
+  ],
+  "discover": {
+    "scenarioAr": "عرضت مكتبة للطلبة صيغتين لاستعارة الكتب خلال العام الدراسي: الصيغة الأولى باشتراك سنوي قدره $300\\text{ DA}$ و $50\\text{ DA}$ لكل كتاب، والصيغة الثانية بدون اشتراك مقابل $80\\text{ DA}$ لكل كتاب. متى تتساوى الكلفتان من أجل نفس عدد الكتب $x$ ؟ نكتب المعادلة $50x + 300 = 80x$ ، كما نستكشف حل المعادلات من الشكل $ax + b = cx + d$ باستعمال توازن الميزان.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 230\" width=\"580\" height=\"230\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"214\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"32\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">تمثيل حل المعادلة 5x + 12 = 2x + 27 بميزان التوازن</text><rect x=\"22\" y=\"46\" width=\"262\" height=\"162\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"153\" y=\"67\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">الحالة 1: الميزان متوازن</text><line x1=\"62\" y1=\"132\" x2=\"244\" y2=\"132\" stroke=\"#334155\" stroke-width=\"3\"/><polygon points=\"153,132 141,164 165,164\" fill=\"#64748b\"/><rect x=\"48\" y=\"96\" width=\"82\" height=\"32\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"89\" y=\"117\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">5x + 12</text><rect x=\"176\" y=\"96\" width=\"82\" height=\"32\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"217\" y=\"117\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"ltr\">2x + 27</text><text x=\"153\" y=\"188\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"rtl\">نطرح 2x و 12 من الكفتين معاً</text><rect x=\"298\" y=\"46\" width=\"260\" height=\"162\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.4\"/><text x=\"428\" y=\"67\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">الحالة 2: عزل المجهول x</text><line x1=\"338\" y1=\"132\" x2=\"518\" y2=\"132\" stroke=\"#334155\" stroke-width=\"3\"/><polygon points=\"428,132 416,164 440,164\" fill=\"#64748b\"/><rect x=\"330\" y=\"96\" width=\"74\" height=\"32\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"367\" y=\"117\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">3x</text><rect x=\"452\" y=\"96\" width=\"74\" height=\"32\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"489\" y=\"117\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#166534\" direction=\"ltr\">15</text><text x=\"428\" y=\"188\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">3x = 15  &#8658;  x = 15 / 3 = 5</text></svg>",
+    "steps": [
+      {
+        "promptAr": "لنختبر هل $x = 6$ حل للمعادلة $50x + 300 = 80x$ . إذا كانت قيمة الطرف الأيسر تساوي $600$ ، فما قيمة الطرف الأيمن $80x$ عند $x = 6$ ؟ (أدخل العدد فقط)",
+        "hintAr": "اضرب $80 \\times 6$ وقارن الناتج مع $600$ .",
+        "expectedInput": "480",
+        "revealAr": "الطرف الأيمن هو $80 \\times 6 = 480$ ، وبما أن $600 \\neq 480$ فإن $x = 6$ ليس حلاً للمعادلة."
+      },
+      {
+        "promptAr": "نطرح $50x$ من طرفي المعادلة $50x + 300 = 80x$ فنحصل على $300 = 30x$ . ما هو عدد الكتب $x$ الذي تتساوى فيه الصيغتان؟ (أدخل العدد فقط)",
+        "hintAr": "اقسم $300$ على $30$ لإيجاد $x$ .",
+        "expectedInput": "10",
+        "revealAr": "بقسمة الطرفين على $30$ نجد $x = \\frac{300}{30} = 10$ كتب. والتحقق: $50(10) + 300 = 800$ و $80(10) = 800$ ."
+      },
+      {
+        "promptAr": "في الميزان الموضح بالرسم: $5x + 12 = 2x + 27$ ، وصلنا إلى $3x = 15$ . ما حل هذه المعادلة؟ (أدخل العدد فقط)",
+        "hintAr": "اقسم $15$ على معامل $x$ الذي هو $3$ .",
+        "expectedInput": "5",
+        "revealAr": "نجد $x = \\frac{15}{3} = 5$ . وبالتعويض: $5(5) + 12 = 37$ و $2(5) + 27 = 37$ ."
+      },
+      {
+        "promptAr": "في المعادلة $2(x + 3) = x + 11$ ، ننشر القوس أولاً فنحصل على $2x + 6 = x + 11$ . ما قيمة $x$ ؟ (أدخل العدد فقط)",
+        "hintAr": "اطرح $x$ و $6$ من طرفي المساواة $2x + 6 = x + 11$ .",
+        "expectedInput": "5",
+        "revealAr": "نطرح $x$ من الطرفين فنجد $x + 6 = 11$ ، ثم نطرح $6$ فنجد $x = 5$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**التمييز بين العبارة الحرفية والمعادلة**: العبارة الحرفية مثل $3x + 4$ تتغيّر قيمتها بتغيّر $x$ ، أما **المعادلة** فهي مساواة تتضمن مجهولاً $x$ مثل $5x + 12 = 2x + 27$ ، وحلّها يعني إيجاد كل قيم $x$ التي تحقق المساواة.",
+      "**اختبار حل معادلة**: للتحقق من أن عدداً $x_0$ حلٌّ لمعادلة، نعوضه في **كل طرف على حدة**؛ إذا تساوى الطرفان فالعدد حل للمعادلة، وإلا فليس حلاً.",
+      "**خوارزمية حل المعادلة $ax + b = cx + d$** (حيث $a \\neq c$ ):\n1. ننشر الأقواس ونبسط كل طرف، أو نوحد المقامات في حالة المعاملات الكسرية.\n2. نعزل الحدود المجهولة في طرف والحدود المعلومة في الطرف الآخر بطرح أو جمع نفس العدد في الطرفين، فتصبح المعادلة من الشكل $Ax = B$ .\n3. نقسم الطرفين على $A$ ($A \\neq 0$) فنجد الحل $x = \\frac{B}{A}$ .",
+      "**مراحل ترييض مشكلة**: (1) **اختيار المجهول** $x$ وتحديد مدلوله؛ (2) **صياغة المعادلة** بترجمة معطيات النص؛ (3) **حل المعادلة** جبرياً؛ (4) **التحقق** من معقولية الحل وصياغة الإجابة النهائية بالوحدة المناسبة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 230\" width=\"580\" height=\"230\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"214\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"32\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">خوارزمية حل معادلة ومراحل ترييض مشكلة</text><rect x=\"22\" y=\"46\" width=\"262\" height=\"162\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"153\" y=\"67\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">مثال: حل 4(x - 1) = 2x + 6</text><rect x=\"40\" y=\"78\" width=\"226\" height=\"28\" rx=\"6\" fill=\"#eff6ff\"/><text x=\"153\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1. النشر:  4x - 4 = 2x + 6</text><rect x=\"40\" y=\"112\" width=\"226\" height=\"28\" rx=\"6\" fill=\"#eff6ff\"/><text x=\"153\" y=\"130\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">2. العزل:  4x - 2x = 6 + 4</text><rect x=\"40\" y=\"146\" width=\"226\" height=\"28\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.2\"/><text x=\"153\" y=\"164\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#065f46\" direction=\"ltr\">3. القسمة:  2x = 10  &#8658;  x = 5</text><text x=\"153\" y=\"196\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">التحقق: 4(5 - 1) = 16  |  2(5) + 6 = 16</text><rect x=\"298\" y=\"46\" width=\"260\" height=\"162\" rx=\"10\" fill=\"#ffffff\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><text x=\"428\" y=\"67\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#5b21b6\" direction=\"rtl\">خطوات ترييض مشكلة (4 مراحل)</text><rect x=\"316\" y=\"78\" width=\"224\" height=\"26\" rx=\"6\" fill=\"#f5f3ff\"/><text x=\"428\" y=\"95\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#4c1d95\" direction=\"rtl\">1. اختيار المجهول (ليكن x ...)</text><rect x=\"316\" y=\"110\" width=\"224\" height=\"26\" rx=\"6\" fill=\"#f5f3ff\"/><text x=\"428\" y=\"127\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#4c1d95\" direction=\"rtl\">2. ترجمة المعطيات إلى معادلة</text><rect x=\"316\" y=\"142\" width=\"224\" height=\"26\" rx=\"6\" fill=\"#f5f3ff\"/><text x=\"428\" y=\"159\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#4c1d95\" direction=\"rtl\">3. حل المعادلة جبرياً</text><rect x=\"316\" y=\"174\" width=\"224\" height=\"26\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.2\"/><text x=\"428\" y=\"191\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">4. التحقق من المعقولية والإجابة</text></svg>",
+    "visualCaptionAr": "خطوات حل معادلة من الدرجة الأولى بمجهول واحد ومراحل ترييض المشكلات",
+    "examples": [
+      {
+        "problemAr": "حل المعادلة التالية ذات المعاملات الكسرية: $\\frac{x}{2} + 3 = \\frac{x}{3} + 5$ .",
+        "solutionAr": "نضرب طرفي المعادلة في المضاعف المشترك للمقامين ($6$) للتخلص من الكسور:\n\n$6 \\times \\frac{x}{2} + 6 \\times 3 = 6 \\times \\frac{x}{3} + 6 \\times 5$\n\n$3x + 18 = 2x + 30$\n\nنطرح $2x$ و $18$ من الطرفين: $3x - 2x = 30 - 18$ ، إذن $x = 12$ .\n\nالتحقق: $\\frac{12}{2} + 3 = 9$ و $\\frac{12}{3} + 5 = 9$ ."
+      },
+      {
+        "problemAr": "مستطيل طوله يزيد عن عرضه بـ $4\\text{ cm}$ ، ومحيطه يساوي $36\\text{ cm}$ . أوجد بُعدي هذا المستطيل.",
+        "solutionAr": "1) **اختيار المجهول**: ليكن $x$ عرض المستطيل ($x > 0$)، فيكون طوله $x + 4$ .\n\n2) **صياغة المعادلة**: $2 \\times (x + x + 4) = 36$ ، أي $2(2x + 4) = 36$ ، ومنه $4x + 8 = 36$ .\n\n3) **حل المعادلة**: $4x = 36 - 8 = 28$ ، إذن $x = \\frac{28}{4} = 7$ .\n\n4) **التحقق والإجابة**: العرض $7\\text{ cm}$ والطول $7 + 4 = 11\\text{ cm}$ ، والمحيط $2(11 + 7) = 36\\text{ cm}$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: عند تجميع الحدود المتشابهة في طرف واحد، ينسى بعض التلاميذ **تغيير إشارة الحد المنقول**، أو ينسون ضرب العدد الذي قبل القوس في **الحد الثاني** داخل القوس (مثلاً $3(x - 2) = 3x - 6$ وليس $3x - 2$ )."
+  },
+  "practice": [
+    {
+      "questionAr": "ما هو حل المعادلة $3(x - 2) = 5x - 14$ ؟",
+      "options": [
+        "$x = 4$",
+        "$x = -4$",
+        "$x = 6$",
+        "$x = 2.5$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! نشرتَ $3x - 6 = 5x - 14$ ، ثم جمعتَ الحدود فوجدت $8 = 2x$ أي $x = 4$ .",
+        "راجع الإشارات عند جمع الحدود: $14 - 6 = +8$ وليس $-8$ ، إذن $2x = 8$ .",
+        "انتبه للتوزيع: $3(x - 2) = 3x - 6$ وليس $3x - 2$ !",
+        "لا نجمع $3x$ مع $5x$ ؛ بل نطرح $3x$ من الطرفين فنجد $5x - 3x = 2x$ ."
+      ],
+      "explanationAr": "ننشر الطرف الأيسر: $3x - 6 = 5x - 14$ . نطرح $3x$ من الطرفين ونضيف $14$ للطرفين: $-6 + 14 = 5x - 3x$ ، أي $8 = 2x$ ، ومنه $x = \\frac{8}{2} = 4$ . التحقق: $3(4 - 2) = 6$ و $5(4) - 14 = 6$ ."
+    },
+    {
+      "questionAr": "ما هو حل المعادلة الكسرية $\\frac{2x - 1}{3} = \\frac{x + 3}{2}$ ؟",
+      "options": [
+        "$x = 7$",
+        "$x = 11$",
+        "$x = 5$",
+        "$x = 13$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$7$ هو قيمة كل من الطرفين بعد التعويض بالحل الصحيح، وليس قيمة $x$ نفسها!",
+        "ممتاز! بضرب الطرفين في $6$ نحصل على $2(2x - 1) = 3(x + 3)$ أي $4x - 2 = 3x + 9$ ومنه $x = 11$ .",
+        "راجع نشر الطرف الأيمن $3(x + 3) = 3x + 9$ وليس $3x + 3$ .",
+        "عند نقل $-2$ من اليسار إلى اليمين نضيف $+2$ لا $+4$ : $9 + 2 = 11$ ."
+      ],
+      "explanationAr": "نضرب طرفي المعادلة في $6$ (أو نطبق الجداء المتصالب): $2(2x - 1) = 3(x + 3)$ . ننشر: $4x - 2 = 3x + 9$ ، ومنه $4x - 3x = 9 + 2$ أي $x = 11$ ."
+    },
+    {
+      "questionAr": "في الشكل المقابل، طول القطعة $[AB]$ يساوي $x + 7$ وطول القطعة $[CD]$ يساوي $3x - 5$ (بوحدة $\\text{cm}$). ما قيمة $x$ التي تجعل القطعتين متقايستين ($AB = CD$)؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 135\" width=\"380\" height=\"135\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"6\" y=\"6\" width=\"368\" height=\"123\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><line x1=\"60\" y1=\"44\" x2=\"300\" y2=\"44\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"44\" r=\"4\" fill=\"#1e40af\"/><circle cx=\"300\" cy=\"44\" r=\"4\" fill=\"#1e40af\"/><text x=\"46\" y=\"48\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">A</text><text x=\"314\" y=\"48\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">B</text><text x=\"180\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">x + 7</text><line x1=\"60\" y1=\"92\" x2=\"300\" y2=\"92\" stroke=\"#059669\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"92\" r=\"4\" fill=\"#047857\"/><circle cx=\"300\" cy=\"92\" r=\"4\" fill=\"#047857\"/><text x=\"46\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\">C</text><text x=\"314\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\">D</text><text x=\"180\" y=\"80\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">3x - 5</text><text x=\"180\" y=\"118\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">AB = CD  &#8658;  x = ?</text></svg>",
+      "options": [
+        "$x = 3$",
+        "$x = 1$",
+        "$x = 6$",
+        "$x = 12$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "نطرح $x$ من $3x$ ($3x - x = 2x$) ولا نجمعهما ($4x$).",
+        "عند نقل $-5$ إلى الطرف الآخر تصبح $+5$ ، فيكون المجموع $7 + 5 = 12$ وليس $7 - 5 = 2$ .",
+        "أحسنت! من $3x - 5 = x + 7$ نجد $2x = 12$ ومنه $x = 6$ (حيث $AB = CD = 13\\text{ cm}$).",
+        "توصلتَ إلى $2x = 12$ ، بقي قسمة $12$ على $2$ لتجد $x = 6$ !"
+      ],
+      "explanationAr": "شرط تقايس القطعتين يترجم إلى المعادلة $3x - 5 = x + 7$ . نطرح $x$ ونضيف $5$ للطرفين: $3x - x = 7 + 5$ ، أي $2x = 12$ ، ومنه $x = 6$ . نتحقق: $6 + 7 = 13$ و $3(6) - 5 = 13$ ."
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "lesson_1am_t2_special_triangles_quads_constructions",
+  "slug": "1am-t2-special-triangles-quads-constructions",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t2",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: المثلثات الخاصة والأشكال المستوية والمساحات والمحيطات",
+  "order": 4,
+  "titleAr": "المثلثات الخاصة والرباعيات المألوفة: الخواص وإنجاز مثيل",
+  "objectives": [
+    "معرفة خواص وإنشاء مثيل لكل من: مثلث كيفي، مثلث متساوي الساقين، مثلث قائم، مثلث متقايس الأضلاع على ورقة غير مسطرة",
+    "معرفة خواص وإنشاء مثيل للمضلعات الرباعية المألوفة (المستطيل، المربع، المعين) باستعمال الأدوات الهندسية والتشفير السليم",
+    "وصف شكل هندسي مألوف أو مركب وكتابة برنامج إنشاء بسيط لإنجاز مثيل له"
+  ],
+  "keywordsAr": [
+    "المثلثات الخاصة",
+    "مثلث متساوي الساقين",
+    "مثلث قائم",
+    "مثلث متقايس الأضلاع",
+    "المستطيل والمربع والمعين",
+    "برنامج إنشاء"
+  ],
+  "discover": {
+    "scenarioAr": "طلب أستاذ الرياضيات من التلاميذ رسم مثيل لزخرفة هندسية على ورقة غير مسطرة بالاستعانة بالتشفير والأدوات الهندسية (المسطرة، الكوس، المدور)، وتتكوّن من معيّن $ABCD$ طول ضلعه $5\\text{ cm}$ وقطراه $AC = 8\\text{ cm}$ و $BD = 6\\text{ cm}$ ، ومثلث متقايس الأضلاع $ABE$ خارج المعين. كيف نقرأ تشفير المثلثات الخاصة والرباعيات المألوفة ونكتب برنامج إنشائها؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"216\" height=\"179\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"116\" y=\"26\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1e40af\">المثلثات الخاصة وتشفيرها</text><polygon points=\"24,96 24,42 94,96\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.8\"/><rect x=\"24\" y=\"86\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"58\" y=\"110\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#1e3a8a\">مثلث قائم</text><polygon points=\"162,40 124,96 200,96\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.8\"/><line x1=\"139\" y1=\"66\" x2=\"147\" y2=\"71\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"185\" y1=\"66\" x2=\"177\" y2=\"71\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"162\" y=\"110\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#166534\">متساوي الساقين</text><polygon points=\"116,120 84,170 148,170\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.8\"/><line x1=\"96\" y1=\"142\" x2=\"104\" y2=\"147\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"136\" y1=\"142\" x2=\"128\" y2=\"147\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"116\" y1=\"165\" x2=\"116\" y2=\"175\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"116\" y=\"183\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#92400e\">متقايس الأضلاع</text><rect x=\"236\" y=\"8\" width=\"216\" height=\"179\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"344\" y=\"26\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#166534\">الرباعيات المألوفة</text><rect x=\"250\" y=\"38\" width=\"74\" height=\"44\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.8\"/><rect x=\"250\" y=\"38\" width=\"7\" height=\"7\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><rect x=\"317\" y=\"38\" width=\"7\" height=\"7\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><rect x=\"250\" y=\"75\" width=\"7\" height=\"7\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><rect x=\"317\" y=\"75\" width=\"7\" height=\"7\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><text x=\"287\" y=\"96\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#1e3a8a\">مستطيل</text><rect x=\"368\" y=\"36\" width=\"48\" height=\"48\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.8\"/><rect x=\"368\" y=\"36\" width=\"7\" height=\"7\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><rect x=\"409\" y=\"36\" width=\"7\" height=\"7\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><rect x=\"368\" y=\"77\" width=\"7\" height=\"7\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><rect x=\"409\" y=\"77\" width=\"7\" height=\"7\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><text x=\"392\" y=\"96\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#166534\">مربع</text><polygon points=\"344,106 398,136 344,166 290,136\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"1.8\"/><line x1=\"344\" y1=\"106\" x2=\"344\" y2=\"166\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 2\"/><line x1=\"290\" y1=\"136\" x2=\"398\" y2=\"136\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 2\"/><rect x=\"344\" y=\"128\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><text x=\"344\" y=\"181\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#854d0e\">معين</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في مثلث متساوي الساقين $ABC$ رأسه الأساسي $A$ ، إذا كان طول الضلع $AB = 6\\text{ cm}$ ، فما طول الضلع $AC$ بالسنتيمتر؟",
+        "hintAr": "في المثلث المتساوي الساقين الذي رأسه الأساسي $A$ ، الضلعان اللذان يلتقيان في $A$ متقايسان.",
+        "expectedInput": "6",
+        "revealAr": "بما أن الرأس الأساسي هو $A$ ، فإن الضلعين المتقايسين هما $[AB]$ و $[AC]$ ، ومنه $AC = AB = 6\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "ما الأداة الهندسية الأساسية التي نستعملها لرسم الزاوية القائمة في المثلث القائم والمستطيل والمربع على ورقة غير مسطرة؟",
+        "hintAr": "فكّر في الأداة التي تحتوي على زاوية قائمة جاهزة لإنشاء التعامد.",
+        "revealAr": "نستعمل **الكوس** لرسم الزاوية القائمة (التعامد)، و**المسطرة المدرجة** لتعيين الأطوال."
+      },
+      {
+        "promptAr": "في المعين $ABCD$ ، كيف يكون وضع قطريه $[AC]$ و $[BD]$ بالنسبة لبعضهما؟",
+        "hintAr": "انظر إلى التشفير عند نقطة تقاطع القطرين في رسم المعين أعلاه.",
+        "revealAr": "قطرا المعين **متعامدان ومتناصفان** (يتقاطعان في منتصف كل منهما ويشكلان زاوية قائمة)، لكنهما ليسا متقايسين بالضرورة."
+      },
+      {
+        "promptAr": "لإنشاء مثلث متقايس الأضلاع $ABE$ طول ضلعه $5\\text{ cm}$ بعد رسم القطعة $[AB]$ ، كيف نعيّن الرأس $E$ بدقة؟",
+        "hintAr": "نريد نقطة $E$ تبعد $5\\text{ cm}$ عن $A$ و $5\\text{ cm}$ عن $B$ في الوقت نفسه.",
+        "revealAr": "نفتح **المدور** بفتحة $5\\text{ cm}$ ، نرسم قوساً مركزه $A$ ثم قوساً مركزه $B$ بنفس الفتحة؛ نقطة تقاطع القوسين هي الرأس $E$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**المثلثات الخاصة**:\n- **المثلث القائم**: مثلث له زاوية قائمة ( $90^\\circ$ )، ويسمى الضلع المقابل للزاوية القائمة **الوتر**.\n- **المثلث المتساوي الساقين**: مثلث له ضلعان متقايسان يلتقيان في **الرأس الأساسي**، ويسمى الضلع الثالث **القاعدة**، وزاويتا القاعدة متقايستان.\n- **المثلث المتقايس الأضلاع**: مثلث أضلاعه الثلاثة متقايسة وزواياه الثلاث متقايسة.",
+      "**الرباعيات المألوفة**:\n- **المستطيل**: رباعي زواياه الأربع قائمة، وكل ضلعين متقابلين فيه متقايسان ومتوازيان، وقطراه **متقايسان ومتناصفان**.\n- **المربع**: رباعي زواياه الأربع قائمة وأضلاعه الأربعة متقايسة، وقطراه **متقايسان ومتعامدان ومتناصفان**.\n- **المعين**: رباعي أضلاعه الأربعة متقايسة، وقطراه **متعامدان ومتناصفان**.",
+      "**أهمية التشفير**: لا نعتمد على المظهر التقريبي للرسم بالعين المجردة، بل نقرأ **التشفير** (رموز التقايس المتماثلة على الأضلاع أو الزوايا، ومربع الزاوية القائمة) ومعطيات النص.",
+      "**برنامج الإنشاء**: هو وصف مرتّب وواضح لخطوات رسم الشكل باستعمال الأدوات الهندسية (ارسم قطعة $[AB]$ طولها...، ارسم العمودي على...، ارسم قوس دائرة مركزها... ونصف قطرها...)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"214\" height=\"170\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"117\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">إنشاء مثلث متساوي الساقين بالمدور</text><polygon points=\"117,56 48,144 186,144\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><path d=\"M 92 68 A 102 102 0 0 1 136 58\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\" stroke-dasharray=\"3 2\"/><path d=\"M 98 58 A 102 102 0 0 1 142 68\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\" stroke-dasharray=\"3 2\"/><circle cx=\"117\" cy=\"56\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"48\" cy=\"144\" r=\"3\" fill=\"#1d4ed8\"/><circle cx=\"186\" cy=\"144\" r=\"3\" fill=\"#1d4ed8\"/><line x1=\"78\" y1=\"96\" x2=\"88\" y2=\"104\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"156\" y1=\"96\" x2=\"146\" y2=\"104\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"117\" y=\"46\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">A</text><text x=\"36\" y=\"150\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"192\" y=\"150\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"117\" y=\"166\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e3a8a\">AB = AC (نفس فتحة المدور)</text><rect x=\"236\" y=\"10\" width=\"214\" height=\"170\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"343\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">إنشاء المعين انطلاقاً من قطريه</text><polygon points=\"343,52 422,102 343,152 264,102\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"264\" y1=\"102\" x2=\"422\" y2=\"102\" stroke=\"#1e293b\" stroke-width=\"1.5\" stroke-dasharray=\"4 2\"/><line x1=\"343\" y1=\"52\" x2=\"343\" y2=\"152\" stroke=\"#1e293b\" stroke-width=\"1.5\" stroke-dasharray=\"4 2\"/><rect x=\"343\" y=\"92\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"343\" y=\"46\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">F</text><text x=\"343\" y=\"167\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">H</text><text x=\"252\" y=\"106\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">E</text><text x=\"426\" y=\"106\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">G</text><text x=\"356\" y=\"116\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">O</text><text x=\"343\" y=\"175\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#166534\">قطران متعامدان ومتناصفان في O</text></svg>",
+    "visualCaptionAr": "استعمال المدور في إنشاء المثلث المتساوي الساقين واستعمال القطرين المتعامدين في إنشاء المعين",
+    "examples": [
+      {
+        "problemAr": "اكتب برنامج إنشاء للمثلث $ABC$ القائم في $A$ حيث $AB = 4\\text{ cm}$ ووتره $BC = 5\\text{ cm}$ .",
+        "solutionAr": "1) نرسم بالمسطرة القطعة $[AB]$ طولها $4\\text{ cm}$ .\n\n2) بالكوس، نرسم نصف المستقيم $[Ax)$ العمودي على $[AB]$ في $A$ .\n\n3) نفتح المدور بفتحة $5\\text{ cm}$ ، نضع الشوكة في $B$ ونرسم قوساً يقطع $[Ax)$ في $C$ ، ثم نصل $[BC]$ ونشفر الزاوية القائمة في $A$ ."
+      },
+      {
+        "problemAr": "معين $KLMN$ يتقاطع قطراه $[KM]$ و $[LN]$ في النقطة $O$ ، حيث $OK = 4\\text{ cm}$ و $OL = 3\\text{ cm}$ . عيّن الطولين $KM$ و $LN$ وقيس الزاوية $\\widehat{KOL}$ .",
+        "solutionAr": "بما أن $KLMN$ معين، فإن قطريه متناصفان ومتعامدان في $O$ .\n\nإذن: $KM = 2 \\times OK = 2 \\times 4 = 8\\text{ cm}$ ، و $LN = 2 \\times OL = 2 \\times 3 = 6\\text{ cm}$ ، وقيس الزاوية $\\widehat{KOL} = 90^\\circ$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: الخلط بين **المعين** و**المربع**، أو الظن أن قطري **المستطيل** متعامدان! تذكّر: للمعين $4$ أضلاع متقايسة وقطران متعامدان لكن زواياه ليست قائمة بالضرورة؛ أما المستطيل فقطراه متقايسان ومتناصفان لكنهما **غير متعامدين** إلا إذا كان مربعاً."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمّل التشفير على الرباعي $ABCD$ المقابل. ما هي طبيعته الدقيقة انطلاقاً من تشفير أضلاعه وقطريه؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 155\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><polygon points=\"140,22 224,78 140,134 56,78\" fill=\"#fefce8\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"140\" y1=\"22\" x2=\"140\" y2=\"134\" stroke=\"#64748b\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><line x1=\"56\" y1=\"78\" x2=\"224\" y2=\"78\" stroke=\"#64748b\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><rect x=\"140\" y=\"68\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><line x1=\"94\" y1=\"45\" x2=\"102\" y2=\"55\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"186\" y1=\"45\" x2=\"178\" y2=\"55\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"94\" y1=\"111\" x2=\"102\" y2=\"101\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"186\" y1=\"111\" x2=\"178\" y2=\"101\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"140\" y=\"15\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"234\" y=\"82\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"140\" y=\"150\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"42\" y=\"82\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">D</text></svg>",
+      "options": [
+        "معين",
+        "مستطيل",
+        "مربع",
+        "مثلث متقايس الأضلاع"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! التشفير يدل على تقايس الأضلاع الأربعة وتعامد القطرين دون وجود تشفير زوايا قائمة في الرؤوس، فهو معين.",
+        "في المستطيل تكون الزوايا الأربع قائمة والأضلاع غير متقايسة بالضرورة، ولا يكون قطراه متعامدين.",
+        "ليكون الشكل مربعاً، يجب أن يظهر تشفير الزاوية القائمة عند الرؤوس أيضاً (أو تشفير تقايس القطرين).",
+        "الشكل $ABCD$ يملك أربعة رؤوس وأربعة أضلاع، فهو مضلع رباعي وليس مثلثاً."
+      ],
+      "explanationAr": "يظهر على الشكل تشفير تقايس الأضلاع الأربعة ( $AB = BC = CD = DA$ ) وتعامد القطرين، ولا يوجد تشفير للزاوية القائمة في الرؤوس، إذن الرباعي $ABCD$ هو **معين**."
+    },
+    {
+      "questionAr": "انطلاقاً من معطيات التشفير على المثلث $ABC$ المقابل، ما هو الوصف الأدق لطبيعة هذا المثلث؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 155\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><polygon points=\"70,38 70,122 154,122\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><rect x=\"70\" y=\"110\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"64\" y1=\"76\" x2=\"76\" y2=\"82\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><line x1=\"109\" y1=\"116\" x2=\"115\" y2=\"128\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><text x=\"68\" y=\"28\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"55\" y=\"132\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"162\" y=\"132\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"42\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">4 cm</text><text x=\"112\" y=\"144\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">4 cm</text></svg>",
+      "options": [
+        "مثلث متقايس الأضلاع",
+        "مثلث قائم في B ومتساوي الساقين",
+        "مثلث متساوي الساقين فقط",
+        "مثلث كيفي"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "المثلث المتقايس الأضلاع لا يمكن أن يحتوي على زاوية قائمة، كما أن التشفير موجود على ضلعين فقط.",
+        "أحسنت! يحمل الشكل تشفير الزاوية القائمة عند $B$ وتشفير تقايس الضلعين $[BA]$ و $[BC]$ ، فهو قائم في $B$ ومتساوي الساقين.",
+        "انتبه: ذكرتَ تقايس الساقين ونسيتَ مربع الزاوية القائمة الحمراء عند الرأس $B$ !",
+        "وجود زاوية قائمة وضلعين متقايسين يخرجه من كونه مثلثاً كيفياً."
+      ],
+      "explanationAr": "نلاحظ من التشفير أن الزاوية $\\widehat{ABC}$ قائمة (عند الرأس $B$ ) وأن الضلعين $[BA]$ و $[BC]$ متقايسان (طول كل منهما $4\\text{ cm}$ ). إذن $ABC$ مثلث **قائم في $B$ ومتساوي الساقين**."
+    },
+    {
+      "questionAr": "أنجز أمين برنامج الإنشاء التالي: «1) ارسم قطعة $[AC]$ طولها $8\\text{ cm}$ وعيّن منتصفها $O$ . 2) ارسم المستقيم العمودي على $[AC]$ في $O$ . 3) عيّن على هذا المستقيم نقطتين $B$ و $D$ من جهتين مختلفتين بحيث $OB = OD = 4\\text{ cm}$ ثم صل الرؤوس.» ما طبيعة الرباعي $ABCD$ الناتج؟",
+      "options": [
+        "معين غير مربع",
+        "مستطيل غير مربع",
+        "مربع",
+        "مثلث متساوي الساقين"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "بما أن $OA = OC = 4\\text{ cm}$ و $OB = OD = 4\\text{ cm}$ فإن القطرين $AC$ و $BD$ متقايسان ( $8\\text{ cm}$ ) ومتعامدان ومتناصفان، وهذا يجعل المعين مربعاً!",
+        "في المستطيل غير المربع لا يكون القطران متعامدين، لكن هنا المستقيم $(BD)$ عمودي على $(AC)$ .",
+        "صحيح تماماً! القطران $[AC]$ و $[BD]$ متناصفان ومتعامدان ومتقايسان (طول كل منهما $8\\text{ cm}$ )، إذن الرباعي $ABCD$ مربع.",
+        "الرباعي $ABCD$ له أربعة رؤوس $A, B, C, D$ وأربعة أضلاع متقايسة وليس مثلثاً."
+      ],
+      "explanationAr": "بما أن $O$ منتصف $[AC]$ (طولها $8\\text{ cm}$ ) فإن $OA = OC = 4\\text{ cm}$ . وبما أن $OB = OD = 4\\text{ cm}$ فإن $BD = 8\\text{ cm} = AC$ و $O$ منتصف $[BD]$ أيضاً. القطران متقايسان ومتناصفان ومتعامدان، إذن الرباعي $ABCD$ **مربع**."
+    }
+  ]
+}

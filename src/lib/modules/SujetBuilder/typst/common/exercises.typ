@@ -10,7 +10,7 @@
   result
 }
 
-#let render-block(b, is-solution) = {
+#let render-block(b, is-solution, body-size: 13pt, table-inset: 8pt) = {
   let m = b.at("mark", default: b.at("points", default: ""))
   
   let scope = (cm: 1cm, mm: 1mm, pt: 1pt, em: 1em)
@@ -18,11 +18,11 @@
   if b.type == "text" [
     #grid(columns: (1fr, auto), [
       #(if is-solution and b.at("answer", default: "") != "" {
-        text(fill: blue)[#safe-eval(b.answer)]
+        text(size: body-size, fill: blue)[#safe-eval(b.answer)]
       } else {
-        text(size: 14pt)[#safe-eval(b.content)]
+        text(size: body-size)[#safe-eval(b.content)]
       })
-    ], if is-solution and b.at("mark", default: "") != "" { align(bottom)[#text(size: 14pt, fill: red)[#b.mark ن]] } else { [] })
+    ], if is-solution and b.at("mark", default: "") != "" { align(bottom)[#text(size: body-size, fill: red)[#b.mark ن]] } else { [] })
   ] else if b.type == "true_false" [
     #for item in b.items [
       #grid(columns: (1fr, auto), [
@@ -147,7 +147,7 @@
         align: eval(t-align) + horizon,
         stroke: t-stroke,
         fill: t-fill,
-        inset: 8pt,
+        inset: table-inset,
         ..process-grid(get-grid(), is-solution)
       )
     ]
@@ -203,7 +203,7 @@
       grid(
         columns: cols,
         column-gutter: 12pt,
-        ..children.map(child => [#render-block(child, is-solution)])
+        ..children.map(child => [#render-block(child, is-solution, body-size: body-size, table-inset: table-inset)])
       )
     }
   ]

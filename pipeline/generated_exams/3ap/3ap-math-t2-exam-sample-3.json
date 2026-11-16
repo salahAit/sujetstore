@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "3ap",
+    "yearName": "السنة الثالثة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t2",
+    "trimesterName": "الفصل الثاني",
+    "docType": "exam",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة وربع",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 1.5,
+      "instruction": "احسب ذهنيا وأكمل الجدول التالي:",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "العملية",
+            "النتيجة"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              {
+                "content": "$9 times 9$",
+                "bold": true
+              },
+              {
+                "content": ".....",
+                "answer": "$81$",
+                "mark": "0.5"
+              }
+            ],
+            [
+              {
+                "content": "$7 times$ ..... $= 49$",
+                "bold": true
+              },
+              {
+                "content": ".....",
+                "answer": "$7$",
+                "mark": "0.5"
+              }
+            ],
+            [
+              {
+                "content": "$1277 times 10$",
+                "bold": true
+              },
+              {
+                "content": ".....",
+                "answer": "$12770$",
+                "mark": "0.25"
+              }
+            ],
+            [
+              {
+                "content": "$653 times 100$",
+                "bold": true
+              },
+              {
+                "content": ".....",
+                "answer": "$65300$",
+                "mark": "0.25"
+              }
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t2-hard-303-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 1.5,
+      "instruction": "أنجز العمليات التالية باحترام المراتب والاحتفاظ:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) ضع ثم أنجز عموديا العملية: $6785 times 6$.",
+              "answer": "1) ناتج الضرب العمودي:\n$ 6785 times 6 = 40710 $",
+              "mark": "1"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t2_vmult_hard_s319762.svg",
+              "caption": "عملية الضرب العمودي"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) احسب باستعمال خاصية توزيع الضرب على الجمع: $72 times 7$.",
+          "answer": "2) $72 times 7 = (70 times 7) + (2 times 7) = 490 + 14 = 504$.",
+          "mark": "0.5"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t2-hard-303-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "points": 1.5,
+      "instruction": "تأمل الشكل الهندسي المرفق ثم أجب عن الأسئلة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) ما اسم المضلع $A B C D$؟ وكم زاوية قائمة يوجد فيه؟",
+              "answer": "1) المضلع $A B C D$ مستطيل، وله $4$ زوايا قائمة.",
+              "mark": "0.75"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t2_rect_hard_s359149.svg",
+              "caption": "المستطيل ABCD"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) استنتج طول الضلع $[A B]$ وطول الضلع $[A D]$.",
+          "answer": "2) كل ضلعين متقابلين متقايسان: طول $[A B]$ هو $15$ cm، وطول $[A D]$ هو $3$ cm.",
+          "mark": "0.75"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t2-hard-303-ex-3",
+      "num": "الثالث"
+    },
+    {
+      "points": 1.5,
+      "instruction": "لاحظ المقادير التالية وأكمل التحويلات والمقارنة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) أكمل الفراغات في الجدول بالوحدة المناسبة:",
+              "answer": "1) راجع التحويلات المكتملة باللون الأزرق في الجدول أدناه.",
+              "mark": "0.5"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t2_cap_hard_s174035.svg",
+              "caption": "سعة الوعاء: 30 L 9 cL"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "المقدار الأول",
+            "التحويل إلى الوحدة الصغرى"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              {
+                "content": "$36$ kg $850$ g",
+                "bold": true
+              },
+              {
+                "content": "..... g",
+                "answer": "$36850$ g",
+                "mark": "0.25"
+              }
+            ],
+            [
+              {
+                "content": "$30$ L $9$ cL",
+                "bold": true
+              },
+              {
+                "content": "..... cL",
+                "answer": "$3009$ cL",
+                "mark": "0.25"
+              }
+            ],
+            [
+              {
+                "content": "$2450$ g",
+                "bold": true
+              },
+              {
+                "content": "..... kg ..... g",
+                "answer": "$2$ kg $450$ g",
+                "mark": "0.25"
+              }
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        },
+        {
+          "type": "text",
+          "content": "2) قارن باستعمال أحد الرموز ($<$ أو $>$ أو $=$): $6$ kg $500$ g  .....  $6850$ g.",
+          "answer": "2) نحول إلى الغرام: $6500 < 6850$، إذن $6$ kg $500$ g $<$ $6850$ g.",
+          "mark": "0.25"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t2-hard-303-ex-4",
+      "num": "الرابع"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "اقرأ الوضعية جيدا ثم أجب عن الأسئلة الثلاثة بوضع العمليات العمودية والأفقية:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "يملك كريم مبلغا قدره $28000$ DA. اشترى من المحل التجاري $4$ علب عصير بسعر $4390$ DA للواحدة، و$4$ علب حلوى بسعر $1370$ DA للواحدة."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t2_integ_hard_s464862.svg",
+              "caption": "معطيات المشتريات"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب ثمن علب عصير ثم ثمن علب حلوى.",
+          "answer": "1) ثمن علب عصير: $4390 times 4 = 17560$ DA.\nثمن علب حلوى: $1370 times 4 = 5480$ DA.",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "2) ما هو الثمن الكلي لجميع المشتريات؟",
+          "answer": "2) الثمن الكلي:\n$ 17560 + 5480 = 23040 $\nدفع كريم مبلغ $23040$ DA.",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "3) كم دينارا بقي معه؟",
+          "answer": "3) المبلغ المتبقي:\n$ 28000 - 23040 = 4960 $\nبقي معه مبلغ $4960$ DA.",
+          "mark": "1.25"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t2-hard-303-ex-5"
+    }
+  ]
+}

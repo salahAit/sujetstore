@@ -1,0 +1,131 @@
+{
+  "id": "lesson_4am_t1_trigonometry_sin_cos_tan_identities",
+  "slug": "4am-t1-trigonometry-sin-cos-tan-identities",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t1",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثالث: حساب المثلثات في المثلث القائم وإدماج الفصل الأول",
+  "order": 6,
+  "titleAr": "النسب المثلثية في المثلث القائم (sin, cos, tan) والعلاقتان المثلثيتان",
+  "objectives": [
+    "تعريف جيب (sin) وجيب تمام (cos) وظل (tan) زاوية حادة في مثلث قائم والتمييز بين الضلع المقابل والضلع المجاور والوتر",
+    "استعمال الحاسبة العلمية (بوحدة الدرجة فقط) لتعيين النسب المثلثية أو أقياس زوايا وحساب أطوال وأقياس زوايا مجهولة",
+    "إنشاء زاوية حادة هندسيا بالمسطرة غير المدرجة والمدور بمعرفة القيمة المضبوطة لإحدى نسبها المثلثية",
+    "معرفة واستعمال العلاقتين المثلثيتين الأساسيتين $\\cos^2 x + \\sin^2 x = 1$ و $\\tan x = \\frac{\\sin x}{\\cos x}$ في وضعيات حسابية وهندسية"
+  ],
+  "keywordsAr": [
+    "النسب المثلثية",
+    "جيب زاوية sin",
+    "جيب تمام cos",
+    "ظل زاوية tan",
+    "العلاقتان المثلثيتان",
+    "إنشاء زاوية هندسيا"
+  ],
+  "discover": {
+    "scenarioAr": "يمثّل المنحدر المخصّص لذوي الهمم مثلثاً $ABC$ قائماً في $A$ ، حيث القاعدة الأفقية $AB = 8\\text{ m}$ والارتفاع العمودي $AC = 6\\text{ m}$ . كيف نحسب طول الوتر $BC$ ، والنسب المثلثية الثلاث للزاوية الحادة $\\widehat{B}$ ($\\sin \\widehat{B}$ و $\\cos \\widehat{B}$ و $\\tan \\widehat{B}$)، ثم نتحقق من العلاقتين المثلثيتين الأساسيتين؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"224\" height=\"175\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"122\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">مثلث قائم ABC في A</text><polygon points=\"78,146 206,146 78,50\" fill=\"#dbeafe\" fill-opacity=\"0.45\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"78\" y1=\"146\" x2=\"206\" y2=\"146\" stroke=\"#2563eb\" stroke-width=\"2.6\"/><line x1=\"78\" y1=\"50\" x2=\"78\" y2=\"146\" stroke=\"#16a34a\" stroke-width=\"2.6\"/><line x1=\"78\" y1=\"50\" x2=\"206\" y2=\"146\" stroke=\"#7c3aed\" stroke-width=\"2.4\"/><polyline points=\"78,133 91,133 91,146\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><path d=\"M 180 146 A 26 26 0 0 1 185.2 130.4\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"68\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"212\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">B</text><text x=\"68\" y=\"46\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"142\" y=\"163\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">AB = 8 m (المجاور)</text><text x=\"44\" y=\"96\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\">AC=6m</text><text x=\"44\" y=\"110\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\">(المقابل)</text><text x=\"165\" y=\"84\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#6d28d9\">BC = 10 m</text><text x=\"165\" y=\"98\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#6d28d9\">(الوتر)</text><text x=\"170\" y=\"135\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\">B</text><rect x=\"244\" y=\"10\" width=\"206\" height=\"175\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"347\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">النسب المثلثية للزاوية الحادة B</text><rect x=\"256\" y=\"42\" width=\"182\" height=\"28\" rx=\"6\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.2\"/><text x=\"347\" y=\"60\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">sin B = المقابل / الوتر = AC/BC</text><rect x=\"256\" y=\"76\" width=\"182\" height=\"28\" rx=\"6\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.2\"/><text x=\"347\" y=\"94\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">cos B = المجاور / الوتر = AB/BC</text><rect x=\"256\" y=\"110\" width=\"182\" height=\"28\" rx=\"6\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.2\"/><text x=\"347\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">tan B = المقابل / المجاور = AC/AB</text><rect x=\"256\" y=\"146\" width=\"182\" height=\"30\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"347\" y=\"165\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">cos²B + sin²B = 1</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في المثلث القائم $ABC$ القائم في $A$ ، لدينا $AB = 8\\text{ m}$ و $AC = 6\\text{ m}$ . بتطبيق خاصية فيثاغورس: $BC^2 = AB^2 + AC^2$ . ما طول الوتر $BC$ بالمتر؟",
+        "hintAr": "احسب $8^2 + 6^2 = 64 + 36$ ثم خذ الجذر التربيعي.",
+        "expectedInput": "10",
+        "revealAr": "$BC^2 = 64 + 36 = 100$ ، وبما أن الطول موجب فإن $BC = \\sqrt{100} = 10\\text{ m}$ ."
+      },
+      {
+        "promptAr": "بالنسبة للزاوية الحادة $\\widehat{B}$ ، الضلع المقابل لها هو $[AC]$ والوتر هو $[BC]$ . احسب جيب الزاوية $\\sin \\widehat{B} = \\frac{AC}{BC}$ في شكل عدد عشري.",
+        "hintAr": "اقسم $6$ على $10$ .",
+        "expectedInput": "0.6",
+        "revealAr": "$\\sin \\widehat{B} = \\frac{AC}{BC} = \\frac{6}{10} = 0.6$ ."
+      },
+      {
+        "promptAr": "الضلع المجاور للزاوية $\\widehat{B}$ هو $[AB]$ . احسب جيب تمام الزاوية $\\cos \\widehat{B} = \\frac{AB}{BC}$ في شكل عدد عشري.",
+        "hintAr": "اقسم $8$ على $10$ .",
+        "expectedInput": "0.8",
+        "revealAr": "$\\cos \\widehat{B} = \\frac{AB}{BC} = \\frac{8}{10} = 0.8$ ."
+      },
+      {
+        "promptAr": "احسب الآن ظل الزاوية $\\tan \\widehat{B} = \\frac{AC}{AB}$ في شكل عدد عشري، وقارنه مع النسبة $\\frac{\\sin \\widehat{B}}{\\cos \\widehat{B}}$ .",
+        "hintAr": "احسب $\\frac{6}{8} = \\frac{3}{4}$ بالكتابة العشرية.",
+        "expectedInput": "0.75",
+        "revealAr": "$\\tan \\widehat{B} = \\frac{6}{8} = 0.75$ ، ونلاحظ أن $\\frac{\\sin \\widehat{B}}{\\cos \\widehat{B}} = \\frac{0.6}{0.8} = 0.75 = \\tan \\widehat{B}$ ، كما أن $\\cos^2 \\widehat{B} + \\sin^2 \\widehat{B} = 0.8^2 + 0.6^2 = 0.64 + 0.36 = 1$ !"
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**تعريف النسب المثلثية لزاوية حادة**: في مثلث $ABC$ قائم في $A$ ، من أجل الزاوية الحادة $\\widehat{B}$ : ضلعها المقابل $[AC]$ ، ضلعها المجاور $[AB]$ ، والوتر $[BC]$ . ومنه: $\\sin \\widehat{B} = \\frac{AC}{BC}$ (المقابل على الوتر)، $\\cos \\widehat{B} = \\frac{AB}{BC}$ (المجاور على الوتر)، $\\tan \\widehat{B} = \\frac{AC}{AB}$ (المقابل على المجاور).",
+      "**حصر النسب المثلثية واستعمال الحاسبة (وضع DEG)**: من أجل كل زاوية حادة $x$ ($0^\\circ < x < 90^\\circ$): لدينا دائماً $0 < \\sin x < 1$ و $0 < \\cos x < 1$ ، أما $\\tan x > 0$ ويمكن أن يكون أكبر من $1$ . لإيجاد قيس زاوية علمت نسبتها المثلثية نستعمل اللمسات العكسية ($\\sin^{-1}$ أو $\\cos^{-1}$ أو $\\tan^{-1}$) مع ضبط الآلة الحاسبة على وحدة الدرجة (**DEG**) فقط.",
+      "**العلاقتان المثلثيتان الأساسيتان**: من أجل كل زاوية حادة $x$ في مثلث قائم: (1) $\\cos^2 x + \\sin^2 x = 1$ ؛ (2) $\\tan x = \\frac{\\sin x}{\\cos x}$ .",
+      "**إنشاء زاوية حادة علمت نسبتها المثلثية**: مثلاً لإنشاء زاوية $x$ تحقق $\\cos x = \\frac{3}{5}$ ، نرسم قطعة $[AB]$ طولها $3$ وحدات، ثم نصف المستقيم العمودي على $(AB)$ في $A$ ، ثم نرسم بالمدور قوساً مركزه $B$ ونصف قطره $5$ وحدات فيقطع العمودي في $C$ ؛ فتكون الزاوية $\\widehat{ABC}$ هي الزاوية المطلوبة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"215\" height=\"175\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"117\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">المقابل والمجاور بالنسبة إلى B</text><polygon points=\"64,146 192,146 64,50\" fill=\"#dbeafe\" fill-opacity=\"0.4\" stroke=\"#0f172a\" stroke-width=\"2\"/><polyline points=\"64,133 77,133 77,146\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><path d=\"M 168 146 A 24 24 0 0 1 172.8 131.6\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"55\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"198\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">B</text><text x=\"55\" y=\"46\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"128\" y=\"164\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">المجاور [AB]</text><text x=\"36\" y=\"102\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\">المقابل</text><text x=\"36\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\">[AC]</text><text x=\"148\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#7c3aed\">الوتر [BC]</text><rect x=\"235\" y=\"10\" width=\"215\" height=\"175\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"342\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\">إنشاء زاوية: cos B = 3/5</text><line x1=\"288\" y1=\"148\" x2=\"288\" y2=\"40\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"288\" y1=\"148\" x2=\"360\" y2=\"148\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><line x1=\"288\" y1=\"52\" x2=\"360\" y2=\"148\" stroke=\"#7c3aed\" stroke-width=\"2.2\"/><polyline points=\"288,136 300,136 300,148\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.4\"/><path d=\"M 279.7 58.8 A 120 120 0 0 1 300 44.1\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,2\"/><circle cx=\"288\" cy=\"52\" r=\"3.2\" fill=\"#dc2626\"/><text x=\"277\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"366\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">B</text><text x=\"275\" y=\"52\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">C</text><text x=\"324\" y=\"164\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">AB = 3</text><text x=\"344\" y=\"96\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#7c3aed\">BC = 5 (بالمدور)</text><text x=\"342\" y=\"178\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#854d0e\">قوس مركزه B ونصف قطره 5</text></svg>",
+    "visualCaptionAr": "تحديد المقابل والمجاور والوتر في المثلث القائم، وطريقة إنشاء زاوية حادة بمعرفة قيمة cos x = 3/5",
+    "examples": [
+      {
+        "problemAr": "(توظيف العلاقتين المثلثيتين) ليكن $x$ قيس زاوية حادة بحيث $\\cos x = \\frac{5}{13}$ . احسب القيمتين المضبوطتين لكل من $\\sin x$ و $\\tan x$ دون إيجاد قيس الزاوية $x$ .",
+        "solutionAr": "نطبق العلاقة $\\cos^2 x + \\sin^2 x = 1$ :\n\n$\\sin^2 x = 1 - \\left(\\frac{5}{13}\\right)^2 = 1 - \\frac{25}{169} = \\frac{144}{169}$\n\nبما أن $x$ زاوية حادة فإن $\\sin x > 0$ ، ومنه $\\sin x = \\sqrt{\\frac{144}{169}} = \\frac{12}{13}$ .\n\nثم نستعمل العلاقة الثانية: $\\tan x = \\frac{\\sin x}{\\cos x} = \\frac{12/13}{5/13} = \\frac{12}{5} = 2.4$ ."
+      },
+      {
+        "problemAr": "(حساب طول وحساب زاوية) مثلث $EFG$ قائم في $E$ . (1) إذا كان $FG = 10\\text{ cm}$ و $\\widehat{F} = 35^\\circ$ ، احسب $EG$ مدوراً إلى $0.1\\text{ cm}$ . (2) إذا كان $EF = 4\\text{ cm}$ و $EG = 3\\text{ cm}$ ، احسب قيس الزاوية $\\widehat{F}$ مدوراً إلى الدرجة.",
+        "solutionAr": "(1) الضلع $[EG]$ مقابل للزاوية $\\widehat{F}$ والوتر $[FG]$ معلوم، فنستعمل $\\sin$ : $\\sin 35^\\circ = \\frac{EG}{10}$ ومنه $EG = 10 \\times \\sin 35^\\circ \\approx 5.7\\text{ cm}$ .\n\n(2) الضلعان $[EG]$ (المقابل) و $[EF]$ (المجاور) معلومان، فنستعمل $\\tan$ : $\\tan \\widehat{F} = \\frac{3}{4} = 0.75$ ، وبالحاسبة (بوضع **DEG**) نجد $\\widehat{F} \\approx 37^\\circ$ ."
+      }
+    ],
+    "watchOutAr": "احذر ثلاث أخطاء شائعة: (1) الخلط بين الضلع **المقابل** والضلع **المجاور** عند الانتقال من الزاوية $\\widehat{B}$ إلى الزاوية $\\widehat{C}$ ؛ (2) نسيان ضبط الحاسبة على وضع الدرجة (**DEG**)؛ (3) الاعتقاد بأن $\\tan x$ أصغر من $1$ دائماً: هذا ينطبق على $\\sin x$ و $\\cos x$ فقط ($0 < \\sin x < 1$ و $0 < \\cos x < 1$)، بينما يمكن أن يكون $\\tan x > 1$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "في المثلث $EFG$ القائم في $E$ المقابل، لدينا $EF = 5\\text{ cm}$ ، $EG = 12\\text{ cm}$ و $FG = 13\\text{ cm}$ . ما هي القيمة المضبوطة لـ $\\sin \\widehat{G}$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 160\" width=\"280\" height=\"160\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><polygon points=\"76,132 232,132 76,67\" fill=\"#eff6ff\" fill-opacity=\"0.45\" stroke=\"#0f172a\" stroke-width=\"2\"/><polyline points=\"76,120 88,120 88,132\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><path d=\"M 204 132 A 28 28 0 0 1 206.2 121.2\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"65\" y=\"142\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">E</text><text x=\"238\" y=\"142\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">G</text><text x=\"65\" y=\"63\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">F</text><text x=\"46\" y=\"103\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">5 cm</text><text x=\"154\" y=\"149\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">12 cm</text><text x=\"164\" y=\"92\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#7c3aed\">13 cm</text></svg>",
+      "options": [
+        "$\\frac{12}{13}$",
+        "$\\frac{5}{13}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{12}{5}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$\\frac{12}{13}$ يمثل $\\cos \\widehat{G}$ (أو $\\sin \\widehat{F}$)! انتبه للزاوية المطلوبة وهي $\\widehat{G}$ : الضلع المقابل لها هو $[EF] = 5\\text{ cm}$ .",
+        "ممتاز! $\\sin \\widehat{G}$ يساوي طول الضلع المقابل للزاوية $\\widehat{G}$ ($EF = 5$) على طول الوتر ($FG = 13$)، أي $\\frac{5}{13}$ .",
+        "$\\frac{5}{12}$ يمثل $\\tan \\widehat{G}$ (المقابل على المجاور) وليس $\\sin \\widehat{G}$ (المقابل على الوتر).",
+        "$\\frac{12}{5}$ يمثل $\\tan \\widehat{F}$ وهو أكبر من $1$ ، بينما $\\sin \\widehat{G}$ أصغر دائماً من $1$ ."
+      ],
+      "explanationAr": "في المثلث $EFG$ القائم في $E$ ، الوتر هو $[FG] = 13\\text{ cm}$ والضلع المقابل للزاوية الحادة $\\widehat{G}$ هو $[EF] = 5\\text{ cm}$ . إذن $\\sin \\widehat{G} = \\frac{EF}{FG} = \\frac{5}{13}$ ."
+    },
+    {
+      "questionAr": "ليكن $x$ قيس زاوية حادة بحيث $\\sin x = 0.8$ . باستعمال العلاقتين المثلثيتين، ما هما القيمتان المضبوطتان لـ $\\cos x$ و $\\tan x$ على الترتيب؟",
+      "options": [
+        "$\\cos x = 0.2$ و $\\tan x = 4$",
+        "$\\cos x = 0.6$ و $\\tan x = 0.75$",
+        "$\\cos x = 0.6$ و $\\tan x = \\frac{4}{3}$",
+        "$\\cos x = -0.6$ و $\\tan x = -\\frac{4}{3}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "العلاقة هي $\\cos^2 x + \\sin^2 x = 1$ بالتربيع وليس $\\cos x + \\sin x = 1$ ! إذن نحسب $1 - 0.8^2 = 0.36$ ثم نجذر.",
+        "قيمة $\\cos x = 0.6$ صحيحة، لكنك قلبت نسبة الظل: $\\tan x = \\frac{\\sin x}{\\cos x} = \\frac{0.8}{0.6} = \\frac{4}{3}$ وليس $\\frac{\\cos x}{\\sin x}$ .",
+        "أحسنت! $\\cos^2 x = 1 - 0.64 = 0.36$ ومنه $\\cos x = 0.6$ ، ثم $\\tan x = \\frac{0.8}{0.6} = \\frac{4}{3}$ .",
+        "لأن $x$ زاوية حادة في مثلث قائم، فإن جميع نسبها المثلثية موجبة تماماً."
+      ],
+      "explanationAr": "نطبق $\\cos^2 x + \\sin^2 x = 1$ : نجد $\\cos^2 x = 1 - 0.8^2 = 1 - 0.64 = 0.36$ ، ولأن $x$ حادة فإن $\\cos x = \\sqrt{0.36} = 0.6$ . ثم $\\tan x = \\frac{\\sin x}{\\cos x} = \\frac{0.8}{0.6} = \\frac{8}{6} = \\frac{4}{3}$ ."
+    },
+    {
+      "questionAr": "في المثلث $MNP$ القائم في $M$ المقابل، نعلم أن $MN = 6\\text{ cm}$ و $\\widehat{N} = 53^\\circ$ (نأخذ $\\cos 53^\\circ \\approx 0.6$ ، $\\sin 53^\\circ \\approx 0.8$ ، $\\tan 53^\\circ \\approx 1.33$). أي عبارة تحسب طول الوتر $NP$ وما قيمته التقريبية؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 160\" width=\"280\" height=\"160\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><polygon points=\"76,132 196,132 76,36\" fill=\"#f0fdf4\" fill-opacity=\"0.45\" stroke=\"#0f172a\" stroke-width=\"2\"/><polyline points=\"76,120 88,120 88,132\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><path d=\"M 172 132 A 24 24 0 0 1 177.2 117.1\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"65\" y=\"142\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">M</text><text x=\"202\" y=\"142\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">N</text><text x=\"65\" y=\"32\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">P</text><text x=\"136\" y=\"149\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">MN = 6 cm</text><text x=\"154\" y=\"124\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\">53°</text><text x=\"152\" y=\"76\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#7c3aed\">NP = ?</text></svg>",
+      "options": [
+        "$NP = \\frac{MN}{\\cos 53^\\circ} \\approx 10\\text{ cm}$",
+        "$NP = MN \\times \\cos 53^\\circ \\approx 3.6\\text{ cm}$",
+        "$NP = \\frac{MN}{\\sin 53^\\circ} \\approx 7.5\\text{ cm}$",
+        "$NP = MN \\times \\tan 53^\\circ \\approx 8\\text{ cm}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! $[MN]$ مجاور للزاوية $\\widehat{N}$ و $[NP]$ هو الوتر، فنستعمل $\\cos 53^\\circ = \\frac{MN}{NP}$ ومنه $NP = \\frac{6}{0.6} = 10\\text{ cm}$ .",
+        "انتبه: الوتر يجب أن يكون أطول ضلع في المثلث القائم ($10 > 6$)، ولا يمكن أن يساوي $3.6\\text{ cm}$ ! عندما يكون المجهول في المقام نقسم على $\\cos 53^\\circ$ .",
+        "$\\sin 53^\\circ = \\frac{MP}{NP}$ تستعمل الضلع المقابل $[MP]$ وليس الضلع المجاور $[MN]$ .",
+        "$MN \\times \\tan 53^\\circ$ يحسب الضلع المقابل $MP$ وليس الوتر $NP$ ."
+      ],
+      "explanationAr": "بالنسبة للزاوية $\\widehat{N}$ ، الضلع المعلوم $[MN]$ هو الضلع **المجاور** والمجهول $[NP]$ هو **الوتر**، لذا نستعمل $\\cos \\widehat{N} = \\frac{MN}{NP}$ ، ومنه $NP = \\frac{MN}{\\cos 53^\\circ} \\approx \\frac{6}{0.6} = 10\\text{ cm}$ ."
+    }
+  ]
+}

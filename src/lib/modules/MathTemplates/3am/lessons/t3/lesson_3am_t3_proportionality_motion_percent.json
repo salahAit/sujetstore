@@ -1,0 +1,129 @@
+{
+  "id": "lesson_3am_t3_proportionality_motion_percent",
+  "slug": "3am-t3-proportionality-motion-percent",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t3",
+  "sequenceId": "seq9",
+  "sequenceTitleAr": "المقطع التاسع: التناسبية والحركة المنتظمة والإحصاء وإدماج الفصل الثالث",
+  "order": 5,
+  "titleAr": "التناسبية: التمثيل البياني، الحركة المنتظمة، وحدات الزمن والسرعة والنسبة المئوية",
+  "objectives": [
+    "التعرف على وضعية تناسبية من تمثيل بياني عبر خاصية استقامية النقاط مع مبدأ المعلم وقراءة وتفسير بيانات متناسبة",
+    "التعرف على الحركة المنتظمة وتوظيف المساواة $d = v \\times t$ لحساب المسافة أو السرعة المتوسطة أو المدة الزمنية مع تحويل وحدات الزمن (العشرية والستينية) ووحدات السرعة ( $\\text{km/h}$ و $\\text{m/s}$ )",
+    "حل مشكلات تناسبية تتضمن النسبة المئوية (الزيادة والتخفيض، مؤشر التطور، والجمع بين النسب المئوية والتكرارات)"
+  ],
+  "keywordsAr": [
+    "التمثيل البياني للتناسبية",
+    "استقامية مع المبدأ",
+    "الحركة المنتظمة",
+    "السرعة المتوسطة",
+    "وحدات الزمن والسرعة",
+    "النسبة المئوية"
+  ],
+  "discover": {
+    "scenarioAr": "انطلقت حافلة لنقل المسافرين من الجزائر العاصمة نحو بجاية بحركة منتظمة (سرعة ثابتة). سجّلنا المسافات المقطوعة $d$ ($\\text{km}$) بدلالة الزمن $t$ ($\\text{h}$) ومثلنا النقاط في معلم متعامد، فلاحظنا أن جميع النقاط تقع على **استقامية واحدة مع مبدأ المعلم $O$** . وبعد تخفيض قدره $15\\%$ على سعر التذكرة البالغ $1200\\text{ DA}$ ، نريد حساب السرعة المتوسطة وتحويل الوحدات وحساب السعر المخفّض.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 230\" width=\"580\" height=\"230\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"214\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"31\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">التمثيل البياني لوضعية تناسبية (الحركة المنتظمة)</text><rect x=\"22\" y=\"44\" width=\"308\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><g stroke=\"#e2e8f0\" stroke-width=\"1\"><line x1=\"74\" y1=\"105\" x2=\"294\" y2=\"105\"/><line x1=\"74\" y1=\"140\" x2=\"294\" y2=\"140\"/><line x1=\"74\" y1=\"70\" x2=\"294\" y2=\"70\"/><line x1=\"140\" y1=\"60\" x2=\"140\" y2=\"175\"/><line x1=\"206\" y1=\"60\" x2=\"206\" y2=\"175\"/><line x1=\"272\" y1=\"60\" x2=\"272\" y2=\"175\"/></g><line x1=\"74\" y1=\"175\" x2=\"308\" y2=\"175\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"74\" y1=\"175\" x2=\"74\" y2=\"54\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"74\" y1=\"175\" x2=\"272\" y2=\"70\" stroke=\"#2563eb\" stroke-width=\"2.6\"/><circle cx=\"74\" cy=\"175\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"140\" cy=\"140\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"206\" cy=\"105\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"272\" cy=\"70\" r=\"4\" fill=\"#2563eb\"/><text x=\"64\" y=\"188\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">O</text><text x=\"140\" y=\"191\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">1</text><text x=\"206\" y=\"191\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">2</text><text x=\"272\" y=\"191\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">3</text><text x=\"304\" y=\"191\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">t(h)</text><text x=\"58\" y=\"144\" text-anchor=\"end\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">80</text><text x=\"58\" y=\"109\" text-anchor=\"end\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">160</text><text x=\"58\" y=\"74\" text-anchor=\"end\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">240</text><text x=\"66\" y=\"54\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">d(km)</text><text x=\"188\" y=\"205\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">نقاط على استقامية مع المبدأ O</text><rect x=\"344\" y=\"44\" width=\"214\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"451\" y=\"64\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"rtl\">تمثيل لا يحقق التناسبية</text><line x1=\"372\" y1=\"166\" x2=\"536\" y2=\"166\" stroke=\"#334155\" stroke-width=\"1.8\"/><line x1=\"372\" y1=\"166\" x2=\"372\" y2=\"76\" stroke=\"#334155\" stroke-width=\"1.8\"/><line x1=\"372\" y1=\"136\" x2=\"522\" y2=\"86\" stroke=\"#dc2626\" stroke-width=\"2.4\" stroke-dasharray=\"5,3\"/><circle cx=\"372\" cy=\"166\" r=\"3.5\" fill=\"#334155\"/><circle cx=\"372\" cy=\"136\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"362\" y=\"178\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">O</text><text x=\"451\" y=\"192\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"rtl\">المستقيم لا يمر بالمبدأ O</text><text x=\"451\" y=\"205\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\" direction=\"rtl\">توجد كلفة ثابتة أو نقطة انطلاق غير صفرية</text></svg>",
+    "steps": [
+      {
+        "promptAr": "من التمثيل البياني، قطعت الحافلة مسافة $240\\text{ km}$ خلال مدة $3\\text{ h}$ . ما هي سرعتها المتوسطة بوحدة $\\text{km/h}$ ؟ (أدخل العدد فقط)",
+        "hintAr": "استعمل العلاقة $v = \\frac{d}{t}$ بقسمة $240$ على $3$ .",
+        "expectedInput": "80",
+        "revealAr": "السرعة المتوسطة هي $v = \\frac{240}{3} = 80\\text{ km/h}$ . ولأن النقاط على استقامية مع المبدأ $O$ ، فإن $80$ هو معامل التناسبية."
+      },
+      {
+        "promptAr": "استغرقت مرحلة أخرى من الرحلة مدة $1\\text{ h } 15\\text{ min}$ . عبّر عن هذه المدة بالساعات العشرية ($\\text{h}$). (أدخل العدد العشري فقط)",
+        "hintAr": "حوّل $15\\text{ min}$ إلى ساعات بقسمتها على $60$ : $\\frac{15}{60} = 0.25\\text{ h}$ .",
+        "expectedInput": "1.25",
+        "revealAr": "بما أن $1\\text{ h} = 60\\text{ min}$ فإن $15\\text{ min} = \\frac{15}{60}\\text{ h} = 0.25\\text{ h}$ ، ومنه $1\\text{ h } 15\\text{ min} = 1.25\\text{ h}$ ."
+      },
+      {
+        "promptAr": "تسير سيارة بسرعة $72\\text{ km/h}$ . حوّل هذه السرعة إلى وحدة $\\text{m/s}$ . (أدخل العدد فقط)",
+        "hintAr": "للتحويل من $\\text{km/h}$ إلى $\\text{m/s}$ نقسم على $3.6$ (لأن $\\frac{1000}{3600} = \\frac{1}{3.6}$ ).",
+        "expectedInput": "20",
+        "revealAr": "نجد $72\\text{ km/h} = \\frac{72}{3.6}\\text{ m/s} = 20\\text{ m/s}$ ."
+      },
+      {
+        "promptAr": "ثمن تذكرة السفر $1200\\text{ DA}$ ، واستفاد المسافرون من تخفيض قدره $15\\%$ . ما السعر الجديد للتذكرة بالدينار؟ (أدخل العدد فقط)",
+        "hintAr": "احسب مبلغ التخفيض $1200 \\times \\frac{15}{100}$ ثم اطرحه من $1200$ (أو اضرب في $0.85$).",
+        "expectedInput": "1020",
+        "revealAr": "قيمة التخفيض $1200 \\times 0.15 = 180\\text{ DA}$ ، ومنه السعر الجديد هو $1200 - 180 = 1020\\text{ DA}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**التمثيل البياني لوضعية تناسبية**: يمثل المعطيات المتناسبة في معلم متعامد **نقاط على استقامية واحدة مع مبدأ المعلم $O(0;0)$** . وإذا لم تكن النقاط على استقامية، أو كان المستقيم لا يمر بالمبدأ $O$ ، فالوضعية **ليست تناسبية**.",
+      "**الحركة المنتظمة والسرعة المتوسطة**: تكون الحركة منتظمة عندما تتناسب المسافة $d$ مع المدة الزمنية $t$ : $d = v \\times t$ ، ومنه $v = \\frac{d}{t}$ و $t = \\frac{d}{v}$ . وفي رحلة ذات مراحل، تُحسب **السرعة المتوسطة** بقسمة المسافة الكلية على المدة الكلية: $v_m = \\frac{d_{\\text{total}}}{t_{\\text{total}}}$ .",
+      "**تحويل وحدات الزمن والسرعة**:\n- من الدقائق إلى الساعات العشرية نقسم على $60$ (مثل $15\\text{ min} = 0.25\\text{ h}$ ، $30\\text{ min} = 0.5\\text{ h}$ ، $45\\text{ min} = 0.75\\text{ h}$ )؛ وللعكس نضرب الجزء العشري في $60$ .\n- من $\\text{km/h}$ إلى $\\text{m/s}$ نقسم على $3.6$ ، ومن $\\text{m/s}$ إلى $\\text{km/h}$ نضرب في $3.6$ .",
+      "**تطبيقات النسبة المئوية**:\n- زيادة مقدار $P$ بنسبة $t\\%$ تعني ضربه في $(1 + \\frac{t}{100})$ .\n- تخفيض مقدار $P$ بنسبة $t\\%$ يعني ضربه في $(1 - \\frac{t}{100})$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 230\" width=\"580\" height=\"230\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"214\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"31\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">قوانين الحركة المنتظمة وتحويل الوحدات والنسبة المئوية</text><rect x=\"22\" y=\"44\" width=\"262\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"153\" y=\"65\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">مثلث الحركة المنتظمة والتحويل</text><polygon points=\"153,76 93,146 213,146\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"123\" y1=\"111\" x2=\"183\" y2=\"111\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><line x1=\"153\" y1=\"111\" x2=\"153\" y2=\"146\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"153\" y=\"103\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\">d</text><text x=\"134\" y=\"135\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\">v</text><text x=\"172\" y=\"135\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#047857\">t</text><rect x=\"38\" y=\"158\" width=\"230\" height=\"42\" rx=\"7\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.2\"/><text x=\"153\" y=\"175\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"ltr\">km/h  &#8594;  (&#247; 3.6)  &#8594;  m/s</text><text x=\"153\" y=\"193\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">m/s   &#8594;  (&#215; 3.6)  &#8594;  km/h</text><rect x=\"298\" y=\"44\" width=\"260\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><text x=\"428\" y=\"65\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#5b21b6\" direction=\"rtl\">تحويل الزمن والنسبة المئوية</text><rect x=\"314\" y=\"78\" width=\"228\" height=\"58\" rx=\"7\" fill=\"#f5f3ff\" stroke=\"#c4b5fd\" stroke-width=\"1.2\"/><text x=\"428\" y=\"97\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#4c1d95\" direction=\"rtl\">النظام الستيني &#8596; العشري (1h = 60min):</text><text x=\"428\" y=\"115\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">15 min = 0.25 h  |  30 min = 0.5 h</text><text x=\"428\" y=\"130\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">45 min = 0.75 h  |  12 min = 0.2 h</text><rect x=\"314\" y=\"146\" width=\"228\" height=\"52\" rx=\"7\" fill=\"#fffbeb\" stroke=\"#f59e0b\" stroke-width=\"1.2\"/><text x=\"428\" y=\"166\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">الزيادة بـ t%: ضرب في (1 + t/100)</text><text x=\"428\" y=\"186\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">التخفيض بـ t%: ضرب في (1 - t/100)</text></svg>",
+    "visualCaptionAr": "العلاقات الثلاث للحركة المنتظمة وتحويل وحدات السرعة والزمن ومعاملات النسبة المئوية",
+    "examples": [
+      {
+        "problemAr": "قطع درّاج مسافة $54\\text{ km}$ خلال مدة $2\\text{ h } 15\\text{ min}$ . احسب سرعته المتوسطة بوحدة $\\text{km/h}$ ثم بوحدة $\\text{m/s}$ .",
+        "solutionAr": "1) نحول المدة إلى الساعة العشرية: $2\\text{ h } 15\\text{ min} = 2 + \\frac{15}{60} = 2.25\\text{ h}$ .\n\n2) السرعة المتوسطة: $v = \\frac{54}{2.25} = 24\\text{ km/h}$ .\n\n3) التحويل إلى $\\text{m/s}$ : $v = \\frac{24}{3.6} = 6.67\\text{ m/s}$ تقريباً."
+      },
+      {
+        "problemAr": "ارتفع سعر جهاز إلكتروني قدره $8000\\text{ DA}$ بنسبة $10\\%$ ، ثم خُفّض السعر الجديد بنسبة $10\\%$ . هل يعود السعر إلى $8000\\text{ DA}$ ؟ برّر حسابياً.",
+        "solutionAr": "1) بعد الزيادة بـ $10\\%$ : $8000 \\times (1 + \\frac{10}{100}) = 8000 \\times 1.1 = 8800\\text{ DA}$ .\n\n2) بعد التخفيض بـ $10\\%$ من السعر الجديد: $8800 \\times (1 - \\frac{10}{100}) = 8800 \\times 0.9 = 7920\\text{ DA}$ .\n\nإذن لا يعود السعر إلى $8000\\text{ DA}$ لأن التخفيض طُبّق على مبلغ أكبر ($8800\\text{ DA}$)."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: كتابة $1\\text{ h } 30\\text{ min} = 1.30\\text{ h}$ أو $2\\text{ h } 40\\text{ min} = 2.4\\text{ h}$ ! الساعة تساوي $60$ دقيقة لا $100$ دقيقة: مثلاً $0.4\\text{ h} = 0.4 \\times 60 = 24\\text{ min}$ وليس $40\\text{ min}$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمّل المعلم المقابل الذي يضم ثلاثة تمثيلات بيانية $(C_1)$ و $(C_2)$ و $(C_3)$ . أيُّ تمثيل بياني يعبّر عن **وضعية تناسبية**، ولماذا؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 180\" width=\"360\" height=\"180\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"6\" y=\"6\" width=\"348\" height=\"168\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><g stroke=\"#e2e8f0\" stroke-width=\"1\"><line x1=\"60\" y1=\"110\" x2=\"320\" y2=\"110\"/><line x1=\"60\" y1=\"70\" x2=\"320\" y2=\"70\"/><line x1=\"60\" y1=\"30\" x2=\"320\" y2=\"30\"/><line x1=\"140\" y1=\"25\" x2=\"140\" y2=\"150\"/><line x1=\"220\" y1=\"25\" x2=\"220\" y2=\"150\"/><line x1=\"300\" y1=\"25\" x2=\"300\" y2=\"150\"/></g><line x1=\"60\" y1=\"150\" x2=\"330\" y2=\"150\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"60\" y1=\"150\" x2=\"60\" y2=\"20\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"60\" y1=\"150\" x2=\"300\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"2.6\"/><line x1=\"60\" y1=\"110\" x2=\"300\" y2=\"58\" stroke=\"#dc2626\" stroke-width=\"2.2\" stroke-dasharray=\"6,3\"/><path d=\"M 60 150 Q 170 144 295 86\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.4\"/><circle cx=\"60\" cy=\"150\" r=\"4\" fill=\"#0f172a\"/><text x=\"48\" y=\"163\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"276\" y=\"28\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">(C1)</text><text x=\"115\" y=\"88\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">(C2)</text><text x=\"236\" y=\"122\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">(C3)</text></svg>",
+      "options": [
+        "التمثيل $(C_1)$ لأن نقاطه على استقامية واحدة ويمر بمبدأ المعلم $O$",
+        "التمثيل $(C_2)$ لأن نقاطه على استقامية واحدة حتى لو لم يمر بالمبدأ $O$",
+        "التمثيل $(C_3)$ لأنه يمر بمبدأ المعلم $O$",
+        "التمثيلان $(C_1)$ و $(C_2)$ معاً لأنهما خطان مستقيمان"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! شرط التناسبية بيانياً هو تحقق خاصيتين معاً: استقامية النقاط، والمرور بمبدأ المعلم $O$ .",
+        "في التمثيل $(C_2)$ المستقيم لا يمر بمبدأ المعلم $O$ ، لذا لا يمثل وضعية تناسبية.",
+        "التمثيل $(C_3)$ يمر بالمبدأ $O$ لكنه منحنى وليس مستقيماً (النقاط ليست على استقامية).",
+        "ليس كل خط مستقيم يمثل تناسبية؛ يجب أن يمر المستقيم حتماً بالمبدأ $O(0;0)$ ."
+      ],
+      "explanationAr": "للتعرف على وضعية تناسبية من تمثيل بياني، يجب أن تكون جميع النقاط على استقامية واحدة وأن يمر المستقيم بمبدأ المعلم $O$ . وهذا يتحقق حصرياً في التمثيل $(C_1)$ ."
+    },
+    {
+      "questionAr": "تسير سيارة بحركة منتظمة بسرعة $90\\text{ km/h}$ . ما المدة الزمنية التي تستغرقها لقطع مسافة $216\\text{ km}$ ؟",
+      "options": [
+        "$2\\text{ h } 40\\text{ min}$",
+        "$2\\text{ h } 24\\text{ min}$",
+        "$2\\text{ h } 04\\text{ min}$",
+        "$2\\text{ h } 15\\text{ min}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "وجدتَ المدة العشرية الصحيحة $2.4\\text{ h}$ ، ولكن انتبه: $0.4\\text{ h} = 0.4 \\times 60 = 24\\text{ min}$ وليس $40\\text{ min}$ !",
+        "ممتاز! $t = \\frac{216}{90} = 2.4\\text{ h}$ ، وبضرب $0.4 \\times 60 = 24\\text{ min}$ تكون المدة $2\\text{ h } 24\\text{ min}$ .",
+        "الجزء العشري $0.4\\text{ h}$ يعني أربعة أعشار الساعة ($0.4 \\times 60 = 24\\text{ min}$) وليس $4$ دقائق.",
+        "تحقق من القسمة $216 \\div 90 = 2.4\\text{ h}$ وليس $2.25\\text{ h}$ ."
+      ],
+      "explanationAr": "نطبق القانون $t = \\frac{d}{v} = \\frac{216}{90} = 2.4\\text{ h}$ . نحول الجزء العشري إلى دقائق بالضرب في $60$ : $0.4 \\times 60 = 24\\text{ min}$ . إذن المدة الزمنية هي $2\\text{ h } 24\\text{ min}$ ."
+    },
+    {
+      "questionAr": "يقطع عدّاء مسافة $400\\text{ m}$ في زمن قدره $50\\text{ s}$ . ما سرعته المتوسطة بوحدة $\\text{km/h}$ ؟",
+      "options": [
+        "$28.8\\text{ km/h}$",
+        "$2.22\\text{ km/h}$",
+        "$8\\text{ km/h}$",
+        "$48\\text{ km/h}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! السرعة بالمتر على الثانية هي $\\frac{400}{50} = 8\\text{ m/s}$ ، وبالضرب في $3.6$ نجد $28.8\\text{ km/h}$ .",
+        "للتحويل من $\\text{m/s}$ إلى $\\text{km/h}$ **نضرب** في $3.6$ ولا نقسم على $3.6$ !",
+        "$8$ هي السرعة بوحدة $\\text{m/s}$ ؛ يجب تحويلها إلى $\\text{km/h}$ بالضرب في $3.6$ .",
+        "معامل التحويل بين $\\text{m/s}$ و $\\text{km/h}$ هو $3.6$ وليس $6$ ."
+      ],
+      "explanationAr": "نحسب أولاً السرعة بوحدة $\\text{m/s}$ : $v = \\frac{400}{50} = 8\\text{ m/s}$ . ثم نحول إلى $\\text{km/h}$ بالضرب في $3.6$ : $v = 8 \\times 3.6 = 28.8\\text{ km/h}$ ."
+    }
+  ]
+}

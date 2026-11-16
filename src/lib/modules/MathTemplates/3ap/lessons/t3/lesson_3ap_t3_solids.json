@@ -1,0 +1,125 @@
+{
+  "id": "lesson_3ap_t3_solids",
+  "slug": "3ap-t3-solids",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع السادس: حفل نهاية السنة (المحيط، التناظر المحوري، المجسمات ومنهجية حل المشكلات)",
+  "order": 6,
+  "titleAr": "المجسمات المألوفة: المكعب ومتوازي المستطيلات والهرم والأسطوانة",
+  "objectives": [
+    "تسمية وتمييز المجسمات المألوفة (المكعب، متوازي المستطيلات، الهرم، الأسطوانة) والتمييز بين المجسمات ذات الوجوه المستوية والتي تتدحرج",
+    "وصف المكعب ومتوازي المستطيلات والهرم والأسطوانة بتحديد عدد الوجوه وشكلها وعدد الرؤوس والأحرف",
+    "إرفاق المكعب ومتوازي المستطيلات بنشرهما (تصميمهما) المناسب"
+  ],
+  "keywordsAr": [
+    "المجسمات",
+    "المكعب",
+    "متوازي المستطيلات",
+    "الهرم",
+    "الأسطوانة",
+    "الوجه والحرف والرأس",
+    "نشر المجسم"
+  ],
+  "discover": {
+    "scenarioAr": "في ركن الأشغال اليدوية، أحضر التلاميذ أربع علب مختلفة لصنع زينة القسم: حجر نرد (**مكعب**)، وعلبة أحذية (**متوازي المستطيلات**)، ومجسم خيمة (**هرم ذو قاعدة مربعة**)، وعلبة مصبرات (**أسطوانة**).",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 205\" width=\"540\" height=\"205\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"540\" height=\"205\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(14,14)\"><rect width=\"118\" height=\"177\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"59\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">المكعب</text><polygon points=\"28,68 72,68 72,112 28,112\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><polygon points=\"28,68 46,50 90,50 72,68\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><polygon points=\"72,68 90,50 90,94 72,112\" fill=\"#93c5fd\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"59\" y=\"138\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e40af\">6 وجوه مربعة</text><text x=\"59\" y=\"154\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\">8 رؤوس، 12 حرفاً</text><text x=\"59\" y=\"169\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\">لا يتدحرج</text></g><g transform=\"translate(144,14)\"><rect width=\"124\" height=\"177\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"62\" y=\"20\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#059669\">متوازي المستطيلات</text><polygon points=\"18,74 84,74 84,112 18,112\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"1.8\"/><polygon points=\"18,74 38,54 104,54 84,74\" fill=\"#bbf7d0\" stroke=\"#059669\" stroke-width=\"1.8\"/><polygon points=\"84,74 104,54 104,92 84,112\" fill=\"#86efac\" stroke=\"#059669\" stroke-width=\"1.8\"/><text x=\"62\" y=\"138\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#047857\">6 وجوه مستطيلة</text><text x=\"62\" y=\"154\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\">8 رؤوس، 12 حرفاً</text><text x=\"62\" y=\"169\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\">لا يتدحرج</text></g><g transform=\"translate(280,14)\"><rect width=\"122\" height=\"177\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"61\" y=\"20\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#7c3aed\">هرم (قاعدته مربعة)</text><polygon points=\"42,96 94,96 78,114 26,114\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"1.4\" stroke-dasharray=\"3,2\"/><polygon points=\"60,42 26,114 78,114\" fill=\"#ddd6fe\" stroke=\"#7c3aed\" stroke-width=\"1.8\"/><polygon points=\"60,42 78,114 94,96\" fill=\"#c4b5fd\" stroke=\"#7c3aed\" stroke-width=\"1.8\"/><line x1=\"60\" y1=\"42\" x2=\"42\" y2=\"96\" stroke=\"#7c3aed\" stroke-width=\"1.3\" stroke-dasharray=\"3,2\"/><text x=\"61\" y=\"138\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#5b21b6\">4 مثلثات + مربع</text><text x=\"61\" y=\"154\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\">5 رؤوس، 8 أحرف</text><text x=\"61\" y=\"169\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\">لا يتدحرج</text></g><g transform=\"translate(414,14)\"><rect width=\"112\" height=\"177\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"56\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#d97706\">الأسطوانة</text><path d=\"M 28 56 L 28 106 A 28 10 0 0 0 84 106 L 84 56 Z\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.8\"/><ellipse cx=\"56\" cy=\"56\" rx=\"28\" ry=\"10\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1.8\"/><path d=\"M 28 106 A 28 10 0 0 1 84 106\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"1.2\" stroke-dasharray=\"3,2\"/><text x=\"56\" y=\"138\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#b45309\">قرصان دائريان</text><text x=\"56\" y=\"154\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\">سطح منحنٍ</text><text x=\"56\" y=\"169\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#b45309\">تتدحرج</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "تأمل **الهرم ذا القاعدة المربعة** في الرسم: قاعدته عبارة عن مربع ($1$ وجه) وله $4$ وجوه جانبية مثلثة. كم وجهاً للهرم في المجموع؟ (اكتب العدد فقط)",
+        "hintAr": "اجمع وجه القاعدة ($1$) مع الوجوه المثلثة الأربعة ($4$).",
+        "expectedInput": "5",
+        "revealAr": "للهرم ذي القاعدة المربعة $5$ وجوه ($4$ مثلثات وقاعدة مربعة)، وله $5$ رؤوس و $8$ أحرف."
+      },
+      {
+        "promptAr": "كم عدد الرؤوس (الزوايا المدببة) في **متوازي المستطيلات**؟ (اكتب العدد فقط)",
+        "hintAr": "لمتوازي المستطيلات نفس عدد رؤوس المكعب: $4$ رؤوس في الأعلى و $4$ في الأسفل.",
+        "expectedInput": "8",
+        "revealAr": "لمتوازي المستطيلات (مثل المكعب تماماً) $8$ رؤوس، و $6$ وجوه، و $12$ حرفاً."
+      },
+      {
+        "promptAr": "إذا وضعنا **الأسطوانة** على جانبها فوق الطاولة فإنها تتدحرج، بينما تقف بثبات على وجه مستوٍ (قرص دائري). كم وجهاً مستوياً للأسطوانة؟ (اكتب العدد فقط)",
+        "hintAr": "انظر إلى الغطاء العلوي والقاعدة السفلية للعلبة الأسطوانية.",
+        "expectedInput": "2",
+        "revealAr": "للأسطوانة وجهان ($2$) مستويان على شكل قرص دائري، وسطح منحنٍ يجعلها تتدحرج، وليس لها رؤوس ($0$)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "تنقسم المجسمات المألوفة إلى مجسمات **ذات وجوه مستوية لا تتدحرج** (المكعب، متوازي المستطيلات، الهرم) ومجسمات **تتدحرج** لوجود سطح منحنٍ (الأسطوانة والكرة).",
+      "**المكعب**: $6$ وجوه كلها **مربعات** متقايسة، و $12$ حرفاً، و $8$ رؤوس. **متوازي المستطيلات**: $6$ وجوه على شكل **مستطيلات** (أو $4$ مستطيلات ومربعان)، و $12$ حرفاً، و $8$ رؤوس.",
+      "**الهرم ذو القاعدة المربعة**: $5$ وجوه (قاعدة مربعة و $4$ وجوه جانبية مثلثة)، و $8$ أحرف، و $5$ رؤوس.",
+      "**الأسطوانة**: لها وجهان مستويان على شكل **قرصين دائريين** وسطح جانبي منحنٍ، وليس لها رؤوس ($0$).",
+      "**نشر المجسم** (التصميم): هو رسم مستوٍ لجميع وجوهه بحيث إذا طويناها على الحواف نحصل على المجسم مغلقاً."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\" width=\"520\" height=\"190\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(16,14)\"><rect width=\"234\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"117\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">نشر المكعب (6 مربعات)</text><g fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"><rect x=\"104\" y=\"34\" width=\"26\" height=\"26\"/><rect x=\"52\" y=\"60\" width=\"26\" height=\"26\"/><rect x=\"78\" y=\"60\" width=\"26\" height=\"26\"/><rect x=\"104\" y=\"60\" width=\"26\" height=\"26\"/><rect x=\"130\" y=\"60\" width=\"26\" height=\"26\"/><rect x=\"104\" y=\"86\" width=\"26\" height=\"26\"/></g><text x=\"117\" y=\"140\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">كل الوجوه الستة مربعات متقايسة</text></g><g transform=\"translate(268,14)\"><rect width=\"236\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"118\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">نشر متوازي المستطيلات (6 وجوه)</text><g stroke=\"#059669\" stroke-width=\"1.8\"><rect x=\"52\" y=\"34\" width=\"44\" height=\"22\" fill=\"#bbf7d0\"/><rect x=\"52\" y=\"56\" width=\"44\" height=\"26\" fill=\"#dcfce7\"/><rect x=\"96\" y=\"56\" width=\"22\" height=\"26\" fill=\"#a7f3d0\"/><rect x=\"118\" y=\"56\" width=\"44\" height=\"26\" fill=\"#dcfce7\"/><rect x=\"162\" y=\"56\" width=\"22\" height=\"26\" fill=\"#a7f3d0\"/><rect x=\"52\" y=\"82\" width=\"44\" height=\"22\" fill=\"#bbf7d0\"/></g><text x=\"118\" y=\"140\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">كل وجهين متقابلين متطابقان</text></g></svg>",
+    "visualCaptionAr": "نشر المكعب ونشر متوازي المستطيلات: عند الطي على الحواف نحصل على المجسم الكامل.",
+    "examples": [
+      {
+        "problemAr": "قارن بين المكعب والهرم ذي القاعدة المربعة من حيث عدد الوجوه وشكلها.",
+        "solutionAr": "للمكعب $6$ وجوه كلها مربعات متقايسة، أما الهرم ذو القاعدة المربعة فله $5$ وجوه: قاعدة مربعة واحدة و $4$ وجوه مثلثة."
+      },
+      {
+        "problemAr": "أرادت ليلى صنع علبة هدايا على شكل متوازي مستطيلات. كم مستطيلاً تحتاج لرسم نشرها؟",
+        "solutionAr": "تحتاج إلى $6$ وجوه مستطيلة (كل وجهين متقابلين لهما نفس الطول والعرض) متصلة بحيث تنطوي لتغلق العلبة."
+      }
+    ],
+    "watchOutAr": "انتبه! للأسطوانة قرصان دائريان مستويان لكنها **تتدحرج** وليس لها رؤوس ($0$)؛ وعند التحقق من نشر المكعب أو متوازي المستطيلات تأكد أن عدد الوجوه $6$ وأن الوجهين العلوي والسفلي يقعان على جهتين متقابلتين!"
+  },
+  "practice": [
+    {
+      "questionAr": "أنا مجسم لا أتدحرج، لي $5$ وجوه ($4$ مثلثات وقاعدة مربعة)، و $5$ رؤوس، و $8$ أحرف. من أنا؟",
+      "options": [
+        "المكعب",
+        "الهرم",
+        "متوازي المستطيلات",
+        "الأسطوانة"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "للمكعب $6$ وجوه مربعة و $8$ رؤوس و $12$ حرفاً، وليس له وجوه مثلثة!",
+        "أحسنت! الهرم ذو القاعدة المربعة له $5$ وجوه ($4$ مثلثات وقاعدة مربعة) و $5$ رؤوس و $8$ أحرف.",
+        "متوازي المستطيلات له $6$ وجوه مستطيلة و $8$ رؤوس و $12$ حرفاً.",
+        "الأسطوانة مجسم يتدحرج له قرصان دائريان وليس له رؤوس ولا مثلثات!"
+      ],
+      "explanationAr": "المجسم الذي قاعدته مربعة ووجوهه الجانبية الأربعة مثلثات هو الهرم (ذو القاعدة المربعة)، وله $5$ وجوه و $5$ رؤوس و $8$ أحرف."
+    },
+    {
+      "questionAr": "أي من المنشورات الأربعة في الشكل يمثل نشراً صحيحاً لـ **متوازي المستطيلات**؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 205\" width=\"420\" height=\"205\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"420\" height=\"205\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><g transform=\"translate(14,12)\"><rect width=\"188\" height=\"86\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"16\" y=\"20\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\">A</text><g fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.4\"><rect x=\"46\" y=\"20\" width=\"32\" height=\"16\"/><rect x=\"46\" y=\"36\" width=\"32\" height=\"20\"/><rect x=\"78\" y=\"36\" width=\"16\" height=\"20\"/><rect x=\"94\" y=\"36\" width=\"32\" height=\"20\"/><rect x=\"126\" y=\"36\" width=\"16\" height=\"20\"/></g></g><g transform=\"translate(218,12)\"><rect width=\"188\" height=\"86\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"16\" y=\"20\" font-size=\"13\" font-weight=\"bold\" fill=\"#d97706\">B</text><g fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.4\"><rect x=\"46\" y=\"20\" width=\"32\" height=\"16\"/><rect x=\"94\" y=\"20\" width=\"32\" height=\"16\"/><rect x=\"46\" y=\"36\" width=\"32\" height=\"20\"/><rect x=\"78\" y=\"36\" width=\"16\" height=\"20\"/><rect x=\"94\" y=\"36\" width=\"32\" height=\"20\"/><rect x=\"126\" y=\"36\" width=\"16\" height=\"20\"/></g></g><g transform=\"translate(14,108)\"><rect width=\"188\" height=\"86\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"16\" y=\"20\" font-size=\"13\" font-weight=\"bold\" fill=\"#059669\">C</text><g fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"1.4\"><rect x=\"46\" y=\"16\" width=\"32\" height=\"16\"/><rect x=\"46\" y=\"32\" width=\"32\" height=\"20\"/><rect x=\"78\" y=\"32\" width=\"16\" height=\"20\"/><rect x=\"94\" y=\"32\" width=\"32\" height=\"20\"/><rect x=\"126\" y=\"32\" width=\"16\" height=\"20\"/><rect x=\"46\" y=\"52\" width=\"32\" height=\"16\"/></g></g><g transform=\"translate(218,108)\"><rect width=\"188\" height=\"86\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"16\" y=\"20\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">D</text><g fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"><rect x=\"46\" y=\"32\" width=\"32\" height=\"20\"/><rect x=\"78\" y=\"32\" width=\"16\" height=\"20\"/><rect x=\"94\" y=\"32\" width=\"32\" height=\"20\"/><rect x=\"126\" y=\"32\" width=\"16\" height=\"20\"/><polygon points=\"46,32 62,14 78,32\"/><polygon points=\"46,52 62,70 78,52\"/></g></g></svg>",
+      "options": [
+        "النشر A",
+        "النشر B",
+        "النشر C",
+        "النشر D"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "النشر A يحتوي على $5$ وجوه فقط، وينقصه الوجه السفلي لإغلاق متوازي المستطيلات!",
+        "في النشر B الوجهان الإضافيان في الأعلى معاً، فعند الطي ينطبقان على بعضهما ويبقى الأسفل مفتوحاً!",
+        "ممتاز! النشر C يضم $6$ مستطيلات متصلة بحيث يطوى الوجهان العلوي والسفلي من الجهتين المتقابلتين فيغلق المجسم تماماً.",
+        "النشر D يحتوي على مثلثين، بينما جميع وجوه متوازي المستطيلات مستطيلات (أو مربعات)!"
+      ],
+      "explanationAr": "يتكون نشر متوازي المستطيلات الصحيح من $6$ وجوه مستطيلة (كل وجهين متقابلين متطابقان) مع وجود غطاء علوي وقاعدة سفلية على جهتين متقابلتين، وهو ما يتحقق في النشر C."
+    },
+    {
+      "questionAr": "أي عبارة تصف **الأسطوانة** وصفاً صحيحاً؟",
+      "options": [
+        "لها $6$ وجوه مربعة وتتدحرج",
+        "لها $5$ وجوه مثلثة ورأس مدبب",
+        "لها $8$ رؤوس و $12$ حرفاً ولا تتدحرج",
+        "لها قرصان دائريان مستويان وسطح منحنٍ يجعلها تتدحرج"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "المجسم الذي له $6$ وجوه مربعة هو المكعب، وهو لا يتدحرج!",
+        "الوصف يخص الهرم ذو الوجوه المثلثة وليس الأسطوانة.",
+        "$8$ رؤوس و $12$ حرفاً هي صفات المكعب ومتوازي المستطيلات.",
+        "أحسنت! الأسطوانة لها وجهان مستويان على شكل قرصين دائريين، وسطح جانبي منحنٍ يسمح لها بالتدحرج."
+      ],
+      "explanationAr": "تتميز الأسطوانة بوجود قرصين دائريين مستويين (القاعدتان) وسطح منحنٍ بينهما يجعلها تتدحرج على الطاولة، وليس لها رؤوس."
+    }
+  ]
+}

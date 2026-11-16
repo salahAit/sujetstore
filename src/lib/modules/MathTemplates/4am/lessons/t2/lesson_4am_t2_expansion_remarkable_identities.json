@@ -1,0 +1,130 @@
+{
+  "id": "lesson_4am_t2_expansion_remarkable_identities",
+  "slug": "4am-t2-expansion-remarkable-identities",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: الحساب الحرفي والمتطابقات الشهيرة والمعادلات والمتراجحات",
+  "order": 1,
+  "titleAr": "النشر والتبسيط وتوظيف المتطابقات الشهيرة في الحساب المتمعن فيه",
+  "objectives": [
+    "معرفة المتطابقات الشهيرة الثلاث: مربع مجموع (a + b)² ومربع فرق (a - b)² وجداء مجموع وفرق (a + b)(a - b)",
+    "نشر وتبسيط عبارات جبرية باستعمال المتطابقات الشهيرة والتوزيعية المضاعفة وتجاوز الأخطاء الشائعة في النشر",
+    "توظيف المتطابقات الشهيرة في الحساب المتمعن فيه وإثبات بعض الخواص العددية والهندسية وحساب قيم عبارات منشورة"
+  ],
+  "keywordsAr": [
+    "المتطابقات الشهيرة",
+    "مربع مجموع",
+    "مربع فرق",
+    "جداء مجموع وفرق",
+    "النشر والتبسيط",
+    "الحساب المتمعن فيه"
+  ],
+  "discover": {
+    "scenarioAr": "أراد مصمّم توسيع ساحة مربعة الشكل طول ضلعها $x$ متر بزيادة $3\\text{ m}$ على كل بعد، ليحصل على مربع أكبر طول ضلعه $(x + 3)\\text{ m}$. قسّم المربع الكبير إلى أربعة أجزاء كما في الشكل، فكيف نعبر عن مساحته بالصيغة المنشورة، وكيف نستثمر المتطابقات الشهيرة في الحساب الذهني المتمعن فيه؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 215\" width=\"460\" height=\"215\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect width=\"460\" height=\"215\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"48\" y=\"38\" width=\"95\" height=\"95\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><rect x=\"143\" y=\"38\" width=\"45\" height=\"95\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><rect x=\"48\" y=\"133\" width=\"95\" height=\"45\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><rect x=\"143\" y=\"133\" width=\"45\" height=\"45\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.8\"/><text x=\"95.5\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">x</text><text x=\"165.5\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\">3</text><text x=\"33\" y=\"90\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">x</text><text x=\"33\" y=\"160\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\">3</text><text x=\"95.5\" y=\"91\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1d4ed8\">x²</text><text x=\"165.5\" y=\"91\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">3x</text><text x=\"95.5\" y=\"160\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">3x</text><text x=\"165.5\" y=\"160\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#b45309\">9</text><rect x=\"212\" y=\"28\" width=\"232\" height=\"160\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"328\" y=\"56\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">(x + 3)² = (x + 3)(x + 3)</text><text x=\"328\" y=\"84\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#334155\">= x² + 3x + 3x + 9</text><text x=\"328\" y=\"114\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1d4ed8\">= x² + 6x + 9</text><line x1=\"230\" y1=\"129\" x2=\"426\" y2=\"129\" stroke=\"#e2e8f0\" stroke-width=\"1.2\"/><text x=\"328\" y=\"152\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#dc2626\">انتبه: (x + 3)² ≠ x² + 9</text><text x=\"328\" y=\"174\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\">لوجود المستطيلين الأخضرين (6x)</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في المخطط المقابل، عبّر عن مساحة **أحد** المستطيلين الأخضرين اللذين بعداهما $x$ و$3$ بعبارة مبسطة.",
+        "hintAr": "مساحة المستطيل هي الطول في العرض مع حذف إشارة $\\times$ بين العدد والحرف.",
+        "expectedInput": "3x",
+        "revealAr": "مساحة كل مستطيل أخضر هي $3 \\times x = 3x$، وبما أن لدينا مستطيلين فإن مجموع مساحتيهما هو $3x + 3x = 6x$، ومنه المساحة الكلية $(x + 3)^2 = x^2 + 6x + 9$."
+      },
+      {
+        "promptAr": "باستعمال متطابقة مربع مجموع $(a + b)^2 = a^2 + 2ab + b^2$، احسب ذهنيا $103^2$ بوضع $103 = 100 + 3$.",
+        "hintAr": "احسب $100^2 + 2 \\times 100 \\times 3 + 3^2 = 10000 + 600 + 9$.",
+        "expectedInput": "10609",
+        "revealAr": "$(100 + 3)^2 = 100^2 + 2 \\times 100 \\times 3 + 3^2 = 10000 + 600 + 9 = 10609$."
+      },
+      {
+        "promptAr": "انشر وبسّط الجداء $(x + 5)(x - 5)$ بالتوزيعية المضاعفة: بعد اختزال $+5x$ و$-5x$ نحصل على $x^2 + (\\dots)$. ما العدد المتبقي مع إشارته؟",
+        "hintAr": "اضرب $+5$ في $-5$ مع مراعاة قاعدة الإشارات.",
+        "expectedInput": "-25",
+        "revealAr": "$(x + 5)(x - 5) = x^2 - 5x + 5x - 25 = x^2 - 25$. هذه هي المتطابقة الثالثة: $(a + b)(a - b) = a^2 - b^2$."
+      },
+      {
+        "promptAr": "احسب بتمعن الجداء $48 \\times 52$ بكتابته على الشكل $(50 - 2)(50 + 2)$ وتطبيق المتطابقة الثالثة.",
+        "hintAr": "احسب $50^2 - 2^2 = 2500 - 4$.",
+        "expectedInput": "2496",
+        "revealAr": "$48 \\times 52 = (50 - 2)(50 + 2) = 50^2 - 2^2 = 2500 - 4 = 2496$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**التوزيعية البسيطة والمضاعفة**: من أجل كل أعداد $k, a, b, c, d$ لدينا $k(a + b) = ka + kb$، و$(a + b)(c + d) = ac + ad + bc + bd$ مع مراعاة قاعدة الإشارات عند حذف الأقواس.",
+      "**المتطابقة الشهيرة الأولى (مربع مجموع)**: $(a + b)^2 = a^2 + 2ab + b^2$.",
+      "**المتطابقة الشهيرة الثانية (مربع فرق)**: $(a - b)^2 = a^2 - 2ab + b^2$.",
+      "**المتطابقة الشهيرة الثالثة (جداء مجموع حدين وفرقهما)**: $(a + b)(a - b) = a^2 - b^2$.",
+      "**الحساب المتمعن فيه**: نستغل المتطابقات الشهيرة لتفكيك الأعداد القريبة من مضاعفات $10$ أو $100$ أو $1000$ (مثل $99 = 100 - 1$ أو $102 \\times 98 = (100 + 2)(100 - 2)$) وحسابها بدقة دون آلة حاسبة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 215\" width=\"480\" height=\"215\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect width=\"480\" height=\"215\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"14\" y=\"14\" width=\"452\" height=\"56\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"162\" y=\"48\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e40af\">(a + b)² = a² + 2ab + b²</text><line x1=\"315\" y1=\"22\" x2=\"315\" y2=\"62\" stroke=\"#bfdbfe\" stroke-width=\"1.5\"/><text x=\"390\" y=\"39\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">مربع مجموع</text><text x=\"390\" y=\"58\" text-anchor=\"middle\" font-size=\"11\" fill=\"#3b82f6\">مثال: (100 + 3)²</text><rect x=\"14\" y=\"80\" width=\"452\" height=\"56\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"162\" y=\"114\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#166534\">(a - b)² = a² - 2ab + b²</text><line x1=\"315\" y1=\"88\" x2=\"315\" y2=\"128\" stroke=\"#bbf7d0\" stroke-width=\"1.5\"/><text x=\"390\" y=\"105\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\">مربع فرق</text><text x=\"390\" y=\"124\" text-anchor=\"middle\" font-size=\"11\" fill=\"#15803d\">مثال: (100 - 1)²</text><rect x=\"14\" y=\"146\" width=\"452\" height=\"56\" rx=\"8\" fill=\"#faf5ff\" stroke=\"#7c3aed\" stroke-width=\"1.6\"/><text x=\"162\" y=\"180\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#5b21b6\">(a + b)(a - b) = a² - b²</text><line x1=\"315\" y1=\"154\" x2=\"315\" y2=\"194\" stroke=\"#ddd6fe\" stroke-width=\"1.5\"/><text x=\"390\" y=\"171\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#5b21b6\">جداء مجموع وفرق</text><text x=\"390\" y=\"190\" text-anchor=\"middle\" font-size=\"11\" fill=\"#6d28d9\">مثال: (50 + 2)(50 - 2)</text></svg>",
+    "visualCaptionAr": "المتطابقات الشهيرة الثلاث وتطبيقاتها في النشر والحساب المتمعن فيه",
+    "examples": [
+      {
+        "problemAr": "انشر وبسّط العبارة الجبرية الآتية: $A = (2x + 3)^2 - (x - 4)(x + 4)$.",
+        "solutionAr": "ننشر كل جزء باستعمال المتطابقات الشهيرة مع وضع القوسين بعد إشارة الطرح:\n\n$A = (4x^2 + 12x + 9) - (x^2 - 16)$\n\nنحذف الأقواس مع تغيير إشارات القوس المسبوق بـ $-$:\n\n$A = 4x^2 + 12x + 9 - x^2 + 16 = 3x^2 + 12x + 25$."
+      },
+      {
+        "problemAr": "احسب بتمعن ودون آلة حاسبة: $B = (3 - \\sqrt{2})^2$ و$C = 997^2$.",
+        "solutionAr": "في $B$ نطبق مربع فرق: $B = 3^2 - 2 \\times 3 \\times \\sqrt{2} + (\\sqrt{2})^2 = 9 - 6\\sqrt{2} + 2 = 11 - 6\\sqrt{2}$.\n\nفي $C$ نكتب $997 = 1000 - 3$: $C = (1000 - 3)^2 = 1000^2 - 2 \\times 1000 \\times 3 + 3^2 = 1000000 - 6000 + 9 = 994009$."
+      }
+    ],
+    "watchOutAr": "تجنّب ثلاثة أخطاء شائعة في النشر: (1) إهمال الحد المضاعف $2ab$ فتكتب $(x + 3)^2 = x^2 + 9$ خطأً؛ (2) نسيان تربيع المعامل العددي في $(2x)^2 = 4x^2$ وليس $2x^2$؛ (3) نسيان عكس إشارات ما داخل القوسين عندما يُسبق الجداء بإشارة طرح كما في $-(x^2 - 16) = -x^2 + 16$."
+  },
+  "practice": [
+    {
+      "questionAr": "في الشكل المقابل مربع طول ضلعه $(2x + 5)$ حيث $x > 0$. ما هي العبارة المنشورة والمبسطة لمساحته $S = (2x + 5)^2$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 175\" width=\"280\" height=\"175\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect width=\"280\" height=\"175\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.4\"/><rect x=\"85\" y=\"38\" width=\"110\" height=\"110\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"140\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">2x + 5</text><text x=\"49\" y=\"97\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">2x + 5</text><text x=\"140\" y=\"98\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1d4ed8\">S = ?</text></svg>",
+      "options": [
+        "$4x^2 + 25$",
+        "$2x^2 + 20x + 25$",
+        "$4x^2 + 10x + 25$",
+        "$4x^2 + 20x + 25$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "نسيتَ الحد الأوسط المضاعف $2ab = 2 \\times 2x \\times 5 = 20x$!",
+        "ربّعتَ $x$ ولم تربّع المعامل $2$: تذكر أن $(2x)^2 = 2^2 \\times x^2 = 4x^2$.",
+        "الحد الأوسط هو ضعف الجداء $2 \\times (2x) \\times 5 = 20x$ وليس $10x$.",
+        "ممتاز! $(2x)^2 + 2(2x)(5) + 5^2 = 4x^2 + 20x + 25$."
+      ],
+      "explanationAr": "بتطبيق متطابقة مربع مجموع $(a + b)^2 = a^2 + 2ab + b^2$ مع $a = 2x$ و$b = 5$: نحصل على $(2x)^2 + 2 \\times 2x \\times 5 + 5^2 = 4x^2 + 20x + 25$."
+    },
+    {
+      "questionAr": "ما هو النشر والتبسيط الصحيح للعبارة: $E = (x - 3)^2 - (x + 2)(x - 2)$؟",
+      "options": [
+        "$-6x + 5$",
+        "$-6x + 13$",
+        "$2x^2 - 6x + 5$",
+        "$13$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "عند حذف القوسين في $-(x^2 - 4)$ نسيت تغيير إشارة $-4$ إلى $+4$، إذ $9 + 4 = 13$ وليس $9 - 4 = 5$.",
+        "أحسنت! نشرتَ كل متطابقة بدقة وعكستَ إشارات القوس المسبوق بإشارة الطرح.",
+        "بين المتطابقتين علامة طرح وليست جمعا: $x^2 - x^2 = 0$ وليس $2x^2$.",
+        "نسيتَ الحد المضاعف $-2 \\times x \\times 3 = -6x$ في نشر $(x - 3)^2$."
+      ],
+      "explanationAr": "لدينا $(x - 3)^2 = x^2 - 6x + 9$ و$(x + 2)(x - 2) = x^2 - 4$. ومنه $E = (x^2 - 6x + 9) - (x^2 - 4) = x^2 - 6x + 9 - x^2 + 4 = -6x + 13$."
+    },
+    {
+      "questionAr": "ما القيمة المضبوطة والمبسطة للعبارة $M = (\\sqrt{7} - 2)^2 + 4\\sqrt{7}$؟",
+      "options": [
+        "$3$",
+        "$11 - 8\\sqrt{7}$",
+        "$11$",
+        "$11 + 2\\sqrt{7}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "مربع العدد $-2$ موجب ويساوي $+4$ وليس $-4$: إذن $7 + 4 = 11$ وليس $7 - 4 = 3$.",
+        "انتبه للإشارات: لدينا $-4\\sqrt{7} + 4\\sqrt{7} = 0$ وليس $-8\\sqrt{7}$.",
+        "صحيح تماما! $7 - 4\\sqrt{7} + 4 + 4\\sqrt{7} = 11$ حيث يختزل الحدان الجذريان.",
+        "الحد الأوسط في $(\\sqrt{7} - 2)^2$ هو $-2 \\times 2\\sqrt{7} = -4\\sqrt{7}$ وليس $-2\\sqrt{7}$."
+      ],
+      "explanationAr": "ننشر $(\\sqrt{7} - 2)^2 = (\\sqrt{7})^2 - 2 \\times 2 \\times \\sqrt{7} + 2^2 = 7 - 4\\sqrt{7} + 4 = 11 - 4\\sqrt{7}$. ثم نضيف $+4\\sqrt{7}$ فنحصل على $M = 11 - 4\\sqrt{7} + 4\\sqrt{7} = 11$."
+    }
+  ]
+}

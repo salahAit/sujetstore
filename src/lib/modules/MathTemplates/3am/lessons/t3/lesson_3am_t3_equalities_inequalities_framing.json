@@ -1,0 +1,128 @@
+{
+  "id": "lesson_3am_t3_equalities_inequalities_framing",
+  "slug": "3am-t3-equalities-inequalities-framing",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t3",
+  "sequenceId": "seq7",
+  "sequenceTitleAr": "المقطع السابع: المساويات والمتباينات والمعادلات من الدرجة الأولى بمجهول واحد",
+  "order": 1,
+  "titleAr": "المساويات والعمليات، المتباينات والعمليات وحصر عدد عشري موجب بالتدوير",
+  "objectives": [
+    "معرفة وتوظيف الخواص المتعلقة بالمساويات والعمليات (الجمع، الطرح، الضرب، والقسمة على عدد غير معدوم) في تبرير مساويات",
+    "معرفة وتوظيف الخواص المتعلقة بالمتباينات والعمليات (الجمع والطرح، والضرب أو القسمة في عدد موجب يحافظ على الاتجاه، وفي عدد سالب يقلب اتجاه المتباينة) ومقارنة عددين ناطقين",
+    "حصر عدد عشري موجب مكتوب في الشكل العشري باستعمال التدوير إلى رتبة معينة أو القيمتين المقربتين بالنقصان وبالزيادة"
+  ],
+  "keywordsAr": [
+    "المساويات والعمليات",
+    "المتباينات والعمليات",
+    "مقارنة عددين ناطقين",
+    "الحصر بالتدوير",
+    "القيمة المقربة"
+  ],
+  "discover": {
+    "scenarioAr": "في مخبر العلوم، وازن التلميذ كريم كفتي ميزان، ثم قاس طول سلك معدني بالمسطرة الرقمية فوجد $L = 6.374\\text{ cm}$ . كيف نحافظ على المساواة أو المتباينة عندما نُجري عمليات على طرفيها؟ ومتى **ينقلب** اتجاه المتباينة؟ وكيف نحصر القياس $6.374$ بالتدوير إلى رتبة معينة؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 230\" width=\"580\" height=\"230\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"214\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"32\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">خواص المتباينات مع العمليات والحصر على مستقيم مدرج</text><rect x=\"22\" y=\"46\" width=\"262\" height=\"162\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"153\" y=\"68\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">الضرب في عدد موجب مقابل عدد سالب</text><rect x=\"36\" y=\"80\" width=\"234\" height=\"32\" rx=\"7\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><text x=\"153\" y=\"101\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">a &lt; 4  &#8594;  3a + 1 &lt; 13</text><rect x=\"36\" y=\"122\" width=\"234\" height=\"36\" rx=\"7\" fill=\"#fef2f2\" stroke=\"#fca5a5\" stroke-width=\"1.2\"/><text x=\"153\" y=\"145\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"ltr\">x &gt; 2  &#8594;  -4x &lt; -8</text><text x=\"153\" y=\"182\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"rtl\">عند الضرب في (-4) ينقلب الاتجاه!</text><text x=\"153\" y=\"198\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">الجمع والطرح لا يغيران اتجاه المتباينة أبداً</text><rect x=\"298\" y=\"46\" width=\"260\" height=\"162\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.4\"/><text x=\"428\" y=\"68\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">حصر العدد L = 6.374 إلى 0.01</text><line x1=\"322\" y1=\"134\" x2=\"534\" y2=\"134\" stroke=\"#334155\" stroke-width=\"2.2\"/><line x1=\"346\" y1=\"124\" x2=\"346\" y2=\"144\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"510\" y1=\"124\" x2=\"510\" y2=\"144\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"428\" y1=\"127\" x2=\"428\" y2=\"141\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><circle cx=\"411\" cy=\"134\" r=\"5\" fill=\"#dc2626\"/><text x=\"346\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">6.37</text><text x=\"428\" y=\"162\" text-anchor=\"middle\" font-size=\"11\" fill=\"#64748b\" direction=\"ltr\">6.375</text><text x=\"510\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">6.38</text><text x=\"411\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">6.374</text><rect x=\"316\" y=\"174\" width=\"224\" height=\"26\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.1\"/><text x=\"428\" y=\"191\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"ltr\">6.37 &lt; 6.374 &lt; 6.38</text></svg>",
+    "steps": [
+      {
+        "promptAr": "إذا كان لدينا $x = 5$ ، وأضفنا $3$ إلى الطرفين ثم ضربنا الطرفين في $2$ ، فما قيمة $2(x + 3)$ ؟ (أدخل العدد فقط)",
+        "hintAr": "احسب أولاً $x + 3 = 5 + 3$ ثم اضرب الناتج في $2$ .",
+        "expectedInput": "16",
+        "revealAr": "حسب خواص المساويات: إضافة $3$ تعطي $x + 3 = 8$ ، والضرب في $2$ يعطي $2(x + 3) = 16$ ."
+      },
+      {
+        "promptAr": "ليكن $a < 4$ . نضرب الطرفين في العدد الموجب $3$ ثم نضيف $1$ فنحصل على $3a + 1 < \\square$ . ما العدد الذي يملأ الفراغ؟ (أدخل العدد فقط)",
+        "hintAr": "الضرب في عدد موجب ($3 > 0$) يحافظ على الاتجاه، وإضافة $1$ لا تغيّر الاتجاه.",
+        "expectedInput": "13",
+        "revealAr": "بما أن $3 > 0$ فإن $3a < 3 \\times 4$ أي $3a < 12$ ، وبإضافة $1$ نجد $3a + 1 < 13$ ."
+      },
+      {
+        "promptAr": "ليكن $x > 2$ . نضرب الطرفين في العدد السالب $-4$ فتصبح المتباينة $-4x < \\square$ . ما العدد الذي يملأ الفراغ بعد قلب الاتجاه؟ (أدخل العدد بالإشارة)",
+        "hintAr": "اضرب $2$ في $-4$ وتذكر أن الضرب في عدد سالب يقلب علامة $>$ إلى $<$ .",
+        "expectedInput": "-8",
+        "revealAr": "عند ضرب طرفي متباينة في عدد سالب تماماً ($-4 < 0$) ينقلب الاتجاه، إذن $x > 2 \\implies -4x < -8$ ."
+      },
+      {
+        "promptAr": "في القياس $L = 6.374\\text{ cm}$ ، ما هو **مدوّر** $L$ إلى $0.01$ (جزء من مئة)؟ (أدخل العدد العشري فقط)",
+        "hintAr": "انظر إلى رقم الأجزاء من الألف ($4$)؛ هل هو أصغر من $5$ أم يساويه أو يفوقه؟",
+        "expectedInput": "6.37",
+        "revealAr": "بما أن رقم الأجزاء من الألف هو $4 < 5$ ، فإن $6.374$ أقرب إلى $6.37$ منه إلى $6.38$ ، فمدوّره إلى $0.01$ هو $6.37$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**المساويات والعمليات**: لا تتغير مساواة إذا أضفنا إلى طرفيها (أو طرحنا منهما) نفس العدد، أو ضربنا طرفيها في نفس العدد، أو قسمناهما على نفس العدد **غير المعدوم**: إذا كان $a = b$ فإن $a + c = b + c$ و $a \\times c = b \\times c$ ، وإذا كان $c \\neq 0$ فإن $\\frac{a}{c} = \\frac{b}{c}$ .",
+      "**المتباينات والجمع والطرح**: لا يتغير اتجاه متباينة إذا أضفنا إلى طرفيها (أو طرحنا منهما) نفس العدد النسبي $c$ : إذا كان $a < b$ فإن $a + c < b + c$ و $a - c < b - c$ .",
+      "**المتباينات والضرب والقسمة**:\n- إذا ضربنا طرفي متباينة في عدد **موجب تماماً** ($k > 0$) أو قسمناهما عليه، **يحافظ** الاتجاه: $a < b \\implies k a < k b$ .\n- إذا ضربنا طرفي متباينة في عدد **سالب تماماً** ($k < 0$) أو قسمناهما عليه، **ينقلب** اتجاه المتباينة: $a < b \\implies k a > k b$ .",
+      "**مقارنة عددين ناطقين والحصر بالتدوير**: لمقارنة $a$ و $b$ ندرس إشارة فرقهما $a - b$ (فإن كان $a - b > 0$ كان $a > b$ ). ولحصر عدد عشري موجب إلى رتبة معينة، نحصره بين قيمته المقربة بالنقصان وقيمته المقربة بالزيادة عند تلك الرتبة، ويُختار **المدوّر** بالنقصان إذا كان الرقم الموالي للرتبة أقل من $5$ وبالزيادة إذا كان $5$ فما فوق."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 230\" width=\"580\" height=\"230\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"214\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"32\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">القاعدة الذهبية للمتباينات والحصر بالتدوير</text><rect x=\"22\" y=\"46\" width=\"264\" height=\"162\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"154\" y=\"68\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">متى ينقلب اتجاه المتباينة؟</text><rect x=\"36\" y=\"80\" width=\"236\" height=\"34\" rx=\"7\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.2\"/><text x=\"154\" y=\"101\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"ltr\">a &lt; b  &#8658;  a + c &lt; b + c</text><rect x=\"36\" y=\"122\" width=\"236\" height=\"34\" rx=\"7\" fill=\"#eff6ff\" stroke=\"#60a5fa\" stroke-width=\"1.2\"/><text x=\"154\" y=\"143\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">k &gt; 0 : a &lt; b  &#8658;  ka &lt; kb</text><rect x=\"36\" y=\"164\" width=\"236\" height=\"34\" rx=\"7\" fill=\"#fef2f2\" stroke=\"#ef4444\" stroke-width=\"1.4\"/><text x=\"154\" y=\"185\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"ltr\">k &lt; 0 : a &lt; b  &#8658;  ka &gt; kb</text><rect x=\"300\" y=\"46\" width=\"258\" height=\"162\" rx=\"10\" fill=\"#ffffff\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><text x=\"429\" y=\"68\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#5b21b6\" direction=\"rtl\">الحصر والتدوير إلى رتبة معينة</text><rect x=\"314\" y=\"80\" width=\"230\" height=\"42\" rx=\"7\" fill=\"#f5f3ff\" stroke=\"#c4b5fd\" stroke-width=\"1.2\"/><text x=\"429\" y=\"98\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#4c1d95\" direction=\"rtl\">الحصر إلى 0.01 للعدد 6.374:</text><text x=\"429\" y=\"115\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">6.37 &lt; 6.374 &lt; 6.38</text><rect x=\"314\" y=\"132\" width=\"230\" height=\"66\" rx=\"7\" fill=\"#fffbeb\" stroke=\"#f59e0b\" stroke-width=\"1.2\"/><text x=\"429\" y=\"152\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">الرقم الموالي (جزء من ألف):</text><text x=\"429\" y=\"171\" text-anchor=\"middle\" font-size=\"11\" fill=\"#78350f\" direction=\"rtl\">0, 1, 2, 3, 4 &#8592; مدوّر بالنقصان</text><text x=\"429\" y=\"188\" text-anchor=\"middle\" font-size=\"11\" fill=\"#78350f\" direction=\"rtl\">5, 6, 7, 8, 9 &#8592; مدوّر بالزيادة</text></svg>",
+    "visualCaptionAr": "خواص المساويات والمتباينات مع العمليات الأربع، ومنهجية الحصر والتدوير",
+    "examples": [
+      {
+        "problemAr": "قارن بين العددين الناطقين $A = \\frac{7}{6}$ و $B = \\frac{9}{8}$ ، ثم استنتج مقارنة $-2A$ و $-2B$ .",
+        "solutionAr": "نحسب الفرق $A - B$ بتوحيد المقامين على $24$ :\n\n$A - B = \\frac{7}{6} - \\frac{9}{8} = \\frac{28}{24} - \\frac{27}{24} = \\frac{1}{24} > 0$\n\nبما أن الفرق موجب تماماً فإن $A > B$ . وبضرب الطرفين في العدد السالب $-2 < 0$ ينقلب اتجاه المتباينة، فنحصل على $-2A < -2B$ ."
+      },
+      {
+        "problemAr": "ليكن العدد $x$ محصوراً كما يلي: $3.4 < x < 3.5$ . أعط حصراً للعدد $2x - 1$ وللعدد $-3x + 5$ .",
+        "solutionAr": "1) لحصر $2x - 1$ : نضرب الأطراف في $2 > 0$ فنجد $6.8 < 2x < 7$ ، ثم نطرح $1$ فنجد $5.8 < 2x - 1 < 6$ .\n\n2) لحصر $-3x + 5$ : نضرب الأطراف في $-3 < 0$ **مع قلب الاتجاهين** فنجد $-10.2 > -3x > -10.5$ أي $-10.5 < -3x < -10.2$ ، ثم نضيف $5$ فنجد $-5.5 < -3x + 5 < -5.2$ ."
+      }
+    ],
+    "watchOutAr": "انتبه! الخطأ الأكثر شيوعاً هو نسيان **قلب اتجاه المتباينة** عند الضرب أو القسمة على عدد سالب. كذلك عند حصر $-3x$ انطلاقاً من $3.4 < x < 3.5$ ، ينعكس موضع الحدين فيصبح $-3 \\times 3.5$ هو الحد الأصغر و $-3 \\times 3.4$ هو الحد الأكبر."
+  },
+  "practice": [
+    {
+      "questionAr": "إذا كان $x \\le -3$ ، فما هي المتباينة الصحيحة التي يحققها العدد $-2x + 5$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 120\" width=\"420\" height=\"120\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"6\" y=\"6\" width=\"408\" height=\"108\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><rect x=\"22\" y=\"34\" width=\"96\" height=\"46\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"70\" y=\"62\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">x &#8804; -3</text><line x1=\"122\" y1=\"57\" x2=\"168\" y2=\"57\" stroke=\"#dc2626\" stroke-width=\"2\"/><polygon points=\"168,57 160,52 160,62\" fill=\"#dc2626\"/><text x=\"145\" y=\"45\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">&#215; (-2)</text><rect x=\"172\" y=\"34\" width=\"92\" height=\"46\" rx=\"8\" fill=\"#fef2f2\" stroke=\"#ef4444\" stroke-width=\"1.5\"/><text x=\"218\" y=\"62\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"ltr\">-2x ? 6</text><line x1=\"268\" y1=\"57\" x2=\"306\" y2=\"57\" stroke=\"#059669\" stroke-width=\"2\"/><polygon points=\"306,57 298,52 298,62\" fill=\"#059669\"/><text x=\"287\" y=\"45\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">+ 5</text><rect x=\"310\" y=\"34\" width=\"92\" height=\"46\" rx=\"8\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.5\"/><text x=\"356\" y=\"62\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#065f46\" direction=\"ltr\">-2x+5 ? ?</text></svg>",
+      "options": [
+        "$-2x + 5 \\ge 11$",
+        "$-2x + 5 \\le 11$",
+        "$-2x + 5 \\ge -1$",
+        "$-2x + 5 \\le -11$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! قلبتَ اتجاه المتباينة عند الضرب في $-2$ : $-2x \\ge 6$ ، ثم أضفتَ $5$ فحصلت على $-2x + 5 \\ge 11$ .",
+        "انتبه: نسيتَ قلب اتجاه المتباينة عند الضرب في العدد السالب $-2$ ! علامة $\\le$ تنقلب إلى $\\ge$ .",
+        "راجِع جداء السالبين: $(-2) \\times (-3) = +6$ وليس $-6$ ، ثم $6 + 5 = 11$ .",
+        "هنا وقعتَ في خطأ الإشارة في $(-2)(-3) = +6$ ونسيتَ أيضاً قلب الاتجاه."
+      ],
+      "explanationAr": "ننطلق من $x \\le -3$ . نضرب الطرفين في العدد السالب $-2 < 0$ مع قلب اتجاه المتباينة، فنجد $-2x \\ge (-2) \\times (-3)$ أي $-2x \\ge 6$ . ثم نضيف $5$ إلى الطرفين دون تغيير الاتجاه: $-2x + 5 \\ge 11$ ."
+    },
+    {
+      "questionAr": "ليكن العدد العشري الموجب $y = 4.687$ . ما هو **حصر $y$ إلى $0.01$** وما هو **مدوّره إلى $0.01$** ؟",
+      "options": [
+        "$4.6 < y < 4.7$ والمدوّر هو $4.7$",
+        "$4.68 < y < 4.69$ والمدوّر هو $4.68$",
+        "$4.68 < y < 4.69$ والمدوّر هو $4.69$",
+        "$4.67 < y < 4.69$ والمدوّر هو $4.68$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "هذا الحصر والمدوّر هما إلى الرتبة $0.1$ (جزء من عشرة) وليس إلى $0.01$ (جزء من مئة).",
+        "الحصر صحيح، لكن رقم الأجزاء من الألف هو $7 \\ge 5$ ، لذا يكون المدوّر بالزيادة ($4.69$) وليس بالنقصان ($4.68$).",
+        "ممتاز! الحصر إلى $0.01$ هو $4.68 < 4.687 < 4.69$ ، ولأن رقم الأجزاء من الألف $7 \\ge 5$ فالمدوّر هو $4.69$ .",
+        "سعة الحصر إلى $0.01$ يجب أن تكون $0.01$ (بين $4.68$ و $4.69$) وليس $0.02$ ."
+      ],
+      "explanationAr": "القيمة المقربة إلى $0.01$ بالنقصان للعدد $4.687$ هي $4.68$ وبالزيادة هي $4.69$ ، إذن الحصر هو $4.68 < y < 4.69$ . وبما أن رقم الأجزاء من الألف هو $7 \\ge 5$ ، فإن المدوّر إلى $0.01$ هو $4.69$ ."
+    },
+    {
+      "questionAr": "إذا كان $1.2 < x < 1.5$ ، فما الحصر الصحيح للعدد $3x - 4$ ؟",
+      "options": [
+        "$-0.4 < 3x - 4 < 0.5$",
+        "$3.6 < 3x - 4 < 4.5$",
+        "$-2.8 < 3x - 4 < -2.5$",
+        "$0.4 < 3x - 4 < 0.5$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "صحيح تماماً! ضربتَ في $3 > 0$ فوجدت $3.6 < 3x < 4.5$ ، ثم طرحتَ $4$ من الأطراف الثلاثة.",
+        "هذا حصر $3x$ فقط؛ نسيتَ طرح $4$ من الحدين $3.6$ و $4.5$ .",
+        "طرحتَ $4$ من $1.2$ و $1.5$ دون أن تضربهما أولاً في $3$ !",
+        "انتبه للإشارة عند حساب الحد الأصغر: $3.6 - 4 = -0.4$ وليس $+0.4$ ."
+      ],
+      "explanationAr": "نضرب أولاً أطراف الحصر $1.2 < x < 1.5$ في العدد الموجب $3$ فنجد $3.6 < 3x < 4.5$ . ثم نطرح $4$ من الأطراف الثلاثة: $3.6 - 4 < 3x - 4 < 4.5 - 4$ ، أي $-0.4 < 3x - 4 < 0.5$ ."
+    }
+  ]
+}

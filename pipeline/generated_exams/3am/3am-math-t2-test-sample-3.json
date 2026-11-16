@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "levelId": "moyen",
+    "yearId": "3am",
+    "yearName": "السنة الثالثة متوسط",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t2",
+    "trimesterName": "الفصل الثاني",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة واحدة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 7,
+      "instruction": "أجب بدقة عن الأسئلة الآتية مع إبراز خطوات الحساب:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب واكتب كتابة علمية العدد: $K = frac(7.2 times 10^4 times 6 times 10^(-9), 2 times 10^(-3))$.",
+          "answer": "1) $K = frac(7.2 times 6, 2) times frac(10^(-5), 10^(-3)) = 21.6 times 10^(-2) = 2.16 times 10^(-1)$.",
+          "mark": "3"
+        },
+        {
+          "type": "text",
+          "content": "2) احصر $K$ بين قوتين متتاليتين للعدد $10$، ثم استنتج رتبة مقداره.",
+          "answer": "2) الحصر: $10^(-1) < K < 10^0$، ورتبة مقدار $K$ هي $2 times 10^(-1)$.",
+          "mark": "1.75"
+        },
+        {
+          "type": "text",
+          "content": "3) بسّط $E = frac(5^4 times 5^(-1), (5^3)^3)$ على شكل قوة واحدة، ثم احسب $F = (frac(2, 5))^(-2) - 4^2 + (-2)^2$.",
+          "answer": "3) $E = 5^(-6)$، و $F = frac(25, 4) - 16 + (4) = -frac(23, 4)$.",
+          "mark": "2.25"
+        }
+      ],
+      "id": "ex_test_1_3am_t2_scientific_notation_powers",
+      "num": "الأول"
+    },
+    {
+      "points": 7,
+      "instruction": "أجب عن الأسئلة الآتية بدقة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.4fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) في المثلث $E F G$ القائم في $E$ المقابل، $E F = 16$ سم و $hat(F) = 37°$ (حيث $cos 37 degree approx 0.8$). احسب طول الوتر $F G$.",
+              "answer": "1) لدينا $cos hat(F) = frac(E F, F G)$، ومنه $F G = frac(16, 0.8) = 20$ سم.",
+              "mark": "3"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3am_t2_cos_hard_472969.svg",
+              "caption": "المثلث القائم EFG"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) في مثلث $A B C$ قائم في $A$، $A B = 7$ سم و $B C = 25$ سم. احسب $cos hat(B)$، ثم استنتج قيس $hat(B)$ (علماً أن $cos 74° approx 0.28$).",
+          "answer": "2) $cos hat(B) = frac(A B, B C) = frac(7, 25) = 0.28$، إذن $hat(B) approx 74°$.",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "3) استنتج قيس الزاوية $hat(G)$ في المثلث $E F G$، ولماذا يكون جيب تمام زاوية حادة أصغر من $1$؟",
+          "answer": "3) $hat(G) = 90° - 37° = 53°$. يكون جيب تمام زاوية حادة أصغر من $1$ لأن طول الضلع المجاور أصغر دائماً من طول الوتر.",
+          "mark": "1.75"
+        }
+      ],
+      "id": "ex_test_2_3am_t2_cosine_acute_angle",
+      "num": "الثاني"
+    },
+    {
+      "points": 6,
+      "instruction": "لاحظ الشكل المقابل وأجب بالتعليل عن الأسئلة الآتية:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.4fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) في الشكل المقابل، $(C)$ دائرة مركزها $O$ ونصف قطرها $R = 6$ سم، والمستقيم $(d)$ مماس لها في $T$، والنقطة $S$ من $(d)$ حيث $hat(O S T) = 36°$. برّر أن المثلث $O T S$ قائم في $T$.",
+              "answer": "1) بما أن $(d)$ مماس للدائرة $(C)$ في $T$، فإنه عمودي على نصف القطر $[O T]$ في النقطة $T$، ومنه $hat(O T S) = 90°$ والمثلث $O T S$ قائم في $T$.",
+              "mark": "2"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3am_t2_circum_tan_164159.svg",
+              "caption": "المماس (d) للدائرة (C) في T"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) احسب قيس الزاوية $hat(T O S)$ بالدرجات، ثم عيّن بعد المركز $O$ عن المستقيم $(d)$.",
+          "answer": "2) في المثلث القائم $O T S$: $hat(T O S) = 90° - 36° = 54°$. وبعد المركز $O$ عن $(d)$ هو الطول $O T = R = 6$ سم.",
+          "mark": "2"
+        },
+        {
+          "type": "text",
+          "content": "3) لتكن $[A B]$ قطراً للدائرة $(C)$ (طوله $A B = 12$ سم) و $M$ نقطة من $(C)$ تختلف عن $A$ و $B$. ما طبيعة المثلث $A B M$؟ وما طول المتوسط $[O M]$؟",
+          "answer": "3) بما أن $M$ تنتمي إلى الدائرة التي قطرها $[A B]$، فالمثلث $A B M$ قائم في $M$ (الخاصية العكسية للدائرة المحيطة)، وطول المتوسط المتعلق بالوتر هو $O M = frac(12, 2) = 6$ سم.",
+          "mark": "2"
+        }
+      ],
+      "id": "ex_test_3_3am_t2_circumcircle_right_triangle",
+      "num": "الثالث"
+    }
+  ]
+}

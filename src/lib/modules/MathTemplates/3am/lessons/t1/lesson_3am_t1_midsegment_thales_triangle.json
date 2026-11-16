@@ -1,0 +1,129 @@
+{
+  "id": "lesson_3am_t1_midsegment_thales_triangle",
+  "slug": "3am-t1-midsegment-thales-triangle",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني: قوى العدد 10 وتقايس المثلثات ومستقيم المنتصفين وطالس في المثلث",
+  "order": 5,
+  "titleAr": "مستقيم المنتصفين وتناسبية الأطوال في المثلث (خاصية طالس في المثلث)",
+  "objectives": [
+    "معرفة الخواص الثلاث لمستقيم المنتصفين في مثلث (التوازي، طول القطعة يساوي نصف الضلع الثالث، والخاصية العكسية لمنتصف الضلع الثالث) وتوظيفها في البراهين",
+    "معرفة واستعمال خاصية تناسبية الأطوال لأضلاع المثلثين المعينين بمستقيمين متوازيين يقطعهما قاطعان غير متوازيين (طالس في المثلث)",
+    "حساب أطوال مجهولة وإثبات توازي مستقيمين أو تنصيف قطعة مستقيم في وضعيات هندسية وحياتية"
+  ],
+  "keywordsAr": [
+    "مستقيم المنتصفين",
+    "خواص مستقيم المنتصفين",
+    "تناسبية الأطوال",
+    "طالس في المثلث",
+    "توازي مستقيمين",
+    "حساب الأطوال"
+  ],
+  "discover": {
+    "scenarioAr": "لقياس عرض بركة مائية $BC$ يصعب قياسه مباشرةً، رسم مسّاح مثلثاً $ABC$ على اليابسة وعيّن $I$ منتصف $[AB]$ و $J$ منتصف $[AC]$ ، فقاس المسافة $IJ = 18\\text{ m}$ . وفي مخطط هندسي ثانٍ لمثلث $ABC$ ، رسم مستقيماً $(MN)$ يوازي $(BC)$ بحيث $M \\in [AB]$ و $N \\in [AC]$ مع $AM = 4\\text{ cm}$ و $AB = 10\\text{ cm}$ و $BC = 15\\text{ cm}$ . كيف نستنتج الطولين $BC$ و $MN$ ؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 220\" width=\"560\" height=\"220\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"262\" height=\"200\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.6\"/><text x=\"141\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">مستقيم المنتصفين: قياس عرض البركة</text><polygon points=\"140,48 46,178 238,178\" fill=\"#dbeafe\" fill-opacity=\"0.5\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"93\" y1=\"113\" x2=\"189\" y2=\"113\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><line x1=\"112.4\" y1=\"77.6\" x2=\"120.6\" y2=\"83.4\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"65.4\" y1=\"142.6\" x2=\"73.6\" y2=\"148.4\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"160.5\" y1=\"83.5\" x2=\"168.5\" y2=\"77.5\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"162.3\" y1=\"85.9\" x2=\"170.3\" y2=\"79.9\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"209.5\" y1=\"148.5\" x2=\"217.5\" y2=\"142.5\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"211.3\" y1=\"150.9\" x2=\"219.3\" y2=\"144.9\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"48\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"46\" cy=\"178\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"238\" cy=\"178\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"93\" cy=\"113\" r=\"4\" fill=\"#16a34a\"/><circle cx=\"189\" cy=\"113\" r=\"4\" fill=\"#16a34a\"/><text x=\"140\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"34\" y=\"184\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"244\" y=\"184\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"78\" y=\"116\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">I</text><text x=\"196\" y=\"116\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">J</text><text x=\"141\" y=\"107\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">18 m</text><text x=\"141\" y=\"196\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">BC = ? m</text><rect x=\"288\" y=\"10\" width=\"262\" height=\"200\" rx=\"12\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"419\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">تناسبية الأطوال (طالس في المثلث)</text><polygon points=\"418,48 322,178 514,178\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"418,48 379.6,100 456.4,100\" fill=\"#dcfce7\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><line x1=\"379.6\" y1=\"100\" x2=\"456.4\" y2=\"100\" stroke=\"#dc2626\" stroke-width=\"2.4\"/><circle cx=\"418\" cy=\"48\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"322\" cy=\"178\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"514\" cy=\"178\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"379.6\" cy=\"100\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"456.4\" cy=\"100\" r=\"4\" fill=\"#dc2626\"/><text x=\"418\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"310\" y=\"184\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"520\" y=\"184\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"364\" y=\"104\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">M</text><text x=\"463\" y=\"104\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">N</text><text x=\"382\" y=\"76\" text-anchor=\"end\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">AM=4</text><text x=\"334\" y=\"140\" text-anchor=\"end\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">AB=10</text><text x=\"418\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">MN = ?  (MN // BC)</text><text x=\"418\" y=\"196\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">BC = 15 cm</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في مثلث المسّاح $ABC$ ، النقطتان $I$ و $J$ منتصفا $[AB]$ و $[AC]$ ، وطول القطعة $IJ = 18\\text{ m}$ . ما هو عرض البركة $BC$ بالمتر؟",
+        "hintAr": "طول القطعة الواصلة بين منتصفي ضلعين في مثلث يساوي نصف طول الضلع الثالث.",
+        "expectedInput": "36",
+        "revealAr": "بما أن $I$ منتصف $[AB]$ و $J$ منتصف $[AC]$ ، فإن $IJ = \\frac{1}{2} BC$ ، ومنه $BC = 2 \\times IJ = 2 \\times 18 = 36\\text{ m}$ (كما أن $(IJ) \\parallel (BC)$ )."
+      },
+      {
+        "promptAr": "لو عكسنا الوضعية: في مثلث $ABC$ ، $I$ منتصف $[AB]$ ورسمنا المستقيم الذي يشمل $I$ ويوازي $(BC)$ فيقطع $[AC]$ في $J$ . ماذا نستنتج عن النقطة $J$ ؟",
+        "hintAr": "تذكر الخاصية العكسية لمستقيم المنتصفين (تنصيف الضلع الثالث).",
+        "revealAr": "حسب الخاصية العكسية لمستقيم المنتصفين: المستقيم الذي يشمل منتصف ضلع ويوازي ضلعاً ثانياً يقطع الضلع الثالث في **منتصفه**، إذن $J$ منتصف $[AC]$ ."
+      },
+      {
+        "promptAr": "في المثلث الثاني، $(MN) \\parallel (BC)$ حيث $M \\in [AB]$ و $N \\in [AC]$ . بتطبيق تناسبية الأطوال نكتب $\\frac{AM}{AB} = \\frac{MN}{BC}$ أي $\\frac{4}{10} = \\frac{MN}{15}$ . ما الطول $MN$ بالسنتيمتر؟",
+        "hintAr": "استعمل الرابع المتناسب: $MN = \\frac{4 \\times 15}{10}$ .",
+        "expectedInput": "6",
+        "revealAr": "$MN = \\frac{4 \\times 15}{10} = \\frac{60}{10} = 6\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "في نفس المثلث الثاني حيث $\\frac{AM}{AB} = \\frac{4}{10} = 0.4$ ، إذا كان $AC = 12.5\\text{ cm}$ ، فما الطول $AN$ بالسنتيمتر؟",
+        "hintAr": "نستعمل التساوي $\\frac{AN}{AC} = \\frac{4}{10}$ ، أي $AN = 0.4 \\times 12.5$ .",
+        "expectedInput": "5",
+        "revealAr": "$\\frac{AN}{12.5} = \\frac{4}{10} \\implies AN = \\frac{4 \\times 12.5}{10} = \\frac{50}{10} = 5\\text{ cm}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**مستقيم المنتصفين (التوازي ونصف الطول)**: في مثلث $ABC$ ، إذا كانت $I$ منتصف $[AB]$ و $J$ منتصف $[AC]$ ، فإن:\n\n1) المستقيم $(IJ)$ يوازي المستقيم $(BC)$ : $(IJ) \\parallel (BC)$ .\n\n2) طول القطعة $[IJ]$ يساوي نصف طول الضلع $[BC]$ : $IJ = \\frac{1}{2} BC$ (أي $BC = 2 IJ$ ).",
+      "**الخاصية العكسية لمستقيم المنتصفين**: في مثلث $ABC$ ، إذا شمل مستقيم منتصف أحد الأضلاع ($I$ منتصف $[AB]$ ) ووازى حاملاً لضلع ثانٍ $(BC)$ ، فإنه يقطع الضلع الثالث $[AC]$ في **منتصفه** $J$ .",
+      "**تناسبية الأطوال (خاصية طالس في المثلث)**: في مثلث $ABC$ ، إذا كانت $M \\in [AB]$ (أو نصف المستقيم $[AB)$ ) و $N \\in [AC]$ (أو نصف المستقيم $[AC)$ ) وكان $(MN) \\parallel (BC)$ ، فإن أطوال أضلاع المثلثين $AMN$ و $ABC$ متناسبة:\n\n$$\\frac{AM}{AB} = \\frac{AN}{AC} = \\frac{MN}{BC}$$",
+      "**ملاحظة الربط**: مستقيم المنتصفين هو حالة خاصة من خاصية طالس في المثلث عندما تكون النسبة $\\frac{AM}{AB} = \\frac{1}{2}$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 215\" width=\"560\" height=\"215\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"258\" height=\"190\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"141\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">الخواص الثلاث لمستقيم المنتصفين</text><polygon points=\"141,48 56,154 226,154\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"98.5\" y1=\"101\" x2=\"183.5\" y2=\"101\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><line x1=\"116\" y1=\"72\" x2=\"124\" y2=\"78\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"73\" y1=\"125\" x2=\"81\" y2=\"131\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"158\" y1=\"78\" x2=\"166\" y2=\"72\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"160\" y1=\"81\" x2=\"168\" y2=\"75\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"200\" y1=\"131\" x2=\"208\" y2=\"125\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"202\" y1=\"134\" x2=\"210\" y2=\"128\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"141\" y=\"43\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"46\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"231\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"86\" y=\"104\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">I</text><text x=\"190\" y=\"104\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">J</text><text x=\"141\" y=\"175\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">(IJ) // (BC)   و   IJ = BC / 2</text><text x=\"141\" y=\"193\" text-anchor=\"middle\" font-size=\"10\" fill=\"#15803d\" direction=\"rtl\">العكسية: I منتصف و (IJ)//(BC) ← J منتصف [AC]</text><rect x=\"290\" y=\"12\" width=\"258\" height=\"190\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"419\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">خاصية طالس في المثلث</text><polygon points=\"419,48 334,154 504,154\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"419,48 380.7,95.7 457.3,95.7\" fill=\"#dcfce7\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><line x1=\"380.7\" y1=\"95.7\" x2=\"457.3\" y2=\"95.7\" stroke=\"#dc2626\" stroke-width=\"2.4\"/><text x=\"419\" y=\"43\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"324\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"509\" y=\"158\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"368\" y=\"99\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">M</text><text x=\"463\" y=\"99\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">N</text><text x=\"419\" y=\"175\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">(MN) // (BC)</text><text x=\"419\" y=\"193\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">AM / AB  =  AN / AC  =  MN / BC</text></svg>",
+    "visualCaptionAr": "خواص مستقيم المنتصفين (التوازي، نصف الطول، التنصيف العكسي) وتناسبية الأطوال في المثلث (طالس)",
+    "examples": [
+      {
+        "problemAr": "$ABC$ مثلث حيث $BC = 9\\text{ cm}$ . النقطة $E$ منتصف $[AB]$ ، والمستقيم الذي يشمل $E$ ويوازي $(BC)$ يقطع $[AC]$ في $F$ . أثبت أن $F$ منتصف $[AC]$ ، ثم احسب الطول $EF$ .",
+        "solutionAr": "1) في المثلث $ABC$ : النقطة $E$ منتصف $[AB]$ و $(EF) \\parallel (BC)$ ، فحسب الخاصية العكسية لمستقيم المنتصفين فإن $F$ **منتصف** الضلع $[AC]$ .\n\n2) بما أن $E$ و $F$ منتصفا $[AB]$ و $[AC]$ على الترتيب، فإن $EF = \\frac{1}{2} BC = \\frac{9}{2} = 4.5\\text{ cm}$ ."
+      },
+      {
+        "problemAr": "$RST$ مثلث، $M \\in [RS]$ و $N \\in [RT]$ حيث $(MN) \\parallel (ST)$ . معطى: $RM = 3\\text{ cm}$ ، $MS = 6\\text{ cm}$ ، $RT = 12\\text{ cm}$ ، $MN = 4\\text{ cm}$ . احسب $RN$ و $ST$ .",
+        "solutionAr": "نحسب أولاً طول الضلع الكلي $RS = RM + MS = 3 + 6 = 9\\text{ cm}$ .\n\nبما أن $M \\in [RS]$ و $N \\in [RT]$ و $(MN) \\parallel (ST)$ ، فحسب خاصية طالس في المثلث:\n\n$\\frac{RM}{RS} = \\frac{RN}{RT} = \\frac{MN}{ST}$ أي $\\frac{3}{9} = \\frac{RN}{12} = \\frac{4}{ST}$ .\n\nومنه $RN = \\frac{3 \\times 12}{9} = 4\\text{ cm}$ و $ST = \\frac{4 \\times 9}{3} = 12\\text{ cm}$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع جداً في خاصية طالس: كتابة النسبة $\\frac{AM}{MB} = \\frac{MN}{BC}$ ! الصواب أن النسب تربط **أضلاع المثلث الصغير بأضلاع المثلث الكبير**: $\\frac{AM}{AB} = \\frac{AN}{AC} = \\frac{MN}{BC}$ . فإذا أعطي في التمرين طول $AM$ وطول $MB$ ، يجب أولاً جمعهما لحساب $AB = AM + MB$ !"
+  },
+  "practice": [
+    {
+      "questionAr": "في المثلث $ABC$ المقابل، النقاط $I$ و $J$ و $K$ هي منتصفات الأضلاع $[AB]$ و $[AC]$ و $[BC]$ على الترتيب. إذا كان $AB = 8\\text{ cm}$ و $AC = 10\\text{ cm}$ و $IJ = 4.5\\text{ cm}$ ، فما محيط المثلث $IJK$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 175\" width=\"360\" height=\"175\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"159\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><polygon points=\"180,32 64,148 296,148\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"122,90 238,90 180,148\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"180\" cy=\"32\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"64\" cy=\"148\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"296\" cy=\"148\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"122\" cy=\"90\" r=\"3.8\" fill=\"#16a34a\"/><circle cx=\"238\" cy=\"90\" r=\"3.8\" fill=\"#16a34a\"/><circle cx=\"180\" cy=\"148\" r=\"3.8\" fill=\"#16a34a\"/><text x=\"180\" y=\"25\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"50\" y=\"154\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"302\" y=\"154\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"108\" y=\"92\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">I</text><text x=\"246\" y=\"92\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">J</text><text x=\"180\" y=\"163\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">K</text><text x=\"180\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">IJ = 4.5 cm</text><text x=\"80\" y=\"82\" text-anchor=\"end\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">AB = 8 cm</text><text x=\"280\" y=\"82\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">AC = 10 cm</text></svg>",
+      "options": [
+        "$27\\text{ cm}$",
+        "$13.5\\text{ cm}$",
+        "$9\\text{ cm}$",
+        "$22.5\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$27\\text{ cm}$ هو محيط المثلث الكبير $ABC$ وليس محيط المثلث الصغير $IJK$ !",
+        "ممتاز! $JK = \\frac{1}{2} AB = 4\\text{ cm}$ و $IK = \\frac{1}{2} AC = 5\\text{ cm}$ ، ومجموع أضلاع $IJK$ هو $4.5 + 4 + 5 = 13.5\\text{ cm}$ .",
+        "انتبه: $9\\text{ cm}$ هو طول الضلع $BC = 2 \\times IJ$ فقط، وليس محيط المثلث $IJK$ .",
+        "تحقق من أطوال أضلاع $IJK$ : كل ضلع فيه يساوي **نصف** الضلع الموازي له في $ABC$ ."
+      ],
+      "explanationAr": "حسب خاصية مستقيم المنتصفين: $JK = \\frac{1}{2} AB = 4\\text{ cm}$ و $IK = \\frac{1}{2} AC = 5\\text{ cm}$ . إذن محيط المثلث $IJK$ يساوي $IJ + JK + IK = 4.5 + 4 + 5 = 13.5\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "في المثلث $EFG$ المقابل، $M \\in [EF]$ و $N \\in [EG]$ بحيث $(MN) \\parallel (FG)$ . إذا كان $EM = 3\\text{ cm}$ و $MF = 5\\text{ cm}$ و $FG = 16\\text{ cm}$ ، فما الطول $MN$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 175\" width=\"360\" height=\"175\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"159\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><polygon points=\"176,30 64,146 300,146\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"176,30 134,73.5 222.5,73.5\" fill=\"#eff6ff\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><line x1=\"134\" y1=\"73.5\" x2=\"222.5\" y2=\"73.5\" stroke=\"#dc2626\" stroke-width=\"2.4\"/><circle cx=\"176\" cy=\"30\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"64\" cy=\"146\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"300\" cy=\"146\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"134\" cy=\"73.5\" r=\"3.8\" fill=\"#dc2626\"/><circle cx=\"222.5\" cy=\"73.5\" r=\"3.8\" fill=\"#dc2626\"/><text x=\"176\" y=\"23\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">E</text><text x=\"52\" y=\"152\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">F</text><text x=\"306\" y=\"152\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">G</text><text x=\"120\" y=\"76\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">M</text><text x=\"230\" y=\"76\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">N</text><text x=\"142\" y=\"50\" text-anchor=\"end\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">3 cm</text><text x=\"88\" y=\"114\" text-anchor=\"end\" font-size=\"11\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">5 cm</text><text x=\"178\" y=\"90\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">MN = ?</text><text x=\"182\" y=\"161\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">FG = 16 cm</text></svg>",
+      "options": [
+        "$9.6\\text{ cm}$",
+        "$10\\text{ cm}$",
+        "$6\\text{ cm}$",
+        "$8\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "استعملتَ النسبة الخاطئة $\\frac{EM}{MF} = \\frac{3}{5}$ بدلاً من $\\frac{EM}{EF} = \\frac{3}{8}$ ! تذكر حساب الضلع الكلي $EF = 3 + 5 = 8\\text{ cm}$ .",
+        "تلك قيمة $\\frac{5}{8} \\times 16$ باستعمال القطعة $MF$ بدلاً من $EM$ ، انتبه لضلع المثلث الصغير $EM = 3\\text{ cm}$ .",
+        "أحسنت! $EF = 3 + 5 = 8\\text{ cm}$ ، وبتطبيق طالس $\\frac{3}{8} = \\frac{MN}{16}$ نجد $MN = 6\\text{ cm}$ .",
+        "النقطة $M$ ليست منتصف $[EF]$ لأن $EM = 3\\text{ cm} \\neq MF = 5\\text{ cm}$ !"
+      ],
+      "explanationAr": "نحسب أولاً طول الضلع الكلي $EF = EM + MF = 3 + 5 = 8\\text{ cm}$ . بما أن $(MN) \\parallel (FG)$ فحسب خاصية طالس: $\\frac{EM}{EF} = \\frac{MN}{FG}$ أي $\\frac{3}{8} = \\frac{MN}{16}$ ، ومنه $MN = \\frac{3 \\times 16}{8} = 6\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "في مثلث $ABC$ ، النقطة $M$ منتصف $[AB]$ ، ورسمنا المستقيم $(\\Delta)$ الذي يشمل $M$ ويوازي $(BC)$ فيقطع $[AC]$ في $N$ . أي عبارة مما يلي **صحيحة دوماً**؟",
+      "options": [
+        "$N$ منتصف $[AC]$ فقط إذا كان المثلث متساوي الساقين ($AB = AC$)",
+        "$N$ منتصف $[AC]$ و $MN = \\frac{1}{2} BC$ دوماً",
+        "$MN = BC$ لأن المستقيمين $(MN)$ و $(BC)$ متوازيان",
+        "لا يمكن استنتاج موضع $N$ إلا بمعرفة قيس الزاوية $\\widehat{A}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "الخاصية العكسية لمستقيم المنتصفين صحيحة في **كل** مثلث كيفي ولا تشترط تساوي الساقين.",
+        "صحيح تماماً! الخاصية العكسية تعطي أن $N$ منتصف $[AC]$ ، ومنه $MN = \\frac{1}{2} BC$ .",
+        "التوازي لا يعني تساوي طولي القطعتين، بل طول القطعة الواصلة بين المنتصفين يساوي نصف الضلع الثالث.",
+        "لا نحتاج لأي زاوية؛ يكفي شرطا المنتصف والتوازي في أي مثلث."
+      ],
+      "explanationAr": "حسب الخاصية العكسية لمستقيم المنتصفين، المستقيم الذي يشمل منتصف الضلع $[AB]$ ويوازي الضلع $[BC]$ يقطع الضلع الثالث $[AC]$ في منتصفه $N$ ، وعندئذ يكون $MN = \\frac{1}{2} BC$ في جميع المثلثات."
+    }
+  ]
+}

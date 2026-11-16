@@ -1,0 +1,124 @@
+{
+  "id": "lesson_4ap_t3_solids_nets_cube_cuboid",
+  "slug": "4ap-t3-solids-nets-cube-cuboid",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع السادس: المحيط والمساحة والمدد وتصميم المجسمات وإدماج الفصل الثالث",
+  "order": 6,
+  "titleAr": "المجسمات: وصف وتمثيل وتصميم المكعب ومتوازي المستطيلات",
+  "objectives": [
+    "التعرف على المجسمات المألوفة (المكعب، متوازي المستطيلات، الأسطوانة، المخروط، الهرم، الكرة) ووصف المكعب ومتوازي المستطيلات (عدد الأوجه وشكلها، الأحرف، الرؤوس)",
+    "التمييز بين المجسم في الفضاء وتمثيله في المستوي وتحديد المضلعات المكونة لأوجهه",
+    "نشر المكعب ومتوازي المستطيلات وتمييز التصميم الصحيح من التصاميم الخاطئة وإرفاق كل مجسم بتصميمه المناسب"
+  ],
+  "keywordsAr": [
+    "المجسمات",
+    "المكعب",
+    "متوازي المستطيلات",
+    "تصميم المكعب",
+    "تصميم متوازي المستطيلات",
+    "منشور مجسم"
+  ],
+  "discover": {
+    "scenarioAr": "أرادت مريم صنع علبة هدايا على شكل **مكعب** وأخرى على شكل **متوازي مستطيلات** من الورق المقوى. ففتحت علبة مكعبة جاهزة لتفحص تصميمها (نشرها) وتحديد عدد أوجهها وأحرفها ورؤوسها.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 175\" width=\"460\" height=\"175\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"159\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><polygon points=\"32,56 84,56 84,108 32,108\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><polygon points=\"32,56 56,36 108,36 84,56\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><polygon points=\"84,56 108,36 108,88 84,108\" fill=\"#60a5fa\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"56\" y1=\"36\" x2=\"56\" y2=\"88\" stroke=\"#1d4ed8\" stroke-dasharray=\"3 3\" stroke-width=\"1.3\"/><line x1=\"32\" y1=\"108\" x2=\"56\" y2=\"88\" stroke=\"#1d4ed8\" stroke-dasharray=\"3 3\" stroke-width=\"1.3\"/><line x1=\"56\" y1=\"88\" x2=\"108\" y2=\"88\" stroke=\"#1d4ed8\" stroke-dasharray=\"3 3\" stroke-width=\"1.3\"/><circle cx=\"84\" cy=\"56\" r=\"4\" fill=\"#dc2626\"/><text x=\"70\" y=\"130\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1e3a8a\">المكعب</text><line x1=\"122\" y1=\"74\" x2=\"156\" y2=\"74\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><polygon points=\"162,74 152,69 152,79\" fill=\"#0f172a\"/><text x=\"142\" y=\"63\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">نشر</text><rect x=\"202\" y=\"22\" width=\"24\" height=\"24\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.6\"/><rect x=\"178\" y=\"46\" width=\"24\" height=\"24\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.6\"/><rect x=\"202\" y=\"46\" width=\"24\" height=\"24\" fill=\"#86efac\" stroke=\"#15803d\" stroke-width=\"1.6\"/><rect x=\"226\" y=\"46\" width=\"24\" height=\"24\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.6\"/><rect x=\"202\" y=\"70\" width=\"24\" height=\"24\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.6\"/><rect x=\"202\" y=\"94\" width=\"24\" height=\"24\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.6\"/><text x=\"214\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">تصميم المكعب</text><polygon points=\"306,62 390,62 390,104 306,104\" fill=\"#fef3c7\" stroke=\"#b45309\" stroke-width=\"2\"/><polygon points=\"306,62 332,42 416,42 390,62\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/><polygon points=\"390,62 416,42 416,84 390,104\" fill=\"#fcd34d\" stroke=\"#b45309\" stroke-width=\"2\"/><text x=\"361\" y=\"130\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#b45309\">متوازي المستطيلات</text><text x=\"230\" y=\"156\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">أوجه مستوية، أحرف مستقيمة، ورؤوس</text></svg>",
+    "steps": [
+      {
+        "promptAr": "عند فتح المكعب على الطاولة نرى مربعات متقايسة تمثل أوجه المكعب. كم وجها يملك المكعب (وكذلك متوازي المستطيلات)؟ (اكتب العدد فقط)",
+        "hintAr": "عُدّ المربعات في تصميم المكعب الظاهر في الوسط.",
+        "expectedInput": "6",
+        "revealAr": "يملك كل من المكعب ومتوازي المستطيلات $6$ أوجه."
+      },
+      {
+        "promptAr": "عدّ الزوايا المدببة الظاهرة في المكعب (الرؤوس): هناك $4$ رؤوس في الأعلى و $4$ رؤوس في الأسفل. كم رأسا يملك المكعب؟ (اكتب العدد فقط)",
+        "hintAr": "اجمع $4 + 4$.",
+        "expectedInput": "8",
+        "revealAr": "يملك المكعب (ومثله متوازي المستطيلات) $8$ رؤوس."
+      },
+      {
+        "promptAr": "للمكعب حواف مستقيمة تسمى الأحرف: $4$ أحرف في القاعدة السفلية، و $4$ في القاعدة العلوية، و $4$ أحرف عمودية. ما العدد الكلي لأحرف المكعب؟ (اكتب العدد فقط)",
+        "hintAr": "احسب $4 + 4 + 4$.",
+        "expectedInput": "12",
+        "revealAr": "للمكعب ومتوازي المستطيلات $12$ حرفا."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "تنقسم المجسمات المألوفة إلى: مجسمات أوجهها مستوية لا تتدحرج (المكعب، متوازي المستطيلات، الهرم)، ومجسمات لها سطوح منحنية تتدحرج (الأسطوانة، المخروط، الكرة).",
+      "المكعب: مجسم له $6$ أوجه كلها مربعات متقايسة، و $8$ رؤوس، و $12$ حرفا متساوية الطول.",
+      "متوازي المستطيلات: مجسم له $6$ أوجه (إما $6$ مستطيلات، أو $4$ مستطيلات ومربعان متقابلان)، و $8$ رؤوس، و $12$ حرفا، بحيث يكون كل وجهين متقابلين متقايسين.",
+      "التصميم (أو النشر): هو رسم مستوٍ يجمع أوجه المجسم الستة متصلة بحيث يمكن طيّها للحصول على المجسم مغلقا دون تراكب أوجه."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 175\" width=\"460\" height=\"175\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"159\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"82\" y=\"28\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">تصميم صحيح لمكعب</text><rect x=\"54\" y=\"40\" width=\"22\" height=\"22\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.4\"/><rect x=\"32\" y=\"62\" width=\"22\" height=\"22\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.4\"/><rect x=\"54\" y=\"62\" width=\"22\" height=\"22\" fill=\"#86efac\" stroke=\"#15803d\" stroke-width=\"1.4\"/><rect x=\"76\" y=\"62\" width=\"22\" height=\"22\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.4\"/><rect x=\"98\" y=\"62\" width=\"22\" height=\"22\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.4\"/><rect x=\"76\" y=\"84\" width=\"22\" height=\"22\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.4\"/><text x=\"82\" y=\"130\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">أوجه لا تتراكب عند الطي</text><text x=\"226\" y=\"28\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">تصميم خاطئ لمكعب</text><rect x=\"196\" y=\"40\" width=\"22\" height=\"22\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><rect x=\"218\" y=\"40\" width=\"22\" height=\"22\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><rect x=\"174\" y=\"62\" width=\"22\" height=\"22\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><rect x=\"196\" y=\"62\" width=\"22\" height=\"22\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><rect x=\"218\" y=\"62\" width=\"22\" height=\"22\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><rect x=\"240\" y=\"62\" width=\"22\" height=\"22\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"226\" y=\"130\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">الجناحان في نفس الجهة يتراكبان!</text><text x=\"372\" y=\"28\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">تصميم متوازي المستطيلات</text><rect x=\"348\" y=\"36\" width=\"44\" height=\"20\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.3\"/><rect x=\"322\" y=\"56\" width=\"26\" height=\"28\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.3\"/><rect x=\"348\" y=\"56\" width=\"44\" height=\"28\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"1.3\"/><rect x=\"392\" y=\"56\" width=\"26\" height=\"28\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.3\"/><rect x=\"348\" y=\"84\" width=\"44\" height=\"20\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.3\"/><rect x=\"348\" y=\"104\" width=\"44\" height=\"28\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"1.3\"/><text x=\"372\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">كل وجهين متقابلين متقايسان</text></svg>",
+    "visualCaptionAr": "التمييز بين التصميم الصحيح والتصميم الخاطئ للمكعب، وتصميم متوازي المستطيلات.",
+    "examples": [
+      {
+        "problemAr": "حدد المضلعات المكونة لأوجه كل من: المكعب، متوازي المستطيلات، والهرم ذي القاعدة المربعة.",
+        "solutionAr": "أوجه المكعب كلها مربعات ($6$ مربعات)؛ أوجه متوازي المستطيلات مستطيلات (أو $4$ مستطيلات ومربعان)؛ وأوجه الهرم هي قاعدة مربعة و $4$ مثلثات."
+      },
+      {
+        "problemAr": "نريد تصميم متوازي مستطيلات أبعاده $6\\text{ cm}$ و $4\\text{ cm}$ و $3\\text{ cm}$. ما المستطيلات التي يتكون منها تصميمه؟",
+        "solutionAr": "يتكون من $3$ أزواج من المستطيلات المتقايسة (كل وجهين متقابلين متقايسان): وجهان أبعادهما $6\\text{ cm} \\times 4\\text{ cm}$، ووجهان أبعادهما $6\\text{ cm} \\times 3\\text{ cm}$، ووجهان أبعادهما $4\\text{ cm} \\times 3\\text{ cm}$."
+      }
+    ],
+    "watchOutAr": "ليس كل شكل من $6$ مربعات صالحا ليكون تصميما لمكعب! فتصميم فيه $5$ مربعات على استقامة واحدة، أو مستطيل $2 \\times 3$ من المربعات، أو مربعان في الجهة نفسها من الصف الأوسط، لا ينطوي لتكوين مكعب مغلق."
+  },
+  "practice": [
+    {
+      "questionAr": "أيّ من التصاميم الأربعة المبيّنة في الشكل يمثّل **تصميما صحيحا لمكعب** عند طيّه؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 105\" width=\"400\" height=\"105\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><text x=\"58\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">(أ)</text><rect x=\"12\" y=\"40\" width=\"18\" height=\"18\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"30\" y=\"40\" width=\"18\" height=\"18\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"48\" y=\"40\" width=\"18\" height=\"18\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"66\" y=\"40\" width=\"18\" height=\"18\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"84\" y=\"40\" width=\"18\" height=\"18\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"48\" y=\"58\" width=\"18\" height=\"18\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><text x=\"155\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">(ب)</text><rect x=\"128\" y=\"40\" width=\"18\" height=\"18\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"146\" y=\"40\" width=\"18\" height=\"18\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"164\" y=\"40\" width=\"18\" height=\"18\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"128\" y=\"58\" width=\"18\" height=\"18\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"146\" y=\"58\" width=\"18\" height=\"18\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"164\" y=\"58\" width=\"18\" height=\"18\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><text x=\"245\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">(ج)</text><rect x=\"226\" y=\"30\" width=\"18\" height=\"18\" fill=\"#dcfce7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"208\" y=\"48\" width=\"18\" height=\"18\" fill=\"#dcfce7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"226\" y=\"48\" width=\"18\" height=\"18\" fill=\"#dcfce7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"244\" y=\"48\" width=\"18\" height=\"18\" fill=\"#dcfce7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"262\" y=\"48\" width=\"18\" height=\"18\" fill=\"#dcfce7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"262\" y=\"66\" width=\"18\" height=\"18\" fill=\"#dcfce7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><text x=\"348\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">(د)</text><rect x=\"328\" y=\"30\" width=\"18\" height=\"18\" fill=\"#fee2e2\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"346\" y=\"30\" width=\"18\" height=\"18\" fill=\"#fee2e2\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"310\" y=\"48\" width=\"18\" height=\"18\" fill=\"#fee2e2\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"328\" y=\"48\" width=\"18\" height=\"18\" fill=\"#fee2e2\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"346\" y=\"48\" width=\"18\" height=\"18\" fill=\"#fee2e2\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"364\" y=\"48\" width=\"18\" height=\"18\" fill=\"#fee2e2\" stroke=\"#1e293b\" stroke-width=\"1.3\"/></svg>",
+      "options": [
+        "التصميم (أ)",
+        "التصميم (ب)",
+        "التصميم (ج)",
+        "التصميم (د)"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "التصميم (أ) يضم $5$ مربعات في صف واحد، وعند طيها يتراكب المربع الخامس فوق الأول!",
+        "التصميم (ب) مستطيل من $6$ مربعات ($2 \\times 3$) ولا يمكن طيه لتكوين مكعب مغلق أبدا.",
+        "أحسنت! التصميم (ج) يتكوّن من شريط أوسط به $4$ مربعات وجناحين على جهتين متقابلتين، لذا يغلق المكعب دون تراكب.",
+        "في التصميم (د) يقع الجناحان في الجهة العلوية نفسها، لذا يتطابقان فوق بعضهما وتبقى القاعدة السفلية مفتوحة!"
+      ],
+      "explanationAr": "التصميم (ج) هو التصميم الصحيح الوحيد للمكعب، لأن الشريط الأوسط من $4$ مربعات يغطي $4$ أوجه جانبية، بينما يغلق المربعان في الجهتين المتقابلتين القاعدتين العلوية والسفلية."
+    },
+    {
+      "questionAr": "تظهر في الشكل $4$ مجسمات مألوفة. ما المجسم الذي يملك **قاعدتين دائريتين** وسطحا منحنيا يمكنه أن يتدحرج؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 120\" width=\"420\" height=\"120\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"8\" y=\"8\" width=\"404\" height=\"104\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><polygon points=\"32,42 66,42 66,76 32,76\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.8\"/><polygon points=\"32,42 46,28 80,28 66,42\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"1.8\"/><polygon points=\"66,42 80,28 80,62 66,76\" fill=\"#60a5fa\" stroke=\"#1d4ed8\" stroke-width=\"1.8\"/><text x=\"56\" y=\"98\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e3a8a\">المكعب</text><ellipse cx=\"160\" cy=\"72\" rx=\"24\" ry=\"8\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.8\"/><rect x=\"136\" y=\"34\" width=\"48\" height=\"38\" fill=\"#dcfce7\"/><line x1=\"136\" y1=\"34\" x2=\"136\" y2=\"72\" stroke=\"#15803d\" stroke-width=\"1.8\"/><line x1=\"184\" y1=\"34\" x2=\"184\" y2=\"72\" stroke=\"#15803d\" stroke-width=\"1.8\"/><ellipse cx=\"160\" cy=\"34\" rx=\"24\" ry=\"8\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.8\"/><text x=\"160\" y=\"98\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#14532d\">الأسطوانة</text><polygon points=\"226,46 280,46 280,76 226,76\" fill=\"#fef3c7\" stroke=\"#b45309\" stroke-width=\"1.8\"/><polygon points=\"226,46 244,30 298,30 280,46\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.8\"/><polygon points=\"280,46 298,30 298,60 280,76\" fill=\"#fcd34d\" stroke=\"#b45309\" stroke-width=\"1.8\"/><text x=\"262\" y=\"98\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#92400e\">متوازي المستطيلات</text><polygon points=\"332,74 374,74 358,28\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><polygon points=\"374,74 392,62 358,28\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"362\" y=\"98\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#991b1b\">الهرم</text></svg>",
+      "options": [
+        "المكعب",
+        "الأسطوانة",
+        "متوازي المستطيلات",
+        "الهرم"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "المكعب كل أوجهه مستوية ومربعة الشكل وهو لا يتدحرج.",
+        "ممتاز! الأسطوانة لها قاعدتان دائريتان متقايستان وسطح جانبي منحني يسمح لها بالتدحرج.",
+        "متوازي المستطيلات أوجهه مستوية ومستطيلة (أو مربعة)، ولا يملك أي وجه دائري.",
+        "الهرم له أوجه مستوية مثلثة وقاعدة مضلعة ولا يتدحرج."
+      ],
+      "explanationAr": "المجسم الذي يملك قاعدتين دائريتين وسطحا جانبيا منحنيا هو الأسطوانة."
+    },
+    {
+      "questionAr": "يحتوي تصميم متوازي مستطيلات (أبعاده الثلاثة مختلفة) على $6$ أوجه. ما العبارة الصحيحة حول هذه الأوجه؟",
+      "options": [
+        "جميع أوجهه الستة مربعات متقايسة",
+        "له $4$ أوجه مثلثة وقاعدة مربعة",
+        "جميع أوجهه الستة مستطيلات مختلفة تماما عن بعضها",
+        "له $6$ أوجه مستطيلة، بحيث كل وجهين متقابلين متقايسان"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "المجسم الذي جميع أوجهه الستة مربعات متقايسة هو **المكعب** وليس متوازي المستطيلات ذي الأبعاد المختلفة.",
+        "هذا وصف **الهرم** ذي القاعدة المربعة وليس متوازي المستطيلات.",
+        "لا تكون الأوجه الستة مختلفة تماما، بل تتطابق على شكل أزواج متقابلة.",
+        "أحسنت! لمتوازي المستطيلات $6$ أوجه مستطيلة مرتبة في $3$ أزواج متقايسة: كل وجهين متقابلين متقايسان."
+      ],
+      "explanationAr": "في متوازي المستطيلات يكون كل وجهين متقابلين مستطيلين متقايسين تماما في الشكل والأبعاد."
+    }
+  ]
+}

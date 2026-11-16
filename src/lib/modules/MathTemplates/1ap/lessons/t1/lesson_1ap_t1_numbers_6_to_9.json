@@ -1,0 +1,121 @@
+{
+  "id": "lesson_1ap_t1_numbers_6_to_9",
+  "slug": "1ap-t1-numbers-6-to-9",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الأول (الجزء الثاني): الأعداد إلى 9، مقارنة الأطوال والجمع باستعمال (+) و(=)",
+  "order": 4,
+  "titleAr": "الأعداد من 6 إلى 9 ومتتالية الأعداد من 0 إلى 9: القراءة والكتابة والترتيب",
+  "objectives": [
+    "عدّ كميات وتشكيلها وقراءة وكتابة الأعداد من 6 إلى 9 بالأرقام",
+    "إتمام متتالية الأعداد من 0 إلى 9 تصاعديًا وتنازليًا وتعيين العدد السابق والعدد الموالي",
+    "مقارنة وترتيب أعداد من 0 إلى 9 واستعمال العدد لتعيين رتبة في صفّ"
+  ],
+  "keywordsAr": [
+    "الأعداد من 6 إلى 9",
+    "متتالية الأعداد إلى 9",
+    "ترتيب الأعداد",
+    "تعيين رتبة"
+  ],
+  "discover": {
+    "scenarioAr": "لَوَّنَ التَّلامِيذُ شَرِيطَ الأَعْدادِ مِنْ $0$ إلى $9$ وَعَدُّوا الكُرَيّاتِ الخَضْراءَ وَالزَّرْقاءَ، لَكِنَّ أَحَدَ الأَعْدادِ سَقَطَ مِنَ الشَّرِيطِ!",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" width=\"460\" height=\"190\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"18\" y=\"14\" width=\"424\" height=\"52\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><g stroke=\"#64748b\" stroke-width=\"1.2\"><rect x=\"28\" y=\"23\" width=\"38\" height=\"34\" rx=\"4\" fill=\"#fff\"/><rect x=\"69\" y=\"23\" width=\"38\" height=\"34\" rx=\"4\" fill=\"#fff\"/><rect x=\"110\" y=\"23\" width=\"38\" height=\"34\" rx=\"4\" fill=\"#fff\"/><rect x=\"151\" y=\"23\" width=\"38\" height=\"34\" rx=\"4\" fill=\"#fff\"/><rect x=\"192\" y=\"23\" width=\"38\" height=\"34\" rx=\"4\" fill=\"#fff\"/><rect x=\"233\" y=\"23\" width=\"38\" height=\"34\" rx=\"4\" fill=\"#fff\"/><rect x=\"274\" y=\"23\" width=\"38\" height=\"34\" rx=\"4\" fill=\"#dbeafe\"/><rect x=\"315\" y=\"23\" width=\"38\" height=\"34\" rx=\"4\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><rect x=\"356\" y=\"23\" width=\"38\" height=\"34\" rx=\"4\" fill=\"#dbeafe\"/><rect x=\"397\" y=\"23\" width=\"38\" height=\"34\" rx=\"4\" fill=\"#fff\"/></g><text x=\"47\" y=\"46\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\">0</text><text x=\"88\" y=\"46\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\">1</text><text x=\"129\" y=\"46\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\">2</text><text x=\"170\" y=\"46\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\">3</text><text x=\"211\" y=\"46\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\">4</text><text x=\"252\" y=\"46\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\">5</text><text x=\"293\" y=\"46\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e40af\">6</text><text x=\"334\" y=\"46\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#b45309\">؟</text><text x=\"375\" y=\"46\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e40af\">8</text><text x=\"416\" y=\"46\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#334155\">9</text><rect x=\"18\" y=\"80\" width=\"204\" height=\"96\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/><text x=\"120\" y=\"100\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">كُرَيّاتٌ زَرْقاءُ (5 في الأَعْلى + 3)</text><circle cx=\"52\" cy=\"124\" r=\"10\" fill=\"#2563eb\"/><circle cx=\"86\" cy=\"124\" r=\"10\" fill=\"#2563eb\"/><circle cx=\"120\" cy=\"124\" r=\"10\" fill=\"#2563eb\"/><circle cx=\"154\" cy=\"124\" r=\"10\" fill=\"#2563eb\"/><circle cx=\"188\" cy=\"124\" r=\"10\" fill=\"#2563eb\"/><circle cx=\"52\" cy=\"154\" r=\"10\" fill=\"#2563eb\"/><circle cx=\"86\" cy=\"154\" r=\"10\" fill=\"#2563eb\"/><circle cx=\"120\" cy=\"154\" r=\"10\" fill=\"#2563eb\"/><rect x=\"238\" y=\"80\" width=\"204\" height=\"96\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#86efac\" stroke-width=\"1.5\"/><text x=\"340\" y=\"100\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">كُرَيّاتٌ خَضْراءُ (5 في الأَعْلى + 1)</text><circle cx=\"272\" cy=\"124\" r=\"10\" fill=\"#16a34a\"/><circle cx=\"306\" cy=\"124\" r=\"10\" fill=\"#16a34a\"/><circle cx=\"340\" cy=\"124\" r=\"10\" fill=\"#16a34a\"/><circle cx=\"374\" cy=\"124\" r=\"10\" fill=\"#16a34a\"/><circle cx=\"408\" cy=\"124\" r=\"10\" fill=\"#16a34a\"/><circle cx=\"272\" cy=\"154\" r=\"10\" fill=\"#16a34a\"/></svg>",
+    "steps": [
+      {
+        "promptAr": "عُدَّ الكُرَيّاتِ الخَضْراءَ في المَجْمُوعَةِ اليُمْنَى ($5$ في الأَعْلى وَ $1$ في الأَسْفَلِ): ما العَدَدُ الكُلِّيُّ؟",
+        "hintAr": "ابْدَأْ مِنَ العَدَدِ $5$ وَأَضِفْ كُرَيَّةً واحِدَةً.",
+        "expectedInput": "6",
+        "revealAr": "عَدَدُ الكُرَيّاتِ الخَضْراءِ هُوَ $6$ (سِتَّةٌ)."
+      },
+      {
+        "promptAr": "اُنْظُرْ إلى شَرِيطِ الأَعْدادِ في الأَعْلى: ما العَدَدُ الناقِصُ الَّذِي يَلِي $6$ وَيَسْبِقُ $8$؟",
+        "hintAr": "عُدَّ بِالتَّرْتِيبِ: $5$، $6$، ...، $8$.",
+        "expectedInput": "7",
+        "revealAr": "العَدَدُ الناقِصُ هُوَ $7$ (سَبْعَةٌ)، فَهُوَ يَلِي $6$ مُباشَرَةً وَيَسْبِقُ $8$."
+      },
+      {
+        "promptAr": "عُدَّ الكُرَيّاتِ الزَّرْقاءَ في المَجْمُوعَةِ اليُسْرى ($5$ في الأَعْلى وَ $3$ في الأَسْفَلِ): ما عَدَدُ الكُرَيّاتِ الزَّرْقاءِ؟",
+        "hintAr": "عُدَّ بَعْدَ $5$: $6$، $7$، ...",
+        "expectedInput": "8",
+        "revealAr": "عَدَدُ الكُرَيّاتِ الزَّرْقاءِ هُوَ $8$ (ثَمانِيَةٌ)، وَالعَدَدُ الَّذِي يَلِيهِ هُوَ $9$ (تِسْعَةٌ)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "الأَعْدادُ مِنْ $6$ إلى $9$ هِيَ: $6$ (سِتَّةٌ)، $7$ (سَبْعَةٌ)، $8$ (ثَمانِيَةٌ)، $9$ (تِسْعَةٌ).",
+      "عَلى الشَّرِيطِ العَدَدِيِّ مِنْ $0$ إلى $9$، كُلُّ عَدَدٍ أَكْبَرُ مِنَ الَّذِي قَبْلَهُ بِـ $1$ وَأَصْغَرُ مِنَ الَّذِي بَعْدَهُ بِـ $1$.",
+      "العَدَدُ السّابِقُ يَأْتي قَبْلَ العَدَدِ مُباشَرَةً، وَالعَدَدُ المُوالِي يَأْتي بَعْدَهُ مُباشَرَةً (مِثْلُ $6$ سابِقٌ لِـ $7$ وَ $8$ مُوالٍ لِـ $7$).",
+      "لِتَرْتِيبِ أَعْدادٍ تَصاعُدِيًّا نَبْدَأُ مِنَ الأَصْغَرِ إلى الأَكْبَرِ، وَلِتَرْتِيبِها تَنازُلِيًّا نَبْدَأُ مِنَ الأَكْبَرِ إلى الأَصْغَرِ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" width=\"460\" height=\"190\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"18\" y=\"16\" width=\"424\" height=\"66\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"42\" y=\"52\" text-anchor=\"middle\" font-size=\"14\" fill=\"#64748b\">0</text><text x=\"84\" y=\"52\" text-anchor=\"middle\" font-size=\"14\" fill=\"#64748b\">1</text><text x=\"126\" y=\"52\" text-anchor=\"middle\" font-size=\"14\" fill=\"#64748b\">2</text><text x=\"168\" y=\"52\" text-anchor=\"middle\" font-size=\"14\" fill=\"#64748b\">3</text><text x=\"210\" y=\"52\" text-anchor=\"middle\" font-size=\"14\" fill=\"#64748b\">4</text><text x=\"252\" y=\"52\" text-anchor=\"middle\" font-size=\"14\" fill=\"#64748b\">5</text><rect x=\"278\" y=\"28\" width=\"32\" height=\"38\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><text x=\"294\" y=\"52\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e40af\">6</text><rect x=\"318\" y=\"26\" width=\"36\" height=\"42\" rx=\"6\" fill=\"#2563eb\"/><text x=\"336\" y=\"53\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#fff\">7</text><rect x=\"362\" y=\"28\" width=\"32\" height=\"38\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><text x=\"378\" y=\"52\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e40af\">8</text><text x=\"420\" y=\"52\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#334155\">9</text><rect x=\"18\" y=\"96\" width=\"100\" height=\"80\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#86efac\"/><text x=\"68\" y=\"120\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#166534\">6</text><text x=\"68\" y=\"142\" text-anchor=\"middle\" font-size=\"12\" fill=\"#15803d\" direction=\"rtl\">5 و 1</text><text x=\"68\" y=\"164\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">سِتَّةٌ</text><rect x=\"126\" y=\"96\" width=\"100\" height=\"80\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/><text x=\"176\" y=\"120\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e40af\">7</text><text x=\"176\" y=\"142\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1d4ed8\" direction=\"rtl\">5 و 2</text><text x=\"176\" y=\"164\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">سَبْعَةٌ</text><rect x=\"234\" y=\"96\" width=\"100\" height=\"80\" rx=\"8\" fill=\"#fefce8\" stroke=\"#fde047\"/><text x=\"284\" y=\"120\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#854d0e\">8</text><text x=\"284\" y=\"142\" text-anchor=\"middle\" font-size=\"12\" fill=\"#a16207\" direction=\"rtl\">5 و 3</text><text x=\"284\" y=\"164\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">ثَمانِيَةٌ</text><rect x=\"342\" y=\"96\" width=\"100\" height=\"80\" rx=\"8\" fill=\"#fff7ed\" stroke=\"#fdba74\"/><text x=\"392\" y=\"120\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#9a3412\">9</text><text x=\"392\" y=\"142\" text-anchor=\"middle\" font-size=\"12\" fill=\"#c2410c\" direction=\"rtl\">5 و 4</text><text x=\"392\" y=\"164\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">تِسْعَةٌ</text></svg>",
+    "visualCaptionAr": "شَرِيطُ الأَعْدادِ مِنْ 0 إلى 9، مَعَ تَوْضِيحِ السّابِقِ (6) وَالمُوالِي (8) لِلْعَدَدِ 7.",
+    "examples": [
+      {
+        "problemAr": "ما العَدَدُ السّابِقُ لِلْعَدَدِ $8$، وَما العَدَدُ المُوالِي لَهُ مُباشَرَةً؟",
+        "solutionAr": "عَلى الشَّرِيطِ العَدَدِيِّ يَأْتي $7$ قَبْلَ $8$ فَهُوَ السّابِقُ، وَيَأْتي $9$ بَعْدَ $8$ فَهُوَ المُوالِي."
+      },
+      {
+        "problemAr": "رَتِّبِ الأَعْدادَ التّالِيَةَ تَصاعُدِيًّا (مِنَ الأَصْغَرِ إلى الأَكْبَرِ): $9$، $4$، $7$، $2$.",
+        "solutionAr": "نَتَتَبَّعُ الشَّرِيطَ مِنْ $0$ إلى $9$ فَيَكُونُ التَّرْتِيبُ هُوَ: $2$ ثُمَّ $4$ ثُمَّ $7$ ثُمَّ $9$."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! اِقْرَأِ المَطْلُوبَ جَيِّدًا لِتُمَيِّزَ بَيْنَ التَّرْتِيبِ التَّصاعُدِيِّ (مِنَ الأَصْغَرِ إلى الأَكْبَرِ) وَالتَّرْتِيبِ التَّنازُلِيِّ (مِنَ الأَكْبَرِ إلى الأَصْغَرِ)."
+  },
+  "practice": [
+    {
+      "questionAr": "عُدَّ الأَقْراصَ البُرْتُقالِيَّةَ في الصُّورَةِ: كَمْ عَدَدُها؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 115\" width=\"360\" height=\"115\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"30\" y=\"14\" width=\"300\" height=\"86\" rx=\"10\" fill=\"#fff7ed\" stroke=\"#fdba74\" stroke-width=\"1.5\"/><circle cx=\"65\" cy=\"38\" r=\"13\" fill=\"#f97316\"/><circle cx=\"122\" cy=\"38\" r=\"13\" fill=\"#f97316\"/><circle cx=\"179\" cy=\"38\" r=\"13\" fill=\"#f97316\"/><circle cx=\"236\" cy=\"38\" r=\"13\" fill=\"#f97316\"/><circle cx=\"293\" cy=\"38\" r=\"13\" fill=\"#f97316\"/><circle cx=\"65\" cy=\"76\" r=\"13\" fill=\"#f97316\"/><circle cx=\"122\" cy=\"76\" r=\"13\" fill=\"#f97316\"/><circle cx=\"179\" cy=\"76\" r=\"13\" fill=\"#f97316\"/><circle cx=\"236\" cy=\"76\" r=\"13\" fill=\"#f97316\"/></svg>",
+      "options": [
+        "$7$",
+        "$8$",
+        "$9$",
+        "$6$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "عُدَّ الصَّفَّيْنِ بِدِقَّةٍ: $5$ في الأَعْلى وَ $4$ في الأَسْفَلِ، فَالْمَجْمُوعُ أَكْبَرُ مِنْ $7$.",
+        "اقْتَرَبْتَ كَثِيرًا! هُناكَ $4$ أَقْراصٍ في الصَّفِّ الثّانِي مَعَ $5$ في الأَوَّلِ.",
+        "أَحْسَنْتَ! $5$ أَقْراصٍ في الأَعْلى وَ $4$ في الأَسْفَلِ تُعْطِي $9$ أَقْراصٍ.",
+        "عَدَدُ الأَقْراصِ في الأَعْلى وَحْدَهُ $5$، أَعِدِ العَدَّ لِلصَّفِّ الثّانِي أَيْضًا."
+      ],
+      "explanationAr": "في الصَّفِّ الأَوَّلِ $5$ أَقْراصٍ وَفي الصَّفِّ الثّانِي $4$ أَقْراصٍ، نُكْمِلُ العَدَّ بَعْدَ $5$: $6$، $7$، $8$، $9$."
+    },
+    {
+      "questionAr": "ما العَدَدُ السّابِقُ لِلْعَدَدِ $7$ وَالعَدَدُ المُوالِي لَهُ عَلى الشَّرِيطِ العَدَدِيِّ؟",
+      "options": [
+        "السّابِقُ $6$ وَالمُوالِي $8$",
+        "السّابِقُ $8$ وَالمُوالِي $6$",
+        "السّابِقُ $5$ وَالمُوالِي $9$",
+        "السّابِقُ $6$ وَالمُوالِي $9$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "مُمْتازٌ! العَدَدُ الَّذِي يَسْبِقُ $7$ هُوَ $6$، وَالَّذِي يَلِيهِ مُباشَرَةً هُوَ $8$.",
+        "لَقَدْ عَكَسْتَ السّابِقَ وَالمُوالِيَ؛ السّابِقُ أَصْغَرُ ($6$) وَالمُوالِي أَكْبَرُ ($8$).",
+        "$5$ وَ $9$ بَعِيدانِ عَنْ $7$ وَلا يَأتِيانِ قَبْلَهُ أَوْ بَعْدَهُ مُباشَرَةً.",
+        "العَدَدُ المُوالِي لِـ $7$ مُباشَرَةً هُوَ $8$ وَلَيْسَ $9$."
+      ],
+      "explanationAr": "عَلى الشَّرِيطِ العَدَدِيِّ نَقْرَأُ: $6$ ثُمَّ $7$ ثُمَّ $8$، إِذَنِ السّابِقُ هُوَ $6$ وَالمُوالِي هُوَ $8$."
+    },
+    {
+      "questionAr": "أَيُّ تَرْتِيبٍ لِلْأَعْدادِ تَصاعُدِيٌّ (مِنَ الأَصْغَرِ إلى الأَكْبَرِ) وَصَحِيحٌ؟",
+      "options": [
+        "$9$، $7$، $5$، $3$",
+        "$3$، $7$، $5$، $9$",
+        "$5$، $3$، $7$، $9$",
+        "$3$، $5$، $7$، $9$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "هذا التَّرْتِيبُ تَنازُلِيٌّ مِنْ الأَكْبَرِ ($9$) إلى الأَصْغَرِ ($3$).",
+        "انْتَبِهْ! العَدَدُ $5$ أَصْغَرُ مِنْ $7$، فَيَجِبُ أَنْ يَسْبِقَهُ.",
+        "العَدَدُ $3$ أَصْغَرُ مِنْ $5$، فَيَجِبُ أَنْ يَكُونَ أَوَّلَ التَّرْتِيبِ.",
+        "أَحْسَنْتَ! التَّرْتِيبُ $3$، $5$، $7$، $9$ يَتَدَرَّجُ مِنَ الأَصْغَرِ إلى الأَكْبَرِ."
+      ],
+      "explanationAr": "نَسِيرُ عَلى الشَّرِيطِ مِنَ اليَسارِ إلى اليَمِينِ: $3$ أَصْغَرُ مِنْ $5$، وَ $5$ أَصْغَرُ مِنْ $7$، وَ $7$ أَصْغَرُ مِنْ $9$."
+    }
+  ]
+}

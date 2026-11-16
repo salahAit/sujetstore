@@ -1,0 +1,129 @@
+{
+  "id": "lesson_3am_t2_pythagoras_theorem",
+  "slug": "3am-t2-pythagoras-theorem",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t2",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: المثلث القائم والدائرة وخاصية فيثاغورس وجيب تمام زاوية حادة",
+  "order": 4,
+  "titleAr": "خاصية فيثاغورس والخاصية العكسية (حساب الأطوال وتمييز المثلث القائم)",
+  "objectives": [
+    "معرفة خاصية فيثاغورس في المثلث القائم وتوظيفها لحساب طول الوتر أو طول أحد الضلعين القائمين",
+    "استعمال لمسة الجذر التربيعي في الآلة الحاسبة لإيجاد القيمة المضبوطة أو القيمة المقربة وحصر طول محسوب بفيثاغورس (دون التطرق لقواعد الحساب على الجذور)",
+    "معرفة وتوظيف الخاصية العكسية لفيثاغورس للبرهان على أن مثلثا قائم، والاستدلال بالخلف للبرهان على أنه غير قائم"
+  ],
+  "keywordsAr": [
+    "خاصية فيثاغورس",
+    "الخاصية العكسية لفيثاغورس",
+    "الوتر والضلعان القائمان",
+    "لمسة الجذر التربيعي",
+    "القيمة المقربة",
+    "تمييز المثلث القائم"
+  ],
+  "discover": {
+    "scenarioAr": "أُسند سلّم طوله $5\\text{ m}$ إلى جدار عمودي على أرض أفقية بحيث تبعد قاعدة السلّم عن أسفل الجدار بمسافة $3\\text{ m}$. وبجانبه إطار خشبي مثلثي أطوال أضلاعه $6\\text{ cm}$ و $8\\text{ cm}$ و $10\\text{ cm}$. كيف نحسب ارتفاع أعلى السلّم على الجدار باستعمال علاقة فيثاغورس، وكيف نميّز المثلث القائم انطلاقاً من أطوال أضلاعه الثلاثة؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 205\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"205\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"12\" y=\"12\" width=\"222\" height=\"181\" rx=\"8\" fill=\"#ffffff\" stroke=\"#bfdbfe\" stroke-width=\"1.4\"/><text x=\"123\" y=\"31\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">فيثاغورس: حساب طول ضلع قائم</text><polygon points=\"60,158 150,158 60,50\" fill=\"#eff6ff\" stroke=\"#0f172a\" stroke-width=\"2\"/><polyline points=\"60,146 72,146 72,158\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><circle cx=\"60\" cy=\"158\" r=\"3\" fill=\"#0f172a\"/><circle cx=\"150\" cy=\"158\" r=\"3\" fill=\"#0f172a\"/><circle cx=\"60\" cy=\"50\" r=\"3\" fill=\"#0f172a\"/><text x=\"46\" y=\"166\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">A</text><text x=\"156\" y=\"166\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">B</text><text x=\"46\" y=\"52\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">C</text><text x=\"105\" y=\"174\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1d4ed8\">3 m</text><text x=\"40\" y=\"108\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\">?</text><text x=\"122\" y=\"96\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#0f172a\">5 m</text><rect x=\"246\" y=\"12\" width=\"222\" height=\"181\" rx=\"8\" fill=\"#ffffff\" stroke=\"#bbf7d0\" stroke-width=\"1.4\"/><text x=\"357\" y=\"31\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">العكسية: هل المثلث EFG قائم؟</text><polygon points=\"285,152 385,152 285,77\" fill=\"#f0fdf4\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"272\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">E</text><text x=\"391\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">F</text><text x=\"272\" y=\"78\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">G</text><text x=\"335\" y=\"168\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#15803d\">8 cm</text><text x=\"264\" y=\"118\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#15803d\">6 cm</text><text x=\"350\" y=\"106\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\">10 cm</text><text x=\"357\" y=\"186\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#166534\">10^2 = 100   |   6^2 + 8^2 = 100</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في المثلث $ABC$ القائم في $A$، تنص خاصية فيثاغورس على أن $BC^{2} = AB^{2} + AC^{2}$. إذا كان $BC = 5\\text{ m}$ و $AB = 3\\text{ m}$، فما قيمة $AC^{2}$؟",
+        "hintAr": "عوض $BC^{2} = 25$ و $AB^{2} = 9$ ثم اطرح $25 - 9$.",
+        "expectedInput": "16",
+        "revealAr": "لدينا $5^{2} = 3^{2} + AC^{2}$ أي $25 = 9 + AC^{2}$، ومنه $AC^{2} = 25 - 9 = 16$."
+      },
+      {
+        "promptAr": "بما أن $AC^{2} = 16$، استعمل لمسة الجذر التربيعي $\\sqrt{\\phantom{x}}$ (أو معرفتك للمربعات) لإيجاد الطول الموجب $AC$ بالمتر.",
+        "hintAr": "ما هو العدد الموجب الذي مربعه يساوي $16$؟",
+        "expectedInput": "4",
+        "revealAr": "العدد الموجب الذي مربعه $16$ هو $\\sqrt{16} = 4$، إذن ارتفاع أعلى السلّم على الجدار هو $AC = 4\\text{ m}$."
+      },
+      {
+        "promptAr": "في المثلث الخشبي $EFG$ حيث $EG = 6\\text{ cm}$ و $EF = 8\\text{ cm}$ و $FG = 10\\text{ cm}$، ما قيمة مجموع مربعي الضلعين الأصغرين $EG^{2} + EF^{2}$؟",
+        "hintAr": "احسب $6^{2} + 8^{2} = 36 + 64$.",
+        "expectedInput": "100",
+        "revealAr": "مربع أطول ضلع هو $FG^{2} = 10^{2} = 100$، ومجموع مربعي الضلعين الآخرين هو $36 + 64 = 100$. بما أن $FG^{2} = EG^{2} + EF^{2}$، فحسب الخاصية العكسية لفيثاغورس المثلث $EFG$ قائم في $E$."
+      },
+      {
+        "promptAr": "في مثلث آخر $RST$، أطوال أضلاعه $RS = 4\\text{ cm}$ و $RT = 5\\text{ cm}$ و $ST = 7\\text{ cm}$. احسب الفرق $ST^{2} - (RS^{2} + RT^{2})$ للتحقق هل هو قائم أم لا.",
+        "hintAr": "احسب $7^{2} = 49$ ثم $4^{2} + 5^{2} = 16 + 25 = 41$ واطرحهما.",
+        "expectedInput": "8",
+        "revealAr": "نجد $49 - 41 = 8 \\neq 0$، أي أن $ST^{2} \\neq RS^{2} + RT^{2}$. إذن نستنتج بالخلف (بعدم تحقق خاصية فيثاغورس) أن المثلث $RST$ **غير قائم**."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**خاصية فيثاغورس**: إذا كان المثلث $ABC$ قائماً في $A$، فإن مربع طول وتره $[BC]$ يساوي مجموع مربعي طولي الضلعين القائمين: $BC^{2} = AB^{2} + AC^{2}$.",
+      "**حساب طول ضلع قائم ولمسة الجذر التربيعي**: لحساب طول الوتر نجمع ($BC^{2} = AB^{2} + AC^{2}$)، ولحساب طول ضلع قائم نطرح ($AB^{2} = BC^{2} - AC^{2}$). ثم نستعمل لمسة $\\sqrt{\\phantom{x}}$ في الآلة الحاسبة لإيجاد القيمة المضبوطة أو القيمة المقربة للعدد الموجب، أو حصره بين عددين عشريين.",
+      "**الخاصية العكسية لفيثاغورس**: إذا كان في مثلث $ABC$ مربع طول أطول ضلع $[BC]$ مساوياً لمجموع مربعي طولي الضلعين الآخرين ($BC^{2} = AB^{2} + AC^{2}$)، فإن هذا المثلث **قائم في $A$**.",
+      "**البرهان على أن مثلثاً غير قائم**: إذا كان مربع طول أطول ضلع لا يساوي مجموع مربعي طولي الضلعين الآخرين ($BC^{2} \\neq AB^{2} + AC^{2}$)، فإن المثلث **غير قائم** (بالاستدلال بالخلف)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 195\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"195\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"14\" y=\"14\" width=\"212\" height=\"167\" rx=\"8\" fill=\"#ffffff\" stroke=\"#bfdbfe\" stroke-width=\"1.4\"/><rect x=\"69\" y=\"92\" width=\"36\" height=\"36\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><rect x=\"105\" y=\"128\" width=\"48\" height=\"48\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><polygon points=\"105,92 153,128 189,80 141,44\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><polygon points=\"105,92 105,128 153,128\" fill=\"#f8fafc\" stroke=\"#0f172a\" stroke-width=\"2\"/><polyline points=\"105,120 113,120 113,128\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.4\"/><text x=\"87\" y=\"114\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10.5\" font-weight=\"700\" fill=\"#166534\">3^2=9</text><text x=\"129\" y=\"156\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10.5\" font-weight=\"700\" fill=\"#1e40af\">4^2=16</text><text x=\"147\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10.5\" font-weight=\"700\" fill=\"#991b1b\">5^2=25</text><text x=\"118\" y=\"30\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"800\" fill=\"#0f172a\">9 + 16 = 25</text><rect x=\"240\" y=\"14\" width=\"226\" height=\"167\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"353\" y=\"38\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">الفرق بين الخاصية وعكسها</text><text x=\"353\" y=\"68\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">المباشرة: مثلث قائم ⇐ BC^2 = AB^2 + AC^2</text><text x=\"353\" y=\"92\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"10.5\" fill=\"#334155\" direction=\"rtl\" unicode-bidi=\"plaintext\">(تُستعمل لحساب طول ضلع مجهول)</text><line x1=\"258\" y1=\"106\" x2=\"448\" y2=\"106\" stroke=\"#bbf7d0\" stroke-width=\"1.2\"/><text x=\"353\" y=\"128\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#15803d\" direction=\"rtl\" unicode-bidi=\"plaintext\">العكسية: BC^2 = AB^2 + AC^2 ⇐ قائم في A</text><text x=\"353\" y=\"152\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#dc2626\" direction=\"rtl\" unicode-bidi=\"plaintext\">إذا كان ≠ فالمثلث غير قائم (بالخلف)</text><text x=\"353\" y=\"171\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"10\" fill=\"#475569\" direction=\"rtl\" unicode-bidi=\"plaintext\">احسب مربع أطول ضلع منفرداً قبل المقارنة</text></svg>",
+    "visualCaptionAr": "التمثيل الهندسي لمساواة فيثاغورس ($3^{2} + 4^{2} = 5^{2}$) وتلخيص توظيف الخاصية المباشرة والعكسية",
+    "examples": [
+      {
+        "problemAr": "مثلث $IJK$ قائم في $I$ حيث $IJ = 4\\text{ cm}$ و $IK = 6\\text{ cm}$. احسب الطول المضبوط $JK$ ثم عيّن قيمته المقربة إلى $0.01$ باستعمال لمسة $\\sqrt{\\phantom{x}}$ وحصره إلى $0.1$.",
+        "solutionAr": "بما أن المثلث $IJK$ قائم في $I$، فحسب خاصية فيثاغورس: $JK^{2} = IJ^{2} + IK^{2} = 4^{2} + 6^{2} = 16 + 36 = 52$.\n\nومنه الطول المضبوط هو $JK = \\sqrt{52}\\text{ cm}$.\n\nباستعمال لمسة $\\sqrt{\\phantom{x}}$ في الآلة الحاسبة نجد $JK \\approx 7.211...$، إذن القيمة المقربة إلى $0.01$ هي $7.21\\text{ cm}$، والحصر إلى $0.1$ هو $7.2 < JK < 7.3$."
+      },
+      {
+        "problemAr": "مثلث $UVW$ أطوال أضلاعه $UV = 9\\text{ cm}$ و $UW = 12\\text{ cm}$ و $VW = 15\\text{ cm}$. بيّن هل المثلث $UVW$ قائم.",
+        "solutionAr": "أطول ضلع هو $[VW]$ ونحسب مربعه على حدة: $VW^{2} = 15^{2} = 225$.\n\nونحسب مجموع مربعي الضلعين الآخرين: $UV^{2} + UW^{2} = 9^{2} + 12^{2} = 81 + 144 = 225$.\n\nبما أن $VW^{2} = UV^{2} + UW^{2}$، فحسب الخاصية العكسية لفيثاغورس المثلث $UVW$ قائم في $U$."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: جمع مربعي الضلعين المعطيين دائماً دون التحقق أيهما الوتر! إذا كان الوتر معلوماً وطلب منك حساب ضلع قائم، يجب **الطرح** (مثلاً في المثلث $ABC$ القائم في $A$ نكتب $AB^{2} = BC^{2} - AC^{2}$). وفي الخاصية العكسية، لا تكتب المساواة $BC^{2} = AB^{2} + AC^{2}$ في البداية، بل احسب كل طرف على حدة ثم قارن!"
+  },
+  "practice": [
+    {
+      "questionAr": "في المثلث $ABC$ القائم في $B$ المقابل، طول الوتر $AC = 17\\text{ cm}$ وطول الضلع $AB = 8\\text{ cm}$. ما طول الضلع $BC$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 175\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"300\" height=\"175\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><polygon points=\"86,44 86,134 236,134\" fill=\"#eff6ff\" stroke=\"#0f172a\" stroke-width=\"2\"/><polyline points=\"86,122 98,122 98,134\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><circle cx=\"86\" cy=\"44\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"86\" cy=\"134\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"236\" cy=\"134\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"78\" y=\"38\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">A</text><text x=\"72\" y=\"146\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\">B</text><text x=\"242\" y=\"146\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">C</text><text x=\"58\" y=\"94\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1d4ed8\">8 cm</text><text x=\"175\" y=\"80\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">17 cm</text><text x=\"161\" y=\"154\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"800\" fill=\"#dc2626\">BC = ?</text></svg>",
+      "options": [
+        "$9\\text{ cm}$",
+        "$15\\text{ cm}$",
+        "$18.8\\text{ cm}$",
+        "$25\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "لا نطرح الأطوال مباشرة ($17 - 8 = 9$)؛ خاصية فيثاغورس تتعلق بمربعات الأطوال!",
+        "ممتاز! المثلث قائم في $B$ فالوتر هو $[AC]$، ومنه $BC^{2} = 17^{2} - 8^{2} = 289 - 64 = 225$، إذن $BC = 15\\text{ cm}$.",
+        "لقد جمعت $17^{2} + 8^{2}$ وكأن $[BC]$ هو الوتر! لاحظ أن الزاوية القائمة في $B$، إذن $[AC]$ هو الوتر.",
+        "لا نجمع الأطوال $17 + 8 = 25$؛ في المثلث القائم نطبق علاقة المربعات $AC^{2} = AB^{2} + BC^{2}$."
+      ],
+      "explanationAr": "المثلث $ABC$ قائم في $B$، إذن وتره هو $[AC]$. حسب خاصية فيثاغورس: $AC^{2} = AB^{2} + BC^{2}$، ومنه $BC^{2} = 17^{2} - 8^{2} = 289 - 64 = 225$، وبالتالي $BC = \\sqrt{225} = 15\\text{ cm}$."
+    },
+    {
+      "questionAr": "في مثلث $DEF$ قائم في $D$، لدينا $DE = 5\\text{ cm}$ و $DF = 7\\text{ cm}$. باستعمال لمسة $\\sqrt{\\phantom{x}}$ في الآلة الحاسبة، ما القيمة المقربة للطول $EF$ إلى $0.1\\text{ cm}$ وما حصره إلى $0.1$؟",
+      "options": [
+        "$EF \\approx 4.9\\text{ cm}$ والحصر $4.8 < EF < 4.9$",
+        "$EF \\approx 12.0\\text{ cm}$ والحصر $11.9 < EF < 12.1$",
+        "$EF \\approx 8.6\\text{ cm}$ والحصر $8.6 < EF < 8.7$",
+        "$EF \\approx 7.4\\text{ cm}$ والحصر $7.3 < EF < 7.4$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "هنا المطلوب حساب الوتر $[EF]$ (مقابل $D$) لذا يجب الجمع $5^{2} + 7^{2}$ وليس الطرح $7^{2} - 5^{2} = 24$.",
+        "لا نجمع الطولين $5 + 7 = 12$ مباشرة؛ نجمع المربعين $25 + 49 = 74$ ثم نأخذ $\\sqrt{74}$.",
+        "أحسنت! $EF^{2} = 25 + 49 = 74$، وباستعمال لمسة $\\sqrt{\\phantom{x}}$ نجد $\\sqrt{74} \\approx 8.602$، أي $EF \\approx 8.6\\text{ cm}$ و $8.6 < EF < 8.7$.",
+        "$74$ هو مربع الطول ($EF^{2} = 74$) وليس $EF$؛ استعمل لمسة الجذر التربيعي $\\sqrt{74}$."
+      ],
+      "explanationAr": "المثلث $DEF$ قائم في $D$، إذن $EF^{2} = DE^{2} + DF^{2} = 5^{2} + 7^{2} = 25 + 49 = 74$. وبما أن $8.6^{2} = 73.96$ و $8.7^{2} = 75.69$ (وعبر الآلة الحاسبة $\\sqrt{74} \\approx 8.602$)، فإن $EF \\approx 8.6\\text{ cm}$ والحصر هو $8.6 < EF < 8.7$."
+    },
+    {
+      "questionAr": "أيٌّ من المثلثات الآتية التي أُعطيت أطوال أضلاعها بالسنتيمتر هو **مثلث قائم**؟",
+      "options": [
+        "مثلث أطواله $5$ و $7$ و $9$",
+        "مثلث أطواله $6$ و $9$ و $11$",
+        "مثلث أطواله $8$ و $10$ و $12$",
+        "مثلث أطواله $7$ و $24$ و $25$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "هنا $9^{2} = 81$ بينما $5^{2} + 7^{2} = 25 + 49 = 74 \\neq 81$، إذن غير قائم.",
+        "هنا $11^{2} = 121$ بينما $6^{2} + 9^{2} = 36 + 81 = 117 \\neq 121$، إذن غير قائم.",
+        "هنا $12^{2} = 144$ بينما $8^{2} + 10^{2} = 64 + 100 = 164 \\neq 144$، إذن غير قائم.",
+        "ممتاز! $25^{2} = 625$ و $7^{2} + 24^{2} = 49 + 576 = 625$، تحققت المساواة فالمثلث قائم حسب الخاصية العكسية لفيثاغورس."
+      ],
+      "explanationAr": "نختبر أطول ضلع في كل حالة: في المثلث $(7, 24, 25)$ لدينا $25^{2} = 625$ و $7^{2} + 24^{2} = 49 + 576 = 625$. وبما أن المساواة متحققة، فحسب الخاصية العكسية لفيثاغورس هذا المثلث قائم."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "lesson_3ap_t2_circle_compass",
+  "slug": "lesson-3ap-t2-circle-compass",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: في محلات الصناعة التقليدية (الكتل والسعات، المضلعات والدائرة وإدماج الفصل الثاني)",
+  "order": 6,
+  "titleAr": "الدائرة: خصائصها (المركز، نصف القطر، القطر) ورسمها باستعمال المدور",
+  "objectives": [
+    "التعرف على عناصر الدائرة (المركز، نصف القطر، القطر) والعلاقة بين القطر ونصف القطر",
+    "استعمال المدور بدقة لرسم دائرة بمعرفة مركزها وطول نصف قطرها أو مركزها ونقطة منها",
+    "التحقق من انتماء نقط إلى الدائرة باستعمال المدور أو المسطرة ونقل أو إتمام رسومات تتضمن دوائر"
+  ],
+  "keywordsAr": [
+    "الدائرة",
+    "المدور",
+    "مركز الدائرة",
+    "نصف القطر",
+    "القطر"
+  ],
+  "discover": {
+    "scenarioAr": "لتزيين طبق نحاسي تقليدي، رسم الصانع دائرة مركزها $O$ باستعمال المدور بفتحة تساوي $4\\text{ cm}$. ثم عيّن على الدائرة النقط $A$ و $B$ و $C$ بحيث تمر القطعة $[AB]$ بالمركز $O$، وعيّن نقطة أخرى $D$ خارج الدائرة.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">عناصر الدائرة وفتحة المدور</text><rect x=\"24\" y=\"44\" width=\"312\" height=\"170\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><circle cx=\"170\" cy=\"128\" r=\"68\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><line x1=\"102\" y1=\"128\" x2=\"238\" y2=\"128\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><line x1=\"170\" y1=\"128\" x2=\"218\" y2=\"80\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><circle cx=\"170\" cy=\"128\" r=\"4\" fill=\"#0f172a\"/><text x=\"170\" y=\"147\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><circle cx=\"102\" cy=\"128\" r=\"4\" fill=\"#dc2626\"/><text x=\"88\" y=\"132\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">A</text><circle cx=\"238\" cy=\"128\" r=\"4\" fill=\"#dc2626\"/><text x=\"252\" y=\"132\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">B</text><circle cx=\"218\" cy=\"80\" r=\"4\" fill=\"#16a34a\"/><text x=\"232\" y=\"76\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">C</text><text x=\"186\" y=\"100\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">4 cm</text><circle cx=\"296\" cy=\"92\" r=\"4.5\" fill=\"#7c3aed\"/><text x=\"312\" y=\"96\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#7c3aed\" direction=\"ltr\">D</text><rect x=\"352\" y=\"44\" width=\"224\" height=\"170\" rx=\"10\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"464\" y=\"68\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">فتحة المدور = نصف القطر</text><line x1=\"464\" y1=\"84\" x2=\"404\" y2=\"156\" stroke=\"#334155\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"464\" y1=\"84\" x2=\"524\" y2=\"156\" stroke=\"#334155\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"464\" cy=\"84\" r=\"6\" fill=\"#0f172a\"/><rect x=\"374\" y=\"164\" width=\"180\" height=\"32\" rx=\"4\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><line x1=\"404\" y1=\"164\" x2=\"404\" y2=\"176\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"404\" y=\"190\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" direction=\"ltr\">0</text><line x1=\"434\" y1=\"164\" x2=\"434\" y2=\"173\" stroke=\"#0f172a\"/><text x=\"434\" y=\"190\" text-anchor=\"middle\" font-size=\"10\" direction=\"ltr\">1</text><line x1=\"464\" y1=\"164\" x2=\"464\" y2=\"173\" stroke=\"#0f172a\"/><text x=\"464\" y=\"190\" text-anchor=\"middle\" font-size=\"10\" direction=\"ltr\">2</text><line x1=\"494\" y1=\"164\" x2=\"494\" y2=\"173\" stroke=\"#0f172a\"/><text x=\"494\" y=\"190\" text-anchor=\"middle\" font-size=\"10\" direction=\"ltr\">3</text><line x1=\"524\" y1=\"164\" x2=\"524\" y2=\"176\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"524\" y=\"190\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">4 cm</text></svg>",
+    "steps": [
+      {
+        "promptAr": "تأمل الرسم: القطعة الخضراء $[OC]$ تصل بين المركز $O$ والنقطة $C$ على الدائرة وطولها $4\\text{ cm}$. ماذا نسمي هذه القطعة؟ (اكتب: نصف القطر)",
+        "hintAr": "إنها القطعة الواصلة بين المركز ونقطة من الدائرة.",
+        "expectedInput": "نصف القطر",
+        "revealAr": "القطعة $[OC]$ هي **نصف القطر**، وطولها يساوي فتحة المدور ($4\\text{ cm}$)."
+      },
+      {
+        "promptAr": "القطعة الحمراء $[AB]$ تصل بين نقطتين من الدائرة وتمر بالمركز $O$، فهي تتكون من نصفي قطرين ($[OA]$ و $[OB]$). ما طول القطر $[AB]$ بالسنتيمتر ($\\text{cm}$)؟ (اكتب العدد فقط)",
+        "hintAr": "طول القطر هو ضعف نصف القطر ($4 + 4$ أو $4 \\times 2$).",
+        "expectedInput": "8",
+        "revealAr": "طول القطر $[AB]$ يساوي $4 + 4 = 8\\text{ cm}$."
+      },
+      {
+        "promptAr": "أي نقطة في الرسم تقع خارج الدائرة ولا تنتمي إليها: $A$ أم $C$ أم $D$؟ (اكتب الحرف اللاتيني فقط)",
+        "hintAr": "انظر إلى النقطة التي تبعد عن $O$ بمسافة أكبر من فتحة المدور.",
+        "expectedInput": "D",
+        "revealAr": "النقطة $D$ تقع خارج الدائرة لأن بعدها عن المركز $O$ أكبر من $4\\text{ cm}$، بينما $A$ و $B$ و $C$ تنتمي إلى الدائرة."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الدائرة** هي مجموعة كل النقط التي تبعد نفس المسافة عن نقطة ثابتة تسمى **المركز** ($O$).",
+      "**نصف القطر**: قطعة مستقيم تصل بين المركز $O$ ونقطة من الدائرة، وهو يساوي **فتحة المدور**.",
+      "**القطر**: قطعة مستقيم تصل بين نقطتين من الدائرة و**تمر بالمركز** $O$. طول القطر يساوي ضعف نصف القطر (أي نصف القطر $\\times 2$).",
+      "لرسم دائرة بالمدور: نفتح المدور بقدر طول **نصف القطر** على المسطرة، نثبت إبرة المدور على المركز $O$، ثم نديره دورة كاملة.",
+      "نقطة $M$ تنتمي إلى الدائرة إذا كان بعدها عن المركز $O$ يساوي نصف القطر تماما."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">العلاقة بين المركز ونصف القطر والقطر</text><rect x=\"24\" y=\"46\" width=\"276\" height=\"168\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><circle cx=\"162\" cy=\"130\" r=\"66\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"96\" y1=\"130\" x2=\"228\" y2=\"130\" stroke=\"#dc2626\" stroke-width=\"2.4\"/><line x1=\"162\" y1=\"130\" x2=\"162\" y2=\"64\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><circle cx=\"162\" cy=\"130\" r=\"4\" fill=\"#0f172a\"/><text x=\"162\" y=\"148\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><text x=\"84\" y=\"134\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">A</text><text x=\"240\" y=\"134\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">B</text><text x=\"162\" y=\"56\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">M</text><text x=\"196\" y=\"98\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">3 cm</text><text x=\"196\" y=\"148\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">6 cm</text><rect x=\"316\" y=\"46\" width=\"260\" height=\"168\" rx=\"10\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.5\"/><rect x=\"334\" y=\"64\" width=\"224\" height=\"38\" rx=\"8\" fill=\"#f1f5f9\"/><text x=\"446\" y=\"88\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">المركز: النقطة O</text><rect x=\"334\" y=\"112\" width=\"224\" height=\"38\" rx=\"8\" fill=\"#f0fdf4\"/><text x=\"446\" y=\"136\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">نصف القطر [OM] = 3 cm</text><rect x=\"334\" y=\"160\" width=\"224\" height=\"38\" rx=\"8\" fill=\"#fef2f2\"/><text x=\"446\" y=\"184\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"rtl\">القطر [AB] = 6 cm (الضعف)</text></svg>",
+    "visualCaptionAr": "توضيح عناصر الدائرة: المركز $O$، نصف القطر $[OM]$، والقطر $[AB]$ الذي يمر بالمركز.",
+    "examples": [
+      {
+        "problemAr": "فتحت سلمى المدور بقدر $5\\text{ cm}$ ورسمت دائرة مركزها $O$. ما طول نصف قطر الدائرة وما طول قطرها؟",
+        "solutionAr": "فتحة المدور هي نصف القطر، إذن نصف القطر يساوي $5\\text{ cm}$، وطول القطر هو ضعفه: $5 \\times 2 = 10\\text{ cm}$."
+      },
+      {
+        "problemAr": "أراد كريم رسم دائرة قطرها $12\\text{ cm}$. كم سنتيمترا يفتح المدور على المسطرة؟",
+        "solutionAr": "نفتح المدور على نصف القطر؛ وبما أن $6 + 6 = 12$ (أي $6 \\times 2 = 12$)، فإن نصف القطر هو $6\\text{ cm}$، لذا يفتح المدور على $6\\text{ cm}$."
+      }
+    ],
+    "watchOutAr": "احذر عند رسم دائرة أعطي لك **قطرها**! لا تفتح المدور على طول القطر كله، بل افتح المدور على **نصف القطر** فقط. وانتبه أيضا: كل قطعة تصل نقطتين من الدائرة ولا تمر بالمركز ليست قطرا."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل الدائرة التي مركزها $O$ في الرسم: أي قطعة من القطع الآتية هي **قطر** للدائرة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 180\" width=\"380\" height=\"180\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"364\" height=\"164\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><circle cx=\"190\" cy=\"90\" r=\"60\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"130\" y1=\"90\" x2=\"250\" y2=\"90\" stroke=\"#dc2626\" stroke-width=\"2.4\"/><line x1=\"190\" y1=\"90\" x2=\"190\" y2=\"30\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><line x1=\"154\" y1=\"138\" x2=\"226\" y2=\"138\" stroke=\"#d97706\" stroke-width=\"2.4\"/><line x1=\"190\" y1=\"90\" x2=\"165\" y2=\"65\" stroke=\"#7c3aed\" stroke-width=\"2.2\"/><circle cx=\"190\" cy=\"90\" r=\"4\" fill=\"#0f172a\"/><text x=\"198\" y=\"105\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">O</text><text x=\"118\" y=\"94\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">A</text><text x=\"262\" y=\"94\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">B</text><text x=\"190\" y=\"23\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">C</text><text x=\"142\" y=\"144\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">M</text><text x=\"238\" y=\"144\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">N</text><circle cx=\"165\" cy=\"65\" r=\"3.5\" fill=\"#7c3aed\"/><text x=\"156\" y=\"60\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#7c3aed\" direction=\"ltr\">E</text></svg>",
+      "options": [
+        "$[AB]$",
+        "$[OC]$",
+        "$[MN]$",
+        "$[OE]$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! القطعة $[AB]$ تصل بين نقطتين من الدائرة وتمر بالمركز $O$، فهي قطر الدائرة.",
+        "القطعة $[OC]$ تصل المركز $O$ بنقطة واحدة من الدائرة، فهي **نصف قطر** وليست قطرا.",
+        "انتبه! القطعة $[MN]$ تصل بين نقطتين من الدائرة ولكنها **لا تمر بالمركز** $O$، لذا فهي ليست قطرا.",
+        "النقطة $E$ تقع داخل الدائرة ولا تقع على محيطها، لذا $[OE]$ ليست قطرا ولا نصف قطر."
+      ],
+      "explanationAr": "قطر الدائرة يحقق شرطين: طرفاه على الدائرة ويمر بالمركز $O$. القطعة الوحيدة التي تحقق ذلك هنا هي $[AB]$."
+    },
+    {
+      "questionAr": "أراد أمين رسم دائرة **قطرها** $14\\text{ cm}$ باستعمال المدور. كم سنتيمترا يجب أن يفتح المدور على المسطرة؟",
+      "options": [
+        "$14\\text{ cm}$",
+        "$7\\text{ cm}$",
+        "$28\\text{ cm}$",
+        "$10\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه! $14\\text{ cm}$ هو طول القطر كاملا؛ إذا فتحت المدور على $14\\text{ cm}$ ستحصل على دائرة قطرها $28\\text{ cm}$.",
+        "ممتاز! فتحة المدور تساوي نصف القطر، وبما أن $7 + 7 = 14$، نفتح المدور على $7\\text{ cm}$.",
+        "حسبت ضعف القطر ($14 \\times 2$) بدل نصفه!",
+        "تحقق من نصف العدد $14$: لأن $7 \\times 2 = 14$ فنصف القطر هو $7\\text{ cm}$ وليس $10\\text{ cm}$."
+      ],
+      "explanationAr": "فتحة المدور تساوي **نصف القطر** دائما. بما أن القطر $14\\text{ cm}$ و $7 + 7 = 14$، فإن نصف القطر هو $7\\text{ cm}$."
+    },
+    {
+      "questionAr": "دائرة مركزها $O$ ونصف قطرها $6\\text{ cm}$. النقطة $K$ تبعد عن $O$ بـ $6\\text{ cm}$، والنقطة $M$ تبعد عن $O$ بـ $4\\text{ cm}$. أي عبارة صحيحة؟",
+      "options": [
+        "النقطة $K$ تنتمي إلى الدائرة، والنقطة $M$ تقع داخل الدائرة",
+        "النقطة $K$ تقع خارج الدائرة، والنقطة $M$ تنتمي إلى الدائرة",
+        "النقطتان $K$ و $M$ تنتميان معا إلى الدائرة",
+        "النقطة $K$ تقع داخل الدائرة، والنقطة $M$ تقع خارجها"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "صحيح! كل نقطة تبعد بقدر نصف القطر ($6\\text{ cm}$) تنتمي إلى الدائرة، والتي تبعد أقل منه ($4\\text{ cm}$) تقع داخلها.",
+        "النقطة $K$ بعدها يساوي نصف القطر تماما ($6\\text{ cm}$)، فهي على الدائرة وليس خارجها.",
+        "حتى تنتمي $M$ إلى الدائرة يجب أن تبعد $6\\text{ cm}$ عن $O$، لكنها تبعد $4\\text{ cm}$ فقط.",
+        "الترتيب معكوس: $6\\text{ cm}$ يساوي نصف القطر (على الدائرة)، و $4\\text{ cm}$ أصغر منه (داخل الدائرة)."
+      ],
+      "explanationAr": "النقطة التي بعدها عن المركز $O$ يساوي نصف القطر ($6\\text{ cm}$) تقع على الدائرة ($K$)، والتي بعدها أصغر من $6\\text{ cm}$ تقع داخل الدائرة ($M$)."
+    }
+  ]
+}

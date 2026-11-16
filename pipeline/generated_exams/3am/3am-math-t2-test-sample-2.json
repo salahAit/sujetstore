@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "levelId": "moyen",
+    "yearId": "3am",
+    "yearName": "السنة الثالثة متوسط",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t2",
+    "trimesterName": "الفصل الثاني",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة واحدة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 7,
+      "instruction": "أجب عن الأسئلة الآتية بالتفصيل:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) بسّط العبارة: $A = 7 x + 7 - (6 x - 5)$.",
+          "answer": "1) $A = 7 x + 7 - 6 x + 5 = x + 12$.",
+          "mark": "1.75"
+        },
+        {
+          "type": "text",
+          "content": "2) انشر وبسّط العبارة: $B = (2 x + 3)(2 x - 5)$.",
+          "answer": "2) $B = 4 x^2 -10 x +6 x -15 = 4 x^2 - 4 x - 15$.",
+          "mark": "3"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب قيمة العبارة $B$ من أجل $x = -3$، ثم تحقق أن الناتج يساوي قيمة العبارة المنشورة.",
+          "answer": "3) بالتعويض في الصيغتين نجد $B = 33$، إذن العبارتان متكافئتان.",
+          "mark": "2.25"
+        }
+      ],
+      "id": "ex_test_1_3am_t2_literal_calculation",
+      "num": "الأول"
+    },
+    {
+      "points": 7,
+      "instruction": "أجب مع توضيح مراحل البرهان والحساب:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.4fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) في المثلث $A B C$ القائم في $A$ المقابل، طول الوتر $B C = 7.5$ سم و $A B = 6$ سم. احسب الطول $A C$.",
+              "answer": "1) حسب خاصية فيثاغورس: $B C^2 = A B^2 + A C^2$، ومنه $A C^2 = B C^2 - A B^2 = 56.25 - 36 = 20.25$، إذن $A C = sqrt(20.25) = 4.5$ سم.",
+              "mark": "3"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3am_t2_pyth_med_880252.svg",
+              "caption": "المثلث القائم ABC"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) نعتبر مثلثاً $E F G$ أطوال أضلاعه $E F = 9$ سم، $E G = 12$ سم، $F G = 16$ سم. هل المثلث $E F G$ قائم؟ علّل.",
+          "answer": "2) $F G^2 = 256$ و $E F^2 + E G^2 = 81 + 144 = 225$. بما أن $F G^2 != E F^2 + E G^2$ فالمثلث $E F G$ غير قائم.",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب مساحة المثلث $A B C$ بـ سم² .",
+          "answer": "3) $S = frac(6 times 4.5, 2) = 13.5$ سم² .",
+          "mark": "1.75"
+        }
+      ],
+      "id": "ex_test_2_3am_t2_pythagoras_converse",
+      "num": "الثاني"
+    },
+    {
+      "points": 6,
+      "instruction": "لاحظ الشكل المقابل وأجب بالتعليل عن الأسئلة الآتية:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.4fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) في المثلث $E F G$ المقابل، $M$ منتصف $[F G]$ حيث $F G = 8$ سم و $E M = 4$ سم. برهن أن المثلث $E F G$ قائم في $E$.",
+              "answer": "1) لدينا $M$ منتصف $[F G]$، إذن $[E M]$ هو المتوسط المتعلق بالضلع $[F G]$، و $E M = 4 = frac(8, 2) = frac(F G, 2)$. حسب الخاصية العكسية للمتوسط المتعلق بالوتر، المثلث $E F G$ قائم في $E$.",
+              "mark": "2.5"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3am_t2_circum_med_700433.svg",
+              "caption": "المثلث EFG والمتوسط [EM]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) استنتج أن النقطة $E$ تنتمي إلى الدائرة التي قطرها $[F G]$، وحدد طول نصف قطرها.",
+          "answer": "2) بما أن $E F G$ قائم في $E$ ووتره $[F G]$، فإن $E$ تنتمي إلى الدائرة المحيطة به التي قطرها $[F G]$ ونصف قطرها $R = 4$ سم.",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "3) دائرة $(C)$ مركزها $O$ وقطرها $D = 14$ سم، وبعد المركز $O$ عن المستقيم $(d)$ هو $h = 6.5$ سم. حدد الوضعية النسبية لـ $(d)$ و $(C)$ مع التعليل.",
+          "answer": "3) نصف القطر $R = frac(14, 2) = 7$ سم. وبما أن $h = 6.5 < R = 7$، فإن المستقيم $(d)$ قاطع للدائرة في نقطتين.",
+          "mark": "2"
+        }
+      ],
+      "id": "ex_test_3_3am_t2_circumcircle_right_triangle",
+      "num": "الثالث"
+    }
+  ]
+}

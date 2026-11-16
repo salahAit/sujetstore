@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "4ap",
+    "yearName": "السنة الرابعة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "exam",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة وربع",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 1.5,
+      "instruction": "أنجز العمليات الآتية ذهنيا بإزاحة الفاصلة، ثم أكمل التحويلات:",
+      "content": [
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "العملية",
+            "النتيجة"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "$6.8 times 100$",
+              {
+                "content": "....................",
+                "answer": "$680$",
+                "mark": "0.25"
+              }
+            ],
+            [
+              "$5.3 div 1000$",
+              {
+                "content": "....................",
+                "answer": "$0.0053$",
+                "mark": "0.25"
+              }
+            ],
+            [
+              "$1.62 times 100$",
+              {
+                "content": "....................",
+                "answer": "$162$",
+                "mark": "0.25"
+              }
+            ],
+            [
+              "$8.1 div 100$",
+              {
+                "content": "....................",
+                "answer": "$0.081$",
+                "mark": "0.25"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "content": "أكمل التحويلين الآتيين باستعمال الضرب أو القسمة على $1000$:\n\nأ) #text(dir: ltr)[0.47 km = ........ m]  ،  ب) #text(dir: ltr)[670 g = ........ kg]",
+          "answer": "أ) #text(dir: ltr)[0.47 km = 470 m]  ،  ب) #text(dir: ltr)[670 g = 0.67 kg]",
+          "mark": "0.5"
+        }
+      ],
+      "id": "exam-4ap-trimester_exam-t3-easy-101-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 1.5,
+      "instruction": "تأمّل المجسم وتصاميم المكعب المرفقة، ثم أجب عن الأسئلة الآتية:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.3fr",
+            "1.2fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) ما اسم المجسم المبيّن في الشكل المقابل؟ اذكر عدد أوجهه، عدد رؤوسه، وعدد أحرفه، وحدّد شكل أوجهه.",
+              "answer": "1) المجسم هو متوازي المستطيلات: له $6$ أوجه مستطيلة (كل وجهين متقابلين متقايسان)، و $8$ رؤوس، و $12$ حرفا.",
+              "mark": "0.5"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/4ap_t3_solid_easy_s693663.svg"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/generated/math-svg/4ap_t3_cubenets_easy_s693663.svg",
+          "caption": "أربعة تصاميم مقترحة للمكعب"
+        },
+        {
+          "type": "text",
+          "content": "2) حدّد رمز التصميم الصحيح للمكعب من بين التصاميم الأربعة أعلاه، مع تعليل سبب رفض التصميم المستطيل (2 في 3) أو الصف الخماسي.",
+          "answer": "2) التصميم الصحيح للمكعب هو (ج) لأن أوجهه الستة تنطوي دون تراكب وتغلق المكعب تماما.",
+          "mark": "0.5"
+        },
+        {
+          "type": "true_false",
+          "items": [
+            {
+              "q": "كل وجهين متقابلين في متوازي المستطيلات متقايسان.",
+              "a": "صحيح",
+              "c": "العبارة صحيحة.",
+              "mark": "0.25"
+            },
+            {
+              "q": "يمكن للمكعب أن يتدحرج على الطاولة مثل الأسطوانة.",
+              "a": "خطأ",
+              "c": "خطأ، أوجه المكعب مستوية فلا يتدحرج.",
+              "mark": "0.25"
+            }
+          ]
+        }
+      ],
+      "id": "exam-4ap-trimester_exam-t3-easy-101-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "points": 1.5,
+      "instruction": "لاحظ الشكل الهندسي المقابل ثم أجب عن السؤالين (المحيط والمساحة، ثم حساب المدد):",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.6fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) مستطيل $A B C D$ طوله #text(dir: ltr)[7 cm] وعرضه #text(dir: ltr)[5 cm]. احسب محيطه ثم مساحته.",
+              "answer": "1) المحيط: $2 times (7 + 5) = 24$ #text(dir: ltr)[cm].\n\nالمساحة: $7 times 5 = 35$ #text(dir: ltr)[cm²].",
+              "mark": "1"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/4ap_t3_rect_easy_s587934.svg"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) انطلقت حافلة على الساعة #text(dir: ltr)[08 h 25 min] واستغرقت رحلتها #text(dir: ltr)[2 h 15 min]. في أي ساعة وصلت؟",
+          "answer": "2) وقت الوصول: #text(dir: ltr)[08 h 25 min + 2 h 15 min = 10 h 40 min].",
+          "mark": "0.5"
+        }
+      ],
+      "id": "exam-4ap-trimester_exam-t3-easy-101-ex-3",
+      "num": "الثالث"
+    },
+    {
+      "points": 1.5,
+      "instruction": "تزن صناديق متماثلة نفس الكتلة. أكمل جدول التناسبية الآتي باستعمال الخواص الخطية ومعامل التناسبية:",
+      "content": [
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "عدد الصناديق",
+            "$3$",
+            "$6$",
+            "$9$",
+            "$10$"
+          ],
+          "cells": [
+            "الكتلة (kg)",
+            "$12$",
+            "$24$",
+            {
+              "content": ".....",
+              "answer": "$36$",
+              "mark": "0.5"
+            },
+            {
+              "content": ".....",
+              "answer": "$40$",
+              "mark": "0.5"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "أوجد معامل التناسبية ثم وضّح طريقة إكمال الجدول.",
+          "answer": "معامل التناسبية: $12 div 3 = 4$ (نضرب السطر الأول في $4$ أو نقسم السطر الثاني على $4$).\n\nباستعمال الخواص الخطية: $6 = 3 times 2$، و $9 = 3 + 6$ إذن $12 + 24 = 36$.",
+          "mark": "0.5"
+        }
+      ],
+      "id": "exam-4ap-trimester_exam-t3-easy-101-ex-4",
+      "num": "الرابع"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "استعن بالمعطيات والجدول والمخطط المقابل لحل هذه الوضعية الإدماجية مع تنظيم الإجابة وكتابة الوحدات:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.6fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "قرّرت التعاونية المدرسية تهيئة حديقة المدرسة المستطيلة الشكل التي طولها #text(dir: ltr)[10 m] وعرضها #text(dir: ltr)[7 m]، وإحاطتها بسياج مع ترك مدخل عرضه #text(dir: ltr)[2.5 m]. خصّصت المدرسة ميزانية قدرها #text(dir: ltr)[1900 DA]، واشترت $10$ من شتلات زينة بسعر #text(dir: ltr)[89.75 DA] لـالشتلة الواحدة، وكيس سماد عضوي بسعر #text(dir: ltr)[243.25 DA]."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/4ap_t3_garden_easy_s229364.svg"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "الميزانية المخصّصة",
+            "سعر الشتلة الواحدة",
+            "الكمية المشتراة",
+            "ثمن كيس سماد عضوي",
+            "عرض المدخل"
+          ],
+          "cells": [
+            "#text(dir: ltr)[1900 DA]",
+            "#text(dir: ltr)[89.75 DA]",
+            "$10$",
+            "#text(dir: ltr)[243.25 DA]",
+            "#text(dir: ltr)[2.5 m]"
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب مساحة حديقة المدرسة بالمتر المربع، ثم احسب محيطها واستنتج طول السياج اللازم بعد ترك المدخل.",
+          "answer": "1) المساحة: $10 times 7 = 70$ #text(dir: ltr)[m²].\n\nالمحيط: $2 times (10 + 7) = 34$ #text(dir: ltr)[m].\n\nطول السياج: $34 - 2.5 = 31.5$ #text(dir: ltr)[m].",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب ثمن 10 من شتلات زينة، ثم احسب المصروف الإجمالي للمقتنيات.",
+          "answer": "2) ثمن شتلات زينة: $89.75 times 10 = 897.5$ #text(dir: ltr)[DA].\n\nالمصروف الإجمالي: $897.5 + 243.25 = 1140.75$ #text(dir: ltr)[DA].",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب المبلغ المالي المتبقي لدى التعاونية المدرسية بعد دفع المصاريف.",
+          "answer": "3) المبلغ المتبقي: $1900.00 - 1140.75 = 759.25$ #text(dir: ltr)[DA].",
+          "mark": "1.25"
+        }
+      ],
+      "id": "exam-4ap-trimester_exam-t3-easy-101-ex-5"
+    }
+  ]
+}

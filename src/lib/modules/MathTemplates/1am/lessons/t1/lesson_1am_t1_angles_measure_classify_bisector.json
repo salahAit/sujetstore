@@ -1,0 +1,128 @@
+{
+  "id": "lesson_1am_t1_angles_measure_classify_bisector",
+  "slug": "1am-t1-angles-measure-classify-bisector",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t1",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثالث: الزوايا وإدماج الفصل الأول",
+  "order": 6,
+  "titleAr": "الزوايا: تسمية وتصنيف وقياس وإنشاء زاوية والمنصف",
+  "objectives": [
+    "تسمية زوايا شكل بالترميز المناسب وتصنيفها: زاوية حادة، زاوية قائمة، زاوية منفرجة، زاوية مستقيمة",
+    "التعرف على الدرجة كوحدة لقياس الزوايا وقياس زاوية بالمنقلة ورسم زاوية قيسها معلوم وإنجاز مثيل زاوية",
+    "التعرف على منصف زاوية (نصف المستقيم الذي يقسمها إلى زاويتين متقايستين) وإنشاؤه باستعمال المنقلة أو المدور"
+  ],
+  "keywordsAr": [
+    "أنواع الزوايا",
+    "زاوية حادة ومنفرجة",
+    "زاوية قائمة ومستقيمة",
+    "قياس زاوية بالمنقلة",
+    "رسم زاوية",
+    "منصف زاوية"
+  ],
+  "discover": {
+    "scenarioAr": "في ورشة النجارة، ثبّت الحرفي ضلعين خشبيين على شكلي نصفي مستقيم $[Ox)$ و $[Oy)$ يصنعان زاوية $\\widehat{xOy} = 120^\\circ$ . أراد تصنيف هذه الزاوية، ثم وضع دعامة وسطى $[Oz)$ تقسم الزاوية $\\widehat{xOy}$ إلى زاويتين متجاورتين متقايستين تماماً. كيف نسمّي ونصنّف هذه الزوايا، وما قيس كل نصف؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 205\" width=\"520\" height=\"205\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"270\" height=\"185\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"145\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">الزاوية xOy = 120° ومنصفها [Oz)</text><line x1=\"140\" y1=\"162\" x2=\"264\" y2=\"162\" stroke=\"#0f172a\" stroke-width=\"2.4\"/><line x1=\"140\" y1=\"162\" x2=\"82.5\" y2=\"62.4\" stroke=\"#0f172a\" stroke-width=\"2.4\"/><line x1=\"140\" y1=\"162\" x2=\"197.5\" y2=\"62.4\" stroke=\"#16a34a\" stroke-width=\"2.2\" stroke-dasharray=\"5 3\"/><path d=\"M 186 162 A 46 46 0 0 0 163 122.2\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 163 122.2 A 46 46 0 0 0 117 122.2\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"177\" y1=\"136\" x2=\"184\" y2=\"141\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"140\" y1=\"112\" x2=\"140\" y2=\"120\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><circle cx=\"140\" cy=\"162\" r=\"3.8\" fill=\"#0f172a\"/><text x=\"134\" y=\"180\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"266\" y=\"166\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">x</text><text x=\"72\" y=\"62\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">y</text><text x=\"201\" y=\"60\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">z</text><text x=\"205\" y=\"144\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">60°</text><text x=\"134\" y=\"104\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">60°</text><rect x=\"290\" y=\"10\" width=\"220\" height=\"185\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"400\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">تصنيف الزوايا بالدرجات</text><text x=\"400\" y=\"60\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">حادة: أصغر من 90°</text><text x=\"400\" y=\"92\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">قائمة: تساوي 90° تماماً</text><text x=\"400\" y=\"124\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#d97706\">منفرجة: بين 90° و 180°</text><text x=\"400\" y=\"156\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">مستقيمة: تساوي 180° تماماً</text><text x=\"400\" y=\"182\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\">المنصف يقسم الزاوية إلى نصفين متقايسين</text></svg>",
+    "steps": [
+      {
+        "promptAr": "ما رأس الزاوية $\\widehat{xOy}$ وما ضلعاها؟ وما نوع هذه الزاوية علماً أن قيسها $120^\\circ$ ؟",
+        "hintAr": "حرف الرأس يُكتب في الوسط، والضلعان هما نصفا مستقيم مبدؤهما الرأس.",
+        "revealAr": "رأس الزاوية هو $O$ ، وضلعاها هما نصفا المستقيم $[Ox)$ و $[Oy)$ . وبما أن $90^\\circ < 120^\\circ < 180^\\circ$ فهي **زاوية منفرجة**."
+      },
+      {
+        "promptAr": "يقسم المنصف $[Oz)$ الزاوية $\\widehat{xOy} = 120^\\circ$ إلى زاويتين متقايستين. ما قيس الزاوية $\\widehat{xOz}$ بالدرجات؟",
+        "hintAr": "اقسم $120^\\circ$ على $2$ .",
+        "expectedInput": "60",
+        "revealAr": "بما أن $[Oz)$ منصف الزاوية $\\widehat{xOy}$ ، فإن $\\widehat{xOz} = \\widehat{zOy} = 120^\\circ \\div 2 = 60^\\circ$ ."
+      },
+      {
+        "promptAr": "ما نوع الزاوية الناتجة $\\widehat{xOz} = 60^\\circ$ ؟",
+        "hintAr": "قارن $60^\\circ$ مع قيس الزاوية القائمة $90^\\circ$ .",
+        "revealAr": "بما أن $0^\\circ < 60^\\circ < 90^\\circ$ فإن $\\widehat{xOz}$ **زاوية حادة**."
+      },
+      {
+        "promptAr": "إذا شكّلت زاويتان متجاورتان معاً زاوية مستقيمة قيسها $180^\\circ$ ، وكان قيس إحداهما $55^\\circ$ ، فما قيس الزاوية الأخرى بالدرجات؟",
+        "hintAr": "اطرح $55^\\circ$ من قيس الزاوية المستقيمة $180^\\circ$ .",
+        "expectedInput": "125",
+        "revealAr": "قيس الزاوية الأخرى هو $180^\\circ - 55^\\circ = 125^\\circ$ (وهي زاوية منفرجة)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**تسمية الزاوية**: تتكوّن الزاوية من **رأس** (مثلاً $O$) و**ضلعين** هما نصفا المستقيم $[Ox)$ و $[Oy)$ . نكتب $\\widehat{xOy}$ أو $\\widehat{yOx}$ (أو $\\widehat{AOB}$) بحيث يكون حرف الرأس دائماً في **الوسط**.",
+      "**تصنيف الزوايا بالدرجات ($^\\circ$)**: **منعدمة** ($0^\\circ$)، **حادة** (أكبر من $0^\\circ$ وأصغر من $90^\\circ$)، **قائمة** ($90^\\circ$)، **منفرجة** (أكبر من $90^\\circ$ وأصغر من $180^\\circ$)، **مستقيمة** ($180^\\circ$).",
+      "**القياس والإنشاء بالمنقلة**: نضع مركز المنقلة على رأس الزاوية، وتدريجة الصفر $0^\\circ$ على أحد الضلعين، ثم نقرأ القيس على التدريج الموافق لذلك الصفر. ويمكن إنشاء مثيل زاوية باستعمال المنقلة أو بالمدور.",
+      "**منصف زاوية**: هو نصف المستقيم الذي مبدؤه رأس الزاوية ويقسمها إلى **زاويتين متجاورتين متقايستين**. ننشئه بالمنقلة (بقسمة القيس على $2$) أو بالمدور والمسطرة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 205\" width=\"540\" height=\"205\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><g font-size=\"11\" font-weight=\"bold\"><rect x=\"10\" y=\"10\" width=\"122\" height=\"86\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\"/><text x=\"71\" y=\"26\" text-anchor=\"middle\" fill=\"#166534\">حادة (45°)</text><line x1=\"34\" y1=\"76\" x2=\"108\" y2=\"76\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"34\" y1=\"76\" x2=\"86\" y2=\"38\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M 58 76 A 24 24 0 0 0 53 62\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"142\" y=\"10\" width=\"122\" height=\"86\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/><text x=\"203\" y=\"26\" text-anchor=\"middle\" fill=\"#1e40af\">قائمة (90°)</text><line x1=\"172\" y1=\"76\" x2=\"240\" y2=\"76\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"172\" y1=\"76\" x2=\"172\" y2=\"34\" stroke=\"#0f172a\" stroke-width=\"2\"/><rect x=\"172\" y=\"64\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"274\" y=\"10\" width=\"122\" height=\"86\" rx=\"8\" fill=\"#fefce8\" stroke=\"#d97706\"/><text x=\"335\" y=\"26\" text-anchor=\"middle\" fill=\"#92400e\">منفرجة (130°)</text><line x1=\"328\" y1=\"76\" x2=\"384\" y2=\"76\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"328\" y1=\"76\" x2=\"290\" y2=\"40\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M 350 76 A 22 22 0 0 0 312 61\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2\"/><rect x=\"406\" y=\"10\" width=\"124\" height=\"86\" rx=\"8\" fill=\"#fef2f2\" stroke=\"#dc2626\"/><text x=\"468\" y=\"26\" text-anchor=\"middle\" fill=\"#991b1b\">مستقيمة (180°)</text><line x1=\"420\" y1=\"72\" x2=\"516\" y2=\"72\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"468\" cy=\"72\" r=\"3\" fill=\"#dc2626\"/><path d=\"M 488 72 A 20 20 0 0 0 448 72\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/></g><rect x=\"10\" y=\"106\" width=\"520\" height=\"89\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"128\" y=\"130\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">إنشاء المنصف بالمدور</text><text x=\"128\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">1) قوس مركزه O يقطع الضلعين في A و B</text><text x=\"128\" y=\"172\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">2) قوسان من A و B بنفس الفتحة يتقاطعان في C</text><line x1=\"285\" y1=\"178\" x2=\"495\" y2=\"178\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"285\" y1=\"178\" x2=\"405\" y2=\"114\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"285\" y1=\"178\" x2=\"486\" y2=\"125\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><path d=\"M 340 178 A 55 55 0 0 0 333 152\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/><circle cx=\"285\" cy=\"178\" r=\"3.2\" fill=\"#0f172a\"/><circle cx=\"340\" cy=\"178\" r=\"3\" fill=\"#2563eb\"/><circle cx=\"333\" cy=\"152\" r=\"3\" fill=\"#2563eb\"/><circle cx=\"430\" cy=\"140\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"274\" y=\"182\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"338\" y=\"191\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">A</text><text x=\"322\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">B</text><text x=\"434\" y=\"135\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">C</text><text x=\"492\" y=\"128\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">z</text></svg>",
+    "visualCaptionAr": "أنواع الزوايا الأربع الرئيسية وخطوات إنشاء منصف زاوية باستعمال المدور والمسطرة",
+    "examples": [
+      {
+        "problemAr": "صنّف الزوايا ذات الأقياس: $38^\\circ$ ، $90^\\circ$ ، $142^\\circ$ ، $180^\\circ$ . وإذا كان $[Ot)$ منصف الزاوية $\\widehat{AOB}$ بحيث $\\widehat{AOt} = 37^\\circ$ ، فما قيس $\\widehat{AOB}$ ؟",
+        "solutionAr": "$38^\\circ$ زاوية **حادة**؛ $90^\\circ$ زاوية **قائمة**؛ $142^\\circ$ زاوية **منفرجة**؛ $180^\\circ$ زاوية **مستقيمة**.\n\nوبما أن $[Ot)$ منصف $\\widehat{AOB}$ فإن $\\widehat{AOB} = 2 \\times 37^\\circ = 74^\\circ$ (حادة)."
+      },
+      {
+        "problemAr": "كيف ننشئ منصف الزاوية $\\widehat{xOy}$ باستعمال المدور والمسطرة غير المدرجة؟",
+        "solutionAr": "1) نضع شوكة المدور في الرأس $O$ ونرسم قوساً يقطع الضلعين $[Ox)$ و $[Oy)$ في $A$ و $B$ .\n\n2) من النقطتين $A$ و $B$ وبنفس فتحة المدور نرسم قوسين يتقاطعان داخل الزاوية في نقطة $C$ .\n\n3) نرسم نصف المستقيم $[OC)$ فهو منصف الزاوية $\\widehat{xOy}$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع عند استعمال المنقلة: للمنقلة تدريجان متعاكسان من $0^\\circ$ إلى $180^\\circ$ ! تأكّد دائماً من القراءة انطلاقاً من التدريجة $0^\\circ$ الموضوعة على الضلع الأول، وتحقّق منطقياً: الزاوية الحادة قيسها أصغر من $90^\\circ$ لا $140^\\circ$ ! كما يُكتب حرف الرأس في الوسط دوماً في $\\widehat{AOB}$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "في الشكل المقابل، النقط $A$ و $O$ و $B$ في استقامية ($\\widehat{AOB} = 180^\\circ$)، وقيس $\\widehat{AOC} = 52^\\circ$ ، ونصف المستقيم $[OD)$ منصف للزاوية $\\widehat{COB}$ . ما قيس الزاوية $\\widehat{DOB}$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 155\" width=\"300\" height=\"155\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"28\" y1=\"125\" x2=\"272\" y2=\"125\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"150\" y1=\"125\" x2=\"91.5\" y2=\"50.1\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"150\" y1=\"125\" x2=\"191.6\" y2=\"39.6\" stroke=\"#16a34a\" stroke-width=\"2.2\" stroke-dasharray=\"5 3\"/><path d=\"M 114 125 A 36 36 0 0 1 127.8 96.6\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><path d=\"M 122.9 90.3 A 44 44 0 0 1 169.3 85.5\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M 169.3 85.5 A 44 44 0 0 1 194 125\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><line x1=\"145\" y1=\"77\" x2=\"147\" y2=\"86\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><line x1=\"185\" y1=\"96\" x2=\"192\" y2=\"102\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><circle cx=\"150\" cy=\"125\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"20\" y=\"129\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"146\" y=\"144\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"276\" y=\"129\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"82\" y=\"46\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"194\" y=\"35\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">D</text><text x=\"98\" y=\"107\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">52°</text><text x=\"196\" y=\"108\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">?</text></svg>",
+      "options": [
+        "$128^\\circ$",
+        "$64^\\circ$",
+        "$52^\\circ$",
+        "$26^\\circ$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$128^\\circ$ هو قيس الزاوية الكلية $\\widehat{COB}$ ($180^\\circ - 52^\\circ$) قبل تنصيفها بالمنصف $[OD)$ .",
+        "ممتاز! أولاً $\\widehat{COB} = 180^\\circ - 52^\\circ = 128^\\circ$ ، ثم ينصفها $[OD)$ إلى $128^\\circ \\div 2 = 64^\\circ$ .",
+        "$52^\\circ$ هو قيس الزاوية $\\widehat{AOC}$ المعطاة، بينما المطلوب نصف $\\widehat{COB}$ .",
+        "قسّمتَ $52^\\circ$ على $2$ بدلاً من تنصيف الزاوية $\\widehat{COB} = 128^\\circ$ ."
+      ],
+      "explanationAr": "بما أن $\\widehat{AOB}$ زاوية مستقيمة ($180^\\circ$) فإن $\\widehat{COB} = 180^\\circ - 52^\\circ = 128^\\circ$ . وبما أن $[OD)$ منصف الزاوية $\\widehat{COB}$ فإن $\\widehat{DOB} = 128^\\circ \\div 2 = 64^\\circ$ ."
+    },
+    {
+      "questionAr": "لتكن الزاوية $\\widehat{EGF}$ التي قيسها $95^\\circ$ . ما هو رأس هذه الزاوية وما نوعها؟",
+      "options": [
+        "الرأس $E$ وهي زاوية منفرجة",
+        "الرأس $G$ وهي زاوية حادة",
+        "الرأس $G$ وهي زاوية منفرجة",
+        "الرأس $F$ وهي زاوية قائمة"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "الحرف $E$ هو نقطة من أحد الضلعين؛ رأس الزاوية هو دائماً الحرف الأوسط في التسمية $\\widehat{EGF}$ .",
+        "الرأس $G$ صحيح، لكن قيسها $95^\\circ$ أكبر من $90^\\circ$ فهي ليست حادة.",
+        "أحسنت! الحرف الأوسط $G$ هو الرأس، وبما أن $90^\\circ < 95^\\circ < 180^\\circ$ فهي زاوية منفرجة.",
+        "القائمة قيسها $90^\\circ$ تماماً، ورأس $\\widehat{EGF}$ هو $G$ وليس $F$ ."
+      ],
+      "explanationAr": "في التسمية $\\widehat{EGF}$ يقع الحرف $G$ في الوسط، فهو رأس الزاوية. وبما أن $95^\\circ$ أكبر من $90^\\circ$ وأصغر من $180^\\circ$ فهي زاوية منفرجة."
+    },
+    {
+      "questionAr": "اقرأ قيس الزاوية $\\widehat{xOy}$ على المنقلة المقابلة وحدّد نوعها بدقة:",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 175\" width=\"320\" height=\"175\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><path d=\"M 55 145 A 105 105 0 0 1 265 145 Z\" fill=\"#eff6ff\" stroke=\"#64748b\" stroke-width=\"1.6\"/><path d=\"M 105 145 A 55 55 0 0 1 215 145\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"160\" y1=\"145\" x2=\"282\" y2=\"145\" stroke=\"#0f172a\" stroke-width=\"2.4\"/><line x1=\"160\" y1=\"145\" x2=\"248.1\" y2=\"71.1\" stroke=\"#dc2626\" stroke-width=\"2.4\"/><path d=\"M 192 145 A 32 32 0 0 0 184.5 124.4\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"145\" r=\"3.8\" fill=\"#0f172a\"/><line x1=\"160\" y1=\"40\" x2=\"160\" y2=\"50\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"160\" y=\"62\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#475569\">90°</text><text x=\"252\" y=\"139\" font-size=\"10\" font-weight=\"bold\" fill=\"#16a34a\">0°</text><text x=\"246\" y=\"158\" font-size=\"9\" fill=\"#64748b\">180°</text><text x=\"60\" y=\"139\" font-size=\"10\" font-weight=\"bold\" fill=\"#16a34a\">180°</text><text x=\"236\" y=\"96\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">40°</text><text x=\"253\" y=\"67\" font-size=\"10\" font-weight=\"bold\" fill=\"#64748b\">140°</text><text x=\"156\" y=\"163\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"286\" y=\"149\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">x</text><text x=\"250\" y=\"84\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">y</text></svg>",
+      "options": [
+        "$140^\\circ$ وهي زاوية منفرجة",
+        "$40^\\circ$ وهي زاوية حادة",
+        "$50^\\circ$ وهي زاوية حادة",
+        "$140^\\circ$ وهي زاوية حادة"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "قرأت التدريج الخارجي ($140^\\circ$) بدلاً من التدريج الداخلي الذي يبدأ من $0^\\circ$ على الضلع $[Ox)$ ! لاحظ أن الفتحة أصغر من زاوية قائمة.",
+        "أحسنت! بالبدء من $0^\\circ$ على الضلع $[Ox)$ نقرأ $40^\\circ$ ، وهي زاوية حادة لأنها أصغر من $90^\\circ$ .",
+        "تحقق من القراءة على التدريج الداخلي: الضلع $[Oy)$ يشير إلى $40^\\circ$ وليس $50^\\circ$ .",
+        "لا يمكن لزاوية قيسها $140^\\circ$ أن تكون حادة! التقطتَ الرقم $140^\\circ$ من التدريج العكسي الخاطئ."
+      ],
+      "explanationAr": "الضلع الأول $[Ox)$ موضوع على تدريجة الصفر $0^\\circ$ في التدريج الداخلي، لذا نقرأ قيس الضلع $[Oy)$ على نفس التدريج الداخلي فنجد $40^\\circ$ ، وبما أن $40^\\circ < 90^\\circ$ فهي زاوية حادة."
+    }
+  ]
+}

@@ -117,10 +117,11 @@ def merge_manifests() -> int:
                 continue
 
             digest = info["sha256"]
-            if digest in seen_hashes:
-                print(f"[DEDUP] Duplicate sha256 {rel_path} == {seen_hashes[digest]}")
+            dedup_key = (doc.get("grade"), digest)
+            if dedup_key in seen_hashes:
+                print(f"[DEDUP] Duplicate sha256 {rel_path} == {seen_hashes[dedup_key]}")
                 continue
-            seen_hashes[digest] = rel_path
+            seen_hashes[dedup_key] = rel_path
 
             doc_id = doc.get("id") or f"ref_{doc.get('grade')}_{len(all_docs) + 1}"
             while doc_id in seen_ids:
@@ -146,7 +147,8 @@ def merge_manifests() -> int:
         "schema_version": "1.0",
         "total_verified": len(all_docs),
         "counts_by_grade": {
-            g: sum(1 for d in all_docs if d["grade"] == g) for g in ("2ap", "5ap", "2am")
+            g: sum(1 for d in all_docs if d["grade"] == g)
+            for g in ("1ap", "2ap", "3ap", "4ap", "5ap", "1am", "2am", "3am", "4am")
         },
         "documents": all_docs,
         "missing_references": missing_refs,

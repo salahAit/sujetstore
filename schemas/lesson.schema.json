@@ -15,10 +15,10 @@
     "practice"
   ],
   "properties": {
-    "id": { "type": "string", "pattern": "^lesson_(2ap|5ap|2am)_t[123]_[a-z0-9_]+$" },
+    "id": { "type": "string", "pattern": "^lesson_(1ap|2ap|3ap|4ap|5ap|1am|2am|3am|4am)_t[123]_[a-z0-9_]+$" },
     "slug": { "type": "string", "minLength": 4 },
-    "grade": { "type": "string", "enum": ["2ap", "5ap", "2am"] },
-    "yearSubjectId": { "type": "integer", "enum": [586, 606, 624] },
+    "grade": { "type": "string", "enum": ["1ap", "2ap", "3ap", "4ap", "5ap", "1am", "2am", "3am", "4am"] },
+    "yearSubjectId": { "type": "integer", "enum": [581, 586, 591, 598, 606, 614, 624, 634, 644] },
     "trimesterId": { "type": "string", "enum": ["t1", "t2", "t3"] },
     "sequenceId": { "type": "string" },
     "sequenceTitleAr": { "type": "string" },

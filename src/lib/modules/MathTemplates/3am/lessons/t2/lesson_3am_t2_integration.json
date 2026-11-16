@@ -1,0 +1,127 @@
+{
+  "id": "lesson_3am_t2_integration",
+  "slug": "3am-t2-integration",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t2",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع السادس: الحساب الحرفي وإدماج الفصل الثاني",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الثاني: الكتابة العلمية والقوى والمثلث القائم وفيثاغورس وجيب التمام والحساب الحرفي",
+  "objectives": [
+    "تجنيد الكتابة العلمية ورتبة مقدار وقواعد القوى والنشر والتبسيط الجبري في معالجة مشكلات عددية وهندسية متنوعة",
+    "استثمار خواص الدائرة المحيطة بالمثلث القائم والمتوسط المتعلق بالوتر والمماس وفيثاغورس وجيب التمام في براهين مركبة نسبيا",
+    "تحرير حل وضعية إدماجية متكاملة مع التحقق من معقولية القيم التقريبية والنتائج وفق معايير التقويم الأربعة"
+  ],
+  "keywordsAr": [
+    "وضعية إدماجية",
+    "حصيلة الفصل الثاني",
+    "المثلث القائم",
+    "تجنيد الموارد"
+  ],
+  "discover": {
+    "scenarioAr": "في مشروع تهيئة حديقة علمية ببلدية جزائرية، كُلّف فريق الهندسة بثلاث مهام متكاملة: (1) تخطيط مسار مثلثي $ABC$ قائم في $A$ حيث $AB = 6\\text{ m}$ و $BC = 10\\text{ m}$ محاط بدائرة مركزها $O$، (2) تصميم لوحة مستطيلة أبعادها $(2x + 3)\\text{ m}$ و $(x + 5)\\text{ m}$، (3) حساب الميزانية المخفّضة $P = (4.2 \\times 10^{5}) \\times 2^{-2}$ بالدينار. كيف نجنّد موارد الفصل الثاني لحل هذه الوضعية؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 205\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"205\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"12\" y=\"12\" width=\"222\" height=\"181\" rx=\"8\" fill=\"#ffffff\" stroke=\"#bfdbfe\" stroke-width=\"1.4\"/><text x=\"123\" y=\"31\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">1. الهندسة: المثلث القائم والدائرة</text><circle cx=\"123\" cy=\"118\" r=\"62\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><polygon points=\"85.8,68.4 61,118 185,118\" fill=\"#eff6ff\" fill-opacity=\"0.65\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"85.8\" y1=\"68.4\" x2=\"123\" y2=\"118\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/><polyline points=\"81.3,77.3 90.3,81.8 94.7,72.9\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><circle cx=\"123\" cy=\"118\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"78\" y=\"60\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">A</text><text x=\"46\" y=\"124\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">B</text><text x=\"191\" y=\"124\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">C</text><text x=\"120\" y=\"135\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\">O</text><text x=\"63\" y=\"90\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#16a34a\">6 m</text><text x=\"123\" y=\"196\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#1e40af\">BC = 10 m   |   O منتصف [BC]</text><rect x=\"246\" y=\"12\" width=\"222\" height=\"181\" rx=\"8\" fill=\"#ffffff\" stroke=\"#bbf7d0\" stroke-width=\"1.4\"/><text x=\"357\" y=\"31\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">2. الحساب الحرفي والقوى</text><rect x=\"276\" y=\"48\" width=\"162\" height=\"64\" rx=\"4\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"357\" y=\"74\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"800\" fill=\"#166534\">S = (2x + 3)(x + 5)</text><text x=\"357\" y=\"96\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#15803d\">= 2x^2 + kx + 15</text><rect x=\"264\" y=\"124\" width=\"186\" height=\"56\" rx=\"6\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.3\"/><text x=\"357\" y=\"146\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"800\" fill=\"#854d0e\">P = (4.2 × 10^5) × 2^-2</text><text x=\"357\" y=\"168\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#b45309\" direction=\"rtl\" unicode-bidi=\"plaintext\">الكتابة العلمية ورتبة المقدار</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في المسار المثلثي $ABC$ القائم في $A$، لدينا $AB = 6\\text{ m}$ والوتر $BC = 10\\text{ m}$. باستعمال خاصية فيثاغورس، ما طول الضلع $[AC]$ بالمتر؟",
+        "hintAr": "احسب $AC^{2} = BC^{2} - AB^{2} = 100 - 36$ ثم استعمل الجذر التربيعي.",
+        "expectedInput": "8",
+        "revealAr": "$AC^{2} = 10^{2} - 6^{2} = 100 - 36 = 64$، ومنه $AC = \\sqrt{64} = 8\\text{ m}$."
+      },
+      {
+        "promptAr": "ما طول المتوسط $[AO]$ المتعلق بالوتر $[BC]$ بالمتر؟ (واستنتج كذلك $\\cos \\widehat{B}$).",
+        "hintAr": "في المثلث القائم، طول المتوسط المتعلق بالوتر يساوي نصف طول الوتر $BC = 10\\text{ m}$.",
+        "expectedInput": "5",
+        "revealAr": "$AO = \\frac{BC}{2} = \\frac{10}{2} = 5\\text{ m}$ (وهو نصف قطر الدائرة المحيطة بالمثلث). كما أن $\\cos \\widehat{B} = \\frac{AB}{BC} = \\frac{6}{10} = 0.6$."
+      },
+      {
+        "promptAr": "مساحة اللوحة المستطيلة هي $S = (2x + 3)(x + 5)$. عند نشرها وتبسيطها نجد $S = 2x^{2} + kx + 15$. ما قيمة المعامل $k$؟",
+        "hintAr": "اجمع الحدين المتشابهين من النشر المضاعف: $2x \\times 5 + 3 \\times x$.",
+        "expectedInput": "13",
+        "revealAr": "$(2x + 3)(x + 5) = 2x^{2} + 10x + 3x + 15 = 2x^{2} + 13x + 15$، إذن $k = 13$."
+      },
+      {
+        "promptAr": "لحساب الميزانية $P = (4.2 \\times 10^{5}) \\times 2^{-2}$، علماً أن $2^{-2} = \\frac{1}{4} = 0.25$، نكتب النتيجة كتابة علمية على الشكل $1.05 \\times 10^{n}$. ما قيمة الأس $n$؟",
+        "hintAr": "احسب $4.2 \\times 0.25 = 1.05$، وهو أصلاً محصور بين $1$ و $10$.",
+        "expectedInput": "5",
+        "revealAr": "$P = (4.2 \\times 0.25) \\times 10^{5} = 1.05 \\times 10^{5}\\text{ DA}$، إذن $n = 5$ ورتبة مقدار التكلفة هي $1 \\times 10^{5}\\text{ DA}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الأدوات العددية (المقطع الرابع)**: كتابة الأعداد الكبيرة والصغيرة كتابة علمية $a \\times 10^{n}$ ($1 \\le a < 10$)، وحصرها $10^{n} \\le A < 10^{n+1}$، وتعيين رتبة مقدارها لتقدير النتائج، وتطبيق قواعد القوى والأسس السالبة ($a^{-n} = \\frac{1}{a^{n}}$) باحترام الأولوية.",
+      "**أدوات المثلث القائم والدائرة (المقطع الخامس)**: لتمييز المثلث القائم نوظف **عكس الدائرة المحيطة** (ضلع قطر)، أو **عكس المتوسط المتعلق بالوتر** ($AO = \\frac{BC}{2}$)، أو **الخاصية العكسية لفيثاغورس** ($BC^{2} = AB^{2} + AC^{2}$)، أو **تعامد المماس** مع نصف القطر.",
+      "**حساب الأطوال والزوايا في المثلث القائم**: لحساب طول ضلع ثالث علم ضلعان نستعمل **خاصية فيثاغورس** (مع لمسة $\\sqrt{\\phantom{x}}$ عند اللزوم)، ولحساب طول أو قيس زاوية حادة بمعرفة ضلع وزاوية نستعمل **جيب تمام زاوية حادة** ($\\cos \\alpha = \\frac{\\text{AB}}{\\text{BC}}$ في المثلث القائم في $A$).",
+      "**أدوات الحساب الحرفي (المقطع السادس)**: تبسيط العبارات بحذف الأقواس المسبوقة بـ $(+)$ أو $(-)$، وتطبيق النشر البسيط $k(a+b)$ والنشر المضاعف $(a+b)(c+d)$ لحساب مساحات أو محيطات بدلالة $x$ وتعويض قيم معطاة، مع التحقق وفق معايير التقويم الأربعة (الوجاهة، الاستعمال السليم، الانسجام، الإتقان)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 185\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"185\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"16\" y=\"14\" width=\"216\" height=\"72\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"124\" y=\"38\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">1. الكتابة العلمية والقوى</text><text x=\"124\" y=\"64\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#334155\">a × 10^n (1 ≤ a &lt; 10)  |  a^-n = 1/a^n</text><rect x=\"248\" y=\"14\" width=\"216\" height=\"72\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"356\" y=\"38\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">2. الدائرة والمتوسط والمماس</text><text x=\"356\" y=\"64\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#334155\" direction=\"rtl\" unicode-bidi=\"plaintext\">قطر محيط | OA = BC/2 | مماس ⊥ نصف قطر</text><rect x=\"16\" y=\"98\" width=\"216\" height=\"72\" rx=\"8\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"124\" y=\"122\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#854d0e\" direction=\"rtl\" unicode-bidi=\"plaintext\">3. فيثاغورس وجيب التمام cos</text><text x=\"124\" y=\"148\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#334155\">BC^2 = AB^2 + AC^2  |  0 &lt; cos &lt; 1</text><rect x=\"248\" y=\"98\" width=\"216\" height=\"72\" rx=\"8\" fill=\"#fdf2f8\" stroke=\"#db2777\" stroke-width=\"1.5\"/><text x=\"356\" y=\"122\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#9d174d\" direction=\"rtl\" unicode-bidi=\"plaintext\">4. الحساب الحرفي والنشر</text><text x=\"356\" y=\"148\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#334155\">-(b - c) = -b + c  |  (a + b)(c + d)</text></svg>",
+    "visualCaptionAr": "الركائز الأربع لموارد الفصل الثاني المجنّدة في حل الوضعيات الإدماجية",
+    "examples": [
+      {
+        "problemAr": "دائرة $(C)$ مركزها $O$ وقطرها $[AB] = 10\\text{ cm}$، و $M$ نقطة من $(C)$ بحيث $AM = 8\\text{ cm}$. برّر أن المثلث $ABM$ قائم، احسب الطول $BM$، ثم احسب $\\cos \\widehat{MAB}$ واستنتج قيس $\\widehat{MAB}$ (علماً أن $\\cos 37^\\circ \\approx 0.8$).",
+        "solutionAr": "1) بما أن $M$ تنتمي إلى الدائرة التي قطرها $[AB]$، فالمثلث $ABM$ قائم في $M$ (عكس الدائرة المحيطة بالمثلث القائم).\n\n2) حسب خاصية فيثاغورس: $AB^{2} = AM^{2} + BM^{2} \\implies BM^{2} = 10^{2} - 8^{2} = 100 - 64 = 36$، إذن $BM = 6\\text{ cm}$.\n\n3) في المثلث القائم $ABM$: $\\cos \\widehat{MAB} = \\frac{AM}{AB} = \\frac{8}{10} = 0.8$، ومنه $\\widehat{MAB} \\approx 37^\\circ$."
+      },
+      {
+        "problemAr": "ليكن $A = (3x + 2)(x - 1) - 3(x^{2} - 2)$ و $B = \\frac{5^{3} \\times 5^{-5}}{10^{-2}}$. بسط العبارة $A$ ثم احسب $A$ من أجل $x = -6$، واحسب $B$ واكتبه كتابة علمية.",
+        "solutionAr": "1) نشر وتبسيط $A$: $A = (3x^{2} - 3x + 2x - 2) - 3x^{2} + 6 = 3x^{2} - x - 2 - 3x^{2} + 6 = -x + 4$.\n\nمن أجل $x = -6$: $A = -(-6) + 4 = 6 + 4 = 10$.\n\n2) حساب $B$: $B = \\frac{5^{3-5}}{10^{-2}} = \\frac{5^{-2}}{10^{-2}} = \\left(\\frac{10}{5}\\right)^{2} = 2^{2} = 4 = 4 \\times 10^{0}$."
+      }
+    ],
+    "watchOutAr": "خطأ شائع في الوضعيات الإدماجية: استعمال أداة غير ملائمة للمعطيات! فإذا أعطيتك **نصف دائرة أو متوسطاً** استعمل خواص الدائرة أو المتوسط لإثبات التعامد، وإذا أعطيتك **الأضلاع الثلاثة** استعمل الخاصية العكسية لفيثاغورس. وتذكر التحقق من معقولية كل نتيجة ($0 < \\cos \\alpha < 1$، والوتر أطول من الضلعين القائمين)."
+  },
+  "practice": [
+    {
+      "questionAr": "ما الكتابة العلمية ورتبة مقدار العدد $K = \\frac{2.8 \\times 10^{4} \\times 3 \\times 10^{-8}}{2 \\times 10^{-1}}$؟",
+      "options": [
+        "الكتابة العلمية $4.2 \\times 10^{-3}$ ورتبة المقدار $4 \\times 10^{-3}$",
+        "الكتابة العلمية $4.2 \\times 10^{-5}$ ورتبة المقدار $4 \\times 10^{-5}$",
+        "الكتابة العلمية $42 \\times 10^{-4}$ ورتبة المقدار $4 \\times 10^{-4}$",
+        "الكتابة العلمية $4.2 \\times 10^{-3}$ ورتبة المقدار $5 \\times 10^{-3}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! $\\frac{2.8 \\times 3}{2} = 4.2$، والأسس $4 - 8 - (-1) = -3$، ومدوّر $4.2$ إلى الوحدة هو $4$.",
+        "انتبه لطرح الأس السالب في المقام: $-4 - (-1) = -4 + 1 = -3$ وليس $-4 - 1 = -5$.",
+        "العدد $42$ ليس محصوراً بين $1$ و $10$، لذا $42 \\times 10^{-4}$ ليست كتابة علمية.",
+        "الكتابة العلمية صحيحة، لكن مدوّر $4.2$ إلى الوحدة هو $4$ وليس $5$ (لأن $2 < 5$)."
+      ],
+      "explanationAr": "نفصل الأعداد العشرية عن قوى $10$: $\\frac{2.8 \\times 3}{2} = \\frac{8.4}{2} = 4.2$، و $\\frac{10^{4} \\times 10^{-8}}{10^{-1}} = \\frac{10^{-4}}{10^{-1}} = 10^{-4 - (-1)} = 10^{-3}$. إذن الكتابة العلمية $4.2 \\times 10^{-3}$، وبتدوير $4.2$ إلى $4$ نحصل على رتبة المقدار $4 \\times 10^{-3}$."
+    },
+    {
+      "questionAr": "في الشكل المقابل، الدائرة $(C)$ مركزها $O$ وقطرها $[EF] = 15\\text{ cm}$، والنقطة $G$ تنتمي إلى $(C)$ بحيث $EG = 9\\text{ cm}$. ما طول كل من $[GF]$ و $[OG]$ وما قيمة $\\cos \\widehat{GEF}$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 185\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"320\" height=\"185\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><circle cx=\"160\" cy=\"106\" r=\"60\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><polygon points=\"100,106 220,106 143.2,48.4\" fill=\"#eff6ff\" fill-opacity=\"0.6\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"160\" y1=\"106\" x2=\"143.2\" y2=\"48.4\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/><circle cx=\"160\" cy=\"106\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"100\" cy=\"106\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"220\" cy=\"106\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"143.2\" cy=\"48.4\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"84\" y=\"111\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">E</text><text x=\"226\" y=\"111\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">F</text><text x=\"139\" y=\"38\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">G</text><text x=\"156\" y=\"124\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#dc2626\">O</text><text x=\"102\" y=\"73\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#16a34a\">9 cm</text><text x=\"160\" y=\"174\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1e40af\">EF = 15 cm (قطر)</text></svg>",
+      "options": [
+        "$GF = 12\\text{ cm}$، و $OG = 7.5\\text{ cm}$، و $\\cos \\widehat{GEF} = 0.8$",
+        "$GF = 12\\text{ cm}$، و $OG = 7.5\\text{ cm}$، و $\\cos \\widehat{GEF} = 0.6$",
+        "$GF = 17.5\\text{ cm}$، و $OG = 7.5\\text{ cm}$، و $\\cos \\widehat{GEF} = 0.6$",
+        "$GF = 12\\text{ cm}$، و $OG = 15\\text{ cm}$، و $\\cos \\widehat{GEF} = 0.6$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$0.8 = \\frac{12}{15}$ استعمل الضلع المقابل $[GF]$ بدل الضلع المجاور $[EG] = 9\\text{ cm}$ للزاوية $\\widehat{GEF}$.",
+        "أحسنت! المثلث قائم في $G$، وفيثاغورس تعطي $GF = 12\\text{ cm}$، والمتوسط $OG = 7.5\\text{ cm}$، و $\\cos \\widehat{GEF} = \\frac{9}{15} = 0.6$.",
+        "الوتر هو القطر $[EF] = 15\\text{ cm}$، لذا لحساب الضلع القائم $[GF]$ نطرح $15^{2} - 9^{2}$ ولا نجمع.",
+        "$OG$ نصف قطر الدائرة (ونصف الوتر) يساوي $7.5\\text{ cm}$ وليس $15\\text{ cm}$."
+      ],
+      "explanationAr": "بما أن $G$ تنتمي إلى الدائرة التي قطرها $[EF]$ فالمثلث $EFG$ قائم في $G$. بفيثاغورس: $GF^{2} = 15^{2} - 9^{2} = 225 - 81 = 144 \\implies GF = 12\\text{ cm}$. وطول المتوسط المتعلق بالوتر (ونصف القطر) $OG = \\frac{15}{2} = 7.5\\text{ cm}$. وفي المثلث القائم $EFG$: $\\cos \\widehat{GEF} = \\frac{EG}{EF} = \\frac{9}{15} = 0.6$."
+    },
+    {
+      "questionAr": "قطعة أرض مستطيلة طولها $(2x + 5)\\text{ m}$ وعرضها $(x + 4)\\text{ m}$، اقتُطع منها ممر مساحته $(3x + 2)\\text{ m}^{2}$. ما العبارة المبسطة للمساحة المتبقية $A = (2x + 5)(x + 4) - (3x + 2)$؟",
+      "options": [
+        "$2x^{2} + 10x + 22$",
+        "$2x^{2} + 16x + 18$",
+        "$2x^{2} + 10x + 18$",
+        "$2x^{2} + 6x + 18$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "انتبه لحذف القوس المسبوق بإشارة $(-)$: يجب عكس إشارة $+2$ فتصبح $-2$، أي $20 - 2 = 18$ وليس $22$.",
+        "القوس $(3x + 2)$ مطروح من المساحة، إذن نطرح $3x$ ولا نضيفه: $13x - 3x = 10x$.",
+        "ممتاز! نشر المستطيل يعطي $2x^{2} + 13x + 20$، وبحذف $(3x + 2)$ تصبح $2x^{2} + 10x + 18$.",
+        "تأكد من النشر المضاعف: $2x \\times 4 + 5 \\times x = 8x + 5x = 13x$ وليس $9x$."
+      ],
+      "explanationAr": "ننشر أولاً $(2x + 5)(x + 4) = 2x^{2} + 8x + 5x + 20 = 2x^{2} + 13x + 20$. ثم نحذف القوسين المسبوقين بإشارة $(-)$: $A = 2x^{2} + 13x + 20 - 3x - 2 = 2x^{2} + 10x + 18$."
+    }
+  ]
+}

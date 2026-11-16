@@ -1,0 +1,128 @@
+{
+  "id": "lesson_1am_t1_decimal_multiplication_powers10",
+  "slug": "1am-t1-decimal-multiplication-powers10",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t1",
+  "sequenceId": "seq1",
+  "sequenceTitleAr": "المقطع الأول: الأعداد الطبيعية والأعداد العشرية (الكتابة والعمليات)",
+  "order": 3,
+  "titleAr": "ضرب وقسمة الأعداد العشرية في/على 10 و0.1 وضرب عددين عشريين",
+  "objectives": [
+    "ضرب عدد عشري في (10، 100، 1000) أو في (0.1، 0.01، 0.001) وقسمته عليها بإزاحة الفاصلة في الاتجاه الصحيح",
+    "إجراء عملية ضرب عدد عشري في عدد عشري عموديا مع تحديد موضع الفاصلة في الناتج بدقة",
+    "إدراك أن عملية الضرب لا تكبر دوما (الضرب في عدد أصغر من 1) وتوظيف ضرب الأعداد العشرية في وضعيات معطاة"
+  ],
+  "keywordsAr": [
+    "ضرب أعداد عشرية",
+    "ضرب وقسمة في 10 و100 و1000",
+    "ضرب وقسمة في 0.1 و0.01",
+    "إزاحة الفاصلة",
+    "الضرب العمودي"
+  ],
+  "discover": {
+    "scenarioAr": "لتحضير ملصقات القسم، اشترى الأستاذ $100$ بطاقة بسعر $3.45\\text{ DA}$ للبطاقة الواحدة، وقسم شريطاً طوله $47.2\\text{ cm}$ على $10$ تلاميذ، ثم أراد حساب مساحة قطعة ورق مستطيلة طولها $2.4\\text{ m}$ وعرضها $0.8\\text{ m}$ . كيف نزيح الفاصلة في كل حالة، وكيف نضرب $2.4 \\times 0.8$ ؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 200\" width=\"520\" height=\"200\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"246\" height=\"176\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"135\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">إزاحة الفاصلة مع 10 و 100 و 0.1</text><text x=\"135\" y=\"64\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">3.45 × 100 = 345</text><text x=\"135\" y=\"83\" text-anchor=\"middle\" font-size=\"11\" fill=\"#166534\">إزاحة الفاصلة مرتبتين إلى اليمين ←</text><line x1=\"32\" y1=\"98\" x2=\"238\" y2=\"98\" stroke=\"#bfdbfe\" stroke-width=\"1.2\"/><text x=\"135\" y=\"122\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">47.2 × 0.1 = 47.2 ÷ 10 = 4.72</text><text x=\"135\" y=\"141\" text-anchor=\"middle\" font-size=\"11\" fill=\"#991b1b\">→ إزاحة الفاصلة مرتبة إلى اليسار</text><text x=\"135\" y=\"169\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">12.5 ÷ 0.01 = 12.5 × 100 = 1250</text><rect x=\"272\" y=\"12\" width=\"236\" height=\"176\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"390\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\">الضرب العشري: 2.4 × 0.8</text><g font-size=\"14\" font-weight=\"bold\" font-family=\"monospace\" direction=\"ltr\"><text x=\"435\" y=\"64\" text-anchor=\"end\" fill=\"#0f172a\">2.4  (رقم 1)</text><text x=\"316\" y=\"88\" text-anchor=\"start\" fill=\"#0f172a\">×</text><text x=\"435\" y=\"88\" text-anchor=\"end\" fill=\"#0f172a\">0.8  (رقم 1)</text><line x1=\"312\" y1=\"100\" x2=\"445\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><text x=\"435\" y=\"124\" text-anchor=\"end\" fill=\"#2563eb\">1.92 (رقمان)</text></g><rect x=\"290\" y=\"140\" width=\"200\" height=\"36\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"390\" y=\"162\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" direction=\"ltr\">1.92 &lt; 2.4 (لأن 0.8 &lt; 1)</text></svg>",
+    "steps": [
+      {
+        "promptAr": "احسب ثمن $100$ بطاقة بسعر $3.45\\text{ DA}$ للواحدة: $3.45 \\times 100$ .",
+        "hintAr": "الضرب في $100$ يزيح الفاصلة بمرتبتين نحو اليمين.",
+        "expectedInput": "345",
+        "revealAr": "$3.45 \\times 100 = 345\\text{ DA}$ (أزحنا الفاصلة مرتبتين إلى اليمين)."
+      },
+      {
+        "promptAr": "طول الشريط $47.2\\text{ cm}$ ونقسمه على $10$ (أو نضرب في $0.1$). ما طول كل قطعة بالـ $\\text{cm}$ ؟",
+        "hintAr": "القسمة على $10$ (والضرب في $0.1$) تزيح الفاصلة بمرتبة واحدة نحو اليسار.",
+        "expectedInput": "4.72",
+        "revealAr": "$47.2 \\div 10 = 47.2 \\times 0.1 = 4.72\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "احسب الآن $12.5 \\div 0.01$ (تذكّر أن القسمة على $0.01$ تكافئ الضرب في $100$).",
+        "hintAr": "أزح الفاصلة بمرتبتين نحو اليمين وأضف صفراً في المنزل الفارغ.",
+        "expectedInput": "1250",
+        "revealAr": "$12.5 \\div 0.01 = 12.5 \\times 100 = 1250$ ."
+      },
+      {
+        "promptAr": "اضرب $24 \\times 8 = 192$ ، ثم ضع الفاصلة في مكانها الصحيح لحساب المساحة $2.4 \\times 0.8$ بالمتر المربع.",
+        "hintAr": "يوجد رقم واحد بعد الفاصلة في $2.4$ ورقم واحد في $0.8$ ، فالمجموع رقمان بعد الفاصلة في الناتج.",
+        "expectedInput": "1.92",
+        "revealAr": "$2.4 \\times 0.8 = 1.92\\text{ m}^2$ . نلاحظ أن $1.92 < 2.4$ ، فالضرب في عدد أصغر من $1$ يُصغّر الناتج!"
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**إزاحة الفاصلة نحو اليمين**: لضرب عدد عشري في $10$ أو $100$ أو $1000$ (أو **قسمته** على $0.1$ أو $0.01$ أو $0.001$)، نزيح الفاصلة نحو **اليمين** بمرتبة أو مرتبتين أو ثلاث مراتب مع إضافة أصفار عند الحاجة: $3.7 \\times 100 = 370$ و $4.5 \\div 0.1 = 45$ .",
+      "**إزاحة الفاصلة نحو اليسار**: لقسمة عدد عشري على $10$ أو $100$ أو $1000$ (أو **ضربه** في $0.1$ أو $0.01$ أو $0.001$)، نزيح الفاصلة نحو **اليسار** بمرتبة أو مرتبتين أو ثلاث مراتب: $4.5 \\times 0.01 = 0.045$ .",
+      "**الضرب العمودي لعددين عشريين**: ننجز العملية كما في الأعداد الطبيعية دون اعتبار الفواصل، ثم نضع الفاصلة في الناتج بحيث يكون عدد أرقامه بعد الفاصلة مساوياً **لمجموع** عدد الأرقام بعد الفاصلة في العاملين معاً.",
+      "**الضرب لا يُكبّر دوماً**: إذا ضربنا عدداً موجباً في عدد أكبر من $1$ يكبر الناتج؛ أما إذا ضربناه في عدد أصغر من $1$ (مثل $0.5$ أو $0.8$) فإن الناتج يكون **أصغر** من العدد الأول."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 205\" width=\"540\" height=\"205\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"264\" height=\"181\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"144\" y=\"34\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">بوصلة إزاحة الفاصلة العشرية</text><rect x=\"24\" y=\"48\" width=\"240\" height=\"56\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.3\"/><text x=\"144\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">نحو اليمين ← (العدد يكبُر)</text><text x=\"144\" y=\"90\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">× 10, × 100  |  ÷ 0.1, ÷ 0.01</text><rect x=\"24\" y=\"118\" width=\"240\" height=\"56\" rx=\"8\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><text x=\"144\" y=\"138\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#991b1b\">→ نحو اليسار (العدد يصغُر)</text><text x=\"144\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">÷ 10, ÷ 100  |  × 0.1, × 0.01</text><rect x=\"288\" y=\"12\" width=\"240\" height=\"181\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"408\" y=\"34\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">الضرب العمودي: 3.25 × 1.4</text><g font-size=\"14\" font-weight=\"bold\" font-family=\"monospace\" direction=\"ltr\"><text x=\"420\" y=\"62\" text-anchor=\"end\" fill=\"#0f172a\">3.<tspan fill=\"#2563eb\">25</tspan></text><text x=\"320\" y=\"84\" text-anchor=\"start\" fill=\"#0f172a\">×</text><text x=\"420\" y=\"84\" text-anchor=\"end\" fill=\"#0f172a\">1.<tspan fill=\"#2563eb\">4</tspan></text><line x1=\"315\" y1=\"94\" x2=\"435\" y2=\"94\" stroke=\"#0f172a\" stroke-width=\"1.4\"/><text x=\"420\" y=\"114\" text-anchor=\"end\" fill=\"#475569\">1300</text><text x=\"420\" y=\"134\" text-anchor=\"end\" fill=\"#475569\">325.</text><line x1=\"315\" y1=\"144\" x2=\"435\" y2=\"144\" stroke=\"#0f172a\" stroke-width=\"1.4\"/><text x=\"420\" y=\"166\" text-anchor=\"end\" fill=\"#16a34a\">4.<tspan fill=\"#dc2626\">550</tspan></text></g><text x=\"408\" y=\"186\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">2 + 1 = 3 أرقام بعد الفاصلة ← 4.55</text></svg>",
+    "visualCaptionAr": "اتجاه إزاحة الفاصلة في الضرب والقسمة على 10 و0.1، وتحديد الفاصلة في الضرب العمودي",
+    "examples": [
+      {
+        "problemAr": "احسب ذهنياً: $0.75 \\times 100$ ، $6.4 \\times 0.01$ ، و $3.8 \\div 0.1$ .",
+        "solutionAr": "$0.75 \\times 100 = 75$ (نزيح الفاصلة مرتبتين يميناً).\n\n$6.4 \\times 0.01 = 0.064$ (نزيح الفاصلة مرتبتين يساراً).\n\n$3.8 \\div 0.1 = 3.8 \\times 10 = 38$ (نزيح الفاصلة مرتبة يميناً)."
+      },
+      {
+        "problemAr": "احسب عمودياً الجداء $4.25 \\times 2.6$ .",
+        "solutionAr": "نحسب أولاً $425 \\times 26 = 11050$ . يوجد رقمان عشريان في $4.25$ ورقم واحد في $2.6$ ، فالمجموع $3$ أرقام عشرية. نضع الفاصلة فنجد $11.050 = 11.05$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: إذا انتهى الجداء بصفر في اليمين مثل $2.5 \\times 0.4$ (حيث $25 \\times 4 = 100$)، يجب وضع الفاصلة أولاً قبل حذف الأصفار غير الضرورية: نعدّ رقمين عشريين فيصبح $1.00 = 1$ (وليس $10$ !). كما أن الضرب في $0.1$ يزيح الفاصلة يساراً لا يميناً."
+  },
+  "practice": [
+    {
+      "questionAr": "ما قيمة كل من العمليتين: $8.3 \\times 0.01$ و $0.42 \\div 0.1$ ؟",
+      "options": [
+        "$0.083$ و $4.2$",
+        "$830$ و $0.042$",
+        "$0.83$ و $4.2$",
+        "$0.083$ و $0.042$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! الضرب في $0.01$ أزاح الفاصلة مرتبتين يساراً، والقسمة على $0.1$ أزاحت الفاصلة مرتبة يميناً.",
+        "عكستَ اتجاه الإزاحة في العمليتين! الضرب في $0.01$ يصغّر العدد والقسمة على $0.1$ تكبّره.",
+        "في $8.3 \\times 0.01$ نزيح الفاصلة مرتبتين يساراً وليس مرتبة واحدة.",
+        "القسمة على $0.1$ تكافئ الضرب في $10$ فتزيح الفاصلة يميناً ($4.2$) وليس يساراً."
+      ],
+      "explanationAr": "$8.3 \\times 0.01 = 8.3 \\div 100 = 0.083$ (مرتبتان يساراً)، بينما $0.42 \\div 0.1 = 0.42 \\times 10 = 4.2$ (مرتبة واحدة يميناً)."
+    },
+    {
+      "questionAr": "احسب بتمعّن الجداء: $2.5 \\times 1.4$ .",
+      "options": [
+        "$35$",
+        "$0.35$",
+        "$3.5$",
+        "$3.05$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "حسبتَ $25 \\times 14 = 350$ ثم حذفتَ الصفر دون عدّ المرتبتين العشريتين!",
+        "وضعتَ الفاصلة بعد $3$ أرقام عشرية بدلاً من رقمين ($1 + 1 = 2$).",
+        "أحسنت! $25 \\times 14 = 350$ ، وبوضع الفاصلة بعد رقمين نجد $3.50 = 3.5$ .",
+        "أدخلت صفراً إضافياً في الأعشار؛ $3.50$ يساوي $3.5$ وليس $3.05$ ."
+      ],
+      "explanationAr": "نضرب دون فاصلة: $25 \\times 14 = 350$ . مجموع الأرقام بعد الفاصلة في العاملين هو $1 + 1 = 2$ . نضع الفاصلة بعد رقمين من اليمين في $350$ قبل حذف الصفر الزائد: $3.50 = 3.5$ ."
+    },
+    {
+      "questionAr": "انظر إلى المستطيل المقابل الذي طوله $4.5\\text{ m}$ وعرضه $0.8\\text{ m}$ : ما مساحته بالمتر المربع؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 135\" width=\"340\" height=\"135\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"65\" y=\"34\" width=\"210\" height=\"66\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"170\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">4.5 m</text><text x=\"298\" y=\"72\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">0.8 m</text><text x=\"170\" y=\"72\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">S = 4.5 × 0.8 = ?</text><text x=\"170\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\">تذكّر: نضرب الطول في العرض ونلاحظ أن 0.8 &lt; 1</text></svg>",
+      "options": [
+        "$36\\text{ m}^2$",
+        "$0.36\\text{ m}^2$",
+        "$5.3\\text{ m}^2$",
+        "$3.6\\text{ m}^2$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "وضعتَ الفاصلة بعد رقم واحد فقط! العاملان معاً فيهما رقمان بعد الفاصلة، لذا $360$ تصبح $3.60 = 3.6$ .",
+        "عدّدتَ $3$ أرقام بعد الفاصلة بدلاً من رقمين: $4.5$ فيه رقم واحد و $0.8$ فيه رقم واحد.",
+        "لقد جمعتَ $4.5 + 0.8 = 5.3$ بدلاً من ضرب الطول في العرض!",
+        "ممتاز! $45 \\times 8 = 360$ ، ومع رقمين عشريين تصبح $3.60 = 3.6\\text{ m}^2$ (وهي أصغر من $4.5$ لأن $0.8 < 1$ )."
+      ],
+      "explanationAr": "مساحة المستطيل هي $4.5 \\times 0.8$ . نحسب $45 \\times 8 = 360$ ، ونعد رقمين بعد الفاصلة فنحصل على $3.60 = 3.6\\text{ m}^2$ ."
+    }
+  ]
+}

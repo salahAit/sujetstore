@@ -1,0 +1,129 @@
+{
+  "id": "lesson_3am_t3_pyramid_and_cone",
+  "slug": "3am-t3-pyramid-and-cone",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t3",
+  "sequenceId": "seq8",
+  "sequenceTitleAr": "المقطع الثامن: الانسحاب والمجسمات في الفضاء (الهرم ومخروط الدوران)",
+  "order": 4,
+  "titleAr": "الهرم ومخروط الدوران: الوصف والتمثيل والتصميم والحجم",
+  "objectives": [
+    "وصف الهرم (المنتظم وغير المنتظم) ومخروط الدوران بالمصطلحات الملائمة (الرأس، القاعدة، الارتفاع، الأحرف الجانبية، المولد) وتمثيلهما بالمنظور متساوي القياس",
+    "إنجاز تصميم لهرم ولمخروط الدوران أبعادهما معلومة وصنعهما (مع حساب زاوية القطاع الدائري في تصميم المخروط بالتناسبية)",
+    "حساب المساحة الجانبية والكلية لهرم منتظم وحجم كل من الهرم ومخروط الدوران بتطبيق العلاقة $V = \\frac{1}{3} \\times B \\times h$"
+  ],
+  "keywordsAr": [
+    "الهرم",
+    "الهرم المنتظم",
+    "مخروط الدوران",
+    "تصميم مجسم",
+    "المنظور متساوي القياس",
+    "حجم الهرم والمخروط"
+  ],
+  "discover": {
+    "scenarioAr": "في حصة الأشغال التطبيقية، يريد التلميذ أنس صنع **هرم منتظم** قاعدته مربع ضلعه $6\\text{ cm}$ وارتفاعه $h = 8\\text{ cm}$ ، بينما تصنع زميلته مريم **مخروط دوران** نصف قطر قاعدته $r = 3\\text{ cm}$ وطول مولّده $g = 5\\text{ cm}$ وارتفاعه $h = 4\\text{ cm}$ . كيف نصف كل مجسم، وكيف نحسب زاوية القطاع الدائري في تصميم المخروط، ثم حجم كل من المجسمين؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 230\" width=\"580\" height=\"230\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"214\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"31\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">تمثيل الهرم المنتظم ومخروط الدوران بالمنظور متساوي القياس</text><rect x=\"22\" y=\"44\" width=\"262\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"153\" y=\"63\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">هرم رباعي منتظم</text><polygon points=\"70,180 186,180 226,148 110,148\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><line x1=\"70\" y1=\"180\" x2=\"148\" y2=\"76\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"186\" y1=\"180\" x2=\"148\" y2=\"76\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"226\" y1=\"148\" x2=\"148\" y2=\"76\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"110\" y1=\"148\" x2=\"148\" y2=\"76\" stroke=\"#94a3b8\" stroke-width=\"1.4\" stroke-dasharray=\"4,3\"/><line x1=\"148\" y1=\"76\" x2=\"148\" y2=\"164\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,3\"/><polyline points=\"148,156 156,156 156,164\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><circle cx=\"148\" cy=\"76\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"148\" cy=\"164\" r=\"3\" fill=\"#dc2626\"/><text x=\"158\" y=\"78\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">S</text><text x=\"156\" y=\"128\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">h = 8 cm</text><text x=\"128\" y=\"196\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">6 cm &#215; 6 cm</text><rect x=\"298\" y=\"44\" width=\"260\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.4\"/><text x=\"428\" y=\"63\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">مخروط الدوران</text><path d=\"M 358 172 A 70 18 0 0 0 498 172\" fill=\"#ecfdf5\" stroke=\"#059669\" stroke-width=\"2\"/><path d=\"M 358 172 A 70 18 0 0 1 498 172\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"1.4\" stroke-dasharray=\"4,3\"/><line x1=\"358\" y1=\"172\" x2=\"428\" y2=\"78\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"498\" y1=\"172\" x2=\"428\" y2=\"78\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"428\" y1=\"78\" x2=\"428\" y2=\"172\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,3\"/><line x1=\"428\" y1=\"172\" x2=\"498\" y2=\"172\" stroke=\"#2563eb\" stroke-width=\"2\"/><polyline points=\"428,164 436,164 436,172\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><circle cx=\"428\" cy=\"78\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"438\" y=\"80\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">S</text><text x=\"402\" y=\"132\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">h=4</text><text x=\"463\" y=\"167\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">r=3</text><text x=\"478\" y=\"122\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">g = 5 cm</text><text x=\"428\" y=\"202\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"ltr\">g&#178; = r&#178; + h&#178;</text></svg>",
+    "steps": [
+      {
+        "promptAr": "للهرم الرباعي قاعدة على شكل مربع و $4$ أوجه جانبية مثلثية. ما هو العدد الإجمالي لجميع أوجه هذا الهرم (القاعدة مع الأوجه الجانبية)؟ (أدخل العدد فقط)",
+        "hintAr": "اجمع القاعدة الواحدة مع الأوجه الجانبية الأربعة.",
+        "expectedInput": "5",
+        "revealAr": "للهرم الرباعي $1 + 4 = 5$ أوجه (و $5$ رؤوس و $8$ أحرف)."
+      },
+      {
+        "promptAr": "في تصميم مخروط الدوران، يساوي طول قوس القطاع الدائري محيط القاعدة، وتُحسب زاوية القطاع بالتناسبية: $\\alpha = \\frac{r}{g} \\times 360^\\circ$ . احسب $\\alpha$ بالدرجات من أجل $r = 3\\text{ cm}$ و $g = 5\\text{ cm}$ . (أدخل العدد فقط)",
+        "hintAr": "احسب $\\frac{3}{5} \\times 360$ .",
+        "expectedInput": "216",
+        "revealAr": "نجد $\\alpha = \\frac{3}{5} \\times 360^\\circ = 0.6 \\times 360^\\circ = 216^\\circ$ ."
+      },
+      {
+        "promptAr": "باستعمال قانون الحجم $V = \\frac{1}{3} \\times B \\times h$ ، احسب حجم هرم أنس ذي القاعدة المربعة ($6\\text{ cm} \\times 6\\text{ cm}$) والارتفاع $h = 8\\text{ cm}$ بوحدة $\\text{cm}^3$ . (أدخل العدد فقط)",
+        "hintAr": "احسب أولاً مساحة القاعدة المربعة $B = 6 \\times 6 = 36\\text{ cm}^2$ ثم طبّق $\\frac{1}{3} \\times B \\times 8$ .",
+        "expectedInput": "96",
+        "revealAr": "مساحة القاعدة $B = 36\\text{ cm}^2$ ، ومنه $V = \\frac{1}{3} \\times 36 \\times 8 = 12 \\times 8 = 96\\text{ cm}^3$ ."
+      },
+      {
+        "promptAr": "احسب حجم مخروط الدوران الذي نصف قطر قاعدته $r = 3\\text{ cm}$ وارتفاعه $h = 4\\text{ cm}$ بأخذ $\\pi = 3.14$ (بوحدة $\\text{cm}^3$). (أدخل العدد فقط)",
+        "hintAr": "احسب مساحة القاعدة $B = 3.14 \\times 3^2 = 28.26\\text{ cm}^2$ ثم احسب $\\frac{1}{3} \\times 28.26 \\times 4$ .",
+        "expectedInput": "37.68",
+        "revealAr": "نجد $B = 3.14 \\times 9 = 28.26\\text{ cm}^2$ ، ومنه الحجم $V = \\frac{1}{3} \\times 28.26 \\times 4 = 9.42 \\times 4 = 37.68\\text{ cm}^3$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**وصف الهرم والهرم المنتظم**: الهرم مجسم قاعدته مضلع وأوجهه الجانبية مثلثات تشترك في **الرأس** $S$ ، والبعد العمودي من $S$ إلى القاعدة هو **الارتفاع** $h$ . يكون الهرم **منتظماً** إذا كانت قاعدته مضلعاً منتظماً ومرّ ارتفاعه بمركز القاعدة، فتكون أوجهه الجانبية مثلثات متساوية الساقين متقايسة.",
+      "**وصف مخروط الدوران**: يتولد من دوران مثلث قائم حول أحد ضلعيه القائمين. قاعدته قرص نصف قطره $r$ ، وارتفاعه $h$ عمودي على القاعدة في مركزها $O$ ، وكل قطعة تصل الرأس $S$ بمحيط القاعدة تُسمى **مولّداً** $g$ (حيث $g^2 = r^2 + h^2$ ).",
+      "**التصميم والمساحات**:\n- تصميم الهرم يتألف من القاعدة المضلعة مضافاً إليها مثلثات الأوجه الجانبية. وللهرم المنتظم: المساحة الجانبية $A_L$ هي مجموع مساحات المثلثات الجانبية، والمساحة الكلية $A_T = A_L + B$ .\n- تصميم مخروط الدوران يتألف من قرص نصف قطره $r$ وقطاع دائري نصف قطره المولّد $g$ وزاويته $\\alpha = \\frac{r}{g} \\times 360^\\circ$ .",
+      "**حجم الهرم ومخروط الدوران**: يُحسب حجم كل منهما بثلث مساحة القاعدة في الارتفاع:\n$$V = \\frac{1}{3} \\times B \\times h$$\nوفي حالة مخروط الدوران حيث $B = \\pi \\times r^2$ : $V = \\frac{1}{3} \\times \\pi \\times r^2 \\times h$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 230\" width=\"580\" height=\"230\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"564\" height=\"214\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"290\" y=\"31\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">تصميم الهرم المنتظم ومخروط الدوران وقانون الحجم</text><rect x=\"22\" y=\"44\" width=\"262\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"153\" y=\"63\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">تصميم هرم رباعي منتظم</text><rect x=\"125\" y=\"105\" width=\"56\" height=\"56\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><polygon points=\"125,105 181,105 153,72\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><polygon points=\"125,161 181,161 153,194\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><polygon points=\"125,105 125,161 92,133\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><polygon points=\"181,105 181,161 214,133\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"153\" y=\"137\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">B</text><text x=\"153\" y=\"205\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">V = (1/3) &#215; B &#215; h</text><rect x=\"298\" y=\"44\" width=\"260\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.5\"/><text x=\"428\" y=\"63\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">تصميم مخروط الدوران</text><path d=\"M 404 92 L 354 148 A 74 74 0 1 0 472 122 Z\" fill=\"#ecfdf5\" stroke=\"#059669\" stroke-width=\"1.8\"/><circle cx=\"486\" cy=\"158\" r=\"21\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><line x1=\"486\" y1=\"158\" x2=\"507\" y2=\"158\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"496\" y=\"153\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e40af\">r</text><text x=\"372\" y=\"118\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">g</text><text x=\"408\" y=\"115\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">&#945;</text><text x=\"428\" y=\"205\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">&#945; = (r / g) &#215; 360&#176;</text></svg>",
+    "visualCaptionAr": "تصميم الهرم المنتظم ومخروط الدوران وقوانين الزاوية $\\alpha$ والحجم $V$",
+    "examples": [
+      {
+        "problemAr": "هرم منتظم قاعدته مربع ضلعه $10\\text{ cm}$ ، وارتفاع كل وجه جانبي مثلثي هو $13\\text{ cm}$ ، وارتفاع الهرم $h = 12\\text{ cm}$ . احسب مساحته الكلية وحجمه.",
+        "solutionAr": "1) مساحة القاعدة: $B = 10 \\times 10 = 100\\text{ cm}^2$ .\n\n2) مساحة وجه جانبي واحد: $\\frac{10 \\times 13}{2} = 65\\text{ cm}^2$ ، ومنه المساحة الجانبية: $A_L = 4 \\times 65 = 260\\text{ cm}^2$ .\n\n3) المساحة الكلية: $A_T = A_L + B = 260 + 100 = 360\\text{ cm}^2$ .\n\n4) الحجم: $V = \\frac{1}{3} \\times B \\times h = \\frac{1}{3} \\times 100 \\times 12 = 400\\text{ cm}^3$ ."
+      },
+      {
+        "problemAr": "قمع مخروطي الشكل نصف قطر قاعدته $r = 6\\text{ cm}$ وطول مولّده $g = 10\\text{ cm}$ ( $\\pi = 3.14$ ). احسب ارتفاعه $h$ ثم سعته بالمليلتر.",
+        "solutionAr": "1) بتطبيق خاصية فيثاغورس في المثلث القائم: $h^2 = g^2 - r^2 = 10^2 - 6^2 = 100 - 36 = 64$ ، إذن $h = 8\\text{ cm}$ .\n\n2) الحجم: $V = \\frac{1}{3} \\times 3.14 \\times 6^2 \\times 8 = \\frac{1}{3} \\times 3.14 \\times 36 \\times 8 = 301.44\\text{ cm}^3$ .\n\n3) السعة: بما أن $1\\text{ cm}^3 = 1\\text{ mL}$ فإن السعة هي $301.44\\text{ mL}$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: في الهرم والمخروط، لا تستعمل طول الحرف الجانبي أو المولّد $g$ بدلاً من **الارتفاع العمودي** $h$ في قانون الحجم! كذلك تذكّر دائماً الضرب في $\\frac{1}{3}$ (أي القسمة على $3$)."
+  },
+  "practice": [
+    {
+      "questionAr": "في مخروط الدوران المبيّن في الشكل المقابل، نصف قطر القاعدة $r = 8\\text{ cm}$ وطول المولّد $g = 10\\text{ cm}$ . ما هو **ارتفاعه** $h$ وما قيس **زاوية القطاع الدائري** $\\alpha$ في تصميمه؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 170\" width=\"360\" height=\"170\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"6\" y=\"6\" width=\"348\" height=\"158\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><path d=\"M 90 132 A 76 20 0 0 0 242 132\" fill=\"#ecfdf5\" stroke=\"#059669\" stroke-width=\"2\"/><path d=\"M 90 132 A 76 20 0 0 1 242 132\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"1.4\" stroke-dasharray=\"4,3\"/><line x1=\"90\" y1=\"132\" x2=\"166\" y2=\"32\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"242\" y1=\"132\" x2=\"166\" y2=\"32\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"166\" y1=\"32\" x2=\"166\" y2=\"132\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,3\"/><line x1=\"166\" y1=\"132\" x2=\"242\" y2=\"132\" stroke=\"#2563eb\" stroke-width=\"2\"/><polyline points=\"166,124 174,124 174,132\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><text x=\"174\" y=\"34\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">S</text><text x=\"148\" y=\"90\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">h = ?</text><text x=\"204\" y=\"127\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">r = 8 cm</text><text x=\"236\" y=\"82\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">g = 10 cm</text></svg>",
+      "options": [
+        "$h = 6\\text{ cm}$ و $\\alpha = 288^\\circ$",
+        "$h = 10\\text{ cm}$ و $\\alpha = 216^\\circ$",
+        "$h = 6\\text{ cm}$ و $\\alpha = 216^\\circ$",
+        "$h = 12.8\\text{ cm}$ و $\\alpha = 288^\\circ$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! طبّقتَ فيثاغورس $h^2 = 10^2 - 8^2 = 36 \\implies h = 6\\text{ cm}$ ، وحسبتَ $\\alpha = \\frac{8}{10} \\times 360^\\circ = 288^\\circ$ .",
+        "انتبه: الارتفاع $h$ لا يساوي المولّد $g = 10\\text{ cm}$ ، وفي زاوية القطاع نقسم نصف القطر $r = 8$ على $g = 10$ .",
+        "الارتفاع $h = 6\\text{ cm}$ صحيح، لكن زاوية القطاع تحسب بـ $\\frac{r}{g} \\times 360^\\circ$ أي $\\frac{8}{10} \\times 360^\\circ$ وليس $\\frac{6}{10} \\times 360^\\circ$ .",
+        "الزاوية $288^\\circ$ صحيحة، لكن في المثلث القائم $g$ هو الوتر، فنطرح $10^2 - 8^2$ لا نجمع $10^2 + 8^2$ !"
+      ],
+      "explanationAr": "في المثلث القائم الذي وتره المولّد $g = 10\\text{ cm}$ ، لدينا $h^2 = 10^2 - 8^2 = 100 - 64 = 36$ ، إذن $h = 6\\text{ cm}$ . وزاوية القطاع الدائري في التصميم هي $\\alpha = \\frac{r}{g} \\times 360^\\circ = \\frac{8}{10} \\times 360^\\circ = 288^\\circ$ ."
+    },
+    {
+      "questionAr": "هرم قاعدته مستطيل بُعداه $9\\text{ cm}$ و $5\\text{ cm}$ ، وحجمه يساوي $150\\text{ cm}^3$ . ما هو ارتفاع هذا الهرم $h$ ؟",
+      "options": [
+        "$3.33\\text{ cm}$",
+        "$10\\text{ cm}$",
+        "$30\\text{ cm}$",
+        "$1.11\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "قسمتَ $150$ على مساحة القاعدة $45$ ، ولكن نسيتَ ضرب الحجم في $3$ لأن $V = \\frac{1}{3} B h$ !",
+        "ممتاز! مساحة القاعدة $B = 45\\text{ cm}^2$ ، ومنه $h = \\frac{3 \\times 150}{45} = 10\\text{ cm}$ .",
+        "تذكّر أن مساحة القاعدة المستطيلة هي $9 \\times 5 = 45\\text{ cm}^2$ وليس $5$ أو $15$ .",
+        "بدل الضرب في $3$ قسمتَ على $3$ ($150 \\div 135$)؛ تأكّد بتعويض $h$ في القانون $V = \\frac{1}{3} \\times 45 \\times h$ ."
+      ],
+      "explanationAr": "مساحة القاعدة المستطيلة هي $B = 9 \\times 5 = 45\\text{ cm}^2$ . بتعويض المعطيات في $V = \\frac{1}{3} \\times B \\times h$ نجد $150 = \\frac{1}{3} \\times 45 \\times h = 15h$ ، ومنه $h = \\frac{150}{15} = 10\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "هرم منتظم قاعدته مربع ضلعه $8\\text{ cm}$ ، وارتفاع كل وجه جانبي مثلثي هو $7\\text{ cm}$ . ما هي **المساحة الكلية** لهذا الهرم؟",
+      "options": [
+        "$112\\text{ cm}^2$",
+        "$288\\text{ cm}^2$",
+        "$176\\text{ cm}^2$",
+        "$92\\text{ cm}^2$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$112\\text{ cm}^2$ هي **المساحة الجانبية** فقط؛ المساحة الكلية تساوي الجانبية مضافاً إليها مساحة القاعدة المربعة ($64\\text{ cm}^2$).",
+        "في مساحة المثلث الواحد يجب القسمة على $2$ : $\\frac{8 \\times 7}{2} = 28\\text{ cm}^2$ وليس $56\\text{ cm}^2$ .",
+        "أحسنت! المساحة الجانبية $4 \\times 28 = 112\\text{ cm}^2$ ، وبإضافة القاعدة $64\\text{ cm}^2$ نحصل على $176\\text{ cm}^2$ .",
+        "للهرم الرباعي $4$ أوجه جانبية مثلثية متقايسة ($4 \\times 28$) وليس وجهاً واحداً."
+      ],
+      "explanationAr": "مساحة القاعدة المربعة $B = 8 \\times 8 = 64\\text{ cm}^2$ . ومساحة وجه جانبي واحد هي $\\frac{8 \\times 7}{2} = 28\\text{ cm}^2$ ، فتكون المساحة الجانبية $A_L = 4 \\times 28 = 112\\text{ cm}^2$ . إذن المساحة الكلية $A_T = 112 + 64 = 176\\text{ cm}^2$ ."
+    }
+  ]
+}

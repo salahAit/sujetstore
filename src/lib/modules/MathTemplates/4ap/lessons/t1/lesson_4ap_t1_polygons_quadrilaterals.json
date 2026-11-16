@@ -1,0 +1,123 @@
+{
+  "id": "lesson_4ap_t1_polygons_quadrilaterals",
+  "slug": "4ap-t1-polygons-quadrilaterals",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني: التوازي والتعامد والمضلعات وتنظيم المعطيات",
+  "order": 5,
+  "titleAr": "المضلعات والرباعيات الخاصة: المربع، المستطيل والمعين",
+  "objectives": [
+    "التعرف على المضلعات وتسميتها حسب عدد أضلاعها ورؤوسها في أشكال بسيطة أو مركبة",
+    "تمييز ووصف الرباعيات الخاصة (المربع، المستطيل، المعين) اعتمادا على خواص الأضلاع (التساوي والتوازي) والزوايا القائمة والأقطار",
+    "رسم أو إتمام إنشاء مربع ومستطيل ومعين على ورق مرصوف أو أبيض باستعمال الأدوات الهندسية المناسبة"
+  ],
+  "keywordsAr": [
+    "المضلعات",
+    "الرباعيات الخاصة",
+    "المربع",
+    "المستطيل",
+    "المعين",
+    "المرصوفة"
+  ],
+  "discover": {
+    "scenarioAr": "رسمت أميرة أربعة مضلعات على **ورق مرصوف** (مرصوفة): المعين `L` ، والمستطيل `R` ، والمربع `C` ، والمثلث `T` . نريد تمييز المضلعات وتحديد خواص أضلاع وزوايا وأقطار كل رباعي خاص.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 198\" width=\"580\" height=\"198\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><path d=\"M20 14V174M40 14V174M60 14V174M80 14V174M100 14V174M120 14V174M140 14V174M160 14V174M180 14V174M200 14V174M220 14V174M240 14V174M260 14V174M280 14V174M300 14V174M320 14V174M340 14V174M360 14V174M380 14V174M400 14V174M420 14V174M440 14V174M460 14V174M480 14V174M500 14V174M520 14V174M540 14V174M560 14V174M20 14H560M20 34H560M20 54H560M20 74H560M20 94H560M20 114H560M20 134H560M20 154H560M20 174H560\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><polygon points=\"80,34 120,94 80,154 40,94\" fill=\"#fef3c7\" fill-opacity=\"0.7\" stroke=\"#d97706\" stroke-width=\"2.2\"/><line x1=\"80\" y1=\"34\" x2=\"80\" y2=\"154\" stroke=\"#64748b\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><line x1=\"40\" y1=\"94\" x2=\"120\" y2=\"94\" stroke=\"#64748b\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><rect x=\"80\" y=\"84\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"96\" y=\"76\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\">L</text><text x=\"80\" y=\"190\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">معين (L)</text><rect x=\"140\" y=\"54\" width=\"120\" height=\"80\" fill=\"#dcfce7\" fill-opacity=\"0.7\" stroke=\"#15803d\" stroke-width=\"2.2\"/><rect x=\"140\" y=\"54\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"249\" y=\"123\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"140\" y1=\"54\" x2=\"260\" y2=\"134\" stroke=\"#64748b\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><line x1=\"260\" y1=\"54\" x2=\"140\" y2=\"134\" stroke=\"#64748b\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><text x=\"200\" y=\"88\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#14532d\">R</text><text x=\"200\" y=\"190\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\" direction=\"rtl\">مستطيل (R)</text><rect x=\"300\" y=\"54\" width=\"80\" height=\"80\" fill=\"#dbeafe\" fill-opacity=\"0.7\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><rect x=\"300\" y=\"54\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"300\" y1=\"54\" x2=\"380\" y2=\"134\" stroke=\"#64748b\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><line x1=\"380\" y1=\"54\" x2=\"300\" y2=\"134\" stroke=\"#64748b\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><text x=\"340\" y=\"88\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\">C</text><text x=\"340\" y=\"190\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">مربع (C)</text><polygon points=\"440,134 520,134 480,54\" fill=\"#ede9fe\" fill-opacity=\"0.75\" stroke=\"#6d28d9\" stroke-width=\"2.2\"/><text x=\"480\" y=\"114\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#4c1d95\">T</text><text x=\"480\" y=\"190\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#4c1d95\" direction=\"rtl\">مثلث (T)</text></svg>",
+    "steps": [
+      {
+        "promptAr": "تأمل الأشكال على المرصوفة: المثلث `T` له $3$ أضلاع. كم ضلعا يوجد في كل من المعين `L` والمستطيل `R` والمربع `C` ؟",
+        "hintAr": "عد القطع المستقيمة التي تحيط بكل شكل من الأشكال الثلاثة.",
+        "expectedInput": "4",
+        "revealAr": "لكل من المعين والمستطيل والمربع **$4$ أضلاع** و $4$ رؤوس، لذلك نسميها **رباعيات**، وكل شكل مغلق حدوده قطع مستقيمة يسمى **مضلعا**."
+      },
+      {
+        "promptAr": "بالاستعانة بالمرصوفة والكوس، أي شكلين من الرباعيات الثلاثة لهما $4$ زوايا قائمة؟",
+        "hintAr": "لاحظ علامة الزاوية القائمة الحمراء عند الرؤوس.",
+        "revealAr": "**المربع (`C`)** و**المستطيل (`R`)** لهما $4$ زوايا قائمة، أما **المعين (`L`)** فأضلاعه الأربعة متقايسة ولكن زواياه ليست قائمة في الحالة العامة."
+      },
+      {
+        "promptAr": "انظر إلى القطرين المرسومين بخط متقطع داخل المعين `L` والمربع `C` : ما الخاصية المشتركة بين قطري المعين وقطري المربع؟ (اكتب: متعامدان أو متقايسان)",
+        "hintAr": "تقاطع القطرين في المعين وفي المربع يشكل زاوية قائمة.",
+        "expectedInput": "متعامدان",
+        "revealAr": "قطرا المعين وقطرا المربع **متعامدان** (يتقاطعان في منتصفيهما بزاوية قائمة)؛ ويمتاز المربع بأن قطريه متقايسان في الطول أيضا بينما قطرا المعين مختلفان في الطول."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**المضلع** هو شكل هندسي مغلق جميع حدوده قطع مستقيمة (أضلاع) تلتقي في رؤوس. نسمي المضلع حسب عدد أضلاعه: مثلث ( $3$ )، رباعي ( $4$ )، خماسي ( $5$ )، سداسي ( $6$ )... أما الشكل الذي يحوي خطا منحنيا فليس مضلعا.",
+      "**المربع**: رباعي خاص له **$4$ أضلاع متقايسة** و**$4$ زوايا قائمة**، وكل ضلعين متقابلين متوازيان، وقطراه **متناصفان ومتقايسان ومتعامدان**.",
+      "**المستطيل**: رباعي خاص له **$4$ زوايا قائمة**، وكل ضلعين متقابلين **متقايسان ومتوازيان**، وقطراه **متناصفان ومتقايسان**.",
+      "**المعين**: رباعي خاص له **$4$ أضلاع متقايسة**، وكل ضلعين متقابلين متوازيان، وقطراه **متناصفان ومتعامدان** (وغير متقايسين في الحالة العامة، ولا يشترط فيه زوايا قائمة)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 186\" width=\"580\" height=\"186\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"14\" y=\"12\" width=\"174\" height=\"162\" rx=\"8\" fill=\"#fffbeb\" stroke=\"#d97706\" stroke-width=\"1.4\"/><text x=\"101\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">المعين</text><polygon points=\"101,44 143,80 101,116 59,80\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/><line x1=\"101\" y1=\"44\" x2=\"101\" y2=\"116\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"3 2\"/><line x1=\"59\" y1=\"80\" x2=\"143\" y2=\"80\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"3 2\"/><rect x=\"101\" y=\"72\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><text x=\"101\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">4 أضلاع متقايسة</text><text x=\"101\" y=\"161\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">قطران متعامدان</text><rect x=\"202\" y=\"12\" width=\"174\" height=\"162\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#15803d\" stroke-width=\"1.4\"/><text x=\"289\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\" direction=\"rtl\">المستطيل</text><rect x=\"235\" y=\"52\" width=\"108\" height=\"56\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/><rect x=\"235\" y=\"52\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><rect x=\"333\" y=\"98\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><line x1=\"235\" y1=\"52\" x2=\"343\" y2=\"108\" stroke=\"#64748b\" stroke-width=\"1.3\" stroke-dasharray=\"3 2\"/><line x1=\"343\" y1=\"52\" x2=\"235\" y2=\"108\" stroke=\"#64748b\" stroke-width=\"1.3\" stroke-dasharray=\"3 2\"/><text x=\"289\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">4 زوايا قائمة</text><text x=\"289\" y=\"161\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">قطران متقايسان</text><rect x=\"390\" y=\"12\" width=\"174\" height=\"162\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"1.4\"/><text x=\"477\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">المربع</text><rect x=\"441\" y=\"44\" width=\"72\" height=\"72\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><rect x=\"441\" y=\"44\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><line x1=\"441\" y1=\"44\" x2=\"513\" y2=\"116\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"3 2\"/><line x1=\"513\" y1=\"44\" x2=\"441\" y2=\"116\" stroke=\"#dc2626\" stroke-width=\"1.3\" stroke-dasharray=\"3 2\"/><text x=\"477\" y=\"142\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">4 أضلاع متقايسة و 4 زوايا قائمة</text><text x=\"477\" y=\"161\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">قطران متقايسان ومتعامدان</text></svg>",
+    "visualCaptionAr": "مقارنة خواص الأضلاع والزوايا والأقطار للرباعيات الخاصة الثلاثة: المربع والمستطيل والمعين.",
+    "examples": [
+      {
+        "problemAr": "رباعي أضلاعه الأربعة متقايسة طول كل منها $5\\text{ cm}$ ، وزواياه ليست قائمة، وقطراه متعامدان طولاهما $8\\text{ cm}$ و $6\\text{ cm}$ . ما طبيعة هذا الرباعي؟",
+        "solutionAr": "بما أن أضلاعه الأربعة متقايسة وقطراه متعامدان ومختلفان في الطول وليست له زوايا قائمة، فإن هذا الرباعي هو **معين**."
+      },
+      {
+        "problemAr": "على مرصوفة، رسمنا ضلعين متجاورين يشكلان زاوية قائمة: ضلعا أفقيا طوله $6$ تدريجات وضلعا عموديا طوله $4$ تدريجات. كيف نتمم إنشاء **المستطيل**؟",
+        "solutionAr": "من نهاية الضلع العمودي نعد $6$ تدريجات أفقيا، ومن نهاية الضلع الأفقي نعد $4$ تدريجات عموديا؛ يلتقي الخطان في الرأس الرابع فنحصل على مستطيل له $4$ زوايا قائمة."
+      }
+    ],
+    "watchOutAr": "انتبه! تساوي الأضلاع الأربعة وحده لا يكفي لنقول إن الشكل **مربع**؛ لأن **المعين** أيضا له $4$ أضلاع متقايسة! للتحقق أنه مربع لا بد من وجود الزوايا القائمة بالكوس (أو تساوي القطرين)."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل الأشكال الأربعة المرسومة أدناه: أي شكل منها **ليس مضلعا**؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 138\" width=\"500\" height=\"138\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><polygon points=\"70,26 112,98 28,98\" fill=\"#ede9fe\" stroke=\"#6d28d9\" stroke-width=\"2\"/><text x=\"70\" y=\"124\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">1</text><polygon points=\"190,24 230,52 215,98 165,98 150,52\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"190\" y=\"124\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">2</text><path d=\"M 270 96 L 270 58 A 40 40 0 0 1 350 58 L 350 96 Z\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"310\" y=\"124\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">3</text><polygon points=\"398,32 458,32 478,98 384,98\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"430\" y=\"124\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">4</text></svg>",
+      "options": [
+        "الشكل 1 (مثلث)",
+        "الشكل 2 (خماسي)",
+        "الشكل 3 (يحوي قوسا منحنيا)",
+        "الشكل 4 (رباعي)"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "الشكل 1 مغلق وكل حدوده $3$ قطع مستقيمة، فهو مضلع ثلاثي (مثلث).",
+        "الشكل 2 مغلق وكل حدوده $5$ قطع مستقيمة، فهو مضلع خماسي.",
+        "أحسنت! الشكل 3 يحوي ضلعا علويا منحنيا (قوسا)، والمضلع لا يتكون إلا من قطع مستقيمة.",
+        "الشكل 4 مغلق وكل حدوده $4$ قطع مستقيمة، فهو مضلع رباعي."
+      ],
+      "explanationAr": "المضلع يتكون حصرا من قطع مستقيمة مترابطة تشكل خطا منكسرا مغلقا. الشكل 3 يحتوي على قوس منحنٍ في الأعلى، لذلك فهو ليس مضلعا."
+    },
+    {
+      "questionAr": "انظر إلى التشفير والقياسات على الرباعي `EFGH` ( $EG = 8\\text{ cm}$ و $FH = 6\\text{ cm}$ ). ما هو نوع هذا الرباعي؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 166\" width=\"380\" height=\"166\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif;max-width:100%;height:auto\"><polygon points=\"140,26 216,84 140,142 64,84\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"2.2\"/><line x1=\"140\" y1=\"26\" x2=\"140\" y2=\"142\" stroke=\"#1d4ed8\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><line x1=\"64\" y1=\"84\" x2=\"216\" y2=\"84\" stroke=\"#1d4ed8\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><rect x=\"140\" y=\"73\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"98\" y1=\"50\" x2=\"106\" y2=\"58\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"174\" y1=\"58\" x2=\"182\" y2=\"50\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"98\" y1=\"118\" x2=\"106\" y2=\"110\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"174\" y1=\"110\" x2=\"182\" y2=\"118\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"140\" y=\"19\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">F</text><text x=\"227\" y=\"88\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">G</text><text x=\"140\" y=\"158\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">H</text><text x=\"50\" y=\"88\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">E</text><text x=\"264\" y=\"74\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">EG = 8 cm</text><text x=\"264\" y=\"98\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">FH = 6 cm</text></svg>",
+      "options": [
+        "مستطيل",
+        "مربع",
+        "معين",
+        "مثلث"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "المستطيل قطراه متقايسان في الطول وله $4$ زوايا قائمة، وهنا $EG \\neq FH$ والقطران متعامدان.",
+        "في المربع يكون القطران متقايسين دائما، بينما هنا $8\\text{ cm} \\neq 6\\text{ cm}$ .",
+        "أحسنت! الأضلاع الأربعة متقايسة والقطران متعامدان ومتناصفان وغير متقايسين، وهذه خواص **المعين**.",
+        "الشكل له $4$ أضلاع و $4$ رؤوس ( `E, F, G, H` ) فهو رباعي وليس مثلثا."
+      ],
+      "explanationAr": "يدل التشفير على تقايس الأضلاع الأربعة وعلى تعامد القطرين `EG` و `FH` ، لكن طوليهما مختلفان ( $8\\text{ cm}$ و $6\\text{ cm}$ ). إذن الرباعي `EFGH` هو **معين**."
+    },
+    {
+      "questionAr": "ما الخاصية التي يتميز بها **المربع** ولا تتحقق في **المستطيل** (في الحالة العامة غير المربعة)؟",
+      "options": [
+        "وجود $4$ زوايا قائمة",
+        "توازي كل ضلعين متقابلين",
+        "تقايس الأضلاع الأربعة وتعامد القطرين",
+        "تقايس القطرين وتناصفهما"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "الزوايا الأربع القائمة موجودة في كل من المربع والمستطيل.",
+        "توازي كل ضلعين متقابلين متحقق في كل من المربع والمستطيل والمعين.",
+        "أحسنت! المستطيل فيه كل ضلعين متقابلين متقايسان فقط، أما المربع فأضلاعه الأربعة متقايسة وقطراه متعامدان.",
+        "قطرا المستطيل متقايسان ومتناصفان مثل قطري المربع، لكنهما غير متعامدين في الحالة العامة."
+      ],
+      "explanationAr": "يشترك المربع والمستطيل في الزوايا الأربع القائمة وتساوي القطرين وتوازي الأضلاع المتقابلة، لكن المربع يمتاز بتقايس أضلاعه الأربعة وبأن قطريه متعامدان."
+    }
+  ]
+}

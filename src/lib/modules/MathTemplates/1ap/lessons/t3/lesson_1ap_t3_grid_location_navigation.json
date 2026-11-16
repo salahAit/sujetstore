@@ -1,0 +1,124 @@
+{
+  "id": "lesson_1ap_t3_grid_location_navigation",
+  "slug": "1ap-t3-grid-location-navigation",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t3",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الرابع (الجزء الثاني) والخامس (الجزء الأول): الأعداد إلى 69 ثم إلى 99 والمرصوفة",
+  "order": 3,
+  "titleAr": "التعليم والتنقل والرسم على المرصوفة (بالسطر والعمود)",
+  "objectives": [
+    "تعيين موقع خانة أو عقدة على مرصوفة باستعمال رقم السطر والعمود",
+    "رسم ووصف مسلك على مرصوفة انطلاقًا من نقطة إلى أخرى بالأسهم",
+    "نقل وإتمام رسم شكل مستو بسيط على مرصوفة مماثلة باتّباع نموذج"
+  ],
+  "keywordsAr": [
+    "المرصوفة",
+    "التعليم على مرصوفة",
+    "السطر والعمود",
+    "التنقل على مرصوفة",
+    "رسم على مرصوفة"
+  ],
+  "discover": {
+    "scenarioAr": "عَلى المَرْصُوفَةِ، يَنْطَلِقُ الضِّفْدَعُ مِنَ الخانَةِ $(A, 1)$ مُتَّبِعًا الأَسْهُمَ الخَضْراءَ لِيَصِلَ إلى الزَّهْرَةِ في الخانَةِ $(D, 3)$. وَبِجانِبِهِ مَرْصُوفَةٌ أُخْرى رُسِمَ عَلَيْها مُرَبَّعٌ لِنَقْلِهِ.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 200\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"256\" height=\"180\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#86efac\" stroke-width=\"1.5\"/><text x=\"138\" y=\"29\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">مَسْلَكُ الضِّفْدَعِ عَلى المَرْصُوفَةِ</text><g stroke=\"#64748b\" stroke-width=\"1.4\" fill=\"#fff\"><rect x=\"54\" y=\"38\" width=\"46\" height=\"36\"/><rect x=\"100\" y=\"38\" width=\"46\" height=\"36\"/><rect x=\"146\" y=\"38\" width=\"46\" height=\"36\"/><rect x=\"192\" y=\"38\" width=\"46\" height=\"36\"/><rect x=\"54\" y=\"74\" width=\"46\" height=\"36\"/><rect x=\"100\" y=\"74\" width=\"46\" height=\"36\"/><rect x=\"146\" y=\"74\" width=\"46\" height=\"36\"/><rect x=\"192\" y=\"74\" width=\"46\" height=\"36\"/><rect x=\"54\" y=\"110\" width=\"46\" height=\"36\"/><rect x=\"100\" y=\"110\" width=\"46\" height=\"36\"/><rect x=\"146\" y=\"110\" width=\"46\" height=\"36\"/><rect x=\"192\" y=\"110\" width=\"46\" height=\"36\"/></g><g font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" text-anchor=\"middle\" direction=\"ltr\"><text x=\"38\" y=\"60\">3</text><text x=\"38\" y=\"96\">2</text><text x=\"38\" y=\"132\">1</text><text x=\"77\" y=\"164\">A</text><text x=\"123\" y=\"164\">B</text><text x=\"169\" y=\"164\">C</text><text x=\"215\" y=\"164\">D</text></g><text x=\"146\" y=\"182\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">الأَعْمِدَةُ (A, B, C, D) وَالأَسْطُرُ (1, 2, 3)</text><circle cx=\"77\" cy=\"128\" r=\"13\" fill=\"#22c55e\"/><text x=\"77\" y=\"132\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#fff\" direction=\"rtl\">ضفدع</text><circle cx=\"215\" cy=\"56\" r=\"13\" fill=\"#ec4899\"/><text x=\"215\" y=\"60\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#fff\" direction=\"rtl\">زهرة</text><path d=\"M92 128 L215 128 L215 71\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"3\" stroke-dasharray=\"5,3\"/><polygon points=\"215,69 210,77 220,77\" fill=\"#15803d\"/><rect x=\"280\" y=\"10\" width=\"190\" height=\"180\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/><text x=\"375\" y=\"29\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">رَسْمٌ عَلى العُقَدِ</text><g stroke=\"#94a3b8\" stroke-width=\"1.2\" fill=\"#fff\"><rect x=\"308\" y=\"42\" width=\"34\" height=\"34\"/><rect x=\"342\" y=\"42\" width=\"34\" height=\"34\"/><rect x=\"376\" y=\"42\" width=\"34\" height=\"34\"/><rect x=\"410\" y=\"42\" width=\"34\" height=\"34\"/><rect x=\"308\" y=\"76\" width=\"34\" height=\"34\"/><rect x=\"342\" y=\"76\" width=\"34\" height=\"34\"/><rect x=\"376\" y=\"76\" width=\"34\" height=\"34\"/><rect x=\"410\" y=\"76\" width=\"34\" height=\"34\"/><rect x=\"308\" y=\"110\" width=\"34\" height=\"34\"/><rect x=\"342\" y=\"110\" width=\"34\" height=\"34\"/><rect x=\"376\" y=\"110\" width=\"34\" height=\"34\"/><rect x=\"410\" y=\"110\" width=\"34\" height=\"34\"/></g><rect x=\"342\" y=\"76\" width=\"68\" height=\"34\" fill=\"#bfdbfe\" fill-opacity=\"0.55\" stroke=\"#2563eb\" stroke-width=\"2.8\"/><circle cx=\"342\" cy=\"76\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"410\" cy=\"76\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"410\" cy=\"110\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"342\" cy=\"110\" r=\"4\" fill=\"#dc2626\"/><text x=\"375\" y=\"172\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e3a8a\" direction=\"rtl\">مُسْتَطِيلٌ عَرْضُهُ 2 وَطُولُهُ 1</text></svg>",
+    "steps": [
+      {
+        "promptAr": "يَنْطَلِقُ الضِّفْدَعُ مِنَ الخانَةِ $(A, 1)$ وَيَتَّجِهُ يَمِينًا إلى $(D, 1)$. كَمْ خانَةً يَقْفِزُ نَحْوَ اليَمِينِ؟",
+        "hintAr": "عُدَّ القَفَزاتِ مِن $A$ إلى $B$، ثُمَّ إلى $C$، ثُمَّ إلى $D$.",
+        "expectedInput": "3",
+        "revealAr": "يَقْفِزُ الضِّفْدَعُ $3$ خاناتٍ نَحْوَ اليَمِينِ لِيَصِلَ إلى الخانَةِ $(D, 1)$."
+      },
+      {
+        "promptAr": "مِنَ الخانَةِ $(D, 1)$، كَمْ خانَةً يَصْعَدُ الضِّفْدَعُ نَحْوَ الأَعْلى لِيَصِلَ إلى الزَّهْرَةِ في $(D, 3)$؟",
+        "hintAr": "عُدَّ الخاناتِ مِنَ السَّطْرِ $1$ إلى السَّطْرِ $2$ ثُمَّ السَّطْرِ $3$.",
+        "expectedInput": "2",
+        "revealAr": "يَصْعَدُ الضِّفْدَعُ $2$ خانَتَيْنِ نَحْوَ الأَعْلى فَيَصِلُ إلى $(D, 3)$."
+      },
+      {
+        "promptAr": "كَمْ قَفْزَةً قَفَزَ الضِّفْدَعُ في المَجْمُوعِ ($3 + 2$) لِيَصِلَ إلى الزَّهْرَةِ؟",
+        "hintAr": "احْسُبْ $3 + 2$.",
+        "expectedInput": "5",
+        "revealAr": "قَفَزَ الضِّفْدَعُ $3 + 2 = 5$ قَفَزاتٍ عَلى المَرْصُوفَةِ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "المَرْصُوفَةُ شَبَكَةٌ مُنَظَّمَةٌ تَتَكَوَّنُ مِنْ أَسْطُرٍ أُفُقِيَّةٍ ($1$، $2$، $3$...) وَأَعْمِدَةٍ عَمُودِيَّةٍ ($A$، $B$، $C$...).",
+      "لِتَعْيِينِ مَوْقِعِ خانَةٍ أَوْ عُقْدَةٍ (تَقاطُعِ خَطَّيْنِ)، نَذْكُرُ العَمُودَ ثُمَّ السَّطْرَ، مِثْلَ: $(B, 2)$.",
+      "لِوَصْفِ مَسْلَكٍ عَلى المَرْصُوفَةِ، نَسْتَعْمِلُ الأَسْهُمَ وَعَدَدَ الخُطُواتِ: يَمِينًا ($\\rightarrow$)، يَسارًا ($\\leftarrow$)، أَعْلى ($\\uparrow$)، أَسْفَلَ ($\\downarrow$).",
+      "لِنَقْلِ شَكْلٍ مُسْتَوٍ (مُرَبَّعٍ أَوْ مُسْتَطِيلٍ أَوْ مُثَلَّثٍ) عَلى مَرْصُوفَةٍ مُماثِلَةٍ، نُحَدِّدُ رُؤُوسَهُ عَلى العُقَدِ وَنَعُدُّ المُرَبَّعاتِ بِدِقَّةٍ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 205\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"222\" height=\"180\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"123\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">الخَانَةُ وَالعُقْدَةُ</text><g stroke=\"#64748b\" stroke-width=\"1.2\" fill=\"#fff\"><rect x=\"58\" y=\"46\" width=\"38\" height=\"34\"/><rect x=\"96\" y=\"46\" width=\"38\" height=\"34\"/><rect x=\"134\" y=\"46\" width=\"38\" height=\"34\"/><rect x=\"172\" y=\"46\" width=\"38\" height=\"34\"/><rect x=\"58\" y=\"80\" width=\"38\" height=\"34\"/><rect x=\"96\" y=\"80\" width=\"38\" height=\"34\" fill=\"#fde047\"/><rect x=\"134\" y=\"80\" width=\"38\" height=\"34\"/><rect x=\"172\" y=\"80\" width=\"38\" height=\"34\"/><rect x=\"58\" y=\"114\" width=\"38\" height=\"34\"/><rect x=\"96\" y=\"114\" width=\"38\" height=\"34\"/><rect x=\"134\" y=\"114\" width=\"38\" height=\"34\"/><rect x=\"172\" y=\"114\" width=\"38\" height=\"34\"/></g><g font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" text-anchor=\"middle\" direction=\"ltr\"><text x=\"42\" y=\"67\">3</text><text x=\"42\" y=\"101\">2</text><text x=\"42\" y=\"135\">1</text><text x=\"77\" y=\"164\">A</text><text x=\"115\" y=\"164\">B</text><text x=\"153\" y=\"164\">C</text><text x=\"191\" y=\"164\">D</text></g><text x=\"115\" y=\"101\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"ltr\">(B,2)</text><circle cx=\"172\" cy=\"80\" r=\"6\" fill=\"#dc2626\"/><text x=\"172\" y=\"71\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"rtl\">عُقْدَةٌ</text><text x=\"123\" y=\"182\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e3a8a\" direction=\"rtl\">خانَةٌ صَفْراءُ (B,2) وَعُقْدَةٌ حَمْراءُ</text><rect x=\"246\" y=\"12\" width=\"222\" height=\"180\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"357\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">نَقْلُ مُثَلَّثٍ عَلى المَرْصُوفَةِ</text><g stroke=\"#94a3b8\" stroke-width=\"1.1\" fill=\"#fff\"><rect x=\"264\" y=\"52\" width=\"28\" height=\"28\"/><rect x=\"292\" y=\"52\" width=\"28\" height=\"28\"/><rect x=\"320\" y=\"52\" width=\"28\" height=\"28\"/><rect x=\"264\" y=\"80\" width=\"28\" height=\"28\"/><rect x=\"292\" y=\"80\" width=\"28\" height=\"28\"/><rect x=\"320\" y=\"80\" width=\"28\" height=\"28\"/><rect x=\"264\" y=\"108\" width=\"28\" height=\"28\"/><rect x=\"292\" y=\"108\" width=\"28\" height=\"28\"/><rect x=\"320\" y=\"108\" width=\"28\" height=\"28\"/><rect x=\"370\" y=\"52\" width=\"28\" height=\"28\"/><rect x=\"398\" y=\"52\" width=\"28\" height=\"28\"/><rect x=\"426\" y=\"52\" width=\"28\" height=\"28\"/><rect x=\"370\" y=\"80\" width=\"28\" height=\"28\"/><rect x=\"398\" y=\"80\" width=\"28\" height=\"28\"/><rect x=\"426\" y=\"80\" width=\"28\" height=\"28\"/><rect x=\"370\" y=\"108\" width=\"28\" height=\"28\"/><rect x=\"398\" y=\"108\" width=\"28\" height=\"28\"/><rect x=\"426\" y=\"108\" width=\"28\" height=\"28\"/></g><polygon points=\"292,52 264,108 320,108\" fill=\"#bbf7d0\" fill-opacity=\"0.6\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><polygon points=\"398,52 370,108 426,108\" fill=\"#bbf7d0\" fill-opacity=\"0.6\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><text x=\"306\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">النَّمُوذَجُ</text><text x=\"412\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">النَّقْلُ</text><text x=\"357\" y=\"180\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">نَعُدُّ نَفْسَ الخاناتِ عِنْدَ الرَّسْمِ</text></svg>",
+    "visualCaptionAr": "تَحْدِيدُ مَوْقِعِ الخانَةِ $(B, 2)$ وَالعُقْدَةِ الحَمْراءِ، وَنَقْلُ مُثَلَّثٍ عَلى مَرْصُوفَةٍ مُماثِلَةٍ.",
+    "examples": [
+      {
+        "problemAr": "عَلى مَرْصُوفَةٍ أَعْمِدَتُها $A, B, C$ وَأَسْطُرُها $1, 2, 3$، تَقَعُ نَجْمَةٌ في العَمُودِ $C$ وَالسَّطْرِ $3$. ما تَعْيِينُ خانَتِها؟",
+        "solutionAr": "نَكْتُبُ العَمُودَ ثُمَّ السَّطْرَ، فَتَكُونُ النَّجْمَةُ في الخانَةِ $(C, 3)$."
+      },
+      {
+        "problemAr": "كَيْفَ نَتَنَقَّلُ مِنْ $(A, 2)$ إلى $(C, 1)$ عَلى المَرْصُوفَةِ؟",
+        "solutionAr": "نَتَّجِهُ خانَتَيْنِ ($2$) نَحْوَ اليَمِينِ ($\\rightarrow$) لِنَصِلَ إلى $(C, 2)$، ثُمَّ نَنْزِلُ خانَةً واحِدَةً ($1$) نَحْوَ الأَسْفَلِ ($\\downarrow$) إلى $(C, 1)$."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! عِنْدَ حِسابِ عَدَدِ خُطُواتِ التَّنَقُّلِ، عُدَّ القَفَزاتِ بَيْنَ الخاناتِ، وَلا تَعُدَّ خانَةَ الانْطِلاقِ نَفْسَها كَخُطْوَةٍ! كَما يَجِبُ التَّمْيِيزُ بَيْنَ الخانَةِ (المُرَبَّعِ) وَالعُقْدَةِ (نُقْطَةِ تَقاطُعِ الخَطَّيْنِ)."
+  },
+  "practice": [
+    {
+      "questionAr": "تَأَمَّلِ المَرْصُوفَةَ التّالِيَةَ: في أَيِّ خانَةٍ تَقَعُ التُّفّاحَةُ الحَمْراءُ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 165\" style=\"background:#fff;font-family:Arial,sans-serif\"><g stroke=\"#64748b\" stroke-width=\"1.4\" fill=\"#fff\"><rect x=\"70\" y=\"15\" width=\"52\" height=\"36\"/><rect x=\"122\" y=\"15\" width=\"52\" height=\"36\"/><rect x=\"174\" y=\"15\" width=\"52\" height=\"36\"/><rect x=\"226\" y=\"15\" width=\"52\" height=\"36\"/><rect x=\"70\" y=\"51\" width=\"52\" height=\"36\"/><rect x=\"122\" y=\"51\" width=\"52\" height=\"36\"/><rect x=\"174\" y=\"51\" width=\"52\" height=\"36\"/><rect x=\"226\" y=\"51\" width=\"52\" height=\"36\"/><rect x=\"70\" y=\"87\" width=\"52\" height=\"36\"/><rect x=\"122\" y=\"87\" width=\"52\" height=\"36\"/><rect x=\"174\" y=\"87\" width=\"52\" height=\"36\"/><rect x=\"226\" y=\"87\" width=\"52\" height=\"36\"/></g><g font-size=\"13\" font-weight=\"bold\" fill=\"#334155\" text-anchor=\"middle\" direction=\"ltr\"><text x=\"52\" y=\"38\">3</text><text x=\"52\" y=\"74\">2</text><text x=\"52\" y=\"110\">1</text><text x=\"96\" y=\"144\">A</text><text x=\"148\" y=\"144\">B</text><text x=\"200\" y=\"144\">C</text><text x=\"252\" y=\"144\">D</text></g><circle cx=\"148\" cy=\"33\" r=\"11\" fill=\"#dc2626\"/><rect x=\"146\" y=\"18\" width=\"4\" height=\"6\" fill=\"#15803d\"/><circle cx=\"252\" cy=\"105\" r=\"11\" fill=\"#2563eb\"/></svg>",
+      "options": [
+        "$(D, 1)$",
+        "$(C, 3)$",
+        "$(B, 3)$",
+        "$(B, 2)$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$(D, 1)$ هُوَ مَوْقِعُ الكُرَةِ الزَّرْقاءِ وَلَيْسَ التُّفّاحَةِ الحَمْراءِ.",
+        "التُّفّاحَةُ تَقَعُ في العَمُودِ $B$ وَلَيْسَ العَمُودِ $C$.",
+        "أَحْسَنْتَ! التُّفّاحَةُ الحَمْراءُ في العَمُودِ $B$ وَالسَّطْرِ $3$، أَيْ $(B, 3)$.",
+        "السَّطْرُ هُوَ $3$ في الأَعْلى وَلَيْسَ السَّطْرَ $2$ في الوَسَطِ."
+      ],
+      "explanationAr": "نَنْظُرُ أَسْفَلَ التُّفّاحَةِ فَنَجِدُ العَمُودَ $B$، وَعَلى اليَسارِ نَجِدُ السَّطْرَ $3$، إِذَنْ مَوْقِعُها $(B, 3)$."
+    },
+    {
+      "questionAr": "تَنَقَّلَتْ سَيّارَةٌ عَلى المَرْصُوفَةِ انْطِلاقًا مِنْ $(A, 1)$: تَقَدَّمَتْ $2$ خانَتَيْنِ يَمِينًا ($\\rightarrow$)، ثُمَّ صَعِدَتْ $1$ خانَةً إلى الأَعْلى ($\\uparrow$). في أَيِّ خانَةٍ تَوَقَّفَتْ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 165\" style=\"background:#fff;font-family:Arial,sans-serif\"><g stroke=\"#64748b\" stroke-width=\"1.4\" fill=\"#fff\"><rect x=\"70\" y=\"15\" width=\"52\" height=\"36\"/><rect x=\"122\" y=\"15\" width=\"52\" height=\"36\"/><rect x=\"174\" y=\"15\" width=\"52\" height=\"36\"/><rect x=\"226\" y=\"15\" width=\"52\" height=\"36\"/><rect x=\"70\" y=\"51\" width=\"52\" height=\"36\"/><rect x=\"122\" y=\"51\" width=\"52\" height=\"36\"/><rect x=\"174\" y=\"51\" width=\"52\" height=\"36\" fill=\"#dcfce7\"/><rect x=\"226\" y=\"51\" width=\"52\" height=\"36\"/><rect x=\"70\" y=\"87\" width=\"52\" height=\"36\"/><rect x=\"122\" y=\"87\" width=\"52\" height=\"36\"/><rect x=\"174\" y=\"87\" width=\"52\" height=\"36\"/><rect x=\"226\" y=\"87\" width=\"52\" height=\"36\"/></g><g font-size=\"13\" font-weight=\"bold\" fill=\"#334155\" text-anchor=\"middle\" direction=\"ltr\"><text x=\"52\" y=\"38\">3</text><text x=\"52\" y=\"74\">2</text><text x=\"52\" y=\"110\">1</text><text x=\"96\" y=\"144\">A</text><text x=\"148\" y=\"144\">B</text><text x=\"200\" y=\"144\">C</text><text x=\"252\" y=\"144\">D</text></g><rect x=\"83\" y=\"96\" width=\"26\" height=\"18\" rx=\"4\" fill=\"#f59e0b\"/><path d=\"M112 105 L200 105 L200 72\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\" stroke-dasharray=\"5,3\"/><polygon points=\"200,68 195,76 205,76\" fill=\"#16a34a\"/></svg>",
+      "options": [
+        "$(C, 2)$",
+        "$(B, 2)$",
+        "$(C, 1)$",
+        "$(B, 3)$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "مُمْتازٌ! خُطْوَتانِ يَمِينًا مِنْ $A$ تَصِلانِ إلى $C$، وَخُطْوَةٌ لِلْأَعْلى مِنْ $1$ تَصِلُ إلى $2$، أَيْ $(C, 2)$.",
+        "خُطْوَتانِ يَمِينًا مِنْ $A$ تَصِلانِ إلى العَمُودِ $C$ وَلَيْسَ $B$.",
+        "بَعْدَ الوُصُولِ إلى $(C, 1)$ صَعِدَتِ السَّيّارَةُ خانَةً إلى الأَعْلى، فَأَصْبَحَتْ في السَّطْرِ $2$.",
+        "السَّيّارَةُ تَحَرَّكَتْ يَمِينًا خُطْوَتَيْنِ وَصَعِدَتْ خُطْوَةً واحِدَةً فَقَطْ."
+      ],
+      "explanationAr": "نَبْدَأُ مِنْ $(A, 1)$، نَتَقَدَّمُ خانَتَيْنِ يَمِينًا إلى $(C, 1)$، ثُمَّ نَصْعَدُ خانَةً إلى الأَعْلى فَنَصِلُ إلى الخانَةِ $(C, 2)$."
+    },
+    {
+      "questionAr": "نُرِيدُ نَقْلَ المُسْتَطِيلِ الأَزْرَقِ عَلى مَرْصُوفَةٍ مُماثِلَةٍ. كَمْ عَرْضُهُ وَكَمْ ارْتِفاعُهُ بِالمُرَبَّعاتِ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 130\" style=\"background:#fff;font-family:Arial,sans-serif\"><g stroke=\"#94a3b8\" stroke-width=\"1.2\" fill=\"#fff\"><rect x=\"45\" y=\"16\" width=\"42\" height=\"32\"/><rect x=\"87\" y=\"16\" width=\"42\" height=\"32\"/><rect x=\"129\" y=\"16\" width=\"42\" height=\"32\"/><rect x=\"171\" y=\"16\" width=\"42\" height=\"32\"/><rect x=\"45\" y=\"48\" width=\"42\" height=\"32\"/><rect x=\"87\" y=\"48\" width=\"42\" height=\"32\"/><rect x=\"129\" y=\"48\" width=\"42\" height=\"32\"/><rect x=\"171\" y=\"48\" width=\"42\" height=\"32\"/><rect x=\"45\" y=\"80\" width=\"42\" height=\"32\"/><rect x=\"87\" y=\"80\" width=\"42\" height=\"32\"/><rect x=\"129\" y=\"80\" width=\"42\" height=\"32\"/><rect x=\"171\" y=\"80\" width=\"42\" height=\"32\"/></g><rect x=\"87\" y=\"48\" width=\"84\" height=\"32\" fill=\"#93c5fd\" fill-opacity=\"0.65\" stroke=\"#2563eb\" stroke-width=\"2.5\"/></svg>",
+      "options": [
+        "$1$ مُرَبَّعٌ عَرْضًا وَ $2$ مُرَبَّعانِ ارْتِفاعًا",
+        "$3$ مُرَبَّعاتٍ عَرْضًا وَ $1$ مُرَبَّعٌ ارْتِفاعًا",
+        "$2$ مُرَبَّعانِ عَرْضًا وَ $2$ مُرَبَّعانِ ارْتِفاعًا",
+        "$2$ مُرَبَّعانِ عَرْضًا وَ $1$ مُرَبَّعٌ ارْتِفاعًا"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "لَقَدْ عَكَسْتَ بَيْنَ العَرْضِ الأُفُقِيِّ وَالِارْتِفاعِ العَمُودِيِّ!",
+        "عُدَّ المُرَبَّعاتِ المُلَوَّنَةَ أُفُقِيًّا: هُما $2$ مُرَبَّعانِ وَلَيْسَا $3$.",
+        "الِارْتِفاعُ العَمُودِيُّ هُوَ سَطْرٌ واحِدٌ ($1$) فَقَطْ وَلَيْسَ $2$.",
+        "أَحْسَنْتَ! المُسْتَطِيلُ يَمْتَدُّ أُفُقِيًّا عَلى $2$ مُرَبَّعَيْنِ وَعَمُودِيًّا عَلى $1$ مُرَبَّعٍ."
+      ],
+      "explanationAr": "بِعَدِّ مُرَبَّعاتِ المَرْصُوفَةِ نَجِدُ أَنَّ المُسْتَطِيلَ يُغَطِّي مُرَبَّعَيْنِ ($2$) في العَرْضِ وَمُرَبَّعًا واحِدًا ($1$) في الِارْتِفاعِ."
+    }
+  ]
+}

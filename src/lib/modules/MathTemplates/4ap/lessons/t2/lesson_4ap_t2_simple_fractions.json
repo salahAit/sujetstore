@@ -1,0 +1,127 @@
+{
+  "id": "lesson_4ap_t2_simple_fractions",
+  "slug": "lesson-4ap-t2-simple-fractions",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t2",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثالث: الضرب والقسمة الإقليدية والكسور البسيطة والعشرية",
+  "order": 3,
+  "titleAr": "الكسور البسيطة: القراءة والتمثيل والمقارنة والحصر",
+  "objectives": [
+    "قراءة وكتابة وتمثيل الكسور البسيطة (مثل 1/2، 1/3، 1/4، 3/4، 2/5) لتشفير أجزاء من أشكال ومساحات أو تعليم نقط على نصف مستقيم مدرج.",
+    "مقارنة كسر بالوحدة (أصغر من 1، يساوي 1، أكبر من 1) ومقارنة وترتيب كسور لها نفس المقام.",
+    "تفكيك كسر أكبر من 1 إلى مجموع عدد طبيعي وكسر أصغر من 1 وحصر كسر بين عددين طبيعيين متتاليين."
+  ],
+  "keywordsAr": [
+    "الكسور البسيطة",
+    "البسط والمقام",
+    "نصف مستقيم مدرج",
+    "مقارنة الكسور",
+    "تفكيك وحصر كسر"
+  ],
+  "discover": {
+    "scenarioAr": "اشترى أمين لوحَيْ شوكولاتة متطابقين، كل لوح مقسّم إلى $4$ مربعات متساوية. أكل أمين اللوح الأول كاملا ($4$ مربعات) و $3$ مربعات من اللوح الثاني، أي أكل $\\frac{7}{4}$ لوحا. لنساعده على تمثيل هذا الكسر على نصف مستقيم مدرج وتفكيكه وحصره.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 225\" width=\"540\" height=\"225\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"209\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"270\" y=\"29\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">تمثيل الكسر 7/4 بالشكل وعلى نصف مستقيم مدرج</text><g stroke=\"#1e40af\" stroke-width=\"1.6\"><rect x=\"40\" y=\"42\" width=\"50\" height=\"38\" fill=\"#60a5fa\"/><rect x=\"90\" y=\"42\" width=\"50\" height=\"38\" fill=\"#60a5fa\"/><rect x=\"140\" y=\"42\" width=\"50\" height=\"38\" fill=\"#60a5fa\"/><rect x=\"190\" y=\"42\" width=\"50\" height=\"38\" fill=\"#60a5fa\"/></g><text x=\"140\" y=\"97\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">اللوح الأول: 4/4 = 1</text><g stroke=\"#15803d\" stroke-width=\"1.6\"><rect x=\"290\" y=\"42\" width=\"50\" height=\"38\" fill=\"#4ade80\"/><rect x=\"340\" y=\"42\" width=\"50\" height=\"38\" fill=\"#4ade80\"/><rect x=\"390\" y=\"42\" width=\"50\" height=\"38\" fill=\"#4ade80\"/><rect x=\"440\" y=\"42\" width=\"50\" height=\"38\" fill=\"#ffffff\"/></g><text x=\"390\" y=\"97\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">اللوح الثاني: 3/4</text><line x1=\"42\" y1=\"150\" x2=\"495\" y2=\"150\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><polygon points=\"502,150 492,145 492,155\" fill=\"#0f172a\"/><line x1=\"50\" y1=\"136\" x2=\"50\" y2=\"164\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><text x=\"50\" y=\"182\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">0</text><line x1=\"102\" y1=\"142\" x2=\"102\" y2=\"158\" stroke=\"#64748b\" stroke-width=\"1.4\"/><text x=\"102\" y=\"178\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">1/4</text><line x1=\"154\" y1=\"142\" x2=\"154\" y2=\"158\" stroke=\"#64748b\" stroke-width=\"1.4\"/><text x=\"154\" y=\"178\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">2/4</text><line x1=\"206\" y1=\"142\" x2=\"206\" y2=\"158\" stroke=\"#64748b\" stroke-width=\"1.4\"/><text x=\"206\" y=\"178\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">3/4</text><line x1=\"258\" y1=\"136\" x2=\"258\" y2=\"164\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><text x=\"258\" y=\"182\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">1 (4/4)</text><line x1=\"310\" y1=\"142\" x2=\"310\" y2=\"158\" stroke=\"#64748b\" stroke-width=\"1.4\"/><text x=\"310\" y=\"178\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">5/4</text><line x1=\"362\" y1=\"142\" x2=\"362\" y2=\"158\" stroke=\"#64748b\" stroke-width=\"1.4\"/><text x=\"362\" y=\"178\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">6/4</text><line x1=\"414\" y1=\"138\" x2=\"414\" y2=\"162\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"414\" cy=\"150\" r=\"5.5\" fill=\"#dc2626\"/><text x=\"414\" y=\"128\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">7/4 = 1 + 3/4</text><line x1=\"466\" y1=\"136\" x2=\"466\" y2=\"164\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><text x=\"466\" y=\"182\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">2 (8/4)</text><text x=\"270\" y=\"205\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#7c3aed\">الحصر: 1 &lt; 7/4 &lt; 2</text></svg>",
+    "steps": [
+      {
+        "promptAr": "كل لوح شوكولاتة مقسم إلى $4$ أجزاء متساوية، وأكل أمين $7$ أجزاء من هذا النوع. ما هو مقام الكسر $\\frac{7}{4}$ ؟",
+        "hintAr": "المقام هو العدد السفلي الذي يدل على عدد الأجزاء المتساوية في الوحدة الواحدة.",
+        "expectedInput": "4",
+        "revealAr": "المقام هو $4$ لأن الوحدة الواحدة (اللوح الواحد) مقسمة إلى $4$ أرباع."
+      },
+      {
+        "promptAr": "اللوح الأول الكامل يساوي $\\frac{4}{4} = 1$ وحدة، وبقي من اللوح الثاني $3$ أرباع ($\\frac{3}{4}$ ). كم وحدة كاملة أكل أمين؟",
+        "hintAr": "عد الألواح المظللة بالكامل في الرسم.",
+        "expectedInput": "1",
+        "revealAr": "أكل أمين وحدة واحدة كاملة ($1$ ) و $\\frac{3}{4}$ من اللوح الثاني."
+      },
+      {
+        "promptAr": "انظر إلى موقع الكسر $\\frac{7}{4}$ على نصف المستقيم المدرج مقارنة بالعدد $1$: ما الرمز المناسب ($>$ أم $<$) لجعل العبارة صحيحة: $\\frac{7}{4}$ ... $1$ ؟",
+        "hintAr": "النقطة الواقعة على يمين $1$ أكبر من $1$ ، وبسطها $7$ أكبر من مقامها $4$.",
+        "expectedInput": ">",
+        "revealAr": "بما أن البسط $7$ أكبر من المقام $4$ ، فإن $\\frac{7}{4} > 1$."
+      },
+      {
+        "promptAr": "اكتب تفكيك الكسر $\\frac{7}{4}$ على شكل مجموع عدد طبيعي وكسر أصغر من $1$ ، ثم احصره بين عددين طبيعيين متتاليين.",
+        "hintAr": "تقع النقطة $\\frac{7}{4}$ بين التدريجتين الكبيرتين $1$ و $2$.",
+        "revealAr": "التفكيك هو: $\\frac{7}{4} = 1 + \\frac{3}{4}$ ، والحصر بين عددين طبيعيين متتاليين هو: $1 < \\frac{7}{4} < 2$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "يتكون الكسر $\\frac{a}{b}$ من **بسط** في الأعلى (عدد الأجزاء المأخوذة) و**مقام** في الأسفل (عدد الأجزاء المتساوية التي قُسّمت إليها الوحدة الواحدة).",
+      "لمقارنة كسر بالعدد $1$: إذا كان البسط أصغر من المقام فالكسر أصغر من $1$ ($\\frac{3}{4} < 1$ )؛ وإذا تساوى البسط والمقام فالكسر يساوي $1$ ($\\frac{4}{4} = 1$ )؛ وإذا كان البسط أكبر من المقام فالكسر أكبر من $1$ ($\\frac{7}{4} > 1$ ).",
+      "لمقارنة أو ترتيب كسور لها **نفس المقام**، نقارن بُسوطها فقط (مثلا: $\\frac{2}{5} < \\frac{4}{5} < \\frac{7}{5}$ ).",
+      "لتفكيك كسر أكبر من $1$ وحصره بين عددين طبيعيين متتاليين، نستعمل القسمة الإقليدية للبسط على المقام: مثلا $\\frac{11}{4} = 2 + \\frac{3}{4}$ ومنه $2 < \\frac{11}{4} < 3$."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 220\" width=\"540\" height=\"220\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"204\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"270\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">أجزاء الكسر ومقارنته بالوحدة وتفكيكه وحصره</text><rect x=\"22\" y=\"44\" width=\"232\" height=\"92\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"65\" y=\"76\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#dc2626\">3</text><line x1=\"46\" y1=\"84\" x2=\"84\" y2=\"84\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"65\" y=\"108\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#1d4ed8\">5</text><text x=\"166\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">البسط (المأخوذ)</text><text x=\"166\" y=\"107\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">المقام (أجزاء الوحدة)</text><rect x=\"268\" y=\"44\" width=\"250\" height=\"92\" rx=\"10\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"393\" y=\"65\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#14532d\">المقارنة مع الوحدة (1)</text><rect x=\"280\" y=\"75\" width=\"72\" height=\"46\" rx=\"6\" fill=\"#eff6ff\"/><text x=\"316\" y=\"94\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">3/4 &lt; 1</text><text x=\"316\" y=\"112\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">بسط &lt; مقام</text><rect x=\"358\" y=\"75\" width=\"72\" height=\"46\" rx=\"6\" fill=\"#f0fdf4\"/><text x=\"394\" y=\"94\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\">4/4 = 1</text><text x=\"394\" y=\"112\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">بسط = مقام</text><rect x=\"436\" y=\"75\" width=\"72\" height=\"46\" rx=\"6\" fill=\"#fef3c7\"/><text x=\"472\" y=\"94\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b45309\">7/4 &gt; 1</text><text x=\"472\" y=\"112\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">بسط &gt; مقام</text><rect x=\"22\" y=\"146\" width=\"496\" height=\"52\" rx=\"10\" fill=\"#f3e8ff\" stroke=\"#9333ea\" stroke-width=\"1.4\"/><text x=\"270\" y=\"169\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#581c87\">تفكيك كسر أكبر من 1:  11/4 = 8/4 + 3/4 = 2 + 3/4</text><text x=\"270\" y=\"189\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1e3a8a\">الحصر بين طبيعيين متتاليين:  2 &lt; 11/4 &lt; 3</text></svg>",
+    "visualCaptionAr": "تسمية البسط والمقام، ومقارنة الكسور بالوحدة، وقاعدة التفكيك والحصر.",
+    "examples": [
+      {
+        "problemAr": "رتّب تصاعديا الكسور الآتية: $\\frac{5}{6}$ ، $\\frac{2}{6}$ ، $\\frac{6}{6}$ ، $\\frac{7}{6}$.",
+        "solutionAr": "للكسور كلها نفس المقام ($6$ )، لذا نقارن البسوط مباشرة: $2 < 5 < 6 < 7$. إذن الترتيب التصاعدي هو: $\\frac{2}{6} < \\frac{5}{6} < \\frac{6}{6} < \\frac{7}{6}$ (ونلاحظ أن $\\frac{6}{6} = 1$ )."
+      },
+      {
+        "problemAr": "فكك الكسر $\\frac{13}{5}$ إلى عدد طبيعي وكسر أصغر من $1$ ، ثم احصره بين عددين طبيعيين متتاليين.",
+        "solutionAr": "نقسم $13$ على $5$: $13 = 5 \\times 2 + 3$. إذن $\\frac{13}{5} = \\frac{10}{5} + \\frac{3}{5} = 2 + \\frac{3}{5}$. وبالتالي الحصر هو: $2 < \\frac{13}{5} < 3$."
+      }
+    ],
+    "watchOutAr": "انتبه! عند قراءة كسر من نصف مستقيم مدرج، عدّ الأجزاء المتساوية داخل **وحدة واحدة فقط** (بين $0$ و $1$ ) لتحديد المقام، ولا تعدّ كل التدريجات في المستقيم كله!"
+  },
+  "practice": [
+    {
+      "questionAr": "انظر إلى نصف المستقيم المدرج المقابل: ما الكسر الذي يمثل موضع النقطة $M$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 115\" width=\"460\" height=\"115\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"99\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><line x1=\"32\" y1=\"62\" x2=\"428\" y2=\"62\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><polygon points=\"434,62 424,57 424,67\" fill=\"#0f172a\"/><line x1=\"40\" y1=\"48\" x2=\"40\" y2=\"76\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><text x=\"40\" y=\"94\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">0</text><line x1=\"100\" y1=\"54\" x2=\"100\" y2=\"70\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"160\" y1=\"54\" x2=\"160\" y2=\"70\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"220\" y1=\"48\" x2=\"220\" y2=\"76\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><text x=\"220\" y=\"94\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">1</text><line x1=\"280\" y1=\"54\" x2=\"280\" y2=\"70\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"340\" y1=\"52\" x2=\"340\" y2=\"72\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"400\" y1=\"48\" x2=\"400\" y2=\"76\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><text x=\"400\" y=\"94\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">2</text><circle cx=\"340\" cy=\"62\" r=\"5.5\" fill=\"#dc2626\"/><text x=\"340\" y=\"38\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\">M</text></svg>",
+      "options": [
+        "$\\frac{5}{3}$",
+        "$\\frac{5}{6}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{3}{5}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! كل وحدة من $0$ إلى $1$ مقسمة إلى $3$ أجزاء متساوية (أثلاث)، والنقطة $M$ تقع عند التدريجة الخامسة أي $\\frac{5}{3}$.",
+        "انتبه! المقام هو عدد الأجزاء في الوحدة الواحدة (بين $0$ و $1$ أي $3$ أجزاء) وليس كل التدريجات من $0$ إلى $2$.",
+        "النقطة $M$ تقع بعد العدد $1$ ، لذا قيمتها أكبر من $1$ ($1 + \\frac{2}{3} = \\frac{5}{3}$ ) وليست $\\frac{2}{3}$.",
+        "لقد قلبت البسط والمقام؛ عدد الأجزاء المأخوذة ($5$ ) يُكتب في البسط والمقام ($3$ ) في الأسفل."
+      ],
+      "explanationAr": "نعدّ عدد الأجزاء المتساوية بين $0$ و $1$ فنجد $3$ أجزاء، إذن المقام هو $3$. ثم نعدّ التدريجات من $0$ إلى $M$ فنجد $5$ تدريجات، إذن النقطة $M$ تمثل الكسر $\\frac{5}{3}$."
+    },
+    {
+      "questionAr": "ما التفكيك الصحيح للكسر $\\frac{11}{3}$ وما حصره بين عددين طبيعيين متتاليين؟",
+      "options": [
+        "$3 + \\frac{2}{3}$ والحصر $3 < \\frac{11}{3} < 4$",
+        "$2 + \\frac{5}{3}$ والحصر $2 < \\frac{11}{3} < 3$",
+        "$3 + \\frac{1}{3}$ والحصر $3 < \\frac{11}{3} < 4$",
+        "$4 + \\frac{1}{3}$ والحصر $4 < \\frac{11}{3} < 5$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! لأن $11 = 3 \\times 3 + 2$ ، نكتب $\\frac{11}{3} = 3 + \\frac{2}{3}$ ، ومنه $3 < \\frac{11}{3} < 4$.",
+        "في التفكيك النموذجي يجب أن يكون الكسر الباقي أصغر من $1$ ، لكن هنا $\\frac{5}{3} > 1$ و $\\frac{11}{3} > 3$.",
+        "تحقق من البسط: $3 + \\frac{1}{3} = \\frac{9}{3} + \\frac{1}{3} = \\frac{10}{3}$ وليس $\\frac{11}{3}$.",
+        "العدد $4$ يساوي $\\frac{12}{3}$ وهو أكبر من $\\frac{11}{3}$ ، فلا يمكن أن يكون $\\frac{11}{3}$ أكبر من $4$."
+      ],
+      "explanationAr": "نقسم $11$ على $3$ فنجد الحاصل $3$ والباقي $2$ ($11 = 3 \\times 3 + 2$ ). إذن $\\frac{11}{3} = \\frac{9}{3} + \\frac{2}{3} = 3 + \\frac{2}{3}$ ، فيكون محصورا بين $3$ و $4$."
+    },
+    {
+      "questionAr": "أيّ سلسلة من المقارنات الآتية صحيحة؟",
+      "options": [
+        "$\\frac{5}{4} < 1$",
+        "$\\frac{7}{8} > \\frac{9}{8}$",
+        "$\\frac{4}{4} > 1$",
+        "$\\frac{3}{5} < \\frac{5}{5} < \\frac{8}{5}$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "خطأ؛ في الكسر $\\frac{5}{4}$ البسط $5$ أكبر من المقام $4$ ، لذا $\\frac{5}{4} > 1$.",
+        "للكسرين نفس المقام ($8$ )، وبما أن $7 < 9$ فإن $\\frac{7}{8} < \\frac{9}{8}$ وليس أكبر.",
+        "في الكسر $\\frac{4}{4}$ البسط يساوي المقام، إذن $\\frac{4}{4} = 1$ تماما.",
+        "أحسنت! للكسور الثلاثة نفس المقام ($5$ ) وبسوطها مرتبة تصاعديا ($3 < 5 < 8$ )."
+      ],
+      "explanationAr": "عندما تتساوى المقامات ($5$ ) نرتب الكسور حسب بسوطها: $3 < 5 < 8$ ، وبالتالي $\\frac{3}{5} < \\frac{5}{5} < \\frac{8}{5}$."
+    }
+  ]
+}

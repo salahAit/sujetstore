@@ -1,0 +1,122 @@
+{
+  "id": "lesson_1ap_t2_time_telling_hour_half",
+  "slug": "lesson-1ap-t2-time-telling-hour-half",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الثالث والرابع (الجزء الأول): الأشكال المستوية، المجسمات وقراءة الساعة",
+  "order": 6,
+  "titleAr": "قراءة الساعة (تمامًا ونصف) وتعليم أوقات وأحداث في اليوم",
+  "objectives": [
+    "تمييز فترات اليوم (صباحًا، منتصف النهار، بعد الظهر، مساءً) وترتيب أحداث يومية زمنيًا",
+    "قراءة الساعة ذات العقارب والساعة الرقمية عند الساعة التامة (تمامًا) وعند نصف الساعة (ونصف)",
+    "رسم عقربي الساعة أو مطابقة التوقيت المكتوب بالحروف والأرقام لنشاط يومي"
+  ],
+  "keywordsAr": [
+    "قراءة الساعة",
+    "تمامًا",
+    "ونصف",
+    "أوقات اليوم"
+  ],
+  "discover": {
+    "scenarioAr": "تَدْخُلُ ياسَمِينُ المَدْرَسَةَ في الصَّباحِ عَلى السّاعَةِ الثّامِنَةِ تَمامًا ($08:00$)، وَتَتَناوَلُ الغَداءَ في مُنْتَصَفِ النَّهارِ عَلى السّاعَةِ الثّانِيَةَ عَشْرَةَ وَالنِّصْفِ ($12:30$).",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 225\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"209\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"22\" y=\"16\" width=\"496\" height=\"32\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/><text x=\"270\" y=\"37\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">صَباحًا  ←  مُنْتَصَفَ النَّهارِ  ←  بَعْدَ الظُّهْرِ  ←  مَساءً</text><circle cx=\"135\" cy=\"118\" r=\"56\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.8\"/><circle cx=\"135\" cy=\"118\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"135\" y=\"78\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">12</text><text x=\"157\" y=\"84\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">1</text><text x=\"173\" y=\"100\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">2</text><text x=\"179\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"173\" y=\"144\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">4</text><text x=\"157\" y=\"160\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">5</text><text x=\"135\" y=\"166\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">6</text><text x=\"113\" y=\"160\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">7</text><text x=\"97\" y=\"144\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">8</text><text x=\"91\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">9</text><text x=\"97\" y=\"100\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">10</text><text x=\"113\" y=\"84\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">11</text><line x1=\"135\" y1=\"118\" x2=\"135\" y2=\"78\" stroke=\"#2563eb\" stroke-width=\"2.8\" stroke-linecap=\"round\"/><line x1=\"135\" y1=\"118\" x2=\"111\" y2=\"132\" stroke=\"#dc2626\" stroke-width=\"4.2\" stroke-linecap=\"round\"/><rect x=\"88\" y=\"182\" width=\"94\" height=\"26\" rx=\"6\" fill=\"#0f172a\"/><text x=\"135\" y=\"200\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#38bdf8\" direction=\"ltr\">08:00</text><circle cx=\"405\" cy=\"118\" r=\"56\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.8\"/><circle cx=\"405\" cy=\"118\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"405\" y=\"78\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">12</text><text x=\"427\" y=\"84\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">1</text><text x=\"443\" y=\"100\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">2</text><text x=\"449\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"443\" y=\"144\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">4</text><text x=\"427\" y=\"160\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">5</text><text x=\"405\" y=\"166\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">6</text><text x=\"383\" y=\"160\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">7</text><text x=\"367\" y=\"144\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">8</text><text x=\"361\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">9</text><text x=\"367\" y=\"100\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">10</text><text x=\"383\" y=\"84\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">11</text><line x1=\"405\" y1=\"118\" x2=\"405\" y2=\"158\" stroke=\"#2563eb\" stroke-width=\"2.8\" stroke-linecap=\"round\"/><line x1=\"405\" y1=\"118\" x2=\"412\" y2=\"91\" stroke=\"#dc2626\" stroke-width=\"4.2\" stroke-linecap=\"round\"/><rect x=\"358\" y=\"182\" width=\"94\" height=\"26\" rx=\"6\" fill=\"#0f172a\"/><text x=\"405\" y=\"200\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#38bdf8\" direction=\"ltr\">12:30</text><text x=\"270\" y=\"108\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">دُخُولُ المَدْرَسَةِ (تَمامًا)</text><text x=\"270\" y=\"132\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"rtl\">وَقْتُ الغَداءِ (وَنِصْفُ)</text></svg>",
+    "steps": [
+      {
+        "promptAr": "انْظُرْ إلى السّاعَةِ اليُسْرى: العَقْرَبُ القَصِيرُ الأَحْمَرُ يُشِيرُ إلى $8$، وَالعَقْرَبُ الطَّوِيلُ الأَزْرَقُ يُشِيرُ إلى $12$. كَمِ السّاعَةُ تَمامًا؟ (اكْتُبِ الرَّقْمَ فَقَطْ)",
+        "hintAr": "اقْرَأِ العَدَدَ الَّذِي يُشِيرُ إِلَيْهِ العَقْرَبُ القَصِيرُ.",
+        "expectedInput": "8",
+        "revealAr": "السّاعَةُ هِيَ الثّامِنَةُ تَمامًا، وَتُكْتَبُ رَقْمِيًّا: $08:00$."
+      },
+      {
+        "promptAr": "في السّاعَةِ اليُمْنى، يُشِيرُ العَقْرَبُ الطَّوِيلُ الأَزْرَقُ إلى الرَّقْمِ $6$. ما الدَّقائِقُ الَّتِي تَظْهَرُ في السّاعَةِ الرَّقْمِيَّةِ عِنْدَ «وَنِصْفٍ»؟",
+        "hintAr": "انْظُرْ إلى السّاعَةِ الرَّقْمِيَّةِ تَحْتَ السّاعَةِ اليُمْنى: $12:\\dots$؟",
+        "expectedInput": "30",
+        "revealAr": "عِنْدَما يَكُونُ العَقْرَبُ الطَّوِيلُ عَلى $6$ تَكُونُ الدَّقائِقُ $30$ (وَنِصْفُ)."
+      },
+      {
+        "promptAr": "اكْتُبِ السّاعَةَ الظّاهِرَةَ في السّاعَةِ اليُمْنى (الثّانِيَةَ عَشْرَةَ وَالنِّصْفَ) بِالأَرْقامِ مِثْلَ $08:00$:",
+        "hintAr": "السّاعاتُ $12$ وَالدَّقائِقُ $30$: اكْتُبْها عَلى الشَّكْلِ $12:30$.",
+        "expectedInput": "12:30",
+        "revealAr": "السّاعَةُ هِيَ $12:30$ (الثّانِيَةَ عَشْرَةَ وَالنِّصْفُ في مُنْتَصَفِ النَّهارِ)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "فَتَراتُ اليَوْمِ مُرَتَّبَةٌ زَمَنِيًّا: **صَباحًا** ← **مُنْتَصَفَ النَّهارِ** ← **بَعْدَ الظُّهْرِ** ← **مَساءً**.",
+      "في السّاعَةِ ذاتِ العَقارِبِ: **العَقْرَبُ القَصِيرُ** يَدُلُّ عَلى السّاعاتِ، وَ**العَقْرَبُ الطَّوِيلُ** يَدُلُّ عَلى الدَّقائِقِ.",
+      "عِنْدَما يَشِيرُ العَقْرَبُ الطَّوِيلُ إلى $12$ تَكُونُ السّاعَةُ **تَمامًا** وَتَظْهَرُ الدَّقائِقُ $00$ (مِثْلُ: $09:00$).",
+      "عِنْدَما يَشِيرُ العَقْرَبُ الطَّوِيلُ إلى $6$ تَكُونُ السّاعَةُ **وَنِصْفًا** وَتَظْهَرُ الدَّقائِقُ $30$، وَيَكُونُ العَقْرَبُ القَصِيرُ بَيْنَ ساعَتَيْنِ (مِثْلُ: $02:30$)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 205\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"189\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"22\" y=\"18\" width=\"238\" height=\"169\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"141\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">السّاعَةُ التّامَّةُ (تَمامًا)</text><circle cx=\"141\" cy=\"104\" r=\"52\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.5\"/><circle cx=\"141\" cy=\"104\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"141\" y=\"66\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">12</text><text x=\"181\" y=\"108\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"141\" y=\"148\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">6</text><text x=\"101\" y=\"108\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">9</text><line x1=\"141\" y1=\"104\" x2=\"141\" y2=\"68\" stroke=\"#2563eb\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"141\" y1=\"104\" x2=\"114\" y2=\"104\" stroke=\"#dc2626\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"141\" y=\"175\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">09:00</text><rect x=\"280\" y=\"18\" width=\"238\" height=\"169\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"399\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">نِصْفُ السّاعَةِ (وَنِصْفُ)</text><circle cx=\"399\" cy=\"104\" r=\"52\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.5\"/><circle cx=\"399\" cy=\"104\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"399\" y=\"66\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">12</text><text x=\"434\" y=\"88\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">2</text><text x=\"439\" y=\"108\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">3</text><text x=\"399\" y=\"148\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">6</text><text x=\"359\" y=\"108\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">9</text><line x1=\"399\" y1=\"104\" x2=\"399\" y2=\"141\" stroke=\"#2563eb\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"399\" y1=\"104\" x2=\"426\" y2=\"97\" stroke=\"#dc2626\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"399\" y=\"175\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">02:30</text></svg>",
+    "visualCaptionAr": "السّاعَةُ التّامَّةُ ($09:00$: العَقْرَبُ الطَّوِيلُ عَلى $12$) وَنِصْفُ السّاعَةِ ($02:30$: العَقْرَبُ الطَّوِيلُ عَلى $6$).",
+    "examples": [
+      {
+        "problemAr": "يُشِيرُ العَقْرَبُ القَصِيرُ بَيْنَ $10$ وَ $11$، وَالعَقْرَبُ الطَّوِيلُ عَلى $6$. كَمِ السّاعَةُ؟",
+        "solutionAr": "تَجاوَزَ العَقْرَبُ القَصِيرُ $10$ وَلَمْ يَصِلْ إلى $11$، وَالطَّوِيلُ عَلى $6$، إِذَنْ السّاعَةُ هِيَ العاشِرَةُ وَالنِّصْفُ ($10:30$)."
+      },
+      {
+        "problemAr": "رَتِّبْ هَذِهِ الأَنْشِطَةَ خِلالَ اليَوْمِ: النَّوْمُ ($09:00$ مَساءً)، الفَطُورُ ($07:00$ صَباحًا)، اللَّعِبُ ($04:30$ بَعْدَ الظُّهْرِ).",
+        "solutionAr": "التَّرْتِيبُ الزَّمَنِيُّ: الفَطُورُ ($07:00$ صَباحًا) ← اللَّعِبُ ($04:30$ بَعْدَ الظُّهْرِ) ← النَّوْمُ ($09:00$ مَساءً)."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! لا تَخْلِطْ بَيْنَ العَقْرَبِ القَصِيرِ (السّاعاتُ) وَالعَقْرَبِ الطَّوِيلِ (الدَّقائِقُ). وَعِنْدَما يَكُونُ العَقْرَبُ الطَّوِيلُ عَلى $6$ فَهُوَ يَعْني $30$ دَقِيقَةً (وَنِصْفًا) وَلَيْسَ $6$ دَقائِقَ!"
+  },
+  "practice": [
+    {
+      "questionAr": "انْظُرْ إلى السّاعَةِ ذاتِ العَقارِبِ: كَمِ السّاعَةُ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 210\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"284\" height=\"194\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"105\" r=\"74\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"105\" r=\"4.5\" fill=\"#0f172a\"/><text x=\"150\" y=\"53\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">12</text><text x=\"178\" y=\"60\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">1</text><text x=\"198\" y=\"81\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">2</text><text x=\"206\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"198\" y=\"137\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">4</text><text x=\"178\" y=\"157\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">5</text><text x=\"150\" y=\"165\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">6</text><text x=\"122\" y=\"157\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">7</text><text x=\"102\" y=\"137\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">8</text><text x=\"94\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">9</text><text x=\"102\" y=\"81\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">10</text><text x=\"122\" y=\"60\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">11</text><line x1=\"150\" y1=\"105\" x2=\"150\" y2=\"54\" stroke=\"#2563eb\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"150\" y1=\"105\" x2=\"114\" y2=\"105\" stroke=\"#dc2626\" stroke-width=\"4.5\" stroke-linecap=\"round\"/></svg>",
+      "options": [
+        "$09:30$",
+        "$12:09$",
+        "$09:00$",
+        "$06:00$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "العَقْرَبُ الطَّوِيلُ عَلى $12$ (تَمامًا) وَلَيْسَ عَلى $6$ (وَنِصْفًا).",
+        "عَكَسْتَ بَيْنَ العَقْرَبَيْنِ! العَقْرَبُ القَصِيرُ يُشِيرُ إلى السّاعاتِ ($9$) وَالطَّوِيلُ إلى $12$ (تَمامًا).",
+        "أَحْسَنْتَ! العَقْرَبُ القَصِيرُ عَلى $9$ وَالطَّوِيلُ عَلى $12$، إِذَنْ السّاعَةُ التّاسِعَةُ تَمامًا ($09:00$).",
+        "انْتَبِهْ إلى الرَّقْمِ الَّذِي يُشِيرُ إِلَيْهِ العَقْرَبُ القَصِيرُ الأَحْمَرُ، إِنَّهُ $9$ وَلَيْسَ $6$."
+      ],
+      "explanationAr": "العَقْرَبُ القَصِيرُ عَلى $9$ وَالعَقْرَبُ الطَّوِيلُ عَلى $12$، إِذَنْ السّاعَةُ هِيَ $09:00$ (التّاسِعَةُ تَمامًا)."
+    },
+    {
+      "questionAr": "إِلى أَيِّ وَقْتٍ تُشِيرُ السّاعَةُ في الرَّسْمِ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 210\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"284\" height=\"194\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"105\" r=\"74\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"105\" r=\"4.5\" fill=\"#0f172a\"/><text x=\"150\" y=\"53\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">12</text><text x=\"178\" y=\"60\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">1</text><text x=\"198\" y=\"81\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">2</text><text x=\"206\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">3</text><text x=\"198\" y=\"137\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">4</text><text x=\"178\" y=\"157\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">5</text><text x=\"150\" y=\"165\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">6</text><text x=\"122\" y=\"157\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">7</text><text x=\"102\" y=\"137\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">8</text><text x=\"94\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">9</text><text x=\"102\" y=\"81\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">10</text><text x=\"122\" y=\"60\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">11</text><line x1=\"150\" y1=\"105\" x2=\"150\" y2=\"156\" stroke=\"#2563eb\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"150\" y1=\"105\" x2=\"185\" y2=\"114\" stroke=\"#dc2626\" stroke-width=\"4.5\" stroke-linecap=\"round\"/></svg>",
+      "options": [
+        "$03:06$",
+        "$03:30$",
+        "$04:30$",
+        "$06:15$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "عِنْدَما يَشِيرُ العَقْرَبُ الطَّوِيلُ إلى $6$ تَكُونُ الدَّقائِقُ $30$ (وَنِصْفًا) وَلَيْسَ $6$.",
+        "مُمْتازٌ! العَقْرَبُ القَصِيرُ بَيْنَ $3$ وَ $4$ (السّاعَةُ $3$)، وَالطَّوِيلُ عَلى $6$ ($30$ دَقِيقَةً): $03:30$.",
+        "العَقْرَبُ القَصِيرُ لَمْ يَصِلْ إلى $4$ بَعْدُ؛ إِنَّهُ بَيْنَ $3$ وَ $4$، فالسّاعَةُ $3$ وَالنِّصْفُ.",
+        "عَكَسْتَ العَقْرَبَيْنِ! القَصِيرُ للسّاعاتِ ($3$) وَالطَّوِيلُ للدَّقائِقِ ($30$)."
+      ],
+      "explanationAr": "العَقْرَبُ القَصِيرُ يَقَعُ بَيْنَ $3$ وَ $4$ فَتَكُونُ السّاعَةُ $3$، وَالطَّوِيلُ عَلى $6$ وَيَعْني $30$ دَقِيقَةً، إِذَنْ $03:30$."
+    },
+    {
+      "questionAr": "ما التَّرْتِيبُ الزَّمَنِيُّ الصَّحِيحُ لِأَحْداثِ يَوْمِ التِّلْمِيذِ؟",
+      "options": [
+        "النَّوْمُ مَساءً ← الدُّخُولُ صَباحًا ← الغَداءُ مُنْتَصَفَ النَّهارِ",
+        "الغَداءُ مُنْتَصَفَ النَّهارِ ← الدُّخُولُ صَباحًا ← النَّوْمُ مَساءً",
+        "المُراجَعَةُ بَعْدَ الظُّهْرِ ← الفَطُورُ صَباحًا ← الغَداءُ مُنْتَصَفَ النَّهارِ",
+        "الفَطُورُ صَباحًا ← الغَداءُ مُنْتَصَفَ النَّهارِ ← المُراجَعَةُ بَعْدَ الظُّهْرِ"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "النَّوْمُ مَساءً يَكُونُ في نِهايَةِ اليَوْمِ وَلَيْسَ قَبْلَ الصَّباحِ.",
+        "الدُّخُولُ صَباحًا يَأْتي قَبْلَ الغَداءِ مُنْتَصَفَ النَّهارِ.",
+        "اليَوْمُ يَبْدَأُ بِالفَطُورِ صَباحًا قَبْلَ المُراجَعَةِ بَعْدَ الظُّهْرِ.",
+        "رائِعٌ! يَبْدَأُ اليَوْمُ صَباحًا، ثُمَّ مُنْتَصَفَ النَّهارِ، ثُمَّ بَعْدَ الظُّهْرِ."
+      ],
+      "explanationAr": "تَتَتابَعُ فَتَراتُ اليَوْمِ مِنْ بِدايَتِهِ إلى نِهايَتِهِ كَالتّالِي: صَباحًا ← مُنْتَصَفَ النَّهارِ ← بَعْدَ الظُّهْرِ ← مَساءً."
+    }
+  ]
+}

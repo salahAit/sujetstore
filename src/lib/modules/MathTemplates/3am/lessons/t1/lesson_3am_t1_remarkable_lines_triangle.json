@@ -1,0 +1,129 @@
+{
+  "id": "lesson_3am_t1_remarkable_lines_triangle",
+  "slug": "3am-t1-remarkable-lines-triangle",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t1",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثالث: المستقيمات الخاصة في المثلث وإدماج الفصل الأول",
+  "order": 6,
+  "titleAr": "المستقيمات الخاصة في المثلث: المحاور، المتوسطات، الارتفاعات والمنصفات",
+  "objectives": [
+    "تعريف وإنشاء المستقيمات الخاصة الأربعة في المثلث: المحاور، المتوسطات، الارتفاعات، والمنصفات باستعمال الأدوات الهندسية",
+    "معرفة وتوظيف خواص تلاقي هذه المستقيمات (مركز الدائرة المحيطة، مركز الثقل وخاصية الثلثين 2/3، مركز الدائرة المماسة لأضلاع المثلث، وقبول تلاقي الارتفاعات دون برهان)",
+    "حل وضعيات هندسية وبناء براهين بسيطة بتجنيد خواص المستقيمات الخاصة في المثلثات الكيفية والخاصة"
+  ],
+  "keywordsAr": [
+    "المستقيمات الخاصة في مثلث",
+    "المحاور",
+    "المتوسطات ومركز الثقل",
+    "الارتفاعات",
+    "المنصفات",
+    "الدائرة المماسة لأضلاع المثلث"
+  ],
+  "discover": {
+    "scenarioAr": "في تصميم منتزه مثلث الشكل $ABC$ ، يريد المهندس تعيين أربع نقاط مميزة: $O$ على نفس البعد من الرؤوس الثلاثة $A$ و $B$ و $C$ ، و $G$ مركز ثقل المثلث لوضع مجسم متوازن، و $H$ نقطة تلاقي المسارات العمودية من كل رأس على الضلع المقابل، و $I$ مركز نافورة دائرية تمس أضلاع المثلث الثلاثة من الداخل. ما المستقيمات الخاصة التي تحدد كل نقطة؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 220\" width=\"560\" height=\"220\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"128\" height=\"200\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"74\" y=\"30\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">1. المحاور ← O</text><circle cx=\"77\" cy=\"128.4\" r=\"61.7\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><polygon points=\"52,72 28,166 126,166\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><line x1=\"77\" y1=\"58\" x2=\"77\" y2=\"186\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><line x1=\"24\" y1=\"114.9\" x2=\"108\" y2=\"136.3\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><polyline points=\"83.0,166.0 83.0,160.0 77.0,160.0\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><polyline points=\"41.5,113.2 47.3,114.7 45.8,120.5\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><circle cx=\"77\" cy=\"128.4\" r=\"3.8\" fill=\"#dc2626\"/><text x=\"84\" y=\"124\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">O</text><text x=\"74\" y=\"202\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">الدائرة المحيطة</text><rect x=\"147\" y=\"10\" width=\"128\" height=\"200\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"211\" y=\"30\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">2. المتوسطات ← G</text><polygon points=\"188,72 164,166 262,166\" fill=\"#dcfce7\" fill-opacity=\"0.4\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><line x1=\"188\" y1=\"72\" x2=\"213\" y2=\"166\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><line x1=\"164\" y1=\"166\" x2=\"225\" y2=\"119\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><line x1=\"262\" y1=\"166\" x2=\"176\" y2=\"119\" stroke=\"#16a34a\" stroke-width=\"1.4\" stroke-dasharray=\"3 2\"/><line x1=\"188\" y1=\"162\" x2=\"188\" y2=\"170\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><line x1=\"237\" y1=\"162\" x2=\"237\" y2=\"170\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><circle cx=\"204.7\" cy=\"134.7\" r=\"3.8\" fill=\"#dc2626\"/><text x=\"212\" y=\"132\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">G</text><text x=\"211\" y=\"202\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">مركز الثقل (2/3)</text><rect x=\"284\" y=\"10\" width=\"128\" height=\"200\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><text x=\"348\" y=\"30\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">3. الارتفاعات ← H</text><polygon points=\"324,72 300,166 398,166\" fill=\"#fef9c3\" fill-opacity=\"0.4\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><line x1=\"324\" y1=\"72\" x2=\"324\" y2=\"166\" stroke=\"#d97706\" stroke-width=\"1.8\"/><line x1=\"300\" y1=\"166\" x2=\"360.5\" y2=\"118.4\" stroke=\"#d97706\" stroke-width=\"1.8\"/><line x1=\"398\" y1=\"166\" x2=\"306\" y2=\"142.5\" stroke=\"#d97706\" stroke-width=\"1.4\" stroke-dasharray=\"3 2\"/><polyline points=\"330.0,166.0 330.0,160.0 324.0,160.0\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><polyline points=\"364.2,123.1 359.5,126.8 355.8,122.1\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><circle cx=\"324\" cy=\"147.1\" r=\"3.8\" fill=\"#dc2626\"/><text x=\"331\" y=\"145\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">H</text><text x=\"348\" y=\"202\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">تتلاقى في نقطة H</text><rect x=\"421\" y=\"10\" width=\"129\" height=\"200\" rx=\"10\" fill=\"#fdf2f8\" stroke=\"#db2777\" stroke-width=\"1.4\"/><text x=\"485\" y=\"30\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#9d174d\" direction=\"rtl\">4. المنصفات ← I</text><circle cx=\"473.7\" cy=\"136.7\" r=\"29.3\" fill=\"#fce7f3\" stroke=\"#db2777\" stroke-width=\"1.6\"/><polygon points=\"460,72 436,166 534,166\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><line x1=\"460\" y1=\"72\" x2=\"479.9\" y2=\"166\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><line x1=\"436\" y1=\"166\" x2=\"496.8\" y2=\"118.7\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><line x1=\"534\" y1=\"166\" x2=\"446.8\" y2=\"123.6\" stroke=\"#7c3aed\" stroke-width=\"1.3\" stroke-dasharray=\"3 2\"/><circle cx=\"473.7\" cy=\"136.7\" r=\"3.8\" fill=\"#dc2626\"/><text x=\"480\" y=\"133\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">I</text><text x=\"485\" y=\"202\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#9d174d\" direction=\"rtl\">الدائرة المماسة للأضلاع</text></svg>",
+    "steps": [
+      {
+        "promptAr": "لتكون النقطة $O$ على نفس البعد من الرؤوس $A$ و $B$ و $C$ ($OA = OB = OC$ )، أي مستقيمات خاصة ننشئ لتعيينها؟",
+        "hintAr": "كل نقطة من محور قطعة مستقيم متساوية البعد عن طرفيها.",
+        "revealAr": "ننشئ **محاور أضلاع المثلث** (يكفي محورين فقط)؛ فهي تتلاقى في نقطة $O$ هي **مركز الدائرة المحيطة بالمثلث**."
+      },
+      {
+        "promptAr": "في المثلث $ABC$ ، $A'$ منتصف الضلع $[BC]$ و $G$ مركز ثقل المثلث (تلاقي المتوسطات). إذا كان طول المتوسط $AA' = 9\\text{ cm}$ ، فما الطول $AG$ بالسنتيمتر؟",
+        "hintAr": "يبعد مركز الثقل $G$ عن كل رأس بمقدار ثلثي طول المتوسط: $AG = \\frac{2}{3} AA'$ .",
+        "expectedInput": "6",
+        "revealAr": "بما أن $G$ مركز ثقل المثلث فإن $AG = \\frac{2}{3} AA' = \\frac{2}{3} \\times 9 = 6\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "في نفس المثلث حيث $AA' = 9\\text{ cm}$ و $AG = 6\\text{ cm}$ ، ما طول القطعة المتبقية $GA'$ بالسنتيمتر؟",
+        "hintAr": "$GA' = \\frac{1}{3} AA'$ (أو احسب $AA' - AG$ ).",
+        "expectedInput": "3",
+        "revealAr": "$GA' = 9 - 6 = 3\\text{ cm}$ ، ونلاحظ أن $AG = 2 GA'$ دائماً."
+      },
+      {
+        "promptAr": "تتلاقى منصفات زوايا المثلث $ABC$ في النقطة $I$ . إذا كان بعد النقطة $I$ عن الضلع $[AB]$ هو $2.5\\text{ cm}$ ، فما نصف قطر الدائرة المماسة لأضلاع المثلث بالسنتيمتر؟",
+        "hintAr": "النقطة $I$ متساوية البعد عن أضلاع المثلث الثلاثة، وهذا البعد هو نصف قطر الدائرة المماسة.",
+        "expectedInput": "2.5",
+        "revealAr": "بما أن $I$ تقع على منصفات الزوايا الثلاث، فهي متساوية البعد عن الأضلاع الثلاثة، ونصف قطر الدائرة المماسة للأضلاع هو $2.5\\text{ cm}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**المحاور والدائرة المحيطة**: محور ضلع هو المستقيم العمودي عليه في منتصفه. تتلاقى المحاور الثلاثة في نقطة واحدة $O$ هي **مركز الدائرة المحيطة بالمثلث** ($OA = OB = OC$ ).",
+      "**المتوسطات ومركز الثقل**: المتوسط هو المستقيم الذي يشمل رأساً ومنتصف الضلع المقابل له. تتلاقى المتوسطات الثلاثة في نقطة واحدة $G$ تسمى **مركز ثقل المثلث**، وتقع دوماً داخل المثلث بحيث $AG = \\frac{2}{3} AA'$ و $GA' = \\frac{1}{3} AA'$ (أي $AG = 2 GA'$ ).",
+      "**الارتفاعات**: الارتفاع هو المستقيم الذي يشمل رأساً ويعامد حامل الضلع المقابل له. تتلاقى الارتفاعات الثلاثة (أو حاملاتها) في نقطة واحدة $H$ (نقبل هذه الخاصية دون برهان).",
+      "**المنصفات والدائرة المماسة للأضلاع**: منصف زاوية يقسمها إلى زاويتين متقايستين. تتلاقى منصفات زوايا المثلث الثلاث في نقطة واحدة $I$ متساوية البعد عن الأضلاع الثلاثة، وهي **مركز الدائرة المماسة لأضلاع المثلث** (من الداخل)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 215\" width=\"560\" height=\"215\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"176\" height=\"190\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"100\" y=\"33\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">خاصية مركز الثقل G</text><polygon points=\"68,46 32,168 182,168\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"68\" y1=\"46\" x2=\"107\" y2=\"168\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><line x1=\"32\" y1=\"168\" x2=\"125\" y2=\"107\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><circle cx=\"94\" cy=\"127.3\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"107\" cy=\"168\" r=\"3.2\" fill=\"#16a34a\"/><text x=\"68\" y=\"40\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"22\" y=\"174\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"184\" y=\"174\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"107\" y=\"182\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">A'</text><text x=\"104\" y=\"126\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">G</text><text x=\"72\" y=\"96\" text-anchor=\"end\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">2/3</text><text x=\"92\" y=\"154\" text-anchor=\"end\" font-size=\"10\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">1/3</text><text x=\"100\" y=\"195\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" direction=\"ltr\">AG = (2/3) AA'</text><rect x=\"198\" y=\"12\" width=\"176\" height=\"190\" rx=\"10\" fill=\"#fdf2f8\" stroke=\"#db2777\" stroke-width=\"1.5\"/><text x=\"286\" y=\"33\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#9d174d\" direction=\"rtl\">الدائرة المماسة للأضلاع</text><circle cx=\"275.1\" cy=\"126.8\" r=\"41.2\" fill=\"#fce7f3\" fill-opacity=\"0.6\" stroke=\"#db2777\" stroke-width=\"1.8\"/><polygon points=\"256,46 220,168 370,168\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"256\" y1=\"46\" x2=\"284.8\" y2=\"168\" stroke=\"#7c3aed\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><line x1=\"220\" y1=\"168\" x2=\"308.3\" y2=\"102\" stroke=\"#7c3aed\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><line x1=\"275.1\" y1=\"126.8\" x2=\"275.1\" y2=\"168\" stroke=\"#dc2626\" stroke-width=\"2\"/><polyline points=\"281.1,168.0 281.1,162.0 275.1,162.0\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><circle cx=\"275.1\" cy=\"126.8\" r=\"4\" fill=\"#dc2626\"/><text x=\"284\" y=\"124\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">I</text><text x=\"268\" y=\"152\" text-anchor=\"end\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">r</text><text x=\"286\" y=\"195\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#9d174d\" direction=\"rtl\">I متساوية البعد عن الأضلاع</text><rect x=\"384\" y=\"12\" width=\"164\" height=\"190\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"466\" y=\"33\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">دليل التمييز السريع</text><rect x=\"394\" y=\"46\" width=\"144\" height=\"32\" rx=\"6\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.1\"/><text x=\"466\" y=\"66\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">المحور: عمودي + منتصف ← O</text><rect x=\"394\" y=\"84\" width=\"144\" height=\"32\" rx=\"6\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.1\"/><text x=\"466\" y=\"104\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">المتوسط: رأس + منتصف ← G</text><rect x=\"394\" y=\"122\" width=\"144\" height=\"32\" rx=\"6\" fill=\"#ffffff\" stroke=\"#fde047\" stroke-width=\"1.1\"/><text x=\"466\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">الارتفاع: رأس + عمودي ← H</text><rect x=\"394\" y=\"160\" width=\"144\" height=\"32\" rx=\"6\" fill=\"#ffffff\" stroke=\"#f9a8d4\" stroke-width=\"1.1\"/><text x=\"466\" y=\"180\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#9d174d\" direction=\"rtl\">المنصف: يقسم الزاوية ← I</text></svg>",
+    "visualCaptionAr": "خاصية الثلثين لمركز الثقل، والدائرة المماسة لأضلاع المثلث، ودليل التمييز بين المستقيمات الخاصة",
+    "examples": [
+      {
+        "problemAr": "في مثلث $ABC$ ، $A'$ منتصف $[BC]$ و $B'$ منتصف $[AC]$ . يتقاطع المستقيمان $(AA')$ و $(BB')$ في النقطة $G$ . إذا كان $GB' = 2.4\\text{ cm}$ و $AA' = 12\\text{ cm}$ ، احسب الأطوال $BG$ و $BB'$ و $AG$ .",
+        "solutionAr": "بما أن $A'$ و $B'$ منتصفا $[BC]$ و $[AC]$ على الترتيب، فإن $(AA')$ و $(BB')$ متوسطان في المثلث $ABC$ ، ونقطة تلاقيهما $G$ هي **مركز ثقل المثلث**.\n\n1) $BG = 2 \\times GB' = 2 \\times 2.4 = 4.8\\text{ cm}$ ، ومنه $BB' = BG + GB' = 4.8 + 2.4 = 7.2\\text{ cm}$ .\n\n2) $AG = \\frac{2}{3} AA' = \\frac{2}{3} \\times 12 = 8\\text{ cm}$ ."
+      },
+      {
+        "problemAr": "$EFG$ مثلث متساوي الساقين رأسه الأساسي $E$ ، و $M$ منتصف القاعدة $[FG]$ . ما هي الصفات الأربع للمستقيم $(EM)$ في هذا المثلث؟",
+        "solutionAr": "في المثلث المتساوي الساقين رأسه الأساسي $E$ ، المستقيم $(EM)$ المار من الرأس ومنتصف القاعدة $[FG]$ هو في آن واحد:\n\n1) **متوسط** متعلق بالضلع $[FG]$ .\n\n2) **محور** الضلع $[FG]$ (لأن $EF = EG$ و $MF = MG$ ).\n\n3) **ارتفاع** متعلق بالضلع $[FG]$ (لأنه يشمل $E$ ويعامد $(FG)$ ).\n\n4) **منصف** للزاوية $\\widehat{FEG}$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: الخلط بين **المحور** و**الارتفاع** و**المتوسط**! تذكر أن المحور عمودي في المنتصف (ولا يمر بالرأس المقابل في المثلث الكيفي)، أما المتوسط فيشمل الرأس والمنتصف (ولا يكون عمودياً بالضرورة)، أما الارتفاع فيشمل الرأس ويكون عمودياً (ولا يمر من المنتصف بالضرورة)."
+  },
+  "practice": [
+    {
+      "questionAr": "في الشكل المقابل، $(AA')$ و $(BB')$ متوسطان في المثلث $ABC$ يتقاطعان في $G$ . إذا كان $AG = 8\\text{ cm}$ ، فما طول المتوسط $AA'$ كاملاً؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 175\" width=\"360\" height=\"175\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"159\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><polygon points=\"128,34 62,148 286,148\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"128\" y1=\"34\" x2=\"174\" y2=\"148\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><line x1=\"62\" y1=\"148\" x2=\"207\" y2=\"91\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"116\" y1=\"143\" x2=\"116\" y2=\"153\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><line x1=\"230\" y1=\"143\" x2=\"230\" y2=\"153\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><circle cx=\"158.7\" cy=\"110\" r=\"4.2\" fill=\"#dc2626\"/><circle cx=\"174\" cy=\"148\" r=\"3.5\" fill=\"#16a34a\"/><circle cx=\"207\" cy=\"91\" r=\"3.5\" fill=\"#2563eb\"/><text x=\"128\" y=\"27\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"48\" y=\"153\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"292\" y=\"153\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"174\" y=\"163\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">A'</text><text x=\"215\" y=\"90\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">B'</text><text x=\"166\" y=\"108\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">G</text><text x=\"134\" y=\"80\" text-anchor=\"end\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">AG = 8 cm</text></svg>",
+      "options": [
+        "$4\\text{ cm}$",
+        "$12\\text{ cm}$",
+        "$16\\text{ cm}$",
+        "$24\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$4\\text{ cm}$ هو طول الجزء $GA' = \\frac{1}{2} AG$ فقط، وليس طول المتوسط $AA'$ كاملاً.",
+        "ممتاز! بما أن $AG = \\frac{2}{3} AA' = 8\\text{ cm}$ ، فإن $GA' = 4\\text{ cm}$ ، ومنه $AA' = 8 + 4 = 12\\text{ cm}$ .",
+        "اعتبرتَ $G$ منتصف المتوسط ($8 \\times 2 = 16$)! تذكر أن $G$ يقع على ثلثي المتوسط من جهة الرأس.",
+        "لا نضرب $8$ في $3$ ! الثلث الواحد هو $8 \\div 2 = 4\\text{ cm}$ ، فيكون الكل $4 \\times 3 = 12\\text{ cm}$ ."
+      ],
+      "explanationAr": "بما أن $G$ مركز ثقل المثلث، فإن $AG = \\frac{2}{3} AA'$ و $GA' = \\frac{1}{2} AG = \\frac{8}{2} = 4\\text{ cm}$ . إذن $AA' = AG + GA' = 8 + 4 = 12\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "أي وصف مما يلي يطابق بدقة **محور ضلع** في مثلث ونقطة تلاقي المحاور الثلاثة؟",
+      "options": [
+        "يشمل الرأس ومنتصف الضلع المقابل، ونقطة تلاقيها مركز ثقل المثلث",
+        "يشمل الرأس ويعامد الضلع المقابل، ونقطة تلاقيها مركز الدائرة المماسة",
+        "عمودي على الضلع في منتصفه، ونقطة تلاقيها مركز الدائرة المحيطة بالمثلث",
+        "يقسم الزاوية إلى زاويتين متقايستين، ونقطة تلاقيها مركز الدائرة المحيطة"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "هذا تعريف وخاصية **المتوسطات** وليس المحاور.",
+        "الشطر الأول يصف **الارتفاع** وليس المحور، والشطر الثاني يخص **المنصفات**.",
+        "أحسنت! محور الضلع عمودي عليه في منتصفه، وتتلاقى المحاور الثلاثة في مركز الدائرة المحيطة بالمثلث.",
+        "هذا تعريف **المنصف**، وتتلاقى المنصفات في مركز الدائرة المماسة لأضلاع المثلث وليس المحيطة به."
+      ],
+      "explanationAr": "محور قطعة مستقيم هو المستقيم العمودي عليها في منتصفها. وتتلاقى محاور أضلاع المثلث الثلاثة في نقطة واحدة هي مركز الدائرة المحيطة بالمثلث."
+    },
+    {
+      "questionAr": "في المثلث $RST$ المقابل، تتلاقى منصفات الزوايا الثلاث في النقطة $I$ التي تبعد عن الضلع $[ST]$ مسافة $3\\text{ cm}$ . ما اسم الدائرة المرسومة في الشكل وما بعد $I$ عن الضلع $[RS]$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 175\" width=\"360\" height=\"175\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"159\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><circle cx=\"124.2\" cy=\"106.3\" r=\"45.7\" fill=\"#fdf2f8\" stroke=\"#db2777\" stroke-width=\"2\"/><polygon points=\"108,34 52,152 252,152\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"108\" y1=\"34\" x2=\"134.4\" y2=\"152\" stroke=\"#7c3aed\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><line x1=\"52\" y1=\"152\" x2=\"164.8\" y2=\"80.6\" stroke=\"#7c3aed\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><line x1=\"252\" y1=\"152\" x2=\"81\" y2=\"90.9\" stroke=\"#7c3aed\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><line x1=\"124.2\" y1=\"106.3\" x2=\"124.2\" y2=\"152\" stroke=\"#dc2626\" stroke-width=\"2\"/><polyline points=\"130.2,152.0 130.2,146.0 124.2,146.0\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><circle cx=\"124.2\" cy=\"106.3\" r=\"4\" fill=\"#dc2626\"/><text x=\"108\" y=\"27\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">R</text><text x=\"40\" y=\"158\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">S</text><text x=\"258\" y=\"158\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">T</text><text x=\"132\" y=\"103\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">I</text><text x=\"118\" y=\"135\" text-anchor=\"end\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">3 cm</text></svg>",
+      "options": [
+        "الدائرة المماسة لأضلاع المثلث، وبعد $I$ عن $[RS]$ يساوي $3\\text{ cm}$",
+        "الدائرة المحيطة بالمثلث، وبعد $I$ عن $[RS]$ يساوي $3\\text{ cm}$",
+        "الدائرة المماسة لأضلاع المثلث، وبعد $I$ عن $[RS]$ يساوي $6\\text{ cm}$",
+        "الدائرة المحيطة بالمثلث، ولا يمكن تحديد بعدها عن $[RS]$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! نقطة تلاقي المنصفات $I$ هي مركز الدائرة المماسة لأضلاع المثلث الثلاثة، وتبعد عنها بنفس المسافة $3\\text{ cm}$ .",
+        "الدائرة المرسومة داخل المثلث وتمس أضلاعه تسمى الدائرة المماسة للأضلاع (أما المحيطة فتشمل الرؤوس الثلاثة).",
+        "بعد $I$ عن جميع الأضلاع متساوٍ (يساوي نصف القطر $3\\text{ cm}$ وليس القطر $6\\text{ cm}$ ).",
+        "ليست الدائرة المحيطة، وبما أن $I$ تقع على منصفات الزوايا فهي متساوية البعد عن الأضلاع الثلاثة."
+      ],
+      "explanationAr": "نقطة تلاقي منصفات زوايا المثلث $I$ متساوية البعد عن أضلاع المثلث الثلاثة $[RS]$ و $[ST]$ و $[RT]$ ، وهي مركز **الدائرة المماسة لأضلاع المثلث**، لذا بعدها عن $[RS]$ يساوي $3\\text{ cm}$ أيضاً."
+    }
+  ]
+}

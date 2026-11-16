@@ -1,0 +1,122 @@
+{
+  "id": "lesson_1ap_t2_add_sub_small_numbers_to_39",
+  "slug": "lesson-1ap-t2-add-sub-small-numbers-to-39",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t2",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثاني والثالث: الأعداد من 10 إلى 19 ثم إلى 39 والتفكيك والمقارنة",
+  "order": 3,
+  "titleAr": "إضافة وطرح أعداد صغيرة (الرمزان - و=) والضعف والنصف إلى 39",
+  "objectives": [
+    "التعرّف على الرمز (-) وحساب مجاميع وفروق بسيطة بإضافة أو طرح أعداد صغيرة على الشريط العددي",
+    "تحديد ضعف عدد أصغر من 10 ونصف عدد زوجي أصغر من 20",
+    "قراءة جدول بسيط وحل وضعيات جمع أو طرح ضمن الأعداد الأصغر من 40"
+  ],
+  "keywordsAr": [
+    "الرمزان - و=",
+    "إضافة وطرح أعداد صغيرة",
+    "الضعف والنصف",
+    "قراءة جدول"
+  ],
+  "discover": {
+    "scenarioAr": "عِنْدَ مَرْيَمَ $24$ حَبَّةَ كَرَزٍ، أَضافَتْ إِلَيْها $5$ حَبّاتٍ أُخْرى، ثُمَّ أَكَلَتْ $3$ حَبّاتٍ. وَمَعَ أَخِيها عادِلٍ $12$ قَلَمًا أَعْطى نِصْفَها لِصَدِيقِهِ.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 205\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"484\" height=\"189\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><path d=\"M 115 58 Q 227 14 340 58\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><polygon points=\"334,50 344,60 330,61\" fill=\"#16a34a\"/><text x=\"227\" y=\"30\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">+ 5</text><path d=\"M 340 112 Q 272 140 205 112\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><polygon points=\"214,119 201,110 216,108\" fill=\"#dc2626\"/><text x=\"272\" y=\"138\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"ltr\">- 3</text><rect x=\"25\" y=\"62\" width=\"450\" height=\"44\" rx=\"6\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><rect x=\"92\" y=\"63\" width=\"45\" height=\"42\" fill=\"#dbeafe\"/><rect x=\"317\" y=\"63\" width=\"45\" height=\"42\" fill=\"#dcfce7\"/><rect x=\"182\" y=\"63\" width=\"45\" height=\"42\" fill=\"#fee2e2\"/><line x1=\"70\" y1=\"62\" x2=\"70\" y2=\"106\" stroke=\"#cbd5e1\"/><line x1=\"115\" y1=\"62\" x2=\"115\" y2=\"106\" stroke=\"#cbd5e1\"/><line x1=\"160\" y1=\"62\" x2=\"160\" y2=\"106\" stroke=\"#cbd5e1\"/><line x1=\"205\" y1=\"62\" x2=\"205\" y2=\"106\" stroke=\"#cbd5e1\"/><line x1=\"250\" y1=\"62\" x2=\"250\" y2=\"106\" stroke=\"#cbd5e1\"/><line x1=\"295\" y1=\"62\" x2=\"295\" y2=\"106\" stroke=\"#cbd5e1\"/><line x1=\"340\" y1=\"62\" x2=\"340\" y2=\"106\" stroke=\"#cbd5e1\"/><line x1=\"385\" y1=\"62\" x2=\"385\" y2=\"106\" stroke=\"#cbd5e1\"/><line x1=\"430\" y1=\"62\" x2=\"430\" y2=\"106\" stroke=\"#cbd5e1\"/><text x=\"47\" y=\"90\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">22</text><text x=\"92\" y=\"90\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">23</text><text x=\"115\" y=\"90\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">24</text><text x=\"160\" y=\"90\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">25</text><text x=\"205\" y=\"90\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"ltr\">26</text><text x=\"250\" y=\"90\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">27</text><text x=\"295\" y=\"90\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">28</text><text x=\"340\" y=\"90\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">29</text><text x=\"385\" y=\"90\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">30</text><text x=\"452\" y=\"90\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">31</text><rect x=\"100\" y=\"148\" width=\"300\" height=\"38\" rx=\"8\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><text x=\"250\" y=\"172\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">12 قَلَمًا نُقَسِّمُها بِالتَّساوي: 6 + 6 = 12</text></svg>",
+    "steps": [
+      {
+        "promptAr": "تَتَبَّعِ السَّهْمَ الأَخْضَرَ عَلى الشَّرِيطِ العَدَدِيِّ: نَنْطَلِقُ مِنْ $24$ وَنَتَقَدَّمُ $5$ خَطَواتٍ. ما ناتِجُ $24 + 5$؟",
+        "hintAr": "عُدَّ $5$ خَطَواتٍ بَعْدَ $24$: $25$، $26$، $27$، $28$، $\\dots$.",
+        "expectedInput": "29",
+        "revealAr": "$24 + 5 = 29$ حَبَّةَ كَرَزٍ."
+      },
+      {
+        "promptAr": "أَكَلَتْ مَرْيَمُ $3$ حَبّاتٍ مِنْ $29$، فَرَجَعْنا إلى الخَلْفِ $3$ خَطَواتٍ. ما ناتِجُ $29 - 3$؟",
+        "hintAr": "انْقُصْ $3$ مِنْ $29$: $28$، $27$، $\\dots$.",
+        "expectedInput": "26",
+        "revealAr": "$29 - 3 = 26$ حَبَّةَ كَرَزٍ بَقِيَتْ عِنْدَ مَرْيَمَ."
+      },
+      {
+        "promptAr": "قَسَّمَ عادِلٌ $12$ قَلَمًا إلى مَجْمُوعَتَيْنِ مُتَساوِيَتَيْنِ. ما نِصْفُ العَدَدِ $12$؟",
+        "hintAr": "ما العَدَدُ الَّذِي نَجْمَعُهُ مَعَ نَفْسِهِ لِيُعْطِيَ $12$؟",
+        "expectedInput": "6",
+        "revealAr": "نِصْفُ $12$ هُوَ $6$ لِأَنَّ $6 + 6 = 12$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لِجَمْعِ عَدَدٍ صَغِيرٍ ($+$) نَتَقَدَّمُ إلى الأَمامِ عَلى الشَّرِيطِ العَدَدِيِّ: مِثْلُ $31 + 6 = 37$.",
+      "الرَّمْزُ ($-$) يَعْني الطَّرْحَ (ناقِصٌ)؛ نَسْتَعْمِلُهُ لِحِسابِ الباقِي بِالرُّجُوعِ إلى الخَلْفِ عَلى الشَّرِيطِ: مِثْلُ $38 - 5 = 33$.",
+      "**ضِعْفُ** عَدَدٍ هُوَ مَجْمُوعُ العَدَدِ مَعَ نَفْسِهِ: مِثْلُ ضِعْفُ $7$ هُوَ $7 + 7 = 14$، وَضِعْفُ $9$ هُوَ $9 + 9 = 18$.",
+      "**نِصْفُ** عَدَدٍ زَوْجِيٍّ هُوَ تَقْسِيمُهُ إلى عَدَدَيْنِ مُتَساوِيَيْنِ: مِثْلُ نِصْفُ $14$ هُوَ $7$، وَنِصْفُ $18$ هُوَ $9$."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 205\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"484\" height=\"189\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"22\" y=\"20\" width=\"248\" height=\"164\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"146\" y=\"44\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">الشَّرِيطُ العَدَدِيُّ (+ وَ -)</text><rect x=\"36\" y=\"64\" width=\"220\" height=\"36\" rx=\"6\" fill=\"#ffffff\" stroke=\"#86efac\"/><text x=\"146\" y=\"87\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">32 + 5 = 37</text><rect x=\"36\" y=\"114\" width=\"220\" height=\"36\" rx=\"6\" fill=\"#ffffff\" stroke=\"#fca5a5\"/><text x=\"146\" y=\"137\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"ltr\">37 - 4 = 33</text><text x=\"146\" y=\"172\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"rtl\">نَتَقَدَّمُ (+) وَنَرْجِعُ (-)</text><rect x=\"284\" y=\"20\" width=\"194\" height=\"164\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"381\" y=\"44\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">الضِّعْفُ وَالنِّصْفُ</text><text x=\"334\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\" direction=\"rtl\">النِّصْفُ</text><text x=\"428\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\" direction=\"rtl\">الضِّعْفُ</text><text x=\"334\" y=\"98\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">5</text><text x=\"381\" y=\"98\" text-anchor=\"middle\" font-size=\"14\" fill=\"#2563eb\">↔</text><text x=\"428\" y=\"98\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">10</text><text x=\"334\" y=\"124\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">7</text><text x=\"381\" y=\"124\" text-anchor=\"middle\" font-size=\"14\" fill=\"#2563eb\">↔</text><text x=\"428\" y=\"124\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">14</text><text x=\"334\" y=\"150\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">8</text><text x=\"381\" y=\"150\" text-anchor=\"middle\" font-size=\"14\" fill=\"#2563eb\">↔</text><text x=\"428\" y=\"150\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">16</text><text x=\"334\" y=\"174\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">9</text><text x=\"381\" y=\"174\" text-anchor=\"middle\" font-size=\"14\" fill=\"#2563eb\">↔</text><text x=\"428\" y=\"174\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">18</text></svg>",
+    "visualCaptionAr": "حِسابُ المَجامِيعِ وَالفُرُوقِ البَسِيطَةِ بِالرَّمْزَيْنِ ($+$) و($-$)، وَأَمْثِلَةُ الضِّعْفِ وَالنِّصْفِ.",
+    "examples": [
+      {
+        "problemAr": "في الرَّفِّ $34$ قِصَّةً، اسْتَعارَ التَّلامِيذُ $4$ قِصَصٍ. كَمْ قِصَّةً بَقِيَتْ؟",
+        "solutionAr": "نَسْتَعْمِلُ الطَّرْحَ ($-$) لِحِسابِ الباقِي: $34 - 4 = 30$ قِصَّةً."
+      },
+      {
+        "problemAr": "أَوْجِدْ ضِعْفَ العَدَدِ $8$، ثُمَّ أَوْجِدْ نِصْفَ العَدَدِ $14$.",
+        "solutionAr": "ضِعْفُ $8$ هُوَ $8 + 8 = 16$. وَنِصْفُ $14$ هُوَ $7$ لِأَنَّ $7 + 7 = 14$."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! الرَّمْزُ ($+$) يَزِيدُ العَدَدَ، أَمّا الرَّمْزُ ($-$) فَيُنْقِصُهُ. وَلا تَخْلِطْ بَيْنَ الضِّعْفِ (أَكْبَرُ) وَالنِّصْفِ (أَصْغَرُ)!"
+  },
+  "practice": [
+    {
+      "questionAr": "انْظُرْ إلى الشَّرِيطِ العَدَدِيِّ: انْطَلَقْنا مِنْ $38$ وَرَجَعْنا $5$ خَطَواتٍ إلى الخَلْفِ. ما ناتِجُ $38 - 5$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 105\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"384\" height=\"89\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><path d=\"M 318 42 Q 218 12 118 42\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><polygon points=\"128,46 114,42 124,33\" fill=\"#dc2626\"/><text x=\"218\" y=\"25\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"ltr\">- 5</text><rect x=\"20\" y=\"48\" width=\"360\" height=\"38\" rx=\"6\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"40\" y=\"72\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">31</text><text x=\"80\" y=\"72\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">32</text><text x=\"120\" y=\"72\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">?</text><text x=\"160\" y=\"72\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">34</text><text x=\"200\" y=\"72\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">35</text><text x=\"240\" y=\"72\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">36</text><text x=\"280\" y=\"72\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">37</text><text x=\"320\" y=\"72\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">38</text><text x=\"360\" y=\"72\" text-anchor=\"middle\" font-size=\"14\" fill=\"#475569\" direction=\"ltr\">39</text></svg>",
+      "options": [
+        "$34$",
+        "$33$",
+        "$32$",
+        "$39$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "رَجَعْنا $5$ خَطَواتٍ وَلَيْسَ $4$؛ نَعُدُّ: $37$، $36$، $35$، $34$، $33$.",
+        "أَحْسَنْتَ! عِنْدَما نَرْجِعُ $5$ خَطَواتٍ مِنْ $38$ نَصِلُ إلى $33$: $38 - 5 = 33$.",
+        "رَجَعْنا $5$ خَطَواتٍ فَقَطْ وَلَيْسَ $6$؛ انْظُرْ إلى الخانَةِ بَيْنَ $32$ وَ $34$.",
+        "العَمَلِيَّةُ طَرْحٌ ($-$) وَلَيْسَ جَمْعًا؛ النّاتِجُ يَصْغُرُ عَنْ $38$."
+      ],
+      "explanationAr": "نَنْقُصُ $5$ مِنْ $38$ عَلى الشَّرِيطِ العَدَدِيِّ: $37$، $36$، $35$، $34$، $33$، إِذَنْ $38 - 5 = 33$."
+    },
+    {
+      "questionAr": "ما ضِعْفُ العَدَدِ $9$، وَما نِصْفُ العَدَدِ $16$ عَلى التَّرْتِيبِ؟",
+      "options": [
+        "$18$ وَ $8$",
+        "$8$ وَ $18$",
+        "$19$ وَ $6$",
+        "$18$ وَ $7$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "مُمْتازٌ! ضِعْفُ $9$ هُوَ $9 + 9 = 18$، وَنِصْفُ $16$ هُوَ $8$ لِأَنَّ $8 + 8 = 16$.",
+        "لَقَدْ عَكَسْتَ التَّرْتِيبَ بَيْنَ النِّصْفِ وَالضِّعْفِ!",
+        "ضِعْفُ $9$ هُوَ $9 + 9 = 18$ وَلَيْسَ $19$، وَنِصْفُ $16$ هُوَ $8$.",
+        "راجِعْ نِصْفَ $16$: $8 + 8 = 16$ وَلَيْسَ $7 + 7$."
+      ],
+      "explanationAr": "ضِعْفُ $9$ يَعْني $9 + 9 = 18$، وَنِصْفُ $16$ هُوَ $8$ لِأَنَّ $8 + 8 = 16$."
+    },
+    {
+      "questionAr": "يُبَيِّنُ الجَدْوَلُ عَدَدَ الكُراتِ في الصُّنْدُوقِ. ما مَجْمُوعُ الكُراتِ الخَضْراءِ وَالزَّرْقاءِ مَعًا؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 105\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><g stroke=\"#64748b\" stroke-width=\"1.5\"><rect x=\"25\" y=\"15\" width=\"135\" height=\"36\" fill=\"#dcfce7\"/><rect x=\"160\" y=\"15\" width=\"135\" height=\"36\" fill=\"#dbeafe\"/><rect x=\"25\" y=\"51\" width=\"135\" height=\"38\" fill=\"#ffffff\"/><rect x=\"160\" y=\"51\" width=\"135\" height=\"38\" fill=\"#ffffff\"/></g><text x=\"92\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">كُراتٌ خَضْراءُ</text><text x=\"227\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">كُراتٌ زَرْقاءُ</text><text x=\"92\" y=\"76\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">23</text><text x=\"227\" y=\"76\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">5</text></svg>",
+      "options": [
+        "$18$",
+        "$27$",
+        "$28$",
+        "$29$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "السُّؤالُ يَطْلُبُ المَجْمُوعَ ($23 + 5$) وَلَيْسَ الطَّرْحَ ($23 - 5$).",
+        "تَحَقَّقْ مِنَ العَدِّ: $23 + 5 = 28$ وَلَيْسَ $27$.",
+        "أَحْسَنْتَ! نَجْمَعُ الكُراتِ الخَضْراءَ ($23$) مَعَ الزَّرْقاءِ ($5$): $23 + 5 = 28$.",
+        "تَحَقَّقْ مِنَ العَدِّ: $23 + 5 = 28$، أَمّا $29$ فَهُوَ $23 + 6$."
+      ],
+      "explanationAr": "نَقْرَأُ الجَدْوَلَ: $23$ كُرَةً خَضْراءَ وَ $5$ كُراتٍ زَرْقاءَ، فَيَكُونُ المَجْمُوعُ $23 + 5 = 28$ كُرَةً."
+    }
+  ]
+}

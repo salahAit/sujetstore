@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "levelId": "moyen",
+    "yearId": "2am",
+    "yearName": "السنة الثانية متوسط",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t1",
+    "trimesterName": "الفصل الأول",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة واحدة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 7,
+      "instruction": "احسب العبارات التالية موضحاً مراحل الحساب:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب سلسلة العمليات دون أقواس: $A = 16 + 4 times 6 - 5$",
+          "answer": "1) $A = 16 + 24 - 5 = 40 - 5 = 35$",
+          "mark": "2.5"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب سلسلة العمليات المتضمنة لأقواس متداخلة: $B = 8 times [16 - (6 + 4)]$",
+          "answer": "2) $B = 8 times [16 - 10] = 8 times 6 = 48$",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "3) استعمل خاصية توزيع الضرب على الطرح لحساب العبارة ذهنياً: $C = 6 times 163 - 6 times 63$",
+          "answer": "3) $C = 6 times (163 - 63) = 6 times 100 = 600$",
+          "mark": "2.25"
+        }
+      ],
+      "id": "ex_test_1_2am_t1_order_ops_distributivity",
+      "num": "الأول"
+    },
+    {
+      "points": 7,
+      "instruction": "احسب العبارات الكسرية التالية مع الاختزال إن أمكن:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) $A = frac(1, 6) + frac(15, 24)$",
+          "answer": "1) $A = frac(4, 24) + frac(15, 24) = frac(19, 24) = frac(19, 24)$",
+          "mark": "2.5"
+        },
+        {
+          "type": "text",
+          "content": "2) $B = frac(4, 4) - frac(2, 12)$",
+          "answer": "2) $B = frac(12, 12) - frac(2, 12) = frac(10, 12) = frac(5, 6)$",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "3) $C = frac(16, 7) times frac(5, 8)$",
+          "answer": "3) $C = frac(16 times 5, 7 times 8) = frac(80, 56) = frac(10, 7)$",
+          "mark": "2.25"
+        }
+      ],
+      "id": "ex_test_2_2am_t1_fractions_operations",
+      "num": "الثاني"
+    },
+    {
+      "points": 6,
+      "instruction": "في الشكل المقابل، المستقيمان $(d)$ و $(d')$ متوازيان:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.5fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) بيّن العلاقة بين الزاوية $46°$ والزاوية ($?$)، ثم احسب قيس ($?$).\n\n2) استنتج قيس الزاوية المتماثلة مع $46°$ وقيس الزاوية المتبادلة خارجياً مع ($?$).\n\n3) ما قيس الزاوية المتممة للزاوية $46°$؟",
+              "answer": "1) الزاويتان متكاملتان، وقيس ($?$) هو $180° - 46° = 134°$.\n\n2) المتماثلة مع $46°$ تقيس $46°$، والمتبادلة خارجياً مع ($?$) تقيس $134°$.\n\n3) المتممة لـ $46°$ تقيس $90° - 46° = 44°$.",
+              "mark": "6"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/2am_t1_angles_par_medium_700433.svg",
+              "caption": "المستقيمان (d) و (d') متوازيان"
+            }
+          ]
+        }
+      ],
+      "id": "ex_test_3_2am_t1_angles_parallelism",
+      "num": "الثالث"
+    }
+  ]
+}

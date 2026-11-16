@@ -1,0 +1,89 @@
+{
+  "documents": [
+    {
+      "id": "ref_1am_curriculum_math_gen2",
+      "grade": "1am",
+      "title_ar": "المنهاج الرسمي لمادة الرياضيات لمرحلة التعليم المتوسط (وزارة التربية الوطنية - الجيل الثاني 2016)",
+      "category": "curriculum",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/01_curriculum/1am_curriculum_math_moyen_2016.pdf",
+      "source_url": "https://www.dzeducative.com/wp-content/uploads/2024/09/%D9%85%D9%86%DA%BE%D8%A7%D8%AC-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA.pdf",
+      "pages_count": 48,
+      "extraction_mode": "digital_text",
+      "sha256": "25adb22fbbde61eebeec9f6ab3b52c70a1331113c815694a8212bb3d2507a9db",
+      "size_bytes": 1389518
+    },
+    {
+      "id": "ref_1am_accompanying_doc_math_gen2",
+      "grade": "1am",
+      "title_ar": "الوثيقة المرافقة لمنهاج الرياضيات في مرحلة التعليم المتوسط (اللجنة الوطنية للمناهج - الجيل الثاني 2016)",
+      "category": "accompanying_doc",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/01_curriculum/1am_accompanying_doc_math_moyen_2016.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1snzUKkm_BHEgDLC1W--dJrrZvwcK4Ca4",
+      "pages_count": 102,
+      "extraction_mode": "digital_text",
+      "sha256": "c513bf73c0878e0873c015c55279f68f7068759892f9b11fc56995f85f91dceb",
+      "size_bytes": 3368243
+    },
+    {
+      "id": "ref_1am_progression_ministry_2022_2023",
+      "grade": "1am",
+      "title_ar": "المخططات السنوية لمادة الرياضيات للسنة الأولى من التعليم المتوسط (وزارة التربية الوطنية / المفتشية العامة للتربية الوطنية - طبعة سبتمبر 2022 المعمول بها)",
+      "category": "progression",
+      "year": "2022-2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/01_curriculum/1am_annual_plan_math_ministry_2022_2023.pdf",
+      "source_url": "https://elbassair.net/achatri/chat2014/cour/moyene/1am/GUIDE%20PRO%201AM/PLAN%20ANNUEL%201AM%20%202023/PLAN%20ANNUEL%201AM%20%20MATH%20%20%20%202022%20elbassair.net.pdf",
+      "pages_count": 10,
+      "extraction_mode": "digital_text",
+      "sha256": "3b2c22e9030d9709bda69ed6ef07c89826a8657b054cdfed711810caf8860f8b",
+      "size_bytes": 1443598
+    },
+    {
+      "id": "ref_1am_progression_mechanisms_2021_2022",
+      "grade": "1am",
+      "title_ar": "المخطط السنوي للتعلمات وآليات تنفيذه لمادة الرياضيات للسنة الأولى متوسط (وزارة التربية الوطنية / المفتشية العامة للتربية الوطنية - 2021/2022)",
+      "category": "progression",
+      "year": "2021-2022",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/01_curriculum/1am_annual_plan_mechanisms_math_2021_2022.pdf",
+      "source_url": "https://elbassair.net/achatri/chat2014/cour/moyene/1am/manahidj/PLANT%20ANNUEL%20%202022%20AM/MATH%20AM%202022/PLAN%20ANNUEL%201AM%20MATH%20%202022%20elbassair.net.pdf",
+      "pages_count": 12,
+      "extraction_mode": "digital_text",
+      "sha256": "e31f66a0d1db0ee241f0899ec186294c219cd87e70685621bd6382008e91de5d",
+      "size_bytes": 399944
+    },
+    {
+      "id": "ref_1am_progression_weekly_2022_2023",
+      "grade": "1am",
+      "title_ar": "التدرج السنوي الأسبوعي لتعلمات مادة الرياضيات للسنة الأولى متوسط (2022-2023)",
+      "category": "progression",
+      "year": "2022-2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/01_curriculum/1am_annual_progression_math_2022_2023.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2022/10/%D8%AA%D8%AF%D8%B1%D8%AC-%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%85%D8%A7%D8%AA-%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-20222023-%D8%A3%D9%88%D9%84%D9%89-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%A7%D9%84%D8%AC%D9%8A%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A.pdf",
+      "pages_count": 2,
+      "extraction_mode": "digital_text",
+      "sha256": "d971e6d891b4b29b1d2380e32df72e89cc250af05fb1e84883dbbc83b14ee9af",
+      "size_bytes": 589126
+    },
+    {
+      "id": "ref_1am_progression_weekly_2025_2026",
+      "grade": "1am",
+      "title_ar": "التدرج السنوي لمادة الرياضيات للسنة الأولى متوسط (العام الدراسي 2025-2026)",
+      "category": "progression",
+      "year": "2025-2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1am/01_curriculum/1am_annual_progression_math_2025_2026.pdf",
+      "source_url": "https://www.dzeducative.com/wp-content/uploads/2025/08/1am.pdf",
+      "pages_count": 2,
+      "extraction_mode": "digital_text",
+      "sha256": "e30d6ad87f60eb7bb00c2471a51cd08b0322ccce26c21e0e8ffd3d4b4cc19094",
+      "size_bytes": 229619
+    }
+  ],
+  "missing_references": []
+}

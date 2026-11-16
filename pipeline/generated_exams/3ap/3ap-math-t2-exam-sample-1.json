@@ -1,0 +1,287 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "3ap",
+    "yearName": "السنة الثالثة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t2",
+    "trimesterName": "الفصل الثاني",
+    "docType": "exam",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة وربع",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 1.5,
+      "instruction": "احسب ذهنيا وأكمل الجدول التالي:",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "العملية",
+            "النتيجة"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              {
+                "content": "$5 times 5$",
+                "bold": true
+              },
+              {
+                "content": ".....",
+                "answer": "$25$",
+                "mark": "0.5"
+              }
+            ],
+            [
+              {
+                "content": "$5 times 8$",
+                "bold": true
+              },
+              {
+                "content": ".....",
+                "answer": "$40$",
+                "mark": "0.5"
+              }
+            ],
+            [
+              {
+                "content": "$4 times 100$",
+                "bold": true
+              },
+              {
+                "content": ".....",
+                "answer": "$400$",
+                "mark": "0.25"
+              }
+            ],
+            [
+              {
+                "content": "$40 times 10$",
+                "bold": true
+              },
+              {
+                "content": ".....",
+                "answer": "$400$",
+                "mark": "0.25"
+              }
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t2-easy-101-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 1.5,
+      "instruction": "أنجز العمليات التالية باحترام المراتب والاحتفاظ:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) ضع ثم أنجز عموديا العملية: $215 times 4$.",
+              "answer": "1) ناتج الضرب العمودي:\n$ 215 times 4 = 860 $",
+              "mark": "1"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t2_vmult_easy_s587934.svg",
+              "caption": "عملية الضرب العمودي"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) احسب باستعمال خاصية توزيع الضرب على الجمع: $79 times 3$.",
+          "answer": "2) $79 times 3 = (70 times 3) + (9 times 3) = 210 + 27 = 237$.",
+          "mark": "0.5"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t2-easy-101-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "points": 1.5,
+      "instruction": "لاحظ الأشكال الهندسية المرفقة ثم أجب:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) اذكر رقم الشكل الذي لا يمثل مضلعا مع التعليل، ثم سمّ الأشكال الأخرى.",
+              "answer": "1) الشكل الذي ليس مضلعا هو الشكل $3$ (دائرة لأن حافته منحنية). الشكل $2$ مربع، والشكل $1$ مستطيل، والشكل $4$ مثلث.",
+              "mark": "0.75"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t2_strip_easy_s963369.svg",
+              "caption": "المضلعات والأشكال المألوفة"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "items": [
+            {
+              "q": "للمربع و للمعين 4 أضلاع متقايسة، ويمتاز المربع بـ 4 زوايا قائمة.",
+              "a": "صحيح",
+              "c": "العبارة صحيحة.",
+              "mark": "0.5"
+            },
+            {
+              "q": "المعين له 4 زوايا قائمة نتحقق منها بالكوس.",
+              "a": "خطأ",
+              "c": "المعين المألوف ليس له زوايا قائمة، أما المربع والمستطيل فلهما 4 زوايا قائمة.",
+              "mark": "0.25"
+            }
+          ]
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t2-easy-101-ex-3",
+      "num": "الثالث"
+    },
+    {
+      "points": 1.5,
+      "instruction": "لاحظ المقادير التالية وأكمل التحويلات والمقارنة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) أكمل الفراغات في الجدول بالوحدة المناسبة:",
+              "answer": "1) راجع التحويلات المكتملة باللون الأزرق في الجدول أدناه.",
+              "mark": "0.5"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t2_cap_easy_s229364.svg",
+              "caption": "سعة الوعاء: 5 L 10 cL"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "المقدار الأول",
+            "التحويل إلى الوحدة الصغرى"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              {
+                "content": "$1$ kg $300$ g",
+                "bold": true
+              },
+              {
+                "content": "..... g",
+                "answer": "$1300$ g",
+                "mark": "0.25"
+              }
+            ],
+            [
+              {
+                "content": "$5$ L $10$ cL",
+                "bold": true
+              },
+              {
+                "content": "..... cL",
+                "answer": "$510$ cL",
+                "mark": "0.25"
+              }
+            ],
+            [
+              {
+                "content": "$6300$ g",
+                "bold": true
+              },
+              {
+                "content": "..... kg ..... g",
+                "answer": "$6$ kg $300$ g",
+                "mark": "0.25"
+              }
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        },
+        {
+          "type": "text",
+          "content": "2) قارن باستعمال أحد الرموز ($<$ أو $>$ أو $=$): $2$ kg $400$ g  .....  $2150$ g.",
+          "answer": "2) نحول إلى الغرام: $2400 > 2150$، إذن $2$ kg $400$ g $>$ $2150$ g.",
+          "mark": "0.25"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t2-easy-101-ex-4",
+      "num": "الرابع"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "اقرأ الوضعية جيدا ثم أجب عن الأسئلة الثلاثة بوضع العمليات العمودية والأفقية:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "يملك كريم مبلغا قدره $3000$ DA. توجه إلى المحل التجاري فـاشترى $3$ علب عصير بسعر $380$ DA للواحدة، وكعكة كبيرة بسعر $230$ DA."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t2_integ_easy_s78588.svg",
+              "caption": "معطيات المشتريات"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب ثمن علب عصير.",
+          "answer": "1) ثمن علب عصير:\n$ 380 times 3 = 1140 $\nالثمن هو $1140$ DA.",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "2) ما هو الثمن الكلي لجميع المشتريات؟",
+          "answer": "2) الثمن الكلي:\n$ 1140 + 230 = 1370 $\nدفع كريم مبلغ $1370$ DA.",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "3) كم دينارا بقي معه؟",
+          "answer": "3) المبلغ المتبقي:\n$ 3000 - 1370 = 1630 $\nبقي معه مبلغ $1630$ DA.",
+          "mark": "1.25"
+        }
+      ],
+      "id": "exam-3ap-trimester_exam-t2-easy-101-ex-5"
+    }
+  ]
+}

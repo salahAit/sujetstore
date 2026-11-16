@@ -43,6 +43,7 @@ export interface ExamMetadata {
 	schoolName?: string;
 	siteUrl: string;
 	font?: string;
+	customDocTitle?: string;
 }
 
 // --- Content Blocks (all exercise patterns for 1AM مادة الرياضيات) ---

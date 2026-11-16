@@ -1,0 +1,122 @@
+{
+  "id": "lesson_3ap_t3_division_equal_sharing",
+  "slug": "3ap-t3-division-equal-sharing",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t3",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: المدخل إلى القسمة، العلاقات الحسابية وقياس المدد",
+  "order": 1,
+  "titleAr": "المدخل إلى القسمة: التجميع والتوزيع المتساوي والقسمة التامة",
+  "objectives": [
+    "مقاربة مفهوم القسمة عبر وضعيات التجميع في حصص متساوية والتوزيع بالتساوي باستعمال الجمع أو الطرح المتكرر",
+    "إيجاد حاصل القسمة التامة اعتمادا على معكوس جداول الضرب من $2$ إلى $9$ ($a \\times ? = b$ و $b \\div a = ?$)",
+    "التمييز بين المقسوم والقاسم وحاصل القسمة في القسمة التامة وحل مشكلات توزيع متساو بسيطة دون خوارزمية القسمة المطولة"
+  ],
+  "keywordsAr": [
+    "القسمة بالتجميع",
+    "القسمة بالتوزيع",
+    "التوزيع المتساوي",
+    "القسمة التامة",
+    "معكوس الضرب"
+  ],
+  "discover": {
+    "scenarioAr": "بمناسبة الأسبوع الثقافي في المدرسة، لدى الأستاذة **$24$** قصة أرادت توزيعها بالتساوي على **$4$** طاولات، كما أرادت وضع **$30$** قلماً في علب تتسع كل واحدة لـ **$6$** أقلام.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 210\" width=\"520\" height=\"210\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"520\" height=\"210\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(14,14)\"><rect width=\"244\" height=\"182\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"122\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">1. التوزيع بالتساوي: 24 قصة على 4 طاولات</text><g transform=\"translate(12,32)\"><rect x=\"0\" y=\"0\" width=\"104\" height=\"58\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/><text x=\"52\" y=\"16\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e40af\">طاولة 1</text><rect x=\"12\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#3b82f6\"/><rect x=\"26\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#60a5fa\"/><rect x=\"40\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#3b82f6\"/><rect x=\"54\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#60a5fa\"/><rect x=\"68\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#3b82f6\"/><rect x=\"82\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#60a5fa\"/></g><g transform=\"translate(128,32)\"><rect x=\"0\" y=\"0\" width=\"104\" height=\"58\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/><text x=\"52\" y=\"16\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e40af\">طاولة 2</text><rect x=\"12\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#3b82f6\"/><rect x=\"26\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#60a5fa\"/><rect x=\"40\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#3b82f6\"/><rect x=\"54\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#60a5fa\"/><rect x=\"68\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#3b82f6\"/><rect x=\"82\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#60a5fa\"/></g><g transform=\"translate(12,98)\"><rect x=\"0\" y=\"0\" width=\"104\" height=\"58\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/><text x=\"52\" y=\"16\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e40af\">طاولة 3</text><rect x=\"12\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#3b82f6\"/><rect x=\"26\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#60a5fa\"/><rect x=\"40\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#3b82f6\"/><rect x=\"54\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#60a5fa\"/><rect x=\"68\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#3b82f6\"/><rect x=\"82\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#60a5fa\"/></g><g transform=\"translate(128,98)\"><rect x=\"0\" y=\"0\" width=\"104\" height=\"58\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/><text x=\"52\" y=\"16\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e40af\">طاولة 4</text><rect x=\"12\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#3b82f6\"/><rect x=\"26\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#60a5fa\"/><rect x=\"40\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#3b82f6\"/><rect x=\"54\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#60a5fa\"/><rect x=\"68\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#3b82f6\"/><rect x=\"82\" y=\"24\" width=\"10\" height=\"24\" rx=\"2\" fill=\"#60a5fa\"/></g><text x=\"122\" y=\"173\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4 × ? = 24</text></g><g transform=\"translate(270,14)\"><rect width=\"236\" height=\"182\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"118\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">2. التجميع: 30 قلماً (6 في كل علبة)</text><rect x=\"18\" y=\"34\" width=\"200\" height=\"22\" rx=\"5\" fill=\"#ecfdf5\" stroke=\"#6ee7b7\"/><text x=\"118\" y=\"49\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\">30 - 6 = 24  (علبة 1)</text><rect x=\"18\" y=\"62\" width=\"200\" height=\"22\" rx=\"5\" fill=\"#ecfdf5\" stroke=\"#6ee7b7\"/><text x=\"118\" y=\"77\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\">24 - 6 = 18  (علبة 2)</text><rect x=\"18\" y=\"90\" width=\"200\" height=\"22\" rx=\"5\" fill=\"#ecfdf5\" stroke=\"#6ee7b7\"/><text x=\"118\" y=\"105\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\">18 - 6 = 12  (علبة 3)</text><rect x=\"18\" y=\"118\" width=\"200\" height=\"22\" rx=\"5\" fill=\"#ecfdf5\" stroke=\"#6ee7b7\"/><text x=\"118\" y=\"133\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\">12 - 6 = 6   (علبة 4)</text><rect x=\"18\" y=\"146\" width=\"200\" height=\"22\" rx=\"5\" fill=\"#d1fae5\" stroke=\"#10b981\"/><text x=\"118\" y=\"161\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">6 - 6 = 0    (علبة 5)</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "لإيجاد حصة كل طاولة من القصص ($24$ قصة على $4$ طاولات)، نبحث عن العدد المناسب في المساواة: $4 \\times ? = 24$. كم قصة توضع على كل طاولة؟ (اكتب العدد فقط)",
+        "hintAr": "راجع جدول ضرب $4$، أو عدّ القصص المرسومة على كل طاولة في الشكل.",
+        "expectedInput": "6",
+        "revealAr": "توضع $6$ قصص على كل طاولة؛ لأن $4 \\times 6 = 24$، ونكتب: $24 \\div 4 = 6$."
+      },
+      {
+        "promptAr": "نريد الآن وضع $30$ قلماً في علب تتسع كل علبة لـ $6$ أقلام (القسمة بالتجميع). باستعمال الطرح المتكرر حتى نصل إلى $0$، كم علبة سنملأ؟ (اكتب العدد فقط)",
+        "hintAr": "عدّ كم مرة طرحنا $6$ من $30$ في الشكل، أو ابحث عن العدد في $6 \\times ? = 30$.",
+        "expectedInput": "5",
+        "revealAr": "سنملأ $5$ علب؛ لأننا طرحنا $6$ خمس مرات ($6 \\times 5 = 30$)، إذن $30 \\div 6 = 5$."
+      },
+      {
+        "promptAr": "في كتابة القسمة التامة $30 \\div 6 = 5$، نسمي $30$ المقسوم، و $5$ حاصل القسمة. ما هو العدد الذي نسميه **القاسم**؟ (اكتب العدد فقط)",
+        "hintAr": "القاسم هو العدد الذي نقسم عليه ويأتي مباشرة بعد علامة ($\\div$).",
+        "expectedInput": "6",
+        "revealAr": "القاسم هو $6$. ففي الكتابة $30 \\div 6 = 5$: $30$ هو **المقسوم**، و $6$ هو **القاسم**، و $5$ هو **حاصل القسمة**."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "نستعمل **القسمة** في وضعيتين: **التوزيع بالتساوي** (لإيجاد حصة الواحد) و**التجميع في حصص متساوية** (لإيجاد عدد الحصص).",
+      "أسرع طريقة لإيجاد حاصل القسمة التامة هي **معكوس جداول الضرب** من $2$ إلى $9$: فإيجاد $b \\div a = ?$ يعني البحث عن العدد الذي يحقق $a \\times ? = b$.",
+      "في كتابة القسمة التامة: **المقسوم** $\\div$ **القاسم** $=$ **حاصل القسمة** (مثال: $24 \\div 4 = 6$).",
+      "تسمى القسمة **تامة** عندما يكون المقسوم من مضاعفات القاسم ولا يبقى أي شيء بعد التوزيع أو التجميع."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 185\" width=\"520\" height=\"185\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"520\" height=\"185\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(18,14)\"><rect width=\"260\" height=\"157\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"130\" y=\"22\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">عناصر عملية القسمة التامة</text><rect x=\"24\" y=\"42\" width=\"54\" height=\"38\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"51\" y=\"67\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e40af\">24</text><text x=\"92\" y=\"67\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#334155\">÷</text><rect x=\"106\" y=\"42\" width=\"46\" height=\"38\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"129\" y=\"67\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#b45309\">4</text><text x=\"166\" y=\"67\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#334155\">=</text><rect x=\"182\" y=\"42\" width=\"54\" height=\"38\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"209\" y=\"67\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#047857\">6</text><line x1=\"51\" y1=\"82\" x2=\"51\" y2=\"104\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"51\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">المقسوم</text><line x1=\"129\" y1=\"82\" x2=\"129\" y2=\"104\" stroke=\"#d97706\" stroke-width=\"1.8\"/><text x=\"129\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">القاسم</text><line x1=\"209\" y1=\"82\" x2=\"209\" y2=\"104\" stroke=\"#059669\" stroke-width=\"1.8\"/><text x=\"209\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">حاصل القسمة</text><text x=\"130\" y=\"145\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\">المقسوم أكبر من أو يساوي القاسم</text></g><g transform=\"translate(294,14)\"><rect width=\"208\" height=\"157\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"104\" y=\"22\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#7c3aed\">معكوس جدول الضرب</text><rect x=\"24\" y=\"42\" width=\"160\" height=\"42\" rx=\"8\" fill=\"#f5f3ff\" stroke=\"#8b5cf6\" stroke-width=\"1.8\"/><text x=\"104\" y=\"69\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#5b21b6\">4 × 6 = 24</text><path d=\"M 104 88 L 104 106\" stroke=\"#7c3aed\" stroke-width=\"2\"/><polygon points=\"99,103 104,111 109,103\" fill=\"#7c3aed\"/><rect x=\"24\" y=\"114\" width=\"160\" height=\"32\" rx=\"6\" fill=\"#ede9fe\" stroke=\"#7c3aed\"/><text x=\"104\" y=\"135\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#4c1d95\">24 ÷ 4 = 6   و   24 ÷ 6 = 4</text></g></svg>",
+    "visualCaptionAr": "تسمية عناصر القسمة التامة والربط بين القسمة ومعكوس جداول الضرب.",
+    "examples": [
+      {
+        "problemAr": "وزّع أب $36$ ديناراً بالتساوي على أبنائه الـ $4$. كم ديناراً يأخذ كل ابن؟",
+        "solutionAr": "نبحث عن العدد الذي يحقق $4 \\times ? = 36$. من جدول ضرب $4$ نجد $4 \\times 9 = 36$، إذن $36 \\div 4 = 9$. يأخذ كل ابن $9$ دنانير."
+      },
+      {
+        "problemAr": "لدى خباز $42$ قطعة حلوى، يضع كل $7$ قطع في علبة واحدة. كم علبة يحتاج؟",
+        "solutionAr": "هذه وضعية تجميع في حصص متساوية: نحسب $42 \\div 7$. بما أن $7 \\times 6 = 42$، فإن $42 \\div 7 = 6$. يحتاج الخباز إلى $6$ علب."
+      }
+    ],
+    "watchOutAr": "انتبه! المقسوم (العدد الكلي الذي نوزعه أو نجمعه) يُكتب دائماً على يسار علامة القسمة ($\\div$)؛ فلا تقلب الترتيب فتكتب $4 \\div 24$، وتحقق دائماً بعملية الضرب: القاسم $\\times$ حاصل القسمة $=$ المقسوم."
+  },
+  "practice": [
+    {
+      "questionAr": "انظر إلى المخطط: يريد المدرب توزيع $35$ كرة بالتساوي على $5$ سلات. كم كرة توضع في كل سلة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 155\" width=\"420\" height=\"155\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"420\" height=\"155\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><rect x=\"140\" y=\"14\" width=\"140\" height=\"36\" rx=\"8\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"210\" y=\"37\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#92400e\">35 كرة</text><g stroke=\"#64748b\" stroke-width=\"1.6\"><line x1=\"170\" y1=\"50\" x2=\"50\" y2=\"86\"/><line x1=\"190\" y1=\"50\" x2=\"130\" y2=\"86\"/><line x1=\"210\" y1=\"50\" x2=\"210\" y2=\"86\"/><line x1=\"230\" y1=\"50\" x2=\"290\" y2=\"86\"/><line x1=\"250\" y1=\"50\" x2=\"370\" y2=\"86\"/></g><g fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"><rect x=\"20\" y=\"88\" width=\"60\" height=\"46\" rx=\"7\"/><rect x=\"100\" y=\"88\" width=\"60\" height=\"46\" rx=\"7\"/><rect x=\"180\" y=\"88\" width=\"60\" height=\"46\" rx=\"7\"/><rect x=\"260\" y=\"88\" width=\"60\" height=\"46\" rx=\"7\"/><rect x=\"340\" y=\"88\" width=\"60\" height=\"46\" rx=\"7\"/></g><g text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e40af\"><text x=\"50\" y=\"116\">?</text><text x=\"130\" y=\"116\">?</text><text x=\"210\" y=\"116\">?</text><text x=\"290\" y=\"116\">?</text><text x=\"370\" y=\"116\">?</text></g></svg>",
+      "options": [
+        "$6$ كرات",
+        "$7$ كرات",
+        "$8$ كرات",
+        "$30$ كرة"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "راجع جدول ضرب $5$: $5 \\times 6 = 30$ وليس $35$!",
+        "أحسنت! لأن $5 \\times 7 = 35$، إذن $35 \\div 5 = 7$ كرات في كل سلة.",
+        "تحقق بالضرب: $5 \\times 8 = 40$ وهذا أكبر من $35$!",
+        "لقد طرحت $5$ من $35$ ($35 - 5 = 30$)؛ والتوزيع المتساوي يتطلب القسمة ($35 \\div 5$)."
+      ],
+      "explanationAr": "نوزع $35$ كرة بالتساوي على $5$ سلات، فنحسب $35 \\div 5$. ومن جدول ضرب $5$ نعلم أن $5 \\times 7 = 35$، إذن في كل سلة $7$ كرات."
+    },
+    {
+      "questionAr": "قطفت أمينة $56$ زهرة، وتريد صنع باقات تضم كل باقة $8$ زهرات. ما هي العملية المناسبة وما عدد الباقات؟",
+      "options": [
+        "$56 - 8 = 48$ باقة",
+        "$56 \\div 8 = 6$ باقات",
+        "$56 \\div 8 = 7$ باقات",
+        "$56 \\div 8 = 8$ باقات"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "طرح $8$ مرة واحدة يعطي عدد الزهرات الباقية بعد صنع باقة واحدة فقط، والمطلوب عدد الباقات كلها!",
+        "تحقق من جدول ضرب $8$: $8 \\times 6 = 48$ وليس $56$.",
+        "ممتاز! نجمع كل $8$ زهرات في باقة ($56 \\div 8$)، وبما أن $8 \\times 7 = 56$ نحصل على $7$ باقات.",
+        "راجع جدول ضرب $8$: $8 \\times 8 = 64$ وليس $56$!"
+      ],
+      "explanationAr": "هذه وضعية تجميع في حصص متساوية (كل باقة $8$ زهرات)، فنحسب $56 \\div 8$. من جدول الضرب: $8 \\times 7 = 56$، إذن تصنع أمينة $7$ باقات."
+    },
+    {
+      "questionAr": "في مساواة القسمة التامة $63 \\div 9 = 7$، أي جملة مما يلي صحيحة؟",
+      "options": [
+        "المقسوم هو $9$ والقاسم هو $63$",
+        "القاسم هو $7$ وحاصل القسمة هو $9$",
+        "المقسوم هو $63$ وحاصل القسمة هو $9$",
+        "المقسوم هو $63$ والقاسم هو $9$ وحاصل القسمة هو $7$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "عكست التسمية! $63$ هو العدد الكلي الذي نقسمه (المقسوم)، و $9$ هو القاسم.",
+        "تأكد من المواقع: القاسم يأتي بعد علامة ($\\div$) وهو $9$، وحاصل القسمة يأتي بعد ($=$) وهو $7$.",
+        "$63$ هو المقسوم فعلاً، لكن $9$ هو القاسم وليس حاصل القسمة!",
+        "أحسنت! في $63 \\div 9 = 7$: المقسوم هو $63$، والقاسم هو $9$، وحاصل القسمة هو $7$."
+      ],
+      "explanationAr": "في الكتابة $63 \\div 9 = 7$: العدد على يسار علامة القسمة ($63$) هو المقسوم، والعدد بعد علامة القسمة ($9$) هو القاسم، والنتيجة ($7$) هي حاصل القسمة."
+    }
+  ]
+}

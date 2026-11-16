@@ -1,0 +1,122 @@
+{
+  "id": "lesson_1ap_t3_mental_math_doubles_complements",
+  "slug": "1ap-t3-mental-math-doubles-complements",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع الخامس (الجزء الثاني): العملة الجزائرية، الحساب بتمعّن والجمع دون احتفاظ",
+  "order": 5,
+  "titleAr": "الحساب بتمعّن: متمم عدد إلى العشرة الموالية والارتكاز على الضعف",
+  "objectives": [
+    "إيجاد متمم عدد إلى 10 وإلى العشرة الموالية وتوظيفه لتسهيل الجمع",
+    "استعمال الضعف (مثل 6 + 6 = 12) لتفكيك وحساب مجاميع بسيطة (مثل 6 + 7)",
+    "إضافة وطرح عشرات تامة ذهنيًا ضمن الأعداد الأصغر من 100"
+  ],
+  "keywordsAr": [
+    "الحساب بتمعن",
+    "متمم إلى 10",
+    "العشرة الموالية",
+    "الضعف",
+    "عشرات تامة"
+  ],
+  "discover": {
+    "scenarioAr": "أَرادَ آدَمُ أَنْ يَحْسُبَ $47 + 5$ ذِهْنِيًّا بِالمُرُورِ إلى العَشَرَةِ المُوالِيَةِ ($50$)، وَأَرادَتْ مَرْيَمُ أَنْ تَحْسُبَ $7 + 8$ بِالِارْتِكازِ عَلى ضِعْفِ $7$.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 200\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"246\" height=\"180\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"133\" y=\"33\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">المُرُورُ إلى العَشَرَةِ المُوالِيَةِ (47 + 5)</text><line x1=\"32\" y1=\"104\" x2=\"234\" y2=\"104\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"48\" cy=\"104\" r=\"16\" fill=\"#fff\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"48\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">47</text><circle cx=\"138\" cy=\"104\" r=\"18\" fill=\"#16a34a\"/><text x=\"138\" y=\"109\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#fff\" direction=\"ltr\">50</text><circle cx=\"216\" cy=\"104\" r=\"16\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"216\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">?</text><path d=\"M52 84 Q93 48 134 84\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><text x=\"93\" y=\"59\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">+3</text><path d=\"M142 84 Q179 52 212 84\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><text x=\"177\" y=\"59\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">+2</text><text x=\"133\" y=\"148\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">5 = 3 + 2</text><text x=\"133\" y=\"172\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">نُكْمِلُ إلى 50 ثُمَّ نُضِيفُ الباقِي</text><rect x=\"268\" y=\"10\" width=\"202\" height=\"180\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"369\" y=\"33\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">الِارْتِكازُ عَلى الضِّعْفِ (7 + 8)</text><rect x=\"286\" y=\"54\" width=\"166\" height=\"42\" rx=\"8\" fill=\"#fff\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"369\" y=\"80\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">7 + 7 = 14</text><rect x=\"286\" y=\"108\" width=\"166\" height=\"44\" rx=\"8\" fill=\"#fff\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"369\" y=\"135\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">7 + 8 = 7 + 7 + 1</text><text x=\"369\" y=\"174\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">= 14 + 1 = ?</text></svg>",
+    "steps": [
+      {
+        "promptAr": "لِحِسابِ $47 + 5$، ما مُتَمِّمُ العَدَدِ $47$ إلى العَشَرَةِ المُوالِيَةِ $50$ ($47 + \\dots = 50$)؟",
+        "hintAr": "ما العَدَدُ الَّذِي نُضِيفُهُ إلى $7$ لِنَحْصُلَ عَلى $10$؟",
+        "expectedInput": "3",
+        "revealAr": "مُتَمِّمُ $47$ إلى $50$ هُوَ $3$ لِأَنَّ $47 + 3 = 50$."
+      },
+      {
+        "promptAr": "بَعْدَ أَنْ أَخَذْنا $3$ مِنْ $5$ ($5 = 3 + 2$) وَوَصَلْنا إلى $50$، نُضِيفُ $2$. ما ناتِجُ $47 + 5$؟",
+        "hintAr": "احْسُبْ $50 + 2$.",
+        "expectedInput": "52",
+        "revealAr": "$47 + 5 = 47 + 3 + 2 = 50 + 2 = 52$."
+      },
+      {
+        "promptAr": "نَساعِدُ مَرْيَمَ: نَعْلَمُ أَنَّ الضِّعْفَ هُوَ $7 + 7 = 14$. ما ناتِجُ $7 + 8$ ($14 + 1$)؟",
+        "hintAr": "أَضِفْ $1$ إلى $14$.",
+        "expectedInput": "15",
+        "revealAr": "$7 + 8 = 7 + 7 + 1 = 14 + 1 = 15$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "مُتَمِّمُ عَدَدٍ إلى $10$ هُوَ العَدَدُ الَّذِي نُضِيفُهُ لِيُصْبِحَ $10$ (مِثْلُ: $6 + 4 = 10$، $7 + 3 = 10$، $8 + 2 = 10$).",
+      "لِإِيجادِ مُتَمِّمِ عَدَدٍ إلى العَشَرَةِ المُوالِيَةِ (مِثْلَ $56 + \\dots = 60$)، نَجِدُ مُتَمِّمَ رَقْمِ وَحَداتِهِ إلى $10$ ($6 + 4 = 10$، إِذَنْ $56 + 4 = 60$).",
+      "لِلْجَمْعِ بِتَمَعُّنٍ عَلى عَدَدَيْنِ مُتَتالِيَيْنِ، نَرْتَكِزُ عَلى الضِّعْفِ: مِثْلَ $6 + 7 = 6 + 6 + 1 = 12 + 1 = 13$.",
+      "عِنْدَ إِضافَةِ أَوْ طَرْحِ عَشَراتٍ تامَّةٍ ($10, 20, 30\\dots$) ذِهْنِيًّا، يَتَغَيَّرُ رَقْمُ العَشَراتِ فَقَطْ وَتَبْقى الوَحَداتُ كَما هِيَ: $54 + 20 = 74$ وَ $74 - 30 = 44$."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 205\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"10\" y=\"12\" width=\"148\" height=\"180\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"84\" y=\"34\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">العَشَرَةُ المُوالِيَةُ</text><text x=\"84\" y=\"68\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">56 + 4 = 60</text><text x=\"84\" y=\"98\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">78 + 2 = 80</text><text x=\"84\" y=\"132\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">68 + 5</text><text x=\"84\" y=\"156\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">= 68 + 2 + 3</text><text x=\"84\" y=\"178\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">= 70 + 3 = 73</text><rect x=\"166\" y=\"12\" width=\"148\" height=\"180\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"240\" y=\"34\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">الضِّعْفُ وَشِبْهُهُ</text><text x=\"240\" y=\"66\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">6 + 6 = 12</text><text x=\"240\" y=\"92\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">6 + 7 = 13</text><text x=\"240\" y=\"126\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">8 + 8 = 16</text><text x=\"240\" y=\"152\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">8 + 9 = 17</text><text x=\"240\" y=\"178\" text-anchor=\"middle\" font-size=\"12\" fill=\"#475569\" direction=\"rtl\">نُضِيفُ 1 إلى الضِّعْفِ</text><rect x=\"322\" y=\"12\" width=\"148\" height=\"180\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"396\" y=\"34\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">العَشَراتُ التّامَّةُ</text><text x=\"396\" y=\"72\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">54 + 20 = 74</text><text x=\"396\" y=\"102\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">74 - 30 = 44</text><text x=\"396\" y=\"136\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">50 + 30 = 80</text><text x=\"396\" y=\"166\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">90 - 40 = 50</text></svg>",
+    "visualCaptionAr": "طُرُقُ الحِسابِ بِتَمَعُّنٍ: المُتَمِّمُ إلى العَشَرَةِ المُوالِيَةِ، الِارْتِكازُ عَلى الضِّعْفِ، وَجَمْعُ وَطَرْحُ العَشَراتِ التّامَّةِ.",
+    "examples": [
+      {
+        "problemAr": "أَوْجِدْ مُتَمِّمَ $63$ إلى $70$، ثُمَّ احْسُبْ بِتَمَعُّنٍ $63 + 9$.",
+        "solutionAr": "مُتَمِّمُ $63$ إلى $70$ هُوَ $7$ ($63 + 7 = 70$). نُفَكِّكُ $9 = 7 + 2$، فَيَكُونُ $63 + 9 = 63 + 7 + 2 = 70 + 2 = 72$."
+      },
+      {
+        "problemAr": "احْسُبْ $8 + 9$ بِالِارْتِكازِ عَلى الضِّعْفِ، ثُمَّ احْسُبْ $90 - 40$ ذِهْنِيًّا.",
+        "solutionAr": "ضِعْفُ $8$ هُوَ $16$، إِذَنْ $8 + 9 = 8 + 8 + 1 = 16 + 1 = 17$. وَ $9$ عَشَراتٍ ناقِصُ $4$ عَشَراتٍ تُساوِي $5$ عَشَراتٍ، أَيْ $90 - 40 = 50$."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! عِنْدَ إِضافَةِ عَشَرَةٍ تامَّةٍ مِثْلَ $43 + 20$، نَجْمَعُ العَشَراتِ ($4 + 2 = 6$) وَتَبْقى الوَحَداتُ ($3$) فَالنّاتِجُ $63$، لا تَجْمَعِ الـ $2$ مَعَ الوَحَداتِ!"
+  },
+  "practice": [
+    {
+      "questionAr": "ما هُوَ مُتَمِّمُ العَدَدِ $74$ إلى العَشَرَةِ المُوالِيَةِ ($80$)؟",
+      "options": [
+        "$4$",
+        "$16$",
+        "$6$",
+        "$10$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$74 + 4 = 78$ وَهُوَ لا يَصِلُ إلى $80$.",
+        "$74 + 16 = 90$ وَهُوَ يَتَجاوَزُ $80$!",
+        "أَحْسَنْتَ! مُتَمِّمُ $4$ إلى $10$ هُوَ $6$، إِذَنْ $74 + 6 = 80$.",
+        "$74 + 10 = 84$ وَلَيْسَ $80$."
+      ],
+      "explanationAr": "لِلْوُصُولِ مِنْ $74$ إلى العَشَرَةِ المُوالِيَةِ $80$، نَبْحَثُ عَنْ مُتَمِّمِ الوَحَداتِ $4$ إلى $10$: $4 + 6 = 10$، إِذَنْ المُتَمِّمُ هُوَ $6$."
+    },
+    {
+      "questionAr": "انْظُرْ إلى التَّمْثِيلِ: بِالِارْتِكازِ عَلى الضِّعْفِ $6 + 6 = 12$، ما ناتِجُ $6 + 7$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 115\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"340\" height=\"95\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"180\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\" direction=\"ltr\">6 + 6 = 12</text><g fill=\"#3b82f6\"><circle cx=\"54\" cy=\"62\" r=\"9\"/><circle cx=\"78\" cy=\"62\" r=\"9\"/><circle cx=\"102\" cy=\"62\" r=\"9\"/><circle cx=\"126\" cy=\"62\" r=\"9\"/><circle cx=\"150\" cy=\"62\" r=\"9\"/><circle cx=\"174\" cy=\"62\" r=\"9\"/></g><g fill=\"#16a34a\"><circle cx=\"54\" cy=\"86\" r=\"9\"/><circle cx=\"78\" cy=\"86\" r=\"9\"/><circle cx=\"102\" cy=\"86\" r=\"9\"/><circle cx=\"126\" cy=\"86\" r=\"9\"/><circle cx=\"150\" cy=\"86\" r=\"9\"/><circle cx=\"174\" cy=\"86\" r=\"9\"/></g><circle cx=\"206\" cy=\"86\" r=\"9\" fill=\"#f59e0b\" stroke=\"#b45309\" stroke-width=\"1.5\"/><text x=\"285\" y=\"78\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">6 + 7 = ?</text></svg>",
+      "options": [
+        "$13$",
+        "$12$",
+        "$14$",
+        "$11$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "مُمْتازٌ! $6 + 7 = 6 + 6 + 1 = 12 + 1 = 13$.",
+        "$12$ هُوَ ضِعْفُ $6$ ($6 + 6$)، وَلا تَنْسَ إِضافَةَ $1$ الباقِي!",
+        "$14$ هُوَ ضِعْفُ $7$ ($7 + 7$) وَلَيْسَ $6 + 7$.",
+        "انْتَبِهْ: $7$ أَكْبَرُ مِنْ $6$ بِـ $1$، لِذا نُضِيفُ $1$ إلى $12$ وَلا نَطْرَحُ."
+      ],
+      "explanationAr": "نُفَكِّكُ $7 = 6 + 1$، فَنَضَعُ $6 + 7 = (6 + 6) + 1 = 12 + 1 = 13$."
+    },
+    {
+      "questionAr": "احْسُبْ ذِهْنِيًّا بِطَرْحِ العَشَراتِ التّامَّةِ: $86 - 30 = \\dots$",
+      "options": [
+        "$83$",
+        "$66$",
+        "$50$",
+        "$56$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "نَطْرَحُ $3$ مِنْ رَقْمِ العَشَراتِ ($8$) وَلَيْسَ مِنَ الوَحَداتِ ($6$).",
+        "راجِعْ طَرْحَ العَشَراتِ: $8 - 3 = 5$ وَلَيْسَ $6$.",
+        "لا تَنْسَ الوَحَداتِ ($6$) الَّتِي تَبْقى كَما هِيَ في النّاتِجِ!",
+        "أَحْسَنْتَ! نَطْرَحُ العَشَراتِ ($8 - 3 = 5$) وَتَبْقى الوَحَداتُ ($6$)، فَيَكُونُ النّاتِجُ $56$."
+      ],
+      "explanationAr": "في $86 - 30$ نَطْرَحُ $3$ عَشَراتٍ مِنْ $8$ عَشَراتٍ فَتَبْقى $5$ عَشَراتٍ ($50$)، وَتَبْقى الوَحَداتُ $6$، إِذَنْ $86 - 30 = 56$."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "2ap",
+    "yearName": "السنة الثانية ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t1",
+    "trimesterName": "الفصل الأول",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "احسب المجموع وأكمل بالضعف والنصف:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب المجموع (دون احتفاظ):  $3 + 22 =$ .....",
+          "answer": "1) المجموع:\n$ 3 + 22 = 25 $",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "2) أكمل: ضعف العدد $12$ هو ..... ، ونصف العدد $18$ هو .....",
+          "answer": "2) ضعف العدد $12$ هو $24$، ونصف العدد $18$ هو $9$.\n$ 12 + 12 = 24 $",
+          "mark": "1.5"
+        }
+      ],
+      "id": "ex_test_1_2ap_t1_add_double_half",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "لاحظ المرصوفة المقابلة ثم أجب:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) عيّن إحداثيي كل من الرمزين $K$ و $M$ على المرصوفة.",
+              "answer": "الرمز $K$ في الخانة $(B, 1)$، والرمز $M$ في الخانة $(B, 3)$.",
+              "mark": "2"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/2ap_t1_grid_easy_s49927.svg",
+              "caption": "المرصوفة"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) ما هو الرمز الموجود في الخانة $(A, 3)$؟",
+          "answer": "الرمز الموجود في الخانة $(A, 3)$ هو $N$.",
+          "mark": "1"
+        }
+      ],
+      "id": "ex_test_2_2ap_t1_grid_locate",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "اقرأ الوضعية جيداً ثم أجب عن الأسئلة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.3fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "اشترت إيناس من المكتبة مقلمةً ثمنه $5$ DA (كما توضحه القطع النقدية)، وممحاةً ثمنه $12$ DA."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/2ap_t1_coins_easy_s895782.svg",
+              "caption": "ثمن مقلمةً بالدينار الجزائري"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب المبلغ الكلي الذي دفعته إيناس:",
+          "answer": "العملية:\n$ 5 + 12 = 17 $\nالجواب: دفعت إيناس مبلغ $17$ DA.",
+          "mark": "4"
+        }
+      ],
+      "id": "ex_integration_2ap_t1_integration_word"
+    }
+  ]
+}

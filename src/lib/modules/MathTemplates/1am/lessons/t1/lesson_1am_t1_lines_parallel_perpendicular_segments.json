@@ -1,0 +1,127 @@
+{
+  "id": "lesson_1am_t1_lines_parallel_perpendicular_segments",
+  "slug": "1am-t1-lines-parallel-perpendicular-segments",
+  "grade": "1am",
+  "yearSubjectId": 614,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني: الإنشاءات الهندسية الأولية والدائرة",
+  "order": 4,
+  "titleAr": "المستقيمات المتعامدة والمتوازية وقطعة المستقيم ومنتصفها",
+  "objectives": [
+    "الاستعمال السليم للمصطلحات والرموز: مستقيم، نصف مستقيم، قطعة مستقيم، منتصف قطعة، استقامية نقط، الانتماء وعدم الانتماء",
+    "رسم مستقيم عمودي على مستقيم معلوم يشمل نقطة معلومة ومستقيم مواز لمستقيم معلوم يشمل نقطة معلومة على ورقة غير مسطرة",
+    "رسم قطعة مستقيم لها نفس طول قطعة معطاة باستعمال المسطرة أو المدور وتعيين منتصفها وتوظيف خواص التوازي والتعامد البسيطة"
+  ],
+  "keywordsAr": [
+    "مستقيم ونصف مستقيم",
+    "قطعة مستقيم ومنتصفها",
+    "استقامية نقط",
+    "مستقيمان متعامدان",
+    "مستقيمان متوازيان",
+    "الكوس والمسطرة"
+  ],
+  "discover": {
+    "scenarioAr": "في مخطط هندسي لحيّ سكني، يقع عمودا إنارة $A$ و $B$ على شارع مستقيم $(d)$ بحيث المسافة بينهما $AB = 8\\text{ cm}$ على التصميم، ونضع نقطة $M$ في منتصف القطعة $[AB]$ . رسم المهندس طريقاً $(d_1)$ عمودياً على $(d)$ في النقطة $M$ ، ثم رسم شارعاً آخر $(d_2)$ عمودياً على $(d_1)$ ويشمل النقطة $C$ . كيف نعبر عن هذه الوضعيات بالرموز الهندسية، وما العلاقة بين $(d)$ و $(d_2)$ ؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 205\" width=\"500\" height=\"205\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"35\" y1=\"150\" x2=\"465\" y2=\"150\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><line x1=\"35\" y1=\"58\" x2=\"465\" y2=\"58\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><line x1=\"220\" y1=\"18\" x2=\"220\" y2=\"188\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><rect x=\"220\" y=\"138\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"220\" y=\"58\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><line x1=\"162\" y1=\"145\" x2=\"168\" y2=\"155\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"272\" y1=\"145\" x2=\"278\" y2=\"155\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"150\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"220\" cy=\"150\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"330\" cy=\"150\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"360\" cy=\"58\" r=\"4\" fill=\"#16a34a\"/><circle cx=\"220\" cy=\"58\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"446\" y=\"142\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">(d)</text><text x=\"446\" y=\"50\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">(d2)</text><text x=\"232\" y=\"30\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">(d1)</text><text x=\"106\" y=\"170\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"204\" y=\"170\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">M</text><text x=\"326\" y=\"170\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"356\" y=\"46\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\">C</text><text x=\"204\" y=\"48\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">H</text><text x=\"165\" y=\"172\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"ltr\">MA = MB</text><text x=\"275\" y=\"172\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"ltr\">AB = 8 cm</text></svg>",
+    "steps": [
+      {
+        "promptAr": "النقطة $M$ هي منتصف قطعة المستقيم $[AB]$ حيث $AB = 8\\text{ cm}$ . ما الطول $AM$ بالسنتيمتر؟",
+        "hintAr": "المنتصف يقسم القطعة إلى قطعتين متقايستين، أي $AM = MB = AB \\div 2$ .",
+        "expectedInput": "4",
+        "revealAr": "بما أن $M$ منتصف $[AB]$ ، فإن $M \\in [AB]$ و $MA = MB = 8 \\div 2 = 4\\text{ cm}$ (نشفّر القطعتين بنفس رمز التقايس)."
+      },
+      {
+        "promptAr": "بالنظر إلى الشكل، هل النقط $A$ و $M$ و $B$ في استقامية؟ وما علاقة النقطة $C$ بالمستقيم $(d)$ (انتماء أم عدم انتماء)؟",
+        "hintAr": "تكون النقط في استقامية إذا انتمت كلها إلى نفس المستقيم، ونستعمل الرمز $\\in$ للانتماء و $\\notin$ لعدم الانتماء.",
+        "revealAr": "نعم، النقط $A$ و $M$ و $B$ في استقامية لأنها تنتمي كلها إلى $(d)$ ($M \\in [AB]$)، بينما $C$ لا تنتمي إلى $(d)$ فنكتب: $C \\notin (d)$ ."
+      },
+      {
+        "promptAr": "رُسم المستقيم $(d_1)$ عمودياً على $(d)$ باستعمال الكوس. كيف نكتب هذه العلاقة بالرموز الرياضية؟",
+        "hintAr": "رمز التعامد هو $\\perp$ .",
+        "revealAr": "نكتب $(d_1) \\perp (d)$ ، ونضع رمز الزاوية القائمة (المربع الصغير) عند نقطة التقاطع $M$ ."
+      },
+      {
+        "promptAr": "بما أن $(d) \\perp (d_1)$ و $(d_2) \\perp (d_1)$ ، ماذا تستنتج عن المستقيمين $(d)$ و $(d_2)$ ؟",
+        "hintAr": "المستقيمان العموديان على نفس المستقيم لا يتقاطعان أبداً.",
+        "revealAr": "المستقيمان $(d)$ و $(d_2)$ متوازيان، ونكتب $(d) \\parallel (d_2)$ ، لأن المستقيمين العموديين على نفس المستقيم متوازيان."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الترميز الهندسي السليم**: **المستقيم** $(AB)$ غير محدود من الجهتين؛ **نصف المستقيم** $[AB)$ محدود من المبدأ $A$ فقط؛ **قطعة المستقيم** $[AB]$ محدودة من الطرفين؛ و**طول القطعة** يُكتب بدون أقواس أو عارضتين: $AB$ (مثلاً $AB = 5\\text{ cm}$).",
+      "**الاستقامية والانتماء والمنتصف**: النقط الواقعة على نفس المستقيم هي **نقط في استقامية**. نكتب $M \\in (d)$ للانتماء و $C \\notin (d)$ لعدم الانتماء. النقطة $M$ **منتصف** $[AB]$ معناها: $M \\in [AB]$ و $MA = MB$ .",
+      "**المستقيمان المتعامدان ($\\perp$)**: مستقيمان يتقاطعان ويشكلان زاوية قائمة (نرسمهما باستعمال **الكوس**).",
+      "**المستقيمان المتوازيان ($\\parallel$) وخواصهما**: مستقيمان لا يتقاطعان (أو منطبقان). **خاصية 1**: إذا تعامد مستقيمان مع نفس المستقيم فهما **متوازيان**. **خاصية 2**: إذا توازى مستقيمان، فكل مستقيم عمودي على أحدهما يكون **عمودياً** على الآخر."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 190\" width=\"540\" height=\"190\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"12\" width=\"168\" height=\"166\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"94\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">الترميز: مستقيم وقطعة</text><line x1=\"24\" y1=\"60\" x2=\"164\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"56\" cy=\"60\" r=\"3\" fill=\"#0f172a\"/><circle cx=\"132\" cy=\"60\" r=\"3\" fill=\"#0f172a\"/><text x=\"94\" y=\"52\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">المستقيم (AB)</text><line x1=\"46\" y1=\"96\" x2=\"164\" y2=\"96\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"46\" cy=\"96\" r=\"3.5\" fill=\"#16a34a\"/><circle cx=\"124\" cy=\"96\" r=\"3\" fill=\"#0f172a\"/><text x=\"100\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" direction=\"ltr\">نصف المستقيم [AB)</text><line x1=\"44\" y1=\"136\" x2=\"144\" y2=\"136\" stroke=\"#dc2626\" stroke-width=\"2.4\"/><circle cx=\"44\" cy=\"136\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"94\" cy=\"136\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"144\" cy=\"136\" r=\"3.5\" fill=\"#dc2626\"/><line x1=\"67\" y1=\"131\" x2=\"71\" y2=\"141\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"117\" y1=\"131\" x2=\"121\" y2=\"141\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"44\" y=\"154\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"94\" y=\"154\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">M</text><text x=\"144\" y=\"154\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"94\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">[AB] ومنتصفها M</text><rect x=\"186\" y=\"12\" width=\"168\" height=\"166\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"270\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">خاصية 1: التوازي بالتعامد</text><line x1=\"216\" y1=\"48\" x2=\"216\" y2=\"148\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"202\" y1=\"72\" x2=\"336\" y2=\"72\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"202\" y1=\"124\" x2=\"336\" y2=\"124\" stroke=\"#2563eb\" stroke-width=\"2\"/><rect x=\"216\" y=\"72\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"216\" y=\"124\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"322\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">(d)</text><text x=\"320\" y=\"117\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">(d')</text><text x=\"228\" y=\"152\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">(Δ)</text><text x=\"270\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">(d)⊥(Δ) و (d')⊥(Δ) ⇒ (d)//(d')</text><rect x=\"362\" y=\"12\" width=\"168\" height=\"166\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"446\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">خاصية 2: التعامد بالتوازي</text><line x1=\"392\" y1=\"48\" x2=\"392\" y2=\"148\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"378\" y1=\"72\" x2=\"512\" y2=\"72\" stroke=\"#16a34a\" stroke-width=\"2\"/><line x1=\"378\" y1=\"124\" x2=\"512\" y2=\"124\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"392\" y=\"72\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"392\" y=\"124\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"1.5\" stroke-dasharray=\"2 1\"/><text x=\"498\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">(d1)</text><text x=\"498\" y=\"117\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">(d2)</text><text x=\"404\" y=\"152\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">(Δ)</text><text x=\"446\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\" direction=\"ltr\">(d1)//(d2) و (Δ)⊥(d1) ⇒ (Δ)⊥(d2)</text></svg>",
+    "visualCaptionAr": "الترميز الدقيق للمستقيم ونصف المستقيم والقطعة ومنتصفها، وخواص التوازي والتعامد",
+    "examples": [
+      {
+        "problemAr": "قطعة المستقيم $[EF]$ طولها $9\\text{ cm}$ ، و $I$ منتصفها، بينما النقطة $K$ لا تنتمي إلى المستقيم $(EF)$ . عبّر بالرموز ثم احسب $EI$ .",
+        "solutionAr": "نكتب $I \\in [EF]$ و $K \\notin (EF)$ .\n\nبما أن $I$ منتصف $[EF]$ فإن $EI = IF = 9 \\div 2 = 4.5\\text{ cm}$ ."
+      },
+      {
+        "problemAr": "ليكن $(d_1) \\parallel (d_2)$ ومستقيم $(\\Delta)$ بحيث $(\\Delta) \\perp (d_1)$ . ماذا نقول عن $(\\Delta)$ و $(d_2)$ ؟ برّر إجابتك.",
+        "solutionAr": "لدينا $(d_1) \\parallel (d_2)$ و $(\\Delta) \\perp (d_1)$ .\n\nوحسب الخاصية: إذا كان مستقيمان متوازيين فكل مستقيم عمودي على أحدهما يكون عمودياً على الآخر، نستنتج أن $(\\Delta) \\perp (d_2)$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: كتابة $[AB] = 5\\text{ cm}$ ! لا نضع عارضتين عند كتابة الطول، بل نكتب $AB = 5\\text{ cm}$ . كما أن تساوي المسافتين $KA = KB$ لا يعني أن $K$ منتصف $[AB]$ ما لم تكن النقط $A$ و $K$ و $B$ في استقامية ($K \\in [AB]$)!"
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل الشكل المقابل حيث $A$ و $M$ و $B$ في استقامية و $MB = 3.2\\text{ cm}$ . أي عبارة صحيحة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 135\" width=\"320\" height=\"135\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"24\" y1=\"95\" x2=\"296\" y2=\"95\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"60\" y1=\"95\" x2=\"160\" y2=\"32\" stroke=\"#94a3b8\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><line x1=\"260\" y1=\"95\" x2=\"160\" y2=\"32\" stroke=\"#94a3b8\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><line x1=\"107\" y1=\"90\" x2=\"113\" y2=\"100\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"207\" y1=\"90\" x2=\"213\" y2=\"100\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"95\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"160\" cy=\"95\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"260\" cy=\"95\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"160\" cy=\"32\" r=\"4\" fill=\"#2563eb\"/><text x=\"56\" y=\"116\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"156\" y=\"116\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">M</text><text x=\"256\" y=\"116\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"168\" y=\"34\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\">K</text><text x=\"210\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3.2 cm</text><text x=\"98\" y=\"56\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">4 cm</text><text x=\"222\" y=\"56\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">4 cm</text></svg>",
+      "options": [
+        "النقطة $K$ منتصف $[AB]$ لأن $KA = KB$",
+        "طول القطعة $AB = 6.4\\text{ cm}$ و $M$ منتصف $[AB]$",
+        "نكتب $[AB] = 6.4\\text{ cm}$ و $K \\in (AB)$",
+        "طول القطعة $AB = 3.2\\text{ cm}$ و $M \\notin [AB]$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "تساوي الطولين $KA = KB$ لا يكفي ليكون $K$ منتصف القطعة، لأن $K$ لا تنتمي إلى $[AB]$ وليست على استقامة واحدة مع $A$ و $B$ .",
+        "أحسنت! النقط $A$ و $M$ و $B$ في استقامية و $MA = MB = 3.2\\text{ cm}$ ، إذن $M$ منتصف $[AB]$ و $AB = 6.4\\text{ cm}$ .",
+        "فيها خطآن: الطول يُكتب $AB = 6.4\\text{ cm}$ دون عارضتين، والنقطة $K$ لا تنتمي إلى المستقيم $(AB)$ ($K \\notin (AB)$).",
+        "$3.2\\text{ cm}$ هو طول النصف $MB$ فقط، والنقطة $M$ تنتمي إلى القطعة $[AB]$ ."
+      ],
+      "explanationAr": "بما أن $M \\in [AB]$ والتشفير يدل على $MA = MB = 3.2\\text{ cm}$ ، فإن $M$ منتصف $[AB]$ ويكون الطول الكلي $AB = 2 \\times 3.2 = 6.4\\text{ cm}$ . أما $K$ فليست على استقامية مع $A$ و $B$ ."
+    },
+    {
+      "questionAr": "في الشكل المقابل، $(d_1) \\parallel (d_2)$ والمستقيم $(d_3)$ عمودي على $(d_1)$ . ما الوضعية النسبية للمستقيمين $(d_3)$ و $(d_2)$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 140\" width=\"280\" height=\"140\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"32\" y1=\"42\" x2=\"248\" y2=\"42\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"32\" y1=\"104\" x2=\"248\" y2=\"104\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"90\" y1=\"16\" x2=\"90\" y2=\"128\" stroke=\"#0f172a\" stroke-width=\"2\"/><rect x=\"90\" y=\"42\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"226\" y=\"35\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">(d1)</text><text x=\"226\" y=\"97\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">(d2)</text><text x=\"100\" y=\"25\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">(d3)</text><text x=\"180\" y=\"76\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">(d1) // (d2)</text></svg>",
+      "options": [
+        "$(d_3) \\parallel (d_2)$",
+        "لا يتقاطعان أبداً",
+        "$(d_3) \\perp (d_2)$",
+        "يتقاطعان بزاوية حادة"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "المستقيم $(d_3)$ يقطع $(d_1)$ عمودياً، وبما أن $(d_1) \\parallel (d_2)$ فإنه يقطع $(d_2)$ عمودياً أيضاً ولا يوازيه.",
+        "بما أن $(d_3)$ يقطع $(d_1)$ و $(d_1) \\parallel (d_2)$ فإن $(d_3)$ يقطع $(d_2)$ أيضاً.",
+        "ممتاز! حسب الخاصية: إذا كان مستقيمان متوازيين، فكل مستقيم عمودي على أحدهما يكون عمودياً على الآخر.",
+        "الزاوية عند التقاطع مع $(d_2)$ قائمة ($90^\\circ$) وليست حادة."
+      ],
+      "explanationAr": "لدينا $(d_1) \\parallel (d_2)$ و $(d_3) \\perp (d_1)$ ، وحسب خاصية التوازي والتعامد فإن $(d_3)$ يكون عمودياً على $(d_2)$ أيضاً: $(d_3) \\perp (d_2)$ ."
+    },
+    {
+      "questionAr": "النقط $E$ و $F$ و $G$ في استقامية بهذا الترتيب (تقع $F$ بين $E$ و $G$). أي عبارة صحيحة دوماً؟",
+      "options": [
+        "$G \\in [EF]$",
+        "$F \\in [EG]$ و $G \\in [EF)$",
+        "$E \\in [FG)$",
+        "$F \\notin (EG)$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "قطعة المستقيم $[EF]$ محدودة بالطرفين $E$ و $F$ ، ولا تمتد لتشمل النقطة $G$ الواقعة بعد $F$ .",
+        "أحسنت! النقطة $F$ تقع بين $E$ و $G$ فهي تنتمي للقطعة $[EG]$ ، ونصف المستقيم $[EF)$ يبدأ من $E$ ويمتد مروراً بـ $F$ فيشمل $G$ .",
+        "نصف المستقيم $[FG)$ يبدأ من $F$ ويتجه نحو $G$ ، بينما تقع $E$ في الاتجاه المعاكس.",
+        "النقط الثلاث في استقامية، أي أنها تقع كلها على نفس المستقيم $(EG)$ ومنه $F \\in (EG)$ ."
+      ],
+      "explanationAr": "بما أن $F$ تقع بين $E$ و $G$ على نفس المستقيم، فإن $F \\in [EG]$ . وبما أن نصف المستقيم $[EF)$ مبدؤه $E$ ويمتد من جهة $F$ دون حد، فإنه يمر من $G$ ، أي $G \\in [EF)$ ."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "lesson_3ap_t3_time_durations",
+  "slug": "3ap-t3-time-durations",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t3",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: المدخل إلى القسمة، العلاقات الحسابية وقياس المدد",
+  "order": 3,
+  "titleAr": "قياس المدد والزمن: الساعات والدقائق والثواني والرزنامة",
+  "objectives": [
+    "قراءة الساعة ذات العقارب والساعة الرقمية بالتوقيت الصباحي والمسائي وتعليم أحداث في اليوم",
+    "معرفة العلاقات بين وحدات الزمن ($1\\text{ h} = 60\\text{ min}$، $1\\text{ min} = 60\\text{ s}$، واليوم $= 24\\text{ h}$) وإجراء تحويلات بين الساعات والدقائق والثواني",
+    "استعمال الرزنامة (اليوم، الأسبوع، الشهر، السنة) وحساب مدد زمنية بسيطة أو توقيت النهاية باستعمال المخطط الزمني"
+  ],
+  "keywordsAr": [
+    "قياس المدد",
+    "الساعة والدقيقة والثانية",
+    "التحويل الزمني",
+    "الرزنامة",
+    "المخطط الزمني"
+  ],
+  "discover": {
+    "scenarioAr": "يخرج التلاميذ في رحلة مدرسية يوم السبت: تنطلق الحافلة صباحاً على الساعة **$08:15$**، وتستغرق الرحلة **$1\\text{ h } 30\\text{ min}$** للوصول إلى المتحف، ثم يقضي التلاميذ ساعتين ($2\\text{ h}$) في زيارة الأجنحة.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 215\" width=\"520\" height=\"215\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"520\" height=\"215\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(14,14)\"><rect width=\"192\" height=\"187\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"96\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">1. ساعة الانطلاق صباحاً</text><circle cx=\"96\" cy=\"90\" r=\"58\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"2.5\"/><g font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#334155\"><text x=\"96\" y=\"48\">12</text><text x=\"119\" y=\"54\">1</text><text x=\"135\" y=\"71\">2</text><text x=\"141\" y=\"94\">3</text><text x=\"135\" y=\"117\">4</text><text x=\"119\" y=\"133\">5</text><text x=\"96\" y=\"139\">6</text><text x=\"73\" y=\"133\">7</text><text x=\"57\" y=\"117\">8</text><text x=\"51\" y=\"94\">9</text><text x=\"57\" y=\"71\">10</text><text x=\"73\" y=\"54\">11</text></g><line x1=\"96\" y1=\"90\" x2=\"71.4\" y2=\"100.2\" stroke=\"#dc2626\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"96\" y1=\"90\" x2=\"134.5\" y2=\"90\" stroke=\"#2563eb\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><circle cx=\"96\" cy=\"90\" r=\"4\" fill=\"#1e293b\"/><rect x=\"48\" y=\"156\" width=\"96\" height=\"22\" rx=\"5\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><text x=\"96\" y=\"171\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">08:15</text></g><g transform=\"translate(218,14)\"><rect width=\"288\" height=\"187\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"144\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">2. المخطط الزمني للرحلة (+ 1 h 30 min)</text><line x1=\"24\" y1=\"108\" x2=\"264\" y2=\"108\" stroke=\"#1e293b\" stroke-width=\"2.2\"/><polygon points=\"268,108 259,103 259,113\" fill=\"#1e293b\"/><circle cx=\"46\" cy=\"108\" r=\"5\" fill=\"#2563eb\"/><text x=\"46\" y=\"130\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">08:15</text><circle cx=\"144\" cy=\"108\" r=\"5\" fill=\"#475569\"/><text x=\"144\" y=\"130\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\">09:15</text><circle cx=\"240\" cy=\"108\" r=\"5\" fill=\"#059669\"/><text x=\"240\" y=\"130\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\">09: ?</text><path d=\"M 46 100 Q 95 54 144 100\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"95\" y=\"68\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">+ 1 h</text><path d=\"M 144 100 Q 192 54 240 100\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"192\" y=\"68\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#059669\">+ 30 min</text><rect x=\"30\" y=\"146\" width=\"228\" height=\"26\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#6ee7b7\"/><text x=\"144\" y=\"163\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\">الوقت في الصباح: 08:15 ← المساء: 20:15</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "قضى التلاميذ ساعتين ($2\\text{ h}$) في زيارة الأجنحة. كم دقيقة تساوي $2\\text{ h}$؟ (اكتب العدد فقط)",
+        "hintAr": "تذكّر أن $1\\text{ h} = 60\\text{ min}$، ثم احسب $2 \\times 60$.",
+        "expectedInput": "120",
+        "revealAr": "$2\\text{ h} = 2 \\times 60\\text{ min} = 120\\text{ min}$."
+      },
+      {
+        "promptAr": "انطلقت الحافلة على الساعة $08:15$ واستغرقت $1\\text{ h } 30\\text{ min}$. بعد إضافة $1\\text{ h}$ نصل إلى $09:15$، ثم نضيف $30\\text{ min}$. ما هو رقم الدقائق عند الوصول ($09:?$)؟ (اكتب العدد فقط)",
+        "hintAr": "اجمع الدقائق: $15 + 30$.",
+        "expectedInput": "45",
+        "revealAr": "تصل الحافلة على الساعة $09:45$ (التاسعة وخمس وأربعون دقيقة صباحاً)."
+      },
+      {
+        "promptAr": "انتهت الأنشطة بعد الظهر على الساعة الثانية والنصف مساءً ($2:30$ مساءً). ما هو رقم الساعات الموافق لها في التوقيت ذي $24$ ساعة؟ (اكتب عدد الساعات فقط)",
+        "hintAr": "في التوقيت المسائي نضيف $12$ إلى عدد الساعات: احسب $2 + 12$.",
+        "expectedInput": "14",
+        "revealAr": "الساعة الثانية والنصف مساءً تُكتب $14:30$؛ لأن $2 + 12 = 14$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "العلاقات الأساسية بين وحدات الزمن: $1\\text{ h} = 60\\text{ min}$، و $1\\text{ min} = 60\\text{ s}$، واليوم الكامل $= 24\\text{ h}$.",
+      "في **الساعة ذات العقارب**، يشير العقرب القصير إلى **الساعات**، والعقرب الطويل إلى **الدقائق** (حيث تزداد كل تدريجة رقمية بـ $5$ دقائق). وفي **التوقيت المسائي** نضيف $12$ إلى عدد الساعات.",
+      "في **الرزنامة**: الأسبوع فيه $7$ أيام، والشهر فيه $30$ أو $31$ يوماً (وفيفري فيه $28$ أو $29$ يوماً)، والسنة فيها $12$ شهراً ($365$ أو $366$ يوماً).",
+      "لحساب توقيت النهاية أو المدة المستغرقة، نرسم **المخطط الزمني** ونقفز بالساعات الكاملة أو إلى الساعة الموالية أولاً، ثم نكمل بالدقائق."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\" width=\"520\" height=\"190\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(14,14)\"><rect width=\"164\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"82\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">وحدات الزمن</text><rect x=\"14\" y=\"32\" width=\"136\" height=\"26\" rx=\"5\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/><text x=\"82\" y=\"49\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">1 h = 60 min</text><rect x=\"14\" y=\"64\" width=\"136\" height=\"26\" rx=\"5\" fill=\"#ecfdf5\" stroke=\"#6ee7b7\"/><text x=\"82\" y=\"81\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\">1 min = 60 s</text><rect x=\"14\" y=\"96\" width=\"136\" height=\"26\" rx=\"5\" fill=\"#fff7ed\" stroke=\"#fdba74\"/><text x=\"82\" y=\"113\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\">اليوم = 24 h</text><rect x=\"14\" y=\"128\" width=\"136\" height=\"26\" rx=\"5\" fill=\"#f5f3ff\" stroke=\"#c4b5fd\"/><text x=\"82\" y=\"145\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#5b21b6\">الأسبوع = 7 أيام</text></g><g transform=\"translate(190,14)\"><rect width=\"164\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"82\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">الرزنامة</text><rect x=\"14\" y=\"34\" width=\"136\" height=\"34\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#10b981\"/><text x=\"82\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\">السنة = 12 شهراً</text><text x=\"82\" y=\"90\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">أشهر بـ 30 يوماً</text><text x=\"82\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">أشهر بـ 31 يوماً</text><text x=\"82\" y=\"130\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">فيفري: 28 أو 29 يوماً</text><text x=\"82\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">السنة: 365 أو 366 يوماً</text></g><g transform=\"translate(366,14)\"><rect width=\"140\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"70\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#d97706\">صباحاً ومساءً</text><circle cx=\"70\" cy=\"72\" r=\"38\" fill=\"#fffbeb\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"70\" y=\"46\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\">12</text><text x=\"98\" y=\"75\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\">3</text><text x=\"70\" y=\"103\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\">6</text><text x=\"42\" y=\"75\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\">9</text><line x1=\"70\" y1=\"72\" x2=\"86\" y2=\"72\" stroke=\"#dc2626\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"70\" y1=\"72\" x2=\"70\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><circle cx=\"70\" cy=\"72\" r=\"3\" fill=\"#1e293b\"/><text x=\"70\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">صباحاً: 03:00</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#9a3412\">مساءً: 15:00 (+12)</text></g></svg>",
+    "visualCaptionAr": "وحدات قياس الزمن، مكونات الرزنامة، والتمييز بين التوقيت الصباحي والمسائي.",
+    "examples": [
+      {
+        "problemAr": "حوّل إلى الدقائق: $1\\text{ h } 25\\text{ min}$، وحوّل إلى الثواني: $3\\text{ min}$.",
+        "solutionAr": "بما أن $1\\text{ h} = 60\\text{ min}$، فإن $1\\text{ h } 25\\text{ min} = 60 + 25 = 85\\text{ min}$. وبما أن $1\\text{ min} = 60\\text{ s}$، فإن $3\\text{ min} = 3 \\times 60 = 180\\text{ s}$."
+      },
+      {
+        "problemAr": "بدأ شريط وثائقي على الساعة $16:40$ وانتهى على الساعة $18:10$. ما هي مدته؟",
+        "solutionAr": "بالمخطط الزمني: من $16:40$ إلى $17:00$ توجد $20\\text{ min}$، ومن $17:00$ إلى $18:10$ توجد $1\\text{ h } 10\\text{ min}$. المدة الكلية هي $1\\text{ h } 30\\text{ min}$."
+      }
+    ],
+    "watchOutAr": "انتبه! الساعة تساوي $60$ دقيقة والدقيقة تساوي $60$ ثانية، وليس $100$! لذلك لا تكتب أبداً $14:80$، بل بادل كل $60\\text{ min}$ بـ $1\\text{ h}$."
+  },
+  "practice": [
+    {
+      "questionAr": "انظر إلى الساعة ذات العقارب في الفترة الصباحية: ما التوقيت الذي تشير إليه؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 190\" width=\"340\" height=\"190\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"340\" height=\"190\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><circle cx=\"170\" cy=\"95\" r=\"70\" fill=\"#ffffff\" stroke=\"#1e293b\" stroke-width=\"3\"/><g font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#1e293b\"><text x=\"170\" y=\"45\">12</text><text x=\"197\" y=\"52\">1</text><text x=\"217\" y=\"72\">2</text><text x=\"224\" y=\"99\">3</text><text x=\"217\" y=\"126\">4</text><text x=\"197\" y=\"146\">5</text><text x=\"170\" y=\"153\">6</text><text x=\"143\" y=\"146\">7</text><text x=\"123\" y=\"126\">8</text><text x=\"116\" y=\"99\">9</text><text x=\"123\" y=\"72\">10</text><text x=\"143\" y=\"52\">11</text></g><line x1=\"170\" y1=\"95\" x2=\"149.9\" y2=\"71.0\" stroke=\"#dc2626\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><line x1=\"170\" y1=\"95\" x2=\"130.0\" y2=\"118.1\" stroke=\"#2563eb\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"170\" cy=\"95\" r=\"5\" fill=\"#1e293b\"/><text x=\"285\" y=\"85\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">قصير: الساعات</text><text x=\"285\" y=\"108\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">طويل: الدقائق</text></svg>",
+      "options": [
+        "$10:08$",
+        "$10:40$",
+        "$11:40$",
+        "$08:50$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه! العقرب الطويل يشير إلى $8$، ونحسب الدقائق بالضرب في $5$: $8 \\times 5 = 40\\text{ min}$ وليس $8$ دقائق.",
+        "أحسنت! العقرب القصير بين $10$ و $11$ (الساعة $10$)، والعقرب الطويل على $8$ ($8 \\times 5 = 40$ دقيقة)، فالتوقيت هو $10:40$.",
+        "العقرب القصير يقترب من $11$ لأنه مر أكثر من نصف ساعة، لكنه لم يصل بعد إلى $11$؛ فالساعة ما زالت $10$.",
+        "عكست العقربين! الأحمر القصير للساعات (بين $10$ و $11$)، والأزرق الطويل للدقائق (على $8$)."
+      ],
+      "explanationAr": "العقرب القصير (الساعات) تجاوز $10$ ولم يبلغ $11$ بعد، إذن الساعة هي $10$. والعقرب الطويل (الدقائق) يشير إلى $8$، وبما أن كل رقم يساوي $5$ دقائق فإن $8 \\times 5 = 40$ دقيقة. التوقيت هو $10:40$."
+    },
+    {
+      "questionAr": "استغرق متسابق في الجري مدة $2\\text{ min } 15\\text{ s}$. كم تساوي هذه المدة بالثواني فقط؟",
+      "options": [
+        "$215\\text{ s}$",
+        "$75\\text{ s}$",
+        "$135\\text{ s}$",
+        "$125\\text{ s}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "الدقيقة تساوي $60$ ثانية وليس $100$ ثانية! لا نلصق الرقمين $2$ و $15$.",
+        "حسبت دقيقة واحدة ($60\\text{ s} + 15\\text{ s} = 75\\text{ s}$) ونسيت أن لدينا دقيقتين!",
+        "ممتاز! $2\\text{ min} = 2 \\times 60 = 120\\text{ s}$، وبإضافة $15\\text{ s}$ نحصل على $135\\text{ s}$.",
+        "راجِع الجمع: $120 + 15 = 135$ وليس $125$."
+      ],
+      "explanationAr": "نعلم أن $1\\text{ min} = 60\\text{ s}$، إذن $2\\text{ min} = 2 \\times 60 = 120\\text{ s}$. نضيف الثواني الباقية: $120 + 15 = 135\\text{ s}$."
+    },
+    {
+      "questionAr": "بدأت حصة الرسم على الساعة $14:35$ ودامت $45\\text{ min}$. في أي ساعة تنتهي الحصة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 125\" width=\"380\" height=\"125\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"380\" height=\"125\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><line x1=\"28\" y1=\"76\" x2=\"348\" y2=\"76\" stroke=\"#1e293b\" stroke-width=\"2.2\"/><polygon points=\"354,76 344,71 344,81\" fill=\"#1e293b\"/><circle cx=\"56\" cy=\"76\" r=\"5\" fill=\"#2563eb\"/><text x=\"56\" y=\"100\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">14:35</text><circle cx=\"190\" cy=\"76\" r=\"5\" fill=\"#475569\"/><text x=\"190\" y=\"100\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#334155\">15:00</text><circle cx=\"318\" cy=\"76\" r=\"5\" fill=\"#059669\"/><text x=\"318\" y=\"100\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\">?</text><path d=\"M 56 68 Q 123 22 190 68\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"123\" y=\"36\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">+ 25 min</text><path d=\"M 190 68 Q 254 22 318 68\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"254\" y=\"36\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#059669\">+ 20 min</text></svg>",
+      "options": [
+        "$14:80$",
+        "$15:10$",
+        "$15:25$",
+        "$15:20$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "لا نكتب $80$ في خانة الدقائق! كل $60$ دقيقة نبادلها بـ $1$ ساعة ($80\\text{ min} = 1\\text{ h } 20\\text{ min}$).",
+        "بعد الوصول إلى $15:00$، يبقى من الـ $45$ دقيقة: $45 - 25 = 20$ دقيقة وليس $10$ دقائق.",
+        "انتبه! أضفنا $25\\text{ min}$ للوصول إلى $15:00$، والباقي لإتمام $45\\text{ min}$ هو $20\\text{ min}$ وليس $25\\text{ min}$.",
+        "أحسنت! من $14:35$ نضيف $25\\text{ min}$ لنبلغ $15:00$، ثم نضيف الـ $20\\text{ min}$ الباقية فنصل إلى $15:20$."
+      ],
+      "explanationAr": "نفكك $45\\text{ min}$ إلى $25\\text{ min} + 20\\text{ min}$: نضيف $25\\text{ min}$ إلى $14:35$ فنبلغ تمام الساعة $15:00$، ثم نضيف $20\\text{ min}$ فتنتهي الحصة على الساعة $15:20$."
+    }
+  ]
+}

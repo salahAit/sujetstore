@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "3ap",
+    "yearName": "السنة الثالثة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "أكمل جدول الضعف والنصف، ثم أتمم العلاقات الحسابية التالية:",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "العدد",
+            "نصفه",
+            "ضعفه"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "$3560$",
+              {
+                "content": "........",
+                "answer": "$1780$",
+                "mark": "0.5"
+              },
+              {
+                "content": "........",
+                "answer": "$7120$",
+                "mark": "0.5"
+              }
+            ],
+            [
+              {
+                "content": "........",
+                "answer": "$2580$",
+                "mark": "0.5"
+              },
+              "$1290$",
+              {
+                "content": "........",
+                "answer": "$5160$",
+                "mark": "0.5"
+              }
+            ]
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        },
+        {
+          "type": "text",
+          "content": "أكمل المساويات التالية:\n\n- $4730 + \".....\" = 5000$\n\n- $41 times 30 = \".....\"$",
+          "answer": "- $4730 + 270 = 5000$\n\n- $41 times 30 = 1230$",
+          "mark": "1"
+        }
+      ],
+      "id": "exam-3ap-supervised_test-t3-hard-603-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "لاحظ الشكل المرسوم وأجب عن أسئلة حساب المحيط مع كتابة القانون والوحدة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) احسب محيط المستطيل #text(dir: ltr)[EFGH] المرسوم أمامك، طوله #text(dir: ltr)[42 m] وعرضه #text(dir: ltr)[26 m].",
+              "answer": "نصف المحيط: $42 + 26 = 68$ m.\n\nمحيط المستطيل: $68 times 2 = 136$ m.",
+              "mark": "2"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t3_perim_hard_s472969.svg",
+              "caption": "المستطيل EFGH"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) احسب محيط مربع طول ضلعه #text(dir: ltr)[12 cm].",
+          "answer": "محيط المربع: $12 times 4 = 48$ cm.",
+          "mark": "1"
+        }
+      ],
+      "id": "exam-3ap-supervised_test-t3-hard-603-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "اقرأ الوضعية وتأمل المخطط المرفق ثم أجب عن الأسئلة الثلاثة بكتابة العمليات والوحدة:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "تعاون عدة إخوة على إحاطة بستانهم المستطيل بسياج معدني، طولها #text(dir: ltr)[24 m] وعرضها #text(dir: ltr)[16 m]، مع ترك مدخل عرضه #text(dir: ltr)[4 m] دون تسييج. سعر المتر الواحد من السياج هو #text(dir: ltr)[200 DA]، وثمن البوابة الخشبية هو #text(dir: ltr)[8800 DA]. تقاسم $8$ إخوة التكلفة الكلية بالتساوي."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/3ap_t3_integ_hard_s164159.svg",
+              "caption": "مخطط بستان العائلة"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب محيط بستان العائلة، ثم استنتج طول السياج اللازم بعد ترك المدخل.",
+          "answer": "1) المحيط: $(24 + 16) times 2 = 40 times 2 = 80$ #text(dir: ltr)[m].\n\nطول السياج: $80 - 4 = 76$ #text(dir: ltr)[m].",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب ثمن السياج، ثم احسب التكلفة الإجمالية بعد إضافة ثمن البوابة الخشبية.",
+          "answer": "2) ثمن السياج: $76 times 200 = 15200$ #text(dir: ltr)[DA].\n\nالتكلفة الإجمالية: $15200 + 8800 = 24000$ #text(dir: ltr)[DA].",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "3) ما هو المبلغ الذي يدفعه كل أخ؟",
+          "answer": "3) حصة كل أخ: $24000 div 8 = 3000$ #text(dir: ltr)[DA].",
+          "mark": "1.25"
+        }
+      ],
+      "id": "exam-3ap-supervised_test-t3-hard-603-ex-3"
+    }
+  ]
+}

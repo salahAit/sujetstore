@@ -1,0 +1,131 @@
+{
+  "id": "lesson_3am_t2_circumcircle_right_triangle",
+  "slug": "3am-t2-circumcircle-right-triangle",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t2",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: المثلث القائم والدائرة وخاصية فيثاغورس وجيب تمام زاوية حادة",
+  "order": 3,
+  "titleAr": "الدائرة المحيطة بالمثلث القائم، خاصية المتوسط المتعلق بالوتر، بعد نقطة عن مستقيم والمماس",
+  "objectives": [
+    "معرفة وتوظيف خاصية الدائرة المحيطة بالمثلث القائم (وتره قطر لها) والخاصية العكسية لتمييز المثلث القائم أو إثبات انتماء نقطة إلى دائرة",
+    "معرفة وتوظيف خاصية المتوسط المتعلق بالوتر في مثلث قائم (طوله يساوي نصف طول الوتر) والخاصية العكسية لها في حساب الأطوال والبرهان",
+    "تعريف وتعيين بعد نقطة عن مستقيم، وتحديد الوضعيات النسبية لمستقيم ودائرة، وإنشاء مماس لدائرة في نقطة منها مع التبرير"
+  ],
+  "keywordsAr": [
+    "الدائرة المحيطة بالمثلث القائم",
+    "المتوسط المتعلق بالوتر",
+    "تمييز المثلث القائم",
+    "بعد نقطة عن مستقيم",
+    "الوضعيات النسبية لمستقيم ودائرة",
+    "مماس لدائرة"
+  ],
+  "discover": {
+    "scenarioAr": "في تصميم ساحة دائرية مركزها $O$ وقطرها $[BC]$ طوله $10\\text{ m}$، ثبّت المهندس عمود إنارة في نقطة $A$ من محيط الدائرة ووصلها بالمركز عبر الممر $[AO]$. وفي حوض مجاور مركزه $O'$ ونصف قطره $4\\text{ m}$، يمر رصيف مستقيم $(d)$ يلامس الحوض في نقطة واحدة $T$. لنكتشف طبيعة المثلث $ABC$، وطول الممر $[AO]$، وخواص المماس والوضعيات النسبية لمستقيم ودائرة.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 215\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"215\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"12\" y=\"12\" width=\"232\" height=\"191\" rx=\"8\" fill=\"#ffffff\" stroke=\"#bfdbfe\" stroke-width=\"1.4\"/><text x=\"128\" y=\"31\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">المثلث القائم والدائرة المحيطة والمتوسط</text><circle cx=\"125\" cy=\"118\" r=\"65\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><polygon points=\"86,66 60,118 190,118\" fill=\"#eff6ff\" fill-opacity=\"0.65\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"86\" y1=\"66\" x2=\"125\" y2=\"118\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4 3\"/><polyline points=\"81.5,74.9 90.4,79.4 94.9,70.5\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><line x1=\"90\" y1=\"113\" x2=\"95\" y2=\"123\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"155\" y1=\"113\" x2=\"160\" y2=\"123\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"101\" y1=\"95\" x2=\"110\" y2=\"89\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><circle cx=\"125\" cy=\"118\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"86\" cy=\"66\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"60\" cy=\"118\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"190\" cy=\"118\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"78\" y=\"58\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">A</text><text x=\"46\" y=\"124\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">B</text><text x=\"196\" y=\"124\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">C</text><text x=\"121\" y=\"135\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#dc2626\">O</text><text x=\"125\" y=\"196\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#1e40af\">BC = 10 m   |   OA = OB = OC</text><rect x=\"254\" y=\"12\" width=\"214\" height=\"191\" rx=\"8\" fill=\"#ffffff\" stroke=\"#bbf7d0\" stroke-width=\"1.4\"/><text x=\"361\" y=\"31\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">المماس (d) والوضع الخارجي (Δ)</text><circle cx=\"324\" cy=\"116\" r=\"44\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"2\"/><line x1=\"324\" y1=\"116\" x2=\"368\" y2=\"116\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><line x1=\"368\" y1=\"48\" x2=\"368\" y2=\"184\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><line x1=\"414\" y1=\"48\" x2=\"414\" y2=\"184\" stroke=\"#64748b\" stroke-width=\"1.8\" stroke-dasharray=\"5 3\"/><polyline points=\"359,116 359,107 368,107\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><circle cx=\"324\" cy=\"116\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"368\" cy=\"116\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"311\" y=\"120\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">O'</text><text x=\"344\" y=\"109\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\">4 m</text><text x=\"374\" y=\"129\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\">T</text><text x=\"373\" y=\"60\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\">(d)</text><text x=\"420\" y=\"60\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#64748b\">(Δ)</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في الساحة الدائرية، القطعة $[BC]$ قطر للدائرة المحيطة بالمثلث $ABC$ والنقطة $A$ تنتمي إلى هذه الدائرة. ما قيس الزاوية $\\widehat{BAC}$ بالدرجات؟",
+        "hintAr": "كل مثلث مرسوم داخل دائرة وأحد أضلاعه قطر لها يكون قائماً في الرأس الثالث.",
+        "expectedInput": "90",
+        "revealAr": "حسب الخاصية العكسية للدائرة المحيطة بالمثلث القائم، المثلث $ABC$ قائم في $A$، إذن $\\widehat{BAC} = 90^\\circ$."
+      },
+      {
+        "promptAr": "في المثلث القائم $ABC$، طول الوتر $BC = 10\\text{ m}$ و $O$ منتصف $[BC]$. ما طول المتوسط $[AO]$ المتعلق بالوتر بالمتر؟",
+        "hintAr": "في المثلث القائم، طول المتوسط المتعلق بالوتر يساوي نصف طول الوتر.",
+        "expectedInput": "5",
+        "revealAr": "طول المتوسط المتعلق بالوتر هو $AO = \\frac{BC}{2} = \\frac{10}{2} = 5\\text{ m}$ (وهو نفسه نصف قطر الدائرة المحيطة)."
+      },
+      {
+        "promptAr": "المستقيم $(d)$ مماس للدائرة التي مركزها $O'$ ونصف قطرها $R' = 4\\text{ m}$ في النقطة $T$. ما هو بعد المركز $O'$ عن المستقيم $(d)$ بالمتر؟",
+        "hintAr": "المماس عمودي على نصف القطر $[O'T]$ في نقطة التماس $T$.",
+        "expectedInput": "4",
+        "revealAr": "بما أن $(d)$ عمودي على $[O'T]$ في $T$، فإن بعد المركز $O'$ عن المستقيم $(d)$ هو الطول $O'T = 4\\text{ m}$."
+      },
+      {
+        "promptAr": "إذا كان المستقيم $(\\Delta)$ يبعد عن المركز $O'$ بمسافة $6\\text{ m}$ (علماً أن نصف القطر $R' = 4\\text{ m}$)، فكم نقطة مشتركة بين الدائرة والمستقيم $(\\Delta)$؟",
+        "hintAr": "قارن البعد $6\\text{ m}$ مع نصف القطر $4\\text{ m}$.",
+        "expectedInput": "0",
+        "revealAr": "بما أن $6 > 4$ (بعد المركز أكبر من نصف القطر)، فالمستقيم $(\\Delta)$ يقع خارج الدائرة ولا يقطعها أبداً، أي عدد النقاط المشتركة هو $0$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الدائرة المحيطة بالمثلث القائم وخاصيتها العكسية**: إذا كان المثلث $ABC$ قائماً في $A$، فإن مركز الدائرة المحيطة به هو **منتصف وتره** $[BC]$ ونصف قطرها $R = \\frac{BC}{2}$. **عكسياً**: إذا كان أحد أضلاع مثلث قطراً لدائرة وكان الرأس الثالث نقطة من هذه الدائرة، فإن المثلث قائم في هذا الرأس.",
+      "**خاصية المتوسط المتعلق بالوتر وخاصيتها العكسية**: في المثلث القائم، طول المتوسط المتعلق بالوتر يساوي **نصف طول الوتر** ($AO = \\frac{BC}{2}$). **عكسياً**: إذا كان طول المتوسط المتعلق بأحد أضلاع مثلث يساوي نصف طول هذا الضلع، فإن المثلث قائم في الرأس المقابل لهذا الضلع.",
+      "**بعد نقطة عن مستقيم**: هو طول القطعة المستقيمة العمودية النازلة من هذه النقطة على المستقيم، وهو **أقصر مسافة** بين النقطة وأي نقطة من هذا المستقيم.",
+      "**الوضعيات النسبية لمستقيم $(d)$ ودائرة مركزها $O$ ونصف قطرها $R$** (ليكن $h$ بعد $O$ عن $(d)$): إذا كان $h < R$ فالمستقيم **قاطع** للدائرة في نقطتين؛ إذا كان $h = R$ فالمستقيم **مماس** للدائرة في نقطة واحدة؛ إذا كان $h > R$ فالمستقيم **خارج** الدائرة ($0$ نقطة مشتركة).",
+      "**المماس لدائرة**: المماس لدائرة مركزها $O$ في نقطة $T$ منها هو المستقيم الذي يشمل $T$ ويكون **عمودياً** على نصف القطر $[OT]$."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"190\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"12\" y=\"14\" width=\"148\" height=\"162\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"86\" y=\"35\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">1. قاطع (h &lt; R)</text><circle cx=\"86\" cy=\"102\" r=\"42\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"32\" y1=\"78\" x2=\"140\" y2=\"78\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"86\" y1=\"102\" x2=\"86\" y2=\"78\" stroke=\"#0f172a\" stroke-width=\"1.6\" stroke-dasharray=\"3 2\"/><circle cx=\"86\" cy=\"102\" r=\"3\" fill=\"#0f172a\"/><circle cx=\"51\" cy=\"78\" r=\"3.2\" fill=\"#dc2626\"/><circle cx=\"121\" cy=\"78\" r=\"3.2\" fill=\"#dc2626\"/><text x=\"86\" y=\"164\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">نقطتان مشتركتان</text><rect x=\"166\" y=\"14\" width=\"148\" height=\"162\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"240\" y=\"35\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">2. مماس (h = R)</text><circle cx=\"240\" cy=\"102\" r=\"42\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><line x1=\"186\" y1=\"60\" x2=\"294\" y2=\"60\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"240\" y1=\"102\" x2=\"240\" y2=\"60\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><polyline points=\"240,69 249,69 249,60\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.4\"/><circle cx=\"240\" cy=\"102\" r=\"3\" fill=\"#0f172a\"/><circle cx=\"240\" cy=\"60\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"240\" y=\"164\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#166534\" direction=\"rtl\" unicode-bidi=\"plaintext\">نقطة تماس واحدة (عمودي)</text><rect x=\"320\" y=\"14\" width=\"148\" height=\"162\" rx=\"8\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"394\" y=\"35\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#991b1b\" direction=\"rtl\" unicode-bidi=\"plaintext\">3. خارجي (h &gt; R)</text><circle cx=\"394\" cy=\"112\" r=\"38\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.8\"/><line x1=\"340\" y1=\"56\" x2=\"448\" y2=\"56\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"394\" y1=\"112\" x2=\"394\" y2=\"56\" stroke=\"#0f172a\" stroke-width=\"1.6\" stroke-dasharray=\"3 2\"/><circle cx=\"394\" cy=\"112\" r=\"3\" fill=\"#0f172a\"/><text x=\"394\" y=\"164\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#991b1b\" direction=\"rtl\" unicode-bidi=\"plaintext\">0 نقطة مشتركة</text></svg>",
+    "visualCaptionAr": "الوضعيات النسبية الثلاث لمستقيم ودائرة بدلالة المسافة $h$ بين المركز والمستقيم ونصف القطر $R$",
+    "examples": [
+      {
+        "problemAr": "في مثلث $EFG$، طول الضلع $FG = 8.4\\text{ cm}$، والنقطة $M$ منتصف $[FG]$ حيث $EM = 4.2\\text{ cm}$. برّر أن المثلث $EFG$ قائم، وحدد وتره ونصف قطر الدائرة المحيطة به.",
+        "solutionAr": "بما أن $M$ منتصف $[FG]$، فإن القطعة $[EM]$ هي المتوسط المتعلق بالضلع $[FG]$.\n\nولدينا $EM = 4.2 = \\frac{8.4}{2} = \\frac{FG}{2}$.\n\nحسب الخاصية العكسية للمتوسط المتعلق بالوتر، فإن المثلث $EFG$ قائم في $E$ ووتره $[FG]$. ونصف قطر الدائرة المحيطة به هو $R = EM = 4.2\\text{ cm}$."
+      },
+      {
+        "problemAr": "دائرة $(C)$ مركزها $O$ ونصف قطرها $R = 3.5\\text{ cm}$، و $A$ نقطة من $(C)$. أنشأنا المستقيم $(d)$ المماس للدائرة $(C)$ في $A$، واخترنا نقطة $B$ من $(d)$ حيث $AB = 3.5\\text{ cm}$. ما طبيعة المثلث $OAB$؟",
+        "solutionAr": "بما أن $(d)$ مماس للدائرة $(C)$ في $A$، فإنه عمودي على نصف القطر $[OA]$ في النقطة $A$، أي $\\widehat{OAB} = 90^\\circ$.\n\nوبما أن $OA = R = 3.5\\text{ cm}$ و $AB = 3.5\\text{ cm}$، فإن المثلث $OAB$ قائم في $A$ ومتساوي الساقين."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: تطبيق خاصية «طول المتوسط يساوي نصف الضلع» على أي متوسط في المثلث القائم! هذه الخاصية تتحقق فقط مع **المتوسط المتعلق بالوتر** (المرسوم من رأس الزاوية القائمة نحو منتصف الوتر). كما يجب الانتباه في التمارين إلى المعطى هل هو **نصف القطر** $R$ أم **القطر** $D$ قبل مقارنته ببعد المركز عن المستقيم."
+  },
+  "practice": [
+    {
+      "questionAr": "في الشكل المقابل، النقطة $N$ منتصف القطعة $[LM]$ بحيث $LN = NM = KN = 4.5\\text{ cm}$. أيٌّ من العبارات الآتية صحيحة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 170\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"320\" height=\"170\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><polygon points=\"94,42 50,130 270,130\" fill=\"#eff6ff\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"94\" y1=\"42\" x2=\"160\" y2=\"130\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"101\" y1=\"125\" x2=\"107\" y2=\"135\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"211\" y1=\"125\" x2=\"217\" y2=\"135\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"122\" y1=\"89\" x2=\"132\" y2=\"83\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><circle cx=\"94\" cy=\"42\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"50\" cy=\"130\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"270\" cy=\"130\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"160\" cy=\"130\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"90\" y=\"32\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">K</text><text x=\"36\" y=\"138\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">L</text><text x=\"276\" y=\"138\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">M</text><text x=\"155\" y=\"150\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\">N</text><text x=\"136\" y=\"76\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#dc2626\">4.5 cm</text><text x=\"102\" y=\"152\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#1e40af\">4.5 cm</text><text x=\"216\" y=\"152\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#1e40af\">4.5 cm</text></svg>",
+      "options": [
+        "المثلث $KLM$ قائم في $K$ وطول وتره $LM = 9\\text{ cm}$",
+        "المثلث $KLM$ قائم في $L$ وطول وتره $KM = 9\\text{ cm}$",
+        "المثلث $KLM$ متقايس الأضلاع ومحيطه $13.5\\text{ cm}$",
+        "المثلث $KLM$ قائم في $K$ وطول وتره $LM = 4.5\\text{ cm}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! بما أن $LM = 4.5 + 4.5 = 9\\text{ cm}$ والمتوسط $KN = 4.5\\text{ cm} = \\frac{LM}{2}$، فالمثلث قائم في الرأس المقابل $K$.",
+        "الزاوية القائمة تقع في الرأس الذي ينطلق منه المتوسط $[KN]$، أي في $K$ وليس في $L$.",
+        "المتوسط $[KN]$ يساوي نصف $[LM]$ وليس بالضرورة أن تساوي الأضلاع $KL$ و $KM$ طول $LM$.",
+        "القطعة $LN = 4.5\\text{ cm}$ هي نصف الضلع $[LM]$، إذن الطول الكلي $LM = 4.5 \\times 2 = 9\\text{ cm}$."
+      ],
+      "explanationAr": "لدينا $LM = LN + NM = 4.5 + 4.5 = 9\\text{ cm}$، وطول المتوسط المتعلق به $KN = 4.5\\text{ cm} = \\frac{LM}{2}$. حسب الخاصية العكسية للمتوسط المتعلق بالوتر، فإن المثلث $KLM$ قائم في $K$ ووتره $[LM]$."
+    },
+    {
+      "questionAr": "دائرة $(C)$ مركزها $O$ و**قطرها** $D = 10\\text{ cm}$. إذا كان بعد المركز $O$ عن المستقيم $(d)$ هو $OH = 5.2\\text{ cm}$، فما الوضعية النسبية للمستقيم $(d)$ والدائرة $(C)$؟",
+      "options": [
+        "المستقيم $(d)$ قاطع للدائرة في نقطتين",
+        "المستقيم $(d)$ مماس للدائرة في نقطة واحدة",
+        "المستقيم $(d)$ يقع خارج الدائرة ولا يقطعها",
+        "المستقيم $(d)$ يمر بالمركز $O$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "يكون المستقيم قاطعاً فقط إذا كان $OH < R$. انتبه: $10\\text{ cm}$ هو القطر، إذن نصف القطر $R = 5\\text{ cm}$!",
+        "يكون المستقيم مماساً فقط إذا كان $OH = R = 5\\text{ cm}$، بينما هنا $5.2 > 5$.",
+        "ممتاز! نصف القطر هو $R = 10 \\div 2 = 5\\text{ cm}$، وبما أن $5.2 > 5$ فالمستقيم خارج الدائرة.",
+        "لو مر المستقيم بالمركز $O$ لكان بعد المركز عنه معدوماً ($OH = 0\\text{ cm}$)."
+      ],
+      "explanationAr": "نحسب أولاً نصف قطر الدائرة: $R = \\frac{D}{2} = \\frac{10}{2} = 5\\text{ cm}$. وبما أن بعد المركز عن المستقيم $OH = 5.2\\text{ cm}$ أكبر من نصف القطر $5\\text{ cm}$، فإن المستقيم $(d)$ يقع خارج الدائرة ولا يقطعها."
+    },
+    {
+      "questionAr": "في الشكل المقابل، المستقيم $(d)$ مماس للدائرة $(C)$ ذات المركز $O$ في النقطة $T$، وتنتمي النقطة $S$ إلى $(d)$ بحيث $\\widehat{OST} = 35^\\circ$. ما قيس الزاوية $\\widehat{TOS}$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 165\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"280\" height=\"165\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><circle cx=\"100\" cy=\"98\" r=\"52\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"35\" y1=\"46\" x2=\"245\" y2=\"46\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><polygon points=\"100,98 100,46 174,46\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><path d=\"M 152 46 A 22 22 0 0 0 156 58.6\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"134\" y=\"63\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#16a34a\">35°</text><circle cx=\"100\" cy=\"98\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"100\" cy=\"46\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"174\" cy=\"46\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"87\" y=\"107\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">O</text><text x=\"96\" y=\"36\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#dc2626\">T</text><text x=\"176\" y=\"36\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#0f172a\">S</text><text x=\"248\" y=\"50\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\">(d)</text></svg>",
+      "options": [
+        "$35^\\circ$",
+        "$45^\\circ$",
+        "$65^\\circ$",
+        "$55^\\circ$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "يكون قيس الزاوية $35^\\circ$ لو كان المثلث $OTS$ متساوي الساقين قاعدته $[OS]$، وهذا غير معطى.",
+        "تحقق من الطرح: $90 - 35 = 55$ وليس $45$.",
+        "انتبه: مجموع قيسي الزاويتين الحادتين في المثلث القائم $90^\\circ$ وليس $100^\\circ$.",
+        "أحسنت! لأن $(d)$ مماس في $T$ فهو عمودي على $[OT]$ أي $\\widehat{OTS} = 90^\\circ$، ومنه $\\widehat{TOS} = 90^\\circ - 35^\\circ = 55^\\circ$."
+      ],
+      "explanationAr": "بما أن المستقيم $(d)$ مماس للدائرة $(C)$ في $T$، فإنه عمودي على نصف القطر $[OT]$ في $T$، أي أن المثلث $OTS$ قائم في $T$ ($\\widehat{OTS} = 90^\\circ$). إذن $\\widehat{TOS} = 180^\\circ - (90^\\circ + 35^\\circ) = 55^\\circ$."
+    }
+  ]
+}

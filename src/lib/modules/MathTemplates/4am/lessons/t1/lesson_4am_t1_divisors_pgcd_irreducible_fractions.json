@@ -1,0 +1,129 @@
+{
+  "id": "lesson_4am_t1_divisors_pgcd_irreducible_fractions",
+  "slug": "4am-t1-divisors-pgcd-irreducible-fractions",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t1",
+  "sequenceId": "seq1",
+  "sequenceTitleAr": "المقطع الأول: الأعداد الطبيعية والأعداد الناطقة والحساب على الجذور",
+  "order": 1,
+  "titleAr": "قواسم عدد طبيعي، القاسم المشترك الأكبر (PGCD) والكسور غير القابلة للاختزال",
+  "objectives": [
+    "التعرف على قاسم عدد طبيعي وتعيين مجموعة قواسم عدد طبيعي وتوظيف خواص القواسم (قاسم المجموع والفرق والباقي)",
+    "حساب القاسم المشترك الأكبر (PGCD) لعددين طبيعيين باستعمال خوارزمية الفروق المتتابعة وخوارزمية القسمات المتتالية (خوارزمية إقليدس)",
+    "التعرف على عددين أوليين فيما بينهما وكتابة كسر على الشكل غير القابل للاختزال وتوظيف القاسم المشترك الأكبر في حل وضعيات التوزيع والتبليط"
+  ],
+  "keywordsAr": [
+    "قواسم عدد طبيعي",
+    "القاسم المشترك الأكبر",
+    "خوارزمية إقليدس",
+    "خوارزمية الفروق المتتابعة",
+    "العددان الأوليان فيما بينهما",
+    "كسر غير قابل للاختزال"
+  ],
+  "discover": {
+    "scenarioAr": "بمناسبة الدخول المدرسي، تتوفر جمعية خيرية على $126$ قلماً و $84$ كراساً، وتريد توزيعها كلها على **أكبر عدد ممكن من العلب المتماثلة** (بحيث تحتوي كل علبة على نفس عدد الأقلام ونفس عدد الكراريس دون بقاء أي قلم أو كراس). كيف نجد هذا العدد الأكبر، وما علاقته باختزال الكسر $\\frac{126}{84}$ ؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"214\" height=\"175\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"117\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">خوارزمية إقليدس: PGCD(126 ; 84)</text><rect x=\"24\" y=\"44\" width=\"186\" height=\"26\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"1\"/><line x1=\"86\" y1=\"44\" x2=\"86\" y2=\"130\" stroke=\"#3b82f6\" stroke-width=\"1\"/><line x1=\"148\" y1=\"44\" x2=\"148\" y2=\"130\" stroke=\"#3b82f6\" stroke-width=\"1\"/><rect x=\"24\" y=\"70\" width=\"186\" height=\"60\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1\"/><line x1=\"86\" y1=\"70\" x2=\"86\" y2=\"130\" stroke=\"#93c5fd\" stroke-width=\"1\"/><line x1=\"148\" y1=\"70\" x2=\"148\" y2=\"130\" stroke=\"#93c5fd\" stroke-width=\"1\"/><line x1=\"24\" y1=\"100\" x2=\"210\" y2=\"100\" stroke=\"#93c5fd\" stroke-width=\"1\"/><text x=\"55\" y=\"61\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">المقسوم</text><text x=\"117\" y=\"61\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">القاسم</text><text x=\"179\" y=\"61\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">الباقي</text><text x=\"55\" y=\"89\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">126</text><text x=\"117\" y=\"89\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">84</text><text x=\"179\" y=\"89\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\">42</text><text x=\"55\" y=\"119\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">84</text><text x=\"117\" y=\"119\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\">42</text><text x=\"179\" y=\"119\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">0</text><text x=\"117\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">آخر باقٍ غير معدوم = 42</text><text x=\"117\" y=\"172\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">PGCD(126 ; 84) = 42</text><rect x=\"236\" y=\"10\" width=\"214\" height=\"175\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"343\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">التوزيع والاختزال التام</text><rect x=\"252\" y=\"46\" width=\"182\" height=\"48\" rx=\"8\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.2\"/><text x=\"343\" y=\"66\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">عدد العلب المتماثلة: 42 علبة</text><text x=\"343\" y=\"85\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">في كل علبة: 3 أقلام + 2 كراس</text><text x=\"288\" y=\"124\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">126</text><line x1=\"270\" y1=\"131\" x2=\"306\" y2=\"131\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><text x=\"288\" y=\"148\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">84</text><text x=\"343\" y=\"124\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">÷ 42</text><text x=\"343\" y=\"138\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">=</text><text x=\"398\" y=\"124\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#16a34a\">3</text><line x1=\"384\" y1=\"131\" x2=\"412\" y2=\"131\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"398\" y=\"148\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#16a34a\">2</text><text x=\"343\" y=\"172\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">PGCD(3 ; 2) = 1 ⇐ غير قابل للاختزال</text></svg>",
+    "steps": [
+      {
+        "promptAr": "نريد إيجاد القاسم المشترك الأكبر للعددين $126$ و $84$ باستعمال خوارزمية إقليدس. ننجز أولاً القسمة الإقليدية للعدد $126$ على $84$ : $126 = 84 \\times 1 + r$ . ما قيمة الباقي $r$ ؟",
+        "hintAr": "احسب الفرق $126 - 84$ .",
+        "expectedInput": "42",
+        "revealAr": "بما أن $126 = 84 \\times 1 + 42$ ، فإن الباقي الأول هو $r = 42$ . وحسب خاصية القواسم، كل قاسم مشترك للعددين $126$ و $84$ هو قاسم لباقي قسمتهما $42$ ."
+      },
+      {
+        "promptAr": "ننتقل إلى القسمة الثانية: نقسم القاسم السابق $84$ على الباقي السابق $42$ : $84 = 42 \\times 2 + r_2$ . ما قيمة الباقي الجديد $r_2$ ؟",
+        "hintAr": "تحقق من جداء $42 \\times 2$ ثم اطرحه من $84$ .",
+        "expectedInput": "0",
+        "revealAr": "لدينا $42 \\times 2 = 84$ ، إذن $84 = 42 \\times 2 + 0$ ، والباقي $r_2 = 0$ ."
+      },
+      {
+        "promptAr": "في خوارزمية إقليدس، القاسم المشترك الأكبر هو **آخر باقٍ غير معدوم**. ما هو إذن $\\text{PGCD}(126; 84)$ الذي يمثّل أكبر عدد من العلب المتماثلة؟",
+        "hintAr": "انظر إلى الباقي الذي سبق الباقي المعدوم $0$ .",
+        "expectedInput": "42",
+        "revealAr": "آخر باقٍ غير معدوم هو $42$ ، ومنه $\\text{PGCD}(126; 84) = 42$ . إذن يمكن تشكيل $42$ علبة متماثلة على الأكثر."
+      },
+      {
+        "promptAr": "بقسمة بسط ومقام الكسر $\\frac{126}{84}$ على $\\text{PGCD}(126; 84) = 42$ نحصل على عدد الأقلام في كل علبة في البسط. كم قلماً يوجد في كل علبة؟",
+        "hintAr": "احسب $126 \\div 42$ .",
+        "expectedInput": "3",
+        "revealAr": "$126 \\div 42 = 3$ أقلام، و $84 \\div 42 = 2$ كراس. وبذلك نحصل على الكسر $\\frac{3}{2}$ وهو كسر غير قابل للاختزال لأن $\\text{PGCD}(3; 2) = 1$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**قاسم عدد طبيعي وخواص القواسم**: نقول إن العدد الطبيعي غير المعدوم $b$ قاسم للعدد الطبيعي $a$ إذا كان باقي القسمة الإقليدية للعدد $a$ على $b$ معدوماً (أي $a = b \\times k$ ). **خواص**: إذا قسم عدد طبيعي $d$ كلاً من $a$ و $b$ ($a \\ge b$)، فإنه يقسم مجموعهما $a + b$ ، وفرقهما $a - b$ ، وباقي القسمة الإقليدية للعدد $a$ على $b$ .",
+      "**حساب القاسم المشترك الأكبر $\\text{PGCD}(a; b)$**: نستعمل إحدى طريقتين: (1) **خوارزمية الفروق المتتابعة** بتطبيق $\\text{PGCD}(a; b) = \\text{PGCD}(b; a - b)$ مع $a > b$ حتى نصل إلى فرق معدوم؛ أو (2) **خوارزمية القسمات المتتالية (إقليدس)** بتطبيق $\\text{PGCD}(a; b) = \\text{PGCD}(b; r)$ فيكون $\\text{PGCD}(a; b)$ هو **آخر باقٍ غير معدوم**.",
+      "**العددان الأوليان فيما بينهما**: يكون العددان الطبيعيان $a$ و $b$ **أوليين فيما بينهما** إذا كان قاسمهما المشترك الأكبر يساوي $1$ ، أي $\\text{PGCD}(a; b) = 1$ (قاسمهما المشترك الوحيد هو $1$).",
+      "**الكسر غير القابل للاختزال**: الكسر $\\frac{a}{b}$ ($b \\ne 0$) غير قابل للاختزال إذا كان $a$ و $b$ أوليين فيما بينهما. ولجعل أي كسر غير قابل للاختزال في خطوة واحدة، نقسم بسطه ومقامه على $\\text{PGCD}(a; b)$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"212\" height=\"175\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"116\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\">خوارزمية الفروق المتتابعة (60 ; 24)</text><text x=\"116\" y=\"60\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">60 − 24 = 36</text><text x=\"116\" y=\"84\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">36 − 24 = 12</text><text x=\"116\" y=\"108\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\">24 − 12 = 12</text><text x=\"116\" y=\"132\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">12 − 12 = 0</text><rect x=\"36\" y=\"146\" width=\"160\" height=\"26\" rx=\"6\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"1\"/><text x=\"116\" y=\"163\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\">PGCD(60 ; 24) = 12</text><rect x=\"238\" y=\"10\" width=\"212\" height=\"175\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"344\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">خوارزمية إقليدس والاختزال (60 ; 24)</text><text x=\"344\" y=\"62\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">60 = 24 × 2 + 12</text><text x=\"344\" y=\"88\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\">24 = 12 × 2 + 0</text><text x=\"344\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">PGCD(60 ; 24) = 12</text><rect x=\"260\" y=\"130\" width=\"168\" height=\"42\" rx=\"8\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.2\"/><text x=\"344\" y=\"148\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">60/24 = (60÷12)/(24÷12)</text><text x=\"344\" y=\"165\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\">= 5/2 (كسر غير قابل للاختزال)</text></svg>",
+    "visualCaptionAr": "حساب PGCD(60 ; 24) بالطرح المتتابع وبخوارزمية إقليدس، ثم اختزال الكسر مباشرة",
+    "examples": [
+      {
+        "problemAr": "احسب $\\text{PGCD}(252; 168)$ باستعمال خوارزمية إقليدس، ثم اكتب الكسر $\\frac{168}{252}$ على الشكل غير القابل للاختزال.",
+        "solutionAr": "ننجز القسمات المتتالية:\n\n$252 = 168 \\times 1 + 84$\n\n$168 = 84 \\times 2 + 0$\n\nآخر باقٍ غير معدوم هو $84$ ، إذن $\\text{PGCD}(252; 168) = 84$ .\n\nالاختزال: $\\frac{168}{252} = \\frac{168 \\div 84}{252 \\div 84} = \\frac{2}{3}$ ، وهو كسر غير قابل للاختزال لأن $\\text{PGCD}(2; 3) = 1$ ."
+      },
+      {
+        "problemAr": "أرضية مستطيلة بُعداها $420\\text{ cm}$ و $300\\text{ cm}$ ، نريد تبليطها ببلاطات مربعة متقايسة بأكبر طول ضلع ممكن دون قصّ. ما طول ضلع كل بلاطة وما عدد البلاطات اللازمة؟",
+        "solutionAr": "طول ضلع البلاطة $c$ هو $\\text{PGCD}(420; 300)$ :\n\n$420 = 300 \\times 1 + 120$\n\n$300 = 120 \\times 2 + 60$\n\n$120 = 60 \\times 2 + 0$\n\nإذن $c = 60\\text{ cm}$ .\n\nعدد البلاطات في الطول: $420 \\div 60 = 7$ ، وفي العرض: $300 \\div 60 = 5$ ، ومنه العدد الكلي: $7 \\times 5 = 35$ بلاطة."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: الظن أن «عددين أوليين فيما بينهما» يعني أنهما عددان أوليان! هذا غير صحيح؛ مثلاً $16$ و $27$ ليسا أوليين لكن $\\text{PGCD}(27; 16) = 1$ فهما **أوليان فيما بينهما**. وتذكّر أن القاسم المشترك الأكبر في خوارزمية إقليدس هو **آخر باقٍ غير معدوم** وليس الحاصل الأخير."
+  },
+  "practice": [
+    {
+      "questionAr": "باستعمال خوارزمية إقليدس، ما قيمة $\\text{PGCD}(195; 117)$ ؟",
+      "options": [
+        "$13$",
+        "$39$",
+        "$78$",
+        "$1$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "العدد $13$ قاسم مشترك للعددين $195$ و $117$ ، لكنه ليس **أكبر** قاسم مشترك لهما لأن $39 = 3 \\times 13$ يقسمهما أيضاً.",
+        "ممتاز! $195 = 117 \\times 1 + 78$ ، ثم $117 = 78 \\times 1 + 39$ ، ثم $78 = 39 \\times 2 + 0$ ، فآخر باقٍ غير معدوم هو $39$ .",
+        "العدد $78$ هو الباقي الأول في الخوارزمية وليس الباقي الأخير غير المعدوم، وهو لا يقسم $117$ .",
+        "يكون القاسم المشترك الأكبر $1$ فقط إذا كان العددان أوليين فيما بينهما، بينما $195$ و $117$ يقبلان القسمة معاً على $3$ و $13$ ."
+      ],
+      "explanationAr": "نطبق خوارزمية إقليدس: $195 = 117 \\times 1 + 78$ ، ثم $117 = 78 \\times 1 + 39$ ، ثم $78 = 39 \\times 2 + 0$ . إذن $\\text{PGCD}(195; 117) = 39$ ."
+    },
+    {
+      "questionAr": "أي ثنائية من الأعداد الطبيعية الآتية تمثّل عددين **أوليين فيما بينهما**؟",
+      "options": [
+        "$14$ و $21$",
+        "$15$ و $25$",
+        "$16$ و $27$",
+        "$18$ و $24$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "كلا العددين $14$ و $21$ يقبل القسمة على $7$ ، إذن $\\text{PGCD}(21; 14) = 7 \\ne 1$ .",
+        "كلا العددين $15$ و $25$ يقبل القسمة على $5$ ، إذن $\\text{PGCD}(25; 15) = 5 \\ne 1$ .",
+        "أحسنت! بتطبيق خوارزمية إقليدس: $27 = 16 \\times 1 + 11$ ، $16 = 11 \\times 1 + 5$ ، $11 = 5 \\times 2 + 1$ ، $5 = 1 \\times 5 + 0$ ، إذن $\\text{PGCD}(27; 16) = 1$ .",
+        "كلا العددين $18$ و $24$ يقبل القسمة على $6$ ، إذن $\\text{PGCD}(24; 18) = 6 \\ne 1$ ."
+      ],
+      "explanationAr": "العددان $16$ و $27$ قاسمهما المشترك الأكبر يساوي $1$ ($\\text{PGCD}(27; 16) = 1$)، فهما أوليان فيما بينهما رغم أن كلاً منهما يقبل قواسم غير $1$ ونفسه."
+    },
+    {
+      "questionAr": "نريد تبليط قاعة مستطيلة بُعداها $315\\text{ cm}$ و $225\\text{ cm}$ ببلاطات مربعة متقايسة ذات **أكبر طول ضلع ممكن $c$** دون تضييع. ما عدد البلاطات اللازمة لتغطية القاعة كلها؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 170\" width=\"320\" height=\"170\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><text x=\"160\" y=\"18\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">315 cm</text><rect x=\"83\" y=\"26\" width=\"154\" height=\"110\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"105\" y1=\"26\" x2=\"105\" y2=\"136\" stroke=\"#93c5fd\" stroke-width=\"1.1\"/><line x1=\"127\" y1=\"26\" x2=\"127\" y2=\"136\" stroke=\"#93c5fd\" stroke-width=\"1.1\"/><line x1=\"149\" y1=\"26\" x2=\"149\" y2=\"136\" stroke=\"#93c5fd\" stroke-width=\"1.1\"/><line x1=\"171\" y1=\"26\" x2=\"171\" y2=\"136\" stroke=\"#93c5fd\" stroke-width=\"1.1\"/><line x1=\"193\" y1=\"26\" x2=\"193\" y2=\"136\" stroke=\"#93c5fd\" stroke-width=\"1.1\"/><line x1=\"215\" y1=\"26\" x2=\"215\" y2=\"136\" stroke=\"#93c5fd\" stroke-width=\"1.1\"/><line x1=\"83\" y1=\"48\" x2=\"237\" y2=\"48\" stroke=\"#93c5fd\" stroke-width=\"1.1\"/><line x1=\"83\" y1=\"70\" x2=\"237\" y2=\"70\" stroke=\"#93c5fd\" stroke-width=\"1.1\"/><line x1=\"83\" y1=\"92\" x2=\"237\" y2=\"92\" stroke=\"#93c5fd\" stroke-width=\"1.1\"/><line x1=\"83\" y1=\"114\" x2=\"237\" y2=\"114\" stroke=\"#93c5fd\" stroke-width=\"1.1\"/><rect x=\"83\" y=\"26\" width=\"22\" height=\"22\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"1.4\"/><text x=\"94\" y=\"41\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e3a8a\">c</text><text x=\"46\" y=\"85\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">225 cm</text><text x=\"160\" y=\"158\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">بلاطات مربعة ضلعها c = PGCD(315 ; 225)</text></svg>",
+      "options": [
+        "$45$",
+        "$12$",
+        "$24$",
+        "$35$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "$45\\text{ cm}$ هو **طول ضلع** البلاطة الواحدة ($\\text{PGCD}(315; 225) = 45$) وليس **عدد البلاطات**!",
+        "$7 + 5 = 12$ هو مجموع عدد البلاطات في طول واحد وعرض واحد فقط، وليس عدد بلاطات السطح كله.",
+        "$2 \\times (7 + 5) = 24$ يمثل محيط الشبكة بالمربعات، بينما المساحة تتطلب الضرب ($7 \\times 5$).",
+        "ممتاز! $c = \\text{PGCD}(315; 225) = 45\\text{ cm}$ ، وعدد البلاطات هو $(315 \\div 45) \\times (225 \\div 45) = 7 \\times 5 = 35$ بلاطة."
+      ],
+      "explanationAr": "نحسب أولاً $c = \\text{PGCD}(315; 225)$ : $315 = 225 \\times 1 + 90$ ، ثم $225 = 90 \\times 2 + 45$ ، ثم $90 = 45 \\times 2 + 0$ ، إذن $c = 45\\text{ cm}$ . عدد البلاطات في الطول $315 \\div 45 = 7$ وفي العرض $225 \\div 45 = 5$ ، فالمجموع هو $7 \\times 5 = 35$ بلاطة."
+    }
+  ]
+}

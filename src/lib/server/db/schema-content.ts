@@ -182,7 +182,11 @@ export const documents = sqliteTable('documents', {
 	hasSolution: integer('has_solution', { mode: 'boolean' }).default(false),
 	difficulty: text('difficulty', { enum: ['easy', 'medium', 'hard'] }),
 
-	// تتبع
+	// تتبع والأصل
+	originType: text('origin_type', { enum: ['exclusive', 'reconstructed_archive', 'official_certificate'] })
+		.default('exclusive')
+		.notNull(),
+	originMetadata: text('origin_metadata'),
 	downloadCount: integer('download_count').default(0),
 	accessTier: text('access_tier', { enum: ['public', 'registered', 'premium'] })
 		.default('public')

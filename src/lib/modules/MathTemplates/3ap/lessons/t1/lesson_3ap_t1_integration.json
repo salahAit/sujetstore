@@ -1,0 +1,123 @@
+{
+  "id": "lesson_3ap_t1_integration",
+  "slug": "lesson-3ap-t1-integration",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني: الاستقامية والزاوية القائمة وتنظيم المعطيات وإدماج الفصل الأول",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الأول: مشكلات جمعية وطرحية في الأعداد إلى 9 999 والأطوال والبيانات",
+  "objectives": [
+    "تجنيد قراءة وكتابة وتفكيك ومقارنة الأعداد إلى 9 999 مع عمليتي الجمع والطرح العمودي بالاحتفاظ في وضعيات حياتية",
+    "توظيف تحويلات الأطوال (m، cm، mm) واستخراج المعطيات من الجداول والتمثيلات البيانية لحل مشكلات مركبة",
+    "ربط معارف الهندسة (الاستقامية، منتصف قطعة مستقيم، الزاوية القائمة بالكوس) والتحرير السليم لخطوات الحل وجملة الإجابة"
+  ],
+  "keywordsAr": [
+    "إدماج",
+    "حصيلة الفصل الأول",
+    "وضعية إدماجية",
+    "الأعداد إلى 9 999",
+    "تجنيد الموارد"
+  ],
+  "discover": {
+    "scenarioAr": "بمناسبة يوم العلم، نظّمت المدرسة مشروع تهيئة حديقة المدرسة. يوضح الجدول المالي مصاريف المشروع بالدينار الجزائري (`DA`)، كما خطط التلاميذ ممراً مستقيماً $[AB]$ طوله $6\\text{ m}$ لتعليق اللافتات وثبّتوا عمود لافتة عمودياً في منتصفه $M$ . لنساعدهم في حل هذه الوضعية الإدماجية.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 230\" width=\"600\" height=\"230\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"214\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">وضعية إدماجية: مشروع حديقة المدرسة</text><rect x=\"24\" y=\"44\" width=\"282\" height=\"168\" rx=\"10\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.3\"/><g font-size=\"12\" font-weight=\"bold\"><rect x=\"34\" y=\"54\" width=\"116\" height=\"28\" fill=\"#dbeafe\" stroke=\"#64748b\"/><text x=\"92\" y=\"72\" text-anchor=\"middle\" fill=\"#1e3a8a\" direction=\"rtl\">المبلغ</text><rect x=\"150\" y=\"54\" width=\"146\" height=\"28\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><text x=\"223\" y=\"72\" text-anchor=\"middle\" fill=\"#0f172a\" direction=\"rtl\">البند</text><rect x=\"34\" y=\"82\" width=\"116\" height=\"28\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"92\" y=\"100\" text-anchor=\"middle\" fill=\"#0f172a\" direction=\"ltr\">2 450 DA</text><rect x=\"150\" y=\"82\" width=\"146\" height=\"28\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"223\" y=\"100\" text-anchor=\"middle\" fill=\"#0f172a\" direction=\"rtl\">شجيرات الزينة</text><rect x=\"34\" y=\"110\" width=\"116\" height=\"28\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"92\" y=\"128\" text-anchor=\"middle\" fill=\"#0f172a\" direction=\"ltr\">1 780 DA</text><rect x=\"150\" y=\"110\" width=\"146\" height=\"28\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"223\" y=\"128\" text-anchor=\"middle\" fill=\"#0f172a\" direction=\"rtl\">الطلاء والأدوات</text><rect x=\"34\" y=\"138\" width=\"116\" height=\"28\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"92\" y=\"156\" text-anchor=\"middle\" fill=\"#0f172a\" direction=\"ltr\">1 250 DA</text><rect x=\"150\" y=\"138\" width=\"146\" height=\"28\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"223\" y=\"156\" text-anchor=\"middle\" fill=\"#0f172a\" direction=\"rtl\">السياج الخشبي</text><rect x=\"34\" y=\"166\" width=\"116\" height=\"32\" fill=\"#dcfce7\" stroke=\"#15803d\"/><text x=\"92\" y=\"187\" text-anchor=\"middle\" fill=\"#14532d\" direction=\"ltr\">7 000 DA</text><rect x=\"150\" y=\"166\" width=\"146\" height=\"32\" fill=\"#dcfce7\" stroke=\"#15803d\"/><text x=\"223\" y=\"187\" text-anchor=\"middle\" fill=\"#14532d\" direction=\"rtl\">الميزانية المخصصة</text></g><rect x=\"320\" y=\"44\" width=\"256\" height=\"168\" rx=\"10\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.3\"/><text x=\"448\" y=\"64\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">مخطط الممر واللافتة</text><line x1=\"448\" y1=\"162\" x2=\"448\" y2=\"90\" stroke=\"#1e293b\" stroke-width=\"2.6\"/><rect x=\"414\" y=\"74\" width=\"68\" height=\"24\" rx=\"5\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.4\"/><text x=\"448\" y=\"90\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">يوم العلم</text><line x1=\"346\" y1=\"162\" x2=\"550\" y2=\"162\" stroke=\"#2563eb\" stroke-width=\"3.2\"/><circle cx=\"346\" cy=\"162\" r=\"4.5\" fill=\"#1d4ed8\"/><text x=\"346\" y=\"178\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">A</text><circle cx=\"448\" cy=\"162\" r=\"4.5\" fill=\"#dc2626\"/><text x=\"448\" y=\"178\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">M</text><circle cx=\"550\" cy=\"162\" r=\"4.5\" fill=\"#1d4ed8\"/><text x=\"550\" y=\"178\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">B</text><rect x=\"448\" y=\"149\" width=\"13\" height=\"13\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><line x1=\"397\" y1=\"156\" x2=\"397\" y2=\"168\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"499\" y1=\"156\" x2=\"499\" y2=\"168\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"448\" y=\"200\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">AB = 6 m</text></svg>",
+    "steps": [
+      {
+        "promptAr": "استخرج من الجدول ثمن شجيرات الزينة ($2\\,450\\text{ DA}$) وثمن الطلاء والأدوات ($1\\,780\\text{ DA}$). ما مجموعهما بالدينار؟ (اكتب العدد فقط بدون فراغات وبدون وحدة)",
+        "hintAr": "ضع العملية عمودياً: $2\\,450 + 1\\,780$ وتذكر الاحتفاظ في العشرات والمئات.",
+        "expectedInput": "4230",
+        "revealAr": "$2\\,450 + 1\\,780 = 4\\,230\\text{ DA}$ ."
+      },
+      {
+        "promptAr": "نضيف ثمن السياج ($1\\,250\\text{ DA}$) فتصبح المصاريف كلها $4\\,230 + 1\\,250 = 5\\,480\\text{ DA}$ . من الميزانية المخصصة ($7\\,000\\text{ DA}$)، كم ديناراً بقي في الصندوق؟ (اكتب العدد فقط بدون فراغات)",
+        "hintAr": "احسب الطرح بالاستعارة: $7\\,000 - 5\\,480$ .",
+        "expectedInput": "1520",
+        "revealAr": "بقي في الصندوق $1\\,520\\text{ DA}$ لأن $7\\,000 - 5\\,480 = 1\\,520$ ."
+      },
+      {
+        "promptAr": "طول الممر المستقيم $[AB]$ هو $6\\text{ m}$ ، ووضعت اللافتة في منتصفه $M$ . كم يبعد المنتصف $M$ عن البداية $A$ **بالسنتيمتر (`cm`)**؟ (اكتب العدد فقط)",
+        "hintAr": "نصف $6\\text{ m}$ هو $3\\text{ m}$ ، ثم حول $3\\text{ m}$ إلى السنتيمتر ($1\\text{ m} = 100\\text{ cm}$).",
+        "expectedInput": "300",
+        "revealAr": "نصف $6\\text{ m}$ يساوي $3\\text{ m}$ ، و $3\\text{ m} = 300\\text{ cm}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لحل **وضعية إدماجية** بنجاح: نقرأ النص والجدول أو التمثيل البياني جيداً، ثم نستخرج المعطيات المفيدة مع الانتباه إلى الوحدات (`DA`، `m`، `cm`، `mm`).",
+      "نوحد الوحدات دائماً قبل إجراء العمليات على الأطوال ($1\\text{ m} = 100\\text{ cm}$ و $1\\text{ cm} = 10\\text{ mm}$)، ونرتب المراتب في الجمع والطرح العمودي إلى $9\\,999$ .",
+      "في الهندسة نستعمل الأدوات بدقة: **المسطرة** للاستقامية والطول ومنتصف قطعة مستقيم، و**الكوس** للتحقق من الزاوية القائمة والتعامد.",
+      "ننظم الحل بوضوح: نكتب العملية الأفقية والعمودية، ثم **جملة الإجابة** متبوعة بالوحدة المناسبة، ونتحقق من معقولية النتائج."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 220\" width=\"600\" height=\"220\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"204\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">خطوات حل الوضعية الإدماجية وحصيلة الفصل الأول</text><rect x=\"446\" y=\"46\" width=\"130\" height=\"82\" rx=\"9\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"511\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">1. أفهم النص</text><text x=\"511\" y=\"95\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">أقرأ الجدول</text><text x=\"511\" y=\"113\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">وأحدد المعطيات</text><line x1=\"444\" y1=\"87\" x2=\"436\" y2=\"87\" stroke=\"#64748b\" stroke-width=\"2\"/><rect x=\"304\" y=\"46\" width=\"130\" height=\"82\" rx=\"9\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"369\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">2. أخطط</text><text x=\"369\" y=\"95\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">أوحد الوحدات</text><text x=\"369\" y=\"113\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">وأختار العملية</text><line x1=\"302\" y1=\"87\" x2=\"294\" y2=\"87\" stroke=\"#64748b\" stroke-width=\"2\"/><rect x=\"162\" y=\"46\" width=\"130\" height=\"82\" rx=\"9\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"227\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">3. أنجز عمودياً</text><text x=\"227\" y=\"95\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">أرتب المراتب</text><text x=\"227\" y=\"113\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">وأحسب بدقة</text><line x1=\"160\" y1=\"87\" x2=\"152\" y2=\"87\" stroke=\"#64748b\" stroke-width=\"2\"/><rect x=\"20\" y=\"46\" width=\"130\" height=\"82\" rx=\"9\" fill=\"#fff7ed\" stroke=\"#ea580c\" stroke-width=\"1.5\"/><text x=\"85\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"rtl\">4. أجيب وأتحقق</text><text x=\"85\" y=\"95\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">جملة الإجابة</text><text x=\"85\" y=\"113\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">والوحدة المناسبة</text><rect x=\"24\" y=\"146\" width=\"132\" height=\"50\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"90\" y=\"167\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#5b21b6\" direction=\"rtl\">الأعداد إلى 9 999</text><text x=\"90\" y=\"185\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">تفكيك وحصر ومقارنة</text><rect x=\"164\" y=\"146\" width=\"132\" height=\"50\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"230\" y=\"167\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">الجمع والطرح</text><text x=\"230\" y=\"185\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">عمليات بالاحتفاظ</text><rect x=\"304\" y=\"146\" width=\"132\" height=\"50\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"370\" y=\"167\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">الأطوال</text><text x=\"370\" y=\"185\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"ltr\">m , cm , mm</text><rect x=\"444\" y=\"146\" width=\"132\" height=\"50\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"510\" y=\"167\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">الهندسة والبيانات</text><text x=\"510\" y=\"185\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">كوس، منتصف، أعمدة</text></svg>",
+    "visualCaptionAr": "منهجية حل الوضعية الإدماجية وربط موارد الفصل الأول الأربعة.",
+    "examples": [
+      {
+        "problemAr": "في صندوق جمعية المدرسة $4\\,350\\text{ DA}$ ، وأضاف الأولياء $2\\,875\\text{ DA}$ ، ثم أنفقت الجمعية $3\\,680\\text{ DA}$ لشراء جوائز. كم ديناراً بقي في الصندوق؟",
+        "solutionAr": "نحسب المبلغ الإجمالي: $4\\,350 + 2\\,875 = 7\\,225\\text{ DA}$ . ثم نطرح المصاريف: $7\\,225 - 3\\,680 = 3\\,545\\text{ DA}$ . بقي في الصندوق $3\\,545\\text{ DA}$ ."
+      },
+      {
+        "problemAr": "لوح خشبي طوله $2\\text{ m } 40\\text{ cm}$ قسمناه عند منتصفه. ما طول كل نصف بالسنتيمتر (`cm`)؟",
+        "solutionAr": "نحول الطول إلى السنتيمتر: $2\\text{ m } 40\\text{ cm} = 240\\text{ cm}$ . نصف $240\\text{ cm}$ هو $120\\text{ cm}$ (ويساوي $1\\text{ m } 20\\text{ cm}$ )."
+      }
+    ],
+    "watchOutAr": "في المسائل المركبة ذات المرحلتين، لا تتوقف عند الخطوة الأولى! وتحقق من توحيد وحدات الأطوال قبل الجمع أو الطرح، ولا تنس كتابة جملة الإجابة والوحدة."
+  },
+  "practice": [
+    {
+      "questionAr": "يوضح التمثيل البياني بالأعمدة تبرعات ثلاثة أقسام لشراء مكتبة متنقلة ثمنها $5\\,500\\text{ DA}$ . ما هو **مجموع** التبرعات، وهل يكفي لشراء المكتبة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 195\" width=\"440\" height=\"195\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"424\" height=\"179\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><g stroke=\"#e2e8f0\" stroke-width=\"1\"><line x1=\"74\" y1=\"135\" x2=\"405\" y2=\"135\"/><line x1=\"74\" y1=\"112\" x2=\"405\" y2=\"112\"/><line x1=\"74\" y1=\"89\" x2=\"405\" y2=\"89\"/><line x1=\"74\" y1=\"66\" x2=\"405\" y2=\"66\"/><line x1=\"74\" y1=\"43\" x2=\"405\" y2=\"43\"/></g><line x1=\"74\" y1=\"30\" x2=\"74\" y2=\"158\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"74\" y1=\"158\" x2=\"405\" y2=\"158\" stroke=\"#475569\" stroke-width=\"1.6\"/><g font-size=\"10\" font-weight=\"bold\" fill=\"#475569\" text-anchor=\"end\"><text x=\"66\" y=\"162\">0</text><text x=\"66\" y=\"139\">500</text><text x=\"66\" y=\"116\">1000</text><text x=\"66\" y=\"93\">1500</text><text x=\"66\" y=\"70\">2000</text><text x=\"66\" y=\"47\">2500</text></g><rect x=\"110\" y=\"73\" width=\"54\" height=\"85\" rx=\"3\" fill=\"#3b82f6\"/><text x=\"137\" y=\"67\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1 850</text><text x=\"137\" y=\"176\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">القسم أ</text><rect x=\"212\" y=\"48\" width=\"54\" height=\"110\" rx=\"3\" fill=\"#10b981\"/><text x=\"239\" y=\"42\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">2 400</text><text x=\"239\" y=\"176\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">القسم ب</text><rect x=\"314\" y=\"78\" width=\"54\" height=\"80\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"341\" y=\"72\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">1 750</text><text x=\"341\" y=\"176\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">القسم ج</text></svg>",
+      "options": [
+        "$6\\,000\\text{ DA}$، نعم يكفي",
+        "$5\\,000\\text{ DA}$، لا يكفي",
+        "$5\\,900\\text{ DA}$، نعم يكفي",
+        "$4\\,250\\text{ DA}$، لا يكفي"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! $1\\,850 + 2\\,400 + 1\\,750 = 6\\,000\\text{ DA}$ ، وبما أن $6\\,000 > 5\\,500$ فإن المبلغ يكفي ويبقى $500\\text{ DA}$ .",
+        "نسيت الاحتفاظ عند جمع المئات ($1 + 8 + 4 + 7 = 20$ فالمئات تعطي احتفاظاً بـ $2$ في الآلاف).",
+        "راجع جمع العشرات والاحتفاظ في المئات: $50 + 50 = 100$ تعطيك احتفاظاً بمئة إضافية.",
+        "جمعت القسم أ والقسم ب فقط ($1\\,850 + 2\\,400 = 4\\,250$) ونسيت تبرع القسم ج ($1\\,750\\text{ DA}$)."
+      ],
+      "explanationAr": "نجمع تبرعات الأقسام الثلاثة: $1\\,850 + 1\\,750 = 3\\,600$ ، ثم $3\\,600 + 2\\,400 = 6\\,000\\text{ DA}$ . وبما أن $6\\,000 > 5\\,500$ ، فإن المبلغ يكفي لشراء المكتبة."
+    },
+    {
+      "questionAr": "طول شريط زينة $4\\text{ m } 60\\text{ cm}$ ، قطعت سلمى منه قطعة طولها $185\\text{ cm}$ . ما هو طول الشريط المتبقي بالسنتيمتر (`cm`)؟",
+      "options": [
+        "$285\\text{ cm}$",
+        "$275\\text{ cm}$",
+        "$325\\text{ cm}$",
+        "$2\\,750\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "نسيت إنقاص $1$ من العشرات بعد الاستعارة للوحدات: تصبح $15 - 8 = 7$ وليس $8$ .",
+        "ممتاز! $4\\text{ m } 60\\text{ cm} = 460\\text{ cm}$ ، والباقي $460 - 185 = 275\\text{ cm}$ .",
+        "استعرت من المئات ($4$ تصبح $3$) لكنك نسيت إنقاصها عند طرح $3 - 1 = 2$ .",
+        "ضربت النتيجة في $10$ خطأً؛ هذا القياس يمثل المليمتر ($2\\,750\\text{ mm}$) وليس السنتيمتر."
+      ],
+      "explanationAr": "نوحد الوحدة إلى السنتيمتر: $4\\text{ m } 60\\text{ cm} = 460\\text{ cm}$ . ثم نطرح بالاستعارة: $460 - 185 = 275\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "تأمل المخطط الهندسي: $M$ منتصف القطعة $[AB]$ التي طولها $18\\text{ cm}$ ، والمستقيم $(MC)$ يعامد $(AB)$ . أي عبارة من العبارات التالية **صحيحة**؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 165\" width=\"420\" height=\"165\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"404\" height=\"149\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><line x1=\"210\" y1=\"122\" x2=\"210\" y2=\"34\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><circle cx=\"210\" cy=\"34\" r=\"4\" fill=\"#15803d\"/><text x=\"224\" y=\"38\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\">C</text><line x1=\"60\" y1=\"122\" x2=\"360\" y2=\"122\" stroke=\"#2563eb\" stroke-width=\"2.8\"/><circle cx=\"60\" cy=\"122\" r=\"4.5\" fill=\"#1d4ed8\"/><text x=\"60\" y=\"140\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">A</text><circle cx=\"210\" cy=\"122\" r=\"4.5\" fill=\"#dc2626\"/><text x=\"210\" y=\"140\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">M</text><circle cx=\"360\" cy=\"122\" r=\"4.5\" fill=\"#1d4ed8\"/><text x=\"360\" y=\"140\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">B</text><rect x=\"210\" y=\"108\" width=\"14\" height=\"14\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><line x1=\"135\" y1=\"116\" x2=\"135\" y2=\"128\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"285\" y1=\"116\" x2=\"285\" y2=\"128\" stroke=\"#059669\" stroke-width=\"2\"/><circle cx=\"305\" cy=\"58\" r=\"4.5\" fill=\"#ea580c\"/><text x=\"319\" y=\"62\" font-size=\"13\" font-weight=\"bold\" fill=\"#c2410c\">K</text><text x=\"210\" y=\"151\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">AB = 18 cm</text></svg>",
+      "options": [
+        "النقط $A$ و $M$ و $K$ على استقامة واحدة",
+        "طول $[AM]$ هو $18\\text{ cm}$ والزاوية عند $M$ أصغر من القائمة",
+        "طول $[AM]$ هو $9\\text{ cm}$ والزاوية عند $M$ قائمة",
+        "طول $[MB]$ هو $6\\text{ cm}$ والمستقيمان غير متعامدين"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "النقطة $K$ بعيدة فوق المستقيم الأزرق، فهي ليست في استقامية مع $A$ و $M$ .",
+        "$18\\text{ cm}$ هو طول القطعة $[AB]$ كلها وليس نصفها $[AM]$ ، والزاوية عند $M$ مشفّرة كزاوية قائمة.",
+        "أحسنت! بما أن $M$ منتصف $18\\text{ cm}$ فإن طول $[AM]$ هو $9\\text{ cm}$ ، والتعامد يعطي زاوية قائمة عند $M$ .",
+        "نصف $18\\text{ cm}$ هو $9\\text{ cm}$ وليس $6\\text{ cm}$ ، والمستقيمان متعامدان كما يظهر من تشفير الزاوية القائمة."
+      ],
+      "explanationAr": "بما أن $M$ منتصف $[AB]$ فإنها تقسم $18\\text{ cm}$ إلى نصفين متساويين طول كل منهما $9\\text{ cm}$ . وبما أن $(MC)$ يعامد $(AB)$ فإن الزاوية عند $M$ زاوية قائمة."
+    }
+  ]
+}

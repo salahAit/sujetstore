@@ -1,0 +1,128 @@
+{
+  "id": "lesson_3am_t2_literal_calculation",
+  "slug": "3am-t2-literal-calculation",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t2",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع السادس: الحساب الحرفي وإدماج الفصل الثاني",
+  "order": 6,
+  "titleAr": "الحساب الحرفي: التبسيط وحذف الأقواس والنشر البسيط والمضاعف (a + b)(c + d)",
+  "objectives": [
+    "تبسيط عبارة جبرية بجمع الحدود المتشابهة وتطبيق قواعد حذف الأقواس المسبوقة بإشارة ($+$) أو ($-$)",
+    "نشر وتبسيط عبارات جبرية من الشكل $k(a + b)$ و $(a + b)(c + d)$ حيث $a$ و $b$ و $c$ و $d$ أعداد نسبية باستعمال التوزيعية",
+    "حساب قيمة عبارة حرفية من أجل قيم عددية معطاة واختبار تكافؤ عبارتين جبريتين في وضعيات عددية وهندسية"
+  ],
+  "keywordsAr": [
+    "الحساب الحرفي",
+    "تبسيط عبارة جبرية",
+    "حذف الأقواس",
+    "النشر البسيط",
+    "النشر المضاعف",
+    "حساب قيمة عبارة حرفية"
+  ],
+  "discover": {
+    "scenarioAr": "يريد بستاني توسيع حوض مستطيل ليصبح بعداه $(x + 4)\\text{ m}$ و $(x + 2)\\text{ m}$ حيث $x > 0$، فقسّمه إلى أربع مناطق مستطيلة أصغر لحساب المساحة الكلية بطريقتين. وفي حساب آخر احتاج إلى تبسيط عبارات تتضمن أقواساً مسبوقة بإشارة $(-)$ أو جداءات من الشكل $k(a+b)$. لنكتشف قواعد التبسيط وحذف الأقواس والنشر المضاعف.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 205\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"205\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><text x=\"240\" y=\"25\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">نموذج المساحة للنشر المضاعف: (x + 4)(x + 2)</text><text x=\"155\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13.5\" font-weight=\"800\" fill=\"#1d4ed8\">x</text><text x=\"260\" y=\"48\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13.5\" font-weight=\"800\" fill=\"#15803d\">+ 4</text><text x=\"72\" y=\"88\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"13.5\" font-weight=\"800\" fill=\"#1d4ed8\">x</text><text x=\"72\" y=\"138\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"13.5\" font-weight=\"800\" fill=\"#b45309\">+ 2</text><rect x=\"84\" y=\"56\" width=\"142\" height=\"54\" fill=\"#dbeafe\" stroke=\"#1e40af\" stroke-width=\"1.6\"/><text x=\"155\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"800\" fill=\"#1e3a8a\">x^2</text><rect x=\"226\" y=\"56\" width=\"68\" height=\"54\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.6\"/><text x=\"260\" y=\"88\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"800\" fill=\"#166534\">4x</text><rect x=\"84\" y=\"110\" width=\"142\" height=\"46\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.6\"/><text x=\"155\" y=\"138\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"800\" fill=\"#92400e\">2x</text><rect x=\"226\" y=\"110\" width=\"68\" height=\"46\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"260\" y=\"138\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"800\" fill=\"#991b1b\">4 × 2 = ?</text><rect x=\"312\" y=\"56\" width=\"154\" height=\"100\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"389\" y=\"80\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#0f172a\" direction=\"rtl\" unicode-bidi=\"plaintext\">مجموع المساحات الأربع:</text><text x=\"389\" y=\"107\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#1e40af\">x^2 + 2x + 4x + c</text><text x=\"389\" y=\"136\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"800\" fill=\"#15803d\">= x^2 + 6x + c</text><text x=\"240\" y=\"186\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"800\" fill=\"#0f172a\">(x + 4)(x + 2) = x(x + 2) + 4(x + 2)</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في نموذج المساحة المقابل، مساحة المستطيل الكلي تساوي مجموع مساحات القطع الأربع: $x^{2} + 2x + 4x + c$. ما قيمة العدد الثابت $c = 4 \\times 2$؟",
+        "hintAr": "اضرب بعدي الركن السفلي الأيمن $4$ و $2$.",
+        "expectedInput": "8",
+        "revealAr": "$4 \\times 2 = 8$. وبجمع الحدين المتشابهين $2x + 4x = 6x$ نجد العبارة المنشورة والمبسطة $x^{2} + 6x + 8$."
+      },
+      {
+        "promptAr": "للتحقق من صحة هذا النشر من أجل $x = 3$، احسب قيمة $(3 + 4)(3 + 2)$ وقارنها بـ $3^{2} + 6 \\times 3 + 8$.",
+        "hintAr": "احسب $7 \\times 5$.",
+        "expectedInput": "35",
+        "revealAr": "كلا الحسابين يعطي $35$ (لأن $7 \\times 5 = 35$ و $9 + 18 + 8 = 35$). وهذا يؤكد تكافؤ العبارتين."
+      },
+      {
+        "promptAr": "عند حذف الأقواس المسبوقة بإشارة ناقص في العبارة $A = 10x - (3x - 5)$ نكتب $10x - 3x + 5$. ما معامل $x$ بعد تبسيط $A$؟",
+        "hintAr": "اجمع الحدين المتشابهين $10x - 3x$.",
+        "expectedInput": "7",
+        "revealAr": "عند حذف قوس مسبوق بإشارة $(-)$ نعكس إشارة كل حد داخله فتصبح $A = 10x - 3x + 5 = 7x + 5$."
+      },
+      {
+        "promptAr": "في النشر البسيط $B = -3(2x - 4)$، نوزع العدد $-3$ على حدي القوس فنجد $-6x + k$. ما قيمة العدد $k$؟",
+        "hintAr": "احسب الجداء $(-3) \\times (-4)$ مع الانتباه لقاعدة الإشارات.",
+        "expectedInput": "12",
+        "revealAr": "جداء عددين سالبين موجب: $(-3) \\times (-4) = +12$، إذن $B = -6x + 12$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**تبسيط عبارة جبرية**: يعني كتابتها بأقل عدد ممكن من الحدود عبر **جمع الحدود المتشابهة** (الحدود التي لها نفس الحرف ونفس الأس، مثل $5x^{2} - 2x^{2} = 3x^{2}$ و $3x - 7x = -4x$). ولا نجمع حدوداً غير متشابهة مثل $3x^{2}$ و $4x$.",
+      "**قواعد حذف الأقواس**: إذا كان القوس مسبوقاً بإشارة $(+)$، نحذف القوسين وإشارة $(+)$ **دون تغيير** إشارات الحدود داخله: $a + (b - c) = a + b - c$. وإذا كان مسبوقاً بإشارة $(-)$، نحذف القوسين وإشارة $(-)$ **مع عكس** إشارة كل حد داخله: $a - (b - c) = a - b + c$.",
+      "**النشر البسيط والنشر المضاعف**: النشر هو تحويل جداء إلى مجموع أو فرق باستعمال التوزيعية: $k(a + b) = ka + kb$، وفي النشر المضاعف $(a + b)(c + d) = ac + ad + bc + bd$ (حيث $a$ و $b$ و $c$ و $d$ أعداد نسبية)، ثم نبسط العبارة الناتجة.",
+      "**حساب قيمة عبارة حرفية واختبار التكافؤ**: نعوّض كل حرف بقيمته العددية المعطاة (مع وضع أقواس حول الأعداد السالبة). وتكون عبارتان متكافئتين إذا أمكن المرور من إحداهما إلى الأخرى بالنشر والتبسيط (ويكفي مثال مضاد واحد لإثبات عدم التكافؤ)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"190\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"14\" y=\"14\" width=\"232\" height=\"162\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"130\" y=\"36\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1e40af\" direction=\"rtl\" unicode-bidi=\"plaintext\">النشر المضاعف (التوزيعية)</text><text x=\"130\" y=\"76\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"800\" fill=\"#0f172a\">(a + b)(c + d)</text><path d=\"M 86 58 Q 124 40 162 58\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><path d=\"M 86 58 Q 140 30 192 58\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><path d=\"M 114 86 Q 138 102 162 86\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><path d=\"M 114 86 Q 152 110 192 86\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"130\" y=\"132\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"800\" fill=\"#1d4ed8\">= ac + ad + bc + bd</text><text x=\"130\" y=\"158\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"10.5\" fill=\"#334155\" direction=\"rtl\" unicode-bidi=\"plaintext\">وزّع كل حد مع إشارته ثم بسّط</text><rect x=\"258\" y=\"14\" width=\"208\" height=\"162\" rx=\"8\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"362\" y=\"36\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#991b1b\" direction=\"rtl\" unicode-bidi=\"plaintext\">قاعدة حذف الأقواس</text><rect x=\"272\" y=\"52\" width=\"180\" height=\"46\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"362\" y=\"73\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13.5\" font-weight=\"800\" fill=\"#166534\">+(b - c) = +b - c</text><text x=\"362\" y=\"91\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"10\" fill=\"#15803d\" direction=\"rtl\" unicode-bidi=\"plaintext\">إشارة (+) تحفظ الإشارات</text><rect x=\"272\" y=\"110\" width=\"180\" height=\"48\" rx=\"6\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><text x=\"362\" y=\"131\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13.5\" font-weight=\"800\" fill=\"#991b1b\">-(b - c) = -b + c</text><text x=\"362\" y=\"149\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\" font-size=\"10\" fill=\"#b91c1c\" direction=\"rtl\" unicode-bidi=\"plaintext\">إشارة (-) تعكس كل الإشارات</text></svg>",
+    "visualCaptionAr": "آلية النشر المضاعف لعبارة $(a+b)(c+d)$ وقاعدتا حذف الأقواس المسبوقة بإشارة $(+)$ أو $(-)$",
+    "examples": [
+      {
+        "problemAr": "انشر وبسّط العبارة الجبرية: $E = (2x - 3)(x + 5) - (x^{2} - 4x + 1)$.",
+        "solutionAr": "1) ننشر الجداء $(2x - 3)(x + 5)$:\n\n$(2x - 3)(x + 5) = 2x \\times x + 2x \\times 5 - 3 \\times x - 3 \\times 5 = 2x^{2} + 10x - 3x - 15 = 2x^{2} + 7x - 15$.\n\n2) نحذف القوسين المسبوقين بإشارة $(-)$ بعكس كل الإشارات:\n\n$E = 2x^{2} + 7x - 15 - x^{2} + 4x - 1$.\n\n3) نجمع الحدود المتشابهة:\n\n$E = (2x^{2} - x^{2}) + (7x + 4x) + (-15 - 1) = x^{2} + 11x - 16$."
+      },
+      {
+        "problemAr": "احسب قيمة العبارة $E = x^{2} + 11x - 16$ من أجل $x = -2$.",
+        "solutionAr": "نعوض $x$ بـ $(-2)$ مع وضع الأقواس:\n\n$E = (-2)^{2} + 11 \\times (-2) - 16 = 4 - 22 - 16 = -34$."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: نسيان عكس إشارة الحد الثاني أو الثالث عند حذف قوس مسبوق بإشارة $(-)$، مثل كتابة $5 - (2x - 3) = 5 - 2x - 3$ بدلاً من $5 - 2x + 3$. كما لا يجوز أبداً جمع حدود غير متشابهة مثل كتابة $2x + 5 = 7x$ أو $x^{2} + 3x = 4x^{3}$!"
+  },
+  "practice": [
+    {
+      "questionAr": "ما الشكل المبسط للعبارة $C = 5x + 2 - (3x - 7)$؟",
+      "options": [
+        "$2x - 5$",
+        "$2x + 9$",
+        "$8x - 5$",
+        "$2x - 9$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "لقد نسيت عكس إشارة $-7$ عند حذف الأقواس المسبوقة بإشارة $(-)$! الصواب $+2 + 7 = +9$ وليس $+2 - 7 = -5$.",
+        "ممتاز! حذفنا الأقواس بعكس الإشارات: $5x + 2 - 3x + 7 = 2x + 9$.",
+        "لا نجمع $5x + 3x$ لأن إشارة $3x$ تصبح سالبة بعد حذف الأقواس: $5x - 3x = 2x$.",
+        "تحقق من إشارة الحد الثابت: لدينا $+2 - (-7) = 2 + 7 = +9$."
+      ],
+      "explanationAr": "نحذف القوسين المسبوقين بإشارة $(-)$ بعكس إشارة كل حد داخلهما: $C = 5x + 2 - 3x + 7$. ثم نجمع الحدود المتشابهة: $(5x - 3x) + (2 + 7) = 2x + 9$."
+    },
+    {
+      "questionAr": "انشر وبسّط العبارة $D = (3x - 2)(x + 4)$:",
+      "options": [
+        "$3x^{2} - 8$",
+        "$3x^{2} + 14x - 8$",
+        "$3x^{2} + 10x - 8$",
+        "$3x^{2} + 10x + 8$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "ضربتَ الحدين الأولين والأخيرين فقط ونسيت الجداءين المتقاطعين $3x \\times 4$ و $-2 \\times x$!",
+        "انتبه لإشارة $-2 \\times x$: نجد $+12x - 2x = +10x$ وليس $12x + 2x = 14x$.",
+        "أحسنت! $3x^{2} + 12x - 2x - 8 = 3x^{2} + 10x - 8$.",
+        "تحقق من إشارة الجداء الأخير: $(-2) \\times (+4) = -8$ وليس $+8$."
+      ],
+      "explanationAr": "نطبق النشر المضاعف: $D = 3x \\times x + 3x \\times 4 - 2 \\times x - 2 \\times 4 = 3x^{2} + 12x - 2x - 8 = 3x^{2} + 10x - 8$."
+    },
+    {
+      "questionAr": "ما قيمة العبارة $F = 2x^{2} - 5x + 3$ من أجل $x = -3$؟",
+      "options": [
+        "$-30$",
+        "$0$",
+        "$6$",
+        "$36$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "انتبه للإشارتين: $(-3)^{2} = +9$ وليس $-9$، كما أن $-5 \\times (-3) = +15$ وليس $-15$.",
+        "عند تعويض $x = -3$ في $2x^{2}$ نضع أقواساً: $2 \\times (-3)^{2} = 2 \\times 9 = +18$ وليس $-18$.",
+        "تحقق من الحد $-5x$: عندما $x = -3$ يكون $-5 \\times (-3) = +15$ وليس $-15$.",
+        "صحيح تماماً! $2 \\times (-3)^{2} - 5 \\times (-3) + 3 = 18 + 15 + 3 = 36$."
+      ],
+      "explanationAr": "نعوض $x$ بالعدد $(-3)$: $F = 2 \\times (-3)^{2} - 5 \\times (-3) + 3 = 2 \\times 9 + 15 + 3 = 18 + 15 + 3 = 36$."
+    }
+  ]
+}

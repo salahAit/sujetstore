@@ -1,0 +1,128 @@
+{
+  "id": "lesson_4am_t1_square_roots_equations_x2_b",
+  "slug": "4am-t1-square-roots-equations-x2-b",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t1",
+  "sequenceId": "seq1",
+  "sequenceTitleAr": "المقطع الأول: الأعداد الطبيعية والأعداد الناطقة والحساب على الجذور",
+  "order": 2,
+  "titleAr": "الجذر التربيعي لعدد موجب، الأعداد الناطقة وغير الناطقة وحل المعادلة x² = b",
+  "objectives": [
+    "تعريف الجذر التربيعي لعدد موجب والتمييز بين القيمة المضبوطة والقيمة المقربة للجذر التربيعي باستعمال الحاسبة",
+    "التمييز بين الأعداد الناطقة والأعداد غير الناطقة (الصماء) وإدراك ضرورة توسيع مجموعة الأعداد الناطقة",
+    "حل المعادلة من الشكل $x^2 = b$ بمناقشة الحالات الثلاث لإشارة $b$ ($b > 0$ ، $b = 0$ ، $b < 0$) وتوظيفها في وضعيات عددية وهندسية"
+  ],
+  "keywordsAr": [
+    "الجذر التربيعي",
+    "العدد الناطق",
+    "العدد غير الناطق",
+    "القيمة المضبوطة والقيمة المقربة",
+    "حل المعادلة x² = b"
+  ],
+  "discover": {
+    "scenarioAr": "لدى بستاني قطعتا أرض مربعتا الشكل: مساحة الأولى $49\\text{ m}^2$ ومساحة الثانية $20\\text{ m}^2$ . يريد معرفة طول ضلع كل قطعة، كما يواجه المهندس في حساباته معادلات مثل $x^2 = 49$ و $x^2 = 0$ و $x^2 = -9$ . كيف نعيّن أطوال أضلاع هذين المربعين، وما الفرق بين الجذر التربيعي لعدد موجب وحلول المعادلة $x^2 = b$ ؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"218\" height=\"175\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"119\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">الجذر التربيعي والطول الموجب</text><rect x=\"28\" y=\"52\" width=\"72\" height=\"72\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"64\" y=\"92\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\">49 m²</text><text x=\"64\" y=\"142\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">c = √49 = 7 m</text><text x=\"64\" y=\"162\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">عدد ناطق</text><rect x=\"138\" y=\"72\" width=\"52\" height=\"52\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"164\" y=\"102\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">20 m²</text><text x=\"164\" y=\"142\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">c = √20 ≈ 4.47 m</text><text x=\"164\" y=\"162\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">عدد غير ناطق</text><rect x=\"238\" y=\"10\" width=\"212\" height=\"175\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"344\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">حلول المعادلة x² = b</text><rect x=\"252\" y=\"46\" width=\"184\" height=\"36\" rx=\"7\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"344\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">x² = 49  ⇐  x = 7 أو x = -7</text><rect x=\"252\" y=\"92\" width=\"184\" height=\"36\" rx=\"7\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.2\"/><text x=\"344\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">x² = 0  ⇐  x = 0 (حل وحيد)</text><rect x=\"252\" y=\"138\" width=\"184\" height=\"36\" rx=\"7\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><text x=\"344\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">x² = -9  ⇐  لا يوجد حل</text></svg>",
+    "steps": [
+      {
+        "promptAr": "المربع الأول مساحته $49\\text{ m}^2$ . ما طول ضلعه الموجب $c$ (بالمتر) بحيث $c^2 = 49$ ؟",
+        "hintAr": "ابحث عن العدد الموجب الذي إذا ضُرب في نفسه أعطى $49$ .",
+        "expectedInput": "7",
+        "revealAr": "بما أن $7^2 = 49$ و $7 > 0$ ، فإن طول ضلع المربع الأول هو $\\sqrt{49} = 7\\text{ m}$ ."
+      },
+      {
+        "promptAr": "احسب الآن مربع العدد السالب $-7$ : ما قيمة $(-7)^2$ ؟",
+        "hintAr": "جداء عددين سالبين هو عدد موجب: $(-7) \\times (-7)$ .",
+        "expectedInput": "49",
+        "revealAr": "$(-7)^2 = 49$ أيضاً! إذن المعادلة $x^2 = 49$ تقبل **حلين** متعاكسين هما $x = 7$ و $x = -7$ ، بينما الجذر التربيعي $\\sqrt{49}$ يساوي $7$ فقط لأنه موجب دوماً، وفي الهندسة نأخذ الطول الموجب $7\\text{ m}$ ."
+      },
+      {
+        "promptAr": "المربع الثاني مساحته $20\\text{ m}^2$ ، وطول ضلعه المضبوط هو $\\sqrt{20}\\text{ m}$ . علماً أن $4^2 = 16$ و $5^2 = 25$ ، ما هو الجزء الصحيح (القيمة المقربة بالنقصان إلى الوحدة) للعدد $\\sqrt{20}$ ؟",
+        "hintAr": "بما أن $16 < 20 < 25$ ، فإن $\\sqrt{20}$ محصور بين $4$ و $5$ .",
+        "expectedInput": "4",
+        "revealAr": "بما أن $4^2 = 16 < 20 < 25 = 5^2$ ، فإن $4 < \\sqrt{20} < 5$ ، فالقيمة المقربة بالنقصان إلى الوحدة هي $4$ (والحاسبة تعطي $\\sqrt{20} \\approx 4.47$ ). ولا يمكن كتابة $\\sqrt{20}$ على شكل كسر $\\frac{a}{b}$ لعددين صحيحين، فهو عدد **غير ناطق**."
+      },
+      {
+        "promptAr": "بالنسبة للمعادلة $x^2 = 0$ ، ما هو الحل الوحيد لها؟ وماذا عن $x^2 = -9$ ؟",
+        "hintAr": "ما العدد الوحيد الذي مربعه يساوي $0$ ؟",
+        "expectedInput": "0",
+        "revealAr": "للمعادلة $x^2 = 0$ حل وحيد هو $x = 0$ . أما المعادلة $x^2 = -9$ فلا تقبل أي حل لأن مربع أي عدد حقيقي موجب أو معدوم دائماً ($x^2 \\ge 0$)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**تعريف الجذر التربيعي لعدد موجب**: ليكن $a$ عدداً موجباً ($a \\ge 0$). الجذر التربيعي للعدد $a$ ، ونرمز له بالرمز $\\sqrt{a}$ ، هو العدد **الموجب** الذي مربعه يساوي $a$ . أي: $\\sqrt{a} \\ge 0$ و $(\\sqrt{a})^2 = a$ و $\\sqrt{a^2} = a$ (من أجل $a \\ge 0$). أما العدد السالب تماماً فليس له جذر تربيعي.",
+      "**العدد الناطق والعدد غير الناطق، والقيمة المضبوطة والمقربة**: **العدد الناطق** هو كل عدد يمكن كتابته على شكل كسر $\\frac{p}{q}$ ($p$ و $q$ عددان صحيحان نسبيان مع $q \\ne 0$) مثل $7$ ، $-2.5$ ، $\\frac{4}{3}$ ، $\\sqrt{36} = 6$ ، $\\sqrt{0.49} = 0.7$ . أما مثل $\\sqrt{2}$ أو $\\sqrt{20}$ أو $\\pi$ فهي **أعداد غير ناطقة (صماء)**؛ والكتابة $\\sqrt{20}$ هي **القيمة المضبوطة** بينما $4.47$ هي **قيمة مقربة**.",
+      "**حل المعادلة $x^2 = b$**: نميز ثلاث حالات حسب إشارة العدد $b$ : (1) إذا كان $b > 0$ ، فإن للمعادلة حلين مختلفين هما $x = \\sqrt{b}$ و $x = -\\sqrt{b}$ ؛ (2) إذا كان $b = 0$ ، فللمعادلة حل وحيد هو $x = 0$ ؛ (3) إذا كان $b < 0$ ، فالمعادلة لا تقبل حلولاً لأن $x^2 \\ge 0$ دائماً.",
+      "**التوظيف في الهندسة**: عند حساب طول مجهول $x$ بواسطة معادلة من الشكل $x^2 = b$ ($b > 0$)، نحتفظ فقط بالحل الموجب $x = \\sqrt{b}$ ونرفض الحل السالب لأن الطول مقدار موجب دوماً."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"232\" height=\"175\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"126\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">حالات المعادلة x² = b</text><rect x=\"22\" y=\"46\" width=\"208\" height=\"40\" rx=\"7\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"126\" y=\"64\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">b &gt; 0 : حلان متعاكسان</text><text x=\"126\" y=\"80\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">x = √b   أو   x = -√b</text><rect x=\"22\" y=\"94\" width=\"208\" height=\"36\" rx=\"7\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.2\"/><text x=\"126\" y=\"116\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">b = 0 : حل وحيد هو x = 0</text><rect x=\"22\" y=\"138\" width=\"208\" height=\"36\" rx=\"7\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><text x=\"126\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">b &lt; 0 : لا يوجد حل حقيقي</text><rect x=\"252\" y=\"10\" width=\"198\" height=\"175\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"351\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\">القيمة المضبوطة والمقربة</text><line x1=\"272\" y1=\"105\" x2=\"430\" y2=\"105\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"292\" y1=\"96\" x2=\"292\" y2=\"114\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"410\" y1=\"96\" x2=\"410\" y2=\"114\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"348\" cy=\"105\" r=\"5\" fill=\"#16a34a\"/><text x=\"292\" y=\"132\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">4</text><text x=\"410\" y=\"132\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">5</text><text x=\"292\" y=\"148\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\">(√16)</text><text x=\"410\" y=\"148\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\">(√25)</text><text x=\"348\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">√20 (مضبوطة)</text><text x=\"348\" y=\"88\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">≈ 4.47 (مقربة)</text><text x=\"351\" y=\"172\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#854d0e\">4 &lt; √20 &lt; 5</text></svg>",
+    "visualCaptionAr": "مناقشة حلول المعادلة x² = b حسب إشارة b، وتمييز القيمة المضبوطة عن القيمة المقربة للعدد غير الناطق",
+    "examples": [
+      {
+        "problemAr": "صنّف الأعداد الآتية إلى أعداد ناطقة وأعداد غير ناطقة: $\\sqrt{64}$ ، $\\sqrt{11}$ ، $\\sqrt{0.25}$ ، $\\frac{-7}{3}$ ، ثم أعط القيمة المقربة إلى $0.01$ بالنقصان للعدد $\\sqrt{11}$ .",
+        "solutionAr": "$\\sqrt{64} = 8$ عدد ناطق؛ $\\sqrt{0.25} = 0.5 = \\frac{1}{2}$ عدد ناطق؛ $\\frac{-7}{3}$ عدد ناطق.\n\nأما $\\sqrt{11}$ فعدد **غير ناطق** لأن $11$ ليس مربعاً لعدد ناطق. وبالحاسبة $\\sqrt{11} \\approx 3.3166\\dots$ ، إذن القيمة المقربة بالنقصان إلى $0.01$ هي $3.31$ ."
+      },
+      {
+        "problemAr": "حل المعادلتين الآتيتين: (أ) $3x^2 - 7 = 41$ ؛ (ب) $x^2 + 9 = 4$ .",
+        "solutionAr": "(أ) $3x^2 - 7 = 41$ تعني $3x^2 = 48$ أي $x^2 = 16$ . وبما أن $16 > 0$ فإن للمعادلة حلين هما $x = \\sqrt{16} = 4$ و $x = -\\sqrt{16} = -4$ .\n\n(ب) $x^2 + 9 = 4$ تعني $x^2 = -5$ . وبما أن $-5 < 0$ ، فالمعادلة **لا تقبل حلولاً**."
+      }
+    ],
+    "watchOutAr": "خطأ شائع جداً: كتابة $\\sqrt{25} = 5$ أو $-5$ ! تذكّر أن **رمز الجذر التربيعي $\\sqrt{25}$ يساوي عدداً موجباً واحداً فقط هو $5$**؛ أما المعادلة $x^2 = 25$ فهي التي لها حلان: $5$ و $-5$ . كما أن $\\sqrt{(-6)^2} = \\sqrt{36} = 6$ وليس $-6$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "ما هما حلا المعادلة $2x^2 - 18 = 0$ ؟",
+      "options": [
+        "$x = 3$ فقط",
+        "$x = 9$ و $x = -9$",
+        "$x = 3$ و $x = -3$",
+        "المعادلة لا تقبل حلولاً"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "انتبه: المعادلة جبرية وليست مسألة أطوال، لذا يجب ذكر الحل السالب $-3$ أيضاً لأن $(-3)^2 = 9$ .",
+        "لقد نسيت أخذ الجذر التربيعي للعدد $9$ ! بعد الوصول إلى $x^2 = 9$ نأخذ $\\pm\\sqrt{9} = \\pm 3$ .",
+        "ممتاز! $2x^2 = 18$ يعطي $x^2 = 9$ ، وبما أن $9 > 0$ فالحلان هما $x = \\sqrt{9} = 3$ و $x = -\\sqrt{9} = -3$ .",
+        "بعد نقل $-18$ إلى الطرف الثاني نحصل على $2x^2 = 18$ أي $x^2 = 9 > 0$ ، فلا توجد إشارة سالبة تمنع الحل."
+      ],
+      "explanationAr": "ننقل $-18$ للطرف الثاني: $2x^2 = 18$ ، ثم نقسم على $2$ فنجد $x^2 = 9$ . وبما أن $9 > 0$ فإن للمعادلة حلين هما $x = 3$ و $x = -3$ ."
+    },
+    {
+      "questionAr": "أي عدد من الأعداد الآتية هو عدد **غير ناطق** (أصم)؟",
+      "options": [
+        "$\\sqrt{12}$",
+        "$\\sqrt{0.49}$",
+        "$\\sqrt{\\frac{16}{25}}$",
+        "$\\sqrt{(-5)^2}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! $12$ ليس مربعاً لعدد ناطق، لذا يبقى $\\sqrt{12}$ عدداً غير ناطق.",
+        "$\\sqrt{0.49} = 0.7 = \\frac{7}{10}$ ، فهو عدد عشري وناطق.",
+        "$\\sqrt{\\frac{16}{25}} = \\frac{4}{5}$ ، وهو كسر لعددين صحيحين فهو عدد ناطق.",
+        "$\\sqrt{(-5)^2} = \\sqrt{25} = 5$ ، وهو عدد طبيعي وناطق."
+      ],
+      "explanationAr": "لدينا $\\sqrt{0.49} = 0.7$ و $\\sqrt{\\frac{16}{25}} = \\frac{4}{5}$ و $\\sqrt{(-5)^2} = 5$ وجميعها أعداد ناطقة. أما $\\sqrt{12}$ فلا يمكن كتابته على شكل كسر $\\frac{p}{q}$ لعددين صحيحين فهو غير ناطق."
+    },
+    {
+      "questionAr": "مساحة مربع هي $15\\text{ cm}^2$ . علماً أن $3.8^2 = 14.44$ و $3.9^2 = 15.21$ ، ما القيمة **المضبوطة** لطول ضلعه وما القيمة **المقربة بالنقصان إلى $0.1$** له على الترتيب؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 155\" width=\"320\" height=\"155\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"24\" y=\"28\" width=\"82\" height=\"82\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"65\" y=\"73\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">15 cm²</text><text x=\"65\" y=\"128\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">طول الضلع c</text><line x1=\"138\" y1=\"82\" x2=\"298\" y2=\"82\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"156\" y1=\"73\" x2=\"156\" y2=\"91\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"280\" y1=\"73\" x2=\"280\" y2=\"91\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"246\" cy=\"82\" r=\"5\" fill=\"#16a34a\"/><text x=\"156\" y=\"108\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">3.8</text><text x=\"280\" y=\"108\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">3.9</text><text x=\"156\" y=\"62\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\">(3.8²=14.44)</text><text x=\"280\" y=\"62\" text-anchor=\"middle\" font-size=\"10\" fill=\"#475569\">(3.9²=15.21)</text><text x=\"246\" y=\"108\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">c</text><text x=\"218\" y=\"136\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">3.8 &lt; c &lt; 3.9</text></svg>",
+      "options": [
+        "$3.8\\text{ cm}$ و $3.9\\text{ cm}$",
+        "$\\sqrt{15}\\text{ cm}$ و $3.8\\text{ cm}$",
+        "$\\sqrt{15}\\text{ cm}$ أو $-\\sqrt{15}\\text{ cm}$ ، و $3.9\\text{ cm}$",
+        "$7.5\\text{ cm}$ و $3.8\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$3.8\\text{ cm}$ قيمة مقربة بالنقصان وليست مضبوطة، لأن $3.8^2 = 14.44 \\ne 15$ .",
+        "ممتاز! الطول موجب فالقيمة المضبوطة هي $\\sqrt{15}\\text{ cm}$ ، ولأن $3.8 < \\sqrt{15} < 3.9$ فالقيمة المقربة بالنقصان إلى $0.1$ هي $3.8\\text{ cm}$ .",
+        "الطول مقدار موجب دوماً فلا نقبل $-\\sqrt{15}$ ، كما أن $3.9$ هي القيمة المقربة بالزيادة وليس بالنقصان.",
+        "ضلع المربع لا يساوي نصف المساحة ($15 \\div 2 = 7.5$)؛ المساحة تساوي الضلع في الضلع ($c^2 = 15$)."
+      ],
+      "explanationAr": "لأن مساحة المربع $c^2 = 15$ والطول موجب، فإن القيمة المضبوطة للضلع هي $\\sqrt{15}\\text{ cm}$ . ولأن $14.44 < 15 < 15.21$ أي $3.8 < \\sqrt{15} < 3.9$ ، فإن القيمة المقربة بالنقصان إلى $0.1$ هي $3.8\\text{ cm}$ ."
+    }
+  ]
+}

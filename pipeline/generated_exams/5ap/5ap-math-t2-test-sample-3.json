@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "5ap",
+    "yearName": "السنة الخامسة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t2",
+    "trimesterName": "الفصل الثاني",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "أنجز العمليات التالية بدقة:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب ذهنيا: $6.63 div 1000 = \"...\"$",
+          "answer": "1) $6.63 div 1000 = 0.00663$ (إزاحة الفاصلة يسارا بـ $3$ مراتب).",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "2) ضع ثم أنجز عموديا: $7.1 times 4$",
+          "answer": "2) $7.1 times 4 = 28.4$.",
+          "mark": "1.5"
+        }
+      ],
+      "id": "exam-5ap-supervised_test-t2-hard-603-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "لاحظ الشكل الهندسي المرفق ثم أجب عن المطلوب:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.3fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "قطعة أرض مربعة الشكل $A B C D$ محيطها $32$ m.\n\n1) احسب طول ضلعها.\n\n2) استنتج مساحتها.",
+              "answer": "1) طول الضلع: $32 div 4 = 8$ m.\n\n2) المساحة: $8 times 8 = 64$ m².",
+              "mark": "3"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap-t2-shape-hard-218149.svg",
+              "caption": "مربع ABCD"
+            }
+          ]
+        }
+      ],
+      "id": "exam-5ap-supervised_test-t2-hard-603-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "أجب عن الأسئلة الثلاثة التالية بوضوح مع كتابة العمليات العمودية والأفقية:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "تملك جمعية أولياء التلاميذ مبلغا ماليا قدره $37500$ DA لتهيئة قطعة أرض مستطيلة الشكل لإنشاء حديقة المدرسة، طولها $37$ m وعرضها $20$ m. خصّصت مساحة $23$ m² لكل حوض زهور (تكلفة الحوض الواحد $150$ DA)، كما أحاطت القطعة بسياج ثمن المتر الواحد منه $277.75$ DA مع ترك مدخل عرضه $5$ m."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap-t2-garden-hard-472969.svg",
+              "caption": "حديقة المدرسة"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب مساحة قطعة الأرض المستطيلة.",
+          "answer": "1) المساحة: $37 times 20 = 740$ m².",
+          "mark": "1"
+        },
+        {
+          "type": "text",
+          "content": "2) ما أكبر عدد ممكن من أحواض الزهور يمكن تهيئته، وما هي المساحة المتبقية؟",
+          "answer": "2) بالقسمة الإقليدية: $740 = 23 times 32 + 4$، إذن العدد هو $32$ حوضا وتبقى $4$ m².",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب المبلغ المتبقي لدى جمعية أولياء التلاميذ بعد دفع تكلفة السياج وثمن أحواض الزهور.",
+          "answer": "3) طول السياج: $2 times (37 + 20) - 5 = 109$ m، وثمنه $109 times 277.75 = 30274.75$ DA، وثمن الغرس $32 times 150 = 4800$ DA، والمجموع $35074.75$ DA، والمتبقي $37500 - 35074.75 = 2425.25$ DA.",
+          "mark": "1.75"
+        }
+      ],
+      "id": "exam-5ap-supervised_test-t2-hard-603-ex-3"
+    }
+  ]
+}

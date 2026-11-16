@@ -1,0 +1,129 @@
+{
+  "id": "lesson_3am_t1_rational_numbers_operations",
+  "slug": "3am-t1-rational-numbers-operations",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t1",
+  "sequenceId": "seq1",
+  "sequenceTitleAr": "المقطع الأول: العمليات على الأعداد النسبية والكسور والأعداد الناطقة",
+  "order": 2,
+  "titleAr": "الكسور والأعداد الناطقة: المقلوب، المقارنة والعمليات الأربع (+، -، ×، ÷)",
+  "objectives": [
+    "تعيين مقلوب عدد غير معدوم، وإجراء قسمة كسرين، وتعميم مقارنة وجمع وطرح كسور كيفية بتوحيد المقامات ذهنيا أو بجداء المقامين",
+    "التعرف على العدد الناطق كحاصل قسمة عددين نسبيين وكتابته في شكله المبسط بإشارة واحدة ومقارنة وترتيب أعداد ناطقة",
+    "حساب مجموع وفرق وجداء وحاصل قسمة عددين ناطقين وحل مشكلات عددية من الحياة اليومية"
+  ],
+  "keywordsAr": [
+    "مقلوب عدد غير معدوم",
+    "قسمة كسرين",
+    "العدد الناطق",
+    "مقارنة الأعداد الناطقة",
+    "العمليات على الأعداد الناطقة",
+    "توحيد المقامات"
+  ],
+  "discover": {
+    "scenarioAr": "في ورشة خياطة، تريد سلمى تقسيم شريط قماش طوله $\\frac{3}{4}\\text{ m}$ إلى قطع متساوية طول الواحدة $\\frac{1}{8}\\text{ m}$ . وفي وضعية أخرى، سجّل خزان سعة مائية تغيراً قدره $-\\frac{2}{3}\\text{ m}$ في اليوم الأول ثم تغيراً قدره $-\\frac{1}{4}\\text{ m}$ في اليوم الثاني. كيف نقسم كسرين باستعمال المقلوب، وكيف نقارن ونجمع الأعداد الناطقة؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 220\" width=\"560\" height=\"220\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"264\" height=\"200\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.6\"/><text x=\"142\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">قسمة كسرين: كم 1/8 في 3/4 ؟</text><rect x=\"30\" y=\"52\" width=\"224\" height=\"28\" fill=\"#ffffff\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><rect x=\"30\" y=\"52\" width=\"168\" height=\"28\" fill=\"#60a5fa\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><line x1=\"86\" y1=\"52\" x2=\"86\" y2=\"80\" stroke=\"#1e293b\" stroke-width=\"1.2\"/><line x1=\"142\" y1=\"52\" x2=\"142\" y2=\"80\" stroke=\"#1e293b\" stroke-width=\"1.2\"/><line x1=\"198\" y1=\"52\" x2=\"198\" y2=\"80\" stroke=\"#1e293b\" stroke-width=\"1.2\"/><text x=\"114\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">3/4 = 6/8</text><rect x=\"30\" y=\"110\" width=\"224\" height=\"28\" fill=\"#ffffff\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><rect x=\"30\" y=\"110\" width=\"168\" height=\"28\" fill=\"#34d399\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><line x1=\"58\" y1=\"110\" x2=\"58\" y2=\"138\" stroke=\"#0f172a\" stroke-width=\"1.1\"/><line x1=\"86\" y1=\"110\" x2=\"86\" y2=\"138\" stroke=\"#0f172a\" stroke-width=\"1.1\"/><line x1=\"114\" y1=\"110\" x2=\"114\" y2=\"138\" stroke=\"#0f172a\" stroke-width=\"1.1\"/><line x1=\"142\" y1=\"110\" x2=\"142\" y2=\"138\" stroke=\"#0f172a\" stroke-width=\"1.1\"/><line x1=\"170\" y1=\"110\" x2=\"170\" y2=\"138\" stroke=\"#0f172a\" stroke-width=\"1.1\"/><line x1=\"198\" y1=\"110\" x2=\"198\" y2=\"138\" stroke=\"#0f172a\" stroke-width=\"1.1\"/><line x1=\"226\" y1=\"110\" x2=\"226\" y2=\"138\" stroke=\"#0f172a\" stroke-width=\"1.1\"/><text x=\"142\" y=\"164\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">(3/4) ÷ (1/8) = (3/4) × (8/1) = 6</text><text x=\"142\" y=\"188\" text-anchor=\"middle\" font-size=\"11\" fill=\"#15803d\" direction=\"rtl\">القسمة على كسر هي الضرب في مقلوبه</text><rect x=\"288\" y=\"10\" width=\"262\" height=\"200\" rx=\"12\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"419\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">تعليم ومقارنة الأعداد الناطقة</text><line x1=\"308\" y1=\"96\" x2=\"532\" y2=\"96\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><polygon points=\"534,96 526,92 526,100\" fill=\"#0f172a\"/><line x1=\"324\" y1=\"88\" x2=\"324\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"468\" y1=\"86\" x2=\"468\" y2=\"106\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"516\" y1=\"88\" x2=\"516\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"372\" cy=\"96\" r=\"4.5\" fill=\"#dc2626\"/><circle cx=\"432\" cy=\"96\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"324\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">-1</text><text x=\"468\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">0</text><text x=\"516\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">+1</text><text x=\"372\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">-2/3</text><text x=\"432\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">-1/4</text><text x=\"419\" y=\"154\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">-2/3 = -8/12  &lt;  -1/4 = -3/12</text><text x=\"419\" y=\"182\" text-anchor=\"middle\" font-size=\"11\" fill=\"#166534\" direction=\"rtl\">الأقرب إلى 0 من الأعداد السالبة هو الأكبر</text></svg>",
+    "steps": [
+      {
+        "promptAr": "من شريط المقارنة، كم قطعة طولها $\\frac{1}{8}\\text{ m}$ نحصل عليها من قماش طوله $\\frac{3}{4}\\text{ m}$ (أي $\\frac{3}{4} \\div \\frac{1}{8}$ )؟",
+        "hintAr": "اضرب $\\frac{3}{4}$ في مقلوب $\\frac{1}{8}$ وهو $8$ ، ثم اختزل.",
+        "expectedInput": "6",
+        "revealAr": "$\\frac{3}{4} \\div \\frac{1}{8} = \\frac{3}{4} \\times \\frac{8}{1} = \\frac{24}{4} = 6$ قطع."
+      },
+      {
+        "promptAr": "ما هو **مقلوب** العدد $\\frac{1}{8}$ (العدد الذي نضربه في $\\frac{1}{8}$ فنجد $1$ )؟",
+        "hintAr": "اقلب البسط والمقام: $\\frac{8}{1}$ .",
+        "expectedInput": "8",
+        "revealAr": "مقلوب $\\frac{1}{8}$ هو $\\frac{8}{1} = 8$ لأن $\\frac{1}{8} \\times 8 = 1$ ."
+      },
+      {
+        "promptAr": "لمقارنة العددين الناطقين $-\\frac{2}{3}$ و $-\\frac{1}{4}$ بتوحيد المقامين إلى $12$ ، نكتب $-\\frac{2}{3} = \\frac{\\square}{12}$ . ما قيمة البسط مع إشارته؟",
+        "hintAr": "اضرب كلاً من $2$ و $3$ في $4$ واحتفظ بالإشارة السالبة.",
+        "expectedInput": "-8",
+        "revealAr": "$-\\frac{2}{3} = \\frac{-2 \\times 4}{3 \\times 4} = \\frac{-8}{12}$ ، و $-\\frac{1}{4} = \\frac{-3}{12}$ . وبما أن $-8 < -3$ فإن $-\\frac{2}{3} < -\\frac{1}{4}$ ."
+      },
+      {
+        "promptAr": "ما التغير الكلي في منسوب الخزان $-\\frac{2}{3} + \\left(-\\frac{1}{4}\\right) = \\frac{\\square}{12}$ ؟ أوجد البسط مع إشارته.",
+        "hintAr": "اجمع البسطين $-8 + (-3)$ واحتفظ بالمقام المشترك $12$ .",
+        "expectedInput": "-11",
+        "revealAr": "$-\\frac{2}{3} + \\left(-\\frac{1}{4}\\right) = \\frac{-8}{12} + \\frac{-3}{12} = \\frac{-11}{12} = -\\frac{11}{12}\\text{ m}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**مقلوب عدد غير معدوم**: مقلوب عدد نسبي $a \\neq 0$ هو العدد $\\frac{1}{a}$ (بحيث $a \\times \\frac{1}{a} = 1$ )، ومقلوب الكسر $\\frac{a}{b}$ هو $\\frac{b}{a}$ ($a, b \\neq 0$). للعدد ومقلوبه **نفس الإشارة** دائماً.",
+      "**قسمة كسرين أو عددين ناطقين**: القسمة على عدد غير معدوم هي الضرب في مقلوبه: $\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c}$ ($b, c, d \\neq 0$).",
+      "**العدد الناطق**: هو حاصل قسمة عدد نسبي $a$ على عدد نسبي غير معدوم $b$ . نضعه في شكله المبسط بإشارة واحدة أمام خط الكسر ومقام موجب، مثل $\\frac{3}{-5} = -\\frac{3}{5}$ و $\\frac{-3}{-5} = \\frac{3}{5}$ .",
+      "**المقارنة والعمليات الأربع**: لتوحيد مقامي كسرين كيفيين نستعمل مضاعفاً مشتركاً ذهنياً أو جداء المقامين. في مقارنة عددين ناطقين سالبين، **الأكبر هو الأقرب إلى الصفر** (ذو المسافة الأصغر إلى الصفر). وتُجرى العمليات الأربع باحترام الأولوية وقواعد الإشارات."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 215\" width=\"560\" height=\"215\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"256\" height=\"190\" rx=\"10\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"140\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#991b1b\" direction=\"rtl\">فرّق بين المعاكس والمقلوب!</text><rect x=\"26\" y=\"50\" width=\"228\" height=\"58\" rx=\"8\" fill=\"#ffffff\" stroke=\"#fca5a5\" stroke-width=\"1.2\"/><text x=\"140\" y=\"71\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">المعاكس (نغيّر الإشارة فقط)</text><text x=\"140\" y=\"95\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">-3/4  ↔  +3/4   (المجموع = 0)</text><rect x=\"26\" y=\"120\" width=\"228\" height=\"66\" rx=\"8\" fill=\"#ffffff\" stroke=\"#fca5a5\" stroke-width=\"1.2\"/><text x=\"140\" y=\"141\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">المقلوب (نقلب البسط والمقام بنفس الإشارة)</text><text x=\"140\" y=\"163\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">-3/4  ↔  -4/3   (الجداء = +1)</text><rect x=\"288\" y=\"12\" width=\"260\" height=\"190\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"418\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">العمليات الأربع على الأعداد الناطقة</text><rect x=\"304\" y=\"48\" width=\"228\" height=\"42\" rx=\"7\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><text x=\"418\" y=\"65\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">الجمع والطرح: نوحّد المقامين</text><text x=\"418\" y=\"82\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">a/b + c/d = (a×d + b×c) / (b×d)</text><rect x=\"304\" y=\"98\" width=\"228\" height=\"42\" rx=\"7\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><text x=\"418\" y=\"115\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">الضرب: البسط × البسط والمقام × المقام</text><text x=\"418\" y=\"132\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">(a/b) × (c/d) = (a×c) / (b×d)</text><rect x=\"304\" y=\"148\" width=\"228\" height=\"42\" rx=\"7\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><text x=\"418\" y=\"165\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#991b1b\" direction=\"rtl\">القسمة: الضرب في مقلوب المقسوم عليه</text><text x=\"418\" y=\"182\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">(a/b) ÷ (c/d) = (a/b) × (d/c)</text></svg>",
+    "visualCaptionAr": "التمييز بين معاكس ومقلوب عدد ناطق وقواعد العمليات الأربع على الأعداد الناطقة",
+    "examples": [
+      {
+        "problemAr": "قارن بين العددين الناطقين $-\\frac{5}{6}$ و $-\\frac{7}{8}$ ، ثم احسب الفرق $A = \\left(-\\frac{5}{6}\\right) - \\left(-\\frac{7}{8}\\right)$ .",
+        "solutionAr": "نوحّد المقامين إلى المضاعف المشترك $24$ :\n\n$-\\frac{5}{6} = -\\frac{20}{24}$ و $-\\frac{7}{8} = -\\frac{21}{24}$ .\n\nبما أن $-20 > -21$ فإن $-\\frac{5}{6} > -\\frac{7}{8}$ .\n\nالفرق: $A = -\\frac{20}{24} + \\frac{21}{24} = \\frac{1}{24}$ ."
+      },
+      {
+        "problemAr": "احسب بأبسط شكل العبارة: $B = \\frac{2}{3} - \\frac{5}{6} \\div \\left(-\\frac{10}{9}\\right)$ .",
+        "solutionAr": "الأولوية للقسمة فنحوّلها إلى ضرب في المقلوب:\n\n$\\frac{5}{6} \\div \\left(-\\frac{10}{9}\\right) = \\frac{5}{6} \\times \\left(-\\frac{9}{10}\\right) = -\\frac{45}{60} = -\\frac{3}{4}$ (بالقسمة على $15$ ).\n\nفتصبح العبارة: $B = \\frac{2}{3} - \\left(-\\frac{3}{4}\\right) = \\frac{2}{3} + \\frac{3}{4} = \\frac{8}{12} + \\frac{9}{12} = \\frac{17}{12}$ ."
+      }
+    ],
+    "watchOutAr": "خطآن شائعان: (1) قلب الكسر **الأول** بدل الكسر **الثاني** عند قسمة كسرين! مثلاً في $\\frac{2}{3} \\div \\frac{5}{4}$ نقلب $\\frac{5}{4}$ فتصبح $\\frac{2}{3} \\times \\frac{4}{5}$ . (2) الخلط بين **المعاكس** و**المقلوب**: مقلوب $-\\frac{3}{4}$ هو $-\\frac{4}{3}$ (نحتفظ بالإشارة السالبة!) وليس $+\\frac{3}{4}$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "لاحظ موضع العددين الناطقين $-\\frac{5}{6}$ و $-\\frac{3}{4}$ على المستقيم المدرج المقابل. أي عبارة مقارنة صحيحة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 110\" width=\"380\" height=\"110\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"364\" height=\"94\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><line x1=\"32\" y1=\"58\" x2=\"348\" y2=\"58\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><polygon points=\"352,58 344,54 344,62\" fill=\"#0f172a\"/><line x1=\"60\" y1=\"48\" x2=\"60\" y2=\"68\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"300\" y1=\"48\" x2=\"300\" y2=\"68\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"100\" cy=\"58\" r=\"4.5\" fill=\"#dc2626\"/><circle cx=\"120\" cy=\"58\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"60\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">-1</text><text x=\"300\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">0</text><text x=\"96\" y=\"38\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">-5/6</text><text x=\"128\" y=\"38\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">-3/4</text></svg>",
+      "options": [
+        "$-\\frac{5}{6} > -\\frac{3}{4}$",
+        "$-\\frac{5}{6} < -\\frac{3}{4}$",
+        "$-\\frac{5}{6} = -\\frac{3}{4}$",
+        "$-\\frac{3}{4} < -1$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "على المستقيم المدرج، يقع $-\\frac{5}{6}$ إلى يسار $-\\frac{3}{4}$ (وأبعد عن الصفر)، إذن هو الأصغر!",
+        "ممتاز! بتوحيد المقامين إلى $12$ نجد $-\\frac{10}{12} < -\\frac{9}{12}$ ، أي $-\\frac{5}{6} < -\\frac{3}{4}$ .",
+        "الكسران غير متساويين لأن $-\\frac{10}{12} \\neq -\\frac{9}{12}$ .",
+        "كلا العددين محصور بين $-1$ و $0$ ، لذا $-\\frac{3}{4} > -1$ ."
+      ],
+      "explanationAr": "نوحّد المقامين إلى $12$ : $-\\frac{5}{6} = -\\frac{10}{12}$ و $-\\frac{3}{4} = -\\frac{9}{12}$ . وبما أن $-10 < -9$ فإن $-\\frac{5}{6} < -\\frac{3}{4}$ ."
+    },
+    {
+      "questionAr": "احسب بأبسط شكل ناتج القسمة: $\\left(-\\frac{3}{5}\\right) \\div \\left(\\frac{9}{10}\\right)$ .",
+      "options": [
+        "$-\\frac{27}{50}$",
+        "$+\\frac{2}{3}$",
+        "$-\\frac{2}{3}$",
+        "$-\\frac{3}{2}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "لقد ضربتَ الكسرين مباشرةً دون قلب المقسوم عليه $\\frac{9}{10}$ !",
+        "انتبه للإشارة: حاصل قسمة عدد سالب على عدد موجب هو عدد **سالب**.",
+        "أحسنت! حوّلتَ القسمة إلى ضرب في المقلوب $\\frac{10}{9}$ وبسّطتَ الناتج $-\\frac{30}{45} = -\\frac{2}{3}$ .",
+        "لقد قلبتَ الكسر الأول $-\\frac{3}{5}$ أو قلبتَ الناتج النهائي!"
+      ],
+      "explanationAr": "القسمة على $\\frac{9}{10}$ هي الضرب في مقلوبه $\\frac{10}{9}$ : $\\left(-\\frac{3}{5}\\right) \\times \\frac{10}{9} = -\\frac{30}{45}$ . وبقسمة البسط والمقام على $15$ نحصل على $-\\frac{2}{3}$ ."
+    },
+    {
+      "questionAr": "احسب العبارة $E = \\frac{1}{2} + \\left(-\\frac{3}{4}\\right) \\times \\frac{2}{5}$ بأبسط شكل ممكن.",
+      "options": [
+        "$-\\frac{1}{10}$",
+        "$\\frac{4}{5}$",
+        "$-\\frac{1}{5}$",
+        "$\\frac{1}{5}$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "ربما حسبتَ الجمع $\\frac{1}{2} - \\frac{3}{4} = -\\frac{1}{4}$ قبل الضرب! تذكر أن الأولوية للضرب.",
+        "انتبه لإشارة الجداء: $\\left(-\\frac{3}{4}\\right) \\times \\frac{2}{5} = -\\frac{3}{10}$ وليس $+\\frac{3}{10}$ .",
+        "تحقق من إشارة الطرح: $\\frac{5}{10} - \\frac{3}{10} = +\\frac{2}{10} = +\\frac{1}{5}$ .",
+        "ممتاز! الضرب أولاً يعطي $-\\frac{6}{20} = -\\frac{3}{10}$ ، ثم $\\frac{5}{10} - \\frac{3}{10} = \\frac{2}{10} = \\frac{1}{5}$ ."
+      ],
+      "explanationAr": "الأولوية للضرب: $\\left(-\\frac{3}{4}\\right) \\times \\frac{2}{5} = -\\frac{6}{20} = -\\frac{3}{10}$ . ثم نوحّد المقام إلى $10$ : $E = \\frac{5}{10} - \\frac{3}{10} = \\frac{2}{10} = \\frac{1}{5}$ ."
+    }
+  ]
+}

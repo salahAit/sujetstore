@@ -1,0 +1,144 @@
+{
+  "documents": [
+    {
+      "id": "1ap_math_t1_dzmadrassa_31_2024",
+      "grade": "1ap",
+      "title_ar": "الفرض الأول في مادة الرياضيات - السنة الأولى ابتدائي مع التصحيح (الفصل الأول - أكتوبر 2023)",
+      "category": "official_exam_with_solution",
+      "year": "2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/03_sample_exams/1ap_math_t1_exam_sol_2024_dzmadrassa_31.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/dzmadrassa-1ap-mathematiques-393535-1769086451453.pdf?download=true&docId=110e90d5-4985-4f91-9265-aa5277eff81c"
+    },
+    {
+      "id": "1ap_math_t1_dzmadrassa_29_2023",
+      "grade": "1ap",
+      "title_ar": "الفرض الأول في مادة الرياضيات - السنة الأولى ابتدائي مع التصحيح (الفصل الأول - نوفمبر 2022)",
+      "category": "official_exam_with_solution",
+      "year": "2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/03_sample_exams/1ap_math_t1_exam_sol_2023_dzmadrassa_29.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/dzmadrassa-1ap-mathematiques-1218259-1769089599491.pdf?download=true&docId=12ecc4b7-181d-45b9-a784-e582ff5f45f7"
+    },
+    {
+      "id": "1ap_math_t1_eddirasa_40_2026",
+      "grade": "1ap",
+      "title_ar": "تقويم الفصل الأول في الرياضيات - السنة الأولى ابتدائي (نموذج 40)",
+      "category": "official_exam",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/03_sample_exams/1ap_math_t1_exam_2026_eddirasa_40.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/08/%D8%A5%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%B1%D9%82%D9%85-40-eddirasa.com.pdf"
+    },
+    {
+      "id": "1ap_math_t1_dzeducative_01_2025",
+      "grade": "1ap",
+      "title_ar": "اختبار الفصل الأول في مادة الرياضيات - السنة الأولى ابتدائي (نموذج 01)",
+      "category": "official_exam",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/03_sample_exams/1ap_math_t1_exam_2025_dzeducative_01.pdf",
+      "source_url": "https://www.dzeducative.com/wp-content/uploads/2025/10/1st-1ap-mathematiques-1.pdf"
+    },
+    {
+      "id": "1ap_math_t2_eddirasa_97_2026",
+      "grade": "1ap",
+      "title_ar": "اختبارات الفصل الثاني في الرياضيات - السنة الأولى ابتدائي مع التصحيح (نموذج 97)",
+      "category": "official_exam_with_solution",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/03_sample_exams/1ap_math_t2_exam_sol_2026_eddirasa_97.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/08/%D8%A5%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%B1%D9%82%D9%85-97-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "1ap_math_t2_ency_eval_2026",
+      "grade": "1ap",
+      "title_ar": "تقويمات الميادين الأربعة في مادة الرياضيات - السنة الأولى ابتدائي الفصل الثاني (2025-2026)",
+      "category": "official_exam",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/03_sample_exams/1ap_math_t2_eval_2026_ency.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_1ddca3004faf48d8a6d3f98862884560.pdf?index=true"
+    },
+    {
+      "id": "1ap_math_t2_elbassair_09_2024",
+      "grade": "1ap",
+      "title_ar": "اختبار الفصل الثاني في مادة الرياضيات - السنة الأولى ابتدائي مع التصحيح (2023-2024)",
+      "category": "official_exam_with_solution",
+      "year": "2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/03_sample_exams/1ap_math_t2_exam_sol_2024_elbassair_09.pdf",
+      "source_url": "https://elbassair.net/achatri/chat2014/cour/primaire/1pr/ikhtibarat1ap/ikhtibarat%20math%201ap/2trim/EXAM%20MATH%202%20TRIM%202024/EXAM%202%20TRIM%20MATH%20%201AP%2009%20elbassair.net.pdf"
+    },
+    {
+      "id": "1ap_math_t2_dzmadrassa_77_2023",
+      "grade": "1ap",
+      "title_ar": "فرض الفصل الثاني في مادة الرياضيات - السنة الأولى ابتدائي مع التصحيح النموذجي (فيفري 2023)",
+      "category": "official_exam_with_solution",
+      "year": "2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/03_sample_exams/1ap_math_t2_exam_sol_2023_dzmadrassa_77.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/1ap/mathematiques/trimestre-2/t2/2023/dzmadrassa-1ap-mathematiques-842449.pdf?download=true&docId=19ca71f9-a488-48a7-9392-de0ed46a66c0"
+    },
+    {
+      "id": "1ap_math_t3_eddirasa_59_2026",
+      "grade": "1ap",
+      "title_ar": "مراجعة واختبار الفصل الثالث في الرياضيات - السنة الأولى ابتدائي مع التصحيح (نموذج 59)",
+      "category": "official_exam_with_solution",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/03_sample_exams/1ap_math_t3_exam_sol_2026_eddirasa_59.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/08/%D8%A5%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%B1%D9%82%D9%85-59-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "1ap_math_t3_dzmadrassa_52_2025",
+      "grade": "1ap",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات - السنة الأولى ابتدائي مع شبكة التصحيح (ولاية المدية 2024-2025)",
+      "category": "official_exam_with_solution",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/03_sample_exams/1ap_math_t3_exam_sol_2025_dzmadrassa_52.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/1ap/mathematiques/trimestre-3/t3/2025/dzmadrassa-1ap-mathematiques-306804.pdf?download=true&docId=ed352747-1ed6-4345-a618-d1fdb69e20c6"
+    },
+    {
+      "id": "1ap_math_t3_dzmadrassa_46_2024",
+      "grade": "1ap",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات - السنة الأولى ابتدائي مع التصحيح (ماي 2024)",
+      "category": "official_exam_with_solution",
+      "year": "2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/03_sample_exams/1ap_math_t3_exam_sol_2024_dzmadrassa_46.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/1ap/mathematiques/trimestre-3/t3/2024/dzmadrassa-1ap-mathematiques-302568.pdf?download=true&docId=d3ae8ce5-d411-4d71-884f-ab282984ee3b"
+    },
+    {
+      "id": "1ap_math_t3_ency_01_2017",
+      "grade": "1ap",
+      "title_ar": "الاختبار الثالث للثلاثي الثالث في مادة الرياضيات - السنة الأولى ابتدائي (2016-2017)",
+      "category": "official_exam",
+      "year": "2017",
+      "generation": "gen2",
+      "local_path": "pipeline/references/1ap/03_sample_exams/1ap_math_t3_exam_2017_ency_01.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_ae9e05ed61704a0ea510baef4fdce971.pdf?index=true"
+    }
+  ],
+  "missing_references": [
+    {
+      "grade": "1ap",
+      "title_ar": "اختبارات السنة الأولى ابتدائي رياضيات - بنك dzexams.com",
+      "reason": "HTTP 403 Cloudflare anti-bot challenge (Just a moment...); skipped per anti-bot policy",
+      "source_url": "https://www.dzexams.com/1ap/math"
+    },
+    {
+      "grade": "1ap",
+      "title_ar": "اختبار الفصل الثالث (النموذج 01) في الرياضيات - السنة الأولى ابتدائي (namadhiji.com)",
+      "reason": "Requires user account registration/login to download PDF (سجّل مجاناً لتحميل الملف)",
+      "source_url": "https://namadhiji.com/resource/1ap-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-third-2024-2141718"
+    },
+    {
+      "grade": "1ap",
+      "title_ar": "اختبارات الفصل الأول الرسمية في الرياضيات للسنة الأولى ابتدائي (ency-education.net)",
+      "reason": "Official ministry policy notice on mirror: formal T1 exams are not held in 1AP (replaced by continuous evaluations / تقويمات)",
+      "source_url": "https://www.ency-education.net/1ap-exams-math/1"
+    }
+  ]
+}

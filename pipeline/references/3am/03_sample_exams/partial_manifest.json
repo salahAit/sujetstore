@@ -1,0 +1,135 @@
+{
+  "documents": [
+    {
+      "id": "ref_3am_test_t1_eddirasa_105_2026",
+      "grade": "3am",
+      "title_ar": "الفرض الأول للفصل الأول في مادة الرياضيات - السنة الثالثة متوسط (الأعداد الناطقة ومستقيمات في المثلث ومتوازي الأضلاع، المدة ساعة واحدة - 2025/2026)",
+      "category": "official_exam",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t1_test_eddirasa_105_2026.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D9%81%D8%B1%D8%B6-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-105-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_3am_test_t1_ency_qantara_2026",
+      "grade": "3am",
+      "title_ar": "فرض الفصل الأول في مادة الرياضيات مع الحل النموذجي - السنة الثالثة متوسط (متوسطة القنطرة، مديرية التربية لولاية بسكرة، المدة ساعة واحدة، سلم التنقيط 20/20 - 2025/2026)",
+      "category": "official_exam_with_solution",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t1_test_ency_2026.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_0a144c54eddc484498e6fe2c4ba0dfe6.pdf?index=true"
+    },
+    {
+      "id": "ref_3am_test_t1_dzmadrassa_96_2025",
+      "grade": "3am",
+      "title_ar": "الفرض الأول للفصل الأول في مادة الرياضيات مع الحل المفصل (نموذج 02) - السنة الثالثة متوسط (الأستاذ علواني محمد، العمليات على الأعداد النسبية والناطقة - 2024/2025)",
+      "category": "official_exam_with_solution",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t1_test_dzmadrassa_96_2025.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/3am/mathematiques/devoirs/dzmadrassa-3am-mathematiques-sujet-775722.pdf?download=true&docId=41e9c97c-957e-418d-9f82-7ad7c42d1fee"
+    },
+    {
+      "id": "ref_3am_exam_t1_ency_berkani_2026",
+      "grade": "3am",
+      "title_ar": "الاختبار الأول في مادة الرياضيات - السنة الثالثة متوسط (متوسطة بركاني علي أولاد قاسم، 08 ديسمبر 2025، المدة ساعتان، الجزء الأول 13 نقطة + المسألة 7 نقاط)",
+      "category": "official_exam",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t1_exam_ency_2026.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_0ac59b1ca1de45c78d899fca813fb58f.pdf?index=true"
+    },
+    {
+      "id": "ref_3am_solution_t1_dzmadrassa_82_2023",
+      "grade": "3am",
+      "title_ar": "اختبار الفصل الأول في مادة الرياضيات مع التصحيح النموذجي وسلم التنقيط - السنة الثالثة متوسط (الجزء الأول 12 نقطة + الوضعية الإدماجية 8 نقاط، 2022/2023)",
+      "category": "exam_solution",
+      "year": "2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t1_solution_dzmadrassa_82_2023.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/3am/mathematiques/examens/dzmadrassa-3am-mathematiques-sujet-654221.pdf?download=true&docId=b1373b88-ce7f-4cb3-8f82-de5a546ed37c"
+    },
+    {
+      "id": "ref_3am_test_t2_eddirasa_46_2026",
+      "grade": "3am",
+      "title_ar": "فرض الفصل الثاني في مادة الرياضيات مع التصحيح النموذجي - السنة الثالثة متوسط (نموذج 46، فيفري 2026، المدة ساعة واحدة، القوى ذات أسس صحيحة نسبية والكتابة العلمية والهندسة)",
+      "category": "official_exam_with_solution",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t2_test_eddirasa_46_2026.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D9%81%D8%B1%D8%B6-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-46-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_3am_exam_t2_ency_2025",
+      "grade": "3am",
+      "title_ar": "اختبار الفصل الثاني في مادة الرياضيات - السنة الثالثة متوسط (المدرسة الخاصة علوم وحياة، المدة ساعتان، الحساب الحرفي والنشر والتبسيط والمعادلات والمسألة - 2024/2025)",
+      "category": "official_exam",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t2_exam_ency_2025.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_d2b902776f3641899c10c39e866fe5c7.pdf?index=true"
+    },
+    {
+      "id": "ref_3am_solution_t2_dzmadrassa_81_2025",
+      "grade": "3am",
+      "title_ar": "اختبار الفصل الثاني في مادة الرياضيات مع التصحيح النموذجي وسلم التنقيط - السنة الثالثة متوسط (الحصر والكتابة العلمية والنشر والدائرة المحيطة بالمثلث القائم ومماس الدائرة - 2025)",
+      "category": "exam_solution",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t2_solution_dzmadrassa_81_2025.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/3am/mathematiques/examens/dzmadrassa-3am-mathematiques-sujet-624353.pdf?download=true&docId=958e6bb2-bc07-4354-b0d3-46955403dd33"
+    },
+    {
+      "id": "ref_3am_test_t3_eddirasa_28_2025",
+      "grade": "3am",
+      "title_ar": "فرض الفصل الثالث في مادة الرياضيات مع التصحيح النموذجي وسلم التنقيط - السنة الثالثة متوسط (نموذج 28، المدة ساعة واحدة، سلم التنقيط 20/20 - 2024/2025)",
+      "category": "official_exam_with_solution",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t3_test_eddirasa_28_2025.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D9%81%D8%B1%D8%B6-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-28-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_3am_exam_t3_ency_aintemouchent_2024",
+      "grade": "3am",
+      "title_ar": "امتحان الثلاثي الثالث في مادة الرياضيات - السنة الثالثة متوسط (متوسطة محمد البوحميدي بولهاصة الغرابة، مديرية التربية لولاية عين تموشنت، 21 ماي 2024، المدة ساعتان)",
+      "category": "official_exam",
+      "year": "2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t3_exam_ency_2024.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_e6f663a75842415389da3cdf45bd91b2.pdf?index=true"
+    },
+    {
+      "id": "ref_3am_solution_t3_ency_2026",
+      "grade": "3am",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات مع التصحيح النموذجي وسلم التنقيط - السنة الثالثة متوسط (المدرسة الخاصة نسرين سكول، المدة ساعتان، الإحصاء والسرعة المتوسطة والنسب المئوية - 2025/2026)",
+      "category": "exam_solution",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t3_solution_ency_2026.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_7fedb6f6f0554249b537657410e68669.pdf?index=true"
+    },
+    {
+      "id": "ref_3am_solution_t3_eddirasa_59_2025",
+      "grade": "3am",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات مع التصحيح النموذجي - السنة الثالثة متوسط (نموذج 59، المدة ساعتان، المتباينات والانسحاب والوضعية الإدماجية - 2024/2025)",
+      "category": "exam_solution",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t3_solution_eddirasa_59_2025.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-59-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_3am_solution_t3_dzmadrassa_68_2025",
+      "grade": "3am",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات مع التصحيح النموذجي وشبكة التقويم - السنة الثالثة متوسط (متوسطة الشهيد درقاوي يونس، مديرية التربية لولاية سعيدة، 20 ماي 2025، المدة ساعتان)",
+      "category": "exam_solution",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/03_sample_exams/3am_math_t3_solution_dzmadrassa_68_2025.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/3am/mathematiques/examens/dzmadrassa-3am-mathematiques-sujet-410024.pdf?download=true&docId=d5f34fa5-08bc-4f93-888f-639659c456fa"
+    }
+  ],
+  "missing_references": []
+}

@@ -1,0 +1,125 @@
+{
+  "id": "lesson_4am_t2_vector_addition_chasles_proofs",
+  "slug": "4am-t2-vector-addition-chasles-proofs",
+  "grade": "4am",
+  "yearSubjectId": 644,
+  "trimesterId": "t2",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: الأشعة والانسحاب",
+  "order": 5,
+  "titleAr": "مجموع شعاعين، علاقة شال، قاعدة متوازي الأضلاع والبراهين الشعاعية",
+  "objectives": [
+    "تعريف مجموع شعاعين انطلاقا من تركيب انسحابين وتطبيق علاقة شال لجمع شعاعين وتبسيط عبارات شعاعية",
+    "توظيف قاعدة متوازي الأضلاع لإنشاء مجموع شعاعين لهما نفس المبدأ",
+    "إنشاء شعاع أو نقطة تحقق علاقة شعاعية معينة وإنجاز براهين هندسية باستعمال علاقة شال وخواص متوازي الأضلاع"
+  ],
+  "keywordsAr": [
+    "مجموع شعاعين",
+    "تركيب انسحابين",
+    "علاقة شال",
+    "قاعدة متوازي الأضلاع",
+    "براهين شعاعية"
+  ],
+  "discover": {
+    "scenarioAr": "يتحرك روبوت في ساحة وفق إزاحتين متتاليتين: الأولى من النقطة $A$ إلى $B$ (شعاعها $\\overrightarrow{AB}$)، والثانية من $B$ إلى $C$ (شعاعها $\\overrightarrow{BC}$). ومن جهة أخرى، ماذا لو طبّقنا على النقطة $A$ شعاعين لهما **نفس المبدأ $A$** هما $\\overrightarrow{AB}$ و$\\overrightarrow{AC}$؟ لاحظ الشكلين لاكتشاف علاقة شال وقاعدة متوازي الأضلاع.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 205\" width=\"460\" height=\"205\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect width=\"460\" height=\"205\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"12\" y=\"12\" width=\"212\" height=\"181\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"118\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">تركيب انسحابين (علاقة شال)</text><line x1=\"40\" y1=\"145\" x2=\"112\" y2=\"66.5\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><polygon points=\"118,60 107.3,65.1 113.9,71.1\" fill=\"#2563eb\"/><line x1=\"118\" y1=\"60\" x2=\"193\" y2=\"124\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><polygon points=\"200,130 194.5,119.5 188.7,126.3\" fill=\"#16a34a\"/><line x1=\"40\" y1=\"145\" x2=\"191\" y2=\"130.8\" stroke=\"#dc2626\" stroke-width=\"2.8\"/><polygon points=\"200,130 188.6,126.5 189.4,135.5\" fill=\"#dc2626\"/><circle cx=\"40\" cy=\"145\" r=\"3.8\" fill=\"#0f172a\"/><circle cx=\"118\" cy=\"60\" r=\"3.8\" fill=\"#0f172a\"/><circle cx=\"200\" cy=\"130\" r=\"3.8\" fill=\"#0f172a\"/><text x=\"27\" y=\"154\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"118\" y=\"50\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"207\" y=\"138\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"118\" y=\"178\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">المجموع هو الشعاع الأحمر</text><rect x=\"236\" y=\"12\" width=\"212\" height=\"181\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"342\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">قاعدة متوازي الأضلاع</text><line x1=\"324\" y1=\"66\" x2=\"426\" y2=\"76\" stroke=\"#94a3b8\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><line x1=\"358\" y1=\"146\" x2=\"426\" y2=\"76\" stroke=\"#94a3b8\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><line x1=\"256\" y1=\"136\" x2=\"318\" y2=\"72.2\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><polygon points=\"324,66 313.1,70 319.5,76.2\" fill=\"#2563eb\"/><line x1=\"256\" y1=\"136\" x2=\"349\" y2=\"145.1\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><polygon points=\"358,146 347.5,140.5 346.6,149.5\" fill=\"#16a34a\"/><line x1=\"256\" y1=\"136\" x2=\"417\" y2=\"79.2\" stroke=\"#dc2626\" stroke-width=\"2.8\"/><polygon points=\"426,76 414.1,75.4 417.1,83.9\" fill=\"#dc2626\"/><circle cx=\"256\" cy=\"136\" r=\"3.8\" fill=\"#0f172a\"/><circle cx=\"324\" cy=\"66\" r=\"3.8\" fill=\"#0f172a\"/><circle cx=\"358\" cy=\"146\" r=\"3.8\" fill=\"#0f172a\"/><circle cx=\"426\" cy=\"76\" r=\"3.8\" fill=\"#dc2626\"/><text x=\"244\" y=\"144\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"322\" y=\"56\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"358\" y=\"161\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"434\" y=\"73\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">D</text><text x=\"342\" y=\"179\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">ABDC متوازي أضلاع</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في الشكل الأيسر، ينتقل الروبوت من $A$ إلى $B$ ثم من $B$ إلى $C$. ما الشعاع الواحد الذي يعوّض هذين الانسحابين المتتاليين؟",
+        "hintAr": "نقطة الانطلاق الأولى هي $A$ ونقطة الوصول النهائية هي $C$.",
+        "revealAr": "مركب الانسحابين يعطي الانسحاب الذي يحوّل $A$ إلى $C$، أي الشعاع $\\overrightarrow{AC}$، وهذه هي **علاقة شال**: $\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$."
+      },
+      {
+        "promptAr": "إذا كان $AB = 3\\text{ cm}$ و$BC = 4\\text{ cm}$ والمثلث $ABC$ قائم في $B$، فهل طول الشعاع المجموع $\\overrightarrow{AC}$ يساوي $3 + 4 = 7\\text{ cm}$؟ احسب الطول الحقيقي $AC$ بالسنتيمتر.",
+        "hintAr": "طبّق خاصية فيثاغورس في المثلث القائم $ABC$ لإيجاد طول الوتر $AC$.",
+        "expectedInput": "5",
+        "revealAr": "لا! جمع الأشعة لا يعني جمع الأطوال: $AC = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5\\text{ cm} < 7\\text{ cm}$."
+      },
+      {
+        "promptAr": "في الشكل الأيمن، للشعاعين $\\overrightarrow{AB}$ و$\\overrightarrow{AC}$ نفس المبدأ $A$، وأنشأنا النقطة $D$ بحيث $ABDC$ متوازي أضلاع. استنتج بالربط مع علاقة شال لماذا $\\overrightarrow{AB} + \\overrightarrow{AC} = \\overrightarrow{AD}$.",
+        "hintAr": "في متوازي الأضلاع $ABDC$، ما الشعاع الذي يساوي $\\overrightarrow{AC}$؟",
+        "revealAr": "بما أن $ABDC$ متوازي أضلاع، فإن $\\overrightarrow{AC} = \\overrightarrow{BD}$. وبالتعويض في علاقة شال نحصل على $\\overrightarrow{AB} + \\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{BD} = \\overrightarrow{AD}$."
+      },
+      {
+        "promptAr": "باستعمال التبديلية وعلاقة شال، كيف نبسط المجموع الشعاعي $\\overrightarrow{EF} + \\overrightarrow{GE} + \\overrightarrow{FG}$؟",
+        "hintAr": "أعد ترتيب الحدود لتصبح نهاية الشعاع الأول مطابقة لبداية الذي يليه: $\\overrightarrow{GE} + \\overrightarrow{EF} + \\overrightarrow{FG}$.",
+        "revealAr": "نجمع $\\overrightarrow{GE} + \\overrightarrow{EF} = \\overrightarrow{GF}$، ثم $\\overrightarrow{GF} + \\overrightarrow{FG} = \\overrightarrow{GG} = \\vec{0}$ (الشعاع المعدوم)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**علاقة شال (تركيب انسحابين)**: من أجل كل ثلاث نقط $A$ و$B$ و$C$ من المستوي: $\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$. تُستعمل لجمع شعاعين متعاقبين أو لتفكيك شعاع بإدخال نقطة وسيطة.",
+      "**قاعدة متوازي الأضلاع**: لجمع شعاعين لهما **نفس المبدأ** $\\overrightarrow{AB}$ و$\\overrightarrow{AC}$، ننشئ النقطة $D$ بحيث يكون الرباعي $ABDC$ متوازي أضلاع، فيكون القطر $\\overrightarrow{AD}$ هو المجموع: $\\overrightarrow{AB} + \\overrightarrow{AC} = \\overrightarrow{AD}$.",
+      "**خواص الجمع والطرح الشعاعي**: الجمع الشعاعي تبديلي وتجميعي، والشعاع المعدوم محايد ($\\vec{u} + \\vec{0} = \\vec{u}$). ولطرح شعاع نضيف معاكسه: $\\overrightarrow{AB} - \\overrightarrow{CB} = \\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$.",
+      "**البراهين الشعاعية**: لإثبات أن $I$ منتصف $[AB]$ نُثبت أن $\\overrightarrow{AI} = \\overrightarrow{IB}$ أو $\\overrightarrow{IA} + \\overrightarrow{IB} = \\vec{0}$؛ ولإثبات أن $MNPQ$ متوازي أضلاع نُثبت أن $\\overrightarrow{MN} = \\overrightarrow{QP}$ أو $\\overrightarrow{MN} + \\overrightarrow{MQ} = \\overrightarrow{MP}$."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 195\" width=\"480\" height=\"195\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect width=\"480\" height=\"195\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"12\" y=\"12\" width=\"222\" height=\"171\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"123\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">علاقة شال وطرح شعاعين</text><line x1=\"42\" y1=\"126\" x2=\"115\" y2=\"65.8\" stroke=\"#2563eb\" stroke-width=\"2.4\"/><polygon points=\"122,60 111.3,63.2 117,70\" fill=\"#2563eb\"/><line x1=\"122\" y1=\"60\" x2=\"197\" y2=\"120.2\" stroke=\"#16a34a\" stroke-width=\"2.4\"/><polygon points=\"204,126 198.7,116 193,122.8\" fill=\"#16a34a\"/><line x1=\"42\" y1=\"126\" x2=\"195\" y2=\"126\" stroke=\"#dc2626\" stroke-width=\"2.6\"/><polygon points=\"204,126 194,121.5 194,130.5\" fill=\"#dc2626\"/><circle cx=\"42\" cy=\"126\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"122\" cy=\"60\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"204\" cy=\"126\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"30\" y=\"133\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"122\" y=\"50\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"211\" y=\"133\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"123\" y=\"154\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">AB + BC = AC</text><text x=\"123\" y=\"173\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">AB - CB = AB + BC = AC</text><rect x=\"246\" y=\"12\" width=\"222\" height=\"171\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"357\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">قاعدة متوازي الأضلاع</text><line x1=\"322\" y1=\"60\" x2=\"444\" y2=\"68\" stroke=\"#94a3b8\" stroke-width=\"1.3\" stroke-dasharray=\"3 2\"/><line x1=\"388\" y1=\"130\" x2=\"444\" y2=\"68\" stroke=\"#94a3b8\" stroke-width=\"1.3\" stroke-dasharray=\"3 2\"/><line x1=\"322\" y1=\"60\" x2=\"388\" y2=\"130\" stroke=\"#cbd5e1\" stroke-width=\"1.1\" stroke-dasharray=\"2 2\"/><line x1=\"266\" y1=\"122\" x2=\"316\" y2=\"66.7\" stroke=\"#2563eb\" stroke-width=\"2.3\"/><polygon points=\"322,60 312.2,64.4 318.8,70.4\" fill=\"#2563eb\"/><line x1=\"266\" y1=\"122\" x2=\"379\" y2=\"129.4\" stroke=\"#16a34a\" stroke-width=\"2.3\"/><polygon points=\"388,130 378.3,124.8 377.7,133.8\" fill=\"#16a34a\"/><line x1=\"266\" y1=\"122\" x2=\"435\" y2=\"70.6\" stroke=\"#dc2626\" stroke-width=\"2.6\"/><polygon points=\"444,68 433.2,66.6 435.8,75.2\" fill=\"#dc2626\"/><circle cx=\"355\" cy=\"95\" r=\"3.2\" fill=\"#dc2626\"/><text x=\"254\" y=\"128\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"320\" y=\"52\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"390\" y=\"144\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"450\" y=\"67\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">D</text><text x=\"355\" y=\"87\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"bold\" fill=\"#dc2626\">O</text><text x=\"357\" y=\"164\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#166534\">AB + AC = AD</text><text x=\"357\" y=\"179\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#475569\">OA + OD = 0</text></svg>",
+    "visualCaptionAr": "علاقة شال لجمع شعاعين متعاقبين وقاعدة متوازي الأضلاع لشعاعين من نفس المبدأ",
+    "examples": [
+      {
+        "problemAr": "بسّط العبارة الشعاعية الآتية إلى أبسط شكل ممكن: $\\vec{u} = \\overrightarrow{AB} - \\overrightarrow{AC} + \\overrightarrow{DC} - \\overrightarrow{DB}$.",
+        "solutionAr": "نستبدل كل عملية طرح بجمع الشعاع المعاكس:\n\n$\\vec{u} = \\overrightarrow{AB} + \\overrightarrow{CA} + \\overrightarrow{DC} + \\overrightarrow{BD}$.\n\nنعيد ترتيب الحدود لتطبيق علاقة شال:\n\n$\\vec{u} = (\\overrightarrow{DC} + \\overrightarrow{CA}) + (\\overrightarrow{AB} + \\overrightarrow{BD}) = \\overrightarrow{DA} + \\overrightarrow{AD} = \\overrightarrow{DD} = \\vec{0}$."
+      },
+      {
+        "problemAr": "ليكن $ABC$ مثلثا. أنشئ النقطة $M$ بحيث $\\overrightarrow{AM} = \\overrightarrow{AB} + \\overrightarrow{AC}$، والنقطة $N$ صورة $C$ بالانسحاب الذي يحوّل $B$ إلى $A$. برهن أن $C$ منتصف القطعة $[MN]$.",
+        "solutionAr": "1) من $\\overrightarrow{AM} = \\overrightarrow{AB} + \\overrightarrow{AC}$ نستنتج أن الرباعي $ABMC$ متوازي أضلاع، إذن $\\overrightarrow{AB} = \\overrightarrow{CM}$ وبأخذ المعاكس نجد $\\overrightarrow{MC} = \\overrightarrow{BA}$.\n\n2) وبما أن $N$ صورة $C$ بالانسحاب الذي يحوّل $B$ إلى $A$، فإن $\\overrightarrow{CN} = \\overrightarrow{BA}$.\n\n3) نستنتج أن $\\overrightarrow{MC} = \\overrightarrow{CN}$، ومنه $C$ منتصف القطعة $[MN]$."
+      }
+    ],
+    "watchOutAr": "لا تخلط بين علاقة شال وقاعدة متوازي الأضلاع: في $\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$ ينطبق **طرف الأول على مبدأ الثاني**؛ أما في $\\overrightarrow{AB} + \\overrightarrow{AC}$ فلهما **نفس المبدأ $A$**، ولذلك لا يساويان $\\overrightarrow{BC}$ ولا $\\overrightarrow{CB}$ بل القطر $\\overrightarrow{AD}$ في متوازي الأضلاع $ABDC$!"
+  },
+  "practice": [
+    {
+      "questionAr": "ما هو التبسيط الصحيح للعبارة الشعاعية: $\\overrightarrow{MN} - \\overrightarrow{PN} + \\overrightarrow{PQ}$؟",
+      "options": [
+        "$\\overrightarrow{MQ}$",
+        "$\\overrightarrow{QM}$",
+        "$\\overrightarrow{MP}$",
+        "$\\vec{0}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! حوّلت $-\\overrightarrow{PN}$ إلى $+\\overrightarrow{NP}$ ثم طبّقت علاقة شال مرتين: $\\overrightarrow{MN} + \\overrightarrow{NP} + \\overrightarrow{PQ} = \\overrightarrow{MQ}$.",
+        "المبدأ هو $M$ والنهاية هي $Q$، لذا الناتج هو $\\overrightarrow{MQ}$ وليس معاكسه $\\overrightarrow{QM}$.",
+        "أهملتَ جمع الحد الثالث $+\\overrightarrow{PQ}$ بعد تبسيط $\\overrightarrow{MN} + \\overrightarrow{NP} = \\overrightarrow{MP}$.",
+        "لم تنغلق السلسلة عند $M$ لأن النهاية هي $Q$ وليست $M$."
+      ],
+      "explanationAr": "نستبدل $-\\overrightarrow{PN}$ بمعاكسه $+\\overrightarrow{NP}$، فتصبح العبارة $\\overrightarrow{MN} + \\overrightarrow{NP} + \\overrightarrow{PQ} = \\overrightarrow{MP} + \\overrightarrow{PQ} = \\overrightarrow{MQ}$."
+    },
+    {
+      "questionAr": "في الشكل المقابل، $EFGH$ متوازي أضلاع مركزه $O$. أيٌّ من المساويات الشعاعية الآتية **صحيحة**؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 175\" width=\"320\" height=\"175\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect width=\"320\" height=\"175\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.4\"/><polygon points=\"62,50 218,42 258,126 102,134\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"62\" y1=\"50\" x2=\"258\" y2=\"126\" stroke=\"#64748b\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><line x1=\"218\" y1=\"42\" x2=\"102\" y2=\"134\" stroke=\"#64748b\" stroke-width=\"1.3\" stroke-dasharray=\"4 3\"/><circle cx=\"62\" cy=\"50\" r=\"3.8\" fill=\"#1e40af\"/><circle cx=\"218\" cy=\"42\" r=\"3.8\" fill=\"#1e40af\"/><circle cx=\"258\" cy=\"126\" r=\"3.8\" fill=\"#1e40af\"/><circle cx=\"102\" cy=\"134\" r=\"3.8\" fill=\"#1e40af\"/><circle cx=\"160\" cy=\"88\" r=\"4\" fill=\"#dc2626\"/><text x=\"47\" y=\"46\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">E</text><text x=\"224\" y=\"37\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">F</text><text x=\"266\" y=\"134\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">G</text><text x=\"87\" y=\"145\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">H</text><text x=\"160\" y=\"76\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#dc2626\">O</text></svg>",
+      "options": [
+        "$\\overrightarrow{EF} + \\overrightarrow{EH} = \\overrightarrow{FH}$",
+        "$\\overrightarrow{EF} + \\overrightarrow{EG} = \\overrightarrow{EH}$",
+        "$\\overrightarrow{EF} + \\overrightarrow{EH} = \\overrightarrow{EG}$",
+        "$\\overrightarrow{OE} + \\overrightarrow{OF} = \\vec{0}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "الشعاعان $\\overrightarrow{EF}$ و$\\overrightarrow{EH}$ ينطلقان من الرأس $E$، إذن مجموعهما هو القطر المنطلق من $E$ أي $\\overrightarrow{EG}$ وليس $\\overrightarrow{FH}$.",
+        "في متوازي الأضلاع $EFGH$، الضلعان المتجاوران هما $[EF]$ و$[EH]$، بينما $[EG]$ هو القطر الناتج عن جمعهما.",
+        "أحسنت! بتطبيق قاعدة متوازي الأضلاع من الرأس $E$، نحصل على $\\overrightarrow{EF} + \\overrightarrow{EH} = \\overrightarrow{EG}$.",
+        "$O$ منتصف $[EG]$ ومنتصف $[FH]$، إذن $\\overrightarrow{OE} + \\overrightarrow{OG} = \\vec{0}$ وليس $\\overrightarrow{OE} + \\overrightarrow{OF}$."
+      ],
+      "explanationAr": "الشعاعان $\\overrightarrow{EF}$ و$\\overrightarrow{EH}$ لهما نفس المبدأ $E$، وبما أن $EFGH$ متوازي أضلاع فإن $\\overrightarrow{EH} = \\overrightarrow{FG}$، ومنه $\\overrightarrow{EF} + \\overrightarrow{EH} = \\overrightarrow{EF} + \\overrightarrow{FG} = \\overrightarrow{EG}$."
+    },
+    {
+      "questionAr": "ليكن $ABC$ مثلثا، والنقطة $D$ من المستوي تحقق العلاقة الشعاعية: $\\overrightarrow{AB} + \\overrightarrow{AC} = \\overrightarrow{AD}$. ماذا نستنتج حتما؟",
+      "options": [
+        "الرباعي $ABCD$ متوازي أضلاع",
+        "الرباعي $ABDC$ متوازي أضلاع",
+        "النقطة $D$ منتصف القطعة $[BC]$",
+        "المثلث $ABD$ قائم في $A$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه لترتيب الرؤوس! في $\\overrightarrow{AB} + \\overrightarrow{AC} = \\overrightarrow{AD}$ يكون $[AD]$ و$[BC]$ هما القطران، فالرباعي هو $ABDC$ وليس $ABCD$.",
+        "صحيح تماما! العلاقة $\\overrightarrow{AB} + \\overrightarrow{AC} = \\overrightarrow{AD}$ هي قاعدة متوازي الأضلاع للرباعي $ABDC$.",
+        "القطر $[AD]$ يقطع $[BC]$ في منتصفه، لكن $D$ نفسها ليست منتصف $[BC]$ بل هي الرأس الرابع لمتوازي الأضلاع.",
+        "قاعدة متوازي الأضلاع محققة لأي مثلث $ABC$ ولا تشترط وجود زاوية قائمة."
+      ],
+      "explanationAr": "بما أن $\\overrightarrow{AB} + \\overrightarrow{AC} = \\overrightarrow{AD}$، يمكن كتابتها $\\overrightarrow{AC} = \\overrightarrow{AD} - \\overrightarrow{AB} = \\overrightarrow{BA} + \\overrightarrow{AD} = \\overrightarrow{BD}$. تساوي الشعاعين $\\overrightarrow{AC} = \\overrightarrow{BD}$ مع عدم استقامية $A, B, C$ يثبت أن الرباعي $ABDC$ متوازي أضلاع."
+    }
+  ]
+}

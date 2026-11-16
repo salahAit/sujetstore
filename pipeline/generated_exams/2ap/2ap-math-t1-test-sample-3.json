@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "2ap",
+    "yearName": "السنة الثانية ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t1",
+    "trimesterName": "الفصل الأول",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "45 دقيقة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 3,
+      "instruction": "احسب المجموع وأكمل بالضعف والنصف:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب المجموع (دون احتفاظ):  $64 + 25 =$ .....",
+          "answer": "1) المجموع:\n$ 64 + 25 = 89 $",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "2) أكمل: ضعف العدد $35$ هو ..... ، ونصف العدد $52$ هو .....",
+          "answer": "2) ضعف العدد $35$ هو $70$، ونصف العدد $52$ هو $26$.\n$ 35 + 35 = 70 $",
+          "mark": "1.5"
+        }
+      ],
+      "id": "ex_test_1_2ap_t1_add_double_half",
+      "num": "الأول"
+    },
+    {
+      "points": 3,
+      "instruction": "تأمل الشكل الهندسي المقابل ثم أجب:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) ما اسم هذا المضلع؟ وكم عدد أضلاعه ورؤوسه؟",
+              "answer": "هذا الشكل مستطيل، له $4$ أضلاع و $4$ رؤوس.",
+              "mark": "1"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/2ap_t1_rect_hard_s472969.svg",
+              "caption": "الشكل الهندسي ABCD"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) استنتج طول الضلع $[A B]$ وطول الضلع $[A D]$:",
+          "answer": "طول $[A B]$ هو $12$ cm، وطول $[A D]$ هو $6$ cm.",
+          "mark": "2"
+        }
+      ],
+      "id": "ex_test_2_2ap_t1_alignment_length_poly",
+      "num": "الثاني"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "اقرأ الوضعية جيداً ثم أجب عن السؤالين:",
+      "content": [
+        {
+          "type": "text",
+          "content": "كان عند إيناس $52$ حبة حلوى، فأعطاها والدها $45$ أخرى، ثم أهدت لأختها $56$ منها."
+        },
+        {
+          "type": "text",
+          "content": "1) كم حبة حلوى صار عند إيناس بعد هدية والدها؟",
+          "answer": "العملية:\n$ 52 + 45 = 97 $\nصار عند إيناس $97$ حبة حلوى.",
+          "mark": "2"
+        },
+        {
+          "type": "text",
+          "content": "2) كم حبة حلوى بقي عند إيناس في النهاية؟",
+          "answer": "العملية:\n$ 97 - 56 = 41 $\nبقي عند إيناس $41$ حبة حلوى.",
+          "mark": "2"
+        }
+      ],
+      "id": "ex_integration_2ap_t1_integration_word"
+    }
+  ]
+}

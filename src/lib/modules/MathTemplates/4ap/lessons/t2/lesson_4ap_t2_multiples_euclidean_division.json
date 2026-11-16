@@ -1,0 +1,128 @@
+{
+  "id": "lesson_4ap_t2_multiples_euclidean_division",
+  "slug": "lesson-4ap-t2-multiples-euclidean-division",
+  "grade": "4ap",
+  "yearSubjectId": 598,
+  "trimesterId": "t2",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثالث: الضرب والقسمة الإقليدية والكسور البسيطة والعشرية",
+  "order": 2,
+  "titleAr": "مضاعفات أعداد مألوفة والقسمة الإقليدية على قاسم ذي رقم واحد",
+  "objectives": [
+    "التعرف على مضاعفات أعداد مألوفة (2، 3، 5، 10، 15، 20، 25، 50، 100) واستعمالها في حصر المقسوم.",
+    "إجراء القسمة التامة والقسمة بباقي (القسمة الإقليدية) على قاسم ذي رقم واحد باستعمال طرح مضاعفات القاسم أو الآلية العمودية.",
+    "التعبير عن القسمة الإقليدية بالمساواة (المقسوم = القاسم × الحاصل + الباقي مع الباقي أصغر من القاسم) وحل وضعيات قسمة."
+  ],
+  "keywordsAr": [
+    "مضاعفات أعداد مألوفة",
+    "القسمة الإقليدية",
+    "القسمة التامة وبباقي",
+    "قاسم ذو رقم واحد",
+    "الحاصل والباقي"
+  ],
+  "discover": {
+    "scenarioAr": "قطف بستاني في تلمسان $197$ حبة رمان، وأراد وضعها في علب تسع كل علبة $6$ حبات. نريد معرفة عدد العلب المملوءة تماما وعدد الحبات المتبقية باستعمال مضاعفات العدد $6$ ثم بالآلية العمودية للقسمة الإقليدية.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 215\" width=\"540\" height=\"215\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"199\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"270\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">تقسيم 197 حبة رمان في علب تسع كل علبة 6 حبات</text><rect x=\"22\" y=\"46\" width=\"246\" height=\"146\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"145\" y=\"68\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#1e3a8a\">1) الحصر وطرح مضاعفات 6</text><rect x=\"34\" y=\"78\" width=\"222\" height=\"28\" rx=\"6\" fill=\"#eff6ff\"/><text x=\"145\" y=\"97\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">6 × 30 = 180  ≤  197  &lt;  240</text><text x=\"145\" y=\"128\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#0f172a\">197 - 180 = 17</text><text x=\"145\" y=\"152\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#15803d\">17 = 6 × 2 + 5</text><rect x=\"34\" y=\"162\" width=\"222\" height=\"22\" rx=\"5\" fill=\"#dcfce7\"/><text x=\"145\" y=\"177\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#14532d\">الحاصل = 30 + 2 = 32  والباقي = 5</text><rect x=\"284\" y=\"46\" width=\"234\" height=\"146\" rx=\"10\" fill=\"#ffffff\" stroke=\"#7c3aed\" stroke-width=\"1.4\"/><text x=\"401\" y=\"68\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#5b21b6\">2) القسمة الإقليدية العمودية</text><text x=\"362\" y=\"96\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">197</text><text x=\"362\" y=\"116\" text-anchor=\"end\" font-size=\"14\" fill=\"#dc2626\">- 18</text><line x1=\"320\" y1=\"122\" x2=\"368\" y2=\"122\" stroke=\"#475569\" stroke-width=\"1.4\"/><text x=\"368\" y=\"140\" text-anchor=\"end\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">17</text><text x=\"368\" y=\"158\" text-anchor=\"end\" font-size=\"14\" fill=\"#dc2626\">- 12</text><line x1=\"326\" y1=\"164\" x2=\"374\" y2=\"164\" stroke=\"#475569\" stroke-width=\"1.4\"/><text x=\"368\" y=\"182\" text-anchor=\"end\" font-size=\"15\" font-weight=\"bold\" fill=\"#b45309\">5</text><line x1=\"388\" y1=\"78\" x2=\"388\" y2=\"178\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"388\" y1=\"104\" x2=\"454\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"421\" y=\"96\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#7c3aed\">6</text><text x=\"421\" y=\"128\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#15803d\">32</text><text x=\"460\" y=\"164\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">197 = 6 × 32 + 5</text><text x=\"460\" y=\"182\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#b45309\">5 &lt; 6</text></svg>",
+    "steps": [
+      {
+        "promptAr": "نعلم أن $6 \\times 30 = 180$ ، أي نملأ $30$ علبة بـ $180$ حبة رمان. كم حبة رمان تتبقى بعد طرح $180$ من $197$ ؟",
+        "hintAr": "احسب $197 - 180$.",
+        "expectedInput": "17",
+        "revealAr": "يتبقى $197 - 180 = 17$ حبة رمان نواصل تقسيمها على $6$."
+      },
+      {
+        "promptAr": "الآن نريد تقسيم الحبات الـ $17$ المتبقية على $6$. ما هو أكبر مضاعف للعدد $6$ أصغر من أو يساوي $17$ ؟",
+        "hintAr": "تذكر مضاعفات $6$: $6$ ، $12$ ، $18$...",
+        "expectedInput": "12",
+        "revealAr": "أكبر مضاعف للعدد $6$ لا يتجاوز $17$ هو $12 = 6 \\times 2$."
+      },
+      {
+        "promptAr": "ملأنا $30$ علبة أولا ثم علبتين ($2$) إضافيتين. ما العدد الكلي للعلب المملوءة تماما (الحاصل)؟",
+        "hintAr": "اجمع $30 + 2$.",
+        "expectedInput": "32",
+        "revealAr": "يمتلئ $32$ علبة تماما، وهو حاصل القسمة الإقليدية للعدد $197$ على $6$."
+      },
+      {
+        "promptAr": "كم حبة رمان تبقى خارج العلب (الباقي)، وكيف نكتب المساواة المعبرة عن هذه القسمة؟",
+        "hintAr": "احسب $17 - 12$ وتأكد من أن الباقي أصغر من القاسم $6$.",
+        "revealAr": "الباقي هو $17 - 12 = 5$ حبات (ونتحقق أن $5 < 6$ )، والمساواة المعبرة عن القسمة هي: $197 = 6 \\times 32 + 5$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "مضاعفات أعداد مألوفة: مضاعفات $2$ رقم آحادها زوجي ($0, 2, 4, 6, 8$ )، ومضاعفات $5$ رقم آحادها $0$ أو $5$ ، ومضاعفات $10$ رقم آحادها $0$ ، ومضاعفات $25$ تنتهي بـ $00$ أو $25$ أو $50$ أو $75$.",
+      "تستعمل **القسمة الإقليدية** على قاسم ذي رقم واحد (من $2$ إلى $9$ ) للبحث عن عدد الحصص أو قيمة الحصة الواحدة.",
+      "نعبّر عن القسمة الإقليدية بالمساواة: المقسوم = القاسم $\\times$ الحاصل + الباقي، مع الشرط الأساسي: **الباقي أصغر تماما من القاسم** (الباقي $< $ القاسم).",
+      "إذا كان الباقي يساوي $0$ نسميها **قسمة تامة**، ويكون المقسوم مضاعفا للقاسم (مثل $180 \\div 6 = 30$ والباقي $0$ )."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 220\" width=\"540\" height=\"220\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"204\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"270\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">المضاعفات المألوفة والقسمة الإقليدية: 275 ÷ 4</text><rect x=\"20\" y=\"44\" width=\"246\" height=\"154\" rx=\"10\" fill=\"#ffffff\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"143\" y=\"66\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"bold\" fill=\"#14532d\">مضاعفات أعداد مألوفة</text><rect x=\"32\" y=\"76\" width=\"222\" height=\"25\" rx=\"5\" fill=\"#f0fdf4\"/><text x=\"143\" y=\"93\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#15803d\">مضاعفات 2: آحادها 0, 2, 4, 6, 8</text><rect x=\"32\" y=\"106\" width=\"222\" height=\"25\" rx=\"5\" fill=\"#f0fdf4\"/><text x=\"143\" y=\"123\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#15803d\">مضاعفات 5: آحادها 0 أو 5</text><rect x=\"32\" y=\"136\" width=\"222\" height=\"25\" rx=\"5\" fill=\"#eff6ff\"/><text x=\"143\" y=\"153\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1d4ed8\">مضاعفات 25: 00, 25, 50, 75</text><rect x=\"32\" y=\"166\" width=\"222\" height=\"25\" rx=\"5\" fill=\"#fef3c7\"/><text x=\"143\" y=\"183\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#92400e\">مضاعفات 50 و 100: تنتهي بـ 00 أو 50</text><rect x=\"280\" y=\"44\" width=\"240\" height=\"154\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"344\" y=\"84\" text-anchor=\"end\" font-size=\"17\" font-weight=\"bold\" fill=\"#1d4ed8\">275</text><text x=\"344\" y=\"106\" text-anchor=\"end\" font-size=\"15\" fill=\"#dc2626\">- 24</text><line x1=\"300\" y1=\"112\" x2=\"350\" y2=\"112\" stroke=\"#475569\" stroke-width=\"1.4\"/><text x=\"350\" y=\"130\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">35</text><text x=\"350\" y=\"150\" text-anchor=\"end\" font-size=\"15\" fill=\"#dc2626\">- 32</text><line x1=\"306\" y1=\"156\" x2=\"356\" y2=\"156\" stroke=\"#475569\" stroke-width=\"1.4\"/><text x=\"350\" y=\"174\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#b45309\">3</text><line x1=\"368\" y1=\"62\" x2=\"368\" y2=\"174\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"368\" y1=\"92\" x2=\"436\" y2=\"92\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"402\" y=\"82\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#7c3aed\">4</text><text x=\"402\" y=\"116\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#15803d\">68</text><text x=\"446\" y=\"136\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">الحاصل = 68</text><text x=\"446\" y=\"154\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">الباقي = 3 &lt; 4</text><text x=\"400\" y=\"191\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">275 = 4 × 68 + 3</text></svg>",
+    "visualCaptionAr": "قواعد تمييز مضاعفات أعداد مألوفة، ومثال للآلية العمودية للقسمة الإقليدية على قاسم ذي رقم واحد ($4$).",
+    "examples": [
+      {
+        "problemAr": "أوجد عددا محصورا بين $20$ و $40$ يكون مضاعفا للعددين $5$ و $3$ في آن واحد.",
+        "solutionAr": "مضاعفات $5$ المحصورة بين $20$ و $40$ هي: $25$ ، $30$ ، $35$. نختبر أيّها يقبل القسمة على $3$ (موجود في جدول $3$ ): نجد $30 = 3 \\times 10 = 5 \\times 6$."
+      },
+      {
+        "problemAr": "أنجز القسمة الإقليدية للعدد $347$ على $8$ ، ثم اكتب المساواة المعبرة عنها.",
+        "solutionAr": "نقسم $34$ عشرة على $8$ فنجد $4$ ($8 \\times 4 = 32$ والباقي $2$ ). ننزل $7$ لنحصل على $27$ ، ونقسمها على $8$ فنجد $3$ ($8 \\times 3 = 24$ والباقي $3$ ). المساواة هي: $347 = 8 \\times 43 + 3$ مع $3 < 8$."
+      }
+    ],
+    "watchOutAr": "لا تتوقف عن القسمة أبدا إذا كان الباقي أكبر من القاسم أو مساويا له! فمثلا المساواة $53 = 7 \\times 6 + 11$ خاطئة لأن $11 > 7$ ، والصحيح هو $53 = 7 \\times 7 + 4$."
+  },
+  "practice": [
+    {
+      "questionAr": "أيّ عدد من الأعداد الآتية يُعدّ مضاعفا للعددين $25$ و $2$ معا؟",
+      "options": [
+        "$75$",
+        "$125$",
+        "$150$",
+        "$140$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "العدد $75$ مضاعف للعدد $25$ ($25 \\times 3$ )، لكنه عدد فردي (آحاده $5$ ) فلا يقبل القسمة على $2$.",
+        "العدد $125$ مضاعف للعدد $25$ ($25 \\times 5$ )، لكنه ليس مضاعفا للعدد $2$ لأن رقم آحاده فردي.",
+        "أحسنت! $150 = 25 \\times 6$ وهو عدد زوجي ينتهي بالرقم $0$ ، لذا $150 = 2 \\times 75$ فهو مضاعف لـ $25$ و $2$ معا.",
+        "العدد $140$ مضاعف للعدد $2$ ، لكنه لا ينتهي بـ $00$ أو $25$ أو $50$ أو $75$ فليس مضاعفا لـ $25$."
+      ],
+      "explanationAr": "مضاعفات $25$ تنتهي بـ $00$ أو $25$ أو $50$ أو $75$ ، وحتى يكون مضاعفا لـ $2$ أيضا يجب أن يكون رقم آحاده زوجيا ($0$ )، وهذا يتحقق في $150$ فقط."
+    },
+    {
+      "questionAr": "أنجز القسمة الإقليدية $428 \\div 7$ المبيّنة في الشكل المقابل. ما هما الحاصل والباقي الصحيحان؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 120\" width=\"320\" height=\"120\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"304\" height=\"104\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"125\" y=\"52\" text-anchor=\"end\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">428</text><line x1=\"145\" y1=\"25\" x2=\"145\" y2=\"95\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"145\" y1=\"60\" x2=\"230\" y2=\"60\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><text x=\"186\" y=\"50\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#7c3aed\">7</text><text x=\"186\" y=\"88\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#2563eb\">؟</text></svg>",
+      "options": [
+        "الحاصل $61$ والباقي $1$",
+        "الحاصل $6$ والباقي $8$",
+        "الحاصل $60$ والباقي $8$",
+        "الحاصل $62$ والباقي $6$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! $42 \\div 7 = 6$ عشرات والباقي $0$ ، ثم ننزل $8$ فنقسم $8 \\div 7 = 1$ والباقي $1$. إذن $428 = 7 \\times 61 + 1$.",
+        "انتبه! بعد قسمة $42$ يجب إنزال $8$ وقسمتها على $7$ ، كما أن الباقي $8$ أكبر من القاسم $7$.",
+        "الباقي $8$ أكبر من القاسم $7$ ، لذا ما زلنا نستطيع قسمة $8$ على $7$ لنجد $1$ في الآحاد.",
+        "تحقق من الضرب: $7 \\times 62 = 434$ وهو أكبر من المقسوم $428$ !"
+      ],
+      "explanationAr": "نبدأ بـ $42$ عشرة: $42 \\div 7 = 6$ والباقي $0$. ننزل $8$ آحاد: $8 \\div 7 = 1$ والباقي $1$. وبما أن $1 < 7$ ، تكون القسمة: $428 = 7 \\times 61 + 1$."
+    },
+    {
+      "questionAr": "وزّعت مدرسة $238$ كراسا بالتساوي على $5$ أقسام. كم كراسا يأخذ كل قسم، وكم كراسا يبقى دون توزيع؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 115\" width=\"360\" height=\"115\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"99\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"180\" y=\"36\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#854d0e\">توزيع 238 كراسا بالتساوي على 5 أقسام</text><rect x=\"45\" y=\"52\" width=\"270\" height=\"38\" rx=\"8\" fill=\"#ffffff\" stroke=\"#eab308\" stroke-width=\"1.3\"/><text x=\"180\" y=\"76\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">238 = 5 × ( ؟ ) + ( ؟ )</text></svg>",
+      "options": [
+        "$46$ كراسا لكل قسم والباقي $8$ كراريس",
+        "$47$ كراسا لكل قسم والباقي $3$ كراريس",
+        "$48$ كراسا لكل قسم والباقي $2$ كراس",
+        "$47$ كراسا لكل قسم والباقي $0$ كراس"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "الباقي $8$ أكبر من عدد الأقسام ($5$ )، أي يمكن إعطاء كراس إضافي لكل قسم فيصبح الحاصل $47$.",
+        "أحسنت! لأن $238 = 5 \\times 47 + 3$ ، يأخذ كل قسم $47$ كراسا وتبقى $3$ كراريس.",
+        "تحقق بالضرب: $5 \\times 48 = 240$ وهو أكبر من عدد الكراريس الموجودة ($238$ ).",
+        "العدد $238$ لا ينتهي بـ $0$ أو $5$ ، لذا لا يمكن أن يكون باقي قسمته على $5$ مساويا لـ $0$."
+      ],
+      "explanationAr": "نقسم $238$ على $5$: $23 \\div 5 = 4$ والباقي $3$ ، ثم ننزل $8$ لنحصل على $38$ ، و $38 \\div 5 = 7$ والباقي $3$. إذن $238 = 5 \\times 47 + 3$."
+    }
+  ]
+}

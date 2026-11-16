@@ -1,0 +1,124 @@
+{
+  "id": "lesson_3ap_t2_mass_and_capacity",
+  "slug": "lesson-3ap-t2-mass-and-capacity",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: في محلات الصناعة التقليدية (الكتل والسعات، المضلعات والدائرة وإدماج الفصل الثاني)",
+  "order": 4,
+  "titleAr": "قياس الكتل (kg، g) وقياس السعات (L، cL) والتحويلات والمقارنة",
+  "objectives": [
+    "قراءة الكتل على موازين مختلفة واستعمال وحدتي الكيلوغرام (kg) والغرام (g) والعلاقة (1 kg = 1000 g)",
+    "قراءة السعات على أوعية مدرجة واستعمال وحدتي اللتر (L) والسنتيلتر (cL) والعلاقة (1 L = 100 cL)",
+    "إجراء تحويلات بسيطة بين (kg، g) وبين (L، cL) ومقارنة وجمع مقادير بنفس الوحدة في وضعيات يومية"
+  ],
+  "keywordsAr": [
+    "قياس الكتل",
+    "الكيلوغرام (kg)",
+    "الغرام (g)",
+    "قياس السعات",
+    "اللتر (L)",
+    "السنتيلتر (cL)"
+  ],
+  "discover": {
+    "scenarioAr": "في محل للصناعة التقليدية والمنتجات المحلية، وضع البائع كيس تمر على كفة الميزان فتوازن مع الكتلتين $1\\text{ kg}$ و $500\\text{ g}$، كما ملأ إبريقا تقليديا بزيت الزيتون سعته $2\\text{ L}$ وقارورة صغيرة سعتها $50\\text{ cL}$.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">قياس الكتلة بالميزان وقياس السعة بالأوعية</text><rect x=\"24\" y=\"46\" width=\"276\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#ea580c\" stroke-width=\"1.5\"/><text x=\"162\" y=\"68\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"rtl\">الميزان في حالة توازن</text><line x1=\"162\" y1=\"86\" x2=\"162\" y2=\"192\" stroke=\"#475569\" stroke-width=\"4\"/><rect x=\"122\" y=\"190\" width=\"80\" height=\"10\" rx=\"4\" fill=\"#334155\"/><line x1=\"74\" y1=\"106\" x2=\"250\" y2=\"106\" stroke=\"#0f172a\" stroke-width=\"3\"/><line x1=\"74\" y1=\"106\" x2=\"74\" y2=\"146\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"250\" y1=\"106\" x2=\"250\" y2=\"146\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"42\" y=\"146\" width=\"64\" height=\"10\" rx=\"3\" fill=\"#94a3b8\"/><rect x=\"212\" y=\"146\" width=\"76\" height=\"10\" rx=\"3\" fill=\"#94a3b8\"/><rect x=\"54\" y=\"114\" width=\"40\" height=\"32\" rx=\"6\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.6\"/><text x=\"74\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">تمر</text><rect x=\"216\" y=\"112\" width=\"34\" height=\"34\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"233\" y=\"133\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">1 kg</text><rect x=\"254\" y=\"120\" width=\"32\" height=\"26\" rx=\"4\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"270\" y=\"137\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#166534\" direction=\"ltr\">500 g</text><text x=\"162\" y=\"178\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">1 kg = 1000 g</text><rect x=\"316\" y=\"46\" width=\"260\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#0284c7\" stroke-width=\"1.5\"/><text x=\"446\" y=\"68\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0369a1\" direction=\"rtl\">قياس سعة الزيت</text><rect x=\"346\" y=\"84\" width=\"72\" height=\"92\" rx=\"6\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"2\"/><rect x=\"348\" y=\"104\" width=\"68\" height=\"70\" rx=\"4\" fill=\"#fde047\"/><text x=\"382\" y=\"144\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#713f12\" direction=\"ltr\">2 L</text><rect x=\"472\" y=\"116\" width=\"54\" height=\"60\" rx=\"6\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"2\"/><rect x=\"474\" y=\"132\" width=\"50\" height=\"42\" rx=\"4\" fill=\"#fde047\"/><text x=\"499\" y=\"158\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#713f12\" direction=\"ltr\">50 cL</text><text x=\"446\" y=\"198\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0369a1\" direction=\"ltr\">1 L = 100 cL</text></svg>",
+    "steps": [
+      {
+        "promptAr": "توازن الميزان مع كتلتي $1\\text{ kg}$ و $500\\text{ g}$. إذا علمت أن $1\\text{ kg} = 1000\\text{ g}$، فما كتلة كيس التمر بالغرام ($\\text{g}$)؟ (اكتب العدد فقط)",
+        "hintAr": "حول $1\\text{ kg}$ إلى $1000\\text{ g}$ ثم أضف $500\\text{ g}$.",
+        "expectedInput": "1500",
+        "revealAr": "$1\\text{ kg } 500\\text{ g} = 1000\\text{ g} + 500\\text{ g} = 1500\\text{ g}$."
+      },
+      {
+        "promptAr": "نريد التعبير عن سعة الإبريق ($2\\text{ L}$) بالسنتيلتر ($\\text{cL}$). علما أن $1\\text{ L} = 100\\text{ cL}$، كم تساوي $2\\text{ L}$ بـ $\\text{cL}$؟ (اكتب العدد فقط)",
+        "hintAr": "اضرب $2$ في $100$.",
+        "expectedInput": "200",
+        "revealAr": "$2\\text{ L} = 2 \\times 100\\text{ cL} = 200\\text{ cL}$."
+      },
+      {
+        "promptAr": "أضفنا إلى الإبريق ($2\\text{ L}$) سعة القارورة الصغيرة ($50\\text{ cL}$). ما السعة الكلية بالسنتيلتر ($\\text{cL}$)؟ (اكتب العدد فقط)",
+        "hintAr": "اجمع $200\\text{ cL} + 50\\text{ cL}$.",
+        "expectedInput": "250",
+        "revealAr": "السعة الكلية هي $200\\text{ cL} + 50\\text{ cL} = 250\\text{ cL}$ (أي $2\\text{ L } 50\\text{ cL}$)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لقياس **الكتل** نستعمل **الكيلوغرام** ($\\text{kg}$) للكتل الكبيرة و**الغرام** ($\\text{g}$) للكتل الخفيفة، والعلاقة بينهما: $1\\text{ kg} = 1000\\text{ g}$.",
+      "للتحويل من $\\text{kg}$ إلى $\\text{g}$ نضرب في $1000$، مثلا: $3\\text{ kg} = 3000\\text{ g}$ و $2\\text{ kg } 450\\text{ g} = 2450\\text{ g}$.",
+      "لقياس **السعات** نستعمل **اللتر** ($\\text{L}$) و**السنتيلتر** ($\\text{cL}$)، والعلاقة بينهما: $1\\text{ L} = 100\\text{ cL}$.",
+      "للتحويل من $\\text{L}$ إلى $\\text{cL}$ نضرب في $100$، مثلا: $4\\text{ L} = 400\\text{ cL}$ و $1\\text{ L } 25\\text{ cL} = 125\\text{ cL}$.",
+      "للمقارنة أو الجمع أو الترتيب، يجب دائما **توحيد الوحدة** أولا (كل الكتل بـ $\\text{g}$ أو كل السعات بـ $\\text{cL}$)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">قواعد التحويل الأساسية بين الكتل والسعات</text><rect x=\"24\" y=\"48\" width=\"266\" height=\"164\" rx=\"10\" fill=\"#fff7ed\" stroke=\"#ea580c\" stroke-width=\"1.5\"/><text x=\"157\" y=\"72\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"rtl\">قياس الكتل: kg و g</text><rect x=\"44\" y=\"88\" width=\"226\" height=\"36\" rx=\"8\" fill=\"#ffffff\" stroke=\"#fb923c\"/><text x=\"157\" y=\"111\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">1 kg = 1000 g</text><text x=\"157\" y=\"146\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"rtl\">للتحويل إلى g نضرب في 1000</text><rect x=\"44\" y=\"160\" width=\"226\" height=\"36\" rx=\"8\" fill=\"#ffedd5\" stroke=\"#fdba74\"/><text x=\"157\" y=\"183\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"ltr\">2 kg 350 g = 2350 g</text><rect x=\"310\" y=\"48\" width=\"266\" height=\"164\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"443\" y=\"72\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">قياس السعات: L و cL</text><rect x=\"330\" y=\"88\" width=\"226\" height=\"36\" rx=\"8\" fill=\"#ffffff\" stroke=\"#60a5fa\"/><text x=\"443\" y=\"111\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1 L = 100 cL</text><text x=\"443\" y=\"146\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"rtl\">للتحويل إلى cL نضرب في 100</text><rect x=\"330\" y=\"160\" width=\"226\" height=\"36\" rx=\"8\" fill=\"#dbeafe\" stroke=\"#93c5fd\"/><text x=\"443\" y=\"183\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">3 L 40 cL = 340 cL</text></svg>",
+    "visualCaptionAr": "العلاقات المرجعية للتحويل في الكتل ($1\\text{ kg} = 1000\\text{ g}$) وفي السعات ($1\\text{ L} = 100\\text{ cL}$).",
+    "examples": [
+      {
+        "problemAr": "قارن بين الكتلتين: $3\\text{ kg } 400\\text{ g}$ و $3040\\text{ g}$.",
+        "solutionAr": "نحول إلى الغرام: $3\\text{ kg } 400\\text{ g} = 3000 + 400 = 3400\\text{ g}$. وبما أن $3400 > 3040$، فإن $3\\text{ kg } 400\\text{ g} > 3040\\text{ g}$."
+      },
+      {
+        "problemAr": "احسب مجموع السعتين وعبر عنه باللتر: $1\\text{ L } 75\\text{ cL} + 225\\text{ cL}$.",
+        "solutionAr": "نحول إلى $\\text{cL}$: $1\\text{ L } 75\\text{ cL} = 175\\text{ cL}$. ثم نجمع: $175 + 225 = 400\\text{ cL} = 4\\text{ L}$."
+      }
+    ],
+    "watchOutAr": "لا تخلط بين القاعدتين: الكيلوغرام فيه $1000$ غرام (ثلاثة أصفار)، بينما اللتر فيه $100$ سنتيلتر فقط (صفران)! مثلا $2\\text{ L } 5\\text{ cL} = 205\\text{ cL}$ وليس $2005\\text{ cL}$."
+  },
+  "practice": [
+    {
+      "questionAr": "انظر إلى الميزان المتوازن المقابل: ما هي كتلة الإناء الفخاري بالغرام ($\\text{g}$)؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 145\" width=\"420\" height=\"145\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"404\" height=\"129\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><line x1=\"210\" y1=\"24\" x2=\"210\" y2=\"120\" stroke=\"#475569\" stroke-width=\"4\"/><rect x=\"160\" y=\"118\" width=\"100\" height=\"10\" rx=\"4\" fill=\"#334155\"/><line x1=\"90\" y1=\"42\" x2=\"330\" y2=\"42\" stroke=\"#0f172a\" stroke-width=\"3\"/><line x1=\"90\" y1=\"42\" x2=\"90\" y2=\"86\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"330\" y1=\"42\" x2=\"330\" y2=\"86\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"50\" y=\"86\" width=\"80\" height=\"10\" rx=\"3\" fill=\"#94a3b8\"/><rect x=\"266\" y=\"86\" width=\"128\" height=\"10\" rx=\"3\" fill=\"#94a3b8\"/><rect x=\"64\" y=\"50\" width=\"52\" height=\"36\" rx=\"8\" fill=\"#fed7aa\" stroke=\"#ea580c\" stroke-width=\"1.6\"/><text x=\"90\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"rtl\">إناء</text><rect x=\"270\" y=\"52\" width=\"38\" height=\"34\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"289\" y=\"73\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">2 kg</text><rect x=\"312\" y=\"58\" width=\"38\" height=\"28\" rx=\"4\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"331\" y=\"76\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#166534\" direction=\"ltr\">500 g</text><rect x=\"354\" y=\"58\" width=\"38\" height=\"28\" rx=\"4\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"373\" y=\"76\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"ltr\">250 g</text></svg>",
+      "options": [
+        "$2750\\text{ g}$",
+        "$2075\\text{ g}$",
+        "$752\\text{ g}$",
+        "$2525\\text{ g}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! $2\\text{ kg} = 2000\\text{ g}$، ونضيف $500\\text{ g} + 250\\text{ g} = 750\\text{ g}$، فيكون المجموع $2750\\text{ g}$.",
+        "انتبه! $500 + 250 = 750$ وليس $75$.",
+        "نسيت أن $2\\text{ kg} = 2000\\text{ g}$؛ جمعت $2$ كوحدات مع $750$ فهذا خطأ.",
+        "راجع جمع الكتل بالغرام: $500\\text{ g} + 250\\text{ g} = 750\\text{ g}$ وليس $525\\text{ g}$."
+      ],
+      "explanationAr": "نحول أولا $2\\text{ kg}$ إلى الغرام: $2\\text{ kg} = 2000\\text{ g}$. ثم نجمع الكتل المرقمة: $2000 + 500 + 250 = 2750\\text{ g}$."
+    },
+    {
+      "questionAr": "ما هي السعة المساوية لـ $5\\text{ L } 30\\text{ cL}$ بالسنتيلتر ($\\text{cL}$)؟",
+      "options": [
+        "$5030\\text{ cL}$",
+        "$530\\text{ cL}$",
+        "$503\\text{ cL}$",
+        "$53\\text{ cL}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه! اللتر يساوي $100\\text{ cL}$ وليس $1000\\text{ cL}$؛ لذلك $5\\text{ L} = 500\\text{ cL}$.",
+        "ممتاز! $5\\text{ L} = 500\\text{ cL}$، نضيف $30\\text{ cL}$ فنحصل على $530\\text{ cL}$.",
+        "القيمة $503\\text{ cL}$ تساوي $5\\text{ L } 3\\text{ cL}$، أما هنا فلدينا $30\\text{ cL}$.",
+        "للحصول على $\\text{cL}$ نضرب اللتر في $100$ وليس في $10$!"
+      ],
+      "explanationAr": "بما أن $1\\text{ L} = 100\\text{ cL}$ فإن $5\\text{ L} = 500\\text{ cL}$، وبإضافة $30\\text{ cL}$ نحصل على $500 + 30 = 530\\text{ cL}$."
+    },
+    {
+      "questionAr": "أي ترتيب من الأصغر إلى الأكبر هو الصحيح للسعات التالية: $2\\text{ L}$ ، $180\\text{ cL}$ ، $2\\text{ L } 50\\text{ cL}$ ؟",
+      "options": [
+        "$2\\text{ L} < 2\\text{ L } 50\\text{ cL} < 180\\text{ cL}$",
+        "$2\\text{ L } 50\\text{ cL} < 2\\text{ L} < 180\\text{ cL}$",
+        "$180\\text{ cL} < 2\\text{ L} < 2\\text{ L } 50\\text{ cL}$",
+        "$180\\text{ cL} < 2\\text{ L } 50\\text{ cL} < 2\\text{ L}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "تذكر توحيد الوحدة! $2\\text{ L} = 200\\text{ cL}$ وهي أكبر من $180\\text{ cL}$.",
+        "هذا الترتيب معكوس جزئيا؛ $2\\text{ L } 50\\text{ cL} = 250\\text{ cL}$ وهي الأكبر بين السعات الثلاث.",
+        "رائع! بعد التحويل إلى $\\text{cL}$ لدينا $180\\text{ cL} < 200\\text{ cL} < 250\\text{ cL}$.",
+        "قارنت بين $2\\text{ L}$ و $2\\text{ L } 50\\text{ cL}$ بشكل خاطئ؛ $250\\text{ cL}$ أكبر من $200\\text{ cL}$."
+      ],
+      "explanationAr": "نوحد الوحدة إلى $\\text{cL}$: $2\\text{ L} = 200\\text{ cL}$، و $2\\text{ L } 50\\text{ cL} = 250\\text{ cL}$. نرتب تصاعديا: $180 < 200 < 250$، إذن $180\\text{ cL} < 2\\text{ L} < 2\\text{ L } 50\\text{ cL}$."
+    }
+  ]
+}

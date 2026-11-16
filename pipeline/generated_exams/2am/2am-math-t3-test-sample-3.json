@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "levelId": "moyen",
+    "yearId": "2am",
+    "yearName": "السنة الثانية متوسط",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة واحدة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 7,
+      "instruction": "انخفض سعر منتج في متجر من $5000$ دج إلى $3500$ دج.",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب مبلغ التخفيض بالدينار الجزائري.",
+          "answer": "1) مبلغ التخفيض: $5000 - 3500 = 1500$ دج.",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب النسبة المئوية لهذا التخفيض.",
+          "answer": "2) نسبة التخفيض: $frac(1500, 5000) times 100 = 30%$.",
+          "mark": "4.75"
+        }
+      ],
+      "id": "ex_test_1_2am_t3_percentages",
+      "num": "الأول"
+    },
+    {
+      "points": 7,
+      "instruction": "في تصميم ملعب، يمثل طول قدره $5$ سم مسافة حقيقية تساوي $100$ م.",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب مقياس هذه الخريطة (أو التصميم) على الشكل $frac(1, a)$.",
+          "answer": "1) نحول المسافة الحقيقية إلى السنتيمتر: $100$ م = $10000$ سم. المقياس:\n\n$frac(5, 10000) = frac(1, 2000)$",
+          "mark": "3.5"
+        },
+        {
+          "type": "text",
+          "content": "2) أتمم جدول التناسبية التالي:",
+          "answer": "2) نضرب المسافة على التصميم في $2000$ للحصول على المسافة الحقيقية بالسنتيمتر ثم نحولها إلى وحدة (م)، والعكس بالقسمة.",
+          "mark": "1.25"
+        },
+        {
+          "type": "table",
+          "headerBackground": true,
+          "headers": [
+            "المسافة على التصميم (سم)",
+            "$5$",
+            "$8$",
+            {
+              "content": "......",
+              "answer": "$10$",
+              "mark": "1.25"
+            }
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "المسافة الحقيقية (م)",
+              "$100$",
+              {
+                "content": "......",
+                "answer": "$160$",
+                "mark": "1"
+              },
+              "$200$"
+            ]
+          ]
+        }
+      ],
+      "id": "ex_test_2_2am_t3_proportionality_scale",
+      "num": "الثاني"
+    },
+    {
+      "points": 6,
+      "instruction": "برميل أسطواني الشكل نصف قطر قاعدته $r = 40$ سم وارتفاعه $15$ دسم (نأخذ $pi approx 3.14$).",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) حوّل الأبعاد إلى الديسمتر (دسم) ثم احسب المساحة الجانبية $A_L$ بوحدة دسم².",
+              "answer": "1) $r = 40$ سم = $4$ دسم، و$h = 15$ دسم. المساحة الجانبية:\n\n$A_L = 2 times 3.14 times 4 times 15 = 376.8$ دسم².",
+              "mark": "3"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/2am_t3_cyl_hard_s164159.svg"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) احسب حجم البرميل بوحدة دسم³ ثم استنتج سعته باللتر.",
+          "answer": "2) $V = 3.14 times 4^2 times 15 = 753.6$ دسم³ = $753.6$ لتر.",
+          "mark": "3"
+        }
+      ],
+      "id": "ex_test_3_2am_t3_cylinder",
+      "num": "الثالث"
+    }
+  ]
+}

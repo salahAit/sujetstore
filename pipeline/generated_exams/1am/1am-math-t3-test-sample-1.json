@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "levelId": "moyen",
+    "yearId": "1am",
+    "yearName": "السنة الأولى متوسط",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة واحدة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 7,
+      "instruction": "يمثل المخطط بالأعمدة توزيع تلاميذ قسم حسب الرياضة المفضلة لديهم.",
+      "content": [
+        {
+          "type": "image",
+          "src": "/generated/math-svg/1am_t3_bar_easy_s687102.svg",
+          "caption": "مخطط بالأعمدة"
+        },
+        {
+          "type": "text",
+          "content": "1) انطلاقاً من المخطط، انقل ثم أتمم الجدول الآتي:",
+          "answer": "1) نملأ الجدول بقراءة قيم الأعمدة: كرة القدم (17)، السباحة (12)، الجودو (5)، العدو (11)، والمجموع $= 45$.",
+          "mark": "2.5"
+        },
+        {
+          "type": "table",
+          "headerBackground": true,
+          "headers": [
+            "الرياضة",
+            "كرة القدم",
+            "السباحة",
+            "الجودو",
+            "العدو",
+            "المجموع"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "عدد التلاميذ",
+              "$17$",
+              {
+                "content": "......",
+                "answer": "$12$",
+                "mark": "0.75"
+              },
+              "$5$",
+              {
+                "content": "......",
+                "answer": "$11$",
+                "mark": "0.75"
+              },
+              {
+                "content": "......",
+                "answer": "$45$",
+                "mark": "0.75"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) ما هي الفئة الأكثر تفضيلاً؟ وما هو الفرق بين أكبر عدد وأصغر عدد؟",
+          "answer": "2) الفئة الأكثر تفضيلاً هي كرة القدم (17 تلميذاً)، والفرق هو: $17 - 5 = 12$ تلميذاً.",
+          "mark": "2.25"
+        }
+      ],
+      "id": "ex_test_1_1am_t3_organizing_data_charts",
+      "num": "الأول"
+    },
+    {
+      "points": 7,
+      "instruction": "لاحظ المستقيم المدرج والمعلم المتعامد للمستوي ثم أجب عن الأسئلة الآتية:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.3fr",
+            "1.7fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) اقرأ فواصل النقط $A$ و $B$ و $C$ من المستقيم المدرج.\n\n2) رتّب تصاعدياً الأعداد النسبية الآتية: $-5$، $-1$، $+2$، $-3$.",
+              "answer": "1) $A(-5)$، $B(-1)$، $C(+2)$.\n\n2) الترتيب التصاعدي: $-5 < -3 < -1 < +2$.",
+              "mark": "3.5"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/1am_t3_numline_easy_s49927.svg"
+            }
+          ]
+        },
+        {
+          "type": "columns",
+          "widths": [
+            "1.3fr",
+            "1.7fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "3) اقرأ إحداثيي كل من النقطتين $M$ و $N$ في المعلم المتعامد للمستوي.",
+              "answer": "3) $M(+2 ; +3)$ و $N(+4 ; -2)$.",
+              "mark": "3.5"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/1am_t3_plane_easy_s49927.svg"
+            }
+          ]
+        }
+      ],
+      "id": "ex_test_2_1am_t3_signed_numbers_coords",
+      "num": "الثاني"
+    },
+    {
+      "points": 6,
+      "instruction": "تأمّل تصميم المكعب وتمثيله بالمنظور متساوي القياس حيث طول حرفه $a = 7$ سم:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "image",
+              "src": "/generated/math-svg/1am_t3_cube_net_easy_s895782.svg",
+              "caption": "تصميم المكعب"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/1am_t3_cube_iso_easy_s895782.svg",
+              "caption": "المنظور متساوي القياس"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) أتمم ما يلي: للمكعب ...... أوجه متقايسة كل منها على شكل ......، وله ...... حرفاً و ...... رؤوس.",
+          "answer": "1) للمكعب $6$ أوجه متقايسة كل منها على شكل مربع، وله $12$ حرفاً و $8$ رؤوس.",
+          "mark": "2"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب مجموع أطوال أحرف هذا المكعب، ثم احسب مساحة أحد أوجهه.",
+          "answer": "2) مجموع أطوال الأحرف: $12 times 7 = 84$ سم. مساحة الوجه الواحد: $7 times 7 = 49$ سم².",
+          "mark": "2"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب حجم هذا المكعب بوحدة السنتيمتر المكعب (سم³).",
+          "answer": "3) $V = 7 times 7 times 7 = 343$ سم³.",
+          "mark": "2"
+        }
+      ],
+      "id": "ex_test_3_1am_t3_cuboid_cube_net_volume",
+      "num": "الثالث"
+    }
+  ]
+}

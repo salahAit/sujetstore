@@ -448,3 +448,259 @@ export function svgBarChart(bars: { label: string; value: number }[], maxVal: nu
 
 	return wrapSvg(w, h, parts.join(''));
 }
+
+/** Visual counting groups (1AP / 2AP) */
+export function svgCountingObjects(opts: {
+	count: number;
+	kind?: 'apple' | 'star' | 'ball' | 'pencil';
+	perRow?: number;
+	secondGroupCount?: number;
+	operatorLabel?: string;
+}): string {
+	const count1 = Math.max(0, Math.min(opts.count, 30));
+	const count2 = opts.secondGroupCount !== undefined ? Math.max(0, Math.min(opts.secondGroupCount, 30)) : null;
+	const perRow = Math.max(1, Math.min(opts.perRow ?? 5, 10));
+	const kind = opts.kind ?? 'apple';
+	const cell = 30;
+
+	const drawItem = (cx: number, cy: number): string => {
+		if (kind === 'star') {
+			return `<polygon points="${cx},${cy - 10} ${cx + 3},${cy - 3} ${cx + 10},${cy - 3} ${cx + 5},${cy + 2} ${cx + 7},${cy + 9} ${cx},${cy + 5} ${cx - 7},${cy + 9} ${cx - 5},${cy + 2} ${cx - 10},${cy - 3} ${cx - 3},${cy - 3}" fill="#facc15" stroke="#ca8a04" stroke-width="1.4"/>`;
+		}
+		if (kind === 'ball') {
+			return `<circle cx="${cx}" cy="${cy}" r="10" fill="#60a5fa" stroke="#1d4ed8" stroke-width="1.5"/><path d="M ${cx - 8} ${cy} Q ${cx} ${cy - 7} ${cx + 8} ${cy}" fill="none" stroke="#eff6ff" stroke-width="1.5"/>`;
+		}
+		if (kind === 'pencil') {
+			return `<rect x="${cx - 9}" y="${cy - 4}" width="14" height="8" rx="1.5" fill="#fb923c" stroke="#c2410c" stroke-width="1.2"/><polygon points="${cx + 5},${cy - 4} ${cx + 11},${cy} ${cx + 5},${cy + 4}" fill="#fde68a" stroke="#c2410c" stroke-width="1.2"/>`;
+		}
+		return `<circle cx="${cx}" cy="${cy + 1}" r="10" fill="#ef4444" stroke="#991b1b" stroke-width="1.4"/><line x1="${cx}" y1="${cy - 9}" x2="${cx}" y2="${cy - 13}" stroke="#713f12" stroke-width="2"/><ellipse cx="${cx + 4}" cy="${cy - 11}" rx="4" ry="2.2" fill="#22c55e"/>`;
+	};
+
+	const cols1 = Math.min(perRow, Math.max(1, count1));
+	const rows1 = Math.max(1, Math.ceil(count1 / perRow));
+	const box1W = cols1 * cell + 16;
+	const cols2 = count2 !== null ? Math.min(perRow, Math.max(1, count2)) : 0;
+	const rows2 = count2 !== null ? Math.max(1, Math.ceil(count2 / perRow)) : 0;
+	const box2W = count2 !== null ? cols2 * cell + 16 : 0;
+	const opW = count2 !== null ? 36 : 0;
+	const totalRows = Math.max(rows1, rows2);
+	const boxH = totalRows * cell + 18;
+	const w = 24 + box1W + opW + box2W;
+	const h = boxH + 24;
+
+	const parts: string[] = [
+		`<rect x="12" y="12" width="${box1W}" height="${boxH}" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>`
+	];
+
+	for (let i = 0; i < count1; i++) {
+		const r = Math.floor(i / perRow);
+		const c = i % perRow;
+		parts.push(drawItem(20 + c * cell + cell / 2, 20 + r * cell + cell / 2));
+	}
+
+	if (count2 !== null) {
+		const opX = 12 + box1W + opW / 2;
+		const opY = 12 + boxH / 2 + 6;
+		parts.push(`<text x="${opX}" y="${opY}" text-anchor="middle" font-size="22" font-weight="bold" fill="#1d4ed8">${escapeXml(opts.operatorLabel || '+')}</text>`);
+		const bx2 = 12 + box1W + opW;
+		parts.push(`<rect x="${bx2}" y="12" width="${box2W}" height="${boxH}" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>`);
+		for (let i = 0; i < count2; i++) {
+			const r = Math.floor(i / perRow);
+			const c = i % perRow;
+			parts.push(drawItem(bx2 + 8 + c * cell + cell / 2, 20 + r * cell + cell / 2));
+		}
+	}
+
+	return wrapSvg(w, h, parts.join(''));
+}
+
+/** Basic geometric shapes strip (1AP / 2AP / 3AP) */
+export function svgShapesStrip(opts: {
+	shapes: ('square' | 'rectangle' | 'triangle' | 'circle')[];
+	highlightIndex?: number;
+	labels?: string[];
+}): string {
+	const slotW = 76;
+	const pad = 16;
+	const n = Math.max(1, opts.shapes.length);
+	const w = pad * 2 + n * slotW;
+	const h = opts.labels && opts.labels.length > 0 ? 102 : 84;
+	const parts: string[] = [];
+
+	opts.shapes.forEach((shape, idx) => {
+		const cx = pad + idx * slotW + slotW / 2;
+		const cy = 42;
+		const isHi = opts.highlightIndex === idx;
+		const fill = isHi ? '#fde68a' : '#dbeafe';
+		const stroke = isHi ? '#b45309' : '#1d4ed8';
+		const sw = isHi ? 2.6 : 1.8;
+
+		if (shape === 'square') {
+			parts.push(`<rect x="${cx - 22}" y="${cy - 22}" width="44" height="44" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"/>`);
+		} else if (shape === 'rectangle') {
+			parts.push(`<rect x="${cx - 30}" y="${cy - 17}" width="60" height="34" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"/>`);
+		} else if (shape === 'triangle') {
+			parts.push(`<polygon points="${cx},${cy - 23} ${cx - 26},${cy + 21} ${cx + 26},${cy + 21}" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"/>`);
+		} else {
+			parts.push(`<circle cx="${cx}" cy="${cy}" r="22" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"/>`);
+		}
+
+		if (opts.labels?.[idx]) {
+			parts.push(`<text x="${cx}" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">${escapeXml(opts.labels[idx])}</text>`);
+		}
+	});
+
+	return wrapSvg(w, h, parts.join(''));
+}
+
+/** Thales configuration (3AM / 4AM): nested triangle or butterfly */
+export function svgThalesConfig(opts: {
+	mode: 'triangle' | 'butterfly';
+	vertices?: [string, string, string, string, string];
+	sideLabels?: Record<string, string>;
+}): string {
+	const v = opts.vertices || ['A', 'B', 'C', 'M', 'N'];
+	const lbls = opts.sideLabels || {};
+	const w = 280;
+	const h = 195;
+	const parts: string[] = [];
+
+	if (opts.mode === 'triangle') {
+		const A = { x: 140, y: 24 };
+		const B = { x: 45, y: 168 };
+		const C = { x: 235, y: 168 };
+		const M = { x: 85, y: 108 };
+		const N = { x: 195, y: 108 };
+		parts.push(
+			`<polygon points="${A.x},${A.y} ${B.x},${B.y} ${C.x},${C.y}" fill="#f0fdf4" stroke="#15803d" stroke-width="2.2"/>`,
+			`<line x1="${M.x}" y1="${M.y}" x2="${N.x}" y2="${N.y}" stroke="#dc2626" stroke-width="2.2"/>`,
+			`<text x="${A.x - 4}" y="${A.y - 7}" font-size="13" font-weight="bold" fill="#0f172a">${escapeXml(v[0])}</text>`,
+			`<text x="${B.x - 16}" y="${B.y + 8}" font-size="13" font-weight="bold" fill="#0f172a">${escapeXml(v[1])}</text>`,
+			`<text x="${C.x + 8}" y="${C.y + 8}" font-size="13" font-weight="bold" fill="#0f172a">${escapeXml(v[2])}</text>`,
+			`<text x="${M.x - 18}" y="${M.y + 4}" font-size="13" font-weight="bold" fill="#dc2626">${escapeXml(v[3])}</text>`,
+			`<text x="${N.x + 8}" y="${N.y + 4}" font-size="13" font-weight="bold" fill="#dc2626">${escapeXml(v[4])}</text>`
+		);
+		if (lbls.AM) parts.push(`<text x="95" y="64" font-size="11" font-weight="bold" fill="#1d4ed8">${escapeXml(lbls.AM)}</text>`);
+		if (lbls.AN) parts.push(`<text x="176" y="64" font-size="11" font-weight="bold" fill="#1d4ed8">${escapeXml(lbls.AN)}</text>`);
+		if (lbls.AB) parts.push(`<text x="48" y="138" font-size="11" font-weight="bold" fill="#0f172a">${escapeXml(lbls.AB)}</text>`);
+		if (lbls.AC) parts.push(`<text x="218" y="138" font-size="11" font-weight="bold" fill="#0f172a">${escapeXml(lbls.AC)}</text>`);
+		if (lbls.MN) parts.push(`<text x="140" y="102" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc2626">${escapeXml(lbls.MN)}</text>`);
+		if (lbls.BC) parts.push(`<text x="140" y="185" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">${escapeXml(lbls.BC)}</text>`);
+	} else {
+		const A = { x: 140, y: 98 };
+		const B = { x: 52, y: 34 };
+		const C = { x: 228, y: 34 };
+		const M = { x: 222, y: 162 };
+		const N = { x: 58, y: 162 };
+		parts.push(
+			`<line x1="${B.x}" y1="${B.y}" x2="${M.x}" y2="${M.y}" stroke="#0f172a" stroke-width="2"/>`,
+			`<line x1="${C.x}" y1="${C.y}" x2="${N.x}" y2="${N.y}" stroke="#0f172a" stroke-width="2"/>`,
+			`<line x1="${B.x}" y1="${B.y}" x2="${C.x}" y2="${C.y}" stroke="#15803d" stroke-width="2.2"/>`,
+			`<line x1="${N.x}" y1="${N.y}" x2="${M.x}" y2="${M.y}" stroke="#dc2626" stroke-width="2.2"/>`,
+			`<circle cx="${A.x}" cy="${A.y}" r="3.5" fill="#1d4ed8"/>`,
+			`<text x="${A.x + 8}" y="${A.y + 4}" font-size="13" font-weight="bold" fill="#1d4ed8">${escapeXml(v[0])}</text>`,
+			`<text x="${B.x - 16}" y="${B.y}" font-size="13" font-weight="bold" fill="#0f172a">${escapeXml(v[1])}</text>`,
+			`<text x="${C.x + 8}" y="${C.y}" font-size="13" font-weight="bold" fill="#0f172a">${escapeXml(v[2])}</text>`,
+			`<text x="${M.x + 8}" y="${M.y + 6}" font-size="13" font-weight="bold" fill="#dc2626">${escapeXml(v[3])}</text>`,
+			`<text x="${N.x - 16}" y="${N.y + 6}" font-size="13" font-weight="bold" fill="#dc2626">${escapeXml(v[4])}</text>`
+		);
+		if (lbls.BC) parts.push(`<text x="140" y="24" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">${escapeXml(lbls.BC)}</text>`);
+		if (lbls.MN) parts.push(`<text x="140" y="182" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc2626">${escapeXml(lbls.MN)}</text>`);
+		if (lbls.AB) parts.push(`<text x="82" y="72" font-size="11" font-weight="bold" fill="#0f172a">${escapeXml(lbls.AB)}</text>`);
+		if (lbls.AM) parts.push(`<text x="188" y="132" font-size="11" font-weight="bold" fill="#dc2626">${escapeXml(lbls.AM)}</text>`);
+	}
+
+	return wrapSvg(w, h, parts.join(''));
+}
+
+/** Cartesian plane (1AM / 2AM / 4AM) with points, linear/affine lines, and vectors */
+export function svgCartesianPlane(opts: {
+	xMin?: number;
+	xMax?: number;
+	yMin?: number;
+	yMax?: number;
+	points?: { x: number; y: number; label: string; color?: string }[];
+	lines?: { a: number; b: number; label?: string; color?: string }[];
+	vectors?: { x1: number; y1: number; x2: number; y2: number; label?: string; color?: string }[];
+}): string {
+	const xMin = opts.xMin ?? -4;
+	const xMax = opts.xMax ?? 4;
+	const yMin = opts.yMin ?? -4;
+	const yMax = opts.yMax ?? 4;
+	const w = 280;
+	const h = 250;
+	const pad = 26;
+	const spanX = Math.max(1, xMax - xMin);
+	const spanY = Math.max(1, yMax - yMin);
+	const toPxX = (x: number) => pad + ((x - xMin) / spanX) * (w - pad * 2);
+	const toPxY = (y: number) => h - pad - ((y - yMin) / spanY) * (h - pad * 2);
+	const parts: string[] = [];
+
+	for (let x = Math.ceil(xMin); x <= Math.floor(xMax); x++) {
+		const px = toPxX(x);
+		parts.push(`<line x1="${px.toFixed(1)}" y1="${pad}" x2="${px.toFixed(1)}" y2="${h - pad}" stroke="${x === 0 ? '#0f172a' : '#e2e8f0'}" stroke-width="${x === 0 ? 1.8 : 1}"/>`);
+		if (x !== 0) {
+			parts.push(`<text x="${px.toFixed(1)}" y="${(toPxY(0) + 13).toFixed(1)}" text-anchor="middle" font-size="9.5" fill="#475569">${x}</text>`);
+		}
+	}
+	for (let y = Math.ceil(yMin); y <= Math.floor(yMax); y++) {
+		const py = toPxY(y);
+		parts.push(`<line x1="${pad}" y1="${py.toFixed(1)}" x2="${w - pad}" y2="${py.toFixed(1)}" stroke="${y === 0 ? '#0f172a' : '#e2e8f0'}" stroke-width="${y === 0 ? 1.8 : 1}"/>`);
+		if (y !== 0) {
+			parts.push(`<text x="${(toPxX(0) - 8).toFixed(1)}" y="${(py + 3).toFixed(1)}" text-anchor="end" font-size="9.5" fill="#475569">${y}</text>`);
+		}
+	}
+
+	parts.push(`<text x="${(toPxX(0) - 8).toFixed(1)}" y="${(toPxY(0) + 12).toFixed(1)}" text-anchor="end" font-size="10" font-weight="bold" fill="#0f172a">O</text>`);
+
+	for (const ln of opts.lines || []) {
+		const pts: [number, number][] = [];
+		for (const x of [xMin, xMax]) {
+			const y = ln.a * x + ln.b;
+			if (y >= yMin && y <= yMax) pts.push([x, y]);
+		}
+		if (pts.length < 2 && ln.a !== 0) {
+			for (const y of [yMin, yMax]) {
+				const x = (y - ln.b) / ln.a;
+				if (x >= xMin && x <= xMax) pts.push([x, y]);
+			}
+		}
+		if (pts.length >= 2) {
+			const [p1, p2] = [pts[0], pts[pts.length - 1]];
+			const col = ln.color || '#2563eb';
+			parts.push(`<line x1="${toPxX(p1[0]).toFixed(1)}" y1="${toPxY(p1[1]).toFixed(1)}" x2="${toPxX(p2[0]).toFixed(1)}" y2="${toPxY(p2[1]).toFixed(1)}" stroke="${col}" stroke-width="2.2"/>`);
+			if (ln.label) {
+				parts.push(`<text x="${toPxX(p2[0]).toFixed(1)}" y="${(toPxY(p2[1]) - 6).toFixed(1)}" font-size="10" font-weight="bold" fill="${col}">${escapeXml(ln.label)}</text>`);
+			}
+		}
+	}
+
+	for (const vec of opts.vectors || []) {
+		const col = vec.color || '#15803d';
+		const x1 = toPxX(vec.x1);
+		const y1 = toPxY(vec.y1);
+		const x2 = toPxX(vec.x2);
+		const y2 = toPxY(vec.y2);
+		const ang = Math.atan2(y2 - y1, x2 - x1);
+		const ah = 8;
+		const p1x = x2 - ah * Math.cos(ang - 0.45);
+		const p1y = y2 - ah * Math.sin(ang - 0.45);
+		const p2x = x2 - ah * Math.cos(ang + 0.45);
+		const p2y = y2 - ah * Math.sin(ang + 0.45);
+		parts.push(`<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${col}" stroke-width="2.2"/>`);
+		parts.push(`<polygon points="${x2.toFixed(1)},${y2.toFixed(1)} ${p1x.toFixed(1)},${p1y.toFixed(1)} ${p2x.toFixed(1)},${p2y.toFixed(1)}" fill="${col}"/>`);
+		if (vec.label) {
+			parts.push(`<text x="${((x1 + x2) / 2 + 6).toFixed(1)}" y="${((y1 + y2) / 2 - 6).toFixed(1)}" font-size="11" font-weight="bold" fill="${col}">${escapeXml(vec.label)}</text>`);
+		}
+	}
+
+	for (const pt of opts.points || []) {
+		const px = toPxX(pt.x);
+		const py = toPxY(pt.y);
+		const col = pt.color || '#dc2626';
+		parts.push(`<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="4" fill="${col}"/>`);
+		parts.push(`<text x="${(px + 6).toFixed(1)}" y="${(py - 5).toFixed(1)}" font-size="11" font-weight="bold" fill="${col}">${escapeXml(pt.label)}</text>`);
+	}
+
+	return wrapSvg(w, h, parts.join(''));
+}

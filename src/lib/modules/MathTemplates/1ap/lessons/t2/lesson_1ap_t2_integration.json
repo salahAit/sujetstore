@@ -1,0 +1,123 @@
+{
+  "id": "lesson_1ap_t2_integration",
+  "slug": "lesson-1ap-t2-integration",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الثالث والرابع (الجزء الأول): الأشكال المستوية، المجسمات وقراءة الساعة",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الثاني: الأعداد إلى 39 والأشكال والمجسمات والزمن",
+  "objectives": [
+    "توظيف قراءة وتفكيك (10 + وحدات) ومقارنة الأعداد من 10 إلى 39 في وضعيات يومية",
+    "استثمار التعرّف على المربع والمستطيل والمثلث والقرص والمجسمات وقراءة الساعة (تمامًا ونصف)",
+    "حل وضعية إدماجية موجهة تتضمن استخراج معطيات من جدول وعملية جمع أو طرح بسيطة"
+  ],
+  "keywordsAr": [
+    "إدماج",
+    "حصيلة الفصل الثاني",
+    "الأعداد إلى 39",
+    "وضعية إدماجية"
+  ],
+  "discover": {
+    "scenarioAr": "في يَوْمِ الأَنْشِطَةِ المَدْرَسِيَّةِ، قَصَّتْ سارَةُ وَأَمِينُ أَشْكالًا مِنَ الوَرَقِ وَسَجَّلاها في الجَدْوَلِ، ثُمَّ انْتَهى النَّشاطُ عِنْدَ السّاعَةِ الظّاهِرَةِ في الرَّسْمِ.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 190\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"174\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><g stroke=\"#64748b\" stroke-width=\"1.5\"><rect x=\"24\" y=\"26\" width=\"104\" height=\"42\" fill=\"#dbeafe\"/><rect x=\"128\" y=\"26\" width=\"104\" height=\"42\" fill=\"#fee2e2\"/><rect x=\"232\" y=\"26\" width=\"104\" height=\"42\" fill=\"#dcfce7\"/><rect x=\"24\" y=\"68\" width=\"104\" height=\"44\" fill=\"#ffffff\"/><rect x=\"128\" y=\"68\" width=\"104\" height=\"44\" fill=\"#ffffff\"/><rect x=\"232\" y=\"68\" width=\"104\" height=\"44\" fill=\"#ffffff\"/><rect x=\"24\" y=\"112\" width=\"104\" height=\"44\" fill=\"#ffffff\"/><rect x=\"128\" y=\"112\" width=\"104\" height=\"44\" fill=\"#ffffff\"/><rect x=\"232\" y=\"112\" width=\"104\" height=\"44\" fill=\"#ffffff\"/></g><text x=\"76\" y=\"52\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">التِّلْمِيذُ</text><text x=\"180\" y=\"52\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"rtl\">مُثَلَّثاتٌ</text><text x=\"284\" y=\"52\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">مُرَبَّعاتٌ</text><text x=\"76\" y=\"95\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">سارَةُ</text><text x=\"180\" y=\"96\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">12</text><text x=\"284\" y=\"96\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">24</text><text x=\"76\" y=\"139\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">أَمِينُ</text><text x=\"180\" y=\"140\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">6</text><text x=\"284\" y=\"140\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">5</text><circle cx=\"430\" cy=\"96\" r=\"56\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.6\"/><circle cx=\"430\" cy=\"96\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"430\" y=\"56\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">12</text><text x=\"452\" y=\"62\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">1</text><text x=\"468\" y=\"78\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">2</text><text x=\"474\" y=\"100\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"468\" y=\"122\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">4</text><text x=\"452\" y=\"138\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">5</text><text x=\"430\" y=\"144\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">6</text><text x=\"408\" y=\"138\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">7</text><text x=\"392\" y=\"122\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">8</text><text x=\"386\" y=\"100\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">9</text><text x=\"392\" y=\"78\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">10</text><text x=\"408\" y=\"62\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">11</text><line x1=\"430\" y1=\"96\" x2=\"430\" y2=\"136\" stroke=\"#2563eb\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><line x1=\"430\" y1=\"96\" x2=\"410\" y2=\"76\" stroke=\"#dc2626\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"430\" y=\"170\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">نِهايَةُ النَّشاطِ</text></svg>",
+    "steps": [
+      {
+        "promptAr": "اسْتَخْرِجْ مِنَ الجَدْوَلِ عَدَدَ المُثَلَّثاتِ: قَصَّتْ سارَةُ $12$ مُثَلَّثًا وَأَمِينُ $6$ مُثَلَّثاتٍ. كَمْ مُثَلَّثًا قَصّا مَعًا؟",
+        "hintAr": "احْسُبْ $12 + 6$.",
+        "expectedInput": "18",
+        "revealAr": "$12 + 6 = 18$ مُثَلَّثًا، وَيُفَكَّكُ كَالتّالِي: $18 = 10 + 8$."
+      },
+      {
+        "promptAr": "قَصَّتْ سارَةُ $24$ مُرَبَّعًا ثُمَّ أَعْطَتْ $4$ مُرَبَّعاتٍ لِصَدِيقَتِها. كَمْ مُرَبَّعًا بَقِيَ عِنْدَ سارَةَ؟",
+        "hintAr": "اطْرَحْ $4$ مِنْ $24$: $24 - 4$.",
+        "expectedInput": "20",
+        "revealAr": "$24 - 4 = 20$ مُرَبَّعًا بَقِيَ عِنْدَ سارَةَ."
+      },
+      {
+        "promptAr": "انْظُرْ إلى السّاعَةِ: العَقْرَبُ القَصِيرُ بَيْنَ $10$ وَ $11$ وَالطَّوِيلُ عَلى $6$. كَمِ السّاعَةُ بِالأَرْقامِ (مِثْلُ $08:30$)؟",
+        "hintAr": "السّاعاتُ $10$ وَالدَّقائِقُ $30$ (وَنِصْفُ).",
+        "expectedInput": "10:30",
+        "revealAr": "السّاعَةُ هِيَ العاشِرَةُ وَالنِّصْفُ صَباحًا ($10:30$)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لِحَلِّ **وَضْعِيَّةٍ إِدْماجِيَّةٍ** نَقْرَأُ السُّؤالَ جَيِّدًا وَنَسْتَخْرِجُ الأَعْدادَ مِنَ الجَدْوَلِ، ثُمَّ نَخْتارُ العَمَلِيَّةَ المُناسِبَةَ ($+$ لِلْإِضافَةِ وَالمَجْمُوعِ، و $-$ لِلطَّرْحِ وَالباقِي).",
+      "نُفَكِّكُ الأَعْدادَ مِنْ $11$ إلى $19$ إلى ($10$ + وَحَداتٍ)، وَنُقارِنُ الأَعْدادَ إلى $39$ بِالعَشَراتِ أَوَّلًا ثُمَّ الوَحَداتِ.",
+      "نُمَيِّزُ الأَشْكالَ المُسْتَوِيَةَ (مُرَبَّعٌ، مُسْتَطِيلٌ، مُثَلَّثٌ، قُرْصٌ) عَنِ المُجَسَّماتِ (مُكَعَّبٌ، بَلاطَةٌ قائِمَةٌ، كُرَةٌ، أُسْطُوانَةٌ).",
+      "نَقْرَأُ السّاعَةَ بِالعَقْرَبِ القَصِيرِ (لِلسّاعاتِ) وَالعَقْرَبِ الطَّوِيلِ ($12$ لِلتَّمامِ $:00$، و $6$ لِلنِّصْفِ $:30$)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 195\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"524\" height=\"179\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"22\" y=\"20\" width=\"156\" height=\"155\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"100\" y=\"44\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">الأَعْدادُ وَالحِسابُ</text><text x=\"100\" y=\"76\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">18 = 10 + 8</text><text x=\"100\" y=\"106\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">24 + 5 = 29</text><text x=\"100\" y=\"136\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"ltr\">29 - 4 = 25</text><text x=\"100\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">18 &lt; 25 &lt; 29</text><rect x=\"192\" y=\"20\" width=\"156\" height=\"155\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"270\" y=\"44\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">أَشْكالٌ وَمُجَسَّماتٌ</text><polygon points=\"226,64 206,98 246,98\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><rect x=\"268\" y=\"64\" width=\"34\" height=\"34\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><polygon points=\"214,122 246,122 246,154 214,154\" fill=\"#fde68a\" stroke=\"#d97706\" stroke-width=\"1.6\"/><polygon points=\"214,122 226,112 258,112 246,122\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.6\"/><polygon points=\"246,122 258,112 258,144 246,154\" fill=\"#fcd34d\" stroke=\"#d97706\" stroke-width=\"1.6\"/><circle cx=\"304\" cy=\"136\" r=\"19\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"1.6\"/><rect x=\"362\" y=\"20\" width=\"156\" height=\"155\" rx=\"10\" fill=\"#fff7ed\" stroke=\"#ea580c\" stroke-width=\"1.4\"/><text x=\"440\" y=\"44\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"rtl\">قِراءَةُ السّاعَةِ</text><circle cx=\"440\" cy=\"100\" r=\"40\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"2.2\"/><circle cx=\"440\" cy=\"100\" r=\"3\" fill=\"#0f172a\"/><text x=\"440\" y=\"72\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">12</text><text x=\"469\" y=\"103\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"440\" y=\"134\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">6</text><text x=\"411\" y=\"103\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">9</text><line x1=\"440\" y1=\"100\" x2=\"440\" y2=\"130\" stroke=\"#2563eb\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"440\" y1=\"100\" x2=\"424\" y2=\"84\" stroke=\"#dc2626\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><text x=\"440\" y=\"162\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">10:30</text></svg>",
+    "visualCaptionAr": "حَصِيلَةُ الفَصْلِ الثّاني: الأَعْدادُ إلى 39، وَالجَمْعُ وَالطَّرْحُ، وَالأَشْكالُ وَالمُجَسَّماتُ، وَالسّاعَةُ.",
+    "examples": [
+      {
+        "problemAr": "في الصُّنْدُوقِ $32$ كُرَةً، أَضَفْنا إِلَيْها $5$ كُراتٍ، كَمْ كُرَةً أَصْبَحَتْ؟ وَقارِنِ النّاتِجَ مَعَ $39$.",
+        "solutionAr": "المَجْمُوعُ: $32 + 5 = 37$ كُرَةً. وَفي المُقارَنَةِ: $37 < 39$ لِأَنَّ العَشَراتِ مُتَساوِيَةٌ ($3$) وَالوَحَداتِ $7 < 9$."
+      },
+      {
+        "problemAr": "عُلْبَةُ هَدايا جَمِيعُ وُجُوهِها السِّتَّةِ مُرَبَّعاتٌ. ما اسْمُ هَذا المُجَسَّمِ؟ وَكَمْ ضِلْعًا لِكُلِّ وَجْهٍ مِنْ وُجُوهِهِ؟",
+        "solutionAr": "المُجَسَّمُ هُوَ المُكَعَّبُ، وَكُلُّ وَجْهٍ مِنْ وُجُوهِهِ مُرَبَّعٌ لَهُ $4$ أَضْلاعٍ مُتَساوِيَةٍ."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! اقْرَأِ السُّؤالَ حَتّى النِّهايَةِ لِتَعْرِفَ هَلْ تَجْمَعُ ($+$) أَمْ تَطْرَحُ ($-$)، وَتَحَقَّقْ مِنَ الأَرْقامِ في الجَدْوَلِ قَبْلَ الإِجابَةِ!"
+  },
+  "practice": [
+    {
+      "questionAr": "انْظُرْ إلى الجَدْوَلِ: كَمْ كُرَةً تُوجَدُ في المَجْمُوعِ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 105\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><g stroke=\"#64748b\" stroke-width=\"1.5\"><rect x=\"25\" y=\"15\" width=\"135\" height=\"36\" fill=\"#fee2e2\"/><rect x=\"160\" y=\"15\" width=\"135\" height=\"36\" fill=\"#dbeafe\"/><rect x=\"25\" y=\"51\" width=\"135\" height=\"38\" fill=\"#ffffff\"/><rect x=\"160\" y=\"51\" width=\"135\" height=\"38\" fill=\"#ffffff\"/></g><text x=\"92\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"rtl\">كُراتٌ حَمْراءُ</text><text x=\"227\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">كُراتٌ زَرْقاءُ</text><text x=\"92\" y=\"76\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">23</text><text x=\"227\" y=\"76\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">6</text></svg>",
+      "options": [
+        "$17$",
+        "$29$",
+        "$28$",
+        "$39$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "المَطْلُوبُ هُوَ المَجْمُوعُ ($23 + 6$) وَلَيْسَ الطَّرْحَ ($23 - 6$).",
+        "أَحْسَنْتَ! نَجْمَعُ الكُراتِ الحَمْراءَ ($23$) مَعَ الزَّرْقاءِ ($6$): $23 + 6 = 29$.",
+        "راجِعِ الحِسابَ: $23 + 6 = 29$ وَلَيْسَ $28$.",
+        "رَقْمُ العَشَراتِ يَبْقى $2$ وَلَيْسَ $3$: $23 + 6 = 29$."
+      ],
+      "explanationAr": "نَسْتَخْرِجُ مِنَ الجَدْوَلِ $23$ وَ $6$، ثُمَّ نَجْمَعُ: $23 + 6 = 29$ كُرَةً."
+    },
+    {
+      "questionAr": "انْتَهى نَشاطُ الرَّسْمِ عَلى السّاعَةِ الظّاهِرَةِ في الرَّسْمِ. ما الوَقْتُ الصَّحِيحُ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 210\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"284\" height=\"194\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"105\" r=\"74\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"105\" r=\"4.5\" fill=\"#0f172a\"/><text x=\"150\" y=\"53\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">12</text><text x=\"178\" y=\"60\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">1</text><text x=\"198\" y=\"81\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">2</text><text x=\"206\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"198\" y=\"137\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">4</text><text x=\"178\" y=\"157\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">5</text><text x=\"150\" y=\"165\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">6</text><text x=\"122\" y=\"157\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">7</text><text x=\"102\" y=\"137\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">8</text><text x=\"94\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">9</text><text x=\"102\" y=\"81\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">10</text><text x=\"122\" y=\"60\" text-anchor=\"middle\" font-size=\"12\" fill=\"#334155\" direction=\"ltr\">11</text><line x1=\"150\" y1=\"105\" x2=\"150\" y2=\"156\" stroke=\"#2563eb\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"150\" y1=\"105\" x2=\"125\" y2=\"130\" stroke=\"#dc2626\" stroke-width=\"4.5\" stroke-linecap=\"round\"/></svg>",
+      "options": [
+        "$07:00$",
+        "$06:35$",
+        "$08:30$",
+        "$07:30$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "العَقْرَبُ الطَّوِيلُ عَلى $6$ (وَنِصْفُ) وَلَيْسَ عَلى $12$ (تَمامًا).",
+        "عَكَسْتَ بَيْنَ العَقْرَبَيْنِ! القَصِيرُ للسّاعاتِ ($7$) وَالطَّوِيلُ للدَّقائِقِ ($30$).",
+        "العَقْرَبُ القَصِيرُ بَيْنَ $7$ وَ $8$ وَلَمْ يَصِلْ إلى $8$ بَعْدُ؛ إِذَنْ السّاعَةُ $7$ وَالنِّصْفُ.",
+        "مُمْتازٌ! العَقْرَبُ القَصِيرُ بَيْنَ $7$ وَ $8$، وَالطَّوِيلُ عَلى $6$، إِذَنْ السّاعَةُ السّابِعَةُ وَالنِّصْفُ ($07:30$)."
+      ],
+      "explanationAr": "العَقْرَبُ القَصِيرُ تَجاوَزَ $7$ وَلَمْ يَصِلْ إلى $8$، وَالطَّوِيلُ عَلى $6$ ($30$ دَقِيقَةً)، فَتَكُونُ السّاعَةُ $07:30$."
+    },
+    {
+      "questionAr": "انْظُرْ إلى الرَّسْمِ: ما اسْمُ المُجَسَّمِ الَّذِي يُشْبِهُ عُلْبَةَ الأَقْلامِ، وَما التَّفْكِيكُ الصَّحِيحُ لِعَدَدِ الأَقْلامِ ($17$)؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 130\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"404\" height=\"114\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><polygon points=\"28,58 138,58 138,98 28,98\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"2\"/><polygon points=\"28,58 52,36 162,36 138,58\" fill=\"#bbf7d0\" stroke=\"#059669\" stroke-width=\"2\"/><polygon points=\"138,58 162,36 162,76 138,98\" fill=\"#86efac\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"83\" y=\"83\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">عُلْبَةُ الأَقْلامِ</text><rect x=\"195\" y=\"26\" width=\"34\" height=\"74\" rx=\"5\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"212\" y=\"68\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">10</text><rect x=\"244\" y=\"52\" width=\"12\" height=\"46\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"266\" y=\"52\" width=\"12\" height=\"46\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"288\" y=\"52\" width=\"12\" height=\"46\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"310\" y=\"52\" width=\"12\" height=\"46\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"332\" y=\"52\" width=\"12\" height=\"46\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"354\" y=\"52\" width=\"12\" height=\"46\" rx=\"3\" fill=\"#f59e0b\"/><rect x=\"376\" y=\"52\" width=\"12\" height=\"46\" rx=\"3\" fill=\"#f59e0b\"/></svg>",
+      "options": [
+        "بَلاطَةٌ قائِمَةٌ، وَ $17 = 10 + 7$",
+        "مُكَعَّبٌ، وَ $17 = 10 + 7$",
+        "بَلاطَةٌ قائِمَةٌ، وَ $17 = 1 + 7$",
+        "أُسْطُوانَةٌ، وَ $17 = 20 + 7$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أَحْسَنْتَ! عُلْبَةُ الأَقْلامِ وُجُوهُها مُسْتَطِيلاتٌ فَهِيَ بَلاطَةٌ قائِمَةٌ، وَالعَدَدُ $17 = 10 + 7$.",
+        "انْتَبِهْ إلى شَكْلِ العُلْبَةِ: وُجُوهُها مُسْتَطِيلاتٌ طَوِيلَةٌ، فَهِيَ بَلاطَةٌ قائِمَةٌ وَلَيْسَتْ مُكَعَّبًا.",
+        "العُلْبَةُ بَلاطَةٌ قائِمَةٌ، لَكِنَّ $1 + 7 = 8$ وَلَيْسَ $17$؛ الرَّقْمُ $1$ عَلى اليَسارِ يُمَثِّلُ $10$.",
+        "العُلْبَةُ لا تَتَدَحْرَجُ فَلَيْسَتْ أُسْطُوانَةً، وَ $20 + 7 = 27$ وَلَيْسَ $17$."
+      ],
+      "explanationAr": "عُلْبَةُ الأَقْلامِ وُجُوهُها مُسْتَطِيلاتٌ فَهِيَ بَلاطَةٌ قائِمَةٌ، وَ $17$ يَتَكَوَّنُ مِنْ عَشَرَةٍ وَ $7$ وَحَداتٍ: $17 = 10 + 7$."
+    }
+  ]
+}

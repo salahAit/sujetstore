@@ -1,0 +1,121 @@
+{
+  "id": "lesson_1ap_t3_add_sub_within_99",
+  "slug": "1ap-t3-add-sub-within-99",
+  "grade": "1ap",
+  "yearSubjectId": 581,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع الخامس (الجزء الثاني): العملة الجزائرية، الحساب بتمعّن والجمع دون احتفاظ",
+  "order": 6,
+  "titleAr": "الجمع دون احتفاظ والطرح البسيط ضمن الأعداد الأصغر من 100",
+  "objectives": [
+    "وضع وإجراء عملية الجمع العمودي دون احتفاظ لعددين مجموعهما أصغر من 100",
+    "حساب فروق بسيطة دون استلاف لعددين أصغر من 100 بالتفكيك أو بالإتمام أو بالشريط العددي",
+    "التمييز بين وضعية جمعية ووضعية طرحية في مشكلات بسيطة وحلّها"
+  ],
+  "keywordsAr": [
+    "الجمع دون احتفاظ",
+    "وضع العملية عموديا",
+    "الطرح البسيط",
+    "وضعيات جمع وطرح"
+  ],
+  "discover": {
+    "scenarioAr": "في مَكْتَبَةِ القِسْمِ $42$ قِصَّةً عَلى الرَّفِّ الأَعْلى وَ $35$ قِصَّةً عَلى الرَّفِّ الأَسْفَلِ. بَعْدَ الغَداءِ، اسْتَعارَ التَّلامِيذُ $13$ قِصَّةً مِنَ المَجْمُوعِ.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 200\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"218\" height=\"176\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"121\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">1. الجَمْعُ العَمُودِيُّ (42 + 35)</text><text x=\"96\" y=\"58\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">ع</text><text x=\"148\" y=\"58\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#d97706\" direction=\"rtl\">و</text><text x=\"96\" y=\"88\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">4</text><text x=\"148\" y=\"88\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">2</text><text x=\"54\" y=\"118\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#16a34a\" direction=\"ltr\">+</text><text x=\"96\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">3</text><text x=\"148\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">5</text><line x1=\"44\" y1=\"132\" x2=\"178\" y2=\"132\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"96\" y=\"162\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">7</text><text x=\"148\" y=\"162\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#d97706\" direction=\"ltr\">?</text><rect x=\"250\" y=\"12\" width=\"218\" height=\"176\" rx=\"10\" fill=\"#fff7ed\" stroke=\"#ea580c\" stroke-width=\"1.5\"/><text x=\"359\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"rtl\">2. الطَّرْحُ البَسِيطُ (77 - 13)</text><text x=\"334\" y=\"58\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">ع</text><text x=\"386\" y=\"58\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#d97706\" direction=\"rtl\">و</text><text x=\"334\" y=\"88\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">7</text><text x=\"386\" y=\"88\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">7</text><text x=\"292\" y=\"118\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#ea580c\" direction=\"ltr\">-</text><text x=\"334\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">1</text><text x=\"386\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">3</text><line x1=\"282\" y1=\"132\" x2=\"416\" y2=\"132\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"359\" y=\"162\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"ltr\">? ?</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في الجَمْعِ العَمُودِيِّ لِـ $42 + 35$، نَبْدَأُ بِعَمُودِ الوَحَداتِ: ما ناتِجُ $2 + 5$؟",
+        "hintAr": "اجْمَعِ الرَّقْمَيْنِ في الجِهَةِ اليُمْنى (تَحْتَ حَرْفِ «و»).",
+        "expectedInput": "7",
+        "revealAr": "$2 + 5 = 7$ في مَرْتَبَةِ الوَحَداتِ."
+      },
+      {
+        "promptAr": "بَعْدَ جَمْعِ العَشَراتِ ($4 + 3 = 7$)، كَمْ قِصَّةً تُوجَدُ في المَكْتَبَةِ كُلِّها ($42 + 35$)؟",
+        "hintAr": "اقْرَأِ العَدَدَ النّاتِجَ مِنْ $7$ عَشَراتٍ وَ $7$ وَحَداتٍ.",
+        "expectedInput": "77",
+        "revealAr": "$42 + 35 = 77$ قِصَّةً في المَكْتَبَةِ."
+      },
+      {
+        "promptAr": "اسْتَعارَ التَّلامِيذُ $13$ قِصَّةً مِنْ بَيْنِ $77$ قِصَّةً. احْسُبْ $77 - 13$ لِمَعْرِفَةِ عَدَدِ القِصَصِ الباقِيَةِ.",
+        "hintAr": "اطْرَحِ الوَحَداتِ ($7 - 3$) ثُمَّ العَشَراتِ ($7 - 1$).",
+        "expectedInput": "64",
+        "revealAr": "$77 - 13 = 64$ قِصَّةً بَقِيَتْ في المَكْتَبَةِ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "في الجَمْعِ العَمُودِيِّ دُونَ احْتِفاظٍ، نَضَعُ الوَحَداتِ تَحْتَ الوَحَداتِ وَالعَشَراتِ تَحْتَ العَشَراتِ، ثُمَّ نَجْمَعُ الوَحَداتِ أَوَّلًا ثُمَّ العَشَراتِ.",
+      "لِلْجَمْعِ الأُفُقِيِّ نُفَكِّكُ العَدَدَيْنِ إلى عَشَراتٍ وَوَحَداتٍ: $51 + 27 = (50 + 20) + (1 + 7) = 70 + 8 = 78$.",
+      "في الطَّرْحِ البَسِيطِ دُونَ اسْتِلافٍ، نَطْرَحُ الوَحَداتِ مِنَ الوَحَداتِ وَالعَشَراتِ مِنَ العَشَراتِ أَوْ نَتَرَاجَعُ عَلى الشَّرِيطِ العَدَدِيِّ: $89 - 34 = 55$.",
+      "لِلتَّمْيِيزِ في المُشْكِلاتِ: كَلِماتُ «مَعًا، المَجْمُوعُ، زادَ، أَضافَ» تَدُلُّ عَلى الجَمْعِ ($+$)، وَكَلِماتُ «بَقِيَ، اسْتَعْمَلَ، أَعْطى، نَقَصَ» تَدُلُّ عَلى الطَّرْحِ ($-$)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 200\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"12\" y=\"12\" width=\"218\" height=\"176\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"121\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">جَمْعٌ دُونَ احْتِفاظٍ</text><text x=\"96\" y=\"58\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">ع</text><text x=\"148\" y=\"58\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#d97706\" direction=\"rtl\">و</text><text x=\"96\" y=\"88\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">5</text><text x=\"148\" y=\"88\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">3</text><text x=\"54\" y=\"118\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">+</text><text x=\"96\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">2</text><text x=\"148\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">4</text><line x1=\"44\" y1=\"132\" x2=\"178\" y2=\"132\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"96\" y=\"162\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">7</text><text x=\"148\" y=\"162\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#d97706\" direction=\"ltr\">7</text><rect x=\"250\" y=\"12\" width=\"218\" height=\"176\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"359\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">طَرْحٌ بَسِيطٌ دُونَ اسْتِلافٍ</text><text x=\"334\" y=\"58\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">ع</text><text x=\"386\" y=\"58\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#d97706\" direction=\"rtl\">و</text><text x=\"334\" y=\"88\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">8</text><text x=\"386\" y=\"88\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">7</text><text x=\"292\" y=\"118\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">-</text><text x=\"334\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">3</text><text x=\"386\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">2</text><line x1=\"282\" y1=\"132\" x2=\"416\" y2=\"132\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"334\" y=\"162\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">5</text><text x=\"386\" y=\"162\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#d97706\" direction=\"ltr\">5</text></svg>",
+    "visualCaptionAr": "مَحاذَاةُ الوَحَداتِ تَحْتَ الوَحَداتِ وَالعَشَراتِ تَحْتَ العَشَراتِ في الجَمْعِ دُونَ احْتِفاظٍ وَالطَّرْحِ البَسِيطِ.",
+    "examples": [
+      {
+        "problemAr": "احْسُبْ عَمُودِيًّا وَأُفُقِيًّا: $61 + 28$.",
+        "solutionAr": "نَجْمَعُ الوَحَداتِ: $1 + 8 = 9$، ثُمَّ العَشَراتِ: $6 + 2 = 8$. إِذَنْ $61 + 28 = 89$."
+      },
+      {
+        "problemAr": "عِنْدَ سارَةَ $78$ مُلْصَقَةً، أَعْطَتْ لِصَدِيقَتِها $25$ مُلْصَقَةً. كَمْ مُلْصَقَةً بَقِيَتْ مَعَها؟",
+        "solutionAr": "كَلِمَةُ «بَقِيَتْ» تَدُلُّ عَلى الطَّرْحِ: الوَحَداتُ $8 - 5 = 3$ وَالعَشَراتُ $7 - 2 = 5$. إِذَنْ $78 - 25 = 53$ مُلْصَقَةً."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! عِنْدَ جَمْعِ أَوْ طَرْحِ عَدَدٍ مِنْ رَقْمَيْنِ مَعَ عَدَدٍ مِنْ رَقْمٍ واحِدٍ مِثْلَ $54 + 3$ أَوْ $67 - 5$، نَضَعُ الرَّقْمَ الواحِدَ تَحْتَ الوَحَداتِ (عَلى اليَمِينِ) وَلَيْسَ تَحْتَ العَشَراتِ!"
+  },
+  "practice": [
+    {
+      "questionAr": "تَأَمَّلْ وَضْعَ العَمَلِيَّةِ العَمُودِيَّةِ: ما ناتِجُ $34 + 52$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 140\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"20\" y=\"10\" width=\"200\" height=\"120\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"102\" y=\"34\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">ع</text><text x=\"148\" y=\"34\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#d97706\" direction=\"rtl\">و</text><text x=\"102\" y=\"60\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">3</text><text x=\"148\" y=\"60\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">4</text><text x=\"64\" y=\"88\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">+</text><text x=\"102\" y=\"88\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">5</text><text x=\"148\" y=\"88\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"ltr\">2</text><line x1=\"54\" y1=\"98\" x2=\"174\" y2=\"98\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"125\" y=\"122\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">? ?</text></svg>",
+      "options": [
+        "$85$",
+        "$86$",
+        "$76$",
+        "$96$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "راجِعْ جَمْعَ الوَحَداتِ: $4 + 2 = 6$ وَلَيْسَ $5$.",
+        "أَحْسَنْتَ! الوَحَداتُ $4 + 2 = 6$ وَالعَشَراتُ $3 + 5 = 8$، فَالنّاتِجُ $86$.",
+        "راجِعْ جَمْعَ العَشَراتِ: $3 + 5 = 8$ وَلَيْسَ $7$.",
+        "تَحَقَّقْ مِنَ العَشَراتِ: $3 + 5 = 8$ وَلَيْسَ $9$."
+      ],
+      "explanationAr": "نَجْمَعُ الوَحَداتِ أَوَّلًا: $4 + 2 = 6$، ثُمَّ العَشَراتِ: $3 + 5 = 8$، إِذَنْ $34 + 52 = 86$."
+    },
+    {
+      "questionAr": "ما ناتِجُ عَمَلِيَّةِ الطَّرْحِ البَسِيطِ: $89 - 35$؟",
+      "options": [
+        "$53$",
+        "$44$",
+        "$64$",
+        "$54$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "راجِعْ طَرْحَ الوَحَداتِ: $9 - 5 = 4$ وَلَيْسَ $3$.",
+        "راجِعْ طَرْحَ العَشَراتِ: $8 - 3 = 5$ وَلَيْسَ $4$.",
+        "راجِعْ طَرْحَ العَشَراتِ: $8 - 3 = 5$ وَلَيْسَ $6$.",
+        "مُمْتازٌ! الوَحَداتُ $9 - 5 = 4$ وَالعَشَراتُ $8 - 3 = 5$، فَالنّاتِجُ $54$."
+      ],
+      "explanationAr": "نَطْرَحُ الوَحَداتِ ($9 - 5 = 4$) ثُمَّ العَشَراتِ ($8 - 3 = 5$)، إِذَنْ $89 - 35 = 54$."
+    },
+    {
+      "questionAr": "غَرَسَ بُسْتانِيٌّ $46$ زَهْرَةً حَمْراءَ وَ $23$ زَهْرَةً صَفْراءَ. ما العَمَلِيَّةُ المُناسِبَةُ لِحِسابِ مَجْمُوعِ الأَزْهارِ، وَما النّاتِجُ؟",
+      "options": [
+        "جَمْعٌ: $46 + 23 = 69$",
+        "طَرْحٌ: $46 - 23 = 23$",
+        "جَمْعٌ: $46 + 23 = 68$",
+        "جَمْعٌ: $46 + 23 = 59$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أَحْسَنْتَ! كَلِمَةُ «مَجْمُوعُ» تَدُلُّ عَلى الجَمْعِ، وَ $46 + 23 = 69$ زَهْرَةً.",
+        "السُّؤالُ يَطْلُبُ مَجْمُوعَ الأَزْهارِ مَعًا، لِذا نَسْتَعْمِلُ الجَمْعَ ($+$) وَلَيْسَ الطَّرْحَ ($-$).",
+        "العَمَلِيَّةُ صَحِيحَةٌ (جَمْعٌ)، لَكِنْ راجِعِ الوَحَداتِ: $6 + 3 = 9$ وَلَيْسَ $8$.",
+        "راجِعْ جَمْعَ العَشَراتِ: $4 + 2 = 6$ وَلَيْسَ $5$."
+      ],
+      "explanationAr": "لِحِسابِ مَجْمُوعِ الأَزْهارِ الحَمْراءِ وَالصَّفْراءِ نَجْمَعُ: الوَحَداتُ $6 + 3 = 9$، وَالعَشَراتُ $4 + 2 = 6$، إِذَنْ $46 + 23 = 69$ زَهْرَةً."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "levelId": "moyen",
+    "yearId": "4am",
+    "yearName": "السنة الرابعة متوسط (BEM)",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t2",
+    "trimesterName": "الفصل الثاني",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة واحدة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 7,
+      "instruction": "لتكن العبارة الجبرية $E = (9x^2 - 1) + (3x - 1)(2x + 4)$:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) حلّل الجزء $(9x^2 - 1)$، ثم استنتج تحليلاً للعبارة $E$ إلى جداء عاملين من الدرجة الأولى.",
+          "answer": "1) لدينا $9x^2 - 1 = (3x - 1)(3x + 1)$.\n\nإذن $E = (3x - 1)[(3x + 1) + (2x + 4)] = (3x - 1)(5x + 5)$.",
+          "mark": "3.5"
+        },
+        {
+          "type": "text",
+          "content": "2) انشر وبسّط العبارة $E$.",
+          "answer": "2) $E = 15x^2 + 10x - 5$.",
+          "mark": "1.75"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب $E$ بالصيغة الأنسب من أجل $x = frac(1, 3)$ ومن أجل $x = sqrt(3)$.",
+          "answer": "3) من أجل $x = frac(1, 3)$ (بالصيغة المحللة): $E = 0$.\n\nمن أجل $x = sqrt(3)$ (بالصيغة المنشورة): $E = 40 + 10sqrt(3)$.",
+          "mark": "1.75"
+        }
+      ],
+      "id": "ex_test_1_4am_t2_factorization_bem",
+      "num": "الأول"
+    },
+    {
+      "points": 7,
+      "instruction": "لتكن العبارة الجبرية $E = (2x + 2)^2 - (3x + 3)(x - 1)$:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) انشر وبسّط العبارة $E$.",
+          "answer": "1) $E = (4x^2 + 8x + 4) - (3x^2 - 3) = x^2 + 8x + 7$.",
+          "mark": "3"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب القيمة المضبوطة للعبارة $E$ من أجل $x = sqrt(3)$ واكتبها على الشكل $m + n sqrt(3)$ (أو $m - n sqrt(3)$).",
+          "answer": "2) بالتعويض في الصيغة المنشورة: $E = 1(sqrt(3))^2 + 8sqrt(3) + 7 = 3 + 7 + 8sqrt(3) = 10 + 8sqrt(3)$.",
+          "mark": "2.25"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب بتمعّن العدد $N = 106^2 - 94^2$ بتوظيف متطابقة شهيرة.",
+          "answer": "3) $N = (106 - 94)(106 + 94) = 12 times 200 = 2400$.",
+          "mark": "1.75"
+        }
+      ],
+      "id": "ex_test_2_4am_t2_expansion_identities",
+      "num": "الثاني"
+    },
+    {
+      "points": 6,
+      "instruction": "المستوي منسوب إلى معلم متعامد ومتجانس $(O ; I, J)$ كما في الشكل المقابل، نعتبر النقط $A(-1; -1)$ ، $B(1; 0)$ ، $C(-1; 4)$:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) احسب مركبتي الشعاع $arrow(A B)$ ثم احسب الأطوال المضبوطة $A B$ و $B C$ و $A C$.\n\n2) استنتج طبيعة المثلث $A B C$ مع التبرير، ثم احسب إحداثيتي $M$ منتصف القطعة $[A C]$.\n\n3) عيّن إحداثيتي النقطة $D$ بحيث يكون $arrow(A B) = arrow(D C)$، واستنتج الطبيعة الدقيقة للرباعي $A B C D$.",
+              "answer": "1) $arrow(A B) vec(2, 1)$ ، والأطوال: $A B = sqrt(5)$ ، $B C = sqrt(20)$ ، $A C = 5$.\n\n2) بما أن $A B^2 + B C^2 = 5 + 20 = 25 = A C^2$ فإن المثلث $A B C$ قائم في $B$ (الخاصية العكسية لفيثاغورس).\n\nمنتصف $[A C]$: $M(-1 ; frac(3, 2))$.\n\n3) من $arrow(A B) = arrow(D C)$ نجد $D(-3; 3)$، وبما أن $A B C D$ متوازي أضلاع فإن طبيعته الدقيقة هي *مستطيل*.",
+              "mark": "6"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/4am_t2_frame_hard_164159.svg",
+              "caption": "المعلم المتعامد والمتجانس (O; I, J)"
+            }
+          ]
+        }
+      ],
+      "id": "ex_test_3_4am_t2_orthonormal_frame_distance",
+      "num": "الثالث"
+    }
+  ]
+}

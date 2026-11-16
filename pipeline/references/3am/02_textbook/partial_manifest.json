@@ -1,0 +1,33 @@
+{
+  "documents": [
+    {
+      "id": "ref_3am_textbook_math_gen2",
+      "grade": "3am",
+      "title_ar": "الكتاب المدرسي الرسمي لمادة الرياضيات - السنة الثالثة متوسط (وزارة التربية الوطنية / منشورات الشهاب - الجيل الثاني)",
+      "category": "textbook",
+      "year": "2017",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/02_textbook/3am_math_textbook_gen2.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2017/10/book-maths-3am-2g-pdf.pdf",
+      "pages_count": 220,
+      "extraction_mode": "scanned_ocr",
+      "sha256": "2d18d4ab7617a5486000400ff578e7060adfe5768155b5f57e3b80b4d8ce600a",
+      "size_bytes": 71647338
+    },
+    {
+      "id": "ref_3am_teacher_guide_math_gen2",
+      "grade": "3am",
+      "title_ar": "دليل استخدام كتاب الرياضيات - السنة الثالثة متوسط (وزارة التربية الوطنية / منشورات الشهاب - الجيل الثاني)",
+      "category": "teacher_guide",
+      "year": "2017",
+      "generation": "gen2",
+      "local_path": "pipeline/references/3am/02_textbook/3am_math_teacher_guide_gen2.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1fdZ1YX4U9Klnw_gjwOqTnaxEBngl-ncJ",
+      "pages_count": 129,
+      "extraction_mode": "digital_text",
+      "sha256": "c31a30b11173c5841a266f94dd9737af788bfb376d3d9124511d81e88991c96a",
+      "size_bytes": 5520915
+    }
+  ],
+  "missing_references": []
+}

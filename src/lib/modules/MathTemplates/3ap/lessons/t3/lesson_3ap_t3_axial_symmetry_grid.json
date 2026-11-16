@@ -1,0 +1,123 @@
+{
+  "id": "lesson_3ap_t3_axial_symmetry_grid",
+  "slug": "3ap-t3-axial-symmetry-grid",
+  "grade": "3ap",
+  "yearSubjectId": 591,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع السادس: حفل نهاية السنة (المحيط، التناظر المحوري، المجسمات ومنهجية حل المشكلات)",
+  "order": 5,
+  "titleAr": "التناظر المحوري على مرصوفة وتعيين محور التناظر",
+  "objectives": [
+    "التحقق من وجود محور تناظر لشكل بالطي أو بعد مربعات المرصوفة وتعيين محاور تناظر الأشكال المألوفة",
+    "إيجاد نظير نقطة أو قطعة مستقيم بالنسبة إلى محور تناظر على مرصوفة باحترام التعامد والمسافة نفسها عن المحور",
+    "إتمام أو رسم نظير شكل هندسي بالنسبة إلى محور تناظر على مرصوفة"
+  ],
+  "keywordsAr": [
+    "التناظر المحوري",
+    "المرصوفة",
+    "محور التناظر",
+    "نظير شكل",
+    "الإنشاء بالتناظر"
+  ],
+  "discover": {
+    "scenarioAr": "تحضّر ليلى بطاقات تهنئة لحفل نهاية السنة على ورقة مرصوفة؛ فهي تطوي الورقة على الخط الأحمر لتتحقق من تطابق النصفين، ثم تكمل رسم الشكل المتناظر بعدّ المربعات على الجهتين.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 215\" width=\"520\" height=\"215\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"520\" height=\"215\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(14,14)\"><rect width=\"212\" height=\"187\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"106\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">1. التحقق بالطي على المحور</text><polygon points=\"106,38 56,92 84,92 52,138 106,138\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"2\"/><polygon points=\"106,38 156,92 128,92 160,138 106,138\" fill=\"#bbf7d0\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"106\" y1=\"30\" x2=\"106\" y2=\"152\" stroke=\"#dc2626\" stroke-width=\"2.5\" stroke-dasharray=\"5,3\"/><text x=\"106\" y=\"172\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">عند الطي ينطبق النصفان تماماً</text></g><g transform=\"translate(238,14)\"><rect width=\"268\" height=\"187\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"134\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">2. التناظر على المرصوفة</text><g transform=\"translate(38,34)\"><rect x=\"0\" y=\"0\" width=\"192\" height=\"120\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><g stroke=\"#cbd5e1\" stroke-width=\"1\"><line x1=\"24\" y1=\"0\" x2=\"24\" y2=\"120\"/><line x1=\"48\" y1=\"0\" x2=\"48\" y2=\"120\"/><line x1=\"72\" y1=\"0\" x2=\"72\" y2=\"120\"/><line x1=\"96\" y1=\"0\" x2=\"96\" y2=\"120\"/><line x1=\"120\" y1=\"0\" x2=\"120\" y2=\"120\"/><line x1=\"144\" y1=\"0\" x2=\"144\" y2=\"120\"/><line x1=\"168\" y1=\"0\" x2=\"168\" y2=\"120\"/><line x1=\"0\" y1=\"24\" x2=\"192\" y2=\"24\"/><line x1=\"0\" y1=\"48\" x2=\"192\" y2=\"48\"/><line x1=\"0\" y1=\"72\" x2=\"192\" y2=\"72\"/><line x1=\"0\" y1=\"96\" x2=\"192\" y2=\"96\"/></g><polygon points=\"96,24 24,48 72,72 96,96\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"24\" y1=\"48\" x2=\"96\" y2=\"48\" stroke=\"#d97706\" stroke-width=\"1.8\" stroke-dasharray=\"3,3\"/><line x1=\"96\" y1=\"-6\" x2=\"96\" y2=\"126\" stroke=\"#dc2626\" stroke-width=\"2.6\" stroke-dasharray=\"5,3\"/><circle cx=\"24\" cy=\"48\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"12\" y=\"45\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">A</text><circle cx=\"72\" cy=\"72\" r=\"4.5\" fill=\"#059669\"/><text x=\"60\" y=\"84\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">B</text><text x=\"60\" y=\"42\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#b45309\">3 مربعات</text></g><text x=\"134\" y=\"174\" text-anchor=\"middle\" font-size=\"11\" fill=\"#dc2626\">محور التناظر الأحمر</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "انظر إلى المرصوفة الثانية: كم مربعاً تبعد النقطة $A$ عن محور التناظر الأحمر إلى اليسار؟ (اكتب العدد فقط)",
+        "hintAr": "عدّ المربعات على السطر الأفقي بين النقطة $A$ والخط الأحمر.",
+        "expectedInput": "3",
+        "revealAr": "تبعد النقطة $A$ عن محور التناظر بـ $3$ مربعات إلى اليسار، إذن نظيرتها تقع على نفس السطر وتبعد $3$ مربعات إلى اليمين."
+      },
+      {
+        "promptAr": "في نفس المرصوفة، تقع النقطة $B$ على بُعد مربع واحد ($1$) من المحور إلى اليسار. كم مربعاً تفصل بين النقطة $B$ ونظيرتها على الجهة اليمنى؟ (اكتب العدد فقط)",
+        "hintAr": "المسافة من $B$ إلى المحور $1$ مربع، ومن المحور إلى نظيرتها $1$ مربع. اجمع $1 + 1$.",
+        "expectedInput": "2",
+        "revealAr": "تبعد النظيرة $1$ مربع عن المحور من الجهة اليمنى، فتكون المسافة بين $B$ ونظيرتها هي $1 + 1 = 2$ مربع."
+      },
+      {
+        "promptAr": "عند طي **المستطيل** (الذي طوله أكبر من عرضه)، ينطبق نصفاه عند الطي عمودياً في الوسط، وأفقياً في الوسط. كم محور تناظر للمستطيل؟ (اكتب العدد فقط)",
+        "hintAr": "القطر في المستطيل غير المربع ليس محور تناظر؛ فتبقى المحاور المارة بمنتصفات الأضلاع فقط.",
+        "expectedInput": "2",
+        "revealAr": "للمستطيل محورا ($2$) تناظر فقط، بينما **للمربع** $4$ محاور تناظر!"
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "يكون المستقيم **محور تناظر** لشكل إذا انطبق نصفا الشكل تماماً على بعضهما عند **الطي** حول هذا المحور.",
+      "عدد محاور التناظر للأشكال المألوفة: **للمربع** $4$ محاور تناظر، **وللمستطيل** محورا ($2$) تناظر فقط (يمران بمنتصفات الأضلاع)، **وللمعين** محورا ($2$) تناظر (قطراه).",
+      "لإيجاد نظير نقطة بالنسبة إلى محور تناظر على **مرصوفة**: نتحرك **عمودياً** نحو المحور ونعدّ المربعات، ثم نعدّ **نفس عدد المربعات** في الجهة المقابلة على نفس السطر (أو نفس العمود للمحور الأفقي).",
+      "النقطة الواقعة **على محور التناظر** تكون نظيرتها هي نفسها؛ ولإتمام نظير مضلع نعين نظائر رؤوسه ثم نصل بينها بالمسطرة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 190\" width=\"520\" height=\"190\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"520\" height=\"190\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(14,14)\"><rect width=\"156\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"78\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">المربع: 4 محاور</text><rect x=\"46\" y=\"42\" width=\"64\" height=\"64\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><g stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4,3\"><line x1=\"78\" y1=\"32\" x2=\"78\" y2=\"116\"/><line x1=\"36\" y1=\"74\" x2=\"120\" y2=\"74\"/><line x1=\"38\" y1=\"34\" x2=\"118\" y2=\"114\"/><line x1=\"118\" y1=\"34\" x2=\"38\" y2=\"114\"/></g><text x=\"78\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">الأضلاع والقطران</text></g><g transform=\"translate(182,14)\"><rect width=\"156\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"78\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">المستطيل: محوران (2)</text><rect x=\"32\" y=\"46\" width=\"92\" height=\"56\" fill=\"#ecfdf5\" stroke=\"#059669\" stroke-width=\"2\"/><g stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4,3\"><line x1=\"78\" y1=\"36\" x2=\"78\" y2=\"112\"/><line x1=\"22\" y1=\"74\" x2=\"134\" y2=\"74\"/></g><text x=\"78\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" fill=\"#dc2626\">القطر ليس محور تناظر</text></g><g transform=\"translate(350,14)\"><rect width=\"156\" height=\"162\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"78\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#7c3aed\">الإنشاء على مرصوفة</text><g transform=\"translate(18,36)\"><rect x=\"0\" y=\"0\" width=\"120\" height=\"80\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><g stroke=\"#cbd5e1\" stroke-width=\"1\"><line x1=\"20\" y1=\"0\" x2=\"20\" y2=\"80\"/><line x1=\"40\" y1=\"0\" x2=\"40\" y2=\"80\"/><line x1=\"60\" y1=\"0\" x2=\"60\" y2=\"80\"/><line x1=\"80\" y1=\"0\" x2=\"80\" y2=\"80\"/><line x1=\"100\" y1=\"0\" x2=\"100\" y2=\"80\"/><line x1=\"0\" y1=\"20\" x2=\"120\" y2=\"20\"/><line x1=\"0\" y1=\"40\" x2=\"120\" y2=\"40\"/><line x1=\"0\" y1=\"60\" x2=\"120\" y2=\"60\"/></g><polygon points=\"60,20 20,40 60,60\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"2\"/><polygon points=\"60,20 100,40 60,60\" fill=\"#ddd6fe\" stroke=\"#7c3aed\" stroke-width=\"2\" stroke-dasharray=\"4,2\"/><line x1=\"60\" y1=\"-4\" x2=\"60\" y2=\"84\" stroke=\"#dc2626\" stroke-width=\"2.2\" stroke-dasharray=\"4,3\"/></g><text x=\"78\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">2 مربعان يساراً = 2 يميناً</text></g></svg>",
+    "visualCaptionAr": "محاور التناظر في المربع والمستطيل، وإنشاء نظير شكل على مرصوفة بالمسافة نفسها عن المحور.",
+    "examples": [
+      {
+        "problemAr": "تقع النقطة $M$ على بعد $4$ مربعات فوق محور تناظر أفقي. أين تقع نظيرتها؟",
+        "solutionAr": "بما أن المحور أفقي، ننزل عمودياً على نفس العمود ونعدّ $4$ مربعات تحت المحور لنعين نظيرة النقطة $M$."
+      },
+      {
+        "problemAr": "طوى يونس ورقة مستطيلة على أحد قطريها؛ فهل القطر محور تناظر للمستطيل؟",
+        "solutionAr": "لا! عند طي المستطيل على قطره لا ينطبق الرأسان الآخران على بعضهما، ولذلك للمستطيل محورا تناظر فقط."
+      }
+    ],
+    "watchOutAr": "انتبه! القطر في **المربع** محور تناظر، أما القطر في **المستطيل** فليس محور تناظر أبداً؛ كما يجب أن تقع النقطة ونظيرتها عمودياً على المحور (على نفس السطر إذا كان المحور عمودياً)."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل المرصوفة ذات محور التناظر الأحمر: أي نقطة هي نظيرة النقطة $P$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 185\" width=\"360\" height=\"185\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"360\" height=\"185\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><g transform=\"translate(76,24)\"><rect x=\"0\" y=\"0\" width=\"208\" height=\"130\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><g stroke=\"#cbd5e1\" stroke-width=\"1\"><line x1=\"26\" y1=\"0\" x2=\"26\" y2=\"130\"/><line x1=\"52\" y1=\"0\" x2=\"52\" y2=\"130\"/><line x1=\"78\" y1=\"0\" x2=\"78\" y2=\"130\"/><line x1=\"104\" y1=\"0\" x2=\"104\" y2=\"130\"/><line x1=\"130\" y1=\"0\" x2=\"130\" y2=\"130\"/><line x1=\"156\" y1=\"0\" x2=\"156\" y2=\"130\"/><line x1=\"182\" y1=\"0\" x2=\"182\" y2=\"130\"/><line x1=\"0\" y1=\"26\" x2=\"208\" y2=\"26\"/><line x1=\"0\" y1=\"52\" x2=\"208\" y2=\"52\"/><line x1=\"0\" y1=\"78\" x2=\"208\" y2=\"78\"/><line x1=\"0\" y1=\"104\" x2=\"208\" y2=\"104\"/></g><polygon points=\"104,26 26,52 78,78 104,104\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"104\" y1=\"-6\" x2=\"104\" y2=\"136\" stroke=\"#dc2626\" stroke-width=\"2.6\" stroke-dasharray=\"5,3\"/><circle cx=\"26\" cy=\"52\" r=\"5\" fill=\"#2563eb\"/><text x=\"13\" y=\"48\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">P</text><circle cx=\"156\" cy=\"52\" r=\"5\" fill=\"#d97706\"/><text x=\"156\" y=\"41\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">A</text><circle cx=\"208\" cy=\"52\" r=\"5\" fill=\"#dc2626\"/><text x=\"219\" y=\"48\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\">B</text><circle cx=\"182\" cy=\"52\" r=\"5\" fill=\"#059669\"/><text x=\"182\" y=\"41\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\">C</text><circle cx=\"182\" cy=\"104\" r=\"5\" fill=\"#7c3aed\"/><text x=\"182\" y=\"122\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#6d28d9\">D</text></g></svg>",
+      "options": [
+        "النقطة $A$",
+        "النقطة $B$",
+        "النقطة $C$",
+        "النقطة $D$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "النقطة $A$ تبعد مربعين فقط عن المحور، بينما تبعد $P$ $3$ مربعات!",
+        "النقطة $B$ تبعد $4$ مربعات عن المحور، وهذا أبعد من مسافة $P$.",
+        "أحسنت! النقطة $P$ تبعد $3$ مربعات يساراً عن المحور، ونظيرتها $C$ تبعد $3$ مربعات يميناً على نفس السطر.",
+        "النقطة $D$ تبعد $3$ مربعات يميناً، لكنها ليست على نفس السطر الأفقي مع $P$!"
+      ],
+      "explanationAr": "نعد المربعات أفقياً من المحور الأحمر إلى النقطة $P$ فنجد $3$ مربعات يساراً. نعد $3$ مربعات يميناً على نفس السطر فنصل إلى النقطة $C$."
+    },
+    {
+      "questionAr": "انظر إلى الأشكال الأربعة: في أي شكل يمثل الخط الأحمر المتقطع **محور تناظر** صحيحاً؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 195\" width=\"420\" height=\"195\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect width=\"420\" height=\"195\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><g transform=\"translate(14,12)\"><rect width=\"188\" height=\"82\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"18\" y=\"20\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\">A</text><rect x=\"50\" y=\"20\" width=\"96\" height=\"46\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"42\" y1=\"16\" x2=\"154\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.2\" stroke-dasharray=\"5,3\"/></g><g transform=\"translate(218,12)\"><rect width=\"188\" height=\"82\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"18\" y=\"20\" font-size=\"13\" font-weight=\"bold\" fill=\"#059669\">B</text><polygon points=\"98,14 54,68 142,68\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"2\"/><line x1=\"98\" y1=\"6\" x2=\"98\" y2=\"76\" stroke=\"#dc2626\" stroke-width=\"2.2\" stroke-dasharray=\"5,3\"/></g><g transform=\"translate(14,102)\"><rect width=\"188\" height=\"82\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"18\" y=\"20\" font-size=\"13\" font-weight=\"bold\" fill=\"#d97706\">C</text><rect x=\"48\" y=\"20\" width=\"96\" height=\"46\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/><line x1=\"78\" y1=\"12\" x2=\"78\" y2=\"74\" stroke=\"#dc2626\" stroke-width=\"2.2\" stroke-dasharray=\"5,3\"/></g><g transform=\"translate(218,102)\"><rect width=\"188\" height=\"82\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"18\" y=\"20\" font-size=\"13\" font-weight=\"bold\" fill=\"#7c3aed\">D</text><polygon points=\"70,20 144,20 124,66 50,66\" fill=\"#ede9fe\" stroke=\"#7c3aed\" stroke-width=\"2\"/><line x1=\"97\" y1=\"10\" x2=\"97\" y2=\"74\" stroke=\"#dc2626\" stroke-width=\"2.2\" stroke-dasharray=\"5,3\"/></g></svg>",
+      "options": [
+        "الشكل A",
+        "الشكل B",
+        "الشكل C",
+        "الشكل D"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "الشكل A مستطيل مقسوم على قطره، وقد تعلمنا أن القطر ليس محور تناظر للمستطيل!",
+        "ممتاز! الخط الأحمر يقسم المثلث في الشكل B إلى نصفين متطابقين ينطبقان عند الطي.",
+        "في الشكل C الخط الأحمر ليس في المنتصف، لذا عند الطي لا ينطبق النصفان.",
+        "في الشكل D الضلعان مائلان في اتجاه واحد، فإذا طويت على الخط العمودي لن ينطبق النصفان."
+      ],
+      "explanationAr": "في الشكل B يمر الخط الأحمر بالرأس العلوي ومنتصف القاعدة للمثلث، فيقسمه إلى جزأين متطابقين تماماً عند الطي."
+    },
+    {
+      "questionAr": "رسمت سارة قطعة مستقيم $[AB]$ على يسار محور تناظر عمودي: النقطة $A$ تقع **على** محور التناظر نفسه، والنقطة $B$ تبعد $3$ مربعات يساراً. كيف تقع نظيرتا $A$ و $B$؟",
+      "options": [
+        "نظيرة $A$ تبقى على المحور نفسه، ونظيرة $B$ تبعد $3$ مربعات يميناً على نفس السطر",
+        "نظيرة $A$ تبعد مربعاً واحداً يميناً، ونظيرة $B$ تبعد $3$ مربعات يميناً",
+        "نظيرة $A$ تبقى على المحور، ونظيرة $B$ تتحرك $3$ مربعات إلى الأسفل",
+        "نظيرتا $A$ و $B$ تبعدان $6$ مربعات عن المحور"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! كل نقطة على محور التناظر نظيرتها هي نفسها (تبعد $0$)، ونظيرة $B$ تبعد $3$ مربعات يميناً على نفس السطر.",
+        "النقطة $A$ تقع على المحور (المسافة $0$)، إذن نظيرتها لا تبتعد عنه!",
+        "في التناظر حول محور عمودي، ننتقل أفقياً إلى اليمين على نفس السطر ولا ننزل إلى الأسفل.",
+        "لا نضاعف المسافة عن المحور! يجب أن تحافظ النظيرة على نفس البعد ($3$ مربعات)."
+      ],
+      "explanationAr": "النقطة $A$ واقعة على المحور فتبعد عنه بـ $0$ مربع وتبقى نظيرتها في مكانها، أما $B$ فتبعد $3$ مربعات يساراً فتكون نظيرتها على نفس السطر وتبعد $3$ مربعات يميناً."
+    }
+  ]
+}

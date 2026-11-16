@@ -1,0 +1,33 @@
+{
+  "documents": [
+    {
+      "id": "ref_4am_textbook_math_gen2",
+      "grade": "4am",
+      "title_ar": "الكتاب المدرسي الرسمي لمادة الرياضيات - السنة الرابعة متوسط (وزارة التربية الوطنية / منشورات الشهاب - الجيل الثاني)",
+      "category": "textbook",
+      "year": "2019",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4am/02_textbook/4am_math_textbook_gen2.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1-kF4SvDaL6ViW4_F9xVqmHLXHUTf4765",
+      "pages_count": 178,
+      "extraction_mode": "digital_text",
+      "sha256": "adbb1682a511dc10f98bab23cc24db01aa9c092b8034beaf0dc687e9e4f3445b",
+      "size_bytes": 56480385
+    },
+    {
+      "id": "ref_4am_teacher_guide_math_gen2",
+      "grade": "4am",
+      "title_ar": "دليل الأستاذ لمادة الرياضيات - السنة الرابعة متوسط (وزارة التربية الوطنية / منشورات الشهاب - الجيل الثاني)",
+      "category": "teacher_guide",
+      "year": "2019",
+      "generation": "gen2",
+      "local_path": "pipeline/references/4am/02_textbook/4am_math_teacher_guide_gen2.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1_GqLmBHhV0uVgEo56gcbcX96UT5r7jQc",
+      "pages_count": 120,
+      "extraction_mode": "digital_text",
+      "sha256": "07bcf7fc2e1b37370d501e8db6cec802daf72f31bd753d17492f80803eed7f3a",
+      "size_bytes": 2949930
+    }
+  ],
+  "missing_references": []
+}

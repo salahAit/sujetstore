@@ -1,0 +1,127 @@
+{
+  "id": "lesson_3am_t1_integration",
+  "slug": "3am-t1-integration",
+  "grade": "3am",
+  "yearSubjectId": 634,
+  "trimesterId": "t1",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثالث: المستقيمات الخاصة في المثلث وإدماج الفصل الأول",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الأول: الأعداد النسبية والناطقة وقوى 10 وهندسة المثلثات",
+  "objectives": [
+    "تجنيد العمليات على الأعداد النسبية والكسور والأعداد الناطقة وقواعد الحساب على قوى العدد 10 في حل مشكلات عددية وعلمية مركبة",
+    "توظيف حالات تقايس مثلثين وخواص مستقيم المنتصفين وتناسبية الأطوال والمستقيمات الخاصة في تحرير براهين هندسية منظمة",
+    "حل وضعيات إدماجية متكاملة وفق معايير التقويم الأربعة (الوجاهة، الاستعمال السليم لأدوات المادة، الانسجام، الإتقان)"
+  ],
+  "keywordsAr": [
+    "وضعية إدماجية",
+    "حصيلة الفصل الأول",
+    "تجنيد الموارد",
+    "تحرير برهان"
+  ],
+  "discover": {
+    "scenarioAr": "في مشروع تهيئة حوض مائي وحديقة مثلثة الشكل $ABC$ بمتوسطة: (1) يتغير حجم الماء في الخزان بمعدل $-\\frac{3}{4}\\text{ m}^3$ كل ساعة لمدة $8$ ساعات أثناء الصيانة، ويتطلب نظام التعقيم تركيزاً مقداره $C = \\frac{10^{-2} \\times 10^5}{10^1}$ وحدة في اللتر. (2) الحديقة مثلثة الشكل حيث $BC = 12\\text{ m}$ ، والممر $[IJ]$ يصل بين منتصفي الضلعين $[AB]$ و $[AC]$ ، وتتلاقى المتوسطات $[CI]$ و $[BJ]$ في النقطة $G$ (حيث $CI = 9\\text{ m}$ ) لوضع نافورة. كيف نجنّد موارد الفصل الأول لحل هذه الوضعية؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 220\" width=\"560\" height=\"220\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"256\" height=\"200\" rx=\"12\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"138\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">1. الموارد العددية المدمجة</text><rect x=\"24\" y=\"48\" width=\"228\" height=\"66\" rx=\"8\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><text x=\"138\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">تغير حجم الخزان خلال 8 ساعات:</text><text x=\"138\" y=\"96\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">8 × (-3/4) = ? m³</text><rect x=\"24\" y=\"126\" width=\"228\" height=\"68\" rx=\"8\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><text x=\"138\" y=\"148\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">معامل التعقيم بقوى 10:</text><text x=\"138\" y=\"174\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">C = (10<tspan dy=\"-4\" font-size=\"9\">-2</tspan><tspan dy=\"4\"> × 10</tspan><tspan dy=\"-4\" font-size=\"9\">5</tspan><tspan dy=\"4\">) / 10</tspan><tspan dy=\"-4\" font-size=\"9\">1</tspan><tspan dy=\"4\"> = 10</tspan><tspan dy=\"-4\" font-size=\"9\">?</tspan></text><rect x=\"280\" y=\"10\" width=\"270\" height=\"200\" rx=\"12\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"415\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">2. الحديقة المثلثة ABC (منتصفان + مركز ثقل)</text><polygon points=\"395,52 316,174 514,174\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"355.5\" y1=\"113\" x2=\"454.5\" y2=\"113\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><line x1=\"514\" y1=\"174\" x2=\"355.5\" y2=\"113\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><line x1=\"316\" y1=\"174\" x2=\"454.5\" y2=\"113\" stroke=\"#16a34a\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><circle cx=\"395\" cy=\"52\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"316\" cy=\"174\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"514\" cy=\"174\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"355.5\" cy=\"113\" r=\"3.8\" fill=\"#2563eb\"/><circle cx=\"454.5\" cy=\"113\" r=\"3.8\" fill=\"#2563eb\"/><circle cx=\"408.3\" cy=\"133.3\" r=\"4\" fill=\"#dc2626\"/><text x=\"395\" y=\"45\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"304\" y=\"180\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"520\" y=\"180\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"342\" y=\"114\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">I</text><text x=\"463\" y=\"114\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">J</text><text x=\"408\" y=\"124\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">G</text><text x=\"415\" y=\"195\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">BC = 12 m  |  CI = 9 m</text></svg>",
+    "steps": [
+      {
+        "promptAr": "لحساب التغير الكلي في حجم الماء خلال $8$ ساعات بمعدل $-\\frac{3}{4}\\text{ m}^3$ في الساعة، احسب $8 \\times \\left(-\\frac{3}{4}\\right)$ . ما قيمة التغير؟",
+        "hintAr": "اضرب $8$ في $-3$ ثم اقسم على $4$ (النتيجة سالبة).",
+        "expectedInput": "-6",
+        "revealAr": "$8 \\times \\left(-\\frac{3}{4}\\right) = -\\frac{24}{4} = -6\\text{ m}^3$ (أي نقص حجم الماء بـ $6\\text{ m}^3$ )."
+      },
+      {
+        "promptAr": "بسّط معامل التعقيم $C = \\frac{10^{-2} \\times 10^5}{10^1} = 10^k$ . ما قيمة الأس $k$ ؟",
+        "hintAr": "احسب البسط أولاً: $10^{-2 + 5} = 10^3$ ، ثم اطرح أس المقام $1$ .",
+        "expectedInput": "2",
+        "revealAr": "$C = \\frac{10^3}{10^1} = 10^{3 - 1} = 10^2 = 100$ ، إذن $k = 2$ ."
+      },
+      {
+        "promptAr": "في الحديقة المثلثة $ABC$ ، $I$ منتصف $[AB]$ و $J$ منتصف $[AC]$ وطول $BC = 12\\text{ m}$ . ما طول الممر $IJ$ بالمتر؟",
+        "hintAr": "طبق خاصية مستقيم المنتصفين: $IJ = \\frac{1}{2} BC$ .",
+        "expectedInput": "6",
+        "revealAr": "بما أن $I$ و $J$ منتصفا الضلعين $[AB]$ و $[AC]$ ، فإن $IJ = \\frac{12}{2} = 6\\text{ m}$ و $(IJ) \\parallel (BC)$ ."
+      },
+      {
+        "promptAr": "تتلاقى المتوسطات $[CI]$ و $[BJ]$ في مركز الثقل $G$ . إذا كان $CI = 9\\text{ m}$ ، فما المسافة $CG$ بالمتر بين الرأس $C$ والنافورة $G$ ؟",
+        "hintAr": "يبعد مركز الثقل $G$ عن الرأس بمقدار $\\frac{2}{3}$ طول المتوسط.",
+        "expectedInput": "6",
+        "revealAr": "$CG = \\frac{2}{3} CI = \\frac{2}{3} \\times 9 = 6\\text{ m}$ (بينما $GI = 3\\text{ m}$ )."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الوجاهة والاستعمال السليم للأعداد**: في الأعداد النسبية والناطقة نعيّن الإشارة بدقة (عدّ العوامل السالبة في الجداء والقسمة)، ونحوّل القسمة على كسر إلى الضرب في مقلوبه، ونوحّد المقامات في الجمع والطرح، ونطبّق قواعد قوى العدد $10$ ($10^m \\times 10^n = 10^{m+n}$ ، $\\frac{10^m}{10^n} = 10^{m-n}$ ، $(10^m)^n = 10^{m \\times n}$ ).",
+      "**منهجية البرهان في هندسة المثلثات**: نظّم كل برهان في ثلاث مراحل: **المعطيات** (تقايس أضلاع أو زوايا، منتصفان، توازي في مثلث، أو مستقيم خاص) $\\leftarrow$ **الخاصية الموظّفة** $\\leftarrow$ **الاستنتاج**.",
+      "**تكامل الخواص الهندسية**: استعمل حالات التقايس لإثبات تساوي أطوال أو زوايا؛ ومستقيم المنتصفين للتوازي ونصف الطول أو إثبات المنتصف؛ وطالس في المثلث لحساب الأطوال المتناسبة؛ والمستقيمات الخاصة لتحديد $O$ (المحاور)، $G$ (المتوسطات وخاصية $\\frac{2}{3}$ )، $H$ (الارتفاعات)، $I$ (المنصفات).",
+      "**الانسجام والإتقان**: تحقق من منطقية الإشارة والوحدات ($\\text{cm}$ ، $\\text{m}$ ، $\\text{m}^3$ ) وملاءمة النتيجة للسياق قبل تحرير الإجابة النهائية."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 215\" width=\"560\" height=\"215\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"14\" y=\"14\" width=\"256\" height=\"86\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"142\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">1. الأعداد النسبية والناطقة</text><text x=\"142\" y=\"62\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">قاعدة الإشارات + عدّ العوامل السالبة</text><text x=\"142\" y=\"83\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">(a/b) ÷ (c/d) = (a/b) × (d/c)</text><rect x=\"290\" y=\"14\" width=\"256\" height=\"86\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"418\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">2. قوى العدد 10</text><text x=\"418\" y=\"62\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"ltr\">10⁻ⁿ = 1 / 10ⁿ   |   10⁰ = 1</text><text x=\"418\" y=\"83\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">10ᵐ×10ⁿ=10ᵐ⁺ⁿ  |  10ᵐ/10ⁿ=10ᵐ⁻ⁿ  |  (10ᵐ)ⁿ=10ᵐⁿ</text><rect x=\"14\" y=\"114\" width=\"256\" height=\"86\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.6\"/><text x=\"142\" y=\"138\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">3. تقايس المثلثات وطالس</text><text x=\"142\" y=\"162\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">الحالات الـ 3 + مثلثان قائمان + مستقيم المنتصفين</text><text x=\"142\" y=\"183\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"ltr\">AM/AB = AN/AC = MN/BC</text><rect x=\"290\" y=\"114\" width=\"256\" height=\"86\" rx=\"10\" fill=\"#fdf2f8\" stroke=\"#db2777\" stroke-width=\"1.6\"/><text x=\"418\" y=\"138\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#9d174d\" direction=\"rtl\">4. المستقيمات الخاصة في مثلث</text><text x=\"418\" y=\"162\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">المحاور (O)  |  المتوسطات (G)  |  الارتفاعات (H)  |  المنصفات (I)</text><text x=\"418\" y=\"183\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#9d174d\" direction=\"ltr\">AG = (2/3) AA'   |   OA = OB = OC</text></svg>",
+    "visualCaptionAr": "خريطة موارد الفصل الأول الأربعة المجندة في الوضعية الإدماجية للسنة الثالثة متوسط",
+    "examples": [
+      {
+        "problemAr": "احسب وبسّط العبارتين: $E = \\left(-\\frac{3}{4} + \\frac{1}{2}\\right) \\div \\left(-\\frac{5}{8}\\right)$ و $F = \\frac{10^{-4} \\times (10^3)^2}{10^{-1}}$ .",
+        "solutionAr": "1) في العبارة $E$ نبدأ بما بين القوسين بتوحيد المقام إلى $4$ :\n\n$-\\frac{3}{4} + \\frac{2}{4} = -\\frac{1}{4}$ . ثم نحوّل القسمة إلى ضرب في المقلوب:\n\n$E = \\left(-\\frac{1}{4}\\right) \\times \\left(-\\frac{8}{5}\\right) = +\\frac{8}{20} = \\frac{2}{5}$ .\n\n2) في العبارة $F$ : $(10^3)^2 = 10^6$ ، والبسط $10^{-4} \\times 10^6 = 10^2$ ، ومنه $F = \\frac{10^2}{10^{-1}} = 10^{2 - (-1)} = 10^3 = 1000$ ."
+      },
+      {
+        "problemAr": "في مثلث $ABC$ ، $BC = 15\\text{ cm}$ و $AB = 12\\text{ cm}$ . النقطة $I$ منتصف $[AB]$ و $J$ منتصف $[AC]$ ، كما عيّنا $M \\in [AB]$ و $N \\in [AC]$ بحيث $AM = 4\\text{ cm}$ و $(MN) \\parallel (BC)$ . احسب $IJ$ و $MN$ ثم قارن وضعية المستقيمين $(IJ)$ و $(MN)$ .",
+        "solutionAr": "1) بما أن $I$ و $J$ منتصفا $[AB]$ و $[AC]$ ، فحسب مستقيم المنتصفين: $(IJ) \\parallel (BC)$ و $IJ = \\frac{15}{2} = 7.5\\text{ cm}$ .\n\n2) بما أن $(MN) \\parallel (BC)$ ، فحسب طالس في المثلث: $\\frac{AM}{AB} = \\frac{MN}{BC}$ أي $\\frac{4}{12} = \\frac{MN}{15} \\implies MN = \\frac{4 \\times 15}{12} = 5\\text{ cm}$ .\n\n3) بما أن $(IJ) \\parallel (BC)$ و $(MN) \\parallel (BC)$ ، فالمستقيمان $(IJ)$ و $(MN)$ متوازيان أيضاً."
+      }
+    ],
+    "watchOutAr": "في الوضعيات الإدماجية، تحقّق دائماً من كتابة **شروط الخاصية** قبل النتيجة (مثلاً: اذكر انتماء النقطتين للضلعين والتوازي قبل تطبيق طالس، واذكر أن المستقيمين متوسطان قبل تطبيق خاصية الثلثين)، ولا تنسَ أن قسمة عددين سالبين أو ضربهما يعطي عدداً **موجباً**!"
+  },
+  "practice": [
+    {
+      "questionAr": "احسب بأبسط شكل ممكن قيمة العبارة الناطقة: $A = \\left(\\frac{1}{3} - \\frac{5}{6}\\right) \\div \\left(-\\frac{3}{4}\\right)$ .",
+      "options": [
+        "$-\\frac{2}{3}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{3}{8}$",
+        "$-\\frac{3}{8}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه للإشارات: ناتج القوسين هو $-\\frac{1}{2}$ (سالب)، والمقسوم عليه $-\\frac{3}{4}$ (سالب أيضاً)، فحاصل قسمة سالبين **موجب**.",
+        "ممتاز! $\\frac{1}{3} - \\frac{5}{6} = -\\frac{3}{6} = -\\frac{1}{2}$ ، ثم $\\left(-\\frac{1}{2}\\right) \\times \\left(-\\frac{4}{3}\\right) = \\frac{4}{6} = \\frac{2}{3}$ .",
+        "لقد ضربتَ $-\\frac{1}{2}$ في $-\\frac{3}{4}$ مباشرةً دون قلب المقسوم عليه!",
+        "ضربتَ دون قلب المقسوم عليه وأخطأتَ في إشارة جداء السالبين."
+      ],
+      "explanationAr": "نحسب ما بين القوسين أولاً: $\\frac{1}{3} - \\frac{5}{6} = \\frac{2}{6} - \\frac{5}{6} = -\\frac{3}{6} = -\\frac{1}{2}$ . ثم نضرب في مقلوب $-\\frac{3}{4}$ وهو $-\\frac{4}{3}$ : $A = \\left(-\\frac{1}{2}\\right) \\times \\left(-\\frac{4}{3}\\right) = +\\frac{4}{6} = \\frac{2}{3}$ ."
+    },
+    {
+      "questionAr": "بسّط العبارة التالية على شكل قوة واحدة للعدد $10$ : $B = \\frac{2 \\times 10^{-3} \\times 5 \\times (10^4)^2}{10^3}$ .",
+      "options": [
+        "$10^2$",
+        "$10^{-3}$",
+        "$10^3$",
+        "$10^9$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "نسيتَ دمج الجداء $2 \\times 5 = 10 = 10^1$ في البسط! بدون هذا العامل يكون الناتج $10^2$ ، أما معه فهو $10^3$ .",
+        "تحقق من إشارات الأسس: البسط يعطي $10^1 \\times 10^{-3} \\times 10^8 = 10^6$ ، ثم نقسم على $10^3$ فنطرح $6 - 3 = 3$ .",
+        "أحسنت! $2 \\times 5 = 10^1$ و $(10^4)^2 = 10^8$ ، فيصبح البسط $10^{1 - 3 + 8} = 10^6$ ، و $\\frac{10^6}{10^3} = 10^3$ .",
+        "في القسمة على $10^3$ نطرح الأس $3$ من $6$ (أي $6 - 3 = 3$ ) ولا نجمعه ($6 + 3 = 9$ )."
+      ],
+      "explanationAr": "نلاحظ أن $2 \\times 5 = 10 = 10^1$ وأن $(10^4)^2 = 10^8$ . إذن البسط يساوي $10^1 \\times 10^{-3} \\times 10^8 = 10^{1 - 3 + 8} = 10^6$ . وبالقسمة على $10^3$ نحصل على $B = 10^{6 - 3} = 10^3$ ."
+    },
+    {
+      "questionAr": "في الشكل المقابل للمثلث $ABC$ ، النقطتان $I$ و $J$ منتصفا $[AB]$ و $[AC]$ على الترتيب، والمستقيم $(MN)$ يوازي $(BC)$ حيث $AM = 2\\text{ cm}$ و $AB = 6\\text{ cm}$ و $BC = 12\\text{ cm}$ . ما الطولان $IJ$ و $MN$ على الترتيب؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 175\" width=\"360\" height=\"175\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"159\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><polygon points=\"180,28 60,148 300,148\" fill=\"#ffffff\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"140\" y1=\"68\" x2=\"220\" y2=\"68\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><line x1=\"120\" y1=\"88\" x2=\"240\" y2=\"88\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><circle cx=\"180\" cy=\"28\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"60\" cy=\"148\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"300\" cy=\"148\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"140\" cy=\"68\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"220\" cy=\"68\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"120\" cy=\"88\" r=\"3.5\" fill=\"#2563eb\"/><circle cx=\"240\" cy=\"88\" r=\"3.5\" fill=\"#2563eb\"/><text x=\"180\" y=\"21\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">A</text><text x=\"46\" y=\"154\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">B</text><text x=\"306\" y=\"154\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">C</text><text x=\"126\" y=\"70\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">M</text><text x=\"226\" y=\"70\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">N</text><text x=\"106\" y=\"92\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">I</text><text x=\"246\" y=\"92\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">J</text><text x=\"180\" y=\"63\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">MN = ?</text><text x=\"180\" y=\"102\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">IJ = ?</text><text x=\"180\" y=\"163\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">BC = 12 cm  |  AM = 2 cm  |  AB = 6 cm</text></svg>",
+      "options": [
+        "$IJ = 6\\text{ cm}$ و $MN = 4\\text{ cm}$",
+        "$IJ = 4\\text{ cm}$ و $MN = 6\\text{ cm}$",
+        "$IJ = 6\\text{ cm}$ و $MN = 3\\text{ cm}$",
+        "$IJ = 24\\text{ cm}$ و $MN = 4\\text{ cm}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "رائع! بمستقيم المنتصفين $IJ = \\frac{12}{2} = 6\\text{ cm}$ ، وبطالس $\\frac{2}{6} = \\frac{MN}{12}$ يعطي $MN = 4\\text{ cm}$ .",
+        "عكستَ القيمتين! $[IJ]$ يمر بالمنتصفين فطوله نصف $BC$ ($6\\text{ cm}$ )، بينما $[MN]$ أقصر ($4\\text{ cm}$ ).",
+        "$IJ = 6\\text{ cm}$ صحيح، لكن في طالس نحسب $MN = \\frac{2}{6} \\times 12 = 4\\text{ cm}$ وليس $3\\text{ cm}$ .",
+        "طول قطعة المنتصفين يساوي **نصف** الضلع الثالث ($12 \\div 2 = 6\\text{ cm}$ ) وليس ضعفه!"
+      ],
+      "explanationAr": "1) حسب خاصية مستقيم المنتصفين: $IJ = \\frac{1}{2} BC = \\frac{12}{2} = 6\\text{ cm}$ .\n\n2) حسب خاصية طالس في المثلث (بما أن $(MN) \\parallel (BC)$ ): $\\frac{AM}{AB} = \\frac{MN}{BC}$ أي $\\frac{2}{6} = \\frac{MN}{12}$ ، ومنه $MN = \\frac{2 \\times 12}{6} = 4\\text{ cm}$ ."
+    }
+  ]
+}
