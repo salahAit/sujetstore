@@ -1,0 +1,123 @@
+{
+  "id": "lesson_2am_t2_parallelogram_and_special_quads",
+  "slug": "2am-t2-parallelogram-and-special-quads",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t2",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع السادس: متوازي الأضلاع وخواصه وإدماج الفصل الثاني",
+  "order": 6,
+  "titleAr": "متوازي الأضلاع وخواصه ومتوازيات الأضلاع الخاصة ومساحته",
+  "objectives": [
+    "تعريف متوازي الأضلاع واستنتاج خواصه باستعمال التناظر المركزي (تقايس وتوازي الأضلاع المتقابلة، تناصف القطرين، تقايس الزوايا المتقابلة)",
+    "معرفة وتوظيف خواص متوازيات الأضلاع الخاصة (المستطيل، المربع، المعين) في الإنشاء وإثبات طبيعة رباعي",
+    "حساب مساحة متوازي الأضلاع بمعلومية طول قاعدة والارتفاع المتعلق بها في وضعيات هندسية وحياتية"
+  ],
+  "keywordsAr": [
+    "متوازي الأضلاع",
+    "خواص متوازي الأضلاع",
+    "المستطيل والمربع والمعين",
+    "تناصف القطرين",
+    "مساحة متوازي الأضلاع"
+  ],
+  "discover": {
+    "scenarioAr": "نعتبر النقطة $O$ منتصف $[AC]$ و$D$ نظيرة $B$ بالنسبة إلى $O$ بالتناظر المركزي. وبما أن التناظر المركزي يحفظ التوازي والأطوال وأقياس الزوايا، نستنتج خواص الرباعي $ABCD$ ومساحته.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"440\" height=\"190\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><polygon points=\"105,155 305,155 365,50 165,50\" fill=\"#f0fdf4\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"105\" y1=\"155\" x2=\"365\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"1.6\" stroke-dasharray=\"5 3\"/><line x1=\"305\" y1=\"155\" x2=\"165\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"1.6\" stroke-dasharray=\"5 3\"/><line x1=\"165\" y1=\"50\" x2=\"165\" y2=\"155\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/><polyline points=\"165,145 175,145 175,155\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><circle cx=\"235\" cy=\"102.5\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"235\" y=\"92\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#2563eb\">O</text><text x=\"150\" y=\"106\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\">h = 4 cm</text><text x=\"225\" y=\"174\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#15803d\">AB = 6 cm</text><text x=\"92\" y=\"164\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">A</text><text x=\"310\" y=\"164\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">B</text><text x=\"370\" y=\"52\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">C</text><text x=\"154\" y=\"45\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">D</text></svg>",
+    "steps": [
+      {
+        "promptAr": "بالتناظر المركزي بالنسبة إلى $O$، نظير المستقيم $(AB)$ هو $(CD)$، ونظير $(AD)$ هو $(CB)$. وبما أنه يحفظ التوازي، فكل ضلعين متقابلين متوازيان. ما اسم الرباعي $ABCD$؟",
+        "hintAr": "الرباعي الذي كل ضلعين متقابلين فيه متوازيان يُسمى...",
+        "expectedInput": "متوازي أضلاع",
+        "revealAr": "الرباعي $ABCD$ هو متوازي أضلاع، ونقطة تقاطع قطريه $O$ هي مركز تناظره."
+      },
+      {
+        "promptAr": "لأن التناظر المركزي يحفظ الأطوال، إذا كان $AB = 6\\text{ cm}$، فما طول الضلع المقابل $DC$ بالسنتيمتر؟",
+        "hintAr": "في متوازي الأضلاع كل ضلعين متقابلين متقايسان.",
+        "expectedInput": "6",
+        "revealAr": "$DC = AB = 6\\text{ cm}$، كما أن كل زاويتين متقابلتين متقايستان ($\\widehat{A} = \\widehat{C}$ و$\\widehat{B} = \\widehat{D}$)."
+      },
+      {
+        "promptAr": "طول القاعدة $AB = 6\\text{ cm}$ والارتفاع المتعلق بها $h = 4\\text{ cm}$. ما هي مساحة متوازي الأضلاع $ABCD$ بالسنتيمتر المربع؟",
+        "hintAr": "مساحة متوازي الأضلاع تساوي طول القاعدة في الارتفاع المتعلق بها.",
+        "expectedInput": "24",
+        "revealAr": "المساحة هي $S = 6 \\times 4 = 24\\text{ cm}^2$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "متوازي الأضلاع هو رباعي كل ضلعين متقابلين فيه متوازيان. ونقطة تقاطع قطريه هي مركز تناظره، ومن خواصه: القطران متناصفان، كل ضلعين متقابلين متقايسان، كل زاويتين متقابلتين متقايستان، وكل زاويتين متتاليتين متكاملتان ($180^\\circ$).",
+      "المستطيل: هو متوازي أضلاع له زاوية قائمة (أو قطراه متقايسان ومتناصفان).",
+      "المعين: هو متوازي أضلاع فيه ضلعان متتاليان متقايسان (أو قطراه متعامدان ومتناصفان).",
+      "المربع: هو متوازي أضلاع يجمع خواص المستطيل والمعين (زاوية قائمة وضلعان متتاليان متقايسان، أو قطراه متناصفان ومتقايسان ومتعامدان).",
+      "مساحة متوازي الأضلاع: تساوي جداء طول أحد أضلاعه (القاعدة $b$) وطول الارتفاع المتعلق به ($h$): $S = b \\times h$."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 188\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"188\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"75\" y=\"16\" width=\"110\" height=\"28\" rx=\"6\" fill=\"#e0e7ff\" stroke=\"#4f46e5\" stroke-width=\"1.6\"/><text x=\"130\" y=\"34\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#3730a3\">ABCD (//)</text><line x1=\"105\" y1=\"44\" x2=\"65\" y2=\"76\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"155\" y1=\"44\" x2=\"195\" y2=\"76\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"18\" y=\"76\" width=\"94\" height=\"30\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><text x=\"65\" y=\"95\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1d4ed8\">90° / AC=BD</text><rect x=\"148\" y=\"76\" width=\"94\" height=\"30\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.6\"/><text x=\"195\" y=\"95\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#15803d\">AB=BC / AC⊥BD</text><line x1=\"65\" y1=\"106\" x2=\"105\" y2=\"138\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"195\" y1=\"106\" x2=\"155\" y2=\"138\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"85\" y=\"138\" width=\"90\" height=\"30\" rx=\"6\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.8\"/><text x=\"130\" y=\"157\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#b45309\">Square (90° + =)</text><line x1=\"255\" y1=\"16\" x2=\"255\" y2=\"174\" stroke=\"#cbd5e1\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><polygon points=\"285,130 420,130 455,55 320,55\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><polygon points=\"285,130 320,130 320,55\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><polygon points=\"420,130 455,130 455,55\" fill=\"#fecaca\" fill-opacity=\"0.55\" stroke=\"#dc2626\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><path d=\"M 308 42 Q 375 20 438 44\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><polygon points=\"442,46 432,45 436,38\" fill=\"#dc2626\"/><text x=\"355\" y=\"152\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#1d4ed8\">b</text><text x=\"330\" y=\"96\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#dc2626\">h</text><text x=\"370\" y=\"172\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">S = b × h</text></svg>",
+    "visualCaptionAr": "الانتقال من متوازي الأضلاع إلى المستطيل والمعين والمربع، وتفسير قاعدة المساحة $S = b \\times h$ بقص مثلث ونقله.",
+    "examples": [
+      {
+        "problemAr": "في متوازي الأضلاع $EFGH$، قيس الزاوية $\\widehat{E} = 115^\\circ$. احسب قيسي $\\widehat{G}$ و$\\widehat{F}$.",
+        "solutionAr": "الزاويتان المتقابلتان متقايستان، إذن $\\widehat{G} = \\widehat{E} = 115^\\circ$. والزاويتان المتتاليتان متكاملتان، إذن $\\widehat{F} = 180^\\circ - 115^\\circ = 65^\\circ$."
+      },
+      {
+        "problemAr": "$KLMN$ رباعي قطراه $[KM]$ و$[LN]$ متناصفان ومتعامدان. ما طبيعته؟ وما طبيعته إذا كان أيضا $KM = LN$؟",
+        "solutionAr": "تناصف القطرين يعني أنه متوازي أضلاع، وتعامدهما يجعله معينا. وإذا تقايس قطراه أيضا يصبح مربعا."
+      }
+    ],
+    "watchOutAr": "انتبه! لا يكفي أن يكون القطران متعامدين ليكون الرباعي معينا، ولا متقايسين ليكون مستطيلا؛ يجب أولا أن يكون متوازي أضلاع (أي أن يتناصف القطران)! ولا تضرب أبدا القاعدة في الضلع المائل عند حساب المساحة، بل في الارتفاع العمودي فقط."
+  },
+  "practice": [
+    {
+      "questionAr": "$ABCD$ متوازي أضلاع فيه قيس $\\widehat{A} = 72^\\circ$. ما هما قيسا الزاويتين $\\widehat{B}$ و$\\widehat{C}$ على الترتيب؟",
+      "options": [
+        "$\\widehat{B} = 72^\\circ$ و$\\widehat{C} = 108^\\circ$",
+        "$\\widehat{B} = 108^\\circ$ و$\\widehat{C} = 72^\\circ$",
+        "$\\widehat{B} = 18^\\circ$ و$\\widehat{C} = 72^\\circ$",
+        "$\\widehat{B} = 108^\\circ$ و$\\widehat{C} = 108^\\circ$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "الزاوية $\\widehat{C}$ هي المقابلة لـ$\\widehat{A}$ فتقايسها ($72^\\circ$)، أما $\\widehat{B}$ فمتتالية معها فتكملها ($108^\\circ$).",
+        "أحسنت! $\\widehat{B}$ متتالية مع $\\widehat{A}$ لذا $\\widehat{B} = 180^\\circ - 72^\\circ = 108^\\circ$، و$\\widehat{C}$ مقابلة لـ$\\widehat{A}$ لذا $\\widehat{C} = 72^\\circ$.",
+        "الزاويتان المتتاليتان في متوازي الأضلاع متكاملتان ($180^\\circ$) وليستا متتامتين ($90^\\circ$).",
+        "$\\widehat{C}$ تقابل $\\widehat{A}$ فيجب أن تساوي $72^\\circ$."
+      ],
+      "explanationAr": "في متوازي الأضلاع: $\\widehat{C} = \\widehat{A} = 72^\\circ$ (متقابلتان)، و$\\widehat{B} = 180^\\circ - 72^\\circ = 108^\\circ$ (متتاليتان متكاملتان)."
+    },
+    {
+      "questionAr": "رباعي قطراه متناصفان ومتعامدان وغير متقايسين. ما طبيعة هذا الرباعي؟",
+      "options": [
+        "مستطيل",
+        "مربع",
+        "معين",
+        "متوازي أضلاع كيفي"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "في المستطيل يكون القطران متقايسين ومتناصفين، لكنهما هنا غير متقايسين ومتعامدين.",
+        "في المربع يجب أن يكون القطران متقايسين أيضا، وهنا هما غير متقايسين.",
+        "صحيح تماما! تناصف القطرين يعطي متوازي أضلاع، وتعامدهما دون تقايسهما يعطي معينا.",
+        "تعامد القطرين خاصية إضافية تجعله معينا وليس متوازي أضلاع كيفيا فقط."
+      ],
+      "explanationAr": "القطران المتناصفان يحددان متوازي أضلاع، وتعامدهما يثبت أنه معين، وعدم تقايسهما ينفي كونه مربعا."
+    },
+    {
+      "questionAr": "لاحظ متوازي الأضلاع $ABCD$ المقابل حيث $BC = 10\\text{ cm}$ و$AB = 6\\text{ cm}$ والارتفاع $AH = 5\\text{ cm}$. ما هي مساحته؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 182\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"400\" height=\"182\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><polygon points=\"125,45 325,45 275,145 75,145\" fill=\"#f8fafc\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"125\" y1=\"45\" x2=\"125\" y2=\"145\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4 3\"/><polyline points=\"125,135 135,135 135,145\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"133\" y=\"98\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#dc2626\">5 cm</text><text x=\"195\" y=\"164\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#2563eb\">10 cm</text><text x=\"86\" y=\"92\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"600\" fill=\"#475569\">6 cm</text><text x=\"118\" y=\"37\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">A</text><text x=\"330\" y=\"45\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">D</text><text x=\"64\" y=\"156\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">B</text><text x=\"121\" y=\"161\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#dc2626\">H</text><text x=\"278\" y=\"156\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">C</text></svg>",
+      "options": [
+        "$60\\text{ cm}^2$",
+        "$50\\text{ cm}^2$",
+        "$25\\text{ cm}^2$",
+        "$32\\text{ cm}^2$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "ضربت القاعدة في الضلع المائل $AB = 6\\text{ cm}$ بدل الارتفاع العمودي $AH = 5\\text{ cm}$.",
+        "ممتاز! مساحة متوازي الأضلاع هي $S = BC \\times AH = 10 \\times 5 = 50\\text{ cm}^2$.",
+        "نسيت أن القسمة على $2$ تخص المثلث وليس متوازي الأضلاع!",
+        "هذا هو المحيط $2 \\times (10 + 6) = 32\\text{ cm}$ وليس المساحة."
+      ],
+      "explanationAr": "نستعمل القاعدة $BC = 10\\text{ cm}$ والارتفاع العمودي المتعلق بها $AH = 5\\text{ cm}$: $S = 10 \\times 5 = 50\\text{ cm}^2$."
+    }
+  ]
+}

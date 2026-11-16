@@ -1,0 +1,121 @@
+{
+  "id": "lesson_2am_t3_percentage_scale_unit_conversions",
+  "slug": "2am-t3-percentage-scale-unit-conversions",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t3",
+  "sequenceId": "seq7",
+  "sequenceTitleAr": "المقطع السابع: التناسبية وتطبيقاتها وتحويل وحدات القياس",
+  "order": 2,
+  "titleAr": "النسبة المئوية ومقياس خريطة أو تصميم وتحويل وحدات القياس",
+  "objectives": [
+    "حساب نسبة مئوية وتوظيفها في مقارنة حصص وحساب كميات ومبالغ بعد التخفيض أو الزيادة",
+    "حساب مقياس خريطة أو تصميم واستعماله لإنجاز تكبير أو تصغير وحساب المسافات الحقيقية والمسافات على التصميم",
+    "إجراء تحويلات وحدات القياس على الأطوال والمساحات والحجوم والسعات بدقة"
+  ],
+  "keywordsAr": [
+    "النسبة المئوية",
+    "مقياس خريطة",
+    "مقياس تصميم",
+    "التكبير والتصغير",
+    "تحويل وحدات القياس"
+  ],
+  "discover": {
+    "scenarioAr": "يخطط تلاميذ قسم الثانية متوسط لتهيئة قاعة مطالعة مستطيلة الشكل أبعادها الحقيقية $8\\text{ m}$ طولاً و $6\\text{ m}$ عرضاً. أنجزوا تصميماً لها بمقياس $\\frac{1}{200}$ ، ثم اختاروا شراء خزانة كتب ثمنها الأصلي $15000\\text{ DA}$ مع الاستفادة من تخفيض قدره $20\\%$ .",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\" width=\"600\" height=\"245\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"229\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"33\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">تهيئة قاعة المطالعة: التصميم، المساحة، والتخفيض</text><rect x=\"24\" y=\"52\" width=\"190\" height=\"135\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"119\" y=\"122\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">القاعة الحقيقية</text><text x=\"119\" y=\"205\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">L = 8 m = 800 cm</text><text x=\"226\" y=\"122\" text-anchor=\"start\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">l = 6 m</text><path d=\"M 278 118 L 348 118\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.2\"/><polygon points=\"348,118 340,113 340,123\" fill=\"#059669\"/><rect x=\"272\" y=\"84\" width=\"82\" height=\"24\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1\"/><text x=\"313\" y=\"100\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">× 1 / 200</text><rect x=\"368\" y=\"86\" width=\"82\" height=\"62\" rx=\"4\" fill=\"#ecfdf5\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"409\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">التصميم</text><text x=\"409\" y=\"166\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">? cm × 3 cm</text><rect x=\"472\" y=\"56\" width=\"104\" height=\"160\" rx=\"10\" fill=\"#fffbeb\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"524\" y=\"80\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\" direction=\"rtl\">خزانة الكتب</text><text x=\"524\" y=\"114\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#64748b\" direction=\"ltr\">15000 DA</text><line x1=\"490\" y1=\"110\" x2=\"558\" y2=\"110\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"492\" y=\"130\" width=\"64\" height=\"26\" rx=\"13\" fill=\"#fef2f2\" stroke=\"#ef4444\" stroke-width=\"1.2\"/><text x=\"524\" y=\"147\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">- 20%</text><text x=\"524\" y=\"192\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">? DA</text></svg>",
+    "steps": [
+      {
+        "promptAr": "حوّل الطول الحقيقي $8\\text{ m}$ إلى السنتيمتر ( $\\text{cm}$ ) ، ثم احسب طول القاعة على التصميم باستعمال المقياس $\\frac{1}{200}$ . (أدخل الطول على التصميم بالسنتيمتر فقط)",
+        "hintAr": "بما أن $1\\text{ m} = 100\\text{ cm}$ ، فإن $8\\text{ m} = 800\\text{ cm}$ . اضرب هذا الطول في المقياس $\\frac{1}{200}$ .",
+        "expectedInput": "4",
+        "revealAr": "بعد توحيد الوحدة إلى السنتيمتر: $8\\text{ m} = 800\\text{ cm}$ . وبضرب الطول الحقيقي في المقياس نجد الطول على التصميم: $800 \\times \\frac{1}{200} = 4\\text{ cm}$ (وكذلك العرض $600\\text{ cm}$ يصبح $3\\text{ cm}$ )."
+      },
+      {
+        "promptAr": "احسب المساحة الحقيقية لقاعة المطالعة بوحدة $\\text{m}^2$ ، ثم حوّلها إلى $\\text{dm}^2$ . (أدخل العدد بوحدة $\\text{dm}^2$ فقط)",
+        "hintAr": "المساحة هي $8 \\times 6 = 48\\text{ m}^2$ ، وتذكّر أن $1\\text{ m}^2 = 100\\text{ dm}^2$ .",
+        "expectedInput": "4800",
+        "revealAr": "المساحة الحقيقية للقاعة هي $A = 8 \\times 6 = 48\\text{ m}^2$ . وبما أن كل وحدة مساحة تساوي $100$ مرة الوحدة التي تليها مباشرة، فإن $48\\text{ m}^2 = 4800\\text{ dm}^2$ ."
+      },
+      {
+        "promptAr": "احسب قيمة التخفيض ( $20\\%$ من $15000\\text{ DA}$ ) ثم استنتج الثمن الجديد لخزانة الكتب. (أدخل الثمن الجديد بالدينار فقط)",
+        "hintAr": "احسب قيمة التخفيض $15000 \\times \\frac{20}{100}$ ، ثم اطرحها من $15000$ .",
+        "expectedInput": "12000",
+        "revealAr": "قيمة التخفيض هي $15000 \\times \\frac{20}{100} = 3000\\text{ DA}$ . ومنه الثمن الجديد للخزانة بعد التخفيض هو $15000 - 3000 = 12000\\text{ DA}$ (أو مباشرة $15000 \\times \\frac{80}{100} = 12000\\text{ DA}$ )."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**حساب النسبة المئوية**: لحساب $p\\%$ من مقدار $A$ نحسب $A \\times \\frac{p}{100}$ . ولحساب النسبة المئوية لجزء $m$ من كل $M$ نستعمل الرابع المتناسب: $\\frac{m}{M} \\times 100$ .",
+      "**التخفيض والزيادة بنسبة مئوية**: بعد تخفيض قدره $p\\%$ يصبح السعر الأصلي $P$ مساوياً $P - ( P \\times \\frac{p}{100} )$ ، وبعد زيادة قدرها $p\\%$ يصبح $P + ( P \\times \\frac{p}{100} )$ .",
+      "**مقياس خريطة أو تصميم**: المقياس $e$ هو حاصل قسمة الطول على التصميم $d$ على الطول الحقيقي $D$ **بنفس وحدة القياس**: $e = \\frac{d}{D}$ . إذا كان $e < 1$ (مثل $\\frac{1}{500}$ ) فالتصميم **تصغير**، وإذا كان $e > 1$ (مثل $\\frac{5}{1}$ ) فهو **تكبير**.",
+      "**تحويل وحدات القياس**: في الأطوال نضرب أو نقسم على $10$ لكل درجة ( $1\\text{ m} = 100\\text{ cm}$ )؛ وفي المساحات على $100$ لكل درجة ( $1\\text{ m}^2 = 100\\text{ dm}^2 = 10000\\text{ cm}^2$ و $1\\text{ ha} = 10000\\text{ m}^2$ )؛ وفي الحجوم على $1000$ لكل درجة ( $1\\text{ m}^3 = 1000\\text{ dm}^3$ و $1\\text{ dm}^3 = 1000\\text{ cm}^3$ ) مع القاعدة الأساسية $1\\text{ dm}^3 = 1\\text{ L}$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 265\" width=\"600\" height=\"265\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"249\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"33\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">ملخص بصري: النسبة المئوية والمقياس وتحويل الوحدات</text><rect x=\"22\" y=\"48\" width=\"176\" height=\"102\" rx=\"10\" fill=\"#ffffff\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><text x=\"110\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#6d28d9\" direction=\"rtl\">النسبة المئوية</text><text x=\"110\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">(m / M) × 100 = p%</text><text x=\"110\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#059669\" direction=\"rtl\">زيادة: + p%</text><text x=\"110\" y=\"138\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"rtl\">تخفيض: - p%</text><rect x=\"212\" y=\"48\" width=\"176\" height=\"102\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"300\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">المقياس (بنفس الوحدة)</text><text x=\"300\" y=\"96\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">طول التصميم ÷ الطول الحقيقي</text><text x=\"300\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0369a1\" direction=\"rtl\">تصغير: e أصغر من 1</text><text x=\"300\" y=\"138\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">تكبير: e أكبر من 1</text><rect x=\"402\" y=\"48\" width=\"176\" height=\"102\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.5\"/><text x=\"490\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">الحجم والسعة</text><rect x=\"420\" y=\"84\" width=\"140\" height=\"24\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1\"/><text x=\"490\" y=\"100\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"ltr\">1 dm³ = 1 L</text><text x=\"490\" y=\"124\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1 m³ = 1000 L</text><text x=\"490\" y=\"140\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1 cm³ = 1 mL</text><rect x=\"22\" y=\"164\" width=\"556\" height=\"78\" rx=\"10\" fill=\"#ffffff\" stroke=\"#d97706\" stroke-width=\"1.5\"/><text x=\"300\" y=\"184\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">سلّم التحويلات بين الوحدات المتجاورة</text><text x=\"115\" y=\"208\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"rtl\">الأطوال: خطوة بـ ×10</text><text x=\"115\" y=\"228\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"ltr\">1 m = 10 dm = 100 cm</text><line x1=\"206\" y1=\"194\" x2=\"206\" y2=\"234\" stroke=\"#fde68a\" stroke-width=\"1.5\"/><text x=\"300\" y=\"208\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"rtl\">المساحات: خطوة بـ ×100</text><text x=\"300\" y=\"228\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"ltr\">1 m² = 100 dm² = 10000 cm²</text><line x1=\"394\" y1=\"194\" x2=\"394\" y2=\"234\" stroke=\"#fde68a\" stroke-width=\"1.5\"/><text x=\"485\" y=\"208\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\" direction=\"rtl\">الحجوم: خطوة بـ ×1000</text><text x=\"485\" y=\"228\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"ltr\">1 m³ = 1000 dm³</text></svg>",
+    "visualCaptionAr": "ترابط قوانين النسبة المئوية ومقياس الرسم وسلّم تحويل وحدات الطول والمساحة والحجم والسعة",
+    "examples": [
+      {
+        "problemAr": "المسافة بين مدينتين على خريطة بمقياس $\\frac{1}{250000}$ هي $12\\text{ cm}$ . ما هي المسافة الحقيقية بينهما بالكيلومتر ( $\\text{km}$ )؟",
+        "solutionAr": "بما أن المقياس $\\frac{1}{250000}$ يعني أن كل $1\\text{ cm}$ على الخريطة يمثل $250000\\text{ cm}$ في الواقع، فإن المسافة الحقيقية هي:\n\n$$\n12 \\times 250000 = 3000000\\text{ cm}\n$$\n\nنحول إلى المتر ثم إلى الكيلومتر:\n\n$$\n3000000\\text{ cm} = 30000\\text{ m} = 30\\text{ km}\n$$"
+      },
+      {
+        "problemAr": "خزان ماء حجمه الكلي $1.5\\text{ m}^3$ مملوء بنسبة $80\\%$ . ما هي كمية الماء الموجودة فيه باللتر ( $\\text{L}$ )؟",
+        "solutionAr": "نحول أولاً حجم الخزان من $\\text{m}^3$ إلى $\\text{dm}^3$ (أي اللتر):\n\n$$\n1.5\\text{ m}^3 = 1500\\text{ dm}^3 = 1500\\text{ L}\n$$\n\nنحسب الآن $80\\%$ من سعة الخزان:\n\n$$\n1500 \\times \\frac{80}{100} = 1200\\text{ L}\n$$"
+      }
+    ],
+    "watchOutAr": "احذر من خطأين شائعين: الأول هو حساب المقياس بوحدتين مختلفتين (كقسمة السنتيمتر على المتر دون تحويل)، والثاني هو ضرب المساحات في $10$ بدل $100$ أو الحجوم في $100$ بدل $1000$ عند الانتقال إلى الوحدة المجاورة."
+  },
+  "practice": [
+    {
+      "questionAr": "في متوسطة تضم $450$ تلميذاً، نجح $378$ تلميذاً في الامتحان النهائي. ما هي النسبة المئوية للنجاح؟",
+      "options": [
+        "$72\\%$",
+        "$78\\%$",
+        "$84\\%$",
+        "$80\\%$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "هذا الفرق $450 - 378 = 72$ يمثل عدد غير الناجحين وليس النسبة المئوية للنجاح!",
+        "تأكد من القسمة: $378 \\div 450 = 0.84$ ثم اضرب في $100$ .",
+        "أحسنت! حسبت النسبة $\\frac{378}{450} \\times 100 = 84\\%$ بدقة.",
+        "قرّبت النتيجة بشكل غير دقيق؛ النسبة المضبوطة هي $\\frac{378}{450} \\times 100$ ."
+      ],
+      "explanationAr": "نحسب نسبة التلاميذ الناجحين باستعمال الرابع المتناسب: $\\frac{378}{450} \\times 100 = 0.84 \\times 100 = 84\\%$ ."
+    },
+    {
+      "questionAr": "طول ملعب مستطيل على تصميم بمقياس $\\frac{1}{500}$ هو $16\\text{ cm}$ . ما هو طوله الحقيقي بالمتر ( $\\text{m}$ )؟",
+      "options": [
+        "$800\\text{ m}$",
+        "$80\\text{ m}$",
+        "$8\\text{ m}$",
+        "$32\\text{ m}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه: $16 \\times 500 = 8000\\text{ cm}$ ، وعند التحويل إلى المتر نقسم على $100$ وليس $10$ .",
+        "ممتاز! حسبت الطول بالسنتيمتر ثم حولت إلى المتر بشكل سليم.",
+        "قسمت على $1000$ بدل القسمة على $100$ عند التحويل من $\\text{cm}$ إلى $\\text{m}$ .",
+        "لا نقسم $16$ على $0.5$ ؛ بل نضرب $16 \\times 500 = 8000\\text{ cm}$ ثم نحول للمتر."
+      ],
+      "explanationAr": "الطول الحقيقي بالسنتيمتر هو $16 \\times 500 = 8000\\text{ cm}$ . وبما أن $1\\text{ m} = 100\\text{ cm}$ ، فإن الطول الحقيقي بالمتر هو $8000 \\div 100 = 80\\text{ m}$ ."
+    },
+    {
+      "questionAr": "أي تحويل من التحويلات المزدوجة الآتية صحيح؟",
+      "options": [
+        "$2.4\\text{ m}^2 = 240\\text{ dm}^2$ و $3500\\text{ cm}^3 = 3.5\\text{ L}$",
+        "$2.4\\text{ m}^2 = 24\\text{ dm}^2$ و $3500\\text{ cm}^3 = 35\\text{ L}$",
+        "$2.4\\text{ m}^2 = 2400\\text{ dm}^2$ و $3500\\text{ cm}^3 = 3.5\\text{ L}$",
+        "$2.4\\text{ m}^2 = 240\\text{ dm}^2$ و $3500\\text{ cm}^3 = 0.35\\text{ L}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! طبقت خطوة $\\times 100$ للمساحات وخطوة $\\div 1000$ من $\\text{cm}^3$ إلى $\\text{dm}^3$ (اللتر).",
+        "انتبه: $1\\text{ m}^2 = 100\\text{ dm}^2$ وليس $10\\text{ dm}^2$ ، كما أن $1\\text{ L} = 1000\\text{ cm}^3$ وليس $100\\text{ cm}^3$ .",
+        "في المساحات نضرب في $100$ (فيصبح $240\\text{ dm}^2$ ) وليس في $1000$ .",
+        "التحويل الأول صحيح، لكن $3500\\text{ cm}^3 = 3500 \\div 1000 = 3.5\\text{ dm}^3 = 3.5\\text{ L}$ ."
+      ],
+      "explanationAr": "بما أن $1\\text{ m}^2 = 100\\text{ dm}^2$ ، فإن $2.4\\text{ m}^2 = 2.4 \\times 100 = 240\\text{ dm}^2$ . وبما أن $1\\text{ dm}^3 = 1000\\text{ cm}^3 = 1\\text{ L}$ ، فإن $3500\\text{ cm}^3 = 3.5\\text{ dm}^3 = 3.5\\text{ L}$ ."
+    }
+  ]
+}

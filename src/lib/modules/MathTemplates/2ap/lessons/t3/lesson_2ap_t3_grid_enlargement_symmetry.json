@@ -1,0 +1,123 @@
+{
+  "id": "lesson_2ap_t3_grid_enlargement_symmetry",
+  "slug": "lesson-2ap-t3-grid-enlargement-symmetry",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t3",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الرابع (الجزء الأول): التحضير لحفل نهاية السنة (الطرح بالاستعارة، الكتل والمرصوفة والتناظر)",
+  "order": 3,
+  "titleAr": "استعمال المرصوفة، تكبير رسم والتناظر المحوري على مرصوفة",
+  "objectives": [
+    "وصف مسلك على مرصوفة وتمثيله بواسطة أسهم وتعيين مواقع أشياء على تصميم بسيط",
+    "تكبير رسم على مرصوفة وفق معامل تكبير بسيط (مرتين أو ثلاث مرات)",
+    "التعرف على محور تناظر شكل بالطي وإتمام رسم شكل بالتناظر المحوري على مرصوفة"
+  ],
+  "keywordsAr": [
+    "استعمال المرصوفة",
+    "تكبير رسم",
+    "محور تناظر",
+    "التناظر على المرصوفة",
+    "التناظر المحوري"
+  ],
+  "discover": {
+    "scenarioAr": "لصنع زينة القاعة للحفل، رسم التلاميذ مسلك النحلة إلى الزهرة على مرصوفة، ثم أرادوا تكبير مربع وإتمام شكل متناظر حول المحور الأحمر.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 215\" width=\"520\" height=\"215\"><rect width=\"520\" height=\"215\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(18,16)\"><rect width=\"226\" height=\"183\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"113\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">1. مسلك النحلة على المرصوفة</text><g transform=\"translate(38,34)\" stroke=\"#cbd5e1\" stroke-width=\"1\"><rect x=\"0\" y=\"0\" width=\"150\" height=\"120\" fill=\"#ffffff\"/><line x1=\"30\" y1=\"0\" x2=\"30\" y2=\"120\"/><line x1=\"60\" y1=\"0\" x2=\"60\" y2=\"120\"/><line x1=\"90\" y1=\"0\" x2=\"90\" y2=\"120\"/><line x1=\"120\" y1=\"0\" x2=\"120\" y2=\"120\"/><line x1=\"0\" y1=\"30\" x2=\"150\" y2=\"30\"/><line x1=\"0\" y1=\"60\" x2=\"150\" y2=\"60\"/><line x1=\"0\" y1=\"90\" x2=\"150\" y2=\"90\"/><circle cx=\"15\" cy=\"105\" r=\"8\" fill=\"#f59e0b\" stroke=\"none\"/><text x=\"15\" y=\"109\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ffffff\" stroke=\"none\">A</text><circle cx=\"105\" cy=\"45\" r=\"8\" fill=\"#10b981\" stroke=\"none\"/><text x=\"105\" y=\"49\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ffffff\" stroke=\"none\">B</text><path d=\"M 25 105 L 75 105 L 75 45 L 95 45\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><polygon points=\"92,40 100,45 92,50\" fill=\"#2563eb\" stroke=\"none\"/></g><text x=\"113\" y=\"172\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#475569\">يمين 2 ، أعلى 2 ، يمين 1</text></g><g transform=\"translate(262,16)\"><rect width=\"240\" height=\"183\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"120\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">2. التناظر حول المحور</text><g transform=\"translate(36,34)\"><rect x=\"0\" y=\"0\" width=\"168\" height=\"112\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><g stroke=\"#cbd5e1\" stroke-width=\"1\"><line x1=\"28\" y1=\"0\" x2=\"28\" y2=\"112\"/><line x1=\"56\" y1=\"0\" x2=\"56\" y2=\"112\"/><line x1=\"84\" y1=\"0\" x2=\"84\" y2=\"112\"/><line x1=\"112\" y1=\"0\" x2=\"112\" y2=\"112\"/><line x1=\"140\" y1=\"0\" x2=\"140\" y2=\"112\"/><line x1=\"0\" y1=\"28\" x2=\"168\" y2=\"28\"/><line x1=\"0\" y1=\"56\" x2=\"168\" y2=\"56\"/><line x1=\"0\" y1=\"84\" x2=\"168\" y2=\"84\"/></g><polygon points=\"84,28 0,56 84,84\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"84\" y1=\"-4\" x2=\"84\" y2=\"118\" stroke=\"#dc2626\" stroke-width=\"2.5\" stroke-dasharray=\"5,3\"/><circle cx=\"0\" cy=\"56\" r=\"4.5\" fill=\"#dc2626\"/><text x=\"10\" y=\"48\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">M</text><text x=\"42\" y=\"72\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e40af\">3 خانات</text></g><text x=\"120\" y=\"172\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#dc2626\">محور التناظر</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "انظر إلى المرصوفة 1: تتبع المسلك من النقطة $A$ إلى النقطة $B$ (خانتان يميناً، ثم خانتان إلى الأعلى، ثم خانة واحدة يميناً). ما هو مجموع الخانات التي قطعتها النحلة؟",
+        "hintAr": "اجمع خطوات المسلك: $2 + 2 + 1$ .",
+        "expectedInput": "5",
+        "revealAr": "قطعت النحلة $5$ خطوات في المجموع ( $2 + 2 + 1 = 5$ )."
+      },
+      {
+        "promptAr": "إذا رسمنا مربعاً طول ضلعه خانتان ( $2$ ) على مرصوفة، وأردنا تكبيره **مرتين** (نضرب في $2$ ). كم خانة يصبح طول ضلع المربع الجديد؟",
+        "hintAr": "اضرب طول الضلع الأصلي في $2$ : احسب $2 \\times 2$ .",
+        "expectedInput": "4",
+        "revealAr": "طول ضلع المربع المكبّر يصبح $4$ خانات لأن $2 \\times 2 = 4$ ."
+      },
+      {
+        "promptAr": "انظر إلى الشكل 2: النقطة $M$ تبعد عن محور التناظر الأحمر بـ $3$ خانات إلى اليسار. كم خانة يجب أن تبعد نظيرتها إلى اليمين عن المحور؟",
+        "hintAr": "في التناظر المحوري، تحافظ النقطة ونظيرتها على نفس المسافة عن محور التناظر.",
+        "expectedInput": "3",
+        "revealAr": "تبعد النظيرة عن محور التناظر بـ $3$ خانات إلى اليمين أيضاً، على نفس السطر."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "نستعمل **المرصوفة** لتعيين مواقع الأشياء بالعمود والسطر، أو لوصف مسلك باستعمال الأسهم (يمين، يسار، أعلى، أسفل).",
+      "عند **تكبير رسم** مرتين ( $\\times 2$ ) أو ثلاث مرات ( $\\times 3$ )، نضرب كل طول من أطوال الرسم في نفس العدد.",
+      "**محور التناظر** يقسم الشكل إلى نصفين متطابقين ينطبقان على بعضهما عند طي الورقة.",
+      "في **التناظر المحوري على مرصوفة**، كل نقطة ونظيرتها تقعان على نفس السطر وتبعدان نفس المسافة عن محور التناظر من الجهتين."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 185\" width=\"500\" height=\"185\"><rect width=\"500\" height=\"185\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(16,14)\"><rect width=\"226\" height=\"157\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"113\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">تكبير رسم مرتين (× 2)</text><g transform=\"translate(22,42)\" stroke=\"#cbd5e1\" stroke-width=\"1\"><rect x=\"0\" y=\"0\" width=\"54\" height=\"72\" fill=\"#ffffff\"/><line x1=\"18\" y1=\"0\" x2=\"18\" y2=\"72\"/><line x1=\"36\" y1=\"0\" x2=\"36\" y2=\"72\"/><line x1=\"0\" y1=\"18\" x2=\"54\" y2=\"18\"/><line x1=\"0\" y1=\"36\" x2=\"54\" y2=\"36\"/><line x1=\"0\" y1=\"54\" x2=\"54\" y2=\"54\"/><rect x=\"0\" y=\"36\" width=\"36\" height=\"18\" fill=\"#93c5fd\" stroke=\"#2563eb\" stroke-width=\"2\"/></g><path d=\"M 82 86 L 106 86\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><polygon points=\"104,81 112,86 104,91\" fill=\"#2563eb\"/><g transform=\"translate(118,42)\" stroke=\"#cbd5e1\" stroke-width=\"1\"><rect x=\"0\" y=\"0\" width=\"90\" height=\"72\" fill=\"#ffffff\"/><line x1=\"18\" y1=\"0\" x2=\"18\" y2=\"72\"/><line x1=\"36\" y1=\"0\" x2=\"36\" y2=\"72\"/><line x1=\"54\" y1=\"0\" x2=\"54\" y2=\"72\"/><line x1=\"72\" y1=\"0\" x2=\"72\" y2=\"72\"/><line x1=\"0\" y1=\"18\" x2=\"90\" y2=\"18\"/><line x1=\"0\" y1=\"36\" x2=\"90\" y2=\"36\"/><line x1=\"0\" y1=\"54\" x2=\"90\" y2=\"54\"/><rect x=\"0\" y=\"18\" width=\"72\" height=\"36\" fill=\"#60a5fa\" stroke=\"#1d4ed8\" stroke-width=\"2\"/></g><text x=\"49\" y=\"138\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\">2 × 1</text><text x=\"163\" y=\"138\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">4 × 2</text></g><g transform=\"translate(258,14)\"><rect width=\"226\" height=\"157\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"113\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">التناظر المحوري على مرصوفة</text><g transform=\"translate(41,38)\"><rect x=\"0\" y=\"0\" width=\"144\" height=\"96\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><g stroke=\"#cbd5e1\" stroke-width=\"1\"><line x1=\"24\" y1=\"0\" x2=\"24\" y2=\"96\"/><line x1=\"48\" y1=\"0\" x2=\"48\" y2=\"96\"/><line x1=\"72\" y1=\"0\" x2=\"72\" y2=\"96\"/><line x1=\"96\" y1=\"0\" x2=\"96\" y2=\"96\"/><line x1=\"120\" y1=\"0\" x2=\"120\" y2=\"96\"/><line x1=\"0\" y1=\"24\" x2=\"144\" y2=\"24\"/><line x1=\"0\" y1=\"48\" x2=\"144\" y2=\"48\"/><line x1=\"0\" y1=\"72\" x2=\"144\" y2=\"72\"/></g><polygon points=\"72,24 24,48 72,72\" fill=\"#bbf7d0\" stroke=\"#059669\" stroke-width=\"2\"/><polygon points=\"72,24 120,48 72,72\" fill=\"#a7f3d0\" stroke=\"#059669\" stroke-width=\"2\" stroke-dasharray=\"4,2\"/><line x1=\"72\" y1=\"-4\" x2=\"72\" y2=\"100\" stroke=\"#dc2626\" stroke-width=\"2.5\" stroke-dasharray=\"4,3\"/><text x=\"48\" y=\"110\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#047857\">خانتان يساراً</text><text x=\"102\" y=\"110\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#047857\">خانتان يميناً</text></g></g></svg>",
+    "visualCaptionAr": "في التكبير نضرب الطول والعرض في نفس العدد، وفي التناظر نحافظ على نفس البعد عن المحور.",
+    "examples": [
+      {
+        "problemAr": "مستطيل طوله $3$ خانات وعرضه $2$ خانة، كبّرناه مرتين. ما أبعاده الجديدة؟",
+        "solutionAr": "الطول الجديد: $3 \\times 2 = 6$ خانات، والعرض الجديد: $2 \\times 2 = 4$ خانات."
+      },
+      {
+        "problemAr": "نقطة تبعد $4$ خانات عن محور تناظر عمودي من اليسار. أين تقع نظيرتها؟",
+        "solutionAr": "تقع على نفس السطر وتبعد $4$ خانات عن المحور من جهة اليمين."
+      }
+    ],
+    "watchOutAr": "انتبه! عند تكبير رسم، يجب أن نضرب جميع أضلاعه (الطول والعرض) في نفس العدد، وليس ضلعاً واحداً فقط."
+  },
+  "practice": [
+    {
+      "questionAr": "انظر إلى المرصوفة في الشكل: ما هو الوصف الصحيح للمسلك من البيت إلى المدرسة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 175\" width=\"320\" height=\"175\"><rect width=\"320\" height=\"175\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><g transform=\"translate(55,22)\"><rect x=\"0\" y=\"0\" width=\"210\" height=\"126\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><g stroke=\"#cbd5e1\" stroke-width=\"1\"><line x1=\"42\" y1=\"0\" x2=\"42\" y2=\"126\"/><line x1=\"84\" y1=\"0\" x2=\"84\" y2=\"126\"/><line x1=\"126\" y1=\"0\" x2=\"126\" y2=\"126\"/><line x1=\"168\" y1=\"0\" x2=\"168\" y2=\"126\"/><line x1=\"0\" y1=\"42\" x2=\"210\" y2=\"42\"/><line x1=\"0\" y1=\"84\" x2=\"210\" y2=\"84\"/></g><path d=\"M 21 21 L 147 21 L 147 97\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><polygon points=\"141,94 147,104 153,94\" fill=\"#2563eb\"/><circle cx=\"21\" cy=\"21\" r=\"11\" fill=\"#f59e0b\"/><text x=\"21\" y=\"40\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#b45309\">البيت</text><circle cx=\"147\" cy=\"105\" r=\"11\" fill=\"#10b981\"/><text x=\"147\" y=\"142\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#047857\">المدرسة</text></g></svg>",
+      "options": [
+        "3 خانات يميناً ثم خانتان إلى الأسفل",
+        "خانتان يميناً ثم 3 خانات إلى الأسفل",
+        "3 خانات يساراً ثم خانتان إلى الأسفل",
+        "3 خانات يميناً ثم خانتان إلى الأعلى"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! انطلق السهم الأزرق 3 خانات إلى اليمين ثم خانتين إلى الأسفل ليصل إلى المدرسة.",
+        "عكست العددين! عد الخانات الأفقية أولاً (3 خانات) ثم العمودية (خانتان).",
+        "راجع الاتجاه الأفقي: السهم يتجه نحو اليمين وليس نحو اليسار!",
+        "راجع الاتجاه العمودي: السهم ينزل إلى الأسفل ولا يصعد إلى الأعلى!"
+      ],
+      "explanationAr": "ننطلق من البيت ونتتبع الخط الأزرق: نتجه 3 خانات نحو اليمين، ثم ننزل خانتين إلى الأسفل لنصل إلى المدرسة."
+    },
+    {
+      "questionAr": "رسمت مريم مستطيلاً طوله $4$ خانات وعرضه $2$ خانة، ثم قامت بتكبيره $3$ مرات. ما هما طول وعرض المستطيل المكبّر؟",
+      "options": [
+        "الطول 12 خانة والعرض 2 خانة",
+        "الطول 7 خانات والعرض 5 خانات",
+        "الطول 12 خانة والعرض 6 خانات",
+        "الطول 8 خانات والعرض 4 خانات"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "كبّرت الطول فقط وتركت العرض كما هو! في التكبير نضرب كل الأبعاد في $3$ .",
+        "أضفت $3$ بالجمع ( $4 + 3$ و $2 + 3$ )! عند التكبير نستعمل الضرب وليس الجمع.",
+        "ممتاز! ضربت الطول في $3$ ( $4 \\times 3 = 12$ ) والعرض في $3$ ( $2 \\times 3 = 6$ ).",
+        "ضربت في $2$ (مرتين) بدلاً من الضرب في $3$ (ثلاث مرات)!"
+      ],
+      "explanationAr": "عند التكبير $3$ مرات، نضرب كل بُعد في $3$ : الطول يصبح $4 \\times 3 = 12$ خانة، والعرض يصبح $2 \\times 3 = 6$ خانات."
+    },
+    {
+      "questionAr": "انظر إلى المرصوفة ذات محور التناظر الأحمر: أي نقطة هي نظيرة النقطة $M$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 190\" width=\"320\" height=\"190\"><rect width=\"320\" height=\"190\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><g transform=\"translate(48,24)\"><rect x=\"0\" y=\"0\" width=\"224\" height=\"140\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><g stroke=\"#cbd5e1\" stroke-width=\"1\"><line x1=\"28\" y1=\"0\" x2=\"28\" y2=\"140\"/><line x1=\"56\" y1=\"0\" x2=\"56\" y2=\"140\"/><line x1=\"84\" y1=\"0\" x2=\"84\" y2=\"140\"/><line x1=\"112\" y1=\"0\" x2=\"112\" y2=\"140\"/><line x1=\"140\" y1=\"0\" x2=\"140\" y2=\"140\"/><line x1=\"168\" y1=\"0\" x2=\"168\" y2=\"140\"/><line x1=\"196\" y1=\"0\" x2=\"196\" y2=\"140\"/><line x1=\"0\" y1=\"28\" x2=\"224\" y2=\"28\"/><line x1=\"0\" y1=\"56\" x2=\"224\" y2=\"56\"/><line x1=\"0\" y1=\"84\" x2=\"224\" y2=\"84\"/><line x1=\"0\" y1=\"112\" x2=\"224\" y2=\"112\"/></g><polygon points=\"112,28 28,56 112,84\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"112\" y1=\"-6\" x2=\"112\" y2=\"146\" stroke=\"#dc2626\" stroke-width=\"2.5\" stroke-dasharray=\"5,3\"/><circle cx=\"28\" cy=\"56\" r=\"5\" fill=\"#2563eb\"/><text x=\"16\" y=\"52\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">M</text><circle cx=\"196\" cy=\"56\" r=\"5\" fill=\"#059669\"/><text x=\"196\" y=\"46\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\">A</text><circle cx=\"168\" cy=\"56\" r=\"5\" fill=\"#d97706\"/><text x=\"168\" y=\"46\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">B</text><circle cx=\"196\" cy=\"112\" r=\"5\" fill=\"#7c3aed\"/><text x=\"196\" y=\"130\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#6d28d9\">C</text><circle cx=\"224\" cy=\"56\" r=\"5\" fill=\"#dc2626\"/><text x=\"234\" y=\"52\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\">D</text></g></svg>",
+      "options": [
+        "النقطة $A$",
+        "النقطة $B$",
+        "النقطة $C$",
+        "النقطة $D$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! النقطة $M$ تبعد 3 خانات يساراً عن المحور، ونظيرتها $A$ تبعد 3 خانات يميناً على نفس السطر.",
+        "النقطة $B$ تبعد خانتين فقط عن المحور، بينما تبعد $M$ 3 خانات.",
+        "النقطة $C$ ليست على نفس السطر مع $M$ ! في التناظر العمودي تبقى النظيرة على نفس السطر.",
+        "النقطة $D$ تبعد 4 خانات عن المحور وهذا أبعد من مسافة $M$ ."
+      ],
+      "explanationAr": "نعد الخانات من المحور الأحمر إلى النقطة $M$ فنجد 3 خانات إلى اليسار. نعد 3 خانات إلى اليمين على نفس السطر فنصل إلى النقطة $A$ ."
+    }
+  ]
+}

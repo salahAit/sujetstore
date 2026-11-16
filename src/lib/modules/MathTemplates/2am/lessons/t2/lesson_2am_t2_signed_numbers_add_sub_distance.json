@@ -1,0 +1,127 @@
+{
+  "id": "lesson_2am_t2_signed_numbers_add_sub_distance",
+  "slug": "2am-t2-signed-numbers-add-sub-distance",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: الأعداد النسبية والحساب الحرفي ومفهوم المعادلة",
+  "order": 2,
+  "titleAr": "جمع وطرح الأعداد النسبية، المجموع الجبري والمسافة بين نقطتين",
+  "objectives": [
+    "حساب مجموع عددين نسبيين من نفس الإشارة أو من إشارتين مختلفتين باستعمال أمثلة ملموسة وقواعد الجمع",
+    "طرح عدد نسبي بتحويل الطرح إلى جمع مع المعاكس، وتبسيط وحساب مجموع جبري",
+    "حساب المسافة بين نقطتين ذات فاصلتين معلومتين على مستقيم مدرج وتوظيفها في وضعيات عددية وهندسية"
+  ],
+  "keywordsAr": [
+    "جمع عددين نسبيين",
+    "طرح عددين نسبيين",
+    "معاكس عدد نسبي",
+    "مجموع جبري",
+    "المسافة بين نقطتين"
+  ],
+  "discover": {
+    "scenarioAr": "ينطلق مصعد من الطابق الثاني تحت الأرض (المستوى $-2$)، فيصعد $5$ طوابق ثم ينزل $4$ طوابق. نمثّل هذه التنقلات على مستقيم مدرج لفهم جمع الأعداد النسبية وطرحها وحساب المسافة بين نقطتين.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 150\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"150\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"84\" x2=\"460\" y2=\"84\" stroke=\"#334155\" stroke-width=\"2\"/><polygon points=\"460,84 450,79 450,89\" fill=\"#334155\"/><polygon points=\"20,84 30,79 30,89\" fill=\"#334155\"/><line x1=\"42\" y1=\"77\" x2=\"42\" y2=\"91\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"42\" y=\"109\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#1e293b\">-4</text><line x1=\"84\" y1=\"77\" x2=\"84\" y2=\"91\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"84\" y=\"109\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#1e293b\">-3</text><line x1=\"126\" y1=\"77\" x2=\"126\" y2=\"91\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"126\" y=\"109\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#1e293b\">-2</text><line x1=\"168\" y1=\"77\" x2=\"168\" y2=\"91\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"168\" y=\"109\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#1e293b\">-1</text><line x1=\"210\" y1=\"77\" x2=\"210\" y2=\"91\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"210\" y=\"109\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#1e293b\">0</text><line x1=\"252\" y1=\"77\" x2=\"252\" y2=\"91\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"252\" y=\"109\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#1e293b\">+1</text><line x1=\"294\" y1=\"77\" x2=\"294\" y2=\"91\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"294\" y=\"109\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#1e293b\">+2</text><line x1=\"336\" y1=\"77\" x2=\"336\" y2=\"91\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"336\" y=\"109\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#1e293b\">+3</text><line x1=\"378\" y1=\"77\" x2=\"378\" y2=\"91\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"378\" y=\"109\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#1e293b\">+4</text><line x1=\"420\" y1=\"77\" x2=\"420\" y2=\"91\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"420\" y=\"109\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#1e293b\">+5</text><path d=\"M 126 78 Q 231 20 332 76\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><polygon points=\"335,79 325,74 331,67\" fill=\"#16a34a\"/><text x=\"231\" y=\"34\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#16a34a\">+5</text><path d=\"M 336 92 Q 252 142 172 94\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\" stroke-dasharray=\"5 3\"/><polygon points=\"169,91 179,95 174,102\" fill=\"#dc2626\"/><text x=\"252\" y=\"136\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\">-4</text><circle cx=\"126\" cy=\"84\" r=\"5\" fill=\"#2563eb\" stroke=\"#fff\" stroke-width=\"1.5\"/><circle cx=\"336\" cy=\"84\" r=\"5\" fill=\"#16a34a\" stroke=\"#fff\" stroke-width=\"1.5\"/><circle cx=\"168\" cy=\"84\" r=\"5\" fill=\"#dc2626\" stroke=\"#fff\" stroke-width=\"1.5\"/></svg>",
+    "steps": [
+      {
+        "promptAr": "انطلاقا من المستوى $-2$، صعد المصعد $5$ طوابق: احسب $(-2) + (+5)$ (اكتب الناتج مسبوقا بالإشارة، مثل $+3$).",
+        "hintAr": "الإشارتان مختلفتان: خذ إشارة العدد الأبعد عن الصفر ($+5$) واطرح $5 - 2$.",
+        "expectedInput": "+3",
+        "revealAr": "$(-2) + (+5) = +3$؛ وصل المصعد إلى الطابق الثالث فوق الأرض."
+      },
+      {
+        "promptAr": "لطرح عدد نسبي نضيف معاكسه. أكمل لتحويل الطرح إلى جمع: $(+3) - (-4) = (+3) + (\\dots)$.",
+        "hintAr": "ما هو معاكس العدد النسبي $-4$؟",
+        "expectedInput": "+4",
+        "revealAr": "معاكس $-4$ هو $+4$، لذلك $(+3) - (-4) = (+3) + (+4) = +7$."
+      },
+      {
+        "promptAr": "ما هي المسافة على المستقيم المدرج بين الطابق $-2$ والطابق $+3$؟",
+        "hintAr": "احسب الفارق بطرح الفاصلة الأصغر من الفاصلة الأكبر: $(+3) - (-2)$.",
+        "expectedInput": "5",
+        "revealAr": "المسافة بين النقطتين تساوي $(+3) - (-2) = (+3) + (+2) = 5$ وحدات."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "جمع عددين نسبيين من نفس الإشارة: نحتفظ بالإشارة المشتركة ونجمع المسافتين إلى الصفر. مثال: $(-4.5) + (-2.5) = -7$.",
+      "جمع عددين نسبيين من إشارتين مختلفتين: نأخذ إشارة العدد الذي له أكبر مسافة إلى الصفر، ونطرح المسافة الأصغر من المسافة الأكبر. مجموع عددين متعاكسين يساوي $0$.",
+      "طرح عدد نسبي: لطرح عدد نسبي نجمع معاكسه، أي $a - b = a + (-b)$.",
+      "تبسيط وحساب مجموع جبري: نحول كل عمليات الطرح إلى جمع المعاكس، ثم نحذف إشارات الجمع والأقواس المحيطة بالأعداد (مع حذف $+$ في البداية)، ثم نجمع الحدود الموجبة معا والحدود السالبة معا.",
+      "المسافة بين نقطتين $A$ و$B$ على مستقيم مدرج: نطرح الفاصلة الأصغر من الفاصلة الأكبر ($AB = x_{\\text{الأكبر}} - x_{\\text{الأصغر}}$)، وتكون المسافة دوما موجبة أو معدومة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 125\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"125\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"80\" x2=\"460\" y2=\"80\" stroke=\"#334155\" stroke-width=\"2\"/><polygon points=\"460,80 450,75 450,85\" fill=\"#334155\"/><line x1=\"37\" y1=\"73\" x2=\"37\" y2=\"87\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"37\" y=\"105\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-6</text><line x1=\"75\" y1=\"73\" x2=\"75\" y2=\"87\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"75\" y=\"105\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-5</text><line x1=\"113\" y1=\"73\" x2=\"113\" y2=\"87\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"113\" y=\"105\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-4</text><line x1=\"151\" y1=\"73\" x2=\"151\" y2=\"87\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"151\" y=\"105\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-3</text><line x1=\"189\" y1=\"73\" x2=\"189\" y2=\"87\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"189\" y=\"105\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-2</text><line x1=\"227\" y1=\"73\" x2=\"227\" y2=\"87\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"227\" y=\"105\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-1</text><line x1=\"265\" y1=\"73\" x2=\"265\" y2=\"87\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"265\" y=\"105\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">0</text><line x1=\"303\" y1=\"73\" x2=\"303\" y2=\"87\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"303\" y=\"105\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">+1</text><line x1=\"341\" y1=\"73\" x2=\"341\" y2=\"87\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"341\" y=\"105\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">+2</text><line x1=\"379\" y1=\"73\" x2=\"379\" y2=\"87\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"379\" y=\"105\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">+3</text><line x1=\"417\" y1=\"73\" x2=\"417\" y2=\"87\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"417\" y=\"105\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">+4</text><line x1=\"94.0\" y1=\"42\" x2=\"360.0\" y2=\"42\" stroke=\"#7c3aed\" stroke-width=\"2.2\"/><line x1=\"94.0\" y1=\"42\" x2=\"94.0\" y2=\"74\" stroke=\"#7c3aed\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><line x1=\"360.0\" y1=\"42\" x2=\"360.0\" y2=\"74\" stroke=\"#7c3aed\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><text x=\"227\" y=\"32\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#7c3aed\">AB = (+2.5) - (-4.5) = 7</text><circle cx=\"94.0\" cy=\"80\" r=\"5.5\" fill=\"#dc2626\" stroke=\"#fff\" stroke-width=\"1.5\"/><text x=\"94.0\" y=\"66\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\">A(-4.5)</text><circle cx=\"360.0\" cy=\"80\" r=\"5.5\" fill=\"#2563eb\" stroke=\"#fff\" stroke-width=\"1.5\"/><text x=\"360.0\" y=\"66\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#2563eb\">B(+2.5)</text></svg>",
+    "visualCaptionAr": "المسافة بين نقطتين على مستقيم مدرج هي الفرق بين أكبر فاصلة وأصغر فاصلة، وهي دائما موجبة.",
+    "examples": [
+      {
+        "problemAr": "احسب ما يلي: $(-7.4) + (+2.9)$ و$(-5) - (-8)$.",
+        "solutionAr": "في الأولى إشارتان مختلفتان و$7.4 > 2.9$، إذن $(-7.4) + (+2.9) = -(7.4 - 2.9) = -4.5$.\nفي الثانية نحول الطرح إلى جمع المعاكس: $(-5) - (-8) = (-5) + (+8) = +3$."
+      },
+      {
+        "problemAr": "بسّط واحسب المجموع الجبري الآتي: $S = (-4) + (+9) - (-3) - (+7) + (-2)$.",
+        "solutionAr": "نحول الطرح إلى جمع المعاكس:\n$$S = (-4) + (+9) + (+3) + (-7) + (-2)$$\nنبسط الكتابة ثم نجمع الموجبة معا والسالبة معا:\n$$S = -4 + 9 + 3 - 7 - 2 = (9 + 3) + (-4 - 7 - 2) = 12 - 13 = -1$$"
+      },
+      {
+        "problemAr": "احسب المسافة $EF$ علما أن فاصلة $E$ هي $-6.5$ وفاصلة $F$ هي $-1.5$.",
+        "solutionAr": "بما أن $-1.5 > -6.5$، فإن:\n$$EF = (-1.5) - (-6.5) = -1.5 + 6.5 = 5$$"
+      }
+    ],
+    "watchOutAr": "انتبه: لا تخلط بين جمع عددين سالبين مثل $(-4) + (-3) = -7$ وبين طرحهما مثل $(-4) - (-3) = -4 + 3 = -1$. وتذكّر أيضا أن المسافة بين نقطتين لا تكون سالبة أبدا: ابدأ دوما بالفاصلة الأكبر ناقص الفاصلة الأصغر."
+  },
+  "practice": [
+    {
+      "questionAr": "ما قيمة المجموع الجبري الآتي: $A = (-6) - (-11) + (-8) - (+3)$؟",
+      "options": [
+        "$-6$",
+        "$+6$",
+        "$-28$",
+        "$-2$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! بعد تحويل الطرح إلى جمع المعاكس نحصل على $-6 + 11 - 8 - 3 = 11 - 17 = -6$.",
+        "راجع الإشارة النهائية: مجموع الحدود السالبة هو $-6 - 8 - 3 = -17$، و$11 - 17 = -6$ وليس $+6$.",
+        "لقد جمعت الأعداد كلها بإشارة سالبة، رغم أن $-(-11)$ يصبح $+11$.",
+        "تأكد من تحويل $-(+3)$ إلى $+(-3)$ وليس $+3$."
+      ],
+      "explanationAr": "نكتب $A = (-6) + (+11) + (-8) + (-3) = -6 + 11 - 8 - 3 = 11 - 17 = -6$."
+    },
+    {
+      "questionAr": "انطلاقا من المستقيم المدرج المقابل حيث فاصلة $M$ هي $-7.5$ وفاصلة $N$ هي $-2$، ما هي المسافة $MN$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 118\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"118\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"74\" x2=\"460\" y2=\"74\" stroke=\"#334155\" stroke-width=\"2\"/><polygon points=\"460,74 450,69 450,79\" fill=\"#334155\"/><line x1=\"53\" y1=\"67\" x2=\"53\" y2=\"81\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"53\" y=\"99\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-9</text><line x1=\"91\" y1=\"67\" x2=\"91\" y2=\"81\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"91\" y=\"99\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-8</text><line x1=\"129\" y1=\"67\" x2=\"129\" y2=\"81\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"129\" y=\"99\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-7</text><line x1=\"167\" y1=\"67\" x2=\"167\" y2=\"81\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"167\" y=\"99\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-6</text><line x1=\"205\" y1=\"67\" x2=\"205\" y2=\"81\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"205\" y=\"99\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-5</text><line x1=\"243\" y1=\"67\" x2=\"243\" y2=\"81\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"243\" y=\"99\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-4</text><line x1=\"281\" y1=\"67\" x2=\"281\" y2=\"81\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"281\" y=\"99\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-3</text><line x1=\"319\" y1=\"67\" x2=\"319\" y2=\"81\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"319\" y=\"99\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-2</text><line x1=\"357\" y1=\"67\" x2=\"357\" y2=\"81\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"357\" y=\"99\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">-1</text><line x1=\"395\" y1=\"67\" x2=\"395\" y2=\"81\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"395\" y=\"99\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">0</text><line x1=\"433\" y1=\"67\" x2=\"433\" y2=\"81\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"433\" y=\"99\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">+1</text><line x1=\"110.0\" y1=\"36\" x2=\"319.0\" y2=\"36\" stroke=\"#0f766e\" stroke-width=\"2\"/><line x1=\"110.0\" y1=\"36\" x2=\"110.0\" y2=\"68\" stroke=\"#0f766e\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/><line x1=\"319.0\" y1=\"36\" x2=\"319.0\" y2=\"68\" stroke=\"#0f766e\" stroke-width=\"1.3\" stroke-dasharray=\"3 3\"/><text x=\"214.5\" y=\"27\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f766e\">MN = ?</text><circle cx=\"110.0\" cy=\"74\" r=\"5.5\" fill=\"#dc2626\" stroke=\"#fff\" stroke-width=\"1.5\"/><text x=\"110.0\" y=\"58\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\">M</text><circle cx=\"319.0\" cy=\"74\" r=\"5.5\" fill=\"#2563eb\" stroke=\"#fff\" stroke-width=\"1.5\"/><text x=\"319.0\" y=\"58\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#2563eb\">N</text></svg>",
+      "options": [
+        "$-5.5$",
+        "$9.5$",
+        "$5.5$",
+        "$-9.5$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "المسافة دوما موجبة! يجب طرح الفاصلة الأصغر من الفاصلة الأكبر: $(-2) - (-7.5)$.",
+        "لقد جمعت المسافتين إلى الصفر، لكن النقطتين تقعان في نفس الجهة السالبة من الصفر.",
+        "صحيح تماما! لأن $-2 > -7.5$، فالمسافة $MN = (-2) - (-7.5) = -2 + 7.5 = 5.5$.",
+        "المسافة لا تكون سالبة أبدا، كما أن $N$ و$M$ كلاهما في الجهة السالبة."
+      ],
+      "explanationAr": "بما أن $-2 > -7.5$، نحسب $MN = (-2) - (-7.5) = (-2) + (+7.5) = 5.5$."
+    },
+    {
+      "questionAr": "تبلغ قمة جبل الشليا في الأوراس $+2328\\text{ m}$، بينما ينخفض شط ملغيغ عن سطح البحر إلى $-40\\text{ m}$. ما هو فرق الارتفاع (المسافة العمودية) بين القمة والشط؟",
+      "options": [
+        "$2288\\text{ m}$",
+        "$2368\\text{ m}$",
+        "$-2368\\text{ m}$",
+        "$2328\\text{ m}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "لقد حسبت $2328 - 40$، بينما الشط يقع تحت سطح البحر أي $-40$، لذا الفرق هو $2328 - (-40)$.",
+        "ممتاز! المسافة بين $+2328$ و$-40$ هي $(+2328) - (-40) = 2328 + 40 = 2368\\text{ m}$.",
+        "فرق الارتفاع هو مسافة ويجب أن يكون موجبا.",
+        "نسيت إضافة العمق $40\\text{ m}$ تحت مستوى سطح البحر."
+      ],
+      "explanationAr": "فرق الارتفاع يساوي الفاصلة الأكبر ناقص الفاصلة الأصغر: $(+2328) - (-40) = 2328 + 40 = 2368\\text{ m}$."
+    }
+  ]
+}

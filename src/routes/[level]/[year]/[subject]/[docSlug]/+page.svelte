@@ -17,10 +17,13 @@
 		Sparkles
 	} from 'lucide-svelte';
 	import { onMount } from 'svelte';
+	import InteractiveLessonPlayer from '#lib/modules/InteractiveLesson/InteractiveLessonPlayer.svelte';
+	import type { InteractiveLessonData } from '#lib/modules/MathTemplates/types';
 
 	let { data }: { data: any } = $props();
 
 	let activeTab = $state<'exam' | 'solution'>('exam');
+	let lessonViewMode = $state<'interactive' | 'pdf'>('interactive');
 	let isFullscreen = $state(false);
 
 	let doc = $derived(data.document);
@@ -30,6 +33,45 @@
 	let relatedDocs = $derived(data.relatedDocs || []);
 	let accessCheck = $derived(data.accessCheck || { allowed: true, tier: 'public', dynamicPortalUrl: '' });
 	let dynamicBase = $derived(accessCheck.dynamicPortalUrl || '');
+
+	function parseInteractiveLesson(rawDoc: any): InteractiveLessonData | null {
+		if (!rawDoc || rawDoc.type !== 'lesson' || !rawDoc.content) return null;
+		try {
+			const parsed =
+				typeof rawDoc.content === 'string' ? JSON.parse(rawDoc.content) : rawDoc.content;
+			if (
+				parsed &&
+				typeof parsed === 'object' &&
+				parsed.discover &&
+				typeof parsed.discover === 'object' &&
+				Array.isArray(parsed.discover.steps) &&
+				parsed.summary &&
+				typeof parsed.summary === 'object' &&
+				Array.isArray(parsed.summary.rulesAr) &&
+				Array.isArray(parsed.practice)
+			) {
+				return parsed as InteractiveLessonData;
+			}
+		} catch {
+			return null;
+		}
+		return null;
+	}
+
+	let parsedLesson = $derived(parseInteractiveLesson(doc));
+	let showInteractiveLesson = $derived(
+		Boolean(parsedLesson && accessCheck.allowed && (!doc.pdfUrl || lessonViewMode === 'interactive'))
+	);
+
+	let lastDocId = $state<number | string | null>(null);
+	$effect(() => {
+		const currentDocId = doc?.id ?? null;
+		if (lastDocId !== null && lastDocId !== currentDocId) {
+			lessonViewMode = 'interactive';
+			activeTab = 'exam';
+		}
+		lastDocId = currentDocId;
+	});
 
 	const typeLabels: Record<string, string> = {
 		exam: 'اختبار',
@@ -231,7 +273,28 @@
 
 			<div class="flex flex-wrap items-center gap-2">
 				{#if accessCheck.allowed}
-					{#if doc.hasSolution && doc.solutionUrl}
+					{#if parsedLesson && doc.pdfUrl}
+						<div class="border-border bg-background flex items-center rounded-xl border p-1">
+							<button
+								onclick={() => (lessonViewMode = 'interactive')}
+								class="rounded-lg px-3 py-1 text-xs font-bold transition {lessonViewMode === 'interactive'
+									? 'bg-blue-600 text-white'
+									: 'text-muted-foreground hover:text-foreground'}"
+							>
+								الدرس التفاعلي
+							</button>
+							<button
+								onclick={() => (lessonViewMode = 'pdf')}
+								class="rounded-lg px-3 py-1 text-xs font-bold transition {lessonViewMode === 'pdf'
+									? 'bg-blue-600 text-white'
+									: 'text-muted-foreground hover:text-foreground'}"
+							>
+								نسخة PDF للطباعة
+							</button>
+						</div>
+					{/if}
+
+					{#if doc.hasSolution && doc.solutionUrl && (!parsedLesson || lessonViewMode === 'pdf')}
 						<div class="border-border bg-background flex items-center rounded-xl border p-1">
 							<button
 								onclick={() => (activeTab = 'exam')}
@@ -364,6 +427,16 @@
 						</a>
 					</div>
 				{/if}
+			</div>
+		{:else if showInteractiveLesson && parsedLesson}
+			<div
+				class={isFullscreen
+					? 'bg-background flex-1 overflow-y-auto p-4 sm:p-6'
+					: 'bg-background/40 p-4 sm:p-6'}
+			>
+				{#key parsedLesson.id}
+					<InteractiveLessonPlayer lesson={parsedLesson} />
+				{/key}
 			</div>
 		{:else}
 			<div class="relative w-full bg-white {isFullscreen ? 'flex-1' : 'h-[78vh] min-h-[520px]'}">

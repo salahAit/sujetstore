@@ -1,0 +1,122 @@
+{
+  "id": "lesson_2ap_t2_time_clock_calendar",
+  "slug": "lesson-2ap-t2-time-clock-calendar",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الثالث: في ساحة البريد المركزي (الأعداد إلى 999، الطرح البسيط، الأشكال المستوية والزمن)",
+  "order": 6,
+  "titleAr": "الساعة (تحديد الأوقات)، قياس المدد والرزنامة",
+  "objectives": [
+    "قراءة الساعة الرقمية وذات العقارب بالتوقيت الصباحي والمسائي وتعليم أحداث في اليوم",
+    "معرفة العلاقة بين اليوم والساعة والدقيقة (1 يوم = 24 ساعة، 1 ساعة = 60 دقيقة) ومقارنة مدد",
+    "استعمال الرزنامة السنوية لمعرفة أيام الأسبوع والشهور وتحديد التواريخ والمدد"
+  ],
+  "keywordsAr": [
+    "الساعة",
+    "التوقيت الصباحي والمسائي",
+    "قياس المدد",
+    "ساعة ودقيقة",
+    "الرزنامة"
+  ],
+  "discover": {
+    "scenarioAr": "يفتح مكتب البريد أبوابه في الصباح عند الساعة الثامنة، ويغلق في المساء عند الساعة الرابعة والنصف بعد الظهر ( $16:30$ ). لنتعلم قراءة الساعة ذات العقارب والساعة الرقمية والرزنامة.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">ساعة الفتح صباحاً وساعة الغلق مساءً والرزنامة</text><circle cx=\"120\" cy=\"125\" r=\"68\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"3\"/><circle cx=\"120\" cy=\"125\" r=\"4\" fill=\"#0f172a\"/><text x=\"120\" y=\"77\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">12</text><text x=\"146\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">1</text><text x=\"165\" y=\"103\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">2</text><text x=\"172\" y=\"129\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"165\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">4</text><text x=\"146\" y=\"174\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">5</text><text x=\"120\" y=\"181\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">6</text><text x=\"94\" y=\"174\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">7</text><text x=\"75\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">8</text><text x=\"68\" y=\"129\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">9</text><text x=\"75\" y=\"103\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">10</text><text x=\"94\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">11</text><line x1=\"120\" y1=\"125\" x2=\"120\" y2=\"81\" stroke=\"#2563eb\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"120\" y1=\"125\" x2=\"91\" y2=\"142\" stroke=\"#dc2626\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><text x=\"120\" y=\"212\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">ساعة الفتح صباحاً</text><rect x=\"228\" y=\"64\" width=\"164\" height=\"64\" rx=\"10\" fill=\"#0f172a\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"310\" y=\"105\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"bold\" fill=\"#38bdf8\" direction=\"ltr\">16:30</text><text x=\"310\" y=\"150\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">ساعة الغلق مساءً (4 و 30 د)</text><rect x=\"228\" y=\"166\" width=\"164\" height=\"42\" rx=\"8\" fill=\"#fff7ed\" stroke=\"#fb923c\" stroke-width=\"1.2\"/><text x=\"310\" y=\"192\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"ltr\">4 + 12 = 16</text><rect x=\"418\" y=\"52\" width=\"154\" height=\"156\" rx=\"10\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"418\" y=\"52\" width=\"154\" height=\"32\" rx=\"8\" fill=\"#dc2626\"/><text x=\"495\" y=\"73\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"rtl\">الرزنامة: مارس</text><text x=\"495\" y=\"108\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">1 أسبوع = 7 أيام</text><text x=\"495\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">الأحد - الاثنين - الثلاثاء</text><text x=\"495\" y=\"154\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">الأربعاء - الخميس</text><text x=\"495\" y=\"174\" text-anchor=\"middle\" font-size=\"11\" fill=\"#15803d\" direction=\"rtl\">الجمعة - السبت</text><text x=\"495\" y=\"198\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">1 سنة = 12 شهراً</text></svg>",
+    "steps": [
+      {
+        "promptAr": "انظر إلى الساعة ذات العقارب في اليسار: العقرب القصير الأحمر يشير إلى $8$ والعقرب الطويل الأزرق يشير إلى $12$. كم الساعة صباحاً؟ (اكتب رقم الساعة فقط)",
+        "hintAr": "العقرب القصير يشير دائماً إلى الساعات، وعندما يكون العقرب الطويل على $12$ تكون الساعة تماماً.",
+        "expectedInput": "8",
+        "revealAr": "الساعة تشير إلى الثامنة صباحاً تماماً ( $08:00$ )."
+      },
+      {
+        "promptAr": "لتحويل ساعة بعد الظهر إلى التوقيت المسائي ( $24$ ساعة) نضيف $12$. مثلاً الرابعة مساءً تصبح $4 + 12 = 16$. كم تشير خانة الساعات عند الثالثة بعد الظهر؟",
+        "hintAr": "اجمع $3 + 12$.",
+        "expectedInput": "15",
+        "revealAr": "$3 + 12 = 15$ ، إذن الثالثة بعد الظهر تكتب $15:00$ على الساعة الرقمية."
+      },
+      {
+        "promptAr": "أدار العقرب الطويل دورة كاملة حول الساعة، ومرت ساعة واحدة. كم دقيقة توجد في الساعة الواحدة؟ (اكتب العدد فقط)",
+        "hintAr": "تذكر العلاقة بين الساعة والدقيقة: $1$ ساعة = ? دقيقة.",
+        "expectedInput": "60",
+        "revealAr": "$1$ ساعة = $60$ دقيقة ، ونصف الساعة يساوي $30$ دقيقة."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "في الساعة ذات العقارب: **العقرب القصير** يشير إلى الساعات، و**العقرب الطويل** يشير إلى الدقائق (عند $12$ تكون الدقائق $00$ ، وعند $6$ تكون $30$ دقيقة أي النصف).",
+      "في اليوم $24$ ساعة ( $1$ يوم = $24$ ساعة ). في المساء (بعد منتصف النهار) نضيف $12$ إلى رقم الساعة الصباحية: مثلاً الساعة $2$ مساءً تصبح $14:00$.",
+      "للتحويل من الساعات إلى الدقائق: $1$ ساعة = $60$ دقيقة ، ونصف ساعة = $30$ دقيقة.",
+      "في **الرزنامة**: يتكون الأسبوع من $7$ أيام، وتتكون السنة من $12$ شهراً (من جانفي إلى ديسمبر)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 240\" width=\"600\" height=\"240\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"224\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">قراءة الساعة ذات العقارب والعلاقات الزمنية</text><circle cx=\"115\" cy=\"128\" r=\"66\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"3\"/><circle cx=\"115\" cy=\"128\" r=\"4\" fill=\"#0f172a\"/><text x=\"115\" y=\"82\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">12</text><text x=\"140\" y=\"89\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">1</text><text x=\"158\" y=\"107\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">2</text><text x=\"165\" y=\"132\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"158\" y=\"157\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">4</text><text x=\"140\" y=\"175\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">5</text><text x=\"115\" y=\"182\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">6</text><text x=\"90\" y=\"175\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">7</text><text x=\"72\" y=\"157\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">8</text><text x=\"65\" y=\"132\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">9</text><text x=\"72\" y=\"107\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">10</text><text x=\"90\" y=\"89\" text-anchor=\"middle\" font-size=\"10\" fill=\"#334155\" direction=\"ltr\">11</text><line x1=\"115\" y1=\"128\" x2=\"115\" y2=\"174\" stroke=\"#2563eb\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"115\" y1=\"128\" x2=\"82\" y2=\"119\" stroke=\"#dc2626\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><text x=\"115\" y=\"214\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">09:30</text><rect x=\"215\" y=\"52\" width=\"358\" height=\"78\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"394\" y=\"76\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">التحويل إلى التوقيت المسائي (+12)</text><text x=\"394\" y=\"106\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">09:30 صباحاً  ←  21:30 مساءً (9 + 12 = 21)</text><rect x=\"215\" y=\"142\" width=\"358\" height=\"74\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#22c55e\" stroke-width=\"1.4\"/><text x=\"394\" y=\"168\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">1 يوم = 24 ساعة   |   1 ساعة = 60 دقيقة</text><text x=\"394\" y=\"196\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">1 أسبوع = 7 أيام   |   1 سنة = 12 شهراً</text></svg>",
+    "visualCaptionAr": "قراءة الساعة $09:30$ صباحاً ومساءً، والعلاقات بين اليوم والساعة والدقيقة والرزنامة.",
+    "examples": [
+      {
+        "problemAr": "تبدأ حصة الرسم على الساعة $15:30$. عبر عن هذا الوقت بالصيغة المعتادة بعد الظهر.",
+        "solutionAr": "نطرح $12$ من $15$: $15 - 12 = 3$. إذن الساعة هي الثالثة والنصف ( $3:30$ ) بعد الظهر."
+      },
+      {
+        "problemAr": "انطلقت الحافلة على الساعة $09:00$ ووصلت على الساعة $11:00$. ما مدة الرحلة بالساعات؟ وما مدتها بالدقائق؟",
+        "solutionAr": "من $09:00$ إلى $11:00$ مرت ساعتان ( $11 - 9 = 2$ ). وبما أن $1$ ساعة = $60$ دقيقة ، فإن ساعتين = $60 + 60 = 120$ دقيقة."
+      }
+    ],
+    "watchOutAr": "لا تخلط بين العقرب القصير (الساعات) والعقرب الطويل (الدقائق)! وعندما يشير العقرب الطويل إلى الرقم $6$ فذلك يعني $30$ دقيقة وليس $6$ دقائق."
+  },
+  "practice": [
+    {
+      "questionAr": "انظر إلى الساعة ذات العقارب التالية. إلى أي وقت تشير في التوقيت الصباحي؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 210\" width=\"300\" height=\"210\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"284\" height=\"194\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"105\" r=\"74\" fill=\"#ffffff\" stroke=\"#334155\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"105\" r=\"4.5\" fill=\"#0f172a\"/><text x=\"150\" y=\"53\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">12</text><text x=\"178\" y=\"60\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">1</text><text x=\"198\" y=\"81\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">2</text><text x=\"206\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"198\" y=\"137\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">4</text><text x=\"178\" y=\"157\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">5</text><text x=\"150\" y=\"165\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">6</text><text x=\"122\" y=\"157\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">7</text><text x=\"102\" y=\"137\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">8</text><text x=\"94\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">9</text><text x=\"102\" y=\"81\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">10</text><text x=\"122\" y=\"60\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">11</text><line x1=\"150\" y1=\"105\" x2=\"150\" y2=\"155\" stroke=\"#2563eb\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"150\" y1=\"105\" x2=\"124\" y2=\"79\" stroke=\"#dc2626\" stroke-width=\"4.5\" stroke-linecap=\"round\"/></svg>",
+      "options": [
+        "$10:30$",
+        "$10:06$",
+        "$06:10$",
+        "$11:30$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! العقرب القصير بين $10$ و $11$ (أي الساعة $10$ )، والعقرب الطويل على $6$ (أي $30$ دقيقة): $10:30$.",
+        "انتبه! عندما يشير العقرب الطويل إلى الرقم $6$ تكون الدقائق $30$ (نصف ساعة) وليس $6$ دقائق.",
+        "عكست بين العقربين! العقرب القصير يشير إلى الساعات ( $10$ ) والطويل إلى الدقائق ( $30$ ).",
+        "العقرب القصير تجاوز $10$ نحو منتصف المسافة إلى $11$ لأنها النصف، ولم يصل إلى $11$ بعد."
+      ],
+      "explanationAr": "العقرب القصير يقع بين $10$ و $11$ فتكون الساعة $10$ ، والعقرب الطويل على $6$ ويعني $30$ دقيقة، إذن الساعة $10:30$."
+    },
+    {
+      "questionAr": "يبدأ نشاط النادي المدرسي على الساعة الثانية بعد الظهر. كيف يظهر على الساعة الرقمية بنظام $24$ ساعة؟",
+      "options": [
+        "$02:00$",
+        "$12:00$",
+        "$14:00$",
+        "$16:00$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$02:00$ تعني الثانية ليلاً (فجراً)، أما بعد الظهر فنضيف $12$ ساعة.",
+        "$12:00$ هي منتصف النهار، وليس الثانية بعد الظهر.",
+        "رائع! بعد الظهر نضيف $12$: $2 + 12 = 14$ ، فتُكتب $14:00$.",
+        "$16:00$ تعني الرابعة بعد الظهر ( $4 + 12 = 16$ )."
+      ],
+      "explanationAr": "في التوقيت المسائي نضيف $12$ إلى الساعة: $2 + 12 = 14$ ، إذن تُكتب $14:00$."
+    },
+    {
+      "questionAr": "استغرقت مسابقة رياضية **ساعة واحدة و $30$ دقيقة**. ما هي مدة المسابقة بالدقائق؟",
+      "options": [
+        "$60$ دقيقة",
+        "$70$ دقيقة",
+        "$130$ دقيقة",
+        "$90$ دقيقة"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "$60$ دقيقة هي ساعة واحدة فقط؛ نسيت إضافة $30$ دقيقة.",
+        "تحقق من الجمع: $60 + 30 = 90$ وليس $70$.",
+        "لا نلصق الرقمين $1$ و $30$ معاً؛ بل نعوض الساعة بـ $60$ دقيقة ثم نجمع.",
+        "ممتاز! $1$ ساعة = $60$ دقيقة ، ونضيف $30$ دقيقة: $60 + 30 = 90$ دقيقة."
+      ],
+      "explanationAr": "نحول الساعة الواحدة إلى $60$ دقيقة ثم نجمع: $60 + 30 = 90$ دقيقة."
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "levelId": "moyen",
+    "yearId": "2am",
+    "yearName": "السنة الثانية متوسط",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "test",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة واحدة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 7,
+      "instruction": "بلغ سعر مكتب دراسة $13400$ دج، وبعد فترة طبّق البائع تخفيض بنسبة $35%$.",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب قيمة الـتخفيض بالدينار الجزائري.",
+          "answer": "1) قيمة الـتخفيض: $13400 times frac(35, 100) = 4690$ دج.",
+          "mark": "3.5"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب السعر الجديد بعد الـتخفيض.",
+          "answer": "2) السعر الجديد: $13400 - 4690 = 8710$ دج.",
+          "mark": "3.5"
+        }
+      ],
+      "id": "ex_test_1_2am_t3_percentages",
+      "num": "الأول"
+    },
+    {
+      "points": 7,
+      "instruction": "دلو أسطواني الشكل قطر قاعدته $d = 4$ دسم وارتفاعه $h = 8$ دسم (نأخذ $pi approx 3.14$).",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) استنتج نصف القطر $r$ ثم احسب المساحة الجانبية $A_L$ والمساحة الكلية $A_T$.",
+              "answer": "1) $r = 4 div 2 = 2$ دسم، ومنه:\n\n$A_L = 2 times 3.14 times 2 times 8 = 100.48$ دسم² و$B = 3.14 times 2^2 = 12.56$ دسم²، إذن $A_T = 100.48 + 2 times 12.56 = 125.6$ دسم².",
+              "mark": "3.5"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/2am_t3_cyl_medium_s19840.svg"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) احسب حجم الدلو بوحدة دسم³ ثم استنتج سعته باللتر.",
+          "answer": "2) الحجم: $V = 3.14 times 2^2 times 8 = 100.48$ دسم³، وبما أن $1$ دسم³ = $1$ لتر فإن السعة تساوي $100.48$ لتر.",
+          "mark": "3.5"
+        }
+      ],
+      "id": "ex_test_2_2am_t3_cylinder",
+      "num": "الثاني"
+    },
+    {
+      "points": 6,
+      "instruction": "يمثل الشكل موشوراً قائماً ارتفاعه $h = 14$ سم، وقاعدته مثلث قائم أطوال أضلاعه $5$ سم، $12$ سم و$13$ سم.",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) احسب المساحة الجانبية $A_L$ لهذا الموشور القائم.",
+              "answer": "1) محيط القاعدة $P = 30$ سم، ومنه:\n\n$A_L = P times h = 30 times 14 = 420$ سم².",
+              "mark": "2"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/2am_t3_prism_medium_s337749.svg"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) احسب المساحة الكلية $A_T$ للموشور القائم.",
+          "answer": "2) مساحة القاعدة $B = 30$ سم²، إذن:\n\n$A_T = A_L + 2 times B = 420 + 2 times 30 = 480$ سم².",
+          "mark": "2"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب حجمه $V$.",
+          "answer": "3) الحجم: $V = B times h = 30 times 14 = 420$ سم³.",
+          "mark": "2"
+        }
+      ],
+      "id": "ex_test_3_2am_t3_right_prism",
+      "num": "الثالث"
+    }
+  ]
+}

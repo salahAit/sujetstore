@@ -1,0 +1,120 @@
+{
+  "id": "lesson_2ap_t3_subtraction_with_borrow",
+  "slug": "lesson-2ap-t3-subtraction-with-borrow",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t3",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الرابع (الجزء الأول): التحضير لحفل نهاية السنة (الطرح بالاستعارة، الكتل والمرصوفة والتناظر)",
+  "order": 1,
+  "titleAr": "وضع عملية الطرح دون استلاف وبالاستعارة (الأعداد إلى 999)",
+  "objectives": [
+    "اكتشاف وتوظيف آلية وضع عملية الطرح العمودي دون استلاف",
+    "فهم وتطبيق آلية وضع عملية الطرح بالاستعارة (الاستلاف البسيط) لأعداد من رقمين أو ثلاثة أرقام",
+    "التحقق من صحة نتيجة عملية الطرح باستعمال عملية الجمع العكسية"
+  ],
+  "keywordsAr": [
+    "وضع عملية الطرح",
+    "الطرح بالاستعارة",
+    "الطرح بالاستلاف",
+    "التحقق بالجمع"
+  ],
+  "discover": {
+    "scenarioAr": "للتحضير لحفل نهاية السنة، كان عند أمين $342$ بطاقة دعوة، فوزّع منها $128$ بطاقة على تلاميذ المدرسة. نريد معرفة عدد البطاقات التي بقيت عند أمين بحساب $342 - 128$ .",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 220\" width=\"520\" height=\"220\"><rect width=\"520\" height=\"220\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><text x=\"260\" y=\"26\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">تمثيل العدد 342 ومبادلة عشرة واحدة بـ 10 وحدات</text><g transform=\"translate(24,46)\"><rect x=\"0\" y=\"0\" width=\"210\" height=\"152\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"105\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">المئات (3) والعشرات (4)</text><rect x=\"16\" y=\"34\" width=\"34\" height=\"34\" rx=\"3\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"33\" y=\"56\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">100</text><rect x=\"56\" y=\"34\" width=\"34\" height=\"34\" rx=\"3\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"73\" y=\"56\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">100</text><rect x=\"96\" y=\"34\" width=\"34\" height=\"34\" rx=\"3\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"113\" y=\"56\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">100</text><rect x=\"148\" y=\"34\" width=\"10\" height=\"52\" rx=\"2\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.2\"/><rect x=\"162\" y=\"34\" width=\"10\" height=\"52\" rx=\"2\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.2\"/><rect x=\"176\" y=\"34\" width=\"10\" height=\"52\" rx=\"2\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.2\"/><rect x=\"190\" y=\"34\" width=\"10\" height=\"52\" rx=\"2\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"3,2\"/><line x1=\"188\" y1=\"88\" x2=\"202\" y2=\"32\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"105\" y=\"114\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">تبقى 3 عشرات</text><text x=\"105\" y=\"134\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#dc2626\">ونستعير عشرة واحدة</text></g><path d=\"M 244 122 L 274 122\" stroke=\"#dc2626\" stroke-width=\"2.5\" fill=\"none\"/><polygon points=\"274,117 284,122 274,127\" fill=\"#dc2626\"/><g transform=\"translate(292,46)\"><rect x=\"0\" y=\"0\" width=\"204\" height=\"152\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"102\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">الوحدات بعد الاستعارة</text><g fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"1.2\"><rect x=\"18\" y=\"36\" width=\"15\" height=\"15\" rx=\"2\"/><rect x=\"38\" y=\"36\" width=\"15\" height=\"15\" rx=\"2\"/><rect x=\"58\" y=\"36\" width=\"15\" height=\"15\" rx=\"2\"/><rect x=\"78\" y=\"36\" width=\"15\" height=\"15\" rx=\"2\"/><rect x=\"98\" y=\"36\" width=\"15\" height=\"15\" rx=\"2\"/><rect x=\"18\" y=\"56\" width=\"15\" height=\"15\" rx=\"2\"/><rect x=\"38\" y=\"56\" width=\"15\" height=\"15\" rx=\"2\"/><rect x=\"58\" y=\"56\" width=\"15\" height=\"15\" rx=\"2\"/><rect x=\"78\" y=\"56\" width=\"15\" height=\"15\" rx=\"2\"/><rect x=\"98\" y=\"56\" width=\"15\" height=\"15\" rx=\"2\"/></g><g fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.2\"><rect x=\"132\" y=\"46\" width=\"15\" height=\"15\" rx=\"2\"/><rect x=\"152\" y=\"46\" width=\"15\" height=\"15\" rx=\"2\"/></g><text x=\"102\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">10 + 2 = 12</text><text x=\"102\" y=\"122\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\">الآن يمكننا طرح 8 وحدات</text><text x=\"102\" y=\"140\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#059669\">12 - 8 = 4</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "نبدأ بالوحدات: لا يمكن طرح $8$ من $2$ . نستعير عشرة واحدة من $4$ عشرات وتصبح $10$ وحدات نضيفها إلى $2$ . كم يصبح عدد الوحدات؟",
+        "hintAr": "اجمع $10 + 2$ لتجد عدد الوحدات الجديد.",
+        "expectedInput": "12",
+        "revealAr": "يصبح عدد الوحدات $12$ (لأن $10 + 2 = 12$ )، وتبقى في العشرات $3$ عشرات فقط."
+      },
+      {
+        "promptAr": "نطرح الآن: في الوحدات $12 - 8 = 4$ ، وفي العشرات $3 - 2 = 1$ . كم يكون رقم المئات عند حساب $3 - 1$ ؟",
+        "hintAr": "احسب الفرق في عمود المئات: $3 - 1$ .",
+        "expectedInput": "2",
+        "revealAr": "في المئات $3 - 1 = 2$ . إذن: $342 - 128 = 214$ بطاقة."
+      },
+      {
+        "promptAr": "لنتحقق من صحة النتيجة باستعمال الجمع العكسي: احسب $214 + 128$ . ما هو المجموع؟",
+        "hintAr": "في الجمع: $4 + 8 = 12$ نكتب $2$ ونحتفظ بـ $1$ ، ثم $1 + 1 + 2 = 4$ ، ثم $2 + 1 = 3$ .",
+        "expectedInput": "342",
+        "revealAr": "ممتاز! بما أن $214 + 128 = 342$ ، فإن نتيجة الطرح $214$ صحيحة تماماً."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لوضع عملية الطرح عمودياً، نرتب الوحدات تحت الوحدات، والعشرات تحت العشرات، والمئات تحت المئات.",
+      "نبدأ الطرح دائماً من مرتبة الوحدات، ثم العشرات، ثم المئات.",
+      "إذا كان الرقم العلوي أصغر من الرقم السفلي، نستعير $1$ من المرتبة التي على يساره فيصبح عندنا $10$ إضافية، ولا ننسى إنقاص $1$ من المرتبة التي استعرنا منها.",
+      "للتحقق من صحة عملية الطرح، نجمع الناتج مع العدد المطروح: إذا حصلنا على العدد الأكبر الأول فالجواب صحيح."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 225\" width=\"500\" height=\"225\"><rect width=\"500\" height=\"225\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">مثال نموذجي: الطرح بالاستعارة والتحقق بالجمع</text><g transform=\"translate(25,40)\"><rect width=\"220\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"110\" y=\"22\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">عملية الطرح: 524 - 183</text><g font-family=\"sans-serif\" text-anchor=\"middle\"><text x=\"75\" y=\"46\" font-size=\"12\" fill=\"#64748b\">م</text><text x=\"120\" y=\"46\" font-size=\"12\" fill=\"#64748b\">ع</text><text x=\"165\" y=\"46\" font-size=\"12\" fill=\"#64748b\">و</text><text x=\"75\" y=\"68\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">4</text><text x=\"120\" y=\"68\" font-size=\"13\" font-weight=\"bold\" fill=\"#059669\">12</text><text x=\"75\" y=\"94\" font-size=\"20\" font-weight=\"bold\" fill=\"#94a3b8\">5</text><line x1=\"64\" y1=\"96\" x2=\"86\" y2=\"78\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"120\" y=\"94\" font-size=\"20\" font-weight=\"bold\" fill=\"#94a3b8\">2</text><line x1=\"109\" y1=\"96\" x2=\"131\" y2=\"78\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"165\" y=\"94\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">4</text><text x=\"42\" y=\"122\" font-size=\"20\" font-weight=\"bold\" fill=\"#dc2626\">-</text><text x=\"75\" y=\"122\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">1</text><text x=\"120\" y=\"122\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">8</text><text x=\"165\" y=\"122\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">3</text><line x1=\"38\" y1=\"131\" x2=\"186\" y2=\"131\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"75\" y=\"154\" font-size=\"21\" font-weight=\"bold\" fill=\"#2563eb\">3</text><text x=\"120\" y=\"154\" font-size=\"21\" font-weight=\"bold\" fill=\"#2563eb\">4</text><text x=\"165\" y=\"154\" font-size=\"21\" font-weight=\"bold\" fill=\"#2563eb\">1</text></g></g><g transform=\"translate(265,40)\"><rect width=\"210\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"105\" y=\"22\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">التحقق بالجمع العكسي</text><g font-family=\"sans-serif\" text-anchor=\"middle\"><text x=\"70\" y=\"64\" font-size=\"12\" font-weight=\"bold\" fill=\"#d97706\">+1</text><text x=\"70\" y=\"92\" font-size=\"20\" font-weight=\"bold\" fill=\"#2563eb\">3</text><text x=\"115\" y=\"92\" font-size=\"20\" font-weight=\"bold\" fill=\"#2563eb\">4</text><text x=\"160\" y=\"92\" font-size=\"20\" font-weight=\"bold\" fill=\"#2563eb\">1</text><text x=\"38\" y=\"120\" font-size=\"20\" font-weight=\"bold\" fill=\"#059669\">+</text><text x=\"70\" y=\"120\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">1</text><text x=\"115\" y=\"120\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">8</text><text x=\"160\" y=\"120\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">3</text><line x1=\"34\" y1=\"129\" x2=\"180\" y2=\"129\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"70\" y=\"152\" font-size=\"21\" font-weight=\"bold\" fill=\"#059669\">5</text><text x=\"115\" y=\"152\" font-size=\"21\" font-weight=\"bold\" fill=\"#059669\">2</text><text x=\"160\" y=\"152\" font-size=\"21\" font-weight=\"bold\" fill=\"#059669\">4</text></g></g></svg>",
+    "visualCaptionAr": "نستعير مئة واحدة فتصبح $5$ مئات تساوي $4$ مئات، وتصبح $2$ عشرات تساوي $12$ عشرة.",
+    "examples": [
+      {
+        "problemAr": "احسب دون استلاف: $478 - 235$",
+        "solutionAr": "الوحدات: $8 - 5 = 3$ ، العشرات: $7 - 3 = 4$ ، المئات: $4 - 2 = 2$ . النتيجة: $243$ ."
+      },
+      {
+        "problemAr": "احسب بالاستعارة: $463 - 147$",
+        "solutionAr": "في الوحدات $3 < 7$ ، نستعير عشرة واحدة من $6$ فتبقى $5$ عشرات وتصبح الوحدات $13$ . نحسب: $13 - 7 = 6$ ، ثم $5 - 4 = 1$ ، ثم $4 - 1 = 3$ . النتيجة: $316$ ."
+      }
+    ],
+    "watchOutAr": "انتبه! عندما تستعير عشرة واحدة أو مئة واحدة، لا تنسَ أبداً أن تشطب الرقم وتنقص منه $1$ قبل إكمال الطرح."
+  },
+  "practice": [
+    {
+      "questionAr": "احسب ناتج عملية الطرح: $263 - 137$",
+      "options": [
+        "$134$",
+        "$126$",
+        "$136$",
+        "$400$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "طرحت $7 - 3 = 4$ في الوحدات! لا نطرح الرقم السفلي ناقص العلوي، بل نستعير $10$ وحدات من العشرات.",
+        "أحسنت! استعرت عشرة واحدة لتصبح الوحدات $13 - 7 = 6$ ، ثم طرحت العشرات الباقية $5 - 3 = 2$ والمئات $2 - 1 = 1$ .",
+        "استعرت $10$ للوحدات بنجاح، لكنك نسيت إنقاص $1$ من رقم العشرات ( $6$ عشرات تصبح $5$ عشرات).",
+        "هذه نتيجة الجمع $263 + 137$ وليست نتيجة الطرح! انتبه إلى الإشارة ( $-$ )."
+      ],
+      "explanationAr": "نبدأ بالوحدات: $3 < 7$ فنستعير $1$ من $6$ عشرات، فتصبح الوحدات $13 - 7 = 6$ ، والعشرات $5 - 3 = 2$ ، والمئات $2 - 1 = 1$ . الجواب هو $126$ ."
+    },
+    {
+      "questionAr": "ما هو ناتج الفرق: $627 - 394$ ؟",
+      "options": [
+        "$233$",
+        "$333$",
+        "$373$",
+        "$243$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! طرحت الوحدات $7 - 4 = 3$ ، ثم استعرت من المئات فحسبت $12 - 9 = 3$ و $5 - 3 = 2$ .",
+        "استعرت مئة واحدة لتحصل على $12$ عشرة، لكنك نسيت إنقاص $1$ من $6$ مئات لتصبح $5$ .",
+        "طرحت $9 - 2 = 7$ في العشرات بدلاً من الاستعارة من المئات! يجب أن نستعير عندما يكون الرقم العلوي أصغر.",
+        "تحقق من طرح العشرات: $12 - 9 = 3$ وليس $4$ ."
+      ],
+      "explanationAr": "الوحدات: $7 - 4 = 3$ . في العشرات $2 < 9$ ، نستعير مئة واحدة من $6$ مئات فتصبح $5$ مئات وتصبح العشرات $12$ . ثم $12 - 9 = 3$ و $5 - 3 = 2$ . النتيجة: $233$ ."
+    },
+    {
+      "questionAr": "كان عند ليلى $345 \\text{ DA}$ ، اشترت قصة ثمنها $180 \\text{ DA}$ . كم ديناراً بقي معها؟",
+      "options": [
+        "$245 \\text{ DA}$",
+        "$265 \\text{ DA}$",
+        "$165 \\text{ DA}$",
+        "$525 \\text{ DA}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "في العشرات طرحت $8 - 4 = 4$ دون أن تستعير من المئات! استعر مئة واحدة لتصبح العشرات $14$ .",
+        "استعرت من المئات لتحسب $14 - 8 = 6$ ، لكنك نسيت إنقاص $3$ مئات إلى $2$ .",
+        "أحسنت! حسبت $345 - 180 = 165 \\text{ DA}$ . ويمكنك التأكد لأن $165 + 180 = 345$ .",
+        "قمت بعملية الجمع بدل الطرح! عند الشراء ينقص المبلغ فنستعمل الطرح."
+      ],
+      "explanationAr": "نضع العملية: $345 - 180$ . الوحدات: $5 - 0 = 5$ . العشرات: $14 - 8 = 6$ (بعد الاستعارة من $3$ فتبقى $2$ ). المئات: $2 - 1 = 1$ . بقي معها $165 \\text{ DA}$ ."
+    }
+  ]
+}

@@ -206,6 +206,8 @@ export interface ExerciseBlock {
 	id?: string;
 	/** Exercise ordinal — 'الأول', 'الثاني', etc. (auto-generated if omitted) */
 	num?: string;
+	/** Optional full custom heading overriding 'التمرين <num>' (e.g. 'الوضعية الإدماجية') */
+	customTitle?: string;
 	/** Total points for this exercise */
 	points: number | string;
 	/** Leading instruction before the blocks */

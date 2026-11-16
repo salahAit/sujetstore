@@ -1,0 +1,124 @@
+{
+  "id": "lesson_5ap_t1_large_natural_numbers",
+  "slug": "5ap-t1-large-natural-numbers",
+  "grade": "5ap",
+  "yearSubjectId": 606,
+  "trimesterId": "t1",
+  "sequenceId": "seq_5ap_1",
+  "sequenceTitleAr": "المقطع التعلمي الأول: الأعداد الكبيرة، العمليات عليها، الهندسة الأساسية والأطوال",
+  "order": 1,
+  "titleAr": "الأعداد الطبيعية الكبيرة إلى المليار (قراءة، كتابة، تفكيك، مقارنة، ترتيب وقيمة الرقم)",
+  "objectives": [
+    "قراءة وكتابة الأعداد الطبيعية الكبيرة إلى منزلة الملايين (أصغر من $1\\,000\\,000\\,000$ ) بالأرقام والحروف.",
+    "تفكيك عدد طبيعي تفكيكا نموذجيا حسب منازل الوحدات البسيطة والآلاف والملايين.",
+    "التمييز بين رقم المنزلة وعددها (مثل رقم المئات وعدد المئات، ورقم الآلاف وعدد الآلاف).",
+    "مقارنة وترتيب أعداد طبيعية كبيرة وحصرها بين مضاعفين متتاليين لعشرة أو مئة أو ألف أو مليون."
+  ],
+  "keywordsAr": [
+    "الملايين",
+    "المليار",
+    "التفكيك النموذجي",
+    "قيمة الرقم",
+    "رقم المنزلة وعددها",
+    "الحصر"
+  ],
+  "discover": {
+    "scenarioAr": "في إحصاء السكان لولايتين جزائريتين، بلغ عدد سكان الولاية الأولى $3\\,452\\,800$ نسمة، بينما بلغ عدد سكان الولاية الثانية $3\\,481\\,200$ نسمة. نريد قراءة هذين العددين وتعيين قيمة أرقامهما ومقارنتهما باستعمال جدول المنازل.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 165\" width=\"600\" height=\"165\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"30\" y=\"14\" width=\"180\" height=\"32\" fill=\"#ede9fe\" stroke=\"#6d28d9\" stroke-width=\"1.5\"/><text x=\"120\" y=\"35\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#4c1d95\" direction=\"rtl\">فصل الملايين</text><rect x=\"210\" y=\"14\" width=\"180\" height=\"32\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"300\" y=\"35\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">فصل الآلاف</text><rect x=\"390\" y=\"14\" width=\"180\" height=\"32\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.5\"/><text x=\"480\" y=\"35\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\" direction=\"rtl\">فصل الوحدات البسيطة</text><g font-size=\"13\" font-weight=\"bold\" fill=\"#334155\"><rect x=\"30\" y=\"46\" width=\"60\" height=\"30\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"60\" y=\"66\" text-anchor=\"middle\">م</text><rect x=\"90\" y=\"46\" width=\"60\" height=\"30\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"120\" y=\"66\" text-anchor=\"middle\">ع</text><rect x=\"150\" y=\"46\" width=\"60\" height=\"30\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"180\" y=\"66\" text-anchor=\"middle\">و</text><rect x=\"210\" y=\"46\" width=\"60\" height=\"30\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"240\" y=\"66\" text-anchor=\"middle\">م</text><rect x=\"270\" y=\"46\" width=\"60\" height=\"30\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"300\" y=\"66\" text-anchor=\"middle\" fill=\"#b45309\">ع</text><rect x=\"330\" y=\"46\" width=\"60\" height=\"30\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"360\" y=\"66\" text-anchor=\"middle\">و</text><rect x=\"390\" y=\"46\" width=\"60\" height=\"30\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"420\" y=\"66\" text-anchor=\"middle\">م</text><rect x=\"450\" y=\"46\" width=\"60\" height=\"30\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"480\" y=\"66\" text-anchor=\"middle\">ع</text><rect x=\"510\" y=\"46\" width=\"60\" height=\"30\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"540\" y=\"66\" text-anchor=\"middle\">و</text></g><g font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"30\" y=\"76\" width=\"60\" height=\"46\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><rect x=\"90\" y=\"76\" width=\"60\" height=\"46\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><rect x=\"150\" y=\"76\" width=\"60\" height=\"46\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"180\" y=\"106\" text-anchor=\"middle\" fill=\"#6d28d9\">3</text><rect x=\"210\" y=\"76\" width=\"60\" height=\"46\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"240\" y=\"106\" text-anchor=\"middle\" fill=\"#1d4ed8\">4</text><rect x=\"270\" y=\"76\" width=\"60\" height=\"46\" fill=\"#fffbeb\" stroke=\"#d97706\" stroke-width=\"1.6\"/><text x=\"300\" y=\"106\" text-anchor=\"middle\" fill=\"#b45309\">5</text><rect x=\"330\" y=\"76\" width=\"60\" height=\"46\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"360\" y=\"106\" text-anchor=\"middle\" fill=\"#1d4ed8\">2</text><rect x=\"390\" y=\"76\" width=\"60\" height=\"46\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"420\" y=\"106\" text-anchor=\"middle\" fill=\"#15803d\">8</text><rect x=\"450\" y=\"76\" width=\"60\" height=\"46\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"480\" y=\"106\" text-anchor=\"middle\" fill=\"#15803d\">0</text><rect x=\"510\" y=\"76\" width=\"60\" height=\"46\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"540\" y=\"106\" text-anchor=\"middle\" fill=\"#15803d\">0</text></g><line x1=\"210\" y1=\"14\" x2=\"210\" y2=\"122\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"390\" y1=\"14\" x2=\"390\" y2=\"122\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"300\" y=\"148\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">3 452 800</text></svg>",
+    "steps": [
+      {
+        "promptAr": "انظر إلى جدول المنازل للعدد $3\\,452\\,800$ : ما هو **رقم** عشرات الآلاف في هذا العدد؟",
+        "hintAr": "ابحث في فصل الآلاف عن العمود المظلل الخاص بالعشرات (ع).",
+        "expectedInput": "5",
+        "revealAr": "رقم عشرات الآلاف هو $5$ ، وقيمته في هذا العدد هي $50\\,000$ ، أما عدد عشرات الآلاف في العدد كله فهو $345$ ."
+      },
+      {
+        "promptAr": "ما هو **عدد الملايين** في العدد $3\\,452\\,800$ ؟",
+        "hintAr": "انظر إلى منزلة الملايين في أقصى يسار العدد.",
+        "expectedInput": "3",
+        "revealAr": "عدد الملايين هو $3$ ، ونقرأ العدد: ثلاثة ملايين وأربع مئة واثنان وخمسون ألفا وثماني مئة."
+      },
+      {
+        "promptAr": "قارن بين $3\\,452\\,800$ و $3\\,481\\,200$ بكتابة الرمز المناسب ( `<` أو `>` أو `=` ).",
+        "hintAr": "لكلا العددين $7$ أرقام، نبدأ المقارنة من اليسار: الملايين متساوية ( $3$ ) ومئات الآلاف متساوية ( $4$ )، قارن عشرات الآلاف.",
+        "expectedInput": "<",
+        "revealAr": "$3\\,452\\,800 < 3\\,481\\,200$ لأن في منزلة عشرات الآلاف لدينا $5 < 8$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لتسهيل قراءة عدد طبيعي كبير، نجزئ أرقامه ثلاثا ثلاثا بدءا من اليمين: فصل الوحدات البسيطة، ثم فصل الآلاف، ثم فصل الملايين (للأعداد الأصغر من المليار $1\\,000\\,000\\,000$ ).",
+      "نفرق بين **رقم المنزلة** (وهو رقم وحيد في الخانة) و**عدد المنزلة** (العدد المكون من تلك الخانة وكل الخانات التي على يسارها). مثال: في $47\\,620$ رقم الآلاف هو $7$ ، بينما عدد الآلاف هو $47$ .",
+      "**التفكيك النموذجي** يكتب العدد على شكل مجموع جداءات كل رقم في قيمة منزلته ( $10$ ، $100$ ، $1\\,000$ ، $10\\,000$ ، $100\\,000$ ، $1\\,000\\,000$ ...).",
+      "لمقارنة عددين: العدد الأكثر أرقاما هو الأكبر؛ وإذا تساوى عدد الأرقام نقارن الأرقام من اليسار إلى اليمين منزلة بمنزلة.",
+      "لحصر عدد بين مليونين متتاليين (أو ألفين متتاليين)، نحتفظ بعدد الملايين (أو الآلاف) ونستبدل باقي الأرقام أصفارا للحد الأدنى، ثم نضيف مليونا (أو ألفا) واحدا للحد الأعلى."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 205\" width=\"600\" height=\"205\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><rect x=\"30\" y=\"12\" width=\"180\" height=\"30\" fill=\"#ede9fe\" stroke=\"#6d28d9\" stroke-width=\"1.5\"/><text x=\"120\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#4c1d95\" direction=\"rtl\">فصل الملايين</text><rect x=\"210\" y=\"12\" width=\"180\" height=\"30\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><text x=\"300\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">فصل الآلاف</text><rect x=\"390\" y=\"12\" width=\"180\" height=\"30\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.5\"/><text x=\"480\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\" direction=\"rtl\">فصل الوحدات البسيطة</text><g font-size=\"12\" font-weight=\"bold\" fill=\"#334155\"><rect x=\"30\" y=\"42\" width=\"60\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"60\" y=\"60\" text-anchor=\"middle\">م</text><rect x=\"90\" y=\"42\" width=\"60\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"120\" y=\"60\" text-anchor=\"middle\">ع</text><rect x=\"150\" y=\"42\" width=\"60\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"180\" y=\"60\" text-anchor=\"middle\">و</text><rect x=\"210\" y=\"42\" width=\"60\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"240\" y=\"60\" text-anchor=\"middle\">م</text><rect x=\"270\" y=\"42\" width=\"60\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"300\" y=\"60\" text-anchor=\"middle\">ع</text><rect x=\"330\" y=\"42\" width=\"60\" height=\"26\" fill=\"#fee2e2\" stroke=\"#dc2626\"/><text x=\"360\" y=\"60\" text-anchor=\"middle\" fill=\"#b91c1c\">و</text><rect x=\"390\" y=\"42\" width=\"60\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"420\" y=\"60\" text-anchor=\"middle\">م</text><rect x=\"450\" y=\"42\" width=\"60\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"480\" y=\"60\" text-anchor=\"middle\">ع</text><rect x=\"510\" y=\"42\" width=\"60\" height=\"26\" fill=\"#f8fafc\" stroke=\"#94a3b8\"/><text x=\"540\" y=\"60\" text-anchor=\"middle\">و</text></g><g font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"30\" y=\"68\" width=\"60\" height=\"44\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><rect x=\"90\" y=\"68\" width=\"60\" height=\"44\" fill=\"#eff6ff\" stroke=\"#94a3b8\"/><text x=\"120\" y=\"97\" text-anchor=\"middle\" fill=\"#6d28d9\">2</text><rect x=\"150\" y=\"68\" width=\"60\" height=\"44\" fill=\"#eff6ff\" stroke=\"#94a3b8\"/><text x=\"180\" y=\"97\" text-anchor=\"middle\" fill=\"#6d28d9\">4</text><rect x=\"210\" y=\"68\" width=\"60\" height=\"44\" fill=\"#eff6ff\" stroke=\"#94a3b8\"/><text x=\"240\" y=\"97\" text-anchor=\"middle\" fill=\"#1d4ed8\">5</text><rect x=\"270\" y=\"68\" width=\"60\" height=\"44\" fill=\"#eff6ff\" stroke=\"#94a3b8\"/><text x=\"300\" y=\"97\" text-anchor=\"middle\" fill=\"#1d4ed8\">0</text><rect x=\"330\" y=\"68\" width=\"60\" height=\"44\" fill=\"#fef2f2\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"360\" y=\"97\" text-anchor=\"middle\" fill=\"#dc2626\">8</text><rect x=\"390\" y=\"68\" width=\"60\" height=\"44\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"420\" y=\"97\" text-anchor=\"middle\" fill=\"#15803d\">3</text><rect x=\"450\" y=\"68\" width=\"60\" height=\"44\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"480\" y=\"97\" text-anchor=\"middle\" fill=\"#15803d\">1</text><rect x=\"510\" y=\"68\" width=\"60\" height=\"44\" fill=\"#ffffff\" stroke=\"#94a3b8\"/><text x=\"540\" y=\"97\" text-anchor=\"middle\" fill=\"#15803d\">9</text></g><line x1=\"210\" y1=\"12\" x2=\"210\" y2=\"112\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"390\" y1=\"12\" x2=\"390\" y2=\"112\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 94 120 L 94 132 L 386 132 L 386 120\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"240\" y1=\"132\" x2=\"240\" y2=\"148\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"240\" y=\"168\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">عدد الآلاف</text><text x=\"240\" y=\"188\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">24 508</text><path d=\"M 360 114 L 360 144 L 465 144\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"360\" cy=\"114\" r=\"3\" fill=\"#dc2626\"/><text x=\"480\" y=\"168\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"rtl\">رقم الآلاف</text><text x=\"480\" y=\"188\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">8</text></svg>",
+    "visualCaptionAr": "جدول المنازل للعدد $24\\,508\\,319$ يوضح الفرق بين رقم الآلاف ( $8$ ) وعدد الآلاف ( $24\\,508$ ).",
+    "examples": [
+      {
+        "problemAr": "فكك العدد $4\\,605\\,230$ تفكيكا نموذجيا.",
+        "solutionAr": "$4\\,605\\,230 = (4 \\times 1\\,000\\,000) + (6 \\times 100\\,000) + (5 \\times 1\\,000) + (2 \\times 100) + (3 \\times 10)$ ."
+      },
+      {
+        "problemAr": "احصر العدد $12\\,740\\,500$ بين ألفين متتاليين، ثم بين مليونين متتاليين.",
+        "solutionAr": "بين ألفين متتاليين: $12\\,740\\,000 < 12\\,740\\,500 < 12\\,741\\,000$ . وبين مليونين متتاليين: $12\\,000\\,000 < 12\\,740\\,500 < 13\\,000\\,000$ ."
+      }
+    ],
+    "watchOutAr": "انتبه! لا تخلط بين **رقم المئات** و**عدد المئات**؛ ففي العدد $35\\,840$ رقم المئات هو $8$ ، أما عدد المئات فهو $358$ لأن كل ألف يحوي $10$ مئات."
+  },
+  "practice": [
+    {
+      "questionAr": "في العدد $68\\,425\\,910$ ، ما هو **عدد مئات الآلاف**؟",
+      "options": [
+        "$4$",
+        "$684$",
+        "$84$",
+        "$68$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه! $4$ هو **رقم** مئات الآلاف في الخانة فقط، وليس **عدد** مئات الآلاف في كل العدد.",
+        "أحسنت! نحدد منزلة مئات الآلاف ( $4$ ) ونأخذ معها جميع الأرقام التي على يسارها فنجد $684$ .",
+        "توقفت عند رقم آحاد الملايين وأهملت رقم عشرات الملايين $6$ ؛ يجب أخذ كل الأرقام يسار منزلة مئات الآلاف.",
+        "$68$ هو **عدد الملايين** في هذا العدد وليس عدد مئات الآلاف."
+      ],
+      "explanationAr": "لتعيين عدد مئات الآلاف في $68\\,425\\,910$ ، نحدد رقم مئات الآلاف وهو $4$ ثم نقرأه مع الأرقام التي على يساره، فيكون عدد مئات الآلاف هو $684$ ."
+    },
+    {
+      "questionAr": "ما هو العدد الطبيعي الذي تفكيكه النموذجي: $(7 \\times 10\\,000\\,000) + (3 \\times 100\\,000) + (9 \\times 1\\,000) + (4 \\times 10) + 6$ ؟",
+      "options": [
+        "$73\\,946$",
+        "$70\\,309\\,046$",
+        "$7\\,309\\,046$",
+        "$70\\,390\\,046$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "أغفلت أصفار المنازل الخالية (آحاد الملايين وعشرات الآلاف والمئات)، فتقلص العدد من الملايين إلى الآلاف.",
+        "أحسنت! بوضع كل رقم في منزلته وملء الخانات الخالية بالأصفار نحصل على $70\\,309\\,046$ .",
+        "انتبه إلى أن $7 \\times 10\\,000\\,000 = 70\\,000\\,000$ (عشرات الملايين) وليس $7\\,000\\,000$ (آحاد الملايين).",
+        "وضعت الرقم $9$ في منزلة عشرات الآلاف بدل آحاد الآلاف؛ فـ $9 \\times 1\\,000 = 9\\,000$ وليس $90\\,000$ ."
+      ],
+      "explanationAr": "نرتب القيم في جدول المنازل: $7$ في عشرات الملايين، $0$ في آحاد الملايين، $3$ في مئات الآلاف، $0$ في عشرات الآلاف، $9$ في آحاد الآلاف، $0$ في المئات، $4$ في العشرات، و $6$ في الآحاد، فينتج العدد $70\\,309\\,046$ ."
+    },
+    {
+      "questionAr": "أي حصر للعدد $45\\,812\\,300$ بين **مليونين متتاليين** هو الحصر الصحيح؟",
+      "options": [
+        "$45\\,800\\,000 < 45\\,812\\,300 < 45\\,900\\,000$",
+        "$44\\,000\\,000 < 45\\,812\\,300 < 46\\,000\\,000$",
+        "$45\\,000\\,000 < 45\\,812\\,300 < 46\\,000\\,000$",
+        "$45\\,812\\,000 < 45\\,812\\,300 < 45\\,813\\,000$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "هذا حصر بين **مئتي ألف** متتاليين وليس بين مليونين متتاليين.",
+        "الفرق بين $44\\,000\\,000$ و $46\\,000\\,000$ هو مليونان، فهما ليسا مليونين متتاليين.",
+        "أحسنت! عدد الملايين في $45\\,812\\,300$ هو $45$ ، لذا يُحصر بين $45\\,000\\,000$ و $46\\,000\\,000$ .",
+        "هذا حصر بين **ألفين** متتاليين وليس بين مليونين متتاليين."
+      ],
+      "explanationAr": "لحصر $45\\,812\\,300$ بين مليونين متتاليين نأخذ عدد الملايين وهو $45$ مليوناً للحد الأدنى ( $45\\,000\\,000$ ) ونضيف مليونا واحدا للحد الأعلى ( $46\\,000\\,000$ )."
+    }
+  ]
+}

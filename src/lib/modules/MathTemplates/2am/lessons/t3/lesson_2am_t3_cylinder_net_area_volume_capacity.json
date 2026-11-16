@@ -1,0 +1,123 @@
+{
+  "id": "lesson_2am_t3_cylinder_net_area_volume_capacity",
+  "slug": "2am-t3-cylinder-net-area-volume-capacity",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t3",
+  "sequenceId": "seq9",
+  "sequenceTitleAr": "المقطع التاسع: الموشور القائم وأسطوانة الدوران وإدماج الفصل الثالث",
+  "order": 6,
+  "titleAr": "أسطوانة الدوران: الوصف والتصميم والمساحة الجانبية والكلية والحجم والسعة",
+  "objectives": [
+    "وصف أسطوانة الدوران (القرصان القاعديان، السطح الجانبي، المحور، الارتفاع) وتمثيل تصميمها وصنعها بأبعاد معلومة",
+    "حساب المساحة الجانبية والمساحة الكلية لأسطوانة دوران نصف قطرها وارتفاعها معلومان",
+    "حساب حجم أسطوانة الدوران وتوظيف العلاقة بين وحدات الحجم ووحدات السعة ( $1\\text{ dm}^3 = 1\\text{ L}$ )"
+  ],
+  "keywordsAr": [
+    "أسطوانة الدوران",
+    "تصميم أسطوانة الدوران",
+    "المساحة الجانبية",
+    "المساحة الكلية",
+    "حجم أسطوانة الدوران",
+    "السعة والحجم"
+  ],
+  "discover": {
+    "scenarioAr": "في معمل ألبان بسطيف، تُعبَّأ علبة حليب أسطوانية الشكل نصف قطر قاعدتها $r = 5\\text{ cm}$ وارتفاعها $h = 12\\text{ cm}$ (نأخذ $\\pi = 3.14$ ). نريد معرفة أبعاد الغلاف الجانبي في تصميم الأسطوانة، ثم حساب مساحتها الجانبية وسعتها باللتر.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 265\" width=\"600\" height=\"265\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"249\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"32\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">أسطوانة الدوران وتصميمها: ربط الأبعاد بالمحيط والارتفاع</text><rect x=\"20\" y=\"46\" width=\"214\" height=\"200\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"127\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">أسطوانة الدوران</text><ellipse cx=\"116\" cy=\"92\" rx=\"52\" ry=\"15\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"64\" y1=\"92\" x2=\"64\" y2=\"206\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"168\" y1=\"92\" x2=\"168\" y2=\"206\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 64 206 A 52 15 0 0 0 168 206\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 64 206 A 52 15 0 0 1 168 206\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/><line x1=\"116\" y1=\"76\" x2=\"116\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.3\" stroke-dasharray=\"4,4\"/><line x1=\"116\" y1=\"92\" x2=\"168\" y2=\"92\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"142\" y=\"86\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">r = 5 cm</text><text x=\"199\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">h = 12 cm</text><path d=\"M 242 146 L 284 146\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.2\"/><polygon points=\"284,146 276,141 276,151\" fill=\"#059669\"/><text x=\"263\" y=\"136\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">النشر</text><rect x=\"292\" y=\"46\" width=\"288\" height=\"200\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"436\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">تصميم أسطوانة الدوران</text><circle cx=\"436\" cy=\"94\" r=\"20\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"436\" y1=\"94\" x2=\"456\" y2=\"94\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"446\" y=\"89\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">r</text><rect x=\"330\" y=\"114\" width=\"212\" height=\"66\" fill=\"#ecfdf5\" stroke=\"#059669\" stroke-width=\"1.8\"/><text x=\"436\" y=\"150\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">L = 2 × π × r = ? cm</text><text x=\"558\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">12</text><circle cx=\"436\" cy=\"200\" r=\"20\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/></svg>",
+    "steps": [
+      {
+        "promptAr": "عند بسط السطح الجانبي لأسطوانة الدوران نحصل على مستطيل طوله يساوي محيط القرص القاعدي $L = 2 \\times \\pi \\times r$ . احسب هذا الطول بأخذ $\\pi = 3.14$ و $r = 5\\text{ cm}$ . (أدخل العدد فقط)",
+        "hintAr": "اضرب $2 \\times 3.14 \\times 5$ (لاحظ أن $2 \\times 5 = 10$ ، مما يسهل الحساب).",
+        "expectedInput": "31.4",
+        "revealAr": "طول المستطيل في التصميم يساوي محيط القاعدة الدائرية: $L = 2 \\times 3.14 \\times 5 = 31.4\\text{ cm}$ ، أما عرضه فهو ارتفاع الأسطوانة $h = 12\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "استنتج **المساحة الجانبية** $A_L$ لهذه الأسطوانة بوحدة $\\text{cm}^2$ . (أدخل العدد فقط)",
+        "hintAr": "المساحة الجانبية هي مساحة المستطيل الجانبي: $A_L = L \\times h = 31.4 \\times 12$ .",
+        "expectedInput": "376.8",
+        "revealAr": "المساحة الجانبية للأسطوانة هي $A_L = 31.4 \\times 12 = 376.8\\text{ cm}^2$ . (وبإضافة مساحتي القرصين القاعديين $B = 3.14 \\times 5^2 = 78.5\\text{ cm}^2$ نحصل على المساحة الكلية $A_T = 376.8 + 2 \\times 78.5 = 533.8\\text{ cm}^2$ )."
+      },
+      {
+        "promptAr": "احسب حجم العلبة $V = B \\times h$ بوحدة $\\text{cm}^3$ ، ثم حوّله إلى **اللتر** ( $\\text{L}$ ) باستعمال العلاقة $1\\text{ dm}^3 = 1\\text{ L}$ و $1\\text{ L} = 1000\\text{ cm}^3$ . (أدخل السعة باللتر فقط)",
+        "hintAr": "احسب أولاً $V = 78.5 \\times 12 = 942\\text{ cm}^3$ ، ثم اقسم على $1000$ لتحصل على السعة باللتر.",
+        "expectedInput": "0.942",
+        "revealAr": "حجم الأسطوانة هو $V = \\pi \\times r^2 \\times h = 3.14 \\times 25 \\times 12 = 78.5 \\times 12 = 942\\text{ cm}^3$ . وبما أن $1000\\text{ cm}^3 = 1\\text{ dm}^3 = 1\\text{ L}$ ، فإن السعة هي $942 \\div 1000 = 0.942\\text{ L}$ (أي $942\\text{ mL}$ )."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**وصف أسطوانة الدوران**: مجسم يتولّد من دوران مستطيل حول أحد أضلاعه (يُسمى **المحور**). لها **قاعدتان** على شكل قرصين متوازيين ومتطابقين نصف قطرهما $r$ ، و**سطح جانبي** منحنٍ، والمسافة بين القاعدتين هي **الارتفاع** $h$ .",
+      "**تصميم أسطوانة الدوران**: يتكون من **مستطيل** طوله محيط القرص القاعدي $2 \\pi r$ وعرضه الارتفاع $h$ ، و**قرصين** متقايسين نصف قطر كل منهما $r$ يمسّان ضلعي الطول في المستطيل.",
+      "**المساحة الجانبية والمساحة الكلية**:\n- المساحة الجانبية: $A_L = 2 \\times \\pi \\times r \\times h$ (وتُكتب أيضاً $\\pi \\times d \\times h$ حيث $d = 2r$ القطر).\n- مساحة القاعدة: $B = \\pi \\times r^2$ .\n- المساحة الكلية: $A_T = A_L + 2 \\times B$ .",
+      "**الحجم والسعة**: حجم أسطوانة الدوران هو $V = B \\times h = \\pi \\times r^2 \\times h$ . وللتحويل إلى السعة نستعمل الجسر الذهبي: $1\\text{ dm}^3 = 1\\text{ L}$ ، ومنه $1\\text{ m}^3 = 1000\\text{ L}$ و $1\\text{ cm}^3 = 1\\text{ mL}$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 250\" width=\"600\" height=\"250\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"234\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"33\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">توليد أسطوانة الدوران وقوانين المساحة والحجم والسعة</text><rect x=\"22\" y=\"48\" width=\"232\" height=\"182\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"138\" y=\"67\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">دوران مستطيل حول محوره</text><ellipse cx=\"138\" cy=\"94\" rx=\"50\" ry=\"13\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/><path d=\"M 88 94 L 88 186 A 50 13 0 0 0 188 186 L 188 94\" fill=\"none\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/><rect x=\"138\" y=\"94\" width=\"50\" height=\"92\" fill=\"#dbeafe\" fill-opacity=\"0.5\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"138\" y1=\"75\" x2=\"138\" y2=\"206\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"5,3\"/><path d=\"M 122 80 A 18 7 0 1 0 154 80\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><polygon points=\"154,80 147,76 149,83\" fill=\"#dc2626\"/><text x=\"163\" y=\"144\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">r</text><text x=\"199\" y=\"144\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">h</text><text x=\"138\" y=\"221\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"rtl\">محور الدوران</text><rect x=\"268\" y=\"48\" width=\"310\" height=\"124\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.5\"/><text x=\"423\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">القوانين الأساسية لأسطوانة الدوران</text><text x=\"423\" y=\"94\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">AL = 2 × π × r × h</text><text x=\"423\" y=\"118\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">AT = AL + 2 × (π × r²)</text><text x=\"423\" y=\"144\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#6d28d9\" direction=\"ltr\">V = π × r² × h</text><text x=\"423\" y=\"163\" text-anchor=\"middle\" font-size=\"11\" fill=\"#64748b\" direction=\"ltr\">(π ≈ 3.14  ,  r = d / 2)</text><rect x=\"268\" y=\"182\" width=\"310\" height=\"48\" rx=\"10\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.5\"/><text x=\"423\" y=\"202\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">العلاقة بين الحجم والسعة</text><text x=\"423\" y=\"221\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">1 dm³ = 1 L   |   1 m³ = 1000 L   |   1 cm³ = 1 mL</text></svg>",
+    "visualCaptionAr": "توليد أسطوانة الدوران من مستطيل، قوانين مساحاتها وحجمها، والتحويل إلى وحدات السعة",
+    "examples": [
+      {
+        "problemAr": "صهريج ماء أسطواني الشكل **قطره** $d = 2\\text{ m}$ وارتفاعه $h = 3\\text{ m}$ ( $\\pi \\approx 3.14$ ). احسب حجم الصهريج ثم سعته باللتر.",
+        "solutionAr": "1. نحسب أولاً نصف القطر: $r = d \\div 2 = 2 \\div 2 = 1\\text{ m}$ .\n2. نحسب الحجم: $V = \\pi \\times r^2 \\times h = 3.14 \\times 1^2 \\times 3 = 9.42\\text{ m}^3$ .\n3. نحول إلى اللتر: بما أن $1\\text{ m}^3 = 1000\\text{ dm}^3 = 1000\\text{ L}$ ، فإن السعة هي $9.42 \\times 1000 = 9420\\text{ L}$ ."
+      },
+      {
+        "problemAr": "أسطوانة دوران نصف قطرها $r = 4\\text{ cm}$ وارتفاعها $h = 10\\text{ cm}$ ( $\\pi \\approx 3.14$ ). احسب مساحتها الجانبية ومساحتها الكلية.",
+        "solutionAr": "1. المساحة الجانبية: $A_L = 2 \\times 3.14 \\times 4 \\times 10 = 251.2\\text{ cm}^2$ .\n2. مساحة القاعدة الواحدة: $B = 3.14 \\times 4^2 = 3.14 \\times 16 = 50.24\\text{ cm}^2$ .\n3. المساحة الكلية: $A_T = 251.2 + 2 \\times 50.24 = 251.2 + 100.48 = 351.68\\text{ cm}^2$ ."
+      }
+    ],
+    "watchOutAr": "انتبه إذا أعطاك التمرين **القطر** $d$ بدلاً من **نصف القطر** $r$ ! يجب قسمة القطر على $2$ أولاً قبل تطبيق $r^2$ . وتذكر أيضاً أن $r^2$ يعني $r \\times r$ وليس $r \\times 2$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل أسطوانة الدوران المبيّنة في الشكل حيث قطر القاعدة $d = 6\\text{ cm}$ والارتفاع $h = 10\\text{ cm}$ (نأخذ $\\pi = 3.14$ ). ما هو **حجم** هذه الأسطوانة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 190\" width=\"380\" height=\"190\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"364\" height=\"174\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><ellipse cx=\"170\" cy=\"54\" rx=\"58\" ry=\"16\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"112\" y1=\"54\" x2=\"112\" y2=\"148\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"228\" y1=\"54\" x2=\"228\" y2=\"148\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 112 148 A 58 16 0 0 0 228 148\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 112 148 A 58 16 0 0 1 228 148\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.4\" stroke-dasharray=\"5,4\"/><line x1=\"112\" y1=\"54\" x2=\"228\" y2=\"54\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"170\" cy=\"54\" r=\"3\" fill=\"#dc2626\"/><text x=\"170\" y=\"31\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">d = 6 cm</text><text x=\"272\" y=\"105\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">h = 10 cm</text></svg>",
+      "options": [
+        "$282.6\\text{ cm}^3$",
+        "$1130.4\\text{ cm}^3$",
+        "$188.4\\text{ cm}^3$",
+        "$56.52\\text{ cm}^3$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! استخرجت أولاً نصف القطر $r = 3\\text{ cm}$ ثم طبقت $V = 3.14 \\times 3^2 \\times 10 = 282.6\\text{ cm}^3$ .",
+        "انتبه: استعملت القطر $6$ مكان نصف القطر! يجب حساب $r = 6 \\div 2 = 3\\text{ cm}$ أولاً.",
+        "هذا ناتج $2 \\times 3.14 \\times 3 \\times 10$ وهو **المساحة الجانبية** وليس الحجم!",
+        "تذكّر أن $3^2 = 3 \\times 3 = 9$ وليس $3 \\times 2 = 6$ (نضرب $3.14 \\times 9 \\times 10$ )."
+      ],
+      "explanationAr": "نصف القطر هو $r = 6 \\div 2 = 3\\text{ cm}$ . ومنه الحجم هو $V = \\pi \\times r^2 \\times h = 3.14 \\times 3^2 \\times 10 = 3.14 \\times 9 \\times 10 = 282.6\\text{ cm}^3$ ."
+    },
+    {
+      "questionAr": "نريد رسم تصميم لأسطوانة دوران نصف قطر قاعدتها $r = 3\\text{ cm}$ وارتفاعها $h = 7\\text{ cm}$ (نأخذ $\\pi = 3.14$ ). ما هما بُعدا المستطيل الذي يمثل السطح الجانبي في التصميم؟",
+      "options": [
+        "$9.42\\text{ cm}$ و $7\\text{ cm}$",
+        "$28.26\\text{ cm}$ و $7\\text{ cm}$",
+        "$18.84\\text{ cm}$ و $7\\text{ cm}$",
+        "$18.84\\text{ cm}$ و $6\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "ضربت $\\pi \\times r$ بدل $2 \\times \\pi \\times r$ ! طول المستطيل يساوي محيط القرص كاملاً.",
+        "$28.26\\text{ cm}^2$ هو مساحة القاعدة $\\pi r^2$ وليس محيطها $2\\pi r$ !",
+        "ممتاز! طول المستطيل هو محيط القاعدة $2 \\times 3.14 \\times 3 = 18.84\\text{ cm}$ وعرضه هو الارتفاع $7\\text{ cm}$ .",
+        "عرض المستطيل يساوي ارتفاع الأسطوانة $h = 7\\text{ cm}$ وليس القطر $6\\text{ cm}$ ."
+      ],
+      "explanationAr": "في تصميم أسطوانة الدوران، طول المستطيل يساوي محيط القاعدة الدائرية: $2 \\times 3.14 \\times 3 = 18.84\\text{ cm}$ ، وعرضه يساوي الارتفاع $7\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "برميل أسطواني سعته الكاملة $200\\text{ L}$ ومساحة قاعدته $25\\text{ dm}^2$ . ما هو ارتفاع هذا البرميل بالسنتيمتر ( $\\text{cm}$ )؟",
+      "options": [
+        "$8\\text{ cm}$",
+        "$80\\text{ cm}$",
+        "$800\\text{ cm}$",
+        "$50\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$8$ هو الارتفاع بوحدة الديسمتر ( $\\text{dm}$ ) لأن الحجم بـ $\\text{dm}^3$ والمساحة بـ $\\text{dm}^2$ ؛ حوّل إلى السنتيمتر!",
+        "أحسنت! وجدت $h = 200 \\div 25 = 8\\text{ dm}$ ثم حولته إلى $80\\text{ cm}$ .",
+        "عند التحويل من $\\text{dm}$ إلى $\\text{cm}$ نضرب في $10$ وليس في $100$ .",
+        "استعمل العلاقة $h = \\frac{V}{B}$ بقسمة $200$ على $25$ ."
+      ],
+      "explanationAr": "بما أن $200\\text{ L} = 200\\text{ dm}^3$ ومساحة القاعدة $25\\text{ dm}^2$ ، فإن الارتفاع هو $h = \\frac{V}{B} = \\frac{200}{25} = 8\\text{ dm}$ . وبالتحويل إلى السنتيمتر: $8\\text{ dm} = 80\\text{ cm}$ ."
+    }
+  ]
+}

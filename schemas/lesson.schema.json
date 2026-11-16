@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SujetStore Interactive Lesson",
+  "type": "object",
+  "required": [
+    "id",
+    "slug",
+    "grade",
+    "trimesterId",
+    "sequenceId",
+    "titleAr",
+    "objectives",
+    "discover",
+    "summary",
+    "practice"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^lesson_(2ap|5ap|2am)_t[123]_[a-z0-9_]+$" },
+    "slug": { "type": "string", "minLength": 4 },
+    "grade": { "type": "string", "enum": ["2ap", "5ap", "2am"] },
+    "yearSubjectId": { "type": "integer", "enum": [586, 606, 624] },
+    "trimesterId": { "type": "string", "enum": ["t1", "t2", "t3"] },
+    "sequenceId": { "type": "string" },
+    "sequenceTitleAr": { "type": "string" },
+    "order": { "type": "integer", "minimum": 1 },
+    "titleAr": { "type": "string", "minLength": 3 },
+    "objectives": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "keywordsAr": { "type": "array", "items": { "type": "string" } },
+    "discover": {
+      "type": "object",
+      "required": ["scenarioAr", "steps"],
+      "properties": {
+        "scenarioAr": { "type": "string", "minLength": 10 },
+        "svg": { "type": "string" },
+        "steps": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["promptAr", "hintAr", "revealAr"],
+            "properties": {
+              "promptAr": { "type": "string" },
+              "hintAr": { "type": "string" },
+              "expectedInput": { "type": "string" },
+              "revealAr": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["rulesAr", "examples"],
+      "properties": {
+        "rulesAr": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "visualSvg": { "type": "string" },
+        "visualCaptionAr": { "type": "string" },
+        "examples": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["problemAr", "solutionAr"],
+            "properties": {
+              "problemAr": { "type": "string" },
+              "solutionAr": { "type": "string" }
+            }
+          }
+        },
+        "watchOutAr": { "type": "string" }
+      }
+    },
+    "practice": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["questionAr", "options", "correctIndex", "diagnosticFeedback", "explanationAr"],
+        "properties": {
+          "questionAr": { "type": "string" },
+          "svg": { "type": "string" },
+          "options": { "type": "array", "minItems": 3, "maxItems": 4, "items": { "type": "string" } },
+          "correctIndex": { "type": "integer", "minimum": 0, "maximum": 3 },
+          "diagnosticFeedback": { "type": "array", "minItems": 3, "maxItems": 4, "items": { "type": "string" } },
+          "explanationAr": { "type": "string" }
+        }
+      }
+    }
+  }
+}

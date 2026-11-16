@@ -1,0 +1,124 @@
+{
+  "id": "lesson_2ap_t3_multiplication_intro_tables",
+  "slug": "lesson-2ap-t3-multiplication-intro-tables",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع الرابع (الجزء الثاني): التحضير لحفل نهاية السنة (الضرب، المجسمات والمشكلات المركبة)",
+  "order": 4,
+  "titleAr": "مفهوم الضرب (الجمع المتكرر) وجداول الضرب في 2 و3 و4 و5 و10",
+  "objectives": [
+    "الانتقال من التعبير اللغوي والجمع المتكرر إلى الكتابة الضربية باستعمال الرمز (×) وحساب جداء على مرصوفة",
+    "بناء وحفظ جداول الضرب في 2 و3 و4 و5 و10 وتوظيف خاصية التبديل في الضرب",
+    "استعمال الحاسبة للتحقق من نتائج العمليات أو اكتشاف انتظامات عددية"
+  ],
+  "keywordsAr": [
+    "ضرب عددين",
+    "الجمع المتكرر",
+    "جدول الضرب في 2",
+    "جدول الضرب في 3 و4",
+    "جدول الضرب في 5",
+    "جدول الضرب في 10",
+    "الحاسبة"
+  ],
+  "discover": {
+    "scenarioAr": "رتّبت سارة علب الهدايا للحفل على طاولة في $3$ صفوف، ووضعت في كل صف $5$ علب هدايا متشابهة. نريد حساب العدد الإجمالي لعلب الهدايا بطريقة سريعة.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" width=\"460\" height=\"190\"><rect width=\"460\" height=\"190\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><text x=\"230\" y=\"24\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">3 صفوف، في كل صف 5 علب هدايا</text><g transform=\"translate(56,42)\"><rect x=\"0\" y=\"0\" width=\"245\" height=\"124\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><g fill=\"#3b82f6\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"><rect x=\"14\" y=\"12\" width=\"34\" height=\"26\" rx=\"4\"/><rect x=\"58\" y=\"12\" width=\"34\" height=\"26\" rx=\"4\"/><rect x=\"102\" y=\"12\" width=\"34\" height=\"26\" rx=\"4\"/><rect x=\"146\" y=\"12\" width=\"34\" height=\"26\" rx=\"4\"/><rect x=\"190\" y=\"12\" width=\"34\" height=\"26\" rx=\"4\"/></g><g fill=\"#10b981\" stroke=\"#047857\" stroke-width=\"1.5\"><rect x=\"14\" y=\"48\" width=\"34\" height=\"26\" rx=\"4\"/><rect x=\"58\" y=\"48\" width=\"34\" height=\"26\" rx=\"4\"/><rect x=\"102\" y=\"48\" width=\"34\" height=\"26\" rx=\"4\"/><rect x=\"146\" y=\"48\" width=\"34\" height=\"26\" rx=\"4\"/><rect x=\"190\" y=\"48\" width=\"34\" height=\"26\" rx=\"4\"/></g><g fill=\"#f59e0b\" stroke=\"#b45309\" stroke-width=\"1.5\"><rect x=\"14\" y=\"84\" width=\"34\" height=\"26\" rx=\"4\"/><rect x=\"58\" y=\"84\" width=\"34\" height=\"26\" rx=\"4\"/><rect x=\"102\" y=\"84\" width=\"34\" height=\"26\" rx=\"4\"/><rect x=\"146\" y=\"84\" width=\"34\" height=\"26\" rx=\"4\"/><rect x=\"190\" y=\"84\" width=\"34\" height=\"26\" rx=\"4\"/></g></g><g transform=\"translate(320,56)\" font-family=\"sans-serif\"><text x=\"58\" y=\"18\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">الصف 1 : 5</text><text x=\"58\" y=\"52\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\">الصف 2 : 5</text><text x=\"58\" y=\"86\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b45309\">الصف 3 : 5</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "باستعمال الجمع المتكرر، نحسب عدد العلب: $5 + 5 + 5$ . ما هو مجموع العلب؟",
+        "hintAr": "عد بالخمسات $3$ مرات: $5$ ، ثم $10$ ، ثم ...",
+        "expectedInput": "15",
+        "revealAr": "المجموع هو $15$ علبة هدايا لأن $5 + 5 + 5 = 15$ ."
+      },
+      {
+        "promptAr": "لنعبر عن هذا الجمع المتكرر بعملية الضرب ( $\\times$ ): تكرر العدد $5$ عدة مرات. ما هو العدد الناقص في الكتابة الضربية: $? \\times 5 = 15$ ؟",
+        "hintAr": "كم عدد الصفوف التي تحتوي كل منها على $5$ علب؟",
+        "expectedInput": "3",
+        "revealAr": "العدد الناقص هو $3$ ، ونكتب: $3 \\times 5 = 15$ (أي $5$ مكررة $3$ مرات)."
+      },
+      {
+        "promptAr": "بخاصية التبديل في الضرب: $5 \\times 3 = 3 \\times 5 = 15$ . الآن استعمل جدول الضرب في $10$ : كم يساوي $3 \\times 10$ ؟",
+        "hintAr": "لحساب $3 \\times 10$ ، نكتب $3$ ونضيف صفراً على يمينه (أو نحسب $10 + 10 + 10$ ).",
+        "expectedInput": "30",
+        "revealAr": "أحسنت! $3 \\times 10 = 30$ . وهكذا نستطيع حساب الجداءات بسرعة!"
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الضرب ( $\\times$ )** هو كتابة مختصرة للجمع المتكرر لنفس العدد: مثلاً $4 + 4 + 4 = 3 \\times 4 = 12$ .",
+      "الضرب **تبديلي**: يعني أن $3 \\times 5 = 5 \\times 3 = 15$ ، ولا تتغير النتيجة عند تبديل العددين.",
+      "لضرب عدد في $10$ ، نكتب العدد نفسه ونضيف صفراً ( $0$ ) على يمينه، مثل: $7 \\times 10 = 70$ .",
+      "في جدول الضرب في $5$ يكون رقم الوحدات دائماً $0$ أو $5$ ، وفي جدول الضرب في $2$ يكون الناتج ضعف العدد."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 185\" width=\"500\" height=\"185\"><rect width=\"500\" height=\"185\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(16,14)\"><rect width=\"220\" height=\"157\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"110\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">خاصية التبديل على المرصوفة</text><g transform=\"translate(56,36)\" fill=\"#60a5fa\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"><circle cx=\"16\" cy=\"14\" r=\"10\"/><circle cx=\"46\" cy=\"14\" r=\"10\"/><circle cx=\"76\" cy=\"14\" r=\"10\"/><circle cx=\"106\" cy=\"14\" r=\"10\"/><circle cx=\"16\" cy=\"42\" r=\"10\"/><circle cx=\"46\" cy=\"42\" r=\"10\"/><circle cx=\"76\" cy=\"42\" r=\"10\"/><circle cx=\"106\" cy=\"42\" r=\"10\"/><circle cx=\"16\" cy=\"70\" r=\"10\"/><circle cx=\"46\" cy=\"70\" r=\"10\"/><circle cx=\"76\" cy=\"70\" r=\"10\"/><circle cx=\"106\" cy=\"70\" r=\"10\"/></g><text x=\"110\" y=\"138\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">3 × 4 = 4 × 3 = 12</text></g><g transform=\"translate(254,14)\"><rect width=\"230\" height=\"157\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"115\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">مفاتيح الجداول الأساسية</text><g font-family=\"sans-serif\" font-size=\"12\" fill=\"#334155\" text-anchor=\"middle\"><rect x=\"18\" y=\"32\" width=\"194\" height=\"22\" rx=\"4\" fill=\"#eff6ff\"/><text x=\"115\" y=\"47\" font-weight=\"bold\" fill=\"#1e40af\">× 2 : نأخذ ضعف العدد (2 × 6 = 12)</text><rect x=\"18\" y=\"60\" width=\"194\" height=\"22\" rx=\"4\" fill=\"#ecfdf5\"/><text x=\"115\" y=\"75\" font-weight=\"bold\" fill=\"#047857\">× 5 : الآحاد 0 أو 5 (5 × 6 = 30)</text><rect x=\"18\" y=\"88\" width=\"194\" height=\"22\" rx=\"4\" fill=\"#fef3c7\"/><text x=\"115\" y=\"103\" font-weight=\"bold\" fill=\"#b45309\">× 10 : نضيف صفراً (10 × 6 = 60)</text><rect x=\"18\" y=\"116\" width=\"194\" height=\"22\" rx=\"4\" fill=\"#f3e8ff\"/><text x=\"115\" y=\"131\" font-weight=\"bold\" fill=\"#6d28d9\">× 3 و × 4 : بالجمع المتكرر والحفظ</text></g></g></svg>",
+    "visualCaptionAr": "المرصوفة تساعدنا على رؤية تساوي $3 \\times 4$ و $4 \\times 3$ ، ويمكننا التحقق من الجداءات باستعمال الحاسبة.",
+    "examples": [
+      {
+        "problemAr": "اكتب على شكل جداء ثم احسب: $2 + 2 + 2 + 2$",
+        "solutionAr": "العدد $2$ تكرر $4$ مرات، إذن: $4 \\times 2 = 8$ ."
+      },
+      {
+        "problemAr": "احسب الجداءين: $7 \\times 5$ و $7 \\times 10$",
+        "solutionAr": "$7 \\times 5 = 35$ ، و $7 \\times 10 = 70$ ."
+      }
+    ],
+    "watchOutAr": "انتبه! لا تخلط بين الجمع والضرب: فـ $3 + 4 = 7$ بينما $3 \\times 4 = 4 + 4 + 4 = 12$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "انظر إلى مرصوفة حبات الكعك في الشكل: ما هي الكتابة الضربية المناسبة لحساب عددها الكلي؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 165\" width=\"320\" height=\"165\"><rect width=\"320\" height=\"165\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><rect x=\"64\" y=\"18\" width=\"192\" height=\"128\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><g fill=\"#f59e0b\" stroke=\"#b45309\" stroke-width=\"1.5\"><circle cx=\"104\" cy=\"38\" r=\"11\"/><circle cx=\"160\" cy=\"38\" r=\"11\"/><circle cx=\"216\" cy=\"38\" r=\"11\"/><circle cx=\"104\" cy=\"68\" r=\"11\"/><circle cx=\"160\" cy=\"68\" r=\"11\"/><circle cx=\"216\" cy=\"68\" r=\"11\"/><circle cx=\"104\" cy=\"98\" r=\"11\"/><circle cx=\"160\" cy=\"98\" r=\"11\"/><circle cx=\"216\" cy=\"98\" r=\"11\"/><circle cx=\"104\" cy=\"128\" r=\"11\"/><circle cx=\"160\" cy=\"128\" r=\"11\"/><circle cx=\"216\" cy=\"128\" r=\"11\"/></g></svg>",
+      "options": [
+        "$4 + 3$",
+        "$4 \\times 3$",
+        "$3 \\times 3$",
+        "$4 \\times 4$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "هذه عملية جمع! لإيجاد عدد الحبات في $4$ صفوف من $3$ حبات نستعمل الضرب وليس الجمع.",
+        "أحسنت! هناك $4$ صفوف وفي كل صف $3$ حبات كعك، فالكتابة الضربية هي $4 \\times 3$ (وتساوي $12$ ).",
+        "تحقق من عدد الصفوف: يوجد $4$ صفوف أفقية وليس $3$ صفوف.",
+        "تحقق من عدد الأعمدة: في كل صف $3$ حبات وليس $4$ حبات."
+      ],
+      "explanationAr": "تتكون المرصوفة من $4$ صفوف، وفي كل صف $3$ حبات كعك. إذن الكتابة الضربية هي $4 \\times 3 = 12$ ."
+    },
+    {
+      "questionAr": "ما هو ناتج الجداء: $6 \\times 4$ ؟",
+      "options": [
+        "$10$",
+        "$20$",
+        "$24$",
+        "$28$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "جمعت العددين $6 + 4 = 10$ ! المطلوب هو الضرب ( $4$ مكررة $6$ مرات) وليس الجمع.",
+        "$20$ هو ناتج $5 \\times 4$ . أضف $4$ مرة أخرى لتجد $6 \\times 4$ .",
+        "ممتاز! $6 \\times 4 = 24$ (أي $4 + 4 + 4 + 4 + 4 + 4 = 24$ ).",
+        "$28$ هو ناتج $7 \\times 4$ وليس $6 \\times 4$ ."
+      ],
+      "explanationAr": "من جدول الضرب في $4$ : $5 \\times 4 = 20$ ، ونضيف $4$ واحدة لنحصل على $6 \\times 4 = 24$ ."
+    },
+    {
+      "questionAr": "اشترت المعلمة $5$ علب أقلام، في كل علبة $10$ أقلام. كم قلماً اشترت المعلمة؟",
+      "options": [
+        "$15$",
+        "$40$",
+        "$50$",
+        "$55$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "جمعت $5 + 10 = 15$ ! بما أن $10$ أقلام تتكرر $5$ مرات، نستعمل الضرب $5 \\times 10$ .",
+        "$40$ هو ناتج $4 \\times 10$ ، لكن عند المعلمة $5$ علب وليس $4$ .",
+        "أحسنت! $5 \\times 10 = 50$ قلماً (نكتب $5$ ونضيف صفراً على يمينه).",
+        "عند الضرب في $10$ نضيف صفراً على اليمين ( $50$ ) ولا نكرر الرقم ( $55$ )."
+      ],
+      "explanationAr": "كل علبة بها $10$ أقلام وتتكرر $5$ مرات، فنحسب: $5 \\times 10 = 50$ قلماً."
+    }
+  ]
+}

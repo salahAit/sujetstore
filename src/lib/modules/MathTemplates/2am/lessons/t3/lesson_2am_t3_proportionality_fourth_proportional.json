@@ -1,0 +1,121 @@
+{
+  "id": "lesson_2am_t3_proportionality_fourth_proportional",
+  "slug": "2am-t3-proportionality-fourth-proportional",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t3",
+  "sequenceId": "seq7",
+  "sequenceTitleAr": "المقطع السابع: التناسبية وتطبيقاتها وتحويل وحدات القياس",
+  "order": 1,
+  "titleAr": "التناسبية: تمييز وإتمام جدول تناسبية وتعيين الرابع المتناسب",
+  "objectives": [
+    "التعرف على وضعية تناسبية أو لا تناسبية انطلاقا من جدول أعداد باستعمال معامل التناسبية",
+    "إتمام جدول أعداد يمثل وضعية تناسبية باستعمال معامل التناسبية والخواص الخطية",
+    "تعيين الرابع المتناسب وتبريره بمساواة الجداءين المتصالبين وتوظيفه في حل مشكلات متنوعة"
+  ],
+  "keywordsAr": [
+    "جدول التناسبية",
+    "معامل التناسبية",
+    "الرابع المتناسب",
+    "الجداءان المتصالبان"
+  ],
+  "discover": {
+    "scenarioAr": "في مكتبة بالجزائر العاصمة، سعر الكراس الواحد من نفس النوع ثابت. اشترى أمين $3$ كراريس بمبلغ $180\\text{ DA}$ ، واشترت سلمى $5$ كراريس بمبلغ $300\\text{ DA}$ ، بينما عرض كشك مجاور $4$ كراريس بمبلغ $260\\text{ DA}$ . نريد التحقق من وجود وضعية تناسبية وحساب ثمن $7$ كراريس في المكتبة.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\" width=\"600\" height=\"245\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"229\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"34\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">مقارنة جدولي الأسعار: المكتبة مقابل الكشك المجاور</text><rect x=\"24\" y=\"52\" width=\"285\" height=\"165\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"166\" y=\"74\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">جدول المكتبة (وضعية تناسبية)</text><rect x=\"36\" y=\"88\" width=\"261\" height=\"76\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><line x1=\"36\" y1=\"126\" x2=\"297\" y2=\"126\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><line x1=\"125\" y1=\"88\" x2=\"125\" y2=\"164\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><line x1=\"182\" y1=\"88\" x2=\"182\" y2=\"164\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><line x1=\"240\" y1=\"88\" x2=\"240\" y2=\"164\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><text x=\"80\" y=\"112\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">عدد الكراريس</text><text x=\"80\" y=\"150\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">الثمن (DA)</text><text x=\"153\" y=\"112\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"153\" y=\"150\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">180</text><text x=\"211\" y=\"112\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">5</text><text x=\"211\" y=\"150\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">300</text><text x=\"268\" y=\"112\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">7</text><text x=\"268\" y=\"150\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">x = ?</text><path d=\"M 153 169 Q 182 192 211 169\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.8\"/><rect x=\"90\" y=\"182\" width=\"152\" height=\"24\" rx=\"12\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.2\"/><text x=\"166\" y=\"198\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">180 / 3 = 300 / 5 = 60</text><rect x=\"325\" y=\"52\" width=\"251\" height=\"165\" rx=\"10\" fill=\"#ffffff\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"450\" y=\"74\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">مقارنة مع الكشك المجاور</text><rect x=\"338\" y=\"88\" width=\"225\" height=\"76\" rx=\"6\" fill=\"#fffbeb\" stroke=\"#fcd34d\" stroke-width=\"1.2\"/><line x1=\"338\" y1=\"126\" x2=\"563\" y2=\"126\" stroke=\"#fcd34d\" stroke-width=\"1.2\"/><line x1=\"428\" y1=\"88\" x2=\"428\" y2=\"164\" stroke=\"#fcd34d\" stroke-width=\"1.2\"/><line x1=\"495\" y1=\"88\" x2=\"495\" y2=\"164\" stroke=\"#fcd34d\" stroke-width=\"1.2\"/><text x=\"383\" y=\"112\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#78350f\" direction=\"rtl\">عدد الكراريس</text><text x=\"383\" y=\"150\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#78350f\" direction=\"rtl\">الثمن (DA)</text><text x=\"461\" y=\"112\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"461\" y=\"150\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">180</text><text x=\"529\" y=\"112\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">4</text><text x=\"529\" y=\"150\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">260</text><rect x=\"360\" y=\"182\" width=\"180\" height=\"24\" rx=\"12\" fill=\"#fef2f2\" stroke=\"#ef4444\" stroke-width=\"1.2\"/><text x=\"450\" y=\"198\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\" direction=\"ltr\">260 / 4 = ?  (60 ?)</text></svg>",
+    "steps": [
+      {
+        "promptAr": "احسب حاصل قسمة الثمن على عدد الكراريس بالنسبة لأمين $180 \\div 3$ وبالنسبة لسلمى $300 \\div 5$ . ما قيمة معامل التناسبية في جدول المكتبة؟ (أدخل العدد فقط)",
+        "hintAr": "اقسم كل عدد في السطر الثاني على العدد الموافق له في السطر الأول.",
+        "expectedInput": "60",
+        "revealAr": "نجد $180 \\div 3 = 60$ و $300 \\div 5 = 60$ . بما أن جميع حواصل القسمة متساوية، فإن جدول المكتبة يمثل **وضعية تناسبية**، والعدد $60$ هو **معامل التناسبية** (ويمثل ثمن الكراس الواحد بالدينار)."
+      },
+      {
+        "promptAr": "في الكشك المجاور، عرض البائع $4$ كراريس بمبلغ $260\\text{ DA}$ . احسب حاصل القسمة $260 \\div 4$ للتحقق مما إذا كان هذا العرض متناسباً مع سعر المكتبة. (أدخل الحاصل فقط)",
+        "hintAr": "اقسم $260$ على $4$ وقارن الناتج بمعامل التناسبية $60$ .",
+        "expectedInput": "65",
+        "revealAr": "نجد $260 \\div 4 = 65$ ، وهو يختلف عن $60$ . إذن الجدول الذي يجمع عرض أمين وعرض الكشك يمثل **وضعية لا تناسبية** لأن حاصل القسمة غير ثابت."
+      },
+      {
+        "promptAr": "بالاعتماد على جدول المكتبة المتناسب، احسب ثمن $7$ كراريس $x$ باستعمال معامل التناسبية أو الجداءين المتصالبين. (أدخل المبلغ بالدينار فقط)",
+        "hintAr": "يمكنك ضرب $7 \\times 60$ ، أو كتابة مساواة الجداءين المتصالبين: $3 \\times x = 180 \\times 7$ .",
+        "expectedInput": "420",
+        "revealAr": "باستعمال معامل التناسبية: $x = 7 \\times 60 = 420\\text{ DA}$ . وبمساواة الجداءين المتصالبين: $3 \\times x = 180 \\times 7 = 1260$ ، ومنه الرابع المتناسب هو $x = \\frac{1260}{3} = 420\\text{ DA}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**تمييز جدول تناسبية**: يكون جدول أعداد جدول تناسبية إذا أمكن الانتقال من أعداد السطر الأول إلى أعداد السطر الثاني بالضرب في **نفس العدد غير المعدوم** $k$ ، ويسمى $k$ **معامل التناسبية**. وإذا اختلف حاصل قسمة عدد من السطر الثاني على نظيره في السطر الأول في عمود واحد فقط، فالوضعية **لا تناسبية**.",
+      "**إتمام جدول تناسبية بالخواص الخطية**: لإتمام جدول تناسبية، يمكننا جمع عمودين معاً للحصول على عمود جديد (مثلاً جمع قيمة $3$ وقيمة $5$ يعطي قيمة $8$ )، أو ضرب عمود كامل في نفس العدد (أو قسمته على نفس العدد غير المعدوم).",
+      "**الرابع المتناسب والجداءان المتصالبان**: في جدول تناسبية من أربع خانات فيه $a$ و $c$ في السطر الأول، و $b$ و $x$ في السطر الثاني (حيث $a \\neq 0$ )، يكون الجداءان المتصالبان متساويين: $a \\times x = b \\times c$ ، ومنه يُحسب **الرابع المتناسب** بالعلاقة $x = \\frac{b \\times c}{a}$ .",
+      "**اتجاه معامل التناسبية**: إذا انتقلنا من السطر الأول إلى السطر الثاني بالضرب في $k = \\frac{b}{a}$ ، فإننا نرجع من السطر الثاني إلى السطر الأول بالقسمة على $k$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 265\" width=\"600\" height=\"265\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"249\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"34\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">طريقتا إتمام جدول التناسبية وإيجاد الرابع المتناسب</text><rect x=\"22\" y=\"52\" width=\"280\" height=\"190\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.5\"/><text x=\"162\" y=\"74\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">1. معامل التناسبية والخواص الخطية</text><rect x=\"38\" y=\"90\" width=\"200\" height=\"76\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#6ee7b7\" stroke-width=\"1.2\"/><line x1=\"38\" y1=\"128\" x2=\"238\" y2=\"128\" stroke=\"#6ee7b7\" stroke-width=\"1.2\"/><line x1=\"88\" y1=\"90\" x2=\"88\" y2=\"166\" stroke=\"#6ee7b7\" stroke-width=\"1.2\"/><line x1=\"138\" y1=\"90\" x2=\"138\" y2=\"166\" stroke=\"#6ee7b7\" stroke-width=\"1.2\"/><line x1=\"188\" y1=\"90\" x2=\"188\" y2=\"166\" stroke=\"#6ee7b7\" stroke-width=\"1.2\"/><text x=\"63\" y=\"114\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">2</text><text x=\"63\" y=\"152\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">9</text><text x=\"113\" y=\"114\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"113\" y=\"152\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">13.5</text><text x=\"163\" y=\"114\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">5</text><text x=\"163\" y=\"152\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">22.5</text><text x=\"213\" y=\"114\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">10</text><text x=\"213\" y=\"152\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">45</text><path d=\"M 244 106 C 266 106, 266 150, 244 150\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/><polygon points=\"244,150 250,145 250,155\" fill=\"#059669\"/><text x=\"276\" y=\"133\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">×4.5</text><text x=\"162\" y=\"192\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">الجمع: 2 + 3 = 5  فإن  9 + 13.5 = 22.5</text><text x=\"162\" y=\"214\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">الضرب: 5 × 2 = 10  فإن  22.5 × 2 = 45</text><rect x=\"316\" y=\"52\" width=\"262\" height=\"190\" rx=\"10\" fill=\"#ffffff\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><text x=\"447\" y=\"74\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#6d28d9\" direction=\"rtl\">2. قاعدة الجداءين المتصالبين</text><rect x=\"367\" y=\"92\" width=\"160\" height=\"82\" rx=\"8\" fill=\"#f5f3ff\" stroke=\"#a78bfa\" stroke-width=\"1.4\"/><line x1=\"367\" y1=\"133\" x2=\"527\" y2=\"133\" stroke=\"#a78bfa\" stroke-width=\"1.4\"/><line x1=\"447\" y1=\"92\" x2=\"447\" y2=\"174\" stroke=\"#a78bfa\" stroke-width=\"1.4\"/><line x1=\"414\" y1=\"116\" x2=\"480\" y2=\"150\" stroke=\"#7c3aed\" stroke-width=\"2\" stroke-dasharray=\"4,2\"/><line x1=\"480\" y1=\"116\" x2=\"414\" y2=\"150\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4,2\"/><text x=\"407\" y=\"118\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">a</text><text x=\"487\" y=\"118\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">c</text><text x=\"407\" y=\"158\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">b</text><text x=\"487\" y=\"158\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#7c3aed\" direction=\"ltr\">x</text><text x=\"447\" y=\"198\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">a × x = b × c</text><rect x=\"377\" y=\"208\" width=\"140\" height=\"26\" rx=\"6\" fill=\"#ede9fe\"/><text x=\"447\" y=\"226\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#5b21b6\" direction=\"ltr\">x = (b × c) / a</text></svg>",
+    "visualCaptionAr": "التمييز بين معامل التناسبية والخواص الخطية وقاعدة الجداءين المتصالبين لحساب الرابع المتناسب",
+    "examples": [
+      {
+        "problemAr": "تحقّق إن كانت الكتلة والثمن في الجدول الآتي في وضعية تناسبية: $2\\text{ kg}$ ثمنها $900\\text{ DA}$ ، و $5\\text{ kg}$ ثمنها $2250\\text{ DA}$ ، و $8\\text{ kg}$ ثمنها $3600\\text{ DA}$ .",
+        "solutionAr": "نحسب حاصل قسمة الثمن على الكتلة لكل عمود:\n- العمود الأول: $900 \\div 2 = 450$\n- العمود الثاني: $2250 \\div 5 = 450$\n- العمود الثالث: $3600 \\div 8 = 450$\n\nبما أن حواصل القسمة متساوية، فإن الجدول يمثل **وضعية تناسبية** ومعامل التناسبية هو $450$ ."
+      },
+      {
+        "problemAr": "تستهلك سيارة $15\\text{ L}$ من البنزين لقطع مسافة $200\\text{ km}$ . ما هي كمية البنزين اللازمة لقطع مسافة $320\\text{ km}$ بنفس الوتيرة؟",
+        "solutionAr": "ننظم المعطيات في جدول تناسبية حيث المسافة $200$ تقابل $15$ ، والمسافة $320$ تقابل الرابع المتناسب $x$ .\n\nبتطبيق مساواة الجداءين المتصالبين:\n\n$$\n200 \\times x = 15 \\times 320\n$$\n\n$$\nx = \\frac{15 \\times 320}{200} = \\frac{4800}{200} = 24\\text{ L}\n$$\n\nإذن تحتاج السيارة إلى $24\\text{ L}$ من البنزين."
+      }
+    ],
+    "watchOutAr": "لا تَجمع ولا تَطرح نفس العدد في سطري الجدول لإتمامه! فإذا كان $3$ يقابل $12$ ، فإن إضافة $+2$ للطرفين تعطي $5$ و $14$ وهي خاطئة لأن $\\frac{14}{5} = 2.8 \\neq 4$ . التناسبية تُحفظ فقط بالضرب أو القسمة أو جمع عمودين متناسبين معاً."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل جدول القيم المبيّن في الشكل المرفق. هل يمثل هذا الجدول وضعية تناسبية؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 120\" width=\"460\" height=\"120\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"10\" y=\"10\" width=\"440\" height=\"100\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"10\" y1=\"60\" x2=\"450\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"155\" y1=\"10\" x2=\"155\" y2=\"110\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"253\" y1=\"10\" x2=\"253\" y2=\"110\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"351\" y1=\"10\" x2=\"351\" y2=\"110\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"82\" y=\"40\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">المقدار الأول</text><text x=\"82\" y=\"90\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">المقدار الثاني</text><text x=\"204\" y=\"40\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">4</text><text x=\"204\" y=\"90\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">14</text><text x=\"302\" y=\"40\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">6</text><text x=\"302\" y=\"90\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">21</text><text x=\"400\" y=\"40\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">10</text><text x=\"400\" y=\"90\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">36</text></svg>",
+      "options": [
+        "لا، لأن $36 \\div 10 = 3.6$ يختلف عن $14 \\div 4 = 3.5$",
+        "نعم، لأن $14 \\div 4 = 3.5$ و $21 \\div 6 = 3.5$",
+        "نعم، لأن القيم تتزايد في السطرين معاً",
+        "لا، لأن $4 + 6 = 10$ بينما $14 \\times 2 = 28$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! التحقق من التناسبية يتطلب فحص جميع الأعمدة دون استثناء.",
+        "تحقق من العمود الثالث أيضاً! تساوي أول عمودين فقط لا يكفي ليكون الجدول جدول تناسبية.",
+        "تزايد القيم في السطرين معاً لا يثبت التناسبية، بل يجب ثبات حاصل القسمة في كل الأعمدة.",
+        "الخاصية الخطية تعني جمع عمودين معاً ( $14 + 21 = 35$ وليس الضرب في $2$ ). احسب حاصل القسمة لكل عمود."
+      ],
+      "explanationAr": "نحسب حاصل القسمة في كل عمود: $\\frac{14}{4} = 3.5$ ، $\\frac{21}{6} = 3.5$ ، لكن في العمود الثالث $\\frac{36}{10} = 3.6 \\neq 3.5$ . بما أن حاصل القسمة ليس ثابتاً في كل الأعمدة، فالجدول **لا يمثل وضعية تناسبية**."
+    },
+    {
+      "questionAr": "تستهلك آلة طباعة $12$ رزمة ورق لطبع $6000$ صفحة. كم رزمة ورق تلزمها لطبع $8500$ صفحة؟",
+      "options": [
+        "$15$ رزمة",
+        "$17$ رزمة",
+        "$18$ رزمة",
+        "$14.5$ رزمة"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "تأكد من حساب الجداءين المتصالبين بدقة: $12 \\times 8500 = 102000$ ثم اقسم على $6000$ .",
+        "ممتاز! استخدمت قاعدة الرابع المتناسب بنجاح.",
+        "الناتج $18$ يقابل $9000$ صفحة وليس $8500$ صفحة. أعد القسمة: $102000 \\div 6000$ .",
+        "انتبه: الزيادة ليست بإضافة $2.5$ إلى $12$ ، بل باستعمال التناسبية: $x = \\frac{12 \\times 8500}{6000}$ ."
+      ],
+      "explanationAr": "بما أن عدد الرزم متناسب مع عدد الصفحات، فإن الرابع المتناسب $x$ يحقق $6000 \\times x = 12 \\times 8500$ ، ومنه $x = \\frac{12 \\times 8500}{6000} = \\frac{102000}{6000} = 17$ رزمة (أو معامل التناسبية $6000 \\div 12 = 500$ صفحة لكل رزمة، ومنه $8500 \\div 500 = 17$ )."
+    },
+    {
+      "questionAr": "في جدول تناسبية، ثمن $4\\text{ kg}$ من التمر هو $1400\\text{ DA}$ وثمن $6\\text{ kg}$ هو $2100\\text{ DA}$ . ما ثمن $10\\text{ kg}$ من نفس التمر؟",
+      "options": [
+        "$2800\\text{ DA}$",
+        "$3200\\text{ DA}$",
+        "$3500\\text{ DA}$",
+        "$4200\\text{ DA}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "هذا ثمن $8\\text{ kg}$ (ضعف $4\\text{ kg}$ ) وليس $10\\text{ kg}$ !",
+        "تحقق من جمع الثمنين: $1400 + 2100$ ، أو اضرب $10$ في ثمن الكيلوغرام الواحد.",
+        "أحسنت! طبقت الخاصية الخطية للجمع ( $4 + 6 = 10$ ) أو معامل التناسبية $350$ بدقة.",
+        "هذا ثمن $12\\text{ kg}$ (ضعف $6\\text{ kg}$ ). أعد حساب $1400 + 2100$ ."
+      ],
+      "explanationAr": "باستعمال الخاصية الخطية للجمع في جدول التناسبية: بما أن $10\\text{ kg} = 4\\text{ kg} + 6\\text{ kg}$ ، فإن ثمن $10\\text{ kg}$ هو $1400 + 2100 = 3500\\text{ DA}$ (ويمكن التحقق عبر معامل التناسبية $1400 \\div 4 = 350$ ، ومنه $10 \\times 350 = 3500\\text{ DA}$ )."
+    }
+  ]
+}

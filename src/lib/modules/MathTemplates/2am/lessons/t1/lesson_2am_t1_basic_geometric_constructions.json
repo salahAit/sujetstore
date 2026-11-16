@@ -1,0 +1,129 @@
+{
+  "id": "lesson_2am_t1_basic_geometric_constructions",
+  "slug": "2am-t1-basic-geometric-constructions",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني: إنشاء أشكال هندسية بسيطة والتناظر المركزي",
+  "order": 4,
+  "titleAr": "إنشاءات هندسية أولية (التوازي، التعامد، المحور، المنصف والأشكال المألوفة)",
+  "objectives": [
+    "الاستعمال السليم للأدوات الهندسية (الكوس، المسطرة، المدور، المنقلة) لإنشاء مستقيمات متوازية ومستقيمات متعامدة",
+    "إنشاء محور قطعة مستقيم ومنصف زاوية باستعمال المدور والمسطرة ومعرفة خاصية كل منهما",
+    "إنشاء مثلثات خاصة ومستطيل ومربع ومعين ودائرة وقوس دائرة مع التبرير ووصف الشكل وكتابة برنامج إنشاء"
+  ],
+  "keywordsAr": [
+    "إنشاءات هندسية أولية",
+    "مستقيمات متوازية ومتعامدة",
+    "محور قطعة مستقيم",
+    "منصف زاوية",
+    "مثلثات خاصة",
+    "برنامج إنشاء"
+  ],
+  "discover": {
+    "scenarioAr": "في مشروع تهيئة حديقة، يريد المهندس وضع عمود إنارة عند نقطة $P$ متساوية البعد عن مقعدين $A$ و $B$ المسافة بينهما $6\\text{ cm}$ على التصميم، ثم رسم ممر يقسم الزاوية $\\widehat{xOy} = 80^\\circ$ إلى زاويتين متقايستين، باستعمال المسطرة والمدور فقط. كيف ننجز هذين الإنشاءين بدقة؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" width=\"460\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"212\" height=\"175\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"116\" y=\"28\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">محور قطعة المستقيم [AB]</text><line x1=\"36\" y1=\"115\" x2=\"196\" y2=\"115\" stroke=\"#0f172a\" stroke-width=\"2.4\"/><line x1=\"116\" y1=\"42\" x2=\"116\" y2=\"172\" stroke=\"#dc2626\" stroke-width=\"2\"/><rect x=\"116\" y=\"105\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><path d=\"M 98 66 A 88 88 0 0 1 134 66\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"3 2\"/><path d=\"M 98 164 A 88 88 0 0 0 134 164\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"3 2\"/><line x1=\"36\" y1=\"115\" x2=\"116\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"196\" y1=\"115\" x2=\"116\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><circle cx=\"36\" cy=\"115\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"196\" cy=\"115\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"116\" cy=\"115\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"116\" cy=\"60\" r=\"4\" fill=\"#2563eb\"/><text x=\"26\" y=\"132\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"198\" y=\"132\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"102\" y=\"132\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">M</text><text x=\"124\" y=\"58\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">P</text><text x=\"130\" y=\"168\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">(Δ)</text><line x1=\"74\" y1=\"110\" x2=\"78\" y2=\"120\" stroke=\"#16a34a\" stroke-width=\"2\"/><line x1=\"154\" y1=\"110\" x2=\"158\" y2=\"120\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"236\" y=\"10\" width=\"214\" height=\"175\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"343\" y=\"28\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">منصف الزاوية xOy</text><line x1=\"262\" y1=\"152\" x2=\"428\" y2=\"152\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"262\" y1=\"152\" x2=\"368\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"262\" y1=\"152\" x2=\"424\" y2=\"95\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><path d=\"M 312 152 A 50 50 0 0 0 298 117\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"1.4\" stroke-dasharray=\"3 2\"/><path d=\"M 294 152 A 32 32 0 0 0 292 141\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M 292 141 A 32 32 0 0 0 285 129\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"262\" cy=\"152\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"248\" y=\"158\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"432\" y=\"156\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">x</text><text x=\"372\" y=\"46\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">y</text><text x=\"430\" y=\"98\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">z</text><text x=\"334\" y=\"142\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">40°</text><text x=\"316\" y=\"114\" font-size=\"11\" font-weight=\"bold\" fill=\"#16a34a\">40°</text></svg>",
+    "steps": [
+      {
+        "promptAr": "أنشأنا محور القطعة $[AB]$ باستعمال المدور بفتحة أكبر من نصف طول $[AB]$ . إذا كان $AB = 6\\text{ cm}$ ، فما الطول $AM$ بالسنتيمتر؟",
+        "hintAr": "يمر محور قطعة مستقيم بمنتصفها $M$ ويقسمها إلى جزأين متقايسين.",
+        "expectedInput": "3",
+        "revealAr": "بما أن المحور $(\\Delta)$ عمودي على $[AB]$ في منتصفها $M$ ، فإن $AM = MB = 6 \\div 2 = 3\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "اخترنا نقطة $P$ من المحور $(\\Delta)$ بحيث $PA = 5\\text{ cm}$ . ما هو طول المسافة $PB$ بالسنتيمتر؟",
+        "hintAr": "كل نقطة تنتمي إلى محور قطعة مستقيم متساوية البعد عن طرفي هذه القطعة.",
+        "expectedInput": "5",
+        "revealAr": "بما أن $P \\in (\\Delta)$ محور $[AB]$ ، فإن $PB = PA = 5\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "أنشأنا بالمدور نصف المستقيم $[Oz)$ منصفاً للزاوية $\\widehat{xOy} = 80^\\circ$ . ما قيس الزاوية $\\widehat{xOz}$ بالدرجات؟",
+        "hintAr": "منصف زاوية يقسمها إلى زاويتين متجاورتين ومتقايستين.",
+        "expectedInput": "40",
+        "revealAr": "نصف المستقيم $[Oz)$ يقسم الزاوية إلى نصفين متقايسين: $\\widehat{xOz} = \\widehat{zOy} = 80^\\circ \\div 2 = 40^\\circ$ ."
+      },
+      {
+        "promptAr": "لإنشاء مستقيمين متوازيين $(d)$ و $(d')$ باستعمال الكوس والمسطرة، كيف نستعين بالتعامد؟",
+        "hintAr": "تذكر الخاصية التي تربط بين مستقيمين عموديين على نفس المستقيم.",
+        "revealAr": "نرسم مستقيماً مساعداً $(\\Delta)$ عمودياً على $(d)$ بالكوس، ثم نرسم $(d')$ عمودياً على $(\\Delta)$ ، لأن المستقيمين العموديين على نفس المستقيم متوازيان."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**التعامد والتوازي**: يُنشأ المستقيمان المتعامدان باستعمال **الكوس**. ولإنشاء مستقيم $(d')$ يوازي $(d)$ ويشمل نقطة $A$ ، ننشئ مستقيماً مساعداً عمودياً على $(d)$ ثم مستقيماً عمودياً عليه يشمل $A$ (لأن العموديين على نفس المستقيم متوازيان).",
+      "**محور قطعة مستقيم**: هو المستقيم العمودي على القطعة في منتصفها. **خاصية**: كل نقطة تنتمي إلى محور قطعة مستقيم تكون متساوية البعد عن طرفيها ( $PA = PB$ )، والعكس صحيح.",
+      "**منصف زاوية**: هو نصف المستقيم الذي مبدؤه رأس الزاوية ويقسمها إلى زاويتين متجاورتين متقايستين. يُنشأ بالمدور والمسطرة (أو بالمنقلة).",
+      "**الأشكال المألوفة وبرنامج الإنشاء**: نستعمل الكوس للزوايا القائمة (المستطيل، المربع، المثلث القائم)، والمدور لنقل الأطوال المتقايسة (المثلث المتساوي الساقين والمتقايس الأضلاع، المعين، الدائرة وقوس الدائرة). وبرنامج الإنشاء هو وصف مرتب لخطوات الرسم."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 175\" width=\"460\" height=\"175\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"12\" width=\"140\" height=\"150\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"80\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">التوازي بالتعامد</text><line x1=\"32\" y1=\"55\" x2=\"32\" y2=\"148\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"24\" y1=\"75\" x2=\"134\" y2=\"75\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"24\" y1=\"122\" x2=\"134\" y2=\"122\" stroke=\"#2563eb\" stroke-width=\"2\"/><rect x=\"32\" y=\"75\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><rect x=\"32\" y=\"122\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"122\" y=\"69\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">(d)</text><text x=\"120\" y=\"116\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">(d')</text><text x=\"46\" y=\"146\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">(Δ)</text><rect x=\"160\" y=\"12\" width=\"140\" height=\"150\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"230\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">مثلث متقايس الأضلاع</text><polygon points=\"230,52 184,132 276,132\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"204\" y1=\"90\" x2=\"212\" y2=\"95\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"256\" y1=\"90\" x2=\"248\" y2=\"95\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"230\" y1=\"127\" x2=\"230\" y2=\"137\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"230\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" fill=\"#166534\">تشفير الأضلاع المتقايسة</text><rect x=\"310\" y=\"12\" width=\"140\" height=\"150\" rx=\"8\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><text x=\"380\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#854d0e\">المعين</text><polygon points=\"380,48 424,95 380,142 336,95\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"2\"/><line x1=\"380\" y1=\"48\" x2=\"380\" y2=\"142\" stroke=\"#94a3b8\" stroke-width=\"1.3\" stroke-dasharray=\"3 2\"/><line x1=\"336\" y1=\"95\" x2=\"424\" y2=\"95\" stroke=\"#94a3b8\" stroke-width=\"1.3\" stroke-dasharray=\"3 2\"/><rect x=\"380\" y=\"87\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><text x=\"380\" y=\"156\" text-anchor=\"middle\" font-size=\"10\" fill=\"#854d0e\">قطراه متعامدان ومتناصفان</text></svg>",
+    "visualCaptionAr": "الاستدلال على التوازي بالتعامد، وإنشاء الأشكال المألوفة بالمدور والكوس مع التشفير",
+    "examples": [
+      {
+        "problemAr": "اكتب برنامج إنشاء للمثلث $ABC$ المتقايس الأضلاع حيث طول ضلعه $4\\text{ cm}$ باستعمال المسطرة والمدور.",
+        "solutionAr": "1) نرسم بالمسطرة قطعة المستقيم $[AB]$ طولها $4\\text{ cm}$ .\n\n2) نفتح المدور بفتحة $4\\text{ cm}$ ، نضع الشوكة في $A$ ونرسم قوساً، ثم نضع الشوكة في $B$ وبنفس الفتحة نرسم قوساً ثانياً يقطع القوس الأول في نقطة $C$ .\n\n3) نصل بالمسطرة بين $A$ و $C$ وبين $B$ و $C$ ونشفر الأضلاع الثلاثة بنفس رمز التقايس."
+      },
+      {
+        "problemAr": "قطعة مستقيم $[EF]$ طولها $7\\text{ cm}$ ومستقيم $(d)$ محورها يقطعها في $I$ . إذا كانت $K$ نقطة من $(d)$ حيث $KE = 4.5\\text{ cm}$ ، استنتج الطولين $EI$ و $KF$ .",
+        "solutionAr": "بما أن $(d)$ محور $[EF]$ ويقطعها في $I$ فإن $I$ منتصف $[EF]$ ، ومنه $EI = 7 \\div 2 = 3.5\\text{ cm}$ .\n\nوبما أن $K$ تنتمي إلى المحور $(d)$ فإنها متساوية البعد عن طرفي القطعة، ومنه $KF = KE = 4.5\\text{ cm}$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: عند إنشاء محور قطعة مستقيم $[AB]$ بالمدور، يجب أخذ فتحة أكبر تماماً من نصف طول $[AB]$ حتى يتقاطع القوسان! كما يجب عدم نسيان تشفير الشكل (رمز الزاوية القائمة ورموز التقايس)."
+  },
+  "practice": [
+    {
+      "questionAr": "في الشكل المقابل، المستقيم $(\\Delta)$ هو محور القطعة $[AB]$ ويقطعها في $M$ . إذا كان $MB = 3.5\\text{ cm}$ و $NA = 6\\text{ cm}$ ، فما الطولان $AB$ و $NB$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 150\" width=\"280\" height=\"150\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"40\" y1=\"105\" x2=\"240\" y2=\"105\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"140\" y1=\"20\" x2=\"140\" y2=\"135\" stroke=\"#dc2626\" stroke-width=\"2\"/><rect x=\"140\" y=\"95\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"105\" x2=\"140\" y2=\"38\" stroke=\"#2563eb\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><line x1=\"240\" y1=\"105\" x2=\"140\" y2=\"38\" stroke=\"#64748b\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><circle cx=\"40\" cy=\"105\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"240\" cy=\"105\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"140\" cy=\"105\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"140\" cy=\"38\" r=\"4\" fill=\"#2563eb\"/><text x=\"32\" y=\"122\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"242\" y=\"122\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"126\" y=\"122\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">M</text><text x=\"148\" y=\"38\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">N</text><text x=\"150\" y=\"132\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">(Δ)</text><text x=\"190\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">3.5 cm</text><text x=\"78\" y=\"64\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">6 cm</text></svg>",
+      "options": [
+        "$AB = 3.5\\text{ cm}$ و $NB = 3.5\\text{ cm}$",
+        "$AB = 7\\text{ cm}$ و $NB = 6\\text{ cm}$",
+        "$AB = 7\\text{ cm}$ و $NB = 3.5\\text{ cm}$",
+        "$AB = 6\\text{ cm}$ و $NB = 7\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$MB = 3.5\\text{ cm}$ هو نصف طول القطعة $[AB]$ وليس طولها كاملاً.",
+        "ممتاز! $M$ منتصف $[AB]$ فطولها $2 \\times 3.5 = 7\\text{ cm}$ ، و $N$ تنتمي للمحور فـ $NB = NA = 6\\text{ cm}$ .",
+        "طول $AB = 7\\text{ cm}$ صحيح، لكن $NB$ يساوي $NA = 6\\text{ cm}$ لأن $N$ تقع على المحور.",
+        "عكستَ القيمتين! تذكر أن $AB = 2 \\times MB$ وأن $NB = NA$ ."
+      ],
+      "explanationAr": "بما أن $(\\Delta)$ محور $[AB]$ فإن $M$ منتصفها، إذن $AB = 2 \\times MB = 2 \\times 3.5 = 7\\text{ cm}$ . وبما أن $N \\in (\\Delta)$ فإنها متساوية البعد عن $A$ و $B$ ، ومنه $NB = NA = 6\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "نصف المستقيم $[Ot)$ هو منصف الزاوية $\\widehat{AOB}$ . إذا كان قيس الزاوية $\\widehat{AOt} = 32^\\circ$ ، فما قيس الزاوية الكلية $\\widehat{AOB}$ ؟",
+      "options": [
+        "$16^\\circ$",
+        "$32^\\circ$",
+        "$64^\\circ$",
+        "$90^\\circ$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "لقد قسمت $32$ على $2$ ! انتبه: $\\widehat{AOt}$ هي نصف الزاوية $\\widehat{AOB}$ المطلوبة.",
+        "$32^\\circ$ هو قيس نصف الزاوية فقط ( $\\widehat{AOt}$ أو $\\widehat{tOB}$ ).",
+        "صحيح! لأن $[Ot)$ ينصف $\\widehat{AOB}$ ، فإن $\\widehat{AOB} = 2 \\times 32^\\circ = 64^\\circ$ .",
+        "ليست زاوية قائمة بالضرورة؛ اضرب قيس أحد النصفين في $2$ ."
+      ],
+      "explanationAr": "منصف الزاوية $[Ot)$ يقسم $\\widehat{AOB}$ إلى زاويتين متقايستين $\\widehat{AOt} = \\widehat{tOB} = 32^\\circ$ ، إذن $\\widehat{AOB} = 32^\\circ + 32^\\circ = 64^\\circ$ ."
+    },
+    {
+      "questionAr": "في برنامج إنشاء هندسي: «أنشأنا مستقيمين $(d_1)$ و $(d_2)$ عموديين على نفس المستقيم $(\\Delta)$ ». ما الوضعية النسبية للمستقيمين $(d_1)$ و $(d_2)$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 140\" width=\"260\" height=\"140\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"60\" y1=\"18\" x2=\"60\" y2=\"126\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"32\" y1=\"45\" x2=\"226\" y2=\"45\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"32\" y1=\"98\" x2=\"226\" y2=\"98\" stroke=\"#2563eb\" stroke-width=\"2\"/><rect x=\"60\" y=\"45\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"60\" y=\"98\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"42\" y=\"28\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">(Δ)</text><text x=\"205\" y=\"39\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">(d1)</text><text x=\"205\" y=\"92\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">(d2)</text></svg>",
+      "options": [
+        "متقاطعان وغير متعامدين",
+        "متعامدان",
+        "متطابقان دائماً",
+        "متوازيان"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "المستقيمان العموديان على نفس المستقيم لا يتقاطعان أبداً في المستوي.",
+        "العموديان على نفس المستقيم ليسا متعامدين، بل متوازيان.",
+        "لا يتطابقان إلا إذا مرا من نفس النقطة، وفي الحالة العامة هما منفصلان ومتوازيان.",
+        "أحسنت! المستقيمان العموديان على نفس المستقيم متوازيان: $(d_1) \\parallel (d_2)$ ."
+      ],
+      "explanationAr": "حسب الخاصية الأساسية للتعامد والتوازي: إذا كان مستقيم $(\\Delta)$ عمودياً على مستقيمين $(d_1)$ و $(d_2)$ فإن $(d_1)$ و $(d_2)$ متوازيان."
+    }
+  ]
+}

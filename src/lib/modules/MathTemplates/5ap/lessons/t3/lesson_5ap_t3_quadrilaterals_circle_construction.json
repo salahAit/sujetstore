@@ -1,0 +1,131 @@
+{
+  "id": "lesson_5ap_t3_quadrilaterals_circle_construction",
+  "slug": "5ap-t3-quadrilaterals-circle-construction",
+  "grade": "5ap",
+  "yearSubjectId": 606,
+  "trimesterId": "t3",
+  "sequenceId": "seq_5ap_3",
+  "sequenceTitleAr": "المقطع التعلمي الثالث: الأعداد العشرية والمساحات، النسبة المئوية، المثلثات والرباعيات والدائرة",
+  "order": 4,
+  "titleAr": "الرباعيات الخاصة، الدائرة ونقل وإنشاء الأشكال الهندسية",
+  "objectives": [
+    "تمييز ووصف المربع والمستطيل والمعين انطلاقا من خواص الأضلاع والزوايا القائمة والقطرين.",
+    "التعرف على عناصر الدائرة (المركز، نصف القطر، القطر، الوتر) ورسم دوائر باستعمال المدور.",
+    "نقل أو إتمام شكل هندسي مركب باستعمال المسطرة والكوس والمدور، وكتابة أو تنفيذ برنامج إنشاء."
+  ],
+  "keywordsAr": [
+    "الرباعيات الخاصة",
+    "المربع",
+    "المستطيل",
+    "المعين",
+    "القطران",
+    "الدائرة",
+    "نصف القطر",
+    "برنامج إنشاء"
+  ],
+  "discover": {
+    "scenarioAr": "رسم ياسين تصميما هندسيا لبلاطة زخرفية: رسم دائرة مركزها $O$ ونصف قطرها $4\\text{ cm}$، ثم رسم فيها قطرين **متعامدين** $AC$ و $BD$، ووصل بين النقط الأربع بالترتيب لتكوين الرباعي $ABCD$.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 435 205\" width=\"435\" height=\"205\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><circle cx=\"145\" cy=\"105\" r=\"72\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><polygon points=\"145,33 217,105 145,177 73,105\" fill=\"rgba(16,185,129,0.16)\" stroke=\"#15803d\" stroke-width=\"2.2\"/><line x1=\"145\" y1=\"33\" x2=\"145\" y2=\"177\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"73\" y1=\"105\" x2=\"217\" y2=\"105\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><rect x=\"145\" y=\"93\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><circle cx=\"145\" cy=\"105\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"145\" y=\"25\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"229\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"145\" y=\"193\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"61\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">D</text><text x=\"131\" y=\"121\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">O</text><text x=\"181\" y=\"97\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">4 cm</text><rect x=\"250\" y=\"40\" width=\"172\" height=\"120\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"336\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">نصف القطر = 4 cm</text><text x=\"336\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\">القطران AC و BD</text><text x=\"336\" y=\"108\" text-anchor=\"middle\" font-size=\"12\" fill=\"#dc2626\">متعامدان ومتقايسان</text><text x=\"336\" y=\"132\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">الشكل ABCD مربع</text></svg>",
+    "steps": [
+      {
+        "promptAr": "إذا كان نصف قطر الدائرة يساوي $4\\text{ cm}$، فما طول القطر $AC$ بالسنتيمتر؟ (اكتب العدد فقط)",
+        "hintAr": "القطر يمر بالمركز $O$ وطوله يساوي ضعف نصف القطر ($2 \\times 4$).",
+        "expectedInput": "8",
+        "revealAr": "طول القطر هو $2 \\times 4 = 8\\text{ cm}$، ولذلك فإن $AC = 8\\text{ cm}$ و $BD = 8\\text{ cm}$ و $OA = OB = OC = OD = 4\\text{ cm}$."
+      },
+      {
+        "promptAr": "بما أن القطرين $AC$ و $BD$ متقايسان ومتناصفان في $O$ ومتعامدان، كم زاوية قائمة توجد عند رؤوس الرباعي $ABCD$؟ (اكتب العدد فقط)",
+        "hintAr": "تحقق بالكوس في الزوايا الأربع للرباعي الناتج داخل الدائرة.",
+        "expectedInput": "4",
+        "revealAr": "توجد $4$ زوايا قائمة، كما أن الأضلاع الأربعة $AB$ و $BC$ و $CD$ و $DA$ متقايسة، إذن الشكل $ABCD$ هو **مربع**."
+      },
+      {
+        "promptAr": "لو رسمنا في نفس الدائرة قطرين متناصفين ومتقايسين ($8\\text{ cm}$) ولكنهما **غير متعامدين**، ما نوع الرباعي الناتج؟ (اكتب: مستطيل أو معين)",
+        "hintAr": "قطراه متقايسان ومتناصفان ولكنهما غير متعامدين، وله $4$ زوايا قائمة.",
+        "expectedInput": "مستطيل",
+        "revealAr": "الرباعي الناتج هو **مستطيل**؛ أما إذا كان القطران متعامدين ومتناصفين ولكن غير متقايسين فالشكل هو **معين**."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "المربع: له $4$ أضلاع متقايسة و $4$ زوايا قائمة، وقطراه متناصفان ومتقايسان ومتعامدان.",
+      "المستطيل: كل ضلعين متقابلين متقايسان ومتوازيان، وله $4$ زوايا قائمة، وقطراه متناصفان ومتقايسان.",
+      "المعين: له $4$ أضلاع متقايسة، وقطراه متناصفان ومتعامدان (وغير متقايسين في الحالة العامة، ولا يشترط فيه زوايا قائمة).",
+      "الدائرة: مركزها $O$ ونصف قطرها معلوم هي مجموعة النقط التي تبعد عن $O$ بنفس المسافة. القطر يمر بالمركز وطوله يساوي ضعف نصف القطر، والوتر قطعة تصل نقطتين من الدائرة.",
+      "برنامج إنشاء: مجموعة خطوات مرتبة ودقيقة تصف رسم الشكل باستعمال المسطرة المدرجة والكوس والمدور، مع احترام التشفير الموجود على الشكل النموذجي."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 450 156\" width=\"450\" height=\"156\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"18\" y=\"25\" width=\"70\" height=\"70\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><rect x=\"18\" y=\"25\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><line x1=\"18\" y1=\"25\" x2=\"88\" y2=\"95\" stroke=\"#64748b\" stroke-dasharray=\"3 2\" stroke-width=\"1.2\"/><line x1=\"88\" y1=\"25\" x2=\"18\" y2=\"95\" stroke=\"#64748b\" stroke-dasharray=\"3 2\" stroke-width=\"1.2\"/><text x=\"53\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">المربع</text><rect x=\"115\" y=\"34\" width=\"92\" height=\"52\" fill=\"#f0fdf4\" stroke=\"#15803d\" stroke-width=\"2\"/><rect x=\"115\" y=\"34\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><line x1=\"115\" y1=\"34\" x2=\"207\" y2=\"86\" stroke=\"#64748b\" stroke-dasharray=\"3 2\" stroke-width=\"1.2\"/><line x1=\"207\" y1=\"34\" x2=\"115\" y2=\"86\" stroke=\"#64748b\" stroke-dasharray=\"3 2\" stroke-width=\"1.2\"/><text x=\"161\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">المستطيل</text><polygon points=\"268,24 306,60 268,96 230,60\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"2\"/><line x1=\"268\" y1=\"24\" x2=\"268\" y2=\"96\" stroke=\"#dc2626\" stroke-dasharray=\"3 2\" stroke-width=\"1.3\"/><line x1=\"230\" y1=\"60\" x2=\"306\" y2=\"60\" stroke=\"#dc2626\" stroke-dasharray=\"3 2\" stroke-width=\"1.3\"/><rect x=\"268\" y=\"52\" width=\"8\" height=\"8\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><text x=\"268\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">المعين</text><circle cx=\"385\" cy=\"60\" r=\"38\" fill=\"#faf5ff\" stroke=\"#6d28d9\" stroke-width=\"2\"/><circle cx=\"385\" cy=\"60\" r=\"2.8\" fill=\"#0f172a\"/><text x=\"378\" y=\"56\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\">O</text><line x1=\"385\" y1=\"60\" x2=\"423\" y2=\"60\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"358\" y1=\"33\" x2=\"412\" y2=\"87\" stroke=\"#1d4ed8\" stroke-width=\"1.5\"/><line x1=\"362\" y1=\"88\" x2=\"408\" y2=\"88\" stroke=\"#15803d\" stroke-width=\"1.6\"/><text x=\"385\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">الدائرة</text><text x=\"225\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">المربع والمستطيل: 4 زوايا قائمة  |  المربع والمعين: 4 أضلاع متقايسة وقطران متعامدان</text></svg>",
+    "visualCaptionAr": "خواص الرباعيات الخاصة الثلاثة (المربع، المستطيل، المعين) وعناصر الدائرة.",
+    "examples": [
+      {
+        "problemAr": "تمييز رباعي من قطريه: رسمنا قطعتين $AC = 6\\text{ cm}$ و $BD = 4\\text{ cm}$ تتقاطعان في منتصفهما $O$ وتصنعان زاوية قائمة. ما طبيعة الرباعي $ABCD$؟",
+        "solutionAr": "بما أن القطرين متناصفان ومتعامدان وغير متقايسين ($6 \\neq 4$)، فإن الرباعي $ABCD$ هو **معين**."
+      },
+      {
+        "problemAr": "عناصر الدائرة: دائرة مركزها $O$ وقطرها $AB = 10\\text{ cm}$، والنقطة $M$ نقطة من هذه الدائرة. ما طول القطعة $OM$؟",
+        "solutionAr": "القطعة $OM$ تصل المركز $O$ بنقطة من الدائرة فهي نصف قطر، إذن $OM = 10 \\div 2 = 5\\text{ cm}$."
+      },
+      {
+        "problemAr": "برنامج إنشاء: صف خطوات إنشاء مربع $ABCD$ طول ضلعه $5\\text{ cm}$ مع دائرة مركزها نقطة تقاطع قطريه $O$.",
+        "solutionAr": "(1) نرسم القطعة $AB$ طولها $5\\text{ cm}$. (2) نرسم بالكوس مستقيمين عموديين على $AB$ عند $A$ و $B$ ونعين $D$ و $C$ بحيث $AD = BC = 5\\text{ cm}$. (3) نصل $C$ بـ $D$ ونرسم القطرين يتقاطعان في $O$. (4) نفتح المدور بفتحة $OA$ ونرسم الدائرة التي مركزها $O$."
+      }
+    ],
+    "watchOutAr": "انتبه! تساوي الأضلاع الأربعة وحده لا يكفي لتسمية الشكل مربعا (المعين أيضا أضلاعه متقايسة!). وتذكر أننا في السنة الخامسة لا نستعمل العدد التقديري للدائرة ولا نحسب محيطها أو مساحة القرص."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل التشفير والمعطيات في الرباعي $EFGH$ الموضح في الشكل ($EG = 8\\text{ cm}$ و $FH = 6\\text{ cm}$). ما نوع هذا الرباعي؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 172\" width=\"360\" height=\"172\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><polygon points=\"145,30 223,88 145,146 67,88\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"2.2\"/><line x1=\"145\" y1=\"30\" x2=\"145\" y2=\"146\" stroke=\"#1d4ed8\" stroke-dasharray=\"4 3\" stroke-width=\"1.6\"/><line x1=\"67\" y1=\"88\" x2=\"223\" y2=\"88\" stroke=\"#1d4ed8\" stroke-dasharray=\"4 3\" stroke-width=\"1.6\"/><rect x=\"145\" y=\"78\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"102\" y1=\"54\" x2=\"110\" y2=\"62\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"180\" y1=\"62\" x2=\"188\" y2=\"54\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"102\" y1=\"122\" x2=\"110\" y2=\"114\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"180\" y1=\"114\" x2=\"188\" y2=\"122\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"145\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">F</text><text x=\"233\" y=\"92\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">G</text><text x=\"145\" y=\"162\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">H</text><text x=\"53\" y=\"92\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">E</text><text x=\"268\" y=\"75\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">EG = 8 cm</text><text x=\"268\" y=\"98\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">FH = 6 cm</text></svg>",
+      "options": [
+        "مستطيل",
+        "مربع",
+        "معين",
+        "مثلث متساوي الساقين"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "المستطيل قطراه متقايسان وله $4$ زوايا قائمة، بينما هنا القطران مختلفا الطول ($8 \\neq 6$) ومتعامدان.",
+        "في المربع يكون القطران متقايسين؛ هنا $EG = 8\\text{ cm}$ و $FH = 6\\text{ cm}$ فهما غير متقايسين.",
+        "أحسنت! الأضلاع الأربعة متقايسة والقطران متعامدان ومتناصفان وغير متقايسين، وهذه خواص **المعين**.",
+        "الشكل له $4$ أضلاع و $4$ رؤوس ($E, F, G, H$) فهو رباعي وليس مثلثا."
+      ],
+      "explanationAr": "نلاحظ من التشفير أن الأضلاع الأربعة متقايسة، وأن القطرين $EG$ و $FH$ متعامدان ومختلفا الطول ($8\\text{ cm}$ و $6\\text{ cm}$)، إذن الرباعي $EFGH$ هو **معين**."
+    },
+    {
+      "questionAr": "دائرة مركزها $O$ وطول نصف قطرها $3.5\\text{ cm}$. ما طول قطر هذه الدائرة؟ وما اسم القطعة التي تصل بين نقطتين من الدائرة دون المرور بالمركز $O$؟",
+      "options": [
+        "القطر $7\\text{ cm}$، والقطعة تسمى وترا",
+        "القطر $1.75\\text{ cm}$، والقطعة تسمى وترا",
+        "القطر $7\\text{ cm}$، والقطعة تسمى نصف قطر",
+        "القطر $3.5\\text{ cm}$، والقطعة تسمى قطرا"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! القطر يساوي ضعف نصف القطر ($2 \\times 3.5 = 7\\text{ cm}$)، والقطعة الواصلة بين نقطتين من الدائرة دون المرور بالمركز تسمى وترا.",
+        "لقد قسمت $3.5$ على $2$ بدلا من الضرب في $2$؛ القطر ضعف نصف القطر.",
+        "طول القطر صحيح ($7\\text{ cm}$)، لكن نصف القطر يصل المركز بنقطة من الدائرة، أما القطعة بين نقطتين من الدائرة فتسمى وترا.",
+        "$3.5\\text{ cm}$ هو نصف القطر وليس القطر، والقطر يمر حتما بالمركز."
+      ],
+      "explanationAr": "طول القطر يساوي ضعف نصف القطر: $3.5 \\times 2 = 7\\text{ cm}$. والقطعة المستقيمة التي تصل نقطتين من الدائرة ولا تمر بالمركز تسمى **وترا**."
+    },
+    {
+      "questionAr": "يريد تلميذ إنشاء الشكل المركب الموضح: مستطيل $ABCD$ طوله $6\\text{ cm}$ وعرضه $4\\text{ cm}$ يعلوه نصف دائرة قطرها الضلع $AB$. ما هي فتحة المدور وأين يضع إبرة المدور لرسم نصف الدائرة؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 310 192\" width=\"310\" height=\"192\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"65\" y=\"75\" width=\"170\" height=\"86\" fill=\"#eff6ff\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><path d=\"M 65 75 A 85 60 0 0 1 235 75\" fill=\"rgba(16,185,129,0.18)\" stroke=\"#15803d\" stroke-width=\"2.2\"/><circle cx=\"150\" cy=\"75\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"53\" y=\"79\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"242\" y=\"79\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"242\" y=\"168\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"53\" y=\"168\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">D</text><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">المنتصف</text><text x=\"150\" y=\"180\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">6 cm</text><text x=\"255\" y=\"122\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">4 cm</text></svg>",
+      "options": [
+        "فتحة المدور $6\\text{ cm}$، والإبرة في النقطة $A$",
+        "فتحة المدور $3\\text{ cm}$، والإبرة في منتصف القطعة $AB$",
+        "فتحة المدور $4\\text{ cm}$، والإبرة في منتصف القطعة $BC$",
+        "فتحة المدور $2\\text{ cm}$، والإبرة في مركز المستطيل"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "إذا فتحنا المدور بـ $6\\text{ cm}$ ووضعنا الإبرة في $A$ فإن القطر سيصبح $12\\text{ cm}$ وليس $6\\text{ cm}$.",
+        "أحسنت! بما أن القطر هو $AB = 6\\text{ cm}$، فإن المركز هو منتصف $AB$ ونصف القطر (فتحة المدور) هو $6 \\div 2 = 3\\text{ cm}$.",
+        "نصف الدائرة مبني على الضلع $AB$ ($6\\text{ cm}$) وليس على الضلع $BC$ ($4\\text{ cm}$).",
+        "مركز نصف الدائرة يقع على منتصف القطر $AB$ وليس في مركز المستطيل."
+      ],
+      "explanationAr": "قطر نصف الدائرة هو الضلع $AB$ وطوله $6\\text{ cm}$. إذن مركزها هو منتصف القطعة $AB$، وفتحة المدور (نصف القطر) تساوي $6 \\div 2 = 3\\text{ cm}$."
+    }
+  ]
+}

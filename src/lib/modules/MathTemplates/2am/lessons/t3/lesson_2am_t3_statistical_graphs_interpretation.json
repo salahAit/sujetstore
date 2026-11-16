@@ -1,0 +1,123 @@
+{
+  "id": "lesson_2am_t3_statistical_graphs_interpretation",
+  "slug": "2am-t3-statistical-graphs-interpretation",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t3",
+  "sequenceId": "seq8",
+  "sequenceTitleAr": "المقطع الثامن: تنظيم المعطيات والإحصاء",
+  "order": 4,
+  "titleAr": "قراءة وتفسير المعطيات الإحصائية وتمثيلها بمخططات (أعمدة، دائري ونصف دائري)",
+  "objectives": [
+    "قراءة معطيات إحصائية في شكل جداول أو تمثيلات بيانية (منحنيات ومخططات) وفهمها وتفسيرها",
+    "تمثيل معطيات إحصائية بمخطط بالأعمدة مع احترام تناسب ارتفاعات الأعمدة مع التكرارات",
+    "تمثيل معطيات إحصائية بمخطط دائري أو نصف دائري بحساب أقياس الزوايا المركزية المتناسبة مع التكرارات والتواترات"
+  ],
+  "keywordsAr": [
+    "التمثيلات البيانية",
+    "مخطط بالأعمدة",
+    "مخطط دائري",
+    "مخطط نصف دائري",
+    "تفسير معطيات"
+  ],
+  "discover": {
+    "scenarioAr": "في استبيان حول وسائل النقل المستعملة للوصول إلى متوسطة بوهران شمل $60$ تلميذاً، جاءت النتائج الآتية: مشياً على الأقدام $25$ تلميذاً، بالحافلة $15$ تلميذاً، بالسيارة $10$ تلاميذ، وبالدراجة $10$ تلاميذ. نريد تمثيل هذه المعطيات بمخطط بالأعمدة ومخطط دائري (أو نصف دائري).",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 265\" width=\"600\" height=\"265\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"249\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"33\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">تمثيل وسائل النقل لـ 60 تلميذاً: مخطط الأعمدة والمخطط الدائري</text><rect x=\"22\" y=\"46\" width=\"276\" height=\"196\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"160\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">مخطط بالأعمدة (التكرارات)</text><line x1=\"55\" y1=\"82\" x2=\"55\" y2=\"206\" stroke=\"#334155\" stroke-width=\"1.6\"/><line x1=\"55\" y1=\"206\" x2=\"282\" y2=\"206\" stroke=\"#334155\" stroke-width=\"1.6\"/><line x1=\"55\" y1=\"166\" x2=\"282\" y2=\"166\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"55\" y1=\"126\" x2=\"282\" y2=\"126\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"55\" y1=\"86\" x2=\"282\" y2=\"86\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><text x=\"46\" y=\"209\" text-anchor=\"end\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">0</text><text x=\"46\" y=\"170\" text-anchor=\"end\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">10</text><text x=\"46\" y=\"130\" text-anchor=\"end\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">20</text><text x=\"46\" y=\"90\" text-anchor=\"end\" font-size=\"10\" fill=\"#475569\" direction=\"ltr\">30</text><rect x=\"74\" y=\"106\" width=\"34\" height=\"100\" rx=\"4\" fill=\"#3b82f6\"/><text x=\"91\" y=\"101\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">25</text><text x=\"91\" y=\"223\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\" direction=\"rtl\">مشياً</text><rect x=\"128\" y=\"146\" width=\"34\" height=\"60\" rx=\"4\" fill=\"#10b981\"/><text x=\"145\" y=\"141\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">15</text><text x=\"145\" y=\"223\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\" direction=\"rtl\">حافلة</text><rect x=\"182\" y=\"166\" width=\"34\" height=\"40\" rx=\"4\" fill=\"#f59e0b\"/><text x=\"199\" y=\"161\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">10</text><text x=\"199\" y=\"223\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\" direction=\"rtl\">سيارة</text><rect x=\"236\" y=\"166\" width=\"34\" height=\"40\" rx=\"4\" fill=\"#8b5cf6\"/><text x=\"253\" y=\"161\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#6d28d9\" direction=\"ltr\">10</text><text x=\"253\" y=\"223\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\" direction=\"rtl\">دراجة</text><rect x=\"312\" y=\"46\" width=\"266\" height=\"196\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"445\" y=\"65\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">المخطط الدائري (360°)</text><path d=\"M 435 145 L 435.0 65.0 A 80 80 0 0 1 475.0 214.3 Z\" fill=\"#3b82f6\" stroke=\"#ffffff\" stroke-width=\"2\"/><path d=\"M 435 145 L 475.0 214.3 A 80 80 0 0 1 365.7 185.0 Z\" fill=\"#10b981\" stroke=\"#ffffff\" stroke-width=\"2\"/><path d=\"M 435 145 L 365.7 185.0 A 80 80 0 0 1 365.7 105.0 Z\" fill=\"#f59e0b\" stroke=\"#ffffff\" stroke-width=\"2\"/><path d=\"M 435 145 L 365.7 105.0 A 80 80 0 0 1 435.0 65.0 Z\" fill=\"#8b5cf6\" stroke=\"#ffffff\" stroke-width=\"2\"/><text x=\"483\" y=\"132\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">150°</text><text x=\"422\" y=\"193\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">?°</text><text x=\"385\" y=\"148\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">60°</text><text x=\"410\" y=\"105\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">60°</text><rect x=\"520\" y=\"88\" width=\"52\" height=\"20\" rx=\"5\" fill=\"#3b82f6\"/><text x=\"546\" y=\"102\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"rtl\">مشياً</text><rect x=\"520\" y=\"114\" width=\"52\" height=\"20\" rx=\"5\" fill=\"#10b981\"/><text x=\"546\" y=\"128\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"rtl\">حافلة</text><rect x=\"520\" y=\"140\" width=\"52\" height=\"20\" rx=\"5\" fill=\"#f59e0b\"/><text x=\"546\" y=\"154\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"rtl\">سيارة</text><rect x=\"520\" y=\"166\" width=\"52\" height=\"20\" rx=\"5\" fill=\"#8b5cf6\"/><text x=\"546\" y=\"180\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"rtl\">دراجة</text></svg>",
+    "steps": [
+      {
+        "promptAr": "لرسم المخطط بالأعمدة، نختار السلم: كل $5$ تلاميذ يمثلهم ارتفاع $1\\text{ cm}$ . ما ارتفاع العمود الذي يمثل «مشياً على الأقدام» ( $25$ تلميذاً )؟ (أدخل الارتفاع بالسنتيمتر فقط)",
+        "hintAr": "بما أن ارتفاع العمود يتناسب مع التكرار، اقسم $25$ على $5$ .",
+        "expectedInput": "5",
+        "revealAr": "بما أن $5$ تلاميذ يمثلهم $1\\text{ cm}$ ، فإن ارتفاع عمود «مشياً على الأقدام» هو $25 \\div 5 = 5\\text{ cm}$ (وبالمثل: الحافلة $3\\text{ cm}$ ، والسيارة والدراجة $2\\text{ cm}$ لكل منهما)."
+      },
+      {
+        "promptAr": "في المخطط الدائري (الذي تمثل فيه الدورة الكاملة $360^\\circ$ )، احسب قيس الزاوية المركزية لقطاع «الحافلة» ( $15$ تلميذاً من أصل $60$ ). (أدخل القيس بالدرجة دون رمز الدرجة)",
+        "hintAr": "استعمل التناسبية: قيس الزاوية $= \\frac{15}{60} \\times 360^\\circ$ .",
+        "expectedInput": "90",
+        "revealAr": "لدينا $\\frac{15}{60} = \\frac{1}{4}$ ، إذن قيس الزاوية المركزية لقطاع الحافلة هو $\\frac{15}{60} \\times 360^\\circ = 90^\\circ$ (زاوية قائمة). ونتحقق من مجموع الزوايا: $150^\\circ + 90^\\circ + 60^\\circ + 60^\\circ = 360^\\circ$ ."
+      },
+      {
+        "promptAr": "لو مثلنا نفس المعطيات في **مخطط نصف دائري** (حيث المجموع الكلي يقابل $180^\\circ$ )، فما قيس الزاوية المركزية لقطاع «مشياً على الأقدام» ( $25$ من $60$ )؟ (أدخل القيس بالدرجة فقط)",
+        "hintAr": "اضرب التواتر $\\frac{25}{60}$ في $180^\\circ$ بدلاً من $360^\\circ$ .",
+        "expectedInput": "75",
+        "revealAr": "قيس الزاوية في المخطط نصف الدائري هو $\\frac{25}{60} \\times 180^\\circ = 25 \\times 3^\\circ = 75^\\circ$ (وهو نصف الزاوية $150^\\circ$ في المخطط الدائري الكامل)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**المخطط بالأعمدة (المستطيلات)**: يتكون من أعمدة متساوية العرض، و**تتناسب ارتفاعاتها** مع التكرارات (أو التواترات) وفق سلم تدريج محدد على المحور العمودي.",
+      "**المخطط الدائري**: يتناسب قيس الزاوية المركزية $\\alpha$ لكل قطاع مع تكرار الفئة $n$ أو تواترها $f = \\frac{n}{N}$ ، حيث يمثل التكرار الكلي $N$ دورة كاملة ( $360^\\circ$ )، فنحسب: $\\alpha = \\frac{n}{N} \\times 360^\\circ = f \\times 360^\\circ$ .",
+      "**المخطط نصف الدائري**: يعتمد نفس مبدأ التناسبية لكن التكرار الكلي $N$ يمثل نصف دورة ( $180^\\circ$ )، فنحسب: $\\alpha = \\frac{n}{N} \\times 180^\\circ = f \\times 180^\\circ$ .",
+      "**قراءة وتفسير المنحنيات والمخططات**: لقراءة تمثيل بياني، نحدد أولاً دلالة المحورين ووحدتي التدرج (أو مفتاح الألوان)، ثم نقرأ القيم ونقارن بينها ونلاحظ اتجاه التغير (تزايد، تناقص، ثبات)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\" width=\"600\" height=\"245\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"229\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"33\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">مقارنة أنواع التمثيلات البيانية وقوانين الزوايا المركزية</text><rect x=\"20\" y=\"48\" width=\"176\" height=\"175\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"108\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">مخطط بالأعمدة</text><line x1=\"46\" y1=\"160\" x2=\"174\" y2=\"160\" stroke=\"#334155\" stroke-width=\"1.5\"/><line x1=\"46\" y1=\"84\" x2=\"46\" y2=\"160\" stroke=\"#334155\" stroke-width=\"1.5\"/><rect x=\"60\" y=\"120\" width=\"24\" height=\"40\" fill=\"#60a5fa\"/><rect x=\"96\" y=\"96\" width=\"24\" height=\"64\" fill=\"#2563eb\"/><rect x=\"132\" y=\"108\" width=\"24\" height=\"52\" fill=\"#3b82f6\"/><text x=\"108\" y=\"184\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الارتفاع يتناسب</text><text x=\"108\" y=\"202\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">مع التكرار</text><rect x=\"212\" y=\"48\" width=\"176\" height=\"175\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.5\"/><text x=\"300\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">مخطط دائري (360°)</text><path d=\"M 300 135 L 300.0 73.0 A 62 62 0 0 1 362.0 135.0 Z\" fill=\"#10b981\" stroke=\"#ffffff\" stroke-width=\"2\"/><path d=\"M 300 135 L 362.0 135.0 A 62 62 0 0 1 249.8 171.4 Z\" fill=\"#3b82f6\" stroke=\"#ffffff\" stroke-width=\"2\"/><path d=\"M 300 135 L 249.8 171.4 A 62 62 0 0 1 300.0 73.0 Z\" fill=\"#f59e0b\" stroke=\"#ffffff\" stroke-width=\"2\"/><text x=\"327\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">90°</text><text x=\"300\" y=\"212\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">α = التواتر × 360°</text><rect x=\"404\" y=\"48\" width=\"176\" height=\"175\" rx=\"10\" fill=\"#ffffff\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><text x=\"492\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#6d28d9\" direction=\"rtl\">نصف دائري (180°)</text><path d=\"M 490 170 L 422.0 170.0 A 68 68 0 0 1 441.9 121.9 Z\" fill=\"#8b5cf6\" stroke=\"#ffffff\" stroke-width=\"2\"/><path d=\"M 490 170 L 441.9 121.9 A 68 68 0 0 1 520.9 109.4 Z\" fill=\"#3b82f6\" stroke=\"#ffffff\" stroke-width=\"2\"/><path d=\"M 490 170 L 520.9 109.4 A 68 68 0 0 1 558.0 170.0 Z\" fill=\"#10b981\" stroke=\"#ffffff\" stroke-width=\"2\"/><text x=\"452\" y=\"155\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">45°</text><text x=\"492\" y=\"212\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#6d28d9\" direction=\"ltr\">α = التواتر × 180°</text></svg>",
+    "visualCaptionAr": "تمثيل نفس المعطيات عبر الأعمدة والمخطط الدائري والمخطط نصف الدائري باحترام التناسبية",
+    "examples": [
+      {
+        "problemAr": "يمثل مخطط دائري الهوايات المفضلة لـ $40$ تلميذاً: الرياضة $45\\%$ ، المطالعة $30\\%$ ، الرسم $15\\%$ ، المسرح $10\\%$ . احسب قيس زاوية قطاع المطالعة وعدد ممارسي الرياضة.",
+        "solutionAr": "1. قيس زاوية قطاع المطالعة في المخطط الدائري: $0.30 \\times 360^\\circ = 108^\\circ$ .\n2. عدد التلاميذ الذين يمارسون الرياضة: $40 \\times \\frac{45}{100} = 18$ تلميذاً."
+      },
+      {
+        "problemAr": "في مخطط نصف دائري لتوزيع استهلاك الماء في منزل، قيس زاوية قطاع «الغسيل» هو $54^\\circ$ . ما هي النسبة المئوية التي يمثلها هذا القطاع؟",
+        "solutionAr": "بما أن المخطط نصف دائري (مجموع الزوايا $180^\\circ$ )، فإن التواتر هو $\\frac{54}{180} = 0.30$ .\n\nومنه النسبة المئوية للقطاع هي $0.30 \\times 100 = 30\\%$ ."
+      }
+    ],
+    "watchOutAr": "لا تخلط بين المخطط الدائري ( $360^\\circ$ ) والمخطط نصف الدائري ( $180^\\circ$ )! فزاوية قياسها $45^\\circ$ تمثل $12.5\\%$ في المخطط الدائري، لكنها تمثل $25\\%$ في المخطط نصف الدائري."
+  },
+  "practice": [
+    {
+      "questionAr": "يمثل المخطط بالأعمدة المرفق عدد الكتب المستعارة في مكتبة متوسطة خلال أربعة أيام. ما هو **التواتر المئوي** ليوم الثلاثاء من مجموع الاستعارات؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" width=\"460\" height=\"190\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"174\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><line x1=\"62\" y1=\"28\" x2=\"62\" y2=\"148\" stroke=\"#334155\" stroke-width=\"1.6\"/><line x1=\"62\" y1=\"148\" x2=\"424\" y2=\"148\" stroke=\"#334155\" stroke-width=\"1.6\"/><line x1=\"62\" y1=\"108\" x2=\"424\" y2=\"108\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"62\" y1=\"68\" x2=\"424\" y2=\"68\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"62\" y1=\"28\" x2=\"424\" y2=\"28\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><text x=\"52\" y=\"152\" text-anchor=\"end\" font-size=\"11\" fill=\"#475569\" direction=\"ltr\">0</text><text x=\"52\" y=\"112\" text-anchor=\"end\" font-size=\"11\" fill=\"#475569\" direction=\"ltr\">10</text><text x=\"52\" y=\"72\" text-anchor=\"end\" font-size=\"11\" fill=\"#475569\" direction=\"ltr\">20</text><text x=\"52\" y=\"32\" text-anchor=\"end\" font-size=\"11\" fill=\"#475569\" direction=\"ltr\">30</text><rect x=\"96\" y=\"84\" width=\"46\" height=\"64\" rx=\"4\" fill=\"#3b82f6\"/><text x=\"119\" y=\"78\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">16</text><text x=\"119\" y=\"168\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الأحد</text><rect x=\"176\" y=\"52\" width=\"46\" height=\"96\" rx=\"4\" fill=\"#10b981\"/><text x=\"199\" y=\"46\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">24</text><text x=\"199\" y=\"168\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الإثنين</text><rect x=\"256\" y=\"100\" width=\"46\" height=\"48\" rx=\"4\" fill=\"#f59e0b\"/><text x=\"279\" y=\"94\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" direction=\"ltr\">12</text><text x=\"279\" y=\"168\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">الثلاثاء</text><rect x=\"336\" y=\"36\" width=\"46\" height=\"112\" rx=\"4\" fill=\"#8b5cf6\"/><text x=\"359\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#6d28d9\" direction=\"ltr\">28</text><text x=\"359\" y=\"168\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الأربعاء</text></svg>",
+      "options": [
+        "$12\\%$",
+        "$15\\%$",
+        "$20\\%$",
+        "$30\\%$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "العدد $12$ هو التكرار المطلق ليوم الثلاثاء وليس نسبته المئوية؛ يجب قسمته على المجموع $80$ .",
+        "أحسنت! المجموع $80$ كتاباً، ومنه $\\frac{12}{80} = 0.15 = 15\\%$ .",
+        "النسبة $20\\%$ توافق $16$ كتاباً (يوم الأحد) وليس $12$ كتاباً.",
+        "النسبة $30\\%$ توافق $24$ كتاباً (يوم الإثنين). احسب $\\frac{12}{80} \\times 100$ ."
+      ],
+      "explanationAr": "نحسب أولاً التكرار الكلي من الأعمدة: $16 + 24 + 12 + 28 = 80$ كتاباً. التواتر ليوم الثلاثاء هو $\\frac{12}{80} = \\frac{3}{20} = 0.15$ ، أي $15\\%$ ."
+    },
+    {
+      "questionAr": "في سلسلة إحصائية تكرارها الكلي $90$ ، ما قيس الزاوية المركزية في **مخطط دائري** لفئة تكرارها $27$ ؟",
+      "options": [
+        "$54^\\circ$",
+        "$97.2^\\circ$",
+        "$108^\\circ$",
+        "$120^\\circ$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$54^\\circ$ هو قيس الزاوية في مخطط نصف دائري ( $180^\\circ$ )، أما السؤال فيطلب مخططاً دائرياً ( $360^\\circ$ ).",
+        "لم تحسب $\\frac{27}{90}$ بشكل صحيح؛ ضربت $0.27 \\times 360$ وكأن التكرار الكلي $100$ .",
+        "ممتاز! $\\frac{27}{90} \\times 360^\\circ = 0.3 \\times 360^\\circ = 108^\\circ$ .",
+        "$120^\\circ$ يوافق ثلث الدائرة (تكرار $30$ من $90$ ) وليس $27$ ."
+      ],
+      "explanationAr": "قيس الزاوية في المخطط الدائري هو $\\frac{27}{90} \\times 360^\\circ = 0.3 \\times 360^\\circ = 108^\\circ$ ."
+    },
+    {
+      "questionAr": "يمثل المخطط نصف الدائري المرفق توزيع $120$ مشاركاً في نادٍ علمي حسب التخصص. ما عدد المشاركين في تخصص **البرمجة**؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" width=\"460\" height=\"190\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"174\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><path d=\"M 220 156 L 110.0 156.0 A 110 110 0 0 1 186.0 51.4 Z\" fill=\"#2563eb\" stroke=\"#ffffff\" stroke-width=\"2\"/><path d=\"M 220 156 L 186.0 51.4 A 110 110 0 0 1 297.8 78.2 Z\" fill=\"#10b981\" stroke=\"#ffffff\" stroke-width=\"2\"/><path d=\"M 220 156 L 297.8 78.2 A 110 110 0 0 1 330.0 156.0 Z\" fill=\"#f59e0b\" stroke=\"#ffffff\" stroke-width=\"2\"/><text x=\"164\" y=\"122\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">72°</text><text x=\"236\" y=\"92\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">63°</text><text x=\"284\" y=\"132\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">45°</text><rect x=\"342\" y=\"48\" width=\"100\" height=\"28\" rx=\"6\" fill=\"#2563eb\"/><text x=\"392\" y=\"66\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"rtl\">البرمجة: 72°</text><rect x=\"342\" y=\"84\" width=\"100\" height=\"28\" rx=\"6\" fill=\"#10b981\"/><text x=\"392\" y=\"102\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"rtl\">الفلك: 63°</text><rect x=\"342\" y=\"120\" width=\"100\" height=\"28\" rx=\"6\" fill=\"#f59e0b\"/><text x=\"392\" y=\"138\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"rtl\">الروبوتيك: 45°</text></svg>",
+      "options": [
+        "$24$ مشاركاً",
+        "$42$ مشاركاً",
+        "$48$ مشاركاً",
+        "$72$ مشاركاً"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "انتبه: هذا مخطط نصف دائري مجموع زواياه $180^\\circ$ وليس $360^\\circ$ ! لا تقسم $72$ على $360$ .",
+        "هذا عدد المشاركين في تخصص الفلك ( $\\frac{63}{180} \\times 120 = 42$ ).",
+        "أحسنت! حسبت التواتر من $180^\\circ$ : $\\frac{72}{180} \\times 120 = 48$ مشاركاً.",
+        "$72^\\circ$ هو قيس الزاوية المركزية وليس عدد المشاركين."
+      ],
+      "explanationAr": "في المخطط نصف الدائري تقابل الزاوية الكلية $180^\\circ$ المجموع الكلي $120$ . إذن عدد المشاركين في البرمجة هو $\\frac{72}{180} \\times 120 = 0.4 \\times 120 = 48$ مشاركاً."
+    }
+  ]
+}

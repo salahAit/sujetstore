@@ -1,0 +1,123 @@
+{
+  "id": "lesson_2ap_t3_mass_and_bar_chart",
+  "slug": "lesson-2ap-t3-mass-and-bar-chart",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t3",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الرابع (الجزء الأول): التحضير لحفل نهاية السنة (الطرح بالاستعارة، الكتل والمرصوفة والتناظر)",
+  "order": 2,
+  "titleAr": "مقارنة وقياس الكتل والتمثيل البياني",
+  "objectives": [
+    "مقارنة كتل أشياء باستعمال الميزان ذي الكفتين والتعابير (أثقل من، أخف من، له نفس الكتلة)",
+    "قياس كتل باستعمال وحدات غير معتمدة ومقاربة وحدتي الغرام (g) والكيلوغرام (kg) على الميزان",
+    "قراءة تمثيل بياني بالأعمدة واستخراج معطيات عددية منه للإجابة عن أسئلة"
+  ],
+  "keywordsAr": [
+    "مقارنة الكتل",
+    "قياس الكتل",
+    "الميزان ذو الكفتين",
+    "التمثيل البياني",
+    "استخراج معطيات"
+  ],
+  "discover": {
+    "scenarioAr": "أحضر تلاميذ القسم مأكولات لحفل نهاية السنة، وقاموا بوزن بعضها على الميزان ذي الكفتين، ثم سجّلوا كتل المأكولات في تمثيل بياني بالأعمدة.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 245\" width=\"540\" height=\"245\"><rect width=\"540\" height=\"245\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(14,14)\"><rect width=\"252\" height=\"102\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"126\" y=\"18\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">الميزان 1: كتلة التفاحة</text><line x1=\"126\" y1=\"92\" x2=\"126\" y2=\"40\" stroke=\"#475569\" stroke-width=\"3\"/><rect x=\"106\" y=\"90\" width=\"40\" height=\"6\" rx=\"2\" fill=\"#334155\"/><line x1=\"56\" y1=\"45\" x2=\"196\" y2=\"45\" stroke=\"#0f172a\" stroke-width=\"3\"/><line x1=\"56\" y1=\"45\" x2=\"46\" y2=\"66\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"56\" y1=\"45\" x2=\"66\" y2=\"66\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"32\" y=\"66\" width=\"48\" height=\"6\" rx=\"2\" fill=\"#94a3b8\"/><circle cx=\"56\" cy=\"58\" r=\"9\" fill=\"#ef4444\"/><path d=\"M56 49 Q60 44 63 47\" stroke=\"#16a34a\" stroke-width=\"2\" fill=\"none\"/><line x1=\"196\" y1=\"45\" x2=\"186\" y2=\"66\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"196\" y1=\"45\" x2=\"206\" y2=\"66\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"164\" y=\"66\" width=\"64\" height=\"6\" rx=\"2\" fill=\"#94a3b8\"/><rect x=\"168\" y=\"50\" width=\"28\" height=\"16\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"182\" y=\"61\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"8\" font-weight=\"bold\" fill=\"#ffffff\">100 g</text><rect x=\"199\" y=\"52\" width=\"25\" height=\"14\" rx=\"3\" fill=\"#d97706\"/><text x=\"211\" y=\"62\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"8\" font-weight=\"bold\" fill=\"#ffffff\">50 g</text></g><g transform=\"translate(14,126)\"><rect width=\"252\" height=\"104\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"126\" y=\"18\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#d97706\">الميزان 2: مقارنة الكتل</text><line x1=\"126\" y1=\"96\" x2=\"126\" y2=\"46\" stroke=\"#475569\" stroke-width=\"3\"/><rect x=\"106\" y=\"92\" width=\"40\" height=\"6\" rx=\"2\" fill=\"#334155\"/><line x1=\"56\" y1=\"60\" x2=\"196\" y2=\"38\" stroke=\"#0f172a\" stroke-width=\"3\"/><rect x=\"28\" y=\"76\" width=\"56\" height=\"6\" rx=\"2\" fill=\"#94a3b8\"/><rect x=\"38\" y=\"54\" width=\"36\" height=\"22\" rx=\"4\" fill=\"#3b82f6\"/><text x=\"56\" y=\"68\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"9\" font-weight=\"bold\" fill=\"#ffffff\">طحين</text><rect x=\"168\" y=\"54\" width=\"56\" height=\"6\" rx=\"2\" fill=\"#94a3b8\"/><rect x=\"178\" y=\"34\" width=\"36\" height=\"20\" rx=\"4\" fill=\"#10b981\"/><text x=\"196\" y=\"47\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"9\" font-weight=\"bold\" fill=\"#ffffff\">سكر</text></g><g transform=\"translate(280,14)\"><rect width=\"246\" height=\"216\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"123\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">التمثيل البياني: الكتلة بـ (kg)</text><g stroke=\"#e2e8f0\" stroke-width=\"1\"><line x1=\"46\" y1=\"180\" x2=\"226\" y2=\"180\" stroke=\"#475569\" stroke-width=\"1.5\"/><line x1=\"46\" y1=\"154\" x2=\"226\" y2=\"154\"/><line x1=\"46\" y1=\"128\" x2=\"226\" y2=\"128\"/><line x1=\"46\" y1=\"102\" x2=\"226\" y2=\"102\"/><line x1=\"46\" y1=\"76\" x2=\"226\" y2=\"76\"/><line x1=\"46\" y1=\"50\" x2=\"226\" y2=\"50\"/></g><line x1=\"46\" y1=\"42\" x2=\"46\" y2=\"180\" stroke=\"#475569\" stroke-width=\"1.5\"/><g font-family=\"sans-serif\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\"><text x=\"40\" y=\"184\">0</text><text x=\"40\" y=\"158\">2</text><text x=\"40\" y=\"132\">4</text><text x=\"40\" y=\"106\">6</text><text x=\"40\" y=\"80\">8</text><text x=\"40\" y=\"54\">10</text></g><rect x=\"64\" y=\"128\" width=\"34\" height=\"52\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"81\" y=\"122\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#b45309\">4</text><text x=\"81\" y=\"198\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">كعك</text><rect x=\"118\" y=\"76\" width=\"34\" height=\"104\" rx=\"3\" fill=\"#3b82f6\"/><text x=\"135\" y=\"70\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">8</text><text x=\"135\" y=\"198\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">عصير</text><rect x=\"172\" y=\"102\" width=\"34\" height=\"78\" rx=\"3\" fill=\"#10b981\"/><text x=\"189\" y=\"96\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#047857\">6</text><text x=\"189\" y=\"198\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">تمر</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "انظر إلى الميزان 1: الكفتان متوازنتان! احسب كتلة التفاحة بالغرام ( $\\text{g}$ ) بجمع العيارين $100 + 50$ .",
+        "hintAr": "اجمع العددين المكتوبين على العيارين في الكفة اليمنى: $100 + 50$ .",
+        "expectedInput": "150",
+        "revealAr": "كتلة التفاحة تساوي $150 \\text{ g}$ لأن $100 + 50 = 150$ ."
+      },
+      {
+        "promptAr": "انظر إلى الميزان 2: كفة كيس الطحين نازلة إلى الأسفل وكفة السكر صاعدة. هل كيس الطحين أثقل أم أخف من السكر؟ (اكتب كلمة واحدة: أثقل أو أخف)",
+        "hintAr": "تذكر: الكفة التي تنزل إلى الأسفل تحمل الجسم الأثقل دائماً.",
+        "expectedInput": "أثقل",
+        "revealAr": "كيس الطحين **أثقل** من السكر لأن كفته نزلت إلى الأسفل."
+      },
+      {
+        "promptAr": "انظر إلى التمثيل البياني بالأعمدة: ما هي كتلة العصير بالكيلوغرام ( $\\text{kg}$ )؟",
+        "hintAr": "اقرأ الارتفاع الموافق للعمود الأزرق المكتوب تحته كلمة (عصير).",
+        "expectedInput": "8",
+        "revealAr": "العمود الأزرق الخاص بالعصير يصل إلى العدد $8$ ، إذن كتلة العصير هي $8 \\text{ kg}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "على الميزان ذي الكفتين: الكفة التي تنزل إلى الأسفل تحمل الجسم **الأثقل**، والكفة التي تصعد تحمل الجسم **الأخف**، وإذا تساوت الكفتان فلهما **نفس الكتلة**.",
+      "نقيس الكتل الصغيرة بالغرام ( $\\text{g}$ ) مثل التفاحة أو القلم، ونقيس الكتل الكبيرة بالكيلوغرام ( $\\text{kg}$ ) مثل كيس الطحين أو البطيخ.",
+      "لحساب كتلة جسم متوازن مع عيارات، نجمع قيم العيارات الموجودة في الكفة المقابلة.",
+      "في التمثيل البياني بالأعمدة، يمثل كل عمود معطى معيناً، ويساعدنا طول العمود على قراءة القيمة والمقارنة بسهولة."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 185\" width=\"500\" height=\"185\"><rect width=\"500\" height=\"185\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(18,16)\"><rect width=\"220\" height=\"152\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"110\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">وحدات الكتلة المألوفة</text><rect x=\"18\" y=\"36\" width=\"184\" height=\"46\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/><text x=\"110\" y=\"56\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">الغرام (g): للأجسام الخفيفة</text><text x=\"110\" y=\"74\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\">مثل: 20 g لقلم، 250 g لعلبة زبدة</text><rect x=\"18\" y=\"92\" width=\"184\" height=\"46\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#6ee7b7\"/><text x=\"110\" y=\"112\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\">الكيلوغرام (kg): للأجسام الثقيلة</text><text x=\"110\" y=\"130\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#334155\">مثل: 4 kg لبطيخة، 25 kg لكيس دقيق</text></g><g transform=\"translate(256,16)\"><rect width=\"226\" height=\"152\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"113\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">كيف نقرأ التمثيل بالأعمدة؟</text><line x1=\"38\" y1=\"122\" x2=\"206\" y2=\"122\" stroke=\"#475569\" stroke-width=\"1.5\"/><line x1=\"38\" y1=\"36\" x2=\"38\" y2=\"122\" stroke=\"#475569\" stroke-width=\"1.5\"/><line x1=\"38\" y1=\"96\" x2=\"206\" y2=\"96\" stroke=\"#e2e8f0\" stroke-dasharray=\"3,2\"/><line x1=\"38\" y1=\"70\" x2=\"206\" y2=\"70\" stroke=\"#e2e8f0\" stroke-dasharray=\"3,2\"/><line x1=\"38\" y1=\"44\" x2=\"206\" y2=\"44\" stroke=\"#e2e8f0\" stroke-dasharray=\"3,2\"/><text x=\"32\" y=\"125\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">0</text><text x=\"32\" y=\"99\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">3</text><text x=\"32\" y=\"73\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">6</text><text x=\"32\" y=\"47\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">9</text><rect x=\"58\" y=\"96\" width=\"28\" height=\"26\" rx=\"2\" fill=\"#3b82f6\"/><text x=\"72\" y=\"138\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#0f172a\">أ (3)</text><rect x=\"108\" y=\"44\" width=\"28\" height=\"78\" rx=\"2\" fill=\"#10b981\"/><text x=\"122\" y=\"138\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#0f172a\">ب (9)</text><rect x=\"158\" y=\"70\" width=\"28\" height=\"52\" rx=\"2\" fill=\"#f59e0b\"/><text x=\"172\" y=\"138\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#0f172a\">ج (6)</text></g></svg>",
+    "visualCaptionAr": "نختار الوحدة المناسبة ( $\\text{g}$ أو $\\text{kg}$ ) لكتلة كل جسم، ونقرأ القيم من قمة كل عمود في التمثيل البياني.",
+    "examples": [
+      {
+        "problemAr": "توازنت علبة حلوى مع عيارين: $500 \\text{ g}$ و $200 \\text{ g}$ . ما هي كتلة العلبة؟",
+        "solutionAr": "نجمع العيارين: $500 + 200 = 700 \\text{ g}$ ."
+      },
+      {
+        "problemAr": "في التمثيل البياني: التفاح $6 \\text{ kg}$ والبرتقال $4 \\text{ kg}$ . ما هي كتلة الفاكهتين معاً؟",
+        "solutionAr": "نجمع الكتلتين: $6 + 4 = 10 \\text{ kg}$ ."
+      }
+    ],
+    "watchOutAr": "انتبه! لا تخلط بين وحدتي الغرام ( $\\text{g}$ ) والكيلوغرام ( $\\text{kg}$ ) ؛ فقطعة الحلوى نقيسها بالغرام، أما حقيبة السفر الكبيرة فنقيسها بالكيلوغرام."
+  },
+  "practice": [
+    {
+      "questionAr": "انظر إلى الميزان المتوازن في الشكل: ما هي كتلة الأناناس؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 150\" width=\"360\" height=\"150\"><rect width=\"360\" height=\"150\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><line x1=\"180\" y1=\"134\" x2=\"180\" y2=\"44\" stroke=\"#475569\" stroke-width=\"4\"/><rect x=\"150\" y=\"128\" width=\"60\" height=\"8\" rx=\"3\" fill=\"#334155\"/><line x1=\"74\" y1=\"50\" x2=\"286\" y2=\"50\" stroke=\"#0f172a\" stroke-width=\"3.5\"/><line x1=\"74\" y1=\"50\" x2=\"56\" y2=\"86\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"74\" y1=\"50\" x2=\"92\" y2=\"86\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"42\" y=\"86\" width=\"64\" height=\"7\" rx=\"2\" fill=\"#64748b\"/><ellipse cx=\"74\" cy=\"71\" rx=\"14\" ry=\"15\" fill=\"#eab308\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><path d=\"M68 56 L74 44 L80 56 Z\" fill=\"#16a34a\"/><line x1=\"286\" y1=\"50\" x2=\"260\" y2=\"86\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"286\" y1=\"50\" x2=\"312\" y2=\"86\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"232\" y=\"86\" width=\"108\" height=\"7\" rx=\"2\" fill=\"#64748b\"/><rect x=\"236\" y=\"66\" width=\"36\" height=\"20\" rx=\"3\" fill=\"#2563eb\"/><text x=\"254\" y=\"79\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"9\" font-weight=\"bold\" fill=\"#ffffff\">500 g</text><rect x=\"276\" y=\"68\" width=\"32\" height=\"18\" rx=\"3\" fill=\"#059669\"/><text x=\"292\" y=\"80\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"8.5\" font-weight=\"bold\" fill=\"#ffffff\">200 g</text><rect x=\"311\" y=\"70\" width=\"28\" height=\"16\" rx=\"3\" fill=\"#d97706\"/><text x=\"325\" y=\"81\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"8\" font-weight=\"bold\" fill=\"#ffffff\">100 g</text></svg>",
+      "options": [
+        "$700 \\text{ g}$",
+        "$800 \\text{ g}$",
+        "$800 \\text{ kg}$",
+        "$600 \\text{ g}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "جمعت $500 + 200$ فقط ونسيت العيار الثالث ( $100 \\text{ g}$ )!",
+        "أحسنت! جمعت العيارات الثلاثة: $500 + 200 + 100 = 800 \\text{ g}$ .",
+        "العدد $800$ صحيح، لكنك أخطأت في الوحدة! العيارات مكتوبة بالغرام ( $\\text{g}$ ) وليس بالكيلوغرام ( $\\text{kg}$ ).",
+        "راجع عملية الجمع: $500 + 200 + 100 = 800$ وليس $600$ ."
+      ],
+      "explanationAr": "نجمع جميع العيارات الموجودة على الكفة اليمنى: $500 + 200 + 100 = 800 \\text{ g}$ . إذن كتلة الأناناس تساوي $800 \\text{ g}$ ."
+    },
+    {
+      "questionAr": "ما هي الكتلة المناسبة لكتاب الرياضيات المدرسي؟",
+      "options": [
+        "$350 \\text{ g}$",
+        "$350 \\text{ kg}$",
+        "$3 \\text{ g}$",
+        "$50 \\text{ kg}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! كتاب الرياضيات خفيف نسبياً لذا نقيسه بالغرام، وكتلته حوالي $350 \\text{ g}$ .",
+        "انتبه للوحدة! $350 \\text{ kg}$ كتلة ثقيلة جداً (ككتلة سيارة صغيرة)، والكتاب أخف من الكيلوغرام الواحد.",
+        "$3 \\text{ g}$ خفيفة جداً مثل مشبك ورق أو ريشة، أما الكتاب فأثقل من ذلك.",
+        "$50 \\text{ kg}$ كتلة ثقيلة جداً (ككتلة شخص بالغ أو كيسين كبيرين من الدقيق)، ولا يمكن أن تكون كتلة كتاب."
+      ],
+      "explanationAr": "الكتاب المدرسي خفيف وأقل من $1 \\text{ kg}$ ، لذلك نقيسه بالغرام ( $\\text{g}$ ). التقدير المنطقي لكتلته هو $350 \\text{ g}$ ."
+    },
+    {
+      "questionAr": "يوضح التمثيل البياني عدد قارورات العصير التي أحضرها كل قسم للحفل. ما هو الفرق بين عدد قارورات القسم ب والقسم د؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 185\" width=\"360\" height=\"185\"><rect width=\"360\" height=\"185\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><line x1=\"44\" y1=\"150\" x2=\"336\" y2=\"150\" stroke=\"#475569\" stroke-width=\"1.5\"/><line x1=\"44\" y1=\"24\" x2=\"44\" y2=\"150\" stroke=\"#475569\" stroke-width=\"1.5\"/><g stroke=\"#e2e8f0\" stroke-width=\"1\"><line x1=\"44\" y1=\"120\" x2=\"336\" y2=\"120\"/><line x1=\"44\" y1=\"90\" x2=\"336\" y2=\"90\"/><line x1=\"44\" y1=\"60\" x2=\"336\" y2=\"60\"/><line x1=\"44\" y1=\"30\" x2=\"336\" y2=\"30\"/></g><g font-family=\"sans-serif\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\"><text x=\"38\" y=\"154\">0</text><text x=\"38\" y=\"124\">5</text><text x=\"38\" y=\"94\">10</text><text x=\"38\" y=\"64\">15</text><text x=\"38\" y=\"34\">20</text></g><rect x=\"68\" y=\"78\" width=\"36\" height=\"72\" rx=\"3\" fill=\"#3b82f6\"/><text x=\"86\" y=\"72\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">12</text><text x=\"86\" y=\"168\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">القسم أ</text><rect x=\"136\" y=\"42\" width=\"36\" height=\"108\" rx=\"3\" fill=\"#10b981\"/><text x=\"154\" y=\"36\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">18</text><text x=\"154\" y=\"168\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">القسم ب</text><rect x=\"204\" y=\"60\" width=\"36\" height=\"90\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"222\" y=\"54\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">15</text><text x=\"222\" y=\"168\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">القسم ج</text><rect x=\"272\" y=\"96\" width=\"36\" height=\"54\" rx=\"3\" fill=\"#8b5cf6\"/><text x=\"290\" y=\"90\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#6d28d9\">9</text><text x=\"290\" y=\"168\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">القسم د</text></svg>",
+      "options": [
+        "$27$",
+        "$18$",
+        "$9$",
+        "$6$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "قمت بجمع $18 + 9 = 27$ ! المطلوب هو «الفرق»، ونستعمل الطرح لإيجاد الفرق.",
+        "هذا هو عدد قارورات القسم ب فقط ( $18$ ). يجب أن تطرح منه عدد قارورات القسم د ( $9$ ).",
+        "أحسنت! قرأت القيمتين بدقة وحسبت الفرق: $18 - 9 = 9$ قارورات.",
+        "حسبت الفرق بين القسم ج والقسم د ( $15 - 9 = 6$ ). انتبه لأن السؤال يطلب القسم ب والقسم د."
+      ],
+      "explanationAr": "عدد قارورات القسم ب هو $18$ ، وعدد قارورات القسم د هو $9$ . لإيجاد الفرق نطرح: $18 - 9 = 9$ قارورات."
+    }
+  ]
+}

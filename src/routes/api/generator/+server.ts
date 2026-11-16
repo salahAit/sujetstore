@@ -3,6 +3,12 @@ import type { RequestHandler } from './$types';
 import { contentSqlite } from '#lib/server/db';
 import { checkRateLimit } from '#lib/server/rate-limit';
 import { compileTypstPdf } from '#lib/server/typst';
+import {
+	assembleExam,
+	compileAssembledExamPdf,
+	yearSubjectToGrade,
+	type AssembleExamOptions
+} from '#lib/server/exam-assembler';
 import { gradeQuizSubmission } from '#lib/server/quiz-grading';
 import { awardQuizGamification } from '#lib/server/gamification';
 import { getOrCreateFingerprint } from '#lib/server/auth';
@@ -205,6 +211,60 @@ export const POST: RequestHandler = async (event) => {
 	}
 
 	if (mode === 'pdf') {
+		const pipelineGrade = yearSubjectToGrade(ys.year_id, ys.subject_id);
+		if (pipelineGrade !== null) {
+			const trimesterId = (['t1', 't2', 't3'].includes(body.trimesterId)
+				? body.trimesterId
+				: 't1') as 't1' | 't2' | 't3';
+			const docType = pipelineGrade === '2am' && body.docType === 'test' ? 'test' : 'exam';
+			const difficulty = (['easy', 'medium', 'hard'].includes(body.difficulty)
+				? body.difficulty
+				: 'medium') as 'easy' | 'medium' | 'hard';
+			const variant = (
+				['trimester_exam', 'supervised_test', 'cinq_mock', 'competency_eval'].includes(body.variant)
+					? body.variant
+					: undefined
+			) as AssembleExamOptions['variant'];
+			const rawSeed = typeof body.seed === 'boolean' ? NaN : Number(body.seed);
+			const seed =
+				Number.isInteger(rawSeed) && rawSeed > 0
+					? rawSeed
+					: Math.floor(Math.random() * 90000) + 10000;
+
+			const paper = assembleExam({
+				grade: pipelineGrade,
+				trimesterId,
+				seed,
+				docType,
+				variant,
+				difficulty
+			});
+
+			const fileId = `gen-${randomUUID().slice(0, 12)}`;
+			const subjectOutPath = resolve('data/uploads/sujet', `${fileId}.pdf`);
+			const solutionOutPath = resolve('data/uploads/sujet', `${fileId}-sol.pdf`);
+
+			const { subjectResult, solutionResult } = await compileAssembledExamPdf(paper, {
+				subjectOutPath,
+				solutionOutPath
+			});
+
+			if (!subjectResult.success) {
+				return json({ error: `تعذر توليد ملف PDF: ${subjectResult.error}` }, { status: 500 });
+			}
+
+			return json({
+				success: true,
+				title: `${paper.docType === 'test' ? 'فرض' : 'اختبار'} مقترح — ${ys.year_name} (${ys.subject_name}) [البذرة #${seed}]`,
+				seed,
+				totalPoints: paper.totalPoints,
+				pdfUrl: `/uploads/sujet/${fileId}.pdf`,
+				solutionUrl: solutionResult.success
+					? `/uploads/sujet/${fileId}-sol.pdf`
+					: `/uploads/sujet/${fileId}.pdf`
+			});
+		}
+
 		const trimesterId = ['t1', 't2', 't3'].includes(body.trimesterId) ? body.trimesterId : 't1';
 		const docType = body.docType === 'test' ? 'test' : 'exam';
 		const exerciseCount = Math.min(4, Math.max(1, Number(body.exerciseCount || 2)));

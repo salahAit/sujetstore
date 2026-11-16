@@ -1,0 +1,122 @@
+{
+  "id": "lesson_5ap_t1_lengths_metric_conversions",
+  "slug": "5ap-t1-lengths-metric-conversions",
+  "grade": "5ap",
+  "yearSubjectId": 606,
+  "trimesterId": "t1",
+  "sequenceId": "seq_5ap_1",
+  "sequenceTitleAr": "المقطع التعلمي الأول: الأعداد الكبيرة، العمليات عليها، الهندسة الأساسية والأطوال",
+  "order": 5,
+  "titleAr": "قياس الأطوال والتحويل بين وحدات الطول المترية",
+  "objectives": [
+    "اختيار الأداة والوحدة المناسبة لقياس أو تقدير طول أو مسافة.",
+    "استعمال جدول الأطوال للتحويل بين المتر وأجزائه ومضاعفاته (`km` و `hm` و `dam` و `m` و `dm` و `cm` و `mm`).",
+    "توحيد الوحدة قبل مقارنة أطوال أو جمعها أو طرحها، والتعبير عن قياس طول بعدد طبيعي أو كسر أو عدد عشري."
+  ],
+  "keywordsAr": [
+    "الأطوال",
+    "المتر",
+    "الكيلومتر",
+    "السنتيمتر",
+    "المليمتر",
+    "جدول التحويلات"
+  ],
+  "discover": {
+    "scenarioAr": "في منافسة الجري الريفي للمدارس، يبلغ طول المسلك الأول $2\\text{ km } 350\\text{ m}$ ، ويبلغ طول المسلك الثاني $2\\,400\\text{ m}$ . نريد معرفة أي المسلكين أطول وما الفرق بينهما باستعمال جدول الأطوال.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 118\" width=\"560\" height=\"118\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><g font-size=\"14\" font-weight=\"bold\"><rect x=\"35\" y=\"14\" width=\"70\" height=\"34\" fill=\"#dbeafe\" stroke=\"#64748b\"/><text x=\"70\" y=\"36\" text-anchor=\"middle\" fill=\"#1e3a8a\">km</text><rect x=\"105\" y=\"14\" width=\"70\" height=\"34\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><text x=\"140\" y=\"36\" text-anchor=\"middle\" fill=\"#334155\">hm</text><rect x=\"175\" y=\"14\" width=\"70\" height=\"34\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><text x=\"210\" y=\"36\" text-anchor=\"middle\" fill=\"#334155\">dam</text><rect x=\"245\" y=\"14\" width=\"70\" height=\"34\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.6\"/><text x=\"280\" y=\"36\" text-anchor=\"middle\" fill=\"#14532d\">m</text><rect x=\"315\" y=\"14\" width=\"70\" height=\"34\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"350\" y=\"36\" text-anchor=\"middle\" fill=\"#475569\">dm</text><rect x=\"385\" y=\"14\" width=\"70\" height=\"34\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"420\" y=\"36\" text-anchor=\"middle\" fill=\"#475569\">cm</text><rect x=\"455\" y=\"14\" width=\"70\" height=\"34\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"490\" y=\"36\" text-anchor=\"middle\" fill=\"#475569\">mm</text></g><g font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"35\" y=\"48\" width=\"70\" height=\"42\" fill=\"#ffffff\" stroke=\"#64748b\"/><text x=\"70\" y=\"76\" text-anchor=\"middle\" fill=\"#1d4ed8\">2</text><rect x=\"105\" y=\"48\" width=\"70\" height=\"42\" fill=\"#ffffff\" stroke=\"#64748b\"/><text x=\"140\" y=\"76\" text-anchor=\"middle\">3</text><rect x=\"175\" y=\"48\" width=\"70\" height=\"42\" fill=\"#ffffff\" stroke=\"#64748b\"/><text x=\"210\" y=\"76\" text-anchor=\"middle\">5</text><rect x=\"245\" y=\"48\" width=\"70\" height=\"42\" fill=\"#f0fdf4\" stroke=\"#15803d\" stroke-width=\"1.6\"/><text x=\"280\" y=\"76\" text-anchor=\"middle\" fill=\"#15803d\">0</text><rect x=\"315\" y=\"48\" width=\"70\" height=\"42\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"385\" y=\"48\" width=\"70\" height=\"42\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"455\" y=\"48\" width=\"70\" height=\"42\" fill=\"#ffffff\" stroke=\"#64748b\"/></g><text x=\"280\" y=\"110\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">2 km 350 m</text></svg>",
+    "steps": [
+      {
+        "promptAr": "باستعمال جدول الأطوال، حول طول المسلك الأول $2\\text{ km } 350\\text{ m}$ إلى المتر (`m`) (اكتب العدد بالأرقام فقط بدون وحدة وبدون فراغات).",
+        "hintAr": "ضع $2$ في خانة `km` ، و $350$ بحيث يكون رقم الآحاد $0$ في خانة `m` .",
+        "expectedInput": "2350",
+        "revealAr": "$2\\text{ km } 350\\text{ m} = 2\\,000\\text{ m} + 350\\text{ m} = 2\\,350\\text{ m}$ ."
+      },
+      {
+        "promptAr": "الآن بعد توحيد الوحدة إلى المتر، أي المسلكين أطول؟ وما الفرق بينهما بالمتر (اكتب الفرق بالأرقام فقط)؟",
+        "hintAr": "قارن $2\\,400\\text{ m}$ و $2\\,350\\text{ m}$ ثم اطرح الأصغر من الأكبر.",
+        "expectedInput": "50",
+        "revealAr": "$2\\,400\\text{ m} > 2\\,350\\text{ m}$ ، إذن المسلك الثاني أطول، والفرق بينهما هو $2\\,400 - 2\\,350 = 50\\text{ m}$ ."
+      },
+      {
+        "promptAr": "عبر عن هذا الفرق ( $50\\text{ m}$ ) بوحدة السنتيمتر (`cm`) (اكتب العدد بالأرقام بدون فراغات).",
+        "hintAr": "كل $1\\text{ m} = 100\\text{ cm}$ ، أضف صفرين في خانتي `dm` و `cm` .",
+        "expectedInput": "5000",
+        "revealAr": "$50\\text{ m} = 5\\,000\\text{ cm}$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "الوحدة الأساسية لقياس الأطوال هي **المتر** (`m`). مضاعفاته هي: الكيلومتر (`km`)، الهكتومتر (`hm`)، الديكامتر (`dam`). وأجزاؤه هي: الديسمتر (`dm`)، السنتيمتر (`cm`)، المليمتر (`mm`).",
+      "للتحويل باستعمال **جدول الأطوال**: نكتب رقم واحد في كل خانة بدءا بوضع رقم آحاد العدد في خانة الوحدة المعطاة، ثم نكمل بالأصفار نحو اليمين أو نضع الفاصلة عند الوحدة المطلوبة.",
+      "**قاعدة ذهبية**: لا نجمع ولا نطرح ولا نقارن أطوالا مكتوبة بوحدات مختلفة إلا بعد **تحويلها إلى الوحدة نفسها**.",
+      "علاقات أساسية للحفظ: $1\\text{ km} = 1\\,000\\text{ m}$ ، $1\\text{ m} = 100\\text{ cm} = 1\\,000\\text{ mm}$ ، $1\\text{ cm} = 10\\text{ mm}$ ، ونصف المتر $\\frac{1}{2}\\text{ m} = 50\\text{ cm} = 0.5\\text{ m}$ ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 580 185\" width=\"580\" height=\"185\" style=\"background:#ffffff;font-family:Tahoma,Arial,sans-serif\"><g font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\"><text x=\"115\" y=\"24\" text-anchor=\"middle\">×10</text><text x=\"185\" y=\"24\" text-anchor=\"middle\">×10</text><text x=\"255\" y=\"24\" text-anchor=\"middle\">×10</text><text x=\"325\" y=\"24\" text-anchor=\"middle\">×10</text><text x=\"395\" y=\"24\" text-anchor=\"middle\">×10</text><text x=\"465\" y=\"24\" text-anchor=\"middle\">×10</text></g><g font-size=\"14\" font-weight=\"bold\"><rect x=\"45\" y=\"34\" width=\"70\" height=\"34\" fill=\"#dbeafe\" stroke=\"#64748b\"/><text x=\"80\" y=\"56\" text-anchor=\"middle\" fill=\"#1e3a8a\">km</text><rect x=\"115\" y=\"34\" width=\"70\" height=\"34\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><text x=\"150\" y=\"56\" text-anchor=\"middle\" fill=\"#334155\">hm</text><rect x=\"185\" y=\"34\" width=\"70\" height=\"34\" fill=\"#f1f5f9\" stroke=\"#64748b\"/><text x=\"220\" y=\"56\" text-anchor=\"middle\" fill=\"#334155\">dam</text><rect x=\"255\" y=\"34\" width=\"70\" height=\"34\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.6\"/><text x=\"290\" y=\"56\" text-anchor=\"middle\" fill=\"#14532d\">m</text><rect x=\"325\" y=\"34\" width=\"70\" height=\"34\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"360\" y=\"56\" text-anchor=\"middle\" fill=\"#475569\">dm</text><rect x=\"395\" y=\"34\" width=\"70\" height=\"34\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"430\" y=\"56\" text-anchor=\"middle\" fill=\"#475569\">cm</text><rect x=\"465\" y=\"34\" width=\"70\" height=\"34\" fill=\"#f8fafc\" stroke=\"#64748b\"/><text x=\"500\" y=\"56\" text-anchor=\"middle\" fill=\"#475569\">mm</text></g><g font-size=\"19\" font-weight=\"bold\" fill=\"#0f172a\"><rect x=\"45\" y=\"68\" width=\"70\" height=\"38\" fill=\"#ffffff\" stroke=\"#64748b\"/><text x=\"80\" y=\"94\" text-anchor=\"middle\">4</text><rect x=\"115\" y=\"68\" width=\"70\" height=\"38\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"150\" y=\"94\" text-anchor=\"middle\" fill=\"#b45309\">0</text><rect x=\"185\" y=\"68\" width=\"70\" height=\"38\" fill=\"#ffffff\" stroke=\"#64748b\"/><text x=\"220\" y=\"94\" text-anchor=\"middle\">5</text><rect x=\"255\" y=\"68\" width=\"70\" height=\"38\" fill=\"#f0fdf4\" stroke=\"#15803d\"/><text x=\"290\" y=\"94\" text-anchor=\"middle\" fill=\"#15803d\">0</text><rect x=\"325\" y=\"68\" width=\"70\" height=\"38\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"395\" y=\"68\" width=\"70\" height=\"38\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"465\" y=\"68\" width=\"70\" height=\"38\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"45\" y=\"106\" width=\"70\" height=\"38\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"115\" y=\"106\" width=\"70\" height=\"38\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"185\" y=\"106\" width=\"70\" height=\"38\" fill=\"#ffffff\" stroke=\"#64748b\"/><rect x=\"255\" y=\"106\" width=\"70\" height=\"38\" fill=\"#f0fdf4\" stroke=\"#15803d\"/><text x=\"290\" y=\"132\" text-anchor=\"middle\">3</text><rect x=\"325\" y=\"106\" width=\"70\" height=\"38\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"360\" y=\"132\" text-anchor=\"middle\" fill=\"#b45309\">0</text><rect x=\"395\" y=\"106\" width=\"70\" height=\"38\" fill=\"#eff6ff\" stroke=\"#1d4ed8\"/><text x=\"430\" y=\"132\" text-anchor=\"middle\" fill=\"#1d4ed8\">8</text><rect x=\"465\" y=\"106\" width=\"70\" height=\"38\" fill=\"#ffffff\" stroke=\"#64748b\"/></g><text x=\"165\" y=\"168\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">4 km 50 m = 4 050 m</text><text x=\"415\" y=\"168\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">3 m 8 cm = 308 cm</text></svg>",
+    "visualCaptionAr": "جدول وحدات الطول المترية يوضح ملء الخانات الخالية بالأصفار عند التحويل.",
+    "examples": [
+      {
+        "problemAr": "احسب بالمتر: $3\\text{ km} + 45\\text{ dam} + 600\\text{ cm}$ .",
+        "solutionAr": "نحول جميع الأطوال إلى المتر: $3\\text{ km} = 3\\,000\\text{ m}$ ، $45\\text{ dam} = 450\\text{ m}$ ، $600\\text{ cm} = 6\\text{ m}$ . ثم نجمع: $3\\,000 + 450 + 6 = 3\\,456\\text{ m}$ ."
+      },
+      {
+        "problemAr": "رتب الأطوال التالية تصاعديا: $1\\,200\\text{ mm}$ ، $15\\text{ dm}$ ، $1\\text{ m } 5\\text{ cm}$ .",
+        "solutionAr": "نحول الكل إلى السنتيمتر ( `cm` ): $1\\,200\\text{ mm} = 120\\text{ cm}$ ، $15\\text{ dm} = 150\\text{ cm}$ ، $1\\text{ m } 5\\text{ cm} = 105\\text{ cm}$ . الترتيب التصاعدي: $1\\text{ m } 5\\text{ cm} < 1\\,200\\text{ mm} < 15\\text{ dm}$ ."
+      }
+    ],
+    "watchOutAr": "عند تحويل مثل $4\\text{ m } 5\\text{ cm}$ إلى السنتيمتر، لا تنس الخانة الفارغة للديسمتر ( `dm` ) فتكتب $45\\text{ cm}$ خطأً! بل نضع $0$ في خانة `dm` فتصبح $405\\text{ cm}$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "ما هو التحويل الصحيح للطول $3\\text{ km } 7\\text{ dam}$ إلى المتر ( `m` )؟",
+      "options": [
+        "$370\\text{ m}$",
+        "$3\\,070\\text{ m}$",
+        "$3\\,700\\text{ m}$",
+        "$30\\,700\\text{ m}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "نسيت خانة الهكتومتر ( `hm` ) الفارغة بين `km` و `dam` ، فأهملت الصفر الفاصل بين $3$ و $7$ .",
+        "أحسنت! نضع $3$ في `km` و $0$ في `hm` و $7$ في `dam` و $0$ في `m` فنحصل على $3\\,070\\text{ m}$ .",
+        "وضعت $7$ في خانة `hm` بدل `dam` ؛ تذكر أن $1\\text{ dam} = 10\\text{ m}$ وليس $100\\text{ m}$ .",
+        "أضفت صفرا زائدا على اليمين (قرأت حتى خانة `dm` بدل التوقف عند `m` )."
+      ],
+      "explanationAr": "في جدول الأطوال: $3$ في خانة `km` ، $0$ في خانة `hm` ، $7$ في خانة `dam` ، و $0$ في خانة `m` . إذن $3\\text{ km } 7\\text{ dam} = 3\\,070\\text{ m}$ ."
+    },
+    {
+      "questionAr": "طول قطعة قماش $4\\text{ m } 20\\text{ cm}$ ، قص منها الخياط $15\\text{ dm}$ . كم سنتيمترا ( `cm` ) بقي من القماش؟",
+      "options": [
+        "$405\\text{ cm}$",
+        "$270\\text{ cm}$",
+        "$370\\text{ cm}$",
+        "$27\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "طرحت $15$ من $420$ مباشرة دون تحويل $15\\text{ dm}$ إلى السنتيمتر ( $150\\text{ cm}$ )!",
+        "أحسنت! $4\\text{ m } 20\\text{ cm} = 420\\text{ cm}$ و $15\\text{ dm} = 150\\text{ cm}$ ، والباقي $420 - 150 = 270\\text{ cm}$ .",
+        "تحقق من الاستعارة في المئات عند حساب $420 - 150$ : بعد استعارة $1$ من $4$ تصبح $3 - 1 = 2$ وليس $3$ .",
+        "العدد $27$ يمثل الباقي بوحدة الديسمتر ( $27\\text{ dm}$ ) وليس السنتيمتر المطلوبة في السؤال."
+      ],
+      "explanationAr": "نوحد الوحدة إلى السنتيمتر أولا: $4\\text{ m } 20\\text{ cm} = 420\\text{ cm}$ ، و $15\\text{ dm} = 150\\text{ cm}$ . ثم نطرح: $420 - 150 = 270\\text{ cm}$ ."
+    },
+    {
+      "questionAr": "طول شريط هو $\\frac{3}{4}\\text{ m}$ . كم يساوي طوله بالسنتيمتر ( `cm` )؟",
+      "options": [
+        "$25\\text{ cm}$",
+        "$50\\text{ cm}$",
+        "$75\\text{ cm}$",
+        "$34\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "العدد $25\\text{ cm}$ يمثل ربع متر واحد ( $\\frac{1}{4}\\text{ m}$ ) وليس ثلاثة أرباع المتر.",
+        "العدد $50\\text{ cm}$ يمثل نصف متر ( $\\frac{1}{2}\\text{ m}$ ) وليس ثلاثة أرباع المتر.",
+        "أحسنت! بما أن $1\\text{ m} = 100\\text{ cm}$ فإن ربع متر يساوي $25\\text{ cm}$ ، وثلاثة أرباع المتر تساوي $25 \\times 3 = 75\\text{ cm}$ .",
+        "الكسر $\\frac{3}{4}$ لا يعني وضع الرقمين $3$ و $4$ بجانب بعضهما لتكوين $34$ !"
+      ],
+      "explanationAr": "نعلم أن $1\\text{ m} = 100\\text{ cm}$ . نقسم $100$ على $4$ لنجد الربع: $25\\text{ cm}$ ، ثم نأخذ $3$ أرباع: $25 \\times 3 = 75\\text{ cm}$ ."
+    }
+  ]
+}

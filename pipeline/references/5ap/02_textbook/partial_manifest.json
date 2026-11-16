@@ -1,0 +1,47 @@
+{
+  "documents": [
+    {
+      "id": "5ap_onps_math_textbook_gen2",
+      "grade": "5ap",
+      "title_ar": "الكتاب المدرسي الرسمي لمادة الرياضيات - السنة الخامسة ابتدائي (الديوان الوطني للمطبوعات المدرسية - الجيل الثاني)",
+      "category": "textbook",
+      "year": "2019-2020",
+      "generation": "gen2",
+      "local_path": "pipeline/references/5ap/02_textbook/5ap_math_textbook_onps_gen2.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2015/02/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D9%84%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AE%D8%A7%D9%85%D8%B3%D8%A9-%D8%A5%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%A7%D9%84%D8%AC%D9%8A%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A.pdf",
+      "pages_count": 113,
+      "extraction_mode": "scanned_ocr",
+      "sha256": "cfbeb6dd10ccefe21629f3bf124785d25f1eb4fadace781bb9440c6a69649472",
+      "size_bytes": 20013326
+    },
+    {
+      "id": "5ap_onps_math_workbook_gen2",
+      "grade": "5ap",
+      "title_ar": "كراس نشاطات الرياضيات - السنة الخامسة ابتدائي (الديوان الوطني للمطبوعات المدرسية - الجيل الثاني)",
+      "category": "workbook",
+      "year": "2019-2020",
+      "generation": "gen2",
+      "local_path": "pipeline/references/5ap/02_textbook/5ap_math_workbook_onps_gen2.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2015/02/%D9%83%D8%B1%D8%A7%D8%B3-%D8%A7%D9%84%D9%86%D8%B4%D8%A7%D8%B7%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D9%84%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AE%D8%A7%D9%85%D8%B3%D8%A9-%D8%A5%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%A7%D9%84%D8%AC%D9%8A%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A.pdf",
+      "pages_count": 80,
+      "extraction_mode": "scanned_ocr",
+      "sha256": "c3b20d3affa89196147335838f9c07b58c65f8863e15855cddb50702da2058ce",
+      "size_bytes": 11241856
+    },
+    {
+      "id": "5ap_onps_math_teacher_guide_gen2",
+      "grade": "5ap",
+      "title_ar": "دليل استخدام كتاب الرياضيات - السنة الخامسة ابتدائي (الديوان الوطني للمطبوعات المدرسية - الجيل الثاني)",
+      "category": "teacher_guide",
+      "year": "2019-2020",
+      "generation": "gen2",
+      "local_path": "pipeline/references/5ap/02_textbook/5ap_math_teacher_guide_onps_gen2.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=12HL-hijb6JUZh5nYnI4QkmQNx60n6AWk",
+      "pages_count": 142,
+      "extraction_mode": "digital_text",
+      "sha256": "e4f92a2b1318eb5ec56d4c80535fe8aaf9d53d8dbdf0b9bffcec63dadda210eb",
+      "size_bytes": 12926434
+    }
+  ],
+  "missing_references": []
+}

@@ -1,0 +1,130 @@
+{
+  "id": "lesson_5ap_t3_solid_geometry_cube_prism",
+  "slug": "5ap-t3-solid-geometry-cube-prism",
+  "grade": "5ap",
+  "yearSubjectId": 606,
+  "trimesterId": "t3",
+  "sequenceId": "seq_5ap_4",
+  "sequenceTitleAr": "المقطع التعلمي الرابع: المجسمات، إنشاء الأشكال، المقياس، السعات والمدد والسرعة المنتظمة",
+  "order": 5,
+  "titleAr": "المجسمات (1) و(2): المكعب ومتوازي المستطيلات ونشرهما وتصميمهما",
+  "objectives": [
+    "التعرف على المجسمات المألوفة وتمييز المتدحرجة منها عن غير المتدحرجة.",
+    "وصف المكعب ومتوازي المستطيلات بتحديد عدد الأوجه والرؤوس والأحرف وطبيعة الأوجه.",
+    "تمييز النشر (التصميم) الصحيح للمكعب ومتوازي المستطيلات من الخاطئ وإتمامه.",
+    "عد المكعبات الصغيرة في رصف ثلاثي الأبعاد بسيط وحساب مجموع أطوال الأحرف."
+  ],
+  "keywordsAr": [
+    "المجسمات",
+    "المكعب",
+    "متوازي المستطيلات",
+    "الوجه",
+    "الرأس",
+    "الحرف",
+    "النشر والتصميم"
+  ],
+  "discover": {
+    "scenarioAr": "يريد عبد الله صنع علبة هدايا على شكل **مكعب** طول حرفه $4\\text{ cm}$ باستعمال الورق المقوى. قصّ العلبة على طول حوافها وفتحها على الطاولة لدراسة نشرها (تصميمها).",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 174\" width=\"430\" height=\"174\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><polygon points=\"36,54 88,54 88,106 36,106\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><polygon points=\"36,54 60,34 112,34 88,54\" fill=\"#93c5fd\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><polygon points=\"88,54 112,34 112,86 88,106\" fill=\"#60a5fa\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"60\" y1=\"34\" x2=\"60\" y2=\"86\" stroke=\"#1d4ed8\" stroke-dasharray=\"3 3\" stroke-width=\"1.3\"/><line x1=\"36\" y1=\"106\" x2=\"60\" y2=\"86\" stroke=\"#1d4ed8\" stroke-dasharray=\"3 3\" stroke-width=\"1.3\"/><line x1=\"60\" y1=\"86\" x2=\"112\" y2=\"86\" stroke=\"#1d4ed8\" stroke-dasharray=\"3 3\" stroke-width=\"1.3\"/><circle cx=\"88\" cy=\"54\" r=\"3.8\" fill=\"#dc2626\"/><text x=\"74\" y=\"128\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">مكعب (4 cm)</text><line x1=\"126\" y1=\"72\" x2=\"162\" y2=\"72\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><polygon points=\"168,72 158,67 158,77\" fill=\"#0f172a\"/><text x=\"146\" y=\"62\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">نشر</text><rect x=\"206\" y=\"20\" width=\"24\" height=\"24\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.6\"/><rect x=\"182\" y=\"44\" width=\"24\" height=\"24\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.6\"/><rect x=\"206\" y=\"44\" width=\"24\" height=\"24\" fill=\"#86efac\" stroke=\"#15803d\" stroke-width=\"1.6\"/><rect x=\"230\" y=\"44\" width=\"24\" height=\"24\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.6\"/><rect x=\"206\" y=\"68\" width=\"24\" height=\"24\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.6\"/><rect x=\"206\" y=\"92\" width=\"24\" height=\"24\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.6\"/><text x=\"218\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">6 أوجه مربعة</text><polygon points=\"300,60 375,60 375,102 300,102\" fill=\"#fef3c7\" stroke=\"#b45309\" stroke-width=\"2\"/><polygon points=\"300,60 324,42 399,42 375,60\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"2\"/><polygon points=\"375,60 399,42 399,84 375,102\" fill=\"#fcd34d\" stroke=\"#b45309\" stroke-width=\"2\"/><text x=\"348\" y=\"128\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">متوازي المستطيلات</text><text x=\"215\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">لكل منهما: 6 أوجه ، 8 رؤوس ، 12 حرفا</text></svg>",
+    "steps": [
+      {
+        "promptAr": "يتكون المكعب (ومثله متوازي المستطيلات) من $6$ أوجه و $8$ رؤوس. كم حرفا (حافة) يملك المكعب؟ (اكتب العدد فقط)",
+        "hintAr": "عُدّ $4$ أحرف في القاعدة السفلية، و $4$ في القاعدة العلوية، و $4$ أحرف عمودية.",
+        "expectedInput": "12",
+        "revealAr": "لكل من المكعب ومتوازي المستطيلات $6$ أوجه و $8$ رؤوس و $12$ حرفا."
+      },
+      {
+        "promptAr": "عند فتح المكعب للحصول على نشره على الورق المقوى، كم مربعا متقايسا نحتاج لرسم التصميم؟ (اكتب العدد فقط)",
+        "hintAr": "كل مربع في النشر يمثل وجها واحدا من أوجه المكعب.",
+        "expectedInput": "6",
+        "revealAr": "نشر المكعب يتكون من $6$ مربعات متقايسة مرتبة بحيث لا تتطابق وجهان عند الطي."
+      },
+      {
+        "promptAr": "يريد عبد الله إلصاق شريط ملون على كل حواف المكعب الإثني عشر. إذا كان طول الحرف الواحد $4\\text{ cm}$، فما الطول الكلي للشريط اللازم بالسنتيمتر؟ (اكتب العدد فقط)",
+        "hintAr": "جميع أحرف المكعب الـ $12$ متساوية الطول: احسب $12 \\times 4$.",
+        "expectedInput": "48",
+        "revealAr": "مجموع أطوال الأحرف هو $12 \\times 4 = 48\\text{ cm}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "تصنيف المجسمات المألوفة: مجسمات أوجهها مستوية لا تتدحرج (المكعب، متوازي المستطيلات، الهرم)، ومجسمات ذات أسطح منحنية تتدحرج (الأسطوانة، المخروط، الكرة).",
+      "المكعب: له $6$ أوجه كلها مربعات متقايسة، و $8$ رؤوس، و $12$ حرفا متساوية الطول.",
+      "متوازي المستطيلات: له $6$ أوجه (إما $6$ مستطيلات، أو $4$ مستطيلات ومربعان)، و $8$ رؤوس، و $12$ حرفا مقسمة إلى $3$ مجموعات من $4$ أحرف متقايسة (الطول، العرض، الارتفاع).",
+      "النشر والتصميم: نشر المكعب مكون من $6$ مربعات متصلة لا تتراكب عند الطي؛ ونشر متوازي المستطيلات مكون من $6$ مستطيلات متصلة بحيث يكون كل وجهين متقابلين متقايسين وتلتقي الأضلاع المتساوية عند الطي."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 152\" width=\"430\" height=\"152\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><text x=\"72\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">نشر صحيح لمكعب</text><rect x=\"44\" y=\"32\" width=\"22\" height=\"22\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.4\"/><rect x=\"22\" y=\"54\" width=\"22\" height=\"22\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.4\"/><rect x=\"44\" y=\"54\" width=\"22\" height=\"22\" fill=\"#86efac\" stroke=\"#15803d\" stroke-width=\"1.4\"/><rect x=\"66\" y=\"54\" width=\"22\" height=\"22\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.4\"/><rect x=\"88\" y=\"54\" width=\"22\" height=\"22\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.4\"/><rect x=\"66\" y=\"76\" width=\"22\" height=\"22\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.4\"/><text x=\"72\" y=\"118\" text-anchor=\"middle\" font-size=\"11\" fill=\"#15803d\">1-4-1 (لا تتراكب)</text><text x=\"208\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">نشر خاطئ لمكعب</text><rect x=\"148\" y=\"42\" width=\"22\" height=\"22\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><rect x=\"170\" y=\"42\" width=\"22\" height=\"22\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><rect x=\"192\" y=\"42\" width=\"22\" height=\"22\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><rect x=\"214\" y=\"42\" width=\"22\" height=\"22\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><rect x=\"236\" y=\"42\" width=\"22\" height=\"22\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><rect x=\"192\" y=\"64\" width=\"22\" height=\"22\" fill=\"#fecaca\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"208\" y=\"118\" text-anchor=\"middle\" font-size=\"11\" fill=\"#dc2626\">5 مربعات في صف واحد!</text><text x=\"355\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">نشر متوازي المستطيلات</text><rect x=\"330\" y=\"28\" width=\"44\" height=\"20\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.3\"/><rect x=\"304\" y=\"48\" width=\"26\" height=\"28\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.3\"/><rect x=\"330\" y=\"48\" width=\"44\" height=\"28\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"1.3\"/><rect x=\"374\" y=\"48\" width=\"26\" height=\"28\" fill=\"#bbf7d0\" stroke=\"#15803d\" stroke-width=\"1.3\"/><rect x=\"330\" y=\"76\" width=\"44\" height=\"20\" fill=\"#fde68a\" stroke=\"#b45309\" stroke-width=\"1.3\"/><rect x=\"330\" y=\"96\" width=\"44\" height=\"28\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"1.3\"/><text x=\"355\" y=\"138\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1d4ed8\">كل وجهين متقابلين متقايسان</text></svg>",
+    "visualCaptionAr": "التمييز بين النشر الصحيح والنشر الخاطئ للمكعب، وبنية نشر متوازي المستطيلات.",
+    "examples": [
+      {
+        "problemAr": "مجموع أطوال أحرف متوازي المستطيلات: علبة طولها $6\\text{ cm}$ وعرضها $4\\text{ cm}$ وارتفاعها $3\\text{ cm}$. ما مجموع أطوال أحرفها؟",
+        "solutionAr": "كل بعد يتكرر $4$ مرات: $4 \\times 6 + 4 \\times 4 + 4 \\times 3 = 24 + 16 + 12 = 52\\text{ cm}$ (أو $4 \\times (6 + 4 + 3) = 52\\text{ cm}$)."
+      },
+      {
+        "problemAr": "أوجه متقابلة في نشر المكعب: في صف من $4$ مربعات ($1, 2, 3, 4$) مع مربع $5$ فوق المربع $2$ ومربع $6$ تحت المربع $2$، ما الوجه المقابل للوجه $1$؟",
+        "solutionAr": "عند الطي نترك مربعا بين الوجهين المتقابلين في الصف؛ إذن الوجه $1$ يقابل الوجه $3$، والوجه $2$ يقابل الوجه $4$، والوجه $5$ يقابل الوجه $6$."
+      },
+      {
+        "problemAr": "تمييز المجسمات: ما المجسم الذي له وجهان دائريان متوازيان وسطح منحني؟ وما المجسم الذي له قاعدة مربعة و $4$ أوجه مثلثة؟",
+        "solutionAr": "المجسم الأول هو **الأسطوانة**، والمجسم الثاني هو **الهرم** ذو القاعدة المربعة."
+      }
+    ],
+    "watchOutAr": "انتبه! ليس كل شكل من $6$ مربعات صالحا ليكون نشرا لمكعب (مثل وضع $5$ مربعات في صف واحد، أو تكوين مستطيل $2 \\times 3$ من المربعات، أو وضع المربعين الجانبيين على نفس الجهة في الشكل $1-4-1$ فهما يتراكبان عند الطي). ولا تُدرج صيغ الحجوم في السنة الخامسة."
+  },
+  "practice": [
+    {
+      "questionAr": "أي من التصاميم الأربعة الموضحة في الشكل يمثل نشرا **صحيحا** لمكعب؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 96\" width=\"400\" height=\"96\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><text x=\"58\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">(أ)</text><rect x=\"12\" y=\"38\" width=\"18\" height=\"18\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"30\" y=\"38\" width=\"18\" height=\"18\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"48\" y=\"38\" width=\"18\" height=\"18\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"66\" y=\"38\" width=\"18\" height=\"18\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"84\" y=\"38\" width=\"18\" height=\"18\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"48\" y=\"56\" width=\"18\" height=\"18\" fill=\"#e0f2fe\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><text x=\"155\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">(ب)</text><rect x=\"128\" y=\"38\" width=\"18\" height=\"18\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"146\" y=\"38\" width=\"18\" height=\"18\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"164\" y=\"38\" width=\"18\" height=\"18\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"128\" y=\"56\" width=\"18\" height=\"18\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"146\" y=\"56\" width=\"18\" height=\"18\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"164\" y=\"56\" width=\"18\" height=\"18\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><text x=\"245\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">(ج)</text><rect x=\"226\" y=\"28\" width=\"18\" height=\"18\" fill=\"#dcfce7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"208\" y=\"46\" width=\"18\" height=\"18\" fill=\"#dcfce7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"226\" y=\"46\" width=\"18\" height=\"18\" fill=\"#dcfce7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"244\" y=\"46\" width=\"18\" height=\"18\" fill=\"#dcfce7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"262\" y=\"46\" width=\"18\" height=\"18\" fill=\"#dcfce7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"262\" y=\"64\" width=\"18\" height=\"18\" fill=\"#dcfce7\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><text x=\"348\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">(د)</text><rect x=\"328\" y=\"28\" width=\"18\" height=\"18\" fill=\"#fee2e2\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"346\" y=\"28\" width=\"18\" height=\"18\" fill=\"#fee2e2\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"310\" y=\"46\" width=\"18\" height=\"18\" fill=\"#fee2e2\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"328\" y=\"46\" width=\"18\" height=\"18\" fill=\"#fee2e2\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"346\" y=\"46\" width=\"18\" height=\"18\" fill=\"#fee2e2\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"364\" y=\"46\" width=\"18\" height=\"18\" fill=\"#fee2e2\" stroke=\"#1e293b\" stroke-width=\"1.3\"/></svg>",
+      "options": [
+        "التصميم (أ)",
+        "التصميم (ب)",
+        "التصميم (ج)",
+        "التصميم (د)"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "التصميم (أ) يضم $5$ مربعات في صف واحد، وعند طيها يتطابق المربع الخامس فوق الأول!",
+        "التصميم (ب) على شكل مستطيل $2 \\times 3$ وهو لا ينطوي أبدا ليشكل مكعبا مغلقا دون تراكب.",
+        "أحسنت! التصميم (ج) يتبع قاعدة $1-4-1$ بحيث يقع مربع على يمين/أعلى الشريط والمربع الآخر على الجهة المقابلة تماما.",
+        "في التصميم (د) يقع الجناحان في الجهة العلوية نفسها، لذا يتراكبان فوق بعضهما عند طي المكعب."
+      ],
+      "explanationAr": "الوحيد الذي يشكل مكعبا مغلقا دون تراكب هو التصميم (ج)، لأن الشريط الأوسط من $4$ مربعات يغطي $4$ أوجه جانبية، والمربعان في الجهتين المتقابلتين يغلقان القاعدتين العلوية والسفلية."
+    },
+    {
+      "questionAr": "لدى سلمى علبة على شكل متوازي مستطيلات طولها $10\\text{ cm}$ وعرضها $5\\text{ cm}$ وارتفاعها $4\\text{ cm}$. كم رأسا لهذه العلبة، وما مجموع أطوال أحرفها الإثني عشر؟",
+      "options": [
+        "$6$ رؤوس، ومجموع الأحرف $38\\text{ cm}$",
+        "$8$ رؤوس، ومجموع الأحرف $76\\text{ cm}$",
+        "$8$ رؤوس، ومجموع الأحرف $19\\text{ cm}$",
+        "$12$ رأسا، ومجموع الأحرف $76\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "عدد $6$ هو عدد **الأوجه** وليس الرؤوس، كما أنك ضربت $(10+5+4)$ في $2$ فقط بدلا من $4$.",
+        "ممتاز! لمتوازي المستطيلات $8$ رؤوس، ومجموع أحرفه هو $4 \\times (10 + 5 + 4) = 4 \\times 19 = 76\\text{ cm}$.",
+        "العدد $19\\text{ cm}$ هو مجموع ثلاثة أحرف فقط (طول + عرض + ارتفاع) وليس كل الأحرف الـ $12$.",
+        "تنبه: للمجسم $12$ **حرفا** و $8$ **رؤوس** وليس العكس!"
+      ],
+      "explanationAr": "لمتوازي المستطيلات $8$ رؤوس و $12$ حرفا ($4$ للطول، $4$ للعرض، $4$ للارتفاع). إذن مجموع أطوال الأحرف هو: $4 \\times 10 + 4 \\times 5 + 4 \\times 4 = 40 + 20 + 16 = 76\\text{ cm}$."
+    },
+    {
+      "questionAr": "تكون هذا المجسم من رصف مكعبات صغيرة متقايسة: قاعدة سفلية مستطيلة ($3 \\times 2$) وفوقها مكعبان في الخلف. كم مكعبا صغيرا استعملنا في تكوينه (باحتساب المكعبات المخفية تحت الطبقة العلوية)؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 175\" width=\"300\" height=\"175\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><text x=\"150\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">رصف مكعبات صغيرة متقايسة</text><polygon points=\"140,62 164,75 140,88 116,75\" fill=\"#93c5fd\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"116,75 140,88 140,112 116,99\" fill=\"#60a5fa\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"140,88 164,75 164,99 140,112\" fill=\"#3b82f6\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"140,38 164,51 140,64 116,51\" fill=\"#93c5fd\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"116,51 140,64 140,88 116,75\" fill=\"#60a5fa\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"140,64 164,51 164,75 140,88\" fill=\"#3b82f6\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"116,75 140,88 116,101 92,88\" fill=\"#93c5fd\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"92,88 116,101 116,125 92,112\" fill=\"#60a5fa\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"116,101 140,88 140,112 116,125\" fill=\"#3b82f6\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"164,75 188,88 164,101 140,88\" fill=\"#93c5fd\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"140,88 164,101 164,125 140,112\" fill=\"#60a5fa\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"164,101 188,88 188,112 164,125\" fill=\"#3b82f6\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"164,51 188,64 164,77 140,64\" fill=\"#93c5fd\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"140,64 164,77 164,101 140,88\" fill=\"#60a5fa\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"164,77 188,64 188,88 164,101\" fill=\"#3b82f6\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"140,88 164,101 140,114 116,101\" fill=\"#93c5fd\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"116,101 140,114 140,138 116,125\" fill=\"#60a5fa\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"140,114 164,101 164,125 140,138\" fill=\"#3b82f6\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"188,88 212,101 188,114 164,101\" fill=\"#93c5fd\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"164,101 188,114 188,138 164,125\" fill=\"#60a5fa\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"188,114 212,101 212,125 188,138\" fill=\"#3b82f6\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"164,101 188,114 164,127 140,114\" fill=\"#93c5fd\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"140,114 164,127 164,151 140,138\" fill=\"#60a5fa\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/><polygon points=\"164,127 188,114 188,138 164,151\" fill=\"#3b82f6\" stroke=\"#1e3a8a\" stroke-width=\"1.5\"/></svg>",
+      "options": [
+        "$6$ مكعبات",
+        "$7$ مكعبات",
+        "$8$ مكعبات",
+        "$9$ مكعبات"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "العدد $6$ يمثل عدد المكعبات الظاهرة فقط أو الطبقة السفلية وحدها دون الطبقة العلوية.",
+        "أعد العد بدقة: تحت المكعبين العلويين يوجد مكعبان مخفيان في الصف الخلفي، فتكون الطبقة السفلية $3 \\times 2 = 6$ مكعبات.",
+        "رائع! الطبقة السفلية تتكون من $3 \\times 2 = 6$ مكعبات، والطبقة العلوية من مكعبين، فالمجموع $6 + 2 = 8$ مكعبات.",
+        "تحقق من الرسم: في الطبقة العلوية مكعبان فقط وليس $3$ مكعبات."
+      ],
+      "explanationAr": "نعد المكعبات طبقة بطبقة: الطبقة السفلية مستطيل أبعاده $3 \\times 2$ أي $6$ مكعبات (منها مكعبان مخفيان تحت الطبقة العلوية)، والطبقة العلوية تحتوي على $2$ مكعبين. المجموع الكلي هو $6 + 2 = 8$ مكعبات."
+    }
+  ]
+}

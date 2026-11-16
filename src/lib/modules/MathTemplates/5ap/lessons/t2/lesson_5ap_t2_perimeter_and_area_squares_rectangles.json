@@ -1,0 +1,124 @@
+{
+  "id": "lesson_5ap_t2_perimeter_and_area_squares_rectangles",
+  "slug": "5ap-t2-perimeter-and-area-squares-rectangles",
+  "grade": "5ap",
+  "yearSubjectId": 606,
+  "trimesterId": "t2",
+  "sequenceId": "seq_5ap_3",
+  "sequenceTitleAr": "المقطع التعلمي الثالث: الأعداد العشرية والمساحات، النسبة المئوية، المثلثات والرباعيات والدائرة",
+  "order": 7,
+  "titleAr": "محيط المربع والمستطيل، قياس المساحات ومساحة المربع والمستطيل والمثلث القائم",
+  "objectives": [
+    "حساب محيط المربع ( $4$ × الضلع ) ومحيط المستطيل ( $2$ × (الطول + العرض) ) ومحيط الأشكال المركبة.",
+    "التعبير عن قيس مساحة بكسر، واستعمال وحدات المساحة ( $\\text{m}^2$ و $\\text{dm}^2$ و $\\text{cm}^2$ و $\\text{mm}^2$ والوحدات الفلاحية $\\text{a}$ و $\\text{ha}$ ) والتحويل بينها ( $1\\text{ m}^2 = 100\\text{ dm}^2 = 10000\\text{ cm}^2$ ).",
+    "حساب مساحة المربع والمستطيل، واستنتاج مساحة المثلث القائم كنصف مساحة مستطيل موافق: (الضلع القائم $1$ × الضلع القائم $2$ ) ÷ $2$."
+  ],
+  "keywordsAr": [
+    "المحيط",
+    "المساحة",
+    "مساحة المربع",
+    "مساحة المستطيل",
+    "مساحة المثلث القائم",
+    "المتر المربع",
+    "السنتيمتر المربع"
+  ],
+  "discover": {
+    "scenarioAr": "تملك مدرسة حديقة مستطيلة الشكل طولها $12\\text{ m}$ وعرضها $5\\text{ m}$ ، قُسّمت قطريا إلى مثلثين قائمين متقايسين لزراعة الزهور في جزء والعشب في الجزء الآخر. نريد حساب طول السياج الخارجي للحديقة ومساحتها ثم مساحة جزء الزهور.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 175\" width=\"420\" height=\"175\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"400\" height=\"155\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><polygon points=\"70,32 310,32 310,132\" fill=\"#fef9c3\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><polygon points=\"70,32 70,132 310,132\" fill=\"#dcfce7\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"70\" y1=\"32\" x2=\"310\" y2=\"132\" stroke=\"#dc2626\" stroke-dasharray=\"5 3\" stroke-width=\"2\"/><rect x=\"70\" y=\"120\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"298\" y=\"32\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"138\" y=\"108\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\">الزهور</text><text x=\"244\" y=\"68\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#854d0e\">العشب</text><text x=\"190\" y=\"152\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">الطول = 12 m</text><text x=\"352\" y=\"86\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">العرض = 5 m</text></svg>",
+    "steps": [
+      {
+        "promptAr": "لإحاطة الحديقة بسياج خارجي، نحسب محيط المستطيل بضرب مجموع الطول والعرض في $2$: $2 \\times (12 + 5)$. ما طول السياج بالمتر؟",
+        "hintAr": "اجمع $12 + 5$ أولا ثم اضرب المجموع في $2$.",
+        "expectedInput": "34",
+        "revealAr": "محيط الحديقة هو $2 \\times (12 + 5) = 2 \\times 17 = 34\\text{ m}$."
+      },
+      {
+        "promptAr": "الآن نحسب المساحة الكلية للحديقة المستطيلة بضرب الطول في العرض: $12 \\times 5$. ما مساحتها بالمتر المربع؟",
+        "hintAr": "احسب جداء الطول $12$ في العرض $5$.",
+        "expectedInput": "60",
+        "revealAr": "مساحة الحديقة الكلية هي $12 \\times 5 = 60\\text{ m}^2$."
+      },
+      {
+        "promptAr": "يقسم القطرُ الأحمرُ المستطيلَ إلى مثلثين قائمين متطابقين تماما. إذن مساحة جزء الزهور (المثلث القائم الأخضر) تساوي نصف مساحة المستطيل: $(12 \\times 5) \\div 2$. ما مساحته بالمتر المربع؟",
+        "hintAr": "اقسم مساحة المستطيل ( $60\\text{ m}^2$ ) على $2$.",
+        "expectedInput": "30",
+        "revealAr": "مساحة المثلث القائم للزهور هي $60 \\div 2 = 30\\text{ m}^2$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "المحيط هو طول الخط الخارجي للشكل ويُقاس بوحدات الطول ( $\\text{cm}$ أو $\\text{m}$ ): محيط المربع يساوي $4$ × الضلع، ومحيط المستطيل يساوي $2$ × (الطول + العرض).",
+      "المساحة هي قياس السطح الداخلي للشكل وتُقاس بوحدات المساحة ( $\\text{cm}^2$ و $\\text{m}^2$ و $\\text{a}$ و $\\text{ha}$ ): مساحة المربع تساوي الضلع × الضلع، ومساحة المستطيل تساوي الطول × العرض.",
+      "مساحة المثلث القائم تساوي نصف مساحة المستطيل المرسوم على ضلعيه القائمين: (الضلع القائم الأول × الضلع القائم الثاني) ÷ $2$.",
+      "في جدول تحويل المساحات، لكل وحدة خانتان: $1\\text{ m}^2 = 100\\text{ dm}^2 = 10000\\text{ cm}^2$ ، و $1\\text{ a} = 100\\text{ m}^2$ ، و $1\\text{ ha} = 100\\text{ a} = 10000\\text{ m}^2$."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 470 205\" width=\"470\" height=\"205\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"6\" y=\"6\" width=\"458\" height=\"193\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"16\" y=\"16\" width=\"136\" height=\"140\" rx=\"8\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.4\"/><text x=\"84\" y=\"35\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">المربع (c = 6 cm)</text><rect x=\"58\" y=\"46\" width=\"52\" height=\"52\" fill=\"#dbeafe\" stroke=\"#1d4ed8\" stroke-width=\"1.8\"/><text x=\"84\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">المحيط: 4 × 6 = 24 cm</text><text x=\"84\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">المساحة: 6 × 6 = 36 cm²</text><rect x=\"164\" y=\"16\" width=\"142\" height=\"140\" rx=\"8\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.4\"/><text x=\"235\" y=\"35\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\">المستطيل (8 و 5 cm)</text><rect x=\"195\" y=\"48\" width=\"80\" height=\"48\" fill=\"#dcfce7\" stroke=\"#15803d\" stroke-width=\"1.8\"/><text x=\"235\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">المحيط: 2×(8+5) = 26 cm</text><text x=\"235\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">المساحة: 8 × 5 = 40 cm²</text><rect x=\"318\" y=\"16\" width=\"136\" height=\"140\" rx=\"8\" fill=\"#ffffff\" stroke=\"#fcd34d\" stroke-width=\"1.4\"/><text x=\"386\" y=\"35\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#92400e\">المثلث القائم</text><rect x=\"346\" y=\"48\" width=\"80\" height=\"48\" fill=\"none\" stroke=\"#cbd5e1\" stroke-dasharray=\"3 2\" stroke-width=\"1.3\"/><polygon points=\"346,48 346,96 426,96\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.8\"/><rect x=\"346\" y=\"87\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"386\" y=\"122\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">نصف المستطيل الموافق</text><text x=\"386\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">S = (8 × 5) ÷ 2 = 20 cm²</text><rect x=\"16\" y=\"164\" width=\"438\" height=\"26\" rx=\"6\" fill=\"#e2e8f0\"/><text x=\"235\" y=\"182\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#0f172a\">تحويلات المساحة (خانتان لكل وحدة): 1 m² = 100 dm²  |  1 ha = 100 a = 10 000 m²</text></svg>",
+    "visualCaptionAr": "قوانين محيط ومساحة المربع والمستطيل والمثلث القائم والعلاقة بين وحدات المساحة.",
+    "examples": [
+      {
+        "problemAr": "حديقة مربعة الشكل طول ضلعها $30\\text{ m}$. احسب محيطها، ثم احسب مساحتها بالمتر المربع وبالآر ( $\\text{a}$ ).",
+        "solutionAr": "المحيط: $4 \\times 30 = 120\\text{ m}$. المساحة: $30 \\times 30 = 900\\text{ m}^2$. وبما أن $1\\text{ a} = 100\\text{ m}^2$ ، فإن $900\\text{ m}^2 = 9\\text{ a}$."
+      },
+      {
+        "problemAr": "قطعة أرض مركّبة تتكون من مستطيل طوله $20\\text{ m}$ وعرضه $10\\text{ m}$ ملتصق بمثلث قائم طولا ضلعيه القائمين $10\\text{ m}$ و $6\\text{ m}$. احسب مساحتها الكلية.",
+        "solutionAr": "مساحة المستطيل: $20 \\times 10 = 200\\text{ m}^2$. مساحة المثلث القائم: $(10 \\times 6) \\div 2 = 30\\text{ m}^2$. المساحة الكلية للقطعة: $200 + 30 = 230\\text{ m}^2$."
+      }
+    ],
+    "watchOutAr": "انتبه من الخلط بين المحيط (طول الحافة بالـ $\\text{cm}$ أو $\\text{m}$ ) والمساحة (السطح الداخلي بالـ $\\text{cm}^2$ أو $\\text{m}^2$ ). وكذلك لا تظن أن $1\\text{ m}^2 = 10\\text{ dm}^2$ ، لأن لكل وحدة مساحة عمودين: $1\\text{ m}^2 = 100\\text{ dm}^2$."
+  },
+  "practice": [
+    {
+      "questionAr": "مستطيل طوله $9\\text{ cm}$ وعرضه $4\\text{ cm}$. ما هما محيطه ومساحته على الترتيب؟",
+      "options": [
+        "المحيط $13\\text{ cm}$ والمساحة $36\\text{ cm}^2$",
+        "المحيط $36\\text{ cm}$ والمساحة $26\\text{ cm}^2$",
+        "المحيط $26\\text{ cm}$ والمساحة $36\\text{ cm}^2$",
+        "المحيط $26\\text{ cm}$ والمساحة $13\\text{ cm}^2$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "العدد $13\\text{ cm}$ هو نصف المحيط ( $9 + 4$ )؛ تذكر أن تضرب في $2$ لحساب الأضلاع الأربعة.",
+        "لقد بدّلت بين القانونين: $36$ هو المساحة ( $9 \\times 4$ ) وليس المحيط، و $26$ هو المحيط.",
+        "أحسنت! المحيط $2 \\times (9 + 4) = 26\\text{ cm}$ ، والمساحة $9 \\times 4 = 36\\text{ cm}^2$.",
+        "لحساب المساحة نضرب الطول في العرض ( $9 \\times 4 = 36$ ) ولا نجمعهما."
+      ],
+      "explanationAr": "محيط المستطيل هو $2 \\times (9 + 4) = 2 \\times 13 = 26\\text{ cm}$ ، ومساحته هي $9 \\times 4 = 36\\text{ cm}^2$."
+    },
+    {
+      "questionAr": "ما هي مساحة المثلث القائم $ABC$ الموضح في الشكل المقابل؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 280 165\" width=\"280\" height=\"165\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><polygon points=\"60,130 60,40 180,130\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2.2\"/><rect x=\"60\" y=\"118\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"46\" y=\"138\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"46\" y=\"38\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"186\" y=\"138\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">C</text><text x=\"32\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">6 cm</text><text x=\"120\" y=\"152\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">8 cm</text><text x=\"138\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#64748b\">10 cm</text></svg>",
+      "options": [
+        "$24\\text{ cm}^2$",
+        "$48\\text{ cm}^2$",
+        "$30\\text{ cm}^2$",
+        "$40\\text{ cm}^2$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! نضرب الضلعين القائمين ثم نقسم على $2$: $(6 \\times 8) \\div 2 = 48 \\div 2 = 24\\text{ cm}^2$.",
+        "حسبت $6 \\times 8 = 48\\text{ cm}^2$ وهي مساحة المستطيل الكامل؛ لا تنسَ القسمة على $2$ للمثلث القائم.",
+        "استعملت الضلع المائل $10\\text{ cm}$ بدلا من الضلعين المحيطين بالزاوية القائمة ( $6\\text{ cm}$ و $8\\text{ cm}$ ).",
+        "استعملت $8 \\times 10 \\div 2$ ؛ يجب دائما استخدام الضلعين القائمين اللذين يكوّنان الزاوية القائمة."
+      ],
+      "explanationAr": "في المثلث القائم في $A$ ، الضلعان القائمان هما $AB = 6\\text{ cm}$ و $AC = 8\\text{ cm}$. إذن المساحة هي $(6 \\times 8) \\div 2 = 48 \\div 2 = 24\\text{ cm}^2$."
+    },
+    {
+      "questionAr": "تبلغ مساحة حقل زراعي $2.5\\text{ ha}$ (هكتار). ما مساحته بالمتر المربع ( $\\text{m}^2$ )؟",
+      "options": [
+        "$250\\text{ m}^2$",
+        "$2500\\text{ m}^2$",
+        "$25000\\text{ m}^2$",
+        "$250000\\text{ m}^2$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "نضرب في $100$ عند التحويل من الهكتار إلى الآر ( $2.5\\text{ ha} = 250\\text{ a}$ )، لكن إلى المتر المربع نضرب في $10000$.",
+        "نضرب في $10000$ وليس في $1000$ لأن $1\\text{ ha} = 10000\\text{ m}^2$.",
+        "أحسنت! بما أن $1\\text{ ha} = 10000\\text{ m}^2$ ، فإن $2.5 \\times 10000 = 25000\\text{ m}^2$.",
+        "أضفت صفرا زائدا؛ تذكر أن إزاحة الفاصلة في $2.5$ بـ $4$ رتب يمينا تعطي $25000$."
+      ],
+      "explanationAr": "نعلم أن $1\\text{ ha} = 100\\text{ a} = 10000\\text{ m}^2$. للتحويل من الهكتار إلى المتر المربع نضرب في $10000$: $2.5 \\times 10000 = 25000\\text{ m}^2$."
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "documents": [
+    {
+      "id": "ref_2ap_exam_t1_eddirasa_145_2025",
+      "grade": "2ap",
+      "title_ar": "اختبار الفصل الأول في مادة الرياضيات - السنة الثانية ابتدائي (مدرسة الشهيد حفناوي بن شاعة، سلم التنقيط 10/10)",
+      "category": "official_exam",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/03_sample_exams/2ap_math_t1_exam_eddirasa_145_2025.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/08/%D8%A5%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%B1%D9%82%D9%85-145-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_2ap_exam_t1_eddirasa_146_2026",
+      "grade": "2ap",
+      "title_ar": "اختبار الثلاثي الأول في مادة الرياضيات - السنة الثانية ابتدائي (3 نماذج رسمية 2025/2026)",
+      "category": "official_exam",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/03_sample_exams/2ap_math_t1_exam_eddirasa_146_2026.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/08/%D8%A5%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%B1%D9%82%D9%85-146-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_2ap_solution_t1_dzmadrassa_98_2023",
+      "grade": "2ap",
+      "title_ar": "اختبار الفصل الأول في مادة الرياضيات مع التصحيح النموذجي - السنة الثانية ابتدائي (ديسمبر 2022)",
+      "category": "exam_solution",
+      "year": "2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/03_sample_exams/2ap_math_t1_solution_dzmadrassa_98_2023.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/2ap/mathematiques/trimestre-1/t1/2023/dzmadrassa-2ap-mathematiques-517010.pdf?download=true&docId=474bef3f-ce7d-4dbe-8143-c5012a3b0053"
+    },
+    {
+      "id": "ref_2ap_exam_t2_eddirasa_79_2025",
+      "grade": "2ap",
+      "title_ar": "اختبار الفصل الثاني في مادة الرياضيات - السنة الثانية ابتدائي (مدرسة الشهيد حفناوي بن شاعة، سلم التنقيط 10/10)",
+      "category": "official_exam",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/03_sample_exams/2ap_math_t2_exam_eddirasa_79_2025.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/08/%D8%A5%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%B1%D9%82%D9%85-79-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_2ap_solution_t2_dzmadrassa_89_2023",
+      "grade": "2ap",
+      "title_ar": "اختبار الفصل الثاني في الرياضيات مع التصحيح النموذجي وسلم التنقيط من 10 - السنة الثانية ابتدائي (مارس 2023)",
+      "category": "exam_solution",
+      "year": "2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/03_sample_exams/2ap_math_t2_solution_dzmadrassa_89_2023.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/2ap/mathematiques/trimestre-2/t2/2023/dzmadrassa-2ap-mathematiques-658655.pdf?download=true&docId=a3e54902-27ac-44d3-a2c5-cf835861fa69"
+    },
+    {
+      "id": "ref_2ap_exam_t2_honec_2023",
+      "grade": "2ap",
+      "title_ar": "اختبار الثلاثي الثاني في مادة الرياضيات - السنة الثانية ابتدائي (ابتدائية فروم مختار، 2022/2023)",
+      "category": "official_exam",
+      "year": "2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/03_sample_exams/2ap_math_t2_exam_honec_2023.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=12c8DrxEePaP10IQXShet81FiRJdBMJK2"
+    },
+    {
+      "id": "ref_2ap_exam_t3_eddirasa_42_2025",
+      "grade": "2ap",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات - السنة الثانية ابتدائي (مدرسة الشهيد حفناوي بن شاعة 2024/2025)",
+      "category": "official_exam",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/03_sample_exams/2ap_math_t3_exam_eddirasa_42_2025.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2025/12/eddirasa.com-إختبار-الفصل-الثالث-في-الرياضيات-السنة-الثانية-ابتدائي-رقم-42.pdf"
+    },
+    {
+      "id": "ref_2ap_exam_t3_honec_2023",
+      "grade": "2ap",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات - السنة الثانية ابتدائي (سلم التنقيط 10/10، 2022/2023)",
+      "category": "official_exam",
+      "year": "2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/03_sample_exams/2ap_math_t3_exam_honec_2023.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1hgCR9P0Mo6DWKlfUF-uiB9YBwBWA95VV"
+    },
+    {
+      "id": "ref_2ap_solution_t3_dzmadrassa_22_2018",
+      "grade": "2ap",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات مع التصحيح النموذجي - السنة الثانية ابتدائي (مدرسة عامر سعيد 01 ذراع بن خدة)",
+      "category": "exam_solution",
+      "year": "2018",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/03_sample_exams/2ap_math_t3_solution_dzmadrassa_22_2018.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/2ap/mathematiques/trimestre-3/t3/2018/dzmadrassa-2ap-mathematiques-t3-20181-172511.pdf?download=true&docId=7ede493d-5986-412b-8314-4e8efce93127"
+    }
+  ],
+  "missing_references": []
+}

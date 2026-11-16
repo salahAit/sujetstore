@@ -1,0 +1,121 @@
+{
+  "id": "lesson_5ap_t2_proportionality_linearity_unit_rate",
+  "slug": "5ap-t2-proportionality-linearity-unit-rate",
+  "grade": "5ap",
+  "yearSubjectId": 606,
+  "trimesterId": "t2",
+  "sequenceId": "seq_5ap_2",
+  "sequenceTitleAr": "المقطع التعلمي الثاني: الكسور والأعداد العشرية، القسمة الإقليدية، التناسبية والتناظر",
+  "order": 5,
+  "titleAr": "التناسبية (1) و(2) و(3): خواص الخطية، معامل التناسبية والمرور بالوحدة",
+  "objectives": [
+    "التعرف على وضعية تناسبية وتمييز جدول تناسبية عن جدول غير تناسبية.",
+    "ملء جدول تناسبية وحل مشكلات تناسبية باستعمال خواص الخطية (الجمع والضرب بين الأعمدة).",
+    "استعمال معامل التناسبية أو إجراء المرور بالوحدة (القاعدة الثلاثية) عندما تتعذر العلاقات المباشرة."
+  ],
+  "keywordsAr": [
+    "جدول التناسبية",
+    "خواص الخطية",
+    "معامل التناسبية",
+    "المرور بالوحدة",
+    "القاعدة الثلاثية"
+  ],
+  "discover": {
+    "scenarioAr": "لتحضير حلوى المقروط في ورشة مدرسية، تستهلك $3$ صوانٍ $600\\text{ g}$ من السميد. نريد إكمال جدول التناسبية التالي لمعرفة كمية السميد اللازمة لتحضير $6$ صوانٍ، ثم $9$ صوانٍ، ثم $5$ صوانٍ.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 155\" width=\"460\" height=\"155\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"139\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><path d=\"M 190 36 Q 226 14 260 34\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><polygon points=\"263,36 255,35 259,28\" fill=\"#2563eb\"/><text x=\"226\" y=\"21\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">× 2</text><rect x=\"16\" y=\"40\" width=\"428\" height=\"70\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"16\" y1=\"75\" x2=\"444\" y2=\"75\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"156\" y1=\"40\" x2=\"156\" y2=\"110\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"228\" y1=\"40\" x2=\"228\" y2=\"110\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"300\" y1=\"40\" x2=\"300\" y2=\"110\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"372\" y1=\"40\" x2=\"372\" y2=\"110\" stroke=\"#64748b\" stroke-width=\"1.5\"/><rect x=\"16\" y=\"40\" width=\"140\" height=\"35\" fill=\"#eff6ff\"/><rect x=\"16\" y=\"75\" width=\"140\" height=\"35\" fill=\"#f0fdf4\"/><text x=\"86\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">عدد الصواني</text><text x=\"86\" y=\"97\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\">كمية السميد (g)</text><text x=\"192\" y=\"62\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">3</text><text x=\"264\" y=\"62\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">6</text><text x=\"336\" y=\"62\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">9</text><text x=\"408\" y=\"62\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">5</text><text x=\"192\" y=\"97\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">600</text><text x=\"264\" y=\"97\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\">؟</text><text x=\"336\" y=\"97\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\">؟</text><text x=\"408\" y=\"97\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\">؟</text><text x=\"230\" y=\"133\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">المرور بالوحدة: صينية واحدة ← 600 ÷ 3 = 200 g (معامل التناسبية)</text></svg>",
+    "steps": [
+      {
+        "promptAr": "بما أن $6$ صوانٍ هي ضعف $3$ صوانٍ ( $3 \\times 2 = 6$ )، فإن كمية السميد تتضاعف أيضا. ما كمية السميد بالغرام لتحضير $6$ صوانٍ؟",
+        "hintAr": "اضرب كمية السميد الخاصة بـ $3$ صوانٍ في $2$: $600 \\times 2$.",
+        "expectedInput": "1200",
+        "revealAr": "نستعمل خاصية الضرب: $600 \\times 2 = 1200\\text{ g}$."
+      },
+      {
+        "promptAr": "نلاحظ أن $9 = 3 + 6$. باستعمال خاصية الجمع، ما كمية السميد بالغرام لتحضير $9$ صوانٍ؟",
+        "hintAr": "اجمع كمية السميد لـ $3$ صوانٍ ( $600\\text{ g}$ ) مع كمية السميد لـ $6$ صوانٍ ( $1200\\text{ g}$ ).",
+        "expectedInput": "1800",
+        "revealAr": "نستعمل خاصية الجمع: $600 + 1200 = 1800\\text{ g}$ (أو $3 \\times 600 = 1800\\text{ g}$ )."
+      },
+      {
+        "promptAr": "العدد $5$ ليس مضاعفا لـ $3$ ، لذا نمرّ بالوحدة: صينية واحدة تستهلك $600 \\div 3 = 200\\text{ g}$ (وهو معامل التناسبية). ما كمية السميد بالغرام لـ $5$ صوانٍ؟",
+        "hintAr": "اضرب كمية الصينية الواحدة ( $200\\text{ g}$ ) في $5$.",
+        "expectedInput": "1000",
+        "revealAr": "لصينية واحدة نحتاج $200\\text{ g}$ ، إذن لـ $5$ صوانٍ نحتاج $200 \\times 5 = 1000\\text{ g}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "يكون جدولا جدول تناسبية إذا أمكن المرور من السطر الأول إلى السطر الثاني بالضرب دائما في نفس العدد غير المعدوم، ويسمى هذا العدد «معامل التناسبية».",
+      "خاصيتا الخطية في جدول التناسبية: يمكننا ضرب (أو قسمة) خانتي عمود في نفس العدد، كما يمكننا جمع عمودين لإيجاد عمود ثالث.",
+      "طريقة المرور بالوحدة (القاعدة الثلاثية): عندما لا توجد علاقة ضرب مباشرة بين عددين في الجدول، نحسب أولا قيمة الوحدة الواحدة بالقسمة، ثم نضرب في العدد المطلوب."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 185\" width=\"460\" height=\"185\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"444\" height=\"169\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"18\" y=\"20\" width=\"424\" height=\"64\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"18\" y1=\"52\" x2=\"442\" y2=\"52\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"154\" y1=\"20\" x2=\"154\" y2=\"84\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"226\" y1=\"20\" x2=\"226\" y2=\"84\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"298\" y1=\"20\" x2=\"298\" y2=\"84\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"370\" y1=\"20\" x2=\"370\" y2=\"84\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"86\" y=\"41\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">الكمية</text><text x=\"86\" y=\"73\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#14532d\">الثمن (DA)</text><text x=\"190\" y=\"41\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">2</text><text x=\"262\" y=\"41\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">4</text><text x=\"334\" y=\"41\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">6</text><text x=\"406\" y=\"41\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#0f172a\">5</text><text x=\"190\" y=\"73\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#15803d\">80</text><text x=\"262\" y=\"73\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#15803d\">160</text><text x=\"334\" y=\"73\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#15803d\">240</text><text x=\"406\" y=\"73\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"bold\" fill=\"#b45309\">200</text><rect x=\"18\" y=\"96\" width=\"136\" height=\"66\" rx=\"7\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.2\"/><text x=\"86\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#1e40af\">1. الضرب بين الأعمدة</text><text x=\"86\" y=\"136\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\">2 × 2 = 4</text><text x=\"86\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e3a8a\">80 × 2 = 160</text><rect x=\"162\" y=\"96\" width=\"136\" height=\"66\" rx=\"7\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><text x=\"230\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#166534\">2. الجمع بين الأعمدة</text><text x=\"230\" y=\"136\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\">2 + 4 = 6</text><text x=\"230\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#14532d\">80 + 160 = 240</text><rect x=\"306\" y=\"96\" width=\"136\" height=\"66\" rx=\"7\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.2\"/><text x=\"374\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"bold\" fill=\"#92400e\">3. المرور بالوحدة</text><text x=\"374\" y=\"136\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0f172a\">1 ← 80 ÷ 2 = 40</text><text x=\"374\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#92400e\">5 ← 40 × 5 = 200</text></svg>",
+    "visualCaptionAr": "الطرق الثلاث لحل مشكلات التناسبية: الضرب، الجمع، والمرور بالوحدة (معامل التناسبية).",
+    "examples": [
+      {
+        "problemAr": "هل الجدول التالي يمثل وضعية تناسبية؟ (السن بالسنوات: $5$ ثم $10$ ، ويقابله القامة بالسنتيمتر: $110\\text{ cm}$ ثم $140\\text{ cm}$ ).",
+        "solutionAr": "عندما يتضاعف السن من $5$ سنوات إلى $10$ سنوات ( $5 \\times 2 = 10$ )، نلاحظ أن القامة لم تتضاعف ( $110 \\times 2 = 220 \\ne 140$ ). إذن القامة لا تتناسب مع السن، والجدول لا يمثل وضعية تناسبية."
+      },
+      {
+        "problemAr": "تقطع سيارة مسافة $240\\text{ km}$ في $3$ ساعات بسرعة منتظمة. ما هي المسافة التي تقطعها في $7$ ساعات بنفس السرعة؟",
+        "solutionAr": "نستعمل طريقة المرور بالوحدة: في ساعة واحدة ( $1\\text{ h}$ ) تقطع السيارة $240 \\div 3 = 80\\text{ km}$. إذن في $7$ ساعات تقطع $80 \\times 7 = 560\\text{ km}$."
+      }
+    ],
+    "watchOutAr": "خطأ شائع جدا: إضافة نفس العدد في السطرين! مثلا إذا زاد عدد العلب بمقدار $+2$ فلا نضيف $+2\\text{ DA}$ إلى الثمن، لأن التناسبية تعتمد على الضرب والقسمة أو جمع عمودين متناسبين."
+  },
+  "practice": [
+    {
+      "questionAr": "يبين الجدول المقابل عدد الكراريس وثمنها بالدينار. إذا علمت أنه جدول تناسبية، فما ثمن $9$ كراريس؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 100\" width=\"380\" height=\"100\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"15\" y=\"14\" width=\"350\" height=\"72\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"15\" y1=\"50\" x2=\"365\" y2=\"50\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"155\" y1=\"14\" x2=\"155\" y2=\"86\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"225\" y1=\"14\" x2=\"225\" y2=\"86\" stroke=\"#475569\" stroke-width=\"1.6\"/><line x1=\"295\" y1=\"14\" x2=\"295\" y2=\"86\" stroke=\"#475569\" stroke-width=\"1.6\"/><rect x=\"15\" y=\"14\" width=\"140\" height=\"36\" fill=\"#eff6ff\"/><rect x=\"15\" y=\"50\" width=\"140\" height=\"36\" fill=\"#f0fdf4\"/><text x=\"85\" y=\"37\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">عدد الكراريس</text><text x=\"85\" y=\"73\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#14532d\">الثمن (DA)</text><text x=\"190\" y=\"37\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">3</text><text x=\"260\" y=\"37\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">6</text><text x=\"330\" y=\"37\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">9</text><text x=\"190\" y=\"73\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">135</text><text x=\"260\" y=\"73\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\">270</text><text x=\"330\" y=\"73\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#dc2626\">؟</text></svg>",
+      "options": [
+        "$273\\text{ DA}$",
+        "$405\\text{ DA}$",
+        "$305\\text{ DA}$",
+        "$540\\text{ DA}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه: من $6$ إلى $9$ أضفنا $3$ كراريس وليس $3$ دنانير؛ يجب أن نضيف ثمن $3$ كراريس وهو $135\\text{ DA}$.",
+        "أحسنت! بما أن $9 = 3 + 6$ ، فإن الثمن هو $135 + 270 = 405\\text{ DA}$ (أو $135 \\times 3 = 405\\text{ DA}$ ).",
+        "راجع عملية الجمع: $135 + 270 = 405$ وليس $305$ (نسيت الاحتفاظ عند جمع العشرات).",
+        "العدد $540$ هو ضعف $270$ أي ثمن $12$ كراسا ( $6 \\times 2$ ) وليس $9$ كراريس."
+      ],
+      "explanationAr": "نستعمل خاصية الجمع في جدول التناسبية: $3 + 6 = 9$ ، إذن نجمع الثمنين الموافقين: $135 + 270 = 405\\text{ DA}$. ويمكن أيضا ضرب عمود $3$ في $3$ فنجد $135 \\times 3 = 405\\text{ DA}$."
+    },
+    {
+      "questionAr": "ثمن $4$ علب جبن من نفس النوع هو $360\\text{ DA}$. ما ثمن $7$ علب من هذا الجبن؟",
+      "options": [
+        "$363\\text{ DA}$",
+        "$540\\text{ DA}$",
+        "$630\\text{ DA}$",
+        "$720\\text{ DA}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "انتبه: زيادة $3$ علب لا تعني إضافة $3$ دنانير، بل حساب ثمن العلبة الواحدة أولا.",
+        "حصلت على $540$ بضرب $90 \\times 6$ أي ثمن $6$ علب، بينما المطلوب ثمن $7$ علب.",
+        "ممتاز! بالمرور بالوحدة: ثمن العلبة الواحدة $360 \\div 4 = 90\\text{ DA}$ ، وثمن $7$ علب هو $90 \\times 7 = 630\\text{ DA}$.",
+        "العدد $720$ هو ضعف $360$ أي ثمن $8$ علب وليس $7$ علب."
+      ],
+      "explanationAr": "نطبق طريقة المرور بالوحدة: نحسب ثمن علبة واحدة: $360 \\div 4 = 90\\text{ DA}$. ثم نضرب في $7$ للحصول على ثمن $7$ علب: $90 \\times 7 = 630\\text{ DA}$."
+    },
+    {
+      "questionAr": "أيّ وضعية من الوضعيات الآتية **لا تمثّل** وضعية تناسبية؟",
+      "options": [
+        "عدد تذاكر الحافلة وثمنها الإجمالي بسعر ثابت للتذكرة",
+        "كتلة البرتقال بالكيلوغرام وثمنه بسعر ثابت للكيلوغرام",
+        "عدد علب العصير وعدد القارورات إذا كانت كل علبة تحوي $6$ قارورات",
+        "عمر طفل بالسنوات وكتلته بالكيلوغرام"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "عندما يتضاعف عدد التذاكر يتضاعف الثمن بنفس النسبة، إذن هذه وضعية تناسبية.",
+        "عندما تتضاعف الكتلة يتضاعف الثمن بنفس النسبة، إذن هذه وضعية تناسبية.",
+        "عدد القارورات يساوي دائما عدد العلب مضروبا في $6$ (معامل التناسبية $6$ )، إذن هي وضعية تناسبية.",
+        "أحسنت! كتلة الإنسان لا تتضاعف بتضاعف عمره، لذلك لا يوجد معامل تناسبية بين العمر والكتلة."
+      ],
+      "explanationAr": "في وضعيات الشراء بسعر ثابت أو التعبئة المتساوية يوجد معامل تناسبية ثابت، أما عمر الطفل وكتلته فلا يرتبطان بمعامل تناسبية ثابت."
+    }
+  ]
+}

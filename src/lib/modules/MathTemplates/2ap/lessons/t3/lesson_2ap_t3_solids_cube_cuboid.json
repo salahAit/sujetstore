@@ -1,0 +1,122 @@
+{
+  "id": "lesson_2ap_t3_solids_cube_cuboid",
+  "slug": "lesson-2ap-t3-solids-cube-cuboid",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع الرابع (الجزء الثاني): التحضير لحفل نهاية السنة (الضرب، المجسمات والمشكلات المركبة)",
+  "order": 6,
+  "titleAr": "التعرف على بعض المجسمات (المكعب والبلاطة القائمة)",
+  "objectives": [
+    "التعرف على مجسمات مألوفة (المكعب، البلاطة القائمة) وتمييزها عن المجسمات التي تتدحرج",
+    "وصف المكعب والبلاطة القائمة وتحديد عدد الوجوه والأحرف والرؤوس وشكل الأوجه لكل منهما",
+    "إرفاق كل مجسم بمنشوره وإتمام تمثيل مكعب أو بلاطة قائمة على مرصوفة"
+  ],
+  "keywordsAr": [
+    "المجسمات",
+    "المكعب",
+    "البلاطة القائمة",
+    "وجه وحرف ورأس",
+    "منشور مجسم"
+  ],
+  "discover": {
+    "scenarioAr": "جمع التلاميذ علب الهدايا لتغليفها يوم الحفل: علبة نرد على شكل **مكعب**، وعلبة أحذية على شكل **بلاطة قائمة** (متوازي المستطيلات)، وكرة زينة تتدحرج على الطاولة.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 200\" width=\"520\" height=\"200\"><rect width=\"520\" height=\"200\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(18,16)\"><rect width=\"164\" height=\"168\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"82\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\">المكعب</text><polygon points=\"42,66 102,66 102,126 42,126\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><polygon points=\"42,66 66,44 126,44 102,66\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"2\"/><polygon points=\"102,66 126,44 126,104 102,126\" fill=\"#93c5fd\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"42\" y1=\"126\" x2=\"102\" y2=\"126\" stroke=\"#dc2626\" stroke-width=\"3.5\"/><circle cx=\"42\" cy=\"66\" r=\"5\" fill=\"#059669\"/><text x=\"24\" y=\"62\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#059669\">رأس</text><text x=\"72\" y=\"100\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">وجه</text><text x=\"72\" y=\"144\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\">حرف</text><text x=\"82\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#475569\">وجوهه مربعات</text></g><g transform=\"translate(194,16)\"><rect width=\"186\" height=\"168\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"93\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#059669\">البلاطة القائمة</text><polygon points=\"26,76 126,76 126,126 26,126\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"2\"/><polygon points=\"26,76 52,52 152,52 126,76\" fill=\"#bbf7d0\" stroke=\"#059669\" stroke-width=\"2\"/><polygon points=\"126,76 152,52 152,102 126,126\" fill=\"#86efac\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"76\" y=\"106\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\">وجه مستطيل</text><text x=\"93\" y=\"160\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#475569\">لا تتدحرج</text></g><g transform=\"translate(392,16)\"><rect width=\"110\" height=\"168\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"55\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#d97706\">الكرة</text><circle cx=\"55\" cy=\"88\" r=\"34\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/><ellipse cx=\"55\" cy=\"88\" rx=\"34\" ry=\"10\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"1.2\" stroke-dasharray=\"4,3\"/><text x=\"55\" y=\"148\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">مجسم يتدحرج</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "تأمل المكعب جيداً: له وجه أمامي ووجه خلفي، ووجه علوي ووجه سفلي، ووجه أيمن ووجه أيسر. كم وجهاً للمكعب؟",
+        "hintAr": "اجمع: $2$ (أمام وخلف) $+ 2$ (فوق وتحت) $+ 2$ (يمين ويسار).",
+        "expectedInput": "6",
+        "revealAr": "للمكعب $6$ وجوه، وكلها مربعات متقايسة!"
+      },
+      {
+        "promptAr": "انظر إلى الزوايا المدببة للمكعب والتي تسمى **الرؤوس**: هناك $4$ رؤوس في الأعلى و $4$ رؤوس في الأسفل. ما هو عدد رؤوس المكعب؟",
+        "hintAr": "احسب $4 + 4$ .",
+        "expectedInput": "8",
+        "revealAr": "للمكعب $8$ رؤوس (وللبلاطة القائمة $8$ رؤوس أيضاً)."
+      },
+      {
+        "promptAr": "الخطوط التي تفصل بين الوجوه تسمى **الأحرف**: هناك $4$ أحرف في الأعلى، و $4$ أحرف في الأسفل، و $4$ أحرف عمودية. كم حرفاً للمكعب أو البلاطة القائمة؟",
+        "hintAr": "احسب: $4 + 4 + 4$ (أو $3 \\times 4$ ).",
+        "expectedInput": "12",
+        "revealAr": "أحسنت! للمكعب وللبلاطة القائمة $12$ حرفاً."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**المكعب** و**البلاطة القائمة** مجسمان لا يتدحرجان؛ لكل منهما: $6$ وجوه، و $12$ حرفاً، و $8$ رؤوس.",
+      "جميع وجوه **المكعب** الستة عبارة عن **مربعات** متقايسة (مثل حجر النرد).",
+      "وجوه **البلاطة القائمة** عبارة عن **مستطيلات** (أو $4$ مستطيلات ومربعان، مثل علبة الأحذية أو علبة الدواء).",
+      "**منشور المجسم** هو رسم مستوٍ لوجوهه؛ منشور المكعب يتكون من $6$ مربعات عند طيّها نحصل على مكعب."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 185\" width=\"500\" height=\"185\"><rect width=\"500\" height=\"185\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(18,14)\"><rect width=\"222\" height=\"157\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"111\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">منشور المكعب (6 مربعات)</text><g fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"><rect x=\"96\" y=\"30\" width=\"28\" height=\"28\"/><rect x=\"68\" y=\"58\" width=\"28\" height=\"28\"/><rect x=\"96\" y=\"58\" width=\"28\" height=\"28\"/><rect x=\"124\" y=\"58\" width=\"28\" height=\"28\"/><rect x=\"96\" y=\"86\" width=\"28\" height=\"28\"/><rect x=\"96\" y=\"114\" width=\"28\" height=\"28\"/></g><text x=\"111\" y=\"152\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#334155\">كل الوجوه مربعات متقايسة</text></g><g transform=\"translate(260,14)\"><rect width=\"222\" height=\"157\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"111\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">منشور البلاطة القائمة</text><g fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"1.8\"><rect x=\"86\" y=\"30\" width=\"50\" height=\"24\"/><rect x=\"62\" y=\"54\" width=\"24\" height=\"32\"/><rect x=\"86\" y=\"54\" width=\"50\" height=\"32\"/><rect x=\"136\" y=\"54\" width=\"24\" height=\"32\"/><rect x=\"86\" y=\"86\" width=\"50\" height=\"24\"/><rect x=\"86\" y=\"110\" width=\"50\" height=\"32\"/></g><text x=\"111\" y=\"152\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#334155\">الوجوه مستطيلات (أو 4 مستطيلات ومربعان)</text></g></svg>",
+    "visualCaptionAr": "عند طي المنشور على الخطوط الداخلية نحصل على المجسم المغلق.",
+    "examples": [
+      {
+        "problemAr": "صف حجر النرد (المكعب) من حيث الوجوه والأحرف والرؤوس.",
+        "solutionAr": "لحجر النرد $6$ وجوه كلها مربعات، و $12$ حرفاً، و $8$ رؤوس."
+      },
+      {
+        "problemAr": "ما الفرق بين المكعب والبلاطة القائمة؟",
+        "solutionAr": "كلاهما له $6$ وجوه و $12$ حرفاً و $8$ رؤوس، لكن وجوه المكعب كلها مربعات، أما البلاطة القائمة فمعظم وجوهها مستطيلات."
+      }
+    ],
+    "watchOutAr": "انتبه! لا تخلط بين عدد الوجوه ( $6$ )، وعدد الرؤوس ( $8$ )، وعدد الأحرف ( $12$ )؛ فالأحرف هي الأضلاع التي تصل بين الرؤوس."
+  },
+  "practice": [
+    {
+      "questionAr": "ما هو عدد أحرف البلاطة القائمة؟",
+      "options": [
+        "$6$",
+        "$8$",
+        "$12$",
+        "$4$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$6$ هو عدد الوجوه وليس عدد الأحرف!",
+        "$8$ هو عدد الرؤوس (الزوايا المدببة) وليس عدد الأحرف!",
+        "أحسنت! للبلاطة القائمة $12$ حرفاً ( $4$ في الأعلى، و $4$ في الأسفل، و $4$ عمودية).",
+        "$4$ هو عدد الأحرف في الوجه الواحد فقط، وليس في المجسم كله!"
+      ],
+      "explanationAr": "للبلاطة القائمة (وللمكعب أيضاً) $12$ حرفاً، و $8$ رؤوس، و $6$ وجوه."
+    },
+    {
+      "questionAr": "أي من المنشورات الأربعة في الشكل يمثل **منشور مكعب** صحيحاً؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 205\" width=\"420\" height=\"205\"><rect width=\"420\" height=\"205\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\"/><g transform=\"translate(14,12)\"><rect width=\"188\" height=\"86\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"18\" y=\"20\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\">A</text><g fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.4\"><rect x=\"58\" y=\"34\" width=\"18\" height=\"18\"/><rect x=\"76\" y=\"34\" width=\"18\" height=\"18\"/><rect x=\"94\" y=\"34\" width=\"18\" height=\"18\"/><rect x=\"112\" y=\"34\" width=\"18\" height=\"18\"/><rect x=\"76\" y=\"16\" width=\"18\" height=\"18\"/><rect x=\"76\" y=\"52\" width=\"18\" height=\"18\"/></g></g><g transform=\"translate(218,12)\"><rect width=\"188\" height=\"86\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"18\" y=\"20\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#059669\">B</text><g fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"1.4\"><rect x=\"68\" y=\"34\" width=\"18\" height=\"18\"/><rect x=\"86\" y=\"34\" width=\"18\" height=\"18\"/><rect x=\"104\" y=\"34\" width=\"18\" height=\"18\"/><rect x=\"86\" y=\"16\" width=\"18\" height=\"18\"/><rect x=\"86\" y=\"52\" width=\"18\" height=\"18\"/></g></g><g transform=\"translate(14,108)\"><rect width=\"188\" height=\"86\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"18\" y=\"20\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#d97706\">C</text><g fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.4\"><rect x=\"48\" y=\"36\" width=\"28\" height=\"16\"/><rect x=\"76\" y=\"36\" width=\"16\" height=\"16\"/><rect x=\"92\" y=\"36\" width=\"28\" height=\"16\"/><rect x=\"120\" y=\"36\" width=\"16\" height=\"16\"/><rect x=\"92\" y=\"20\" width=\"28\" height=\"16\"/><rect x=\"92\" y=\"52\" width=\"28\" height=\"16\"/></g></g><g transform=\"translate(218,108)\"><rect width=\"188\" height=\"86\" rx=\"6\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"18\" y=\"20\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">D</text><g fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"><rect x=\"58\" y=\"34\" width=\"18\" height=\"18\"/><rect x=\"76\" y=\"34\" width=\"18\" height=\"18\"/><rect x=\"94\" y=\"34\" width=\"18\" height=\"18\"/><rect x=\"112\" y=\"34\" width=\"18\" height=\"18\"/><polygon points=\"76,34 85,16 94,34\"/><polygon points=\"76,52 85,70 94,52\"/></g></g></svg>",
+      "options": [
+        "المنشور A",
+        "المنشور B",
+        "المنشور C",
+        "المنشور D"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! المنشور A يتكون من $6$ مربعات متقايسة ومرتبطة بحيث تطوى إلى مكعب.",
+        "المنشور B يتكون من $5$ مربعات فقط، وينقصه وجه سادس لإغلاق المكعب!",
+        "المنشور C فيه وجوه مستطيلة الشكل، فهو منشور بلاطة قائمة وليس مكعباً.",
+        "المنشور D يحتوي على مثلثين، بينما جميع وجوه المكعب الستة مربعات!"
+      ],
+      "explanationAr": "للمكعب $6$ وجوه كلها مربعات متقايسة، وهذا ما يظهر في المنشور A ( $4$ مربعات في صف، ومربع من الأعلى وآخر من الأسفل)."
+    },
+    {
+      "questionAr": "أي من الأجسام التالية له $6$ وجوه كلها مربعات متقايسة؟",
+      "options": [
+        "حجر النرد (المكعب)",
+        "علبة الأحذية (البلاطة القائمة)",
+        "الكرة",
+        "علبة العصير الأسطوانية"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! حجر النرد شكله مكعب، وكل وجوهه الستة مربعات متقايسة.",
+        "علبة الأحذية على شكل بلاطة قائمة، وجوهها مستطيلات وليست كلها مربعات.",
+        "الكرة مجسم يتدحرج وليس له وجوه مسطحة ولا أحرف ولا رؤوس.",
+        "علبة العصير أسطوانة تتدحرج ولها قرصان دائريان وليست مربعات."
+      ],
+      "explanationAr": "حجر النرد هو مثال مألوف للمكعب الذي يتميز بـ $6$ وجوه كلها مربعات متقايسة."
+    }
+  ]
+}

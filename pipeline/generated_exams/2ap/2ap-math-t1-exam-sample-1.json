@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "2ap",
+    "yearName": "السنة الثانية ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t1",
+    "trimesterName": "الفصل الأول",
+    "docType": "exam",
+    "academicYear": "2025/2026",
+    "duration": "ساعة واحدة",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 1.5,
+      "instruction": "لاحظ النقط المرسومة على المرصوفة ثم أجب:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) اذكر النقط الثلاث التي تقع على استقامية واحدة.",
+              "answer": "النقط التي على استقامية واحدة هي: $P$ ، $N$ ، $M$.",
+              "mark": "1"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/2ap_t1_align_easy_s3131.svg",
+              "caption": "استقامية النقط على المرصوفة"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) ما هي النقطة التي ليست على استقامية واحدة معها؟",
+          "answer": "النقطة التي ليست على استقامية واحدة هي: $R$.",
+          "mark": "0.5"
+        }
+      ],
+      "id": "ex-2ap_t1_alignment_length_poly-s3131",
+      "num": "الأول"
+    },
+    {
+      "points": 1.5,
+      "instruction": "احسب المجموع وأكمل بالضعف والنصف:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب المجموع (دون احتفاظ):  $16 + 21 =$ .....",
+          "answer": "1) المجموع:\n$ 16 + 21 = 37 $",
+          "mark": "1"
+        },
+        {
+          "type": "text",
+          "content": "2) أكمل: ضعف العدد $14$ هو ..... ، ونصف العدد $10$ هو .....",
+          "answer": "2) ضعف العدد $14$ هو $28$، ونصف العدد $10$ هو $5$.\n$ 14 + 14 = 28 $",
+          "mark": "1"
+        }
+      ],
+      "id": "ex-2ap_t1_add_double_half-s3148",
+      "num": "الثاني"
+    },
+    {
+      "points": 1.5,
+      "instruction": "أنجز المقارنة والترتيب والحصر بدقة.",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) قارن باستعمال أحد الرمزين ($<$ أو $>$):  $7$ ..... $19$    و    $10$ ..... $15$",
+          "answer": "1) المقارنة:\n$ 7 < 19 $\n$ 10 < 15 $",
+          "mark": "0.5"
+        },
+        {
+          "type": "text",
+          "content": "2) رتّب الأعداد التالية ترتيباً تصاعدياً:  $7$ ، $19$ ، $10$ ، $15$",
+          "answer": "2) الترتيب التصاعدي:\n$ 7 < 10 < 15 < 19 $",
+          "mark": "1"
+        },
+        {
+          "type": "text",
+          "content": "3) احصر العدد $19$ بين عشرتين متتاليتين:  ..... $<$ $19$ $<$ .....",
+          "answer": "3) الحصر:\n$ 10 < 19 < 20 $",
+          "mark": "0.5"
+        }
+      ],
+      "id": "ex-2ap_t1_compare_order-s3165",
+      "num": "الثالث"
+    },
+    {
+      "points": 1.5,
+      "instruction": "لاحظ المرصوفة المقابلة ثم أجب:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) عيّن إحداثيي كل من الرمزين $K$ و $M$ على المرصوفة.",
+              "answer": "الرمز $K$ في الخانة $(C, 1)$، والرمز $M$ في الخانة $(B, 3)$.",
+              "mark": "1"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/2ap_t1_grid_easy_s3182.svg",
+              "caption": "المرصوفة"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "2) ما هو الرمز الموجود في الخانة $(C, 3)$؟",
+          "answer": "الرمز الموجود في الخانة $(C, 3)$ هو $N$.",
+          "mark": "0.5"
+        }
+      ],
+      "id": "ex-2ap_t1_grid_locate-s3182",
+      "num": "الرابع"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "اقرأ الوضعية جيداً ثم أجب:",
+      "content": [
+        {
+          "type": "text",
+          "content": "عند سارة $29$ حبة حلوى، أعطت لأختها $17$ منها."
+        },
+        {
+          "type": "text",
+          "content": "1) كم حبة حلوى بقي عند سارة؟",
+          "answer": "العملية:\n$ 29 - 17 = 12 $\nالجواب: بقي عند سارة $12$ حبة حلوى.",
+          "mark": "3"
+        }
+      ],
+      "id": "ex-2ap_t1_integration_word-s3199"
+    }
+  ]
+}

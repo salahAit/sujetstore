@@ -1,0 +1,129 @@
+{
+  "id": "lesson_5ap_t3_time_durations_calculations",
+  "slug": "5ap-t3-time-durations-calculations",
+  "grade": "5ap",
+  "yearSubjectId": 606,
+  "trimesterId": "t3",
+  "sequenceId": "seq_5ap_4",
+  "sequenceTitleAr": "المقطع التعلمي الرابع: المجسمات، إنشاء الأشكال، المقياس، السعات والمدد والسرعة المنتظمة",
+  "order": 7,
+  "titleAr": "قياس المدد وتعليم الأحداث والحساب على الأزمنة",
+  "objectives": [
+    "استعمال وحدات الزمن والعلاقات بينها ($\\text{s}, \\text{min}, \\text{h}$ واليوم والأسبوع والشهر والسنة والقرن).",
+    "حساب وقت الوصول أو وقت الانطلاق أو المدة المستغرقة بجمع وطرح المدد مع المبادلة الستينية ($1\\text{ h} = 60\\text{ min}$).",
+    "حساب مدد تعبر منتصف الليل باستعمال التدرج على خط الزمن.",
+    "التعبير عن المدد بالكسور المألوفة والأعداد العشرية ($\\frac{1}{4}\\text{ h} = 15\\text{ min}$، $1.5\\text{ h} = 1\\text{ h } 30\\text{ min}$)."
+  ],
+  "keywordsAr": [
+    "قياس المدد",
+    "الساعة والدقيقة والثانية",
+    "وقت الانطلاق",
+    "وقت الوصول",
+    "المدة المستغرقة",
+    "المبادلة الستينية"
+  ],
+  "discover": {
+    "scenarioAr": "انطلق قطار صباحي من محطة الجزائر نحو قسنطينة على الساعة $07\\text{ h } 45\\text{ min}$، واستغرقت الرحلة مدة $5\\text{ h } 35\\text{ min}$.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 160\" width=\"440\" height=\"160\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><text x=\"220\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">التدرج على خط الزمن: 07 h 45 min + 5 h 35 min</text><line x1=\"30\" y1=\"92\" x2=\"410\" y2=\"92\" stroke=\"#1e293b\" stroke-width=\"2.2\"/><polygon points=\"416,92 406,87 406,97\" fill=\"#1e293b\"/><circle cx=\"48\" cy=\"92\" r=\"5\" fill=\"#1d4ed8\"/><text x=\"48\" y=\"116\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">07 h 45 min</text><circle cx=\"145\" cy=\"92\" r=\"5\" fill=\"#475569\"/><text x=\"145\" y=\"116\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">08 h 00 min</text><circle cx=\"295\" cy=\"92\" r=\"5\" fill=\"#475569\"/><text x=\"295\" y=\"116\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">13 h 00 min</text><circle cx=\"385\" cy=\"92\" r=\"5\" fill=\"#15803d\"/><text x=\"385\" y=\"116\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">13 h 20 min</text><path d=\"M 48 86 Q 96 42 145 86\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"96\" y=\"54\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">+ 15 min</text><path d=\"M 145 86 Q 220 38 295 86\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"220\" y=\"52\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">+ 5 h</text><path d=\"M 295 86 Q 340 42 385 86\" fill=\"none\" stroke=\"#15803d\" stroke-width=\"1.8\"/><text x=\"340\" y=\"54\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\">+ 20 min</text><text x=\"220\" y=\"146\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">المبادلة: 45 min + 35 min = 80 min = 1 h 20 min</text></svg>",
+    "steps": [
+      {
+        "promptAr": "نجمع الساعات مع الساعات ($7 + 5 = 12\\text{ h}$) والدقائق مع الدقائق ($45 + 35 = 80\\text{ min}$). بعد مبادلة $60\\text{ min}$ بـ $1\\text{ h}$، كم دقيقة تبقى؟ (اكتب العدد فقط)",
+        "hintAr": "احسب $80 - 60$، ثم أضف $1\\text{ h}$ إلى $12\\text{ h}$.",
+        "expectedInput": "20",
+        "revealAr": "$80\\text{ min} = 1\\text{ h } 20\\text{ min}$، فنضيف $1\\text{ h}$ إلى $12\\text{ h}$ ليصل القطار على الساعة $13\\text{ h } 20\\text{ min}$."
+      },
+      {
+        "promptAr": "شاهد المسافرون خلال الرحلة شريطا وثائقيا مدته $\\frac{3}{4}\\text{ h}$. كم دقيقة استمر هذا الشريط؟ (اكتب العدد فقط)",
+        "hintAr": "الساعة تساوي $60\\text{ min}$، إذن $\\frac{1}{4}\\text{ h} = 15\\text{ min}$، اضرب في $3$.",
+        "expectedInput": "45",
+        "revealAr": "مدة الشريط الوثائقي هي $\\frac{3}{4}\\text{ h} = 3 \\times 15 = 45\\text{ min}$."
+      },
+      {
+        "promptAr": "في رحلة أخرى، بدأ عرض تربوي على الساعة $18\\text{ h } 50\\text{ min}$ وانتهى على الساعة $20\\text{ h } 15\\text{ min}$. ما المدة المستغرقة بالدقائق فقط؟ (اكتب العدد فقط)",
+        "hintAr": "من $18\\text{ h } 50\\text{ min}$ إلى $19\\text{ h } 00\\text{ min}$ توجد $10\\text{ min}$، ثم إلى $20\\text{ h } 15\\text{ min}$ توجد $1\\text{ h } 15\\text{ min} = 75\\text{ min}$.",
+        "expectedInput": "85",
+        "revealAr": "المدة المستغرقة هي $10 + 75 = 85\\text{ min}$ أي $1\\text{ h } 25\\text{ min}$ (أو بالطرح الستيني: $19\\text{ h } 75\\text{ min} - 18\\text{ h } 50\\text{ min} = 1\\text{ h } 25\\text{ min}$)."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "العلاقات بين وحدات الزمن: $1\\text{ min} = 60\\text{ s}$، $1\\text{ h} = 60\\text{ min} = 3600\\text{ s}$، يوم واحد = $24\\text{ h}$، أسبوع واحد = $7$ أيام، سنة واحدة = $12$ شهرا = $365$ أو $366$ يوما، قرن واحد = $100$ سنة.",
+      "العلاقات الثلاث لحساب الأزمنة: وقت الوصول = وقت الانطلاق + المدة؛ المدة = وقت الوصول - وقت الانطلاق؛ وقت الانطلاق = وقت الوصول - المدة.",
+      "المبادلة الستينية: في الجمع نحول كل $60\\text{ min}$ إلى $1\\text{ h}$ (وكل $60\\text{ s}$ إلى $1\\text{ min}$). في الطرح إذا كانت دقائق المطروح أكبر، نستلف $1\\text{ h}$ ونضيف $60\\text{ min}$ إلى الدقائق.",
+      "الكسور والأعداد العشرية للزمن: $\\frac{1}{4}\\text{ h} = 15\\text{ min}$، $\\frac{1}{2}\\text{ h} = 0.5\\text{ h} = 30\\text{ min}$، $\\frac{3}{4}\\text{ h} = 0.75\\text{ h} = 45\\text{ min}$، $2.5\\text{ h} = 2\\text{ h } 30\\text{ min}$.",
+      "عبور منتصف الليل: نحسب أولا المدة من وقت الانطلاق ليلا حتى $24\\text{ h } 00\\text{ min}$، ثم نضيف وقت الوصول صباحا."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 170\" width=\"440\" height=\"170\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><rect x=\"10\" y=\"10\" width=\"235\" height=\"150\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.4\"/><text x=\"127\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">الطرح بالمبادلة الستينية (1 h = 60 min)</text><text x=\"127\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"#64748b\">20 h 15 min ← نستلف 1 h = 60 min</text><text x=\"127\" y=\"80\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\">19 h 75 min</text><text x=\"127\" y=\"102\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">- 18 h 50 min</text><line x1=\"55\" y1=\"112\" x2=\"200\" y2=\"112\" stroke=\"#1e293b\" stroke-width=\"1.8\"/><text x=\"127\" y=\"136\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#15803d\">= 1 h 25 min</text><rect x=\"258\" y=\"10\" width=\"172\" height=\"150\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><text x=\"344\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">كسور الساعة</text><text x=\"344\" y=\"60\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">1/4 h = 15 min</text><text x=\"344\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">1/2 h = 0.5 h = 30 min</text><text x=\"344\" y=\"116\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">3/4 h = 0.75 h = 45 min</text><text x=\"344\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" fill=\"#dc2626\">انتبه: 1.5 h = 1 h 30 min</text></svg>",
+    "visualCaptionAr": "توضيح الاستلاف الستيني (إضافة $60\\text{ min}$ بدلا من $100$) وتحويل كسور الساعة إلى دقائق.",
+    "examples": [
+      {
+        "problemAr": "طرح مع الاستلاف الستيني: بدأت مباراة على الساعة $16\\text{ h } 45\\text{ min}$ وانتهت على الساعة $18\\text{ h } 30\\text{ min}$. ما المدة الكلية للمباراة؟",
+        "solutionAr": "بما أن $30 < 45$، نستلف $1\\text{ h} = 60\\text{ min}$ فتصبح $18\\text{ h } 30\\text{ min} = 17\\text{ h } 90\\text{ min}$. نطرح: $90 - 45 = 45\\text{ min}$ و $17 - 16 = 1\\text{ h}$. المدة هي $1\\text{ h } 45\\text{ min}$."
+      },
+      {
+        "problemAr": "عبور منتصف الليل: غادرت حافلة المحطة على الساعة $21\\text{ h } 40\\text{ min}$ ووصلت صباح الغد على الساعة $05\\text{ h } 15\\text{ min}$. ما مدة السفر؟",
+        "solutionAr": "حتى منتصف الليل ($23\\text{ h } 60\\text{ min}$): $23\\text{ h } 60\\text{ min} - 21\\text{ h } 40\\text{ min} = 2\\text{ h } 20\\text{ min}$. نضيف مدة الصباح: $2\\text{ h } 20\\text{ min} + 5\\text{ h } 15\\text{ min} = 7\\text{ h } 35\\text{ min}$."
+      },
+      {
+        "problemAr": "تحويل الثواني والأعداد العشرية: حول $200\\text{ s}$ إلى دقائق وثوانٍ، و $2.5\\text{ h}$ إلى ساعات ودقائق.",
+        "solutionAr": "نقسم $200 \\div 60 = 3$ والباقي $20$، إذن $200\\text{ s} = 3\\text{ min } 20\\text{ s}$. أما $2.5\\text{ h} = 2\\text{ h} + 0.5\\text{ h} = 2\\text{ h } 30\\text{ min}$."
+      }
+    ],
+    "watchOutAr": "حذار من الخلط بين النظام العشري والنظام الستيني! عند الاستلاف من الساعات نضيف $60$ دقيقة وليس $100$، والمدة $1.5\\text{ h}$ تساوي $1\\text{ h } 30\\text{ min}$ وليس $1\\text{ h } 50\\text{ min}$، كما أن $2\\text{ h } 25\\text{ min}$ لا تكتب $2.25\\text{ h}$!"
+  },
+  "practice": [
+    {
+      "questionAr": "وصلت طائرة إلى المطار على الساعة $14\\text{ h } 20\\text{ min}$ بعد رحلة استغرقت $2\\text{ h } 45\\text{ min}$. في أي ساعة أقلعت الطائرة؟",
+      "options": [
+        "$12\\text{ h } 25\\text{ min}$",
+        "$11\\text{ h } 35\\text{ min}$",
+        "$11\\text{ h } 75\\text{ min}$",
+        "$12\\text{ h } 35\\text{ min}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "لقد طرحت $45 - 20 = 25$ في الدقائق وهذا عكس المطلوب، كما نسيت إنقاص ساعة الاستلاف.",
+        "ممتاز! استلفت ساعة ($60\\text{ min}$) فأصبحت $13\\text{ h } 80\\text{ min}$، ثم $13\\text{ h } 80\\text{ min} - 2\\text{ h } 45\\text{ min} = 11\\text{ h } 35\\text{ min}$.",
+        "عند الاستلاف أضفت $100$ دقيقة بدلا من $60$ دقيقة ($120 - 45 = 75$)، تذكر أن الساعة تساوي $60\\text{ min}$ فقط!",
+        "بعد الاستلاف من $14\\text{ h}$ تصبح الساعات $13\\text{ h}$، و $13 - 2 = 11\\text{ h}$ وليس $12\\text{ h}$."
+      ],
+      "explanationAr": "لحساب وقت الانطلاق نطرح المدة من وقت الوصول: $14\\text{ h } 20\\text{ min} - 2\\text{ h } 45\\text{ min}$. لأن $20 < 45$، نستلف $1\\text{ h} = 60\\text{ min}$ فتصبح $13\\text{ h } 80\\text{ min}$. نطرح: $80 - 45 = 35\\text{ min}$ و $13 - 2 = 11\\text{ h}$، إذن أقلعت على $11\\text{ h } 35\\text{ min}$."
+    },
+    {
+      "questionAr": "تدرّب رياضي مدة $1.5\\text{ h}$ في الفترة الصباحية و $\\frac{3}{4}\\text{ h}$ في الفترة المسائية. ما المجموع الكلي لمدة تدريبه بالساعات والدقائق؟",
+      "options": [
+        "$2\\text{ h } 25\\text{ min}$",
+        "$2\\text{ h } 15\\text{ min}$",
+        "$1\\text{ h } 95\\text{ min}$",
+        "$2\\text{ h } 35\\text{ min}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه! حولت $1.5\\text{ h}$ إلى $1\\text{ h } 50\\text{ min}$ خطأً؛ الصحيح أن $0.5\\text{ h} = 30\\text{ min}$.",
+        "أحسنت! $1.5\\text{ h} = 1\\text{ h } 30\\text{ min}$ و $\\frac{3}{4}\\text{ h} = 45\\text{ min}$، والمجموع $1\\text{ h } 75\\text{ min} = 2\\text{ h } 15\\text{ min}$.",
+        "حول الدقائق الزائدة إلى ساعة: $95\\text{ min}$ أو $75\\text{ min}$ أكبر من $60\\text{ min}$ ولا نتركها دون مبادلة!",
+        "لقد حسبت $1\\text{ h } 50\\text{ min} + 45\\text{ min} = 2\\text{ h } 35\\text{ min}$؛ راجع قيمة $0.5\\text{ h} = 30\\text{ min}$."
+      ],
+      "explanationAr": "نحول المدتين إلى ساعات ودقائق: $1.5\\text{ h} = 1\\text{ h } 30\\text{ min}$، و $\\frac{3}{4}\\text{ h} = 45\\text{ min}$. نجمع: $30 + 45 = 75\\text{ min} = 1\\text{ h } 15\\text{ min}$. نضيفها إلى $1\\text{ h}$ فنجد $2\\text{ h } 15\\text{ min}$."
+    },
+    {
+      "questionAr": "توضح الساعة وقت انطلاق قطار ليلي ($22\\text{ h } 45\\text{ min}$). إذا وصل القطار إلى وجهته في صباح الغد على الساعة $06\\text{ h } 10\\text{ min}$، فما المدة المستغرقة في السفر؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 195 192\" width=\"195\" height=\"192\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><circle cx=\"97\" cy=\"90\" r=\"70\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"2.8\"/><line x1=\"129.0\" y1=\"34.6\" x2=\"132.0\" y2=\"29.4\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"124.0\" y=\"47.2\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">1</text><line x1=\"152.4\" y1=\"58.0\" x2=\"157.6\" y2=\"55.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"143.8\" y=\"67.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">2</text><line x1=\"161.0\" y1=\"90.0\" x2=\"167.0\" y2=\"90.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"151.0\" y=\"94.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">3</text><line x1=\"152.4\" y1=\"122.0\" x2=\"157.6\" y2=\"125.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"143.8\" y=\"121.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">4</text><line x1=\"129.0\" y1=\"145.4\" x2=\"132.0\" y2=\"150.6\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"124.0\" y=\"140.8\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">5</text><line x1=\"97.0\" y1=\"154.0\" x2=\"97.0\" y2=\"160.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"97.0\" y=\"148.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">6</text><line x1=\"65.0\" y1=\"145.4\" x2=\"62.0\" y2=\"150.6\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"70.0\" y=\"140.8\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">7</text><line x1=\"41.6\" y1=\"122.0\" x2=\"36.4\" y2=\"125.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"50.2\" y=\"121.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">8</text><line x1=\"33.0\" y1=\"90.0\" x2=\"27.0\" y2=\"90.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"43.0\" y=\"94.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">9</text><line x1=\"41.6\" y1=\"58.0\" x2=\"36.4\" y2=\"55.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"50.2\" y=\"67.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">10</text><line x1=\"65.0\" y1=\"34.6\" x2=\"62.0\" y2=\"29.4\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"70.0\" y=\"47.2\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">11</text><line x1=\"97.0\" y1=\"26.0\" x2=\"97.0\" y2=\"20.0\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"97.0\" y=\"40.0\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">12</text><line x1=\"97\" y1=\"90\" x2=\"75.1\" y2=\"61.4\" stroke=\"#dc2626\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"97\" y1=\"90\" x2=\"43.0\" y2=\"90.0\" stroke=\"#2563eb\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"97\" cy=\"90\" r=\"4\" fill=\"#0f172a\"/><text x=\"97\" y=\"180\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">انطلاق ليلا: 22 h 45 min</text></svg>",
+      "options": [
+        "$7\\text{ h } 25\\text{ min}$",
+        "$8\\text{ h } 25\\text{ min}$",
+        "$7\\text{ h } 55\\text{ min}$",
+        "$6\\text{ h } 35\\text{ min}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "ممتاز! من $22\\text{ h } 45\\text{ min}$ إلى منتصف الليل توجد $1\\text{ h } 15\\text{ min}$، نضيف $6\\text{ h } 10\\text{ min}$ فنجد $7\\text{ h } 25\\text{ min}$.",
+        "راجع المدة حتى منتصف الليل: من $22\\text{ h } 45\\text{ min}$ إلى $24\\text{ h } 00\\text{ min}$ هي ساعة واحدة و $15$ دقيقة وليس ساعتين.",
+        "من $22\\text{ h } 45\\text{ min}$ إلى $23\\text{ h } 00\\text{ min}$ توجد $15\\text{ min}$ وليس $45\\text{ min}$؛ ثم $15 + 10 = 25\\text{ min}$.",
+        "لا تنسَ المدة بين $22\\text{ h } 45\\text{ min}$ ومنتصف الليل ($1\\text{ h } 15\\text{ min}$) قبل إضافة ساعات الصباح."
+      ],
+      "explanationAr": "نحسب على مرحلتين عبر منتصف الليل ($24\\text{ h } 00\\text{ min} = 23\\text{ h } 60\\text{ min}$): من $22\\text{ h } 45\\text{ min}$ إلى منتصف الليل توجد $1\\text{ h } 15\\text{ min}$. نضيف وقت الصباح: $1\\text{ h } 15\\text{ min} + 6\\text{ h } 10\\text{ min} = 7\\text{ h } 25\\text{ min}$."
+    }
+  ]
+}

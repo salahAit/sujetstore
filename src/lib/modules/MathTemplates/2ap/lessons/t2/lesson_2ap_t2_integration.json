@@ -1,0 +1,121 @@
+{
+  "id": "lesson_2ap_t2_integration",
+  "slug": "lesson-2ap-t2-integration",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الثالث: في ساحة البريد المركزي (الأعداد إلى 999، الطرح البسيط، الأشكال المستوية والزمن)",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الثاني: مشكلات في العملة والأطوال والأشكال والأعداد إلى 999",
+  "objectives": [
+    "استثمار الأعداد إلى 999 والجمع بالاحتفاظ والطرح دون استلاف في وضعيات شراء ومبادلة بالدينار الجزائري",
+    "تجنيد معطيات من الجداول والرزنامة والساعة لحل مشكلات من الحياة اليومية",
+    "بناء استراتيجية حل منظمة تتضمن العمليات العمودية والأفقية وجملة الإجابة"
+  ],
+  "keywordsAr": [
+    "إدماج",
+    "حصيلة الفصل الثاني",
+    "الدينار الجزائري (DA)",
+    "وضعية إدماجية"
+  ],
+  "discover": {
+    "scenarioAr": "تجمع سلمى وزملاؤها $495\\text{ DA}$ لتجهيز ركن أزهار مستطيل الشكل في المدرسة. من الجدول المقابل: اشتروا بذور أزهار بـ $148\\text{ DA}$ ، وأصيص تزيين بـ $235\\text{ DA}$ ، وشريط تزيين طوله $1\\text{ m } 20\\text{ cm}$.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 230\" width=\"600\" height=\"230\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"214\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">معطيات تجهيز ركن الأزهار</text><rect x=\"28\" y=\"48\" width=\"270\" height=\"158\" rx=\"10\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"163\" y=\"72\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">المبلغ المتاح: 495 DA</text><line x1=\"28\" y1=\"84\" x2=\"298\" y2=\"84\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"28\" y1=\"124\" x2=\"298\" y2=\"124\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"28\" y1=\"164\" x2=\"298\" y2=\"164\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"145\" y1=\"84\" x2=\"145\" y2=\"206\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"222\" y=\"109\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">بذور الأزهار</text><text x=\"86\" y=\"109\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">148 DA</text><text x=\"222\" y=\"149\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">أصيص تزيين</text><text x=\"86\" y=\"149\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">235 DA</text><text x=\"222\" y=\"189\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">شريط التزيين</text><text x=\"86\" y=\"189\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">1 m 20 cm</text><rect x=\"320\" y=\"48\" width=\"252\" height=\"158\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.4\"/><text x=\"446\" y=\"72\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">حوض مستطيل الشكل</text><rect x=\"362\" y=\"92\" width=\"168\" height=\"76\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><rect x=\"362\" y=\"92\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"520\" y=\"92\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"362\" y=\"158\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"520\" y=\"158\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"446\" y=\"192\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">وقت العمل: من 09:00 إلى 10:30</text></svg>",
+    "steps": [
+      {
+        "promptAr": "أولاً: احسب ثمن بذور الأزهار ( $148\\text{ DA}$ ) وأصيص التزيين ( $235\\text{ DA}$ ) معاً باستعمال الجمع بالاحتفاظ. (اكتب العدد فقط)",
+        "hintAr": "اجمع الوحدات $8 + 5 = 13$ (نكتب $3$ ونحتفظ بـ $1$ )، ثم العشرات $1 + 4 + 3$ ، ثم المئات $1 + 2$.",
+        "expectedInput": "383",
+        "revealAr": "$148 + 235 = 383$. إذن ثمن المشتريات هو $383\\text{ DA}$."
+      },
+      {
+        "promptAr": "ثانياً: كم ديناراً بقي مع التلاميذ من مبلغ $495\\text{ DA}$ بعد دفع $383\\text{ DA}$ ؟ (اكتب العدد فقط)",
+        "hintAr": "ضع الطرح العمودي دون استلاف: $495 - 383$ (الوحدات $5 - 3$ ، العشرات $9 - 8$ ، المئات $4 - 3$ ).",
+        "expectedInput": "112",
+        "revealAr": "$495 - 383 = 112$. بقي مع التلاميذ $112\\text{ DA}$."
+      },
+      {
+        "promptAr": "ثالثاً: ما هو طول شريط التزيين ( $1\\text{ m } 20\\text{ cm}$ ) بالسنتيمتر ( $\\text{cm}$ )؟ (اكتب العدد فقط)",
+        "hintAr": "تذكر أن $1\\text{ m} = 100\\text{ cm}$ ، ثم أضف $20\\text{ cm}$.",
+        "expectedInput": "120",
+        "revealAr": "$1\\text{ m } 20\\text{ cm} = 100 + 20 = 120\\text{ cm}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**أفهم المعطيات**: أقرأ نص الوضعية الإدماجية والجدول أو الرسم جيداً، وأحدد المطلوب في كل سؤال.",
+      "**أختار العملية المناسبة**: أستعمل **الجمع** عندما أضم أشياء أو أبحث عن المجموع الكلي، و**الطرح** عندما أبحث عن الباقي أو الفرق.",
+      "**أوحد الوحدات**: لا أجمع أو أقارن قبل توحيد الوحدات ( $\\text{DA}$ مع $\\text{DA}$ ، و $1\\text{ m} = 100\\text{ cm}$ ، و $1$ ساعة = $60$ دقيقة ).",
+      "**أنظم الحل**: أضع العملية العمودية بترتيب المراتب، ثم أكتب العملية الأفقية، ثم جملة الإجابة واضحة مع **الوحدة**."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"32\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">خطوات حل الوضعية الإدماجية في الفصل الثاني</text><rect x=\"448\" y=\"52\" width=\"126\" height=\"156\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.6\"/><circle cx=\"511\" cy=\"80\" r=\"15\" fill=\"#2563eb\"/><text x=\"511\" y=\"85\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">1</text><text x=\"511\" y=\"116\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">أقرأ وأفهم</text><text x=\"511\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">أستخرج الأعداد</text><text x=\"511\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">من النص والجدول</text><text x=\"511\" y=\"188\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">DA | cm | الساعة</text><rect x=\"308\" y=\"52\" width=\"126\" height=\"156\" rx=\"10\" fill=\"#fff7ed\" stroke=\"#f97316\" stroke-width=\"1.6\"/><circle cx=\"371\" cy=\"80\" r=\"15\" fill=\"#ea580c\"/><text x=\"371\" y=\"85\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">2</text><text x=\"371\" y=\"116\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"rtl\">أختار العملية</text><text x=\"371\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">المجموع: جمع (+)</text><text x=\"371\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">الباقي: طرح (-)</text><text x=\"371\" y=\"188\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">أوحد الوحدات</text><rect x=\"168\" y=\"52\" width=\"126\" height=\"156\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#22c55e\" stroke-width=\"1.6\"/><circle cx=\"231\" cy=\"80\" r=\"15\" fill=\"#16a34a\"/><text x=\"231\" y=\"85\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">3</text><text x=\"231\" y=\"116\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">أحسب بدقة</text><text x=\"231\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">أضع العملية عمودياً</text><text x=\"231\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">أرتب م | ع | و</text><text x=\"231\" y=\"188\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">أنتبه للاحتفاظ</text><rect x=\"28\" y=\"52\" width=\"126\" height=\"156\" rx=\"10\" fill=\"#faf5ff\" stroke=\"#a855f7\" stroke-width=\"1.6\"/><circle cx=\"91\" cy=\"80\" r=\"15\" fill=\"#9333ea\"/><text x=\"91\" y=\"85\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#ffffff\" direction=\"ltr\">4</text><text x=\"91\" y=\"116\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#581c87\" direction=\"rtl\">أكتب الإجابة</text><text x=\"91\" y=\"142\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">العملية الأفقية</text><text x=\"91\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\" direction=\"rtl\">+ جملة الإجابة</text><text x=\"91\" y=\"188\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#7e22ce\" direction=\"rtl\">مع الوحدة الصحيحة</text></svg>",
+    "visualCaptionAr": "خريطة الحل المنظمة للوضعيات الإدماجية في الرياضيات للسنة الثانية ابتدائي.",
+    "examples": [
+      {
+        "problemAr": "يملك علي $495\\text{ DA}$. اشترى هدية ثمنها $265\\text{ DA}$ وبطاقة تهنئة بـ $128\\text{ DA}$. كم دفع؟ وكم بقي له؟",
+        "solutionAr": "ثمن المشتريات: $265 + 128 = 393\\text{ DA}$ (بالاحتفاظ $5+8=13$ ). الباقي: $495 - 393 = 102\\text{ DA}$. بقي لعلي $102\\text{ DA}$."
+      },
+      {
+        "problemAr": "طول طاولة مستطيلة $1\\text{ m } 50\\text{ cm}$ وعرضها $80\\text{ cm}$. ما طولها بـ $\\text{cm}$ ؟ وكم زاوية قائمة لها؟",
+        "solutionAr": "الطول بـ $\\text{cm}$: $100 + 50 = 150\\text{ cm}$. وبما أن الطاولة مستطيلة الشكل فلها $4$ زوايا قائمة."
+      }
+    ],
+    "watchOutAr": "لا تنس كتابة **الوحدة** في جملة الإجابة ( $\\text{DA}$ للنقود، $\\text{cm}$ أو $\\text{m}$ للأطوال، ساعة أو دقيقة للزمن)، وتأكد من قراءة السؤال جيداً لتعرف هل تحتاج إلى عملية واحدة أم عمليتين!"
+  },
+  "practice": [
+    {
+      "questionAr": "مع ياسين $398\\text{ DA}$. اشترى مسطرة بـ $45\\text{ DA}$ وعلبة أقلام تلوين بـ $128\\text{ DA}$. كم ديناراً بقي مع ياسين؟",
+      "options": [
+        "$173\\text{ DA}$",
+        "$235\\text{ DA}$",
+        "$225\\text{ DA}$",
+        "$215\\text{ DA}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "$173\\text{ DA}$ هو مجموع ما صرفه ياسين ( $45 + 128$ )، لكن السؤال يطلب المبلغ الذي بقي معه!",
+        "تأكد من الاحتفاظ عند جمع $45 + 128$: المجموع $173$ وليس $163$.",
+        "ممتاز! أولاً نحسب المشتريات: $45 + 128 = 173\\text{ DA}$ ، ثم الباقي: $398 - 173 = 225\\text{ DA}$.",
+        "راجع طرح العشرات في $398 - 173$: $9 - 7 = 2$ وليس $1$."
+      ],
+      "explanationAr": "نحل على مرحلتين: (1) ثمن المشتريات: $45 + 128 = 173\\text{ DA}$. (2) المبلغ المتبقي: $398 - 173 = 225\\text{ DA}$."
+    },
+    {
+      "questionAr": "تأمل رسم حوض الأزهار المستطيل المقابل. ما هو طول الضلع الأكبر بالسنتيمتر ( $\\text{cm}$ )، وكم زاوية قائمة يملك هذا الحوض؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 155\" width=\"380\" height=\"155\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"364\" height=\"139\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"100\" y=\"36\" width=\"180\" height=\"82\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><rect x=\"100\" y=\"36\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"269\" y=\"36\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"100\" y=\"107\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"269\" y=\"107\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"190\" y=\"27\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">2 m</text><text x=\"190\" y=\"138\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">2 m</text><text x=\"54\" y=\"82\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">1 m 40 cm</text><text x=\"326\" y=\"82\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">1 m 40 cm</text></svg>",
+      "options": [
+        "$200\\text{ cm}$ و $4$ زوايا قائمة",
+        "$20\\text{ cm}$ و $4$ زوايا قائمة",
+        "$200\\text{ cm}$ و زاويتان قائمتان",
+        "$140\\text{ cm}$ و $4$ زوايا قائمة"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! $2\\text{ m} = 200\\text{ cm}$ ، والمستطيل له $4$ زوايا قائمة.",
+        "انتبه! $1\\text{ m} = 100\\text{ cm}$ وليس $10\\text{ cm}$ ، لذا $2\\text{ m} = 200\\text{ cm}$.",
+        "انظر إلى زوايا المستطيل الأربع في الرسم: للمستطيل $4$ زوايا قائمة وليس زاويتين فقط.",
+        "$140\\text{ cm}$ هو طول الضلع الأصغر ( $1\\text{ m } 40\\text{ cm}$ )، والمطلوب طول الضلع الأكبر ( $2\\text{ m}$ )."
+      ],
+      "explanationAr": "الضلع الأكبر طوله $2\\text{ m} = 200\\text{ cm}$ (لأن $1\\text{ m} = 100\\text{ cm}$ )، والحوض مستطيل الشكل إذن له $4$ زوايا قائمة."
+    },
+    {
+      "questionAr": "زار تلاميذ القسم مركز البريد من الساعة $09:00$ إلى الساعة $10:30$ ، ولاحظوا أن عدد الرسائل المسجلة هو $364$. ما مدة الزيارة بالدقائق، وما هو الحصر الصحيح للعدد $364$ بين **مئتين متتاليتين**؟",
+      "options": [
+        "$90$ دقيقة، والحصر: $360 < 364 < 370$",
+        "$60$ دقيقة، والحصر: $300 < 364 < 400$",
+        "$130$ دقيقة، والحصر: $300 < 364 < 400$",
+        "$90$ دقيقة، والحصر: $300 < 364 < 400$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "المدة صحيحة ( $90$ دقيقة)، لكن $360 < 364 < 370$ حصر بين عشرتين وليس بين مئتين متتاليتين!",
+        "من $09:00$ إلى $10:30$ تمر ساعة واحدة ( $60$ د) و $30$ دقيقة، أي $90$ دقيقة وليس $60$ دقيقة.",
+        "ساعة و $30$ دقيقة تساوي $60 + 30 = 90$ دقيقة وليس $130$ دقيقة.",
+        "رائع! المدة ساعة ونصف ( $60 + 30 = 90$ دقيقة)، وحصر $364$ بين مئتين متتاليتين هو $300 < 364 < 400$."
+      ],
+      "explanationAr": "من $09:00$ إلى $10:30$ تمر ساعة واحدة و $30$ دقيقة أي $60 + 30 = 90$ دقيقة. وحصر $364$ بين مئتين متتاليتين هو $300 < 364 < 400$."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "id": "lesson_2ap_t2_numbers_to_999_decomp",
+  "slug": "lesson-2ap-t2-numbers-to-999-decomp",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t2",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثاني (الجزء الثاني): حملة التشجير (الأعداد إلى 999، الجمع بالاحتفاظ والعملة)",
+  "order": 1,
+  "titleAr": "متتالية الأعداد إلى 199 وإلى 999 (القراءة، الكتابة والتفكيك النموذجي)",
+  "objectives": [
+    "استعمال المئات والعشرات والوحدات وجدول المراتب لقراءة وكتابة الأعداد إلى 199 ثم إلى 999",
+    "التمييز بين رقم المئات وعدد المئات ورقم العشرات وعدد العشرات",
+    "التعرف على التفكيك النموذجي لأعداد أصغر من 1000 وربطه بالكتابة الرقمية والحرفية"
+  ],
+  "keywordsAr": [
+    "الأعداد إلى 199",
+    "الأعداد إلى 999",
+    "المئات والعشرات والوحدات",
+    "التفكيك النموذجي",
+    "جدول المراتب"
+  ],
+  "discover": {
+    "scenarioAr": "في حملة التشجير بالمدرسة، وصلت شجيرات مرتبة في صندوقين من $100$ شجيرة، و $4$ حزم من $10$ شجيرات، و $5$ شجيرات منفردة. نريد معرفة العدد الكلي للشجيرات باستعمال جدول المراتب.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 230\" width=\"600\" height=\"230\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"214\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">تمثيل الشجيرات بالمئات والعشرات والوحدات</text><rect x=\"35\" y=\"48\" width=\"82\" height=\"82\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"76\" y=\"95\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">100</text><rect x=\"128\" y=\"48\" width=\"82\" height=\"82\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"169\" y=\"95\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">100</text><rect x=\"255\" y=\"48\" width=\"20\" height=\"82\" rx=\"4\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"1.8\"/><text x=\"265\" y=\"94\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">10</text><rect x=\"282\" y=\"48\" width=\"20\" height=\"82\" rx=\"4\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"1.8\"/><text x=\"292\" y=\"94\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">10</text><rect x=\"309\" y=\"48\" width=\"20\" height=\"82\" rx=\"4\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"1.8\"/><text x=\"319\" y=\"94\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">10</text><rect x=\"336\" y=\"48\" width=\"20\" height=\"82\" rx=\"4\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"1.8\"/><text x=\"346\" y=\"94\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">10</text><rect x=\"405\" y=\"52\" width=\"24\" height=\"24\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"417\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1</text><rect x=\"437\" y=\"52\" width=\"24\" height=\"24\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"449\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1</text><rect x=\"469\" y=\"52\" width=\"24\" height=\"24\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"481\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1</text><rect x=\"421\" y=\"88\" width=\"24\" height=\"24\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"433\" y=\"105\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1</text><rect x=\"453\" y=\"88\" width=\"24\" height=\"24\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"465\" y=\"105\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1</text><rect x=\"90\" y=\"148\" width=\"420\" height=\"60\" rx=\"8\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"230\" y1=\"148\" x2=\"230\" y2=\"208\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"370\" y1=\"148\" x2=\"370\" y2=\"208\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"90\" y1=\"176\" x2=\"510\" y2=\"176\" stroke=\"#64748b\" stroke-width=\"1.2\"/><text x=\"160\" y=\"167\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">المئات (م)</text><text x=\"300\" y=\"167\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">العشرات (ع)</text><text x=\"440\" y=\"167\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">الوحدات (و)</text><text x=\"160\" y=\"199\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">2</text><text x=\"300\" y=\"199\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">4</text><text x=\"440\" y=\"199\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">5</text></svg>",
+    "steps": [
+      {
+        "promptAr": "انظر إلى جدول المراتب: لدينا $2$ مئات، و $4$ عشرات، و $5$ وحدات. ما هو العدد الكلي للشجيرات؟ (اكتب العدد بالأرقام فقط)",
+        "hintAr": "نضع رقم المئات على اليسار، ثم العشرات في الوسط، ثم الوحدات على اليمين.",
+        "expectedInput": "245",
+        "revealAr": "العدد الكلي للشجيرات هو $245$ (مئتان وخمسة وأربعون)."
+      },
+      {
+        "promptAr": "كيف نكتب التفكيك النموذجي (الجمعي) للعدد $245$ باستعمال قيمة كل مرتبة؟",
+        "hintAr": "$2$ مئات تساوي $200$ ، و $4$ عشرات تساوي $40$ ، و $5$ وحدات تساوي $5$.",
+        "revealAr": "التفكيك النموذجي هو: $245 = 200 + 40 + 5$."
+      },
+      {
+        "promptAr": "في العدد $245$ ، رقم العشرات هو $4$. لكن كم حزمة من $10$ (عدد العشرات) توجد في العدد $245$ كله؟",
+        "hintAr": "كل مئة تحتوي على $10$ عشرات؛ إذن في $200$ توجد $20$ عشرة، نضيف إليها $4$ عشرات.",
+        "expectedInput": "24",
+        "revealAr": "عدد العشرات في $245$ هو $24$ عشرة (لأن $240$ فيه $24$ عشرة)، بينما رقم العشرات هو $4$ فقط."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "كل عدد أصغر من $1000$ يتكون من ثلاث مراتب على الأكثر: الوحدات (على اليمين)، العشرات (في الوسط)، والمئات (على اليسار).",
+      "لقراءة عدد من $3$ أرقام: نقرأ المئات أولاً، ثم الوحدات، ثم العشرات (مثلاً $358$ يُقرأ: ثلاثمئة وثمانية وخمسون).",
+      "التفكيك النموذجي يظهر قيمة كل رقم: $358 = 300 + 50 + 8$.",
+      "نميز بين **رقم المرتبة** (الخانة نفسها) و**عددها** في العدد كله: في $358$ ، رقم العشرات هو $5$ وعدد العشرات هو $35$ ، ورقم المئات هو $3$ وعدد المئات هو $3$."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"32\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">جدول المراتب والتفكيك للعدد 358</text><rect x=\"95\" y=\"48\" width=\"410\" height=\"76\" rx=\"10\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.8\"/><line x1=\"231\" y1=\"48\" x2=\"231\" y2=\"124\" stroke=\"#475569\" stroke-width=\"1.5\"/><line x1=\"368\" y1=\"48\" x2=\"368\" y2=\"124\" stroke=\"#475569\" stroke-width=\"1.5\"/><line x1=\"95\" y1=\"82\" x2=\"505\" y2=\"82\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"163\" y=\"70\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">المئات</text><text x=\"300\" y=\"70\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">العشرات</text><text x=\"436\" y=\"70\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">الوحدات</text><text x=\"163\" y=\"111\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">3</text><text x=\"300\" y=\"111\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">5</text><text x=\"436\" y=\"111\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">8</text><rect x=\"75\" y=\"138\" width=\"450\" height=\"36\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.2\"/><text x=\"300\" y=\"161\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">358 = 300 + 50 + 8</text><rect x=\"55\" y=\"184\" width=\"235\" height=\"32\" rx=\"8\" fill=\"#fff7ed\" stroke=\"#fb923c\" stroke-width=\"1.2\"/><text x=\"172\" y=\"205\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#9a3412\" direction=\"rtl\">رقم العشرات: 5 | عدد العشرات: 35</text><rect x=\"310\" y=\"184\" width=\"235\" height=\"32\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#4ade80\" stroke-width=\"1.2\"/><text x=\"427\" y=\"205\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#166534\" direction=\"rtl\">رقم المئات: 3 | عدد المئات: 3</text></svg>",
+    "visualCaptionAr": "مثال مرجعي لتمثيل العدد $358$ في جدول المراتب وتفكيكه والتمييز بين الرقم والعدد.",
+    "examples": [
+      {
+        "problemAr": "اكتب العدد **مئة وأربعة وثمانون** بالأرقام ثم فككه تفكيكاً نموذجياً.",
+        "solutionAr": "الكتابة الرقمية هي $184$. التفكيك النموذجي: $184 = 100 + 80 + 4$."
+      },
+      {
+        "problemAr": "في العدد $507$ ، ما هو رقم العشرات وما هو عدد العشرات؟ وكيف نفككه؟",
+        "solutionAr": "رقم العشرات هو $0$ ، وعدد العشرات هو $50$. التفكيك النموذجي: $507 = 500 + 7$ (لأن العشرات تساوي $0$ )."
+      }
+    ],
+    "watchOutAr": "انتبه للصفر! عندما لا توجد عشرات مثل العدد $407$ ، نكتب $0$ في خانة العشرات حتى لا يتحول إلى $47$. ولا تخلط بين رقم العشرات وعدد العشرات."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل التمثيل المقابل بالمئات والعشرات والوحدات. ما هو العدد الممثل؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 140\" width=\"520\" height=\"140\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"504\" height=\"124\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"30\" y=\"28\" width=\"72\" height=\"72\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"66\" y=\"70\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">100</text><rect x=\"114\" y=\"28\" width=\"72\" height=\"72\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"150\" y=\"70\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">100</text><rect x=\"198\" y=\"28\" width=\"72\" height=\"72\" rx=\"8\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"234\" y=\"70\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">100</text><text x=\"318\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" fill=\"#64748b\" direction=\"rtl\">لا توجد عشرات</text><rect x=\"380\" y=\"34\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"391\" y=\"50\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1</text><rect x=\"410\" y=\"34\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"421\" y=\"50\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1</text><rect x=\"440\" y=\"34\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"451\" y=\"50\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1</text><rect x=\"380\" y=\"66\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"391\" y=\"82\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1</text><rect x=\"410\" y=\"66\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"421\" y=\"82\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1</text><rect x=\"440\" y=\"66\" width=\"22\" height=\"22\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"451\" y=\"82\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1</text><text x=\"150\" y=\"120\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">3 مئات</text><text x=\"318\" y=\"120\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#64748b\" direction=\"rtl\">0 عشرات</text><text x=\"421\" y=\"120\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">6 وحدات</text></svg>",
+      "options": [
+        "$36$",
+        "$306$",
+        "$360$",
+        "$603$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه! تجاهلت وجود صفر في خانة العشرات، فـ $36$ يعني $3$ عشرات و $6$ وحدات فقط.",
+        "أحسنت! لدينا $3$ مئات و $0$ عشرات و $6$ وحدات، فيكون العدد $306$.",
+        "تأمل جيداً: $6$ هي وحدات وليست عشرات، لذا لا تكتب $6$ في خانة العشرات.",
+        "بدّلت بين المئات والوحدات؛ لدينا $3$ مئات وليس $6$ مئات."
+      ],
+      "explanationAr": "نضع $3$ في المئات، و $0$ في العشرات لعدم وجود عشرات، و $6$ في الوحدات، فنحصل على العدد $306$."
+    },
+    {
+      "questionAr": "في العدد $472$ ، ما هو **عدد العشرات**؟",
+      "options": [
+        "$7$",
+        "$4$",
+        "$47$",
+        "$72$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "تذكر الفرق: $7$ هو رقم العشرات فقط، أما السؤال فيطلب عدد العشرات في العدد كله.",
+        "الرقم $4$ هو رقم المئات وعدد المئات، وليس عدد العشرات.",
+        "ممتاز! $400$ فيها $40$ عشرة، نضيف إليها $7$ عشرات فيكون عدد العشرات $47$.",
+        "العدد $72$ يمثل العشرات والوحدات معاً، وليس عدد العشرات في $472$."
+      ],
+      "explanationAr": "لإيجاد عدد العشرات في $472$ نأخذ رقم المئات ورقم العشرات معاً ( $47$ ) لأن كل مئة فيها $10$ عشرات: $40 + 7 = 47$."
+    },
+    {
+      "questionAr": "ما هو التفكيك النموذجي الصحيح للعدد: **خمسمئة وتسعة وثمانون**؟",
+      "options": [
+        "$500 + 80 + 9$",
+        "$500 + 90 + 8$",
+        "$50 + 80 + 9$",
+        "$800 + 50 + 9$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "صحيح! خمسمئة وتسعة وثمانون هو $589 = 500 + 80 + 9$.",
+        "عكست بين الوحدات والعشرات: تسعة تعني $9$ وحدات، وثمانون تعني $80$.",
+        "خمسمئة تعني $5$ مئات أي $500$ وليس $50$.",
+        "المئات في العدد هي خمسمئة ( $500$ ) وليس ثمانمئة ( $800$ )."
+      ],
+      "explanationAr": "نكتب العدد بالأرقام: خمسمئة ( $5$ )، وتسعة في الوحدات ( $9$ )، وثمانون في العشرات ( $8$ ) أي $589 = 500 + 80 + 9$."
+    }
+  ]
+}

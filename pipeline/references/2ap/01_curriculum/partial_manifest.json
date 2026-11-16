@@ -1,0 +1,55 @@
+{
+  "documents": [
+    {
+      "id": "ref_2ap_cur_primary_gen2_2016",
+      "grade": "2ap",
+      "title_ar": "مناهج مرحلة التعليم الابتدائي - الجيل الثاني (يتضمن الإطار العام ومنهاج الرياضيات)",
+      "category": "curriculum",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/01_curriculum/2ap_curriculum_primary_gen2_2016.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2018/03/primaire_gen2-manahij.pdf"
+    },
+    {
+      "id": "ref_2ap_cur_cycle1_programs_2016",
+      "grade": "2ap",
+      "title_ar": "البرامج الدراسية للطور الأول من مرحلة التعليم الابتدائي - الجيل الثاني (يتضمن برنامج الرياضيات للسنة الثانية ابتدائي)",
+      "category": "curriculum",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/01_curriculum/2ap_curriculum_cycle1_programs_2016.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2022/05/%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%85%D8%AC-%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9-%D9%84%D9%84%D8%B7%D9%88%D8%B1-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-%D9%85%D8%B1%D8%AD%D9%84%D8%A9-%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A.pdf"
+    },
+    {
+      "id": "ref_2ap_acc_doc_math_primary_2016",
+      "grade": "2ap",
+      "title_ar": "الوثيقة المرافقة لمنهاج الرياضيات لمرحلة التعليم الابتدائي (الجيل الثاني)",
+      "category": "accompanying_doc",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/01_curriculum/2ap_accompanying_doc_math_primary_2016.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2022/05/%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%A5%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%A7%D9%84%D9%88%D8%AB%D9%8A%D9%82%D8%A9-%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D9%81%D9%82%D8%A9-%D9%84%D9%85%D9%86%D9%87%D8%A7%D8%AC-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA.pdf"
+    },
+    {
+      "id": "ref_2ap_prog_annual_men_sept2022",
+      "grade": "2ap",
+      "title_ar": "المخططات السنوية لبناء التعلمات للسنة الثانية من التعليم الابتدائي - طبعة سبتمبر 2022 (وزارة التربية الوطنية)",
+      "category": "progression",
+      "year": "2022",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/01_curriculum/2ap_progression_annual_men_sept2022.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1K_rlDbIYwu_umwOz7pqhCzlnGQE7dfHG"
+    },
+    {
+      "id": "ref_2ap_prog_annual_2025_2026_games",
+      "grade": "2ap",
+      "title_ar": "المخطط السنوي لبناء التعلمات للسنة الثانية ابتدائي 2025-2026 (الرياضيات والألعاب الرياضياتية وفق المخططات الوزارية 2022)",
+      "category": "progression",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/01_curriculum/2ap_progression_annual_2025_2026_games.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1DC4A935me1VRLeVKvrFXoJ1BGrA2SMe6"
+    }
+  ],
+  "missing_references": []
+}

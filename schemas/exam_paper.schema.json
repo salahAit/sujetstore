@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SujetStore Assembled Exam Paper",
+  "type": "object",
+  "required": ["id", "grade", "trimesterId", "docType", "templateId", "totalPoints", "seed", "examDoc"],
+  "properties": {
+    "id": { "type": "string" },
+    "grade": { "type": "string", "enum": ["2ap", "5ap", "2am"] },
+    "trimesterId": { "type": "string", "enum": ["t1", "t2", "t3"] },
+    "docType": { "type": "string", "enum": ["exam", "test"] },
+    "variant": { "type": "string", "enum": ["trimester_exam", "supervised_test", "cinq_mock", "competency_eval"] },
+    "templateId": { "type": "string", "enum": ["primary/taqweem", "middle/quiz", "middle/exam"] },
+    "totalPoints": { "type": "number", "enum": [10, 20] },
+    "seed": { "type": "integer" },
+    "examDoc": {
+      "type": "object",
+      "required": ["metadata", "exercises"],
+      "properties": {
+        "metadata": { "type": "object" },
+        "exercises": { "type": "array", "minItems": 2 }
+      }
+    }
+  }
+}

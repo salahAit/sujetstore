@@ -1,0 +1,123 @@
+{
+  "id": "lesson_2ap_t2_currency_lengths_m_cm",
+  "slug": "lesson-2ap-t2-currency-lengths-m-cm",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t2",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثاني (الجزء الثاني): حملة التشجير (الأعداد إلى 999، الجمع بالاحتفاظ والعملة)",
+  "order": 3,
+  "titleAr": "العملة (الدينار الجزائري)، قياس الأطوال بالمتر والسنتيمتر واستخراج معطيات",
+  "objectives": [
+    "تمييز قيم القطع والأوراق النقدية للعملة الجزائرية (DA) واستعمالها في الحساب والتبادل",
+    "استعمال وحدتي المتر (m) والسنتيمتر (cm) في قياس الأطوال وتوظيف العلاقة 1 m = 100 cm",
+    "قراءة جدول أسعار أو معطيات في وضعيات بسيطة من الحياة اليومية واستغلالها"
+  ],
+  "keywordsAr": [
+    "الدينار الجزائري (DA)",
+    "القطع والأوراق النقدية",
+    "المتر (m)",
+    "السنتيمتر (cm)",
+    "استخراج معطيات"
+  ],
+  "discover": {
+    "scenarioAr": "يريد أمين شراء لوازم للحديقة المدرسية. يملك أمين قطعاً نقدية بالدينار الجزائري ( $\\text{DA}$ )، وأمامه جدول يبين الأسعار والطول المطلوب لسياج الحديقة.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 240\" width=\"600\" height=\"240\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"224\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"155\" y=\"32\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">نقود أمين (DA)</text><circle cx=\"75\" cy=\"88\" r=\"34\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"88\" r=\"24\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" stroke-width=\"1\"/><text x=\"75\" y=\"87\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">200</text><text x=\"75\" y=\"102\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"158\" cy=\"88\" r=\"31\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"3\"/><circle cx=\"158\" cy=\"88\" r=\"21\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1\"/><text x=\"158\" y=\"87\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">100</text><text x=\"158\" y=\"102\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"235\" cy=\"88\" r=\"28\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2.5\"/><text x=\"235\" y=\"87\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">50</text><text x=\"235\" y=\"100\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"115\" cy=\"166\" r=\"24\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"115\" y=\"166\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">10</text><text x=\"115\" y=\"178\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"185\" cy=\"166\" r=\"24\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"185\" y=\"166\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">10</text><text x=\"185\" y=\"178\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><rect x=\"305\" y=\"24\" width=\"270\" height=\"192\" rx=\"10\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"440\" y=\"48\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">جدول الأسعار والمعطيات</text><line x1=\"305\" y1=\"60\" x2=\"575\" y2=\"60\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"305\" y1=\"108\" x2=\"575\" y2=\"108\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"305\" y1=\"156\" x2=\"575\" y2=\"156\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"425\" y1=\"60\" x2=\"425\" y2=\"216\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"500\" y=\"90\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">شجيرة</text><text x=\"365\" y=\"90\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">150 DA</text><text x=\"500\" y=\"138\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">مرش ماء</text><text x=\"365\" y=\"138\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">220 DA</text><text x=\"500\" y=\"190\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">شريط السياج</text><text x=\"365\" y=\"190\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">1 m 45 cm</text></svg>",
+    "steps": [
+      {
+        "promptAr": "احسب المبلغ الكلي الذي يملكه أمين من القطع النقدية الظاهرة في الرسم. (اكتب العدد فقط)",
+        "hintAr": "اجمع قيم القطع من الأكبر إلى الأصغر: $200 + 100 + 50 + 10 + 10$.",
+        "expectedInput": "370",
+        "revealAr": "يملك أمين $200 + 100 + 50 + 10 + 10 = 370\\text{ DA}$."
+      },
+      {
+        "promptAr": "استخرج من الجدول ثمن الشجيرة وثمن مرش الماء، ثم احسب ثمنهما معاً. (اكتب العدد فقط)",
+        "hintAr": "ثمن الشجيرة $150\\text{ DA}$ وثمن مرش الماء $220\\text{ DA}$.",
+        "expectedInput": "370",
+        "revealAr": "$150 + 220 = 370\\text{ DA}$. إذن المبلغ الذي يملكه أمين يكفي تماماً للشراء!"
+      },
+      {
+        "promptAr": "يحتاج أمين شريط سياج طوله $1\\text{ m } 45\\text{ cm}$. علماً أن $1\\text{ m} = 100\\text{ cm}$ ، كم يساوي هذا الطول بالسنتيمتر ( $\\text{cm}$ )؟ (اكتب العدد فقط)",
+        "hintAr": "عوض $1\\text{ m}$ بـ $100\\text{ cm}$ ثم أضف $45\\text{ cm}$.",
+        "expectedInput": "145",
+        "revealAr": "$1\\text{ m } 45\\text{ cm} = 100\\text{ cm} + 45\\text{ cm} = 145\\text{ cm}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "العملة الرسمية في الجزائر هي **الدينار الجزائري** ونرمز له بـ $\\text{DA}$. من القطع والأوراق المألوفة: $5\\text{ DA}$ ، $10\\text{ DA}$ ، $20\\text{ DA}$ ، $50\\text{ DA}$ ، $100\\text{ DA}$ ، $200\\text{ DA}$ ، والورقة النقدية $500\\text{ DA}$.",
+      "لقياس الأطوال الصغيرة نستعمل **السنتيمتر** ( $\\text{cm}$ ) مثل طول القلم، وللأطوال الكبيرة نستعمل **المتر** ( $\\text{m}$ ) مثل طول القسم.",
+      "القاعدة الأساسية للتحويل بين المتر والسنتيمتر هي: $1\\text{ m} = 100\\text{ cm}$ (ومثلاً $2\\text{ m} = 200\\text{ cm}$ ).",
+      "عند قراءة جدول معطيات، نحدد السطر والعمود المناسبين لاستخراج الثمن أو الطول قبل الحساب."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\" width=\"600\" height=\"245\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"229\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">العملة الجزائرية (DA) والتحويل بين المتر والسنتيمتر</text><rect x=\"30\" y=\"46\" width=\"110\" height=\"52\" rx=\"8\" fill=\"#f3e8ff\" stroke=\"#7e22ce\" stroke-width=\"2\"/><text x=\"85\" y=\"78\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#581c87\" direction=\"ltr\">500 DA</text><circle cx=\"185\" cy=\"72\" r=\"26\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2.5\"/><text x=\"185\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">200 DA</text><circle cx=\"252\" cy=\"72\" r=\"24\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"2.5\"/><text x=\"252\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">100 DA</text><circle cx=\"314\" cy=\"72\" r=\"22\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"314\" y=\"76\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">50 DA</text><circle cx=\"372\" cy=\"72\" r=\"20\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"372\" y=\"76\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">20 DA</text><circle cx=\"426\" cy=\"72\" r=\"18\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"426\" y=\"76\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">10 DA</text><circle cx=\"476\" cy=\"72\" r=\"16\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"476\" y=\"76\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">5 DA</text><rect x=\"505\" y=\"48\" width=\"72\" height=\"48\" rx=\"8\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.5\"/><text x=\"541\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">عملات DA</text><rect x=\"30\" y=\"122\" width=\"540\" height=\"98\" rx=\"10\" fill=\"#ffffff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"300\" y=\"146\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">1 m = 100 cm</text><rect x=\"60\" y=\"158\" width=\"340\" height=\"22\" rx=\"4\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"230\" y=\"174\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">1 m = 100 cm</text><rect x=\"400\" y=\"158\" width=\"120\" height=\"22\" rx=\"4\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"1.5\"/><text x=\"460\" y=\"174\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"ltr\">30 cm</text><text x=\"300\" y=\"205\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">1 m 30 cm = 100 cm + 30 cm = 130 cm</text></svg>",
+    "visualCaptionAr": "القطع والأوراق النقدية المألوفة والعلاقة الأساسية $1\\text{ m} = 100\\text{ cm}$.",
+    "examples": [
+      {
+        "problemAr": "ثمن كتاب $240\\text{ DA}$ وثمن قلم $35\\text{ DA}$. كم ندفع لشرائهما معاً؟ وما هي القطع المناسبة؟",
+        "solutionAr": "نحسب المجموع: $240 + 35 = 275\\text{ DA}$. يمكن دفع المبلغ بـ: قطعة $200\\text{ DA}$ + قطعة $50\\text{ DA}$ + قطعة $20\\text{ DA}$ + قطعة $5\\text{ DA}$."
+      },
+      {
+        "problemAr": "طول طاولة $1\\text{ m } 25\\text{ cm}$ وطول سبورة $2\\text{ m}$. أيهما أطول؟",
+        "solutionAr": "نحول إلى نفس الوحدة ( $\\text{cm}$ ): طول الطاولة $125\\text{ cm}$ ، وطول السبورة $200\\text{ cm}$. وبما أن $200 > 125$ فإن السبورة أطول."
+      }
+    ],
+    "watchOutAr": "تذكر دائماً أن $1\\text{ m}$ يساوي $100\\text{ cm}$ وليس $10\\text{ cm}$! فمثلاً $2\\text{ m } 5\\text{ cm}$ تساوي $205\\text{ cm}$ وليس $25\\text{ cm}$ ، ولا تقارن طولين إلا بعد توحيد الوحدة."
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل القطع النقدية التالية. ما هو المبلغ الكلي؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 120\" width=\"520\" height=\"120\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"504\" height=\"104\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><circle cx=\"72\" cy=\"60\" r=\"34\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"3\"/><text x=\"72\" y=\"59\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">200</text><text x=\"72\" y=\"74\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"164\" cy=\"60\" r=\"31\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"3\"/><text x=\"164\" y=\"59\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">100</text><text x=\"164\" y=\"74\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"254\" cy=\"60\" r=\"31\" fill=\"#e2e8f0\" stroke=\"#475569\" stroke-width=\"3\"/><text x=\"254\" y=\"59\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">100</text><text x=\"254\" y=\"74\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"342\" cy=\"60\" r=\"25\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2.5\"/><text x=\"342\" y=\"59\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">20</text><text x=\"342\" y=\"73\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text><circle cx=\"422\" cy=\"60\" r=\"21\" fill=\"#f1f5f9\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"422\" y=\"59\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">5</text><text x=\"422\" y=\"72\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#475569\" direction=\"ltr\">DA</text></svg>",
+      "options": [
+        "$425\\text{ DA}$",
+        "$325\\text{ DA}$",
+        "$435\\text{ DA}$",
+        "$405\\text{ DA}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! $200 + 100 + 100 + 20 + 5 = 425\\text{ DA}$.",
+        "انتبه! هناك قطعتان من فئة $100\\text{ DA}$ وليس قطعة واحدة.",
+        "تحقق من قيمة القطعة الصغيرة: هي $20\\text{ DA}$ وليست $30\\text{ DA}$.",
+        "نسيت إضافة قطعة $20\\text{ DA}$ إلى المجموع."
+      ],
+      "explanationAr": "نجمع قيم القطع: $200 + 100 + 100 = 400$ ، ثم نضيف $20 + 5 = 25$ ، فالمجموع $425\\text{ DA}$."
+    },
+    {
+      "questionAr": "يبلغ طول حبل القفز $2\\text{ m } 8\\text{ cm}$. ما هو طوله بالسنتيمتر ( $\\text{cm}$ )؟",
+      "options": [
+        "$28\\text{ cm}$",
+        "$280\\text{ cm}$",
+        "$208\\text{ cm}$",
+        "$108\\text{ cm}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "تذكر أن $1\\text{ m} = 100\\text{ cm}$ ، لذا $2\\text{ m}$ تساوي $200\\text{ cm}$ وليس $20\\text{ cm}$.",
+        "$280\\text{ cm}$ تعني $2\\text{ m } 80\\text{ cm}$ ، لكن الحبل فيه $8\\text{ cm}$ في الوحدات وليس $80\\text{ cm}$.",
+        "ممتاز! $2\\text{ m} = 200\\text{ cm}$ ، ونضيف $8\\text{ cm}$ فتصبح $208\\text{ cm}$.",
+        "$108\\text{ cm}$ تساوي $1\\text{ m } 8\\text{ cm}$ فقط، بينما لدينا $2\\text{ m}$."
+      ],
+      "explanationAr": "بما أن $1\\text{ m} = 100\\text{ cm}$ فإن $2\\text{ m} = 200\\text{ cm}$. إذن $2\\text{ m } 8\\text{ cm} = 200 + 8 = 208\\text{ cm}$."
+    },
+    {
+      "questionAr": "استخرج المعطيات من جدول أسعار الأدوات المدرسية التالي: كم يدفع تلميذ لشراء **كراس** و**مقلمة** معاً؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 130\" width=\"520\" height=\"130\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"15\" y=\"15\" width=\"490\" height=\"100\" rx=\"10\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.5\"/><rect x=\"15\" y=\"15\" width=\"490\" height=\"44\" rx=\"8\" fill=\"#eff6ff\"/><line x1=\"15\" y1=\"59\" x2=\"505\" y2=\"59\" stroke=\"#475569\" stroke-width=\"1.5\"/><line x1=\"137\" y1=\"15\" x2=\"137\" y2=\"115\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"260\" y1=\"15\" x2=\"260\" y2=\"115\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"382\" y1=\"15\" x2=\"382\" y2=\"115\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"443\" y=\"42\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">كراس</text><text x=\"321\" y=\"42\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">مقلمة</text><text x=\"198\" y=\"42\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">مسطرة</text><text x=\"76\" y=\"42\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">قلم</text><text x=\"443\" y=\"93\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">65 DA</text><text x=\"321\" y=\"93\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">250 DA</text><text x=\"198\" y=\"93\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">40 DA</text><text x=\"76\" y=\"93\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">35 DA</text></svg>",
+      "options": [
+        "$290\\text{ DA}$",
+        "$305\\text{ DA}$",
+        "$325\\text{ DA}$",
+        "$315\\text{ DA}$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "هذا مجموع المقلمة والمسطرة ( $250 + 40 = 290\\text{ DA}$ )، والمطلوب الكراس والمقلمة.",
+        "تحقق من جمع العشرات: $6 + 5 = 11$ وليس $10$ ، لذا الناتج في العشرات هو $1$ وليس $0$.",
+        "أخطأت في رقم العشرات عند جمع $250 + 65$.",
+        "رائع! ثمن الكراس $65\\text{ DA}$ وثمن المقلمة $250\\text{ DA}$ ، ومجموعهما $250 + 65 = 315\\text{ DA}$."
+      ],
+      "explanationAr": "من الجدول: ثمن الكراس $65\\text{ DA}$ وثمن المقلمة $250\\text{ DA}$. نجمع عمودياً: $250 + 65 = 315\\text{ DA}$."
+    }
+  ]
+}

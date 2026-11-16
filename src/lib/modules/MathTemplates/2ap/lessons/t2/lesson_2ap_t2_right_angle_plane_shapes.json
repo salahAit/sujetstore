@@ -1,0 +1,124 @@
+{
+  "id": "lesson_2ap_t2_right_angle_plane_shapes",
+  "slug": "lesson-2ap-t2-right-angle-plane-shapes",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الثالث: في ساحة البريد المركزي (الأعداد إلى 999، الطرح البسيط، الأشكال المستوية والزمن)",
+  "order": 5,
+  "titleAr": "الزاوية القائمة والأشكال المستوية المألوفة (رسمها وقياس أطوال أضلاعها)",
+  "objectives": [
+    "التعرف على الزاوية القائمة في شكل هندسي والتحقق منها باستعمال الكوس",
+    "التمييز بين الأشكال المستوية المألوفة (المثلث، المثلث القائم، المربع، المستطيل) وذكر عدد أضلاعها ورؤوسها وزواياها القائمة",
+    "مقارنة وقياس أطوال أضلاع أشكال مألوفة ورسم أو إتمام شكل هندسي بأدوات الرسم"
+  ],
+  "keywordsAr": [
+    "الزاوية القائمة",
+    "الكوس",
+    "شكل مستو",
+    "مثلث قائم",
+    "مربع",
+    "مستطيل"
+  ],
+  "discover": {
+    "scenarioAr": "في ساحة البريد المركزي، لاحظ التلاميذ أشكالاً هندسية مختلفة على اللافتات والبلاط والأظرفة: مستطيلاً، ومربعاً، ومثلثاً قائماً. لنستعمل **الكوس** والمسطرة لاكتشاف خصائص كل شكل.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 225\" width=\"600\" height=\"225\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"209\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">التحقق من الزوايا القائمة باستعمال الكوس</text><rect x=\"50\" y=\"68\" width=\"140\" height=\"86\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><rect x=\"50\" y=\"68\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><rect x=\"178\" y=\"68\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><rect x=\"178\" y=\"142\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><polygon points=\"50,154 50,94 114,154\" fill=\"#fef08a\" fill-opacity=\"0.85\" stroke=\"#ca8a04\" stroke-width=\"2\"/><rect x=\"50\" y=\"142\" width=\"12\" height=\"12\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"80\" y=\"146\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">كوس</text><text x=\"120\" y=\"182\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">المستطيل</text><rect x=\"255\" y=\"66\" width=\"88\" height=\"88\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><rect x=\"255\" y=\"66\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"332\" y=\"66\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"255\" y=\"143\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"332\" y=\"143\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><line x1=\"299\" y1=\"60\" x2=\"299\" y2=\"72\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"299\" y1=\"148\" x2=\"299\" y2=\"160\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"249\" y1=\"110\" x2=\"261\" y2=\"110\" stroke=\"#15803d\" stroke-width=\"2\"/><line x1=\"337\" y1=\"110\" x2=\"349\" y2=\"110\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"299\" y=\"182\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">المربع</text><polygon points=\"415,154 540,154 415,66\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2.2\"/><rect x=\"415\" y=\"140\" width=\"14\" height=\"14\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"472\" y=\"182\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">المثلث القائم</text></svg>",
+    "steps": [
+      {
+        "promptAr": "تحقق باستعمال الكوس من زوايا المستطيل. كم زاوية قائمة يملك المستطيل؟ (اكتب العدد فقط)",
+        "hintAr": "عد المربعات الحمراء الصغيرة الموجودة في رؤوس المستطيل الأربعة.",
+        "expectedInput": "4",
+        "revealAr": "يملك المستطيل $4$ زوايا قائمة، وله $4$ أضلاع حيث كل ضلعين متقابلين متقايسان."
+      },
+      {
+        "promptAr": "قارن المربع بالمثلث: كم رأساً وكم ضلعاً يوجد في المثلث؟ (اكتب العدد فقط)",
+        "hintAr": "كلمة «مثلث» تدل على العدد $3$.",
+        "expectedInput": "3",
+        "revealAr": "للمثلث $3$ أضلاع و $3$ رؤوس، بينما للمربع $4$ أضلاع متقايسة (متساوية الطول) و $4$ رؤوس و $4$ زوايا قائمة."
+      },
+      {
+        "promptAr": "انظر إلى المثلث القائم في اليمين. كم زاوية قائمة توجد في المثلث القائم؟ (اكتب العدد فقط)",
+        "hintAr": "ضع الكوس عند كل رأس من رؤوس المثلث: كم زاوية تنطبق على زاوية الكوس القائمة؟",
+        "expectedInput": "1",
+        "revealAr": "في المثلث القائم توجد زاوية قائمة واحدة ( $1$ ) فقط، والزاويتان الأخريان ليستا قائمتين."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الزاوية القائمة**: للتحقق منها نضع رأس الزاوية على الزاوية القائمة لـ **الكوس**؛ إذا انطبق الضلعان فهي زاوية قائمة.",
+      "**المربع**: شكل مستوٍ له $4$ أضلاع متقايسة (لها نفس الطول بالمسطرة)، و $4$ رؤوس، و $4$ زوايا قائمة.",
+      "**المستطيل**: شكل مستوٍ له $4$ أضلاع (كل ضلعين متقابلين متقايسان)، و $4$ رؤوس، و $4$ زوايا قائمة.",
+      "**المثلث**: شكل مستوٍ له $3$ أضلاع و $3$ رؤوس. إذا كان له زاوية قائمة واحدة يسمى **مثلثاً قائماً**."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\" width=\"600\" height=\"245\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"229\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">ملخص الأشكال المستوية المألوفة وخصائصها</text><rect x=\"24\" y=\"46\" width=\"130\" height=\"176\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><polygon points=\"50,138 128,138 50,74\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><rect x=\"50\" y=\"124\" width=\"14\" height=\"14\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"89\" y=\"168\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#854d0e\" direction=\"rtl\">الكوس</text><text x=\"89\" y=\"192\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">يكشف الزاوية القائمة</text><rect x=\"166\" y=\"46\" width=\"130\" height=\"176\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><rect x=\"196\" y=\"70\" width=\"70\" height=\"70\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><rect x=\"196\" y=\"70\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"256\" y=\"70\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"196\" y=\"130\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"256\" y=\"130\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"231\" y=\"168\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"rtl\">المربع</text><text x=\"231\" y=\"190\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">4 أضلاع متقايسة</text><text x=\"231\" y=\"208\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">4 زوايا قائمة</text><rect x=\"308\" y=\"46\" width=\"130\" height=\"176\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><rect x=\"328\" y=\"78\" width=\"90\" height=\"54\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><rect x=\"328\" y=\"78\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"408\" y=\"78\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"328\" y=\"122\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><rect x=\"408\" y=\"122\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"373\" y=\"168\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">المستطيل</text><text x=\"373\" y=\"190\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">كل ضلعين متقابلين متقايسان</text><text x=\"373\" y=\"208\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">4 زوايا قائمة</text><rect x=\"450\" y=\"46\" width=\"130\" height=\"176\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><polygon points=\"474,138 556,138 474,76\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2.2\"/><rect x=\"474\" y=\"126\" width=\"12\" height=\"12\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"515\" y=\"168\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c2410c\" direction=\"rtl\">المثلث القائم</text><text x=\"515\" y=\"190\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">3 أضلاع و 3 رؤوس</text><text x=\"515\" y=\"208\" text-anchor=\"middle\" font-size=\"11\" fill=\"#475569\" direction=\"rtl\">زاوية قائمة واحدة</text></svg>",
+    "visualCaptionAr": "التمييز بين الكوس، المربع، المستطيل، والمثلث القائم.",
+    "examples": [
+      {
+        "problemAr": "قسنا أضلاع رباعي فوجدناها: $5\\text{ cm}$ ، $3\\text{ cm}$ ، $5\\text{ cm}$ ، $3\\text{ cm}$ وله $4$ زوايا قائمة. ما اسم هذا الشكل؟",
+        "solutionAr": "بما أن له $4$ زوايا قائمة وكل ضلعين متقابلين متقايسان ( $5\\text{ cm}$ و $3\\text{ cm}$ )، فهذا الشكل **مستطيل**."
+      },
+      {
+        "problemAr": "نريد إتمام رسم مربع طول ضلعه $4\\text{ cm}$ باستعمال المسطرة والكوس. ما هي أطوال أضلاعه الأربعة؟",
+        "solutionAr": "أضلاع المربع الأربعة متقايسة، إذن طول كل ضلع هو $4\\text{ cm}$ ، ونرسم الزوايا باستعمال الكوس لتكون زوايا قائمة."
+      }
+    ],
+    "watchOutAr": "للمربع والمستطيل كلاهما $4$ زوايا قائمة، لكن الفرق أن أضلاع المربع الأربعة متساوية الطول، بينما في المستطيل كل ضلعين متقابلين فقط متساويان. وتحقق دائماً بالكوس لا بالعين فقط!"
+  },
+  "practice": [
+    {
+      "questionAr": "تأمل الشكل المقابل: له $4$ زوايا قائمة وأطوال أضلاعه هي $5\\text{ cm}$ و $3\\text{ cm}$. ما اسم هذا الشكل؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 150\" width=\"360\" height=\"150\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"134\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"100\" y=\"34\" width=\"160\" height=\"82\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><rect x=\"100\" y=\"34\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"249\" y=\"34\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"100\" y=\"105\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><rect x=\"249\" y=\"105\" width=\"11\" height=\"11\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"180\" y=\"26\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">5 cm</text><text x=\"180\" y=\"134\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">5 cm</text><text x=\"74\" y=\"80\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">3 cm</text><text x=\"286\" y=\"80\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">3 cm</text></svg>",
+      "options": [
+        "المربع",
+        "المثلث القائم",
+        "المستطيل",
+        "المثلث"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "أضلاع المربع الأربعة متساوية الطول، بينما هذا الشكل ضلعاه المتجاوران $5\\text{ cm}$ و $3\\text{ cm}$.",
+        "المثلث القائم له $3$ أضلاع فقط وزاوية قائمة واحدة، وليس $4$ أضلاع.",
+        "أحسنت! الشكل له $4$ زوايا قائمة وكل ضلعين متقابلين متقايسان ( $5\\text{ cm}$ و $3\\text{ cm}$ )، فهو مستطيل.",
+        "المثلث له $3$ أضلاع فقط، بينما هذا الشكل رباعي له $4$ أضلاع."
+      ],
+      "explanationAr": "الرباعي الذي له $4$ زوايا قائمة وكل ضلعين متقابلين متقايسان ( $5\\text{ cm}$ و $3\\text{ cm}$ ) هو **المستطيل**."
+    },
+    {
+      "questionAr": "تأمل الشكل المقابل لمثلث قائم وضعنا عليه الكوس. كم زاوية قائمة توجد في المثلث القائم؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 145\" width=\"320\" height=\"145\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"304\" height=\"129\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><polygon points=\"85,118 235,118 85,32\" fill=\"#ffedd5\" stroke=\"#ea580c\" stroke-width=\"2.2\"/><polygon points=\"85,118 140,118 85,70\" fill=\"#fef08a\" fill-opacity=\"0.8\" stroke=\"#ca8a04\" stroke-width=\"1.8\"/><rect x=\"85\" y=\"104\" width=\"14\" height=\"14\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.8\"/></svg>",
+      "options": [
+        "لا توجد أي زاوية قائمة",
+        "زاوية قائمة واحدة ( $1$ )",
+        "زاويتان قائمتان ( $2$ )",
+        "$3$ زوايا قائمة"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انظر إلى العلامة الحمراء وانطباق الكوس عند الرأس السفلي: توجد زاوية قائمة.",
+        "ممتاز! المثلث القائم يحتوي على زاوية قائمة واحدة فقط.",
+        "لا يمكن أن يكون للمثلث زاويتان قائمتان؛ المثلث القائم له زاوية قائمة واحدة فقط.",
+        "المربع والمستطيل لهما $4$ زوايا قائمة، أما المثلث القائم فله زاوية قائمة واحدة فقط."
+      ],
+      "explanationAr": "عند التحقق بالكوس من رؤوس المثلث الثلاثة، نجد زاوية قائمة واحدة فقط ( $1$ )، ولذلك نسميه مثلثاً قائماً."
+    },
+    {
+      "questionAr": "رسمت سارة مربعاً طول أحد أضلاعه $6\\text{ cm}$. ما هو طول كل ضلع من أضلاعه الثلاثة الأخرى؟",
+      "options": [
+        "$3\\text{ cm}$",
+        "$4\\text{ cm}$",
+        "$12\\text{ cm}$",
+        "$6\\text{ cm}$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "$3\\text{ cm}$ هو نصف الضلع، لكن أضلاع المربع كلها متساوية.",
+        "المربع له $4$ أضلاع، لكن طول كل ضلع هنا يساوي $6\\text{ cm}$ وليس $4\\text{ cm}$.",
+        "$12\\text{ cm}$ هو ضعف الضلع، وليس طول الضلع الواحد.",
+        "صحيح! في المربع جميع الأضلاع الأربعة متقايسة، فطول كل ضلع هو $6\\text{ cm}$."
+      ],
+      "explanationAr": "من خصائص المربع أن أضلاعه الأربعة متقايسة (لها نفس الطول)، إذن كل ضلع طوله $6\\text{ cm}$."
+    }
+  ]
+}

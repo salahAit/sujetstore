@@ -1,0 +1,121 @@
+{
+  "id": "lesson_2ap_t2_numbers_compare_sub_2digit",
+  "slug": "lesson-2ap-t2-numbers-compare-sub-2digit",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الثالث: في ساحة البريد المركزي (الأعداد إلى 999، الطرح البسيط، الأشكال المستوية والزمن)",
+  "order": 4,
+  "titleAr": "مقارنة وترتيب وحصر الأعداد إلى 999 وطرح عدد ذي رقمين",
+  "objectives": [
+    "مقارنة وترتيب الأعداد الأصغر من 1000 تصاعديا وتنازليا باستعمال (<) و(>)",
+    "حصر عدد أصغر من 1000 بين عشرتين متتاليتين أو بين مئتين متتاليتين",
+    "حساب فرق عددين ذوي رقمين بتفكيك العدد المطروح أو بالطرح العمودي دون استلاف"
+  ],
+  "keywordsAr": [
+    "مقارنة الأعداد إلى 999",
+    "الحصر بين مئتين",
+    "الحصر بين عشرتين",
+    "طرح عدد ذي رقمين"
+  ],
+  "discover": {
+    "scenarioAr": "في مركز البريد المركزي، تحمل أكياس الرسائل الأعداد: $348$ ، $512$ ، و $365$. وفي مكتب الطوابع البريدية كان لدى الموظف $78$ طابعاً، باع منها $35$ طابعاً.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 235\" width=\"600\" height=\"235\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"219\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">مقارنة وحصر الأعداد وطرح 78 - 35</text><rect x=\"30\" y=\"44\" width=\"540\" height=\"86\" rx=\"10\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"60\" y1=\"92\" x2=\"540\" y2=\"92\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"80\" y1=\"84\" x2=\"80\" y2=\"100\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"80\" y=\"116\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">300</text><line x1=\"210\" y1=\"84\" x2=\"210\" y2=\"100\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"210\" y=\"116\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">340</text><circle cx=\"245\" cy=\"92\" r=\"6\" fill=\"#dc2626\"/><text x=\"245\" y=\"74\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">348</text><line x1=\"275\" y1=\"84\" x2=\"275\" y2=\"100\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"275\" y=\"116\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">350</text><circle cx=\"335\" cy=\"92\" r=\"5\" fill=\"#2563eb\"/><text x=\"335\" y=\"74\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">365</text><line x1=\"415\" y1=\"84\" x2=\"415\" y2=\"100\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"415\" y=\"116\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">400</text><circle cx=\"510\" cy=\"92\" r=\"5\" fill=\"#15803d\"/><text x=\"510\" y=\"74\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">512</text><rect x=\"30\" y=\"142\" width=\"540\" height=\"72\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.2\"/><text x=\"300\" y=\"166\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">طرح الطوابع البريدية: تفكيك العدد 35 = 30 + 5</text><text x=\"300\" y=\"196\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">78 - 35 = 78 - 30 - 5 = 48 - 5 = ?</text></svg>",
+    "steps": [
+      {
+        "promptAr": "قارن بين الأعداد الثلاثة ( $348$ ، $512$ ، $365$ ) انطلاقاً من المئات. ما هو أكبر عدد فيها؟ (اكتب العدد بالأرقام)",
+        "hintAr": "قارن رقم المئات أولاً: $5$ مئات أكبر من $3$ مئات.",
+        "expectedInput": "512",
+        "revealAr": "العدد $512$ هو الأكبر لأن رقم مئاته $5$ ، بينما $348 < 365$ لأن عشراتهما $4 < 6$. الترتيب التصاعدي: $348 < 365 < 512$."
+      },
+      {
+        "promptAr": "نريد حصر العدد $348$ بين **عشرتين متتاليتين**: $340 < 348 < ?$. ما هي العشرة الموالية؟",
+        "hintAr": "ما هي العشرة الكاملة التي تأتي مباشرة بعد $340$ ؟",
+        "expectedInput": "350",
+        "revealAr": "الحصر بين عشرتين متتاليتين هو $340 < 348 < 350$ ، والحصر بين مئتين متتاليتين هو $300 < 348 < 400$."
+      },
+      {
+        "promptAr": "كان لدى الموظف $78$ طابعاً وباع $35$ طابعاً. احسب الباقي $78 - 35$ (بتفكيك $35$ إلى $30 + 5$ أو بالطرح العمودي).",
+        "hintAr": "نطرح العشرات أولاً ( $78 - 30 = 48$ ) ثم نطرح $5$ ، أو نطرح الوحدات $8 - 5$ ثم العشرات $7 - 3$.",
+        "expectedInput": "43",
+        "revealAr": "$78 - 35 = 43$. بقي لدى الموظف $43$ طابعاً."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لمقارنة عددين من $3$ أرقام: نقارن **المئات** أولاً، فإن تساوت نقارن **العشرات**، وإن تساوت نقارن **الوحدات** (مثلاً $348 < 365$ ).",
+      "الترتيب **التصاعدي** يكون من الأصغر إلى الأكبر باستعمال ( $<$ )، والترتيب **التنازلي** من الأكبر إلى الأصغر باستعمال ( $>$ ).",
+      "لحصر عدد مثل $463$ بين **مئتين متتاليتين** نكتب: $400 < 463 < 500$ ، ولحصره بين **عشرتين متتاليتين** نكتب: $460 < 463 < 470$.",
+      "لحساب فرق عددين ذوي رقمين دون استلاف (مثل $87 - 24$ ): يمكن تفكيك المطروح ( $87 - 20 - 4 = 63$ ) أو وضع العملية العمودية وطرح الوحدات ثم العشرات."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 240\" width=\"600\" height=\"240\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"224\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الحصر على الشريط العددي والطرح العمودي دون استلاف</text><rect x=\"30\" y=\"46\" width=\"350\" height=\"168\" rx=\"10\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.4\"/><text x=\"205\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">400 &lt; 463 &lt; 500</text><text x=\"205\" y=\"92\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">460 &lt; 463 &lt; 470</text><line x1=\"55\" y1=\"146\" x2=\"355\" y2=\"146\" stroke=\"#334155\" stroke-width=\"2.2\"/><line x1=\"65\" y1=\"136\" x2=\"65\" y2=\"156\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"65\" y=\"174\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">400</text><line x1=\"185\" y1=\"136\" x2=\"185\" y2=\"156\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"185\" y=\"174\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">460</text><circle cx=\"208\" cy=\"146\" r=\"6\" fill=\"#dc2626\"/><text x=\"208\" y=\"128\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">463</text><line x1=\"255\" y1=\"136\" x2=\"255\" y2=\"156\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"255\" y=\"174\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\" direction=\"ltr\">470</text><line x1=\"345\" y1=\"136\" x2=\"345\" y2=\"156\" stroke=\"#15803d\" stroke-width=\"2\"/><text x=\"345\" y=\"174\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">500</text><rect x=\"400\" y=\"46\" width=\"172\" height=\"168\" rx=\"10\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.4\"/><text x=\"486\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">طرح عمودي بسيط</text><text x=\"472\" y=\"108\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">8</text><text x=\"512\" y=\"108\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">7</text><text x=\"434\" y=\"140\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">-</text><text x=\"472\" y=\"140\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">2</text><text x=\"512\" y=\"140\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">4</text><line x1=\"426\" y1=\"152\" x2=\"534\" y2=\"152\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"472\" y=\"184\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#15803d\" direction=\"ltr\">6</text><text x=\"512\" y=\"184\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">3</text></svg>",
+    "visualCaptionAr": "حصر العدد $463$ بين عشرتين ومئتين متتاليتين، وطريقة الطرح العمودي دون استلاف.",
+    "examples": [
+      {
+        "problemAr": "رتب الأعداد $419$ ، $398$ ، $425$ ترتيباً تصاعدياً، ثم احصر العدد $425$ بين عشرتين متتاليتين.",
+        "solutionAr": "الترتيب التصاعدي (من الأصغر إلى الأكبر): $398 < 419 < 425$. الحصر بين عشرتين متتاليتين: $420 < 425 < 430$."
+      },
+      {
+        "problemAr": "احسب الفرق $96 - 42$ بطريقتين.",
+        "solutionAr": "بالتفكيك: $96 - 40 = 56$ ثم $56 - 2 = 54$. عمودياً: في الوحدات $6 - 2 = 4$ وفي العشرات $9 - 4 = 5$ ، فالناتج $54$."
+      }
+    ],
+    "watchOutAr": "كل عدد من $3$ أرقام (مثل $102$ ) أكبر دائماً من أي عدد من رقمين (مثل $99$ ). وفي الطرح نضع العدد الأكبر في الأعلى دائماً ولا نقلب ترتيب الرقمين!"
+  },
+  "practice": [
+    {
+      "questionAr": "أي ترتيب تصاعدي (من الأصغر إلى الأكبر) صحيح للأعداد: $504$ ، $495$ ، $540$ ؟",
+      "options": [
+        "$504 < 495 < 540$",
+        "$495 < 504 < 540$",
+        "$540 < 504 < 495$",
+        "$495 < 540 < 504$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "قارن المئات أولاً: $495$ له $4$ مئات، فهو أصغر من $504$ الذي له $5$ مئات.",
+        "ممتاز! $495$ أصغرها ( $4$ مئات)، ثم $504$ ( $0$ عشرات)، ثم $540$ ( $4$ عشرات).",
+        "هذا ترتيب تنازلي من الأكبر إلى الأصغر، والمطلوب هو الترتيب التصاعدي!",
+        "انتبه لخانة العشرات بين $504$ و $540$: الصفر أصغر من $4$ ، إذن $504 < 540$."
+      ],
+      "explanationAr": "نقارن المئات: $495$ هو الأصغر ( $4$ مئات). ثم نقارن $504$ و $540$ فنجد $0 < 4$ في العشرات، إذن $495 < 504 < 540$."
+    },
+    {
+      "questionAr": "ما هو الحصر الصحيح للعدد $674$ بين **عشرتين متتاليتين**؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 90\" width=\"420\" height=\"90\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"8\" y=\"8\" width=\"404\" height=\"74\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"45\" y=\"24\" width=\"82\" height=\"40\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"86\" y=\"50\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">?</text><text x=\"152\" y=\"50\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">&lt;</text><text x=\"210\" y=\"50\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">674</text><text x=\"268\" y=\"50\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#334155\" direction=\"ltr\">&lt;</text><rect x=\"293\" y=\"24\" width=\"82\" height=\"40\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"334\" y=\"50\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">?</text></svg>",
+      "options": [
+        "$600 < 674 < 700$",
+        "$660 < 674 < 670$",
+        "$670 < 674 < 680$",
+        "$673 < 674 < 675$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "هذا حصر بين مئتين متتاليتين، والسؤال يطلب الحصر بين عشرتين متتاليتين.",
+        "العدد $674$ أكبر من $670$ ، ولا يقع بين $660$ و $670$.",
+        "أحسنت! عشرات العدد $674$ هي $670$ والعشرة الموالية هي $680$ ، إذن $670 < 674 < 680$.",
+        "العددان $673$ و $675$ ليسا عشرتين كاملتين، بل هما العددان السابق واللاحق."
+      ],
+      "explanationAr": "للحصر بين عشرتين متتاليتين نأخذ العشرة الكاملة للعدد ( $670$ ) ثم العشرة التي تليها ( $680$ ): $670 < 674 < 680$."
+    },
+    {
+      "questionAr": "كان في حقيبة ساعي البريد $89$ رسالة، وزع منها $54$ رسالة. كم رسالة بقيت في الحقيبة؟",
+      "options": [
+        "$35$",
+        "$34$",
+        "$45$",
+        "$143$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "صحيح! في الوحدات $9 - 4 = 5$ وفي العشرات $8 - 5 = 3$ ، فالبقية $35$ رسالة.",
+        "راجع طرح الوحدات: $9 - 4 = 5$ وليس $4$.",
+        "راجع طرح العشرات: $8 - 5 = 3$ وليس $4$.",
+        "لقد استعملت الجمع بدلاً من الطرح! السؤال يطلب عدد الرسائل الباقية."
+      ],
+      "explanationAr": "لحساب الباقي نطرح: $89 - 54$. بالتفكيك $89 - 50 = 39$ ثم $39 - 4 = 35$ رسالة."
+    }
+  ]
+}

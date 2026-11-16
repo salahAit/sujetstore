@@ -1,0 +1,119 @@
+{
+  "id": "lesson_2ap_t3_multiplication_tens_2digit",
+  "slug": "lesson-2ap-t3-multiplication-tens-2digit",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t3",
+  "sequenceId": "seq6",
+  "sequenceTitleAr": "المقطع الرابع (الجزء الثاني): التحضير لحفل نهاية السنة (الضرب، المجسمات والمشكلات المركبة)",
+  "order": 5,
+  "titleAr": "الضرب في مضاعفات 10 وضرب عدد ذي رقمين في عدد ذي رقم واحد",
+  "objectives": [
+    "التحكم في آلية الضرب في 10 وفي مضاعفات 10 (مثل 20، 30، 40...)",
+    "استعمال التفكيك النموذجي وخاصية توزيع الضرب على الجمع لحساب جداء عدد ذي رقمين في عدد ذي رقم واحد",
+    "التعرف على وضع عملية الضرب العمودي لحساب جداء عددين ناتجهما أصغر من 1000"
+  ],
+  "keywordsAr": [
+    "مضاعفات 10",
+    "توزيع الضرب على الجمع",
+    "التفكيك النموذجي",
+    "ضرب عدد ذي رقمين في رقم واحد"
+  ],
+  "discover": {
+    "scenarioAr": "اشترى التلاميذ $3$ علب حلوى لحفل القسم، تحتوي كل علبة على $24$ حبة حلوى. نريد حساب العدد الكلي لحبات الحلوى بإيجاد ناتج $24 \\times 3$ باستعمال التفكيك النموذجي.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 205\" width=\"500\" height=\"205\"><rect width=\"500\" height=\"205\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#0f172a\">تفكيك 24 × 3 إلى (20 × 3) + (4 × 3)</text><g transform=\"translate(22,40)\"><rect x=\"0\" y=\"0\" width=\"248\" height=\"145\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"124\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">العشرات: 3 مرات 20</text><g fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.4\"><rect x=\"22\" y=\"32\" width=\"92\" height=\"22\" rx=\"4\"/><rect x=\"134\" y=\"32\" width=\"92\" height=\"22\" rx=\"4\"/><rect x=\"22\" y=\"62\" width=\"92\" height=\"22\" rx=\"4\"/><rect x=\"134\" y=\"62\" width=\"92\" height=\"22\" rx=\"4\"/><rect x=\"22\" y=\"92\" width=\"92\" height=\"22\" rx=\"4\"/><rect x=\"134\" y=\"92\" width=\"92\" height=\"22\" rx=\"4\"/></g><g font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" text-anchor=\"middle\"><text x=\"68\" y=\"47\">10</text><text x=\"180\" y=\"47\">10</text><text x=\"68\" y=\"77\">10</text><text x=\"180\" y=\"77\">10</text><text x=\"68\" y=\"107\">10</text><text x=\"180\" y=\"107\">10</text></g><text x=\"124\" y=\"135\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">20 × 3 = 60</text></g><text x=\"286\" y=\"118\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"22\" font-weight=\"bold\" fill=\"#0f172a\">+</text><g transform=\"translate(304,40)\"><rect x=\"0\" y=\"0\" width=\"174\" height=\"145\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"87\" y=\"20\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">الوحدات: 3 مرات 4</text><g fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"1.4\"><rect x=\"26\" y=\"34\" width=\"20\" height=\"20\" rx=\"3\"/><rect x=\"54\" y=\"34\" width=\"20\" height=\"20\" rx=\"3\"/><rect x=\"82\" y=\"34\" width=\"20\" height=\"20\" rx=\"3\"/><rect x=\"110\" y=\"34\" width=\"20\" height=\"20\" rx=\"3\"/><rect x=\"26\" y=\"63\" width=\"20\" height=\"20\" rx=\"3\"/><rect x=\"54\" y=\"63\" width=\"20\" height=\"20\" rx=\"3\"/><rect x=\"82\" y=\"63\" width=\"20\" height=\"20\" rx=\"3\"/><rect x=\"110\" y=\"63\" width=\"20\" height=\"20\" rx=\"3\"/><rect x=\"26\" y=\"92\" width=\"20\" height=\"20\" rx=\"3\"/><rect x=\"54\" y=\"92\" width=\"20\" height=\"20\" rx=\"3\"/><rect x=\"82\" y=\"92\" width=\"20\" height=\"20\" rx=\"3\"/><rect x=\"110\" y=\"92\" width=\"20\" height=\"20\" rx=\"3\"/></g><text x=\"87\" y=\"135\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\">4 × 3 = 12</text></g></svg>",
+    "steps": [
+      {
+        "promptAr": "نفكك العدد $24 = 20 + 4$ . أولاً نضرب العشرات: كم يساوي $20 \\times 3$ ؟",
+        "hintAr": "احسب $2 \\times 3 = 6$ ثم أضف صفراً على اليمين.",
+        "expectedInput": "60",
+        "revealAr": "$20 \\times 3 = 60$ لأن $2$ عشرات $\\times 3 = 6$ عشرات، أي $60$ ."
+      },
+      {
+        "promptAr": "ثانياً نضرب الوحدات: كم يساوي $4 \\times 3$ ؟",
+        "hintAr": "من جدول الضرب في $3$ أو $4$ : احسب $4 + 4 + 4$ .",
+        "expectedInput": "12",
+        "revealAr": "$4 \\times 3 = 12$ حبة حلوى في الوحدات."
+      },
+      {
+        "promptAr": "أخيراً نجمع النتيجتين $60 + 12$ لنحصل على العدد الكلي لحبات الحلوى ( $24 \\times 3$ ). ما هو المجموع؟",
+        "hintAr": "احسب $60 + 12$ .",
+        "expectedInput": "72",
+        "revealAr": "أحسنت! $24 \\times 3 = 60 + 12 = 72$ حبة حلوى."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لضرب عدد في مضاعف للعدد $10$ (مثل $20$ أو $30$ أو $40$ )، نضرب رقم العشرات ثم نضيف صفراً ( $0$ ) على اليمين، مثل: $30 \\times 4 = 120$ لأن $3 \\times 4 = 12$ .",
+      "لضرب عدد ذي رقمين في عدد ذي رقم واحد أفقياً، نستعمل **التفكيك النموذجي**: نفكك العدد إلى عشرات ووحدات، نضرب كل جزء، ثم نجمع النتيجتين.",
+      "لضرب عددين **عمودياً**، نضع العدد ذا الرقمين في الأعلى، ونبدأ بضرب الوحدات أولاً، ثم نضرب العشرات (ولا ننسى إضافة الاحتفاظ إن وجد)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 185\" width=\"500\" height=\"185\"><rect width=\"500\" height=\"185\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><g transform=\"translate(16,14)\"><rect width=\"256\" height=\"157\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"128\" y=\"22\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">الطريقة الأفقية (بالتفكيك)</text><text x=\"128\" y=\"52\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">34 × 2</text><text x=\"128\" y=\"80\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" fill=\"#334155\">= (30 × 2) + (4 × 2)</text><text x=\"128\" y=\"108\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#059669\">= 60 + 8</text><text x=\"128\" y=\"138\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" fill=\"#1d4ed8\">= 68</text></g><g transform=\"translate(286,14)\"><rect width=\"198\" height=\"157\" rx=\"8\" fill=\"#ffffff\" stroke=\"#cbd5e1\"/><text x=\"99\" y=\"22\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#059669\">الضرب العمودي: 25 × 3</text><g font-family=\"sans-serif\" text-anchor=\"middle\"><text x=\"78\" y=\"52\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">+1</text><text x=\"78\" y=\"78\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">2</text><text x=\"116\" y=\"78\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">5</text><text x=\"52\" y=\"104\" font-size=\"20\" font-weight=\"bold\" fill=\"#2563eb\">×</text><text x=\"116\" y=\"104\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">3</text><line x1=\"46\" y1=\"114\" x2=\"134\" y2=\"114\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"78\" y=\"138\" font-size=\"21\" font-weight=\"bold\" fill=\"#059669\">7</text><text x=\"116\" y=\"138\" font-size=\"21\" font-weight=\"bold\" fill=\"#059669\">5</text></g></g></svg>",
+    "visualCaptionAr": "في الضرب العمودي $25 \\times 3$ : نضرب $5 \\times 3 = 15$ (نكتب $5$ ونحتفظ بـ $1$ )، ثم $2 \\times 3 = 6$ ونضيف $1$ فنجد $7$ .",
+    "examples": [
+      {
+        "problemAr": "احسب: $40 \\times 5$",
+        "solutionAr": "نحسب $4 \\times 5 = 20$ ثم نضيف صفراً على اليمين، فنحصل على $200$ ."
+      },
+      {
+        "problemAr": "احسب بالتفكيك: $32 \\times 4$",
+        "solutionAr": "نفكك $32 = 30 + 2$ . نحسب $(30 \\times 4) + (2 \\times 4) = 120 + 8 = 128$ ."
+      }
+    ],
+    "watchOutAr": "انتبه! عند تفكيك عدد مثل $24 \\times 3$ ، الرقم $2$ في العشرات قيمته $20$ وليس $2$ ؛ لذلك نحسب $20 \\times 3 = 60$ وليس $6$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "ما هو ناتج الجداء: $40 \\times 5$ ؟",
+      "options": [
+        "$20$",
+        "$45$",
+        "$200$",
+        "$90$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "حسبت $4 \\times 5 = 20$ ونسيت إضافة الصفر الخاص بـ $40$ على اليمين!",
+        "قمت بجمع العددين $40 + 5 = 45$ بدلاً من ضربهما!",
+        "أحسنت! $4 \\times 5 = 20$ وعندما نضيف صفراً على اليمين نحصل على $200$ .",
+        "راجع جدول الضرب في $5$ : $4 \\times 5 = 20$ وليس $9$ ."
+      ],
+      "explanationAr": "نضرب رقم العشرات $4 \\times 5 = 20$ ، ثم نضيف صفر العشرات على اليمين فنحصل على $200$ ."
+    },
+    {
+      "questionAr": "احسب باستعمال التفكيك النموذجي: $43 \\times 2$",
+      "options": [
+        "$14$",
+        "$83$",
+        "$68$",
+        "$86$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "حسبت $4 \\times 2 + 3 \\times 2 = 8 + 6 = 14$ لأنك نسيت أن $4$ في العشرات يساوي $40$ !",
+        "ضربت العشرات فقط ( $40 \\times 2 = 80$ ) وتركت الوحدات $3$ دون ضربها في $2$ !",
+        "انتبه إلى ترتيب الوحدات والعشرات: العشرات $40 \\times 2 = 80$ والوحدات $3 \\times 2 = 6$ .",
+        "ممتاز! حسبت $(40 \\times 2) + (3 \\times 2) = 80 + 6 = 86$ ."
+      ],
+      "explanationAr": "نفكك $43 = 40 + 3$ ، ثم نضرب كل جزء في $2$ : $40 \\times 2 = 80$ و $3 \\times 2 = 6$ ، والمجموع هو $80 + 6 = 86$ ."
+    },
+    {
+      "questionAr": "في قاعة الحفل $3$ صفوف، في كل صف $25$ كرسياً. كم كرسياً في القاعة؟",
+      "options": [
+        "$75$",
+        "$65$",
+        "$615$",
+        "$28$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أحسنت! $(20 \\times 3) + (5 \\times 3) = 60 + 15 = 75$ كرسياً.",
+        "نسيت إضافة العشرة المحتفظ بها من $5 \\times 3 = 15$ إلى $20 \\times 3 = 60$ !",
+        "كتبت $6$ بجانب $15$ ! في الضرب العمودي نكتب $5$ ونحتفظ بـ $1$ لنجمعه مع $6$ .",
+        "جمعت $25 + 3 = 28$ ! لدينا $25$ مكررة $3$ مرات، فنستعمل الضرب."
+      ],
+      "explanationAr": "نحسب $25 \\times 3 = (20 \\times 3) + (5 \\times 3) = 60 + 15 = 75$ كرسياً."
+    }
+  ]
+}

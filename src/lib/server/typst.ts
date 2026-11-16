@@ -43,16 +43,42 @@ export function sanitizeForTypst(text: string): string {
 
 function sanitizeImagePath(src: unknown): unknown {
 	if (typeof src !== 'string') return src;
+	if (src.startsWith('/static/') || src.startsWith('/data/')) {
+		return src;
+	}
 	if (src.startsWith('/uploads/')) {
 		const dataCandidate = join(PROJECT_ROOT, 'data', src.slice(1));
-		if (existsSync(dataCandidate)) return dataCandidate;
-		return join(PROJECT_ROOT, 'static', src.slice(1));
+		if (existsSync(dataCandidate)) return `/data/${src.slice(1)}`;
+		return `/static/${src.slice(1)}`;
 	}
 	if (src.startsWith('/')) {
 		const staticCandidate = join(PROJECT_ROOT, 'static', src.slice(1));
-		if (existsSync(staticCandidate)) return staticCandidate;
+		if (existsSync(staticCandidate)) return `/static/${src.slice(1)}`;
 	}
 	return src;
+}
+
+function sanitizeBlock(block: any) {
+	if (!block || typeof block !== 'object') return;
+	if (block.type === 'math' && typeof block.content === 'string') {
+		block.content = sanitizeMathInner(block.content);
+	} else {
+		if (typeof block.content === 'string') block.content = sanitizeForTypst(block.content);
+		if (typeof block.answer === 'string') block.answer = sanitizeForTypst(block.answer);
+	}
+	if (block.type === 'image' && block.src) {
+		block.src = sanitizeImagePath(block.src);
+	}
+	if (block.type === 'image_grid' && Array.isArray(block.items)) {
+		for (const it of block.items) {
+			if (it?.src) it.src = sanitizeImagePath(it.src);
+		}
+	}
+	if (block.type === 'columns' && Array.isArray(block.children)) {
+		for (const child of block.children) {
+			sanitizeBlock(child);
+		}
+	}
 }
 
 /** Deep-clone and prepare a SujetBuilder document payload for Typst compilation. */
@@ -65,20 +91,7 @@ export function sanitizeTypstDocument<T extends Record<string, any>>(examDoc: T)
 			}
 			const blocks = ex.blocks || ex.content || [];
 			for (const block of blocks) {
-				if (block.type === 'math' && typeof block.content === 'string') {
-					block.content = sanitizeMathInner(block.content);
-				} else {
-					if (typeof block.content === 'string') block.content = sanitizeForTypst(block.content);
-					if (typeof block.answer === 'string') block.answer = sanitizeForTypst(block.answer);
-				}
-				if (block.type === 'image' && block.src) {
-					block.src = sanitizeImagePath(block.src);
-				}
-				if (block.type === 'image_grid' && Array.isArray(block.items)) {
-					for (const it of block.items) {
-						if (it?.src) it.src = sanitizeImagePath(it.src);
-					}
-				}
+				sanitizeBlock(block);
 			}
 		}
 	}

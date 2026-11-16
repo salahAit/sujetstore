@@ -1,0 +1,123 @@
+{
+  "id": "lesson_2ap_t1_alignment_lengths_polygons",
+  "slug": "2ap-t1-alignment-lengths-polygons",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني (الجزء الأول): حملة التشجير (الأعداد إلى 99 و100، الجمع دون احتفاظ والأطوال)",
+  "order": 5,
+  "titleAr": "استقامية أشياء ونقط، التعرف على المضلعات وقياس الأطوال",
+  "objectives": [
+    "التعرف على استقامية أشياء ونقط والتحقق منها باستعمال المسطرة أو الخيط المشدود",
+    "قياس أطوال بوحدة غير معتمدة ثم باستعمال المسطرة المدرجة بالسنتيمتر (cm)",
+    "التعرف على المضلعات والتمييز بين المثلث والرباعيات المألوفة (المربع والمستطيل)"
+  ],
+  "keywordsAr": [
+    "استقامية أشياء",
+    "استقامية نقط",
+    "المضلعات",
+    "المسطرة المدرجة",
+    "السنتيمتر (cm)"
+  ],
+  "discover": {
+    "scenarioAr": "في فِناءِ المَدْرَسَةِ، غَرَسَ التَّلامِيذُ شُجَيْراتٍ عَلى خَطٍّ واحِدٍ وَتَحَقَّقُوا مِنِ اسْتِقامِيَّتِها، ثُمَّ قاسُوا طُولَ قَلَمٍ بِالمِسْطَرَةِ المُدَرَّجَةِ بالسَّنْتِيمِتْرِ ($\\text{cm}$).",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 205\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"18\" y=\"12\" width=\"424\" height=\"82\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><line x1=\"45\" y1=\"56\" x2=\"390\" y2=\"56\" stroke=\"#2563eb\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><circle cx=\"80\" cy=\"56\" r=\"5\" fill=\"#16a34a\"/><text x=\"80\" y=\"42\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">A</text><circle cx=\"170\" cy=\"56\" r=\"5\" fill=\"#16a34a\"/><text x=\"170\" y=\"42\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">B</text><circle cx=\"260\" cy=\"56\" r=\"5\" fill=\"#16a34a\"/><text x=\"260\" y=\"42\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">C</text><circle cx=\"350\" cy=\"56\" r=\"5\" fill=\"#16a34a\"/><text x=\"350\" y=\"42\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">D</text><circle cx=\"215\" cy=\"26\" r=\"5\" fill=\"#dc2626\"/><text x=\"232\" y=\"30\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">E</text><rect x=\"18\" y=\"104\" width=\"424\" height=\"88\" rx=\"8\" fill=\"#fffbeb\" stroke=\"#fcd34d\" stroke-width=\"1.5\"/><rect x=\"48\" y=\"118\" width=\"280\" height=\"16\" rx=\"3\" fill=\"#16a34a\"/><polygon points=\"328,118 344,126 328,134\" fill=\"#f59e0b\"/><rect x=\"35\" y=\"142\" width=\"390\" height=\"36\" rx=\"4\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><line x1=\"48\" y1=\"142\" x2=\"48\" y2=\"156\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"48\" y=\"171\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">0</text><line x1=\"85\" y1=\"142\" x2=\"85\" y2=\"152\" stroke=\"#1e293b\"/><text x=\"85\" y=\"171\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e293b\">1</text><line x1=\"122\" y1=\"142\" x2=\"122\" y2=\"152\" stroke=\"#1e293b\"/><text x=\"122\" y=\"171\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e293b\">2</text><line x1=\"159\" y1=\"142\" x2=\"159\" y2=\"152\" stroke=\"#1e293b\"/><text x=\"159\" y=\"171\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e293b\">3</text><line x1=\"196\" y1=\"142\" x2=\"196\" y2=\"152\" stroke=\"#1e293b\"/><text x=\"196\" y=\"171\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e293b\">4</text><line x1=\"233\" y1=\"142\" x2=\"233\" y2=\"152\" stroke=\"#1e293b\"/><text x=\"233\" y=\"171\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e293b\">5</text><line x1=\"270\" y1=\"142\" x2=\"270\" y2=\"152\" stroke=\"#1e293b\"/><text x=\"270\" y=\"171\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e293b\">6</text><line x1=\"307\" y1=\"142\" x2=\"307\" y2=\"152\" stroke=\"#1e293b\"/><text x=\"307\" y=\"171\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e293b\">7</text><line x1=\"344\" y1=\"142\" x2=\"344\" y2=\"156\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"344\" y=\"171\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">8</text><line x1=\"381\" y1=\"142\" x2=\"381\" y2=\"152\" stroke=\"#1e293b\"/><text x=\"381\" y=\"171\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e293b\">9</text><text x=\"410\" y=\"168\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#78350f\">cm</text></svg>",
+    "steps": [
+      {
+        "promptAr": "اُنْظُرْ إلى النُّقَطِ في الأَعْلى: ما النُّقْطَةُ الَّتِي لَيْسَتْ في اسْتِقامِيَّةٍ مَعَ النُّقَطِ $A, B, C, D$؟",
+        "hintAr": "ابْحَثْ عَنِ النُّقْطَةِ الَّتِي لا تَقَعُ عَلى الخَطِّ المُسْتَقِيمِ الأَزْرَقِ.",
+        "expectedInput": "E",
+        "revealAr": "النُّقْطَةُ $E$ لَيْسَتْ عَلى الخَطِّ المُسْتَقِيمِ، أَمّا $A, B, C, D$ فَهِيَ في اسْتِقامِيَّةٍ واحِدَةٍ."
+      },
+      {
+        "promptAr": "بِدايَةُ القَلَمِ عِنْدَ التَّدْرِيجَةِ $0$ في المِسْطَرَةِ. ما طُولُ القَلَمِ بالسَّنْتِيمِتْرِ ($\\text{cm}$)؟",
+        "hintAr": "اقْرَأِ العَدَدَ عِنْدَ نِهايَةِ رَأْسِ القَلَمِ.",
+        "expectedInput": "8",
+        "revealAr": "طُولُ القَلَمِ هُوَ $8\\text{ cm}$ لِأَنَّ طَرَفَهُ الأَيْمَنَ عِنْدَ التَّدْرِيجَةِ $8$."
+      },
+      {
+        "promptAr": "ما اسْمُ الشَّكْلِ المُغْلَقِ الَّذِي لَهُ $4$ أَضْلاعٍ مُسْتَقِيمَةٍ مُتَساوِيَةِ الطُّولِ وَ $4$ رُؤُوسٍ؟",
+        "hintAr": "هُوَ مُضَلَّعٌ رُباعِيٌّ مَعْرُوفٌ كُلُّ أَضْلاعِهِ مُتَقايِسَةٌ.",
+        "expectedInput": "المربع",
+        "revealAr": "الشَّكْلُ هُوَ المُرَبَّعُ، وَهُوَ مُضَلَّعٌ لَهُ $4$ أَضْلاعٍ مُتَساوِيَةٍ وَ $4$ رُؤُوسٍ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "تَكُونُ النُّقَطُ أَوِ الأَشْياءُ في اسْتِقامِيَّةٍ إِذا مَرَّ بِها جَمِيعًا خَطٌّ مُسْتَقِيمٌ واحِدٌ بِاسْتِعْمالِ المِسْطَرَةِ أَوِ الخَيْطِ المَشْدُودِ.",
+      "لِقِياسِ طُولِ قِطْعَةٍ بالسَّنْتِيمِتْرِ ($\\text{cm}$): نَضَعُ التَّدْرِيجَةَ $0$ لِلْمِسْطَرَةِ عَلى بِدايَةِ القِطْعَةِ وَنَقْرَأُ التَّدْرِيجَةَ عِنْدَ نِهايَتِها.",
+      "المُضَلَّعُ شَكْلٌ مُغْلَقٌ جَمِيعُ حَوافِهِ قِطَعٌ مُسْتَقِيمَةٌ؛ أَمّا الشَّكْلُ المُنْحَنِي كَالدّائِرَةِ فَلَيْسَ مُضَلَّعًا.",
+      "المُثَلَّثُ مُضَلَّعٌ لَهُ $3$ أَضْلاعٍ وَ $3$ رُؤُوسٍ، وَالمُرَبَّعُ وَالمُسْتَطِيلُ مُضَلَّعانِ رُباعِيّانِ لِكُلٍّ مِنْهُما $4$ أَضْلاعٍ وَ $4$ رُؤُوسٍ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 205\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"15\" y=\"15\" width=\"430\" height=\"76\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/><text x=\"350\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">قِياسٌ: 6 cm</text><line x1=\"40\" y1=\"42\" x2=\"238\" y2=\"42\" stroke=\"#16a34a\" stroke-width=\"4\"/><rect x=\"30\" y=\"52\" width=\"260\" height=\"28\" rx=\"3\" fill=\"#fef08a\" stroke=\"#ca8a04\"/><line x1=\"40\" y1=\"52\" x2=\"40\" y2=\"64\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"40\" y=\"75\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\">0</text><text x=\"73\" y=\"75\" text-anchor=\"middle\" font-size=\"10\">1</text><text x=\"106\" y=\"75\" text-anchor=\"middle\" font-size=\"10\">2</text><text x=\"139\" y=\"75\" text-anchor=\"middle\" font-size=\"10\">3</text><text x=\"172\" y=\"75\" text-anchor=\"middle\" font-size=\"10\">4</text><text x=\"205\" y=\"75\" text-anchor=\"middle\" font-size=\"10\">5</text><line x1=\"238\" y1=\"52\" x2=\"238\" y2=\"64\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"238\" y=\"75\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">6</text><text x=\"272\" y=\"74\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">cm</text><rect x=\"15\" y=\"102\" width=\"430\" height=\"90\" rx=\"8\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><polygon points=\"65,120 35,166 95,166\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"65\" y=\"184\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">مُثَلَّثٌ (3)</text><rect x=\"142\" y=\"120\" width=\"46\" height=\"46\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"165\" y=\"184\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">مُرَبَّعٌ (4)</text><rect x=\"230\" y=\"124\" width=\"76\" height=\"42\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/><text x=\"268\" y=\"184\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\">مُسْتَطِيلٌ (4)</text><circle cx=\"385\" cy=\"143\" r=\"23\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"385\" y=\"184\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b91c1c\">دائِرَةٌ (لَيْسَتْ مُضَلَّعًا)</text></svg>",
+    "visualCaptionAr": "قِياسُ طُولٍ بِالمِسْطَرَةِ بِدْءًا مِن $0$، وَالتَّمْيِيزُ بَيْنَ المُضَلَّعاتِ والدّائِرَةِ.",
+    "examples": [
+      {
+        "problemAr": "وَضَعَتْ مَرْيَمُ بِدايَةَ شَرِيطٍ عِنْدَ التَّدْرِيجَةِ $0$ في المِسْطَرَةِ، فَوَصَلَتْ نِهايَتُهُ إلى التَّدْرِيجَةِ $9$. ما طُولُ الشَّرِيطِ؟",
+        "solutionAr": "بِما أَنَّ البِدايَةَ عِنْدَ $0$، فَطُولُ الشَّرِيطِ هُوَ $9\\text{ cm}$."
+      },
+      {
+        "problemAr": "أَيُّ شَكْلٍ لَهُ $3$ أَضْلاعٍ وَ $3$ رُؤُوسٍ، وَأَيُّ شَكْلٍ لَيْسَ لَهُ أَضْلاعٌ مُسْتَقِيمَةٌ؟",
+        "solutionAr": "المُثَلَّثُ لَهُ $3$ أَضْلاعٍ وَ $3$ رُؤُوسٍ، أَمّا الدّائِرَةُ فَلَيْسَ لَها أَضْلاعٌ مُسْتَقِيمَةٌ."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! لا تَبْدَأِ القِياسَ مِنَ التَّدْرِيجَةِ $1$ أَوْ مِن طَرَفِ الخَشَبِ في المِسْطَرَةِ؛ ضَعْ دائِمًا بِدايَةَ القِطْعَةِ عِنْدَ التَّدْرِيجَةِ $0$."
+  },
+  "practice": [
+    {
+      "questionAr": "اُنْظُرْ إلى المِسْطَرَةِ: ما طُولُ القِطْعَةِ الخَضْراءِ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 110\" style=\"background:#fff;font-family:Arial,sans-serif\"><line x1=\"35\" y1=\"34\" x2=\"280\" y2=\"34\" stroke=\"#16a34a\" stroke-width=\"6\" stroke-linecap=\"round\"/><rect x=\"20\" y=\"52\" width=\"340\" height=\"40\" rx=\"4\" fill=\"#fef9c3\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><line x1=\"35\" y1=\"52\" x2=\"35\" y2=\"66\" stroke=\"#000\" stroke-width=\"2\"/><text x=\"35\" y=\"84\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\">0</text><line x1=\"70\" y1=\"52\" x2=\"70\" y2=\"62\" stroke=\"#000\"/><text x=\"70\" y=\"84\" text-anchor=\"middle\" font-size=\"12\">1</text><line x1=\"105\" y1=\"52\" x2=\"105\" y2=\"62\" stroke=\"#000\"/><text x=\"105\" y=\"84\" text-anchor=\"middle\" font-size=\"12\">2</text><line x1=\"140\" y1=\"52\" x2=\"140\" y2=\"62\" stroke=\"#000\"/><text x=\"140\" y=\"84\" text-anchor=\"middle\" font-size=\"12\">3</text><line x1=\"175\" y1=\"52\" x2=\"175\" y2=\"62\" stroke=\"#000\"/><text x=\"175\" y=\"84\" text-anchor=\"middle\" font-size=\"12\">4</text><line x1=\"210\" y1=\"52\" x2=\"210\" y2=\"62\" stroke=\"#000\"/><text x=\"210\" y=\"84\" text-anchor=\"middle\" font-size=\"12\">5</text><line x1=\"245\" y1=\"52\" x2=\"245\" y2=\"62\" stroke=\"#000\"/><text x=\"245\" y=\"84\" text-anchor=\"middle\" font-size=\"12\">6</text><line x1=\"280\" y1=\"52\" x2=\"280\" y2=\"66\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"280\" y=\"84\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\">7</text><line x1=\"315\" y1=\"52\" x2=\"315\" y2=\"62\" stroke=\"#000\"/><text x=\"315\" y=\"84\" text-anchor=\"middle\" font-size=\"12\">8</text><text x=\"344\" y=\"82\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\">cm</text></svg>",
+      "options": [
+        "$7\\text{ cm}$",
+        "$6\\text{ cm}$",
+        "$8\\text{ cm}$",
+        "$5\\text{ cm}$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أَحْسَنْتَ! القِطْعَةُ تَبْدَأُ عِنْدَ $0$ وَتَنْتَهِي عِنْدَ $7$، إِذَنْ طُولُها $7\\text{ cm}$.",
+        "انْتَبِهْ جَيِّدًا لِنِهايَةِ القِطْعَةِ؛ إِنَّها تَتَجاوَزُ $6$ وَتَصِلُ إلى $7$.",
+        "التَّدْرِيجَةُ $8$ بَعْدَ نِهايَةِ القِطْعَةِ؛ اقْرَأِ الرَّقْمَ تَحْتَ الطَّرَفِ الأَيْمَنِ مُباشَرَةً.",
+        "اقْرَأِ التَّدْرِيجَةَ عِنْدَ نِهايَةِ القِطْعَةِ، وَهِيَ $7$ وَلَيْسَ $5$."
+      ],
+      "explanationAr": "لِأَنَّ طَرَفَ القِطْعَةِ الأَيْسَرَ عِنْدَ $0$ وَطَرَفَها الأَيْمَنَ عِنْدَ $7$، يَكُونُ طُولُها $7\\text{ cm}$."
+    },
+    {
+      "questionAr": "أَيُّ شَكْلٍ مِنْ هَذِهِ الأَشْكالِ لَيْسَ مُضَلَّعًا؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 100\" style=\"background:#fff;font-family:Arial,sans-serif\"><polygon points=\"50,20 20,76 80,76\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><rect x=\"115\" y=\"24\" width=\"52\" height=\"52\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"235\" cy=\"50\" r=\"27\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"2\"/><rect x=\"290\" y=\"28\" width=\"72\" height=\"44\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2\"/></svg>",
+      "options": [
+        "الدائرة",
+        "المثلث",
+        "المربع",
+        "المستطيل"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "مُمْتازٌ! الدّائِرَةُ خَطُّها مُنْحَنٍ وَلَيْسَ لَها أَضْلاعٌ مُسْتَقِيمَةٌ، فَهِيَ لَيْسَتْ مُضَلَّعًا.",
+        "المُثَلَّثُ مُضَلَّعٌ لِأَنَّ جَمِيعَ أَضْلاعِهِ الثَّلاثَةِ قِطَعٌ مُسْتَقِيمَةٌ.",
+        "المُرَبَّعُ مُضَلَّعٌ رُباعِيٌّ جَمِيعُ أَضْلاعِهِ مُسْتَقِيمَةٌ.",
+        "المُسْتَطِيلُ مُضَلَّعٌ رُباعِيٌّ جَمِيعُ أَضْلاعِهِ مُسْتَقِيمَةٌ."
+      ],
+      "explanationAr": "المُضَلَّعُ يَتَكَوَّنُ مِن قِطَعٍ مُسْتَقِيمَةٍ فَقَطْ، أَمّا الدّائِرَةُ فَهِيَ مُنْحَنِيَةٌ وَلَيْسَتْ مُضَلَّعًا."
+    },
+    {
+      "questionAr": "كَمْ ضِلْعًا مُسْتَقِيمًا وَكَمْ رَأْسًا لِلْمُسْتَطِيلِ؟",
+      "options": [
+        "$4$ أَضْلاعٍ وَ $4$ رُؤُوسٍ",
+        "$3$ أَضْلاعٍ وَ $3$ رُؤُوسٍ",
+        "$4$ أَضْلاعٍ وَ $3$ رُؤُوسٍ",
+        "$5$ أَضْلاعٍ وَ $5$ رُؤُوسٍ"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أَحْسَنْتَ! المُسْتَطِيلُ مُضَلَّعٌ رُباعِيٌّ، لَهُ $4$ أَضْلاعٍ وَ $4$ رُؤُوسٍ.",
+        "$3$ أَضْلاعٍ وَ $3$ رُؤُوسٍ هِيَ خَصائِصُ المُثَلَّثِ وَلَيْسَ المُسْتَطِيلِ.",
+        "في كُلِّ مُضَلَّعٍ يَتَساوى عَدَدُ الأَضْلاعِ وَعَدَدُ الرُّؤُوسِ.",
+        "المُسْتَطِيلُ شَكْلٌ رُباعِيٌّ فِيهِ $4$ أَضْلاعٍ وَ $4$ رُؤُوسٍ وَلَيْسَ $5$."
+      ],
+      "explanationAr": "المُسْتَطِيلُ شَكْلٌ رُباعِيٌّ مِثْلُ المُرَبَّعِ، فَهُوَ يَمْلِكُ $4$ أَضْلاعٍ مُسْتَقِيمَةٍ وَ $4$ رُؤُوسٍ."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "lesson_2am_t1_angles_and_parallelism",
+  "slug": "2am-t1-angles-and-parallelism",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t1",
+  "sequenceId": "seq3",
+  "sequenceTitleAr": "المقطع الثالث: الزوايا والتوازي وإدماج الفصل الأول",
+  "order": 6,
+  "titleAr": "الزوايا والتوازي (العلاقات بين الزوايا، متوازيان وقاطع)",
+  "objectives": [
+    "معرفة وتوظيف التعابير: زاويتان متجاورتان، متكاملتان، متتامتان، متقابلتان بالرأس، متبادلتان داخليا، متبادلتان خارجيا، ومتماثلتان",
+    "معرفة خاصية الزاويتين المتقابلتين بالرأس وتوظيفها في حساب أقياس الزوايا",
+    "معرفة وتوظيف خواص الزوايا المعينة بمستقيمين متوازيين وقاطع في بناء استدلالات استنتاجية بسيطة (دون البرهان على الخواص العكسية)"
+  ],
+  "keywordsAr": [
+    "زاويتان متجاورتان",
+    "زاويتان متتامتان ومتكاملتان",
+    "زاويتان متقابلتان بالرأس",
+    "زاويتان متبادلتان داخليا وخارجيا",
+    "زاويتان متماثلتان",
+    "متوازيان وقاطع"
+  ],
+  "discover": {
+    "scenarioAr": "في تصميم شبكة السكة الحديدية، يتقاطع مساران متوازيان $(d) \\parallel (d')$ مع طريق مستقيم قاطع $(\\Delta)$ في نقطتين $A$ و $B$ . قاس المهندس الزاوية $\\widehat{1}$ عند النقطة $A$ فوجدها $65^\\circ$ . كيف يمكنه استنتاج أقياس الزوايا $\\widehat{2}$ و $\\widehat{3}$ و $\\widehat{5}$ و $\\widehat{6}$ دون استعمال المنقلة؟",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 195\" width=\"440\" height=\"195\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"40\" y1=\"58\" x2=\"400\" y2=\"58\" stroke=\"#1d4ed8\" stroke-width=\"2.4\"/><line x1=\"40\" y1=\"148\" x2=\"400\" y2=\"148\" stroke=\"#1d4ed8\" stroke-width=\"2.4\"/><line x1=\"179\" y1=\"182\" x2=\"256\" y2=\"18\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"414\" y=\"62\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">(d)</text><text x=\"414\" y=\"152\" font-size=\"13\" font-weight=\"bold\" fill=\"#1d4ed8\">(d')</text><text x=\"264\" y=\"25\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">(Δ)</text><circle cx=\"237\" cy=\"58\" r=\"3.5\" fill=\"#0f172a\"/><circle cx=\"195\" cy=\"148\" r=\"3.5\" fill=\"#0f172a\"/><text x=\"246\" y=\"73\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"205\" y=\"164\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">B</text><path d=\"M 259 58 A 22 22 0 0 0 246.4 38.1\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"285\" y=\"46\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">1 (65°)</text><path d=\"M 246.4 38.1 A 22 22 0 0 0 215 58\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"2\"/><text x=\"205\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0284c7\">2</text><path d=\"M 215 58 A 22 22 0 0 0 227.6 77.9\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><text x=\"206\" y=\"79\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">3</text><path d=\"M 217 148 A 22 22 0 0 0 204.4 128.1\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><text x=\"226\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">5</text><path d=\"M 204.4 128.1 A 22 22 0 0 0 173 148\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"2\"/><text x=\"165\" y=\"132\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0284c7\">6</text><text x=\"84\" y=\"104\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\">(d) // (d')</text></svg>",
+    "steps": [
+      {
+        "promptAr": "عند الرأس $A$ ، الزاويتان $\\widehat{1} = 65^\\circ$ و $\\widehat{2}$ متجاورتان وتؤلفان زاوية مستقيمة (متكاملتان). ما قيس الزاوية $\\widehat{2}$ بالدرجات؟",
+        "hintAr": "مجموع قيسي زاويتين متكاملتين هو $180^\\circ$ . احسب $180 - 65$ .",
+        "expectedInput": "115",
+        "revealAr": "بما أن $\\widehat{1}$ و $\\widehat{2}$ متكاملتان، فإن $\\widehat{2} = 180^\\circ - 65^\\circ = 115^\\circ$ ."
+      },
+      {
+        "promptAr": "الزاوية $\\widehat{3}$ تقع في الجهة المقابلة للزاوية $\\widehat{1}$ عند الرأس $A$ (متقابلتان بالرأس). ما قيس الزاوية $\\widehat{3}$ بالدرجات؟",
+        "hintAr": "كل زاويتين متقابلتين بالرأس متقايستان دائماً.",
+        "expectedInput": "65",
+        "revealAr": "الزاويتان المتقابلتان بالرأس متقايستان، إذن $\\widehat{3} = \\widehat{1} = 65^\\circ$ ."
+      },
+      {
+        "promptAr": "بما أن $(d) \\parallel (d')$ ويقطعهما $(\\Delta)$ ، فالزاويتان $\\widehat{3}$ و $\\widehat{5}$ متبادلتان داخلياً. ما قيس الزاوية $\\widehat{5}$ بالدرجات؟",
+        "hintAr": "إذا قطع مستقيم مستقيمين متوازيين، فإن كل زاويتين متبادلتين داخلياً متقايستان.",
+        "expectedInput": "65",
+        "revealAr": "لأن $(d) \\parallel (d')$ فإن الزاويتين المتبادلتين داخلياً $\\widehat{3}$ و $\\widehat{5}$ متقايستان: $\\widehat{5} = 65^\\circ$ ."
+      },
+      {
+        "promptAr": "وما قيس الزاوية $\\widehat{6}$ المتماثلة مع $\\widehat{2} = 115^\\circ$ (في نفس الجهة من القاطع، إحداهما داخلية والأخرى خارجية)؟",
+        "hintAr": "الزاويتان المتماثلتان المعينتان بمتوازيين وقاطع متقايستان أيضاً.",
+        "expectedInput": "115",
+        "revealAr": "بما أن $(d) \\parallel (d')$ فإن الزاويتين المتماثلتين $\\widehat{2}$ و $\\widehat{6}$ متقايستان، ومنه $\\widehat{6} = 115^\\circ$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**زاويتان متجاورتان، متتامتان، متكاملتان**: زاويتان **متجاورتان** تشتركان في الرأس وفي ضلع يفصل بينهما. تكونان **متتامتين** إذا كان مجموع قيسيهما $90^\\circ$ ، و**متكاملتين** إذا كان مجموع قيسيهما $180^\\circ$ .",
+      "**زاويتان متقابلتان بالرأس**: لهما نفس الرأس وأضلاع إحداهما امتداد لأضلاع الأخرى. **خاصية**: كل زاويتين متقابلتين بالرأس **متقايستان**.",
+      "**الزوايا المعينة بمستقيمين وقاطع**: نميّز: **متبادلتان داخلياً** (بين المستقيمين وفي جهتين مختلفتين من القاطع)، **متبادلتان خارجياً** (خارج المستقيمين وفي جهتين مختلفتين)، و**متماثلتان** (في نفس الجهة من القاطع، إحداهما داخلية والأخرى خارجية).",
+      "**خواص المتوازيين والقاطع**: إذا قطع مستقيم $(\\Delta)$ مستقيمين **متوازيين** $(d)$ و $(d')$ ، فإن: كل زاويتين متبادلتين داخلياً متقايستان، وكل زاويتين متبادلتين خارجياً متقايستان، وكل زاويتين متماثلتين متقايستان."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 175\" width=\"460\" height=\"175\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><rect x=\"10\" y=\"12\" width=\"140\" height=\"150\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><text x=\"80\" y=\"30\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">متتامتان و متقابلتان</text><line x1=\"28\" y1=\"86\" x2=\"130\" y2=\"86\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><line x1=\"55\" y1=\"48\" x2=\"105\" y2=\"124\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><path d=\"M 98 86 A 18 18 0 0 0 90 71\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><path d=\"M 62 86 A 18 18 0 0 0 70 101\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"80\" y=\"148\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1e40af\">المتقابلتان بالرأس متقايستان</text><rect x=\"160\" y=\"12\" width=\"140\" height=\"150\" rx=\"8\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.4\"/><text x=\"230\" y=\"30\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#166534\">متبادلتان داخلياً</text><line x1=\"176\" y1=\"60\" x2=\"284\" y2=\"60\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"176\" y1=\"118\" x2=\"284\" y2=\"118\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"204\" y1=\"134\" x2=\"256\" y2=\"44\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><path d=\"M 230 60 A 16 16 0 0 0 238 74\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><path d=\"M 230 118 A 16 16 0 0 0 222 104\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><text x=\"230\" y=\"148\" text-anchor=\"middle\" font-size=\"10\" fill=\"#166534\">(d) // (d') ⇐ تقايس</text><rect x=\"310\" y=\"12\" width=\"140\" height=\"150\" rx=\"8\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.4\"/><text x=\"380\" y=\"30\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#854d0e\">متماثلتان</text><line x1=\"326\" y1=\"64\" x2=\"434\" y2=\"64\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"326\" y1=\"118\" x2=\"434\" y2=\"118\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><line x1=\"354\" y1=\"136\" x2=\"406\" y2=\"40\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><path d=\"M 409 64 A 16 16 0 0 0 401 50\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><path d=\"M 380 118 A 16 16 0 0 0 372 104\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"380\" y=\"148\" text-anchor=\"middle\" font-size=\"10\" fill=\"#854d0e\">نفس الجهة: خارجية + داخلية</text></svg>",
+    "visualCaptionAr": "تمثيل بصري للزوايا المتقابلة بالرأس، المتبادلة داخلياً، والمتماثلة عند تقاطع قاطع مع متوازيين",
+    "examples": [
+      {
+        "problemAr": "الزاويتان $\\widehat{A}$ و $\\widehat{B}$ متتامتان حيث $\\widehat{A} = 37^\\circ$ ، والزاوية $\\widehat{C}$ مكملة للزاوية $\\widehat{A}$ . احسب قيسي $\\widehat{B}$ و $\\widehat{C}$ .",
+        "solutionAr": "بما أن $\\widehat{A}$ و $\\widehat{B}$ متتامتان، فإن مجموعهما $90^\\circ$ ، ومنه $\\widehat{B} = 90^\\circ - 37^\\circ = 53^\\circ$ .\n\nوبما أن $\\widehat{C}$ مكملة لـ $\\widehat{A}$ ، فإن مجموعهما $180^\\circ$ ، ومنه $\\widehat{C} = 180^\\circ - 37^\\circ = 143^\\circ$ ."
+      },
+      {
+        "problemAr": "المستقيمان $(xy)$ و $(zt)$ متوازيان يقطعهما $(uv)$ في $M$ و $N$ . إذا كان $\\widehat{xMu} = 128^\\circ$ ، استنتج قيس الزاوية المتبادلة خارجياً معها $\\widehat{tNv}$ وقيس الزاوية المتماثلة معها $\\widehat{zNu}$ .",
+        "solutionAr": "بما أن $(xy) \\parallel (zt)$ :\n\n1) الزاويتان $\\widehat{xMu}$ و $\\widehat{tNv}$ متبادلتان خارجياً، إذن $\\widehat{tNv} = 128^\\circ$ .\n\n2) الزاويتان $\\widehat{xMu}$ و $\\widehat{zNu}$ متماثلتان، إذن $\\widehat{zNu} = 128^\\circ$ ."
+      }
+    ],
+    "watchOutAr": "خطأ شائع: الاعتقاد بأن الزاويتين المتبادلتين داخلياً أو المتماثلتين متقايستان دائماً! هذا التقايس لا يتحقق إلا إذا كان المستقيمان المعطيان **متوازيين**! أما الزاويتان المتقابلتان بالرأس فهما متقايستان دائماً دون اشتراط التوازي."
+  },
+  "practice": [
+    {
+      "questionAr": "إذا كانت الزاويتان $\\widehat{E}$ و $\\widehat{F}$ **متتامتين** وكان قيس $\\widehat{E} = 28^\\circ$ ، فما قيس الزاوية $\\widehat{F}$ ؟",
+      "options": [
+        "$152^\\circ$",
+        "$62^\\circ$",
+        "$28^\\circ$",
+        "$72^\\circ$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$152^\\circ = 180^\\circ - 28^\\circ$ تخص الزاويتين **المتكاملتين** وليس المتتامتين!",
+        "ممتاز! الزاويتان المتتامتان مجموع قيسيهما $90^\\circ$ ، إذن $90^\\circ - 28^\\circ = 62^\\circ$ .",
+        "الزاويتان المتتامتان لا تكونان متقايستين إلا إذا ساوت كل منهما $45^\\circ$ .",
+        "انتبه لعملية الطرح: $90 - 28 = 62$ وليس $72$ ."
+      ],
+      "explanationAr": "الزاويتان المتتامتان هما زاويتان مجموع قيسيهما $90^\\circ$ . ومنه $\\widehat{F} = 90^\\circ - 28^\\circ = 62^\\circ$ ."
+    },
+    {
+      "questionAr": "في الشكل المقابل، $(d_1) \\parallel (d_2)$ والمستقيم $(\\Delta)$ قاطع لهما حيث $\\widehat{a} = 52^\\circ$ . ما نوع العلاقة بين $\\widehat{a}$ و $\\widehat{b}$ وما قيس $\\widehat{b}$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 155\" width=\"260\" height=\"155\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"30\" y1=\"48\" x2=\"230\" y2=\"48\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><line x1=\"30\" y1=\"112\" x2=\"230\" y2=\"112\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><line x1=\"80\" y1=\"144\" x2=\"180\" y2=\"16\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"236\" y=\"52\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">(d1)</text><text x=\"236\" y=\"116\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">(d2)</text><text x=\"186\" y=\"24\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">(Δ)</text><path d=\"M 177 48 A 22 22 0 0 0 168.5 30.7\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.2\"/><text x=\"198\" y=\"38\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">a = 52°</text><path d=\"M 127 112 A 22 22 0 0 0 118.5 94.7\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><text x=\"134\" y=\"101\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">b</text></svg>",
+      "options": [
+        "متبادلتان داخلياً، و $\\widehat{b} = 52^\\circ$",
+        "متماثلتان، و $\\widehat{b} = 128^\\circ$",
+        "متماثلتان، و $\\widehat{b} = 52^\\circ$",
+        "متبادلتان خارجياً، و $\\widehat{b} = 128^\\circ$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "القيس $52^\\circ$ صحيح، لكن لاحظ أن $\\widehat{a}$ خارجية بينما $\\widehat{b}$ داخلية وفي نفس الجهة من القاطع، فهما متماثلتان.",
+        "الزاويتان المتماثلتان المعينتان بمتوازيين وقاطع متقايستان وليستا متكاملتين.",
+        "أحسنت! هما زاويتان متماثلتان، وبما أن $(d_1) \\parallel (d_2)$ فهما متقايستان: $\\widehat{b} = 52^\\circ$ .",
+        "إحداهما داخلية والأخرى خارجية في نفس الجهة من القاطع، إذن هما متماثلتان ومتقايستان."
+      ],
+      "explanationAr": "تقع الزاويتان $\\widehat{a}$ و $\\widehat{b}$ في نفس الجهة من القاطع $(\\Delta)$ ، إحداهما خارجية والأخرى داخلية، فهما متماثلتان. وبما أن $(d_1) \\parallel (d_2)$ فإنهما متقايستان: $\\widehat{b} = \\widehat{a} = 52^\\circ$ ."
+    },
+    {
+      "questionAr": "في الشكل نفسه حيث $(d_1) \\parallel (d_2)$ و $\\widehat{b} = 52^\\circ$ ، نعتبر الزاوية $\\widehat{c}$ المجاورة للزاوية $\\widehat{b}$ على المستقيم $(d_2)$ . ما قيس الزاوية $\\widehat{c}$ ؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 155\" width=\"260\" height=\"155\" style=\"background:#ffffff;font-family:Cairo,Arial,sans-serif\"><line x1=\"30\" y1=\"48\" x2=\"230\" y2=\"48\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><line x1=\"30\" y1=\"112\" x2=\"230\" y2=\"112\" stroke=\"#1d4ed8\" stroke-width=\"2.2\"/><line x1=\"80\" y1=\"144\" x2=\"180\" y2=\"16\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"236\" y=\"52\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">(d1)</text><text x=\"236\" y=\"116\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">(d2)</text><path d=\"M 127 112 A 22 22 0 0 0 118.5 94.7\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><text x=\"134\" y=\"101\" font-size=\"12\" font-weight=\"bold\" fill=\"#16a34a\">b = 52°</text><path d=\"M 118.5 94.7 A 22 22 0 0 0 83 112\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2.2\"/><text x=\"80\" y=\"96\" font-size=\"12\" font-weight=\"bold\" fill=\"#d97706\">c</text></svg>",
+      "options": [
+        "$38^\\circ$",
+        "$52^\\circ$",
+        "$138^\\circ$",
+        "$128^\\circ$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "$38^\\circ = 90^\\circ - 52^\\circ$ يخص زاويتين متتامتين، بينما $\\widehat{b}$ و $\\widehat{c}$ تشكلان زاوية مستقيمة (متكاملتين).",
+        "الزاوية $\\widehat{c}$ منفرجة ومجاورة ومكملة للزاوية $\\widehat{b}$ وليست مساوية لها.",
+        "تحقق من الطرح: $180 - 52 = 128$ وليس $138$ .",
+        "ممتاز! $\\widehat{b}$ و $\\widehat{c}$ متكاملتان، لذا $\\widehat{c} = 180^\\circ - 52^\\circ = 128^\\circ$ ."
+      ],
+      "explanationAr": "الزاويتان $\\widehat{b}$ و $\\widehat{c}$ متجاورتان وتشكلان زاوية مستقيمة قيسها $180^\\circ$ ، إذن هما متكاملتان: $\\widehat{c} = 180^\\circ - 52^\\circ = 128^\\circ$ ."
+    }
+  ]
+}

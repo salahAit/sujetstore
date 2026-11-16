@@ -1,0 +1,103 @@
+{
+  "documents": [
+    {
+      "id": "5ap_curriculum_primary_gen2_2016",
+      "grade": "5ap",
+      "title_ar": "مناهج مرحلة التعليم الابتدائي - الجيل الثاني (يتضمن منهاج الرياضيات للطور الثالث / السنة الخامسة)",
+      "category": "curriculum",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/5ap/01_curriculum/5ap_curriculum_primary_gen2_2016.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2018/03/primaire_gen2-manahij.pdf",
+      "pages_count": 353,
+      "extraction_mode": "digital_text",
+      "sha256": "de6cf2a5186a70a86b0d8a624138a6c2a3a274d62f483b9ebb9db717f3458c21",
+      "size_bytes": 6924516
+    },
+    {
+      "id": "5ap_accompanying_doc_math_primary_gen2_2016",
+      "grade": "5ap",
+      "title_ar": "الوثيقة المرافقة لمنهاج الرياضيات - مرحلة التعليم الابتدائي (الجيل الثاني)",
+      "category": "accompanying_doc",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/5ap/01_curriculum/5ap_accompanying_doc_math_primary_gen2_2016.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1clNqfZE3bkHDVt0LGDXk77bg5jDh7hNp",
+      "pages_count": 90,
+      "extraction_mode": "digital_text",
+      "sha256": "1b9e3861907f699ee131d2adb7e91623ec47f10de8505a9d5915d8054de6554d",
+      "size_bytes": 3396639
+    },
+    {
+      "id": "5ap_progression_annual_plans_men_2022_2023",
+      "grade": "5ap",
+      "title_ar": "المخططات السنوية لبناء التعلمات للسنة الخامسة من التعليم الابتدائي 2022-2023 (وزارة التربية الوطنية - يتضمن مخطط الرياضيات)",
+      "category": "progression",
+      "year": "2022-2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/5ap/01_curriculum/5ap_progression_annual_plans_men_2022_2023.pdf",
+      "source_url": "https://up.educafile.com/uploads/166371076825245.pdf",
+      "pages_count": 51,
+      "extraction_mode": "digital_text",
+      "sha256": "643b1308b765cd339c8d0aaba6014e5305aa2e44e5bedbd6a7aeff97507e5e34",
+      "size_bytes": 1738951
+    },
+    {
+      "id": "5ap_progression_annual_plan_2023_2024",
+      "grade": "5ap",
+      "title_ar": "المخطط السنوي لبناء التعلمات للسنة الخامسة ابتدائي 2023-2024 (يتضمن التدرج الأسبوعي للرياضيات)",
+      "category": "progression",
+      "year": "2023-2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/5ap/01_curriculum/5ap_progression_annual_plan_2023_2024.pdf",
+      "source_url": "https://drive.google.com/uc?authuser=0&id=1Z3pOpFCOqfJ45mN81uMKzbJsFVZL6yNT&export=download",
+      "pages_count": 3,
+      "extraction_mode": "digital_text",
+      "sha256": "51533521ae4d631f4deb9d49b9b2a5b795d552a2745ed19ecc8303b741784919",
+      "size_bytes": 1154494
+    },
+    {
+      "id": "5ap_progression_annual_plan_2024_2025",
+      "grade": "5ap",
+      "title_ar": "المخطط السنوي لبناء التعلمات للسنة الخامسة ابتدائي 2024-2025 (يتضمن التدرج الأسبوعي للرياضيات)",
+      "category": "progression",
+      "year": "2024-2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/5ap/01_curriculum/5ap_progression_annual_plan_2024_2025.pdf",
+      "source_url": "https://www.mediafire.com/file/2bxdgtwg7axt4hk/%D9%85%D8%AE%D8%B7%D8%B7+%D8%A8%D9%86%D8%A7%D8%A1+%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%85%D8%A7%D8%AA+%D8%A7%D9%84%D8%B3%D9%86%D8%A9+%D8%A7%D9%84%D8%AE%D8%A7%D9%85%D8%B3%D8%A9++2024+-+2025.pdf/file",
+      "pages_count": 4,
+      "extraction_mode": "digital_text",
+      "sha256": "1e59631990570e3e996279ec63e2446857d58b1487b83afa75a194ba5360f511",
+      "size_bytes": 226857
+    },
+    {
+      "id": "5ap_exam_guide_taqyim_maktasabat_math_2023",
+      "grade": "5ap",
+      "title_ar": "دليل تقييم مكتسبات مرحلة التعليم الابتدائي - مادة الرياضيات (السنة الدراسية 2022/2023)",
+      "category": "exam_guide",
+      "year": "2022-2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/5ap/01_curriculum/5ap_exam_guide_taqyim_maktasabat_math_2023.pdf",
+      "source_url": "https://up.educafile.com/uploads/167795611434125.pdf",
+      "pages_count": 15,
+      "extraction_mode": "digital_text",
+      "sha256": "6463bee2e69126ee46fc64016290649a0d9cedc56fa5bbccd3325e6bd4c181c6",
+      "size_bytes": 1017940
+    },
+    {
+      "id": "5ap_exam_guide_binaa_ikhtibar_math_onec_2018",
+      "grade": "5ap",
+      "title_ar": "دليل بناء اختبار مادة الرياضيات في امتحان نهاية مرحلة التعليم الابتدائي (الديوان الوطني للامتحانات والمسابقات - أكتوبر 2018)",
+      "category": "exam_guide",
+      "year": "2018",
+      "generation": "gen2",
+      "local_path": "pipeline/references/5ap/01_curriculum/5ap_exam_guide_binaa_ikhtibar_math_onec_2018.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2022/08/%D8%AF%D9%84%D9%8A%D9%84-%D8%A8%D9%86%D8%A7%D8%A1-%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D9%85%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D9%84%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%A5%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A.pdf",
+      "pages_count": 9,
+      "extraction_mode": "digital_text",
+      "sha256": "ae13e1794e5e3b7ee3519e6979ec72c553e2273b9b1b2151801f23752ac8cb6a",
+      "size_bytes": 732079
+    }
+  ],
+  "missing_references": []
+}

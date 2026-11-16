@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "5ap",
+    "yearName": "السنة الخامسة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t3",
+    "trimesterName": "الفصل الثالث",
+    "docType": "exam",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة ونصف",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 1.5,
+      "instruction": "أجب عن السؤالين الآتيين مع إبراز خطوات القسمة العشرية التامة:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب الحاصل العشري التام للعملية الآتية: $435 div 25$",
+          "answer": "1) حساب الحاصل العشري التام: $435 div 25 = 17.4$ (الحاصل الصحيح $17$ والباقي $10$ ثم تحويل الباقي إلى أعشار).",
+          "mark": "0.75"
+        },
+        {
+          "type": "text",
+          "content": "2) أتمم المساويات الآتية بالكتابة العشرية المناسبة: $frac(2, 5) = ...$  ،  $17 + frac(2, 5) = ...$  ،  $frac(3, 5) = ...$",
+          "answer": "2) إتمام المساويات: $frac(2, 5) = 0.4$  ،  $17 + frac(2, 5) = 17.4$  ،  $frac(3, 5) = 0.6$",
+          "mark": "0.75"
+        }
+      ],
+      "id": "exam-5ap-trimester_exam-t3-medium-202-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 1.5,
+      "instruction": "على خريطة لشمال الجزائر مرسومة بمقياس $frac(1, 25000)$. المسافة على الخريطة تساوي #text(dir: ltr)[6 cm]. استعمل جدول التناسبية لحساب المسافة الحقيقية بوحدة km:",
+      "content": [
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "البعد على الخريطة (cm)",
+            "البعد الحقيقي (cm)",
+            "البعد الحقيقي (km)"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "$1$",
+              "$25000$",
+              "#text(dir: ltr)[0.25 km]"
+            ],
+            [
+              "$6$",
+              {
+                "content": "$...$",
+                "answer": "$150000$"
+              },
+              {
+                "content": "$...$",
+                "answer": "#text(dir: ltr)[1.5 km]",
+                "mark": "0.75"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "content": "احسب المسافة الحقيقية بـ cm ثم حوّلها إلى km.",
+          "answer": "المسافة الحقيقية بـ cm: $6 times 25000 = 150000$ cm، وبالتحويل إلى km نجد: #text(dir: ltr)[1.5 km].",
+          "mark": "0.75"
+        }
+      ],
+      "id": "exam-5ap-trimester_exam-t3-medium-202-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "points": 1.5,
+      "instruction": "أكمل جدول التحويلات الآتي بالعدد المناسب في كل خانة:",
+      "content": [
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "القياس المعطى",
+            "الوحدة المطلوبة",
+            "القياس المحوّل"
+          ],
+          "cells": [],
+          "rows": [
+            [
+              "#text(dir: ltr)[2.5 t]",
+              "#text(dir: ltr)[kg]",
+              {
+                "content": "#text(dir: ltr)[...... kg]",
+                "answer": "#text(dir: ltr)[2500 kg]",
+                "mark": "0.5"
+              }
+            ],
+            [
+              "#text(dir: ltr)[2500 mL]",
+              "#text(dir: ltr)[cL]",
+              {
+                "content": "#text(dir: ltr)[...... cL]",
+                "answer": "#text(dir: ltr)[250 cL]",
+                "mark": "0.25"
+              }
+            ],
+            [
+              "#text(dir: ltr)[3.4 m²]",
+              "#text(dir: ltr)[dm²]",
+              {
+                "content": "#text(dir: ltr)[...... dm²]",
+                "answer": "#text(dir: ltr)[340 dm²]",
+                "mark": "0.25"
+              }
+            ],
+            [
+              "#text(dir: ltr)[1.5 ha]",
+              "#text(dir: ltr)[m²]",
+              {
+                "content": "#text(dir: ltr)[...... m²]",
+                "answer": "#text(dir: ltr)[15000 m²]",
+                "mark": "0.5"
+              }
+            ]
+          ]
+        }
+      ],
+      "id": "exam-5ap-trimester_exam-t3-medium-202-ex-3",
+      "num": "الثالث"
+    },
+    {
+      "points": 1.5,
+      "instruction": "أجب بـ (صحيح) أو (خطأ) مع تصحيح الخطأ إن وُجد:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "الشكل المقابل مستطيل $A B C D$ طوله $5$ cm وعرضه $3$ cm."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap_t3_geom_s398114725_medium.svg"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "items": [
+            {
+              "q": "قطرا المستطيل متعامدان دائما.",
+              "a": "خطأ",
+              "c": "خطأ، قطرا المستطيل غير متعامدين (المتعامدان هما قطرا المعين والمربع).",
+              "mark": "0.5"
+            },
+            {
+              "q": "كل وتر في الدائرة يمر حتما من مركز الدائرة.",
+              "a": "خطأ",
+              "c": "خطأ، الوتر يصل بين نقطتين من الدائرة ولا يشترط أن يمر بالمركز.",
+              "mark": "0.5"
+            },
+            {
+              "q": "لمتوازي المستطيلات 6 أوجه، 8 رؤوس، و 12 حرفا.",
+              "a": "صحيح",
+              "c": "العبارة صحيحة، متوازي المستطيلات يشترك مع المكعب في عدد الأوجه والرؤوس والأحرف.",
+              "mark": "0.5"
+            }
+          ]
+        }
+      ],
+      "id": "exam-5ap-trimester_exam-t3-medium-202-ex-4",
+      "num": "الرابع"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "استعن بالساعة والجدول للإجابة عن المطالب الثلاثة بكتابة العمليات والوحدات:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "2fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "نظمت مدرسة رحلة لفائدة $30$ تلميذا إلى متحف المجاهد بالجزائر. انطلقت الحافلة على الساعة #text(dir: ltr)[08 h 15 min] (كما توضح الساعة المقابلة) بسرعة منتظمة قدرها #text(dir: ltr)[80 km/h]، ووصلت على الساعة #text(dir: ltr)[09 h 45 min]."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap_t3_integ_s1337011052_medium.svg",
+              "caption": "#text(dir: ltr)[08 h 15 min]"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headerBackground": true,
+          "align": "center",
+          "borders": "grid",
+          "headers": [
+            "كراء الحافلة",
+            "سعر التذكرة",
+            "تخفيض التلاميذ",
+            "إعانة الجمعية",
+            "عدد التلاميذ"
+          ],
+          "cells": [
+            "10000 دج",
+            "400 دج",
+            "50%",
+            "5000 دج",
+            "$30$"
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب مدة السير، ثم استنتج المسافة المقطوعة بين المدرسة ومتحف المجاهد بالجزائر.",
+          "answer": "1) المدة: #text(dir: ltr)[09 h 45 min - 08 h 15 min = 1 h 30 min] (#text(dir: ltr)[90 min]).\n\nالمسافة: #text(dir: ltr)[80 km] في #text(dir: ltr)[60 min]، إذن المسافة في #text(dir: ltr)[90 min] هي #text(dir: ltr)[120 km].",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "2) احسب سعر التذكرة بعد التخفيض، ثم التكلفة الإجمالية للرحلة (كراء الحافلة + التذاكر).",
+          "answer": "2) قيمة التخفيض: $(400 times 50) div 100 = 200$ دج، وسعر التذكرة المخفض: $200$ دج.\n\nثمن التذاكر: $30 times 200 = 6000$ دج، والتكلفة الإجمالية: $6000 + 10000 = 16000$ دج.",
+          "mark": "1.25"
+        },
+        {
+          "type": "text",
+          "content": "3) اطرح إعانة الجمعية من التكلفة الإجمالية، ثم احسب مساهمة التلميذ الواحد.",
+          "answer": "3) المبلغ المتبقي: $16000 - 5000 = 11000$ دج.\n\nمساهمة التلميذ الواحد: $11000 div 30 = 366.67$ دج.",
+          "mark": "1.5"
+        }
+      ],
+      "id": "exam-5ap-trimester_exam-t3-medium-202-ex-5"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "documents": [
+    {
+      "id": "ref_2am_test_t1_eddirasa_87_2026",
+      "grade": "2am",
+      "title_ar": "فرض الفصل الأول في مادة الرياضيات مع التصحيح - السنة الثانية متوسط (نموذج 87، المدة ساعة واحدة، سلم التنقيط 20/20 - 2025/2026)",
+      "category": "official_exam",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/03_sample_exams/2am_math_t1_test_eddirasa_87_2026.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D9%81%D8%B1%D8%B6-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-87-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_2am_exam_t1_ency_oran_2023",
+      "grade": "2am",
+      "title_ar": "اختبار الفصل الأول في مادة الرياضيات - السنة الثانية متوسط (متوسطة منصوري إبراهيم، مديرية التربية لولاية وهران، المدة ساعتان، الجزء الأول 12 نقطة + الوضعية الإدماجية 8 نقاط)",
+      "category": "official_exam",
+      "year": "2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/03_sample_exams/2am_math_t1_exam_ency_2023.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_d55485fea5cd4c0f805b0e8a10e43595.pdf?index=true"
+    },
+    {
+      "id": "ref_2am_solution_t1_tonec_18_2022",
+      "grade": "2am",
+      "title_ar": "اختبار الفصل الأول في مادة الرياضيات مع التصحيح النموذجي ومؤشرات التقويم - السنة الثانية متوسط (متوسطة بلعسل بومدين بني زنطيس، المدة ساعتان، 12 نقطة + الوضعية الإدماجية 8 نقاط)",
+      "category": "exam_solution",
+      "year": "2022",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/03_sample_exams/2am_math_t1_solution_tonec_18_2022.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1CuzGgfyW7ySRiR26IMpL4PB2_DB0-sa9"
+    },
+    {
+      "id": "ref_2am_test_t2_eddirasa_55_2026",
+      "grade": "2am",
+      "title_ar": "فرض الفصل الثاني في مادة الرياضيات مع التصحيح النموذجي - السنة الثانية متوسط (نموذج 55، فيفري 2026، المدة ساعة واحدة، سلم التنقيط 20/20)",
+      "category": "official_exam",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/03_sample_exams/2am_math_t2_test_eddirasa_55_2026.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D9%81%D8%B1%D8%B6-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-55-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_2am_exam_t2_eddirasa_72_2025",
+      "grade": "2am",
+      "title_ar": "اختبار الثلاثي الثاني في مادة الرياضيات - السنة الثانية متوسط (متوسطة محمد سحنون الناصرية، مديرية التربية لولاية بومرداس، المدة ساعتان، الجزء الأول 12 نقطة + الوضعية الإدماجية 8 نقاط)",
+      "category": "official_exam",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/03_sample_exams/2am_math_t2_exam_eddirasa_72_2025.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-72-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_2am_solution_t2_dzmadrassa_2023",
+      "grade": "2am",
+      "title_ar": "اختبار الفصل الثاني في مادة الرياضيات مع التصحيح النموذجي وشبكة التقويم المعيارية - السنة الثانية متوسط (دورة مارس 2023، المدة ساعتان، 12 نقطة + الوضعية الإدماجية 8 نقاط وفق معايير الوجاهة والاستعمال السليم والانسجام والإتقان)",
+      "category": "exam_solution",
+      "year": "2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/03_sample_exams/2am_math_t2_solution_dzmadrassa_2023.pdf",
+      "source_url": "https://dzmadrassa.com/api/files/2am/mathematiques/examens/dzmadrassa-2am-mathematiques-sujet-400290.pdf?download=true&docId=bd0efd6b-0b2e-4ab0-a2c7-f45b45c13047"
+    },
+    {
+      "id": "ref_2am_test_t3_eddirasa_27_2025",
+      "grade": "2am",
+      "title_ar": "فرض الثلاثي الثالث في مادة الرياضيات مع الإجابة النموذجية وسلم التنقيط - السنة الثانية متوسط (المتوسطة الجديدة عدل 900 سكن السوقر، مديرية التربية لولاية تيارت، أفريل 2025، المدة ساعة واحدة، 20/20)",
+      "category": "official_exam",
+      "year": "2025",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/03_sample_exams/2am_math_t3_test_eddirasa_27_2025.pdf",
+      "source_url": "https://eddirasa.com/uploads/2026/09/%D9%81%D8%B1%D8%B6-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B5%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB-%D8%A7%D9%84%D8%B3%D9%86%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D9%85%D8%AA%D9%88%D8%B3%D8%B7-%D8%B1%D9%82%D9%85-27-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B5%D8%AD%D9%8A%D8%AD-eddirasa.com.pdf"
+    },
+    {
+      "id": "ref_2am_exam_t3_ency_relizane_2024",
+      "grade": "2am",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات - السنة الثانية متوسط (متوسطة الشهيد ريطاب الحاج المرجة، مديرية التربية لولاية غليزان، ماي 2024، المدة ساعتان، الجزء الأول 12 نقطة + الوضعية الإدماجية 8 نقاط)",
+      "category": "official_exam",
+      "year": "2024",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/03_sample_exams/2am_math_t3_exam_ency_2024.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_962790caf0664bcaa148b19579affb7e.pdf?index=true"
+    },
+    {
+      "id": "ref_2am_solution_t3_ency_2026",
+      "grade": "2am",
+      "title_ar": "اختبار الفصل الثالث في مادة الرياضيات مع التصحيح النموذجي وسلم التنقيط - السنة الثانية متوسط (المدة ساعتان، الجزء الأول 12 نقطة + المسألة 8 نقاط - 2025/2026)",
+      "category": "exam_solution",
+      "year": "2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/03_sample_exams/2am_math_t3_solution_ency_2026.pdf",
+      "source_url": "https://www.ency-education.net/_files/ugd/414868_59ceb01c857345b2b2b2583e1ea564d0.pdf?index=true"
+    }
+  ],
+  "missing_references": []
+}

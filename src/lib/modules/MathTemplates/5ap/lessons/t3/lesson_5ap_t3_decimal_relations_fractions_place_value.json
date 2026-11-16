@@ -1,0 +1,127 @@
+{
+  "id": "lesson_5ap_t3_decimal_relations_fractions_place_value",
+  "slug": "5ap-t3-decimal-relations-fractions-place-value",
+  "grade": "5ap",
+  "yearSubjectId": 606,
+  "trimesterId": "t3",
+  "sequenceId": "seq_5ap_4",
+  "sequenceTitleAr": "المقطع التعلمي الرابع: المجسمات، إنشاء الأشكال، المقياس، السعات والمدد والسرعة المنتظمة",
+  "order": 2,
+  "titleAr": "العلاقات الحسابية بين الأعداد العشرية، الكسور المألوفة، التفكيك الكسري وقيمة الرقم",
+  "objectives": [
+    "معرفة واستعمال العلاقات الحسابية الذهنية بين الأعداد العشرية (الضعف، $3$ أمثال، $4$ أمثال، النصف، الثلث، الربع).",
+    "ربط الكسور المألوفة بالكتابة العشرية ($\\frac{1}{2} = 0.5$، $\\frac{1}{4} = 0.25$، $\\frac{3}{4} = 0.75$، $\\frac{1}{5} = 0.2$).",
+    "تفكيك عدد عشري إلى مجموع عدد طبيعي وكسور عشرية مقاماتها $10$ و $100$ و $1000$ وتركيبه.",
+    "تحديد قيمة كل رقم والتمييز الدقيق بين رقم المنزلة وعدد المنزلة في العدد العشري."
+  ],
+  "keywordsAr": [
+    "علاقات حسابية عشرية",
+    "الكسور المألوفة",
+    "تفكيك عدد عشري",
+    "رقم الأعشار",
+    "عدد الأعشار"
+  ],
+  "discover": {
+    "scenarioAr": "تستخدم خديجة في ورشة الخياطة لفة شريط طولها $24.75\\text{ m}$، وتقص منها قطعا صغيرة طول الواحدة $0.25\\text{ m}$ لتزيين المآزر.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 222\" width=\"440\" height=\"222\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><text x=\"220\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">جدول مراتب العدد العشري 24.75</text><rect x=\"20\" y=\"34\" width=\"78\" height=\"28\" fill=\"#eff6ff\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"59.0\" y=\"52\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">العشرات</text><rect x=\"20\" y=\"62\" width=\"78\" height=\"34\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"59.0\" y=\"85\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">2</text><rect x=\"98\" y=\"34\" width=\"78\" height=\"28\" fill=\"#eff6ff\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"137.0\" y=\"52\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">الوحدات</text><rect x=\"98\" y=\"62\" width=\"78\" height=\"34\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"137.0\" y=\"85\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">4</text><rect x=\"176\" y=\"34\" width=\"36\" height=\"28\" fill=\"#fef3c7\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"194.0\" y=\"52\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">الفاصلة</text><rect x=\"176\" y=\"62\" width=\"36\" height=\"34\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"194.0\" y=\"85\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">.</text><rect x=\"212\" y=\"34\" width=\"94\" height=\"28\" fill=\"#dcfce7\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"259.0\" y=\"52\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">الأعشار</text><rect x=\"212\" y=\"62\" width=\"94\" height=\"34\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"259.0\" y=\"85\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">7</text><rect x=\"306\" y=\"34\" width=\"114\" height=\"28\" fill=\"#f0fdf4\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"363.0\" y=\"52\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">الأجزاء من 100</text><rect x=\"306\" y=\"62\" width=\"114\" height=\"34\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.3\"/><text x=\"363.0\" y=\"85\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">5</text><circle cx=\"259\" cy=\"79\" r=\"13\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"259\" y=\"118\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">رقم الأعشار = 7</text><path d=\"M 24 128 L 24 136 L 302 136 L 302 128\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><text x=\"163\" y=\"155\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">عدد الأعشار الكلي = 247</text><rect x=\"70\" y=\"170\" width=\"75\" height=\"22\" fill=\"#60a5fa\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><rect x=\"145\" y=\"170\" width=\"75\" height=\"22\" fill=\"#60a5fa\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><rect x=\"220\" y=\"170\" width=\"75\" height=\"22\" fill=\"#60a5fa\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><rect x=\"295\" y=\"170\" width=\"75\" height=\"22\" fill=\"#f1f5f9\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><text x=\"220\" y=\"210\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">3/4 = 0.75</text></svg>",
+    "steps": [
+      {
+        "promptAr": "يمثل الطول $0.25\\text{ m}$ كسرا مألوفا من المتر بسطه $1$. ما هو مقام هذا الكسر ($1$ على كم)؟",
+        "hintAr": "كم قطعة طولها $0.25\\text{ m}$ تلزم لتكوين $1\\text{ m}$ كامل؟ ($0.25 \\times 4 = 1$).",
+        "expectedInput": "4",
+        "revealAr": "$0.25 = \\frac{25}{100} = \\frac{1}{4}$ (ربع متر)، ونحفظ أيضا أن $\\frac{1}{2} = 0.5$ و $\\frac{3}{4} = 0.75$."
+      },
+      {
+        "promptAr": "تحتاج خديجة إلى شريط أطول يساوي $3$ أمثال القطعة الصغيرة ($0.25\\text{ m}$). ما طوله بالمتر؟ (اكتب العدد العشري)",
+        "hintAr": "احسب $0.25 + 0.25 + 0.25$ أو $3 \\times 0.25$.",
+        "expectedInput": "0.75",
+        "revealAr": "$3 \\times 0.25 = 0.75\\text{ m}$، وهو يوافق الكسر المألوف $\\frac{3}{4}$."
+      },
+      {
+        "promptAr": "في طول اللفة $24.75\\text{ m}$، نلاحظ أن رقم الأعشار هو $7$. ولكن ما هو **عدد الأعشار** الكلي في $24.75$؟ (اكتب العدد فقط)",
+        "hintAr": "كل وحدة تساوي $10$ أعشار، فكم عشرا في $24$ وحدة مضافا إليها $7$ أعشار؟",
+        "expectedInput": "247",
+        "revealAr": "رقم الأعشار هو $7$ فقط، بينما **عدد الأعشار** في $24.75$ هو $247$ عشرا لأن $24.75 = \\frac{247}{10} + \\frac{5}{100}$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "العلاقات الحسابية بين الأعداد العشرية: ضعف $2.5$ هو $5$، نصف $3.5$ هو $1.75$، $4$ أمثال $0.25$ هو $1$، ربع $1.2$ هو $0.3$، ثلث $0.9$ هو $0.3$.",
+      "الكسور المألوفة وكتابتها العشرية: $\\frac{1}{2} = 0.5$، $\\frac{1}{4} = 0.25$، $\\frac{3}{4} = 0.75$، $\\frac{1}{5} = 0.2$، $\\frac{3}{2} = 1.5$.",
+      "التفكيك الكسري للعدد العشري: نفكك الجزء الصحيح حسب مراتبه والجزء العشري إلى كسور عشرية، مثال: $307.508 = 3 \\times 100 + 7 + \\frac{5}{10} + \\frac{8}{1000}$.",
+      "التمييز بين رقم المنزلة وعدد المنزلة: رقم المنزلة هو الرقم المكتوب داخل تلك الخانة ($0$ إلى $9$)، أما عدد المنزلة فيشمل جميع المراتب من اليسار حتى تلك الخانة (مثال: في $307.508$ رقم الأعشار $5$ وعدد الأعشار $3075$)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 445 170\" width=\"445\" height=\"170\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><text x=\"220\" y=\"20\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">مراتب وتفكيك العدد 307.508</text><rect x=\"16\" y=\"30\" width=\"58\" height=\"26\" fill=\"#eff6ff\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"45.0\" y=\"47\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">المئات</text><rect x=\"16\" y=\"56\" width=\"58\" height=\"32\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"45.0\" y=\"77\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">3</text><rect x=\"74\" y=\"30\" width=\"58\" height=\"26\" fill=\"#eff6ff\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"103.0\" y=\"47\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">العشرات</text><rect x=\"74\" y=\"56\" width=\"58\" height=\"32\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"103.0\" y=\"77\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">0</text><rect x=\"132\" y=\"30\" width=\"58\" height=\"26\" fill=\"#eff6ff\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"161.0\" y=\"47\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">الوحدات</text><rect x=\"132\" y=\"56\" width=\"58\" height=\"32\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"161.0\" y=\"77\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">7</text><rect x=\"190\" y=\"30\" width=\"24\" height=\"26\" fill=\"#fef3c7\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"202.0\" y=\"47\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">.</text><rect x=\"190\" y=\"56\" width=\"24\" height=\"32\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"202.0\" y=\"77\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">.</text><rect x=\"214\" y=\"30\" width=\"62\" height=\"26\" fill=\"#dcfce7\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"245.0\" y=\"47\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">الأعشار</text><rect x=\"214\" y=\"56\" width=\"62\" height=\"32\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"245.0\" y=\"77\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">5</text><rect x=\"276\" y=\"30\" width=\"72\" height=\"26\" fill=\"#dcfce7\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"312.0\" y=\"47\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">أجزاء 100</text><rect x=\"276\" y=\"56\" width=\"72\" height=\"32\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"312.0\" y=\"77\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">0</text><rect x=\"348\" y=\"30\" width=\"76\" height=\"26\" fill=\"#dcfce7\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"386.0\" y=\"47\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">أجزاء 1000</text><rect x=\"348\" y=\"56\" width=\"76\" height=\"32\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"386.0\" y=\"77\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\">8</text><text x=\"220\" y=\"108\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">307.508 = 3 × 100 + 7 + 5/10 + 8/1000</text><rect x=\"20\" y=\"124\" width=\"90\" height=\"32\" rx=\"6\" fill=\"#dbeafe\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"65\" y=\"144\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">1/2 = 0.5</text><rect x=\"125\" y=\"124\" width=\"90\" height=\"32\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"170\" y=\"144\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">1/4 = 0.25</text><rect x=\"230\" y=\"124\" width=\"90\" height=\"32\" rx=\"6\" fill=\"#fef3c7\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"275\" y=\"144\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">3/4 = 0.75</text><rect x=\"335\" y=\"124\" width=\"90\" height=\"32\" rx=\"6\" fill=\"#ede9fe\" stroke=\"#475569\" stroke-width=\"1.2\"/><text x=\"380\" y=\"144\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">1/5 = 0.2</text></svg>",
+    "visualCaptionAr": "تمثيل مراتب العدد العشري $307.508$ وأشهر المتساويات بين الكسور المألوفة والأعداد العشرية.",
+    "examples": [
+      {
+        "problemAr": "تفكيك وتركيب: فكك العدد $45.309$ تفكيكا كسريا، ثم اكتب بالفاصلة: $6 \\times 10 + 2 + \\frac{4}{10} + \\frac{7}{1000}$.",
+        "solutionAr": "$45.309 = 4 \\times 10 + 5 + \\frac{3}{10} + \\frac{9}{1000}$. والعدد الثاني هو $62.407$ (نضع $0$ في مرتبة الأجزاء من مئة لعدم وجود كسر مقامه $100$)."
+      },
+      {
+        "problemAr": "علاقات حسابية: احسب نصف العدد $3.5$، وضعف العدد $0.75$، والكتابة العشرية للكسر $\\frac{5}{4}$.",
+        "solutionAr": "نصف $3.5$ هو $3.5 \\div 2 = 1.75$؛ ضعف $0.75$ هو $0.75 \\times 2 = 1.5$؛ والكسر $\\frac{5}{4} = \\frac{4}{4} + \\frac{1}{4} = 1 + 0.25 = 1.25$."
+      },
+      {
+        "problemAr": "رقم المنزلة مقابل عدد المنزلة: في العدد $18.64$، ما رقم الأجزاء من مئة؟ وما عدد الأعشار؟",
+        "solutionAr": "رقم الأجزاء من مئة هو $4$، أما عدد الأعشار الكلي فهو $186$ عشرا (لأن $18.64 = 186 \\times 0.1 + 4 \\times 0.01$)."
+      }
+    ],
+    "watchOutAr": "احذر من حذف الأصفار الوسطية عند تركيب التفكيك الكسري: فالمجموع $\\frac{3}{10} + \\frac{9}{1000}$ يساوي $0.309$ وليس $0.39$! وتنبه أيضا للفرق بين «رقم» المنزلة و«عدد» المنزلة."
+  },
+  "practice": [
+    {
+      "questionAr": "ما الكتابة العشرية الصحيحة للعدد المفكك: $2 \\times 100 + 5 + \\frac{3}{10} + \\frac{9}{1000}$؟",
+      "options": [
+        "$205.39$",
+        "$25.309$",
+        "$205.309$",
+        "$205.039$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "انتبه! لقد وضعت $9$ في مرتبة الأجزاء من مئة بدلا من مرتبة الأجزاء من ألف؛ يوجد $0$ في الأجزاء من مئة.",
+        "انتبه للجزء الصحيح: $2 \\times 100 + 5 = 205$ وليس $25$ (مرتبة العشرات تساوي $0$).",
+        "ممتاز! الجزء الصحيح $205$، والأعشار $3$، والأجزاء من مئة $0$، والأجزاء من ألف $9$، فالناتج $205.309$.",
+        "تحقق من المقامين: $\\frac{3}{10}$ تعني $3$ في الأعشار وليس في الأجزاء من مئة."
+      ],
+      "explanationAr": "الجزء الصحيح هو $2 \\times 100 + 0 \\times 10 + 5 = 205$. وفي الجزء العشري لدينا $3$ أعشار و $0$ أجزاء من مئة و $9$ أجزاء من ألف، فتكون الكتابة العشرية هي $205.309$."
+    },
+    {
+      "questionAr": "في العدد العشري $47.825$، ما هو **عدد الأعشار** الكلي؟",
+      "options": [
+        "$8$",
+        "$478$",
+        "$4782$",
+        "$47$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "الرقم $8$ هو **رقم** الأعشار فقط، أما السؤال يطلب **عدد** الأعشار الكلي الموجود في $47.825$.",
+        "أحسنت! نقرأ من أقصى اليسار حتى مرتبة الأعشار فنجد $478$ عشرا (لأن $47 \\times 10 + 8 = 478$).",
+        "العدد $4782$ هو عدد الأجزاء من مئة وليس عدد الأعشار.",
+        "العدد $47$ يمثل عدد الوحدات (الجزء الصحيح) وليس عدد الأعشار."
+      ],
+      "explanationAr": "كل وحدة تحتوي على $10$ أعشار، إذن في $47$ وحدة يوجد $470$ عشرا، وبإضافة $8$ أعشار يصبح عدد الأعشار الكلي في $47.825$ هو $478$."
+    },
+    {
+      "questionAr": "طول مسار رياضي $\\frac{3}{4}\\text{ km}$، وطول مسار ثانٍ يساوي **ضعف** المسار الأول كما يوضحه التمثيل. ما طول المسار الثاني بالكتابة العشرية؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 148\" width=\"380\" height=\"148\" style=\"background:#ffffff;font-family:Arial,sans-serif;max-width:100%;height:auto\"><text x=\"190\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">المسار الأول: 3/4 km</text><rect x=\"50\" y=\"30\" width=\"70\" height=\"24\" fill=\"#3b82f6\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><rect x=\"120\" y=\"30\" width=\"70\" height=\"24\" fill=\"#3b82f6\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><rect x=\"190\" y=\"30\" width=\"70\" height=\"24\" fill=\"#3b82f6\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><rect x=\"260\" y=\"30\" width=\"70\" height=\"24\" fill=\"#f1f5f9\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><text x=\"190\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">المسار الثاني = ضعف المسار الأول (× 2)</text><rect x=\"50\" y=\"86\" width=\"70\" height=\"22\" fill=\"#10b981\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"120\" y=\"86\" width=\"70\" height=\"22\" fill=\"#10b981\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"190\" y=\"86\" width=\"70\" height=\"22\" fill=\"#10b981\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"260\" y=\"86\" width=\"70\" height=\"22\" fill=\"#f1f5f9\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"50\" y=\"112\" width=\"70\" height=\"22\" fill=\"#10b981\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"120\" y=\"112\" width=\"70\" height=\"22\" fill=\"#10b981\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"190\" y=\"112\" width=\"70\" height=\"22\" fill=\"#10b981\" stroke=\"#1e293b\" stroke-width=\"1.3\"/><rect x=\"260\" y=\"112\" width=\"70\" height=\"22\" fill=\"#f1f5f9\" stroke=\"#1e293b\" stroke-width=\"1.3\"/></svg>",
+      "options": [
+        "$1.25\\text{ km}$",
+        "$0.375\\text{ km}$",
+        "$1.5\\text{ km}$",
+        "$2.75\\text{ km}$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "احسب بدقة: $0.75 + 0.75 = 1.50$ وليس $1.25$.",
+        "لقد حسبت **نصف** $0.75$ بدلا من **ضعفه**؛ الضعف يعني الضرب في $2$.",
+        "صحيح! لأن $\\frac{3}{4} = 0.75$ وضعفه هو $0.75 \\times 2 = 1.5\\text{ km}$ (أي $\\frac{6}{4} = 1 + \\frac{1}{2} = 1.5$).",
+        "ضعف $\\frac{3}{4}$ يعني الجمع مرتين ($0.75 + 0.75$) وليس إضافة $2$ كاملة."
+      ],
+      "explanationAr": "نعلم أن الكسر المألوف $\\frac{3}{4} = 0.75$. لحساب الضعف نضرب في $2$: $0.75 \\times 2 = 1.5\\text{ km}$ (أو $\\frac{3}{4} + \\frac{3}{4} = \\frac{6}{4} = 1.5$)."
+    }
+  ]
+}

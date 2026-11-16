@@ -1,0 +1,120 @@
+{
+  "id": "lesson_2ap_t1_addition_no_carry_double_half",
+  "slug": "2ap-t1-addition-no-carry-double-half",
+  "grade": "2ap",
+  "yearSubjectId": 586,
+  "trimesterId": "t1",
+  "sequenceId": "seq2",
+  "sequenceTitleAr": "المقطع الثاني (الجزء الأول): حملة التشجير (الأعداد إلى 99 و100، الجمع دون احتفاظ والأطوال)",
+  "order": 6,
+  "titleAr": "الضعف والنصف والجمع العمودي دون احتفاظ (الأعداد إلى 99)",
+  "objectives": [
+    "تعيين ضعف ونصف الأعداد المألوفة الأصغر من 100",
+    "حساب مجموع عددين أو ثلاثة أعداد أفقيا بتفكيك العدد إلى وحدات وعشرات",
+    "اكتشاف واستعمال آلية وضع عملية الجمع العمودي دون احتفاظ بحيث لا يتعدى المجموع 100"
+  ],
+  "keywordsAr": [
+    "الضعف والنصف",
+    "جمع عددين",
+    "الجمع دون احتفاظ",
+    "وضع العملية"
+  ],
+  "discover": {
+    "scenarioAr": "جَمَعَ أَمِينُ $23$ صَدَفَةً مِنْ شاطِئِ البَحْرِ، وَجَمَعَ صَدِيقُهُ نَفْسَ العَدَدِ ($23$ صَدَفَةً). وَعِنْدَ مَرْيَمَ $14$ حَبَّةَ تَمْرٍ أَعْطَتْ نِصْفَها لِأَخِيها.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"20\" y=\"15\" width=\"200\" height=\"160\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"120\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">الجَمْعُ العَمُودِيُّ (ضِعْفُ 23)</text><text x=\"95\" y=\"62\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\">ع</text><text x=\"145\" y=\"62\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#ea580c\">و</text><text x=\"95\" y=\"90\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\">2</text><text x=\"145\" y=\"90\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\">3</text><text x=\"55\" y=\"118\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#2563eb\">+</text><text x=\"95\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\">2</text><text x=\"145\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\">3</text><line x1=\"45\" y1=\"130\" x2=\"175\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"95\" y=\"158\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#16a34a\">4</text><text x=\"145\" y=\"158\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#ea580c\">6</text><rect x=\"240\" y=\"15\" width=\"200\" height=\"160\" rx=\"10\" fill=\"#fefce8\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><text x=\"340\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#854d0e\">نِصْفُ العَدَدِ 14</text><rect x=\"256\" y=\"60\" width=\"72\" height=\"80\" rx=\"8\" fill=\"#fff\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><rect x=\"352\" y=\"60\" width=\"72\" height=\"80\" rx=\"8\" fill=\"#fff\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"292\" y=\"107\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#d97706\">7</text><text x=\"388\" y=\"107\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#d97706\">7</text><text x=\"340\" y=\"162\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">7 + 7 = 14</text></svg>",
+    "steps": [
+      {
+        "promptAr": "في الجَمْعِ العَمُودِيِّ لِـ $23 + 23$، نَبْدَأُ بِجَمْعِ عَمُودِ الوَحَداتِ: ما ناتِجُ $3 + 3$؟",
+        "hintAr": "اِجْمَعِ الرَّقْمَيْنِ في الجِهَةِ اليُمْنى (تَحْتَ حَرْفِ «و»).",
+        "expectedInput": "6",
+        "revealAr": "$3 + 3 = 6$ في مَرْتَبَةِ الوَحَداتِ."
+      },
+      {
+        "promptAr": "الآنَ نَجْمَعُ العَشَراتِ ($2 + 2 = 4$). ما النّاتِجُ الكُلِّيُّ لِـ $23 + 23$ (أَيْ ضِعْفُ $23$)؟",
+        "hintAr": "اقْرَأِ العَدَدَ النّاتِجَ مِنْ $4$ عَشَراتٍ وَ $6$ وَحَداتٍ.",
+        "expectedInput": "46",
+        "revealAr": "$23 + 23 = 46$، إِذَنْ ضِعْفُ $23$ هُوَ $46$."
+      },
+      {
+        "promptAr": "قَسَّمَتْ مَرْيَمُ $14$ حَبَّةَ تَمْرٍ إلى مَجْمُوعَتَيْنِ مُتَساوِيَتَيْنِ. ما نِصْفُ العَدَدِ $14$؟",
+        "hintAr": "ما العَدَدُ الَّذِي نَجْمَعُهُ مَعَ نَفْسِهِ فَيُعْطِي $14$؟",
+        "expectedInput": "7",
+        "revealAr": "نِصْفُ $14$ هُوَ $7$ لِأَنَّ $7 + 7 = 14$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "ضِعْفُ عَدَدٍ هُوَ مَجْمُوعُ العَدَدِ مَعَ نَفْسِهِ، مِثْلُ: ضِعْفُ $12$ هُوَ $12 + 12 = 24$، وضِعْفُ $30$ هُوَ $60$.",
+      "نِصْفُ عَدَدٍ هُوَ تَقْسِيمُهُ إلى جُزْأَيْنِ مُتَساوِيَيْنِ، مِثْلُ: نِصْفُ $18$ هُوَ $9$، ونِصْفُ $40$ هُوَ $20$.",
+      "لِلْجَمْعِ الأُفُقِيِّ نُفَكِّكُ الأَعْدادَ إلى عَشَراتٍ وَوَحَداتٍ: $34 + 25 = (30 + 20) + (4 + 5) = 50 + 9 = 59$.",
+      "في الجَمْعِ العَمُودِيِّ دُونَ احْتِفاظٍ: نَضَعُ الوَحَداتِ تَحْتَ الوَحَداتِ وَالعَشَراتِ تَحْتَ العَشَراتِ، ثُمَّ نَجْمَعُ الوَحَداتِ أَوَّلًا ثُمَّ العَشَراتِ."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 195\" style=\"background:#fff;font-family:Arial,sans-serif\"><rect x=\"18\" y=\"15\" width=\"205\" height=\"165\" rx=\"10\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"120\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#15803d\">وَضْعُ العَمَلِيَّةِ دُونَ احْتِفاظٍ</text><text x=\"95\" y=\"62\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#16a34a\">ع</text><text x=\"145\" y=\"62\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#ea580c\">و</text><text x=\"95\" y=\"90\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"90\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\">2</text><text x=\"55\" y=\"118\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#16a34a\">+</text><text x=\"95\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\">3</text><text x=\"145\" y=\"118\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#1e293b\">5</text><line x1=\"45\" y1=\"130\" x2=\"175\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"95\" y=\"158\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#16a34a\">7</text><text x=\"145\" y=\"158\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#ea580c\">7</text><rect x=\"238\" y=\"15\" width=\"204\" height=\"165\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"340\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e40af\">جَدْوَلُ الضِّعْفِ والنِّصْفِ</text><text x=\"290\" y=\"66\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\">النِّصْفُ</text><text x=\"390\" y=\"66\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#334155\">العَدَدُ / الضِّعْفُ</text><text x=\"290\" y=\"94\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1e293b\">5</text><text x=\"340\" y=\"94\" text-anchor=\"middle\" font-size=\"14\" fill=\"#2563eb\">&#8596;</text><text x=\"390\" y=\"94\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\">10</text><text x=\"290\" y=\"120\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1e293b\">10</text><text x=\"340\" y=\"120\" text-anchor=\"middle\" font-size=\"14\" fill=\"#2563eb\">&#8596;</text><text x=\"390\" y=\"120\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\">20</text><text x=\"290\" y=\"146\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1e293b\">15</text><text x=\"340\" y=\"146\" text-anchor=\"middle\" font-size=\"14\" fill=\"#2563eb\">&#8596;</text><text x=\"390\" y=\"146\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\">30</text><text x=\"290\" y=\"172\" text-anchor=\"middle\" font-size=\"14\" fill=\"#1e293b\">20</text><text x=\"340\" y=\"172\" text-anchor=\"middle\" font-size=\"14\" fill=\"#2563eb\">&#8596;</text><text x=\"390\" y=\"172\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e293b\">40</text></svg>",
+    "visualCaptionAr": "تَرْتِيبُ الوَحَداتِ تَحْتَ الوَحَداتِ والعَشَراتِ تَحْتَ العَشَراتِ في الجَمْعِ العَمُودِيِّ، مَعَ أَمْثِلَةِ الضِّعْفِ والنِّصْفِ.",
+    "examples": [
+      {
+        "problemAr": "احْسُبْ أُفُقِيًّا وَعَمُودِيًّا مَجْمُوعَ $53 + 24$.",
+        "solutionAr": "نَجْمَعُ الوَحَداتِ: $3 + 4 = 7$، وَالعَشَراتِ: $5 + 2 = 7$. إِذَنْ $53 + 24 = 77$."
+      },
+      {
+        "problemAr": "أَوْجِدْ ضِعْفَ العَدَدِ $34$، ثُمَّ أَوْجِدْ نِصْفَ العَدَدِ $40$.",
+        "solutionAr": "ضِعْفُ $34$ هُوَ $34 + 34 = 68$. وَنِصْفُ $40$ هُوَ $20$ لِأَنَّ $20 + 20 = 40$."
+      }
+    ],
+    "watchOutAr": "انْتَبِهْ! عِنْدَ جَمْعِ عَدَدٍ ذِي رَقْمَيْنِ مَعَ عَدَدٍ ذِي رَقْمٍ واحِدٍ مِثْلَ $42 + 5$، نَضَعُ $5$ تَحْتَ رَقْمِ الوَحَداتِ ($2$) وَلَيْسَ تَحْتَ العَشَراتِ ($4$)!"
+  },
+  "practice": [
+    {
+      "questionAr": "ما ناتِجُ عَمَلِيَّةِ الجَمْعِ دُونَ احْتِفاظٍ: $43 + 25$؟",
+      "options": [
+        "$68$",
+        "$67$",
+        "$78$",
+        "$28$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أَحْسَنْتَ! الوَحَداتُ $3 + 5 = 8$، والعَشَراتُ $4 + 2 = 6$، النّاتِجُ $68$.",
+        "راجِعْ جَمْعَ الوَحَداتِ: $3 + 5 = 8$ وَلَيْسَ $7$.",
+        "راجِعْ جَمْعَ العَشَراتِ: $4 + 2 = 6$ وَلَيْسَ $7$.",
+        "نَسِيتَ العَشَراتِ الأُولَى ($4$) عِنْدَ الجَمْعِ: $4 + 2 = 6$."
+      ],
+      "explanationAr": "نَجْمَعُ الوَحَداتِ $3 + 5 = 8$ ثُمَّ العَشَراتِ $4 + 2 = 6$، فَيَكُونُ المَجْمُوعُ $43 + 25 = 68$."
+    },
+    {
+      "questionAr": "ما ضِعْفُ العَدَدِ $32$، وَما نِصْفُ العَدَدِ $18$ عَلى التَّرْتِيبِ؟",
+      "options": [
+        "$64$ و $9$",
+        "$16$ و $36$",
+        "$64$ و $8$",
+        "$34$ و $9$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "مُمْتازٌ! ضِعْفُ $32$ هُوَ $32 + 32 = 64$، وَنِصْفُ $18$ هُوَ $9$.",
+        "لَقَدْ عَكَسْتَ بَيْنَ الضِّعْفِ والنِّصْفِ!",
+        "راجِعْ نِصْفَ $18$: $9 + 9 = 18$ وَلَيْسَ $8 + 8$.",
+        "ضِعْفُ $32$ هُوَ $32 + 32 = 64$ وَلَيْسَ إِضافَةَ $2$ فَقَطْ."
+      ],
+      "explanationAr": "ضِعْفُ $32$ يَعْني $32 + 32 = 64$، وَنِصْفُ $18$ هُوَ $9$ لِأَنَّ $9 + 9 = 18$."
+    },
+    {
+      "questionAr": "في العُلْبَةِ $21$ قَلَمًا أَزْرَقَ و $13$ قَلَمًا أَحْمَرَ و $14$ قَلَمًا أَخْضَرَ. كَمْ قَلَمًا في العُلْبَةِ؟",
+      "options": [
+        "$48$",
+        "$34$",
+        "$47$",
+        "$38$"
+      ],
+      "correctIndex": 0,
+      "diagnosticFeedback": [
+        "أَحْسَنْتَ! الوَحَداتُ $1 + 3 + 4 = 8$ والعَشَراتُ $2 + 1 + 1 = 4$، المَجْمُوعُ $48$.",
+        "لَقَدْ جَمَعْتَ عَدَدَيْنِ فَقَطْ ($21 + 13 = 34$) وَنَسِيتَ الأَقْلامَ الخَضْراءَ ($14$).",
+        "راجِعْ جَمْعَ الوَحَداتِ: $1 + 3 + 4 = 8$ وَلَيْسَ $7$.",
+        "راجِعْ جَمْعَ العَشَراتِ: $2 + 1 + 1 = 4$ وَلَيْسَ $3$."
+      ],
+      "explanationAr": "نَجْمَعُ الثَّلاثَةَ أَعْدادٍ: الوَحَداتُ $1 + 3 + 4 = 8$، والعَشَراتُ $2 + 1 + 1 = 4$، إِذَنْ المَجْمُوعُ هُوَ $48$ قَلَمًا."
+    }
+  ]
+}

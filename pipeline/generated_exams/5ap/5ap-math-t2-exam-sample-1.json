@@ -1,0 +1,181 @@
+{
+  "metadata": {
+    "levelId": "primaire",
+    "yearId": "5ap",
+    "yearName": "السنة الخامسة ابتدائي",
+    "subjectId": "MAT-B",
+    "subjectName": "الرياضيات",
+    "trimesterId": "t2",
+    "trimesterName": "الفصل الثاني",
+    "docType": "exam",
+    "academicYear": "2025 / 2026",
+    "duration": "ساعة ونصف",
+    "siteUrl": "sujetstore.com"
+  },
+  "exercises": [
+    {
+      "points": 1.5,
+      "instruction": "لاحظ الشكل الهندسي المرفق ثم أجب عن المطلوب:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.3fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "1) احسب محيط المربع $A B C D$.\n\n2) احسب مساحته.",
+              "answer": "1) المحيط: $4 times 9 = 36$ cm.\n\n2) المساحة: $9 times 9 = 81$ cm².",
+              "mark": "1.5"
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap-t2-shape-easy-457185877.svg",
+              "caption": "مربع ABCD"
+            }
+          ]
+        }
+      ],
+      "id": "exam-5ap-trimester_exam-t2-easy-101-ex-1",
+      "num": "الأول"
+    },
+    {
+      "points": 1.5,
+      "instruction": "أنجز العمليات التالية بدقة:",
+      "content": [
+        {
+          "type": "text",
+          "content": "1) احسب ذهنيا: $6.8 div 10 = \"...\"$",
+          "answer": "1) $6.8 div 10 = 0.68$ (إزاحة الفاصلة يسارا بـ $1$ مراتب).",
+          "mark": "0.75"
+        },
+        {
+          "type": "text",
+          "content": "2) ضع ثم أنجز عموديا: $6.3 times 4$",
+          "answer": "2) $6.3 times 4 = 25.2$.",
+          "mark": "0.75"
+        }
+      ],
+      "id": "exam-5ap-trimester_exam-t2-easy-101-ex-2",
+      "num": "الثاني"
+    },
+    {
+      "points": 1.5,
+      "instruction": "يبيع فلاح التفاح بسعر متناسب مع الكتلة. أكمل جدول التناسبية التالي باستعمال المرور بالوحدة:",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "الكتلة (kg)",
+            "$4$",
+            "$1$",
+            "$3$",
+            "$10$"
+          ],
+          "cells": [
+            "الثمن (دج)",
+            "$300$",
+            {
+              "content": "...",
+              "answer": "$75$",
+              "mark": "0.5"
+            },
+            {
+              "content": "...",
+              "answer": "$225$",
+              "mark": "0.5"
+            },
+            {
+              "content": "...",
+              "answer": "$750$",
+              "mark": "0.5"
+            }
+          ],
+          "align": "center",
+          "borders": "grid",
+          "headerBackground": true,
+          "width": "full"
+        },
+        {
+          "type": "text",
+          "content": "وضح طريقة حساب قيمة الوحدة وقيمة $3$:",
+          "answer": "قيمة الوحدة: $300 div 4 = 75$ دج، ومنه قيمة $3$ هي: $75 times 3 = 225$ دج.",
+          "mark": ""
+        }
+      ],
+      "id": "exam-5ap-trimester_exam-t2-easy-101-ex-3",
+      "num": "الثالث"
+    },
+    {
+      "points": 1.5,
+      "instruction": "لاحظ المستقيم المدرج التالي جيدا ثم أجب عن السؤالين:",
+      "content": [
+        {
+          "type": "image",
+          "src": "/generated/math-svg/5ap-t2-numline-easy-1588147129.svg",
+          "caption": "المستقيم المدرج"
+        },
+        {
+          "type": "text",
+          "content": "1) اقرأ فاصلتي النقطتين $A$ و $B$ ثم قارن بينهما باستعمال الرمز المناسب ($<$ أو $>$).",
+          "answer": "1) فاصلة $A$ هي $5.8$ وفاصلة $B$ هي $6.7$، والمقارنة: $5.8 < 6.7$ (أو $6.7 > 5.8$).",
+          "mark": "0.5"
+        },
+        {
+          "type": "text",
+          "content": "2) ضع ثم أنجز العملية عموديا: $6.7 - 5$",
+          "answer": "2) $6.7 - 5.0 = 1.7$.",
+          "mark": "1"
+        }
+      ],
+      "id": "exam-5ap-trimester_exam-t2-easy-101-ex-4",
+      "num": "الرابع"
+    },
+    {
+      "customTitle": "الوضعية الإدماجية",
+      "points": 4,
+      "instruction": "أجب عن الأسئلة الثلاثة التالية مع توضيح العمليات العمودية والأفقية وذكر الوحدات:",
+      "content": [
+        {
+          "type": "columns",
+          "widths": [
+            "1.35fr",
+            "1fr"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "content": "تملك جمعية أولياء التلاميذ قطعة أرض مستطيلة الشكل لتهيئة حديقة المدرسة، طولها $21$ m وعرضها $12$ m. أرادت إحاطتها بسياج ثمن المتر الواحد منه $114.5$ DA، وتخصيص مساحتها لغرس أحواض الزهور بحيث تحتاج كل واحدة إلى $10$ m²."
+            },
+            {
+              "type": "image",
+              "src": "/generated/math-svg/5ap-t2-garden-easy-782639104.svg",
+              "caption": "حديقة المدرسة"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "1) احسب مساحة قطعة الأرض المستطيلة.",
+          "answer": "1) مساحة الأرض: $21 times 12 = 252$ m².",
+          "mark": "1"
+        },
+        {
+          "type": "text",
+          "content": "2) ما هو أكبر عدد من أحواض الزهور يمكن تهيئته في هذه المساحة، وما هي المساحة المتبقية؟",
+          "answer": "2) بالقسمة الإقليدية: $252 = 10 times 25 + 2$، إذن العدد هو $25$ حوضا وتبقى $2$ m².",
+          "mark": "1.5"
+        },
+        {
+          "type": "text",
+          "content": "3) احسب محيط الأرض ثم احسب تكلفة السياج بالدينار الجزائري.",
+          "answer": "3) المحيط: $2 times (21 + 12) = 66$ m. تكلفة السياج: $66 times 114.5 = 7557$ DA.",
+          "mark": "1.5"
+        }
+      ],
+      "id": "exam-5ap-trimester_exam-t2-easy-101-ex-5"
+    }
+  ]
+}

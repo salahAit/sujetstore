@@ -1,0 +1,122 @@
+{
+  "id": "lesson_2am_t2_circumcircle_triangle_disk_area",
+  "slug": "2am-t2-circumcircle-triangle-disk-area",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t2",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: المثلثات والدائرة",
+  "order": 5,
+  "titleAr": "الدائرة المحيطة بمثلث وحساب مساحة المثلث والقرص",
+  "objectives": [
+    "إنشاء الدائرة المحيطة بمثلث انطلاقا من تلاقي محاور أضلاعه في نقطة واحدة هي مركز هذه الدائرة",
+    "حساب مساحة مثلث بمعلومية طول ضلع والارتفاع المتعلق به",
+    "معرفة وتوظيف قاعدة حساب مساحة قرص نصف قطره معلوم ومقاربتها بالحصر"
+  ],
+  "keywordsAr": [
+    "الدائرة المحيطة بمثلث",
+    "محاور أضلاع مثلث",
+    "مساحة مثلث",
+    "مساحة قرص",
+    "نصف القطر"
+  ],
+  "discover": {
+    "scenarioAr": "تخطط ثلاث بلديات $A$ و$B$ و$C$ لبناء محطة مياه في النقطة $O$ على نفس المسافة من البلديات الثلاث ($OA = OB = OC$). ثم نحسب مساحة مثلث ومساحة حوض دائري (قرص).",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 265\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"420\" height=\"265\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><circle cx=\"206.8\" cy=\"149.4\" r=\"102.3\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><polygon points=\"165,56 112,188 305,178\" fill=\"#eff6ff\" fill-opacity=\"0.45\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"108.8\" y1=\"110.1\" x2=\"243.9\" y2=\"164.3\" stroke=\"#dc2626\" stroke-width=\"1.6\" stroke-dasharray=\"5 3\"/><line x1=\"210.2\" y1=\"215.0\" x2=\"204.4\" y2=\"104.5\" stroke=\"#16a34a\" stroke-width=\"1.6\" stroke-dasharray=\"5 3\"/><polyline points=\"135.5,129.4 142.9,132.4 145.9,125.0\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.4\"/><polyline points=\"216.5,182.6 216.1,174.6 208.1,175.0\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"206.8\" y1=\"149.4\" x2=\"165\" y2=\"56\" stroke=\"#7c3aed\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><line x1=\"206.8\" y1=\"149.4\" x2=\"112\" y2=\"188\" stroke=\"#7c3aed\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><line x1=\"206.8\" y1=\"149.4\" x2=\"305\" y2=\"178\" stroke=\"#7c3aed\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><circle cx=\"206.8\" cy=\"149.4\" r=\"4.5\" fill=\"#dc2626\"/><text x=\"214.8\" y=\"143.4\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\">O</text><circle cx=\"165\" cy=\"56\" r=\"4\" fill=\"#0f172a\"/><text x=\"161\" y=\"46\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">A</text><circle cx=\"112\" cy=\"188\" r=\"4\" fill=\"#0f172a\"/><text x=\"96\" y=\"200\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">B</text><circle cx=\"305\" cy=\"178\" r=\"4\" fill=\"#0f172a\"/><text x=\"313\" y=\"190\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">C</text></svg>",
+    "steps": [
+      {
+        "promptAr": "تقع النقطة $O$ على محور الضلع $[AB]$ وعلى محور الضلع $[BC]$. إذا كان $OA = 5\\text{ km}$، فكم يساوي $OC$ بالكيلومتر؟",
+        "hintAr": "كل نقطة من محور قطعة مستقيم متساوية المسافة عن طرفيها: $OA = OB$ و$OB = OC$.",
+        "expectedInput": "5",
+        "revealAr": "بما أن $OA = OB = OC = 5\\text{ km}$، فإن $OC = 5\\text{ km}$، والدائرة التي مركزها $O$ ونصف قطرها $5\\text{ km}$ تشمل الرؤوس الثلاثة $A$ و$B$ و$C$."
+      },
+      {
+        "promptAr": "أرض مثلثة الشكل طول قاعدتها $8\\text{ m}$ وطول الارتفاع المتعلق بها $5\\text{ m}$. ما هي مساحتها بالمتر المربع؟",
+        "hintAr": "مساحة المثلث تساوي نصف مساحة المستطيل الذي بعداه $8\\text{ m}$ و$5\\text{ m}$.",
+        "expectedInput": "20",
+        "revealAr": "$S = \\frac{8 \\times 5}{2} = \\frac{40}{2} = 20\\text{ m}^2$."
+      },
+      {
+        "promptAr": "حوض مائي على شكل قرص نصف قطره $R = 3\\text{ m}$. احسب قيمة مقربة لمساحته بأخذ $\\pi \\approx 3.14$.",
+        "hintAr": "استعمل القاعدة $S = \\pi \\times R \\times R$.",
+        "expectedInput": "28.26",
+        "revealAr": "$S \\approx 3.14 \\times 3 \\times 3 = 3.14 \\times 9 = 28.26\\text{ m}^2$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "الدائرة المحيطة بمثلث: محاور أضلاع أي مثلث تتلاقى في نقطة واحدة $O$ هي مركز الدائرة المحيطة بهذا المثلث، وتحقق $OA = OB = OC = R$. يكفي رسم محورين فقط لإيجاد $O$.",
+      "موضع المركز $O$: داخل المثلث إذا كانت زواياه الثلاث حادة، في منتصف الوتر إذا كان المثلث قائما، وخارج المثلث إذا كانت إحدى زواياه منفرجة.",
+      "مساحة المثلث: تساوي نصف جداء طول ضلع (القاعدة $b$) والارتفاع المتعلق به ($h$): $S = \\frac{b \\times h}{2}$.",
+      "مساحة القرص: مساحة قرص نصف قطره $R$ هي $S = \\pi \\times R \\times R$ حيث $\\pi \\approx 3.14$. ويمكن حصرها بمقارنتها بمساحتي مربعين (داخلي وخارجي): $2 \\times R \\times R < S_{\\text{القرص}} < 4 \\times R \\times R$."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"190\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><polygon points=\"40,140 210,140 145,45\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"145\" y1=\"45\" x2=\"145\" y2=\"140\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4 3\"/><polyline points=\"145,130 155,130 155,140\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"155\" y=\"96\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\">h</text><text x=\"125\" y=\"158\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#1d4ed8\">b</text><text x=\"125\" y=\"176\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\">S = (b × h) ÷ 2</text><line x1=\"245\" y1=\"18\" x2=\"245\" y2=\"180\" stroke=\"#cbd5e1\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><rect x=\"313\" y=\"36\" width=\"104\" height=\"104\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><circle cx=\"365\" cy=\"88\" r=\"52\" fill=\"#dcfce7\" fill-opacity=\"0.7\" stroke=\"#16a34a\" stroke-width=\"2.2\"/><polygon points=\"365,36 417,88 365,140 313,88\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/><line x1=\"365\" y1=\"88\" x2=\"417\" y2=\"88\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"365\" cy=\"88\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"391\" y=\"81\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#dc2626\">R</text><text x=\"365\" y=\"172\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#15803d\">S = π × R × R</text></svg>",
+    "visualCaptionAr": "مساحة المثلث تساوي نصف جداء القاعدة في الارتفاع، ومساحة القرص تحصر بين $2 \\times R \\times R$ و$4 \\times R \\times R$ وتساوي $\\pi \\times R \\times R$.",
+    "examples": [
+      {
+        "problemAr": "مثلث $ABC$ قائم في $A$ حيث $AB = 6\\text{ cm}$ و$AC = 8\\text{ cm}$ و$BC = 10\\text{ cm}$. أين يقع مركز الدائرة المحيطة به وما نصف قطرها؟ ثم احسب مساحته.",
+        "solutionAr": "بما أن المثلث قائم في $A$، فمركز الدائرة المحيطة به هو منتصف الوتر $[BC]$، ونصف قطرها $R = 10 \\div 2 = 5\\text{ cm}$.\nومساحته: $S = \\frac{AB \\times AC}{2} = \\frac{6 \\times 8}{2} = 24\\text{ cm}^2$."
+      },
+      {
+        "problemAr": "احسب مساحة قرص قطره $D = 10\\text{ cm}$ بأخذ $\\pi \\approx 3.14$.",
+        "solutionAr": "نجد أولا نصف القطر: $R = 10 \\div 2 = 5\\text{ cm}$.\nثم نحسب المساحة: $S \\approx 3.14 \\times 5 \\times 5 = 3.14 \\times 25 = 78.5\\text{ cm}^2$."
+      }
+    ],
+    "watchOutAr": "انتبه! في قاعدة مساحة القرص نضرب $\\pi$ في نصف القطر مرتين ($\\pi \\times R \\times R$) وليس في القطر كاملا، ولا تخلط بين مساحة القرص ومحيط الدائرة ($2 \\times \\pi \\times R$). وفي مساحة المثلث استعمل الارتفاع المتعلق بالقاعدة المختارة ولا تستعمل ضلعا مائلا."
+  },
+  "practice": [
+    {
+      "questionAr": "مثلث $EFG$ قائم في $E$ وطول وتره $FG = 12\\text{ cm}$. أين يقع مركز الدائرة المحيطة به وما طول نصف قطرها؟",
+      "options": [
+        "في النقطة $E$، ونصف القطر $12\\text{ cm}$",
+        "في منتصف $[FG]$، ونصف القطر $6\\text{ cm}$",
+        "في منتصف $[FG]$، ونصف القطر $12\\text{ cm}$",
+        "خارج المثلث، ونصف القطر $6\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "الرأس $E$ هو رأس الزاوية القائمة وليس مركز الدائرة المحيطة.",
+        "أحسنت! مركز الدائرة المحيطة بمثلث قائم هو منتصف الوتر $[FG]$، ونصف القطر هو نصف الوتر أي $12 \\div 2 = 6\\text{ cm}$.",
+        "$12\\text{ cm}$ هو القطر (طول الوتر كاملا)، أما نصف القطر فهو $6\\text{ cm}$.",
+        "المركز يقع خارج المثلث فقط عندما تكون فيه زاوية منفرجة؛ أما في المثلث القائم فيقع في منتصف الوتر."
+      ],
+      "explanationAr": "في المثلث القائم، يقع مركز الدائرة المحيطة في منتصف الوتر $[FG]$، فيكون نصف القطر $R = \\frac{12}{2} = 6\\text{ cm}$."
+    },
+    {
+      "questionAr": "لاحظ المثلث $KLM$ المقابل حيث القاعدة $LM = 9\\text{ cm}$ والارتفاع $KH = 4\\text{ cm}$ والضلع $KL = 5\\text{ cm}$. ما هي مساحة المثلث $KLM$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 178\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"380\" height=\"178\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><line x1=\"65\" y1=\"140\" x2=\"165\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><polygon points=\"80,45 165,140 325,140\" fill=\"#eff6ff\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"80\" y1=\"45\" x2=\"80\" y2=\"140\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"4 3\"/><polyline points=\"80,130 90,130 90,140\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"64\" y=\"96\" text-anchor=\"end\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\">4 cm</text><text x=\"245\" y=\"158\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#2563eb\">9 cm</text><text x=\"134\" y=\"86\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"600\" fill=\"#475569\">5 cm</text><text x=\"76\" y=\"36\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">K</text><text x=\"75\" y=\"156\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\">H</text><text x=\"162\" y=\"158\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">L</text><text x=\"328\" y=\"156\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">M</text></svg>",
+      "options": [
+        "$36\\text{ cm}^2$",
+        "$22.5\\text{ cm}^2$",
+        "$18\\text{ cm}^2$",
+        "$10\\text{ cm}^2$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "لقد حسبت $9 \\times 4$ ونسيت القسمة على $2$!",
+        "الضلع $KL = 5\\text{ cm}$ ليس ارتفاعا متعلقا بالقاعدة $[LM]$ لأنه غير عمودي عليها.",
+        "صحيح تماما! $S = \\frac{LM \\times KH}{2} = \\frac{9 \\times 4}{2} = 18\\text{ cm}^2$.",
+        "استعمل القاعدة $LM = 9\\text{ cm}$ والارتفاع المتعلق بها $KH = 4\\text{ cm}$."
+      ],
+      "explanationAr": "الارتفاع المتعلق بالضلع $[LM]$ هو $KH = 4\\text{ cm}$، إذن $S = \\frac{9 \\times 4}{2} = 18\\text{ cm}^2$."
+    },
+    {
+      "questionAr": "قرص قطره $D = 8\\text{ cm}$. ما هي القيمة المقربة لمساحته بأخذ $\\pi \\approx 3.14$؟",
+      "options": [
+        "$25.12\\text{ cm}^2$",
+        "$200.96\\text{ cm}^2$",
+        "$50.24\\text{ cm}^2$",
+        "$12.56\\text{ cm}^2$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "هذا هو محيط الدائرة ($\\pi \\times D = 3.14 \\times 8$) وليس مساحة القرص!",
+        "انتبه: استعملت القطر $8$ بدل نصف القطر $R = 4$ في صيغة المساحة.",
+        "ممتاز! نصف القطر $R = 8 \\div 2 = 4\\text{ cm}$، فتكون المساحة $3.14 \\times 4 \\times 4 = 50.24\\text{ cm}^2$.",
+        "نسيت ضرب $3.14$ في $R$ مرتين ($3.14 \\times 4 \\times 4$ وليس $3.14 \\times 4$)."
+      ],
+      "explanationAr": "نحسب نصف القطر أولا: $R = 8 \\div 2 = 4\\text{ cm}$، ثم المساحة: $S \\approx 3.14 \\times 4 \\times 4 = 50.24\\text{ cm}^2$."
+    }
+  ]
+}

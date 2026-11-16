@@ -1,0 +1,75 @@
+{
+  "documents": [
+    {
+      "id": "ref_2am_curriculum_math_gen2",
+      "grade": "2am",
+      "title_ar": "المنهاج الرسمي لمادة الرياضيات لمرحلة التعليم المتوسط (وزارة التربية الوطنية - الجيل الثاني 2016)",
+      "category": "curriculum",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/01_curriculum/2am_curriculum_math_moyen_2016.pdf",
+      "source_url": "https://www.dzeducative.com/wp-content/uploads/2024/09/%D9%85%D9%86%DA%BE%D8%A7%D8%AC-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA.pdf",
+      "pages_count": 48,
+      "extraction_mode": "digital_text",
+      "sha256": "25adb22fbbde61eebeec9f6ab3b52c70a1331113c815694a8212bb3d2507a9db",
+      "size_bytes": 1389518
+    },
+    {
+      "id": "ref_2am_accompanying_doc_math_gen2",
+      "grade": "2am",
+      "title_ar": "الوثيقة المرافقة لمنهاج الرياضيات في مرحلة التعليم المتوسط (اللجنة الوطنية للمناهج - الجيل الثاني 2016)",
+      "category": "accompanying_doc",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/01_curriculum/2am_accompanying_doc_math_moyen_2016.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1snzUKkm_BHEgDLC1W--dJrrZvwcK4Ca4",
+      "pages_count": 102,
+      "extraction_mode": "digital_text",
+      "sha256": "c513bf73c0878e0873c015c55279f68f7068759892f9b11fc56995f85f91dceb",
+      "size_bytes": 3368243
+    },
+    {
+      "id": "ref_2am_progression_ministry_2022_2023",
+      "grade": "2am",
+      "title_ar": "المخططات السنوية لمادة الرياضيات للسنة الثانية من التعليم المتوسط (وزارة التربية الوطنية / المفتشية العامة للتربية الوطنية - طبعة سبتمبر 2022 المعمول بها)",
+      "category": "progression",
+      "year": "2022-2023",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/01_curriculum/2am_annual_plan_math_ministry_2022_2023.pdf",
+      "source_url": "https://elbassair.net/achatri/chat2014/cour/moyene/2am/manahidj2am/PLAN%20ANNUEL%202AM%20%202023/PLAN%20ANNUEL%202AM%20%20MATH%20%20%20%202022%20elbassair.net.pdf",
+      "pages_count": 9,
+      "extraction_mode": "digital_text",
+      "sha256": "0fdc217ce3408d6682c2bab8d5c100de1a48cbbef7f89cb9218c7b0149980cec",
+      "size_bytes": 1395688
+    },
+    {
+      "id": "ref_2am_progression_mechanisms_2021_2022",
+      "grade": "2am",
+      "title_ar": "المخطط السنوي للتعلمات وآليات تنفيذه لمادة الرياضيات للسنة الثانية متوسط (وزارة التربية الوطنية / المفتشية العامة للتربية الوطنية - 2021/2022)",
+      "category": "progression",
+      "year": "2021-2022",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/01_curriculum/2am_annual_plan_mechanisms_math_2021_2022.pdf",
+      "source_url": "https://elbassair.net/achatri/chat2014/cour/moyene/1am/manahidj/PLANT%20ANNUEL%20%202022%20AM/MATH%20AM%202022/PLAN%20ANNUEL%202AM%20MATH%20%202022%20elbassair.net.pdf",
+      "pages_count": 12,
+      "extraction_mode": "digital_text",
+      "sha256": "f140288dadecf1457063b22fcce39e54922036d6e6201e077b815491a856f7b3",
+      "size_bytes": 426933
+    },
+    {
+      "id": "ref_2am_progression_weekly_2025_2026",
+      "grade": "2am",
+      "title_ar": "التدرج السنوي لمادة الرياضيات للسنة الثانية متوسط (العام الدراسي 2025-2026)",
+      "category": "progression",
+      "year": "2025-2026",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2am/01_curriculum/2am_annual_progression_math_2025_2026.pdf",
+      "source_url": "https://www.dzeducative.com/wp-content/uploads/2025/08/2am.pdf",
+      "pages_count": 2,
+      "extraction_mode": "digital_text",
+      "sha256": "63bc75430cc841ba3ab78ac88f70a1bab31abcb079a5d244e7304c67ea3c03d6",
+      "size_bytes": 236700
+    }
+  ],
+  "missing_references": []
+}

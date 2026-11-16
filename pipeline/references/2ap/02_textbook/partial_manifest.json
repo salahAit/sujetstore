@@ -1,0 +1,35 @@
+{
+  "documents": [
+    {
+      "id": "ref_2ap_textbook_math_sci_onps_gen2",
+      "grade": "2ap",
+      "title_ar": "كتابي في الرياضيات والتربية العلمية والتكنولوجية - السنة الثانية من التعليم الابتدائي (الجيل الثاني - ONPS)",
+      "category": "textbook",
+      "year": "2022",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/02_textbook/2ap_textbook_math_sci_onps_gen2.pdf",
+      "source_url": "https://archive.org/download/books-for-the-second-year-of-primary-algerian/%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA%20%D9%88%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9%20%D9%88%20%D8%A7%D9%84%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A9.pdf"
+    },
+    {
+      "id": "ref_2ap_workbook_math_sci_onps_gen2",
+      "grade": "2ap",
+      "title_ar": "دفتر الأنشطة في الرياضيات والتربية العلمية والتكنولوجية - السنة الثانية من التعليم الابتدائي (الجيل الثاني - ONPS)",
+      "category": "workbook",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/02_textbook/2ap_workbook_math_sci_onps_gen2.pdf",
+      "source_url": "https://eddirasa.com/wp-content/uploads/2016/09/%D8%AF%D9%81%D8%AA%D8%B1-%D8%A7%D9%84%D8%A3%D9%86%D8%B4%D8%B7%D8%A9-%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA-%D9%88-%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9-%D8%B9%D9%84%D9%85%D9%8A%D8%A9-%D8%B3%D9%86%D8%A9-%D8%AB%D8%A7%D9%86%D9%8A%D8%A9-%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A-%D8%A7%D9%84%D8%AC%D9%8A%D9%84-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A.pdf"
+    },
+    {
+      "id": "ref_2ap_teacher_guide_math_sci_onps_gen2",
+      "grade": "2ap",
+      "title_ar": "دليل الأستاذ في الرياضيات والتربية العلمية والتكنولوجية - السنة الثانية من التعليم الابتدائي (مطابق لمناهج الجيل الثاني - ONPS)",
+      "category": "teacher_guide",
+      "year": "2016",
+      "generation": "gen2",
+      "local_path": "pipeline/references/2ap/02_textbook/2ap_teacher_guide_math_sci_onps_gen2.pdf",
+      "source_url": "https://drive.google.com/uc?export=download&id=1vBBEQi5lQypkgRSsczVFOiojRrqixI7n"
+    }
+  ],
+  "missing_references": []
+}

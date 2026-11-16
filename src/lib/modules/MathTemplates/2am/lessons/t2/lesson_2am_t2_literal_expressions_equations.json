@@ -1,0 +1,127 @@
+{
+  "id": "lesson_2am_t2_literal_expressions_equations",
+  "slug": "2am-t2-literal-expressions-equations",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t2",
+  "sequenceId": "seq4",
+  "sequenceTitleAr": "المقطع الرابع: الأعداد النسبية والحساب الحرفي ومفهوم المعادلة",
+  "order": 3,
+  "titleAr": "الحساب الحرفي ومفهوم المعادلة واختبار صحة مساواة أو متباينة",
+  "objectives": [
+    "إنتاج عبارة حرفية بسيطة وتطبيق قاعدة حرفية في وضعيات حسابية وهندسية (المحيطات والمساحات)",
+    "اختبار صحة مساواة أو متباينة تتضمن مجهولا أو مجهولين عند استبدالهما بقيم عددية معلومة",
+    "إتمام مساويات وحل معادلات بسيطة من الشكل (a + □ = b، a - □ = b، a × □ = b، a ÷ □ = b) اعتمادا على معنى العمليات والمخططات"
+  ],
+  "keywordsAr": [
+    "الحساب الحرفي",
+    "إنتاج عبارة حرفية",
+    "مفهوم المعادلة",
+    "حل معادلة بسيطة",
+    "اختبار صحة مساواة",
+    "اختبار صحة متباينة"
+  ],
+  "discover": {
+    "scenarioAr": "أراد فلاح حساب المساحة الإجمالية لحديقتين متجاورتين: الأولى مستطيلة طولها $x$ وعرضها $5$، والثانية مربعة ضلعها $4$. نستعمل الحرف $x$ لكتابة عبارة حرفية واختبار مساواة وحل معادلة بسيطة.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 165\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"440\" height=\"165\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><rect x=\"55\" y=\"42\" width=\"170\" height=\"100\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"2.2\"/><rect x=\"275\" y=\"52\" width=\"80\" height=\"80\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"2.2\"/><text x=\"140\" y=\"96\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#1d4ed8\">5x</text><text x=\"315\" y=\"96\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#b45309\">16</text><text x=\"140\" y=\"32\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#1e293b\">x</text><text x=\"38\" y=\"96\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#1e293b\">5</text><text x=\"315\" y=\"42\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#1e293b\">4</text><text x=\"369\" y=\"96\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#1e293b\">4</text><text x=\"250\" y=\"98\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#334155\">+</text></svg>",
+    "steps": [
+      {
+        "promptAr": "عبّر عن مساحة المستطيل بدلالة $x$ باستعمال اصطلاح حذف علامة الضرب $\\times$ بين العدد والحرف.",
+        "hintAr": "مساحة المستطيل هي الطول في العرض، ونحذف علامة $\\times$ بين $5$ و$x$.",
+        "expectedInput": "5x",
+        "revealAr": "مساحة المستطيل هي $5 \\times x = 5x$، وبإضافة مساحة المربع $4 \\times 4 = 16$ تصبح المساحة الكلية $5x + 16$."
+      },
+      {
+        "promptAr": "نريد اختبار صحة المساواة $5x + 16 = 46$ من أجل $x = 6$. ما قيمة الطرف الأيسر $5x + 16$ عند تعويض $x$ بـ $6$؟",
+        "hintAr": "احسب $5 \\times 6 + 16$.",
+        "expectedInput": "46",
+        "revealAr": "$5 \\times 6 + 16 = 30 + 16 = 46$؛ بما أن الطرف الأيسر يساوي الطرف الأيمن $46$، فالمساواة صحيحة من أجل $x = 6$."
+      },
+      {
+        "promptAr": "إذا علمنا أن مساحة المستطيل $5x = 35$، فما قيمة المجهول $x$ اعتمادا على معنى الضرب؟",
+        "hintAr": "ابحث عن العدد الذي إذا ضُرب في $5$ أعطى $35$، أي $35 \\div 5$.",
+        "expectedInput": "7",
+        "revealAr": "من معنى الضرب: $5 \\times x = 35$ معناه $x = 35 \\div 5 = 7$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "العبارة الحرفية هي عبارة رياضية يظهر فيها حرف أو أكثر يمثل أعدادا. يُسمح بحذف علامة الضرب $\\times$ قبل حرف أو قوس، فنكتب $5x$ بدل $5 \\times x$ و$2(a+b)$ بدل $2 \\times (a+b)$.",
+      "لاختبار صحة مساواة أو متباينة من أجل قيم معطاة للحروف، نعوض كل حرف بقيمته ونحسب كل طرف على حدة، ثم نقارن النتيجتين للحكم إن كانت صحيحة أم خاطئة.",
+      "لحل معادلة بسيطة اعتمادا على معنى العمليات والمخططات الشريطية:",
+      "إذا كان $a + x = b$ فإن $x = b - a$؛ وإذا كان $a - x = b$ فإن $x = a - b$؛ وإذا كان $a \\times x = b$ ($a \\neq 0$) فإن $x = b \\div a$؛ وإذا كان $a \\div x = b$ ($x \\neq 0, b \\neq 0$) فإن $x = a \\div b$."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 145\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"145\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><text x=\"125\" y=\"28\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">12 + x = 29</text><path d=\"M 30 50 L 30 42 L 220 42 L 220 50\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"125\" y=\"39\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#475569\">29</text><rect x=\"30\" y=\"55\" width=\"80\" height=\"36\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"70\" y=\"78\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#1d4ed8\">12</text><rect x=\"110\" y=\"55\" width=\"110\" height=\"36\" fill=\"#fef3c7\" stroke=\"#d97706\" stroke-width=\"1.8\"/><text x=\"165\" y=\"78\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#b45309\">x</text><text x=\"125\" y=\"120\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">x = 29 - 12 = 17</text><line x1=\"240\" y1=\"20\" x2=\"240\" y2=\"145\" stroke=\"#cbd5e1\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><text x=\"355\" y=\"28\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">4 × x = 28</text><path d=\"M 260 50 L 260 42 L 450 42 L 450 50\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"355\" y=\"39\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#475569\">28</text><rect x=\"260\" y=\"55\" width=\"47.5\" height=\"36\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><rect x=\"307.5\" y=\"55\" width=\"47.5\" height=\"36\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><rect x=\"355\" y=\"55\" width=\"47.5\" height=\"36\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><rect x=\"402.5\" y=\"55\" width=\"47.5\" height=\"36\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"283.75\" y=\"78\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#15803d\">x</text><text x=\"331.25\" y=\"78\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#15803d\">x</text><text x=\"378.75\" y=\"78\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#15803d\">x</text><text x=\"426.25\" y=\"78\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#15803d\">x</text><text x=\"355\" y=\"120\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">x = 28 ÷ 4 = 7</text></svg>",
+    "visualCaptionAr": "توظيف المخطط الشريطي ومعنى العمليات لإيجاد العدد المجهول في المعادلات البسيطة.",
+    "examples": [
+      {
+        "problemAr": "اشترى تلميذ $n$ كراريس بسعر $45\\text{ DA}$ للواحد وقلما بسعر $30\\text{ DA}$. اكتب العبارة الحرفية للمبلغ الإجمالي $M$، ثم احسب $M$ من أجل $n = 4$.",
+        "solutionAr": "العبارة الحرفية هي $M = 45n + 30$. من أجل $n = 4$: $M = 45 \\times 4 + 30 = 180 + 30 = 210\\text{ DA}$."
+      },
+      {
+        "problemAr": "اختبر صحة المتباينة $2x + 3y < 20$ من أجل $x = 4$ و$y = 3$، ثم من أجل $x = 5$ و$y = 4$.",
+        "solutionAr": "من أجل $x = 4, y = 3$: نحسب $2 \\times 4 + 3 \\times 3 = 8 + 9 = 17$. وبما أن $17 < 20$، المتباينة صحيحة.\nمن أجل $x = 5, y = 4$: نحسب $2 \\times 5 + 3 \\times 4 = 10 + 12 = 22$. وبما أن $22$ ليس أصغر من $20$، المتباينة خاطئة."
+      },
+      {
+        "problemAr": "حل المعادلات الآتية بمعنى العمليات: $14.5 + x = 22$، $25 - x = 9$، و$6x = 27$.",
+        "solutionAr": "في الأولى: $x = 22 - 14.5 = 7.5$.\nفي الثانية: $x = 25 - 9 = 16$.\nفي الثالثة: $x = 27 \\div 6 = 4.5$."
+      }
+    ],
+    "watchOutAr": "عند اختبار صحة مساواة، احسب كل طرف بشكل منفصل ولا تكتب علامة $=$ بينهما قبل التأكد! وفي المعادلة $6x = 27$ تذكر أن العملية هي ضرب، لذا نجد $x$ بالقسمة $27 \\div 6$ وليس بالطرح $27 - 6$."
+  },
+  "practice": [
+    {
+      "questionAr": "مثلث متساوي الساقين طول قاعدته $5\\text{ cm}$ وطول كل من ضلعيه المتقايسين $a\\text{ cm}$. ما هي العبارة الحرفية التي تعبّر عن محيطه $P$؟",
+      "options": [
+        "$P = a + 5$",
+        "$P = 2a + 5$",
+        "$P = 5a + 2$",
+        "$P = 7a$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "المثلث المتساوي الساقين له ضلعان طول كل منهما $a$ وليس ضلعا واحدا!",
+        "أحسنت! المحيط هو مجموع أطوال الأضلاع الثلاثة: $a + a + 5 = 2a + 5$.",
+        "لقد بدّلت بين $5$ و$a$: الضلعان المتقايسان طولهما $a$ والقاعدة طولها $5$.",
+        "لا يمكن جمع $2a$ و$5$ ليصبحا $7a$ لأن $5$ لا يضرب في $a$."
+      ],
+      "explanationAr": "محيط المثلث يساوي مجموع أطوال أضلاعه الثلاثة: $P = a + a + 5 = 2a + 5$."
+    },
+    {
+      "questionAr": "من أجل $x = 3$ و$y = 2$، أي عبارة من العبارات الآتية صحيحة؟",
+      "options": [
+        "$4x - y = 9$",
+        "$2x + 3y < 11$",
+        "$5x - 2y = 11$",
+        "$3x + y > 12$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "بالتعويض: $4 \\times 3 - 2 = 12 - 2 = 10 \\neq 9$، إذن المساواة خاطئة.",
+        "بالتعويض: $2 \\times 3 + 3 \\times 2 = 6 + 6 = 12$، و$12$ ليس أصغر من $11$.",
+        "صحيح! بالتعويض نجد $5 \\times 3 - 2 \\times 2 = 15 - 4 = 11$، والطرف الأيمن $11$.",
+        "بالتعويض: $3 \\times 3 + 2 = 9 + 2 = 11$، و$11$ ليس أكبر من $12$."
+      ],
+      "explanationAr": "بتعويض $x=3$ و$y=2$ في $5x - 2y$ نحصل على $5 \\times 3 - 2 \\times 2 = 15 - 4 = 11$، فهي المساواة الوحيدة الصحيحة."
+    },
+    {
+      "questionAr": "يعبّر المخطط الشريطي المقابل عن المعادلة $4x = 30$. ما هي قيمة $x$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 125\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"420\" height=\"125\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><path d=\"M 50 48 L 50 38 L 370 38 L 370 48\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.8\"/><text x=\"210\" y=\"30\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\">30</text><rect x=\"50\" y=\"56\" width=\"80\" height=\"42\" fill=\"#e0e7ff\" stroke=\"#4f46e5\" stroke-width=\"2\"/><rect x=\"130\" y=\"56\" width=\"80\" height=\"42\" fill=\"#e0e7ff\" stroke=\"#4f46e5\" stroke-width=\"2\"/><rect x=\"210\" y=\"56\" width=\"80\" height=\"42\" fill=\"#e0e7ff\" stroke=\"#4f46e5\" stroke-width=\"2\"/><rect x=\"290\" y=\"56\" width=\"80\" height=\"42\" fill=\"#e0e7ff\" stroke=\"#4f46e5\" stroke-width=\"2\"/><text x=\"90\" y=\"82\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#4338ca\">x</text><text x=\"170\" y=\"82\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#4338ca\">x</text><text x=\"250\" y=\"82\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#4338ca\">x</text><text x=\"330\" y=\"82\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#4338ca\">x</text></svg>",
+      "options": [
+        "$26$",
+        "$7.5$",
+        "$120$",
+        "$7$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "هذا ناتج الطرح $30 - 4$، بينما المخطط يبين أربع خانات متساوية من $x$ أي عملية ضرب.",
+        "ممتاز! بما أن $4 \\times x = 30$، فإن $x = 30 \\div 4 = 7.5$.",
+        "هذا ناتج الضرب $30 \\times 4$؛ الكل هو $30$ ونحن نبحث عن قيمة الجزء الواحد.",
+        "$4 \\times 7 = 28$ وليس $30$، تأكد من إتمام القسمة العشرية."
+      ],
+      "explanationAr": "لإيجاد قيمة $x$ في المعادلة $4x = 30$ نقسم المجموع $30$ على $4$: $x = 30 \\div 4 = 7.5$."
+    }
+  ]
+}

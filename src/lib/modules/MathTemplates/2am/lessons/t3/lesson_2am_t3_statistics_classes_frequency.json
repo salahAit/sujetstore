@@ -1,0 +1,122 @@
+{
+  "id": "lesson_2am_t3_statistics_classes_frequency",
+  "slug": "2am-t3-statistics-classes-frequency",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t3",
+  "sequenceId": "seq8",
+  "sequenceTitleAr": "المقطع الثامن: تنظيم المعطيات والإحصاء",
+  "order": 3,
+  "titleAr": "السلاسل الإحصائية: التنظيم في فئات وحساب التكرار والتواتر (التكرار النسبي)",
+  "objectives": [
+    "جمع معطيات إحصائية وتنظيمها في جداول وتلخيص سلسلة إحصائية في شكل فئات متساوية المدى",
+    "حساب التكرارات المطلقة والتواترات (التكرارات النسبية) لقيم أو فئات سلسلة إحصائية",
+    "التعبير عن التواتر بكسر أو عدد عشري أو نسبة مئوية واستعمال خاصية أن مجموع التواترات يساوي 1 (أو 100%) لمراقبة الحسابات"
+  ],
+  "keywordsAr": [
+    "تنظيم المعطيات",
+    "سلسلة إحصائية",
+    "فئات متساوية المدى",
+    "التكرار",
+    "التواتر",
+    "التكرار النسبي"
+  ],
+  "discover": {
+    "scenarioAr": "سجّل أستاذ التربية البدنية في متوسطة بقسنطينة نتائج رمي الجلة بالمتر لـ $20$ تلميذاً فكانت كما يلي: $5.2$ ، $6.8$ ، $7.4$ ، $8.1$ ، $9.0$ ، $6.3$ ، $7.5$ ، $8.4$ ، $10.2$ ، $5.9$ ، $7.0$ ، $8.8$ ، $9.5$ ، $6.5$ ، $7.9$ ، $8.0$ ، $10.6$ ، $7.2$ ، $6.1$ ، $8.6$ . نريد تنظيم هذه السلسلة في $4$ فئات متساوية المدى وتحديد تكرار كل فئة وتواترها.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\" width=\"600\" height=\"245\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"229\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"33\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">تنظيم نتائج رمي الجلة (20 تلميذاً) في فئات متساوية المدى</text><rect x=\"24\" y=\"48\" width=\"552\" height=\"52\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.2\"/><text x=\"300\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">5.2 , 6.8 , 7.4 , 8.1 , 9.0 , 6.3 , 7.5 , 8.4 , 10.2 , 5.9</text><text x=\"300\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"ltr\">7.0 , 8.8 , 9.5 , 6.5 , 7.9 , 8.0 , 10.6 , 7.2 , 6.1 , 8.6</text><rect x=\"36\" y=\"114\" width=\"528\" height=\"108\" rx=\"8\" fill=\"#ffffff\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"36\" y1=\"148\" x2=\"564\" y2=\"148\" stroke=\"#64748b\" stroke-width=\"1.4\"/><line x1=\"36\" y1=\"185\" x2=\"564\" y2=\"185\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"144\" y1=\"114\" x2=\"144\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"248\" y1=\"114\" x2=\"248\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"352\" y1=\"114\" x2=\"352\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"456\" y1=\"114\" x2=\"456\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"90\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الفئة (بالمتر)</text><text x=\"90\" y=\"171\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">التكرار</text><text x=\"90\" y=\"208\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">التواتر</text><text x=\"196\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">[5 ; 6.5[</text><text x=\"196\" y=\"171\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">4</text><text x=\"196\" y=\"208\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">4 / 20 = 0.20</text><text x=\"300\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">[6.5 ; 8[</text><text x=\"300\" y=\"171\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">?</text><text x=\"300\" y=\"208\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">?</text><text x=\"404\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">[8 ; 9.5[</text><text x=\"404\" y=\"171\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">6</text><text x=\"404\" y=\"208\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">0.30</text><text x=\"510\" y=\"135\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"ltr\">[9.5 ; 11]</text><text x=\"510\" y=\"171\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">3</text><text x=\"510\" y=\"208\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">0.15</text></svg>",
+    "steps": [
+      {
+        "promptAr": "تتضمن الفئة الثانية $[6.5 ; 8[$ كل القيم الأكبر من أو تساوي $6.5$ والأصغر تماماً من $8$ . عدّ هذه القيم من السلسلة لإيجاد تكرار الفئة الثانية. (أدخل العدد فقط)",
+        "hintAr": "احسب القياسات الواقعة بين $6.5$ (داخلة) و $8$ (غير داخلة): $6.8$ ، $7.4$ ، $7.5$ ، $7.0$ ، $6.5$ ، $7.9$ ، $7.2$ .",
+        "expectedInput": "7",
+        "revealAr": "تكرار الفئة $[6.5 ; 8[$ هو $7$ تلاميذ، بينما تكرار الفئات الأخرى هو $4$ و $6$ و $3$ ، ونتحقق من المجموع الكلي: $4 + 7 + 6 + 3 = 20$ تلميذاً. كما نلاحظ أن مدى كل فئة متساوٍ ويساوي $6.5 - 5 = 1.5\\text{ m}$ ."
+      },
+      {
+        "promptAr": "احسب **التواتر** (التكرار النسبي) للفئة $[6.5 ; 8[$ واكتبه على شكل عدد عشري. (أدخل العدد العشري فقط)",
+        "hintAr": "التواتر يساوي تكرار الفئة مقسوماً على التكرار الكلي: $\\frac{7}{20}$ .",
+        "expectedInput": "0.35",
+        "revealAr": "تواتر الفئة $[6.5 ; 8[$ هو $f = \\frac{7}{20} = 0.35$ (ويُعبّر عنه أيضاً بالنسبة المئوية $35\\%$ )."
+      },
+      {
+        "promptAr": "ما هي النسبة المئوية للتلاميذ الذين حققوا رمية تساوي $8\\text{ m}$ على الأقل (أي الفئتان $[8 ; 9.5[$ و $[9.5 ; 11]$ معاً)؟ (أدخل العدد دون رمز النسبة المئوية)",
+        "hintAr": "تواتر الفئة الثالثة $0.30$ وتواتر الرابعة $0.15$ ، اجمعهما ثم اضرب في $100$ .",
+        "expectedInput": "45",
+        "revealAr": "مجموع التكرارين هو $6 + 3 = 9$ من أصل $20$ ، أي تواتر يساوي $0.30 + 0.15 = 0.45$ ، وهو يوافق النسبة المئوية $45\\%$ . لاحظ أن مجموع كل التواترات يساوي $0.20 + 0.35 + 0.30 + 0.15 = 1$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**التكرار والتكرار الكلي**: التكرار لقيمة أو فئة هو عدد مرات ظهورها في السلسلة الإحصائية، و**التكرار الكلي** $N$ هو مجموع تكرارات جميع القيم أو الفئات.",
+      "**الفئات متساوية المدى**: عند تعدد القيم، ننظم السلسلة في فئات متساوية المدى من الشكل $[a ; b[$ حيث **مدى الفئة** هو $b - a$ . تشمل الفئة $[a ; b[$ القيمة $a$ ولا تشمل $b$ (تُضم $b$ إلى الفئة الموالية، أما الفئة الأخيرة فتكون مغلقة من الطرفين).",
+      "**التواتر (التكرار النسبي)**: تواتر قيمة أو فئة $f$ هو حاصل قسمة تكرارها $n$ على التكرار الكلي $N$ ، أي: $f = \\frac{n}{N}$ . يمكن كتابة التواتر على شكل **كسر** أو **عدد عشري** (محصور بين $0$ و $1$ ) أو **نسبة مئوية** بضرب العدد العشري في $100$ .",
+      "**مراقبة الحسابات بمجموع التواترات**: مجموع تواترات جميع القيم أو الفئات في أي سلسلة إحصائية يساوي دائماً $1$ (أو $100\\%$ بالنسب المئوية)."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 250\" width=\"600\" height=\"250\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"234\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"33\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الحوصلة البصرية: جدول الفئات والتكرار والتواتر</text><rect x=\"24\" y=\"48\" width=\"552\" height=\"140\" rx=\"8\" fill=\"#ffffff\" stroke=\"#475569\" stroke-width=\"1.5\"/><rect x=\"24\" y=\"48\" width=\"552\" height=\"32\" rx=\"8\" fill=\"#eff6ff\"/><line x1=\"24\" y1=\"80\" x2=\"576\" y2=\"80\" stroke=\"#475569\" stroke-width=\"1.4\"/><line x1=\"24\" y1=\"107\" x2=\"576\" y2=\"107\" stroke=\"#e2e8f0\" stroke-width=\"1.1\"/><line x1=\"24\" y1=\"134\" x2=\"576\" y2=\"134\" stroke=\"#e2e8f0\" stroke-width=\"1.1\"/><line x1=\"24\" y1=\"161\" x2=\"576\" y2=\"161\" stroke=\"#475569\" stroke-width=\"1.4\"/><line x1=\"162\" y1=\"48\" x2=\"162\" y2=\"188\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"272\" y1=\"48\" x2=\"272\" y2=\"188\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"382\" y1=\"48\" x2=\"382\" y2=\"188\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><line x1=\"479\" y1=\"48\" x2=\"479\" y2=\"188\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><text x=\"93\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">الفئة (المدى = 1.5)</text><text x=\"217\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">التكرار</text><text x=\"327\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">التواتر (كسر)</text><text x=\"430\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">التواتر (عشري)</text><text x=\"527\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"rtl\">النسبة المئوية</text><text x=\"93\" y=\"98\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">[5 ; 6.5[</text><text x=\"217\" y=\"98\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\" direction=\"ltr\">4</text><text x=\"327\" y=\"98\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\" direction=\"ltr\">4 / 20</text><text x=\"430\" y=\"98\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\" direction=\"ltr\">0.20</text><text x=\"527\" y=\"98\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\" direction=\"ltr\">20%</text><text x=\"93\" y=\"125\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">[6.5 ; 8[</text><text x=\"217\" y=\"125\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\" direction=\"ltr\">7</text><text x=\"327\" y=\"125\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\" direction=\"ltr\">7 / 20</text><text x=\"430\" y=\"125\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\" direction=\"ltr\">0.35</text><text x=\"527\" y=\"125\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\" direction=\"ltr\">35%</text><text x=\"93\" y=\"152\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">[8 ; 9.5[  +  [9.5 ; 11]</text><text x=\"217\" y=\"152\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\" direction=\"ltr\">6 + 3 = 9</text><text x=\"327\" y=\"152\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\" direction=\"ltr\">9 / 20</text><text x=\"430\" y=\"152\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\" direction=\"ltr\">0.45</text><text x=\"527\" y=\"152\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0f172a\" direction=\"ltr\">45%</text><text x=\"93\" y=\"179\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">المجموع الكلي</text><text x=\"217\" y=\"179\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">20</text><text x=\"327\" y=\"179\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">20 / 20 = 1</text><text x=\"430\" y=\"179\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">1.00</text><text x=\"527\" y=\"179\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">100%</text><rect x=\"48\" y=\"200\" width=\"504\" height=\"30\" rx=\"8\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.2\"/><text x=\"300\" y=\"220\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">تذكر دائماً: التواتر = التكرار ÷ التكرار الكلي ، ومجموع جميع التواترات = 1 (أي 100%)</text></svg>",
+    "visualCaptionAr": "التمثيل الجدولي للفئات متساوية المدى وحساب التكرارات والتواترات ومراقبة المجموع",
+    "examples": [
+      {
+        "problemAr": "في دراسة حول عدد الإخوة لـ $25$ تلميذاً، كانت التكرارات كما يلي: $0$ إخوة ( $3$ تلاميذ ) ، أخ واحد ( $8$ تلاميذ ) ، أخوان ( $9$ تلاميذ ) ، $3$ إخوة ( $5$ تلاميذ ) . احسب التواتر العشري والمئوي لكل فئة وتحقق من المجموع.",
+        "solutionAr": "التكرار الكلي هو $3 + 8 + 9 + 5 = 25$ .\n- لقيمة $0$ : التواتر $\\frac{3}{25} = 0.12$ أي $12\\%$ .\n- لقيمة $1$ : التواتر $\\frac{8}{25} = 0.32$ أي $32\\%$ .\n- لقيمة $2$ : التواتر $\\frac{9}{25} = 0.36$ أي $36\\%$ .\n- لقيمة $3$ : التواتر $\\frac{5}{25} = 0.20$ أي $20\\%$ .\n\nالتحقق: $0.12 + 0.32 + 0.36 + 0.20 = 1$ (أي $100\\%$ )."
+      },
+      {
+        "problemAr": "أُجري إحصاء على $40$ تلميذاً حول مدة المراجعة اليومية، فكانت تكرارات ثلاث فئات هي $6$ و $14$ و $12$ . أوجد تكرار الفئة الرابعة وتواترها المئوي.",
+        "solutionAr": "نحسب أولاً تكرار الفئة الرابعة بطرح مجموع التكرارات المعلومة من التكرار الكلي:\n\n$$\n40 - (6 + 14 + 12) = 40 - 32 = 8\n$$\n\nومنه تواتر الفئة الرابعة هو $\\frac{8}{40} = 0.20$ ، أي بالنسبة المئوية $20\\%$ ."
+      }
+    ],
+    "watchOutAr": "لا تحسب القيمة الواقعة على الحد الفاصل بين فئتين مرتين! في الفئة $[10 ; 15[$ العدد $15$ لا ينتمي إليها بل ينتمي إلى الفئة التالية $[15 ; 20[$ . كما أن التواتر لا يمكن أبداً أن يكون أكبر من $1$ ."
+  },
+  "practice": [
+    {
+      "questionAr": "في جدول إحصائي لتوزيع علامات $25$ تلميذاً، بلغ تكرار الفئة $[10 ; 15[$ العدد $9$ . ما هو تواتر هذه الفئة؟",
+      "options": [
+        "$0.25$ (أي $25\\%$ )",
+        "$0.36$ (أي $36\\%$ )",
+        "$0.45$ (أي $45\\%$ )",
+        "$2.77$ (أي $277\\%$ )"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "$0.25$ يوافق $\\frac{1}{4}$ أو العدد الكلي مقسوماً على $100$ ، لكن المطلوب قسمة $9$ على $25$ .",
+        "أحسنت! $\\frac{9}{25} = \\frac{36}{100} = 0.36$ أي $36\\%$ .",
+        "انتبه: تواتر $9$ من $20$ هو $0.45$ ، أما هنا فالتكرار الكلي هو $25$ وليس $20$ .",
+        "عكست القسمة! التواتر يكون دائماً بين $0$ و $1$ بقسمة التكرار على التكرار الكلي: $9 \\div 25$ ."
+      ],
+      "explanationAr": "نحسب التواتر بقسمة تكرار الفئة على التكرار الكلي: $\\frac{9}{25} = \\frac{9 \\times 4}{25 \\times 4} = \\frac{36}{100} = 0.36$ ، أي $36\\%$ ."
+    },
+    {
+      "questionAr": "في دراسة إحصائية شملت $50$ تلميذاً، كانت تواترات ثلاث فئات هي $0.18$ و $0.34$ و $0.26$ . ما هو **تكرار** الفئة الرابعة؟",
+      "options": [
+        "$22$ تلميذاً",
+        "$13$ تلميذاً",
+        "$11$ تلميذاً",
+        "$9$ تلاميذ"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "انتبه: $0.22$ هو التواتر وليس التكرار! يجب ضربه في التكرار الكلي $50$ (أي $0.22 \\times 50$ ).",
+        "راجع عملية الطرح من $1$ : $1 - (0.18 + 0.34 + 0.26) = 1 - 0.78 = 0.22$ .",
+        "ممتاز! وجدت التواتر المجهول $0.22$ ثم ضربته في $50$ لتحصل على التكرار $11$ .",
+        "أعد جمع التواترات الثلاثة: $0.18 + 0.34 + 0.26 = 0.78$ وليس $0.82$ ."
+      ],
+      "explanationAr": "بما أن مجموع التواترات يساوي $1$ ، فإن تواتر الفئة الرابعة هو $1 - (0.18 + 0.34 + 0.26) = 1 - 0.78 = 0.22$ . ومنه تكرارها يساوي $0.22 \\times 50 = 11$ تلميذاً."
+    },
+    {
+      "questionAr": "نريد تنظيم قامات تلاميذ تتراوح بين $120\\text{ cm}$ و $160\\text{ cm}$ في $4$ فئات متساوية المدى تبدأ من $120\\text{ cm}$ . ما هو مدى كل فئة؟ وإلى أي فئة تنتمي القامة $140\\text{ cm}$ ؟",
+      "options": [
+        "المدى $10\\text{ cm}$ وتنتمي إلى $[130 ; 140[$",
+        "المدى $10\\text{ cm}$ وتنتمي إلى $[140 ; 150[$",
+        "المدى $40\\text{ cm}$ وتنتمي إلى $[140 ; 150[$",
+        "المدى $8\\text{ cm}$ وتنتمي إلى $[136 ; 144[$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه إلى القوس المفتوح في $[130 ; 140[$ : الحد الأعلى $140$ غير مشمول هنا بل ينتقل للفئة الموالية.",
+        "أحسنت! المدى $(160 - 120) \\div 4 = 10\\text{ cm}$ ، و $140$ ينتمي إلى $[140 ; 150[$ .",
+        "العدد $40\\text{ cm}$ هو المدى الكلي للسلسلة كلها، ويجب قسمته على عدد الفئات $4$ .",
+        "عند القسمة على $4$ فئات نجد $(160 - 120) \\div 4 = 10\\text{ cm}$ وليس $8\\text{ cm}$ ."
+      ],
+      "explanationAr": "مدى كل فئة يساوي $\\frac{160 - 120}{4} = \\frac{40}{4} = 10\\text{ cm}$ ، فتكون الفئات هي $[120 ; 130[$ و $[130 ; 140[$ و $[140 ; 150[$ و $[150 ; 160]$ . وبما أن الحد الأدنى داخل في الفئة، فإن $140\\text{ cm}$ ينتمي إلى $[140 ; 150[$ ."
+    }
+  ]
+}

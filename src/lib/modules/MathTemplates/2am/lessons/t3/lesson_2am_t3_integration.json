@@ -1,0 +1,127 @@
+{
+  "id": "lesson_2am_t3_integration",
+  "slug": "2am-t3-integration",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t3",
+  "sequenceId": "seq9",
+  "sequenceTitleAr": "المقطع التاسع: الموشور القائم وأسطوانة الدوران وإدماج الفصل الثالث",
+  "order": 7,
+  "titleAr": "إدماج وحصيلة الفصل الثالث: التناسبية والإحصاء والموشور القائم وأسطوانة الدوران",
+  "objectives": [
+    "حل وضعيات إدماجية مركبة تجند التناسبية والنسبة المئوية والمقياس وتحويل الوحدات وتنظيم المعطيات",
+    "استثمار خواص الموشور القائم وأسطوانة الدوران في حساب المساحات الجانبية والكلية والحجوم والسعات والتكاليف",
+    "التحقق من معقولية النتائج وتحرير الحلول بدقة وفق معايير التقويم الأربعة (الوجاهة، الاستعمال السليم، الانسجام، الإتقان)"
+  ],
+  "keywordsAr": [
+    "وضعية إدماجية",
+    "مشكلات مركبة",
+    "حصيلة الفصل الثالث",
+    "تجنيد الموارد"
+  ],
+  "discover": {
+    "scenarioAr": "**وضعية إدماجية (تهيئة حديقة بلدية ببجاية)**: تشرف جمعية بيئية على تهيئة حديقة تضم مسبحاً للأطفال على شكل **موشور قائم قاعدته شبه منحرف قائم** (قاعدتاه الحقيقيتان $6\\text{ m}$ و $4\\text{ m}$ وارتفاع شبه المنحرف $3\\text{ m}$ ) وعمق المسبح $1.2\\text{ m}$ ، مرسوماً على مخطط بمقياس $\\frac{1}{500}$ . وبجانبه خزان ماء أسطواني للسقي نصف قطره $r = 1\\text{ m}$ وارتفاعه $h = 2.5\\text{ m}$ ( $\\pi = 3.14$ ). كما أُجري استبيان شمل $80$ زائراً حول النشاط المفضل في الحديقة.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 245\" width=\"600\" height=\"245\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"229\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"33\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">الوضعية الإدماجية: مشروع تهيئة حديقة بلدية (المقياس 1 / 500)</text><rect x=\"22\" y=\"48\" width=\"184\" height=\"176\" rx=\"10\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"114\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">1. حوض موشوري قائم</text><polygon points=\"54,96 154,96 134,132 54,132\" fill=\"#dbeafe\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"54\" y1=\"132\" x2=\"54\" y2=\"164\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"134\" y1=\"132\" x2=\"134\" y2=\"164\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"154\" y1=\"96\" x2=\"154\" y2=\"128\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"54\" y1=\"164\" x2=\"134\" y2=\"164\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"134\" y1=\"164\" x2=\"154\" y2=\"128\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><text x=\"104\" y=\"90\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">6 m</text><text x=\"94\" y=\"147\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">4 m</text><text x=\"39\" y=\"118\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#1e3a8a\" direction=\"ltr\">3 m</text><text x=\"176\" y=\"120\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">1.2 m</text><text x=\"114\" y=\"205\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">السعة القصوى باللتر؟</text><rect x=\"218\" y=\"48\" width=\"176\" height=\"176\" rx=\"10\" fill=\"#ffffff\" stroke=\"#059669\" stroke-width=\"1.5\"/><text x=\"306\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">2. خزان أسطواني (80%)</text><ellipse cx=\"306\" cy=\"96\" rx=\"38\" ry=\"11\" fill=\"#dcfce7\" stroke=\"#059669\" stroke-width=\"1.8\"/><line x1=\"268\" y1=\"96\" x2=\"268\" y2=\"172\" stroke=\"#059669\" stroke-width=\"1.8\"/><line x1=\"344\" y1=\"96\" x2=\"344\" y2=\"172\" stroke=\"#059669\" stroke-width=\"1.8\"/><path d=\"M 268 172 A 38 11 0 0 0 344 172\" fill=\"#bae6fd\" stroke=\"#059669\" stroke-width=\"1.8\"/><path d=\"M 268 116 L 268 172 A 38 11 0 0 0 344 172 L 344 116 Z\" fill=\"#38bdf8\" fill-opacity=\"0.35\"/><line x1=\"306\" y1=\"96\" x2=\"344\" y2=\"96\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"325\" y=\"91\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\" direction=\"ltr\">r = 1 m</text><text x=\"368\" y=\"138\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">2.5 m</text><text x=\"306\" y=\"205\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0369a1\" direction=\"rtl\">مملوء بنسبة 80%</text><rect x=\"406\" y=\"48\" width=\"172\" height=\"176\" rx=\"10\" fill=\"#ffffff\" stroke=\"#7c3aed\" stroke-width=\"1.5\"/><text x=\"492\" y=\"68\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#6d28d9\" direction=\"rtl\">3. استبيان (80 زائراً)</text><rect x=\"424\" y=\"88\" width=\"136\" height=\"26\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1\"/><text x=\"492\" y=\"105\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\" direction=\"rtl\">مساحات خضراء: 36</text><rect x=\"424\" y=\"122\" width=\"136\" height=\"26\" rx=\"6\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1\"/><text x=\"492\" y=\"139\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\" direction=\"rtl\">الرياضة: 24</text><rect x=\"424\" y=\"156\" width=\"136\" height=\"26\" rx=\"6\" fill=\"#fffbeb\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"492\" y=\"173\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">الألعاب: الباقي (؟)</text><text x=\"492\" y=\"205\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#6d28d9\" direction=\"rtl\">زاوية قطاع الألعاب (360°)</text></svg>",
+    "steps": [
+      {
+        "promptAr": "أولاً (المقياس والتحويل): ما هو الطول على التصميم بوحدة $\\text{cm}$ للقاعدة الكبرى للمسبح التي طولها الحقيقي $6\\text{ m}$ بمقياس $\\frac{1}{500}$ ؟ (أدخل العدد فقط)",
+        "hintAr": "حوّل $6\\text{ m}$ إلى $\\text{cm}$ (أي $600\\text{ cm}$ ) ثم اضرب في $\\frac{1}{500}$ .",
+        "expectedInput": "1.2",
+        "revealAr": "نحول أولاً إلى السنتيمتر: $6\\text{ m} = 600\\text{ cm}$ . ومنه الطول على التصميم هو $600 \\times \\frac{1}{500} = 1.2\\text{ cm}$ ."
+      },
+      {
+        "promptAr": "ثانياً (الموشور القائم والسعة): احسب مساحة قاعدة المسبح (شبه المنحرف)، ثم حجم المسبح بوحدة $\\text{m}^3$ ، واستنتج سعته القصوى باللتر ( $\\text{L}$ ). (أدخل السعة باللتر فقط)",
+        "hintAr": "مساحة شبه المنحرف $B = \\frac{(6 + 4) \\times 3}{2} = 15\\text{ m}^2$ ، ثم اضرب في العمق $1.2\\text{ m}$ وحوّل من $\\text{m}^3$ إلى $\\text{L}$ بالضرب في $1000$ .",
+        "expectedInput": "18000",
+        "revealAr": "مساحة القاعدة: $B = \\frac{(6 + 4) \\times 3}{2} = 15\\text{ m}^2$ . الحجم: $V = B \\times h = 15 \\times 1.2 = 18\\text{ m}^3$ . وبما أن $1\\text{ m}^3 = 1000\\text{ L}$ ، فإن السعة القصوى للمسبح هي $18000\\text{ L}$ ."
+      },
+      {
+        "promptAr": "ثالثاً (أسطوانة الدوران والنسبة المئوية): نملأ الخزان الأسطواني ( $r = 1\\text{ m}$ و $h = 2.5\\text{ m}$ ) بنسبة $80\\%$ من سعته. ما هي كمية الماء الموجودة فيه باللتر ( $\\pi = 3.14$ )؟ (أدخل العدد فقط)",
+        "hintAr": "احسب الحجم الكلي $V = 3.14 \\times 1^2 \\times 2.5 = 7.85\\text{ m}^3 = 7850\\text{ L}$ ، ثم اضرب في $\\frac{80}{100}$ .",
+        "expectedInput": "6280",
+        "revealAr": "الحجم الكلي للخزان الأسطواني هو $V = 3.14 \\times 1 \\times 2.5 = 7.85\\text{ m}^3 = 7850\\text{ L}$ . وكمية الماء المعبأة ( $80\\%$ ) هي $7850 \\times \\frac{80}{100} = 6280\\text{ L}$ ."
+      },
+      {
+        "promptAr": "رابعاً (الإحصاء والمخطط الدائري): من بين $80$ زائراً، فضّل $36$ المساحات الخضراء و $24$ الرياضة والبقية فضّلوا الألعاب. ما قيس الزاوية المركزية لقطاع «الألعاب» في **مخطط دائري** ( $360^\\circ$ )؟ (أدخل القيس بالدرجة فقط)",
+        "hintAr": "تكرار «الألعاب» هو $80 - (36 + 24) = 20$ . احسب التواتر $\\frac{20}{80}$ ثم اضرب في $360^\\circ$ .",
+        "expectedInput": "90",
+        "revealAr": "عدد مفضلي الألعاب هو $80 - 60 = 20$ زائراً، وتواترهم $\\frac{20}{80} = 0.25$ (أي $25\\%$ ). إذن قيس الزاوية المركزية لقطاع الألعاب في المخطط الدائري هو $0.25 \\times 360^\\circ = 90^\\circ$ ."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "**الوجاهة (اختيار الأدوات المناسبة)**: اقرأ نص الوضعية الإدماجية بتأنٍّ واستخرج المعطيات العددية ثم اربط كل سؤال بالقانون الموافق له (جدول تناسبية أو رابع متناسب، نسبة مئوية، مقياس، تواتر وزوايا مخطط، مساحة جانبية أو حجم مجسم).",
+      "**الاستعمال السليم لأدوات المادة (دقة التحويلات)**: قبل تطبيق أي قانون، وحّد وحدات الطول ( $\\text{m}$ مع $\\text{m}$ أو $\\text{cm}$ مع $\\text{cm}$ )، واضبط تحويل المساحات ( $\\times 100$ ) والحجوم ( $\\times 1000$ ) والسعات ( $1\\text{ dm}^3 = 1\\text{ L}$ و $1\\text{ m}^3 = 1000\\text{ L}$ ).",
+      "**الانسجام (وضوح التبرير والترتيب)**: اكتب العبارة الحرفية للقانون أولاً، ثم عوّض بالأرقام، وأرفق كل نتيجة بوحدتها المناسبة. في الإحصاء راقب حساباتك بمجموع التواترات ( $= 1$ ) ومجموع الزوايا ( $360^\\circ$ أو $180^\\circ$ ).",
+      "**الإتقان (التحقق من المعقولية)**: قارن نتيجتك بالواقع (الثمن بعد التخفيض أصغر من الأصلي، المساحة الكلية أكبر من الجانبية، والنسبة المئوية للجزء لا تتعدى $100\\%$ )."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 250\" width=\"600\" height=\"250\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"584\" height=\"234\" rx=\"14\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"300\" y=\"33\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"rtl\">خريطة موارد الفصل الثالث ومعايير حل الوضعية الإدماجية</text><rect x=\"22\" y=\"48\" width=\"266\" height=\"58\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"155\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">التناسبية والمقياس والنسب</text><text x=\"155\" y=\"92\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1e3a8a\" direction=\"ltr\">a·x = b·c   |   e = d_plan / d_real   |   p%</text><rect x=\"312\" y=\"48\" width=\"266\" height=\"58\" rx=\"10\" fill=\"#f5f3ff\" stroke=\"#8b5cf6\" stroke-width=\"1.5\"/><text x=\"445\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#6d28d9\" direction=\"rtl\">الإحصاء والتواتر والمخططات</text><text x=\"445\" y=\"92\" text-anchor=\"middle\" font-size=\"11\" fill=\"#4c1d95\" direction=\"ltr\">f = n / N   |   Σf = 1   |   α = f × 360° (أو 180°)</text><rect x=\"22\" y=\"118\" width=\"266\" height=\"58\" rx=\"10\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.5\"/><text x=\"155\" y=\"140\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">الموشور القائم</text><text x=\"155\" y=\"162\" text-anchor=\"middle\" font-size=\"11\" fill=\"#065f46\" direction=\"ltr\">AL = Pb × h   |   AT = AL + 2B   |   V = B × h</text><rect x=\"312\" y=\"118\" width=\"266\" height=\"58\" rx=\"10\" fill=\"#fffbeb\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"445\" y=\"140\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#b45309\" direction=\"rtl\">أسطوانة الدوران والسعة</text><text x=\"445\" y=\"162\" text-anchor=\"middle\" font-size=\"11\" fill=\"#78350f\" direction=\"ltr\">AL = 2πrh   |   V = πr²h   |   1 dm³ = 1 L</text><rect x=\"48\" y=\"188\" width=\"504\" height=\"42\" rx=\"10\" fill=\"#0f172a\"/><text x=\"300\" y=\"205\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#f8fafc\" direction=\"rtl\">معايير تقويم الوضعية الإدماجية:</text><text x=\"300\" y=\"222\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#38bdf8\" direction=\"rtl\">1. الوجاهة   •   2. الاستعمال السليم لأدوات المادة   •   3. الانسجام   •   4. الإتقان</text></svg>",
+    "visualCaptionAr": "ترابط ميادين الفصل الثالث في حل الوضعية الإدماجية باحترام المعايير البيداغوجية الأربعة",
+    "examples": [
+      {
+        "problemAr": "حوض مائي على شكل متوازي مستطيلات **بدون غطاء** طوله $3\\text{ m}$ وعرضه $2\\text{ m}$ وارتفاعه $1.5\\text{ m}$ . نريد طلاء جدرانه الداخلية الأربعة وقاع الحوض. إذا كان ثمن الطلاء قبل التخفيض $600\\text{ DA}$ للمتر المربع واستفاد المقاول من تخفيض $15\\%$ ، فما كلفة الطلاء؟",
+        "solutionAr": "1. محيط القاعدة: $P_b = 2 \\times (3 + 2) = 10\\text{ m}$ .\n2. المساحة الجانبية: $A_L = 10 \\times 1.5 = 15\\text{ m}^2$ .\n3. مساحة القاع (قاعدة واحدة لأن الحوض بدون غطاء): $B = 3 \\times 2 = 6\\text{ m}^2$ .\n4. المساحة المطلوب طلاؤها: $15 + 6 = 21\\text{ m}^2$ .\n5. الثمن قبل التخفيض: $21 \\times 600 = 12600\\text{ DA}$ .\n6. الثمن بعد تخفيض $15\\%$ : $12600 \\times \\frac{85}{100} = 10710\\text{ DA}$ ."
+      },
+      {
+        "problemAr": "يملأ فلاح براميل أسطوانية نصف قطرها $r = 3\\text{ dm}$ وارتفاعها $h = 10\\text{ dm}$ بزيت الزيتون ( $\\pi = 3.14$ ). إذا باع $75\\%$ من سعة برميل واحد بسعر $900\\text{ DA}$ للتر الواحد، فما المبلغ المحصل؟",
+        "solutionAr": "1. حجم البرميل الواحد: $V = 3.14 \\times 3^2 \\times 10 = 3.14 \\times 9 \\times 10 = 282.6\\text{ dm}^3$ .\n2. بما أن $1\\text{ dm}^3 = 1\\text{ L}$ ، فسعة البرميل هي $282.6\\text{ L}$ .\n3. الكمية المباعة ( $75\\%$ ): $282.6 \\times \\frac{75}{100} = 211.95\\text{ L}$ .\n4. المبلغ المحصل: $211.95 \\times 900 = 190755\\text{ DA}$ ."
+      }
+    ],
+    "watchOutAr": "في الوضعيات الإدماجية حول المجسمات، اقرأ بدقة هل المجسم **مغلق** (نضيف $2B$ ) أم **مفتوح بدون غطاء** كحوض سباحة أو خزان مكشوف (نضيف $B$ واحدة فقط) أم نغطي **السطح الجانبي فقط** كملصق على علبة (نحسب $A_L$ فقط)!"
+  },
+  "practice": [
+    {
+      "questionAr": "حوض ماء أسطواني نصف قطره $r = 0.5\\text{ m}$ وارتفاعه $h = 2\\text{ m}$ ( $\\pi = 3.14$ ). يريد بستاني ملء $60\\%$ من سعته بالماء باستعمال مضخة تضخ $15.7\\text{ L}$ في الدقيقة الواحدة. ما المدة اللازمة لملئه؟",
+      "options": [
+        "$30$ دقيقة",
+        "$60$ دقيقة",
+        "$100$ دقيقة",
+        "$120$ دقيقة"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "تحقق من حساب $r^2$ : مربع $0.5$ هو $0.25$ ، فتكون السعة $1570\\text{ L}$ و $60\\%$ منها هو $942\\text{ L}$ .",
+        "أحسنت! حسبت السعة الكلية $1570\\text{ L}$ ثم $60\\%$ منها ( $942\\text{ L}$ ) ثم قسمت على $15.7$ لتجد $60$ دقيقة.",
+        "قسمت السعة الكلية $1570\\text{ L}$ مباشرة على $15.7$ ، ونسيت أن المطلوب ملء $60\\%$ فقط!",
+        "تذكّر أن $0.5^2 = 0.25$ وليس $0.5$ ؛ فحجم الأسطوانة هو $1.57\\text{ m}^3$ وليس $3.14\\text{ m}^3$ ."
+      ],
+      "explanationAr": "الحجم الكلي للحوض: $V = 3.14 \\times 0.5^2 \\times 2 = 3.14 \\times 0.25 \\times 2 = 1.57\\text{ m}^3 = 1570\\text{ L}$ . كمية الماء المطلوبة ( $60\\%$ ): $1570 \\times \\frac{60}{100} = 942\\text{ L}$ . المدة اللازمة: $942 \\div 15.7 = 60$ دقيقة (ساعة واحدة)."
+    },
+    {
+      "questionAr": "رسم مهندس خزاناً موشورياً قائماً على تصميم بمقياس $\\frac{1}{50}$ ، فكان ارتفاعه على التصميم $6\\text{ cm}$ ومحيط قاعدته على التصميم $28\\text{ cm}$ . ما هي **المساحة الجانبية الحقيقية** لهذا الخزان بالمتر المربع ( $\\text{m}^2$ )؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 155\" width=\"420\" height=\"155\" style=\"font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;\"><rect x=\"8\" y=\"8\" width=\"404\" height=\"139\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.4\"/><rect x=\"26\" y=\"26\" width=\"170\" height=\"102\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"111\" y=\"48\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\" direction=\"rtl\">على التصميم (1 / 50)</text><text x=\"111\" y=\"78\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">Pb = 28 cm</text><text x=\"111\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">h = 6 cm</text><path d=\"M 206 78 L 244 78\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.2\"/><polygon points=\"244,78 236,73 236,83\" fill=\"#059669\"/><text x=\"225\" y=\"68\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\" direction=\"ltr\">× 50</text><rect x=\"254\" y=\"26\" width=\"140\" height=\"102\" rx=\"8\" fill=\"#ecfdf5\" stroke=\"#10b981\" stroke-width=\"1.5\"/><text x=\"324\" y=\"48\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#047857\" direction=\"rtl\">في الحقيقة</text><text x=\"324\" y=\"78\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">Pb = ? m</text><text x=\"324\" y=\"104\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\" direction=\"ltr\">h = ? m</text></svg>",
+      "options": [
+        "$0.84\\text{ m}^2$",
+        "$8.4\\text{ m}^2$",
+        "$42\\text{ m}^2$",
+        "$168\\text{ m}^2$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "انتبه: ضربت المساحة على التصميم في $50$ فقط! لكن كلاً من المحيط والارتفاع يُضرب في $50$ .",
+        "تحقق من التحويل: $1400\\text{ cm} = 14\\text{ m}$ و $300\\text{ cm} = 3\\text{ m}$ ، فجداءهما $14 \\times 3 = 42\\text{ m}^2$ .",
+        "ممتاز! حولت البعدين أولاً إلى الحقيقة ( $14\\text{ m}$ و $3\\text{ m}$ ) ثم حسبت $14 \\times 3 = 42\\text{ m}^2$ .",
+        "تحقق من حساب المساحة الجانبية: $A_L = P_b \\times h$ بدون ضرب إضافي في $4$ ."
+      ],
+      "explanationAr": "نحسب أولاً الأبعاد الحقيقية: محيط القاعدة الحقيقي $28 \\times 50 = 1400\\text{ cm} = 14\\text{ m}$ ، والارتفاع الحقيقي $6 \\times 50 = 300\\text{ cm} = 3\\text{ m}$ . ومنه المساحة الجانبية الحقيقية هي $A_L = 14 \\times 3 = 42\\text{ m}^2$ ."
+    },
+    {
+      "questionAr": "في استطلاع شمل $200$ علبة عصير، توزعت النكهات في **مخطط نصف دائري** ( $180^\\circ$ ) حيث قيس زاوية البرتقال $81^\\circ$ ، وزاوية التفاح $54^\\circ$ ، والباقي لنكهة الليمون. ما عدد علب عصير الليمون؟",
+      "options": [
+        "$25$ علبة",
+        "$50$ علبة",
+        "$45$ علبة",
+        "$60$ علبة"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "قسمت زاوية الليمون $45^\\circ$ على $360^\\circ$ بدل $180^\\circ$ ! انتبه أن المخطط **نصف دائري**.",
+        "أحسنت! زاوية الليمون $180^\\circ - 135^\\circ = 45^\\circ$ ، وتقابل $\\frac{45}{180} \\times 200 = 50$ علبة.",
+        "$45^\\circ$ هو قيس الزاوية المركزية لليمون وليس عدد العلب!",
+        "أعد طرح الزاويتين من $180^\\circ$ : $180 - (81 + 54) = 180 - 135 = 45^\\circ$ ."
+      ],
+      "explanationAr": "قيس زاوية قطاع الليمون في المخطط نصف الدائري هو $180^\\circ - (81^\\circ + 54^\\circ) = 45^\\circ$ . ومنه تواتر نكهة الليمون هو $\\frac{45}{180} = \\frac{1}{4} = 0.25$ ، أي أن عدد علب الليمون هو $200 \\times 0.25 = 50$ علبة."
+    }
+  ]
+}

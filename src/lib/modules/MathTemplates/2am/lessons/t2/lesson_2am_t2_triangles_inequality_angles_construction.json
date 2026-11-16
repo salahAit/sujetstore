@@ -1,0 +1,122 @@
+{
+  "id": "lesson_2am_t2_triangles_inequality_angles_construction",
+  "slug": "2am-t2-triangles-inequality-angles-construction",
+  "grade": "2am",
+  "yearSubjectId": 624,
+  "trimesterId": "t2",
+  "sequenceId": "seq5",
+  "sequenceTitleAr": "المقطع الخامس: المثلثات والدائرة",
+  "order": 4,
+  "titleAr": "المثلثات: مجموع أقياس الزوايا، المتباينة المثلثية وحالات إنشاء مثلث",
+  "objectives": [
+    "معرفة خاصية مجموع أقياس زوايا مثلث (180°) وتبريرها بالزوايا المتبادلة داخليا وتوظيفها لحساب قيس زاوية مجهولة",
+    "فهم وتطبيق المتباينة المثلثية للتحقق من إمكانية إنشاء مثلث بأطوال معطاة",
+    "إنشاء مثلث بمعرفة أطوال أضلاعه الثلاثة، أو طولي ضلعين والزاوية المحصورة بينهما، أو طول ضلع والزاويتين المجاورتين له ومقاربة مفهوم التطابق"
+  ],
+  "keywordsAr": [
+    "مجموع زوايا مثلث",
+    "المتباينة المثلثية",
+    "إنشاء مثلث",
+    "زوايا المثلث",
+    "التطابق"
+  ],
+  "discover": {
+    "scenarioAr": "حاول أمين إنشاء مثلث بأطوال $3\\text{ cm}$ و$4\\text{ cm}$ و$8\\text{ cm}$ فلاحظ أن القوسين لا يتقاطعان! وفي مثلث آخر $ABC$، رسم مستقيما $(xy)$ يشمل $A$ ويوازي $(BC)$ لاكتشاف مجموع أقياس زوايا المثلث.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 190\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"190\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><line x1=\"35\" y1=\"140\" x2=\"195\" y2=\"140\" stroke=\"#1e293b\" stroke-width=\"2.5\"/><circle cx=\"35\" cy=\"140\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"195\" cy=\"140\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"115\" y=\"158\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1e293b\">8 cm</text><path d=\"M 35 80 A 60 60 0 0 1 95 140\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/><path d=\"M 115 140 A 80 80 0 0 1 195 60\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.8\" stroke-dasharray=\"4 3\"/><line x1=\"35\" y1=\"140\" x2=\"77\" y2=\"98\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"195\" y1=\"140\" x2=\"138\" y2=\"83\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"45\" y=\"114\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#dc2626\">3 cm</text><text x=\"170\" y=\"106\" font-family=\"sans-serif\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2563eb\">4 cm</text><text x=\"115\" y=\"34\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\">3 + 4 &lt; 8</text><line x1=\"225\" y1=\"18\" x2=\"225\" y2=\"172\" stroke=\"#cbd5e1\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><line x1=\"245\" y1=\"52\" x2=\"455\" y2=\"52\" stroke=\"#64748b\" stroke-width=\"1.8\" stroke-dasharray=\"5 3\"/><polygon points=\"265,152 435,152 345,52\" fill=\"#f1f5f9\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M 287.0 152.0 A 22 22 0 0 0 278.7 134.8\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><path d=\"M 323.0 52.0 A 22 22 0 0 0 331.3 69.2\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><path d=\"M 413.0 152.0 A 22 22 0 0 1 420.3 135.6\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 367.0 52.0 A 22 22 0 0 1 359.7 68.4\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 335.0 64.5 A 16 16 0 0 0 355.7 63.9\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><text x=\"248\" y=\"45\" font-family=\"sans-serif\" font-size=\"12\" font-style=\"italic\" fill=\"#475569\">x</text><text x=\"448\" y=\"45\" font-family=\"sans-serif\" font-size=\"12\" font-style=\"italic\" fill=\"#475569\">y</text><text x=\"345\" y=\"41\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">A</text><text x=\"255\" y=\"166\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">B</text><text x=\"436\" y=\"166\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\">C</text><text x=\"350\" y=\"176\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#16a34a\">(xy) // (BC) ⇒ 180°</text></svg>",
+    "steps": [
+      {
+        "promptAr": "هل يمكن إنشاء مثلث أطوال أضلاعه $3\\text{ cm}$ و$4\\text{ cm}$ و$8\\text{ cm}$؟ (أجب بـ: نعم أو لا)",
+        "hintAr": "قارن مجموع الضلعين الأصغرين $3 + 4$ مع الضلع الأطول $8$.",
+        "expectedInput": "لا",
+        "revealAr": "لا يمكن، لأن $3 + 4 = 7 < 8$؛ الضلعان القصيران لا يصلان لبعضهما فوق الضلع الطويل."
+      },
+      {
+        "promptAr": "في الشكل الأيمن، $(xy) // (BC)$. لأن $\\widehat{xAB}$ و$\\widehat{B}$ متبادلتان داخليا فهما متقايستان، وكذا $\\widehat{yAC} = \\widehat{C}$. وبما أن $\\widehat{xAy}$ زاوية مستقيمة، ما مجموع أقياس زوايا المثلث $ABC$ بالدرجات؟",
+        "hintAr": "قيس الزاوية المستقيمة $\\widehat{xAy}$ يساوي مجموع $\\widehat{xAB} + \\widehat{BAC} + \\widehat{yAC}$.",
+        "expectedInput": "180",
+        "revealAr": "مجموع أقياس زوايا أي مثلث يساوي دائما $180^\\circ$ لأن $\\widehat{A} + \\widehat{B} + \\widehat{C} = \\widehat{BAC} + \\widehat{xAB} + \\widehat{yAC} = 180^\\circ$."
+      },
+      {
+        "promptAr": "إذا كان في المثلث $ABC$: $\\widehat{B} = 55^\\circ$ و$\\widehat{C} = 65^\\circ$، فما قيس الزاوية $\\widehat{A}$ بالدرجات؟",
+        "hintAr": "اطرح مجموع الزاويتين المعلومتين من $180^\\circ$.",
+        "expectedInput": "60",
+        "revealAr": "$\\widehat{A} = 180^\\circ - (55^\\circ + 65^\\circ) = 180^\\circ - 120^\\circ = 60^\\circ$."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "مجموع أقياس زوايا مثلث يساوي $180^\\circ$: في أي مثلث $ABC$ لدينا $\\widehat{A} + \\widehat{B} + \\widehat{C} = 180^\\circ$. (في المثلث القائم مجموع الزاويتين الحادتين $90^\\circ$، وفي المتقايس الأضلاع كل زاوية $60^\\circ$).",
+      "المتباينة المثلثية: في كل مثلث، طول كل ضلع أصغر تماما من مجموع طولي الضلعين الآخرين. وللتحقق من إمكانية الإنشاء، يكفي التأكد أن أطول ضلع أصغر تماما من مجموع الضلعين الآخرين.",
+      "إذا كان طول أطول ضلع يساوي مجموع طولي الضلعين الآخرين (مثل $AC = AB + BC$)، فإن النقط الثلاث على استقامة واحدة والمنطقة مغلقة (لا يتشكل مثلث).",
+      "يمكن إنشاء مثلث واحد فقط (متطابق مع كل مثلث يشترك معه في نفس المعطيات) في ثلاث حالات: 1) معرفة أطوال الأضلاع الثلاثة، 2) معرفة طولي ضلعين وقيس الزاوية المحصورة بينهما، 3) معرفة طول ضلع وقيسي الزاويتين المجاورتين له."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 172\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"480\" height=\"172\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><polygon points=\"30,130 130,130 85,55\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 70.7 46.4 A 93.0 93.0 0 0 1 97.5 66.1\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/><path d=\"M 72.3 64.3 A 87.5 87.5 0 0 1 99.2 48.2\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/><text x=\"80\" y=\"152\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#1d4ed8\">1) 3 Sides</text><polygon points=\"190,130 290,130 225,58\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"2\"/><path d=\"M 212.0 130.0 A 22 22 0 0 0 199.6 110.2\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><text x=\"240\" y=\"152\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#15803d\">2) Side-Angle-Side</text><polygon points=\"350,130 450,130 408,58\" fill=\"#fefce8\" stroke=\"#d97706\" stroke-width=\"2\"/><path d=\"M 370.0 130.0 A 20 20 0 0 0 362.5 114.4\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><path d=\"M 430.0 130.0 A 20 20 0 0 1 439.9 112.7\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><text x=\"400\" y=\"152\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#b45309\">3) Angle-Side-Angle</text></svg>",
+    "visualCaptionAr": "حالات إنشاء مثلث وحيد: 1) ثلاثة أضلاع (بالمسطرة والمدور)، 2) ضلعان وزاوية محصورة، 3) ضلع وزاويتان مجاورتان له.",
+    "examples": [
+      {
+        "problemAr": "هل يمكن إنشاء مثلث بالأطوال الآتية: أ) $5\\text{ cm}, 6\\text{ cm}, 12\\text{ cm}$؟ ب) $4\\text{ cm}, 5\\text{ cm}, 9\\text{ cm}$؟ ج) $6\\text{ cm}, 7\\text{ cm}, 10\\text{ cm}$؟",
+        "solutionAr": "أ) $5 + 6 = 11 < 12$: لا يمكن.\nب) $4 + 5 = 9$: لا يتشكل مثلث بل ثلاث نقط في استقامية.\nج) $6 + 7 = 13 > 10$: نعم، يمكن إنشاء المثلث لأن أطول ضلع أصغر تماما من مجموع الضلعين الآخرين."
+      },
+      {
+        "problemAr": "مثلث $EFG$ متساوي الساقين رأسه الأساسي $E$، وقيس زاوية رأسه $\\widehat{E} = 40^\\circ$. احسب قيس كل من زاويتي القاعدة $\\widehat{F}$ و$\\widehat{G}$.",
+        "solutionAr": "في المثلث المتساوي الساقين زاويتا القاعدة متقايستان ($\\widehat{F} = \\widehat{G}$)، إذن:\n$$\\widehat{F} = \\widehat{G} = \\frac{180^\\circ - 40^\\circ}{2} = \\frac{140^\\circ}{2} = 70^\\circ$$"
+      }
+    ],
+    "watchOutAr": "احذر في المتباينة المثلثية من حالة المساواة ($4 + 5 = 9$): عند التساوي لا يتشكل مثلث، بل تنتمي النقطة الثالثة إلى القطعة المستقيمة! كما أن معرفة أقياس الزوايا الثلاث فقط لا تكفي لإنشاء مثلث وحيد لأن الأطوال تبقى غير محددة."
+  },
+  "practice": [
+    {
+      "questionAr": "أي ثلاثية من الأطوال الآتية لا يمكنها تشكيل مثلث؟",
+      "options": [
+        "$6\\text{ cm}$، $8\\text{ cm}$، $10\\text{ cm}$",
+        "$5\\text{ cm}$، $7\\text{ cm}$، $12\\text{ cm}$",
+        "$4\\text{ cm}$، $4\\text{ cm}$، $7\\text{ cm}$",
+        "$3.5\\text{ cm}$، $4.5\\text{ cm}$، $6\\text{ cm}$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "تحقق: $6 + 8 = 14 > 10$، إذن يتشكل مثلث.",
+        "إجابة صحيحة! لأن $5 + 7 = 12$، وأطول ضلع ليس أصغر تماما من مجموع الضلعين الآخرين (بل النقط في استقامية).",
+        "تحقق: $4 + 4 = 8 > 7$، إذن يتشكل مثلث متساوي الساقين.",
+        "تحقق: $3.5 + 4.5 = 8 > 6$، إذن يتشكل مثلث."
+      ],
+      "explanationAr": "لإنشاء مثلث يجب أن يكون أطول ضلع أصغر تماما من مجموع الضلعين الآخرين؛ وهنا $5 + 7 = 12$ فلا يتشكل مثلث."
+    },
+    {
+      "questionAr": "في الشكل المقابل، المثلث $EFG$ متساوي الساقين رأسه الأساسي $E$ ($EF = EG$)، وقيس $\\widehat{F} = 52^\\circ$. ما هو قيس الزاوية $\\widehat{E}$؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 180\" dir=\"ltr\" style=\"direction:ltr;max-width:100%;height:auto;display:block;margin:0 auto;\"><rect width=\"360\" height=\"180\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/><polygon points=\"180,35 90,150 270,150\" fill=\"#f8fafc\" stroke=\"#0f172a\" stroke-width=\"2.2\"/><line x1=\"128\" y1=\"88\" x2=\"140\" y2=\"97\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"132\" y1=\"84\" x2=\"144\" y2=\"93\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"220\" y1=\"97\" x2=\"232\" y2=\"88\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"216\" y1=\"93\" x2=\"228\" y2=\"84\" stroke=\"#2563eb\" stroke-width=\"2\"/><path d=\"M 114.0 150.0 A 24 24 0 0 0 104.8 131.1\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><text x=\"122\" y=\"140\" font-family=\"sans-serif\" font-size=\"12.5\" font-weight=\"700\" fill=\"#16a34a\">52°</text><path d=\"M 166.4 52.3 A 22 22 0 0 0 193.6 52.3\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><text x=\"180\" y=\"75\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\">?</text><text x=\"180\" y=\"25\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\">E</text><text x=\"76\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\">F</text><text x=\"275\" y=\"160\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\">G</text></svg>",
+      "options": [
+        "$128^\\circ$",
+        "$52^\\circ$",
+        "$76^\\circ$",
+        "$38^\\circ$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "طرحت $52^\\circ$ مرة واحدة من $180^\\circ$ ونسيت الزاوية $\\widehat{G}$ التي تقايس $\\widehat{F}$.",
+        "المثلث متساوي الساقين رأسه $E$، إذن $\\widehat{G} = \\widehat{F} = 52^\\circ$ وليست $\\widehat{E}$.",
+        "أحسنت! بما أن $\\widehat{G} = \\widehat{F} = 52^\\circ$، فإن $\\widehat{E} = 180^\\circ - (52^\\circ + 52^\\circ) = 180^\\circ - 104^\\circ = 76^\\circ$.",
+        "قسمت $76^\\circ$ على $2$ دون مبرر؛ $76^\\circ$ هو قيس الزاوية $\\widehat{E}$ مباشرة."
+      ],
+      "explanationAr": "زاويتا القاعدة متقايستان: $\\widehat{G} = \\widehat{F} = 52^\\circ$، ومنه $\\widehat{E} = 180^\\circ - 2 \\times 52^\\circ = 76^\\circ$."
+    },
+    {
+      "questionAr": "أي معطيات من المعطيات الآتية تسمح بإنشاء مثلث $ABC$ وحيد؟",
+      "options": [
+        "$\\widehat{A} = 60^\\circ$، $\\widehat{B} = 70^\\circ$، $\\widehat{C} = 50^\\circ$",
+        "$AB = 4\\text{ cm}$، $BC = 3\\text{ cm}$، $AC = 9\\text{ cm}$",
+        "$AB = 6\\text{ cm}$، $\\widehat{A} = 50^\\circ$، $\\widehat{B} = 70^\\circ$",
+        "$AB = 5\\text{ cm}$، $\\widehat{A} = 100^\\circ$، $\\widehat{B} = 90^\\circ$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "معرفة الزوايا الثلاث فقط لا يحدد أطوال الأضلاع، فيمكن رسم مثلثات متشابهة بأحجام مختلفة.",
+        "هذا يخالف المتباينة المثلثية لأن $4 + 3 = 7 < 9$.",
+        "صحيح! هذه حالة ضلع وزاويتين مجاورتين له ومجموعهما $50^\\circ + 70^\\circ = 120^\\circ < 180^\\circ$.",
+        "مجموع الزاويتين $100^\\circ + 90^\\circ = 190^\\circ > 180^\\circ$، وهذا مستحيل في مثلث."
+      ],
+      "explanationAr": "الحالة الثالثة تحدد مثلثا وحيدا (طول ضلع وزاويتان مجاورتان له) وتحقق شرط مجموع الزوايا ($50^\\circ + 70^\\circ < 180^\\circ$)."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "id": "lesson_5ap_t2_decimal_add_sub_problems",
+  "slug": "5ap-t2-decimal-add-sub-problems",
+  "grade": "5ap",
+  "yearSubjectId": 606,
+  "trimesterId": "t2",
+  "sequenceId": "seq_5ap_2",
+  "sequenceTitleAr": "المقطع التعلمي الثاني: الكسور والأعداد العشرية، القسمة الإقليدية، التناسبية والتناظر",
+  "order": 2,
+  "titleAr": "جمع وطرح أعداد طبيعية وعشرية ووضعيات جمعية أو ضربية",
+  "objectives": [
+    "حساب مجموع وفرق عددين عشريين أو عدد طبيعي وعدد عشري ذهنيا وبوضع العملية العمودية.",
+    "تطبيق قواعد الوضع العمودي السليم: وضع الفاصلة تحت الفاصلة والمراتب المتماثلة تحت بعضها، وإضافة أصفار على يمين الجزء العشري عند الحاجة في الطرح.",
+    "التمييز بين الوضعيات الجمعية والطرحية والوضعيات الضربية وحلها."
+  ],
+  "keywordsAr": [
+    "جمع أعداد عشرية",
+    "طرح أعداد عشرية",
+    "محاذاة الفاصلة",
+    "وضعيات جمعية أو ضربية"
+  ],
+  "discover": {
+    "scenarioAr": "اشترى ياسين من مكتبة الحي كراسا بسعر $48.75\\text{ DA}$ وقلما بسعر $25\\text{ DA}$ ، ثم قدّم للبائع ورقة نقدية قيمتها $100\\text{ DA}$. نريد حساب المبلغ الذي دفعه ياسين والمبلغ المتبقي له.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 165\" width=\"440\" height=\"165\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"420\" height=\"145\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><rect x=\"24\" y=\"24\" width=\"184\" height=\"118\" rx=\"8\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/><text x=\"116\" y=\"43\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1d4ed8\">1. حساب مجموع الثمنين</text><line x1=\"119\" y1=\"50\" x2=\"119\" y2=\"128\" stroke=\"#ef4444\" stroke-dasharray=\"3 2\" stroke-width=\"1.2\"/><text x=\"156\" y=\"68\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">48 . 75</text><text x=\"62\" y=\"92\" font-size=\"16\" font-weight=\"bold\" fill=\"#1d4ed8\">+</text><text x=\"156\" y=\"92\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">25 . <tspan fill=\"#2563eb\">00</tspan></text><line x1=\"60\" y1=\"101\" x2=\"164\" y2=\"101\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><text x=\"156\" y=\"124\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#15803d\">73 . 75</text><rect x=\"232\" y=\"24\" width=\"184\" height=\"118\" rx=\"8\" fill=\"#ffffff\" stroke=\"#86efac\" stroke-width=\"1.5\"/><text x=\"324\" y=\"43\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#15803d\">2. حساب الباقي من 100 DA</text><line x1=\"327\" y1=\"50\" x2=\"327\" y2=\"128\" stroke=\"#ef4444\" stroke-dasharray=\"3 2\" stroke-width=\"1.2\"/><text x=\"364\" y=\"68\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">100 . <tspan fill=\"#2563eb\">00</tspan></text><text x=\"256\" y=\"92\" font-size=\"16\" font-weight=\"bold\" fill=\"#dc2626\">-</text><text x=\"364\" y=\"92\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">73 . 75</text><line x1=\"254\" y1=\"101\" x2=\"372\" y2=\"101\" stroke=\"#0f172a\" stroke-width=\"1.6\"/><text x=\"364\" y=\"124\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#b45309\">؟؟ . ؟؟</text></svg>",
+    "steps": [
+      {
+        "promptAr": "لجمع $48.75 + 25$ عموديا، نكتب العدد الطبيعي $25$ على الشكل $25.00$ حتى تصبح الفاصلة تحت الفاصلة والآحاد تحت الآحاد. ما هو مجموع ثمن الكراس والقلم؟",
+        "hintAr": "اجمع الجزأين الصحيحين $48 + 25$ واحتفظ بالجزء العشري $0.75$.",
+        "expectedInput": "73.75",
+        "revealAr": "نجد: $48.75 + 25.00 = 73.75\\text{ DA}$. لاحظ أن الرقم $5$ في $25$ يوضع تحت رقم الآحاد $8$ وليس تحت $5$ من الأجزاء من مئة."
+      },
+      {
+        "promptAr": "لحساب الباقي الذي يرجعه البائع من ورقة $100\\text{ DA}$ ، نضع $100.00 - 73.75$ بإضافة صفرين بعد الفاصلة في $100$. ما هو المبلغ المتبقي لياسين بالدينار؟",
+        "hintAr": "احسب ما يلزم إضافته إلى $73.75$ للوصول إلى $100$ (أكمل $0.75$ إلى $1$ فتصبح $74$ ثم أكمل إلى $100$ ).",
+        "expectedInput": "26.25",
+        "revealAr": "المبلغ المتبقي هو $100.00 - 73.75 = 26.25\\text{ DA}$."
+      },
+      {
+        "promptAr": "لو أراد ياسين شراء $4$ أقلام متماثلة بسعر $25\\text{ DA}$ للقلم الواحد، هل نختار وضعية جمعية أم وضعية ضربية؟",
+        "hintAr": "نفس السعر ( $25\\text{ DA}$ ) يتكرر $4$ مرات بالضبط.",
+        "revealAr": "إنها وضعية ضربية ( $25 \\times 4 = 100\\text{ DA}$ ) لأن نفس الكمية أو السعر يتكرر، بينما حساب ثمن أدوات مختلفة الأثمان ( $48.75 + 25$ ) هو وضعية جمعية."
+      }
+    ]
+  },
+  "summary": {
+    "rulesAr": [
+      "لجمع أو طرح عددين عشريين (أو عدد طبيعي وعدد عشري) عموديا، نضع الفاصلة تحت الفاصلة، ثم نرتب الآحاد تحت الآحاد، والأعشار تحت الأعشار، والأجزاء من مئة تحت الأجزاء من مئة.",
+      "كل عدد طبيعي يمكن كتابته بفاصلة وأصفار على اليمين، مثل $18 = 18.00$ ، لتسهيل المحاذاة وخاصة في الطرح.",
+      "نبدأ الحساب عموديا من أقصى اليمين (أصغر رتبة عشرية) مع تطبيق الاحتفاظ في الجمع والاستعارة (المبادلة) في الطرح، ثم ننزل الفاصلة في مكانها.",
+      "نلجأ إلى الجمع عند ضم مقادير مختلفة، وإلى الطرح لحساب الباقي أو الفرق، وإلى الضرب عندما يتكرر نفس المقدار عدة مرات."
+    ],
+    "visualSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 190\" width=\"460\" height=\"190\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"440\" height=\"170\" rx=\"10\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><text x=\"230\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">جدول المراتب في الطرح العمودي: 20 - 4.35 = 15.65</text><rect x=\"55\" y=\"44\" width=\"350\" height=\"28\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"125\" y1=\"44\" x2=\"125\" y2=\"148\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"195\" y1=\"44\" x2=\"195\" y2=\"148\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"245\" y1=\"44\" x2=\"245\" y2=\"148\" stroke=\"#ef4444\" stroke-width=\"1.8\"/><line x1=\"325\" y1=\"44\" x2=\"325\" y2=\"148\" stroke=\"#94a3b8\" stroke-width=\"1\"/><text x=\"90\" y=\"63\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">العشرات</text><text x=\"160\" y=\"63\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">الآحاد</text><text x=\"220\" y=\"63\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">الفاصلة</text><text x=\"285\" y=\"63\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">الأعشار</text><text x=\"365\" y=\"63\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">أجزاء من 100</text><rect x=\"55\" y=\"72\" width=\"350\" height=\"76\" fill=\"#ffffff\" stroke=\"#94a3b8\" stroke-width=\"1\"/><rect x=\"195\" y=\"72\" width=\"50\" height=\"76\" fill=\"#fef2f2\"/><text x=\"90\" y=\"94\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">2</text><text x=\"160\" y=\"94\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">0</text><text x=\"220\" y=\"94\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#dc2626\">.</text><text x=\"285\" y=\"94\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#2563eb\">0</text><text x=\"365\" y=\"94\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#2563eb\">0</text><text x=\"42\" y=\"118\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#dc2626\">-</text><text x=\"160\" y=\"118\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">4</text><text x=\"220\" y=\"118\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#dc2626\">.</text><text x=\"285\" y=\"118\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">3</text><text x=\"365\" y=\"118\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0f172a\">5</text><line x1=\"55\" y1=\"124\" x2=\"405\" y2=\"124\" stroke=\"#0f172a\" stroke-width=\"1.8\"/><text x=\"90\" y=\"143\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#15803d\">1</text><text x=\"160\" y=\"143\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#15803d\">5</text><text x=\"220\" y=\"143\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#dc2626\">.</text><text x=\"285\" y=\"143\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#15803d\">6</text><text x=\"365\" y=\"143\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#15803d\">5</text><text x=\"230\" y=\"169\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">الأصفار الزرقاء مضافة لتسهيل الطرح، والفاصلة دائما في نفس العمود</text></svg>",
+    "visualCaptionAr": "الوضع العمودي السليم لطرح عدد عشري من عدد طبيعي بإضافة أصفار مساعدة.",
+    "examples": [
+      {
+        "problemAr": "أحسب المجموع التالي عموديا: $125.4 + 38 + 6.75$.",
+        "solutionAr": "نكتب جميع الأعداد برقمين بعد الفاصلة لمحاذاتها بسهولة: $125.40 + 38.00 + 6.75$. نجمع الأجزاء من مئة ( $5$ ) ثم الأعشار ( $4 + 7 = 11$ ، نكتب $1$ ونحتفظ بـ $1$ )، ثم الجزء الصحيح ( $1 + 125 + 38 + 6 = 170$ ). النتيجة هي $170.15$."
+      },
+      {
+        "problemAr": "لدى خياط قطعة قماش طولها $18.4\\text{ m}$ ، استعمل منها $5.65\\text{ m}$ لخياطة فستان. كم مترا بقي لديه؟",
+        "solutionAr": "الوضعية تتطلب طرح المستعمل من الطول الكلي: نكتب $18.40 - 5.65$ بإضافة $0$ على يمين $18.4$. بعد الاستعارة والحساب العمودي نجد: $18.40 - 5.65 = 12.75\\text{ m}$."
+      }
+    ],
+    "watchOutAr": "لا تحاذِ الأعداد العشرية من أقصى اليمين مثل الأعداد الطبيعية! فالكتابة الخاطئة في $15 - 3.4$ تجعل البعض يكتب $12.4$ لأنه نسي وضع الفاصلة والأصفار؛ والصحيح هو كتابة $15.0 - 3.4 = 11.6$."
+  },
+  "practice": [
+    {
+      "questionAr": "ما هو ناتج الجمع العمودي: $24.6 + 7.35$ ؟",
+      "options": [
+        "$31.41$",
+        "$31.95$",
+        "$9.81$",
+        "$32.95$"
+      ],
+      "correctIndex": 1,
+      "diagnosticFeedback": [
+        "انتبه: لقد جمعت $6 + 35 = 41$ دون محاذاة الأعشار، والصحيح أن $6$ هي أعشار ( $0.60$ ) فتُجمع مع $3$ أعشار.",
+        "أحسنت! نكتب $24.60 + 7.35$ فيكون مجموع الأعشار والأجزاء من مئة $0.95$ ، ومجموع الصحيح $31$ ، أي $31.95$.",
+        "لقد أزحت الأرقام ولم تحاذِ الفاصلتين؛ يجب وضع الآحاد $7$ تحت الآحاد $4$.",
+        "راجع الجمع في الآحاد: $4 + 7 = 11$ دون أي احتفاظ من الأعشار لأن $0.60 + 0.35 = 0.95 < 1$."
+      ],
+      "explanationAr": "نضع الفاصلة تحت الفاصلة ونضيف صفرا: $24.60 + 7.35$. نجمع $0 + 5 = 5$ ، ثم $6 + 3 = 9$ ، ثم $24 + 7 = 31$ ، فتكون النتيجة $31.95$."
+    },
+    {
+      "questionAr": "احسب ناتج الطرح: $30 - 12.45$.",
+      "options": [
+        "$18.45$",
+        "$18.55$",
+        "$17.55$",
+        "$17.65$"
+      ],
+      "correctIndex": 2,
+      "diagnosticFeedback": [
+        "لا يمكن إنزال $.45$ كما هي لأننا نطرح $0.45$ من $0.00$ باستعارة وحدة كاملة، وليس من الصفر مباشرة.",
+        "تذكر أنه عند استعارة $1$ من $30$ لتكملة الجزء العشري يتبقى $29$ في الجزء الصحيح، و $29 - 12 = 17$ وليس $18$.",
+        "ممتاز! نكتب $30.00 - 12.45$ ، وبعد الاستعارة نجد $17.55$ (ويمكن التحقق: $17.55 + 12.45 = 30.00$ ).",
+        "راجع طرح الأعشار: بعد استعارة $10$ للأجزاء من مئة ( $10 - 5 = 5$ )، يبقى $9$ في الأعشار و $9 - 4 = 5$ وليس $6$."
+      ],
+      "explanationAr": "نكتب العدد الطبيعي $30$ على الشكل $30.00$ ثم نطرح $12.45$ عموديا مع الاستعارة من المراتب، أو نكمل $12.45$ إلى $13$ بـ $0.55$ ثم نضيف $17$ لنصل إلى $30$ ، فنجد $17.55$."
+    },
+    {
+      "questionAr": "اشترت أميرة $3$ علب عصير ثمن العلبة الواحدة $65\\text{ DA}$ ، وكعكة واحدة ثمنها $125.5\\text{ DA}$. ما المبلغ الإجمالي الذي تدفعه؟",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 110\" width=\"380\" height=\"110\" style=\"background:#ffffff;font-family:Arial,sans-serif\"><rect x=\"10\" y=\"10\" width=\"360\" height=\"90\" rx=\"10\" fill=\"#eff6ff\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><rect x=\"26\" y=\"24\" width=\"150\" height=\"62\" rx=\"8\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/><text x=\"101\" y=\"48\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e3a8a\">3 علب عصير</text><text x=\"101\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2563eb\">65 DA للعلبة</text><text x=\"190\" y=\"62\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#0f172a\">+</text><rect x=\"204\" y=\"24\" width=\"150\" height=\"62\" rx=\"8\" fill=\"#ffffff\" stroke=\"#fcd34d\" stroke-width=\"1.5\"/><text x=\"279\" y=\"48\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#92400e\">كعكة واحدة</text><text x=\"279\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b45309\">125.5 DA</text></svg>",
+      "options": [
+        "$190.5\\text{ DA}$",
+        "$193.5\\text{ DA}$",
+        "$310.5\\text{ DA}$",
+        "$320.5\\text{ DA}$"
+      ],
+      "correctIndex": 3,
+      "diagnosticFeedback": [
+        "لقد حسبت ثمن علبة عصير واحدة فقط ( $65 + 125.5$ ) ونسيت أنها اشترت $3$ علب.",
+        "ثمن $3$ علب هو $3 \\times 65 = 195\\text{ DA}$ وليس $65 + 3 = 68\\text{ DA}$.",
+        "تحقق من الضرب والجمع: $3 \\times 65 = 195$ ، ثم $195 + 125.5 = 320.5$ وليس $310.5$.",
+        "رائع! استعملت الضرب لثمن العلب المتماثلة ( $3 \\times 65 = 195\\text{ DA}$ ) ثم الجمع لإضافة ثمن الكعكة: $195 + 125.5 = 320.5\\text{ DA}$."
+      ],
+      "explanationAr": "أولا نحسب ثمن $3$ علب عصير بعملية ضرب: $65 \\times 3 = 195\\text{ DA}$. ثانيا نجمع مع ثمن الكعكة بمحاذاة الفاصلة: $195.0 + 125.5 = 320.5\\text{ DA}$."
+    }
+  ]
+}

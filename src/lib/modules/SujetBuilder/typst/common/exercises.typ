@@ -214,6 +214,12 @@
   let ordinals = ("الأول", "الثاني", "الثالث", "الرابع", "الخامس", "السادس", "السابع", "الثامن")
   
   for (idx, ex) in exercises.enumerate() {
+    let custom-title = ex.at("customTitle", default: none)
+    let heading-text = if custom-title != none and custom-title != "" {
+      custom-title + " : (" + str(ex.at("points", default: "0")) + " نقاط)"
+    } else {
+      "التمرين " + ex.at("num", default: ordinals.at(idx, default: str(idx + 1))) + " : (" + str(ex.at("points", default: "0")) + " نقاط)"
+    }
     v(10pt)
     block(breakable: true, width: 100%)[
       #grid(
@@ -221,7 +227,7 @@
         gutter: 10pt,
         align: horizon,
         text(size: 22pt, fill: if is-solution { green } else { blue })[▪],
-        text(weight: "bold", size: 17pt)[#eval("التمرين " + ex.at("num", default: ordinals.at(idx, default: str(idx + 1))) + " : (" + str(ex.at("points", default: "0")) + " نقاط)", mode: "markup")],
+        text(weight: "bold", size: 17pt)[#eval(heading-text, mode: "markup")],
       )
       #v(5pt)
       
