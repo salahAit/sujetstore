@@ -110,7 +110,7 @@
 	});
 
 	$effect(() => {
-		if (data) {
+		if (data?.mode === 'subject' && Array.isArray(data.trimesters)) {
 			const hasCurrentTabDocs = getDocsByTrimester(activeTrimesterTab).length > 0;
 
 			if (!hasCurrentTabDocs) {
