@@ -24,7 +24,7 @@
 		academicYear: '2024/2025',
 		duration: '1 سا',
 		siteUrl: 'sujetstore.com',
-		font: 'KFGQPC Uthman Taha Naskh'
+		font: 'Scheherazade New'
 	});
 
 	let isMetadataComplete = $derived(!!metadata.levelId && !!metadata.yearId && !!metadata.subjectId);
@@ -331,7 +331,7 @@
 					metadata = { 
 						...metadata,  // keep defaults
 						...doc.metadata, 
-						font: doc.metadata.font || 'KFGQPC Uthman Taha Naskh',
+						font: 'Scheherazade New',
 						siteUrl: doc.metadata.siteUrl || 'sujetstore.com'
 					};
 				}
@@ -375,7 +375,7 @@
 				const res = await fetch(`/api/sujet-builder/load?id=${loadId}`);
 				const result = await res.json();
 				if (result.success && result.document) {
-					metadata = { ...result.document.metadata, font: result.document.metadata.font || 'KFGQPC Uthman Taha Naskh' };
+					metadata = { ...result.document.metadata, font: result.document.metadata.font || 'Scheherazade New' };
 					exercises = (result.document.exercises || []).map((ex: any) => ({
 						...ex,
 						id: ex.id || Math.random().toString(36).substring(2, 9)

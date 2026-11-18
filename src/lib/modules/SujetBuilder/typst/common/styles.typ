@@ -11,11 +11,12 @@
     numbering: "1 / 1",
   )
   set text(
-    font: "Amiri",
+    font: ("Scheherazade New", "Scheherazade"),
     size: 12pt,
     lang: "ar",
     dir: rtl,
   )
+  show math.equation: set text(font: ("STIX Two Math", "Scheherazade New"), dir: ltr)
   set par(
     justify: true,
     leading: 0.8em,

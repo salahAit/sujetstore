@@ -283,8 +283,7 @@
 					onchange={() => onchange?.()}
 				>
 					<optgroup label="خطوط عربية (Arabic Fonts)">
-						<option value="KFGQPC Uthman Taha Naskh">خط مجمع الملك فهد (الافتراضي)</option>
-						<option value="Noto Naskh Arabic">Noto Naskh — نوتو نسخ (قياسي)</option>
+						<option value="Scheherazade New">Scheherazade New — خط شهرزاد (الافتراضي)</option>
 					</optgroup>
 					<optgroup label="خطوط لاتينية (Latin - Fr/En)">
 						<option value="Montserrat">Montserrat — مونتسيرات (أنيق)</option>

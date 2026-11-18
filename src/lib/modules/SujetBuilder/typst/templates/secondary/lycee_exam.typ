@@ -17,10 +17,11 @@
   let custom-doc-title = metadata.at("customDocTitle", default: "")
 
   let explicit-font = metadata.at("font", default: "")
-  let main-font = if explicit-font != "" {
-    (explicit-font, "Amiri", "Noto Naskh Arabic")
+  let banned-arabic-fonts = ("", "Noto Naskh Arabic", "Amiri", "Traditional Arabic", "Arabic Transparent", "KFGQPC Uthman Taha Naskh")
+  let main-font = if explicit-font not in banned-arabic-fonts {
+    (explicit-font, "Scheherazade New", "Scheherazade")
   } else {
-    ("Amiri", "Noto Naskh Arabic", "Scheherazade")
+    ("Scheherazade New", "Scheherazade")
   }
 
   let body-size = 11.5pt
@@ -50,7 +51,7 @@
 
   set text(font: main-font, lang: "ar", region: "dz", dir: rtl, size: body-size, weight: "regular")
   set par(leading: 0.72em, justify: true)
-  show math.equation: set text(font: "New Computer Modern Math", dir: ltr)
+  show math.equation: set text(font: ("STIX Two Math", "Scheherazade New"), dir: ltr)
 
   // ═══════════ رأس الورقة الثانوية ═══════════
   grid(
@@ -58,17 +59,17 @@
     align: horizon,
     column-gutter: 8pt,
     align(right)[
-      #text(size: 10pt, weight: "bold")[وزارة التربية الوطنية] \
-      #text(size: 10pt)[#school-name] \
-      #text(size: 10.5pt, weight: "bold")[#year-name #(if stream-name != "" { "— " + stream-name } else { "" })]
+      #text(font: main-font, size: 10pt, weight: "bold")[وزارة التربية الوطنية] \
+      #text(font: main-font, size: 10pt)[#school-name] \
+      #text(font: main-font, size: 10.5pt, weight: "bold")[#year-name #(if stream-name != "" { "— " + stream-name } else { "" })]
     ],
     align(center)[
       #link("https://sujetstore.com/")[#image("../../common/logo.png", width: 1.5cm, fit: "contain")]
     ],
     align(left)[
-      #text(size: 10pt, weight: "bold")[السنة الدراسية: #academic-year] \
-      #text(size: 10pt, weight: "bold")[المدة: #duration] \
-      #text(size: 10pt, weight: "bold")[المعامل: #coefficient]
+      #text(font: main-font, size: 10pt, weight: "bold")[السنة الدراسية: #academic-year] \
+      #text(font: main-font, size: 10pt, weight: "bold")[المدة: #duration] \
+      #text(font: main-font, size: 10pt, weight: "bold")[المعامل: #coefficient]
     ]
   )
   v(4pt)

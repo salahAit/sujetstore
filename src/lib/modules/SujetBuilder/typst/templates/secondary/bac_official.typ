@@ -17,10 +17,11 @@
   let source-kind = metadata.at("docType", default: "exam")
 
   let explicit-font = metadata.at("font", default: "")
-  let main-font = if explicit-font != "" {
-    (explicit-font, "Amiri", "Noto Naskh Arabic")
+  let banned-arabic-fonts = ("", "Noto Naskh Arabic", "Amiri", "Traditional Arabic", "Arabic Transparent", "KFGQPC Uthman Taha Naskh")
+  let main-font = if explicit-font not in banned-arabic-fonts {
+    (explicit-font, "Scheherazade New", "Scheherazade")
   } else {
-    ("Amiri", "Noto Naskh Arabic", "Scheherazade")
+    ("Scheherazade New", "Scheherazade")
   }
 
   let body-size = 11.5pt
@@ -56,12 +57,12 @@
 
   set text(font: main-font, lang: "ar", region: "dz", dir: rtl, size: body-size, weight: "regular")
   set par(leading: 0.72em, justify: true)
-  show math.equation: set text(font: "New Computer Modern Math", dir: ltr)
+  show math.equation: set text(font: ("STIX Two Math", "Scheherazade New"), dir: ltr)
 
   // ═══════════ الترويسة الرسمية الجزائرية ═══════════
   align(center)[
-    #text(size: 11.5pt, weight: "bold")[الجمهورية الجزائرية الديمقراطية الشعبية] \
-    #text(size: 10.5pt, weight: "bold")[وزارة التربية الوطنية — الديوان الوطني للامتحانات والمسابقات]
+    #text(font: main-font, size: 11.5pt, weight: "bold")[الجمهورية الجزائرية الديمقراطية الشعبية] \
+    #text(font: main-font, size: 10.5pt, weight: "bold")[وزارة التربية الوطنية — الديوان الوطني للامتحانات والمسابقات]
   ]
   v(3pt)
 
@@ -76,17 +77,17 @@
       columns: (1fr, auto, 1fr),
       align: horizon,
       align(right)[
-        #text(weight: "bold", size: 11.5pt)[#exam-banner] \
-        #text(size: 10.5pt)[الشعبة: #text(weight: "bold")[#stream-name]]
+        #text(font: main-font, weight: "bold", size: 11.5pt)[#exam-banner] \
+        #text(font: main-font, size: 10.5pt)[الشعبة: #text(font: main-font, weight: "bold")[#stream-name]]
       ],
       align(center)[
         #box(stroke: 0.8pt + luma(90), inset: (x: 10pt, y: 4pt), radius: 2pt, fill: white)[
-          #text(weight: "bold", size: 11pt)[#session-ar]
+          #text(font: main-font, weight: "bold", size: 11pt)[#session-ar]
         ]
       ],
       align(left)[
-        #text(size: 10.5pt)[المدة: #text(weight: "bold")[#duration]] \
-        #text(size: 10.5pt)[المعامل: #text(weight: "bold")[#coefficient]]
+        #text(font: main-font, size: 10.5pt)[المدة: #text(font: main-font, weight: "bold")[#duration]] \
+        #text(font: main-font, size: 10.5pt)[المعامل: #text(font: main-font, weight: "bold")[#coefficient]]
       ]
     )
   ]

@@ -17,14 +17,11 @@
   }
 
   let explicit-font = metadata.at("font", default: "")
-  let main-font = if explicit-font != "" {
-    (explicit-font, "Scheherazade", "Noto Naskh Arabic")
-  } else if year-id == "1ap" or year-id == "2ap" {
-    ("Arabic Transparent", "Scheherazade", "Scheherazade New", "Noto Naskh Arabic")
-  } else if year-id == "3ap" or year-id == "4ap" or year-id == "5ap" {
-    ("Arabic Transparent", "Noto Naskh Arabic", "Scheherazade", "Scheherazade New")
+  let banned-arabic-fonts = ("", "Noto Naskh Arabic", "Amiri", "Traditional Arabic", "Arabic Transparent", "KFGQPC Uthman Taha Naskh")
+  let main-font = if explicit-font not in banned-arabic-fonts {
+    (explicit-font, "Scheherazade New", "Scheherazade")
   } else {
-    ("Traditional Arabic", "Amiri", "KFGQPC Uthman Taha Naskh", "Noto Naskh Arabic")
+    ("Scheherazade New", "Scheherazade")
   }
 
   let body-size = if year-id == "1ap" {
@@ -112,16 +109,16 @@
 
   set text(font: main-font, lang: "ar", region: "dz", dir: rtl, size: body-size, weight: "regular")
   set par(leading: body-leading)
-  show math.equation: set text(font: "New Computer Modern Math", dir: ltr)
+  show math.equation: set text(font: ("STIX Two Math", "Scheherazade New"), dir: ltr)
 
   // ═══════════ العناصر العائمة (أعلى الصفحة) ═══════════
   place(top + left, dx: 0pt, dy: -5pt)[#stack(dir: ttb, spacing: 1pt,
-    text(size: 9pt, fill: blue)[#link("https://sujetstore.com/")[https://sujetstore.com]],
-    text(size: 7pt, fill: luma(80))[تطوير جزائري حصري و عصري]
+    text(font: main-font, size: 9pt, fill: blue)[#link("https://sujetstore.com/")[https://sujetstore.com]],
+    text(font: main-font, size: 7pt, fill: luma(80))[تطوير جزائري حصري و عصري]
   )]
   place(top + right, dx: 0pt, dy: -5pt)[#stack(dir: ttb, spacing: 1pt,
     box(width: 35pt, height: 35pt, stroke: 0.5pt + gray, radius: 2pt, inset: 2pt)[#image("qrcode.png")],
-    align(center)[#text(size: 7pt)[امسح للمزيد]]
+    align(center)[#text(font: main-font, size: 7pt)[امسح للمزيد]]
   )]
 
   // ═══════════ العنوان المركزي ═══════════
