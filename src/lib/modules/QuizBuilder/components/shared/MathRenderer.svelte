@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Marked } from 'marked';
 	import markedKatex from 'marked-katex-extension';
+	import 'katex/contrib/mhchem';
 	import 'katex/dist/katex.min.css';
 
 	const mathMarked = new Marked(

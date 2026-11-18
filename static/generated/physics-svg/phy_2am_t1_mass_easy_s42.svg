@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 188" width="360" height="188" style="background:#ffffff;font-family:'Arabic Transparent',Arial,sans-serif">
+		<text x="180" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#0f172a">تفاعل في دورق مغلق بالبالون</text>
+		<rect x="35" y="132" width="110" height="26" rx="4" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+		<text x="90" y="149" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0f172a">198 g</text>
+		<polygon points="65,132 115,132 100,82 80,82" fill="#dbeafe" stroke="#1e293b" stroke-width="1.6"/>
+		<path d="M80 82 Q65 65 78 52 Q90 44 102 52 Q115 65 100 82 Z" fill="#fde68a" stroke="#b45309" stroke-width="1.4"/>
+		<text x="90" y="173" text-anchor="middle" font-size="11" fill="#1e40af">قبل المزج</text>
+		<path d="M160 105 L196 105" stroke="#16a34a" stroke-width="2.2"/>
+		<polygon points="194,100 202,105 194,110" fill="#16a34a"/>
+		<rect x="215" y="132" width="110" height="26" rx="4" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+		<text x="270" y="149" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#15803d">198 g</text>
+		<polygon points="245,132 295,132 280,82 260,82" fill="#bae6fd" stroke="#1e293b" stroke-width="1.6"/>
+		<ellipse cx="270" cy="58" rx="22" ry="22" fill="#fef08a" stroke="#b45309" stroke-width="1.5"/>
+				   <text x="270" y="62" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#92400e">غاز CO₂</text>
+		<text x="270" y="173" text-anchor="middle" font-size="11" fill="#166534">بعد التفاعل</text>
+	</svg>

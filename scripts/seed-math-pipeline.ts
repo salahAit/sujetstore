@@ -769,7 +769,7 @@ function main() {
 			if (officialSlugs.length > 0) {
 				const placeholders = officialSlugs.map(() => '?').join(', ');
 				db.query(
-					`DELETE FROM documents WHERE origin_type = 'official_certificate' AND slug NOT IN (${placeholders})`
+					`DELETE FROM documents WHERE origin_type = 'official_certificate' AND slug LIKE 'bac-%-math' AND slug NOT IN (${placeholders})`
 				).run(...officialSlugs);
 			}
 			for (const item of officialBacManifest.items) {

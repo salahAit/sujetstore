@@ -24,13 +24,22 @@ const TYPST_MATH_WORDS = new Set([
 	'binom', 'cases', 'mat', 'cancel', 'lr', 'overbrace', 'underbrace', 'dif', 'equiv', 'Re', 'Im',
 	'PGCD', 'PPCM', 'pgcd', 'ppcm', 'Card', 'card', 'conj', 'arrow', 'plus', 'minus', 'double',
 	'mapsto', 'to', 'implies', 'iff', 'forall', 'exists', 'over',
-	'not', 'eq', 'sect', 'union', 'inter', 'parallel', 'perp', 'degree', 'vect'
+	'not', 'eq', 'sect', 'union', 'inter', 'parallel', 'perp', 'degree', 'vect',
+	'harpoons', 'rtlb', 'ltbr', 'overline', 'underline', 'attach', 'limits', 'accent',
+	'underbracket', 'overbracket', 'hbar', 'ell', 'prop', 'star', 'dots', 'quad', 'wide'
 ]);
 
-/** Sanitize math tokens inside Typst `$ ... $` expressions. */
+/** Sanitize math tokens inside Typst `$ ... $` expressions while preserving quoted chemical/unit literals. */
 export function sanitizeMathInner(inner: string): string {
 	if (!inner) return inner;
 	let normalized = inner
+		.replace(/\\(?:text|mathrm|textbf|operatorname)\{([^}]+)\}/g, '"$1"')
+		.replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, 'frac($1, $2)')
+		.replace(/\\sqrt\{([^}]+)\}/g, 'sqrt($1)')
+		.replace(/\\times\b/g, 'times')
+		.replace(/\\cdot\b/g, 'dot')
+		.replace(/\\div\b/g, 'div')
+		.replace(/\\approx\b/g, 'approx')
 		.replace(/\\mathbb\{([RNZCQ])\}/g, 'bb($1)')
 		.replace(/\\mathcal\{([A-Z])\}/g, 'cal($1)')
 		.replace(/\\infty\b/g, 'infinity')
@@ -43,19 +52,29 @@ export function sanitizeMathInner(inner: string): string {
 		.replace(/\\mapsto\b/g, 'arrow.r.bar')
 		.replace(/\\implies\b/g, 'arrow.r.double')
 		.replace(/\\iff\b/g, 'arrow.l.r.double')
+		.replace(/\\rightleftharpoons\b/g, 'harpoons.rtlb')
 		.replace(/\\to\b/g, 'arrow.r')
 		.replace(/\\int\b/g, 'integral')
 		.replace(/\\det\b/g, 'det')
 		.replace(/\\vec\{([^}]+)\}/g, 'arrow($1)')
-		.replace(/\\(alpha|beta|gamma|delta|theta|lambda|mu|pi|sigma|omega|Delta|Omega)\b/g, '$1');
+		.replace(/\\overline\{([^}]+)\}/g, 'overline($1)')
+		.replace(/\\(alpha|beta|gamma|delta|epsilon|zeta|eta|theta|iota|kappa|lambda|mu|nu|xi|pi|rho|sigma|tau|phi|chi|psi|omega|Delta|Gamma|Lambda|Phi|Psi|Omega)\b/g, '$1');
 
-	let fixed = normalized.replace(/[a-zA-Z]{2,}/g, (word: string) => {
-		if (TYPST_MATH_WORDS.has(word)) return word;
+	// Temporarily mask already-quoted literals ("Fe", "aq", "mol", etc.) so they are never split
+	const quotedLiterals: string[] = [];
+	let masked = normalized.replace(/"[^"]*"/g, (m) => {
+		const idx = quotedLiterals.push(m) - 1;
+		return `__Q${idx}__`;
+	});
+
+	masked = masked.replace(/[a-zA-Z]{2,}/g, (word: string) => {
+		if (/^__Q\d+__$/.test(word) || TYPST_MATH_WORDS.has(word)) return word;
 		return word.split('').join(' ');
 	});
-	fixed = fixed.replace(/[\u0600-\u06FF]{2,}/g, (word: string) => `"${word}"`);
-	fixed = fixed.replace(/(\d)([a-zA-Z\u0600-\u06FF])/g, '$1 $2');
-	return fixed;
+	masked = masked.replace(/[\u0600-\u06FF]{2,}/g, (word: string) => `"${word}"`);
+	masked = masked.replace(/(\d)([a-zA-Z\u0600-\u06FF])/g, '$1 $2');
+
+	return masked.replace(/__Q(\d+)__/g, (_m, idx) => quotedLiterals[Number(idx)] ?? '');
 }
 
 /** Sanitize inline `$...$` delimiters inside Arabic text blocks for Typst. */
@@ -89,8 +108,9 @@ function sanitizeBlock(block: any) {
 		if (typeof block.content === 'string') block.content = sanitizeForTypst(block.content);
 		if (typeof block.answer === 'string') block.answer = sanitizeForTypst(block.answer);
 	}
-	if (block.type === 'image' && block.src) {
-		block.src = sanitizeImagePath(block.src);
+	if (block.type === 'image') {
+		if (block.src) block.src = sanitizeImagePath(block.src);
+		if (typeof block.caption === 'string') block.caption = sanitizeForTypst(block.caption);
 	}
 	if (block.type === 'image_grid' && Array.isArray(block.items)) {
 		for (const it of block.items) {

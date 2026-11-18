@@ -68,11 +68,13 @@ scripts/test_*.ts
 # Generated Subject Data
 static/generated/*
 !static/generated/math-svg/
+!static/generated/physics-svg/
 static/wasm/
 
-# Math Pipeline large reference PDFs (manifest.json stays tracked)
+# Pipeline large reference PDFs (manifest JSONs stay tracked)
 pipeline/references/**/*.pdf
 pipeline/references/**/legacy_gen1/*.pdf
+pipeline/references_physics/**/*.pdf
 
 # Python caches
 __pycache__/

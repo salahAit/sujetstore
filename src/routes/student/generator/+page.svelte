@@ -34,7 +34,14 @@
 		'2as:MAT-MATH:MATH': 7,
 		'3as:MAT-SE:SE': 5,
 		'3as:MAT-TM:TM': 6,
-		'3as:MAT-MATH:MATH': 7
+		'3as:MAT-MATH:MATH': 7,
+		'1as:PHY-SE:TCST': 4,
+		'2as:PHY-SE:SE': 5,
+		'2as:PHY-MTM:TM': 5,
+		'2as:PHY-MTM:MATH': 6,
+		'3as:PHY-SE:SE': 5,
+		'3as:PHY-MTM:TM': 5,
+		'3as:PHY-MTM:MATH': 6
 	};
 
 	function formatYsLabel(ys: any): string {

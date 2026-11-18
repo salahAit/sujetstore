@@ -5,9 +5,12 @@ import { checkRateLimit } from '#lib/server/rate-limit';
 import { compileTypstPdf } from '#lib/server/typst';
 import {
 	assembleExam,
+	assemblePhysicsExam,
 	compileAssembledExamPdf,
 	yearSubjectToGrade,
-	type AssembleExamOptions
+	yearSubjectToPhysicsTrack,
+	type AssembleExamOptions,
+	type AssemblePhysicsExamOptions
 } from '#lib/server/exam-assembler';
 import { gradeQuizSubmission } from '#lib/server/quiz-grading';
 import { awardQuizGamification } from '#lib/server/gamification';
@@ -244,8 +247,10 @@ export const POST: RequestHandler = async (event) => {
 	}
 
 	if (mode === 'pdf') {
-		const pipelineGrade = yearSubjectToGrade(ys.year_id, ys.subject_id, ys.stream_id);
-		if (pipelineGrade !== null) {
+		const mathGrade = yearSubjectToGrade(ys.year_id, ys.subject_id, ys.stream_id);
+		const physicsTrack =
+			mathGrade === null ? yearSubjectToPhysicsTrack(ys.year_id, ys.subject_id, ys.stream_id) : null;
+		if (mathGrade !== null || physicsTrack !== null) {
 			const trimesterId = (['t1', 't2', 't3'].includes(body.trimesterId)
 				? body.trimesterId
 				: 't1') as 't1' | 't2' | 't3';
@@ -271,14 +276,28 @@ export const POST: RequestHandler = async (event) => {
 					? rawSeed
 					: Math.floor(Math.random() * 90000) + 10000;
 
-			const paper = assembleExam({
-				grade: pipelineGrade,
-				trimesterId,
-				seed,
-				docType,
-				variant,
-				difficulty
-			});
+			const paper =
+				mathGrade !== null
+					? assembleExam({
+							grade: mathGrade,
+							trimesterId,
+							seed,
+							docType,
+							variant,
+							difficulty
+						})
+					: assemblePhysicsExam({
+							grade: physicsTrack!,
+							trimesterId,
+							seed,
+							docType,
+							variant: (['trimester_exam', 'supervised_test', 'bem_mock', 'bac_mock'].includes(
+								variant || ''
+							)
+								? variant
+								: undefined) as AssemblePhysicsExamOptions['variant'],
+							difficulty
+						});
 
 			const fileId = `gen-${randomUUID().slice(0, 12)}`;
 			const subjectOutPath = resolve('data/uploads/sujet', `${fileId}.pdf`);

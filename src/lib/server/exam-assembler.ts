@@ -17,6 +17,16 @@ import {
 	type AssembledSecondaryPaper,
 	type SecondaryVariant
 } from './assemblers/exam-secondary';
+import {
+	assemblePhysicsMiddleExam,
+	type AssembledPhysicsMiddlePaper,
+	type PhysicsMiddleVariant
+} from './assemblers/exam-physics-middle';
+import {
+	assemblePhysicsSecondaryExam,
+	type AssembledPhysicsSecondaryPaper,
+	type PhysicsSecondaryVariant
+} from './assemblers/exam-physics-secondary';
 import { compileTypstPdf } from './typst';
 import {
 	SECONDARY_TRACK_IDS,
@@ -24,6 +34,7 @@ import {
 	type GradeId,
 	type SecondaryTrackId
 } from '../modules/MathTemplates/types';
+import type { PhysicsTrackId } from '../modules/PhysicsTemplates/types';
 import type { TrimesterId } from '../modules/SujetBuilder/types';
 
 export type UnifiedAssembledExam =
@@ -31,6 +42,10 @@ export type UnifiedAssembledExam =
 	| AssembledPrimaryUpperPaper
 	| AssembledMiddlePaper
 	| AssembledSecondaryPaper;
+
+export type UnifiedAssembledPhysicsExam =
+	| AssembledPhysicsMiddlePaper
+	| AssembledPhysicsSecondaryPaper;
 
 export interface AssembleExamOptions {
 	grade: GradeId;
@@ -184,7 +199,7 @@ export function assembleExam(opts: AssembleExamOptions): UnifiedAssembledExam {
 }
 
 export async function compileAssembledExamPdf(
-	paper: UnifiedAssembledExam,
+	paper: UnifiedAssembledExam | UnifiedAssembledPhysicsExam,
 	paths: { subjectOutPath: string; solutionOutPath: string }
 ) {
 	const [subjectResult, solutionResult] = await Promise.all([
@@ -202,4 +217,103 @@ export async function compileAssembledExamPdf(
 		})
 	]);
 	return { subjectResult, solutionResult };
+}
+
+const PHYSICS_MIDDLE_SET: ReadonlySet<string> = new Set(['1am', '2am', '3am', '4am']);
+
+export function yearSubjectToPhysicsTrack(
+	yearId: string,
+	subjectId: string,
+	streamId?: string | null
+): PhysicsTrackId | null {
+	if (subjectId === 'PHY-B' && PHYSICS_MIDDLE_SET.has(yearId)) {
+		return yearId as PhysicsTrackId;
+	}
+	if (yearId === '1as' && subjectId === 'PHY-SE') {
+		if (!streamId || streamId === 'TCST' || streamId === 'tcst' || streamId === 'GEN') {
+			return '1as_tcst';
+		}
+	}
+	if (yearId === '2as') {
+		if (subjectId === 'PHY-SE') return '2as_se';
+		if (subjectId === 'PHY-MTM') {
+			if (streamId === 'TM') return '2as_tm';
+			if (streamId === 'MATH') return '2as_math';
+		}
+	}
+	if (yearId === '3as') {
+		if (subjectId === 'PHY-SE') return '3as_se';
+		if (subjectId === 'PHY-MTM') {
+			if (streamId === 'TM') return '3as_tm';
+			if (streamId === 'MATH') return '3as_math';
+		}
+	}
+	return null;
+}
+
+export interface AssemblePhysicsExamOptions {
+	grade: PhysicsTrackId;
+	trimesterId: TrimesterId;
+	seed: number;
+	docType?: 'exam' | 'test';
+	variant?: 'trimester_exam' | 'supervised_test' | 'bem_mock' | 'bac_mock';
+	difficulty?: Difficulty;
+	academicYear?: string;
+	schoolName?: string;
+}
+
+export function assemblePhysicsExam(
+	opts: AssemblePhysicsExamOptions
+): UnifiedAssembledPhysicsExam {
+	switch (opts.grade) {
+		case '1am':
+		case '2am':
+		case '3am':
+		case '4am': {
+			let variant: PhysicsMiddleVariant;
+			if (opts.grade === '4am' && opts.variant === 'bem_mock') {
+				variant = 'bem_mock';
+			} else if (opts.docType === 'test' || opts.variant === 'supervised_test') {
+				variant = 'supervised_test';
+			} else {
+				variant = 'trimester_exam';
+			}
+			return assemblePhysicsMiddleExam({
+				grade: opts.grade,
+				trimesterId: opts.trimesterId,
+				seed: opts.seed,
+				docType: opts.docType,
+				variant,
+				difficulty: opts.difficulty,
+				academicYear: opts.academicYear,
+				schoolName: opts.schoolName
+			});
+		}
+		case '1as_tcst':
+		case '2as_se':
+		case '2as_tm':
+		case '2as_math':
+		case '3as_se':
+		case '3as_tm':
+		case '3as_math': {
+			let variant: PhysicsSecondaryVariant;
+			if (opts.variant === 'bac_mock' && opts.grade.startsWith('3as_')) {
+				variant = 'bac_mock';
+			} else if (opts.docType === 'test' || opts.variant === 'supervised_test') {
+				variant = 'supervised_test';
+			} else {
+				variant = 'trimester_exam';
+			}
+			return assemblePhysicsSecondaryExam({
+				grade: opts.grade,
+				trimesterId: opts.trimesterId,
+				seed: opts.seed,
+				docType: opts.docType,
+				variant,
+				difficulty: opts.difficulty,
+				academicYear: opts.academicYear,
+				schoolName: opts.schoolName
+			});
+		}
+	}
 }

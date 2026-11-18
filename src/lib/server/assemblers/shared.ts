@@ -198,6 +198,40 @@ export function selectDomainBalancedTemplates(
 	return picked.sort((a, b) => rank(a.domain) - rank(b.domain));
 }
 
+export function buildPhysicsPart2RubricTable(): TableBlock {
+	return {
+		type: 'table',
+		headers: ['المعيار', 'مؤشرات التقييم', 'العلامة'],
+		cells: [],
+		rows: [
+			[
+				'م1: الوجاهة (التفسير السليم للوضعية)',
+				'فهم السند واختيار القوانين والنماذج الفيزيائية والكيميائية المناسبة',
+				'3'
+			],
+			[
+				'م2: الاستعمال السليم لأدوات المادة',
+				'التطبيق الصحيح للقوانين والتمثيل الشعاعي وموازنة المعادلات وقواعد الأمن الكهربائي',
+				'3'
+			],
+			[
+				'م3: الانسجام وتسلسل الإجابة',
+				'تناسق خطوات الحل واحترام الوحدات الدولية ومنطقية النتائج',
+				'1'
+			],
+			[
+				'م4: الإتقان وتنظيم الورقة',
+				'نظافة الورقة، تنظيم العرض، وضوح الرسومات والمخططات والتصريح بالنتائج',
+				'1'
+			]
+		],
+		align: 'center',
+		borders: 'grid',
+		headerBackground: true,
+		width: 'full'
+	};
+}
+
 export function buildPart2RubricTable(): TableBlock {
 	return {
 		type: 'table',
