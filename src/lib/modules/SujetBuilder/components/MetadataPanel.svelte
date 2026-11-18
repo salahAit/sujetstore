@@ -283,7 +283,7 @@
 					onchange={() => onchange?.()}
 				>
 					<optgroup label="خطوط عربية (Arabic Fonts)">
-						<option value="Scheherazade New">Scheherazade New — خط شهرزاد (الافتراضي)</option>
+						<option value="Arabic Transparent">Arabic Transparent — خط Arabic Transparent (الافتراضي)</option>
 					</optgroup>
 					<optgroup label="خطوط لاتينية (Latin - Fr/En)">
 						<option value="Montserrat">Montserrat — مونتسيرات (أنيق)</option>

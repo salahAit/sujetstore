@@ -10,7 +10,7 @@
   result
 }
 
-#let render-block(b, is-solution, body-size: 13pt, table-inset: 8pt) = {
+#let render-block(b, is-solution, body-size: 15pt, table-inset: 8pt) = {
   let m = b.at("mark", default: b.at("points", default: ""))
   
   let scope = (cm: 1cm, mm: 1mm, pt: 1pt, em: 1em)
@@ -26,9 +26,9 @@
   ] else if b.type == "true_false" [
     #for item in b.items [
       #grid(columns: (1fr, auto), [
-        - #eval(item.q, mode: "markup", scope: scope) #h(5pt) [#box(width: 35pt, align(center)[#(if is-solution { text(fill: blue)[#eval(item.a, mode: "markup", scope: scope)] } else { "........" })])] \
-        #v(-2pt) #text(size: 10pt)[التصحيح: #(if is-solution and item.at("c", default: "") != "" { text(fill: blue)[#eval(item.c, mode: "markup", scope: scope)] } else { "........................................................................................................" })]
-      ], if is-solution { align(bottom)[#text(size: 14pt, fill: red)[#item.mark ن]] } else { [] })
+        - #eval(item.q, mode: "markup", scope: scope) #h(5pt) [#box(width: 40pt, align(center)[#(if is-solution { text(fill: blue)[#eval(item.a, mode: "markup", scope: scope)] } else { "........" })])] \
+        #v(-2pt) #text(size: calc.max(body-size - 2.5pt, 11.5pt))[التصحيح: #(if is-solution and item.at("c", default: "") != "" { text(fill: blue)[#eval(item.c, mode: "markup", scope: scope)] } else { "........................................................................................................" })]
+      ], if is-solution { align(bottom)[#text(size: body-size, fill: red)[#item.mark ن]] } else { [] })
       #v(4pt)
     ]
   ] else if b.type == "multiple_choice" [
@@ -41,12 +41,13 @@
             #let symbol = if is-solution and opt == g.correct { text(fill: blue)[×] } else { " " }
             #box(stroke: 0.5pt, width: 12pt, height: 12pt, radius: 2pt, align(center + horizon)[#v(-2pt)#symbol]) #h(4pt) #(if is-solution and opt == g.correct { text(fill: blue)[#eval(opt, mode: "markup", scope: scope)] } else { eval(opt, mode: "markup", scope: scope) })
           ]).join(h(20pt))
-        ], if is-solution and g.at("mark", default: "") != "" { text(size: 14pt, fill: red)[#g.mark ن] } else { [] })
+        ], if is-solution and g.at("mark", default: "") != "" { text(size: body-size, fill: red)[#g.mark ن] } else { [] })
       ]))
   ] else if b.type == "diagram_flow" [
     #v(5pt)
     #grid(columns: (1fr, auto), [
       #align(center)[
+        #set text(top-edge: "bounds", bottom-edge: "bounds")
         #grid(
           columns: (1fr, auto, 1.2fr, auto, 1fr), 
           align: center + horizon, 
@@ -57,13 +58,13 @@
           rect(width: 100%, stroke: 0.7pt, inset: 10pt, radius: 4pt)[#(if is-solution { text(fill: blue)[#eval(b.flow.at(0), mode: "markup", scope: scope)] } else { "..............." })]
         )
       ]
-    ], if is-solution and m != "" { text(size: 14pt, fill: red)[#m ن] } else { [] })
+    ], if is-solution and m != "" { text(size: body-size, fill: red)[#m ن] } else { [] })
   ] else if b.type == "labeling" [
     #grid(columns: (1fr, auto), [
       #grid(columns: (1fr, 1fr), gutter: 15pt,
         ..b.labels.map(l => [ - #(if is-solution { text(fill: blue)[#eval(l, mode: "markup", scope: scope)] } else { ".........................................." }) ])
       )
-    ], if is-solution and m != "" { text(size: 14pt, fill: red)[#m ن] } else { [] })
+    ], if is-solution and m != "" { text(size: body-size, fill: red)[#m ن] } else { [] })
   ] else if b.type == "table" [
     #v(5pt)
     #let t-align = b.at("align", default: "center")
@@ -163,10 +164,10 @@
           #box(width: 100%, height: 80pt, inset: 0pt)[#image(it.src, fit: "contain")]
         ]),
         ..b.items.map(it => [
-          #set text(size: 11pt)
+          #set text(size: calc.max(body-size - 2pt, 12pt))
           #stack(dir: ttb, spacing: 3pt,
             if is-solution { text(fill: blue)[#it.answer] } else { it.label },
-            if is-solution and it.at("mark", default: "") != "" { text(size: 12pt, fill: red)[#it.mark ن] }
+            if is-solution and it.at("mark", default: "") != "" { text(size: body-size, fill: red)[#it.mark ن] }
           )
         ])
       )
@@ -190,7 +191,7 @@
       align(center)[
         #image(b.src, width: img-w)
         #if b.at("caption", default: "") != "" {
-          text(size: 10pt, style: "italic")[#eval(b.caption, mode: "markup", scope: scope)]
+          text(size: calc.max(body-size - 2pt, 12pt), style: "italic")[#eval(b.caption, mode: "markup", scope: scope)]
         }
       ]
     }
@@ -201,7 +202,7 @@
       } else {
         safe-eval(b.content)
       })
-    ], if is-solution and b.at("mark", default: "") != "" { align(bottom)[#text(size: 14pt, fill: red)[#b.mark ن]] } else { [] })
+    ], if is-solution and b.at("mark", default: "") != "" { align(bottom)[#text(size: body-size, fill: red)[#b.mark ن]] } else { [] })
   ] else if b.type == "columns" [
     #let children = b.at("children", default: ())
     #let n = children.len()

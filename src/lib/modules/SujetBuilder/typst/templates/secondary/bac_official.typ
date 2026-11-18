@@ -17,15 +17,15 @@
   let source-kind = metadata.at("docType", default: "exam")
 
   let explicit-font = metadata.at("font", default: "")
-  let banned-arabic-fonts = ("", "Noto Naskh Arabic", "Amiri", "Traditional Arabic", "Arabic Transparent", "KFGQPC Uthman Taha Naskh")
+  let banned-arabic-fonts = ("", "Noto Naskh Arabic", "Amiri", "Traditional Arabic", "Scheherazade New", "Scheherazade", "KFGQPC Uthman Taha Naskh")
   let main-font = if explicit-font not in banned-arabic-fonts {
-    (explicit-font, "Scheherazade New", "Scheherazade")
+    (explicit-font, "Arabic Transparent", "STIX Two Math")
   } else {
-    ("Scheherazade New", "Scheherazade")
+    ("Arabic Transparent", "STIX Two Math")
   }
 
-  let body-size = 11.5pt
-  let table-inset = 6pt
+  let body-size = 14pt
+  let table-inset = 6.5pt
 
   let is-official-archive = custom-doc-title.contains("بكالوريا") and not custom-doc-title.contains("تجريبية")
   let exam-banner = if custom-doc-title != "" {
@@ -42,77 +42,83 @@
     paper: "a4",
     margin: (top: 1.0cm, bottom: 1.8cm, x: 1.4cm),
     footer: context [
-      #set text(size: 9pt, font: main-font)
+      #set text(size: 10pt, font: main-font)
       #line(length: 100%, stroke: 0.6pt + luma(120))
       #v(-4pt)
       #grid(
         columns: (1fr, 1fr, 1fr),
         align: horizon,
-        align(right)[#text(size: 8.5pt, weight: "bold")[#stream-name — المعامل: #coefficient]],
-        align(center)[#text(size: 9.5pt, weight: "bold")[صفحة #counter(page).display() من #counter(page).final().at(0)]],
-        align(left)[#link("https://sujetstore.com/")[#text(size: 8.5pt, fill: rgb("1E3A8A"))[sujetstore.com]]]
+        align(right)[#text(size: 10pt, weight: "bold")[#stream-name — المعامل: #coefficient]],
+        align(center)[#text(size: 10.5pt, weight: "bold")[صفحة #counter(page).display() من #counter(page).final().at(0)]],
+        align(left)[#link("https://sujetstore.com/")[#text(size: 10pt, fill: rgb("1E3A8A"))[sujetstore.com]]]
       )
     ],
   )
 
-  set text(font: main-font, lang: "ar", region: "dz", dir: rtl, size: body-size, weight: "regular")
+  set text(font: main-font, lang: "ar", region: "dz", dir: rtl, size: body-size, weight: "regular", top-edge: "ascender", bottom-edge: "descender")
   set par(leading: 0.72em, justify: true)
-  show math.equation: set text(font: ("STIX Two Math", "Scheherazade New"), dir: ltr)
+  show math.equation: set text(font: ("STIX Two Math", "Arabic Transparent"), dir: ltr)
 
   // ═══════════ الترويسة الرسمية الجزائرية ═══════════
   align(center)[
-    #text(font: main-font, size: 11.5pt, weight: "bold")[الجمهورية الجزائرية الديمقراطية الشعبية] \
-    #text(font: main-font, size: 10.5pt, weight: "bold")[وزارة التربية الوطنية — الديوان الوطني للامتحانات والمسابقات]
+    #text(font: main-font, size: 14.5pt, weight: "bold")[الجمهورية الجزائرية الديمقراطية الشعبية] \
+    #text(font: main-font, size: 13pt, weight: "bold")[وزارة التربية الوطنية — الديوان الوطني للامتحانات والمسابقات]
   ]
-  v(3pt)
+  v(4pt)
 
   box(
     width: 100%,
     stroke: 1.1pt + black,
     radius: 2pt,
-    inset: (x: 10pt, y: 7pt),
+    inset: (x: 12pt, y: 11pt),
     fill: luma(248)
   )[
+    #set text(top-edge: "ascender", bottom-edge: "descender")
+    #set par(leading: 0.65em, justify: false)
     #grid(
-      columns: (1fr, auto, 1fr),
+      columns: (1.35fr, auto, 0.95fr),
+      column-gutter: 10pt,
       align: horizon,
       align(right)[
-        #text(font: main-font, weight: "bold", size: 11.5pt)[#exam-banner] \
-        #text(font: main-font, size: 10.5pt)[الشعبة: #text(font: main-font, weight: "bold")[#stream-name]]
+        #text(font: main-font, weight: "bold", size: 13pt)[#exam-banner] \
+        #text(font: main-font, size: 12.5pt)[الشعبة: #text(font: main-font, weight: "bold")[#stream-name]]
       ],
       align(center)[
-        #box(stroke: 0.8pt + luma(90), inset: (x: 10pt, y: 4pt), radius: 2pt, fill: white)[
-          #text(font: main-font, weight: "bold", size: 11pt)[#session-ar]
+        #box(stroke: 0.8pt + luma(90), inset: (x: 12pt, y: 8pt), radius: 2pt, fill: white)[
+          #set text(top-edge: "bounds", bottom-edge: "bounds")
+          #text(font: main-font, weight: "bold", size: 13pt)[#session-ar]
         ]
       ],
       align(left)[
-        #text(font: main-font, size: 10.5pt)[المدة: #text(font: main-font, weight: "bold")[#duration]] \
-        #text(font: main-font, size: 10.5pt)[المعامل: #text(font: main-font, weight: "bold")[#coefficient]]
+        #text(font: main-font, size: 12.5pt)[المدة: #text(font: main-font, weight: "bold")[#duration]] \
+        #text(font: main-font, size: 12.5pt)[المعامل: #text(font: main-font, weight: "bold")[#coefficient]]
       ]
     )
   ]
-  v(4pt)
+  v(5pt)
 
   // شريط عنوان الاختبار / الحل النموذجي
   box(
     width: 100%,
     stroke: (top: 1.2pt + black, bottom: 1.2pt + black),
-    inset: (y: 5pt, x: 8pt),
+    inset: (y: 10pt, x: 12pt),
     fill: if is-solution { rgb("EFF6FF") } else { luma(240) }
   )[
+    #set text(top-edge: "bounds", bottom-edge: "bounds")
     #grid(
       columns: (1fr, auto),
+      column-gutter: 8pt,
       align: horizon,
       align(center)[
-        #text(weight: "bold", size: 14pt, fill: if is-solution { rgb("1D4ED8") } else { black })[
+        #text(weight: "bold", size: 16pt, fill: if is-solution { rgb("1D4ED8") } else { black })[
           اختبار في مادة: #subject-name #(if is-solution { "— الإجابة النموذجية وسلم التنقيط" } else { "" })
         ]
       ],
       align(left)[
         #if not is-solution [
-          #text(size: 9.5pt, weight: "bold")[#topic-label]
+          #text(size: 12pt, weight: "bold")[#topic-label]
         ] else [
-          #text(size: 9.5pt, weight: "bold", fill: rgb("B91C1C"))[المجموع: 20 نقطة]
+          #text(size: 12pt, weight: "bold", fill: rgb("B91C1C"))[المجموع: 20 نقطة]
         ]
       ]
     )
@@ -121,11 +127,11 @@
 
   if not is-solution [
     #align(center)[
-      #text(size: 9.5pt, style: "italic", fill: luma(60))[
+      #text(size: 11.5pt, style: "italic", fill: luma(60))[
         على المترشح أن يختار أحد الموضوعين الآتيين — التوثيق العلمي والبرهان الصريح ضروريان
       ]
     ]
-    v(3pt)
+    #v(3pt)
   ]
 
   // ═══════════ التمارين (4 + 4 + 5 + 7) ═══════════
@@ -155,17 +161,18 @@
     block(breakable: true, width: 100%)[
       #box(
         width: 100%,
-        inset: (x: 6pt, y: 4pt),
+        inset: (x: 8pt, y: 8pt),
         fill: if is-solution { rgb("F0FDF4") } else { luma(244) },
         stroke: (right: 3pt + if is-solution { rgb("15803D") } else { rgb("1E3A8A") }),
       )[
-        #text(font: main-font, weight: "bold", size: 12.5pt)[#eval(heading-text, mode: "markup")]
+        #set text(top-edge: "bounds", bottom-edge: "bounds")
+        #text(font: main-font, weight: "bold", size: 15.5pt)[#eval(heading-text, mode: "markup")]
       ]
       #v(3pt)
 
       #block(width: 100%, inset: (right: 10pt))[
         #if ex.keys().contains("instruction") and ex.instruction != "" [
-          #text(font: main-font, weight: "semibold", size: 11pt)[#eval(ex.instruction, mode: "markup")]
+          #text(font: main-font, weight: "bold", size: 14pt)[#eval(ex.instruction, mode: "markup")]
           #v(3pt)
         ]
 

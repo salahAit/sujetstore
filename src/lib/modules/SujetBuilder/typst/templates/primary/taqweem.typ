@@ -24,8 +24,10 @@
   page-setup(body)
 }
 
-// Override text size for primary school (larger, more readable)
-#set text(size: 14pt)
+// Override text size for primary school (18pt for 1AP/2AP, 16pt for 3AP-5AP)
+#let taqweem-year = metadata.at("yearId", default: "5ap")
+#let taqweem-size = if taqweem-year == "1ap" or taqweem-year == "2ap" { 18pt } else { 16pt }
+#set text(size: taqweem-size)
 
 #exam-footer(site-url: metadata.at("siteUrl", default: "sujetstore.com"))
 

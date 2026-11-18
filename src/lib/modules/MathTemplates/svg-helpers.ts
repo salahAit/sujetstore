@@ -26,7 +26,7 @@ function escapeXml(str: string): string {
 }
 
 function wrapSvg(width: number, height: number, body: string): string {
-	return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" style="background:#ffffff;font-family:'Scheherazade New','Scheherazade',Arial,sans-serif">${body}</svg>`;
+	return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" style="background:#ffffff;font-family:'Arabic Transparent',Arial,sans-serif">${body}</svg>`;
 }
 
 /** 2AP / 2AM Grid (المرصوفة) with optional marked cells or points */

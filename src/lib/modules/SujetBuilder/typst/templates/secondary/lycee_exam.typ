@@ -17,77 +17,83 @@
   let custom-doc-title = metadata.at("customDocTitle", default: "")
 
   let explicit-font = metadata.at("font", default: "")
-  let banned-arabic-fonts = ("", "Noto Naskh Arabic", "Amiri", "Traditional Arabic", "Arabic Transparent", "KFGQPC Uthman Taha Naskh")
+  let banned-arabic-fonts = ("", "Noto Naskh Arabic", "Amiri", "Traditional Arabic", "Scheherazade New", "Scheherazade", "KFGQPC Uthman Taha Naskh")
   let main-font = if explicit-font not in banned-arabic-fonts {
-    (explicit-font, "Scheherazade New", "Scheherazade")
+    (explicit-font, "Arabic Transparent", "STIX Two Math")
   } else {
-    ("Scheherazade New", "Scheherazade")
+    ("Arabic Transparent", "STIX Two Math")
   }
 
-  let body-size = 11.5pt
-  let table-inset = 6pt
+  let body-size = 14pt
+  let table-inset = 6.5pt
   let type-label = if doc-type == "test" { "فرض محروس" } else { "اختبار" }
   let banner-title = if custom-doc-title != "" { custom-doc-title } else { type-label + " " + trimester-name }
+  let year-display = if stream-name != "" and not year-name.contains(stream-name) {
+    year-name + " — " + stream-name
+  } else {
+    year-name
+  }
 
   set page(
     paper: "a4",
     margin: (top: 0.9cm, bottom: 1.9cm, x: 1.4cm),
     footer: context [
-      #set text(size: 9pt, font: main-font)
+      #set text(size: 10pt, font: main-font)
       #line(length: 100%, stroke: 0.5pt + gray)
       #v(-4pt)
       #grid(
         columns: (1fr, 1fr, 1fr),
         align: horizon,
         align(right)[#box(width: 22pt, height: 22pt)[#image("../../common/qrcode.png", width: 100%, height: 100%, fit: "contain")]],
-        align(center)[#text(size: 9.5pt)[صفحة #counter(page).display() من #counter(page).final().at(0)]],
+        align(center)[#text(size: 10.5pt)[صفحة #counter(page).display() من #counter(page).final().at(0)]],
         align(left)[#stack(dir: ltr, spacing: 4pt,
           link("https://sujetstore.com/")[#box(width: 22pt, height: 22pt)[#image("../../common/logo.png", width: 100%, height: 100%, fit: "contain")]],
-          align(horizon)[#text(fill: rgb("1D4ED8"), size: 8.5pt)[sujetstore.com]]
+          align(horizon)[#text(fill: rgb("1D4ED8"), size: 9.5pt)[sujetstore.com]]
         )]
       )
     ],
   )
 
-  set text(font: main-font, lang: "ar", region: "dz", dir: rtl, size: body-size, weight: "regular")
+  set text(font: main-font, lang: "ar", region: "dz", dir: rtl, size: body-size, weight: "regular", top-edge: "ascender", bottom-edge: "descender")
   set par(leading: 0.72em, justify: true)
-  show math.equation: set text(font: ("STIX Two Math", "Scheherazade New"), dir: ltr)
+  show math.equation: set text(font: ("STIX Two Math", "Arabic Transparent"), dir: ltr)
 
   // ═══════════ رأس الورقة الثانوية ═══════════
   grid(
-    columns: (1.2fr, auto, 1.2fr),
+    columns: (1.25fr, auto, 1.1fr),
     align: horizon,
     column-gutter: 8pt,
-    align(right)[
-      #text(font: main-font, size: 10pt, weight: "bold")[وزارة التربية الوطنية] \
-      #text(font: main-font, size: 10pt)[#school-name] \
-      #text(font: main-font, size: 10.5pt, weight: "bold")[#year-name #(if stream-name != "" { "— " + stream-name } else { "" })]
+    align(right)[#set par(leading: 0.55em)
+      #text(font: main-font, size: 12pt, weight: "bold")[وزارة التربية الوطنية] \
+      #text(font: main-font, size: 11.5pt)[#school-name] \
+      #text(font: main-font, size: 12pt, weight: "bold")[#year-display]
     ],
     align(center)[
       #link("https://sujetstore.com/")[#image("../../common/logo.png", width: 1.5cm, fit: "contain")]
     ],
-    align(left)[
-      #text(font: main-font, size: 10pt, weight: "bold")[السنة الدراسية: #academic-year] \
-      #text(font: main-font, size: 10pt, weight: "bold")[المدة: #duration] \
-      #text(font: main-font, size: 10pt, weight: "bold")[المعامل: #coefficient]
+    align(left)[#set par(leading: 0.55em)
+      #text(font: main-font, size: 12pt, weight: "bold")[السنة الدراسية: #academic-year] \
+      #text(font: main-font, size: 12pt, weight: "bold")[المدة: #duration] \
+      #text(font: main-font, size: 12pt, weight: "bold")[المعامل: #coefficient]
     ]
   )
-  v(4pt)
+  v(6pt)
 
   box(
     width: 100%,
     stroke: 1pt + rgb("1E3A8A"),
     radius: 4pt,
-    inset: (y: 6pt, x: 10pt),
+    inset: (y: 10pt, x: 12pt),
     fill: if is-solution { rgb("ECFDF5") } else { rgb("EFF6FF") }
   )[
+    #set text(top-edge: "bounds", bottom-edge: "bounds")
     #align(center)[
-      #text(font: main-font, size: 14.5pt, weight: "bold", fill: if is-solution { rgb("047857") } else { rgb("1E3A8A") })[
+      #text(font: main-font, size: 16.5pt, weight: "bold", fill: if is-solution { rgb("047857") } else { rgb("1E3A8A") })[
         #banner-title في مادة: #subject-name #(if is-solution { "— التصحيح النموذجي وسلم التنقيط" } else { "" })
       ]
     ]
   ]
-  v(5pt)
+  v(6pt)
 
   // ═══════════ التمارين والمسألة ═══════════
   let exercises = if data.keys().contains("exercises") {
@@ -119,13 +125,13 @@
         gutter: 8pt,
         align: horizon,
         text(size: 16pt, fill: if is-solution { rgb("047857") } else { rgb("1D4ED8") })[◆],
-        text(font: main-font, weight: "bold", size: 13pt)[#eval(heading-text, mode: "markup")]
+        text(font: main-font, weight: "bold", size: 16pt)[#eval(heading-text, mode: "markup")]
       )
       #v(2pt)
 
       #block(width: 100%, inset: (right: 12pt))[
         #if ex.keys().contains("instruction") and ex.instruction != "" [
-          #text(font: main-font, weight: "semibold", size: 11pt)[#eval(ex.instruction, mode: "markup")]
+          #text(font: main-font, weight: "bold", size: 14pt)[#eval(ex.instruction, mode: "markup")]
           #v(3pt)
         ]
 

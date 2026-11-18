@@ -17,71 +17,45 @@
   }
 
   let explicit-font = metadata.at("font", default: "")
-  let banned-arabic-fonts = ("", "Noto Naskh Arabic", "Amiri", "Traditional Arabic", "Arabic Transparent", "KFGQPC Uthman Taha Naskh")
+  let banned-arabic-fonts = ("", "Noto Naskh Arabic", "Amiri", "Traditional Arabic", "Scheherazade New", "Scheherazade", "KFGQPC Uthman Taha Naskh")
   let main-font = if explicit-font not in banned-arabic-fonts {
-    (explicit-font, "Scheherazade New", "Scheherazade")
+    (explicit-font, "Arabic Transparent", "STIX Two Math")
   } else {
-    ("Scheherazade New", "Scheherazade")
+    ("Arabic Transparent", "STIX Two Math")
   }
 
-  let body-size = if year-id == "1ap" {
-    17pt
-  } else if year-id == "2ap" {
-    15.5pt
-  } else if year-id == "3ap" {
-    14.5pt
-  } else if year-id == "4ap" or year-id == "5ap" {
-    13.5pt
-  } else {
-    12.5pt
-  }
-
-  let heading-size = if year-id == "1ap" {
-    18.5pt
-  } else if year-id == "2ap" {
-    17.5pt
-  } else if year-id == "3ap" {
-    16.5pt
-  } else if year-id == "4ap" or year-id == "5ap" {
-    15.5pt
-  } else {
-    14.5pt
-  }
-
-  let instr-size = if year-id == "1ap" {
-    15pt
-  } else if year-id == "2ap" {
+  let body-size = if year-id == "1ap" or year-id == "2ap" {
+    18pt
+  } else if level-id == "primaire" or year-id == "3ap" or year-id == "4ap" or year-id == "5ap" {
+    16pt
+  } else if level-id == "secondaire" or year-id.ends-with("as") {
     14pt
-  } else if year-id == "3ap" {
-    13.5pt
-  } else if year-id == "4ap" or year-id == "5ap" {
-    12.5pt
   } else {
-    12pt
+    15pt
   }
 
-  let body-leading = if year-id == "1ap" {
-    1.15em
-  } else if year-id == "2ap" {
-    1.05em
-  } else if year-id == "3ap" {
+  let heading-size = body-size + 2pt
+
+  let instr-size = body-size
+
+  let body-leading = if year-id == "1ap" or year-id == "2ap" {
     0.95em
-  } else if year-id == "4ap" or year-id == "5ap" {
+  } else if level-id == "primaire" or year-id == "3ap" or year-id == "4ap" or year-id == "5ap" {
     0.85em
+  } else if level-id == "secondaire" or year-id.ends-with("as") {
+    0.72em
   } else {
     0.78em
   }
 
-  let table-inset = if year-id == "1ap" {
-    11pt
-  } else if year-id == "2ap" {
+  let table-inset = if year-id == "1ap" or year-id == "2ap" {
     10pt
-  } else if year-id == "3ap" {
-    9pt
-  } else if year-id == "4ap" or year-id == "5ap" {
-    8pt
+  } else if level-id == "primaire" or year-id == "3ap" or year-id == "4ap" or year-id == "5ap" {
+    8.5pt
+  } else if level-id == "secondaire" or year-id.ends-with("as") {
+    6.5pt
   } else {
-    7pt
+    7.5pt
   }
 
   let show-pupil-box = year-id == "1ap" or year-id == "2ap" or year-id == "3ap"
@@ -89,63 +63,63 @@
   // ─────── إعداد الصفحة ───────
   set page(
     paper: "a4",
-    margin: (top: 0.8cm, bottom: 2.0cm, x: 1.5cm),
+    margin: (top: 0.9cm, bottom: 2.0cm, x: 1.5cm),
     footer: context [
-      #set text(size: 9pt, font: main-font)
+      #set text(size: 10pt, font: main-font)
       #line(length: 100%, stroke: 0.5pt + gray)
       #v(-5pt)
       #grid(
         columns: (1fr, 1fr, 1fr),
         align: horizon,
         align(right)[#box(width: 25pt, height: 25pt, stroke: none, inset: 0pt)[#image("qrcode.png", width: 100%, height: 100%, fit: "contain")]],
-        align(center)[#text(font: main-font, size: 10pt)[صفحة #counter(page).display() من #counter(page).final().at(0)]],
+        align(center)[#text(font: main-font, size: 11pt)[صفحة #counter(page).display() من #counter(page).final().at(0)]],
         align(left)[#stack(dir: ltr, spacing: 5pt,
           link("https://sujetstore.com/")[#box(width: 25pt, height: 25pt, stroke: none, inset: 0pt)[#image("logo.png", width: 100%, height: 100%, fit: "contain")]],
-          align(horizon)[#text(fill: blue, size: 9pt)[#link("https://sujetstore.com/")[sujetstore.com]]]
+          align(horizon)[#text(fill: blue, size: 10pt)[#link("https://sujetstore.com/")[sujetstore.com]]]
         )]
       )
     ],
   )
 
-  set text(font: main-font, lang: "ar", region: "dz", dir: rtl, size: body-size, weight: "regular")
+  set text(font: main-font, lang: "ar", region: "dz", dir: rtl, size: body-size, weight: "regular", top-edge: "ascender", bottom-edge: "descender")
   set par(leading: body-leading)
-  show math.equation: set text(font: ("STIX Two Math", "Scheherazade New"), dir: ltr)
+  show math.equation: set text(font: ("STIX Two Math", "Arabic Transparent"), dir: ltr)
 
   // ═══════════ العناصر العائمة (أعلى الصفحة) ═══════════
-  place(top + left, dx: 0pt, dy: -5pt)[#stack(dir: ttb, spacing: 1pt,
-    text(font: main-font, size: 9pt, fill: blue)[#link("https://sujetstore.com/")[https://sujetstore.com]],
-    text(font: main-font, size: 7pt, fill: luma(80))[تطوير جزائري حصري و عصري]
+  place(top + left, dx: 0pt, dy: -4pt)[#stack(dir: ttb, spacing: 1pt,
+    text(font: main-font, size: 10pt, fill: blue)[#link("https://sujetstore.com/")[https://sujetstore.com]],
+    text(font: main-font, size: 8.5pt, fill: luma(80))[تطوير جزائري حصري و عصري]
   )]
-  place(top + right, dx: 0pt, dy: -5pt)[#stack(dir: ttb, spacing: 1pt,
-    box(width: 35pt, height: 35pt, stroke: 0.5pt + gray, radius: 2pt, inset: 2pt)[#image("qrcode.png")],
-    align(center)[#text(font: main-font, size: 7pt)[امسح للمزيد]]
+  place(top + right, dx: 0pt, dy: -4pt)[#stack(dir: ttb, spacing: 2pt,
+    box(width: 34pt, height: 34pt, stroke: 0.5pt + gray, radius: 2pt, inset: 2pt)[#image("qrcode.png")],
+    align(center)[#text(font: main-font, size: 8.5pt)[امسح للمزيد]]
   )]
 
   // ═══════════ العنوان المركزي ═══════════
   v(2pt)
   align(center)[
-    #text(font: main-font, size: 18pt, weight: "bold")[منصة ]#text(font: main-font, size: 22pt, weight: "bold", fill: rgb("2563EB"))[سوجيستور]#text(font: main-font, size: 18pt, weight: "bold")[ للنجاح]
+    #text(font: main-font, size: 20pt, weight: "bold")[منصة ]#text(font: main-font, size: 24pt, weight: "bold", fill: rgb("2563EB"))[سوجيستور]#text(font: main-font, size: 20pt, weight: "bold")[ للنجاح]
   ]
-  v(-8pt)
+  v(4pt)
 
   // ═══════════ الشبكة: معلومات + اللوجو الكبير ═══════════
-  grid(columns: (1fr, auto, 1fr), column-gutter: 5pt, align: horizon,
+  grid(columns: (1fr, auto, 1fr), column-gutter: 8pt, align: horizon,
     // ── اليمين: نوع الموضوع + الفصل + المستوى ──
-    align(right)[#set par(leading: 0.4em)
-      #text(font: main-font, size: 12pt, weight: "bold")[#exam-type-label #metadata.at("trimesterName", default: "")]
+    align(right)[#set par(leading: 0.55em)
+      #text(font: main-font, size: 13.5pt, weight: "bold")[#exam-type-label #metadata.at("trimesterName", default: "")]
       \
-      #text(font: main-font, size: 12pt, weight: "bold")[#metadata.at("yearName", default: metadata.at("branch", default: ""))]
+      #text(font: main-font, size: 13.5pt, weight: "bold")[#metadata.at("yearName", default: metadata.at("branch", default: ""))]
     ],
     // ── الوسط: اللوجو الكبير ──
-    align(center)[#link("https://sujetstore.com/")[#image("logo.png", width: 1.8cm, fit: "contain")]],
+    align(center)[#link("https://sujetstore.com/")[#image("logo.png", width: 1.7cm, fit: "contain")]],
     // ── اليسار: السنة الدراسية + المدة ──
-    align(left)[#set par(leading: 0.4em)
-      #text(font: main-font, size: 12pt, weight: "bold")[#metadata.at("academicYear", default: metadata.at("date", default: ""))]
+    align(left)[#set par(leading: 0.55em)
+      #text(font: main-font, size: 13.5pt, weight: "bold")[#metadata.at("academicYear", default: metadata.at("date", default: ""))]
       \
-      #text(font: main-font, size: 12pt, weight: "bold")[المدة: #metadata.at("duration", default: "")]
+      #text(font: main-font, size: 13.5pt, weight: "bold")[المدة: #metadata.at("duration", default: "")]
     ],
   )
-  v(-10pt)
+  v(-4pt)
 
   // ═══════════ شريط العنوان ═══════════
   {
@@ -155,24 +129,25 @@
 
     align(center)[
       #line(length: 100%, stroke: 1pt)
-      #v(-7pt)
-      #text(font: main-font, size: 16pt, weight: "bold", fill: rgb("2563EB"))[#banner-prefix في مادة: #subject-label #solution-suffix]
-      #v(-7pt)
+      #v(4pt)
+      #text(font: main-font, size: 18pt, weight: "bold", fill: rgb("2563EB"), top-edge: "bounds", bottom-edge: "bounds")[#banner-prefix في مادة: #subject-label #solution-suffix]
+      #v(4pt)
       #line(length: 100%, stroke: 1pt)
     ]
   }
-  v(2pt)
+  v(4pt)
 
   // ── خانة التلميذ (للأطوار الدنيا من الابتدائي في ورقة الموضوع) ──
   if show-pupil-box and not is-solution {
-    box(width: 100%, stroke: 0.8pt + luma(140), radius: 5pt, inset: (x: 10pt, y: 7pt), fill: luma(250))[
+    box(width: 100%, stroke: 0.8pt + luma(140), radius: 5pt, inset: (x: 10pt, y: 9pt), fill: luma(250))[
+      #set text(top-edge: "bounds", bottom-edge: "bounds")
       #grid(
         columns: (1.7fr, 1fr, 0.9fr),
         gutter: 8pt,
         align: right + horizon,
-        [#text(font: main-font, size: 12pt, weight: "bold")[الاسم واللقب: ...............................]],
-        [#text(font: main-font, size: 12pt, weight: "bold")[القسم: ..............]],
-        [#text(font: main-font, size: 12pt, weight: "bold")[العلامة: ....... / 10]]
+        [#text(font: main-font, size: 14pt, weight: "bold")[الاسم واللقب: ...........................]],
+        [#text(font: main-font, size: 14pt, weight: "bold")[القسم: ............]],
+        [#text(font: main-font, size: 14pt, weight: "bold")[العلامة: ..... / 10]]
       )
     ]
     v(4pt)

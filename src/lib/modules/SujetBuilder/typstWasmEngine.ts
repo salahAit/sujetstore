@@ -269,7 +269,7 @@ export function isEngineReady(): boolean {
 // ── IndexedDB Cache ──
 
 const DB_NAME = 'typst-wasm-cache';
-const DB_VERSION = 3; // Bumped to clear stale cache
+const DB_VERSION = 4; // Bumped to clear stale cache (Arabic Transparent + header box fixes)
 const STORE_NAME = 'templates';
 
 function openDB(): Promise<IDBDatabase> {

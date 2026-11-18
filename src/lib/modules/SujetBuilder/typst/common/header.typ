@@ -28,26 +28,27 @@
 
   // Build the header block
   block(width: 100%, stroke: 1.5pt, inset: 0pt)[
+    #set text(font: ("Arabic Transparent", "STIX Two Math"), top-edge: "ascender", bottom-edge: "descender")
     // Top row: School info + Academic year
-    #block(width: 100%, inset: (x: 12pt, y: 8pt))[
+    #block(width: 100%, inset: (x: 12pt, y: 10pt))[
       #grid(
         columns: (1fr, 1fr),
         align: (right, left),
         [
           #if school-name != none [
-            #text(size: 11pt, weight: "bold")[#school-name]
+            #text(size: 13pt, weight: "bold")[#school-name]
             #linebreak()
           ]
-          #text(size: 10pt)[المستوى: *#level-name*]
+          #text(size: 12pt)[المستوى: *#level-name*]
           #if stream-name != none [
             #linebreak()
-            #text(size: 10pt)[الشعبة: *#stream-name*]
+            #text(size: 12pt)[الشعبة: *#stream-name*]
           ]
         ],
         [
-          #text(size: 11pt)[السنة الدراسية: *#academic-year*]
+          #text(size: 13pt)[السنة الدراسية: *#academic-year*]
           #linebreak()
-          #text(size: 10pt)[المدة: *#duration*]
+          #text(size: 12pt)[المدة: *#duration*]
         ],
       )
     ]
@@ -56,12 +57,13 @@
     #line(length: 100%, stroke: 0.8pt)
 
     // Center: Exam title + Subject
-    #block(width: 100%, inset: (x: 12pt, y: 10pt))[
+    #block(width: 100%, inset: (x: 12pt, y: 11pt))[
+      #set text(top-edge: "bounds", bottom-edge: "bounds")
       #align(center)[
-        #text(size: 16pt, weight: "bold")[#full-title]
+        #text(size: 18pt, weight: "bold")[#full-title]
         #linebreak()
-        #v(4pt)
-        #text(size: 14pt, weight: "bold")[في مادة: #subject-name]
+        #v(5pt)
+        #text(size: 16pt, weight: "bold")[في مادة: #subject-name]
       ]
     ]
 
@@ -69,9 +71,10 @@
     #line(length: 100%, stroke: 0.5pt)
 
     // Footer with site branding
-    #block(width: 100%, inset: (x: 12pt, y: 4pt), fill: luma(245))[
+    #block(width: 100%, inset: (x: 12pt, y: 6pt), fill: luma(245))[
+      #set text(top-edge: "bounds", bottom-edge: "bounds")
       #align(center)[
-        #text(size: 8pt, fill: luma(120))[#site-url]
+        #text(size: 9.5pt, fill: luma(120))[#site-url]
       ]
     ]
   ]
