@@ -388,7 +388,7 @@ export function createSharedPhysicsTemplates3asT2(
 				}
 			});
 			const rcCurveSvg = svgPhysicsCurvePlot({
-				title: 'تطور التوتر u_C(t) بين طرفي المكثفة أثناء الشحن',
+				title: 'تطور التوتر بين طرفي المكثفة أثناء الشحن u_C(t)',
 				xMin: 0,
 				xMax: roundTo(tau_ms * 5, 1),
 				yMin: 0,
@@ -402,7 +402,7 @@ export function createSharedPhysicsTemplates3asT2(
 				],
 				dashedGuides: [
 					{ x1: 0, y1: E, x2: roundTo(tau_ms * 5, 1), y2: E, color: '#475569', label: `E = ${E} V`, labelPos: 'top' },
-					{ x1: 0, y1: 0, x2: tau_ms, y2: E, color: '#dc2626', label: 'المماس عند t=0', labelPos: 'left' },
+					{ x1: 0, y1: 0, x2: tau_ms, y2: E, color: '#dc2626', label: 'المماس عند t=0', labelPos: 'right' },
 					{ x1: tau_ms, y1: 0, x2: tau_ms, y2: E, color: '#dc2626' }
 				],
 				points: [{ x: tau_ms, y: E, label: `τ = ${tau_ms} ms`, color: '#dc2626' }]
@@ -566,7 +566,7 @@ export function createSharedPhysicsTemplates3asT2(
 				}
 			});
 			const rlCurveSvg = svgPhysicsCurvePlot({
-				title: 'منحنى تأسيس شدة التيار i(t) في الدارة RL',
+				title: 'منحنى تأسيس شدة التيار في الدارة (R, L) : i(t)',
 				xMin: 0,
 				xMax: roundTo(tau_ms * 5, 1),
 				yMin: 0,
@@ -578,7 +578,7 @@ export function createSharedPhysicsTemplates3asT2(
 				curves: [{ fn: (t) => I0 * (1 - Math.exp(-t / tau_ms)), color: '#2563eb', label: 'i(t)' }],
 				dashedGuides: [
 					{ x1: 0, y1: I0, x2: roundTo(tau_ms * 5, 1), y2: I0, color: '#475569', label: `I₀ = ${I0} A`, labelPos: 'top' },
-					{ x1: 0, y1: 0, x2: tau_ms, y2: I0, color: '#dc2626', label: 'المماس عند t=0', labelPos: 'left' },
+					{ x1: 0, y1: 0, x2: tau_ms, y2: I0, color: '#dc2626', label: 'المماس عند t=0', labelPos: 'right' },
 					{ x1: tau_ms, y1: 0, x2: tau_ms, y2: I0, color: '#dc2626' }
 				],
 				points: [{ x: tau_ms, y: I0, label: `τ = ${tau_ms} ms`, color: '#dc2626' }]

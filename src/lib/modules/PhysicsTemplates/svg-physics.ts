@@ -21,8 +21,51 @@ function esc(str: string): string {
 		.replaceAll('"', '&quot;');
 }
 
+const SUB_MAP: Record<string, string> = {
+	'₀': '0', '₁': '1', '₂': '2', '₃': '3', '₄': '4',
+	'₅': '5', '₆': '6', '₇': '7', '₈': '8', '₉': '9',
+	'₊': '+', '₋': '-'
+};
+const SUP_MAP: Record<string, string> = {
+	'⁰': '0', '¹': '1', '²': '2', '³': '3', '⁴': '4',
+	'⁵': '5', '⁶': '6', '⁷': '7', '⁸': '8', '⁹': '9',
+	'⁺': '+', '⁻': '-'
+};
+
+/**
+ * Escapes XML and turns Unicode sub/superscripts (including ₁/₂) into crisp SVG tspans
+ * so Typst SVG renderer never falls back to FreeMono for missing Unicode sub/sup glyphs.
+ */
+function escRich(str: string): string {
+	const tokens = str.match(/([₀-₉₊₋]+(?:\/[₀-₉]+)?|[⁰-⁹⁺⁻]+|[^₀-₉₊₋⁰-⁹⁺⁻]+)/g) ?? [str];
+	let out = '';
+	for (let i = 0; i < tokens.length; i++) {
+		const tok = tokens[i];
+		const isSub = /^[₀-₉₊₋]/.test(tok);
+		const isSup = /^[⁰-⁹⁺⁻]/.test(tok);
+		if (isSub) {
+			const plain = tok
+				.split('')
+				.map((c) => SUB_MAP[c] ?? c)
+				.join('');
+			out += `<tspan dy="3" font-size="72%">${esc(plain)}</tspan>`;
+			if (i < tokens.length - 1) out += `<tspan dy="-3">&#8203;</tspan>`;
+		} else if (isSup) {
+			const plain = tok
+				.split('')
+				.map((c) => SUP_MAP[c] ?? c)
+				.join('');
+			out += `<tspan dy="-4" font-size="72%">${esc(plain)}</tspan>`;
+			if (i < tokens.length - 1) out += `<tspan dy="4">&#8203;</tspan>`;
+		} else {
+			out += esc(tok);
+		}
+	}
+	return out;
+}
+
 export function wrapPhysicsSvg(width: number, height: number, body: string): string {
-	return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" style="background:#ffffff;font-family:'Arabic Transparent',Arial,sans-serif">${body}</svg>`;
+	return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" font-family="Arabic Transparent" style="background:#ffffff;font-family:'Arabic Transparent',Arial,sans-serif">${body}</svg>`;
 }
 
 /** 1. Precision Physics Curve Plotter (RC, RL, RLC, Kinetics, pH Titration, Conductimetry, Radioactive Decay, Kinematics) */
@@ -51,17 +94,17 @@ export function svgPhysicsCurvePlot(opts: {
 		label?: string;
 		labelPos?: 'top' | 'right' | 'left' | 'bottom';
 	}>;
-	points?: Array<{ x: number; y: number; label: string; color?: string }>;
+	points?: Array<{ x: number; y: number; label: string; color?: string; dx?: number; dy?: number }>;
 	title?: string;
 	width?: number;
 	height?: number;
 }): string {
 	const w = opts.width ?? 420;
-	const h = opts.height ?? 265;
-	const padL = 54;
-	const padR = 26;
-	const padT = opts.title ? 32 : 24;
-	const padB = 42;
+	const h = opts.height ?? 275;
+	const padL = 56;
+	const padR = 32;
+	const padT = opts.title ? 58 : 34;
+	const padB = 44;
 	const pw = w - padL - padR;
 	const ph = h - padT - padB;
 
@@ -77,10 +120,11 @@ export function svgPhysicsCurvePlot(opts: {
 
 	const xStep = opts.xStep ?? xSpan / 5;
 	const yStep = opts.yStep ?? ySpan / 5;
+	const halo = `paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"`;
 
 	let body = '';
 	if (opts.title) {
-		body += `<text x="${w / 2}" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">${esc(opts.title)}</text>`;
+		body += `<text x="${w / 2}" y="20" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#0f172a">${escRich(opts.title)}</text>`;
 	}
 
 	// Gridlines & ticks
@@ -100,11 +144,12 @@ export function svgPhysicsCurvePlot(opts: {
 	// Axes
 	const yAxisX = xMin <= 0 && xMax >= 0 ? sx(0) : padL;
 	const xAxisY = yMin <= 0 && yMax >= 0 ? sy(0) : padT + ph;
+	const yLabelOnLeft = yAxisX > padL + pw * 0.72;
 	body += `<defs><marker id="axArr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#1e293b"/></marker></defs>`;
 	body += `<line x1="${padL}" y1="${xAxisY.toFixed(1)}" x2="${padL + pw + 12}" y2="${xAxisY.toFixed(1)}" stroke="#1e293b" stroke-width="1.6" marker-end="url(#axArr)"/>`;
 	body += `<line x1="${yAxisX.toFixed(1)}" y1="${padT + ph}" x2="${yAxisX.toFixed(1)}" y2="${padT - 12}" stroke="#1e293b" stroke-width="1.6" marker-end="url(#axArr)"/>`;
-	body += `<text x="${padL + pw + 8}" y="${xAxisY - 7}" text-anchor="end" font-size="12" font-weight="bold" fill="#0f172a">${esc(opts.xLabel)}</text>`;
-	body += `<text x="${yAxisX + 10}" y="${padT - 10}" text-anchor="start" font-size="12" font-weight="bold" fill="#0f172a">${esc(opts.yLabel)}</text>`;
+	body += `<text x="${padL + pw + 10}" y="${xAxisY - 8}" text-anchor="end" font-size="12" font-weight="bold" fill="#0f172a" ${halo}>${escRich(opts.xLabel)}</text>`;
+	body += `<text x="${(yLabelOnLeft ? yAxisX - 10 : yAxisX + 10).toFixed(1)}" y="${padT - 10}" text-anchor="${yLabelOnLeft ? 'end' : 'start'}" font-size="12" font-weight="bold" fill="#0f172a" ${halo}>${escRich(opts.yLabel)}</text>`;
 
 	// Dashed guides (tangents, half-lives, asymptotes, equivalence lines)
 	for (const g of opts.dashedGuides ?? []) {
@@ -115,9 +160,38 @@ export function svgPhysicsCurvePlot(opts: {
 		const col = g.color ?? '#dc2626';
 		body += `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${col}" stroke-width="1.4" stroke-dasharray="5,4"/>`;
 		if (g.label) {
-			const lx = (x1 + x2) / 2 + (g.labelPos === 'right' ? 8 : g.labelPos === 'left' ? -8 : 0);
-			const ly = (y1 + y2) / 2 + (g.labelPos === 'top' ? -8 : g.labelPos === 'bottom' ? 14 : 4);
-			body += `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" font-size="11" font-weight="bold" fill="${col}">${esc(g.label)}</text>`;
+			const isHoriz = Math.abs(y1 - y2) < 1.5;
+			const isVert = Math.abs(x1 - x2) < 1.5;
+			let lx = (x1 + x2) / 2;
+			let ly = (y1 + y2) / 2;
+			let anchor = 'middle';
+			let rotateAttr = '';
+			if (isHoriz) {
+				lx = padL + pw * 0.42;
+				ly = g.labelPos === 'bottom' ? y1 + 15 : y1 - 8;
+			} else if (isVert) {
+				const nearRight = x1 > padL + pw * 0.78;
+				anchor = nearRight ? 'end' : 'start';
+				lx = nearRight ? x1 - 7 : x1 + 7;
+				ly = (y1 + y2) / 2;
+			} else {
+				const [ax, ay, bx, by] = x1 <= x2 ? [x1, y1, x2, y2] : [x2, y2, x1, y1];
+				const segDx = bx - ax;
+				const segDy = by - ay;
+				const segLen = Math.max(1, Math.hypot(segDx, segDy));
+				const ux = segDx / segLen;
+				const uy = segDy / segLen;
+				const angle = (Math.atan2(segDy, segDx) * 180) / Math.PI;
+				// Place label parallel to the diagonal tangent on the curve-free side
+				const normOffset = 9;
+				const nx = segDy < 0 ? uy : -uy;
+				const ny = segDy < 0 ? -ux : ux;
+				lx = (ax + bx) / 2 + nx * normOffset;
+				ly = (ay + by) / 2 + ny * normOffset;
+				anchor = 'middle';
+				rotateAttr = ` transform="rotate(${angle.toFixed(1)}, ${lx.toFixed(1)}, ${ly.toFixed(1)})"`;
+			}
+			body += `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}"${rotateAttr} text-anchor="${anchor}" font-size="11" font-weight="bold" fill="${col}" ${halo}>${escRich(g.label)}</text>`;
 		}
 	}
 
@@ -138,23 +212,40 @@ export function svgPhysicsCurvePlot(opts: {
 	}
 	body += `</g>`;
 
-	// Highlighted points
+	// Highlighted points with smart slope-aware non-overlapping placement
+	const primaryFn = opts.curves[0]?.fn;
 	for (const pt of opts.points ?? []) {
 		const px = sx(pt.x);
 		const py = sy(pt.y);
 		const col = pt.color ?? '#dc2626';
 		body += `<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="4" fill="${col}" stroke="#ffffff" stroke-width="1.2"/>`;
-		body += `<text x="${(px + 6).toFixed(1)}" y="${(py - 6).toFixed(1)}" font-size="11" font-weight="bold" fill="${col}">${esc(pt.label)}</text>`;
+
+		let slope = 0;
+		if (primaryFn) {
+			const eps = xSpan * 0.025;
+			const yPrev = primaryFn(Math.max(xMin, pt.x - eps));
+			const yNext = primaryFn(Math.min(xMax, pt.x + eps));
+			if (Number.isFinite(yPrev) && Number.isFinite(yNext)) slope = yNext - yPrev;
+		}
+		const nearRight = px > padL + pw * 0.74;
+		const nearTop = py < padT + 22;
+		const nearBottom = py > padT + ph - 20;
+		const defaultDx = nearRight ? -8 : 8;
+		const defaultDy = nearBottom ? -8 : nearTop ? 16 : slope > 0 ? 16 : -8;
+		const dx = pt.dx ?? defaultDx;
+		const dy = pt.dy ?? defaultDy;
+		const anchor = nearRight && pt.dx === undefined ? 'end' : 'start';
+		body += `<text x="${(px + dx).toFixed(1)}" y="${(py + dy).toFixed(1)}" text-anchor="${anchor}" font-size="11" font-weight="bold" fill="${col}" ${halo}>${escRich(pt.label)}</text>`;
 	}
 
 	// Legend if multiple named curves
 	const labeled = opts.curves.filter((c) => c.label);
 	if (labeled.length > 0) {
 		labeled.forEach((c, idx) => {
-			const lx = padL + pw - 10;
+			const lx = padL + pw - 8;
 			const ly = padT + 14 + idx * 17;
 			body += `<line x1="${lx - 58}" y1="${ly - 4}" x2="${lx - 38}" y2="${ly - 4}" stroke="${c.color ?? '#2563eb'}" stroke-width="2.2" ${c.dashed ? 'stroke-dasharray="5,3"' : ''}/>`;
-			body += `<text x="${lx - 64}" y="${ly}" text-anchor="end" font-size="11" font-weight="bold" fill="#1e293b">${esc(c.label!)}</text>`;
+			body += `<text x="${lx - 64}" y="${ly}" text-anchor="end" font-size="11" font-weight="bold" fill="#1e293b" ${halo}>${escRich(c.label!)}</text>`;
 		});
 	}
 
@@ -533,16 +624,16 @@ export function svgTitrationSetup(opts: {
 		body += `<line x1="122" y1="${y}" x2="128" y2="${y}" stroke="#334155" stroke-width="1"/>`;
 	}
 	body += `<polygon points="127,116 133,116 130,130" fill="#2563eb"/>`;
-	body += `<text x="148" y="62" font-size="11.5" font-weight="bold" fill="#1d4ed8">${esc(opts.titrantLabel)}</text>`;
+	body += `<text x="148" y="62" font-size="11.5" font-weight="bold" fill="#1d4ed8">${escRich(opts.titrantLabel)}</text>`;
 	// Beaker on magnetic stirrer
 	body += `<rect x="96" y="176" width="68" height="22" rx="3" fill="#e2e8f0" stroke="#334155" stroke-width="1.5"/>`;
 	body += `<rect x="104" y="138" width="52" height="38" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>`;
 	body += `<rect x="105" y="154" width="50" height="21" fill="#dbeafe"/>`;
 	body += `<rect x="122" y="170" width="16" height="4" rx="2" fill="#0f172a"/>`;
-	body += `<text x="172" y="166" font-size="11.5" font-weight="bold" fill="#0f172a">${esc(opts.analyteLabel)}</text>`;
+	body += `<text x="172" y="166" font-size="11.5" font-weight="bold" fill="#0f172a">${escRich(opts.analyteLabel)}</text>`;
 	if (opts.sensorLabel) {
 		body += `<rect x="112" y="128" width="5" height="36" fill="#059669"/>`;
-		body += `<text x="172" y="136" font-size="11" font-weight="bold" fill="#059669">${esc(opts.sensorLabel)}</text>`;
+		body += `<text x="172" y="136" font-size="11" font-weight="bold" fill="#059669">${escRich(opts.sensorLabel)}</text>`;
 	}
 	return wrapPhysicsSvg(w, h, body);
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T23:06:27.409Z",
+  "generated_at": "2026-11-18T23:31:07.559Z",
   "total_papers": 9,
   "total_pdfs": 18,
   "items": [
@@ -15,8 +15,8 @@
       "titleAr": "بكالوريا رسمية في العلوم الفيزيائية — شعبة علوم تجريبية (دورة جوان 2023 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac_physics/3as_se/bac-2023-3as-se-physics.pdf",
       "solutionUrl": "/documents/official_bac_physics/3as_se/bac-2023-3as-se-physics-sol.pdf",
-      "fileSize": 171220,
-      "solutionFileSize": 232043,
+      "fileSize": 193713,
+      "solutionFileSize": 263396,
       "sourcePdfRelPath": "pipeline/references_physics/3as/bac_official/bac_2023_se_physics_subject.pdf",
       "sourceSha256": "fa5448bb58a1d93110bd124550f84210162dff6a53187961a86cebdb3edbf216"
     },
@@ -32,8 +32,8 @@
       "titleAr": "بكالوريا رسمية في العلوم الفيزيائية — شعبة علوم تجريبية (دورة جوان 2024 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac_physics/3as_se/bac-2024-3as-se-physics.pdf",
       "solutionUrl": "/documents/official_bac_physics/3as_se/bac-2024-3as-se-physics-sol.pdf",
-      "fileSize": 171489,
-      "solutionFileSize": 202457,
+      "fileSize": 182887,
+      "solutionFileSize": 214230,
       "sourcePdfRelPath": "pipeline/references_physics/3as/bac_official/bac_2024_se_physics_subject.pdf",
       "sourceSha256": "c9090482b9b08f7f489f8245682173e9816f44a0d69c2f288d1064b3e6062618"
     },
@@ -49,8 +49,8 @@
       "titleAr": "بكالوريا رسمية في العلوم الفيزيائية — شعبة علوم تجريبية (دورة جوان 2025 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac_physics/3as_se/bac-2025-3as-se-physics.pdf",
       "solutionUrl": "/documents/official_bac_physics/3as_se/bac-2025-3as-se-physics-sol.pdf",
-      "fileSize": 151725,
-      "solutionFileSize": 188667,
+      "fileSize": 176988,
+      "solutionFileSize": 214023,
       "sourcePdfRelPath": "pipeline/references_physics/3as/bac_official/bac_2025_se_physics_subject.pdf",
       "sourceSha256": "9041ea28bc74c0b9db38d7445d0e240daeac5689bee7ca853742a80f6ed478c3"
     },
@@ -66,8 +66,8 @@
       "titleAr": "بكالوريا رسمية في العلوم الفيزيائية — شعبة تقني رياضي (دورة جوان 2023 - الموضوع الثاني)",
       "pdfUrl": "/documents/official_bac_physics/3as_tm/bac-2023-3as-tm-physics.pdf",
       "solutionUrl": "/documents/official_bac_physics/3as_tm/bac-2023-3as-tm-physics-sol.pdf",
-      "fileSize": 173681,
-      "solutionFileSize": 214044,
+      "fileSize": 186961,
+      "solutionFileSize": 234242,
       "sourcePdfRelPath": "pipeline/references_physics/3as/bac_official/bac_2023_math_tm_physics_subject.pdf",
       "sourceSha256": "dbe95e4f9c6ba55488067ce38d42286cd6ead7cbda57e2ba239af06e77a40be5"
     },
@@ -83,8 +83,8 @@
       "titleAr": "بكالوريا رسمية في العلوم الفيزيائية — شعبة تقني رياضي (دورة جوان 2024 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac_physics/3as_tm/bac-2024-3as-tm-physics.pdf",
       "solutionUrl": "/documents/official_bac_physics/3as_tm/bac-2024-3as-tm-physics-sol.pdf",
-      "fileSize": 161870,
-      "solutionFileSize": 204171,
+      "fileSize": 181934,
+      "solutionFileSize": 224499,
       "sourcePdfRelPath": "pipeline/references_physics/3as/bac_official/bac_2024_math_tm_physics_subject.pdf",
       "sourceSha256": "bffc93c56307cf9a8c8dcb9f35186d1cf8b6e7f93f04075de345f22c710762bf"
     },
@@ -100,8 +100,8 @@
       "titleAr": "بكالوريا رسمية في العلوم الفيزيائية — شعبة تقني رياضي (دورة جوان 2025 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac_physics/3as_tm/bac-2025-3as-tm-physics.pdf",
       "solutionUrl": "/documents/official_bac_physics/3as_tm/bac-2025-3as-tm-physics-sol.pdf",
-      "fileSize": 153515,
-      "solutionFileSize": 175687,
+      "fileSize": 175005,
+      "solutionFileSize": 197295,
       "sourcePdfRelPath": "pipeline/references_physics/3as/bac_official/bac_2025_math_tm_physics_subject.pdf",
       "sourceSha256": "e435fbaceeff82f68cd65f062e4f69a08f7e44481acbcbbaf052c30aa91d0eaf"
     },
@@ -117,8 +117,8 @@
       "titleAr": "بكالوريا رسمية في العلوم الفيزيائية — شعبة رياضيات (دورة جوان 2023 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac_physics/3as_math/bac-2023-3as-math-physics.pdf",
       "solutionUrl": "/documents/official_bac_physics/3as_math/bac-2023-3as-math-physics-sol.pdf",
-      "fileSize": 201559,
-      "solutionFileSize": 224394,
+      "fileSize": 234992,
+      "solutionFileSize": 264102,
       "sourcePdfRelPath": "pipeline/references_physics/3as/bac_official/bac_2023_math_tm_physics_subject.pdf",
       "sourceSha256": "dbe95e4f9c6ba55488067ce38d42286cd6ead7cbda57e2ba239af06e77a40be5"
     },
@@ -134,8 +134,8 @@
       "titleAr": "بكالوريا رسمية في العلوم الفيزيائية — شعبة رياضيات (دورة جوان 2024 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac_physics/3as_math/bac-2024-3as-math-physics.pdf",
       "solutionUrl": "/documents/official_bac_physics/3as_math/bac-2024-3as-math-physics-sol.pdf",
-      "fileSize": 141468,
-      "solutionFileSize": 159075,
+      "fileSize": 152880,
+      "solutionFileSize": 170437,
       "sourcePdfRelPath": "pipeline/references_physics/3as/bac_official/bac_2024_math_tm_physics_subject.pdf",
       "sourceSha256": "bffc93c56307cf9a8c8dcb9f35186d1cf8b6e7f93f04075de345f22c710762bf"
     },
@@ -151,8 +151,8 @@
       "titleAr": "بكالوريا رسمية في العلوم الفيزيائية — شعبة رياضيات (دورة جوان 2025 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac_physics/3as_math/bac-2025-3as-math-physics.pdf",
       "solutionUrl": "/documents/official_bac_physics/3as_math/bac-2025-3as-math-physics-sol.pdf",
-      "fileSize": 142317,
-      "solutionFileSize": 156240,
+      "fileSize": 161852,
+      "solutionFileSize": 175834,
       "sourcePdfRelPath": "pipeline/references_physics/3as/bac_official/bac_2025_math_tm_physics_subject.pdf",
       "sourceSha256": "e435fbaceeff82f68cd65f062e4f69a08f7e44481acbcbbaf052c30aa91d0eaf"
     }

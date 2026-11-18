@@ -48,7 +48,7 @@ const iceKineticsLesson1 = buildIceTable({
 });
 
 const svgKineticsCurveWithHalfLife = svgPhysicsCurvePlot({
-	title: 'تطور التقدم x(t) وتعيين زمن نصف التفاعل t_{1/2}',
+	title: 'تطور التقدم وتعيين زمن نصف التفاعل t₁/₂',
 	xMin: 0,
 	xMax: 40,
 	yMin: 0,
@@ -74,7 +74,7 @@ const svgKineticsCurveWithHalfLife = svgPhysicsCurvePlot({
 		{ x1: 0, y1: 4, x2: 40, y2: 4, color: '#475569', label: 'x_max = 4', labelPos: 'top' },
 		{ x1: 0, y1: 2, x2: 6.93, y2: 2, color: '#dc2626' },
 		{ x1: 6.93, y1: 0, x2: 6.93, y2: 2, color: '#dc2626', label: 't₁/₂ ≈ 6.9 min', labelPos: 'right' },
-		{ x1: 0, y1: 0, x2: 10, y2: 4, color: '#d97706', label: 'المماس عند t=0', labelPos: 'left' }
+		{ x1: 0, y1: 0, x2: 10, y2: 4, color: '#d97706', label: 'المماس عند t=0', labelPos: 'right' }
 	],
 	points: [
 		{ x: 6.93, y: 2, label: '(t₁/₂, x_max/2)', color: '#dc2626' }

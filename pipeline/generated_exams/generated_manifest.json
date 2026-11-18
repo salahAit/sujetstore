@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T22:19:49.149Z",
+  "generated_at": "2026-11-18T23:27:48.735Z",
   "total_papers": 311,
   "total_pdfs": 622,
   "items": [
@@ -112,7 +112,7 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الأولى ابتدائي (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/1ap/1ap-math-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/1ap/1ap-math-t2-exam-sample-1-sol.pdf",
-      "fileSize": 172972,
+      "fileSize": 172000,
       "solutionFileSize": 168384
     },
     {
@@ -128,7 +128,7 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الأولى ابتدائي (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/1ap/1ap-math-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/1ap/1ap-math-t2-exam-sample-2-sol.pdf",
-      "fileSize": 175120,
+      "fileSize": 174156,
       "solutionFileSize": 168036
     },
     {
@@ -144,7 +144,7 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الأولى ابتدائي (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/1ap/1ap-math-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/1ap/1ap-math-t2-exam-sample-3-sol.pdf",
-      "fileSize": 173380,
+      "fileSize": 172297,
       "solutionFileSize": 166095
     },
     {
@@ -160,7 +160,7 @@
       "titleAr": "تقويم مرحلي الفصل الثاني في الرياضيات — السنة الأولى ابتدائي (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/1ap/1ap-math-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/1ap/1ap-math-t2-test-sample-1-sol.pdf",
-      "fileSize": 157335,
+      "fileSize": 156308,
       "solutionFileSize": 147871
     },
     {
@@ -176,7 +176,7 @@
       "titleAr": "تقويم مرحلي الفصل الثاني في الرياضيات — السنة الأولى ابتدائي (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/1ap/1ap-math-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/1ap/1ap-math-t2-test-sample-2-sol.pdf",
-      "fileSize": 155542,
+      "fileSize": 154474,
       "solutionFileSize": 150466
     },
     {
@@ -192,7 +192,7 @@
       "titleAr": "تقويم مرحلي الفصل الثاني في الرياضيات — السنة الأولى ابتدائي (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/1ap/1ap-math-t2-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/1ap/1ap-math-t2-test-sample-3-sol.pdf",
-      "fileSize": 153557,
+      "fileSize": 152511,
       "solutionFileSize": 149985
     },
     {
@@ -400,7 +400,7 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثانية ابتدائي (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/2ap/2ap-math-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/2ap/2ap-math-t2-exam-sample-1-sol.pdf",
-      "fileSize": 143831,
+      "fileSize": 142776,
       "solutionFileSize": 143656
     },
     {
@@ -416,7 +416,7 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثانية ابتدائي (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/2ap/2ap-math-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/2ap/2ap-math-t2-exam-sample-2-sol.pdf",
-      "fileSize": 145723,
+      "fileSize": 144670,
       "solutionFileSize": 146696
     },
     {
@@ -432,7 +432,7 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثانية ابتدائي (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/2ap/2ap-math-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2ap/2ap-math-t2-exam-sample-3-sol.pdf",
-      "fileSize": 145128,
+      "fileSize": 144185,
       "solutionFileSize": 144441
     },
     {
@@ -1552,7 +1552,7 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الأولى متوسط (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/1am/1am-math-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/1am/1am-math-t2-exam-sample-1-sol.pdf",
-      "fileSize": 182720,
+      "fileSize": 182184,
       "solutionFileSize": 186885
     },
     {
@@ -1568,7 +1568,7 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الأولى متوسط (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/1am/1am-math-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/1am/1am-math-t2-exam-sample-2-sol.pdf",
-      "fileSize": 183467,
+      "fileSize": 182922,
       "solutionFileSize": 186137
     },
     {
@@ -1584,7 +1584,7 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الأولى متوسط (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/1am/1am-math-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/1am/1am-math-t2-exam-sample-3-sol.pdf",
-      "fileSize": 189462,
+      "fileSize": 188909,
       "solutionFileSize": 195687
     },
     {
@@ -1632,7 +1632,7 @@
       "titleAr": "فرض محروس الفصل الثاني في الرياضيات — السنة الأولى متوسط (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/1am/1am-math-t2-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/1am/1am-math-t2-test-sample-3-sol.pdf",
-      "fileSize": 141729,
+      "fileSize": 141181,
       "solutionFileSize": 145616
     },
     {
@@ -2800,8 +2800,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/1as_tcst/1as_tcst-math-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/1as_tcst/1as_tcst-math-t3-exam-sample-1-sol.pdf",
-      "fileSize": 175371,
-      "solutionFileSize": 206066
+      "fileSize": 175331,
+      "solutionFileSize": 206041
     },
     {
       "slug": "1as_tcst-math-t3-exam-sample-2",
@@ -2816,8 +2816,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/1as_tcst/1as_tcst-math-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/1as_tcst/1as_tcst-math-t3-exam-sample-2-sol.pdf",
-      "fileSize": 181142,
-      "solutionFileSize": 216694
+      "fileSize": 181122,
+      "solutionFileSize": 216629
     },
     {
       "slug": "1as_tcst-math-t3-exam-sample-3",
@@ -2832,8 +2832,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/1as_tcst/1as_tcst-math-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/1as_tcst/1as_tcst-math-t3-exam-sample-3-sol.pdf",
-      "fileSize": 180948,
-      "solutionFileSize": 212975
+      "fileSize": 180912,
+      "solutionFileSize": 212944
     },
     {
       "slug": "1as_tcst-math-t3-test-sample-1",
@@ -2993,7 +2993,7 @@
       "pdfUrl": "/documents/generated_samples/2as_se/2as_se-math-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/2as_se/2as_se-math-t2-exam-sample-1-sol.pdf",
       "fileSize": 178614,
-      "solutionFileSize": 205583
+      "solutionFileSize": 205563
     },
     {
       "slug": "2as_se-math-t2-exam-sample-2",
@@ -3008,8 +3008,8 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثانية ثانوي — علوم تجريبية (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/2as_se/2as_se-math-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/2as_se/2as_se-math-t2-exam-sample-2-sol.pdf",
-      "fileSize": 184028,
-      "solutionFileSize": 208992
+      "fileSize": 184006,
+      "solutionFileSize": 208963
     },
     {
       "slug": "2as_se-math-t2-exam-sample-3",
@@ -3024,8 +3024,8 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثانية ثانوي — علوم تجريبية (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/2as_se/2as_se-math-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2as_se/2as_se-math-t2-exam-sample-3-sol.pdf",
-      "fileSize": 181406,
-      "solutionFileSize": 204093
+      "fileSize": 181391,
+      "solutionFileSize": 204064
     },
     {
       "slug": "2as_se-math-t2-test-sample-1",
@@ -3040,8 +3040,8 @@
       "titleAr": "فرض محروس الفصل الثاني في الرياضيات — السنة الثانية ثانوي — علوم تجريبية (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/2as_se/2as_se-math-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/2as_se/2as_se-math-t2-test-sample-1-sol.pdf",
-      "fileSize": 172964,
-      "solutionFileSize": 185801
+      "fileSize": 172939,
+      "solutionFileSize": 185766
     },
     {
       "slug": "2as_se-math-t2-test-sample-2",
@@ -3056,8 +3056,8 @@
       "titleAr": "فرض محروس الفصل الثاني في الرياضيات — السنة الثانية ثانوي — علوم تجريبية (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/2as_se/2as_se-math-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/2as_se/2as_se-math-t2-test-sample-2-sol.pdf",
-      "fileSize": 173252,
-      "solutionFileSize": 187557
+      "fileSize": 173243,
+      "solutionFileSize": 187508
     },
     {
       "slug": "2as_se-math-t2-test-sample-3",
@@ -3073,7 +3073,7 @@
       "pdfUrl": "/documents/generated_samples/2as_se/2as_se-math-t2-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2as_se/2as_se-math-t2-test-sample-3-sol.pdf",
       "fileSize": 163449,
-      "solutionFileSize": 189900
+      "solutionFileSize": 189849
     },
     {
       "slug": "2as_se-math-t3-exam-sample-1",
@@ -3088,7 +3088,7 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثانية ثانوي — علوم تجريبية (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/2as_se/2as_se-math-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/2as_se/2as_se-math-t3-exam-sample-1-sol.pdf",
-      "fileSize": 187584,
+      "fileSize": 186994,
       "solutionFileSize": 259089
     },
     {
@@ -3104,7 +3104,7 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثانية ثانوي — علوم تجريبية (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/2as_se/2as_se-math-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/2as_se/2as_se-math-t3-exam-sample-2-sol.pdf",
-      "fileSize": 202453,
+      "fileSize": 202024,
       "solutionFileSize": 284166
     },
     {
@@ -3120,7 +3120,7 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثانية ثانوي — علوم تجريبية (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/2as_se/2as_se-math-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2as_se/2as_se-math-t3-exam-sample-3-sol.pdf",
-      "fileSize": 192239,
+      "fileSize": 191885,
       "solutionFileSize": 268788
     },
     {
@@ -3168,7 +3168,7 @@
       "titleAr": "فرض محروس الفصل الثالث في الرياضيات — السنة الثانية ثانوي — علوم تجريبية (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/2as_se/2as_se-math-t3-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2as_se/2as_se-math-t3-test-sample-3-sol.pdf",
-      "fileSize": 180067,
+      "fileSize": 179700,
       "solutionFileSize": 246298
     },
     {
@@ -3281,7 +3281,7 @@
       "pdfUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t2-exam-sample-1-sol.pdf",
       "fileSize": 181400,
-      "solutionFileSize": 218301
+      "solutionFileSize": 218277
     },
     {
       "slug": "2as_tm-math-t2-exam-sample-2",
@@ -3296,8 +3296,8 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثانية ثانوي — تقني رياضي (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t2-exam-sample-2-sol.pdf",
-      "fileSize": 183922,
-      "solutionFileSize": 208905
+      "fileSize": 183912,
+      "solutionFileSize": 208884
     },
     {
       "slug": "2as_tm-math-t2-exam-sample-3",
@@ -3312,8 +3312,8 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثانية ثانوي — تقني رياضي (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t2-exam-sample-3-sol.pdf",
-      "fileSize": 181338,
-      "solutionFileSize": 204020
+      "fileSize": 181321,
+      "solutionFileSize": 203990
     },
     {
       "slug": "2as_tm-math-t2-test-sample-1",
@@ -3328,8 +3328,8 @@
       "titleAr": "فرض محروس الفصل الثاني في الرياضيات — السنة الثانية ثانوي — تقني رياضي (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t2-test-sample-1-sol.pdf",
-      "fileSize": 172960,
-      "solutionFileSize": 185784
+      "fileSize": 172935,
+      "solutionFileSize": 185755
     },
     {
       "slug": "2as_tm-math-t2-test-sample-2",
@@ -3344,8 +3344,8 @@
       "titleAr": "فرض محروس الفصل الثاني في الرياضيات — السنة الثانية ثانوي — تقني رياضي (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t2-test-sample-2-sol.pdf",
-      "fileSize": 173252,
-      "solutionFileSize": 187539
+      "fileSize": 173245,
+      "solutionFileSize": 187489
     },
     {
       "slug": "2as_tm-math-t2-test-sample-3",
@@ -3361,7 +3361,7 @@
       "pdfUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t2-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t2-test-sample-3-sol.pdf",
       "fileSize": 163470,
-      "solutionFileSize": 189878
+      "solutionFileSize": 189827
     },
     {
       "slug": "2as_tm-math-t3-exam-sample-1",
@@ -3376,7 +3376,7 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثانية ثانوي — تقني رياضي (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t3-exam-sample-1-sol.pdf",
-      "fileSize": 187525,
+      "fileSize": 186934,
       "solutionFileSize": 258929
     },
     {
@@ -3392,7 +3392,7 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثانية ثانوي — تقني رياضي (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t3-exam-sample-2-sol.pdf",
-      "fileSize": 189043,
+      "fileSize": 188440,
       "solutionFileSize": 254324
     },
     {
@@ -3408,7 +3408,7 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثانية ثانوي — تقني رياضي (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t3-exam-sample-3-sol.pdf",
-      "fileSize": 176498,
+      "fileSize": 175996,
       "solutionFileSize": 238397
     },
     {
@@ -3456,7 +3456,7 @@
       "titleAr": "فرض محروس الفصل الثالث في الرياضيات — السنة الثانية ثانوي — تقني رياضي (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t3-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2as_tm/2as_tm-math-t3-test-sample-3-sol.pdf",
-      "fileSize": 165432,
+      "fileSize": 164944,
       "solutionFileSize": 216119
     },
     {
@@ -3569,7 +3569,7 @@
       "pdfUrl": "/documents/generated_samples/2as_math/2as_math-math-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/2as_math/2as_math-math-t2-exam-sample-1-sol.pdf",
       "fileSize": 178507,
-      "solutionFileSize": 205499
+      "solutionFileSize": 205479
     },
     {
       "slug": "2as_math-math-t2-exam-sample-2",
@@ -3585,7 +3585,7 @@
       "pdfUrl": "/documents/generated_samples/2as_math/2as_math-math-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/2as_math/2as_math-math-t2-exam-sample-2-sol.pdf",
       "fileSize": 196560,
-      "solutionFileSize": 234127
+      "solutionFileSize": 234099
     },
     {
       "slug": "2as_math-math-t2-exam-sample-3",
@@ -3601,7 +3601,7 @@
       "pdfUrl": "/documents/generated_samples/2as_math/2as_math-math-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2as_math/2as_math-math-t2-exam-sample-3-sol.pdf",
       "fileSize": 187407,
-      "solutionFileSize": 220586
+      "solutionFileSize": 220558
     },
     {
       "slug": "2as_math-math-t2-test-sample-1",
@@ -3617,7 +3617,7 @@
       "pdfUrl": "/documents/generated_samples/2as_math/2as_math-math-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/2as_math/2as_math-math-t2-test-sample-1-sol.pdf",
       "fileSize": 178701,
-      "solutionFileSize": 204970
+      "solutionFileSize": 204944
     },
     {
       "slug": "2as_math-math-t2-test-sample-2",
@@ -3633,7 +3633,7 @@
       "pdfUrl": "/documents/generated_samples/2as_math/2as_math-math-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/2as_math/2as_math-math-t2-test-sample-2-sol.pdf",
       "fileSize": 179317,
-      "solutionFileSize": 206398
+      "solutionFileSize": 206375
     },
     {
       "slug": "2as_math-math-t2-test-sample-3",
@@ -3649,7 +3649,7 @@
       "pdfUrl": "/documents/generated_samples/2as_math/2as_math-math-t2-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2as_math/2as_math-math-t2-test-sample-3-sol.pdf",
       "fileSize": 170817,
-      "solutionFileSize": 197860
+      "solutionFileSize": 197834
     },
     {
       "slug": "2as_math-math-t3-exam-sample-1",
@@ -3664,8 +3664,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثانية ثانوي — رياضيات (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/2as_math/2as_math-math-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/2as_math/2as_math-math-t3-exam-sample-1-sol.pdf",
-      "fileSize": 184014,
-      "solutionFileSize": 257165
+      "fileSize": 183496,
+      "solutionFileSize": 256624
     },
     {
       "slug": "2as_math-math-t3-exam-sample-2",
@@ -3680,8 +3680,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثانية ثانوي — رياضيات (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/2as_math/2as_math-math-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/2as_math/2as_math-math-t3-exam-sample-2-sol.pdf",
-      "fileSize": 187736,
-      "solutionFileSize": 261485
+      "fileSize": 187220,
+      "solutionFileSize": 261358
     },
     {
       "slug": "2as_math-math-t3-exam-sample-3",
@@ -3696,7 +3696,7 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثانية ثانوي — رياضيات (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/2as_math/2as_math-math-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2as_math/2as_math-math-t3-exam-sample-3-sol.pdf",
-      "fileSize": 177707,
+      "fileSize": 177190,
       "solutionFileSize": 249873
     },
     {
@@ -3744,7 +3744,7 @@
       "titleAr": "فرض محروس الفصل الثالث في الرياضيات — السنة الثانية ثانوي — رياضيات (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/2as_math/2as_math-math-t3-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/2as_math/2as_math-math-t3-test-sample-3-sol.pdf",
-      "fileSize": 166938,
+      "fileSize": 166402,
       "solutionFileSize": 228896
     },
     {
@@ -3760,7 +3760,7 @@
       "titleAr": "اختبار الفصل الأول في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t1-exam-sample-1-sol.pdf",
-      "fileSize": 206005,
+      "fileSize": 205308,
       "solutionFileSize": 255969
     },
     {
@@ -3776,7 +3776,7 @@
       "titleAr": "اختبار الفصل الأول في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t1-exam-sample-2-sol.pdf",
-      "fileSize": 197272,
+      "fileSize": 196594,
       "solutionFileSize": 244678
     },
     {
@@ -3856,8 +3856,8 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t2-exam-sample-1-sol.pdf",
-      "fileSize": 198965,
-      "solutionFileSize": 239864
+      "fileSize": 196499,
+      "solutionFileSize": 236446
     },
     {
       "slug": "3as_se-math-t2-exam-sample-2",
@@ -3872,8 +3872,8 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t2-exam-sample-2-sol.pdf",
-      "fileSize": 200232,
-      "solutionFileSize": 240748
+      "fileSize": 197684,
+      "solutionFileSize": 237705
     },
     {
       "slug": "3as_se-math-t2-exam-sample-3",
@@ -3889,7 +3889,7 @@
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t2-exam-sample-3-sol.pdf",
       "fileSize": 179212,
-      "solutionFileSize": 229697
+      "solutionFileSize": 229173
     },
     {
       "slug": "3as_se-math-t2-test-sample-1",
@@ -3904,8 +3904,8 @@
       "titleAr": "فرض محروس الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t2-test-sample-1-sol.pdf",
-      "fileSize": 186260,
-      "solutionFileSize": 217949
+      "fileSize": 183400,
+      "solutionFileSize": 214630
     },
     {
       "slug": "3as_se-math-t2-test-sample-2",
@@ -3920,8 +3920,8 @@
       "titleAr": "فرض محروس الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t2-test-sample-2-sol.pdf",
-      "fileSize": 188048,
-      "solutionFileSize": 221584
+      "fileSize": 185203,
+      "solutionFileSize": 218260
     },
     {
       "slug": "3as_se-math-t2-test-sample-3",
@@ -3952,8 +3952,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-exam-sample-1-sol.pdf",
-      "fileSize": 204119,
-      "solutionFileSize": 252300
+      "fileSize": 204040,
+      "solutionFileSize": 252318
     },
     {
       "slug": "3as_se-math-t3-exam-sample-2",
@@ -3968,8 +3968,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-exam-sample-2-sol.pdf",
-      "fileSize": 206346,
-      "solutionFileSize": 258551
+      "fileSize": 206314,
+      "solutionFileSize": 258528
     },
     {
       "slug": "3as_se-math-t3-exam-sample-3",
@@ -3984,8 +3984,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-exam-sample-3-sol.pdf",
-      "fileSize": 204807,
-      "solutionFileSize": 254086
+      "fileSize": 204752,
+      "solutionFileSize": 254040
     },
     {
       "slug": "3as_se-math-t3-test-sample-1",
@@ -4000,8 +4000,8 @@
       "titleAr": "فرض محروس الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-test-sample-1-sol.pdf",
-      "fileSize": 187495,
-      "solutionFileSize": 226097
+      "fileSize": 187458,
+      "solutionFileSize": 226068
     },
     {
       "slug": "3as_se-math-t3-test-sample-2",
@@ -4016,8 +4016,8 @@
       "titleAr": "فرض محروس الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-test-sample-2-sol.pdf",
-      "fileSize": 188143,
-      "solutionFileSize": 226985
+      "fileSize": 188106,
+      "solutionFileSize": 226973
     },
     {
       "slug": "3as_se-math-t3-test-sample-3",
@@ -4032,8 +4032,8 @@
       "titleAr": "فرض محروس الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-test-sample-3-sol.pdf",
-      "fileSize": 185939,
-      "solutionFileSize": 231771
+      "fileSize": 185890,
+      "solutionFileSize": 231709
     },
     {
       "slug": "3as_tm-math-t1-exam-sample-1",
@@ -4048,8 +4048,8 @@
       "titleAr": "اختبار الفصل الأول في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t1-exam-sample-1-sol.pdf",
-      "fileSize": 202887,
-      "solutionFileSize": 253414
+      "fileSize": 202213,
+      "solutionFileSize": 252439
     },
     {
       "slug": "3as_tm-math-t1-exam-sample-2",
@@ -4064,8 +4064,8 @@
       "titleAr": "اختبار الفصل الأول في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t1-exam-sample-2-sol.pdf",
-      "fileSize": 198742,
-      "solutionFileSize": 245568
+      "fileSize": 197873,
+      "solutionFileSize": 244528
     },
     {
       "slug": "3as_tm-math-t1-exam-sample-3",
@@ -4080,8 +4080,8 @@
       "titleAr": "اختبار الفصل الأول في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t1-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t1-exam-sample-3-sol.pdf",
-      "fileSize": 203086,
-      "solutionFileSize": 247861
+      "fileSize": 201188,
+      "solutionFileSize": 245646
     },
     {
       "slug": "3as_tm-math-t1-test-sample-1",
@@ -4096,8 +4096,8 @@
       "titleAr": "فرض محروس الفصل الأول في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t1-test-sample-1-sol.pdf",
-      "fileSize": 183855,
-      "solutionFileSize": 226631
+      "fileSize": 183175,
+      "solutionFileSize": 224536
     },
     {
       "slug": "3as_tm-math-t1-test-sample-2",
@@ -4112,8 +4112,8 @@
       "titleAr": "فرض محروس الفصل الأول في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t1-test-sample-2-sol.pdf",
-      "fileSize": 186955,
-      "solutionFileSize": 228460
+      "fileSize": 186085,
+      "solutionFileSize": 227379
     },
     {
       "slug": "3as_tm-math-t1-test-sample-3",
@@ -4128,8 +4128,8 @@
       "titleAr": "فرض محروس الفصل الأول في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t1-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t1-test-sample-3-sol.pdf",
-      "fileSize": 184567,
-      "solutionFileSize": 220117
+      "fileSize": 180948,
+      "solutionFileSize": 217887
     },
     {
       "slug": "3as_tm-math-t2-exam-sample-1",
@@ -4144,8 +4144,8 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t2-exam-sample-1-sol.pdf",
-      "fileSize": 198427,
-      "solutionFileSize": 241939
+      "fileSize": 195720,
+      "solutionFileSize": 238264
     },
     {
       "slug": "3as_tm-math-t2-exam-sample-2",
@@ -4160,8 +4160,8 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t2-exam-sample-2-sol.pdf",
-      "fileSize": 199568,
-      "solutionFileSize": 251752
+      "fileSize": 197098,
+      "solutionFileSize": 249169
     },
     {
       "slug": "3as_tm-math-t2-exam-sample-3",
@@ -4177,7 +4177,7 @@
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t2-exam-sample-3-sol.pdf",
       "fileSize": 179784,
-      "solutionFileSize": 236707
+      "solutionFileSize": 236296
     },
     {
       "slug": "3as_tm-math-t2-test-sample-1",
@@ -4192,8 +4192,8 @@
       "titleAr": "فرض محروس الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t2-test-sample-1-sol.pdf",
-      "fileSize": 164140,
-      "solutionFileSize": 205170
+      "fileSize": 163755,
+      "solutionFileSize": 203937
     },
     {
       "slug": "3as_tm-math-t2-test-sample-2",
@@ -4209,7 +4209,7 @@
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t2-test-sample-2-sol.pdf",
       "fileSize": 166375,
-      "solutionFileSize": 209160
+      "solutionFileSize": 208758
     },
     {
       "slug": "3as_tm-math-t2-test-sample-3",
@@ -4225,7 +4225,7 @@
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t2-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t2-test-sample-3-sol.pdf",
       "fileSize": 169089,
-      "solutionFileSize": 214883
+      "solutionFileSize": 214474
     },
     {
       "slug": "3as_tm-math-t3-exam-sample-1",
@@ -4240,8 +4240,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-exam-sample-1-sol.pdf",
-      "fileSize": 189726,
-      "solutionFileSize": 239809
+      "fileSize": 189666,
+      "solutionFileSize": 239761
     },
     {
       "slug": "3as_tm-math-t3-exam-sample-2",
@@ -4256,8 +4256,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-exam-sample-2-sol.pdf",
-      "fileSize": 193770,
-      "solutionFileSize": 256754
+      "fileSize": 193728,
+      "solutionFileSize": 255422
     },
     {
       "slug": "3as_tm-math-t3-exam-sample-3",
@@ -4272,8 +4272,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-exam-sample-3-sol.pdf",
-      "fileSize": 195410,
-      "solutionFileSize": 256129
+      "fileSize": 195349,
+      "solutionFileSize": 256076
     },
     {
       "slug": "3as_tm-math-t3-test-sample-1",
@@ -4288,8 +4288,8 @@
       "titleAr": "فرض محروس الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-test-sample-1-sol.pdf",
-      "fileSize": 171791,
-      "solutionFileSize": 215056
+      "fileSize": 171758,
+      "solutionFileSize": 215010
     },
     {
       "slug": "3as_tm-math-t3-test-sample-2",
@@ -4304,8 +4304,8 @@
       "titleAr": "فرض محروس الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-test-sample-2-sol.pdf",
-      "fileSize": 174504,
-      "solutionFileSize": 223628
+      "fileSize": 174469,
+      "solutionFileSize": 223568
     },
     {
       "slug": "3as_tm-math-t3-test-sample-3",
@@ -4320,8 +4320,8 @@
       "titleAr": "فرض محروس الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-test-sample-3-sol.pdf",
-      "fileSize": 185951,
-      "solutionFileSize": 231762
+      "fileSize": 185902,
+      "solutionFileSize": 231699
     },
     {
       "slug": "3as_math-math-t1-exam-sample-1",
@@ -4336,7 +4336,7 @@
       "titleAr": "اختبار الفصل الأول في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t1-exam-sample-1-sol.pdf",
-      "fileSize": 209219,
+      "fileSize": 208542,
       "solutionFileSize": 259626
     },
     {
@@ -4352,7 +4352,7 @@
       "titleAr": "اختبار الفصل الأول في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t1-exam-sample-2-sol.pdf",
-      "fileSize": 201488,
+      "fileSize": 200814,
       "solutionFileSize": 249067
     },
     {
@@ -4384,7 +4384,7 @@
       "titleAr": "فرض محروس الفصل الأول في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t1-test-sample-1-sol.pdf",
-      "fileSize": 190285,
+      "fileSize": 189606,
       "solutionFileSize": 230630
     },
     {
@@ -4400,7 +4400,7 @@
       "titleAr": "فرض محروس الفصل الأول في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t1-test-sample-2-sol.pdf",
-      "fileSize": 190074,
+      "fileSize": 189397,
       "solutionFileSize": 230061
     },
     {
@@ -4432,8 +4432,8 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t2-exam-sample-1-sol.pdf",
-      "fileSize": 212297,
-      "solutionFileSize": 266593
+      "fileSize": 209181,
+      "solutionFileSize": 263012
     },
     {
       "slug": "3as_math-math-t2-exam-sample-2",
@@ -4448,8 +4448,8 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t2-exam-sample-2-sol.pdf",
-      "fileSize": 212388,
-      "solutionFileSize": 268299
+      "fileSize": 209263,
+      "solutionFileSize": 264633
     },
     {
       "slug": "3as_math-math-t2-exam-sample-3",
@@ -4464,8 +4464,8 @@
       "titleAr": "اختبار الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t2-exam-sample-3-sol.pdf",
-      "fileSize": 206966,
-      "solutionFileSize": 258531
+      "fileSize": 204494,
+      "solutionFileSize": 255668
     },
     {
       "slug": "3as_math-math-t2-test-sample-1",
@@ -4480,8 +4480,8 @@
       "titleAr": "فرض محروس الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t2-test-sample-1-sol.pdf",
-      "fileSize": 191077,
-      "solutionFileSize": 230778
+      "fileSize": 188355,
+      "solutionFileSize": 227625
     },
     {
       "slug": "3as_math-math-t2-test-sample-2",
@@ -4496,8 +4496,8 @@
       "titleAr": "فرض محروس الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t2-test-sample-2-sol.pdf",
-      "fileSize": 192317,
-      "solutionFileSize": 232155
+      "fileSize": 189609,
+      "solutionFileSize": 229042
     },
     {
       "slug": "3as_math-math-t2-test-sample-3",
@@ -4512,8 +4512,8 @@
       "titleAr": "فرض محروس الفصل الثاني في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t2-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t2-test-sample-3-sol.pdf",
-      "fileSize": 195253,
-      "solutionFileSize": 235853
+      "fileSize": 192565,
+      "solutionFileSize": 232779
     },
     {
       "slug": "3as_math-math-t3-exam-sample-1",
@@ -4528,8 +4528,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-exam-sample-1-sol.pdf",
-      "fileSize": 195749,
-      "solutionFileSize": 252790
+      "fileSize": 195701,
+      "solutionFileSize": 252754
     },
     {
       "slug": "3as_math-math-t3-exam-sample-2",
@@ -4544,8 +4544,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-exam-sample-2-sol.pdf",
-      "fileSize": 197531,
-      "solutionFileSize": 259828
+      "fileSize": 197514,
+      "solutionFileSize": 258490
     },
     {
       "slug": "3as_math-math-t3-exam-sample-3",
@@ -4560,8 +4560,8 @@
       "titleAr": "اختبار الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-exam-sample-3-sol.pdf",
-      "fileSize": 195788,
-      "solutionFileSize": 252394
+      "fileSize": 195746,
+      "solutionFileSize": 252343
     },
     {
       "slug": "3as_math-math-t3-test-sample-1",
@@ -4576,8 +4576,8 @@
       "titleAr": "فرض محروس الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-test-sample-1-sol.pdf",
-      "fileSize": 179469,
-      "solutionFileSize": 226696
+      "fileSize": 179436,
+      "solutionFileSize": 226643
     },
     {
       "slug": "3as_math-math-t3-test-sample-2",
@@ -4592,8 +4592,8 @@
       "titleAr": "فرض محروس الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-test-sample-2-sol.pdf",
-      "fileSize": 179994,
-      "solutionFileSize": 228466
+      "fileSize": 179956,
+      "solutionFileSize": 228417
     },
     {
       "slug": "3as_math-math-t3-test-sample-3",
@@ -4608,8 +4608,8 @@
       "titleAr": "فرض محروس الفصل الثالث في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-test-sample-3-sol.pdf",
-      "fileSize": 186055,
-      "solutionFileSize": 231884
+      "fileSize": 186006,
+      "solutionFileSize": 231825
     },
     {
       "slug": "5ap-math-t3-cinq-mock-1",
@@ -4752,8 +4752,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (النموذج 1)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-bac-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-bac-mock-1-sol.pdf",
-      "fileSize": 142436,
-      "solutionFileSize": 188139
+      "fileSize": 139938,
+      "solutionFileSize": 185026
     },
     {
       "slug": "3as_se-math-t3-bac-mock-2",
@@ -4769,7 +4769,7 @@
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-bac-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-bac-mock-2-sol.pdf",
       "fileSize": 119866,
-      "solutionFileSize": 166848
+      "solutionFileSize": 166326
     },
     {
       "slug": "3as_se-math-t3-bac-mock-3",
@@ -4784,8 +4784,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في الرياضيات — السنة الثالثة ثانوي — علوم تجريبية (BAC) (النموذج 3)",
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-bac-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-bac-mock-3-sol.pdf",
-      "fileSize": 149083,
-      "solutionFileSize": 210316
+      "fileSize": 148141,
+      "solutionFileSize": 209364
     },
     {
       "slug": "3as_se-math-t3-bac-mock-4",
@@ -4801,7 +4801,7 @@
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-bac-mock-4.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-bac-mock-4-sol.pdf",
       "fileSize": 120304,
-      "solutionFileSize": 173827
+      "solutionFileSize": 173297
     },
     {
       "slug": "3as_se-math-t3-bac-mock-5",
@@ -4817,7 +4817,7 @@
       "pdfUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-bac-mock-5.pdf",
       "solutionUrl": "/documents/generated_samples/3as_se/3as_se-math-t3-bac-mock-5-sol.pdf",
       "fileSize": 133904,
-      "solutionFileSize": 185982
+      "solutionFileSize": 185437
     },
     {
       "slug": "3as_tm-math-t3-bac-mock-1",
@@ -4832,8 +4832,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (النموذج 1)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-bac-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-bac-mock-1-sol.pdf",
-      "fileSize": 134345,
-      "solutionFileSize": 178934
+      "fileSize": 131176,
+      "solutionFileSize": 174394
     },
     {
       "slug": "3as_tm-math-t3-bac-mock-2",
@@ -4849,7 +4849,7 @@
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-bac-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-bac-mock-2-sol.pdf",
       "fileSize": 125563,
-      "solutionFileSize": 172382
+      "solutionFileSize": 171545
     },
     {
       "slug": "3as_tm-math-t3-bac-mock-3",
@@ -4864,8 +4864,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (النموذج 3)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-bac-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-bac-mock-3-sol.pdf",
-      "fileSize": 151491,
-      "solutionFileSize": 200186
+      "fileSize": 148951,
+      "solutionFileSize": 197105
     },
     {
       "slug": "3as_tm-math-t3-bac-mock-4",
@@ -4880,8 +4880,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في الرياضيات — السنة الثالثة ثانوي — تقني رياضي (BAC) (النموذج 4)",
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-bac-mock-4.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-bac-mock-4-sol.pdf",
-      "fileSize": 122659,
-      "solutionFileSize": 169667
+      "fileSize": 120610,
+      "solutionFileSize": 167386
     },
     {
       "slug": "3as_tm-math-t3-bac-mock-5",
@@ -4897,7 +4897,7 @@
       "pdfUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-bac-mock-5.pdf",
       "solutionUrl": "/documents/generated_samples/3as_tm/3as_tm-math-t3-bac-mock-5-sol.pdf",
       "fileSize": 134618,
-      "solutionFileSize": 186359
+      "solutionFileSize": 185812
     },
     {
       "slug": "3as_math-math-t3-bac-mock-1",
@@ -4912,8 +4912,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (النموذج 1)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-bac-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-bac-mock-1-sol.pdf",
-      "fileSize": 136988,
-      "solutionFileSize": 178364
+      "fileSize": 134440,
+      "solutionFileSize": 175508
     },
     {
       "slug": "3as_math-math-t3-bac-mock-2",
@@ -4928,8 +4928,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (النموذج 2)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-bac-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-bac-mock-2-sol.pdf",
-      "fileSize": 151107,
-      "solutionFileSize": 198770
+      "fileSize": 148064,
+      "solutionFileSize": 195127
     },
     {
       "slug": "3as_math-math-t3-bac-mock-3",
@@ -4944,8 +4944,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (النموذج 3)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-bac-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-bac-mock-3-sol.pdf",
-      "fileSize": 152339,
-      "solutionFileSize": 210787
+      "fileSize": 149803,
+      "solutionFileSize": 207451
     },
     {
       "slug": "3as_math-math-t3-bac-mock-4",
@@ -4961,7 +4961,7 @@
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-bac-mock-4.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-bac-mock-4-sol.pdf",
       "fileSize": 121519,
-      "solutionFileSize": 169865
+      "solutionFileSize": 169337
     },
     {
       "slug": "3as_math-math-t3-bac-mock-5",
@@ -4976,8 +4976,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في الرياضيات — السنة الثالثة ثانوي — رياضيات (BAC) (النموذج 5)",
       "pdfUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-bac-mock-5.pdf",
       "solutionUrl": "/documents/generated_samples/3as_math/3as_math-math-t3-bac-mock-5-sol.pdf",
-      "fileSize": 154797,
-      "solutionFileSize": 211758
+      "fileSize": 153625,
+      "solutionFileSize": 210854
     }
   ]
 }

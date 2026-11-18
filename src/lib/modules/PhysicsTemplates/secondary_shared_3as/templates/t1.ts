@@ -113,7 +113,7 @@ export function createSharedPhysicsTemplates3asT1(
 			const yTop = Math.ceil(xmax_mmol * 1.25);
 			const tMax = tauMin * 4;
 			const curveSvg = svgPhysicsCurvePlot({
-				title: 'تطور تقدم التفاعل x(t) بدلالة الزمن',
+				title: 'تطور تقدم التفاعل بدلالة الزمن x(t)',
 				xMin: 0,
 				xMax: tMax,
 				yMin: 0,
@@ -131,7 +131,7 @@ export function createSharedPhysicsTemplates3asT1(
 				],
 				dashedGuides: [
 					{ x1: 0, y1: xmax_mmol, x2: tMax, y2: xmax_mmol, color: '#475569', label: `x_max = ${xmax_mmol}`, labelPos: 'top' },
-					{ x1: 0, y1: 0, x2: tauMin, y2: xmax_mmol, color: '#d97706', label: 'المماس عند t=0', labelPos: 'left' },
+					{ x1: 0, y1: 0, x2: tauMin, y2: xmax_mmol, color: '#d97706', label: 'المماس عند t=0', labelPos: 'right' },
 					{ x1: 0, y1: roundTo(xmax_mmol / 2, 2), x2: tHalfMin, y2: roundTo(xmax_mmol / 2, 2), color: '#dc2626' },
 					{ x1: tHalfMin, y1: 0, x2: tHalfMin, y2: roundTo(xmax_mmol / 2, 2), color: '#dc2626' }
 				],
@@ -359,7 +359,7 @@ export function createSharedPhysicsTemplates3asT1(
 
 			const yMaxPlot = Math.ceil(Pmax_kPa * 1.2);
 			const svgP = svgPhysicsCurvePlot({
-				title: 'تطور ضغط غاز ثنائي الهيدروجين P_H₂(t)',
+				title: 'تطور ضغط غاز ثنائي الهيدروجين ΔP(t)',
 				xMin: 0,
 				xMax: tauS * 4,
 				yMin: 0,
@@ -719,7 +719,7 @@ export function createSharedPhysicsTemplates3asT1(
 			const yMaxPlot = Math.ceil(vLim * 1.25);
 			const tMaxPlot = roundTo(tau * 5, 1);
 			const svgFall = svgPhysicsCurvePlot({
-				title: 'منحنى تطور السرعة v(t) أثناء السقوط الشاقولي في سائل',
+				title: 'منحنى تطور السرعة أثناء السقوط الشاقولي v(t)',
 				xMin: 0,
 				xMax: tMaxPlot,
 				yMin: 0,
@@ -737,7 +737,7 @@ export function createSharedPhysicsTemplates3asT1(
 				],
 				dashedGuides: [
 					{ x1: 0, y1: vLim, x2: tMaxPlot, y2: vLim, color: '#475569', label: `v_lim = ${vLim} m/s`, labelPos: 'top' },
-					{ x1: 0, y1: 0, x2: tau, y2: vLim, color: '#dc2626', label: 'المماس عند t=0', labelPos: 'left' },
+					{ x1: 0, y1: 0, x2: tau, y2: vLim, color: '#dc2626', label: 'المماس عند t=0', labelPos: 'right' },
 					{ x1: tau, y1: 0, x2: tau, y2: vLim, color: '#dc2626' }
 				],
 				points: [

@@ -14,7 +14,7 @@ import type { SharedPhysicsLesson } from './t1';
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const svgRcChargeCurve = svgPhysicsCurvePlot({
-	title: 'منحنى شحن مكثفة u_C(t) وتعيين ثابت الزمن τ = RC',
+	title: 'منحنى شحن مكثفة وتعيين ثابت الزمن τ = RC',
 	xMin: 0,
 	xMax: 60,
 	yMin: 0,
@@ -38,7 +38,7 @@ const svgRcChargeCurve = svgPhysicsCurvePlot({
 	],
 	dashedGuides: [
 		{ x1: 0, y1: 10, x2: 60, y2: 10, color: '#475569', label: 'E = 10 V', labelPos: 'top' },
-		{ x1: 0, y1: 0, x2: 10, y2: 10, color: '#dc2626', label: 'المماس عند t=0', labelPos: 'left' },
+		{ x1: 0, y1: 0, x2: 10, y2: 10, color: '#dc2626', label: 'المماس عند t=0', labelPos: 'right' },
 		{ x1: 10, y1: 0, x2: 10, y2: 10, color: '#dc2626' },
 		{ x1: 0, y1: 6.32, x2: 10, y2: 6.32, color: '#d97706' }
 	],

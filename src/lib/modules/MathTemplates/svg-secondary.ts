@@ -7,7 +7,7 @@ function escXml(str: string): string {
 }
 
 function wrapSecSvg(width: number, height: number, body: string): string {
-	return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" style="background:#ffffff;font-family:'Arabic Transparent',Arial,sans-serif">${body}</svg>`;
+	return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" font-family="Arabic Transparent" style="background:#ffffff;font-family:'Arabic Transparent',Arial,sans-serif">${body}</svg>`;
 }
 
 /** 1. Analytical function curve plotter with discontinuity splitting, asymptotes, extrema & tangents */
