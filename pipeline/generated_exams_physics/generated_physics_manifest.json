@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T23:31:20.731Z",
+  "generated_at": "2026-11-18T23:38:31.424Z",
   "total_papers": 216,
   "total_pdfs": 432,
   "items": [
@@ -144,8 +144,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية والتكنولوجيا — السنة الأولى متوسط (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/1am/1am-phy-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/1am/1am-phy-t2-exam-sample-3-sol.pdf",
-      "fileSize": 180130,
-      "solutionFileSize": 185337
+      "fileSize": 174132,
+      "solutionFileSize": 179309
     },
     {
       "slug": "1am-phy-t2-test-sample-1",
@@ -160,8 +160,8 @@
       "titleAr": "فرض محروس الفصل الثاني في العلوم الفيزيائية والتكنولوجيا — السنة الأولى متوسط (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/1am/1am-phy-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/1am/1am-phy-t2-test-sample-1-sol.pdf",
-      "fileSize": 136725,
-      "solutionFileSize": 141200
+      "fileSize": 130753,
+      "solutionFileSize": 135234
     },
     {
       "slug": "1am-phy-t2-test-sample-2",
@@ -400,8 +400,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية والتكنولوجيا — السنة الثانية متوسط (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2am/2am-phy-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2am/2am-phy-t2-exam-sample-1-sol.pdf",
-      "fileSize": 156908,
-      "solutionFileSize": 161960
+      "fileSize": 155235,
+      "solutionFileSize": 160303
     },
     {
       "slug": "2am-phy-t2-exam-sample-2",
@@ -416,8 +416,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية والتكنولوجيا — السنة الثانية متوسط (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/2am/2am-phy-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2am/2am-phy-t2-exam-sample-2-sol.pdf",
-      "fileSize": 160976,
-      "solutionFileSize": 166913
+      "fileSize": 159321,
+      "solutionFileSize": 165243
     },
     {
       "slug": "2am-phy-t2-exam-sample-3",
@@ -432,8 +432,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية والتكنولوجيا — السنة الثانية متوسط (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/2am/2am-phy-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2am/2am-phy-t2-exam-sample-3-sol.pdf",
-      "fileSize": 166048,
-      "solutionFileSize": 170127
+      "fileSize": 161642,
+      "solutionFileSize": 165732
     },
     {
       "slug": "2am-phy-t2-test-sample-1",
@@ -448,8 +448,8 @@
       "titleAr": "فرض محروس الفصل الثاني في العلوم الفيزيائية والتكنولوجيا — السنة الثانية متوسط (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2am/2am-phy-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2am/2am-phy-t2-test-sample-1-sol.pdf",
-      "fileSize": 137210,
-      "solutionFileSize": 140945
+      "fileSize": 133699,
+      "solutionFileSize": 137378
     },
     {
       "slug": "2am-phy-t2-test-sample-2",
@@ -784,8 +784,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية والتكنولوجيا — السنة الثالثة متوسط (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3am/3am-phy-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3am/3am-phy-t3-exam-sample-1-sol.pdf",
-      "fileSize": 153137,
-      "solutionFileSize": 158274
+      "fileSize": 150352,
+      "solutionFileSize": 155481
     },
     {
       "slug": "3am-phy-t3-exam-sample-2",
@@ -816,8 +816,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية والتكنولوجيا — السنة الثالثة متوسط (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3am/3am-phy-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3am/3am-phy-t3-exam-sample-3-sol.pdf",
-      "fileSize": 152602,
-      "solutionFileSize": 158589
+      "fileSize": 149648,
+      "solutionFileSize": 155617
     },
     {
       "slug": "3am-phy-t3-test-sample-1",
@@ -864,8 +864,8 @@
       "titleAr": "فرض محروس الفصل الثالث في العلوم الفيزيائية والتكنولوجيا — السنة الثالثة متوسط (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3am/3am-phy-t3-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3am/3am-phy-t3-test-sample-3-sol.pdf",
-      "fileSize": 131724,
-      "solutionFileSize": 135305
+      "fileSize": 128655,
+      "solutionFileSize": 132221
     },
     {
       "slug": "4am-phy-t1-exam-sample-1",
@@ -1264,8 +1264,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t2-exam-sample-1-sol.pdf",
-      "fileSize": 191465,
-      "solutionFileSize": 200251
+      "fileSize": 185885,
+      "solutionFileSize": 194650
     },
     {
       "slug": "1as_tcst-phy-t2-exam-sample-2",
@@ -1280,8 +1280,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t2-exam-sample-2-sol.pdf",
-      "fileSize": 175334,
-      "solutionFileSize": 187713
+      "fileSize": 169416,
+      "solutionFileSize": 181766
     },
     {
       "slug": "1as_tcst-phy-t2-exam-sample-3",
@@ -1296,8 +1296,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t2-exam-sample-3-sol.pdf",
-      "fileSize": 189309,
-      "solutionFileSize": 205778
+      "fileSize": 183725,
+      "solutionFileSize": 200193
     },
     {
       "slug": "1as_tcst-phy-t2-test-sample-1",
@@ -1312,8 +1312,8 @@
       "titleAr": "فرض محروس الفصل الثاني في العلوم الفيزيائية — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t2-test-sample-1-sol.pdf",
-      "fileSize": 160655,
-      "solutionFileSize": 170302
+      "fileSize": 154936,
+      "solutionFileSize": 164519
     },
     {
       "slug": "1as_tcst-phy-t2-test-sample-2",
@@ -1360,8 +1360,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t3-exam-sample-1-sol.pdf",
-      "fileSize": 212620,
-      "solutionFileSize": 228898
+      "fileSize": 197262,
+      "solutionFileSize": 213410
     },
     {
       "slug": "1as_tcst-phy-t3-exam-sample-2",
@@ -1376,8 +1376,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t3-exam-sample-2-sol.pdf",
-      "fileSize": 203240,
-      "solutionFileSize": 218240
+      "fileSize": 187048,
+      "solutionFileSize": 201934
     },
     {
       "slug": "1as_tcst-phy-t3-exam-sample-3",
@@ -1392,8 +1392,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t3-exam-sample-3-sol.pdf",
-      "fileSize": 214250,
-      "solutionFileSize": 231243
+      "fileSize": 198175,
+      "solutionFileSize": 215056
     },
     {
       "slug": "1as_tcst-phy-t3-test-sample-1",
@@ -1408,8 +1408,8 @@
       "titleAr": "فرض محروس الفصل الثالث في العلوم الفيزيائية — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t3-test-sample-1-sol.pdf",
-      "fileSize": 181376,
-      "solutionFileSize": 190853
+      "fileSize": 174322,
+      "solutionFileSize": 183783
     },
     {
       "slug": "1as_tcst-phy-t3-test-sample-2",
@@ -1424,8 +1424,8 @@
       "titleAr": "فرض محروس الفصل الثالث في العلوم الفيزيائية — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t3-test-sample-2-sol.pdf",
-      "fileSize": 159145,
-      "solutionFileSize": 171308
+      "fileSize": 152085,
+      "solutionFileSize": 164248
     },
     {
       "slug": "1as_tcst-phy-t3-test-sample-3",
@@ -1440,8 +1440,8 @@
       "titleAr": "فرض محروس الفصل الثالث في العلوم الفيزيائية — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t3-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/1as_tcst/1as_tcst-phy-t3-test-sample-3-sol.pdf",
-      "fileSize": 171316,
-      "solutionFileSize": 186085
+      "fileSize": 163281,
+      "solutionFileSize": 177966
     },
     {
       "slug": "2as_se-phy-t1-exam-sample-1",
@@ -1456,8 +1456,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — علوم تجريبية (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t1-exam-sample-1-sol.pdf",
-      "fileSize": 176478,
-      "solutionFileSize": 193029
+      "fileSize": 169407,
+      "solutionFileSize": 185947
     },
     {
       "slug": "2as_se-phy-t1-exam-sample-2",
@@ -1472,8 +1472,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — علوم تجريبية (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t1-exam-sample-2-sol.pdf",
-      "fileSize": 168041,
-      "solutionFileSize": 173895
+      "fileSize": 160402,
+      "solutionFileSize": 166168
     },
     {
       "slug": "2as_se-phy-t1-exam-sample-3",
@@ -1488,8 +1488,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — علوم تجريبية (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t1-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t1-exam-sample-3-sol.pdf",
-      "fileSize": 175785,
-      "solutionFileSize": 185295
+      "fileSize": 163556,
+      "solutionFileSize": 173202
     },
     {
       "slug": "2as_se-phy-t1-test-sample-1",
@@ -1504,8 +1504,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — علوم تجريبية (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t1-test-sample-1-sol.pdf",
-      "fileSize": 159457,
-      "solutionFileSize": 166360
+      "fileSize": 152084,
+      "solutionFileSize": 158911
     },
     {
       "slug": "2as_se-phy-t1-test-sample-2",
@@ -1520,8 +1520,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — علوم تجريبية (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t1-test-sample-2-sol.pdf",
-      "fileSize": 153017,
-      "solutionFileSize": 159031
+      "fileSize": 145508,
+      "solutionFileSize": 151440
     },
     {
       "slug": "2as_se-phy-t1-test-sample-3",
@@ -1536,8 +1536,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — علوم تجريبية (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t1-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t1-test-sample-3-sol.pdf",
-      "fileSize": 155429,
-      "solutionFileSize": 165255
+      "fileSize": 147680,
+      "solutionFileSize": 157427
     },
     {
       "slug": "2as_se-phy-t2-exam-sample-1",
@@ -1552,8 +1552,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثانية ثانوي — علوم تجريبية (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t2-exam-sample-1-sol.pdf",
-      "fileSize": 171835,
-      "solutionFileSize": 191116
+      "fileSize": 164788,
+      "solutionFileSize": 184077
     },
     {
       "slug": "2as_se-phy-t2-exam-sample-2",
@@ -1568,8 +1568,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثانية ثانوي — علوم تجريبية (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t2-exam-sample-2-sol.pdf",
-      "fileSize": 156870,
-      "solutionFileSize": 169460
+      "fileSize": 152104,
+      "solutionFileSize": 164658
     },
     {
       "slug": "2as_se-phy-t2-exam-sample-3",
@@ -1648,8 +1648,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثانية ثانوي — علوم تجريبية (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t3-exam-sample-1-sol.pdf",
-      "fileSize": 155007,
-      "solutionFileSize": 161345
+      "fileSize": 149855,
+      "solutionFileSize": 156182
     },
     {
       "slug": "2as_se-phy-t3-exam-sample-2",
@@ -1680,8 +1680,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثانية ثانوي — علوم تجريبية (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_se/2as_se-phy-t3-exam-sample-3-sol.pdf",
-      "fileSize": 152904,
-      "solutionFileSize": 164405
+      "fileSize": 147698,
+      "solutionFileSize": 159152
     },
     {
       "slug": "2as_se-phy-t3-test-sample-1",
@@ -1744,8 +1744,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — تقني رياضي (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t1-exam-sample-1-sol.pdf",
-      "fileSize": 172568,
-      "solutionFileSize": 186520
+      "fileSize": 165199,
+      "solutionFileSize": 179098
     },
     {
       "slug": "2as_tm-phy-t1-exam-sample-2",
@@ -1760,8 +1760,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — تقني رياضي (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t1-exam-sample-2-sol.pdf",
-      "fileSize": 175354,
-      "solutionFileSize": 189179
+      "fileSize": 167491,
+      "solutionFileSize": 181209
     },
     {
       "slug": "2as_tm-phy-t1-exam-sample-3",
@@ -1776,8 +1776,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — تقني رياضي (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t1-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t1-exam-sample-3-sol.pdf",
-      "fileSize": 186341,
-      "solutionFileSize": 196779
+      "fileSize": 173719,
+      "solutionFileSize": 184190
     },
     {
       "slug": "2as_tm-phy-t1-test-sample-1",
@@ -1792,8 +1792,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — تقني رياضي (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t1-test-sample-1-sol.pdf",
-      "fileSize": 156648,
-      "solutionFileSize": 164843
+      "fileSize": 149270,
+      "solutionFileSize": 157403
     },
     {
       "slug": "2as_tm-phy-t1-test-sample-2",
@@ -1808,8 +1808,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — تقني رياضي (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t1-test-sample-2-sol.pdf",
-      "fileSize": 153009,
-      "solutionFileSize": 159016
+      "fileSize": 145502,
+      "solutionFileSize": 151426
     },
     {
       "slug": "2as_tm-phy-t1-test-sample-3",
@@ -1824,8 +1824,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — تقني رياضي (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t1-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t1-test-sample-3-sol.pdf",
-      "fileSize": 160188,
-      "solutionFileSize": 166911
+      "fileSize": 152451,
+      "solutionFileSize": 159084
     },
     {
       "slug": "2as_tm-phy-t2-exam-sample-1",
@@ -1840,8 +1840,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثانية ثانوي — تقني رياضي (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t2-exam-sample-1-sol.pdf",
-      "fileSize": 150296,
-      "solutionFileSize": 166451
+      "fileSize": 144407,
+      "solutionFileSize": 160519
     },
     {
       "slug": "2as_tm-phy-t2-exam-sample-2",
@@ -1856,8 +1856,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثانية ثانوي — تقني رياضي (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t2-exam-sample-2-sol.pdf",
-      "fileSize": 161842,
-      "solutionFileSize": 178586
+      "fileSize": 155738,
+      "solutionFileSize": 172481
     },
     {
       "slug": "2as_tm-phy-t2-exam-sample-3",
@@ -1872,8 +1872,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثانية ثانوي — تقني رياضي (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t2-exam-sample-3-sol.pdf",
-      "fileSize": 159258,
-      "solutionFileSize": 173996
+      "fileSize": 153712,
+      "solutionFileSize": 168409
     },
     {
       "slug": "2as_tm-phy-t2-test-sample-1",
@@ -1936,8 +1936,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثانية ثانوي — تقني رياضي (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t3-exam-sample-1-sol.pdf",
-      "fileSize": 154712,
-      "solutionFileSize": 160498
+      "fileSize": 150321,
+      "solutionFileSize": 156091
     },
     {
       "slug": "2as_tm-phy-t3-exam-sample-2",
@@ -1952,8 +1952,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثانية ثانوي — تقني رياضي (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t3-exam-sample-2-sol.pdf",
-      "fileSize": 154111,
-      "solutionFileSize": 166833
+      "fileSize": 149309,
+      "solutionFileSize": 162000
     },
     {
       "slug": "2as_tm-phy-t3-exam-sample-3",
@@ -1968,8 +1968,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثانية ثانوي — تقني رياضي (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_tm/2as_tm-phy-t3-exam-sample-3-sol.pdf",
-      "fileSize": 152005,
-      "solutionFileSize": 163717
+      "fileSize": 147554,
+      "solutionFileSize": 159226
     },
     {
       "slug": "2as_tm-phy-t3-test-sample-1",
@@ -2032,8 +2032,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — رياضيات (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t1-exam-sample-1-sol.pdf",
-      "fileSize": 174115,
-      "solutionFileSize": 185255
+      "fileSize": 166730,
+      "solutionFileSize": 177772
     },
     {
       "slug": "2as_math-phy-t1-exam-sample-2",
@@ -2048,8 +2048,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — رياضيات (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t1-exam-sample-2-sol.pdf",
-      "fileSize": 177286,
-      "solutionFileSize": 187596
+      "fileSize": 169432,
+      "solutionFileSize": 179622
     },
     {
       "slug": "2as_math-phy-t1-exam-sample-3",
@@ -2064,8 +2064,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — رياضيات (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t1-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t1-exam-sample-3-sol.pdf",
-      "fileSize": 186302,
-      "solutionFileSize": 196748
+      "fileSize": 173674,
+      "solutionFileSize": 184159
     },
     {
       "slug": "2as_math-phy-t1-test-sample-1",
@@ -2080,8 +2080,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — رياضيات (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t1-test-sample-1-sol.pdf",
-      "fileSize": 159501,
-      "solutionFileSize": 163109
+      "fileSize": 152119,
+      "solutionFileSize": 155668
     },
     {
       "slug": "2as_math-phy-t1-test-sample-2",
@@ -2096,8 +2096,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — رياضيات (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t1-test-sample-2-sol.pdf",
-      "fileSize": 152991,
-      "solutionFileSize": 159008
+      "fileSize": 145477,
+      "solutionFileSize": 151418
     },
     {
       "slug": "2as_math-phy-t1-test-sample-3",
@@ -2112,8 +2112,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي — رياضيات (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t1-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t1-test-sample-3-sol.pdf",
-      "fileSize": 160180,
-      "solutionFileSize": 166898
+      "fileSize": 152433,
+      "solutionFileSize": 159069
     },
     {
       "slug": "2as_math-phy-t2-exam-sample-1",
@@ -2128,8 +2128,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثانية ثانوي — رياضيات (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t2-exam-sample-1-sol.pdf",
-      "fileSize": 147786,
-      "solutionFileSize": 161630
+      "fileSize": 144453,
+      "solutionFileSize": 158286
     },
     {
       "slug": "2as_math-phy-t2-exam-sample-2",
@@ -2144,8 +2144,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثانية ثانوي — رياضيات (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t2-exam-sample-2-sol.pdf",
-      "fileSize": 157364,
-      "solutionFileSize": 172049
+      "fileSize": 154007,
+      "solutionFileSize": 168730
     },
     {
       "slug": "2as_math-phy-t2-exam-sample-3",
@@ -2160,8 +2160,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثانية ثانوي — رياضيات (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t2-exam-sample-3-sol.pdf",
-      "fileSize": 155342,
-      "solutionFileSize": 169278
+      "fileSize": 152007,
+      "solutionFileSize": 165994
     },
     {
       "slug": "2as_math-phy-t2-test-sample-1",
@@ -2224,8 +2224,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثانية ثانوي — رياضيات (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t3-exam-sample-1-sol.pdf",
-      "fileSize": 154827,
-      "solutionFileSize": 160605
+      "fileSize": 150435,
+      "solutionFileSize": 156197
     },
     {
       "slug": "2as_math-phy-t3-exam-sample-2",
@@ -2240,8 +2240,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثانية ثانوي — رياضيات (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t3-exam-sample-2-sol.pdf",
-      "fileSize": 154270,
-      "solutionFileSize": 167010
+      "fileSize": 149465,
+      "solutionFileSize": 162173
     },
     {
       "slug": "2as_math-phy-t3-exam-sample-3",
@@ -2256,8 +2256,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثانية ثانوي — رياضيات (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/2as_math/2as_math-phy-t3-exam-sample-3-sol.pdf",
-      "fileSize": 152152,
-      "solutionFileSize": 163872
+      "fileSize": 147697,
+      "solutionFileSize": 159380
     },
     {
       "slug": "2as_math-phy-t3-test-sample-1",
@@ -2320,8 +2320,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t1-exam-sample-1-sol.pdf",
-      "fileSize": 221089,
-      "solutionFileSize": 237461
+      "fileSize": 198733,
+      "solutionFileSize": 214936
     },
     {
       "slug": "3as_se-phy-t1-exam-sample-2",
@@ -2336,8 +2336,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t1-exam-sample-2-sol.pdf",
-      "fileSize": 220366,
-      "solutionFileSize": 236991
+      "fileSize": 201089,
+      "solutionFileSize": 217531
     },
     {
       "slug": "3as_se-phy-t1-exam-sample-3",
@@ -2352,8 +2352,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t1-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t1-exam-sample-3-sol.pdf",
-      "fileSize": 243184,
-      "solutionFileSize": 261539
+      "fileSize": 215791,
+      "solutionFileSize": 234047
     },
     {
       "slug": "3as_se-phy-t1-test-sample-1",
@@ -2368,8 +2368,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t1-test-sample-1-sol.pdf",
-      "fileSize": 198469,
-      "solutionFileSize": 209640
+      "fileSize": 178817,
+      "solutionFileSize": 189869
     },
     {
       "slug": "3as_se-phy-t1-test-sample-2",
@@ -2384,8 +2384,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t1-test-sample-2-sol.pdf",
-      "fileSize": 192627,
-      "solutionFileSize": 200986
+      "fileSize": 180094,
+      "solutionFileSize": 188354
     },
     {
       "slug": "3as_se-phy-t1-test-sample-3",
@@ -2400,8 +2400,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t1-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t1-test-sample-3-sol.pdf",
-      "fileSize": 197966,
-      "solutionFileSize": 216827
+      "fileSize": 174623,
+      "solutionFileSize": 193373
     },
     {
       "slug": "3as_se-phy-t2-exam-sample-1",
@@ -2416,8 +2416,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t2-exam-sample-1-sol.pdf",
-      "fileSize": 199971,
-      "solutionFileSize": 217878
+      "fileSize": 181763,
+      "solutionFileSize": 199635
     },
     {
       "slug": "3as_se-phy-t2-exam-sample-2",
@@ -2432,8 +2432,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t2-exam-sample-2-sol.pdf",
-      "fileSize": 196744,
-      "solutionFileSize": 213819
+      "fileSize": 181504,
+      "solutionFileSize": 198521
     },
     {
       "slug": "3as_se-phy-t2-exam-sample-3",
@@ -2448,8 +2448,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t2-exam-sample-3-sol.pdf",
-      "fileSize": 197349,
-      "solutionFileSize": 214586
+      "fileSize": 181598,
+      "solutionFileSize": 198788
     },
     {
       "slug": "3as_se-phy-t2-test-sample-1",
@@ -2464,8 +2464,8 @@
       "titleAr": "فرض محروس الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t2-test-sample-1-sol.pdf",
-      "fileSize": 179658,
-      "solutionFileSize": 192835
+      "fileSize": 163943,
+      "solutionFileSize": 177032
     },
     {
       "slug": "3as_se-phy-t2-test-sample-2",
@@ -2480,8 +2480,8 @@
       "titleAr": "فرض محروس الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t2-test-sample-2-sol.pdf",
-      "fileSize": 172367,
-      "solutionFileSize": 179887
+      "fileSize": 160769,
+      "solutionFileSize": 168227
     },
     {
       "slug": "3as_se-phy-t2-test-sample-3",
@@ -2496,8 +2496,8 @@
       "titleAr": "فرض محروس الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t2-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t2-test-sample-3-sol.pdf",
-      "fileSize": 172439,
-      "solutionFileSize": 179798
+      "fileSize": 160785,
+      "solutionFileSize": 168064
     },
     {
       "slug": "3as_se-phy-t3-exam-sample-1",
@@ -2512,8 +2512,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-exam-sample-1-sol.pdf",
-      "fileSize": 192878,
-      "solutionFileSize": 194502
+      "fileSize": 186468,
+      "solutionFileSize": 188037
     },
     {
       "slug": "3as_se-phy-t3-exam-sample-2",
@@ -2528,8 +2528,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-exam-sample-2-sol.pdf",
-      "fileSize": 205051,
-      "solutionFileSize": 210230
+      "fileSize": 186902,
+      "solutionFileSize": 191895
     },
     {
       "slug": "3as_se-phy-t3-exam-sample-3",
@@ -2544,8 +2544,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-exam-sample-3-sol.pdf",
-      "fileSize": 199255,
-      "solutionFileSize": 206980
+      "fileSize": 188746,
+      "solutionFileSize": 196447
     },
     {
       "slug": "3as_se-phy-t3-test-sample-1",
@@ -2576,8 +2576,8 @@
       "titleAr": "فرض محروس الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-test-sample-2-sol.pdf",
-      "fileSize": 185135,
-      "solutionFileSize": 192540
+      "fileSize": 168460,
+      "solutionFileSize": 175798
     },
     {
       "slug": "3as_se-phy-t3-test-sample-3",
@@ -2592,8 +2592,8 @@
       "titleAr": "فرض محروس الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — علوم تجريبية (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-test-sample-3-sol.pdf",
-      "fileSize": 174225,
-      "solutionFileSize": 180470
+      "fileSize": 161949,
+      "solutionFileSize": 168051
     },
     {
       "slug": "3as_tm-phy-t1-exam-sample-1",
@@ -2608,8 +2608,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t1-exam-sample-1-sol.pdf",
-      "fileSize": 247417,
-      "solutionFileSize": 270440
+      "fileSize": 218477,
+      "solutionFileSize": 241295
     },
     {
       "slug": "3as_tm-phy-t1-exam-sample-2",
@@ -2624,8 +2624,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t1-exam-sample-2-sol.pdf",
-      "fileSize": 247058,
-      "solutionFileSize": 271579
+      "fileSize": 218204,
+      "solutionFileSize": 242490
     },
     {
       "slug": "3as_tm-phy-t1-exam-sample-3",
@@ -2640,8 +2640,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t1-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t1-exam-sample-3-sol.pdf",
-      "fileSize": 271975,
-      "solutionFileSize": 297004
+      "fileSize": 233930,
+      "solutionFileSize": 258954
     },
     {
       "slug": "3as_tm-phy-t1-test-sample-1",
@@ -2656,8 +2656,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t1-test-sample-1-sol.pdf",
-      "fileSize": 198466,
-      "solutionFileSize": 209641
+      "fileSize": 178813,
+      "solutionFileSize": 189861
     },
     {
       "slug": "3as_tm-phy-t1-test-sample-2",
@@ -2672,8 +2672,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t1-test-sample-2-sol.pdf",
-      "fileSize": 192619,
-      "solutionFileSize": 200975
+      "fileSize": 180083,
+      "solutionFileSize": 188335
     },
     {
       "slug": "3as_tm-phy-t1-test-sample-3",
@@ -2688,8 +2688,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t1-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t1-test-sample-3-sol.pdf",
-      "fileSize": 197958,
-      "solutionFileSize": 216811
+      "fileSize": 174623,
+      "solutionFileSize": 193369
     },
     {
       "slug": "3as_tm-phy-t2-exam-sample-1",
@@ -2704,8 +2704,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t2-exam-sample-1-sol.pdf",
-      "fileSize": 221617,
-      "solutionFileSize": 248808
+      "fileSize": 203479,
+      "solutionFileSize": 230559
     },
     {
       "slug": "3as_tm-phy-t2-exam-sample-2",
@@ -2720,8 +2720,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t2-exam-sample-2-sol.pdf",
-      "fileSize": 218189,
-      "solutionFileSize": 244264
+      "fileSize": 203209,
+      "solutionFileSize": 229163
     },
     {
       "slug": "3as_tm-phy-t2-exam-sample-3",
@@ -2736,8 +2736,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t2-exam-sample-3-sol.pdf",
-      "fileSize": 219034,
-      "solutionFileSize": 244821
+      "fileSize": 203331,
+      "solutionFileSize": 229022
     },
     {
       "slug": "3as_tm-phy-t2-test-sample-1",
@@ -2752,8 +2752,8 @@
       "titleAr": "فرض محروس الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t2-test-sample-1-sol.pdf",
-      "fileSize": 179683,
-      "solutionFileSize": 192839
+      "fileSize": 163978,
+      "solutionFileSize": 177045
     },
     {
       "slug": "3as_tm-phy-t2-test-sample-2",
@@ -2768,8 +2768,8 @@
       "titleAr": "فرض محروس الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t2-test-sample-2-sol.pdf",
-      "fileSize": 172374,
-      "solutionFileSize": 179901
+      "fileSize": 160775,
+      "solutionFileSize": 168232
     },
     {
       "slug": "3as_tm-phy-t2-test-sample-3",
@@ -2784,8 +2784,8 @@
       "titleAr": "فرض محروس الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t2-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t2-test-sample-3-sol.pdf",
-      "fileSize": 172456,
-      "solutionFileSize": 179812
+      "fileSize": 160801,
+      "solutionFileSize": 168079
     },
     {
       "slug": "3as_tm-phy-t3-exam-sample-1",
@@ -2800,8 +2800,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-exam-sample-1-sol.pdf",
-      "fileSize": 254209,
-      "solutionFileSize": 269363
+      "fileSize": 220403,
+      "solutionFileSize": 235465
     },
     {
       "slug": "3as_tm-phy-t3-exam-sample-2",
@@ -2816,8 +2816,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-exam-sample-2-sol.pdf",
-      "fileSize": 245600,
-      "solutionFileSize": 256498
+      "fileSize": 223370,
+      "solutionFileSize": 234208
     },
     {
       "slug": "3as_tm-phy-t3-exam-sample-3",
@@ -2832,8 +2832,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-exam-sample-3-sol.pdf",
-      "fileSize": 252302,
-      "solutionFileSize": 265971
+      "fileSize": 220554,
+      "solutionFileSize": 234096
     },
     {
       "slug": "3as_tm-phy-t3-test-sample-1",
@@ -2848,8 +2848,8 @@
       "titleAr": "فرض محروس الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-test-sample-1-sol.pdf",
-      "fileSize": 181057,
-      "solutionFileSize": 185730
+      "fileSize": 167512,
+      "solutionFileSize": 172130
     },
     {
       "slug": "3as_tm-phy-t3-test-sample-2",
@@ -2864,8 +2864,8 @@
       "titleAr": "فرض محروس الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-test-sample-2-sol.pdf",
-      "fileSize": 173712,
-      "solutionFileSize": 183779
+      "fileSize": 163033,
+      "solutionFileSize": 173142
     },
     {
       "slug": "3as_tm-phy-t3-test-sample-3",
@@ -2880,8 +2880,8 @@
       "titleAr": "فرض محروس الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — تقني رياضي (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-test-sample-3-sol.pdf",
-      "fileSize": 194126,
-      "solutionFileSize": 206692
+      "fileSize": 172251,
+      "solutionFileSize": 184708
     },
     {
       "slug": "3as_math-phy-t1-exam-sample-1",
@@ -2896,8 +2896,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t1-exam-sample-1-sol.pdf",
-      "fileSize": 247394,
-      "solutionFileSize": 270408
+      "fileSize": 218452,
+      "solutionFileSize": 241266
     },
     {
       "slug": "3as_math-phy-t1-exam-sample-2",
@@ -2912,8 +2912,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t1-exam-sample-2-sol.pdf",
-      "fileSize": 247042,
-      "solutionFileSize": 271555
+      "fileSize": 218194,
+      "solutionFileSize": 242470
     },
     {
       "slug": "3as_math-phy-t1-exam-sample-3",
@@ -2928,8 +2928,8 @@
       "titleAr": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t1-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t1-exam-sample-3-sol.pdf",
-      "fileSize": 271952,
-      "solutionFileSize": 296982
+      "fileSize": 233919,
+      "solutionFileSize": 258933
     },
     {
       "slug": "3as_math-phy-t1-test-sample-1",
@@ -2944,8 +2944,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t1-test-sample-1-sol.pdf",
-      "fileSize": 198563,
-      "solutionFileSize": 209728
+      "fileSize": 178900,
+      "solutionFileSize": 189948
     },
     {
       "slug": "3as_math-phy-t1-test-sample-2",
@@ -2960,8 +2960,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t1-test-sample-2-sol.pdf",
-      "fileSize": 192604,
-      "solutionFileSize": 200974
+      "fileSize": 180065,
+      "solutionFileSize": 188333
     },
     {
       "slug": "3as_math-phy-t1-test-sample-3",
@@ -2976,8 +2976,8 @@
       "titleAr": "فرض محروس الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t1-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t1-test-sample-3-sol.pdf",
-      "fileSize": 197920,
-      "solutionFileSize": 216803
+      "fileSize": 174579,
+      "solutionFileSize": 193360
     },
     {
       "slug": "3as_math-phy-t2-exam-sample-1",
@@ -2992,8 +2992,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t2-exam-sample-1-sol.pdf",
-      "fileSize": 221583,
-      "solutionFileSize": 248777
+      "fileSize": 203440,
+      "solutionFileSize": 230521
     },
     {
       "slug": "3as_math-phy-t2-exam-sample-2",
@@ -3008,8 +3008,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t2-exam-sample-2-sol.pdf",
-      "fileSize": 218154,
-      "solutionFileSize": 244244
+      "fileSize": 203166,
+      "solutionFileSize": 229127
     },
     {
       "slug": "3as_math-phy-t2-exam-sample-3",
@@ -3024,8 +3024,8 @@
       "titleAr": "اختبار الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t2-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t2-exam-sample-3-sol.pdf",
-      "fileSize": 218982,
-      "solutionFileSize": 244793
+      "fileSize": 203267,
+      "solutionFileSize": 228988
     },
     {
       "slug": "3as_math-phy-t2-test-sample-1",
@@ -3040,8 +3040,8 @@
       "titleAr": "فرض محروس الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t2-test-sample-1-sol.pdf",
-      "fileSize": 179780,
-      "solutionFileSize": 192957
+      "fileSize": 164048,
+      "solutionFileSize": 177147
     },
     {
       "slug": "3as_math-phy-t2-test-sample-2",
@@ -3056,8 +3056,8 @@
       "titleAr": "فرض محروس الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t2-test-sample-2-sol.pdf",
-      "fileSize": 172382,
-      "solutionFileSize": 179883
+      "fileSize": 160771,
+      "solutionFileSize": 168213
     },
     {
       "slug": "3as_math-phy-t2-test-sample-3",
@@ -3072,8 +3072,8 @@
       "titleAr": "فرض محروس الفصل الثاني في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t2-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t2-test-sample-3-sol.pdf",
-      "fileSize": 172423,
-      "solutionFileSize": 179795
+      "fileSize": 160770,
+      "solutionFileSize": 168069
     },
     {
       "slug": "3as_math-phy-t3-exam-sample-1",
@@ -3088,8 +3088,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-exam-sample-1-sol.pdf",
-      "fileSize": 254867,
-      "solutionFileSize": 270834
+      "fileSize": 221039,
+      "solutionFileSize": 236928
     },
     {
       "slug": "3as_math-phy-t3-exam-sample-2",
@@ -3104,8 +3104,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-exam-sample-2-sol.pdf",
-      "fileSize": 246084,
-      "solutionFileSize": 257849
+      "fileSize": 223867,
+      "solutionFileSize": 235551
     },
     {
       "slug": "3as_math-phy-t3-exam-sample-3",
@@ -3120,8 +3120,8 @@
       "titleAr": "اختبار الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-exam-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-exam-sample-3-sol.pdf",
-      "fileSize": 252658,
-      "solutionFileSize": 267471
+      "fileSize": 220927,
+      "solutionFileSize": 235587
     },
     {
       "slug": "3as_math-phy-t3-test-sample-1",
@@ -3136,8 +3136,8 @@
       "titleAr": "فرض محروس الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 1 — مستوى سهل)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-test-sample-1-sol.pdf",
-      "fileSize": 181012,
-      "solutionFileSize": 185705
+      "fileSize": 167470,
+      "solutionFileSize": 172108
     },
     {
       "slug": "3as_math-phy-t3-test-sample-2",
@@ -3152,8 +3152,8 @@
       "titleAr": "فرض محروس الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 2 — مستوى متوسط)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-test-sample-2-sol.pdf",
-      "fileSize": 173686,
-      "solutionFileSize": 183757
+      "fileSize": 163009,
+      "solutionFileSize": 173118
     },
     {
       "slug": "3as_math-phy-t3-test-sample-3",
@@ -3168,8 +3168,8 @@
       "titleAr": "فرض محروس الفصل الثالث في العلوم الفيزيائية — السنة الثالثة ثانوي — رياضيات (BAC) (نموذج 3 — مستوى صعب)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-test-sample-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-test-sample-3-sol.pdf",
-      "fileSize": 194594,
-      "solutionFileSize": 208063
+      "fileSize": 172722,
+      "solutionFileSize": 186065
     },
     {
       "slug": "4am-phy-t3-bem-mock-1",
@@ -3232,8 +3232,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة علوم تجريبية (النموذج 1)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-bac-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-bac-mock-1-sol.pdf",
-      "fileSize": 130555,
-      "solutionFileSize": 142216
+      "fileSize": 117633,
+      "solutionFileSize": 129296
     },
     {
       "slug": "3as_se-phy-t3-bac-mock-2",
@@ -3248,8 +3248,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة علوم تجريبية (النموذج 2)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-bac-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-bac-mock-2-sol.pdf",
-      "fileSize": 133987,
-      "solutionFileSize": 140728
+      "fileSize": 124259,
+      "solutionFileSize": 130973
     },
     {
       "slug": "3as_se-phy-t3-bac-mock-3",
@@ -3264,8 +3264,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة علوم تجريبية (النموذج 3)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-bac-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-bac-mock-3-sol.pdf",
-      "fileSize": 119158,
-      "solutionFileSize": 129846
+      "fileSize": 116596,
+      "solutionFileSize": 127207
     },
     {
       "slug": "3as_se-phy-t3-bac-mock-4",
@@ -3280,8 +3280,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة علوم تجريبية (النموذج 4)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-bac-mock-4.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-bac-mock-4-sol.pdf",
-      "fileSize": 143118,
-      "solutionFileSize": 154921
+      "fileSize": 121906,
+      "solutionFileSize": 133618
     },
     {
       "slug": "3as_se-phy-t3-bac-mock-5",
@@ -3296,8 +3296,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة علوم تجريبية (النموذج 5)",
       "pdfUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-bac-mock-5.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_se/3as_se-phy-t3-bac-mock-5-sol.pdf",
-      "fileSize": 162798,
-      "solutionFileSize": 173573
+      "fileSize": 142388,
+      "solutionFileSize": 153116
     },
     {
       "slug": "3as_tm-phy-t3-bac-mock-1",
@@ -3312,8 +3312,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة تقني رياضي (النموذج 1)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-bac-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-bac-mock-1-sol.pdf",
-      "fileSize": 170694,
-      "solutionFileSize": 190869
+      "fileSize": 146734,
+      "solutionFileSize": 166862
     },
     {
       "slug": "3as_tm-phy-t3-bac-mock-2",
@@ -3328,8 +3328,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة تقني رياضي (النموذج 2)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-bac-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-bac-mock-2-sol.pdf",
-      "fileSize": 181372,
-      "solutionFileSize": 207612
+      "fileSize": 146984,
+      "solutionFileSize": 173094
     },
     {
       "slug": "3as_tm-phy-t3-bac-mock-3",
@@ -3344,8 +3344,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة تقني رياضي (النموذج 3)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-bac-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-bac-mock-3-sol.pdf",
-      "fileSize": 183603,
-      "solutionFileSize": 205583
+      "fileSize": 146886,
+      "solutionFileSize": 168792
     },
     {
       "slug": "3as_tm-phy-t3-bac-mock-4",
@@ -3360,8 +3360,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة تقني رياضي (النموذج 4)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-bac-mock-4.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-bac-mock-4-sol.pdf",
-      "fileSize": 180897,
-      "solutionFileSize": 198956
+      "fileSize": 146391,
+      "solutionFileSize": 164312
     },
     {
       "slug": "3as_tm-phy-t3-bac-mock-5",
@@ -3376,8 +3376,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة تقني رياضي (النموذج 5)",
       "pdfUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-bac-mock-5.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_tm/3as_tm-phy-t3-bac-mock-5-sol.pdf",
-      "fileSize": 197798,
-      "solutionFileSize": 213857
+      "fileSize": 164605,
+      "solutionFileSize": 180564
     },
     {
       "slug": "3as_math-phy-t3-bac-mock-1",
@@ -3392,8 +3392,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة رياضيات (النموذج 1)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-bac-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-bac-mock-1-sol.pdf",
-      "fileSize": 170744,
-      "solutionFileSize": 192108
+      "fileSize": 146778,
+      "solutionFileSize": 168084
     },
     {
       "slug": "3as_math-phy-t3-bac-mock-2",
@@ -3408,8 +3408,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة رياضيات (النموذج 2)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-bac-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-bac-mock-2-sol.pdf",
-      "fileSize": 181837,
-      "solutionFileSize": 209060
+      "fileSize": 147477,
+      "solutionFileSize": 174545
     },
     {
       "slug": "3as_math-phy-t3-bac-mock-3",
@@ -3424,8 +3424,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة رياضيات (النموذج 3)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-bac-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-bac-mock-3-sol.pdf",
-      "fileSize": 183843,
-      "solutionFileSize": 207050
+      "fileSize": 147128,
+      "solutionFileSize": 170245
     },
     {
       "slug": "3as_math-phy-t3-bac-mock-4",
@@ -3440,8 +3440,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة رياضيات (النموذج 4)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-bac-mock-4.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-bac-mock-4-sol.pdf",
-      "fileSize": 181303,
-      "solutionFileSize": 200355
+      "fileSize": 146808,
+      "solutionFileSize": 165714
     },
     {
       "slug": "3as_math-phy-t3-bac-mock-5",
@@ -3456,8 +3456,8 @@
       "titleAr": "امتحان بكالوريا تجريبي مقترح في العلوم الفيزيائية — شعبة رياضيات (النموذج 5)",
       "pdfUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-bac-mock-5.pdf",
       "solutionUrl": "/documents/generated_samples_physics/3as_math/3as_math-phy-t3-bac-mock-5-sol.pdf",
-      "fileSize": 198066,
-      "solutionFileSize": 215358
+      "fileSize": 164861,
+      "solutionFileSize": 182058
     }
   ]
 }

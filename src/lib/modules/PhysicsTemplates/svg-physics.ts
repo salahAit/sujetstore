@@ -33,34 +33,45 @@ const SUP_MAP: Record<string, string> = {
 };
 
 /**
- * Escapes XML and turns Unicode sub/superscripts (including ₁/₂) into crisp SVG tspans
- * so Typst SVG renderer never falls back to FreeMono for missing Unicode sub/sup glyphs.
+ * Escapes XML and turns Unicode or `_`-delimited sub/superscripts (including ₁/₂, _max, _C)
+ * into crisp SVG tspans so Typst SVG renderer never falls back to FreeMono or shows raw underscores.
  */
 function escRich(str: string): string {
-	const tokens = str.match(/([₀-₉₊₋]+(?:\/[₀-₉]+)?|[⁰-⁹⁺⁻]+|[^₀-₉₊₋⁰-⁹⁺⁻]+)/g) ?? [str];
+	const tokenRe =
+		/((?<=[A-Za-zΔσλτ])_\{[^}]+\}|(?<=[A-Za-zΔσλτ])_[A-Za-z0-9]+(?:\/[0-9]+)?|[₀-₉₊₋]+(?:\/[₀-₉]+)?|[⁰-⁹⁺⁻]+)/g;
 	let out = '';
-	for (let i = 0; i < tokens.length; i++) {
-		const tok = tokens[i];
-		const isSub = /^[₀-₉₊₋]/.test(tok);
+	let lastIdx = 0;
+	for (const m of str.matchAll(tokenRe)) {
+		const idx = m.index ?? 0;
+		if (idx > lastIdx) out += esc(str.slice(lastIdx, idx));
+		const tok = m[0];
 		const isSup = /^[⁰-⁹⁺⁻]/.test(tok);
-		if (isSub) {
-			const plain = tok
-				.split('')
-				.map((c) => SUB_MAP[c] ?? c)
-				.join('');
-			out += `<tspan dy="3" font-size="72%">${esc(plain)}</tspan>`;
-			if (i < tokens.length - 1) out += `<tspan dy="-3">&#8203;</tspan>`;
-		} else if (isSup) {
+		const isLast = idx + tok.length >= str.length;
+		if (isSup) {
 			const plain = tok
 				.split('')
 				.map((c) => SUP_MAP[c] ?? c)
 				.join('');
 			out += `<tspan dy="-4" font-size="72%">${esc(plain)}</tspan>`;
-			if (i < tokens.length - 1) out += `<tspan dy="4">&#8203;</tspan>`;
+			if (!isLast) out += `<tspan dy="4">&#8203;</tspan>`;
 		} else {
-			out += esc(tok);
+			let plain = tok;
+			if (plain.startsWith('_{') && plain.endsWith('}')) {
+				plain = plain.slice(2, -1);
+			} else if (plain.startsWith('_')) {
+				plain = plain.slice(1);
+			} else {
+				plain = plain
+					.split('')
+					.map((c) => SUB_MAP[c] ?? c)
+					.join('');
+			}
+			out += `<tspan dy="3" font-size="72%">${esc(plain)}</tspan>`;
+			if (!isLast) out += `<tspan dy="-3">&#8203;</tspan>`;
 		}
+		lastIdx = idx + tok.length;
 	}
+	if (lastIdx < str.length) out += esc(str.slice(lastIdx));
 	return out;
 }
 
@@ -120,7 +131,11 @@ export function svgPhysicsCurvePlot(opts: {
 
 	const xStep = opts.xStep ?? xSpan / 5;
 	const yStep = opts.yStep ?? ySpan / 5;
-	const halo = `paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"`;
+	// Two-pass white halo: paint-order="stroke" is ignored by Typst's usvg renderer,
+	// which otherwise strokes white OVER the dark glyph fill.
+	const haloText = (attrs: string, color: string, richHtml: string) =>
+		`<text ${attrs} fill="#ffffff" stroke="#ffffff" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round">${richHtml}</text>` +
+		`<text ${attrs} fill="${color}">${richHtml}</text>`;
 
 	let body = '';
 	if (opts.title) {
@@ -148,8 +163,8 @@ export function svgPhysicsCurvePlot(opts: {
 	body += `<defs><marker id="axArr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#1e293b"/></marker></defs>`;
 	body += `<line x1="${padL}" y1="${xAxisY.toFixed(1)}" x2="${padL + pw + 12}" y2="${xAxisY.toFixed(1)}" stroke="#1e293b" stroke-width="1.6" marker-end="url(#axArr)"/>`;
 	body += `<line x1="${yAxisX.toFixed(1)}" y1="${padT + ph}" x2="${yAxisX.toFixed(1)}" y2="${padT - 12}" stroke="#1e293b" stroke-width="1.6" marker-end="url(#axArr)"/>`;
-	body += `<text x="${padL + pw + 10}" y="${xAxisY - 8}" text-anchor="end" font-size="12" font-weight="bold" fill="#0f172a" ${halo}>${escRich(opts.xLabel)}</text>`;
-	body += `<text x="${(yLabelOnLeft ? yAxisX - 10 : yAxisX + 10).toFixed(1)}" y="${padT - 10}" text-anchor="${yLabelOnLeft ? 'end' : 'start'}" font-size="12" font-weight="bold" fill="#0f172a" ${halo}>${escRich(opts.yLabel)}</text>`;
+	body += haloText(`x="${padL + pw + 10}" y="${xAxisY - 8}" text-anchor="end" font-size="12" font-weight="bold"`, '#0f172a', escRich(opts.xLabel));
+	body += haloText(`x="${(yLabelOnLeft ? yAxisX - 10 : yAxisX + 10).toFixed(1)}" y="${padT - 10}" text-anchor="${yLabelOnLeft ? 'end' : 'start'}" font-size="12" font-weight="bold"`, '#0f172a', escRich(opts.yLabel));
 
 	// Dashed guides (tangents, half-lives, asymptotes, equivalence lines)
 	for (const g of opts.dashedGuides ?? []) {
@@ -191,7 +206,7 @@ export function svgPhysicsCurvePlot(opts: {
 				anchor = 'middle';
 				rotateAttr = ` transform="rotate(${angle.toFixed(1)}, ${lx.toFixed(1)}, ${ly.toFixed(1)})"`;
 			}
-			body += `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}"${rotateAttr} text-anchor="${anchor}" font-size="11" font-weight="bold" fill="${col}" ${halo}>${escRich(g.label)}</text>`;
+			body += haloText(`x="${lx.toFixed(1)}" y="${ly.toFixed(1)}"${rotateAttr} text-anchor="${anchor}" font-size="11" font-weight="bold"`, col, escRich(g.label));
 		}
 	}
 
@@ -235,7 +250,7 @@ export function svgPhysicsCurvePlot(opts: {
 		const dx = pt.dx ?? defaultDx;
 		const dy = pt.dy ?? defaultDy;
 		const anchor = nearRight && pt.dx === undefined ? 'end' : 'start';
-		body += `<text x="${(px + dx).toFixed(1)}" y="${(py + dy).toFixed(1)}" text-anchor="${anchor}" font-size="11" font-weight="bold" fill="${col}" ${halo}>${escRich(pt.label)}</text>`;
+		body += haloText(`x="${(px + dx).toFixed(1)}" y="${(py + dy).toFixed(1)}" text-anchor="${anchor}" font-size="11" font-weight="bold"`, col, escRich(pt.label));
 	}
 
 	// Legend if multiple named curves
@@ -245,7 +260,7 @@ export function svgPhysicsCurvePlot(opts: {
 			const lx = padL + pw - 8;
 			const ly = padT + 14 + idx * 17;
 			body += `<line x1="${lx - 58}" y1="${ly - 4}" x2="${lx - 38}" y2="${ly - 4}" stroke="${c.color ?? '#2563eb'}" stroke-width="2.2" ${c.dashed ? 'stroke-dasharray="5,3"' : ''}/>`;
-			body += `<text x="${lx - 64}" y="${ly}" text-anchor="end" font-size="11" font-weight="bold" fill="#1e293b" ${halo}>${escRich(c.label!)}</text>`;
+			body += haloText(`x="${lx - 64}" y="${ly}" text-anchor="end" font-size="11" font-weight="bold"`, '#1e293b', escRich(c.label!));
 		});
 	}
 
