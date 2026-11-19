@@ -74,7 +74,21 @@
 		'3as:ENG-SEC:MATH': 2,
 		'3as:ENG-SEC:GE': 2,
 		'3as:ENG-SEC:LP': 3,
-		'3as:ENG-SEC:LE': 5
+		'3as:ENG-SEC:LE': 5,
+		'1as:FRE-SEC:TCST': 2,
+		'1as:FRE-SEC:TCL': 3,
+		'2as:FRE-SEC:SE': 2,
+		'2as:FRE-SEC:TM': 2,
+		'2as:FRE-SEC:MATH': 2,
+		'2as:FRE-SEC:GE': 2,
+		'2as:FRE-SEC:LP': 3,
+		'2as:FRE-SEC:LE': 5,
+		'3as:FRE-SEC:SE': 2,
+		'3as:FRE-SEC:TM': 2,
+		'3as:FRE-SEC:MATH': 2,
+		'3as:FRE-SEC:GE': 2,
+		'3as:FRE-SEC:LP': 3,
+		'3as:FRE-SEC:LE': 5
 	};
 
 	function formatYsLabel(ys: any): string {

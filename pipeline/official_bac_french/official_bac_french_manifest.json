@@ -1,0 +1,956 @@
+{
+  "generated_at": "2026-11-19T17:24:37.322Z",
+  "total_papers": 18,
+  "total_pdfs": 36,
+  "blocklist_hits": 0,
+  "freemono_hits": 0,
+  "fonts_used": [
+    "AMEMSI+Arial-BoldMT",
+    "AULKAC+Arial-ItalicMT",
+    "AWTSAN+Arial-BoldMT",
+    "BPXICI+ArialMT",
+    "BQOWZJ+Arial-BoldMT",
+    "BSNGHL+ArialMT",
+    "BXWYOZ+Arial-BoldMT",
+    "CFPYCL+ArialMT",
+    "CGBFRL+ArialMT",
+    "CIMNGP+Arial-BoldMT",
+    "COBKIN+Arial-BoldMT",
+    "DIEOWX+Arial-BoldMT",
+    "DNDYUU+Arial-BoldMT",
+    "EKOMRH+Arial-BoldMT",
+    "FBUEJI+Arial-BoldMT",
+    "FHAVWE+Arial-BoldMT",
+    "FHDQZI+Arial-BoldMT",
+    "FJRSTL+ArialMT",
+    "FRZKFC+ArialMT",
+    "FYNAQJ+Arial-BoldMT",
+    "FYVPOE+Arial-BoldMT",
+    "GJSLKV+Arial-ItalicMT",
+    "GYSBQQ+Arial-BoldMT",
+    "IPCGGP+ArialMT",
+    "JMHCXC+Arial-BoldMT",
+    "KKXICA+Arial-BoldMT",
+    "KTLBGU+ArialMT",
+    "KTMYJL+ArialMT",
+    "KUZWQY+Arial-BoldMT",
+    "LBQYNA+Arial-BoldMT",
+    "LJRWEV+Arial-ItalicMT",
+    "LMFLQN+Arial-BoldMT",
+    "LOAWQB+Arial-BoldMT",
+    "LTIVAF+Arial-BoldMT",
+    "LUKYMM+Arial-BoldMT",
+    "MCPXVE+Arial-BoldMT",
+    "MHIJOD+Arial-BoldMT",
+    "MSHQIF+Arial-ItalicMT",
+    "MYURQB+Arial-ItalicMT",
+    "MYWWLI+Arial-BoldMT",
+    "MZQCEE+ArialMT",
+    "NOFYBQ+ArialMT",
+    "NSSQZT+Arial-BoldMT",
+    "ORXQYH+Arial-BoldMT",
+    "OYNFVD+ArialMT",
+    "PHNJPR+ArialMT",
+    "QWBTKW+Arial-ItalicMT",
+    "QWUNKE+Arial-ItalicMT",
+    "RQFCVQ+Arial-BoldMT",
+    "SQUEUH+Arial-BoldMT",
+    "UEMQCP+ArialMT",
+    "VBXHHR+Arial-BoldMT",
+    "VFZGUQ+ArialMT",
+    "VZTEGZ+Arial-BoldMT",
+    "WFSILO+Arial-ItalicMT",
+    "WHCFXE+Arial-ItalicMT",
+    "XIBSJJ+ArialMT",
+    "XSKUSM+Arial-BoldMT",
+    "YEULAA+ArialMT",
+    "YIPOYQ+ArialMT",
+    "YUDRZV+Arial-BoldMT",
+    "ZOKRFA+Arial-BoldMT",
+    "ZTRNVM+Arial-BoldMT"
+  ],
+  "items": [
+    {
+      "slug": "bac-2023-3as-se-french",
+      "grade": "3as_se",
+      "yearSubjectId": 685,
+      "subjectId": "FRE-SEC",
+      "streamId": "SE",
+      "streamNameAr": "علوم تجريبية",
+      "streamNameFr": "Sciences Expérimentales",
+      "academicYear": "2023",
+      "sessionFr": "Juin 2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeFr": "Projet 1 : Texte d’Histoire — L’éveil national et le mouvement réformiste algérien",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Sciences Expérimentales (Juin 2023 : Le rôle éducatif et patriotique de l’Association des Oulémas Musulmans Algériens)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة علوم تجريبية (دورة جوان 2023 — الدور التربوي والوطني لجمعية العلماء المسلمين الجزائريين في الوعي الوطني)",
+      "themesFr": [
+        "Texte d’Histoire",
+        "Association des Oulémas Musulmans Algériens",
+        "Cheikh Abdelhamid Ben Badis",
+        "Cheikh Mohamed Bachir El-Ibrahimi"
+      ],
+      "themesAr": [
+        "النص التاريخي",
+        "جمعية العلماء المسلمين الجزائريين",
+        "الشيخ عبد الحميد بن باديس",
+        "الشيخ محمد البشير الإبراهيمي"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2023-3as-se-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2023-3as-se-french-sol.pdf",
+      "fileSize": 183687,
+      "solutionFileSize": 187907,
+      "fonts": [
+        "ZOKRFA+Arial-BoldMT",
+        "VFZGUQ+ArialMT",
+        "QWUNKE+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "MYWWLI+Arial-BoldMT",
+        "BSNGHL+ArialMT",
+        "QWUNKE+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2023-3as-tm-french",
+      "grade": "3as_tm",
+      "yearSubjectId": 727,
+      "subjectId": "FRE-SEC",
+      "streamId": "TM",
+      "streamNameAr": "تقني رياضي",
+      "streamNameFr": "Techniques Mathématiques",
+      "academicYear": "2023",
+      "sessionFr": "Juin 2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeFr": "Projet 1 : Texte d’Histoire — L’éveil national et le mouvement réformiste algérien",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Techniques Mathématiques (Juin 2023 : Le rôle éducatif et patriotique de l’Association des Oulémas Musulmans Algériens)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة تقني رياضي (دورة جوان 2023 — الدور التربوي والوطني لجمعية العلماء المسلمين الجزائريين في الوعي الوطني)",
+      "themesFr": [
+        "Texte d’Histoire",
+        "Association des Oulémas Musulmans Algériens",
+        "Cheikh Abdelhamid Ben Badis",
+        "Cheikh Mohamed Bachir El-Ibrahimi"
+      ],
+      "themesAr": [
+        "النص التاريخي",
+        "جمعية العلماء المسلمين الجزائريين",
+        "الشيخ عبد الحميد بن باديس",
+        "الشيخ محمد البشير الإبراهيمي"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2023-3as-tm-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2023-3as-tm-french-sol.pdf",
+      "fileSize": 184116,
+      "solutionFileSize": 188411,
+      "fonts": [
+        "DIEOWX+Arial-BoldMT",
+        "VFZGUQ+ArialMT",
+        "QWUNKE+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "BQOWZJ+Arial-BoldMT",
+        "BSNGHL+ArialMT",
+        "QWUNKE+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2023-3as-math-french",
+      "grade": "3as_math",
+      "yearSubjectId": 705,
+      "subjectId": "FRE-SEC",
+      "streamId": "MATH",
+      "streamNameAr": "رياضيات",
+      "streamNameFr": "Mathématiques",
+      "academicYear": "2023",
+      "sessionFr": "Juin 2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeFr": "Projet 1 : Texte d’Histoire — L’éveil national et le mouvement réformiste algérien",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Mathématiques (Juin 2023 : Le rôle éducatif et patriotique de l’Association des Oulémas Musulmans Algériens)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة رياضيات (دورة جوان 2023 — الدور التربوي والوطني لجمعية العلماء المسلمين الجزائريين في الوعي الوطني)",
+      "themesFr": [
+        "Texte d’Histoire",
+        "Association des Oulémas Musulmans Algériens",
+        "Cheikh Abdelhamid Ben Badis",
+        "Cheikh Mohamed Bachir El-Ibrahimi"
+      ],
+      "themesAr": [
+        "النص التاريخي",
+        "جمعية العلماء المسلمين الجزائريين",
+        "الشيخ عبد الحميد بن باديس",
+        "الشيخ محمد البشير الإبراهيمي"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2023-3as-math-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2023-3as-math-french-sol.pdf",
+      "fileSize": 184084,
+      "solutionFileSize": 188245,
+      "fonts": [
+        "RQFCVQ+Arial-BoldMT",
+        "VFZGUQ+ArialMT",
+        "QWUNKE+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "LBQYNA+Arial-BoldMT",
+        "BSNGHL+ArialMT",
+        "QWUNKE+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2023-3as-ge-french",
+      "grade": "3as_ge",
+      "yearSubjectId": 750,
+      "subjectId": "FRE-SEC",
+      "streamId": "GE",
+      "streamNameAr": "تسيير واقتصاد",
+      "streamNameFr": "Gestion et Économie",
+      "academicYear": "2023",
+      "sessionFr": "Juin 2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeFr": "Projet 1 : Texte d’Histoire — L’éveil national et le mouvement réformiste algérien",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Gestion et Économie (Juin 2023 : Le rôle éducatif et patriotique de l’Association des Oulémas Musulmans Algériens)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة تسيير واقتصاد (دورة جوان 2023 — الدور التربوي والوطني لجمعية العلماء المسلمين الجزائريين في الوعي الوطني)",
+      "themesFr": [
+        "Texte d’Histoire",
+        "Association des Oulémas Musulmans Algériens",
+        "Cheikh Abdelhamid Ben Badis",
+        "Cheikh Mohamed Bachir El-Ibrahimi"
+      ],
+      "themesAr": [
+        "النص التاريخي",
+        "جمعية العلماء المسلمين الجزائريين",
+        "الشيخ عبد الحميد بن باديس",
+        "الشيخ محمد البشير الإبراهيمي"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2023-3as-ge-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2023-3as-ge-french-sol.pdf",
+      "fileSize": 183959,
+      "solutionFileSize": 188150,
+      "fonts": [
+        "BXWYOZ+Arial-BoldMT",
+        "VFZGUQ+ArialMT",
+        "QWUNKE+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "MCPXVE+Arial-BoldMT",
+        "BSNGHL+ArialMT",
+        "QWUNKE+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2024-3as-se-french",
+      "grade": "3as_se",
+      "yearSubjectId": 685,
+      "subjectId": "FRE-SEC",
+      "streamId": "SE",
+      "streamNameAr": "علوم تجريبية",
+      "streamNameFr": "Sciences Expérimentales",
+      "academicYear": "2024",
+      "sessionFr": "Juin 2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeFr": "Projet 2 : Débat d’idées — Intelligence artificielle, lecture et éthique scientifique",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Sciences Expérimentales (Juin 2024 : Intelligence artificielle, lecture et responsabilité éthique)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة علوم تجريبية (دورة جوان 2024 — الذكاء الاصطناعي والمطالعة والأخلاقيات العلمية بين التقدم والمسؤولية)",
+      "themesFr": [
+        "Débat d’idées",
+        "Intelligence artificielle",
+        "Éthique scientifique",
+        "Lecture et esprit critique"
+      ],
+      "themesAr": [
+        "النص الحجاجي ومناظرة الأفكار",
+        "الذكاء الاصطناعي",
+        "الأخلاقيات العلمية",
+        "المطالعة والروح النقدية"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2024-3as-se-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2024-3as-se-french-sol.pdf",
+      "fileSize": 180306,
+      "solutionFileSize": 185556,
+      "fonts": [
+        "KUZWQY+Arial-BoldMT",
+        "PHNJPR+ArialMT",
+        "WFSILO+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "FBUEJI+Arial-BoldMT",
+        "UEMQCP+ArialMT",
+        "WFSILO+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2024-3as-tm-french",
+      "grade": "3as_tm",
+      "yearSubjectId": 727,
+      "subjectId": "FRE-SEC",
+      "streamId": "TM",
+      "streamNameAr": "تقني رياضي",
+      "streamNameFr": "Techniques Mathématiques",
+      "academicYear": "2024",
+      "sessionFr": "Juin 2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeFr": "Projet 2 : Débat d’idées — Intelligence artificielle, lecture et éthique scientifique",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Techniques Mathématiques (Juin 2024 : Intelligence artificielle, lecture et responsabilité éthique)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة تقني رياضي (دورة جوان 2024 — الذكاء الاصطناعي والمطالعة والأخلاقيات العلمية بين التقدم والمسؤولية)",
+      "themesFr": [
+        "Débat d’idées",
+        "Intelligence artificielle",
+        "Éthique scientifique",
+        "Lecture et esprit critique"
+      ],
+      "themesAr": [
+        "النص الحجاجي ومناظرة الأفكار",
+        "الذكاء الاصطناعي",
+        "الأخلاقيات العلمية",
+        "المطالعة والروح النقدية"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2024-3as-tm-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2024-3as-tm-french-sol.pdf",
+      "fileSize": 180704,
+      "solutionFileSize": 186100,
+      "fonts": [
+        "LOAWQB+Arial-BoldMT",
+        "PHNJPR+ArialMT",
+        "WFSILO+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "SQUEUH+Arial-BoldMT",
+        "UEMQCP+ArialMT",
+        "WFSILO+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2024-3as-math-french",
+      "grade": "3as_math",
+      "yearSubjectId": 705,
+      "subjectId": "FRE-SEC",
+      "streamId": "MATH",
+      "streamNameAr": "رياضيات",
+      "streamNameFr": "Mathématiques",
+      "academicYear": "2024",
+      "sessionFr": "Juin 2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeFr": "Projet 2 : Débat d’idées — Intelligence artificielle, lecture et éthique scientifique",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Mathématiques (Juin 2024 : Intelligence artificielle, lecture et responsabilité éthique)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة رياضيات (دورة جوان 2024 — الذكاء الاصطناعي والمطالعة والأخلاقيات العلمية بين التقدم والمسؤولية)",
+      "themesFr": [
+        "Débat d’idées",
+        "Intelligence artificielle",
+        "Éthique scientifique",
+        "Lecture et esprit critique"
+      ],
+      "themesAr": [
+        "النص الحجاجي ومناظرة الأفكار",
+        "الذكاء الاصطناعي",
+        "الأخلاقيات العلمية",
+        "المطالعة والروح النقدية"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2024-3as-math-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2024-3as-math-french-sol.pdf",
+      "fileSize": 180668,
+      "solutionFileSize": 185927,
+      "fonts": [
+        "FHDQZI+Arial-BoldMT",
+        "PHNJPR+ArialMT",
+        "WFSILO+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "VBXHHR+Arial-BoldMT",
+        "UEMQCP+ArialMT",
+        "WFSILO+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2024-3as-ge-french",
+      "grade": "3as_ge",
+      "yearSubjectId": 750,
+      "subjectId": "FRE-SEC",
+      "streamId": "GE",
+      "streamNameAr": "تسيير واقتصاد",
+      "streamNameFr": "Gestion et Économie",
+      "academicYear": "2024",
+      "sessionFr": "Juin 2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeFr": "Projet 2 : Débat d’idées — Intelligence artificielle, lecture et éthique scientifique",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Gestion et Économie (Juin 2024 : Intelligence artificielle, lecture et responsabilité éthique)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة تسيير واقتصاد (دورة جوان 2024 — الذكاء الاصطناعي والمطالعة والأخلاقيات العلمية بين التقدم والمسؤولية)",
+      "themesFr": [
+        "Débat d’idées",
+        "Intelligence artificielle",
+        "Éthique scientifique",
+        "Lecture et esprit critique"
+      ],
+      "themesAr": [
+        "النص الحجاجي ومناظرة الأفكار",
+        "الذكاء الاصطناعي",
+        "الأخلاقيات العلمية",
+        "المطالعة والروح النقدية"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2024-3as-ge-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2024-3as-ge-french-sol.pdf",
+      "fileSize": 180565,
+      "solutionFileSize": 185839,
+      "fonts": [
+        "EKOMRH+Arial-BoldMT",
+        "PHNJPR+ArialMT",
+        "WFSILO+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "LUKYMM+Arial-BoldMT",
+        "UEMQCP+ArialMT",
+        "WFSILO+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2025-3as-se-french",
+      "grade": "3as_se",
+      "yearSubjectId": 685,
+      "subjectId": "FRE-SEC",
+      "streamId": "SE",
+      "streamNameAr": "علوم تجريبية",
+      "streamNameFr": "Sciences Expérimentales",
+      "academicYear": "2025",
+      "sessionFr": "Juin 2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeFr": "Projet 3 : L’Appel — Sauvegarde des forêts algériennes, du Barrage Vert et de l’eau",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Sciences Expérimentales (Juin 2025 : Appel urgent pour la protection des forêts algériennes et des ressources hydriques)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة علوم تجريبية (دورة جوان 2025 — نداء عاجل لحماية الغابات الجزائرية والسد الأخضر والثروة المائية)",
+      "themesFr": [
+        "Texte exhortatif (L’Appel)",
+        "Barrage Vert",
+        "Forêts algériennes",
+        "Gestion de l’eau"
+      ],
+      "themesAr": [
+        "نص النداء",
+        "السد الأخضر",
+        "الغابات الجزائرية",
+        "الحفاظ على الثروة المائية"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2025-3as-se-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2025-3as-se-french-sol.pdf",
+      "fileSize": 181540,
+      "solutionFileSize": 186204,
+      "fonts": [
+        "LMFLQN+Arial-BoldMT",
+        "KTLBGU+ArialMT",
+        "AULKAC+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "GYSBQQ+Arial-BoldMT",
+        "FRZKFC+ArialMT",
+        "AULKAC+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2025-3as-tm-french",
+      "grade": "3as_tm",
+      "yearSubjectId": 727,
+      "subjectId": "FRE-SEC",
+      "streamId": "TM",
+      "streamNameAr": "تقني رياضي",
+      "streamNameFr": "Techniques Mathématiques",
+      "academicYear": "2025",
+      "sessionFr": "Juin 2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeFr": "Projet 3 : L’Appel — Sauvegarde des forêts algériennes, du Barrage Vert et de l’eau",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Techniques Mathématiques (Juin 2025 : Appel urgent pour la protection des forêts algériennes et des ressources hydriques)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة تقني رياضي (دورة جوان 2025 — نداء عاجل لحماية الغابات الجزائرية والسد الأخضر والثروة المائية)",
+      "themesFr": [
+        "Texte exhortatif (L’Appel)",
+        "Barrage Vert",
+        "Forêts algériennes",
+        "Gestion de l’eau"
+      ],
+      "themesAr": [
+        "نص النداء",
+        "السد الأخضر",
+        "الغابات الجزائرية",
+        "الحفاظ على الثروة المائية"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2025-3as-tm-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2025-3as-tm-french-sol.pdf",
+      "fileSize": 181994,
+      "solutionFileSize": 186768,
+      "fonts": [
+        "DNDYUU+Arial-BoldMT",
+        "KTLBGU+ArialMT",
+        "AULKAC+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "ORXQYH+Arial-BoldMT",
+        "FRZKFC+ArialMT",
+        "AULKAC+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2025-3as-math-french",
+      "grade": "3as_math",
+      "yearSubjectId": 705,
+      "subjectId": "FRE-SEC",
+      "streamId": "MATH",
+      "streamNameAr": "رياضيات",
+      "streamNameFr": "Mathématiques",
+      "academicYear": "2025",
+      "sessionFr": "Juin 2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeFr": "Projet 3 : L’Appel — Sauvegarde des forêts algériennes, du Barrage Vert et de l’eau",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Mathématiques (Juin 2025 : Appel urgent pour la protection des forêts algériennes et des ressources hydriques)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة رياضيات (دورة جوان 2025 — نداء عاجل لحماية الغابات الجزائرية والسد الأخضر والثروة المائية)",
+      "themesFr": [
+        "Texte exhortatif (L’Appel)",
+        "Barrage Vert",
+        "Forêts algériennes",
+        "Gestion de l’eau"
+      ],
+      "themesAr": [
+        "نص النداء",
+        "السد الأخضر",
+        "الغابات الجزائرية",
+        "الحفاظ على الثروة المائية"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2025-3as-math-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2025-3as-math-french-sol.pdf",
+      "fileSize": 181971,
+      "solutionFileSize": 186590,
+      "fonts": [
+        "FYNAQJ+Arial-BoldMT",
+        "KTLBGU+ArialMT",
+        "AULKAC+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "AMEMSI+Arial-BoldMT",
+        "FRZKFC+ArialMT",
+        "AULKAC+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2025-3as-ge-french",
+      "grade": "3as_ge",
+      "yearSubjectId": 750,
+      "subjectId": "FRE-SEC",
+      "streamId": "GE",
+      "streamNameAr": "تسيير واقتصاد",
+      "streamNameFr": "Gestion et Économie",
+      "academicYear": "2025",
+      "sessionFr": "Juin 2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeFr": "Projet 3 : L’Appel — Sauvegarde des forêts algériennes, du Barrage Vert et de l’eau",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Gestion et Économie (Juin 2025 : Appel urgent pour la protection des forêts algériennes et des ressources hydriques)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة تسيير واقتصاد (دورة جوان 2025 — نداء عاجل لحماية الغابات الجزائرية والسد الأخضر والثروة المائية)",
+      "themesFr": [
+        "Texte exhortatif (L’Appel)",
+        "Barrage Vert",
+        "Forêts algériennes",
+        "Gestion de l’eau"
+      ],
+      "themesAr": [
+        "نص النداء",
+        "السد الأخضر",
+        "الغابات الجزائرية",
+        "الحفاظ على الثروة المائية"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2025-3as-ge-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2025-3as-ge-french-sol.pdf",
+      "fileSize": 181847,
+      "solutionFileSize": 186487,
+      "fonts": [
+        "ZTRNVM+Arial-BoldMT",
+        "KTLBGU+ArialMT",
+        "AULKAC+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "CIMNGP+Arial-BoldMT",
+        "FRZKFC+ArialMT",
+        "AULKAC+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2023-3as-lp-french",
+      "grade": "3as_lp",
+      "yearSubjectId": 769,
+      "subjectId": "FRE-SEC",
+      "streamId": "LP",
+      "streamNameAr": "آداب وفلسفة",
+      "streamNameFr": "Lettres et Philosophie",
+      "academicYear": "2023",
+      "sessionFr": "Juin 2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 3,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        6,
+        7
+      ],
+      "unitThemeFr": "Projet 1 : Texte d’Histoire — La Révolution du 1er Novembre 1954 et la parole engagée",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Lettres et Philosophie (Juin 2023 : Le 1er Novembre 1954, la plume de Moufdi Zakaria et la presse algérienne)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة آداب وفلسفة (دورة جوان 2023 — أول نوفمبر 1954 والقلم الملتزم لمفدي زكريا والصحافة الجزائرية)",
+      "themesFr": [
+        "Texte d’Histoire",
+        "1er Novembre 1954",
+        "Moufdi Zakaria",
+        "Presse de la Révolution algérienne"
+      ],
+      "themesAr": [
+        "النص التاريخي",
+        "ثورة أول نوفمبر 1954",
+        "الشاعر مفدي زكريا",
+        "صحافة الثورة التحريرية الجزائرية"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2023-3as-lp-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2023-3as-lp-french-sol.pdf",
+      "fileSize": 182915,
+      "solutionFileSize": 187775,
+      "fonts": [
+        "COBKIN+Arial-BoldMT",
+        "NOFYBQ+ArialMT",
+        "QWBTKW+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "VZTEGZ+Arial-BoldMT",
+        "MZQCEE+ArialMT",
+        "QWBTKW+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2024-3as-lp-french",
+      "grade": "3as_lp",
+      "yearSubjectId": 769,
+      "subjectId": "FRE-SEC",
+      "streamId": "LP",
+      "streamNameAr": "آداب وفلسفة",
+      "streamNameFr": "Lettres et Philosophie",
+      "academicYear": "2024",
+      "sessionFr": "Juin 2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 3,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        6,
+        7
+      ],
+      "unitThemeFr": "Projet 2 : Débat d’idées — Le livre papier face aux écrans numériques et la formation de l’esprit critique",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Lettres et Philosophie (Juin 2024 : Le livre papier face aux écrans numériques : former l’esprit critique des jeunes)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة آداب وفلسفة (دورة جوان 2024 — الكتاب الورقي في مواجهة الشاشات الرقمية وتكوين الروح النقدية لدى الشباب)",
+      "themesFr": [
+        "Débat d’idées",
+        "Livre papier et écrans numériques",
+        "Esprit critique",
+        "Lecture approfondie"
+      ],
+      "themesAr": [
+        "مناظرة الأفكار",
+        "الكتاب الورقي والشاشات الرقمية",
+        "الروح النقدية",
+        "المطالعة العميقة"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2024-3as-lp-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2024-3as-lp-french-sol.pdf",
+      "fileSize": 178965,
+      "solutionFileSize": 184827,
+      "fonts": [
+        "AWTSAN+Arial-BoldMT",
+        "CGBFRL+ArialMT",
+        "LJRWEV+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "XSKUSM+Arial-BoldMT",
+        "YEULAA+ArialMT",
+        "LJRWEV+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2025-3as-lp-french",
+      "grade": "3as_lp",
+      "yearSubjectId": 769,
+      "subjectId": "FRE-SEC",
+      "streamId": "LP",
+      "streamNameAr": "آداب وفلسفة",
+      "streamNameFr": "Lettres et Philosophie",
+      "academicYear": "2025",
+      "sessionFr": "Juin 2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 3,
+      "duration": "02 h 30",
+      "pointsSplit": [
+        7,
+        6,
+        7
+      ],
+      "unitThemeFr": "Projet 3 : L’Appel — Solidarité algérienne « Touiza » et préservation du patrimoine historique",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Lettres et Philosophie (Juin 2025 : Appel à la solidarité « Touiza » et à la sauvegarde du patrimoine historique national)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة آداب وفلسفة (دورة جوان 2025 — نداء لإحياء روح التويزة والتضامن وحماية التراث التاريخي الوطني)",
+      "themesFr": [
+        "Texte exhortatif (L’Appel)",
+        "Touiza et solidarité algérienne",
+        "Patrimoine historique national",
+        "Casbah d’Alger, Tlemcen et M’Zab"
+      ],
+      "themesAr": [
+        "نص النداء",
+        "التويزة والتضامن الجزائري",
+        "التراث التاريخي الوطني",
+        "القصبة وتلمسان وميزاب"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2025-3as-lp-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2025-3as-lp-french-sol.pdf",
+      "fileSize": 182569,
+      "solutionFileSize": 187861,
+      "fonts": [
+        "FYVPOE+Arial-BoldMT",
+        "FJRSTL+ArialMT",
+        "GJSLKV+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "FHAVWE+Arial-BoldMT",
+        "OYNFVD+ArialMT",
+        "GJSLKV+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2023-3as-le-french",
+      "grade": "3as_le",
+      "yearSubjectId": 788,
+      "subjectId": "FRE-SEC",
+      "streamId": "LE",
+      "streamNameAr": "لغات أجنبية",
+      "streamNameFr": "Langues Étrangères",
+      "academicYear": "2023",
+      "sessionFr": "Juin 2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 5,
+      "duration": "03 h 30",
+      "pointsSplit": [
+        6,
+        6,
+        8
+      ],
+      "unitThemeFr": "Projet 1 : Texte d’Histoire — Les savants algériens face à la politique coloniale d’acculturation",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Langues Étrangères (Juin 2023 : Les savants et réformateurs algériens face à l’acculturation coloniale : Ben Badis, El-Mili et El-Ibrahimi)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة لغات أجنبية (دورة جوان 2023 — العلماء والمصلحون الجزائريون في مواجهة سياسة التغريب الاستعمارية: بن باديس والميلي والإبراهيمي)",
+      "themesFr": [
+        "Texte d’Histoire",
+        "Résistance culturelle à l’acculturation",
+        "Cheikh Ben Badis, Cheikh El-Mili et Cheikh El-Ibrahimi",
+        "Historiographie algérienne"
+      ],
+      "themesAr": [
+        "النص التاريخي",
+        "المقاومة الثقافية لسياسة التغريب",
+        "بن باديس والميلي والإبراهيمي",
+        "كتابة التاريخ الوطني الجزائري"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2023-3as-le-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2023-3as-le-french-sol.pdf",
+      "fileSize": 182809,
+      "solutionFileSize": 189993,
+      "fonts": [
+        "YUDRZV+Arial-BoldMT",
+        "YIPOYQ+ArialMT",
+        "MYURQB+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "NSSQZT+Arial-BoldMT",
+        "BPXICI+ArialMT",
+        "MYURQB+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2024-3as-le-french",
+      "grade": "3as_le",
+      "yearSubjectId": 788,
+      "subjectId": "FRE-SEC",
+      "streamId": "LE",
+      "streamNameAr": "لغات أجنبية",
+      "streamNameFr": "Langues Étrangères",
+      "academicYear": "2024",
+      "sessionFr": "Juin 2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 5,
+      "duration": "03 h 30",
+      "pointsSplit": [
+        6,
+        6,
+        8
+      ],
+      "unitThemeFr": "Projet 2 : Débat d’idées — Apprentissage des langues étrangères, identité culturelle et ouverture scientifique",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Langues Étrangères (Juin 2024 : Apprentissage des langues étrangères, identité culturelle et ouverture scientifique)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة لغات أجنبية (دورة جوان 2024 — تعلم اللغات الأجنبية بين الهوية الثقافية والانفتاح العلمي)",
+      "themesFr": [
+        "Débat d’idées",
+        "Langues étrangères et plurilinguisme",
+        "Identité culturelle",
+        "Ouverture scientifique et patrimoine islamique"
+      ],
+      "themesAr": [
+        "مناظرة الأفكار",
+        "تعلم اللغات الأجنبية والتعدد اللغوي",
+        "الهوية الثقافية",
+        "الانفتاح العلمي وإرث العلماء المسلمين"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2024-3as-le-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2024-3as-le-french-sol.pdf",
+      "fileSize": 180305,
+      "solutionFileSize": 185726,
+      "fonts": [
+        "KKXICA+Arial-BoldMT",
+        "KTMYJL+ArialMT",
+        "WHCFXE+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "MHIJOD+Arial-BoldMT",
+        "IPCGGP+ArialMT",
+        "WHCFXE+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2025-3as-le-french",
+      "grade": "3as_le",
+      "yearSubjectId": 788,
+      "subjectId": "FRE-SEC",
+      "streamId": "LE",
+      "streamNameAr": "لغات أجنبية",
+      "streamNameFr": "Langues Étrangères",
+      "academicYear": "2025",
+      "sessionFr": "Juin 2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 5,
+      "duration": "03 h 30",
+      "pointsSplit": [
+        6,
+        6,
+        8
+      ],
+      "unitThemeFr": "Projet 3 : L’Appel — Engagement volontaire des jeunes, éthique du travail et protection de l’environnement",
+      "titleFr": "Examen blanc du Baccalauréat en Français — Langues Étrangères (Juin 2025 : Appel aux jeunes générations pour le bénévolat, l’éthique du travail et la protection de l’environnement)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الفرنسية — شعبة لغات أجنبية (دورة جوان 2025 — نداء إلى الأجيال الشابة للتطوع وأخلاقيات العمل وحماية البيئة)",
+      "themesFr": [
+        "Texte exhortatif (L’Appel)",
+        "Engagement volontaire des jeunes",
+        "Éthique du travail (Itqan)",
+        "Protection de l’environnement"
+      ],
+      "themesAr": [
+        "نص النداء",
+        "التطوع والعمل الخيري لدى الشباب",
+        "إتقان العمل والأخلاقيات المهنية",
+        "حماية البيئة والتنمية المستدامة"
+      ],
+      "templateId": "french/bac_official",
+      "pdfUrl": "/generated/official-bac-french/bac-2025-3as-le-french.pdf",
+      "solutionUrl": "/generated/official-bac-french/bac-2025-3as-le-french-sol.pdf",
+      "fileSize": 181090,
+      "solutionFileSize": 185324,
+      "fonts": [
+        "LTIVAF+Arial-BoldMT",
+        "XIBSJJ+ArialMT",
+        "MSHQIF+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "JMHCXC+Arial-BoldMT",
+        "CFPYCL+ArialMT",
+        "MSHQIF+Arial-ItalicMT"
+      ]
+    }
+  ]
+}

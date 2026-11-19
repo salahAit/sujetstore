@@ -72,6 +72,21 @@ import {
 	type AssembledEnglishSecondaryPaper,
 	type EnglishSecondaryVariant
 } from './assemblers/exam-english-secondary';
+import {
+	assembleFrenchPrimaryExam,
+	type AssembledFrenchPrimaryPaper,
+	type FrenchPrimaryVariant
+} from './assemblers/exam-french-primary';
+import {
+	assembleFrenchMiddleExam,
+	type AssembledFrenchMiddlePaper,
+	type FrenchMiddleVariant
+} from './assemblers/exam-french-middle';
+import {
+	assembleFrenchSecondaryExam,
+	type AssembledFrenchSecondaryPaper,
+	type FrenchSecondaryVariant
+} from './assemblers/exam-french-secondary';
 import { compileTypstPdf } from './typst';
 import {
 	SECONDARY_TRACK_IDS,
@@ -83,6 +98,7 @@ import type { PhysicsTrackId } from '../modules/PhysicsTemplates/types';
 import type { SciencesTrackId } from '../modules/SciencesTemplates/types';
 import type { ArabicTrackId } from '../modules/ArabicTemplates/types';
 import type { EnglishTrackId } from '../modules/EnglishTemplates/types';
+import type { FrenchTrackId } from '../modules/FrenchTemplates/types';
 import type { TrimesterId } from '../modules/SujetBuilder/types';
 
 export type UnifiedAssembledExam =
@@ -109,6 +125,11 @@ export type UnifiedAssembledEnglishExam =
 	| AssembledEnglishPrimaryPaper
 	| AssembledEnglishMiddlePaper
 	| AssembledEnglishSecondaryPaper;
+
+export type UnifiedAssembledFrenchExam =
+	| AssembledFrenchPrimaryPaper
+	| AssembledFrenchMiddlePaper
+	| AssembledFrenchSecondaryPaper;
 
 export interface AssembleExamOptions {
 	grade: GradeId;
@@ -267,7 +288,8 @@ export async function compileAssembledExamPdf(
 		| UnifiedAssembledPhysicsExam
 		| UnifiedAssembledSciencesExam
 		| UnifiedAssembledArabicExam
-		| UnifiedAssembledEnglishExam,
+		| UnifiedAssembledEnglishExam
+		| UnifiedAssembledFrenchExam,
 	paths: { subjectOutPath: string; solutionOutPath: string }
 ) {
 	const [subjectResult, solutionResult] = await Promise.all([
@@ -767,6 +789,141 @@ export function assembleEnglishExam(opts: AssembleEnglishExamOptions): UnifiedAs
 				variant = 'trimester_exam';
 			}
 			return assembleEnglishSecondaryExam({
+				grade: opts.grade,
+				trimesterId: opts.trimesterId,
+				seed: opts.seed,
+				docType: opts.docType,
+				variant,
+				difficulty: opts.difficulty,
+				academicYear: opts.academicYear,
+				schoolName: opts.schoolName,
+				topicNumber: opts.topicNumber
+			});
+		}
+	}
+}
+
+const FRENCH_PRIMARY_SET: ReadonlySet<string> = new Set(['3ap', '4ap', '5ap']);
+const FRENCH_MIDDLE_SET: ReadonlySet<string> = new Set(['1am', '2am', '3am', '4am']);
+
+export function yearSubjectToFrenchTrack(
+	yearId: string,
+	subjectId: string,
+	streamId?: string | null
+): FrenchTrackId | null {
+	if (subjectId === 'FRE-B' && FRENCH_PRIMARY_SET.has(yearId)) {
+		return yearId as FrenchTrackId;
+	}
+	if (subjectId === 'FRE-B' && FRENCH_MIDDLE_SET.has(yearId)) {
+		return yearId as FrenchTrackId;
+	}
+	if (subjectId === 'FRE-SEC') {
+		const s = (streamId || '').toUpperCase();
+		if (yearId === '1as') {
+			return s === 'TCL' ? '1as_tcl' : '1as_tcst';
+		}
+		if (yearId === '2as') {
+			if (s === 'TM') return '2as_tm';
+			if (s === 'MATH') return '2as_math';
+			if (s === 'GE') return '2as_ge';
+			if (s === 'LP') return '2as_lp';
+			if (s === 'LE') return '2as_le';
+			return '2as_se';
+		}
+		if (yearId === '3as') {
+			if (s === 'TM') return '3as_tm';
+			if (s === 'MATH') return '3as_math';
+			if (s === 'GE') return '3as_ge';
+			if (s === 'LP') return '3as_lp';
+			if (s === 'LE') return '3as_le';
+			return '3as_se';
+		}
+	}
+	return null;
+}
+
+export interface AssembleFrenchExamOptions {
+	grade: FrenchTrackId;
+	trimesterId: TrimesterId;
+	seed: number;
+	docType?: 'exam' | 'test';
+	variant?: 'trimester_exam' | 'supervised_test' | 'competency_eval' | 'bem_mock' | 'bac_mock';
+	difficulty?: Difficulty;
+	academicYear?: string;
+	schoolName?: string;
+	topicNumber?: 1 | 2;
+}
+
+export function assembleFrenchExam(opts: AssembleFrenchExamOptions): UnifiedAssembledFrenchExam {
+	switch (opts.grade) {
+		case '3ap':
+		case '4ap':
+		case '5ap': {
+			let variant: FrenchPrimaryVariant;
+			if (opts.grade === '5ap' && opts.variant === 'competency_eval') {
+				variant = 'competency_eval';
+			} else if (opts.docType === 'test' || opts.variant === 'supervised_test') {
+				variant = 'supervised_test';
+			} else {
+				variant = 'trimester_exam';
+			}
+			return assembleFrenchPrimaryExam({
+				grade: opts.grade,
+				trimesterId: opts.trimesterId,
+				seed: opts.seed,
+				docType: opts.docType,
+				variant,
+				difficulty: opts.difficulty,
+				academicYear: opts.academicYear,
+				schoolName: opts.schoolName
+			});
+		}
+		case '1am':
+		case '2am':
+		case '3am':
+		case '4am': {
+			let variant: FrenchMiddleVariant;
+			if (opts.grade === '4am' && opts.variant === 'bem_mock') {
+				variant = 'bem_mock';
+			} else if (opts.docType === 'test' || opts.variant === 'supervised_test') {
+				variant = 'supervised_test';
+			} else {
+				variant = 'trimester_exam';
+			}
+			return assembleFrenchMiddleExam({
+				grade: opts.grade,
+				trimesterId: opts.trimesterId,
+				seed: opts.seed,
+				docType: opts.docType,
+				variant,
+				difficulty: opts.difficulty,
+				academicYear: opts.academicYear,
+				schoolName: opts.schoolName
+			});
+		}
+		case '1as_tcst':
+		case '1as_tcl':
+		case '2as_se':
+		case '2as_tm':
+		case '2as_math':
+		case '2as_ge':
+		case '2as_lp':
+		case '2as_le':
+		case '3as_se':
+		case '3as_tm':
+		case '3as_math':
+		case '3as_ge':
+		case '3as_lp':
+		case '3as_le': {
+			let variant: FrenchSecondaryVariant;
+			if (opts.variant === 'bac_mock' && opts.grade.startsWith('3as_')) {
+				variant = 'bac_mock';
+			} else if (opts.docType === 'test' || opts.variant === 'supervised_test') {
+				variant = 'supervised_test';
+			} else {
+				variant = 'trimester_exam';
+			}
+			return assembleFrenchSecondaryExam({
 				grade: opts.grade,
 				trimesterId: opts.trimesterId,
 				seed: opts.seed,
