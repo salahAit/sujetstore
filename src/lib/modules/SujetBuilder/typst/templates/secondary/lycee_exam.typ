@@ -64,7 +64,7 @@
     align: horizon,
     column-gutter: 8pt,
     align(right)[#set par(leading: 0.55em)
-      #text(font: main-font, size: 12pt, weight: "bold")[وزارة التربية الوطنية] \
+      #text(font: main-font, size: 12pt, weight: "bold")[الجمهورية الجزائرية الديمقراطية الشعبية] \
       #text(font: main-font, size: 11.5pt)[#school-name] \
       #text(font: main-font, size: 12pt, weight: "bold")[#year-display]
     ],

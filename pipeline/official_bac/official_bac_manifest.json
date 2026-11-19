@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T23:27:34.238Z",
+  "generated_at": "2026-11-19T05:52:48.854Z",
   "total_papers": 9,
   "total_pdfs": 18,
   "items": [
@@ -15,8 +15,8 @@
       "titleAr": "بكالوريا رسمية في الرياضيات — شعبة علوم تجريبية (دورة جوان 2023 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac/3as_se/bac-2023-3as-se-math.pdf",
       "solutionUrl": "/documents/official_bac/3as_se/bac-2023-3as-se-math-sol.pdf",
-      "fileSize": 139836,
-      "solutionFileSize": 211709,
+      "fileSize": 140811,
+      "solutionFileSize": 212724,
       "sourcePdfRelPath": "pipeline/references/3as_se/03_bac_official_archive/bac_2023_3as_se_math.pdf",
       "sourceSha256": "1c7cbda5ea153badce8d038cddf99735301648b49d38acb079e0edfd01fd509e"
     },
@@ -32,8 +32,8 @@
       "titleAr": "بكالوريا رسمية في الرياضيات — شعبة علوم تجريبية (دورة جوان 2024 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac/3as_se/bac-2024-3as-se-math.pdf",
       "solutionUrl": "/documents/official_bac/3as_se/bac-2024-3as-se-math-sol.pdf",
-      "fileSize": 134692,
-      "solutionFileSize": 195265,
+      "fileSize": 135636,
+      "solutionFileSize": 196202,
       "sourcePdfRelPath": "pipeline/references/3as_se/03_bac_official_archive/bac_2024_3as_se_math.pdf",
       "sourceSha256": "572659216ec8c003bb9d3342f5cf205e95ef67e97d9e0a697ff24b80f117b4d2"
     },
@@ -49,8 +49,8 @@
       "titleAr": "بكالوريا رسمية في الرياضيات — شعبة علوم تجريبية (دورة جوان 2025 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac/3as_se/bac-2025-3as-se-math.pdf",
       "solutionUrl": "/documents/official_bac/3as_se/bac-2025-3as-se-math-sol.pdf",
-      "fileSize": 132042,
-      "solutionFileSize": 195683,
+      "fileSize": 133286,
+      "solutionFileSize": 196783,
       "sourcePdfRelPath": "pipeline/references/3as_se/03_bac_official_archive/bac_2025_3as_se_math.pdf",
       "sourceSha256": "5033d827c7a6912b62fd86c885a8670e51828b47535175f45ef5560fbcda5c59"
     },
@@ -66,8 +66,8 @@
       "titleAr": "بكالوريا 2023 — الرياضيات (شعبة تقني رياضي - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac/3as_tm/bac-2023-3as-tm-math.pdf",
       "solutionUrl": "/documents/official_bac/3as_tm/bac-2023-3as-tm-math-sol.pdf",
-      "fileSize": 131117,
-      "solutionFileSize": 204782,
+      "fileSize": 132308,
+      "solutionFileSize": 206016,
       "sourcePdfRelPath": "pipeline/references/3as_tm/03_bac_official_archive/bac_2023_sujet.pdf",
       "sourceSha256": "e801c87a795f0409a9bbfba63d0cdfc63930c72df9d5212541bc8c7a9f2c75f7"
     },
@@ -83,8 +83,8 @@
       "titleAr": "بكالوريا 2024 — الرياضيات (شعبة تقني رياضي - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac/3as_tm/bac-2024-3as-tm-math.pdf",
       "solutionUrl": "/documents/official_bac/3as_tm/bac-2024-3as-tm-math-sol.pdf",
-      "fileSize": 128080,
-      "solutionFileSize": 194540,
+      "fileSize": 129019,
+      "solutionFileSize": 195492,
       "sourcePdfRelPath": "pipeline/references/3as_tm/03_bac_official_archive/bac_2024_sujet.pdf",
       "sourceSha256": "e7cbf6a15bad6cef70bf265c72e45e085acff003093f08943f7267158e2ec2c3"
     },
@@ -100,8 +100,8 @@
       "titleAr": "بكالوريا 2025 — الرياضيات (شعبة تقني رياضي - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac/3as_tm/bac-2025-3as-tm-math.pdf",
       "solutionUrl": "/documents/official_bac/3as_tm/bac-2025-3as-tm-math-sol.pdf",
-      "fileSize": 120585,
-      "solutionFileSize": 197931,
+      "fileSize": 121836,
+      "solutionFileSize": 198985,
       "sourcePdfRelPath": "pipeline/references/3as_tm/03_bac_official_archive/bac_2025_sujet.pdf",
       "sourceSha256": "6f43e52d630244933a2b85b7a3e2a50620c588c3df02698173d3ea61db4924b5"
     },
@@ -117,8 +117,8 @@
       "titleAr": "بكالوريا رسمية في الرياضيات — شعبة رياضيات (دورة جوان 2023 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac/3as_math/bac-2023-3as-math-math.pdf",
       "solutionUrl": "/documents/official_bac/3as_math/bac-2023-3as-math-math-sol.pdf",
-      "fileSize": 139768,
-      "solutionFileSize": 221185,
+      "fileSize": 141006,
+      "solutionFileSize": 222224,
       "sourcePdfRelPath": "pipeline/references/3as_math/03_bac_official_archive/bac_math_2023_sujet.pdf",
       "sourceSha256": "3edb0c0bfa01139921c7be8a507202827e0c80613e4e5f7a544657d9c037d3b1"
     },
@@ -134,8 +134,8 @@
       "titleAr": "بكالوريا رسمية في الرياضيات — شعبة رياضيات (دورة جوان 2024 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac/3as_math/bac-2024-3as-math-math.pdf",
       "solutionUrl": "/documents/official_bac/3as_math/bac-2024-3as-math-math-sol.pdf",
-      "fileSize": 152529,
-      "solutionFileSize": 225062,
+      "fileSize": 153740,
+      "solutionFileSize": 226303,
       "sourcePdfRelPath": "pipeline/references/3as_math/03_bac_official_archive/bac_math_2024_sujet.pdf",
       "sourceSha256": "66109dfb2e092940f2aad39af258a62cb4503f4e70691bcc876883c71caad560"
     },
@@ -151,8 +151,8 @@
       "titleAr": "بكالوريا رسمية في الرياضيات — شعبة رياضيات (دورة جوان 2025 - الموضوع الأول)",
       "pdfUrl": "/documents/official_bac/3as_math/bac-2025-3as-math-math.pdf",
       "solutionUrl": "/documents/official_bac/3as_math/bac-2025-3as-math-math-sol.pdf",
-      "fileSize": 169791,
-      "solutionFileSize": 232710,
+      "fileSize": 170758,
+      "solutionFileSize": 233739,
       "sourcePdfRelPath": "pipeline/references/3as_math/03_bac_official_archive/bac_math_2025_sujet.pdf",
       "sourceSha256": "5d2b59b871d0a6bc32c61ac14282a622ff4355087321ac3b92330f08561ab7e1"
     }

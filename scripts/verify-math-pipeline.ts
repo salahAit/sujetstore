@@ -291,8 +291,12 @@ async function main() {
 				}
 			}
 
-			const rHiddenLit = await httpReq('/secondaire/2as/lp');
-			assert.equal(rHiddenLit.status, 404, 'Unpublished literary stream GET /secondaire/2as/lp must return 404');
+			const rHiddenLitMath = await httpReq('/secondaire/2as/mat-lit?stream=LP');
+			assert.equal(
+				rHiddenLitMath.status,
+				404,
+				'Unpublished literary math GET /secondaire/2as/mat-lit?stream=LP must return 404'
+			);
 			console.log('✅ 1. Visibility & curriculum routes passed (all 16 Primary + Middle + Secondary scientific tracks)');
 		}
 

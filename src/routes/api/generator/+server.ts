@@ -7,13 +7,16 @@ import {
 	assembleExam,
 	assemblePhysicsExam,
 	assembleSciencesExam,
+	assembleArabicExam,
 	compileAssembledExamPdf,
 	yearSubjectToGrade,
 	yearSubjectToPhysicsTrack,
 	yearSubjectToSciencesTrack,
+	yearSubjectToArabicTrack,
 	type AssembleExamOptions,
 	type AssemblePhysicsExamOptions,
-	type AssembleSciencesExamOptions
+	type AssembleSciencesExamOptions,
+	type AssembleArabicExamOptions
 } from '#lib/server/exam-assembler';
 import { gradeQuizSubmission } from '#lib/server/quiz-grading';
 import { awardQuizGamification } from '#lib/server/gamification';
@@ -257,7 +260,16 @@ export const POST: RequestHandler = async (event) => {
 			mathGrade === null && physicsTrack === null
 				? yearSubjectToSciencesTrack(ys.year_id, ys.subject_id, ys.stream_id)
 				: null;
-		if (mathGrade !== null || physicsTrack !== null || sciencesTrack !== null) {
+		const arabicTrack =
+			mathGrade === null && physicsTrack === null && sciencesTrack === null
+				? yearSubjectToArabicTrack(ys.year_id, ys.subject_id, ys.stream_id)
+				: null;
+		if (
+			mathGrade !== null ||
+			physicsTrack !== null ||
+			sciencesTrack !== null ||
+			arabicTrack !== null
+		) {
 			const trimesterId = (['t1', 't2', 't3'].includes(body.trimesterId)
 				? body.trimesterId
 				: 't1') as 't1' | 't2' | 't3';
@@ -306,22 +318,39 @@ export const POST: RequestHandler = async (event) => {
 									: undefined) as AssemblePhysicsExamOptions['variant'],
 								difficulty
 							})
-						: assembleSciencesExam({
-								grade: sciencesTrack!,
-								trimesterId,
-								seed,
-								docType,
-								variant: ([
-									'trimester_exam',
-									'supervised_test',
-									'competency_eval',
-									'bem_mock',
-									'bac_mock'
-								].includes(variant || '')
-									? variant
-									: undefined) as AssembleSciencesExamOptions['variant'],
-								difficulty
-							});
+						: sciencesTrack !== null
+							? assembleSciencesExam({
+									grade: sciencesTrack,
+									trimesterId,
+									seed,
+									docType,
+									variant: ([
+										'trimester_exam',
+										'supervised_test',
+										'competency_eval',
+										'bem_mock',
+										'bac_mock'
+									].includes(variant || '')
+										? variant
+										: undefined) as AssembleSciencesExamOptions['variant'],
+									difficulty
+								})
+							: assembleArabicExam({
+									grade: arabicTrack!,
+									trimesterId,
+									seed,
+									docType,
+									variant: ([
+										'trimester_exam',
+										'supervised_test',
+										'competency_eval',
+										'bem_mock',
+										'bac_mock'
+									].includes(variant || '')
+										? variant
+										: undefined) as AssembleArabicExamOptions['variant'],
+									difficulty
+								});
 
 			const fileId = `gen-${randomUUID().slice(0, 12)}`;
 			const subjectOutPath = resolve('data/uploads/sujet', `${fileId}.pdf`);

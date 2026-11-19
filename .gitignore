@@ -70,6 +70,8 @@ static/generated/*
 !static/generated/math-svg/
 !static/generated/physics-svg/
 !static/generated/sciences-svg/
+!static/generated/arabic-svg/
+!static/generated/official-bac-arabic/
 static/wasm/
 
 # Pipeline large reference PDFs (manifest JSONs stay tracked)
@@ -77,6 +79,7 @@ pipeline/references/**/*.pdf
 pipeline/references/**/legacy_gen1/*.pdf
 pipeline/references_physics/**/*.pdf
 pipeline/references_sciences/**/*.pdf
+pipeline/references_arabic/**/*.pdf
 
 # Python caches
 __pycache__/

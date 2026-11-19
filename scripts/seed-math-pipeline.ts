@@ -788,7 +788,7 @@ function main() {
 					pdfUrl: item.pdfUrl,
 					solutionUrl: item.solutionUrl,
 					fileSize: Number(item.fileSize) || 0,
-					source: 'الديوان الوطني للامتحانات والمسابقات (ONEC) — رسمي',
+					source: 'أرشيف مواضيع البكالوريا — منصة SujetStore',
 					academicYear: item.academicYear,
 					originType: 'official_certificate',
 					hasSolution: 1,

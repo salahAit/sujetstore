@@ -42,6 +42,21 @@ import {
 	type AssembledSciencesSecondaryPaper,
 	type SciencesSecondaryVariant
 } from './assemblers/exam-sciences-secondary';
+import {
+	assembleArabicPrimaryExam,
+	type AssembledArabicPrimaryPaper,
+	type ArabicPrimaryVariant
+} from './assemblers/exam-arabic-primary';
+import {
+	assembleArabicMiddleExam,
+	type AssembledArabicMiddlePaper,
+	type ArabicMiddleVariant
+} from './assemblers/exam-arabic-middle';
+import {
+	assembleArabicSecondaryExam,
+	type AssembledArabicSecondaryPaper,
+	type ArabicSecondaryVariant
+} from './assemblers/exam-arabic-secondary';
 import { compileTypstPdf } from './typst';
 import {
 	SECONDARY_TRACK_IDS,
@@ -51,6 +66,7 @@ import {
 } from '../modules/MathTemplates/types';
 import type { PhysicsTrackId } from '../modules/PhysicsTemplates/types';
 import type { SciencesTrackId } from '../modules/SciencesTemplates/types';
+import type { ArabicTrackId } from '../modules/ArabicTemplates/types';
 import type { TrimesterId } from '../modules/SujetBuilder/types';
 
 export type UnifiedAssembledExam =
@@ -67,6 +83,11 @@ export type UnifiedAssembledSciencesExam =
 	| AssembledSciencesPrimaryPaper
 	| AssembledSciencesMiddlePaper
 	| AssembledSciencesSecondaryPaper;
+
+export type UnifiedAssembledArabicExam =
+	| AssembledArabicPrimaryPaper
+	| AssembledArabicMiddlePaper
+	| AssembledArabicSecondaryPaper;
 
 export interface AssembleExamOptions {
 	grade: GradeId;
@@ -220,7 +241,11 @@ export function assembleExam(opts: AssembleExamOptions): UnifiedAssembledExam {
 }
 
 export async function compileAssembledExamPdf(
-	paper: UnifiedAssembledExam | UnifiedAssembledPhysicsExam | UnifiedAssembledSciencesExam,
+	paper:
+		| UnifiedAssembledExam
+		| UnifiedAssembledPhysicsExam
+		| UnifiedAssembledSciencesExam
+		| UnifiedAssembledArabicExam,
 	paths: { subjectOutPath: string; solutionOutPath: string }
 ) {
 	const [subjectResult, solutionResult] = await Promise.all([
@@ -453,6 +478,147 @@ export function assembleSciencesExam(
 				difficulty: opts.difficulty,
 				academicYear: opts.academicYear,
 				schoolName: opts.schoolName
+			});
+		}
+	}
+}
+
+const ARABIC_PRIMARY_SET: ReadonlySet<string> = new Set(['1ap', '2ap', '3ap', '4ap', '5ap']);
+const ARABIC_MIDDLE_SET: ReadonlySet<string> = new Set(['1am', '2am', '3am', '4am']);
+
+export function yearSubjectToArabicTrack(
+	yearId: string,
+	subjectId: string,
+	streamId?: string | null
+): ArabicTrackId | null {
+	if (subjectId === 'ARB-B' && ARABIC_PRIMARY_SET.has(yearId)) {
+		return yearId as ArabicTrackId;
+	}
+	if (subjectId === 'ARB-B' && ARABIC_MIDDLE_SET.has(yearId)) {
+		return yearId as ArabicTrackId;
+	}
+	if (yearId === '1as') {
+		if (subjectId === 'ARB-SCI') return '1as_tcst';
+		if (subjectId === 'ARB-LP') return '1as_tcl';
+	}
+	if (yearId === '2as') {
+		if (subjectId === 'ARB-LP') return '2as_lp';
+		if (subjectId === 'ARB-LE') return '2as_le';
+		if (subjectId === 'ARB-SCI') {
+			const s = (streamId || '').toUpperCase();
+			if (s === 'TM') return '2as_tm';
+			if (s === 'MATH') return '2as_math';
+			if (s === 'GE') return '2as_ge';
+			return '2as_se';
+		}
+	}
+	if (yearId === '3as') {
+		if (subjectId === 'ARB-LP') return '3as_lp';
+		if (subjectId === 'ARB-LE') return '3as_le';
+		if (subjectId === 'ARB-SCI') {
+			const s = (streamId || '').toUpperCase();
+			if (s === 'TM') return '3as_tm';
+			if (s === 'MATH') return '3as_math';
+			if (s === 'GE') return '3as_ge';
+			return '3as_se';
+		}
+	}
+	return null;
+}
+
+export interface AssembleArabicExamOptions {
+	grade: ArabicTrackId;
+	trimesterId: TrimesterId;
+	seed: number;
+	docType?: 'exam' | 'test';
+	variant?: 'trimester_exam' | 'supervised_test' | 'competency_eval' | 'bem_mock' | 'bac_mock';
+	difficulty?: Difficulty;
+	academicYear?: string;
+	schoolName?: string;
+	topicNumber?: 1 | 2;
+}
+
+export function assembleArabicExam(opts: AssembleArabicExamOptions): UnifiedAssembledArabicExam {
+	switch (opts.grade) {
+		case '1ap':
+		case '2ap':
+		case '3ap':
+		case '4ap':
+		case '5ap': {
+			let variant: ArabicPrimaryVariant;
+			if (opts.grade === '5ap' && opts.variant === 'competency_eval') {
+				variant = 'competency_eval';
+			} else if (opts.docType === 'test' || opts.variant === 'supervised_test') {
+				variant = 'supervised_test';
+			} else {
+				variant = 'trimester_exam';
+			}
+			return assembleArabicPrimaryExam({
+				grade: opts.grade,
+				trimesterId: opts.trimesterId,
+				seed: opts.seed,
+				docType: opts.docType,
+				variant,
+				difficulty: opts.difficulty,
+				academicYear: opts.academicYear,
+				schoolName: opts.schoolName
+			});
+		}
+		case '1am':
+		case '2am':
+		case '3am':
+		case '4am': {
+			let variant: ArabicMiddleVariant;
+			if (opts.grade === '4am' && opts.variant === 'bem_mock') {
+				variant = 'bem_mock';
+			} else if (opts.docType === 'test' || opts.variant === 'supervised_test') {
+				variant = 'supervised_test';
+			} else {
+				variant = 'trimester_exam';
+			}
+			return assembleArabicMiddleExam({
+				grade: opts.grade,
+				trimesterId: opts.trimesterId,
+				seed: opts.seed,
+				docType: opts.docType,
+				variant,
+				difficulty: opts.difficulty,
+				academicYear: opts.academicYear,
+				schoolName: opts.schoolName
+			});
+		}
+		case '1as_tcst':
+		case '1as_tcl':
+		case '2as_se':
+		case '2as_tm':
+		case '2as_math':
+		case '2as_ge':
+		case '2as_lp':
+		case '2as_le':
+		case '3as_se':
+		case '3as_tm':
+		case '3as_math':
+		case '3as_ge':
+		case '3as_lp':
+		case '3as_le': {
+			let variant: ArabicSecondaryVariant;
+			if (opts.variant === 'bac_mock' && opts.grade.startsWith('3as_')) {
+				variant = 'bac_mock';
+			} else if (opts.docType === 'test' || opts.variant === 'supervised_test') {
+				variant = 'supervised_test';
+			} else {
+				variant = 'trimester_exam';
+			}
+			return assembleArabicSecondaryExam({
+				grade: opts.grade,
+				trimesterId: opts.trimesterId,
+				seed: opts.seed,
+				docType: opts.docType,
+				variant,
+				difficulty: opts.difficulty,
+				academicYear: opts.academicYear,
+				schoolName: opts.schoolName,
+				topicNumber: opts.topicNumber
 			});
 		}
 	}

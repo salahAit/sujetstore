@@ -520,7 +520,7 @@
 								? 'border-amber-500 bg-amber-500/20 text-amber-300'
 								: 'border-amber-500/30 bg-amber-500/10 text-amber-400 hover:bg-amber-500/20'}"
 						>
-							أرشيف البكالوريا الرسمي (ONEC)
+							أرشيف مواضيع البكالوريا (2023 – 2025)
 						</button>
 					{/if}
 

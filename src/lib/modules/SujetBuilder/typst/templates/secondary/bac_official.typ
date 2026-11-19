@@ -59,10 +59,10 @@
   set par(leading: 0.72em, justify: true)
   show math.equation: set text(font: ("STIX Two Math", "Arabic Transparent"), dir: ltr)
 
-  // ═══════════ الترويسة الرسمية الجزائرية ═══════════
+  // ═══════════ الترويسة الجزائرية لمنصة SujetStore ═══════════
   align(center)[
     #text(font: main-font, size: 14.5pt, weight: "bold")[الجمهورية الجزائرية الديمقراطية الشعبية] \
-    #text(font: main-font, size: 13pt, weight: "bold")[وزارة التربية الوطنية — الديوان الوطني للامتحانات والمسابقات]
+    #text(font: main-font, size: 12pt, weight: "bold", fill: rgb("1E3A8A"))[منصة SujetStore التعليمية]
   ]
   v(4pt)
 
@@ -128,7 +128,11 @@
   if not is-solution [
     #align(center)[
       #text(size: 11.5pt, style: "italic", fill: luma(60))[
-        على المترشح أن يختار أحد الموضوعين الآتيين — التوثيق العلمي والبرهان الصريح ضروريان
+        #(if str(metadata.at("subjectId", default: "")).starts-with("ARB") {
+          "على المترشح أن يختار أحد الموضوعين الآتيين — تُراعى سلامة اللغة ودقّة المنهجية"
+        } else {
+          "على المترشح أن يختار أحد الموضوعين الآتيين — التوثيق العلمي والبرهان الصريح ضروريان"
+        })
       ]
     ]
     #v(3pt)

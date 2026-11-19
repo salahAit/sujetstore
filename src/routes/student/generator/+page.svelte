@@ -46,7 +46,21 @@
 		'2as:SCI-SE:SE': 6,
 		'2as:SCI-MATH:MATH': 2,
 		'3as:SCI-SE:SE': 6,
-		'3as:SCI-MATH:MATH': 2
+		'3as:SCI-MATH:MATH': 2,
+		'1as:ARB-SCI:TCST': 3,
+		'1as:ARB-LP:TCL': 5,
+		'2as:ARB-SCI:SE': 2,
+		'2as:ARB-SCI:TM': 2,
+		'2as:ARB-SCI:MATH': 2,
+		'2as:ARB-SCI:GE': 2,
+		'2as:ARB-LP:LP': 5,
+		'2as:ARB-LE:LE': 4,
+		'3as:ARB-SCI:SE': 3,
+		'3as:ARB-SCI:TM': 3,
+		'3as:ARB-SCI:MATH': 3,
+		'3as:ARB-SCI:GE': 3,
+		'3as:ARB-LP:LP': 6,
+		'3as:ARB-LE:LE': 5
 	};
 
 	function formatYsLabel(ys: any): string {
@@ -302,7 +316,7 @@
 								class="bg-background w-full rounded-xl border px-3 py-2.5 text-sm outline-none focus:border-blue-500"
 							>
 								<option value="trimester_exam">اختبار فصلي عادي</option>
-								<option value="bac_mock">بكالوريا تجريبية (ONEC)</option>
+								<option value="bac_mock">بكالوريا تجريبية نموذجية</option>
 							</select>
 						</div>
 					{/if}

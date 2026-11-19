@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T00:38:19.930Z",
+  "generated_at": "2026-11-19T05:52:54.818Z",
   "total_papers": 6,
   "total_pdfs": 12,
   "items": [
@@ -21,8 +21,8 @@
       ],
       "pdfUrl": "/documents/official_bac_sciences/3as_se/bac-2023-3as-se-sciences.pdf",
       "solutionUrl": "/documents/official_bac_sciences/3as_se/bac-2023-3as-se-sciences-sol.pdf",
-      "fileSize": 141337,
-      "solutionFileSize": 201391,
+      "fileSize": 141326,
+      "solutionFileSize": 201499,
       "sourcePdfRelPath": "pipeline/references_sciences/3as/bac_official/bac_2023_se_sciences_subject.pdf",
       "sourceSha256": null
     },
@@ -44,8 +44,8 @@
       ],
       "pdfUrl": "/documents/official_bac_sciences/3as_se/bac-2024-3as-se-sciences.pdf",
       "solutionUrl": "/documents/official_bac_sciences/3as_se/bac-2024-3as-se-sciences-sol.pdf",
-      "fileSize": 157219,
-      "solutionFileSize": 225434,
+      "fileSize": 157479,
+      "solutionFileSize": 225703,
       "sourcePdfRelPath": "pipeline/references_sciences/3as/bac_official/bac_2024_se_sciences_subject.pdf",
       "sourceSha256": null
     },
@@ -67,8 +67,8 @@
       ],
       "pdfUrl": "/documents/official_bac_sciences/3as_se/bac-2025-3as-se-sciences.pdf",
       "solutionUrl": "/documents/official_bac_sciences/3as_se/bac-2025-3as-se-sciences-sol.pdf",
-      "fileSize": 165605,
-      "solutionFileSize": 239149,
+      "fileSize": 166063,
+      "solutionFileSize": 239629,
       "sourcePdfRelPath": "pipeline/references_sciences/3as/bac_official/bac_2025_se_sciences_subject.pdf",
       "sourceSha256": null
     },
@@ -89,8 +89,8 @@
       ],
       "pdfUrl": "/documents/official_bac_sciences/3as_math/bac-2023-3as-math-sciences.pdf",
       "solutionUrl": "/documents/official_bac_sciences/3as_math/bac-2023-3as-math-sciences-sol.pdf",
-      "fileSize": 142677,
-      "solutionFileSize": 205719,
+      "fileSize": 143103,
+      "solutionFileSize": 206011,
       "sourcePdfRelPath": "pipeline/references_sciences/3as/bac_official/bac_2023_math_sciences_subject.pdf",
       "sourceSha256": null
     },
@@ -111,8 +111,8 @@
       ],
       "pdfUrl": "/documents/official_bac_sciences/3as_math/bac-2024-3as-math-sciences.pdf",
       "solutionUrl": "/documents/official_bac_sciences/3as_math/bac-2024-3as-math-sciences-sol.pdf",
-      "fileSize": 110566,
-      "solutionFileSize": 170305,
+      "fileSize": 110805,
+      "solutionFileSize": 170633,
       "sourcePdfRelPath": "pipeline/references_sciences/3as/bac_official/bac_2024_math_sciences_subject.pdf",
       "sourceSha256": null
     },
@@ -133,8 +133,8 @@
       ],
       "pdfUrl": "/documents/official_bac_sciences/3as_math/bac-2025-3as-math-sciences.pdf",
       "solutionUrl": "/documents/official_bac_sciences/3as_math/bac-2025-3as-math-sciences-sol.pdf",
-      "fileSize": 140559,
-      "solutionFileSize": 196524,
+      "fileSize": 141198,
+      "solutionFileSize": 197197,
       "sourcePdfRelPath": "pipeline/references_sciences/3as/bac_official/bac_2025_math_sciences_subject.pdf",
       "sourceSha256": null
     }
