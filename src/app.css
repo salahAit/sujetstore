@@ -75,6 +75,15 @@ body {
 	font-feature-settings:
 		'rlig' 1,
 		'calt' 1;
+	overscroll-behavior-y: contain;
+}
+
+/* Prevent accidental native mobile link/image/card drag-ghosts during vertical scrolling */
+a:not([draggable='true']),
+img:not([draggable='true']) {
+	-webkit-user-drag: none;
+	user-drag: none;
+	-webkit-touch-callout: none;
 }
 
 /* ============================================
@@ -84,6 +93,16 @@ body {
 .glass-card {
 	@apply cursor-pointer rounded-2xl border border-black/10 bg-black/5 p-5 backdrop-blur-xl transition-all duration-300;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+	touch-action: pan-y pinch-zoom;
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+.glass-card a,
+.glass-card button {
+	touch-action: manipulation;
+	-webkit-user-drag: none;
 }
 
 .dark .glass-card {

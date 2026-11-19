@@ -29,7 +29,15 @@
 	let isStaff = $derived(
 		data?.user ? ['superadmin', 'admin', 'editor'].includes(data.user.role) : false
 	);
+
+	function handleGlobalDragStart(e: DragEvent) {
+		const target = e.target as HTMLElement | null;
+		if (target?.closest?.('[draggable="true"]')) return;
+		e.preventDefault();
+	}
 </script>
+
+<svelte:window ondragstart={handleGlobalDragStart} />
 
 <ModeWatcher />
 

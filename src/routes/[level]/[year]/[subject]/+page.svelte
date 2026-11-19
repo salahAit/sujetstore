@@ -619,6 +619,7 @@
 						<h3 class="truncate text-base font-bold sm:text-lg">
 							{#if doc._itemType === 'quiz'}
 								<a
+									draggable="false"
 									href={doc.isLocked ? `${data.dynamicPortalUrl || ''}/quizzes/${doc.slug}` : `/quizzes/${doc.slug}`}
 									class="hover:text-primary transition-colors"
 								>
@@ -626,6 +627,7 @@
 								</a>
 							{:else}
 								<a
+									draggable="false"
 									href={doc.isLocked
 										? `${data.dynamicPortalUrl || ''}/${data.level.slug}/${data.year.slug}/${data.subject.slug}/${doc.slug}`
 										: `/${data.level.slug}/${data.year.slug}/${data.subject.slug}/${doc.slug}`}
