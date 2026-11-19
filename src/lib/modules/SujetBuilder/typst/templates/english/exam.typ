@@ -202,7 +202,7 @@
 
   set page(
     paper: "a4",
-    margin: (top: 1.4cm, bottom: 1.6cm, left: 1.6cm, right: 1.6cm),
+    margin: (top: 1.0cm, bottom: 1.9cm, left: 1.5cm, right: 1.5cm),
     footer: context [
       #set text(font: main-font, size: 9pt, dir: ltr)
       #line(length: 100%, stroke: 0.5pt + luma(140))
@@ -210,9 +210,12 @@
       #grid(
         columns: (1fr, 1fr, 1fr),
         align: horizon,
-        align(left)[#text(weight: "bold", fill: luma(70))[#(if stream-name != "" { stream-name + " — Coeff: " + coefficient } else { year-name })]],
-        align(center)[#text(weight: "bold")[Page #counter(page).display() of #counter(page).final().at(0)]],
-        align(right)[#link("https://sujetstore.com/")[#text(fill: rgb("1D4ED8"), weight: "bold")[sujetstore.com]]]
+        align(left)[#stack(dir: ltr, spacing: 5pt,
+          link("https://sujetstore.com/")[#box(width: 22pt, height: 22pt)[#image("../../common/logo.png", width: 100%, height: 100%, fit: "contain")]],
+          align(horizon)[#link("https://sujetstore.com/")[#text(fill: rgb("1D4ED8"), weight: "bold", size: 9.5pt)[sujetstore.com]]]
+        )],
+        align(center)[#text(weight: "bold", size: 9.5pt)[Page #counter(page).display() of #counter(page).final().at(0)]],
+        align(right)[#box(width: 22pt, height: 22pt)[#image("../../common/qrcode.png", width: 100%, height: 100%, fit: "contain")]]
       )
     ]
   )
@@ -220,45 +223,104 @@
   set text(font: main-font, lang: "en", dir: ltr, size: body-size, weight: "regular")
   set par(leading: 0.62em, justify: true)
 
-  // ═══════════ Clean Legal Header (NO Ministry / NO ONEC) ═══════════
-  align(center)[
-    #text(size: 13pt, weight: "bold")[People's Democratic Republic of Algeria] \
-    #text(size: 10.5pt, weight: "bold", fill: rgb("1E3A8A"))[SujetStore Educational Platform]
-  ]
-  v(4pt)
-
-  box(
-    width: 100%,
-    stroke: 1pt + rgb("1E3A8A"),
-    radius: 3pt,
-    inset: (x: 11pt, y: 8pt),
-    fill: rgb("F8FAFC")
-  )[
-    #set par(leading: 0.55em, justify: false)
+  // ═══════════ Branded English Header (Logo + QR + SujetStore Identity, NO Ministry / NO ONEC) ═══════════
+  if is-bac [
     #grid(
-      columns: (1.35fr, auto, 1fr),
-      column-gutter: 10pt,
+      columns: (1fr, auto, 1fr),
+      column-gutter: 8pt,
       align: horizon,
-      align(left)[
-        #text(size: 11pt, weight: "bold")[#year-name] \
-        #(if stream-name != "" [
+      align(left)[#stack(dir: ttb, spacing: 2pt,
+        link("https://sujetstore.com/")[#text(size: 9pt, fill: rgb("1D4ED8"), weight: "bold")[https://sujetstore.com]],
+        text(size: 8pt, fill: luma(90))[Exclusive Modern Algerian Platform]
+      )],
+      align(center)[
+        #stack(dir: ttb, spacing: 2pt,
+          align(center)[#link("https://sujetstore.com/")[#image("../../common/logo.png", width: 1.25cm, fit: "contain")]],
+          align(center)[#text(size: 12.5pt, weight: "bold")[People's Democratic Republic of Algeria]],
+          align(center)[#text(size: 10pt, weight: "bold", fill: rgb("1D4ED8"))[SujetStore Educational Platform]]
+        )
+      ],
+      align(right)[#stack(dir: ttb, spacing: 2pt,
+        align(right)[#box(width: 32pt, height: 32pt, stroke: 0.5pt + luma(140), radius: 2pt, inset: 2pt)[#image("../../common/qrcode.png")]],
+        align(right)[#text(size: 7.5pt, fill: luma(80))[Scan for more]]
+      )]
+    )
+    #v(4pt)
+    #box(
+      width: 100%,
+      stroke: 1pt + rgb("1E3A8A"),
+      radius: 3pt,
+      inset: (x: 11pt, y: 7pt),
+      fill: rgb("F8FAFC")
+    )[
+      #set par(leading: 0.55em, justify: false)
+      #grid(
+        columns: (1.35fr, auto, 1fr),
+        column-gutter: 10pt,
+        align: horizon,
+        align(left)[
+          #text(size: 11pt, weight: "bold")[#year-name] \
           #text(size: 10.5pt)[Stream: #text(weight: "bold")[#stream-name]]
+        ],
+        align(center)[
+          #box(stroke: 0.7pt + luma(120), inset: (x: 10pt, y: 5pt), radius: 2pt, fill: white)[
+            #text(size: 10.5pt, weight: "bold")[#session-en]
+          ]
+        ],
+        align(right)[
+          #text(size: 10.5pt)[Duration: #text(weight: "bold")[#duration]] \
+          #text(size: 10.5pt)[Coefficient: #text(weight: "bold")[#coefficient]]
+        ]
+      )
+    ]
+    #v(5pt)
+  ] else [
+    #grid(
+      columns: (1fr, auto, 1fr),
+      column-gutter: 6pt,
+      align: horizon,
+      align(left)[#stack(dir: ttb, spacing: 1.5pt,
+        link("https://sujetstore.com/")[#text(size: 8.8pt, fill: rgb("2563EB"), weight: "bold")[https://sujetstore.com]],
+        text(size: 7.4pt, fill: luma(85))[Exclusive Modern Algerian Platform]
+      )],
+      align(center)[
+        #text(size: 15.5pt, weight: "bold", fill: rgb("2563EB"))[SujetStore ]#text(size: 14.5pt, weight: "bold", fill: rgb("0F172A"))[Platform for Success]
+      ],
+      align(right)[#stack(dir: ttb, spacing: 2pt,
+        align(right)[#box(width: 30pt, height: 30pt, stroke: 0.5pt + luma(140), radius: 2pt, inset: 2pt)[#image("../../common/qrcode.png")]],
+        align(right)[#text(size: 7.2pt, fill: luma(80))[Scan for more]]
+      )]
+    )
+    #v(4pt)
+
+    #grid(
+      columns: (1.25fr, auto, 1.15fr),
+      column-gutter: 8pt,
+      align: horizon,
+      align(left)[#set par(leading: 0.55em, justify: false)
+        #text(size: 10.5pt, weight: "bold")[People's Democratic Republic of Algeria] \
+        #text(size: 10.5pt, weight: "bold", fill: rgb("1E3A8A"))[#year-name] \
+        #(if stream-name != "" [
+          #text(size: 10pt)[Stream: #text(weight: "bold")[#stream-name]]
         ] else [
-          #text(size: 10.5pt)[Term: #text(weight: "bold")[#trimester-name]]
+          #text(size: 10pt)[Term: #text(weight: "bold")[#trimester-name]]
         ])
       ],
       align(center)[
-        #box(stroke: 0.7pt + luma(120), inset: (x: 10pt, y: 5pt), radius: 2pt, fill: white)[
-          #text(size: 10.5pt, weight: "bold")[#(if is-bac { session-en } else { academic-year })]
-        ]
+        #link("https://sujetstore.com/")[#image("../../common/logo.png", width: 1.55cm, fit: "contain")]
       ],
-      align(right)[
-        #text(size: 10.5pt)[Duration: #text(weight: "bold")[#duration]] \
-        #text(size: 10.5pt)[#(if is-primary { "Mark: .... / 10" } else { "Coefficient: " + coefficient })]
+      align(right)[#set par(leading: 0.55em, justify: false)
+        #text(size: 10.5pt, weight: "bold")[Academic Year: #academic-year] \
+        #text(size: 10.5pt, weight: "bold")[Duration: #duration] \
+        #(if is-primary [
+          #text(size: 10pt)[Mark: #text(weight: "bold")[.... / 10]]
+        ] else [
+          #text(size: 10.5pt, weight: "bold")[Coefficient: #coefficient]
+        ])
       ]
     )
+    #v(4pt)
   ]
-  v(5pt)
 
   box(
     width: 100%,
