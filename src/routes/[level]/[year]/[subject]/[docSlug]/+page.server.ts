@@ -74,9 +74,14 @@ export async function load({ params, locals }) {
 		)
 		.limit(5);
 
+	const displaySubject =
+		docRow.level.id === 'primaire' && docRow.subject.id === 'SCI-B'
+			? { ...docRow.subject, nameAr: 'التربية العلمية والتكنولوجية' }
+			: docRow.subject;
+
 	return {
 		document: safeDocument,
-		subject: docRow.subject,
+		subject: displaySubject,
 		year: docRow.year,
 		level: docRow.level,
 		relatedDocs,

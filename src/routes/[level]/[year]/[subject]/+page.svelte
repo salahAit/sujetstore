@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	import {
 		Printer,
 		Download,
@@ -20,7 +21,8 @@
 		PlusCircle,
 		FilePlus2,
 		Share2,
-		Lock
+		Lock,
+		Sparkles
 	} from 'lucide-svelte';
 	import DynamicIcon from '#lib/components/DynamicIcon.svelte';
 	import ShareModal from '#lib/components/ShareModal.svelte';
@@ -136,7 +138,20 @@
 		}
 	});
 
+	function isInteractiveLesson(doc: any): boolean {
+		return Boolean(doc && doc.type === 'lesson' && (doc.content || !doc.pdf_url));
+	}
+
+	function getDocUrl(doc: any): string {
+		const base = doc.isLocked ? (data.dynamicPortalUrl || '') : '';
+		return `${base}/${data.level.slug}/${data.year.slug}/${data.subject.slug}/${doc.slug}`;
+	}
+
 	function openDoc(doc: any, tab: 'exam' | 'solution') {
+		if ((tab === 'exam' && !doc.pdf_url && doc.slug) || (tab === 'solution' && !doc.solution_url && doc.slug)) {
+			goto(getDocUrl(doc));
+			return;
+		}
 		selectedDoc = doc;
 		activeTab = tab;
 		isFullscreen = true;
@@ -609,9 +624,11 @@
 							class="badge-{doc.type} shrink-0 rounded border px-1.5 py-0.5 text-[10px] font-medium sm:text-xs {doc._itemType ===
 							'quiz'
 								? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-400'
-								: ''}"
+								: isInteractiveLesson(doc)
+									? 'border-indigo-500/30 bg-indigo-500/10 text-indigo-400'
+									: ''}"
 						>
-							{typeLabels[doc.type] || doc.type}
+							{isInteractiveLesson(doc) ? 'درس تفاعلي' : typeLabels[doc.type] || doc.type}
 						</span>
 					</div>
 
@@ -701,6 +718,24 @@
 							<Lock size={14} class="sm:h-4 sm:w-4" />
 							{doc.lockReason === 'premium_required' ? 'للمشتركين فقط' : 'سجّل مجاناً للعرض'}
 						</a>
+					{:else if isInteractiveLesson(doc)}
+						<a
+							href={getDocUrl(doc)}
+							class="relative flex flex-1 items-center justify-center gap-1.5 overflow-hidden rounded-lg bg-indigo-600 py-2 text-[11px] font-semibold text-white shadow-md shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-600/30 sm:flex-none sm:px-4 sm:py-2 sm:text-sm"
+						>
+							<Sparkles size={14} class="sm:h-4 sm:w-4" /> ابدأ الدرس التفاعلي
+						</a>
+						{#if doc.pdf_url}
+							<button
+								onclick={(e) => {
+									e.preventDefault();
+									openDoc(doc, 'exam');
+								}}
+								class="relative flex flex-1 items-center justify-center gap-1 overflow-hidden rounded-lg bg-blue-600 py-2 text-[11px] font-semibold text-white shadow-md shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 sm:flex-none sm:px-3 sm:py-2 sm:text-sm"
+							>
+								<FileText size={14} class="sm:h-4 sm:w-4" /> PDF
+							</button>
+						{/if}
 					{:else}
 						<button
 							onclick={(e) => {
