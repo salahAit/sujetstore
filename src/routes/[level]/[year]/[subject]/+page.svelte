@@ -73,6 +73,16 @@
 			data.documents.some((d: any) => d.origin_type === 'official_certificate')
 	);
 
+	const TYPE_SORT_ORDER: Record<string, number> = {
+		test: 1,
+		exam: 2,
+		lesson: 3,
+		summary: 4,
+		interactive_quiz: 5,
+		exercise: 6,
+		solution: 7
+	};
+
 	// Reactive filtered documents
 	let filteredDocs = $derived.by(() => {
 		// Include docs for the active trimester + null-trimester docs (lessons/summaries)
@@ -108,7 +118,12 @@
 			docs = docs.filter((d: any) => d.has_solution || d._itemType === 'quiz');
 		}
 
-		return docs;
+		return [...docs].sort((a: any, b: any) => {
+			const oa = TYPE_SORT_ORDER[a.type] ?? 99;
+			const ob = TYPE_SORT_ORDER[b.type] ?? 99;
+			if (oa !== ob) return oa - ob;
+			return 0;
+		});
 	});
 
 	$effect(() => {
@@ -409,16 +424,16 @@
 					<div class="text-muted-foreground text-xs">تمرين تفاعلي</div>
 				</div>
 				<div class="text-center">
-					<div class="text-xl font-bold text-red-400">
-						{data.documents.filter((d: any) => d.type === 'exam').length}
-					</div>
-					<div class="text-muted-foreground text-xs">اختبار</div>
-				</div>
-				<div class="text-center">
 					<div class="text-xl font-bold text-orange-400">
 						{data.documents.filter((d: any) => d.type === 'test').length}
 					</div>
 					<div class="text-muted-foreground text-xs">فرض</div>
+				</div>
+				<div class="text-center">
+					<div class="text-xl font-bold text-red-400">
+						{data.documents.filter((d: any) => d.type === 'exam').length}
+					</div>
+					<div class="text-muted-foreground text-xs">اختبار</div>
 				</div>
 			</div>
 		</div>

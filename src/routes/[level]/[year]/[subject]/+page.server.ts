@@ -105,7 +105,18 @@ export const load: PageServerLoad = async ({ params, url, locals }) => {
 		SELECT *, is_published as isPublished, has_solution as hasSolution, access_tier as accessTier
 		FROM documents
 		WHERE year_subject_id IN (${placeholders}) AND is_published = 1
-		ORDER BY trimester_id, type, id DESC
+		ORDER BY trimester_id,
+			CASE type
+				WHEN 'test' THEN 1
+				WHEN 'exam' THEN 2
+				WHEN 'lesson' THEN 3
+				WHEN 'summary' THEN 4
+				WHEN 'exercise' THEN 5
+				WHEN 'solution' THEN 6
+				ELSE 7
+			END,
+			CASE WHEN origin_type = 'official_certificate' THEN 1 ELSE 0 END,
+			id ASC
 	`
 		)
 		.all(...ysIds) as any[];

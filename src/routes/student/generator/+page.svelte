@@ -327,8 +327,8 @@
 							bind:value={docType}
 							class="bg-background w-full rounded-xl border px-3 py-2.5 text-sm outline-none focus:border-blue-500"
 						>
-							<option value="exam">اختبار فصلي</option>
 							<option value="test">تقويم مرحلي / فرض محروس</option>
+							<option value="exam">اختبار فصلي</option>
 						</select>
 					</div>
 
