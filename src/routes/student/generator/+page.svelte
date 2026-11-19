@@ -60,7 +60,21 @@
 		'3as:ARB-SCI:MATH': 3,
 		'3as:ARB-SCI:GE': 3,
 		'3as:ARB-LP:LP': 6,
-		'3as:ARB-LE:LE': 5
+		'3as:ARB-LE:LE': 5,
+		'1as:ENG-SEC:TCST': 2,
+		'1as:ENG-SEC:TCL': 3,
+		'2as:ENG-SEC:SE': 2,
+		'2as:ENG-SEC:TM': 2,
+		'2as:ENG-SEC:MATH': 2,
+		'2as:ENG-SEC:GE': 2,
+		'2as:ENG-SEC:LP': 3,
+		'2as:ENG-SEC:LE': 5,
+		'3as:ENG-SEC:SE': 2,
+		'3as:ENG-SEC:TM': 2,
+		'3as:ENG-SEC:MATH': 2,
+		'3as:ENG-SEC:GE': 2,
+		'3as:ENG-SEC:LP': 3,
+		'3as:ENG-SEC:LE': 5
 	};
 
 	function formatYsLabel(ys: any): string {

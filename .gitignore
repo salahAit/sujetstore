@@ -72,6 +72,8 @@ static/generated/*
 !static/generated/sciences-svg/
 !static/generated/arabic-svg/
 !static/generated/official-bac-arabic/
+!static/generated/english-svg/
+!static/generated/official-bac-english/
 static/wasm/
 
 # Pipeline large reference PDFs (manifest JSONs stay tracked)

@@ -1,0 +1,948 @@
+{
+  "generated_at": "2026-11-19T07:38:52.021Z",
+  "total_papers": 18,
+  "total_pdfs": 36,
+  "blocklist_hits": 0,
+  "freemono_hits": 0,
+  "fonts_used": [
+    "APAXPU+Arial-BoldMT",
+    "ARCXWT+Arial-BoldMT",
+    "BBHXCU+ArialMT",
+    "BRQEKU+Arial-BoldMT",
+    "BWEXCE+Arial-ItalicMT",
+    "CTQNKS+Arial-BoldMT",
+    "CYIMWY+ArialMT",
+    "DCNKZP+Arial-BoldMT",
+    "DOONGV+ArialMT",
+    "DSUUNI+Arial-BoldMT",
+    "DVDJHN+Arial-BoldMT",
+    "EKONVR+ArialMT",
+    "EQMKZO+Arial-ItalicMT",
+    "EVSPTA+ArialMT",
+    "FWGPVT+Arial-BoldMT",
+    "GCZBHP+ArialMT",
+    "GEUGCS+Arial-BoldMT",
+    "GGLDNC+Arial-BoldMT",
+    "GHULRQ+ArialMT",
+    "GJWSAS+Arial-BoldMT",
+    "GSYBGX+Arial-BoldMT",
+    "GYFOBO+Arial-ItalicMT",
+    "HAFWIU+Arial-BoldMT",
+    "ICAGWD+Arial-ItalicMT",
+    "IICSZS+ArialMT",
+    "IPILOJ+ArialMT",
+    "IRJBUJ+Arial-ItalicMT",
+    "JHMPJT+Arial-BoldMT",
+    "JUUUMI+Arial-BoldMT",
+    "KBOEMV+Arial-BoldMT",
+    "KDDKPV+Arial-BoldMT",
+    "KKVOCH+Arial-BoldMT",
+    "KMMBKX+ArialMT",
+    "LABVYK+Arial-ItalicMT",
+    "LKPAQL+Arial-BoldMT",
+    "LZCXLF+Arial-ItalicMT",
+    "MMLZNR+Arial-BoldMT",
+    "MSSWSP+Arial-BoldMT",
+    "NLBQLA+ArialMT",
+    "OAWXYZ+Arial-BoldMT",
+    "OLYQLX+Arial-BoldMT",
+    "ORNBMB+Arial-BoldMT",
+    "OVWYLH+ArialMT",
+    "PVEIFG+Arial-BoldMT",
+    "PXRNUB+Arial-BoldMT",
+    "QHZUHD+ArialMT",
+    "REUKHO+Arial-BoldMT",
+    "RRILNM+Arial-BoldMT",
+    "RRVBWW+ArialMT",
+    "RTOZOQ+Arial-BoldMT",
+    "SGPYMC+Arial-ItalicMT",
+    "SJKNCY+Arial-BoldMT",
+    "SPMWBM+Arial-BoldMT",
+    "SUIEYK+ArialMT",
+    "TGVHKP+ArialMT",
+    "TMPRXH+Arial-BoldMT",
+    "UFLYOP+Arial-BoldMT",
+    "UQYUEJ+Arial-BoldMT",
+    "VEBQJZ+Arial-ItalicMT",
+    "XKEMTV+Arial-BoldMT",
+    "YSHPJU+ArialMT",
+    "ZDZGDE+Arial-BoldMT",
+    "ZWDJAQ+ArialMT"
+  ],
+  "items": [
+    {
+      "slug": "bac-2023-3as-se-english",
+      "grade": "3as_se",
+      "yearSubjectId": 686,
+      "subjectId": "ENG-SEC",
+      "streamId": "SE",
+      "streamNameAr": "علوم تجريبية",
+      "streamNameEn": "Experimental Sciences",
+      "academicYear": "2023",
+      "sessionEn": "June 2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        8,
+        7,
+        5
+      ],
+      "unitThemeEn": "Ethics in Business",
+      "titleEn": "BAC Practice Examination in English — Experimental Sciences (2023: Fighting Counterfeiting and Promoting Integrity in Trade)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة علوم تجريبية (دورة جوان 2023 — أخلاقيات التجارة ومحاربة التقليد)",
+      "themesEn": [
+        "Ethics in Business",
+        "Anti-Counterfeiting",
+        "Commercial Integrity"
+      ],
+      "themesAr": [
+        "أخلاقيات العمل التجاري",
+        "محاربة الغش والتقليد",
+        "الأمانة في التجارة"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2023-3as-se-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2023-3as-se-english-sol.pdf",
+      "fileSize": 111441,
+      "solutionFileSize": 113416,
+      "fonts": [
+        "ZDZGDE+Arial-BoldMT",
+        "DOONGV+ArialMT",
+        "VEBQJZ+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "ORNBMB+Arial-BoldMT",
+        "KMMBKX+ArialMT",
+        "VEBQJZ+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2023-3as-tm-english",
+      "grade": "3as_tm",
+      "yearSubjectId": 728,
+      "subjectId": "ENG-SEC",
+      "streamId": "TM",
+      "streamNameAr": "تقني رياضي",
+      "streamNameEn": "Technical Mathematics",
+      "academicYear": "2023",
+      "sessionEn": "June 2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        8,
+        7,
+        5
+      ],
+      "unitThemeEn": "Ethics in Business",
+      "titleEn": "BAC Practice Examination in English — Technical Mathematics (2023: Fighting Counterfeiting and Promoting Integrity in Trade)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة تقني رياضي (دورة جوان 2023 — أخلاقيات التجارة ومحاربة التقليد)",
+      "themesEn": [
+        "Ethics in Business",
+        "Anti-Counterfeiting",
+        "Commercial Integrity"
+      ],
+      "themesAr": [
+        "أخلاقيات العمل التجاري",
+        "محاربة الغش والتقليد",
+        "الأمانة في التجارة"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2023-3as-tm-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2023-3as-tm-english-sol.pdf",
+      "fileSize": 111443,
+      "solutionFileSize": 113431,
+      "fonts": [
+        "JHMPJT+Arial-BoldMT",
+        "DOONGV+ArialMT",
+        "VEBQJZ+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "UFLYOP+Arial-BoldMT",
+        "KMMBKX+ArialMT",
+        "VEBQJZ+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2023-3as-math-english",
+      "grade": "3as_math",
+      "yearSubjectId": 706,
+      "subjectId": "ENG-SEC",
+      "streamId": "MATH",
+      "streamNameAr": "رياضيات",
+      "streamNameEn": "Mathematics",
+      "academicYear": "2023",
+      "sessionEn": "June 2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        8,
+        7,
+        5
+      ],
+      "unitThemeEn": "Ethics in Business",
+      "titleEn": "BAC Practice Examination in English — Mathematics (2023: Fighting Counterfeiting and Promoting Integrity in Trade)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة رياضيات (دورة جوان 2023 — أخلاقيات التجارة ومحاربة التقليد)",
+      "themesEn": [
+        "Ethics in Business",
+        "Anti-Counterfeiting",
+        "Commercial Integrity"
+      ],
+      "themesAr": [
+        "أخلاقيات العمل التجاري",
+        "محاربة الغش والتقليد",
+        "الأمانة في التجارة"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2023-3as-math-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2023-3as-math-english-sol.pdf",
+      "fileSize": 111410,
+      "solutionFileSize": 113393,
+      "fonts": [
+        "RRILNM+Arial-BoldMT",
+        "DOONGV+ArialMT",
+        "VEBQJZ+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "LKPAQL+Arial-BoldMT",
+        "KMMBKX+ArialMT",
+        "VEBQJZ+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2023-3as-ge-english",
+      "grade": "3as_ge",
+      "yearSubjectId": 751,
+      "subjectId": "ENG-SEC",
+      "streamId": "GE",
+      "streamNameAr": "تسيير واقتصاد",
+      "streamNameEn": "Management & Economics",
+      "academicYear": "2023",
+      "sessionEn": "June 2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        8,
+        7,
+        5
+      ],
+      "unitThemeEn": "Ethics in Business",
+      "titleEn": "BAC Practice Examination in English — Management & Economics (2023: Fighting Counterfeiting and Promoting Integrity in Trade)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة تسيير واقتصاد (دورة جوان 2023 — أخلاقيات التجارة ومحاربة التقليد)",
+      "themesEn": [
+        "Ethics in Business",
+        "Anti-Counterfeiting",
+        "Commercial Integrity"
+      ],
+      "themesAr": [
+        "أخلاقيات العمل التجاري",
+        "محاربة الغش والتقليد",
+        "الأمانة في التجارة"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2023-3as-ge-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2023-3as-ge-english-sol.pdf",
+      "fileSize": 111856,
+      "solutionFileSize": 113447,
+      "fonts": [
+        "REUKHO+Arial-BoldMT",
+        "DOONGV+ArialMT",
+        "VEBQJZ+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "XKEMTV+Arial-BoldMT",
+        "KMMBKX+ArialMT",
+        "VEBQJZ+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2024-3as-se-english",
+      "grade": "3as_se",
+      "yearSubjectId": 686,
+      "subjectId": "ENG-SEC",
+      "streamId": "SE",
+      "streamNameAr": "علوم تجريبية",
+      "streamNameEn": "Experimental Sciences",
+      "academicYear": "2024",
+      "sessionEn": "June 2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        8,
+        7,
+        5
+      ],
+      "unitThemeEn": "Safety First",
+      "titleEn": "BAC Practice Examination in English — Experimental Sciences (2024: Food Safety, Honest Advertising and Consumer Awareness)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة علوم تجريبية (دورة جوان 2024 — سلامة الغذاء والإشهار الصادق ووعي المستهلك)",
+      "themesEn": [
+        "Safety First",
+        "Food Safety",
+        "Honest Advertising",
+        "Consumer Awareness"
+      ],
+      "themesAr": [
+        "السلامة الغذائية",
+        "الإشهار النزيه",
+        "وعي المستهلك",
+        "التغذية الصحية"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2024-3as-se-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2024-3as-se-english-sol.pdf",
+      "fileSize": 112652,
+      "solutionFileSize": 115186,
+      "fonts": [
+        "GSYBGX+Arial-BoldMT",
+        "QHZUHD+ArialMT",
+        "SGPYMC+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "APAXPU+Arial-BoldMT",
+        "EKONVR+ArialMT",
+        "SGPYMC+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2024-3as-tm-english",
+      "grade": "3as_tm",
+      "yearSubjectId": 728,
+      "subjectId": "ENG-SEC",
+      "streamId": "TM",
+      "streamNameAr": "تقني رياضي",
+      "streamNameEn": "Technical Mathematics",
+      "academicYear": "2024",
+      "sessionEn": "June 2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        8,
+        7,
+        5
+      ],
+      "unitThemeEn": "Safety First",
+      "titleEn": "BAC Practice Examination in English — Technical Mathematics (2024: Food Safety, Honest Advertising and Consumer Awareness)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة تقني رياضي (دورة جوان 2024 — سلامة الغذاء والإشهار الصادق ووعي المستهلك)",
+      "themesEn": [
+        "Safety First",
+        "Food Safety",
+        "Honest Advertising",
+        "Consumer Awareness"
+      ],
+      "themesAr": [
+        "السلامة الغذائية",
+        "الإشهار النزيه",
+        "وعي المستهلك",
+        "التغذية الصحية"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2024-3as-tm-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2024-3as-tm-english-sol.pdf",
+      "fileSize": 112675,
+      "solutionFileSize": 115194,
+      "fonts": [
+        "KBOEMV+Arial-BoldMT",
+        "QHZUHD+ArialMT",
+        "SGPYMC+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "GGLDNC+Arial-BoldMT",
+        "EKONVR+ArialMT",
+        "SGPYMC+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2024-3as-math-english",
+      "grade": "3as_math",
+      "yearSubjectId": 706,
+      "subjectId": "ENG-SEC",
+      "streamId": "MATH",
+      "streamNameAr": "رياضيات",
+      "streamNameEn": "Mathematics",
+      "academicYear": "2024",
+      "sessionEn": "June 2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        8,
+        7,
+        5
+      ],
+      "unitThemeEn": "Safety First",
+      "titleEn": "BAC Practice Examination in English — Mathematics (2024: Food Safety, Honest Advertising and Consumer Awareness)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة رياضيات (دورة جوان 2024 — سلامة الغذاء والإشهار الصادق ووعي المستهلك)",
+      "themesEn": [
+        "Safety First",
+        "Food Safety",
+        "Honest Advertising",
+        "Consumer Awareness"
+      ],
+      "themesAr": [
+        "السلامة الغذائية",
+        "الإشهار النزيه",
+        "وعي المستهلك",
+        "التغذية الصحية"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2024-3as-math-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2024-3as-math-english-sol.pdf",
+      "fileSize": 112620,
+      "solutionFileSize": 115160,
+      "fonts": [
+        "PXRNUB+Arial-BoldMT",
+        "QHZUHD+ArialMT",
+        "SGPYMC+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "KKVOCH+Arial-BoldMT",
+        "EKONVR+ArialMT",
+        "SGPYMC+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2024-3as-ge-english",
+      "grade": "3as_ge",
+      "yearSubjectId": 751,
+      "subjectId": "ENG-SEC",
+      "streamId": "GE",
+      "streamNameAr": "تسيير واقتصاد",
+      "streamNameEn": "Management & Economics",
+      "academicYear": "2024",
+      "sessionEn": "June 2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        8,
+        7,
+        5
+      ],
+      "unitThemeEn": "Safety First",
+      "titleEn": "BAC Practice Examination in English — Management & Economics (2024: Food Safety, Honest Advertising and Consumer Awareness)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة تسيير واقتصاد (دورة جوان 2024 — سلامة الغذاء والإشهار الصادق ووعي المستهلك)",
+      "themesEn": [
+        "Safety First",
+        "Food Safety",
+        "Honest Advertising",
+        "Consumer Awareness"
+      ],
+      "themesAr": [
+        "السلامة الغذائية",
+        "الإشهار النزيه",
+        "وعي المستهلك",
+        "التغذية الصحية"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2024-3as-ge-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2024-3as-ge-english-sol.pdf",
+      "fileSize": 113070,
+      "solutionFileSize": 115211,
+      "fonts": [
+        "DCNKZP+Arial-BoldMT",
+        "QHZUHD+ArialMT",
+        "SGPYMC+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "ARCXWT+Arial-BoldMT",
+        "EKONVR+ArialMT",
+        "SGPYMC+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2025-3as-se-english",
+      "grade": "3as_se",
+      "yearSubjectId": 686,
+      "subjectId": "ENG-SEC",
+      "streamId": "SE",
+      "streamNameAr": "علوم تجريبية",
+      "streamNameEn": "Experimental Sciences",
+      "academicYear": "2025",
+      "sessionEn": "June 2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        8,
+        7,
+        5
+      ],
+      "unitThemeEn": "Astronomy and the Solar System",
+      "titleEn": "BAC Practice Examination in English — Experimental Sciences (2025: Exploring the Cosmos and Contributions of Muslim Astronomers)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة علوم تجريبية (دورة جوان 2025 — علم الفلك والنظام الشمسي وإسهامات العلماء المسلمين)",
+      "themesEn": [
+        "Astronomy",
+        "Solar System",
+        "Muslim Scientists",
+        "Space Satellites"
+      ],
+      "themesAr": [
+        "علم الفلك",
+        "المجموعة الشمسية",
+        "إسهامات العلماء المسلمين",
+        "الأقمار الصناعية"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2025-3as-se-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2025-3as-se-english-sol.pdf",
+      "fileSize": 112371,
+      "solutionFileSize": 115018,
+      "fonts": [
+        "DSUUNI+Arial-BoldMT",
+        "NLBQLA+ArialMT",
+        "GYFOBO+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "PVEIFG+Arial-BoldMT",
+        "CYIMWY+ArialMT",
+        "GYFOBO+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2025-3as-tm-english",
+      "grade": "3as_tm",
+      "yearSubjectId": 728,
+      "subjectId": "ENG-SEC",
+      "streamId": "TM",
+      "streamNameAr": "تقني رياضي",
+      "streamNameEn": "Technical Mathematics",
+      "academicYear": "2025",
+      "sessionEn": "June 2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        8,
+        7,
+        5
+      ],
+      "unitThemeEn": "Astronomy and the Solar System",
+      "titleEn": "BAC Practice Examination in English — Technical Mathematics (2025: Exploring the Cosmos and Contributions of Muslim Astronomers)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة تقني رياضي (دورة جوان 2025 — علم الفلك والنظام الشمسي وإسهامات العلماء المسلمين)",
+      "themesEn": [
+        "Astronomy",
+        "Solar System",
+        "Muslim Scientists",
+        "Space Satellites"
+      ],
+      "themesAr": [
+        "علم الفلك",
+        "المجموعة الشمسية",
+        "إسهامات العلماء المسلمين",
+        "الأقمار الصناعية"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2025-3as-tm-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2025-3as-tm-english-sol.pdf",
+      "fileSize": 112396,
+      "solutionFileSize": 115032,
+      "fonts": [
+        "RTOZOQ+Arial-BoldMT",
+        "NLBQLA+ArialMT",
+        "GYFOBO+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "MMLZNR+Arial-BoldMT",
+        "CYIMWY+ArialMT",
+        "GYFOBO+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2025-3as-math-english",
+      "grade": "3as_math",
+      "yearSubjectId": 706,
+      "subjectId": "ENG-SEC",
+      "streamId": "MATH",
+      "streamNameAr": "رياضيات",
+      "streamNameEn": "Mathematics",
+      "academicYear": "2025",
+      "sessionEn": "June 2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        8,
+        7,
+        5
+      ],
+      "unitThemeEn": "Astronomy and the Solar System",
+      "titleEn": "BAC Practice Examination in English — Mathematics (2025: Exploring the Cosmos and Contributions of Muslim Astronomers)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة رياضيات (دورة جوان 2025 — علم الفلك والنظام الشمسي وإسهامات العلماء المسلمين)",
+      "themesEn": [
+        "Astronomy",
+        "Solar System",
+        "Muslim Scientists",
+        "Space Satellites"
+      ],
+      "themesAr": [
+        "علم الفلك",
+        "المجموعة الشمسية",
+        "إسهامات العلماء المسلمين",
+        "الأقمار الصناعية"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2025-3as-math-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2025-3as-math-english-sol.pdf",
+      "fileSize": 112341,
+      "solutionFileSize": 114998,
+      "fonts": [
+        "OLYQLX+Arial-BoldMT",
+        "NLBQLA+ArialMT",
+        "GYFOBO+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "SJKNCY+Arial-BoldMT",
+        "CYIMWY+ArialMT",
+        "GYFOBO+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2025-3as-ge-english",
+      "grade": "3as_ge",
+      "yearSubjectId": 751,
+      "subjectId": "ENG-SEC",
+      "streamId": "GE",
+      "streamNameAr": "تسيير واقتصاد",
+      "streamNameEn": "Management & Economics",
+      "academicYear": "2025",
+      "sessionEn": "June 2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        8,
+        7,
+        5
+      ],
+      "unitThemeEn": "Astronomy and the Solar System",
+      "titleEn": "BAC Practice Examination in English — Management & Economics (2025: Exploring the Cosmos and Contributions of Muslim Astronomers)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة تسيير واقتصاد (دورة جوان 2025 — علم الفلك والنظام الشمسي وإسهامات العلماء المسلمين)",
+      "themesEn": [
+        "Astronomy",
+        "Solar System",
+        "Muslim Scientists",
+        "Space Satellites"
+      ],
+      "themesAr": [
+        "علم الفلك",
+        "المجموعة الشمسية",
+        "إسهامات العلماء المسلمين",
+        "الأقمار الصناعية"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2025-3as-ge-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2025-3as-ge-english-sol.pdf",
+      "fileSize": 112796,
+      "solutionFileSize": 115047,
+      "fonts": [
+        "JUUUMI+Arial-BoldMT",
+        "NLBQLA+ArialMT",
+        "GYFOBO+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "CTQNKS+Arial-BoldMT",
+        "CYIMWY+ArialMT",
+        "GYFOBO+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2023-3as-lp-english",
+      "grade": "3as_lp",
+      "yearSubjectId": 770,
+      "subjectId": "ENG-SEC",
+      "streamId": "LP",
+      "streamNameAr": "آداب وفلسفة",
+      "streamNameEn": "Literature & Philosophy",
+      "academicYear": "2023",
+      "sessionEn": "June 2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 3,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        7,
+        8,
+        5
+      ],
+      "unitThemeEn": "Exploring the Past",
+      "titleEn": "BAC Practice Examination in English — Literature & Philosophy (2023: The Legacy of Islamic Civilization and Algerian Heritage)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة آداب وفلسفة (دورة جوان 2023 — إرث الحضارة الإسلامية والتراث الجزائري)",
+      "themesEn": [
+        "Exploring the Past",
+        "Islamic Civilization",
+        "Algerian Heritage",
+        "Ibn Khaldun"
+      ],
+      "themesAr": [
+        "استكشاف الماضي",
+        "الحضارة الإسلامية",
+        "تلمسان والتراث الجزائري",
+        "ابن خلدون وفاطمة الفهرية"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2023-3as-lp-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2023-3as-lp-english-sol.pdf",
+      "fileSize": 114684,
+      "solutionFileSize": 115961,
+      "fonts": [
+        "TMPRXH+Arial-BoldMT",
+        "GCZBHP+ArialMT",
+        "BWEXCE+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "KDDKPV+Arial-BoldMT",
+        "BBHXCU+ArialMT",
+        "BWEXCE+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2024-3as-lp-english",
+      "grade": "3as_lp",
+      "yearSubjectId": 770,
+      "subjectId": "ENG-SEC",
+      "streamId": "LP",
+      "streamNameAr": "آداب وفلسفة",
+      "streamNameEn": "Literature & Philosophy",
+      "academicYear": "2024",
+      "sessionEn": "June 2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 3,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        7,
+        8,
+        5
+      ],
+      "unitThemeEn": "Ill-Gotten Gains Never Prosper",
+      "titleEn": "BAC Practice Examination in English — Literature & Philosophy (2024: Combating Bribery and Upholding Ethical Governance)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة آداب وفلسفة (دورة جوان 2024 — محاربة الرشوة وترسيخ النزاهة والحوكمة الأخلاقية)",
+      "themesEn": [
+        "Ill-Gotten Gains Never Prosper",
+        "Anti-Bribery",
+        "Ethical Governance",
+        "Transparency"
+      ],
+      "themesAr": [
+        "الكسب غير المشروع لا يثمر",
+        "محاربة الرشوة",
+        "النزاهة والشفافية",
+        "الأمانة الوظيفية"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2024-3as-lp-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2024-3as-lp-english-sol.pdf",
+      "fileSize": 114119,
+      "solutionFileSize": 114916,
+      "fonts": [
+        "DVDJHN+Arial-BoldMT",
+        "EVSPTA+ArialMT",
+        "ICAGWD+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "SPMWBM+Arial-BoldMT",
+        "TGVHKP+ArialMT",
+        "ICAGWD+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2025-3as-lp-english",
+      "grade": "3as_lp",
+      "yearSubjectId": 770,
+      "subjectId": "ENG-SEC",
+      "streamId": "LP",
+      "streamNameAr": "آداب وفلسفة",
+      "streamNameEn": "Literature & Philosophy",
+      "academicYear": "2025",
+      "sessionEn": "June 2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 3,
+      "duration": "02 Hours 30 Min",
+      "pointsSplit": [
+        7,
+        8,
+        5
+      ],
+      "unitThemeEn": "Schools: Different and Alike",
+      "titleEn": "BAC Practice Examination in English — Literature & Philosophy (2025: Education, Reform and the Legacy of Imam Abdelhamid Ben Badis and Sheikh Mohamed Bachir El Ibrahimi)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة آداب وفلسفة (دورة جوان 2025 — التربية والإصلاح وإرث الإمام عبد الحميد بن باديس والشيخ البشير الإبراهيمي)",
+      "themesEn": [
+        "Schools: Different and Alike",
+        "Education Reform",
+        "Ben Badis",
+        "El Ibrahimi"
+      ],
+      "themesAr": [
+        "المدارس والأنظمة التعليمية",
+        "الإصلاح التربوي",
+        "الإمام عبد الحميد بن باديس",
+        "الشيخ البشير الإبراهيمي"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2025-3as-lp-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2025-3as-lp-english-sol.pdf",
+      "fileSize": 113341,
+      "solutionFileSize": 113836,
+      "fonts": [
+        "OAWXYZ+Arial-BoldMT",
+        "GHULRQ+ArialMT",
+        "EQMKZO+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "MSSWSP+Arial-BoldMT",
+        "RRVBWW+ArialMT",
+        "EQMKZO+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2023-3as-le-english",
+      "grade": "3as_le",
+      "yearSubjectId": 789,
+      "subjectId": "ENG-SEC",
+      "streamId": "LE",
+      "streamNameAr": "لغات أجنبية",
+      "streamNameEn": "Foreign Languages",
+      "academicYear": "2023",
+      "sessionEn": "June 2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 5,
+      "duration": "03 Hours 30 Min",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeEn": "Exploring the Past",
+      "titleEn": "BAC Practice Examination in English — Foreign Languages (2023: Cultural and Scientific Preservation in Tassili n-Ajjer, Timgad and Andalusian Libraries)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة لغات أجنبية (دورة جوان 2023 — صون التراث الثقافي والعلمي في الطاسيلي وتيمقاد ومكتبات الأندلس)",
+      "themesEn": [
+        "Exploring the Past",
+        "Tassili n-Ajjer",
+        "Timgad",
+        "Andalusian Libraries"
+      ],
+      "themesAr": [
+        "استكشاف الماضي",
+        "طاسيلي ناجر",
+        "تيمقاد",
+        "مكتبات الأندلس"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2023-3as-le-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2023-3as-le-english-sol.pdf",
+      "fileSize": 112587,
+      "solutionFileSize": 113895,
+      "fonts": [
+        "FWGPVT+Arial-BoldMT",
+        "IICSZS+ArialMT",
+        "IRJBUJ+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "GEUGCS+Arial-BoldMT",
+        "IPILOJ+ArialMT",
+        "IRJBUJ+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2024-3as-le-english",
+      "grade": "3as_le",
+      "yearSubjectId": 789,
+      "subjectId": "ENG-SEC",
+      "streamId": "LE",
+      "streamNameAr": "لغات أجنبية",
+      "streamNameEn": "Foreign Languages",
+      "academicYear": "2024",
+      "sessionEn": "June 2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 5,
+      "duration": "03 Hours 30 Min",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeEn": "Ill-Gotten Gains Never Prosper",
+      "titleEn": "BAC Practice Examination in English — Foreign Languages (2024: Intellectual Property, Anti-Fraud and Transparency)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة لغات أجنبية (دورة جوان 2024 — الملكية الفكرية ومحاربة الاحتيال والشفافية الأكاديمية)",
+      "themesEn": [
+        "Ill-Gotten Gains Never Prosper",
+        "Intellectual Property",
+        "Anti-Fraud",
+        "Academic Integrity"
+      ],
+      "themesAr": [
+        "الكسب غير المشروع",
+        "الملكية الفكرية",
+        "محاربة التزوير والغش",
+        "الأمانة العلمية"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2024-3as-le-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2024-3as-le-english-sol.pdf",
+      "fileSize": 111622,
+      "solutionFileSize": 113462,
+      "fonts": [
+        "GJWSAS+Arial-BoldMT",
+        "SUIEYK+ArialMT",
+        "LABVYK+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "HAFWIU+Arial-BoldMT",
+        "YSHPJU+ArialMT",
+        "LABVYK+Arial-ItalicMT"
+      ]
+    },
+    {
+      "slug": "bac-2025-3as-le-english",
+      "grade": "3as_le",
+      "yearSubjectId": 789,
+      "subjectId": "ENG-SEC",
+      "streamId": "LE",
+      "streamNameAr": "لغات أجنبية",
+      "streamNameEn": "Foreign Languages",
+      "academicYear": "2025",
+      "sessionEn": "June 2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 5,
+      "duration": "03 Hours 30 Min",
+      "pointsSplit": [
+        7,
+        7,
+        6
+      ],
+      "unitThemeEn": "Schools: Different and Alike",
+      "titleEn": "BAC Practice Examination in English — Foreign Languages (2025: Global Education Challenges, Equal Opportunity and Moral Character Building)",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإنجليزية — شعبة لغات أجنبية (دورة جوان 2025 — تحديات التعليم العالمية وتكافؤ الفرص وبناء الشخصية الأخلاقية)",
+      "themesEn": [
+        "Schools: Different and Alike",
+        "Equal Opportunity",
+        "Global Education",
+        "Character Building"
+      ],
+      "themesAr": [
+        "المدارس والأنظمة التعليمية",
+        "تكافؤ الفرص التعليمية",
+        "تحديات التعليم العالمية",
+        "التربية الأخلاقية"
+      ],
+      "templateId": "english/bac_official",
+      "pdfUrl": "/generated/official-bac-english/bac-2025-3as-le-english.pdf",
+      "solutionUrl": "/generated/official-bac-english/bac-2025-3as-le-english-sol.pdf",
+      "fileSize": 111733,
+      "solutionFileSize": 113606,
+      "fonts": [
+        "BRQEKU+Arial-BoldMT",
+        "ZWDJAQ+ArialMT",
+        "LZCXLF+Arial-ItalicMT"
+      ],
+      "solutionFonts": [
+        "UQYUEJ+Arial-BoldMT",
+        "OVWYLH+ArialMT",
+        "LZCXLF+Arial-ItalicMT"
+      ]
+    }
+  ]
+}

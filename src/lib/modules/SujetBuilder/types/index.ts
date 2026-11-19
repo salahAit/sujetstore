@@ -24,7 +24,11 @@ export type TemplateId =
 	| 'secondary/exam'
 	| 'secondary/solution'
 	| 'secondary/bac_official'
-	| 'secondary/lycee_exam';
+	| 'secondary/lycee_exam'
+	| 'english/primary'
+	| 'english/middle'
+	| 'english/secondary'
+	| 'english/bac_official';
 
 /**
  * Exam metadata — injected into the Typst header.
