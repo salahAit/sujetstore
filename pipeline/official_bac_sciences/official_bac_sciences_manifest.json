@@ -1,0 +1,142 @@
+{
+  "generated_at": "2026-11-19T00:38:19.930Z",
+  "total_papers": 6,
+  "total_pdfs": 12,
+  "items": [
+    {
+      "slug": "bac-2023-3as-se-sciences",
+      "grade": "3as_se",
+      "yearSubjectId": 684,
+      "subjectId": "SCI-SE",
+      "streamId": "SE",
+      "academicYear": "2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 6,
+      "duration": "04 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في علوم الطبيعة والحياة — شعبة علوم تجريبية (دورة جوان 2023 - الموضوع الأول)",
+      "themesAr": [
+        "تركيب البروتين والمضادات الحيوية",
+        "التثبيط الإنزيمي التنافسي الدوائي",
+        "العلاج المناعي للأورام بالأجسام المضادة"
+      ],
+      "pdfUrl": "/documents/official_bac_sciences/3as_se/bac-2023-3as-se-sciences.pdf",
+      "solutionUrl": "/documents/official_bac_sciences/3as_se/bac-2023-3as-se-sciences-sol.pdf",
+      "fileSize": 141337,
+      "solutionFileSize": 201391,
+      "sourcePdfRelPath": "pipeline/references_sciences/3as/bac_official/bac_2023_se_sciences_subject.pdf",
+      "sourceSha256": null
+    },
+    {
+      "slug": "bac-2024-3as-se-sciences",
+      "grade": "3as_se",
+      "yearSubjectId": 684,
+      "subjectId": "SCI-SE",
+      "streamId": "SE",
+      "academicYear": "2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 6,
+      "duration": "04 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في علوم الطبيعة والحياة — شعبة علوم تجريبية (دورة جوان 2024 - الموضوع الأول)",
+      "themesAr": [
+        "بنية البروتين وتجربة أنفينسن",
+        "النقل المشبكي وتأثير سم عصبي",
+        "التركيب الضوئي وتثبيط PSII بمبيد DCMU"
+      ],
+      "pdfUrl": "/documents/official_bac_sciences/3as_se/bac-2024-3as-se-sciences.pdf",
+      "solutionUrl": "/documents/official_bac_sciences/3as_se/bac-2024-3as-se-sciences-sol.pdf",
+      "fileSize": 157219,
+      "solutionFileSize": 225434,
+      "sourcePdfRelPath": "pipeline/references_sciences/3as/bac_official/bac_2024_se_sciences_subject.pdf",
+      "sourceSha256": null
+    },
+    {
+      "slug": "bac-2025-3as-se-sciences",
+      "grade": "3as_se",
+      "yearSubjectId": 684,
+      "subjectId": "SCI-SE",
+      "streamId": "SE",
+      "academicYear": "2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 6,
+      "duration": "04 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في علوم الطبيعة والحياة — شعبة علوم تجريبية (دورة جوان 2025 - الموضوع الأول)",
+      "themesAr": [
+        "الاستجابة المناعية الخلوية LTc والبرفورين",
+        "الطفرات الوراثية في مورثة التيروزيناز",
+        "التنفس الخلوي والميتوكوندري وتثبيط السيانور"
+      ],
+      "pdfUrl": "/documents/official_bac_sciences/3as_se/bac-2025-3as-se-sciences.pdf",
+      "solutionUrl": "/documents/official_bac_sciences/3as_se/bac-2025-3as-se-sciences-sol.pdf",
+      "fileSize": 165605,
+      "solutionFileSize": 239149,
+      "sourcePdfRelPath": "pipeline/references_sciences/3as/bac_official/bac_2025_se_sciences_subject.pdf",
+      "sourceSha256": null
+    },
+    {
+      "slug": "bac-2023-3as-math-sciences",
+      "grade": "3as_math",
+      "yearSubjectId": 704,
+      "subjectId": "SCI-MATH",
+      "streamId": "MATH",
+      "academicYear": "2023",
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "02 ساعة و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في علوم الطبيعة والحياة — شعبة رياضيات (دورة جوان 2023 - الموضوع الأول)",
+      "themesAr": [
+        "تركيب البروتين والشفرة الوراثية والطفرات",
+        "الهجرة الكهربائية وتأثير pH والحرارة على الإنزيمات"
+      ],
+      "pdfUrl": "/documents/official_bac_sciences/3as_math/bac-2023-3as-math-sciences.pdf",
+      "solutionUrl": "/documents/official_bac_sciences/3as_math/bac-2023-3as-math-sciences-sol.pdf",
+      "fileSize": 142677,
+      "solutionFileSize": 205719,
+      "sourcePdfRelPath": "pipeline/references_sciences/3as/bac_official/bac_2023_math_sciences_subject.pdf",
+      "sourceSha256": null
+    },
+    {
+      "slug": "bac-2024-3as-math-sciences",
+      "grade": "3as_math",
+      "yearSubjectId": 704,
+      "subjectId": "SCI-MATH",
+      "streamId": "MATH",
+      "academicYear": "2024",
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "02 ساعة و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في علوم الطبيعة والحياة — شعبة رياضيات (دورة جوان 2024 - الموضوع الأول)",
+      "themesAr": [
+        "الذات واللاذات والأجسام المضادة والاستجابة الخلطية",
+        "النقل المشبكي وتأثير سم البوتولينوم المانع لتحرير ACh"
+      ],
+      "pdfUrl": "/documents/official_bac_sciences/3as_math/bac-2024-3as-math-sciences.pdf",
+      "solutionUrl": "/documents/official_bac_sciences/3as_math/bac-2024-3as-math-sciences-sol.pdf",
+      "fileSize": 110566,
+      "solutionFileSize": 170305,
+      "sourcePdfRelPath": "pipeline/references_sciences/3as/bac_official/bac_2024_math_sciences_subject.pdf",
+      "sourceSha256": null
+    },
+    {
+      "slug": "bac-2025-3as-math-sciences",
+      "grade": "3as_math",
+      "yearSubjectId": 704,
+      "subjectId": "SCI-MATH",
+      "streamId": "MATH",
+      "academicYear": "2025",
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "02 ساعة و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في علوم الطبيعة والحياة — شعبة رياضيات (دورة جوان 2025 - الموضوع الأول)",
+      "themesAr": [
+        "مستويات البنية الفراغية وعلاقة البنية بالوظيفة",
+        "الاستجابة المناعية ضد فيروس VIH والتعاون المناعي LT4/IL-2"
+      ],
+      "pdfUrl": "/documents/official_bac_sciences/3as_math/bac-2025-3as-math-sciences.pdf",
+      "solutionUrl": "/documents/official_bac_sciences/3as_math/bac-2025-3as-math-sciences-sol.pdf",
+      "fileSize": 140559,
+      "solutionFileSize": 196524,
+      "sourcePdfRelPath": "pipeline/references_sciences/3as/bac_official/bac_2025_math_sciences_subject.pdf",
+      "sourceSha256": null
+    }
+  ]
+}

@@ -146,11 +146,16 @@ export const load: PageServerLoad = async ({ params, url, locals }) => {
 		};
 	});
 
+	const displaySubject =
+		level.id === 'primaire' && subject.id === 'SCI-B'
+			? { ...subject, name_ar: 'التربية العلمية والتكنولوجية' }
+			: subject;
+
 	return {
 		mode: 'subject' as const,
 		level,
 		year,
-		subject,
+		subject: displaySubject,
 		yearSubject: primaryYearSubject,
 		streamFilter: streamParam,
 		streamInfo,

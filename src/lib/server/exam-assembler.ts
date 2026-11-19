@@ -27,6 +27,21 @@ import {
 	type AssembledPhysicsSecondaryPaper,
 	type PhysicsSecondaryVariant
 } from './assemblers/exam-physics-secondary';
+import {
+	assembleSciencesPrimaryExam,
+	type AssembledSciencesPrimaryPaper,
+	type SciencesPrimaryVariant
+} from './assemblers/exam-sciences-primary';
+import {
+	assembleSciencesMiddleExam,
+	type AssembledSciencesMiddlePaper,
+	type SciencesMiddleVariant
+} from './assemblers/exam-sciences-middle';
+import {
+	assembleSciencesSecondaryExam,
+	type AssembledSciencesSecondaryPaper,
+	type SciencesSecondaryVariant
+} from './assemblers/exam-sciences-secondary';
 import { compileTypstPdf } from './typst';
 import {
 	SECONDARY_TRACK_IDS,
@@ -35,6 +50,7 @@ import {
 	type SecondaryTrackId
 } from '../modules/MathTemplates/types';
 import type { PhysicsTrackId } from '../modules/PhysicsTemplates/types';
+import type { SciencesTrackId } from '../modules/SciencesTemplates/types';
 import type { TrimesterId } from '../modules/SujetBuilder/types';
 
 export type UnifiedAssembledExam =
@@ -46,6 +62,11 @@ export type UnifiedAssembledExam =
 export type UnifiedAssembledPhysicsExam =
 	| AssembledPhysicsMiddlePaper
 	| AssembledPhysicsSecondaryPaper;
+
+export type UnifiedAssembledSciencesExam =
+	| AssembledSciencesPrimaryPaper
+	| AssembledSciencesMiddlePaper
+	| AssembledSciencesSecondaryPaper;
 
 export interface AssembleExamOptions {
 	grade: GradeId;
@@ -199,7 +220,7 @@ export function assembleExam(opts: AssembleExamOptions): UnifiedAssembledExam {
 }
 
 export async function compileAssembledExamPdf(
-	paper: UnifiedAssembledExam | UnifiedAssembledPhysicsExam,
+	paper: UnifiedAssembledExam | UnifiedAssembledPhysicsExam | UnifiedAssembledSciencesExam,
 	paths: { subjectOutPath: string; solutionOutPath: string }
 ) {
 	const [subjectResult, solutionResult] = await Promise.all([
@@ -305,6 +326,125 @@ export function assemblePhysicsExam(
 				variant = 'trimester_exam';
 			}
 			return assemblePhysicsSecondaryExam({
+				grade: opts.grade,
+				trimesterId: opts.trimesterId,
+				seed: opts.seed,
+				docType: opts.docType,
+				variant,
+				difficulty: opts.difficulty,
+				academicYear: opts.academicYear,
+				schoolName: opts.schoolName
+			});
+		}
+	}
+}
+
+const SCIENCES_PRIMARY_SET: ReadonlySet<string> = new Set(['1ap', '2ap', '3ap', '4ap', '5ap']);
+const SCIENCES_MIDDLE_SET: ReadonlySet<string> = new Set(['1am', '2am', '3am', '4am']);
+
+export function yearSubjectToSciencesTrack(
+	yearId: string,
+	subjectId: string,
+	streamId?: string | null
+): SciencesTrackId | null {
+	if (subjectId === 'SCI-B' && SCIENCES_PRIMARY_SET.has(yearId)) {
+		return yearId as SciencesTrackId;
+	}
+	if (subjectId === 'SCI-B' && SCIENCES_MIDDLE_SET.has(yearId)) {
+		return yearId as SciencesTrackId;
+	}
+	if (yearId === '1as' && subjectId === 'SCI-SE') {
+		if (!streamId || streamId === 'TCST' || streamId === 'tcst' || streamId === 'GEN') {
+			return '1as_tcst';
+		}
+	}
+	if (yearId === '2as') {
+		if (subjectId === 'SCI-SE') return '2as_se';
+		if (subjectId === 'SCI-MATH') return '2as_math';
+	}
+	if (yearId === '3as') {
+		if (subjectId === 'SCI-SE') return '3as_se';
+		if (subjectId === 'SCI-MATH') return '3as_math';
+	}
+	return null;
+}
+
+export interface AssembleSciencesExamOptions {
+	grade: SciencesTrackId;
+	trimesterId: TrimesterId;
+	seed: number;
+	docType?: 'exam' | 'test';
+	variant?: 'trimester_exam' | 'supervised_test' | 'competency_eval' | 'bem_mock' | 'bac_mock';
+	difficulty?: Difficulty;
+	academicYear?: string;
+	schoolName?: string;
+}
+
+export function assembleSciencesExam(
+	opts: AssembleSciencesExamOptions
+): UnifiedAssembledSciencesExam {
+	switch (opts.grade) {
+		case '1ap':
+		case '2ap':
+		case '3ap':
+		case '4ap':
+		case '5ap': {
+			let variant: SciencesPrimaryVariant;
+			if (opts.grade === '5ap' && opts.variant === 'competency_eval') {
+				variant = 'competency_eval';
+			} else if (opts.docType === 'test' || opts.variant === 'supervised_test') {
+				variant = 'supervised_test';
+			} else {
+				variant = 'trimester_exam';
+			}
+			return assembleSciencesPrimaryExam({
+				grade: opts.grade,
+				trimesterId: opts.trimesterId,
+				seed: opts.seed,
+				docType: opts.docType,
+				variant,
+				difficulty: opts.difficulty,
+				academicYear: opts.academicYear,
+				schoolName: opts.schoolName
+			});
+		}
+		case '1am':
+		case '2am':
+		case '3am':
+		case '4am': {
+			let variant: SciencesMiddleVariant;
+			if (opts.grade === '4am' && opts.variant === 'bem_mock') {
+				variant = 'bem_mock';
+			} else if (opts.docType === 'test' || opts.variant === 'supervised_test') {
+				variant = 'supervised_test';
+			} else {
+				variant = 'trimester_exam';
+			}
+			return assembleSciencesMiddleExam({
+				grade: opts.grade,
+				trimesterId: opts.trimesterId,
+				seed: opts.seed,
+				docType: opts.docType,
+				variant,
+				difficulty: opts.difficulty,
+				academicYear: opts.academicYear,
+				schoolName: opts.schoolName
+			});
+		}
+		case '1as_tcst':
+		case '2as_se':
+		case '2as_math':
+		case '3as_se':
+		case '3as_math': {
+			let variant: SciencesSecondaryVariant;
+			if (opts.variant === 'bac_mock' && opts.grade.startsWith('3as_')) {
+				variant = 'bac_mock';
+			} else if (opts.docType === 'test' || opts.variant === 'supervised_test') {
+				variant = 'supervised_test';
+			} else {
+				variant = 'trimester_exam';
+			}
+			return assembleSciencesSecondaryExam({
 				grade: opts.grade,
 				trimesterId: opts.trimesterId,
 				seed: opts.seed,

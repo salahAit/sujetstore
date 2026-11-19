@@ -58,7 +58,8 @@ export function sanitizeMathInner(inner: string): string {
 		.replace(/\\det\b/g, 'det')
 		.replace(/\\vec\{([^}]+)\}/g, 'arrow($1)')
 		.replace(/\\overline\{([^}]+)\}/g, 'overline($1)')
-		.replace(/\\(alpha|beta|gamma|delta|epsilon|zeta|eta|theta|iota|kappa|lambda|mu|nu|xi|pi|rho|sigma|tau|phi|chi|psi|omega|Delta|Gamma|Lambda|Phi|Psi|Omega)\b/g, '$1');
+		.replace(/\\(alpha|beta|gamma|delta|epsilon|zeta|eta|theta|iota|kappa|lambda|mu|nu|xi|pi|rho|sigma|tau|phi|chi|psi|omega|Delta|Gamma|Lambda|Phi|Psi|Omega)\b/g, '$1')
+		.replace(/\/\//g, ' "//" ');
 
 	// Temporarily mask already-quoted literals ("Fe", "aq", "mol", etc.) so they are never split
 	const quotedLiterals: string[] = [];
@@ -77,10 +78,25 @@ export function sanitizeMathInner(inner: string): string {
 	return masked.replace(/__Q(\d+)__/g, (_m, idx) => quotedLiterals[Number(idx)] ?? '');
 }
 
-/** Sanitize inline `$...$` delimiters inside Arabic text blocks for Typst. */
+/** Sanitize prose + inline `$...$` delimiters inside Arabic text blocks for Typst. */
 export function sanitizeForTypst(text: string): string {
 	if (!text || typeof text !== 'string') return text;
-	return text.replace(/\$([^$]+)\$/g, (_match, inner) => `$${sanitizeMathInner(inner)}$`);
+	const parts = text.split(/(\$[^$]+\$)/g);
+	return parts
+		.map((part) => {
+			if (part.startsWith('$') && part.endsWith('$') && part.length >= 2) {
+				return `$${sanitizeMathInner(part.slice(1, -1))}$`;
+			}
+			// Prose segment outside math:
+			// 1. Escape `//` (e.g. genetic allele notation `P//P`, `HbA//HbS`) so Typst never treats it as a comment
+			// 2. Convert Markdown `**bold**` and Arabic-prefixed `*bold*` (like `و*الأوردة*`) into `#strong[...]`
+			//    so Typst never fails with `unclosed delimiter` on word-attached asterisks.
+			let out = part.replace(/(?<!:)\/\//g, '\\/\\/');
+			out = out.replace(/\*\*([^\s*\n](?:[^*\n]*?[^\s*\n])?)\*\*/g, '#strong[$1]');
+			out = out.replace(/(?<!\\)\*([^\s*\n](?:[^*\n]*?[^\s*\n])?)\*/g, '#strong[$1]');
+			return out;
+		})
+		.join('');
 }
 
 function sanitizeImagePath(src: unknown): unknown {
@@ -120,6 +136,28 @@ function sanitizeBlock(block: any) {
 	if (block.type === 'columns' && Array.isArray(block.children)) {
 		for (const child of block.children) {
 			sanitizeBlock(child);
+		}
+	}
+	if (block.type === 'true_false' && Array.isArray(block.items)) {
+		for (const item of block.items) {
+			if (typeof item?.q === 'string') item.q = sanitizeForTypst(item.q);
+			if (typeof item?.a === 'string') item.a = sanitizeForTypst(item.a);
+			if (typeof item?.c === 'string') item.c = sanitizeForTypst(item.c);
+		}
+	}
+	if (block.type === 'table') {
+		const sanitizeCell = (c: any) => {
+			if (typeof c === 'string') return sanitizeForTypst(c);
+			if (c && typeof c === 'object') {
+				if (typeof c.content === 'string') c.content = sanitizeForTypst(c.content);
+				if (typeof c.answer === 'string') c.answer = sanitizeForTypst(c.answer);
+			}
+			return c;
+		};
+		if (Array.isArray(block.headers)) block.headers = block.headers.map(sanitizeCell);
+		if (Array.isArray(block.cells)) block.cells = block.cells.map(sanitizeCell);
+		if (Array.isArray(block.rows)) {
+			block.rows = block.rows.map((r: any) => (Array.isArray(r) ? r.map(sanitizeCell) : r));
 		}
 	}
 }

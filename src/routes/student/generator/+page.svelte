@@ -41,16 +41,25 @@
 		'2as:PHY-MTM:MATH': 6,
 		'3as:PHY-SE:SE': 5,
 		'3as:PHY-MTM:TM': 5,
-		'3as:PHY-MTM:MATH': 6
+		'3as:PHY-MTM:MATH': 6,
+		'1as:SCI-SE:TCST': 4,
+		'2as:SCI-SE:SE': 6,
+		'2as:SCI-MATH:MATH': 2,
+		'3as:SCI-SE:SE': 6,
+		'3as:SCI-MATH:MATH': 2
 	};
 
 	function formatYsLabel(ys: any): string {
+		const subjLabel =
+			ys.subjectId === 'SCI-B' && typeof ys.yearId === 'string' && ys.yearId.endsWith('ap')
+				? 'التربية العلمية والتكنولوجية'
+				: ys.subjectName;
 		if (ys.streamName && ys.streamId !== 'GEN') {
 			const coeff = ys.coefficient ?? SECONDARY_COEFFS[`${ys.yearId}:${ys.subjectId}:${ys.streamId}`];
 			const coeffPart = coeff ? ` (معامل ${coeff})` : '';
-			return `${ys.yearName} — ${ys.streamName} — ${ys.subjectName}${coeffPart}`;
+			return `${ys.yearName} — ${ys.streamName} — ${subjLabel}${coeffPart}`;
 		}
-		return `${ys.yearName} — ${ys.subjectName}`;
+		return `${ys.yearName} — ${subjLabel}`;
 	}
 
 	// Quiz mode options

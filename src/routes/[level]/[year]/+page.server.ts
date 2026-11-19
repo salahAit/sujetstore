@@ -51,7 +51,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		return { level, year, streams: streamsWithCounts, subjects: [], isSecondary: true, comingSoon: false };
 	}
 
-	const subjects = contentSqlite
+	const rawSubjects = contentSqlite
 		.query(
 			`
 		SELECT s.*, ys.id as yearSubjectId, ys.coefficient,
@@ -63,7 +63,13 @@ export const load: PageServerLoad = async ({ params }) => {
 		ORDER BY ys."order"
 	`
 		)
-		.all(year.id);
+		.all(year.id) as any[];
+
+	const subjects = rawSubjects.map((s) =>
+		level.id === 'primaire' && s.id === 'SCI-B'
+			? { ...s, name_ar: 'التربية العلمية والتكنولوجية' }
+			: s
+	);
 
 	return { level, year, subjects, streams: [], isSecondary: false, comingSoon: false };
 };

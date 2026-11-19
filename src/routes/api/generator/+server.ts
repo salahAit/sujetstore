@@ -6,11 +6,14 @@ import { compileTypstPdf } from '#lib/server/typst';
 import {
 	assembleExam,
 	assemblePhysicsExam,
+	assembleSciencesExam,
 	compileAssembledExamPdf,
 	yearSubjectToGrade,
 	yearSubjectToPhysicsTrack,
+	yearSubjectToSciencesTrack,
 	type AssembleExamOptions,
-	type AssemblePhysicsExamOptions
+	type AssemblePhysicsExamOptions,
+	type AssembleSciencesExamOptions
 } from '#lib/server/exam-assembler';
 import { gradeQuizSubmission } from '#lib/server/quiz-grading';
 import { awardQuizGamification } from '#lib/server/gamification';
@@ -250,7 +253,11 @@ export const POST: RequestHandler = async (event) => {
 		const mathGrade = yearSubjectToGrade(ys.year_id, ys.subject_id, ys.stream_id);
 		const physicsTrack =
 			mathGrade === null ? yearSubjectToPhysicsTrack(ys.year_id, ys.subject_id, ys.stream_id) : null;
-		if (mathGrade !== null || physicsTrack !== null) {
+		const sciencesTrack =
+			mathGrade === null && physicsTrack === null
+				? yearSubjectToSciencesTrack(ys.year_id, ys.subject_id, ys.stream_id)
+				: null;
+		if (mathGrade !== null || physicsTrack !== null || sciencesTrack !== null) {
 			const trimesterId = (['t1', 't2', 't3'].includes(body.trimesterId)
 				? body.trimesterId
 				: 't1') as 't1' | 't2' | 't3';
@@ -286,18 +293,35 @@ export const POST: RequestHandler = async (event) => {
 							variant,
 							difficulty
 						})
-					: assemblePhysicsExam({
-							grade: physicsTrack!,
-							trimesterId,
-							seed,
-							docType,
-							variant: (['trimester_exam', 'supervised_test', 'bem_mock', 'bac_mock'].includes(
-								variant || ''
-							)
-								? variant
-								: undefined) as AssemblePhysicsExamOptions['variant'],
-							difficulty
-						});
+					: physicsTrack !== null
+						? assemblePhysicsExam({
+								grade: physicsTrack,
+								trimesterId,
+								seed,
+								docType,
+								variant: (['trimester_exam', 'supervised_test', 'bem_mock', 'bac_mock'].includes(
+									variant || ''
+								)
+									? variant
+									: undefined) as AssemblePhysicsExamOptions['variant'],
+								difficulty
+							})
+						: assembleSciencesExam({
+								grade: sciencesTrack!,
+								trimesterId,
+								seed,
+								docType,
+								variant: ([
+									'trimester_exam',
+									'supervised_test',
+									'competency_eval',
+									'bem_mock',
+									'bac_mock'
+								].includes(variant || '')
+									? variant
+									: undefined) as AssembleSciencesExamOptions['variant'],
+								difficulty
+							});
 
 			const fileId = `gen-${randomUUID().slice(0, 12)}`;
 			const subjectOutPath = resolve('data/uploads/sujet', `${fileId}.pdf`);
