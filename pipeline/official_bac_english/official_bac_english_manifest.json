@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T15:48:31.269Z",
+  "generated_at": "2026-11-20T14:56:23.700Z",
   "total_papers": 18,
   "total_pdfs": 36,
   "blocklist_hits": 0,
@@ -16,10 +16,9 @@
     "EQMKZO+Arial-ItalicMT",
     "ERKWKS+Arial-BoldMT",
     "FBRMVL+Arial-BoldMT",
-    "GSAUVK+ArialMT",
     "GYFOBO+Arial-ItalicMT",
+    "HCAYPQ+ArialMT",
     "ICAGWD+Arial-ItalicMT",
-    "IECCOC+ArialMT",
     "ILVJEJ+Arial-BoldMT",
     "IRJBUJ+Arial-ItalicMT",
     "JCXJXM+ArialMT",
@@ -31,39 +30,40 @@
     "KUQHCD+Arial-BoldMT",
     "KXNAGQ+Arial-BoldMT",
     "LABVYK+Arial-ItalicMT",
-    "LCGAWU+ArialMT",
+    "LCHGZR+ArialMT",
     "LECTBE+Arial-BoldMT",
     "LNGWBT+ArialMT",
     "LQPXWF+Arial-BoldMT",
     "LZCXLF+Arial-ItalicMT",
     "MCQYHE+Arial-BoldMT",
-    "MTAOJP+ArialMT",
+    "MKJLFQ+ArialMT",
     "MUPAHM+ArialMT",
+    "MXFUJO+ArialMT",
     "NHVFBL+Arial-BoldMT",
     "NOMILA+Arial-BoldMT",
     "ORMMNZ+Arial-BoldMT",
-    "PBBTVP+ArialMT",
     "PVDGOQ+Arial-BoldMT",
     "PWQGAA+Arial-BoldMT",
     "RNPKAE+Arial-BoldMT",
     "RPRTXS+ArialMT",
     "SGPYMC+Arial-ItalicMT",
+    "SIJIKY+ArialMT",
     "SKPAQA+Arial-BoldMT",
-    "SRHNDL+ArialMT",
     "TJABEA+Arial-BoldMT",
     "TJOFZI+Arial-BoldMT",
+    "TPSIPF+ArialMT",
     "UHGLDA+Arial-BoldMT",
     "UQHUAT+ArialMT",
     "UQMVTD+Arial-BoldMT",
-    "VAVJGR+ArialMT",
     "VDQXPS+Arial-BoldMT",
     "VEBQJZ+Arial-ItalicMT",
-    "VGSMMA+ArialMT",
-    "VKSQFR+ArialMT",
+    "VJBTGL+ArialMT",
     "VZKZTX+Arial-BoldMT",
     "WCZPZG+ArialMT",
+    "WFYALJ+ArialMT",
     "WHESPB+Arial-BoldMT",
     "WSOQPM+Arial-BoldMT",
+    "WWOHOG+ArialMT",
     "WZBYLB+Arial-BoldMT",
     "XATGOB+Arial-BoldMT",
     "XRYEUR+Arial-BoldMT",
@@ -104,11 +104,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2023-3as-se-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2023-3as-se-english-sol.pdf",
-      "fileSize": 180591,
+      "fileSize": 186927,
       "solutionFileSize": 182383,
       "fonts": [
         "UHGLDA+Arial-BoldMT",
-        "VKSQFR+ArialMT",
+        "SIJIKY+ArialMT",
         "VEBQJZ+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -151,11 +151,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2023-3as-tm-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2023-3as-tm-english-sol.pdf",
-      "fileSize": 180587,
+      "fileSize": 186922,
       "solutionFileSize": 182390,
       "fonts": [
         "KXNAGQ+Arial-BoldMT",
-        "VKSQFR+ArialMT",
+        "SIJIKY+ArialMT",
         "VEBQJZ+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -198,11 +198,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2023-3as-math-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2023-3as-math-english-sol.pdf",
-      "fileSize": 180591,
+      "fileSize": 186929,
       "solutionFileSize": 182390,
       "fonts": [
         "FBRMVL+Arial-BoldMT",
-        "VKSQFR+ArialMT",
+        "SIJIKY+ArialMT",
         "VEBQJZ+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -245,11 +245,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2023-3as-ge-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2023-3as-ge-english-sol.pdf",
-      "fileSize": 181015,
+      "fileSize": 187346,
       "solutionFileSize": 182412,
       "fonts": [
         "WSOQPM+Arial-BoldMT",
-        "VKSQFR+ArialMT",
+        "SIJIKY+ArialMT",
         "VEBQJZ+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -294,11 +294,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2024-3as-se-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2024-3as-se-english-sol.pdf",
-      "fileSize": 181860,
+      "fileSize": 186943,
       "solutionFileSize": 184271,
       "fonts": [
         "AYKEBO+Arial-BoldMT",
-        "IECCOC+ArialMT",
+        "WFYALJ+ArialMT",
         "SGPYMC+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -343,11 +343,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2024-3as-tm-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2024-3as-tm-english-sol.pdf",
-      "fileSize": 181867,
+      "fileSize": 186952,
       "solutionFileSize": 184285,
       "fonts": [
         "TJOFZI+Arial-BoldMT",
-        "IECCOC+ArialMT",
+        "WFYALJ+ArialMT",
         "SGPYMC+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -392,11 +392,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2024-3as-math-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2024-3as-math-english-sol.pdf",
-      "fileSize": 181857,
+      "fileSize": 186942,
       "solutionFileSize": 184275,
       "fonts": [
         "MCQYHE+Arial-BoldMT",
-        "IECCOC+ArialMT",
+        "WFYALJ+ArialMT",
         "SGPYMC+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -441,11 +441,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2024-3as-ge-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2024-3as-ge-english-sol.pdf",
-      "fileSize": 182261,
+      "fileSize": 187351,
       "solutionFileSize": 184295,
       "fonts": [
         "DOABVY+Arial-BoldMT",
-        "IECCOC+ArialMT",
+        "WFYALJ+ArialMT",
         "SGPYMC+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -490,11 +490,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2025-3as-se-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2025-3as-se-english-sol.pdf",
-      "fileSize": 181731,
+      "fileSize": 188235,
       "solutionFileSize": 184072,
       "fonts": [
         "EDTXRM+Arial-BoldMT",
-        "SRHNDL+ArialMT",
+        "WWOHOG+ArialMT",
         "GYFOBO+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -539,11 +539,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2025-3as-tm-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2025-3as-tm-english-sol.pdf",
-      "fileSize": 181752,
+      "fileSize": 188252,
       "solutionFileSize": 184095,
       "fonts": [
         "RNPKAE+Arial-BoldMT",
-        "SRHNDL+ArialMT",
+        "WWOHOG+ArialMT",
         "GYFOBO+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -588,11 +588,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2025-3as-math-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2025-3as-math-english-sol.pdf",
-      "fileSize": 181743,
+      "fileSize": 188246,
       "solutionFileSize": 184090,
       "fonts": [
         "ILVJEJ+Arial-BoldMT",
-        "SRHNDL+ArialMT",
+        "WWOHOG+ArialMT",
         "GYFOBO+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -637,11 +637,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2025-3as-ge-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2025-3as-ge-english-sol.pdf",
-      "fileSize": 182149,
+      "fileSize": 188646,
       "solutionFileSize": 184105,
       "fonts": [
         "LECTBE+Arial-BoldMT",
-        "SRHNDL+ArialMT",
+        "WWOHOG+ArialMT",
         "GYFOBO+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -686,11 +686,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2023-3as-lp-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2023-3as-lp-english-sol.pdf",
-      "fileSize": 184008,
+      "fileSize": 190599,
       "solutionFileSize": 185071,
       "fonts": [
         "SKPAQA+Arial-BoldMT",
-        "MTAOJP+ArialMT",
+        "VJBTGL+ArialMT",
         "BWEXCE+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -735,11 +735,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2024-3as-lp-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2024-3as-lp-english-sol.pdf",
-      "fileSize": 183321,
+      "fileSize": 190678,
       "solutionFileSize": 184008,
       "fonts": [
         "EDUHAS+Arial-BoldMT",
-        "VGSMMA+ArialMT",
+        "HCAYPQ+ArialMT",
         "ICAGWD+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -784,11 +784,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2025-3as-lp-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2025-3as-lp-english-sol.pdf",
-      "fileSize": 182795,
+      "fileSize": 190357,
       "solutionFileSize": 183102,
       "fonts": [
         "KFCKEB+Arial-BoldMT",
-        "GSAUVK+ArialMT",
+        "LCHGZR+ArialMT",
         "EQMKZO+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -833,11 +833,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2023-3as-le-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2023-3as-le-english-sol.pdf",
-      "fileSize": 181472,
+      "fileSize": 188087,
       "solutionFileSize": 183326,
       "fonts": [
         "KNZEOK+Arial-BoldMT",
-        "PBBTVP+ArialMT",
+        "TPSIPF+ArialMT",
         "IRJBUJ+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -882,11 +882,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2024-3as-le-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2024-3as-le-english-sol.pdf",
-      "fileSize": 180680,
+      "fileSize": 186989,
       "solutionFileSize": 182523,
       "fonts": [
         "BPXOEO+Arial-BoldMT",
-        "VAVJGR+ArialMT",
+        "MXFUJO+ArialMT",
         "LABVYK+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -931,11 +931,11 @@
       "templateId": "english/bac_official",
       "pdfUrl": "/generated/official-bac-english/bac-2025-3as-le-english.pdf",
       "solutionUrl": "/generated/official-bac-english/bac-2025-3as-le-english-sol.pdf",
-      "fileSize": 180751,
+      "fileSize": 187131,
       "solutionFileSize": 183342,
       "fonts": [
         "PVDGOQ+Arial-BoldMT",
-        "LCGAWU+ArialMT",
+        "MKJLFQ+ArialMT",
         "LZCXLF+Arial-ItalicMT"
       ],
       "solutionFonts": [

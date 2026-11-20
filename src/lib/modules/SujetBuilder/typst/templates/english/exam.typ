@@ -4,8 +4,13 @@
 
 #let safe-eval-en(content, mode: "markup") = {
   if content == "" or content == none { return [] }
+  let prepared = if mode == "markup" and type(content) == str {
+    content.replace(regex("\.{12,}"), "#repeat(gap: 1.8pt)[.]")
+  } else {
+    content
+  }
   let scope = (cm: 1cm, mm: 1mm, pt: 1pt, em: 1em)
-  eval(content, mode: mode, scope: scope)
+  eval(prepared, mode: mode, scope: scope)
 }
 
 #let render-block-en(b, is-solution, body-size: 11.5pt, table-inset: 6pt) = {
@@ -36,7 +41,7 @@
         [
           - #safe-eval-en(item.q) #h(6pt) [#box(width: 48pt, align(center)[#(if is-solution { text(fill: rgb("1D4ED8"), weight: "bold")[#safe-eval-en(item.a)] } else { "........" })])] \
           #if item.at("c", default: "") != "" [
-            #v(-1pt) #text(size: calc.max(body-size - 1.2pt, 9.5pt))[Correction: #(if is-solution { text(fill: rgb("1D4ED8"))[#safe-eval-en(item.c)] } else { "...................................................................................." })]
+            #v(-1pt) #text(size: calc.max(body-size - 1.2pt, 9.5pt))[Correction: #(if is-solution { text(fill: rgb("1D4ED8"))[#safe-eval-en(item.c)] } else { repeat(gap: 1.8pt)[.] })]
           ]
         ],
         if is-solution and item.at("mark", default: "") != "" {

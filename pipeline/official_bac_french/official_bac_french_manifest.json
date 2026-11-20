@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T17:24:37.322Z",
+  "generated_at": "2026-11-20T14:56:49.691Z",
   "total_papers": 18,
   "total_pdfs": 36,
   "blocklist_hits": 0,
@@ -13,26 +13,25 @@
     "BSNGHL+ArialMT",
     "BXWYOZ+Arial-BoldMT",
     "CFPYCL+ArialMT",
-    "CGBFRL+ArialMT",
     "CIMNGP+Arial-BoldMT",
     "COBKIN+Arial-BoldMT",
     "DIEOWX+Arial-BoldMT",
     "DNDYUU+Arial-BoldMT",
+    "DVRHWU+ArialMT",
     "EKOMRH+Arial-BoldMT",
     "FBUEJI+Arial-BoldMT",
+    "FGZZSL+ArialMT",
     "FHAVWE+Arial-BoldMT",
     "FHDQZI+Arial-BoldMT",
-    "FJRSTL+ArialMT",
     "FRZKFC+ArialMT",
     "FYNAQJ+Arial-BoldMT",
     "FYVPOE+Arial-BoldMT",
     "GJSLKV+Arial-ItalicMT",
     "GYSBQQ+Arial-BoldMT",
     "IPCGGP+ArialMT",
+    "IZNYGY+ArialMT",
     "JMHCXC+Arial-BoldMT",
     "KKXICA+Arial-BoldMT",
-    "KTLBGU+ArialMT",
-    "KTMYJL+ArialMT",
     "KUZWQY+Arial-BoldMT",
     "LBQYNA+Arial-BoldMT",
     "LJRWEV+Arial-ItalicMT",
@@ -46,25 +45,26 @@
     "MYURQB+Arial-ItalicMT",
     "MYWWLI+Arial-BoldMT",
     "MZQCEE+ArialMT",
-    "NOFYBQ+ArialMT",
     "NSSQZT+Arial-BoldMT",
+    "OAKXMN+ArialMT",
+    "OPWFSP+ArialMT",
     "ORXQYH+Arial-BoldMT",
     "OYNFVD+ArialMT",
-    "PHNJPR+ArialMT",
     "QWBTKW+Arial-ItalicMT",
     "QWUNKE+Arial-ItalicMT",
     "RQFCVQ+Arial-BoldMT",
+    "RZJWZM+ArialMT",
     "SQUEUH+Arial-BoldMT",
+    "TECIIY+ArialMT",
     "UEMQCP+ArialMT",
+    "UPAAJO+ArialMT",
     "VBXHHR+Arial-BoldMT",
-    "VFZGUQ+ArialMT",
+    "VXQEYQ+ArialMT",
     "VZTEGZ+Arial-BoldMT",
     "WFSILO+Arial-ItalicMT",
     "WHCFXE+Arial-ItalicMT",
-    "XIBSJJ+ArialMT",
     "XSKUSM+Arial-BoldMT",
     "YEULAA+ArialMT",
-    "YIPOYQ+ArialMT",
     "YUDRZV+Arial-BoldMT",
     "ZOKRFA+Arial-BoldMT",
     "ZTRNVM+Arial-BoldMT"
@@ -106,11 +106,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2023-3as-se-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2023-3as-se-french-sol.pdf",
-      "fileSize": 183687,
+      "fileSize": 191031,
       "solutionFileSize": 187907,
       "fonts": [
         "ZOKRFA+Arial-BoldMT",
-        "VFZGUQ+ArialMT",
+        "FGZZSL+ArialMT",
         "QWUNKE+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -155,11 +155,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2023-3as-tm-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2023-3as-tm-french-sol.pdf",
-      "fileSize": 184116,
+      "fileSize": 191454,
       "solutionFileSize": 188411,
       "fonts": [
         "DIEOWX+Arial-BoldMT",
-        "VFZGUQ+ArialMT",
+        "FGZZSL+ArialMT",
         "QWUNKE+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -204,11 +204,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2023-3as-math-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2023-3as-math-french-sol.pdf",
-      "fileSize": 184084,
+      "fileSize": 191420,
       "solutionFileSize": 188245,
       "fonts": [
         "RQFCVQ+Arial-BoldMT",
-        "VFZGUQ+ArialMT",
+        "FGZZSL+ArialMT",
         "QWUNKE+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -253,11 +253,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2023-3as-ge-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2023-3as-ge-french-sol.pdf",
-      "fileSize": 183959,
+      "fileSize": 191295,
       "solutionFileSize": 188150,
       "fonts": [
         "BXWYOZ+Arial-BoldMT",
-        "VFZGUQ+ArialMT",
+        "FGZZSL+ArialMT",
         "QWUNKE+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -302,11 +302,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2024-3as-se-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2024-3as-se-french-sol.pdf",
-      "fileSize": 180306,
+      "fileSize": 188049,
       "solutionFileSize": 185556,
       "fonts": [
         "KUZWQY+Arial-BoldMT",
-        "PHNJPR+ArialMT",
+        "IZNYGY+ArialMT",
         "WFSILO+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -351,11 +351,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2024-3as-tm-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2024-3as-tm-french-sol.pdf",
-      "fileSize": 180704,
+      "fileSize": 188454,
       "solutionFileSize": 186100,
       "fonts": [
         "LOAWQB+Arial-BoldMT",
-        "PHNJPR+ArialMT",
+        "IZNYGY+ArialMT",
         "WFSILO+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -400,11 +400,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2024-3as-math-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2024-3as-math-french-sol.pdf",
-      "fileSize": 180668,
+      "fileSize": 188425,
       "solutionFileSize": 185927,
       "fonts": [
         "FHDQZI+Arial-BoldMT",
-        "PHNJPR+ArialMT",
+        "IZNYGY+ArialMT",
         "WFSILO+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -449,11 +449,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2024-3as-ge-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2024-3as-ge-french-sol.pdf",
-      "fileSize": 180565,
+      "fileSize": 188322,
       "solutionFileSize": 185839,
       "fonts": [
         "EKOMRH+Arial-BoldMT",
-        "PHNJPR+ArialMT",
+        "IZNYGY+ArialMT",
         "WFSILO+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -498,11 +498,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2025-3as-se-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2025-3as-se-french-sol.pdf",
-      "fileSize": 181540,
+      "fileSize": 188632,
       "solutionFileSize": 186204,
       "fonts": [
         "LMFLQN+Arial-BoldMT",
-        "KTLBGU+ArialMT",
+        "OAKXMN+ArialMT",
         "AULKAC+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -547,11 +547,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2025-3as-tm-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2025-3as-tm-french-sol.pdf",
-      "fileSize": 181994,
+      "fileSize": 189082,
       "solutionFileSize": 186768,
       "fonts": [
         "DNDYUU+Arial-BoldMT",
-        "KTLBGU+ArialMT",
+        "OAKXMN+ArialMT",
         "AULKAC+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -596,11 +596,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2025-3as-math-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2025-3as-math-french-sol.pdf",
-      "fileSize": 181971,
+      "fileSize": 189055,
       "solutionFileSize": 186590,
       "fonts": [
         "FYNAQJ+Arial-BoldMT",
-        "KTLBGU+ArialMT",
+        "OAKXMN+ArialMT",
         "AULKAC+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -645,11 +645,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2025-3as-ge-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2025-3as-ge-french-sol.pdf",
-      "fileSize": 181847,
+      "fileSize": 188931,
       "solutionFileSize": 186487,
       "fonts": [
         "ZTRNVM+Arial-BoldMT",
-        "KTLBGU+ArialMT",
+        "OAKXMN+ArialMT",
         "AULKAC+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -694,11 +694,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2023-3as-lp-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2023-3as-lp-french-sol.pdf",
-      "fileSize": 182915,
+      "fileSize": 189490,
       "solutionFileSize": 187775,
       "fonts": [
         "COBKIN+Arial-BoldMT",
-        "NOFYBQ+ArialMT",
+        "UPAAJO+ArialMT",
         "QWBTKW+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -743,11 +743,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2024-3as-lp-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2024-3as-lp-french-sol.pdf",
-      "fileSize": 178965,
+      "fileSize": 185550,
       "solutionFileSize": 184827,
       "fonts": [
         "AWTSAN+Arial-BoldMT",
-        "CGBFRL+ArialMT",
+        "VXQEYQ+ArialMT",
         "LJRWEV+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -792,11 +792,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2025-3as-lp-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2025-3as-lp-french-sol.pdf",
-      "fileSize": 182569,
+      "fileSize": 189061,
       "solutionFileSize": 187861,
       "fonts": [
         "FYVPOE+Arial-BoldMT",
-        "FJRSTL+ArialMT",
+        "TECIIY+ArialMT",
         "GJSLKV+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -841,11 +841,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2023-3as-le-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2023-3as-le-french-sol.pdf",
-      "fileSize": 182809,
+      "fileSize": 191157,
       "solutionFileSize": 189993,
       "fonts": [
         "YUDRZV+Arial-BoldMT",
-        "YIPOYQ+ArialMT",
+        "RZJWZM+ArialMT",
         "MYURQB+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -890,11 +890,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2024-3as-le-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2024-3as-le-french-sol.pdf",
-      "fileSize": 180305,
+      "fileSize": 186984,
       "solutionFileSize": 185726,
       "fonts": [
         "KKXICA+Arial-BoldMT",
-        "KTMYJL+ArialMT",
+        "OPWFSP+ArialMT",
         "WHCFXE+Arial-ItalicMT"
       ],
       "solutionFonts": [
@@ -939,11 +939,11 @@
       "templateId": "french/bac_official",
       "pdfUrl": "/generated/official-bac-french/bac-2025-3as-le-french.pdf",
       "solutionUrl": "/generated/official-bac-french/bac-2025-3as-le-french-sol.pdf",
-      "fileSize": 181090,
+      "fileSize": 187519,
       "solutionFileSize": 185324,
       "fonts": [
         "LTIVAF+Arial-BoldMT",
-        "XIBSJJ+ArialMT",
+        "DVRHWU+ArialMT",
         "MSHQIF+Arial-ItalicMT"
       ],
       "solutionFonts": [

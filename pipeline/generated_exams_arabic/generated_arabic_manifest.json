@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T14:47:32.785Z",
+  "generatedAt": "2026-11-20T14:55:46.864Z",
   "totalPapers": 299,
   "totalPdfs": 598,
   "items": [
@@ -16,7 +16,7 @@
       "titleAr": "تقويم تشخيصي وتكويني (1) لـالفصل الأول في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 136089,
+      "fileSize": 138500,
       "solutionFileSize": 132886
     },
     {
@@ -32,7 +32,7 @@
       "titleAr": "تقويم تشخيصي وتكويني (2) لـالفصل الأول في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 136539,
+      "fileSize": 140567,
       "solutionFileSize": 133201
     },
     {
@@ -48,7 +48,7 @@
       "titleAr": "تقييم فصلي تكويني الفصل الأول النموذجي (1) في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 142056,
+      "fileSize": 145835,
       "solutionFileSize": 138458
     },
     {
@@ -64,7 +64,7 @@
       "titleAr": "تقييم فصلي تكويني الفصل الأول النموذجي (2) في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 138472,
+      "fileSize": 139985,
       "solutionFileSize": 133180
     },
     {
@@ -80,7 +80,7 @@
       "titleAr": "تقويم تشخيصي وتكويني (1) لـالفصل الثاني في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 137283,
+      "fileSize": 138347,
       "solutionFileSize": 135457
     },
     {
@@ -96,7 +96,7 @@
       "titleAr": "تقويم تشخيصي وتكويني (2) لـالفصل الثاني في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 138806,
+      "fileSize": 139929,
       "solutionFileSize": 137269
     },
     {
@@ -112,7 +112,7 @@
       "titleAr": "تقييم فصلي تكويني الفصل الثاني النموذجي (1) في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 144655,
+      "fileSize": 145796,
       "solutionFileSize": 142302
     },
     {
@@ -128,7 +128,7 @@
       "titleAr": "تقييم فصلي تكويني الفصل الثاني النموذجي (2) في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 138571,
+      "fileSize": 139636,
       "solutionFileSize": 135076
     },
     {
@@ -144,7 +144,7 @@
       "titleAr": "تقويم تشخيصي وتكويني (1) لـالفصل الثالث في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t3/1ap-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t3/1ap-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 137507,
+      "fileSize": 139268,
       "solutionFileSize": 131975
     },
     {
@@ -160,7 +160,7 @@
       "titleAr": "تقويم تشخيصي وتكويني (2) لـالفصل الثالث في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t3/1ap-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t3/1ap-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 137460,
+      "fileSize": 139263,
       "solutionFileSize": 132242
     },
     {
@@ -176,7 +176,7 @@
       "titleAr": "تقييم فصلي تكويني الفصل الثالث النموذجي (1) في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t3/1ap-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t3/1ap-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 139347,
+      "fileSize": 140409,
       "solutionFileSize": 135397
     },
     {
@@ -192,7 +192,7 @@
       "titleAr": "تقييم فصلي تكويني الفصل الثالث النموذجي (2) في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t3/1ap-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t3/1ap-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 139555,
+      "fileSize": 141325,
       "solutionFileSize": 136015
     },
     {
@@ -208,7 +208,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الأول في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 140780,
+      "fileSize": 142214,
       "solutionFileSize": 137110
     },
     {
@@ -224,7 +224,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الأول في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 142537,
+      "fileSize": 143936,
       "solutionFileSize": 139227
     },
     {
@@ -240,7 +240,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 146764,
+      "fileSize": 147793,
       "solutionFileSize": 146495
     },
     {
@@ -256,7 +256,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 142691,
+      "fileSize": 144243,
       "solutionFileSize": 140255
     },
     {
@@ -272,7 +272,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الثاني في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 139531,
+      "fileSize": 141064,
       "solutionFileSize": 134642
     },
     {
@@ -288,7 +288,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الثاني في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 138610,
+      "fileSize": 140051,
       "solutionFileSize": 133419
     },
     {
@@ -304,7 +304,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 142056,
+      "fileSize": 143496,
       "solutionFileSize": 139650
     },
     {
@@ -320,7 +320,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 143549,
+      "fileSize": 144674,
       "solutionFileSize": 142346
     },
     {
@@ -336,7 +336,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الثالث في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t3/2ap-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t3/2ap-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 140128,
+      "fileSize": 141585,
       "solutionFileSize": 134976
     },
     {
@@ -352,7 +352,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الثالث في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t3/2ap-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t3/2ap-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 140064,
+      "fileSize": 141626,
       "solutionFileSize": 134716
     },
     {
@@ -368,7 +368,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t3/2ap-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t3/2ap-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 145545,
+      "fileSize": 146621,
       "solutionFileSize": 142396
     },
     {
@@ -384,7 +384,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t3/2ap-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t3/2ap-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 145019,
+      "fileSize": 146455,
       "solutionFileSize": 142355
     },
     {

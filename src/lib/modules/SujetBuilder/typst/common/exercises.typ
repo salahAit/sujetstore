@@ -3,13 +3,19 @@
 #let safe-eval(content, mode: "markup") = {
   if content == "" or content == none { return [] }
   
+  let prepared = if mode == "markup" and type(content) == str {
+    content.replace(regex("\.{12,}"), "#repeat(gap: 1.8pt)[.]")
+  } else {
+    content
+  }
+  
   // Define common units & poetry renderer in eval scope
   let scope = (
     cm: 1cm, mm: 1mm, pt: 1pt, em: 1em,
     render-arabic-poem: render-arabic-poem,
   )
   
-  let result = eval(content, mode: mode, scope: scope)
+  let result = eval(prepared, mode: mode, scope: scope)
   result
 }
 
@@ -30,7 +36,7 @@
     #for item in b.items [
       #grid(columns: (1fr, auto), [
         - #eval(item.q, mode: "markup", scope: scope) #h(5pt) [#box(width: 40pt, align(center)[#(if is-solution { text(fill: blue)[#eval(item.a, mode: "markup", scope: scope)] } else { "........" })])] \
-        #v(-2pt) #text(size: calc.max(body-size - 2.5pt, 11.5pt))[التصحيح: #(if is-solution and item.at("c", default: "") != "" { text(fill: blue)[#eval(item.c, mode: "markup", scope: scope)] } else { "........................................................................................................" })]
+        #v(-2pt) #text(size: calc.max(body-size - 2.5pt, 11.5pt))[التصحيح: #(if is-solution and item.at("c", default: "") != "" { text(fill: blue)[#eval(item.c, mode: "markup", scope: scope)] } else { repeat(gap: 1.8pt)[.] })]
       ], if is-solution { align(bottom)[#text(size: body-size, fill: red)[#item.mark ن]] } else { [] })
       #v(4pt)
     ]
