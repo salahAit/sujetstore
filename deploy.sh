@@ -106,6 +106,8 @@ deploy() {
         --exclude 'data' \
         --exclude 'static/uploads' \
         --exclude 'build-static' \
+        --exclude 'docs' \
+        --exclude 'book' \
         --exclude '.env' \
         ./ $SERVER_USER@$SERVER_IP:$REMOTE_DIR
 
