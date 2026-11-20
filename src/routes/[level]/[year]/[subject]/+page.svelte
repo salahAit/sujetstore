@@ -83,19 +83,52 @@
 		solution: 7
 	};
 
+	function isOfficialDoc(d: any): boolean {
+		if (!d || d._itemType === 'quiz') return false;
+		return d.origin_type === 'official_certificate' || d.source === 'رسمي';
+	}
+
+	function normalizeAcademicYear(val: unknown): string {
+		return typeof val === 'string' ? val.replace(/\s+/g, '') : '';
+	}
+
+	function resetFilters() {
+		filterType = 'all';
+		filterSource = 'all';
+		filterYear = 'all';
+		filterHasSolution = false;
+		filterOfficialArchiveOnly = false;
+	}
+
+	let hasActiveFilters = $derived(
+		filterType !== 'all' ||
+			filterSource !== 'all' ||
+			filterYear !== 'all' ||
+			filterHasSolution ||
+			filterOfficialArchiveOnly
+	);
+
 	// Reactive filtered documents
 	let filteredDocs = $derived.by(() => {
-		// Include docs for the active trimester + null-trimester docs (lessons/summaries)
-		let docs = allActivities.filter(
-			(d: any) =>
-				d.trimester_id === activeTrimesterTab ||
-				d.trimester_id === null ||
-				d.trimesterId === activeTrimesterTab ||
-				d.trimesterId === null
-		);
+		const normalizedFilterYear = normalizeAcademicYear(filterYear);
+		const bypassTrimesterFilter =
+			filterOfficialArchiveOnly ||
+			filterSource === 'رسمي' ||
+			(filterYear !== 'all' && /^\d{4}$/.test(normalizedFilterYear));
+
+		// Include docs for the active trimester + null-trimester docs (or all trimesters when browsing official/historical archives)
+		let docs = bypassTrimesterFilter
+			? allActivities
+			: allActivities.filter(
+					(d: any) =>
+						d.trimester_id === activeTrimesterTab ||
+						d.trimester_id === null ||
+						d.trimesterId === activeTrimesterTab ||
+						d.trimesterId === null
+				);
 
 		if (filterOfficialArchiveOnly) {
-			docs = docs.filter((d: any) => d.origin_type === 'official_certificate');
+			docs = docs.filter((d: any) => isOfficialDoc(d));
 		}
 
 		if (filterType !== 'all') {
@@ -106,12 +139,17 @@
 			}
 		}
 
-		if (filterSource !== 'all') {
-			docs = docs.filter((d: any) => d.source === filterSource);
+		if (filterSource === 'رسمي') {
+			docs = docs.filter((d: any) => isOfficialDoc(d));
+		} else if (filterSource === 'مقترح') {
+			docs = docs.filter((d: any) => !isOfficialDoc(d));
 		}
 
 		if (filterYear !== 'all') {
-			docs = docs.filter((d: any) => d.academic_year === filterYear);
+			docs = docs.filter((d: any) => {
+				const docYear = normalizeAcademicYear(d.academic_year) || (d._itemType === 'quiz' ? '2025/2026' : '');
+				return docYear === normalizedFilterYear;
+			});
 		}
 
 		if (filterHasSolution) {
@@ -492,6 +530,11 @@
 					<!-- Source Filter -->
 					<select
 						bind:value={filterSource}
+						onchange={() => {
+							if (filterSource === 'مقترح') {
+								filterOfficialArchiveOnly = false;
+							}
+						}}
 						class="bg-background text-foreground hover:bg-accent hover:text-accent-foreground focus:ring-ring w-full rounded-md border px-4 py-2 text-sm font-medium transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none sm:w-auto"
 					>
 						<option value="all">المصدر: الكل</option>
@@ -515,7 +558,12 @@
 					{#if hasOfficialArchiveDocs}
 						<button
 							type="button"
-							onclick={() => (filterOfficialArchiveOnly = !filterOfficialArchiveOnly)}
+							onclick={() => {
+								filterOfficialArchiveOnly = !filterOfficialArchiveOnly;
+								if (filterOfficialArchiveOnly && filterSource === 'مقترح') {
+									filterSource = 'all';
+								}
+							}}
 							class="rounded-md border px-3 py-2 text-xs font-bold transition-colors {filterOfficialArchiveOnly
 								? 'border-amber-500 bg-amber-500/20 text-amber-300'
 								: 'border-amber-500/30 bg-amber-500/10 text-amber-400 hover:bg-amber-500/20'}"
@@ -556,7 +604,22 @@
 						<div class="text-muted-foreground flex flex-col items-center py-16 text-center">
 							<Filter size={48} class="mb-4 opacity-40" />
 							<h3 class="mb-2 text-lg font-bold">لا توجد نتائج</h3>
-							<p class="text-sm">لا توجد وثائق مطابقة للفلاتر المحددة في هذا الفصل</p>
+							<p class="text-sm">
+								{#if filterSource === 'رسمي' && !hasOfficialArchiveDocs}
+									لا توجد مواضيع رسمية للشهادات الوطنية مرفوعة لهذا المستوى بعد، جرّب اختيار «مقترح» أو «الكل».
+								{:else}
+									لا توجد وثائق مطابقة للفلاتر المحددة
+								{/if}
+							</p>
+							{#if hasActiveFilters}
+								<button
+									type="button"
+									onclick={resetFilters}
+									class="mt-4 rounded-lg border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-xs font-bold text-blue-400 transition-colors hover:bg-blue-500/20"
+								>
+									إعادة ضبط الفلاتر
+								</button>
+							{/if}
 						</div>
 					{/each}
 
