@@ -1,9 +1,12 @@
+#import "arabic_poetry.typ": render-arabic-poem
+
 #let safe-eval(content, mode: "markup") = {
   if content == "" or content == none { return [] }
   
-  // Define common units as variables to avoid "unknown variable" errors in math eval
+  // Define common units & poetry renderer in eval scope
   let scope = (
     cm: 1cm, mm: 1mm, pt: 1pt, em: 1em,
+    render-arabic-poem: render-arabic-poem,
   )
   
   let result = eval(content, mode: mode, scope: scope)

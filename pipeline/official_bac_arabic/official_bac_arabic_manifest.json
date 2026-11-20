@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T06:08:36.510Z",
+  "generated_at": "2026-11-20T14:18:11.411Z",
   "total_papers": 18,
   "total_pdfs": 36,
   "items": [
@@ -26,8 +26,8 @@
       ],
       "pdfUrl": "/generated/official-bac-arabic/bac-2023-3as-se-arabic.pdf",
       "solutionUrl": "/generated/official-bac-arabic/bac-2023-3as-se-arabic-sol.pdf",
-      "fileSize": 91873,
-      "solutionFileSize": 118109,
+      "fileSize": 92728,
+      "solutionFileSize": 119166,
       "sourcePdfRelPath": "pipeline/references_arabic/3as/bac_official/bac_2023_sci_arabic_subject.pdf",
       "sourceSha256": null
     },
@@ -54,8 +54,8 @@
       ],
       "pdfUrl": "/generated/official-bac-arabic/bac-2023-3as-tm-arabic.pdf",
       "solutionUrl": "/generated/official-bac-arabic/bac-2023-3as-tm-arabic-sol.pdf",
-      "fileSize": 91861,
-      "solutionFileSize": 118083,
+      "fileSize": 92714,
+      "solutionFileSize": 119149,
       "sourcePdfRelPath": "pipeline/references_arabic/3as/bac_official/bac_2023_sci_arabic_subject.pdf",
       "sourceSha256": null
     },
@@ -82,8 +82,8 @@
       ],
       "pdfUrl": "/generated/official-bac-arabic/bac-2023-3as-math-arabic.pdf",
       "solutionUrl": "/generated/official-bac-arabic/bac-2023-3as-math-arabic-sol.pdf",
-      "fileSize": 91815,
-      "solutionFileSize": 117996,
+      "fileSize": 92668,
+      "solutionFileSize": 119058,
       "sourcePdfRelPath": "pipeline/references_arabic/3as/bac_official/bac_2023_sci_arabic_subject.pdf",
       "sourceSha256": null
     },
@@ -110,8 +110,8 @@
       ],
       "pdfUrl": "/generated/official-bac-arabic/bac-2023-3as-ge-arabic.pdf",
       "solutionUrl": "/generated/official-bac-arabic/bac-2023-3as-ge-arabic-sol.pdf",
-      "fileSize": 91877,
-      "solutionFileSize": 118111,
+      "fileSize": 92729,
+      "solutionFileSize": 119169,
       "sourcePdfRelPath": "pipeline/references_arabic/3as/bac_official/bac_2023_sci_arabic_subject.pdf",
       "sourceSha256": null
     },
@@ -250,8 +250,8 @@
       ],
       "pdfUrl": "/generated/official-bac-arabic/bac-2025-3as-se-arabic.pdf",
       "solutionUrl": "/generated/official-bac-arabic/bac-2025-3as-se-arabic-sol.pdf",
-      "fileSize": 89421,
-      "solutionFileSize": 112550,
+      "fileSize": 89854,
+      "solutionFileSize": 111966,
       "sourcePdfRelPath": "pipeline/references_arabic/3as/bac_official/bac_2025_sci_arabic_subject.pdf",
       "sourceSha256": null
     },
@@ -278,8 +278,8 @@
       ],
       "pdfUrl": "/generated/official-bac-arabic/bac-2025-3as-tm-arabic.pdf",
       "solutionUrl": "/generated/official-bac-arabic/bac-2025-3as-tm-arabic-sol.pdf",
-      "fileSize": 89405,
-      "solutionFileSize": 112523,
+      "fileSize": 89843,
+      "solutionFileSize": 111942,
       "sourcePdfRelPath": "pipeline/references_arabic/3as/bac_official/bac_2025_sci_arabic_subject.pdf",
       "sourceSha256": null
     },
@@ -306,8 +306,8 @@
       ],
       "pdfUrl": "/generated/official-bac-arabic/bac-2025-3as-math-arabic.pdf",
       "solutionUrl": "/generated/official-bac-arabic/bac-2025-3as-math-arabic-sol.pdf",
-      "fileSize": 89353,
-      "solutionFileSize": 112451,
+      "fileSize": 89802,
+      "solutionFileSize": 111880,
       "sourcePdfRelPath": "pipeline/references_arabic/3as/bac_official/bac_2025_sci_arabic_subject.pdf",
       "sourceSha256": null
     },
@@ -334,8 +334,8 @@
       ],
       "pdfUrl": "/generated/official-bac-arabic/bac-2025-3as-ge-arabic.pdf",
       "solutionUrl": "/generated/official-bac-arabic/bac-2025-3as-ge-arabic-sol.pdf",
-      "fileSize": 89425,
-      "solutionFileSize": 112551,
+      "fileSize": 89862,
+      "solutionFileSize": 111952,
       "sourcePdfRelPath": "pipeline/references_arabic/3as/bac_official/bac_2025_sci_arabic_subject.pdf",
       "sourceSha256": null
     },
@@ -362,8 +362,8 @@
       ],
       "pdfUrl": "/generated/official-bac-arabic/bac-2023-3as-lp-arabic.pdf",
       "solutionUrl": "/generated/official-bac-arabic/bac-2023-3as-lp-arabic-sol.pdf",
-      "fileSize": 99763,
-      "solutionFileSize": 132456,
+      "fileSize": 100959,
+      "solutionFileSize": 134418,
       "sourcePdfRelPath": "pipeline/references_arabic/3as/bac_official/bac_2023_lp_arabic_subject.pdf",
       "sourceSha256": null
     },
@@ -418,8 +418,8 @@
       ],
       "pdfUrl": "/generated/official-bac-arabic/bac-2025-3as-lp-arabic.pdf",
       "solutionUrl": "/generated/official-bac-arabic/bac-2025-3as-lp-arabic-sol.pdf",
-      "fileSize": 97403,
-      "solutionFileSize": 126786,
+      "fileSize": 98127,
+      "solutionFileSize": 126972,
       "sourcePdfRelPath": "pipeline/references_arabic/3as/bac_official/bac_2025_lp_arabic_subject.pdf",
       "sourceSha256": null
     },
@@ -474,8 +474,8 @@
       ],
       "pdfUrl": "/generated/official-bac-arabic/bac-2024-3as-le-arabic.pdf",
       "solutionUrl": "/generated/official-bac-arabic/bac-2024-3as-le-arabic-sol.pdf",
-      "fileSize": 98479,
-      "solutionFileSize": 130308,
+      "fileSize": 99289,
+      "solutionFileSize": 131002,
       "sourcePdfRelPath": "pipeline/references_arabic/3as/bac_official/bac_2024_le_arabic_subject.pdf",
       "sourceSha256": null
     },

@@ -186,8 +186,133 @@ export function buildProsePassageBlock(opts: {
 	};
 }
 
+const ARABIC_DIACRITIC_RE = /^[\u064B-\u065F\u0670]$/;
+const ARABIC_DUAL_JOINERS = new Set(Array.from('بتثجحخسشصضطظعغفقكلمنهيئ'));
+const ARABIC_RIGHT_JOINERS = new Set(Array.from('اأإآدذرزوؤةى'));
+const ARABIC_ALEF_FORMS = new Set(Array.from('اأإآ'));
+const KASHIDA_PRIORITY_1 = new Set(Array.from('سشصض'));
+const KASHIDA_PRIORITY_2 = new Set(Array.from('طظعغفقك'));
+
+function escapeTypstQuoted(s: string): string {
+	return s.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+}
+
 /**
- * Renders an authentic classical/modern Arabic poem (`السند الشعري`) with numbered two-column centered hemistichs (`صدر البيت` | `عجز البيت`).
+ * Splits a single Arabic word at its best authentic calligraphic Kashida (ـ U+0640) insertion slot.
+ * Preserves all diacritics (تشكيل), avoids breaking `لا` ligatures, and returns `[pre, post]`.
+ * If no valid Kashida slot exists, returns `[word, '']`.
+ */
+function splitArabicWordForKashida(word: string): [string, string] {
+	// Strip any stray manual tatweel first so Typst measures clean natural width
+	const clean = word.replace(/\u0640/g, '');
+	const chars = Array.from(clean);
+	const clusters: Array<{ base: string; text: string }> = [];
+
+	for (const ch of chars) {
+		if (ARABIC_DIACRITIC_RE.test(ch) && clusters.length > 0) {
+			clusters[clusters.length - 1].text += ch;
+		} else {
+			clusters.push({ base: ch, text: ch });
+		}
+	}
+
+	if (clusters.length < 2) return [clean, ''];
+
+	let bestIdx = -1;
+	let bestScore = -1;
+
+	for (let i = 0; i < clusters.length - 1; i++) {
+		const cur = clusters[i].base;
+		const nxt = clusters[i + 1].base;
+		if (!ARABIC_DUAL_JOINERS.has(cur)) continue;
+		if (!ARABIC_DUAL_JOINERS.has(nxt) && !ARABIC_RIGHT_JOINERS.has(nxt)) continue;
+		// Never break lam-alef ligature (لا / لأ / لإ / لآ)
+		if (cur === 'ل' && ARABIC_ALEF_FORMS.has(nxt)) continue;
+
+		let score = 18;
+		if (KASHIDA_PRIORITY_1.has(cur)) score = 40;
+		else if (KASHIDA_PRIORITY_2.has(cur)) score = 32;
+		else if (i === clusters.length - 2) score = 26;
+
+		// Slight preference for slots closer to the end of the word (authentic Arabic typesetting)
+		const totalScore = score * 100 + i;
+		if (totalScore > bestScore) {
+			bestScore = totalScore;
+			bestIdx = i;
+		}
+	}
+
+	if (bestIdx === -1) return [clean, ''];
+	const pre = clusters
+		.slice(0, bestIdx + 1)
+		.map((c) => c.text)
+		.join('');
+	const post = clusters
+		.slice(bestIdx + 1)
+		.map((c) => c.text)
+		.join('');
+	return [pre, post];
+}
+
+interface PoemWordToken {
+	pre: string;
+	post: string;
+	style: 'normal' | 'ul' | 'bold';
+	prefixPunct?: string;
+	suffixPunct?: string;
+}
+
+function tokenizeArabicHemistich(raw: string): PoemWordToken[] {
+	const tokens: PoemWordToken[] = [];
+	const segments = raw.split(/(\[\[[^\]]+\]\]|\(\([^)]+\)\))/g);
+
+	for (const seg of segments) {
+		if (!seg) continue;
+		if (seg.startsWith('[[') && seg.endsWith(']]')) {
+			const words = seg.slice(2, -2).trim().split(/\s+/).filter(Boolean);
+			for (const w of words) {
+				const [pre, post] = splitArabicWordForKashida(w);
+				tokens.push({ pre, post, style: 'ul' });
+			}
+		} else if (seg.startsWith('((') && seg.endsWith('))')) {
+			const words = seg.slice(2, -2).trim().split(/\s+/).filter(Boolean);
+			words.forEach((w, idx) => {
+				const [pre, post] = splitArabicWordForKashida(w);
+				tokens.push({
+					pre,
+					post,
+					style: 'bold',
+					prefixPunct: idx === 0 ? '(' : '',
+					suffixPunct: idx === words.length - 1 ? ')' : ''
+				});
+			});
+		} else {
+			const words = seg.trim().split(/\s+/).filter(Boolean);
+			for (const w of words) {
+				const [pre, post] = splitArabicWordForKashida(w);
+				tokens.push({ pre, post, style: 'normal' });
+			}
+		}
+	}
+	return tokens;
+}
+
+function serializePoemWordsTypst(tokens: PoemWordToken[]): string {
+	if (tokens.length === 0) return '()';
+	const items = tokens.map((t) => {
+		const base = `"${escapeTypstQuoted(t.pre)}", "${escapeTypstQuoted(t.post)}", "${t.style}"`;
+		if (t.prefixPunct || t.suffixPunct) {
+			return `(${base}, "${escapeTypstQuoted(t.prefixPunct || '')}", "${escapeTypstQuoted(t.suffixPunct || '')}")`;
+		}
+		return `(${base})`;
+	});
+	return `(${items.join(', ')},)`;
+}
+
+/**
+ * Renders an authentic classical/modern Arabic poem (`السند الشعري`) with official Algerian BAC
+ * right-and-left justified two-column hemistichs (`صدر البيت` | `عجز البيت`) using calligraphic
+ * Kashida (`ـ`) elongation + fine `#h(1fr)` spacing, plus clean `1-` RTL verse numbering.
  * Supports `[[كلمة]]` (underlined word) and `((جملة))` (bracketed clause) inside any hemistich.
  */
 export function buildPoetryPassageBlock(opts: {
@@ -200,25 +325,19 @@ export function buildPoetryPassageBlock(opts: {
 }): TypstRawBlock {
 	const numbered = opts.numbered ?? true;
 	const titlePart = opts.title
-		? `#align(center)[#text(weight: "bold")[${escapeTypstLiteral(opts.title)}]]\n#v(5pt)\n`
+		? `#align(center)[#text(weight: "bold")[${escapeTypstLiteral(opts.title)}]]\n#v(6pt)\n`
 		: '';
 
-	const gridCells = opts.verses
-		.map(([sadr, ajuz], idx) => {
-			const s = formatExamArabicMarkup(sadr);
-			const a = formatExamArabicMarkup(ajuz);
-			if (numbered) {
-				return `[#text(size: 11.5pt, fill: rgb("#64748b"))[${idx + 1}.]], [${s}], [${a}]`;
-			}
-			return `[${s}], [${a}]`;
+	const serializedVerses = opts.verses
+		.map(([sadr, ajuz]) => {
+			const sExpr = serializePoemWordsTypst(tokenizeArabicHemistich(sadr));
+			const aExpr = serializePoemWordsTypst(tokenizeArabicHemistich(ajuz));
+			return `(${sExpr}, ${aExpr})`;
 		})
-		.join(',\n  ');
-
-	const colsSpec = numbered ? '(auto, 1fr, 1fr)' : '(1fr, 1fr)';
-	const alignSpec = numbered ? '(right, center, center)' : '(center, center)';
+		.join(',\n    ');
 
 	const attributionPieces = [opts.author, opts.source].filter(Boolean).map((x) => escapeTypstLiteral(x!));
-	const attribution = `\n#v(6pt)\n#align(left)[#text(style: "italic", size: 12.5pt)[— ${attributionPieces.join('، ')}]]`;
+	const attribution = `\n#v(7pt)\n#align(left)[#text(style: "italic", size: 12.5pt)[— ${attributionPieces.join('، ')}]]`;
 	const vocab =
 		opts.vocabulary && opts.vocabulary.length > 0
 			? `\n#v(5pt)\n#line(length: 100%, stroke: 0.4pt + luma(170))\n#v(3pt)\n#text(size: 12.5pt)[#strong[شرح المفردات:] ${opts.vocabulary
@@ -228,7 +347,7 @@ export function buildPoetryPassageBlock(opts: {
 
 	return {
 		type: 'typst_raw',
-		content: `#block(width: 100%, inset: 10pt, radius: 4pt, stroke: 0.75pt + rgb("#334155"), fill: rgb("#f8fafc"))[\n${titlePart}#grid(\n  columns: ${colsSpec},\n  column-gutter: 14pt,\n  row-gutter: 5pt,\n  align: ${alignSpec},\n  ${gridCells}\n)${attribution}${vocab}\n]`
+		content: `#block(width: 100%, inset: 10pt, radius: 4pt, stroke: 0.75pt + rgb("#334155"), fill: rgb("#f8fafc"))[\n${titlePart}#render-arabic-poem(\n  numbered: ${numbered ? 'true' : 'false'},\n  verses: (\n    ${serializedVerses},\n  )\n)${attribution}${vocab}\n]`
 	};
 }
 
