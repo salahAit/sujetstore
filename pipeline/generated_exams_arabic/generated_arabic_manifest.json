@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T14:19:10.289Z",
+  "generatedAt": "2026-11-20T14:47:32.785Z",
   "totalPapers": 299,
   "totalPdfs": 598,
   "items": [
@@ -16,7 +16,7 @@
       "titleAr": "تقويم تشخيصي وتكويني (1) لـالفصل الأول في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 135785,
+      "fileSize": 136089,
       "solutionFileSize": 132886
     },
     {
@@ -32,7 +32,7 @@
       "titleAr": "تقويم تشخيصي وتكويني (2) لـالفصل الأول في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 136185,
+      "fileSize": 136539,
       "solutionFileSize": 133201
     },
     {
@@ -48,7 +48,7 @@
       "titleAr": "تقييم فصلي تكويني الفصل الأول النموذجي (1) في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t1/1ap-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 141656,
+      "fileSize": 142056,
       "solutionFileSize": 138458
     },
     {
@@ -80,7 +80,7 @@
       "titleAr": "تقويم تشخيصي وتكويني (1) لـالفصل الثاني في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 136737,
+      "fileSize": 137283,
       "solutionFileSize": 135457
     },
     {
@@ -96,7 +96,7 @@
       "titleAr": "تقويم تشخيصي وتكويني (2) لـالفصل الثاني في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 138183,
+      "fileSize": 138806,
       "solutionFileSize": 137269
     },
     {
@@ -112,7 +112,7 @@
       "titleAr": "تقييم فصلي تكويني الفصل الثاني النموذجي (1) في اللغة العربية — السنة الأولى ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1ap/t2/1ap-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 144005,
+      "fileSize": 144655,
       "solutionFileSize": 142302
     },
     {
@@ -208,7 +208,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الأول في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 140454,
+      "fileSize": 140780,
       "solutionFileSize": 137110
     },
     {
@@ -224,7 +224,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الأول في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 142188,
+      "fileSize": 142537,
       "solutionFileSize": 139227
     },
     {
@@ -240,7 +240,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t1/2ap-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 146411,
+      "fileSize": 146764,
       "solutionFileSize": 146495
     },
     {
@@ -272,7 +272,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الثاني في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 139252,
+      "fileSize": 139531,
       "solutionFileSize": 134642
     },
     {
@@ -288,7 +288,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الثاني في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 138367,
+      "fileSize": 138610,
       "solutionFileSize": 133419
     },
     {
@@ -320,7 +320,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية — السنة الثانية ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2ap/t2/2ap-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 143293,
+      "fileSize": 143549,
       "solutionFileSize": 142346
     },
     {
@@ -400,7 +400,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الأول في اللغة العربية — السنة الثالثة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/3ap/t1/3ap-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3ap/t1/3ap-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 143918,
+      "fileSize": 144815,
       "solutionFileSize": 148651
     },
     {
@@ -416,7 +416,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الأول في اللغة العربية — السنة الثالثة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/3ap/t1/3ap-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3ap/t1/3ap-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 143057,
+      "fileSize": 143786,
       "solutionFileSize": 147537
     },
     {
@@ -432,7 +432,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية — السنة الثالثة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/3ap/t1/3ap-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3ap/t1/3ap-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 141078,
+      "fileSize": 141343,
       "solutionFileSize": 143068
     },
     {
@@ -448,7 +448,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية — السنة الثالثة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/3ap/t1/3ap-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3ap/t1/3ap-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 141059,
+      "fileSize": 141565,
       "solutionFileSize": 144148
     },
     {
@@ -464,7 +464,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الثاني في اللغة العربية — السنة الثالثة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/3ap/t2/3ap-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3ap/t2/3ap-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 138956,
+      "fileSize": 139305,
       "solutionFileSize": 138515
     },
     {
@@ -480,7 +480,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الثاني في اللغة العربية — السنة الثالثة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/3ap/t2/3ap-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3ap/t2/3ap-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 139338,
+      "fileSize": 139693,
       "solutionFileSize": 139569
     },
     {
@@ -496,7 +496,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية — السنة الثالثة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/3ap/t2/3ap-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3ap/t2/3ap-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 138979,
+      "fileSize": 139230,
       "solutionFileSize": 139243
     },
     {
@@ -528,7 +528,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الثالث في اللغة العربية — السنة الثالثة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/3ap/t3/3ap-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3ap/t3/3ap-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 150017,
+      "fileSize": 151646,
       "solutionFileSize": 151163
     },
     {
@@ -544,7 +544,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الثالث في اللغة العربية — السنة الثالثة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/3ap/t3/3ap-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3ap/t3/3ap-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 148860,
+      "fileSize": 150353,
       "solutionFileSize": 149504
     },
     {
@@ -560,7 +560,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية — السنة الثالثة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/3ap/t3/3ap-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3ap/t3/3ap-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 140537,
+      "fileSize": 140970,
       "solutionFileSize": 141973
     },
     {
@@ -576,7 +576,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية — السنة الثالثة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/3ap/t3/3ap-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3ap/t3/3ap-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 146981,
+      "fileSize": 148119,
       "solutionFileSize": 146161
     },
     {
@@ -592,7 +592,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الأول في اللغة العربية — السنة الرابعة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/4ap/t1/4ap-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4ap/t1/4ap-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 141475,
+      "fileSize": 142376,
       "solutionFileSize": 147377
     },
     {
@@ -608,7 +608,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الأول في اللغة العربية — السنة الرابعة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/4ap/t1/4ap-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4ap/t1/4ap-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 142695,
+      "fileSize": 143602,
       "solutionFileSize": 147996
     },
     {
@@ -624,7 +624,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية — السنة الرابعة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/4ap/t1/4ap-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4ap/t1/4ap-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 141438,
+      "fileSize": 141838,
       "solutionFileSize": 146140
     },
     {
@@ -640,7 +640,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية — السنة الرابعة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/4ap/t1/4ap-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4ap/t1/4ap-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 139405,
+      "fileSize": 139910,
       "solutionFileSize": 141581
     },
     {
@@ -656,7 +656,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الثاني في اللغة العربية — السنة الرابعة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/4ap/t2/4ap-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4ap/t2/4ap-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 143237,
+      "fileSize": 144198,
       "solutionFileSize": 149067
     },
     {
@@ -672,7 +672,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الثاني في اللغة العربية — السنة الرابعة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/4ap/t2/4ap-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4ap/t2/4ap-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 142461,
+      "fileSize": 143342,
       "solutionFileSize": 148483
     },
     {
@@ -688,7 +688,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية — السنة الرابعة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/4ap/t2/4ap-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4ap/t2/4ap-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 143221,
+      "fileSize": 143605,
       "solutionFileSize": 148576
     },
     {
@@ -704,7 +704,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية — السنة الرابعة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/4ap/t2/4ap-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4ap/t2/4ap-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 140701,
+      "fileSize": 141229,
       "solutionFileSize": 144228
     },
     {
@@ -720,7 +720,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الثالث في اللغة العربية — السنة الرابعة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/4ap/t3/4ap-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4ap/t3/4ap-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 150459,
+      "fileSize": 152055,
       "solutionFileSize": 155001
     },
     {
@@ -736,7 +736,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الثالث في اللغة العربية — السنة الرابعة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/4ap/t3/4ap-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4ap/t3/4ap-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 150266,
+      "fileSize": 151766,
       "solutionFileSize": 155092
     },
     {
@@ -752,7 +752,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية — السنة الرابعة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/4ap/t3/4ap-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4ap/t3/4ap-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 141918,
+      "fileSize": 142268,
       "solutionFileSize": 148597
     },
     {
@@ -768,7 +768,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية — السنة الرابعة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/4ap/t3/4ap-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4ap/t3/4ap-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 144027,
+      "fileSize": 145114,
       "solutionFileSize": 149689
     },
     {
@@ -784,7 +784,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الأول في اللغة العربية — السنة الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t1/5ap-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t1/5ap-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 137132,
+      "fileSize": 137947,
       "solutionFileSize": 143918
     },
     {
@@ -800,7 +800,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الأول في اللغة العربية — السنة الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t1/5ap-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t1/5ap-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 138055,
+      "fileSize": 138843,
       "solutionFileSize": 144381
     },
     {
@@ -816,7 +816,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية — السنة الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t1/5ap-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t1/5ap-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 136141,
+      "fileSize": 136482,
       "solutionFileSize": 140785
     },
     {
@@ -832,7 +832,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية — السنة الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t1/5ap-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t1/5ap-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 135103,
+      "fileSize": 135409,
       "solutionFileSize": 140426
     },
     {
@@ -848,7 +848,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الثاني في اللغة العربية — السنة الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t2/5ap-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t2/5ap-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 135479,
+      "fileSize": 136295,
       "solutionFileSize": 141557
     },
     {
@@ -864,7 +864,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الثاني في اللغة العربية — السنة الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t2/5ap-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t2/5ap-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 135084,
+      "fileSize": 136063,
       "solutionFileSize": 141586
     },
     {
@@ -880,7 +880,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية — السنة الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t2/5ap-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t2/5ap-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 132475,
+      "fileSize": 132832,
       "solutionFileSize": 137568
     },
     {
@@ -896,7 +896,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية — السنة الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t2/5ap-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t2/5ap-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 133139,
+      "fileSize": 133492,
       "solutionFileSize": 137808
     },
     {
@@ -912,7 +912,7 @@
       "titleAr": "تقويم مرحلي (1) لـالفصل الثالث في اللغة العربية — السنة الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t3/5ap-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t3/5ap-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 137984,
+      "fileSize": 138539,
       "solutionFileSize": 143601
     },
     {
@@ -928,7 +928,7 @@
       "titleAr": "تقويم مرحلي (2) لـالفصل الثالث في اللغة العربية — السنة الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t3/5ap-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t3/5ap-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 138482,
+      "fileSize": 139010,
       "solutionFileSize": 144381
     },
     {
@@ -944,7 +944,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية — السنة الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t3/5ap-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t3/5ap-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 169282,
+      "fileSize": 170213,
       "solutionFileSize": 175065
     },
     {
@@ -960,7 +960,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية — السنة الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t3/5ap-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t3/5ap-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 133984,
+      "fileSize": 134061,
       "solutionFileSize": 138279
     },
     {
@@ -976,7 +976,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية — السنة الأولى متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/1am/t1/1am-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1am/t1/1am-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 132434,
+      "fileSize": 132721,
       "solutionFileSize": 135362
     },
     {
@@ -992,7 +992,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية — السنة الأولى متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/1am/t1/1am-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1am/t1/1am-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 137894,
+      "fileSize": 138170,
       "solutionFileSize": 139124
     },
     {
@@ -1008,7 +1008,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية — السنة الأولى متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/1am/t1/1am-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1am/t1/1am-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 137585,
+      "fileSize": 137830,
       "solutionFileSize": 140987
     },
     {
@@ -1024,7 +1024,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية — السنة الأولى متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/1am/t1/1am-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1am/t1/1am-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 137925,
+      "fileSize": 138222,
       "solutionFileSize": 142105
     },
     {
@@ -1040,7 +1040,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية — السنة الأولى متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/1am/t2/1am-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1am/t2/1am-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 130811,
+      "fileSize": 131189,
       "solutionFileSize": 134993
     },
     {
@@ -1056,7 +1056,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية — السنة الأولى متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/1am/t2/1am-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1am/t2/1am-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 135810,
+      "fileSize": 136048,
       "solutionFileSize": 138983
     },
     {
@@ -1072,7 +1072,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية — السنة الأولى متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/1am/t2/1am-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1am/t2/1am-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 133150,
+      "fileSize": 133421,
       "solutionFileSize": 138801
     },
     {
@@ -1088,7 +1088,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية — السنة الأولى متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/1am/t2/1am-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1am/t2/1am-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 134583,
+      "fileSize": 134983,
       "solutionFileSize": 141277
     },
     {
@@ -1104,7 +1104,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية — السنة الأولى متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/1am/t3/1am-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1am/t3/1am-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 132517,
+      "fileSize": 132789,
       "solutionFileSize": 136607
     },
     {
@@ -1120,7 +1120,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية — السنة الأولى متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/1am/t3/1am-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1am/t3/1am-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 130629,
+      "fileSize": 131038,
       "solutionFileSize": 135288
     },
     {
@@ -1136,7 +1136,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية — السنة الأولى متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/1am/t3/1am-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1am/t3/1am-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 135313,
+      "fileSize": 135737,
       "solutionFileSize": 141929
     },
     {
@@ -1152,7 +1152,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية — السنة الأولى متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/1am/t3/1am-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1am/t3/1am-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 136049,
+      "fileSize": 136349,
       "solutionFileSize": 142734
     },
     {
@@ -1168,7 +1168,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية — السنة الثانية متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/2am/t1/2am-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2am/t1/2am-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 135787,
+      "fileSize": 136081,
       "solutionFileSize": 139659
     },
     {
@@ -1184,7 +1184,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية — السنة الثانية متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/2am/t1/2am-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2am/t1/2am-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 135777,
+      "fileSize": 136139,
       "solutionFileSize": 139138
     },
     {
@@ -1200,7 +1200,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية — السنة الثانية متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/2am/t1/2am-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2am/t1/2am-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 138984,
+      "fileSize": 139373,
       "solutionFileSize": 143754
     },
     {
@@ -1216,7 +1216,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية — السنة الثانية متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/2am/t1/2am-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2am/t1/2am-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 140891,
+      "fileSize": 141231,
       "solutionFileSize": 147046
     },
     {
@@ -1232,7 +1232,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية — السنة الثانية متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/2am/t2/2am-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2am/t2/2am-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 130525,
+      "fileSize": 130806,
       "solutionFileSize": 133632
     },
     {
@@ -1248,7 +1248,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية — السنة الثانية متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/2am/t2/2am-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2am/t2/2am-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 136442,
+      "fileSize": 136687,
       "solutionFileSize": 140373
     },
     {
@@ -1264,7 +1264,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية — السنة الثانية متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/2am/t2/2am-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2am/t2/2am-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 133492,
+      "fileSize": 133752,
       "solutionFileSize": 139844
     },
     {
@@ -1280,7 +1280,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية — السنة الثانية متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/2am/t2/2am-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2am/t2/2am-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 135349,
+      "fileSize": 135584,
       "solutionFileSize": 141413
     },
     {
@@ -1296,7 +1296,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية — السنة الثانية متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/2am/t3/2am-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2am/t3/2am-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 130901,
+      "fileSize": 131199,
       "solutionFileSize": 135726
     },
     {
@@ -1312,7 +1312,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية — السنة الثانية متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/2am/t3/2am-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2am/t3/2am-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 137594,
+      "fileSize": 137828,
       "solutionFileSize": 141159
     },
     {
@@ -1328,7 +1328,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية — السنة الثانية متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/2am/t3/2am-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2am/t3/2am-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 135738,
+      "fileSize": 136025,
       "solutionFileSize": 142130
     },
     {
@@ -1344,7 +1344,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية — السنة الثانية متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/2am/t3/2am-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2am/t3/2am-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 136552,
+      "fileSize": 136830,
       "solutionFileSize": 144271
     },
     {
@@ -1360,7 +1360,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية — السنة الثالثة متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/3am/t1/3am-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3am/t1/3am-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 137208,
+      "fileSize": 137830,
       "solutionFileSize": 144400
     },
     {
@@ -1376,7 +1376,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية — السنة الثالثة متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/3am/t1/3am-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3am/t1/3am-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 138879,
+      "fileSize": 139446,
       "solutionFileSize": 146638
     },
     {
@@ -1392,7 +1392,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية — السنة الثالثة متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/3am/t1/3am-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3am/t1/3am-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 147603,
+      "fileSize": 148172,
       "solutionFileSize": 152452
     },
     {
@@ -1408,7 +1408,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية — السنة الثالثة متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/3am/t1/3am-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3am/t1/3am-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 147446,
+      "fileSize": 148130,
       "solutionFileSize": 151885
     },
     {
@@ -1424,7 +1424,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية — السنة الثالثة متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/3am/t2/3am-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3am/t2/3am-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 136659,
+      "fileSize": 137227,
       "solutionFileSize": 143394
     },
     {
@@ -1440,7 +1440,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية — السنة الثالثة متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/3am/t2/3am-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3am/t2/3am-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 137629,
+      "fileSize": 138231,
       "solutionFileSize": 145357
     },
     {
@@ -1456,7 +1456,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية — السنة الثالثة متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/3am/t2/3am-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3am/t2/3am-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 144556,
+      "fileSize": 145245,
       "solutionFileSize": 153909
     },
     {
@@ -1472,7 +1472,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية — السنة الثالثة متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/3am/t2/3am-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3am/t2/3am-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 142335,
+      "fileSize": 143060,
       "solutionFileSize": 149886
     },
     {
@@ -1488,7 +1488,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية — السنة الثالثة متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/3am/t3/3am-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3am/t3/3am-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 139736,
+      "fileSize": 140297,
       "solutionFileSize": 146623
     },
     {
@@ -1504,7 +1504,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية — السنة الثالثة متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/3am/t3/3am-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3am/t3/3am-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 137425,
+      "fileSize": 137993,
       "solutionFileSize": 143592
     },
     {
@@ -1520,7 +1520,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية — السنة الثالثة متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/3am/t3/3am-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3am/t3/3am-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 148331,
+      "fileSize": 148965,
       "solutionFileSize": 152169
     },
     {
@@ -1536,7 +1536,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية — السنة الثالثة متوسط",
       "pdfUrl": "/documents/generated_samples_arabic/3am/t3/3am-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3am/t3/3am-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 146002,
+      "fileSize": 146626,
       "solutionFileSize": 151499
     },
     {
@@ -1552,7 +1552,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية — السنة الرابعة متوسط (BEM)",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t1/4am-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t1/4am-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 141643,
+      "fileSize": 142229,
       "solutionFileSize": 147832
     },
     {
@@ -1568,7 +1568,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية — السنة الرابعة متوسط (BEM)",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t1/4am-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t1/4am-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 137935,
+      "fileSize": 138207,
       "solutionFileSize": 143940
     },
     {
@@ -1584,7 +1584,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية — السنة الرابعة متوسط (BEM)",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t1/4am-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t1/4am-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 143813,
+      "fileSize": 144146,
       "solutionFileSize": 149898
     },
     {
@@ -1600,7 +1600,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية — السنة الرابعة متوسط (BEM)",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t1/4am-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t1/4am-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 149423,
+      "fileSize": 150152,
       "solutionFileSize": 155422
     },
     {
@@ -1616,7 +1616,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية — السنة الرابعة متوسط (BEM)",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t2/4am-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t2/4am-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 141299,
+      "fileSize": 141889,
       "solutionFileSize": 147992
     },
     {
@@ -1632,7 +1632,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية — السنة الرابعة متوسط (BEM)",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t2/4am-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t2/4am-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 141685,
+      "fileSize": 142294,
       "solutionFileSize": 149481
     },
     {
@@ -1648,7 +1648,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية — السنة الرابعة متوسط (BEM)",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t2/4am-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t2/4am-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 145369,
+      "fileSize": 145965,
       "solutionFileSize": 155806
     },
     {
@@ -1664,7 +1664,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية — السنة الرابعة متوسط (BEM)",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t2/4am-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t2/4am-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 149857,
+      "fileSize": 150453,
       "solutionFileSize": 156262
     },
     {
@@ -1680,7 +1680,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية — السنة الرابعة متوسط (BEM)",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 141972,
+      "fileSize": 142574,
       "solutionFileSize": 147540
     },
     {
@@ -1696,7 +1696,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية — السنة الرابعة متوسط (BEM)",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 141322,
+      "fileSize": 141955,
       "solutionFileSize": 147705
     },
     {
@@ -1712,7 +1712,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية — السنة الرابعة متوسط (BEM)",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 148283,
+      "fileSize": 148962,
       "solutionFileSize": 154723
     },
     {
@@ -1728,7 +1728,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية — السنة الرابعة متوسط (BEM)",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 152174,
+      "fileSize": 152877,
       "solutionFileSize": 156642
     },
     {
@@ -1744,7 +1744,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcst/t1/1as_tcst-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcst/t1/1as_tcst-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 135221,
+      "fileSize": 135865,
       "solutionFileSize": 141943
     },
     {
@@ -1760,7 +1760,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcst/t1/1as_tcst-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcst/t1/1as_tcst-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 144063,
+      "fileSize": 144384,
       "solutionFileSize": 151956
     },
     {
@@ -1776,7 +1776,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcst/t1/1as_tcst-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcst/t1/1as_tcst-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 143674,
+      "fileSize": 143982,
       "solutionFileSize": 150151
     },
     {
@@ -1792,7 +1792,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcst/t1/1as_tcst-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcst/t1/1as_tcst-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 134762,
+      "fileSize": 135375,
       "solutionFileSize": 140223
     },
     {
@@ -1808,7 +1808,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcst/t2/1as_tcst-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcst/t2/1as_tcst-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 134341,
+      "fileSize": 134944,
       "solutionFileSize": 139922
     },
     {
@@ -1824,7 +1824,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcst/t2/1as_tcst-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcst/t2/1as_tcst-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 146394,
+      "fileSize": 146693,
       "solutionFileSize": 153020
     },
     {
@@ -1840,7 +1840,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcst/t2/1as_tcst-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcst/t2/1as_tcst-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 143859,
+      "fileSize": 144261,
       "solutionFileSize": 148178
     },
     {
@@ -1856,7 +1856,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcst/t2/1as_tcst-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcst/t2/1as_tcst-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 134072,
+      "fileSize": 134673,
       "solutionFileSize": 139659
     },
     {
@@ -1872,7 +1872,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcst/t3/1as_tcst-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcst/t3/1as_tcst-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 131160,
+      "fileSize": 131630,
       "solutionFileSize": 136577
     },
     {
@@ -1888,7 +1888,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcst/t3/1as_tcst-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcst/t3/1as_tcst-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 148700,
+      "fileSize": 149005,
       "solutionFileSize": 156333
     },
     {
@@ -1904,7 +1904,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcst/t3/1as_tcst-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcst/t3/1as_tcst-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 144226,
+      "fileSize": 144522,
       "solutionFileSize": 151543
     },
     {
@@ -1920,7 +1920,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcst/t3/1as_tcst-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcst/t3/1as_tcst-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 131807,
+      "fileSize": 132272,
       "solutionFileSize": 136468
     },
     {
@@ -1936,7 +1936,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك آداب",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcl/t1/1as_tcl-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcl/t1/1as_tcl-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 146153,
+      "fileSize": 146553,
       "solutionFileSize": 156113
     },
     {
@@ -1952,7 +1952,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك آداب",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcl/t1/1as_tcl-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcl/t1/1as_tcl-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 141568,
+      "fileSize": 142054,
       "solutionFileSize": 148658
     },
     {
@@ -1968,7 +1968,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك آداب",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcl/t1/1as_tcl-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcl/t1/1as_tcl-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 149341,
+      "fileSize": 149859,
       "solutionFileSize": 161889
     },
     {
@@ -1984,7 +1984,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك آداب",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcl/t1/1as_tcl-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcl/t1/1as_tcl-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 144627,
+      "fileSize": 145063,
       "solutionFileSize": 156222
     },
     {
@@ -2000,7 +2000,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك آداب",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcl/t2/1as_tcl-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcl/t2/1as_tcl-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 137898,
+      "fileSize": 138323,
       "solutionFileSize": 145356
     },
     {
@@ -2016,7 +2016,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك آداب",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcl/t2/1as_tcl-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcl/t2/1as_tcl-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 142050,
+      "fileSize": 142529,
       "solutionFileSize": 149083
     },
     {
@@ -2032,7 +2032,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك آداب",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcl/t2/1as_tcl-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcl/t2/1as_tcl-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 140170,
+      "fileSize": 140654,
       "solutionFileSize": 148373
     },
     {
@@ -2048,7 +2048,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك آداب",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcl/t2/1as_tcl-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcl/t2/1as_tcl-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 147119,
+      "fileSize": 147533,
       "solutionFileSize": 158991
     },
     {
@@ -2064,7 +2064,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك آداب",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcl/t3/1as_tcl-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcl/t3/1as_tcl-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 147346,
+      "fileSize": 147759,
       "solutionFileSize": 156616
     },
     {
@@ -2080,7 +2080,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك آداب",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcl/t3/1as_tcl-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcl/t3/1as_tcl-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 131438,
+      "fileSize": 131759,
       "solutionFileSize": 136572
     },
     {
@@ -2096,7 +2096,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك آداب",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcl/t3/1as_tcl-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcl/t3/1as_tcl-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 151400,
+      "fileSize": 151721,
       "solutionFileSize": 163311
     },
     {
@@ -2112,7 +2112,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الأولى ثانوي — جذع مشترك آداب",
       "pdfUrl": "/documents/generated_samples_arabic/1as_tcl/t3/1as_tcl-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/1as_tcl/t3/1as_tcl-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 134803,
+      "fileSize": 135241,
       "solutionFileSize": 144296
     },
     {
@@ -2128,7 +2128,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الثانية ثانوي — علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_se/t1/2as_se-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_se/t1/2as_se-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 137603,
+      "fileSize": 138089,
       "solutionFileSize": 145063
     },
     {
@@ -2144,7 +2144,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الثانية ثانوي — علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_se/t1/2as_se-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_se/t1/2as_se-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 148768,
+      "fileSize": 149074,
       "solutionFileSize": 159123
     },
     {
@@ -2160,7 +2160,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_se/t1/2as_se-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_se/t1/2as_se-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 148911,
+      "fileSize": 149214,
       "solutionFileSize": 158793
     },
     {
@@ -2176,7 +2176,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_se/t1/2as_se-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_se/t1/2as_se-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 136690,
+      "fileSize": 137151,
       "solutionFileSize": 143947
     },
     {
@@ -2192,7 +2192,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثانية ثانوي — علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_se/t2/2as_se-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_se/t2/2as_se-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 137868,
+      "fileSize": 138376,
       "solutionFileSize": 145344
     },
     {
@@ -2208,7 +2208,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثانية ثانوي — علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_se/t2/2as_se-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_se/t2/2as_se-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 142363,
+      "fileSize": 142670,
       "solutionFileSize": 151391
     },
     {
@@ -2224,7 +2224,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_se/t2/2as_se-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_se/t2/2as_se-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 141953,
+      "fileSize": 142267,
       "solutionFileSize": 151119
     },
     {
@@ -2240,7 +2240,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_se/t2/2as_se-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_se/t2/2as_se-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 137825,
+      "fileSize": 138343,
       "solutionFileSize": 145061
     },
     {
@@ -2256,7 +2256,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثانية ثانوي — علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_se/t3/2as_se-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_se/t3/2as_se-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 139052,
+      "fileSize": 139557,
       "solutionFileSize": 147681
     },
     {
@@ -2272,7 +2272,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثانية ثانوي — علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_se/t3/2as_se-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_se/t3/2as_se-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 146855,
+      "fileSize": 147147,
       "solutionFileSize": 157527
     },
     {
@@ -2288,7 +2288,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_se/t3/2as_se-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_se/t3/2as_se-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 148862,
+      "fileSize": 149169,
       "solutionFileSize": 160713
     },
     {
@@ -2304,7 +2304,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_se/t3/2as_se-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_se/t3/2as_se-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 139206,
+      "fileSize": 139720,
       "solutionFileSize": 147311
     },
     {
@@ -2320,7 +2320,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الثانية ثانوي — تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/2as_tm/t1/2as_tm-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_tm/t1/2as_tm-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 137584,
+      "fileSize": 138063,
       "solutionFileSize": 145055
     },
     {
@@ -2336,7 +2336,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الثانية ثانوي — تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/2as_tm/t1/2as_tm-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_tm/t1/2as_tm-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 148749,
+      "fileSize": 149059,
       "solutionFileSize": 159108
     },
     {
@@ -2352,7 +2352,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/2as_tm/t1/2as_tm-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_tm/t1/2as_tm-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 148878,
+      "fileSize": 149182,
       "solutionFileSize": 158756
     },
     {
@@ -2368,7 +2368,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/2as_tm/t1/2as_tm-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_tm/t1/2as_tm-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 136647,
+      "fileSize": 137110,
       "solutionFileSize": 143922
     },
     {
@@ -2384,7 +2384,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثانية ثانوي — تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/2as_tm/t2/2as_tm-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_tm/t2/2as_tm-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 137848,
+      "fileSize": 138354,
       "solutionFileSize": 145341
     },
     {
@@ -2400,7 +2400,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثانية ثانوي — تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/2as_tm/t2/2as_tm-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_tm/t2/2as_tm-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 142290,
+      "fileSize": 142602,
       "solutionFileSize": 151311
     },
     {
@@ -2416,7 +2416,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/2as_tm/t2/2as_tm-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_tm/t2/2as_tm-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 141865,
+      "fileSize": 142182,
       "solutionFileSize": 151015
     },
     {
@@ -2432,7 +2432,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/2as_tm/t2/2as_tm-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_tm/t2/2as_tm-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 137786,
+      "fileSize": 138304,
       "solutionFileSize": 145040
     },
     {
@@ -2448,7 +2448,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثانية ثانوي — تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/2as_tm/t3/2as_tm-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_tm/t3/2as_tm-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 139064,
+      "fileSize": 139578,
       "solutionFileSize": 147692
     },
     {
@@ -2464,7 +2464,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثانية ثانوي — تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/2as_tm/t3/2as_tm-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_tm/t3/2as_tm-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 146839,
+      "fileSize": 147130,
       "solutionFileSize": 157510
     },
     {
@@ -2480,7 +2480,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/2as_tm/t3/2as_tm-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_tm/t3/2as_tm-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 148835,
+      "fileSize": 149143,
       "solutionFileSize": 160690
     },
     {
@@ -2496,7 +2496,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/2as_tm/t3/2as_tm-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_tm/t3/2as_tm-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 139190,
+      "fileSize": 139703,
       "solutionFileSize": 147292
     },
     {
@@ -2512,7 +2512,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الثانية ثانوي — رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/2as_math/t1/2as_math-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_math/t1/2as_math-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 137599,
+      "fileSize": 138084,
       "solutionFileSize": 145057
     },
     {
@@ -2528,7 +2528,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الثانية ثانوي — رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/2as_math/t1/2as_math-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_math/t1/2as_math-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 148765,
+      "fileSize": 149067,
       "solutionFileSize": 159114
     },
     {
@@ -2544,7 +2544,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/2as_math/t1/2as_math-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_math/t1/2as_math-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 148913,
+      "fileSize": 149214,
       "solutionFileSize": 158780
     },
     {
@@ -2560,7 +2560,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/2as_math/t1/2as_math-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_math/t1/2as_math-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 136677,
+      "fileSize": 137143,
       "solutionFileSize": 143956
     },
     {
@@ -2576,7 +2576,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثانية ثانوي — رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/2as_math/t2/2as_math-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_math/t2/2as_math-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 137865,
+      "fileSize": 138371,
       "solutionFileSize": 145367
     },
     {
@@ -2592,7 +2592,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثانية ثانوي — رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/2as_math/t2/2as_math-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_math/t2/2as_math-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 142294,
+      "fileSize": 142603,
       "solutionFileSize": 151322
     },
     {
@@ -2608,7 +2608,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/2as_math/t2/2as_math-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_math/t2/2as_math-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 141865,
+      "fileSize": 142181,
       "solutionFileSize": 151033
     },
     {
@@ -2624,7 +2624,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/2as_math/t2/2as_math-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_math/t2/2as_math-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 137807,
+      "fileSize": 138330,
       "solutionFileSize": 145071
     },
     {
@@ -2640,7 +2640,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثانية ثانوي — رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/2as_math/t3/2as_math-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_math/t3/2as_math-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 139055,
+      "fileSize": 139567,
       "solutionFileSize": 147687
     },
     {
@@ -2656,7 +2656,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثانية ثانوي — رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/2as_math/t3/2as_math-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_math/t3/2as_math-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 146849,
+      "fileSize": 147144,
       "solutionFileSize": 157525
     },
     {
@@ -2672,7 +2672,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/2as_math/t3/2as_math-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_math/t3/2as_math-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 148855,
+      "fileSize": 149163,
       "solutionFileSize": 160698
     },
     {
@@ -2688,7 +2688,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/2as_math/t3/2as_math-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_math/t3/2as_math-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 139205,
+      "fileSize": 139707,
       "solutionFileSize": 147290
     },
     {
@@ -2704,7 +2704,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الثانية ثانوي — تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/2as_ge/t1/2as_ge-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_ge/t1/2as_ge-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 137592,
+      "fileSize": 138075,
       "solutionFileSize": 145050
     },
     {
@@ -2720,7 +2720,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الثانية ثانوي — تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/2as_ge/t1/2as_ge-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_ge/t1/2as_ge-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 148764,
+      "fileSize": 149071,
       "solutionFileSize": 159115
     },
     {
@@ -2736,7 +2736,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/2as_ge/t1/2as_ge-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_ge/t1/2as_ge-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 148884,
+      "fileSize": 149190,
       "solutionFileSize": 158764
     },
     {
@@ -2752,7 +2752,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/2as_ge/t1/2as_ge-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_ge/t1/2as_ge-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 136651,
+      "fileSize": 137113,
       "solutionFileSize": 143926
     },
     {
@@ -2768,7 +2768,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثانية ثانوي — تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/2as_ge/t2/2as_ge-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_ge/t2/2as_ge-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 137851,
+      "fileSize": 138358,
       "solutionFileSize": 145350
     },
     {
@@ -2784,7 +2784,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثانية ثانوي — تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/2as_ge/t2/2as_ge-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_ge/t2/2as_ge-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 142350,
+      "fileSize": 142660,
       "solutionFileSize": 151385
     },
     {
@@ -2800,7 +2800,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/2as_ge/t2/2as_ge-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_ge/t2/2as_ge-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 141928,
+      "fileSize": 142242,
       "solutionFileSize": 151097
     },
     {
@@ -2816,7 +2816,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/2as_ge/t2/2as_ge-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_ge/t2/2as_ge-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 137777,
+      "fileSize": 138297,
       "solutionFileSize": 145051
     },
     {
@@ -2832,7 +2832,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثانية ثانوي — تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/2as_ge/t3/2as_ge-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_ge/t3/2as_ge-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 139054,
+      "fileSize": 139560,
       "solutionFileSize": 147693
     },
     {
@@ -2848,7 +2848,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثانية ثانوي — تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/2as_ge/t3/2as_ge-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_ge/t3/2as_ge-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 146841,
+      "fileSize": 147136,
       "solutionFileSize": 157499
     },
     {
@@ -2864,7 +2864,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/2as_ge/t3/2as_ge-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_ge/t3/2as_ge-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 148824,
+      "fileSize": 149130,
       "solutionFileSize": 160678
     },
     {
@@ -2880,7 +2880,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/2as_ge/t3/2as_ge-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_ge/t3/2as_ge-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 139176,
+      "fileSize": 139688,
       "solutionFileSize": 147292
     },
     {
@@ -2896,7 +2896,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الثانية ثانوي — آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/2as_lp/t1/2as_lp-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_lp/t1/2as_lp-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 144713,
+      "fileSize": 145144,
       "solutionFileSize": 153314
     },
     {
@@ -2912,7 +2912,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الثانية ثانوي — آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/2as_lp/t1/2as_lp-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_lp/t1/2as_lp-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 128673,
+      "fileSize": 129102,
       "solutionFileSize": 132967
     },
     {
@@ -2928,7 +2928,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/2as_lp/t1/2as_lp-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_lp/t1/2as_lp-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 150799,
+      "fileSize": 151238,
       "solutionFileSize": 162349
     },
     {
@@ -2944,7 +2944,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/2as_lp/t1/2as_lp-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_lp/t1/2as_lp-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 133280,
+      "fileSize": 133777,
       "solutionFileSize": 139588
     },
     {
@@ -2960,7 +2960,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثانية ثانوي — آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/2as_lp/t2/2as_lp-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_lp/t2/2as_lp-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 143276,
+      "fileSize": 143707,
       "solutionFileSize": 151943
     },
     {
@@ -2976,7 +2976,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثانية ثانوي — آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/2as_lp/t2/2as_lp-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_lp/t2/2as_lp-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 129079,
+      "fileSize": 129511,
       "solutionFileSize": 135362
     },
     {
@@ -2992,7 +2992,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/2as_lp/t2/2as_lp-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_lp/t2/2as_lp-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 149114,
+      "fileSize": 149536,
       "solutionFileSize": 160481
     },
     {
@@ -3008,7 +3008,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/2as_lp/t2/2as_lp-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_lp/t2/2as_lp-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 149049,
+      "fileSize": 149466,
       "solutionFileSize": 161094
     },
     {
@@ -3024,7 +3024,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثانية ثانوي — آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/2as_lp/t3/2as_lp-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_lp/t3/2as_lp-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 143499,
+      "fileSize": 143922,
       "solutionFileSize": 153292
     },
     {
@@ -3040,7 +3040,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثانية ثانوي — آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/2as_lp/t3/2as_lp-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_lp/t3/2as_lp-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 128743,
+      "fileSize": 129179,
       "solutionFileSize": 135180
     },
     {
@@ -3056,7 +3056,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/2as_lp/t3/2as_lp-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_lp/t3/2as_lp-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 148370,
+      "fileSize": 148788,
       "solutionFileSize": 161771
     },
     {
@@ -3072,7 +3072,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/2as_lp/t3/2as_lp-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_lp/t3/2as_lp-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 149094,
+      "fileSize": 149519,
       "solutionFileSize": 162086
     },
     {
@@ -3088,7 +3088,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الثانية ثانوي — لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_le/t1/2as_le-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_le/t1/2as_le-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 144279,
+      "fileSize": 144693,
       "solutionFileSize": 153979
     },
     {
@@ -3104,7 +3104,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الثانية ثانوي — لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_le/t1/2as_le-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_le/t1/2as_le-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 130419,
+      "fileSize": 130866,
       "solutionFileSize": 135602
     },
     {
@@ -3120,7 +3120,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_le/t1/2as_le-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_le/t1/2as_le-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 150013,
+      "fileSize": 150437,
       "solutionFileSize": 162378
     },
     {
@@ -3136,7 +3136,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_le/t1/2as_le-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_le/t1/2as_le-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 134562,
+      "fileSize": 135068,
       "solutionFileSize": 141495
     },
     {
@@ -3152,7 +3152,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثانية ثانوي — لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_le/t2/2as_le-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_le/t2/2as_le-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 143451,
+      "fileSize": 144038,
       "solutionFileSize": 151448
     },
     {
@@ -3168,7 +3168,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثانية ثانوي — لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_le/t2/2as_le-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_le/t2/2as_le-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 130555,
+      "fileSize": 131177,
       "solutionFileSize": 135667
     },
     {
@@ -3184,7 +3184,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_le/t2/2as_le-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_le/t2/2as_le-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 149284,
+      "fileSize": 149883,
       "solutionFileSize": 160366
     },
     {
@@ -3200,7 +3200,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_le/t2/2as_le-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_le/t2/2as_le-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 149433,
+      "fileSize": 150034,
       "solutionFileSize": 160820
     },
     {
@@ -3216,7 +3216,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثانية ثانوي — لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_le/t3/2as_le-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_le/t3/2as_le-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 129666,
+      "fileSize": 130105,
       "solutionFileSize": 135974
     },
     {
@@ -3232,7 +3232,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثانية ثانوي — لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_le/t3/2as_le-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_le/t3/2as_le-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 142706,
+      "fileSize": 143115,
       "solutionFileSize": 153880
     },
     {
@@ -3248,7 +3248,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الثانية ثانوي — لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_le/t3/2as_le-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_le/t3/2as_le-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 133485,
+      "fileSize": 133972,
       "solutionFileSize": 141360
     },
     {
@@ -3264,7 +3264,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الثانية ثانوي — لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/2as_le/t3/2as_le-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/2as_le/t3/2as_le-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 133630,
+      "fileSize": 134112,
       "solutionFileSize": 140922
     },
     {
@@ -3280,7 +3280,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الثالثة ثانوي — علوم تجريبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t1/3as_se-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t1/3as_se-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 152611,
+      "fileSize": 153473,
       "solutionFileSize": 161985
     },
     {
@@ -3296,7 +3296,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الثالثة ثانوي — علوم تجريبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t1/3as_se-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t1/3as_se-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 145501,
+      "fileSize": 146163,
       "solutionFileSize": 153647
     },
     {
@@ -3312,7 +3312,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — علوم تجريبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t1/3as_se-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t1/3as_se-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 142888,
+      "fileSize": 143531,
       "solutionFileSize": 151615
     },
     {
@@ -3328,7 +3328,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — علوم تجريبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t1/3as_se-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t1/3as_se-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 153597,
+      "fileSize": 154265,
       "solutionFileSize": 163166
     },
     {
@@ -3344,7 +3344,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثالثة ثانوي — علوم تجريبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t2/3as_se-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t2/3as_se-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 139876,
+      "fileSize": 140493,
       "solutionFileSize": 149918
     },
     {
@@ -3360,7 +3360,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثالثة ثانوي — علوم تجريبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t2/3as_se-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t2/3as_se-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 146386,
+      "fileSize": 146892,
       "solutionFileSize": 154239
     },
     {
@@ -3376,7 +3376,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — علوم تجريبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t2/3as_se-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t2/3as_se-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 146976,
+      "fileSize": 147595,
       "solutionFileSize": 156107
     },
     {
@@ -3392,7 +3392,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — علوم تجريبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t2/3as_se-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t2/3as_se-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 139656,
+      "fileSize": 140300,
       "solutionFileSize": 149673
     },
     {
@@ -3408,7 +3408,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثالثة ثانوي — علوم تجريبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 148044,
+      "fileSize": 148699,
       "solutionFileSize": 156357
     },
     {
@@ -3424,7 +3424,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثالثة ثانوي — علوم تجريبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 145132,
+      "fileSize": 145908,
       "solutionFileSize": 153648
     },
     {
@@ -3440,7 +3440,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — علوم تجريبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 146479,
+      "fileSize": 147132,
       "solutionFileSize": 155428
     },
     {
@@ -3456,7 +3456,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — علوم تجريبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 148603,
+      "fileSize": 149507,
       "solutionFileSize": 156915
     },
     {
@@ -3472,7 +3472,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الثالثة ثانوي — تقني رياضي (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t1/3as_tm-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t1/3as_tm-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 152612,
+      "fileSize": 153474,
       "solutionFileSize": 161969
     },
     {
@@ -3488,7 +3488,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الثالثة ثانوي — تقني رياضي (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t1/3as_tm-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t1/3as_tm-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 145491,
+      "fileSize": 146157,
       "solutionFileSize": 153613
     },
     {
@@ -3504,7 +3504,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — تقني رياضي (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t1/3as_tm-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t1/3as_tm-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 142851,
+      "fileSize": 143498,
       "solutionFileSize": 151582
     },
     {
@@ -3520,7 +3520,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — تقني رياضي (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t1/3as_tm-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t1/3as_tm-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 153575,
+      "fileSize": 154241,
       "solutionFileSize": 163114
     },
     {
@@ -3536,7 +3536,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثالثة ثانوي — تقني رياضي (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t2/3as_tm-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t2/3as_tm-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 139866,
+      "fileSize": 140478,
       "solutionFileSize": 149899
     },
     {
@@ -3552,7 +3552,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثالثة ثانوي — تقني رياضي (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t2/3as_tm-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t2/3as_tm-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 146348,
+      "fileSize": 146853,
       "solutionFileSize": 154206
     },
     {
@@ -3568,7 +3568,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — تقني رياضي (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t2/3as_tm-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t2/3as_tm-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 146939,
+      "fileSize": 147553,
       "solutionFileSize": 156065
     },
     {
@@ -3584,7 +3584,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — تقني رياضي (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t2/3as_tm-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t2/3as_tm-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 139604,
+      "fileSize": 140250,
       "solutionFileSize": 149625
     },
     {
@@ -3600,7 +3600,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثالثة ثانوي — تقني رياضي (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 148014,
+      "fileSize": 148672,
       "solutionFileSize": 156333
     },
     {
@@ -3616,7 +3616,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثالثة ثانوي — تقني رياضي (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 145096,
+      "fileSize": 145874,
       "solutionFileSize": 153652
     },
     {
@@ -3632,7 +3632,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — تقني رياضي (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 146436,
+      "fileSize": 147086,
       "solutionFileSize": 155368
     },
     {
@@ -3648,7 +3648,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — تقني رياضي (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 148591,
+      "fileSize": 149483,
       "solutionFileSize": 156881
     },
     {
@@ -3664,7 +3664,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الثالثة ثانوي — رياضيات (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t1/3as_math-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t1/3as_math-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 152591,
+      "fileSize": 153457,
       "solutionFileSize": 161941
     },
     {
@@ -3680,7 +3680,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الثالثة ثانوي — رياضيات (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t1/3as_math-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t1/3as_math-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 145497,
+      "fileSize": 146165,
       "solutionFileSize": 153628
     },
     {
@@ -3696,7 +3696,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — رياضيات (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t1/3as_math-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t1/3as_math-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 142856,
+      "fileSize": 143497,
       "solutionFileSize": 151600
     },
     {
@@ -3712,7 +3712,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — رياضيات (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t1/3as_math-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t1/3as_math-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 153570,
+      "fileSize": 154236,
       "solutionFileSize": 163133
     },
     {
@@ -3728,7 +3728,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثالثة ثانوي — رياضيات (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t2/3as_math-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t2/3as_math-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 139853,
+      "fileSize": 140467,
       "solutionFileSize": 149900
     },
     {
@@ -3744,7 +3744,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثالثة ثانوي — رياضيات (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t2/3as_math-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t2/3as_math-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 146364,
+      "fileSize": 146866,
       "solutionFileSize": 154219
     },
     {
@@ -3760,7 +3760,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — رياضيات (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t2/3as_math-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t2/3as_math-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 146965,
+      "fileSize": 147583,
       "solutionFileSize": 156090
     },
     {
@@ -3776,7 +3776,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — رياضيات (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t2/3as_math-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t2/3as_math-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 139611,
+      "fileSize": 140255,
       "solutionFileSize": 149636
     },
     {
@@ -3792,7 +3792,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثالثة ثانوي — رياضيات (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 148018,
+      "fileSize": 148678,
       "solutionFileSize": 156345
     },
     {
@@ -3808,7 +3808,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثالثة ثانوي — رياضيات (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 145096,
+      "fileSize": 145872,
       "solutionFileSize": 153659
     },
     {
@@ -3824,7 +3824,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — رياضيات (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 146454,
+      "fileSize": 147098,
       "solutionFileSize": 155376
     },
     {
@@ -3840,7 +3840,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — رياضيات (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 148593,
+      "fileSize": 149484,
       "solutionFileSize": 156901
     },
     {
@@ -3856,7 +3856,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الثالثة ثانوي — تسيير واقتصاد (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t1/3as_ge-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t1/3as_ge-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 152619,
+      "fileSize": 153477,
       "solutionFileSize": 161970
     },
     {
@@ -3872,7 +3872,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الثالثة ثانوي — تسيير واقتصاد (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t1/3as_ge-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t1/3as_ge-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 145503,
+      "fileSize": 146168,
       "solutionFileSize": 153630
     },
     {
@@ -3888,7 +3888,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — تسيير واقتصاد (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t1/3as_ge-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t1/3as_ge-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 142863,
+      "fileSize": 143513,
       "solutionFileSize": 151595
     },
     {
@@ -3904,7 +3904,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — تسيير واقتصاد (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t1/3as_ge-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t1/3as_ge-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 153573,
+      "fileSize": 154243,
       "solutionFileSize": 163145
     },
     {
@@ -3920,7 +3920,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثالثة ثانوي — تسيير واقتصاد (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t2/3as_ge-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t2/3as_ge-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 139879,
+      "fileSize": 140491,
       "solutionFileSize": 149912
     },
     {
@@ -3936,7 +3936,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثالثة ثانوي — تسيير واقتصاد (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t2/3as_ge-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t2/3as_ge-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 146368,
+      "fileSize": 146877,
       "solutionFileSize": 154216
     },
     {
@@ -3952,7 +3952,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — تسيير واقتصاد (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t2/3as_ge-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t2/3as_ge-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 146958,
+      "fileSize": 147574,
       "solutionFileSize": 156097
     },
     {
@@ -3968,7 +3968,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — تسيير واقتصاد (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t2/3as_ge-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t2/3as_ge-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 139629,
+      "fileSize": 140271,
       "solutionFileSize": 149666
     },
     {
@@ -3984,7 +3984,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثالثة ثانوي — تسيير واقتصاد (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 148026,
+      "fileSize": 148683,
       "solutionFileSize": 156349
     },
     {
@@ -4000,7 +4000,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثالثة ثانوي — تسيير واقتصاد (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 145092,
+      "fileSize": 145866,
       "solutionFileSize": 153628
     },
     {
@@ -4016,7 +4016,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — تسيير واقتصاد (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 146452,
+      "fileSize": 147101,
       "solutionFileSize": 155390
     },
     {
@@ -4032,7 +4032,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — تسيير واقتصاد (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 148592,
+      "fileSize": 149490,
       "solutionFileSize": 156894
     },
     {
@@ -4048,7 +4048,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الثالثة ثانوي — آداب وفلسفة (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t1/3as_lp-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t1/3as_lp-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 143241,
+      "fileSize": 143796,
       "solutionFileSize": 153234
     },
     {
@@ -4064,7 +4064,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الثالثة ثانوي — آداب وفلسفة (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t1/3as_lp-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t1/3as_lp-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 142258,
+      "fileSize": 142871,
       "solutionFileSize": 151881
     },
     {
@@ -4080,7 +4080,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — آداب وفلسفة (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t1/3as_lp-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t1/3as_lp-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 146839,
+      "fileSize": 147395,
       "solutionFileSize": 161165
     },
     {
@@ -4096,7 +4096,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — آداب وفلسفة (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t1/3as_lp-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t1/3as_lp-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 147283,
+      "fileSize": 147857,
       "solutionFileSize": 161361
     },
     {
@@ -4112,7 +4112,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثالثة ثانوي — آداب وفلسفة (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t2/3as_lp-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t2/3as_lp-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 143676,
+      "fileSize": 144273,
       "solutionFileSize": 151649
     },
     {
@@ -4128,7 +4128,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثالثة ثانوي — آداب وفلسفة (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t2/3as_lp-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t2/3as_lp-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 144107,
+      "fileSize": 144722,
       "solutionFileSize": 151102
     },
     {
@@ -4144,7 +4144,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — آداب وفلسفة (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t2/3as_lp-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t2/3as_lp-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 146450,
+      "fileSize": 147024,
       "solutionFileSize": 157838
     },
     {
@@ -4160,7 +4160,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — آداب وفلسفة (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t2/3as_lp-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t2/3as_lp-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 146165,
+      "fileSize": 146753,
       "solutionFileSize": 159257
     },
     {
@@ -4176,7 +4176,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثالثة ثانوي — آداب وفلسفة (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 141156,
+      "fileSize": 141552,
       "solutionFileSize": 149601
     },
     {
@@ -4192,7 +4192,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثالثة ثانوي — آداب وفلسفة (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 142248,
+      "fileSize": 142686,
       "solutionFileSize": 150036
     },
     {
@@ -4208,7 +4208,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — آداب وفلسفة (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 146133,
+      "fileSize": 146573,
       "solutionFileSize": 160816
     },
     {
@@ -4224,7 +4224,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — آداب وفلسفة (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 147539,
+      "fileSize": 147955,
       "solutionFileSize": 161084
     },
     {
@@ -4240,7 +4240,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الأول في اللغة العربية وآدابها — السنة الثالثة ثانوي — لغات أجنبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t1/3as_le-arb-t1-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t1/3as_le-arb-t1-test-sample-1-sol.pdf",
-      "fileSize": 141536,
+      "fileSize": 141841,
       "solutionFileSize": 146622
     },
     {
@@ -4256,7 +4256,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الأول في اللغة العربية وآدابها — السنة الثالثة ثانوي — لغات أجنبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t1/3as_le-arb-t1-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t1/3as_le-arb-t1-test-sample-2-sol.pdf",
-      "fileSize": 139166,
+      "fileSize": 139470,
       "solutionFileSize": 144899
     },
     {
@@ -4272,7 +4272,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — لغات أجنبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t1/3as_le-arb-t1-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t1/3as_le-arb-t1-exam-sample-1-sol.pdf",
-      "fileSize": 144732,
+      "fileSize": 145039,
       "solutionFileSize": 153228
     },
     {
@@ -4288,7 +4288,7 @@
       "titleAr": "اختبار الفصل الأول النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — لغات أجنبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t1/3as_le-arb-t1-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t1/3as_le-arb-t1-exam-sample-2-sol.pdf",
-      "fileSize": 145787,
+      "fileSize": 146098,
       "solutionFileSize": 153907
     },
     {
@@ -4304,7 +4304,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثالثة ثانوي — لغات أجنبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t2/3as_le-arb-t2-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t2/3as_le-arb-t2-test-sample-1-sol.pdf",
-      "fileSize": 139634,
+      "fileSize": 140067,
       "solutionFileSize": 147915
     },
     {
@@ -4320,7 +4320,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثاني في اللغة العربية وآدابها — السنة الثالثة ثانوي — لغات أجنبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t2/3as_le-arb-t2-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t2/3as_le-arb-t2-test-sample-2-sol.pdf",
-      "fileSize": 142206,
+      "fileSize": 142613,
       "solutionFileSize": 150089
     },
     {
@@ -4336,7 +4336,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — لغات أجنبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t2/3as_le-arb-t2-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t2/3as_le-arb-t2-exam-sample-1-sol.pdf",
-      "fileSize": 144047,
+      "fileSize": 144461,
       "solutionFileSize": 155290
     },
     {
@@ -4352,7 +4352,7 @@
       "titleAr": "اختبار الفصل الثاني النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — لغات أجنبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t2/3as_le-arb-t2-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t2/3as_le-arb-t2-exam-sample-2-sol.pdf",
-      "fileSize": 143467,
+      "fileSize": 143881,
       "solutionFileSize": 153459
     },
     {
@@ -4368,7 +4368,7 @@
       "titleAr": "فرض محروس (1) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثالثة ثانوي — لغات أجنبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-test-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-test-sample-1-sol.pdf",
-      "fileSize": 139423,
+      "fileSize": 139738,
       "solutionFileSize": 146412
     },
     {
@@ -4384,7 +4384,7 @@
       "titleAr": "فرض محروس (2) لـالفصل الثالث في اللغة العربية وآدابها — السنة الثالثة ثانوي — لغات أجنبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-test-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-test-sample-2-sol.pdf",
-      "fileSize": 141928,
+      "fileSize": 142228,
       "solutionFileSize": 147909
     },
     {
@@ -4400,7 +4400,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (1) في اللغة العربية وآدابها — السنة الثالثة ثانوي — لغات أجنبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-exam-sample-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-exam-sample-1-sol.pdf",
-      "fileSize": 144000,
+      "fileSize": 144303,
       "solutionFileSize": 153346
     },
     {
@@ -4416,7 +4416,7 @@
       "titleAr": "اختبار الفصل الثالث النموذجي (2) في اللغة العربية وآدابها — السنة الثالثة ثانوي — لغات أجنبية (BAC)",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-exam-sample-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-exam-sample-2-sol.pdf",
-      "fileSize": 143649,
+      "fileSize": 143961,
       "solutionFileSize": 153188
     },
     {
@@ -4432,7 +4432,7 @@
       "titleAr": "موضوع امتحان تقييم المكتسبات (1) في اللغة العربية — الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t3/5ap-arb-t3-competency-eval-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t3/5ap-arb-t3-competency-eval-1-sol.pdf",
-      "fileSize": 135221,
+      "fileSize": 135529,
       "solutionFileSize": 140568
     },
     {
@@ -4448,7 +4448,7 @@
       "titleAr": "موضوع امتحان تقييم المكتسبات (2) في اللغة العربية — الخامسة ابتدائي",
       "pdfUrl": "/documents/generated_samples_arabic/5ap/t3/5ap-arb-t3-competency-eval-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/5ap/t3/5ap-arb-t3-competency-eval-2-sol.pdf",
-      "fileSize": 134223,
+      "fileSize": 134715,
       "solutionFileSize": 138496
     },
     {
@@ -4464,7 +4464,7 @@
       "titleAr": "امتحان تجريبي لشهادة التعليم المتوسط (BEM) نموذج 1 — اللغة العربية",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-bem-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-bem-mock-1-sol.pdf",
-      "fileSize": 150361,
+      "fileSize": 151032,
       "solutionFileSize": 155941
     },
     {
@@ -4480,7 +4480,7 @@
       "titleAr": "امتحان تجريبي لشهادة التعليم المتوسط (BEM) نموذج 2 — اللغة العربية",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-bem-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-bem-mock-2-sol.pdf",
-      "fileSize": 149993,
+      "fileSize": 150608,
       "solutionFileSize": 157686
     },
     {
@@ -4496,7 +4496,7 @@
       "titleAr": "امتحان تجريبي لشهادة التعليم المتوسط (BEM) نموذج 3 — اللغة العربية",
       "pdfUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-bem-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/4am/t3/4am-arb-t3-bem-mock-3-sol.pdf",
-      "fileSize": 146310,
+      "fileSize": 146710,
       "solutionFileSize": 152276
     },
     {
@@ -4512,7 +4512,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 1 في اللغة العربية وآدابها — شعبة علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-bac-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-bac-mock-1-sol.pdf",
-      "fileSize": 81356,
+      "fileSize": 81994,
       "solutionFileSize": 87363
     },
     {
@@ -4528,7 +4528,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 2 في اللغة العربية وآدابها — شعبة علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-bac-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-bac-mock-2-sol.pdf",
-      "fileSize": 83791,
+      "fileSize": 84455,
       "solutionFileSize": 89046
     },
     {
@@ -4544,7 +4544,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 3 في اللغة العربية وآدابها — شعبة علوم تجريبية",
       "pdfUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-bac-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_se/t3/3as_se-arb-t3-bac-mock-3-sol.pdf",
-      "fileSize": 74387,
+      "fileSize": 74971,
       "solutionFileSize": 80321
     },
     {
@@ -4560,7 +4560,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 1 في اللغة العربية وآدابها — شعبة تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-bac-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-bac-mock-1-sol.pdf",
-      "fileSize": 81334,
+      "fileSize": 81972,
       "solutionFileSize": 87333
     },
     {
@@ -4576,7 +4576,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 2 في اللغة العربية وآدابها — شعبة تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-bac-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-bac-mock-2-sol.pdf",
-      "fileSize": 83771,
+      "fileSize": 84436,
       "solutionFileSize": 89011
     },
     {
@@ -4592,7 +4592,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 3 في اللغة العربية وآدابها — شعبة تقني رياضي",
       "pdfUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-bac-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_tm/t3/3as_tm-arb-t3-bac-mock-3-sol.pdf",
-      "fileSize": 74360,
+      "fileSize": 74947,
       "solutionFileSize": 80287
     },
     {
@@ -4608,7 +4608,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 1 في اللغة العربية وآدابها — شعبة رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-bac-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-bac-mock-1-sol.pdf",
-      "fileSize": 81282,
+      "fileSize": 81925,
       "solutionFileSize": 87287
     },
     {
@@ -4624,7 +4624,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 2 في اللغة العربية وآدابها — شعبة رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-bac-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-bac-mock-2-sol.pdf",
-      "fileSize": 83715,
+      "fileSize": 84384,
       "solutionFileSize": 88962
     },
     {
@@ -4640,7 +4640,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 3 في اللغة العربية وآدابها — شعبة رياضيات",
       "pdfUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-bac-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_math/t3/3as_math-arb-t3-bac-mock-3-sol.pdf",
-      "fileSize": 74314,
+      "fileSize": 74896,
       "solutionFileSize": 80242
     },
     {
@@ -4656,7 +4656,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 1 في اللغة العربية وآدابها — شعبة تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-bac-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-bac-mock-1-sol.pdf",
-      "fileSize": 81346,
+      "fileSize": 81983,
       "solutionFileSize": 87367
     },
     {
@@ -4672,7 +4672,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 2 في اللغة العربية وآدابها — شعبة تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-bac-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-bac-mock-2-sol.pdf",
-      "fileSize": 83779,
+      "fileSize": 84444,
       "solutionFileSize": 89050
     },
     {
@@ -4688,7 +4688,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 3 في اللغة العربية وآدابها — شعبة تسيير واقتصاد",
       "pdfUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-bac-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_ge/t3/3as_ge-arb-t3-bac-mock-3-sol.pdf",
-      "fileSize": 74376,
+      "fileSize": 74958,
       "solutionFileSize": 80325
     },
     {
@@ -4704,7 +4704,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 1 في اللغة العربية وآدابها — شعبة آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-bac-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-bac-mock-1-sol.pdf",
-      "fileSize": 73696,
+      "fileSize": 74343,
       "solutionFileSize": 88249
     },
     {
@@ -4720,7 +4720,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 2 في اللغة العربية وآدابها — شعبة آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-bac-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-bac-mock-2-sol.pdf",
-      "fileSize": 78693,
+      "fileSize": 79371,
       "solutionFileSize": 94777
     },
     {
@@ -4736,7 +4736,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 3 في اللغة العربية وآدابها — شعبة آداب وفلسفة",
       "pdfUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-bac-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_lp/t3/3as_lp-arb-t3-bac-mock-3-sol.pdf",
-      "fileSize": 76073,
+      "fileSize": 76761,
       "solutionFileSize": 90881
     },
     {
@@ -4752,7 +4752,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 1 في اللغة العربية وآدابها — شعبة لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-bac-mock-1.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-bac-mock-1-sol.pdf",
-      "fileSize": 74539,
+      "fileSize": 74976,
       "solutionFileSize": 87492
     },
     {
@@ -4768,7 +4768,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 2 في اللغة العربية وآدابها — شعبة لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-bac-mock-2.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-bac-mock-2-sol.pdf",
-      "fileSize": 71851,
+      "fileSize": 72220,
       "solutionFileSize": 83718
     },
     {
@@ -4784,7 +4784,7 @@
       "titleAr": "بكالوريا تجريبية نموذج 3 في اللغة العربية وآدابها — شعبة لغات أجنبية",
       "pdfUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-bac-mock-3.pdf",
       "solutionUrl": "/documents/generated_samples_arabic/3as_le/t3/3as_le-arb-t3-bac-mock-3-sol.pdf",
-      "fileSize": 76478,
+      "fileSize": 76905,
       "solutionFileSize": 89006
     }
   ]

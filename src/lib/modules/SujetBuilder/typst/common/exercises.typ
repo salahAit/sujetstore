@@ -121,9 +121,16 @@
             let answer-str = if is-dict { cell.at("answer", default: "") } else { "" }
             let mark-str = if is-dict { cell.at("mark", default: "") } else { "" }
             let content-str = if is-dict { cell.at("content", default: "") } else { cell }
+            let is-dots-only = type(content-str) == str and content-str.trim().len() >= 4 and content-str.trim().find(regex("^[.\u{2026}]+$")) != none
             
             let cell-styled = if is-sol and answer-str != "" {
               text(fill: blue)[#safe-eval(answer-str)]
+            } else if is-dots-only {
+              if t-width == "full" {
+                box(width: 100%)[#repeat(gap: 1.8pt)[.]]
+              } else {
+                box(width: 80pt)[#repeat(gap: 1.8pt)[.]]
+              }
             } else {
               safe-eval(content-str)
             }

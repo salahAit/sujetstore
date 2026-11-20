@@ -93,9 +93,16 @@
         let answer-str = if is-dict { cell.at("answer", default: "") } else { "" }
         let mark-str = if is-dict { cell.at("mark", default: "") } else { "" }
         let content-str = if is-dict { cell.at("content", default: "") } else { str(cell) }
+        let is-dots-only = content-str.trim().len() >= 4 and content-str.trim().find(regex("^[.\u{2026}]+$")) != none
 
         let rendered = if is-solution and answer-str != "" {
           text(fill: rgb("1D4ED8"))[#safe-eval-en(answer-str)]
+        } else if is-dots-only {
+          if t-width == "full" {
+            box(width: 100%)[#repeat(gap: 1.8pt)[.]]
+          } else {
+            box(width: 80pt)[#repeat(gap: 1.8pt)[.]]
+          }
         } else {
           safe-eval-en(content-str)
         }
