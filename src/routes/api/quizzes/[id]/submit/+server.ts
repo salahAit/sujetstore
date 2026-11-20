@@ -1,7 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { contentSqlite, usersDatabase } from '#lib/server/db';
-import * as userSchema from '#lib/server/db/schema';
+import { contentSqlite, usersDatabase, userSchema, pgGet } from '#lib/server/db';
 import { sql } from 'drizzle-orm';
 import { getOrCreateFingerprint } from '#lib/server/auth';
 import { canAccessTier } from '#lib/server/visibility';
@@ -55,17 +54,15 @@ export const POST: RequestHandler = async (event) => {
 
 		// Enforce max_attempts limit if configured
 		if (quizRow.max_attempts && quizRow.max_attempts > 0) {
-			const countRow = (
-				userId
-					? usersDatabase.$client
-							.query('SELECT COUNT(*) as c FROM quiz_attempts WHERE quiz_id = ? AND user_id = ?')
-							.get(quizId, userId)
-					: usersDatabase.$client
-							.query(
-								'SELECT COUNT(*) as c FROM quiz_attempts WHERE quiz_id = ? AND user_id IS NULL AND fingerprint = ?'
-							)
-							.get(quizId, fingerprint)
-			) as { c: number } | null;
+			const countRow = userId
+				? await pgGet<{ c: number }>(
+						'SELECT COUNT(*)::int as c FROM quiz_attempts WHERE quiz_id = $1 AND user_id = $2',
+						[quizId, userId]
+					)
+				: await pgGet<{ c: number }>(
+						'SELECT COUNT(*)::int as c FROM quiz_attempts WHERE quiz_id = $1 AND user_id IS NULL AND fingerprint = $2',
+						[quizId, fingerprint]
+					);
 
 			if ((countRow?.c || 0) >= Number(quizRow.max_attempts)) {
 				return json(
@@ -123,7 +120,7 @@ export const POST: RequestHandler = async (event) => {
 		const timeTaken = Math.max(0, Math.min(86400, Math.round(Number(body.timeTaken || 0))));
 
 		// 1. Insert attempt using server-computed score
-		const attemptResult = usersDatabase
+		const [attemptResult] = await usersDatabase
 			.insert(userSchema.quizAttempts)
 			.values({
 				quizId,
@@ -133,10 +130,9 @@ export const POST: RequestHandler = async (event) => {
 				totalPoints: graded.totalPoints,
 				percentage: graded.percentage,
 				timeTaken,
-				completedAt: sql`(datetime('now'))`
+				completedAt: sql`to_char(NOW() AT TIME ZONE 'UTC', 'YYYY-MM-DD HH24:MI:SS')`
 			})
-			.returning({ id: userSchema.quizAttempts.id })
-			.get();
+			.returning({ id: userSchema.quizAttempts.id });
 
 		if (!attemptResult) {
 			return json({ error: 'فشل في حفظ المحاولة' }, { status: 500 });
@@ -151,11 +147,11 @@ export const POST: RequestHandler = async (event) => {
 			pointsEarned: d.result.pointsEarned
 		}));
 		if (answerValues.length > 0) {
-			usersDatabase.insert(userSchema.attemptAnswers).values(answerValues).run();
+			await usersDatabase.insert(userSchema.attemptAnswers).values(answerValues);
 		}
 
 		// 3. Award XP, update daily streak, track mistakes, and evaluate badges
-		const gamification = awardQuizGamification({
+		const gamification = await awardQuizGamification({
 			userId,
 			fingerprint,
 			quizId,

@@ -1,7 +1,11 @@
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
-const FRENCH_SVG_DIR = resolve('static/generated/french-svg');
+const FRENCH_SVG_DIR = process.env.MEDIA_ROOT
+	? resolve(process.env.MEDIA_ROOT, 'generated/french-svg')
+	: existsSync('/var/lib/sujetstore-media')
+		? resolve('/var/lib/sujetstore-media/generated/french-svg')
+		: resolve('static/generated/french-svg');
 
 export function saveFrenchSvgAsset(filename: string, svgContent: string): string {
 	const safeName = filename.replace(/[^a-zA-Z0-9._-]/g, '_').replace(/\.svg$/i, '') + '.svg';

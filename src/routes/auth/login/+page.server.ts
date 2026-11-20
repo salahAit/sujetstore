@@ -36,7 +36,7 @@ export const actions: Actions = {
 			return fail(400, { error: 'يرجى إدخال البريد الإلكتروني وكلمة المرور', identifier });
 		}
 
-		const user = await usersDatabase
+		const [user] = await usersDatabase
 			.select()
 			.from(userSchema.users)
 			.where(
@@ -45,7 +45,7 @@ export const actions: Actions = {
 					eq(userSchema.users.username, identifier)
 				)
 			)
-			.get();
+			.limit(1);
 
 		if (!user) {
 			return fail(401, { error: 'بيانات الدخول غير صحيحة', identifier });
@@ -68,7 +68,7 @@ export const actions: Actions = {
 		}
 
 		const fp = getOrCreateFingerprint(event);
-		migrateAnonymousProgressToUser(fp, user.id);
+		await migrateAnonymousProgressToUser(fp, user.id);
 
 		const session = await createSession(user.id);
 		setSessionTokenCookie(event, session.id, new Date(session.expiresAt));

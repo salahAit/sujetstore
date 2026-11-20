@@ -21,8 +21,7 @@ export const GET: RequestHandler = async ({ url, locals }) => {
 					eq(userSchema.userBookmarks.userId, locals.user.id),
 					eq(userSchema.userBookmarks.itemType, 'document')
 				)
-			)
-			.all();
+			);
 		ids = saved.map((s) => s.itemId);
 	}
 
@@ -66,7 +65,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		return json({ error: 'معرف العنصر غير صالح' }, { status: 400 });
 	}
 
-	const existing = await usersDatabase
+	const [existing] = await usersDatabase
 		.select()
 		.from(userSchema.userBookmarks)
 		.where(
@@ -76,7 +75,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				eq(userSchema.userBookmarks.itemId, itemId)
 			)
 		)
-		.get();
+		.limit(1);
 
 	if (existing) {
 		await usersDatabase

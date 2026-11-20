@@ -1,7 +1,11 @@
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
-const SVG_DIR = resolve('static/generated/math-svg');
+const SVG_DIR = process.env.MEDIA_ROOT
+	? resolve(process.env.MEDIA_ROOT, 'generated/math-svg')
+	: existsSync('/var/lib/sujetstore-media')
+		? resolve('/var/lib/sujetstore-media/generated/math-svg')
+		: resolve('static/generated/math-svg');
 
 /**
  * Writes an SVG asset to static/generated/math-svg/ and returns the public path

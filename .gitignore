@@ -23,6 +23,8 @@ data/*.db-wal
 data/*.db-shm
 data/backups/
 data/uploads/
+data/media
+data/tmp-typst/
 data/*_remote.db
 /content.db
 *apiKey*.csv
@@ -65,15 +67,9 @@ scripts/debug_*.ts
 scripts/temp_*.ts
 scripts/test_*.ts
 
-# Generated Subject Data
-static/generated/*
-!static/generated/math-svg/
-!static/generated/physics-svg/
-!static/generated/sciences-svg/
-!static/generated/arabic-svg/
-!static/generated/official-bac-arabic/
-!static/generated/english-svg/
-!static/generated/official-bac-english/
+# Generated Subject Data (stored in RustFS S3 + /var/lib/sujetstore-media)
+static/documents/
+static/generated/
 static/wasm/
 
 # Pipeline large reference PDFs (manifest JSONs stay tracked)

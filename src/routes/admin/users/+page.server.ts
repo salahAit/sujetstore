@@ -1,6 +1,6 @@
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
-import { usersDatabase, userSchema, usersSqlite } from '#lib/server/db';
+import { usersDatabase, userSchema, pgAll } from '#lib/server/db';
 import { eq } from 'drizzle-orm';
 import { hashPassword } from '#lib/server/auth';
 
@@ -20,16 +20,19 @@ export const load: PageServerLoad = async ({ locals, url }) => {
 	`;
 	const params: any[] = [];
 	if (q) {
-		sql += ' AND (LOWER(name) LIKE ? OR LOWER(email) LIKE ?)';
-		params.push(`%${q}%`, `%${q}%`);
+		params.push(`%${q}%`);
+		const p1 = params.length;
+		params.push(`%${q}%`);
+		const p2 = params.length;
+		sql += ` AND (LOWER(name) LIKE $${p1} OR LOWER(email) LIKE $${p2})`;
 	}
 	if (['superadmin', 'admin', 'editor', 'student'].includes(roleFilter)) {
-		sql += ' AND role = ?';
 		params.push(roleFilter);
+		sql += ` AND role = $${params.length}`;
 	}
 	sql += ' ORDER BY id DESC LIMIT 100';
 
-	const users = usersSqlite.query(sql).all(...params);
+	const users = await pgAll(sql, params);
 
 	return {
 		users,
@@ -58,11 +61,11 @@ export const actions: Actions = {
 			return fail(400, { error: 'يرجى التحقق من الاسم، البريد، وكلمة المرور (6 أحرف+)' });
 		}
 
-		const exists = await usersDatabase
+		const [exists] = await usersDatabase
 			.select({ id: userSchema.users.id })
 			.from(userSchema.users)
 			.where(eq(userSchema.users.email, email))
-			.get();
+			.limit(1);
 		if (exists) {
 			return fail(400, { error: 'البريد الإلكتروني مستخدم بالفعل' });
 		}

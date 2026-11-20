@@ -1,23 +1,38 @@
 import { fail } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
-import { contentSqlite, usersDatabase, userSchema, usersSqlite } from '#lib/server/db';
+import { contentSqlite, usersDatabase, userSchema, pgAll } from '#lib/server/db';
 import { eq } from 'drizzle-orm';
 import { ALGERIAN_WILAYAS } from '#lib/data/wilayas';
 
 export const load: PageServerLoad = async ({ parent }) => {
 	const { studentUser } = await parent();
 
-	const rawAttempts = usersSqlite
-		.query(
+	const [rawAttempts, badges, rawBookmarks] = await Promise.all([
+		pgAll<any>(
 			`
-		SELECT id, quiz_id, score, total_points, percentage, time_taken, completed_at, created_at
-		FROM quiz_attempts
-		WHERE user_id = ?
-		ORDER BY id DESC
-		LIMIT 15
-	`
+			SELECT id, quiz_id, score, total_points, percentage, time_taken, completed_at, created_at
+			FROM quiz_attempts
+			WHERE user_id = $1
+			ORDER BY id DESC
+			LIMIT 15
+		`,
+			[studentUser.id]
+		),
+		pgAll<any>(
+			`
+			SELECT bd.slug, bd.name_ar, bd.description, bd.icon, bd.color, bd.points, ub.earned_at
+			FROM user_badges ub
+			JOIN badge_definitions bd ON ub.badge_id = bd.id
+			WHERE ub.user_id = $1
+			ORDER BY ub.earned_at DESC
+		`,
+			[studentUser.id]
+		),
+		pgAll<any>(
+			'SELECT id, item_type, item_id, created_at FROM user_bookmarks WHERE user_id = $1 ORDER BY id DESC LIMIT 20',
+			[studentUser.id]
 		)
-		.all(studentUser.id) as any[];
+	]);
 
 	const quizIds = [...new Set(rawAttempts.map((a) => a.quiz_id).filter(Boolean))];
 	const quizMap = new Map<number, any>();
@@ -42,22 +57,6 @@ export const load: PageServerLoad = async ({ parent }) => {
 		...a,
 		quiz: quizMap.get(a.quiz_id) || null
 	}));
-
-	const badges = usersSqlite
-		.query(
-			`
-		SELECT bd.slug, bd.name_ar, bd.description, bd.icon, bd.color, bd.points, ub.earned_at
-		FROM user_badges ub
-		JOIN badge_definitions bd ON ub.badge_id = bd.id
-		WHERE ub.user_id = ?
-		ORDER BY ub.earned_at DESC
-	`
-		)
-		.all(studentUser.id) as any[];
-
-	const rawBookmarks = usersSqlite
-		.query('SELECT id, item_type, item_id, created_at FROM user_bookmarks WHERE user_id = ? ORDER BY id DESC LIMIT 20')
-		.all(studentUser.id) as any[];
 
 	const docIds = rawBookmarks.filter((b) => b.item_type === 'document').map((b) => b.item_id);
 	const bmQuizIds = rawBookmarks.filter((b) => b.item_type === 'quiz').map((b) => b.item_id);

@@ -4,6 +4,7 @@ import { existsSync, readFileSync, unlinkSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { createSession, SESSION_COOKIE_NAME } from '../src/lib/server/auth';
+import { pgGet, pgRun } from '../src/lib/server/db';
 import {
 	ALL_FRENCH_TRACK_IDS,
 	FRENCH_GRADE_METADATA
@@ -12,7 +13,6 @@ import {
 const PORT = 4186;
 const BASE_URL = `http://127.0.0.1:${PORT}`;
 const CONTENT_DB = resolve('data/content.db');
-const USERS_DB = resolve('data/users.db');
 
 class CookieJar {
 	private map = new Map<string, string>();
@@ -124,7 +124,6 @@ async function main() {
 		stderr: 'pipe'
 	});
 
-	const usersDb = new Database(USERS_DB);
 	const db = new Database(CONTENT_DB, { readonly: true });
 	let tempSessionId = `verify-fre-${randomUUID()}`;
 	const tempUploadFiles: string[] = [];
@@ -133,10 +132,10 @@ async function main() {
 		await waitForServer();
 		console.log(`✅ Server booted on ${BASE_URL}`);
 
-		const activeUser = usersDb
-			.query('SELECT id FROM users WHERE is_active = 1 ORDER BY id ASC LIMIT 1')
-			.get() as { id: number } | null;
-		assert.ok(activeUser, 'An active user must exist in data/users.db');
+		const activeUser = await pgGet<{ id: number }>(
+			'SELECT id FROM users WHERE is_active = TRUE ORDER BY id ASC LIMIT 1'
+		);
+		assert.ok(activeUser, 'An active user must exist in PostgreSQL users table');
 		const session = await createSession(activeUser.id);
 		tempSessionId = session.id;
 
@@ -245,28 +244,32 @@ async function main() {
 		}
 		console.log('✅ 4. Smart Generator French quizzes & 100% grading verified across 5AP, 4AM BEM, 3AS SE, 3AS LE');
 
-		// 5. BAC French Archive (18 papers = 36 LTR PDFs) on disk
+		// 5. BAC French Archive (18 papers = 36 LTR PDFs) via RustFS HTTP route
 		const officialRows = db
 			.query("SELECT slug, pdf_url as pdfUrl, solution_url as solutionUrl FROM documents WHERE origin_type = 'official_certificate' AND slug LIKE 'bac-%-french' AND is_published = 1")
 			.all() as Array<{ slug: string; pdfUrl: string; solutionUrl: string }>;
 		assert.equal(officialRows.length, 18, `Expected 18 BAC French papers in DB, got ${officialRows.length}`);
 		for (const row of officialRows) {
-			assertValidPdfFile(resolve('static', row.pdfUrl.replace(/^\//, '')), `${row.slug} subject`);
-			assertValidPdfFile(resolve('static', row.solutionUrl.replace(/^\//, '')), `${row.slug} solution`);
+			for (const [label, url] of [[`${row.slug} subject`, row.pdfUrl], [`${row.slug} solution`, row.solutionUrl]] as const) {
+				const pdfRes = await httpReq(url, { jar });
+				assert.equal(pdfRes.status, 200, `PDF HTTP failed (${label}): ${url} -> ${pdfRes.status}`);
+				const buf = Buffer.from(await pdfRes.arrayBuffer());
+				assert.equal(buf.subarray(0, 5).toString('ascii'), '%PDF-', `Invalid %PDF- header (${label})`);
+				assert.ok(buf.length > 10_000, `PDF too small (${buf.length}B) for ${label}`);
+			}
 		}
-		console.log('✅ 5. All 18 BAC French Archive papers (36 LTR PDFs) verified on disk');
+		console.log('✅ 5. All 18 BAC French Archive papers (36 LTR PDFs) verified via RustFS HTTP');
 
 		console.log('\n🎉 ALL FRENCH PIPELINE E2E VERIFICATION CHECKS PASSED 100%!');
 	} finally {
 		try {
-			usersDb.query('DELETE FROM sessions WHERE id = ?').run(tempSessionId);
+			await pgRun('DELETE FROM sessions WHERE id = $1', [tempSessionId]);
 		} catch {}
 		for (const f of tempUploadFiles) {
 			try {
 				if (existsSync(f)) unlinkSync(f);
 			} catch {}
 		}
-		usersDb.close();
 		db.close();
 		proc.kill();
 	}

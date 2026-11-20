@@ -1,20 +1,20 @@
 import type { PageServerLoad } from './$types';
-import { contentSqlite, usersSqlite } from '#lib/server/db';
+import { contentSqlite, pgAll } from '#lib/server/db';
+import { buildRemediationSummary } from '#lib/server/remediation';
 
 export const load: PageServerLoad = async ({ parent }) => {
 	const { studentUser } = await parent();
 
-	const mistakeRows = usersSqlite
-		.query(
-			`
+	const mistakeRows = await pgAll<any>(
+		`
 		SELECT id, question_id, quiz_id, wrong_count, last_attempt_at, resolved
 		FROM user_mistakes
-		WHERE user_id = ?
+		WHERE user_id = $1
 		ORDER BY resolved ASC, wrong_count DESC, last_attempt_at DESC
 		LIMIT 100
-	`
-		)
-		.all(studentUser.id) as any[];
+	`,
+		[studentUser.id]
+	);
 
 	const questionIds = [...new Set(mistakeRows.map((m) => m.question_id).filter(Boolean))];
 	const qMap = new Map<number, any>();
@@ -62,7 +62,11 @@ export const load: PageServerLoad = async ({ parent }) => {
 		})
 		.filter(Boolean);
 
+	const remediation = buildRemediationSummary(mistakeRows);
+
 	return {
-		mistakes
+		mistakes,
+		weaknessAreas: remediation.weaknessAreas,
+		enrichedByQuestionId: remediation.enrichedByQuestionId
 	};
 };

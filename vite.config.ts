@@ -20,13 +20,13 @@ export default defineConfig({
 	},
 	// إعدادات التبعيات
 	optimizeDeps: {
-		// منع Vite من محاولة معالجة bun:sqlite
-		exclude: ['bun:sqlite']
+		// منع Vite من محاولة معالجة bun و bun:sqlite
+		exclude: ['bun', 'bun:sqlite']
 	},
 	build: {
 		rolldownOptions: {
-			// إخبار Rolldown بأن bun:sqlite خارجية
-			external: ['bun:sqlite']
+			// إخبار Rolldown بأن bun و bun:sqlite خارجية
+			external: ['bun', 'bun:sqlite']
 		}
 	}
 });

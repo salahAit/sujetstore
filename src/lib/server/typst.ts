@@ -112,6 +112,8 @@ function sanitizeImagePath(src: unknown): unknown {
 	if (src.startsWith('/')) {
 		const staticCandidate = join(PROJECT_ROOT, 'static', src.slice(1));
 		if (existsSync(staticCandidate)) return `/static/${src.slice(1)}`;
+		const mediaCandidate = join(PROJECT_ROOT, 'data/media', src.slice(1));
+		if (existsSync(mediaCandidate)) return `/data/media/${src.slice(1)}`;
 	}
 	return src;
 }

@@ -8,7 +8,7 @@ import type { RequestHandler } from './$types';
 
 const PROJECT_ROOT = resolve('.');
 const TYPST_ROOT = join(PROJECT_ROOT, 'src/lib/modules/SujetBuilder/typst');
-const GENERATED_DIR = join(PROJECT_ROOT, 'static/generated');
+const GENERATED_DIR = join(PROJECT_ROOT, 'data/tmp-typst');
 
 export const POST: RequestHandler = async ({ request }) => {
 	const fileId = randomUUID();
@@ -27,7 +27,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		await writeFile(dataFileAbs, JSON.stringify(processedDoc), 'utf-8');
 
 		const isSvg = format === 'svg';
-		const dataFileRel = `/static/generated/${fileId}.json`;
+		const dataFileRel = `/data/tmp-typst/${fileId}.json`;
 		const fontPath = join(PROJECT_ROOT, 'static', 'fonts');
 
 		const pdfResult = await new Promise<{ success: boolean; error?: string }>((res) => {

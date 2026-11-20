@@ -34,7 +34,7 @@ export const POST: RequestHandler = async (event) => {
 	const userId = event.locals.user?.id ?? null;
 	const fingerprint = getOrCreateFingerprint(event);
 
-	const existing = await usersDatabase
+	const [existing] = await usersDatabase
 		.select()
 		.from(userSchema.ratings)
 		.where(
@@ -46,7 +46,7 @@ export const POST: RequestHandler = async (event) => {
 						eq(userSchema.ratings.fingerprint, fingerprint)
 					)
 		)
-		.get();
+		.limit(1);
 
 	if (existing) {
 		await usersDatabase

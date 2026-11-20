@@ -1,31 +1,56 @@
 import { json } from '@sveltejs/kit';
-import { contentSqlite, usersSqlite } from '#lib/server/db';
+import { contentSqlite, pgAll, pgGet } from '#lib/server/db';
 
 export async function GET() {
-	const totalAttempts = usersSqlite.query('SELECT COUNT(*) as count FROM quiz_attempts').get() as any;
-	const avgScore = usersSqlite.query('SELECT AVG(percentage) as avg FROM quiz_attempts').get() as any;
+	const [totalAttempts, avgScore, quizStats, distribution, recentAttempts] = await Promise.all([
+		pgGet<{ count: number }>('SELECT COUNT(*)::int as count FROM quiz_attempts'),
+		pgGet<{ avg: number | null }>('SELECT AVG(percentage)::float8 as avg FROM quiz_attempts'),
+		pgAll<any>(
+			`
+			SELECT
+				quiz_id,
+				COUNT(*)::int as attempts,
+				ROUND(AVG(percentage)::numeric, 1)::float8 as avg_score,
+				MAX(percentage)::float8 as best_score,
+				MIN(percentage)::float8 as worst_score,
+				ROUND(AVG(time_taken)::numeric, 0)::int as avg_time,
+				SUM(CASE WHEN percentage >= 60 THEN 1 ELSE 0 END)::int as passed_count
+			FROM quiz_attempts
+			GROUP BY quiz_id
+			ORDER BY attempts DESC
+		`
+		),
+		pgAll<any>(
+			`
+			SELECT
+				CASE
+					WHEN percentage >= 90 THEN 'ممتاز (90-100%)'
+					WHEN percentage >= 75 THEN 'جيد جداً (75-89%)'
+					WHEN percentage >= 60 THEN 'جيد (60-74%)'
+					WHEN percentage >= 40 THEN 'متوسط (40-59%)'
+					ELSE 'ضعيف (0-39%)'
+				END as range,
+				COUNT(*)::int as count
+			FROM quiz_attempts
+			GROUP BY 1
+			ORDER BY MIN(percentage) DESC
+		`
+		),
+		pgAll<any>(
+			`
+			SELECT qa.*,
+				qa.created_at as attempt_date
+			FROM quiz_attempts qa
+			ORDER BY qa.created_at DESC
+			LIMIT 20
+		`
+		)
+	]);
+
 	const totalQuizzes = contentSqlite
 		.query('SELECT COUNT(*) as count FROM quizzes WHERE is_published = 1')
 		.get() as any;
 	const totalQuestions = contentSqlite.query('SELECT COUNT(*) as count FROM questions').get() as any;
-
-	const quizStats = usersSqlite
-		.query(
-			`
-		SELECT
-			quiz_id,
-			COUNT(*) as attempts,
-			ROUND(AVG(percentage), 1) as avg_score,
-			MAX(percentage) as best_score,
-			MIN(percentage) as worst_score,
-			ROUND(AVG(time_taken), 0) as avg_time,
-			SUM(CASE WHEN percentage >= 60 THEN 1 ELSE 0 END) as passed_count
-		FROM quiz_attempts
-		GROUP BY quiz_id
-		ORDER BY attempts DESC
-	`
-		)
-		.all() as any[];
 
 	const enrichedStats = quizStats.map((s: any) => {
 		const quiz = contentSqlite
@@ -38,37 +63,6 @@ export async function GET() {
 			passRate: s.attempts > 0 ? Math.round((s.passed_count / s.attempts) * 100) : 0
 		};
 	});
-
-	const distribution = usersSqlite
-		.query(
-			`
-		SELECT
-			CASE
-				WHEN percentage >= 90 THEN 'ممتاز (90-100%)'
-				WHEN percentage >= 75 THEN 'جيد جداً (75-89%)'
-				WHEN percentage >= 60 THEN 'جيد (60-74%)'
-				WHEN percentage >= 40 THEN 'متوسط (40-59%)'
-				ELSE 'ضعيف (0-39%)'
-			END as range,
-			COUNT(*) as count
-		FROM quiz_attempts
-		GROUP BY range
-		ORDER BY MIN(percentage) DESC
-	`
-		)
-		.all();
-
-	const recentAttempts = usersSqlite
-		.query(
-			`
-		SELECT qa.*,
-			datetime(qa.created_at) as attempt_date
-		FROM quiz_attempts qa
-		ORDER BY qa.created_at DESC
-		LIMIT 20
-	`
-		)
-		.all() as any[];
 
 	const enrichedRecent = recentAttempts.map((a: any) => {
 		const quiz = contentSqlite

@@ -26,6 +26,8 @@
 	} from 'lucide-svelte';
 	import DynamicIcon from '#lib/components/DynamicIcon.svelte';
 	import ShareModal from '#lib/components/ShareModal.svelte';
+	import OfflinePackButton from '#lib/components/OfflinePackButton.svelte';
+	import SeoJsonLd from '#lib/components/SeoJsonLd.svelte';
 	import { toggleBookmark, isBookmarked } from '#lib/stores/bookmarks.svelte';
 
 	let { data }: { data: any } = $props();
@@ -260,7 +262,85 @@
 				d.trimesterId === null
 		);
 	}
+
+	let offlinePackId = $derived(
+		data.mode === 'subject'
+			? `${data.level.slug}-${data.year.slug}-${data.subject.slug}${data.streamInfo ? `-${data.streamInfo.id.toLowerCase()}` : ''}`
+			: ''
+	);
+
+	let offlinePackUrls = $derived.by(() => {
+		if (data.mode !== 'subject') return [] as string[];
+		const basePath = `/${data.level.slug}/${data.year.slug}/${data.subject.slug}`;
+		const streamQuery = data.streamInfo ? `?stream=${data.streamInfo.id.toLowerCase()}` : '';
+		const urls = new Set<string>([`${basePath}${streamQuery}`]);
+		let lessonAdded = 0;
+		let pdfAdded = 0;
+		for (const doc of data.documents || []) {
+			if (doc.type === 'lesson' && doc.slug && lessonAdded < 20) {
+				urls.add(`${basePath}/${doc.slug}${streamQuery}`);
+				lessonAdded++;
+			}
+			const isFreeDoc = !doc.access_tier || doc.access_tier === 'public' || doc.access_tier === 'free';
+			if (isFreeDoc && doc.pdf_url && pdfAdded < 20) {
+				urls.add(doc.pdf_url);
+				pdfAdded++;
+			}
+		}
+		return [...urls];
+	});
+
+	let subjectJsonLd = $derived.by(() => {
+		const origin = 'https://sujetstore.com';
+		const breadcrumbs: Array<Record<string, unknown>> = [
+			{ '@type': 'ListItem', position: 1, name: 'الرئيسية', item: origin },
+			{ '@type': 'ListItem', position: 2, name: data.level.name_ar, item: `${origin}/${data.level.slug}` },
+			{ '@type': 'ListItem', position: 3, name: data.year.name_ar, item: `${origin}/${data.level.slug}/${data.year.slug}` }
+		];
+		if (data.mode === 'stream') {
+			breadcrumbs.push({
+				'@type': 'ListItem',
+				position: 4,
+				name: data.stream.name_ar,
+				item: `${origin}/${data.level.slug}/${data.year.slug}/${data.stream.id.toLowerCase()}`
+			});
+			return {
+				'@context': 'https://schema.org',
+				'@type': 'BreadcrumbList',
+				itemListElement: breadcrumbs
+			};
+		}
+		const streamQuery = data.streamInfo ? `?stream=${data.streamInfo.id.toLowerCase()}` : '';
+		const subjectUrl = `${origin}/${data.level.slug}/${data.year.slug}/${data.subject.slug}${streamQuery}`;
+		breadcrumbs.push({
+			'@type': 'ListItem',
+			position: 4,
+			name: data.subject.name_ar,
+			item: subjectUrl
+		});
+		return [
+			{
+				'@context': 'https://schema.org',
+				'@type': 'BreadcrumbList',
+				itemListElement: breadcrumbs
+			},
+			{
+				'@context': 'https://schema.org',
+				'@type': 'Course',
+				name: `${data.subject.name_ar} — ${data.year.name_ar}`,
+				description: `فروض واختبارات ودروس تفاعلية في مادة ${data.subject.name_ar} للسنة ${data.year.name_ar}`,
+				url: subjectUrl,
+				provider: {
+					'@type': 'EducationalOrganization',
+					name: 'SujetStore',
+					sameAs: origin
+				}
+			}
+		];
+	});
 </script>
+
+<SeoJsonLd schema={subjectJsonLd} />
 
 <svelte:head>
 	{#if data.mode === 'stream'}
@@ -474,6 +554,16 @@
 					<div class="text-muted-foreground text-xs">اختبار</div>
 				</div>
 			</div>
+
+			{#if offlinePackUrls.length > 1}
+				<div class="mt-6 flex justify-center">
+					<OfflinePackButton
+						packId={offlinePackId}
+						label="حفظ المادة للدراسة دون إنترنت"
+						urls={offlinePackUrls}
+					/>
+				</div>
+			{/if}
 		</div>
 	</section>
 

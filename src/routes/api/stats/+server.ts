@@ -14,11 +14,11 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	const today = new Date().toISOString().split('T')[0];
 
-	const existing = await usersDatabase
+	const [existing] = await usersDatabase
 		.select()
 		.from(userSchema.viewStats)
 		.where(and(eq(userSchema.viewStats.documentId, idNum), eq(userSchema.viewStats.date, today)))
-		.get();
+		.limit(1);
 
 	if (existing) {
 		if (action === 'view') {

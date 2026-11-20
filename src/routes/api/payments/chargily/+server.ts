@@ -1,6 +1,8 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { usersSqlite } from '#lib/server/db';
+import { pgGet, pgRun } from '#lib/server/db';
+
+const PG_NOW_EXPR = "to_char(NOW() AT TIME ZONE 'UTC', 'YYYY-MM-DD HH24:MI:SS')";
 
 const PLANS: Record<string, { days: number; amountDzd: number; label: string }> = {
 	monthly: { days: 30, amountDzd: 500, label: 'اشتراك SujetStore Pro — شهر واحد' },
@@ -14,7 +16,8 @@ export const POST: RequestHandler = async ({ locals, request, url }) => {
 	}
 
 	const body = await request.json();
-	const plan = PLANS[String(body.plan || 'monthly')];
+	const planKey = String(body.plan || 'monthly');
+	const plan = PLANS[planKey];
 	if (!plan) {
 		return json({ error: 'الباقة المختارة غير صالحة' }, { status: 400 });
 	}
@@ -22,17 +25,29 @@ export const POST: RequestHandler = async ({ locals, request, url }) => {
 	const secretKey = process.env.CHARGILY_SECRET_KEY;
 	const mode = process.env.CHARGILY_MODE === 'live' ? 'live' : 'test';
 
-	const info = usersSqlite
-		.query(
-			"INSERT INTO payment_orders (user_id, provider, amount_dzd, plan_days, status, created_at) VALUES (?, 'chargily', ?, ?, 'pending', datetime('now'))"
-		)
-		.run(locals.user.id, plan.amountDzd, plan.days);
-	const orderId = Number(info.lastInsertRowid);
+	const inserted = await pgGet<{ id: number }>(
+		`INSERT INTO payment_orders (user_id, provider, amount_dzd, plan_days, status, created_at)
+		 VALUES ($1, 'chargily', $2, $3, 'pending', ${PG_NOW_EXPR})
+		 RETURNING id`,
+		[locals.user.id, plan.amountDzd, plan.days]
+	);
+	const orderId = Number(inserted?.id);
 
 	if (!secretKey) {
-		usersSqlite
-			.query("UPDATE payment_orders SET status = 'canceled', metadata = 'chargily_not_configured' WHERE id = ?")
-			.run(orderId);
+		await pgRun(
+			`UPDATE payment_orders SET status = 'canceled', metadata = 'chargily_not_configured', updated_at = ${PG_NOW_EXPR} WHERE id = $1`,
+			[orderId]
+		);
+		await pgRun(
+			`INSERT INTO billing_audit_logs (order_id, user_id, event_type, provider, external_id, amount_dzd, status, payload, created_at)
+			 VALUES ($1, $2, 'checkout.canceled', 'chargily', NULL, $3, 'canceled', $4, ${PG_NOW_EXPR})`,
+			[
+				orderId,
+				locals.user.id,
+				plan.amountDzd,
+				JSON.stringify({ reason: 'chargily_not_configured', plan: planKey, planDays: plan.days })
+			]
+		);
 		return json(
 			{
 				configured: false,
@@ -44,7 +59,9 @@ export const POST: RequestHandler = async ({ locals, request, url }) => {
 	}
 
 	const apiBase =
-		mode === 'live' ? 'https://pay.chargily.net/api/v2/checkouts' : 'https://pay.chargily.net/test/api/v2/checkouts';
+		mode === 'live'
+			? 'https://pay.chargily.net/api/v2/checkouts'
+			: 'https://pay.chargily.net/test/api/v2/checkouts';
 
 	const origin = url.origin;
 	const res = await fetch(apiBase, {
@@ -70,16 +87,39 @@ export const POST: RequestHandler = async ({ locals, request, url }) => {
 
 	if (!res.ok) {
 		const errText = await res.text();
-		usersSqlite
-			.query("UPDATE payment_orders SET status = 'failed', metadata = ? WHERE id = ?")
-			.run(errText.slice(0, 500), orderId);
+		await pgRun(
+			`UPDATE payment_orders SET status = 'failed', metadata = $1, updated_at = ${PG_NOW_EXPR} WHERE id = $2`,
+			[errText.slice(0, 500), orderId]
+		);
+		await pgRun(
+			`INSERT INTO billing_audit_logs (order_id, user_id, event_type, provider, external_id, amount_dzd, status, payload, created_at)
+			 VALUES ($1, $2, 'checkout.failed', 'chargily', NULL, $3, 'failed', $4, ${PG_NOW_EXPR})`,
+			[
+				orderId,
+				locals.user.id,
+				plan.amountDzd,
+				JSON.stringify({ httpStatus: res.status, error: errText.slice(0, 500), mode, plan: planKey })
+			]
+		);
 		return json({ error: 'تعذر إنشاء جلسة الدفع لدى Chargily' }, { status: 502 });
 	}
 
 	const data = (await res.json()) as { id: string; checkout_url: string };
-	usersSqlite
-		.query('UPDATE payment_orders SET checkout_id = ? WHERE id = ?')
-		.run(data.id, orderId);
+	await pgRun(
+		`UPDATE payment_orders SET checkout_id = $1, updated_at = ${PG_NOW_EXPR} WHERE id = $2`,
+		[data.id, orderId]
+	);
+	await pgRun(
+		`INSERT INTO billing_audit_logs (order_id, user_id, event_type, provider, external_id, amount_dzd, status, payload, created_at)
+		 VALUES ($1, $2, 'checkout.created', 'chargily', $3, $4, 'pending', $5, ${PG_NOW_EXPR})`,
+		[
+			orderId,
+			locals.user.id,
+			data.id,
+			plan.amountDzd,
+			JSON.stringify({ mode, plan: planKey, planDays: plan.days, checkoutUrl: data.checkout_url })
+		]
+	);
 
 	return json({
 		configured: true,

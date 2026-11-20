@@ -1,9 +1,11 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { contentSqlite, usersSqlite } from '#lib/server/db';
+import { contentSqlite, pgRun } from '#lib/server/db';
 import { gradeQuizSubmission } from '#lib/server/quiz-grading';
 import { awardQuizGamification } from '#lib/server/gamification';
 import { getOrCreateFingerprint } from '#lib/server/auth';
+
+const PG_NOW_EXPR = "to_char(NOW() AT TIME ZONE 'UTC', 'YYYY-MM-DD HH24:MI:SS')";
 
 export const POST: RequestHandler = async (event) => {
 	if (!event.locals.user) {
@@ -16,9 +18,10 @@ export const POST: RequestHandler = async (event) => {
 	if (body.action === 'resolve') {
 		const qid = Number(body.questionId);
 		if (!qid) return json({ error: 'معرف السؤال مفقود' }, { status: 400 });
-		usersSqlite
-			.query("UPDATE user_mistakes SET resolved = 1, last_attempt_at = datetime('now') WHERE user_id = ? AND question_id = ?")
-			.run(userId, qid);
+		await pgRun(
+			`UPDATE user_mistakes SET resolved = TRUE, last_attempt_at = ${PG_NOW_EXPR} WHERE user_id = $1 AND question_id = $2`,
+			[userId, qid]
+		);
 		return json({ success: true });
 	}
 
@@ -56,7 +59,7 @@ export const POST: RequestHandler = async (event) => {
 		);
 
 		const fingerprint = getOrCreateFingerprint(event);
-		const gamification = awardQuizGamification({
+		const gamification = await awardQuizGamification({
 			userId,
 			fingerprint,
 			quizId: 0,

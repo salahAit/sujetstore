@@ -127,5 +127,51 @@ export const handle: Handle = async ({ event, resolve }) => {
 		}
 	}
 
-	return await resolve(event);
+	const response = await resolve(event);
+
+	// Smart HTTP edge/browser caching for HTML GET/HEAD responses (non-static runtime)
+	if (!isInternalStaticBuild && (method === 'GET' || method === 'HEAD') && response.status === 200) {
+		const contentType = response.headers.get('content-type') || '';
+		if (contentType.includes('text/html')) {
+			const isPrivatePath =
+				path === '/admin' ||
+				path.startsWith('/admin/') ||
+				path === '/student' ||
+				path.startsWith('/student/') ||
+				path === '/auth' ||
+				path.startsWith('/auth/');
+
+			const isNonCacheablePath =
+				isPrivatePath ||
+				path === '/api' ||
+				path.startsWith('/api/') ||
+				path === '/bookmarks' ||
+				path.startsWith('/bookmarks/') ||
+				path === '/progress' ||
+				path.startsWith('/progress/');
+
+			if (event.locals.user || isPrivatePath || response.headers.has('set-cookie')) {
+				response.headers.set('Cache-Control', 'private, no-store');
+			} else if (!isNonCacheablePath) {
+				response.headers.set(
+					'Cache-Control',
+					'public, max-age=60, s-maxage=3600, stale-while-revalidate=86400'
+				);
+				const existingVary = response.headers.get('Vary');
+				if (!existingVary) {
+					response.headers.set('Vary', 'Cookie');
+				} else {
+					const varyParts = existingVary
+						.split(',')
+						.map((part) => part.trim().toLowerCase())
+						.filter(Boolean);
+					if (!varyParts.includes('cookie')) {
+						response.headers.set('Vary', `${existingVary}, Cookie`);
+					}
+				}
+			}
+		}
+	}
+
+	return response;
 };

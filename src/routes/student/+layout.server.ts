@@ -1,6 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';
-import { usersSqlite } from '#lib/server/db';
+import { pgGet } from '#lib/server/db';
 import { isEffectivePremium } from '#lib/server/auth';
 
 export const load: LayoutServerLoad = async ({ locals, url }) => {
@@ -9,17 +9,19 @@ export const load: LayoutServerLoad = async ({ locals, url }) => {
 	}
 
 	const user = locals.user;
-	const pointsRow = usersSqlite
-		.query('SELECT COALESCE(SUM(points), 0) as total FROM user_points WHERE user_id = ?')
-		.get(user.id) as { total: number };
-
-	const mistakesRow = usersSqlite
-		.query('SELECT COUNT(*) as c FROM user_mistakes WHERE user_id = ? AND resolved = 0')
-		.get(user.id) as { c: number };
-
-	const attemptsRow = usersSqlite
-		.query('SELECT COUNT(*) as c FROM quiz_attempts WHERE user_id = ?')
-		.get(user.id) as { c: number };
+	const [pointsRow, mistakesRow, attemptsRow] = await Promise.all([
+		pgGet<{ total: number }>(
+			'SELECT COALESCE(SUM(points), 0)::int as total FROM user_points WHERE user_id = $1',
+			[user.id]
+		),
+		pgGet<{ c: number }>(
+			'SELECT COUNT(*)::int as c FROM user_mistakes WHERE user_id = $1 AND resolved = FALSE',
+			[user.id]
+		),
+		pgGet<{ c: number }>('SELECT COUNT(*)::int as c FROM quiz_attempts WHERE user_id = $1', [
+			user.id
+		])
+	]);
 
 	return {
 		studentUser: {

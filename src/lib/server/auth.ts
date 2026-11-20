@@ -91,11 +91,11 @@ export async function createSession(userId: number): Promise<typeof userSchema.s
 }
 
 export async function validateSession(sessionId: string) {
-	const result = await usersDatabase
+	const [result] = await usersDatabase
 		.select()
 		.from(userSchema.sessions)
 		.where(eq(userSchema.sessions.id, sessionId))
-		.get();
+		.limit(1);
 
 	if (!result) return null;
 
@@ -105,11 +105,11 @@ export async function validateSession(sessionId: string) {
 		return null;
 	}
 
-	const user = await usersDatabase
+	const [user] = await usersDatabase
 		.select()
 		.from(userSchema.users)
 		.where(eq(userSchema.users.id, result.userId))
-		.get();
+		.limit(1);
 
 	if (!user || !user.isActive) {
 		await usersDatabase.delete(userSchema.sessions).where(eq(userSchema.sessions.id, sessionId));

@@ -18,6 +18,7 @@
 	} from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import InteractiveLessonPlayer from '#lib/modules/InteractiveLesson/InteractiveLessonPlayer.svelte';
+	import SeoJsonLd from '#lib/components/SeoJsonLd.svelte';
 	import type { InteractiveLessonData } from '#lib/modules/MathTemplates/types';
 
 	let { data }: { data: any } = $props();
@@ -188,6 +189,39 @@
 		return `منذ ${Math.floor(diff / 86400)} ي`;
 	}
 
+	let docJsonLd = $derived.by(() => {
+		const origin = 'https://sujetstore.com';
+		const docUrl = `${origin}/${level.slug}/${year.slug}/${subject.slug}/${doc.slug}`;
+		return [
+			{
+				'@context': 'https://schema.org',
+				'@type': 'BreadcrumbList',
+				itemListElement: [
+					{ '@type': 'ListItem', position: 1, name: 'الرئيسية', item: origin },
+					{ '@type': 'ListItem', position: 2, name: level.nameAr, item: `${origin}/${level.slug}` },
+					{ '@type': 'ListItem', position: 3, name: year.nameAr, item: `${origin}/${level.slug}/${year.slug}` },
+					{ '@type': 'ListItem', position: 4, name: subject.nameAr, item: `${origin}/${level.slug}/${year.slug}/${subject.slug}` },
+					{ '@type': 'ListItem', position: 5, name: doc.titleAr || doc.title, item: docUrl }
+				]
+			},
+			{
+				'@context': 'https://schema.org',
+				'@type': 'LearningResource',
+				name: doc.titleAr || doc.title,
+				description: `${doc.titleAr || doc.title} | ${subject.nameAr} - ${year.nameAr}`,
+				url: docUrl,
+				educationalLevel: `${level.nameAr} — ${year.nameAr}`,
+				learningResourceType: typeLabels[doc.type] || doc.type,
+				isAccessibleForFree: !doc.accessTier || doc.accessTier === 'public' || doc.accessTier === 'free',
+				provider: {
+					'@type': 'EducationalOrganization',
+					name: 'SujetStore',
+					sameAs: origin
+				}
+			}
+		];
+	});
+
 	onMount(() => {
 		fetch('/api/stats', {
 			method: 'POST',
@@ -199,6 +233,8 @@
 		loadComments();
 	});
 </script>
+
+<SeoJsonLd schema={docJsonLd} />
 
 <svelte:head>
 	<title>{doc.titleAr || doc.title} - SujetStore</title>

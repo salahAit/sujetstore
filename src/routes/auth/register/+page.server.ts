@@ -64,18 +64,18 @@ export const actions: Actions = {
 			return fail(400, { error: 'كلمة المرور يجب أن لا تقل عن 6 أحرف', name, email });
 		}
 
-		const existing = await usersDatabase
+		const [existing] = await usersDatabase
 			.select({ id: userSchema.users.id })
 			.from(userSchema.users)
 			.where(eq(userSchema.users.email, email))
-			.get();
+			.limit(1);
 
 		if (existing) {
 			return fail(400, { error: 'هذا البريد الإلكتروني مسجل مسبقاً', name, email });
 		}
 
 		const passwordHash = await hashPassword(password);
-		const created = await usersDatabase
+		const [created] = await usersDatabase
 			.insert(userSchema.users)
 			.values({
 				email,
@@ -88,11 +88,10 @@ export const actions: Actions = {
 				wilaya,
 				subscriptionTier: 'free'
 			})
-			.returning()
-			.get();
+			.returning();
 
 		const fp = getOrCreateFingerprint(event);
-		migrateAnonymousProgressToUser(fp, created.id);
+		await migrateAnonymousProgressToUser(fp, created.id);
 
 		const session = await createSession(created.id);
 		setSessionTokenCookie(event, session.id, new Date(session.expiresAt));

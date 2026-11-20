@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import { contentDatabase, usersSqlite } from '#lib/server/db';
+import { contentDatabase, pgGet } from '#lib/server/db';
 import {
 	quizzes,
 	quizQuestions,
@@ -99,16 +99,16 @@ export const load: PageServerLoad = async ({ params, locals, cookies }) => {
 	if (!locals.isStaticBuild) {
 		const fp = cookies.get(FP_COOKIE_NAME) || cookies.get('fingerprint');
 		if (locals.user) {
-			const row = usersSqlite
-				.query('SELECT COUNT(*) as c FROM quiz_attempts WHERE quiz_id = ? AND user_id = ?')
-				.get(quizRow.quiz.id, locals.user.id) as { c: number };
+			const row = await pgGet<{ c: number }>(
+				'SELECT COUNT(*)::int as c FROM quiz_attempts WHERE quiz_id = $1 AND user_id = $2',
+				[quizRow.quiz.id, locals.user.id]
+			);
 			attemptsUsed = row?.c || 0;
 		} else if (fp) {
-			const row = usersSqlite
-				.query(
-					'SELECT COUNT(*) as c FROM quiz_attempts WHERE quiz_id = ? AND user_id IS NULL AND fingerprint = ?'
-				)
-				.get(quizRow.quiz.id, fp) as { c: number };
+			const row = await pgGet<{ c: number }>(
+				'SELECT COUNT(*)::int as c FROM quiz_attempts WHERE quiz_id = $1 AND user_id IS NULL AND fingerprint = $2',
+				[quizRow.quiz.id, fp]
+			);
 			attemptsUsed = row?.c || 0;
 		}
 	}

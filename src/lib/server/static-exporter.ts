@@ -9,7 +9,7 @@ import {
 } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { contentSqlite, usersSqlite } from '#lib/server/db';
+import { contentSqlite, pgAll } from '#lib/server/db';
 import { getSiteSettings } from '#lib/server/visibility';
 
 export interface StaticExportResult {
@@ -321,18 +321,16 @@ function generateSearchIndex(): Array<Record<string, unknown>> {
 	return [...docs, ...quizzes];
 }
 
-function generateNotificationsList(): Array<Record<string, unknown>> {
+async function generateNotificationsList(): Promise<Array<Record<string, unknown>>> {
 	try {
-		return usersSqlite
-			.query(
-				`
-				SELECT id, title, body, type, document_id as documentId, created_at as createdAt
-				FROM notifications
-				ORDER BY created_at DESC
-				LIMIT 20
+		return await pgAll<Record<string, unknown>>(
 			`
-			)
-			.all() as Array<Record<string, unknown>>;
+			SELECT id, title, body, type, document_id as "documentId", created_at as "createdAt"
+			FROM notifications
+			ORDER BY created_at DESC
+			LIMIT 20
+		`
+		);
 	} catch {
 		return [];
 	}
@@ -530,7 +528,7 @@ export async function exportStaticPublicSite(options?: {
 		'utf-8'
 	);
 
-	const notifications = generateNotificationsList();
+	const notifications = await generateNotificationsList();
 	writeFileSync(
 		join(staticApiDir, 'notifications.json'),
 		JSON.stringify({ notifications }),

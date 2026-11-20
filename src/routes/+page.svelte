@@ -8,8 +8,34 @@
 		ClipboardList
 	} from 'lucide-svelte';
 	import DynamicIcon from '#lib/components/DynamicIcon.svelte';
+	import SeoJsonLd from '#lib/components/SeoJsonLd.svelte';
 	let { data }: { data: any } = $props();
+
+	const homeJsonLd = [
+		{
+			'@context': 'https://schema.org',
+			'@type': 'EducationalOrganization',
+			name: 'SujetStore',
+			url: 'https://sujetstore.com',
+			logo: 'https://sujetstore.com/logo.png',
+			description: 'بنك الفروض والاختبارات والدروس التفاعلية الجزائرية لجميع المراحل التعليمية وفق المنهاج الدراسي الوطني'
+		},
+		{
+			'@context': 'https://schema.org',
+			'@type': 'WebSite',
+			name: 'SujetStore',
+			url: 'https://sujetstore.com',
+			inLanguage: ['ar', 'fr', 'en'],
+			potentialAction: {
+				'@type': 'SearchAction',
+				target: 'https://sujetstore.com/?q={search_term_string}',
+				'query-input': 'required name=search_term_string'
+			}
+		}
+	];
 </script>
+
+<SeoJsonLd schema={homeJsonLd} />
 
 <svelte:head>
 	<title>SujetStore - بنك الفروض والاختبارات الجزائرية</title>

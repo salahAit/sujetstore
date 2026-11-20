@@ -1,7 +1,11 @@
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
-const SCIENCES_SVG_DIR = resolve('static/generated/sciences-svg');
+const SCIENCES_SVG_DIR = process.env.MEDIA_ROOT
+	? resolve(process.env.MEDIA_ROOT, 'generated/sciences-svg')
+	: existsSync('/var/lib/sujetstore-media')
+		? resolve('/var/lib/sujetstore-media/generated/sciences-svg')
+		: resolve('static/generated/sciences-svg');
 
 export function saveSciencesSvgAsset(filename: string, svgContent: string): string {
 	const safeName = filename.replace(/[^a-zA-Z0-9._-]/g, '_').replace(/\.svg$/i, '') + '.svg';

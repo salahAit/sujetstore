@@ -2,28 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { contentSqlite } from '#lib/server/db';
 import { checkRateLimit } from '#lib/server/rate-limit';
-import { compileTypstPdf } from '#lib/server/typst';
-import {
-	assembleExam,
-	assemblePhysicsExam,
-	assembleSciencesExam,
-	assembleArabicExam,
-	assembleEnglishExam,
-	assembleFrenchExam,
-	compileAssembledExamPdf,
-	yearSubjectToGrade,
-	yearSubjectToPhysicsTrack,
-	yearSubjectToSciencesTrack,
-	yearSubjectToArabicTrack,
-	yearSubjectToEnglishTrack,
-	yearSubjectToFrenchTrack,
-	type AssembleExamOptions,
-	type AssemblePhysicsExamOptions,
-	type AssembleSciencesExamOptions,
-	type AssembleArabicExamOptions,
-	type AssembleEnglishExamOptions,
-	type AssembleFrenchExamOptions
-} from '#lib/server/exam-assembler';
+import { generatorEngine, subjectRegistry, type ExamVariant } from '#lib/kernel';
 import { gradeQuizSubmission } from '#lib/server/quiz-grading';
 import { awardQuizGamification } from '#lib/server/gamification';
 import { getOrCreateFingerprint } from '#lib/server/auth';
@@ -68,7 +47,7 @@ export const POST: RequestHandler = async (event) => {
 			answersMap
 		);
 		const fingerprint = getOrCreateFingerprint(event);
-		const gamification = awardQuizGamification({
+		const gamification = await awardQuizGamification({
 			userId: event.locals.user.id,
 			fingerprint,
 			quizId: 0,
@@ -259,167 +238,62 @@ export const POST: RequestHandler = async (event) => {
 	}
 
 	if (mode === 'pdf') {
-		const mathGrade = yearSubjectToGrade(ys.year_id, ys.subject_id, ys.stream_id);
-		const physicsTrack =
-			mathGrade === null ? yearSubjectToPhysicsTrack(ys.year_id, ys.subject_id, ys.stream_id) : null;
-		const sciencesTrack =
-			mathGrade === null && physicsTrack === null
-				? yearSubjectToSciencesTrack(ys.year_id, ys.subject_id, ys.stream_id)
-				: null;
-		const arabicTrack =
-			mathGrade === null && physicsTrack === null && sciencesTrack === null
-				? yearSubjectToArabicTrack(ys.year_id, ys.subject_id, ys.stream_id)
-				: null;
-		const englishTrack =
-			mathGrade === null &&
-			physicsTrack === null &&
-			sciencesTrack === null &&
-			arabicTrack === null
-				? yearSubjectToEnglishTrack(ys.year_id, ys.subject_id, ys.stream_id)
-				: null;
-		const frenchTrack =
-			mathGrade === null &&
-			physicsTrack === null &&
-			sciencesTrack === null &&
-			arabicTrack === null &&
-			englishTrack === null
-				? yearSubjectToFrenchTrack(ys.year_id, ys.subject_id, ys.stream_id)
-				: null;
-		if (
-			mathGrade !== null ||
-			physicsTrack !== null ||
-			sciencesTrack !== null ||
-			arabicTrack !== null ||
-			englishTrack !== null ||
-			frenchTrack !== null
-		) {
-			const trimesterId = (['t1', 't2', 't3'].includes(body.trimesterId)
-				? body.trimesterId
-				: 't1') as 't1' | 't2' | 't3';
-			const docType = body.docType === 'test' ? 'test' : 'exam';
-			const difficulty = (['easy', 'medium', 'hard'].includes(body.difficulty)
-				? body.difficulty
-				: 'medium') as 'easy' | 'medium' | 'hard';
-			const variant = (
-				[
-					'trimester_exam',
-					'supervised_test',
-					'cinq_mock',
-					'competency_eval',
-					'bem_mock',
-					'bac_mock'
-				].includes(body.variant)
-					? body.variant
-					: undefined
-			) as AssembleExamOptions['variant'];
-			const rawSeed = typeof body.seed === 'boolean' ? NaN : Number(body.seed);
-			const seed =
-				Number.isInteger(rawSeed) && rawSeed > 0
-					? rawSeed
-					: Math.floor(Math.random() * 90000) + 10000;
+		const trimesterId = (['t1', 't2', 't3'].includes(body.trimesterId)
+			? body.trimesterId
+			: 't1') as 't1' | 't2' | 't3';
+		const docType = body.docType === 'test' ? 'test' : 'exam';
+		const difficulty = (['easy', 'medium', 'hard'].includes(body.difficulty)
+			? body.difficulty
+			: 'medium') as 'easy' | 'medium' | 'hard';
+		const variant = (
+			[
+				'trimester_exam',
+				'supervised_test',
+				'cinq_mock',
+				'competency_eval',
+				'bem_mock',
+				'bac_mock'
+			].includes(body.variant)
+				? body.variant
+				: undefined
+		) as ExamVariant | undefined;
+		const topicNumber =
+			body.topicNumber === 1 || body.topicNumber === 2 ? (body.topicNumber as 1 | 2) : undefined;
+		const rawSeed = typeof body.seed === 'boolean' ? NaN : Number(body.seed);
+		const seed =
+			Number.isInteger(rawSeed) && rawSeed > 0
+				? rawSeed
+				: Math.floor(Math.random() * 90000) + 10000;
 
-			const paper =
-				mathGrade !== null
-					? assembleExam({
-							grade: mathGrade,
-							trimesterId,
-							seed,
-							docType,
-							variant,
-							difficulty
-						})
-					: physicsTrack !== null
-						? assemblePhysicsExam({
-								grade: physicsTrack,
-								trimesterId,
-								seed,
-								docType,
-								variant: (['trimester_exam', 'supervised_test', 'bem_mock', 'bac_mock'].includes(
-									variant || ''
-								)
-									? variant
-									: undefined) as AssemblePhysicsExamOptions['variant'],
-								difficulty
-							})
-						: sciencesTrack !== null
-							? assembleSciencesExam({
-									grade: sciencesTrack,
-									trimesterId,
-									seed,
-									docType,
-									variant: ([
-										'trimester_exam',
-										'supervised_test',
-										'competency_eval',
-										'bem_mock',
-										'bac_mock'
-									].includes(variant || '')
-										? variant
-										: undefined) as AssembleSciencesExamOptions['variant'],
-									difficulty
-								})
-							: arabicTrack !== null
-								? assembleArabicExam({
-										grade: arabicTrack,
-										trimesterId,
-										seed,
-										docType,
-										variant: ([
-											'trimester_exam',
-											'supervised_test',
-											'competency_eval',
-											'bem_mock',
-											'bac_mock'
-										].includes(variant || '')
-											? variant
-											: undefined) as AssembleArabicExamOptions['variant'],
-										difficulty
-									})
-								: englishTrack !== null
-									? assembleEnglishExam({
-											grade: englishTrack,
-											trimesterId,
-											seed,
-											docType,
-											variant: ([
-												'trimester_exam',
-												'supervised_test',
-												'competency_eval',
-												'bem_mock',
-												'bac_mock'
-											].includes(variant || '')
-												? variant
-												: undefined) as AssembleEnglishExamOptions['variant'],
-											difficulty
-										})
-									: assembleFrenchExam({
-											grade: frenchTrack!,
-											trimesterId,
-											seed,
-											docType,
-											variant: ([
-												'trimester_exam',
-												'supervised_test',
-												'competency_eval',
-												'bem_mock',
-												'bac_mock'
-											].includes(variant || '')
-												? variant
-												: undefined) as AssembleFrenchExamOptions['variant'],
-											difficulty
-										});
+		const assembled = subjectRegistry.assembleForYearSubject(
+			ys.year_id,
+			ys.subject_id,
+			ys.stream_id,
+			{
+				trimesterId,
+				seed,
+				docType,
+				variant,
+				difficulty,
+				topicNumber
+			}
+		);
 
-			const fileId = `gen-${randomUUID().slice(0, 12)}`;
-			const subjectOutPath = resolve('data/uploads/sujet', `${fileId}.pdf`);
-			const solutionOutPath = resolve('data/uploads/sujet', `${fileId}-sol.pdf`);
-
-			const { subjectResult, solutionResult } = await compileAssembledExamPdf(paper, {
-				subjectOutPath,
-				solutionOutPath
+		if (assembled) {
+			const { plugin, trackId, paper } = assembled;
+			const compiled = await generatorEngine.compileExamWithQueueAndCache(paper, {
+				pluginId: plugin.id,
+				trackId,
+				trimesterId,
+				docType: paper.docType,
+				variant: paper.variant,
+				difficulty,
+				seed,
+				topicNumber
 			});
 
-			if (!subjectResult.success) {
-				return json({ error: `تعذر توليد ملف PDF: ${subjectResult.error}` }, { status: 500 });
+			if (!compiled.success) {
+				return json({ error: `تعذر توليد ملف PDF: ${compiled.error}` }, { status: 500 });
 			}
 
 			const docLabel =
@@ -439,15 +313,12 @@ export const POST: RequestHandler = async (event) => {
 				title: `${docLabel} مقترح — ${ys.year_name}${streamPart} (${ys.subject_name}) [البذرة #${seed}]`,
 				seed,
 				totalPoints: paper.totalPoints,
-				pdfUrl: `/uploads/sujet/${fileId}.pdf`,
-				solutionUrl: solutionResult.success
-					? `/uploads/sujet/${fileId}-sol.pdf`
-					: `/uploads/sujet/${fileId}.pdf`
+				pdfUrl: compiled.pdfUrl,
+				solutionUrl: compiled.solutionUrl,
+				cached: compiled.cached
 			});
 		}
 
-		const trimesterId = ['t1', 't2', 't3'].includes(body.trimesterId) ? body.trimesterId : 't1';
-		const docType = body.docType === 'test' ? 'test' : 'exam';
 		const exerciseCount = Math.min(4, Math.max(1, Number(body.exerciseCount || 2)));
 
 		let exRows = contentSqlite
@@ -529,8 +400,18 @@ export const POST: RequestHandler = async (event) => {
 			ys.level_id === 'secondaire' ? 'secondary/exam' : ys.level_id === 'primaire' ? 'primary/taqweem' : 'middle/exam';
 
 		const [subjRes, solRes] = await Promise.all([
-			compileTypstPdf({ examDoc, outputPath: subjectOut, templateId, isSolution: false }),
-			compileTypstPdf({ examDoc, outputPath: solOut, templateId, isSolution: true })
+			generatorEngine.runQueuedTypstCompile({
+				examDoc,
+				outputPath: subjectOut,
+				templateId,
+				isSolution: false
+			}),
+			generatorEngine.runQueuedTypstCompile({
+				examDoc,
+				outputPath: solOut,
+				templateId,
+				isSolution: true
+			})
 		]);
 
 		if (!subjRes.success) {

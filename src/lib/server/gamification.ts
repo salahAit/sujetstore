@@ -1,4 +1,6 @@
-import { contentSqlite, usersSqlite } from './db';
+import { contentSqlite, pgAll, pgGet, pgRun, pgTx } from './db';
+
+const PG_NOW_EXPR = "to_char(NOW() AT TIME ZONE 'UTC', 'YYYY-MM-DD HH24:MI:SS')";
 
 export interface EarnedBadgeSummary {
 	slug: string;
@@ -16,43 +18,47 @@ export interface GamificationOutcome {
 }
 
 /** Award XP, update daily streak, track mistakes, and evaluate badges after a quiz submission. */
-export function awardQuizGamification(params: {
+export async function awardQuizGamification(params: {
 	userId: number | null;
 	fingerprint: string;
 	quizId: number;
 	percentage: number;
 	timeTaken: number;
 	gradedDetails: { questionId: number; type: string; isCorrect: boolean }[];
-}): GamificationOutcome {
+}): Promise<GamificationOutcome> {
 	const { userId, fingerprint, quizId, percentage, timeTaken, gradedDetails } = params;
 	let xpEarned = 0;
 	const newBadges: EarnedBadgeSummary[] = [];
 	let streakDays = 0;
 
-	const tx = usersSqlite.transaction(() => {
+	await pgTx(async (tx) => {
 		// 1. Base completion XP + performance bonus
 		const completionXp = 10 + Math.round(Math.max(0, Math.min(100, percentage)) / 10);
-		usersSqlite
-			.query(
-				"INSERT INTO user_points (user_id, fingerprint, points, reason, quiz_id, earned_at) VALUES (?, ?, ?, 'quiz_complete', ?, datetime('now'))"
-			)
-			.run(userId, fingerprint, completionXp, quizId);
+		await pgRun(
+			`INSERT INTO user_points (user_id, fingerprint, points, reason, quiz_id, earned_at)
+			 VALUES ($1, $2, $3, 'quiz_complete', $4, ${PG_NOW_EXPR})`,
+			[userId, fingerprint, completionXp, quizId],
+			tx
+		);
 		xpEarned += completionXp;
 
 		if (percentage >= 100) {
-			usersSqlite
-				.query(
-					"INSERT INTO user_points (user_id, fingerprint, points, reason, quiz_id, earned_at) VALUES (?, ?, 15, 'perfect_score', ?, datetime('now'))"
-				)
-				.run(userId, fingerprint, quizId);
+			await pgRun(
+				`INSERT INTO user_points (user_id, fingerprint, points, reason, quiz_id, earned_at)
+				 VALUES ($1, $2, 15, 'perfect_score', $3, ${PG_NOW_EXPR})`,
+				[userId, fingerprint, quizId],
+				tx
+			);
 			xpEarned += 15;
 		}
 
 		// 2. Update daily study streak for signed-in users
 		if (userId) {
-			const userRow = usersSqlite
-				.query('SELECT streak_days, last_active_date FROM users WHERE id = ?')
-				.get(userId) as { streak_days: number; last_active_date: string | null } | null;
+			const userRow = await pgGet<{ streak_days: number; last_active_date: string | null }>(
+				'SELECT streak_days, last_active_date FROM users WHERE id = $1 FOR UPDATE',
+				[userId],
+				tx
+			);
 
 			const today = new Date().toISOString().slice(0, 10);
 			const yesterday = new Date(Date.now() - 86400_000).toISOString().slice(0, 10);
@@ -65,77 +71,95 @@ export function awardQuizGamification(params: {
 				} else {
 					streakDays = 1;
 				}
-				usersSqlite
-					.query('UPDATE users SET streak_days = ?, last_active_date = ? WHERE id = ?')
-					.run(streakDays, today, userId);
+				await pgRun(
+					'UPDATE users SET streak_days = $1, last_active_date = $2 WHERE id = $3',
+					[streakDays, today, userId],
+					tx
+				);
 			}
 		}
 
 		// 3. Mistake Notebook tracking (record wrongs, auto-resolve rights)
 		for (const item of gradedDetails) {
 			if (!item.questionId) continue;
-			const existing = (
-				userId
-					? usersSqlite
-							.query('SELECT id, wrong_count FROM user_mistakes WHERE user_id = ? AND question_id = ? LIMIT 1')
-							.get(userId, item.questionId)
-					: usersSqlite
-							.query(
-								'SELECT id, wrong_count FROM user_mistakes WHERE user_id IS NULL AND fingerprint = ? AND question_id = ? LIMIT 1'
-							)
-							.get(fingerprint, item.questionId)
-			) as { id: number; wrong_count: number } | null;
+			const existing = userId
+				? await pgGet<{ id: number; wrong_count: number }>(
+						'SELECT id, wrong_count FROM user_mistakes WHERE user_id = $1 AND question_id = $2 LIMIT 1',
+						[userId, item.questionId],
+						tx
+					)
+				: await pgGet<{ id: number; wrong_count: number }>(
+						'SELECT id, wrong_count FROM user_mistakes WHERE user_id IS NULL AND fingerprint = $1 AND question_id = $2 LIMIT 1',
+						[fingerprint, item.questionId],
+						tx
+					);
 
 			if (!item.isCorrect) {
 				if (existing) {
-					usersSqlite
-						.query(
-							"UPDATE user_mistakes SET wrong_count = wrong_count + 1, resolved = 0, quiz_id = ?, last_attempt_at = datetime('now') WHERE id = ?"
-						)
-						.run(quizId, existing.id);
+					await pgRun(
+						`UPDATE user_mistakes
+						 SET wrong_count = wrong_count + 1, resolved = FALSE, quiz_id = $1, last_attempt_at = ${PG_NOW_EXPR}
+						 WHERE id = $2`,
+						[quizId, existing.id],
+						tx
+					);
 				} else {
-					usersSqlite
-						.query(
-							"INSERT INTO user_mistakes (user_id, fingerprint, question_id, quiz_id, wrong_count, last_attempt_at, resolved) VALUES (?, ?, ?, ?, 1, datetime('now'), 0)"
-						)
-						.run(userId, fingerprint, item.questionId, quizId);
+					await pgRun(
+						`INSERT INTO user_mistakes (user_id, fingerprint, question_id, quiz_id, wrong_count, last_attempt_at, resolved)
+						 VALUES ($1, $2, $3, $4, 1, ${PG_NOW_EXPR}, FALSE)`,
+						[userId, fingerprint, item.questionId, quizId],
+						tx
+					);
 				}
 			} else if (existing) {
-				usersSqlite
-					.query("UPDATE user_mistakes SET resolved = 1, last_attempt_at = datetime('now') WHERE id = ?")
-					.run(existing.id);
+				await pgRun(
+					`UPDATE user_mistakes SET resolved = TRUE, last_attempt_at = ${PG_NOW_EXPR} WHERE id = $1`,
+					[existing.id],
+					tx
+				);
 			}
 		}
 
 		// 4. Evaluate badges
-		const whereCol = userId ? 'user_id = ?' : 'user_id IS NULL AND fingerprint = ?';
+		const whereCol = userId ? 'user_id = $1' : 'user_id IS NULL AND fingerprint = $1';
 		const whereArg = userId ?? fingerprint;
 
-		const allBadges = usersSqlite.query('SELECT * FROM badge_definitions ORDER BY id').all() as any[];
-		const earnedRows = usersSqlite
-			.query(`SELECT badge_id FROM user_badges WHERE ${whereCol}`)
-			.all(whereArg) as { badge_id: number }[];
+		const allBadges = await pgAll<any>('SELECT * FROM badge_definitions ORDER BY id', [], tx);
+		const earnedRows = await pgAll<{ badge_id: number }>(
+			`SELECT badge_id FROM user_badges WHERE ${whereCol}`,
+			[whereArg],
+			tx
+		);
 		const earnedSet = new Set(earnedRows.map((r) => r.badge_id));
 
-		const attemptCountRow = usersSqlite
-			.query(`SELECT COUNT(*) as c FROM quiz_attempts WHERE ${whereCol}`)
-			.get(whereArg) as { c: number };
+		const attemptCountRow = await pgGet<{ c: number }>(
+			`SELECT COUNT(*)::int as c FROM quiz_attempts WHERE ${whereCol}`,
+			[whereArg],
+			tx
+		);
 		const totalAttempts = attemptCountRow?.c || 0;
 
-		const pointsSumRow = usersSqlite
-			.query(`SELECT COALESCE(SUM(points), 0) as total FROM user_points WHERE ${whereCol}`)
-			.get(whereArg) as { total: number };
+		const pointsSumRow = await pgGet<{ total: number }>(
+			`SELECT COALESCE(SUM(points), 0)::int as total FROM user_points WHERE ${whereCol}`,
+			[whereArg],
+			tx
+		);
 		const currentPoints = pointsSumRow?.total || 0;
 
-		const recentAttempts = usersSqlite
-			.query(`SELECT percentage FROM quiz_attempts WHERE ${whereCol} ORDER BY id DESC LIMIT 10`)
-			.all(whereArg) as { percentage: number }[];
+		const recentAttempts = await pgAll<{ percentage: number }>(
+			`SELECT percentage FROM quiz_attempts WHERE ${whereCol} ORDER BY id DESC LIMIT 10`,
+			[whereArg],
+			tx
+		);
 
-		const answeredQRows = usersSqlite
-			.query(
-				`SELECT DISTINCT aa.question_id FROM attempt_answers aa JOIN quiz_attempts qa ON aa.attempt_id = qa.id WHERE qa.${whereCol}`
-			)
-			.all(whereArg) as { question_id: number }[];
+		const answeredQRows = await pgAll<{ question_id: number }>(
+			`SELECT DISTINCT aa.question_id
+			 FROM attempt_answers aa
+			 JOIN quiz_attempts qa ON aa.attempt_id = qa.id
+			 WHERE qa.${whereCol}`,
+			[whereArg],
+			tx
+		);
 
 		let distinctTypeCount = 0;
 		if (answeredQRows.length > 0) {
@@ -183,19 +207,21 @@ export function awardQuizGamification(params: {
 			}
 
 			if (qualified) {
-				usersSqlite
-					.query(
-						"INSERT INTO user_badges (user_id, fingerprint, badge_id, earned_at) VALUES (?, ?, ?, datetime('now'))"
-					)
-					.run(userId, fingerprint, badge.id);
+				await pgRun(
+					`INSERT INTO user_badges (user_id, fingerprint, badge_id, earned_at)
+					 VALUES ($1, $2, $3, ${PG_NOW_EXPR})`,
+					[userId, fingerprint, badge.id],
+					tx
+				);
 
 				const badgePoints = Number(badge.points || 0);
 				if (badgePoints > 0) {
-					usersSqlite
-						.query(
-							"INSERT INTO user_points (user_id, fingerprint, points, reason, quiz_id, earned_at) VALUES (?, ?, ?, 'badge_earned', ?, datetime('now'))"
-						)
-						.run(userId, fingerprint, badgePoints, quizId);
+					await pgRun(
+						`INSERT INTO user_points (user_id, fingerprint, points, reason, quiz_id, earned_at)
+						 VALUES ($1, $2, $3, 'badge_earned', $4, ${PG_NOW_EXPR})`,
+						[userId, fingerprint, badgePoints, quizId],
+						tx
+					);
 					xpEarned += badgePoints;
 				}
 				newBadges.push({
@@ -209,15 +235,12 @@ export function awardQuizGamification(params: {
 		}
 	});
 
-	tx();
-
-	const totalRow = usersSqlite
-		.query(
-			userId
-				? 'SELECT COALESCE(SUM(points), 0) as total FROM user_points WHERE user_id = ?'
-				: 'SELECT COALESCE(SUM(points), 0) as total FROM user_points WHERE user_id IS NULL AND fingerprint = ?'
-		)
-		.get(userId ?? fingerprint) as { total: number };
+	const totalRow = await pgGet<{ total: number }>(
+		userId
+			? 'SELECT COALESCE(SUM(points), 0)::int as total FROM user_points WHERE user_id = $1'
+			: 'SELECT COALESCE(SUM(points), 0)::int as total FROM user_points WHERE user_id IS NULL AND fingerprint = $1',
+		[userId ?? fingerprint]
+	);
 
 	return {
 		xpEarned,
@@ -227,61 +250,117 @@ export function awardQuizGamification(params: {
 	};
 }
 
+/** Read aggregated gamification stats for a signed-in user or anonymous fingerprint. */
+export async function getUserGamificationStats(params: {
+	userId: number | null;
+	fingerprint: string;
+}): Promise<{ totalPoints: number; quizCount: number; earnedBadgeIds: number[] }> {
+	const whereCol = params.userId ? 'user_id = $1' : 'user_id IS NULL AND fingerprint = $1';
+	const whereArg = params.userId ?? params.fingerprint;
+
+	const [pointsRow, attemptsRow, badgesRows] = await Promise.all([
+		pgGet<{ total: number }>(
+			`SELECT COALESCE(SUM(points), 0)::int as total FROM user_points WHERE ${whereCol}`,
+			[whereArg]
+		),
+		pgGet<{ c: number }>(
+			`SELECT COUNT(*)::int as c FROM quiz_attempts WHERE ${whereCol}`,
+			[whereArg]
+		),
+		pgAll<{ badge_id: number }>(
+			`SELECT badge_id FROM user_badges WHERE ${whereCol}`,
+			[whereArg]
+		)
+	]);
+
+	return {
+		totalPoints: pointsRow?.total || 0,
+		quizCount: attemptsRow?.c || 0,
+		earnedBadgeIds: badgesRows.map((r) => r.badge_id)
+	};
+}
+
 /** Merge anonymous browser fingerprint history (`sujet_fp`) into a newly signed-in user account. */
-export function migrateAnonymousProgressToUser(fingerprint: string | null | undefined, userId: number) {
+export async function migrateAnonymousProgressToUser(
+	fingerprint: string | null | undefined,
+	userId: number
+): Promise<void> {
 	if (!fingerprint) return;
 
-	const tx = usersSqlite.transaction(() => {
-		usersSqlite
-			.query('UPDATE quiz_attempts SET user_id = ? WHERE user_id IS NULL AND fingerprint = ?')
-			.run(userId, fingerprint);
+	await pgTx(async (tx) => {
+		await pgRun(
+			'UPDATE quiz_attempts SET user_id = $1 WHERE user_id IS NULL AND fingerprint = $2',
+			[userId, fingerprint],
+			tx
+		);
 
-		usersSqlite
-			.query('UPDATE user_points SET user_id = ? WHERE user_id IS NULL AND fingerprint = ?')
-			.run(userId, fingerprint);
+		await pgRun(
+			'UPDATE user_points SET user_id = $1 WHERE user_id IS NULL AND fingerprint = $2',
+			[userId, fingerprint],
+			tx
+		);
 
-		usersSqlite
-			.query('UPDATE ratings SET user_id = ? WHERE user_id IS NULL AND fingerprint = ?')
-			.run(userId, fingerprint);
+		await pgRun(
+			'UPDATE ratings SET user_id = $1 WHERE user_id IS NULL AND fingerprint = $2',
+			[userId, fingerprint],
+			tx
+		);
 
 		// Deduplicate badges before attaching user_id
-		const existingBadges = usersSqlite
-			.query('SELECT badge_id FROM user_badges WHERE user_id = ?')
-			.all(userId) as { badge_id: number }[];
+		const existingBadges = await pgAll<{ badge_id: number }>(
+			'SELECT badge_id FROM user_badges WHERE user_id = $1',
+			[userId],
+			tx
+		);
 		const ownedSet = new Set(existingBadges.map((b) => b.badge_id));
 
-		const anonBadges = usersSqlite
-			.query('SELECT id, badge_id FROM user_badges WHERE user_id IS NULL AND fingerprint = ?')
-			.all(fingerprint) as { id: number; badge_id: number }[];
+		const anonBadges = await pgAll<{ id: number; badge_id: number }>(
+			'SELECT id, badge_id FROM user_badges WHERE user_id IS NULL AND fingerprint = $1',
+			[fingerprint],
+			tx
+		);
 		for (const ab of anonBadges) {
 			if (ownedSet.has(ab.badge_id)) {
-				usersSqlite.query('DELETE FROM user_badges WHERE id = ?').run(ab.id);
+				await pgRun('DELETE FROM user_badges WHERE id = $1', [ab.id], tx);
 			} else {
-				usersSqlite.query('UPDATE user_badges SET user_id = ? WHERE id = ?').run(userId, ab.id);
+				await pgRun('UPDATE user_badges SET user_id = $1 WHERE id = $2', [userId, ab.id], tx);
 				ownedSet.add(ab.badge_id);
 			}
 		}
 
 		// Merge mistake counts if question already exists on user
-		const anonMistakes = usersSqlite
-			.query('SELECT id, question_id, wrong_count, quiz_id, resolved FROM user_mistakes WHERE user_id IS NULL AND fingerprint = ?')
-			.all(fingerprint) as { id: number; question_id: number; wrong_count: number; quiz_id: number | null; resolved: number }[];
+		const anonMistakes = await pgAll<{
+			id: number;
+			question_id: number;
+			wrong_count: number;
+			quiz_id: number | null;
+			resolved: boolean;
+		}>(
+			'SELECT id, question_id, wrong_count, quiz_id, resolved FROM user_mistakes WHERE user_id IS NULL AND fingerprint = $1',
+			[fingerprint],
+			tx
+		);
 		for (const am of anonMistakes) {
-			const existing = usersSqlite
-				.query('SELECT id FROM user_mistakes WHERE user_id = ? AND question_id = ? LIMIT 1')
-				.get(userId, am.question_id) as { id: number } | null;
+			const existing = await pgGet<{ id: number }>(
+				'SELECT id FROM user_mistakes WHERE user_id = $1 AND question_id = $2 LIMIT 1',
+				[userId, am.question_id],
+				tx
+			);
 			if (existing) {
-				usersSqlite
-					.query(
-						'UPDATE user_mistakes SET wrong_count = wrong_count + ?, resolved = CASE WHEN ? = 0 THEN 0 ELSE resolved END WHERE id = ?'
-					)
-					.run(am.wrong_count, am.resolved, existing.id);
-				usersSqlite.query('DELETE FROM user_mistakes WHERE id = ?').run(am.id);
+				await pgRun(
+					`UPDATE user_mistakes
+					 SET wrong_count = wrong_count + $1,
+					     resolved = CASE WHEN $2 = FALSE THEN FALSE ELSE resolved END
+					 WHERE id = $3`,
+					[am.wrong_count, Boolean(am.resolved), existing.id],
+					tx
+				);
+				await pgRun('DELETE FROM user_mistakes WHERE id = $1', [am.id], tx);
 			} else {
-				usersSqlite.query('UPDATE user_mistakes SET user_id = ? WHERE id = ?').run(userId, am.id);
+				await pgRun('UPDATE user_mistakes SET user_id = $1 WHERE id = $2', [userId, am.id], tx);
 			}
 		}
 	});
-
-	tx();
 }
+
+export const mergeAnonymousGamification = migrateAnonymousProgressToUser;

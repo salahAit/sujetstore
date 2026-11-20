@@ -1,7 +1,11 @@
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
-const ARABIC_SVG_DIR = resolve('static/generated/arabic-svg');
+const ARABIC_SVG_DIR = process.env.MEDIA_ROOT
+	? resolve(process.env.MEDIA_ROOT, 'generated/arabic-svg')
+	: existsSync('/var/lib/sujetstore-media')
+		? resolve('/var/lib/sujetstore-media/generated/arabic-svg')
+		: resolve('static/generated/arabic-svg');
 
 export function saveArabicSvgAsset(filename: string, svgContent: string): string {
 	const safeName = filename.replace(/[^a-zA-Z0-9._-]/g, '_').replace(/\.svg$/i, '') + '.svg';

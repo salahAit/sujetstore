@@ -30,11 +30,11 @@ export const actions: Actions = {
 		}
 
 		const trimmed = identifier.trim();
-		const existingUser = await usersDatabase
+		const [existingUser] = await usersDatabase
 			.select()
 			.from(userSchema.users)
 			.where(or(eq(userSchema.users.username, trimmed), eq(userSchema.users.email, trimmed)))
-			.get();
+			.limit(1);
 
 		if (!existingUser || !existingUser.isActive) {
 			return fail(400, {

@@ -1,56 +1,55 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { usersSqlite } from '#lib/server/db';
+import { pgAll, pgGet } from '#lib/server/db';
 import { getOrCreateFingerprint } from '#lib/server/auth';
 
 export const GET: RequestHandler = async (event) => {
 	const userId = event.locals.user?.id ?? null;
 	const fingerprint = getOrCreateFingerprint(event);
 
-	const whereClause = userId ? 'user_id = ?' : 'user_id IS NULL AND fingerprint = ?';
+	const whereClause = userId ? 'user_id = $1' : 'user_id IS NULL AND fingerprint = $1';
 	const whereParam = userId ?? fingerprint;
 
-	const allBadges = usersSqlite.query('SELECT * FROM badge_definitions ORDER BY id').all();
-
-	const earnedBadges = usersSqlite
-		.query(`SELECT badge_id FROM user_badges WHERE ${whereClause}`)
-		.all(whereParam) as { badge_id: number }[];
-	const earnedSet = new Set(earnedBadges.map((b) => b.badge_id));
-
-	const pointsRow = usersSqlite
-		.query(`SELECT COALESCE(SUM(points), 0) as total FROM user_points WHERE ${whereClause}`)
-		.get(whereParam) as { total: number };
-
-	const history = usersSqlite
-		.query(`SELECT * FROM user_points WHERE ${whereClause} ORDER BY earned_at DESC LIMIT 20`)
-		.all(whereParam);
-
-	// Leaderboard joined with registered users (excludes legacy fake seed rows)
-	const leaderboard = usersSqlite
-		.query(
+	const [allBadges, earnedBadges, pointsRow, history, leaderboard, attemptCount] =
+		await Promise.all([
+			pgAll<any>('SELECT * FROM badge_definitions ORDER BY id'),
+			pgAll<{ badge_id: number }>(`SELECT badge_id FROM user_badges WHERE ${whereClause}`, [
+				whereParam
+			]),
+			pgGet<{ total: number }>(
+				`SELECT COALESCE(SUM(points), 0)::int as total FROM user_points WHERE ${whereClause}`,
+				[whereParam]
+			),
+			pgAll<any>(
+				`SELECT * FROM user_points WHERE ${whereClause} ORDER BY earned_at DESC LIMIT 20`,
+				[whereParam]
+			),
+			// Leaderboard joined with registered users (excludes legacy fake seed rows)
+			pgAll<any>(
+				`
+				SELECT
+					COALESCE(up.user_id::text, MAX(up.fingerprint)) as player_key,
+					MAX(up.fingerprint) as fingerprint,
+					CASE
+						WHEN up.user_id IS NOT NULL THEN COALESCE(MAX(u.name), 'مستخدم')
+						ELSE 'زائر #' || substr(replace(MAX(up.fingerprint), 'fp_', ''), 1, 6)
+					END as display_name,
+					COALESCE(SUM(up.points), 0)::int as total_points,
+					COUNT(DISTINCT up.quiz_id)::int as quizzes
+				FROM user_points up
+				LEFT JOIN users u ON up.user_id = u.id
+				WHERE up.fingerprint != 'example-user-fp'
+				GROUP BY COALESCE('u:' || up.user_id::text, 'f:' || up.fingerprint), up.user_id
+				ORDER BY total_points DESC
+				LIMIT 10
 			`
-		SELECT
-			COALESCE(CAST(up.user_id AS TEXT), up.fingerprint) as player_key,
-			up.fingerprint as fingerprint,
-			CASE
-				WHEN u.id IS NOT NULL THEN u.name
-				ELSE 'زائر #' || substr(replace(up.fingerprint, 'fp_', ''), 1, 6)
-			END as display_name,
-			SUM(up.points) as total_points,
-			COUNT(DISTINCT up.quiz_id) as quizzes
-		FROM user_points up
-		LEFT JOIN users u ON up.user_id = u.id
-		WHERE up.fingerprint != 'example-user-fp'
-		GROUP BY COALESCE('u:' || up.user_id, 'f:' || up.fingerprint)
-		ORDER BY total_points DESC
-		LIMIT 10
-	`
-		)
-		.all();
+			),
+			pgGet<{ c: number }>(`SELECT COUNT(*)::int as c FROM quiz_attempts WHERE ${whereClause}`, [
+				whereParam
+			])
+		]);
 
-	const attemptCount = usersSqlite
-		.query(`SELECT COUNT(*) as c FROM quiz_attempts WHERE ${whereClause}`)
-		.get(whereParam) as { c: number };
+	const earnedSet = new Set(earnedBadges.map((b) => b.badge_id));
 
 	return json({
 		badges: allBadges.map((b: any) => ({
