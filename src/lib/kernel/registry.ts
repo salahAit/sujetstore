@@ -36,17 +36,17 @@ export class SubjectRegistry {
 		return null;
 	}
 
-	assembleForYearSubject(
+	async assembleForYearSubject(
 		yearId: string,
 		subjectId: string,
 		streamId: string | null | undefined,
 		opts: Omit<SubjectAssembleRequest, 'trackId'>
-	): AssembledSubjectResult | null {
+	): Promise<AssembledSubjectResult | null> {
 		const resolved = this.resolveForYearSubject(yearId, subjectId, streamId);
 		if (!resolved) {
 			return null;
 		}
-		const paper = resolved.plugin.assemble({
+		const paper = await resolved.plugin.assemble({
 			...opts,
 			trackId: resolved.trackId
 		});

@@ -2,13 +2,13 @@ import {
 	SCIENCES_GRADE_METADATA,
 	SeededRng,
 	getSciencesTemplatesFor
-} from '../../modules/SciencesTemplates';
+} from '../../modules/SciencesTemplates/runtime';
 import type {
 	Difficulty,
 	SciencesGeneratedExerciseInstance,
 	SciencesParameterizedTemplate,
 	SciencesPrimaryTrackId
-} from '../../modules/SciencesTemplates';
+} from '../../modules/SciencesTemplates/runtime';
 import type {
 	ExamDocument,
 	ExamMetadata,

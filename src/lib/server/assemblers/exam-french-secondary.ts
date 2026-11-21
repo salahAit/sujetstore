@@ -3,14 +3,14 @@ import {
 	FRENCH_SECONDARY_TRACK_IDS,
 	SeededRng,
 	getFrenchTemplatesFor
-} from '../../modules/FrenchTemplates';
+} from '../../modules/FrenchTemplates/runtime';
 import type {
 	Difficulty,
 	FrenchExamRole,
 	FrenchGeneratedExerciseInstance,
 	FrenchParameterizedTemplate,
 	FrenchSecondaryTrackId
-} from '../../modules/FrenchTemplates';
+} from '../../modules/FrenchTemplates/runtime';
 import type {
 	ExamDocument,
 	ExamMetadata,

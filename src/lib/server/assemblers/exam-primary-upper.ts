@@ -1,4 +1,4 @@
-import { getTemplatesFor, GRADE_METADATA, SeededRng } from '../../modules/MathTemplates';
+import { getTemplatesFor, GRADE_METADATA, SeededRng } from '../../modules/MathTemplates/runtime';
 import type {
 	Difficulty,
 	GeneratedExerciseInstance,

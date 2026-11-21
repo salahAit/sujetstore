@@ -3,14 +3,14 @@ import {
 	ENGLISH_SECONDARY_TRACK_IDS,
 	SeededRng,
 	getEnglishTemplatesFor
-} from '../../modules/EnglishTemplates';
+} from '../../modules/EnglishTemplates/runtime';
 import type {
 	Difficulty,
 	EnglishExamRole,
 	EnglishGeneratedExerciseInstance,
 	EnglishParameterizedTemplate,
 	EnglishSecondaryTrackId
-} from '../../modules/EnglishTemplates';
+} from '../../modules/EnglishTemplates/runtime';
 import type {
 	ExamDocument,
 	ExamMetadata,

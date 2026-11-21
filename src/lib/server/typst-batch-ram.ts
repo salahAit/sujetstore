@@ -982,11 +982,11 @@ function inferTemplateIdForStoredDoc(
 	return 'middle/exam';
 }
 
-function assembleTargetExam(
+async function assembleTargetExam(
 	doc: TargetDocumentRow,
 	language: 'ar' | 'fr' | 'en',
 	manifests: Map<string, ManifestHint>
-): { examDoc: Record<string, any>; templateId: string } | null {
+): Promise<{ examDoc: Record<string, any>; templateId: string } | null> {
 	// 1. Direct stored JSON exam content
 	if (doc.content && doc.content.trim().startsWith('{')) {
 		try {
@@ -1014,7 +1014,7 @@ function assembleTargetExam(
 	const difficulty: ExamDifficulty = hint?.difficulty ?? inferDifficulty(doc.difficulty, doc.slug);
 	const seed = hint?.seed ?? deriveSeedFromSlug(doc.slug);
 
-	const assembled = subjectRegistry.assembleForYearSubject(
+	const assembled = await subjectRegistry.assembleForYearSubject(
 		doc.year_id,
 		doc.subject_id,
 		doc.stream_id,
@@ -1229,7 +1229,7 @@ async function runBatchRebuildJob(job: RebuildJobState, targets: TargetDocumentR
 						docType: doc.type
 					});
 
-					const assembled = assembleTargetExam(doc, language, manifests);
+					const assembled = await assembleTargetExam(doc, language, manifests);
 					if (!assembled) {
 						throw new Error(`No kernel assembler matched (${doc.year_id}/${doc.subject_id})`);
 					}

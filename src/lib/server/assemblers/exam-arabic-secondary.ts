@@ -3,13 +3,13 @@ import {
 	ARABIC_SECONDARY_TRACK_IDS,
 	SeededRng,
 	getArabicTemplatesFor
-} from '../../modules/ArabicTemplates';
+} from '../../modules/ArabicTemplates/runtime';
 import type {
 	ArabicGeneratedExerciseInstance,
 	ArabicParameterizedTemplate,
 	ArabicSecondaryTrackId,
 	Difficulty
-} from '../../modules/ArabicTemplates';
+} from '../../modules/ArabicTemplates/runtime';
 import type {
 	ExamDocument,
 	ExamMetadata,

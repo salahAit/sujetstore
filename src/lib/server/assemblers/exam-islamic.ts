@@ -7,7 +7,7 @@ import {
 	type IslamicGeneratedExerciseInstance,
 	type IslamicParameterizedTemplate,
 	type IslamicTrackId
-} from '../../modules/IslamicTemplates';
+} from '../../modules/IslamicTemplates/runtime';
 import type {
 	ExamDocument,
 	ExamMetadata,

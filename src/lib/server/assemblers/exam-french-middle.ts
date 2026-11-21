@@ -2,14 +2,14 @@ import {
 	FRENCH_GRADE_METADATA,
 	SeededRng,
 	getFrenchTemplatesFor
-} from '../../modules/FrenchTemplates';
+} from '../../modules/FrenchTemplates/runtime';
 import type {
 	Difficulty,
 	FrenchExamRole,
 	FrenchGeneratedExerciseInstance,
 	FrenchMiddleTrackId,
 	FrenchParameterizedTemplate
-} from '../../modules/FrenchTemplates';
+} from '../../modules/FrenchTemplates/runtime';
 import type {
 	ExamDocument,
 	ExamMetadata,

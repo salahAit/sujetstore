@@ -11,6 +11,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
+		"incremental": true,
 		"sourceMap": true,
 		"strict": true
 	},
@@ -21,6 +22,7 @@
 	],
 	"exclude": [
 		"src/service-worker",
-		"src/service-worker.ts"
+		"src/service-worker.ts",
+		"plugins"
 	]
 }

@@ -3,13 +3,13 @@ import {
 	SECONDARY_TRACK_IDS,
 	SeededRng,
 	getTemplatesFor
-} from '../../modules/MathTemplates';
+} from '../../modules/MathTemplates/runtime';
 import type {
 	Difficulty,
 	GeneratedExerciseInstance,
 	ParameterizedTemplate,
 	SecondaryTrackId
-} from '../../modules/MathTemplates';
+} from '../../modules/MathTemplates/runtime';
 import type {
 	ExamDocument,
 	ExamMetadata,

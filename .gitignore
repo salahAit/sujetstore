@@ -10,6 +10,8 @@ node_modules/
 build/
 build-static/
 dist/
+plugins/subjects/*.js
+*.tsbuildinfo
 
 # Environment files
 .env

@@ -2,13 +2,13 @@ import {
 	ARABIC_GRADE_METADATA,
 	SeededRng,
 	getArabicTemplatesFor
-} from '../../modules/ArabicTemplates';
+} from '../../modules/ArabicTemplates/runtime';
 import type {
 	ArabicGeneratedExerciseInstance,
 	ArabicParameterizedTemplate,
 	ArabicPrimaryTrackId,
 	Difficulty
-} from '../../modules/ArabicTemplates';
+} from '../../modules/ArabicTemplates/runtime';
 import type {
 	ExamDocument,
 	ExamMetadata,

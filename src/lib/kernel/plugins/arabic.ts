@@ -1,15 +1,9 @@
-import {
-	ALL_ARABIC_LESSONS,
-	ALL_ARABIC_TEMPLATES,
-	ALL_ARABIC_TRACK_IDS,
-	type ArabicTrackId
-} from '../../modules/ArabicTemplates';
-import {
-	assembleArabicExam,
-	yearSubjectToArabicTrack,
-	type AssembleArabicExamOptions
-} from '../../server/exam-assembler';
+import { getPluginManifestStats, loadSubjectAssembler } from '../plugin-loader';
 import type { SubjectPlugin } from '../types';
+
+const BASIC_GRADES: ReadonlySet<string> = new Set([
+	'1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am'
+]);
 
 const SUPPORTED_VARIANTS = [
 	'trimester_exam',
@@ -19,8 +13,6 @@ const SUPPORTED_VARIANTS = [
 	'bac_mock'
 ] as const;
 
-const SUPPORTED_VARIANT_SET: ReadonlySet<string> = new Set(SUPPORTED_VARIANTS);
-
 export const arabicPlugin: SubjectPlugin = {
 	id: 'arabic',
 	nameAr: 'اللغة العربية',
@@ -28,33 +20,31 @@ export const arabicPlugin: SubjectPlugin = {
 	supportedVariants: SUPPORTED_VARIANTS,
 
 	resolveTrack(yearId, subjectId, streamId) {
-		return yearSubjectToArabicTrack(yearId, subjectId, streamId);
+		if (subjectId === 'ARB-B' && BASIC_GRADES.has(yearId)) return yearId;
+		if (yearId === '1as') {
+			if (subjectId === 'ARB-SCI') return '1as_tcst';
+			if (subjectId === 'ARB-LP') return '1as_tcl';
+		}
+		if (yearId === '2as' || yearId === '3as') {
+			if (subjectId === 'ARB-LP') return `${yearId}_lp`;
+			if (subjectId === 'ARB-LE') return `${yearId}_le`;
+			if (subjectId === 'ARB-SCI') {
+				const s = (streamId || '').toUpperCase();
+				if (s === 'TM') return `${yearId}_tm`;
+				if (s === 'MATH') return `${yearId}_math`;
+				if (s === 'GE') return `${yearId}_ge`;
+				return `${yearId}_se`;
+			}
+		}
+		return null;
 	},
 
-	assemble(req) {
-		const variant =
-			req.variant && SUPPORTED_VARIANT_SET.has(req.variant)
-				? (req.variant as AssembleArabicExamOptions['variant'])
-				: undefined;
-
-		return assembleArabicExam({
-			grade: req.trackId as ArabicTrackId,
-			trimesterId: req.trimesterId,
-			seed: req.seed,
-			docType: req.docType,
-			variant,
-			difficulty: req.difficulty,
-			academicYear: req.academicYear,
-			schoolName: req.schoolName,
-			topicNumber: req.topicNumber
-		});
+	async assemble(req) {
+		const mod = await loadSubjectAssembler('arabic');
+		return mod.assemble(req);
 	},
 
 	getStats() {
-		return {
-			tracks: ALL_ARABIC_TRACK_IDS.length,
-			lessons: ALL_ARABIC_LESSONS.length,
-			templates: ALL_ARABIC_TEMPLATES.length
-		};
+		return getPluginManifestStats('arabic', { tracks: 23, lessons: 312, templates: 300 });
 	}
 };

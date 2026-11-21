@@ -265,7 +265,7 @@ export const POST: RequestHandler = async (event) => {
 				? rawSeed
 				: Math.floor(Math.random() * 90000) + 10000;
 
-		const assembled = subjectRegistry.assembleForYearSubject(
+		const assembled = await subjectRegistry.assembleForYearSubject(
 			ys.year_id,
 			ys.subject_id,
 			ys.stream_id,

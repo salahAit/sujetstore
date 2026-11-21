@@ -1,0 +1,68 @@
+{
+  "updatedAt": "2026-11-21T19:00:14.555Z",
+  "subjects": {
+    "math": {
+      "id": "math",
+      "tracks": 16,
+      "lessons": 336,
+      "templates": 288,
+      "sizeBytes": 4091921,
+      "builtAt": "2026-11-21T19:00:12.147Z",
+      "elapsedMs": 1211
+    },
+    "physics": {
+      "id": "physics",
+      "tracks": 11,
+      "lessons": 155,
+      "templates": 214,
+      "sizeBytes": 2041220,
+      "builtAt": "2026-11-21T19:00:13.198Z",
+      "elapsedMs": 2255
+    },
+    "sciences": {
+      "id": "sciences",
+      "tracks": 14,
+      "lessons": 177,
+      "templates": 231,
+      "sizeBytes": 3482317,
+      "builtAt": "2026-11-21T19:00:13.387Z",
+      "elapsedMs": 2442
+    },
+    "arabic": {
+      "id": "arabic",
+      "tracks": 23,
+      "lessons": 312,
+      "templates": 300,
+      "sizeBytes": 4759314,
+      "builtAt": "2026-11-21T19:00:13.030Z",
+      "elapsedMs": 2085
+    },
+    "english": {
+      "id": "english",
+      "tracks": 21,
+      "lessons": 285,
+      "templates": 285,
+      "sizeBytes": 1640939,
+      "builtAt": "2026-11-21T19:00:12.875Z",
+      "elapsedMs": 1930
+    },
+    "french": {
+      "id": "french",
+      "tracks": 21,
+      "lessons": 309,
+      "templates": 315,
+      "sizeBytes": 2602165,
+      "builtAt": "2026-11-21T19:00:13.873Z",
+      "elapsedMs": 2928
+    },
+    "islamic": {
+      "id": "islamic",
+      "tracks": 23,
+      "lessons": 441,
+      "templates": 438,
+      "sizeBytes": 6230005,
+      "builtAt": "2026-11-21T19:00:14.555Z",
+      "elapsedMs": 155
+    }
+  }
+}

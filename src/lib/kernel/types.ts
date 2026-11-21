@@ -62,7 +62,7 @@ export interface SubjectPlugin {
 	direction: 'rtl' | 'ltr';
 	supportedVariants: readonly string[];
 	resolveTrack(yearId: string, subjectId: string, streamId?: string | null): string | null;
-	assemble(req: SubjectAssembleRequest): UnifiedExamPaper;
+	assemble(req: SubjectAssembleRequest): Promise<UnifiedExamPaper> | UnifiedExamPaper;
 	getStats(): SubjectPluginStats;
 }
 

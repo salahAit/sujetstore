@@ -24,6 +24,7 @@ export default defineConfig({
 		exclude: ['bun', 'bun:sqlite']
 	},
 	build: {
+		sourcemap: false,
 		rolldownOptions: {
 			// إخبار Rolldown بأن bun و bun:sqlite خارجية
 			external: ['bun', 'bun:sqlite']

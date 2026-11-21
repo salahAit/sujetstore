@@ -2,14 +2,14 @@ import {
 	ENGLISH_GRADE_METADATA,
 	SeededRng,
 	getEnglishTemplatesFor
-} from '../../modules/EnglishTemplates';
+} from '../../modules/EnglishTemplates/runtime';
 import type {
 	Difficulty,
 	EnglishExamRole,
 	EnglishGeneratedExerciseInstance,
 	EnglishParameterizedTemplate,
 	EnglishPrimaryTrackId
-} from '../../modules/EnglishTemplates';
+} from '../../modules/EnglishTemplates/runtime';
 import type {
 	ExamDocument,
 	ExamMetadata,

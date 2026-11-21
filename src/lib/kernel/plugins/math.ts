@@ -1,15 +1,9 @@
-import {
-	ALL_LESSONS,
-	ALL_TEMPLATES,
-	LESSONS_BY_GRADE,
-	type GradeId
-} from '../../modules/MathTemplates';
-import {
-	assembleExam,
-	yearSubjectToGrade,
-	type AssembleExamOptions
-} from '../../server/exam-assembler';
+import { getPluginManifestStats, loadSubjectAssembler } from '../plugin-loader';
 import type { SubjectPlugin } from '../types';
+
+const BASIC_GRADES: ReadonlySet<string> = new Set([
+	'1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am'
+]);
 
 const SUPPORTED_VARIANTS = [
 	'trimester_exam',
@@ -20,8 +14,6 @@ const SUPPORTED_VARIANTS = [
 	'bac_mock'
 ] as const;
 
-const SUPPORTED_VARIANT_SET: ReadonlySet<string> = new Set(SUPPORTED_VARIANTS);
-
 export const mathPlugin: SubjectPlugin = {
 	id: 'math',
 	nameAr: 'الرياضيات',
@@ -29,32 +21,26 @@ export const mathPlugin: SubjectPlugin = {
 	supportedVariants: SUPPORTED_VARIANTS,
 
 	resolveTrack(yearId, subjectId, streamId) {
-		return yearSubjectToGrade(yearId, subjectId, streamId);
+		if (subjectId === 'MAT-B' && BASIC_GRADES.has(yearId)) return yearId;
+		if (yearId === '1as' && subjectId === 'MAT-SE') {
+			if (!streamId || streamId === 'TCST' || streamId === 'tcst' || streamId === 'GEN') {
+				return '1as_tcst';
+			}
+		}
+		if (yearId === '2as' || yearId === '3as') {
+			if (subjectId === 'MAT-SE') return `${yearId}_se`;
+			if (subjectId === 'MAT-TM') return `${yearId}_tm`;
+			if (subjectId === 'MAT-MATH') return `${yearId}_math`;
+		}
+		return null;
 	},
 
-	assemble(req) {
-		const variant =
-			req.variant && SUPPORTED_VARIANT_SET.has(req.variant)
-				? (req.variant as AssembleExamOptions['variant'])
-				: undefined;
-
-		return assembleExam({
-			grade: req.trackId as GradeId,
-			trimesterId: req.trimesterId,
-			seed: req.seed,
-			docType: req.docType,
-			variant,
-			difficulty: req.difficulty,
-			academicYear: req.academicYear,
-			schoolName: req.schoolName
-		});
+	async assemble(req) {
+		const mod = await loadSubjectAssembler('math');
+		return mod.assemble(req);
 	},
 
 	getStats() {
-		return {
-			tracks: Object.keys(LESSONS_BY_GRADE).length,
-			lessons: ALL_LESSONS.length,
-			templates: ALL_TEMPLATES.length
-		};
+		return getPluginManifestStats('math', { tracks: 16, lessons: 336, templates: 288 });
 	}
 };

@@ -1,15 +1,9 @@
-import {
-	ALL_SCIENCES_LESSONS,
-	ALL_SCIENCES_TEMPLATES,
-	SCIENCES_LESSONS_BY_GRADE,
-	type SciencesTrackId
-} from '../../modules/SciencesTemplates';
-import {
-	assembleSciencesExam,
-	yearSubjectToSciencesTrack,
-	type AssembleSciencesExamOptions
-} from '../../server/exam-assembler';
+import { getPluginManifestStats, loadSubjectAssembler } from '../plugin-loader';
 import type { SubjectPlugin } from '../types';
+
+const BASIC_GRADES: ReadonlySet<string> = new Set([
+	'1ap', '2ap', '3ap', '4ap', '5ap', '1am', '2am', '3am', '4am'
+]);
 
 const SUPPORTED_VARIANTS = [
 	'trimester_exam',
@@ -19,8 +13,6 @@ const SUPPORTED_VARIANTS = [
 	'bac_mock'
 ] as const;
 
-const SUPPORTED_VARIANT_SET: ReadonlySet<string> = new Set(SUPPORTED_VARIANTS);
-
 export const sciencesPlugin: SubjectPlugin = {
 	id: 'sciences',
 	nameAr: 'علوم الطبيعة والحياة',
@@ -28,32 +20,25 @@ export const sciencesPlugin: SubjectPlugin = {
 	supportedVariants: SUPPORTED_VARIANTS,
 
 	resolveTrack(yearId, subjectId, streamId) {
-		return yearSubjectToSciencesTrack(yearId, subjectId, streamId);
+		if (subjectId === 'SCI-B' && BASIC_GRADES.has(yearId)) return yearId;
+		if (yearId === '1as' && subjectId === 'SCI-SE') {
+			if (!streamId || streamId === 'TCST' || streamId === 'tcst' || streamId === 'GEN') {
+				return '1as_tcst';
+			}
+		}
+		if (yearId === '2as' || yearId === '3as') {
+			if (subjectId === 'SCI-SE') return `${yearId}_se`;
+			if (subjectId === 'SCI-MATH') return `${yearId}_math`;
+		}
+		return null;
 	},
 
-	assemble(req) {
-		const variant =
-			req.variant && SUPPORTED_VARIANT_SET.has(req.variant)
-				? (req.variant as AssembleSciencesExamOptions['variant'])
-				: undefined;
-
-		return assembleSciencesExam({
-			grade: req.trackId as SciencesTrackId,
-			trimesterId: req.trimesterId,
-			seed: req.seed,
-			docType: req.docType,
-			variant,
-			difficulty: req.difficulty,
-			academicYear: req.academicYear,
-			schoolName: req.schoolName
-		});
+	async assemble(req) {
+		const mod = await loadSubjectAssembler('sciences');
+		return mod.assemble(req);
 	},
 
 	getStats() {
-		return {
-			tracks: Object.keys(SCIENCES_LESSONS_BY_GRADE).length,
-			lessons: ALL_SCIENCES_LESSONS.length,
-			templates: ALL_SCIENCES_TEMPLATES.length
-		};
+		return getPluginManifestStats('sciences', { tracks: 14, lessons: 177, templates: 231 });
 	}
 };

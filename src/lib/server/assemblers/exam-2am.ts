@@ -1,9 +1,9 @@
-import { GRADE_METADATA, getTemplatesFor, SeededRng } from '../../modules/MathTemplates';
+import { GRADE_METADATA, getTemplatesFor, SeededRng } from '../../modules/MathTemplates/runtime';
 import type {
 	Difficulty,
 	GeneratedExerciseInstance,
 	ParameterizedTemplate
-} from '../../modules/MathTemplates';
+} from '../../modules/MathTemplates/runtime';
 import type {
 	ContentBlock,
 	ExamDocument,

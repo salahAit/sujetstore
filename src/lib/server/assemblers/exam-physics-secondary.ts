@@ -2,14 +2,14 @@ import {
 	PHYSICS_GRADE_METADATA,
 	SeededRng,
 	getPhysicsTemplatesFor
-} from '../../modules/PhysicsTemplates';
+} from '../../modules/PhysicsTemplates/runtime';
 import type {
 	Difficulty,
 	PhysicsDomain,
 	PhysicsGeneratedExerciseInstance,
 	PhysicsParameterizedTemplate,
 	PhysicsSecondaryTrackId
-} from '../../modules/PhysicsTemplates';
+} from '../../modules/PhysicsTemplates/runtime';
 import type {
 	ExamDocument,
 	ExamMetadata,
