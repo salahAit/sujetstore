@@ -70,11 +70,11 @@ addQ(catGram, 'true_false', 'easy', 'Hamza', 'الهمزة في كلمة "سأل
 addQ(catGram, 'fill_blank', 'medium', 'Complete', 'أكمل: ذهبَ ___ إلى المدرسة', { sentence: "ذهبَ ___ إلى المدرسة", answers: ["الولدُ", "الولد"] }, '"الولدُ" فاعل مرفوع');
 addQ(catGram, 'sentence_reorder', 'easy', 'Reorder', 'رتب الكلمات لتكوين جملة مفيدة:', { words: ["التلميذُ", "الدرسَ", "كتبَ"], correctOrder: [2, 0, 1] }, 'كتب التلميذ الدرس');
 addQ(catGram, 'essay', 'medium', 'Essay', 'اكتب فقرة قصيرة عن فضل العلم (تحتوي على كلمتي "نور" و "المستقبل"):', { minWords: 10, maxWords: 50, keywords: ["نور", "المستقبل"], minKeywords: 2 }, 'تقييم معتمد على الكلمات المفتاحية وطول النص');
-// رياضيات متوسط
-addQ(catAlg, 'mcq', 'medium', 'Solve', 'حل المعادلة: 2س + 6 = 20', { options: [{ id: "1", text: "س = 5", isCorrect: false }, { id: "2", text: "س = 7", isCorrect: true }, { id: "3", text: "س = 8", isCorrect: false }, { id: "4", text: "س = 10", isCorrect: false }] }, '2س = 14 ← س = 7');
-addQ(catAlg, 'mcq', 'hard', 'Factor', 'حلّل: س² - 9', { options: [{ id: "1", text: "(س-3)(س+3)", isCorrect: true }, { id: "2", text: "(س-9)(س+1)", isCorrect: false }, { id: "3", text: "(س-3)²", isCorrect: false }, { id: "4", text: "(س+3)²", isCorrect: false }] }, 'فرق مربعين: (س-3)(س+3)');
-addQ(catAlg, 'true_false', 'medium', 'Ineq', 'إذا كان س > 5 فإن 2س > 10', { correctAnswer: true }, 'ضرب بعدد موجب يحافظ على الاتجاه');
-addQ(catAlg, 'short_answer', 'hard', 'System', 'حل: س + ص = 10 و س - ص = 4', { keywords: ["7", "3"], minKeywords: 2 }, 'س = 7 ، ص = 3');
+// رياضيات متوسط (ترميز المنهاج الجزائري الرسمي $x, y$)
+addQ(catAlg, 'mcq', 'medium', 'Solve', 'حل المعادلة: $2x + 6 = 20$', { options: [{ id: "1", text: "$x = 5$", isCorrect: false }, { id: "2", text: "$x = 7$", isCorrect: true }, { id: "3", text: "$x = 8$", isCorrect: false }, { id: "4", text: "$x = 10$", isCorrect: false }] }, '$2x = 14 \\implies x = 7$');
+addQ(catAlg, 'mcq', 'hard', 'Factor', 'حلّل العبارة الجبرية: $x^2 - 9$', { options: [{ id: "1", text: "$(x - 3)(x + 3)$", isCorrect: true }, { id: "2", text: "$(x - 9)(x + 1)$", isCorrect: false }, { id: "3", text: "$(x - 3)^2$", isCorrect: false }, { id: "4", text: "$(x + 3)^2$", isCorrect: false }] }, 'متطابقة شهيرة (فرق مربعين): $(x - 3)(x + 3)$');
+addQ(catAlg, 'true_false', 'medium', 'Ineq', 'إذا كان $x > 5$ فإن $2x > 10$', { correctAnswer: true }, 'الضرب في عدد موجب تماماً يحافظ على اتجاه المتباينة');
+addQ(catAlg, 'short_answer', 'hard', 'System', 'حل جملة المعادلتين: $x + y = 10$ و $x - y = 4$', { keywords: ["7", "3"], minKeywords: 2 }, '$x = 7$ و $y = 3$');
 
 // فيزياء متوسط
 addQ(catElec, 'mcq', 'medium', 'Current unit', 'ما وحدة قياس شدة التيار الكهربائي ؟', { options: [{ id: "1", text: "فولط (V)", isCorrect: false }, { id: "2", text: "أمبير (A)", isCorrect: true }, { id: "3", text: "أوم (Ω)", isCorrect: false }, { id: "4", text: "واط (W)", isCorrect: false }] }, 'الأمبير (A)');
@@ -86,10 +86,10 @@ addQ(catElec, 'drag_drop', 'medium', 'Classify', 'صنّف إلى موصلات �
 addQ(catGramM, 'mcq', 'medium', 'Parse', 'ما إعراب "الكتابَ" في: قرأتُ الكتابَ ؟', { options: [{ id: "1", text: "فاعل", isCorrect: false }, { id: "2", text: "مفعول به منصوب", isCorrect: true }, { id: "3", text: "مبتدأ", isCorrect: false }, { id: "4", text: "اسم مجرور", isCorrect: false }] }, '"الكتابَ" مفعول به منصوب بالفتحة');
 addQ(catGramM, 'cloze', 'medium', 'Choose', 'اختر: ذهب المعلمون ___ المدرسة', { sentence: "ذهب المعلمون ___ المدرسة", options: ["إلى", "على", "في", "من"], correctIndex: 0 }, 'حرف الجر "إلى" للوجهة');
 
-// رياضيات ثانوي
-addQ(catAnal, 'mcq', 'hard', 'Derivative', 'ما مشتقة: د(س) = 3س² + 2س - 5 ؟', { options: [{ id: "1", text: "6س + 2", isCorrect: true }, { id: "2", text: "3س + 2", isCorrect: false }, { id: "3", text: "6س² + 2", isCorrect: false }, { id: "4", text: "6س - 5", isCorrect: false }] }, 'مشتقة 3س² = 6س ، مشتقة 2س = 2 ← 6س + 2');
-addQ(catAnal, 'true_false', 'hard', 'Limit', 'نهاية 1/س عندما س→∞ تساوي 0', { correctAnswer: true }, 'lim(1/x) = 0 عندما x → ∞');
-addQ(catAnal, 'fill_blank', 'hard', 'Integral', 'أكمل: ∫2س dس = ___ + C', { sentence: "∫2س dس = ___ + C", answers: ["س²", "س^2", "x²", "x^2"] }, '∫2x dx = x² + C');
+// رياضيات ثانوي (ترميز المنهاج الجزائري الرسمي $f(x), \int f(x)\,dx$)
+addQ(catAnal, 'mcq', 'hard', 'Derivative', 'عيّن الدالة المشتقة للدالة: $f(x) = 3x^2 + 2x - 5$', { options: [{ id: "1", text: "$f\x27(x) = 6x + 2$", isCorrect: true }, { id: "2", text: "$f\x27(x) = 3x + 2$", isCorrect: false }, { id: "3", text: "$f\x27(x) = 6x^2 + 2$", isCorrect: false }, { id: "4", text: "$f\x27(x) = 6x - 5$", isCorrect: false }] }, '$f\x27(x) = 6x + 2$');
+addQ(catAnal, 'true_false', 'hard', 'Limit', 'نهاية الدالة $\\lim_{x \\to +\\infty} \\frac{1}{x} = 0$', { correctAnswer: true }, '$\\lim_{x \\to +\\infty} \\frac{1}{x} = 0$');
+addQ(catAnal, 'fill_blank', 'hard', 'Integral', 'أكمل حساب الدالة الأصلية الآتية:', { sentence: "$\\int 2x \\, dx =$ ___ $+ C$", answers: ["x^2", "x²"], acceptedAnswers: ["x^2", "x²"] }, 'الدالة الأصلية لـ $2x$ هي $x^2 + C$ لأن $(x^2)\x27 = 2x$');
 
 // فيزياء ثانوي
 addQ(catMech, 'mcq', 'hard', 'Newton', 'ينص قانون نيوتن الثاني على:', { options: [{ id: "1", text: "F = m × a", isCorrect: true }, { id: "2", text: "F = m × v", isCorrect: false }, { id: "3", text: "E = m × c²", isCorrect: false }, { id: "4", text: "P = m × g", isCorrect: false }] }, 'F = m·a');

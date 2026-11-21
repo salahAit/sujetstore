@@ -1,6 +1,16 @@
 <script lang="ts">
-	let { data, onAnswer }: { data: any; onAnswer: (answer: any) => void } = $props();
-	let answer = $state('');
+	import { untrack } from 'svelte';
+
+	let {
+		data,
+		initialAnswer = null,
+		onAnswer
+	}: {
+		data: any;
+		initialAnswer?: any;
+		onAnswer: (answer: any) => void;
+	} = $props();
+	let answer = $state<string>(untrack(() => initialAnswer?.text ?? ''));
 
 	function handleInput() {
 		onAnswer({ text: answer.trim() });

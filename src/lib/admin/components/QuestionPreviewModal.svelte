@@ -14,6 +14,7 @@
 	import DragToImage from '#lib/modules/QuizBuilder/components/player/questions/DragToImage.svelte';
 	import Matrix from '#lib/modules/QuizBuilder/components/player/questions/Matrix.svelte';
 	import Essay from '#lib/modules/QuizBuilder/components/player/questions/Essay.svelte';
+	import MathRenderer from '#lib/modules/QuizBuilder/components/shared/MathRenderer.svelte';
 	import { getQuestionType } from '#lib/modules/QuizBuilder';
 
 	let { isOpen = $bindable(false), question }: {
@@ -206,7 +207,10 @@
 			<div class="space-y-5 p-6">
 				<!-- Question Text -->
 				<h3 class="text-base font-bold leading-relaxed sm:text-lg">
-					{question.questionTextAr || question.questionText || 'بدون نص'}
+					<MathRenderer
+						content={(question.questionTextAr || question.questionText || 'بدون نص').replace(/_{3,}/g, '……')}
+						inline
+					/>
 				</h3>
 
 				<!-- Interactive Component -->
@@ -290,7 +294,9 @@
 						<div class="absolute top-2 right-4 select-none text-xs font-bold text-blue-500/40">
 							شرح / تلميح
 						</div>
-						<p class="mt-4 whitespace-pre-wrap text-sm leading-relaxed text-blue-200">{question.explanation}</p>
+						<div class="mt-4 whitespace-pre-wrap text-sm leading-relaxed text-blue-200">
+							<MathRenderer content={question.explanation} inline />
+						</div>
 					</div>
 				{/if}
 

@@ -1,8 +1,23 @@
 <script lang="ts">
+	import { untrack } from 'svelte';
 	import MathRenderer from '../../shared/MathRenderer.svelte';
 
-	let { data, onAnswer }: { data: any; onAnswer: (answer: any) => void } = $props();
-	let selected = $state<number | null>(null);
+	let {
+		data,
+		initialAnswer = null,
+		onAnswer
+	}: {
+		data: any;
+		initialAnswer?: any;
+		onAnswer: (answer: any) => void;
+	} = $props();
+	let selected = $state<number | null>(
+		untrack(() =>
+			Array.isArray(initialAnswer?.selectedIndexes) && initialAnswer.selectedIndexes.length > 0
+				? initialAnswer.selectedIndexes[0]
+				: null
+		)
+	);
 
 	// Normalize options: handle both legacy strings and new { text, imageUrl, originalIndex } objects
 	let options = $derived(

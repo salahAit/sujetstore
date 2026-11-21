@@ -511,6 +511,20 @@
 	function openShare() {
 		if (onShare) onShare(); else isShareModalOpen = true;
 	}
+
+	function formatQuestionHeader(question: any): string {
+		const raw = String(question?.questionTextAr || question?.questionText || '').trim();
+		if (!raw) return '';
+		if ((question?.type === 'fill_blank' || question?.type === 'cloze') && raw.includes('___')) {
+			const colonIdx = raw.indexOf(':');
+			if (colonIdx > 0 && colonIdx < raw.indexOf('___')) {
+				const prefix = raw.slice(0, colonIdx).trim();
+				return prefix === 'أكمل' ? 'أكمل الفراغ بما يناسب:' : `${prefix}:`;
+			}
+			return raw.replace(/_{3,}/g, '……');
+		}
+		return raw;
+	}
 </script>
 
 <svelte:head>
@@ -722,12 +736,12 @@
 							</div>
 						{/if}
 					{/if}
-					<MathRenderer content={currentQuestion.questionTextAr || currentQuestion.questionText} inline />
+					<MathRenderer content={formatQuestionHeader(currentQuestion)} inline />
 					</h2>
 
 					<!-- Dynamic Question Component -->
 					{#if currentQuestion.type === 'mcq'}
-						<MCQ data={currentQuestion.questionData} {onAnswer} />
+						<MCQ data={currentQuestion.questionData} initialAnswer={answers[currentQuestion.id]} {onAnswer} />
 					{:else if currentQuestion.type === 'true_false'}
 						<TrueFalse data={currentQuestion.questionData} {onAnswer} />
 					{:else if currentQuestion.type === 'ordering'}
@@ -737,11 +751,11 @@
 					{:else if currentQuestion.type === 'matching'}
 						<Matching data={currentQuestion.questionData} {onAnswer} />
 					{:else if currentQuestion.type === 'fill_blank'}
-						<FillBlank data={currentQuestion.questionData} {onAnswer} />
+						<FillBlank data={currentQuestion.questionData} initialAnswer={answers[currentQuestion.id]} {onAnswer} />
 					{:else if currentQuestion.type === 'short_answer'}
-						<ShortAnswer data={currentQuestion.questionData} {onAnswer} />
+						<ShortAnswer data={currentQuestion.questionData} initialAnswer={answers[currentQuestion.id]} {onAnswer} />
 					{:else if currentQuestion.type === 'cloze'}
-						<Cloze data={currentQuestion.questionData} {onAnswer} />
+						<Cloze data={currentQuestion.questionData} initialAnswer={answers[currentQuestion.id]} {onAnswer} />
 					{:else if currentQuestion.type === 'calculated'}
 						<Calculated data={currentQuestion.questionData} {onAnswer} />
 					{:else if currentQuestion.type === 'sentence_reorder'}
