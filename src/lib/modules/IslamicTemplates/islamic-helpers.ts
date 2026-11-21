@@ -178,7 +178,15 @@ export function buildQuranPassageBlock(opts: {
 	const ayahRange = opts.ayahRange ?? '';
 	return {
 		type: 'typst_raw',
-		content: `#quran-box(\n  label: "${escapeTypstQuoted(label)}",\n  verses: "${escapeTypstQuoted(cleanVerses)}",\n  surah: "${escapeTypstQuoted(opts.surah)}",\n  ayah-range: "${escapeTypstQuoted(ayahRange)}",\n  vocabulary: ${serializeVocabTypst(opts.vocabulary)},\n)`
+		content: `#quran-box(\n  label: "${escapeTypstQuoted(label)}",\n  verses: "${escapeTypstQuoted(cleanVerses)}",\n  surah: "${escapeTypstQuoted(opts.surah)}",\n  ayah-range: "${escapeTypstQuoted(ayahRange)}",\n  vocabulary: ${serializeVocabTypst(opts.vocabulary)},\n)`,
+		webMeta: {
+			kind: 'quran_box',
+			label,
+			verses: cleanVerses,
+			surah: opts.surah,
+			ayahRange,
+			vocabulary: opts.vocabulary ?? []
+		}
 	};
 }
 
@@ -197,7 +205,15 @@ export function buildHadithPassageBlock(opts: {
 	const label = opts.label ?? 'السند النبوي الشريف:';
 	return {
 		type: 'typst_raw',
-		content: `#hadith-box(\n  label: "${escapeTypstQuoted(label)}",\n  narrator: "${escapeTypstQuoted(opts.narrator)}",\n  text-body: "${escapeTypstQuoted(cleanText)}",\n  source: "${escapeTypstQuoted(opts.source)}",\n  vocabulary: ${serializeVocabTypst(opts.vocabulary)},\n)`
+		content: `#hadith-box(\n  label: "${escapeTypstQuoted(label)}",\n  narrator: "${escapeTypstQuoted(opts.narrator)}",\n  text-body: "${escapeTypstQuoted(cleanText)}",\n  source: "${escapeTypstQuoted(opts.source)}",\n  vocabulary: ${serializeVocabTypst(opts.vocabulary)},\n)`,
+		webMeta: {
+			kind: 'hadith_box',
+			label,
+			narrator: opts.narrator,
+			text: cleanText,
+			source: opts.source,
+			vocabulary: opts.vocabulary ?? []
+		}
 	};
 }
 
@@ -217,7 +233,14 @@ export function buildIslamicContextBlock(opts: {
 		: '';
 	return {
 		type: 'typst_raw',
-		content: `#block(width: 100%, breakable: false, inset: (x: 11pt, y: 9pt), radius: 4pt, stroke: (right: 3pt + rgb("#1e3a8a"), rest: 0.7pt + rgb("#cbd5e1")), fill: rgb("#f8fafc"))[\n${titleLine}${escapeTypstMarkup(opts.text)}${sourceLine}\n]`
+		content: `#block(width: 100%, breakable: false, inset: (x: 11pt, y: 9pt), radius: 4pt, stroke: (right: 3pt + rgb("#1e3a8a"), rest: 0.7pt + rgb("#cbd5e1")), fill: rgb("#f8fafc"))[\n${titleLine}${escapeTypstMarkup(opts.text)}${sourceLine}\n]`,
+		webMeta: {
+			kind: 'passage_box',
+			lang: 'ar',
+			title: opts.title,
+			paragraphs: [opts.text],
+			source: opts.source
+		}
 	};
 }
 

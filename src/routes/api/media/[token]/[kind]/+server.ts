@@ -18,6 +18,55 @@ import {
 	getCachedPdfPageCount,
 	getRenderedPdfPage
 } from '#lib/server/pdf-pages';
+import { resolveWebExamByDocId } from '#lib/server/exam-web-serializer';
+import type { WebBlock, WebExamPayload } from '#lib/types/web-exam';
+
+function stripBlockSolutions(b: WebBlock): WebBlock {
+	switch (b.type) {
+		case 'text':
+		case 'quran_box':
+		case 'hadith_box':
+			return { ...b, answer: undefined };
+		case 'table':
+			return {
+				...b,
+				rows: b.rows.map((r) => r.map((c) => ({ ...c, answer: undefined })))
+			};
+		case 'true_false':
+			return {
+				...b,
+				items: b.items.map((it) => ({ q: it.q, a: '', mark: it.mark }))
+			};
+		case 'multiple_choice':
+			return {
+				...b,
+				groups: b.groups.map((g) => ({ ...g, correct: '' }))
+			};
+		case 'image_grid':
+			return {
+				...b,
+				items: b.items.map((it) => ({ ...it, answer: undefined }))
+			};
+		case 'figure':
+			return b.legendMode === 'quiz' ? { ...b, legend: [] } : b;
+		case 'columns':
+			return { ...b, children: b.children.map(stripBlockSolutions) };
+		default:
+			return b;
+	}
+}
+
+function stripExamSolutions(payload: WebExamPayload): WebExamPayload {
+	return {
+		...payload,
+		hasAnySolution: false,
+		exercises: payload.exercises.map((ex) => ({
+			...ex,
+			hasSolution: false,
+			blocks: ex.blocks.map(stripBlockSolutions)
+		}))
+	};
+}
 
 interface DocumentMediaRow {
 	id: number;
@@ -175,6 +224,45 @@ export const GET: RequestHandler = async (event) => {
 
 	const wmKeyPart = accessTier !== 'public' ? `wm:${locals.user?.id ?? 'm'}` : 'pub';
 	const renderCacheKey = `${doc.id}:${kind}:${relKey}:${doc.updated_at || 'v1'}:${wmKeyPart}`;
+
+	// 5a. NATIVE REFLOWABLE MOBILE READER FAST-PATH (~3 KB JSON, 0 ms switch, 0 S3/Poppler I/O!)
+	if (renderMode === 'web') {
+		const webExam = await resolveWebExamByDocId(doc.id);
+		recordAuditEvent({
+			event,
+			eventType: 'pdf_view',
+			statusCode: 200,
+			resourceId: `${doc.id}:web`
+		});
+		if (!webExam) {
+			return new Response(JSON.stringify({ supported: false }), {
+				status: 200,
+				headers: {
+					'Content-Type': 'application/json; charset=utf-8',
+					'Cache-Control': 'private, max-age=300',
+					'X-Storage-Backend': 'web-unsupported'
+				}
+			});
+		}
+		const allowSolutions = Boolean(doc.solution_url);
+		const safeExam = allowSolutions ? webExam : stripExamSolutions(webExam);
+		return new Response(
+			JSON.stringify({
+				supported: true,
+				hasSolution: allowSolutions && webExam.hasAnySolution,
+				exam: safeExam
+			}),
+			{
+				status: 200,
+				headers: {
+					'Content-Type': 'application/json; charset=utf-8',
+					'Cache-Control': 'private, max-age=300',
+					'X-Content-Type-Options': 'nosniff',
+					'X-Storage-Backend': 'web-ram'
+				}
+			}
+		);
+	}
 
 	// 5b. ULTRA-FAST /dev/shm RAM Cache Fast-Path BEFORE touching RustFS S3! (< 2ms!)
 	if (isPageImageRequest) {

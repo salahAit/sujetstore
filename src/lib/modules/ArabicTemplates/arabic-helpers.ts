@@ -182,7 +182,16 @@ export function buildProsePassageBlock(opts: {
 
 	return {
 		type: 'typst_raw',
-		content: `#block(width: 100%, inset: 10pt, radius: 4pt, stroke: 0.75pt + rgb("#334155"), fill: rgb("#f8fafc"))[\n${titlePart}${bodyLines}${attribution}${vocab}\n]`
+		content: `#block(width: 100%, inset: 10pt, radius: 4pt, stroke: 0.75pt + rgb("#334155"), fill: rgb("#f8fafc"))[\n${titlePart}${bodyLines}${attribution}${vocab}\n]`,
+		webMeta: {
+			kind: 'passage_box',
+			lang: 'ar',
+			title: opts.title,
+			paragraphs: opts.paragraphs,
+			author: opts.author,
+			source: opts.source,
+			vocabulary: opts.vocabulary ?? []
+		}
 	};
 }
 
@@ -347,7 +356,16 @@ export function buildPoetryPassageBlock(opts: {
 
 	return {
 		type: 'typst_raw',
-		content: `#block(width: 100%, inset: 10pt, radius: 4pt, stroke: 0.75pt + rgb("#334155"), fill: rgb("#f8fafc"))[\n${titlePart}#render-arabic-poem(\n  numbered: ${numbered ? 'true' : 'false'},\n  verses: (\n    ${serializedVerses},\n  )\n)${attribution}${vocab}\n]`
+		content: `#block(width: 100%, inset: 10pt, radius: 4pt, stroke: 0.75pt + rgb("#334155"), fill: rgb("#f8fafc"))[\n${titlePart}#render-arabic-poem(\n  numbered: ${numbered ? 'true' : 'false'},\n  verses: (\n    ${serializedVerses},\n  )\n)${attribution}${vocab}\n]`,
+		webMeta: {
+			kind: 'arabic_poem',
+			title: opts.title,
+			numbered,
+			verses: opts.verses,
+			author: opts.author,
+			source: opts.source,
+			vocabulary: opts.vocabulary ?? []
+		}
 	};
 }
 

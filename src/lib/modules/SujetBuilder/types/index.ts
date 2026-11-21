@@ -197,6 +197,8 @@ export interface TypstRawBlock {
 	answer?: string;
 	/** Points */
 	mark?: string;
+	/** Optional structured metadata for SmartExamReader native mobile rendering */
+	webMeta?: Record<string, any>;
 }
 
 /** شبكة صور مع تسميات */

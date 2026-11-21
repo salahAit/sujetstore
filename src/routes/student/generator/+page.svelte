@@ -1,6 +1,7 @@
 <script lang="ts">
 	import QuizPlayer from '#lib/modules/QuizBuilder/components/player/QuizPlayer.svelte';
-	import PdfCanvasViewer from '#lib/components/PdfCanvasViewer.svelte';
+	import SmartExamReader from '#lib/components/SmartExamReader.svelte';
+	import type { WebExamPayload } from '#lib/types/web-exam';
 	import {
 		Sparkles,
 		Brain,
@@ -134,7 +135,13 @@
 	let exerciseCount = $state(2);
 	let pdfVariant = $state<'trimester_exam' | 'bac_mock'>('trimester_exam');
 	let generatingPdf = $state(false);
-	let pdfResult = $state<{ pdfUrl: string; solutionUrl: string; title: string } | null>(null);
+	let pdfReaderMode = $state<'exam' | 'solution'>('exam');
+	let pdfResult = $state<{
+		pdfUrl: string;
+		solutionUrl: string;
+		title: string;
+		webExam?: WebExamPayload | null;
+	} | null>(null);
 
 	let errorMsg = $state<string | null>(null);
 
@@ -184,6 +191,7 @@
 		generatingPdf = true;
 		errorMsg = null;
 		pdfResult = null;
+		pdfReaderMode = 'exam';
 		try {
 			const payload: Record<string, any> = {
 				mode: 'pdf',
@@ -437,7 +445,27 @@
 								<CheckCircle2 size={20} />
 								<span>تم توليد الموضوع: {pdfResult.title}</span>
 							</div>
-							<div class="flex flex-wrap gap-2">
+							<div class="flex flex-wrap items-center gap-2">
+								<div class="bg-background inline-flex items-center rounded-xl border p-1">
+									<button
+										type="button"
+										onclick={() => (pdfReaderMode = 'exam')}
+										class="rounded-lg px-3 py-1.5 text-xs font-bold transition {pdfReaderMode === 'exam'
+											? 'bg-blue-600 text-white shadow-sm'
+											: 'text-muted-foreground hover:text-foreground'}"
+									>
+										الموضوع
+									</button>
+									<button
+										type="button"
+										onclick={() => (pdfReaderMode = 'solution')}
+										class="rounded-lg px-3 py-1.5 text-xs font-bold transition {pdfReaderMode === 'solution'
+											? 'bg-emerald-600 text-white shadow-sm'
+											: 'text-muted-foreground hover:text-foreground'}"
+									>
+										التصحيح النموذجي
+									</button>
+								</div>
 								<a
 									href={pdfResult.pdfUrl}
 									target="_blank"
@@ -457,8 +485,14 @@
 							</div>
 						</div>
 
-						<div class="h-[560px] overflow-hidden rounded-xl border bg-neutral-900">
-							<PdfCanvasViewer url={pdfResult.pdfUrl} title={pdfResult.title} />
+						<div class="h-[680px] overflow-hidden rounded-xl border">
+							<SmartExamReader
+								subjectUrl={pdfResult.pdfUrl}
+								solutionUrl={pdfResult.solutionUrl}
+								initialPayload={pdfResult.webExam ?? null}
+								bind:mode={pdfReaderMode}
+								title={pdfResult.title}
+							/>
 						</div>
 					</div>
 				{/if}

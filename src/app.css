@@ -5,6 +5,22 @@
 @import '@fontsource/cairo/800.css';
 @import 'tw-animate-css';
 
+@font-face {
+	font-family: 'KFGQPC Uthman Taha Naskh';
+	src: url('/fonts/UthmanTN_v2-0.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'KFGQPC Uthman Taha Naskh';
+	src: url('/fonts/UthmanTNB_v2-0.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {

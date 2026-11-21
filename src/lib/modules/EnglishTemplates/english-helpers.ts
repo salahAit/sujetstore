@@ -129,7 +129,16 @@ export function buildEnglishPassageBlock(opts: {
 
 	return {
 		type: 'typst_raw',
-		content: `#block(width: 100%, inset: 10pt, radius: 4pt, stroke: 0.75pt + rgb("334155"), fill: rgb("F8FAFC"))[\n${titlePart}${bodyLines}${sourceLine}${glossaryLine}\n]`
+		content: `#block(width: 100%, inset: 10pt, radius: 4pt, stroke: 0.75pt + rgb("334155"), fill: rgb("F8FAFC"))[\n${titlePart}${bodyLines}${sourceLine}${glossaryLine}\n]`,
+		webMeta: {
+			kind: 'passage_box',
+			lang: 'en',
+			title: opts.title,
+			paragraphs: opts.paragraphs,
+			numberedParagraphs: numbered,
+			source: opts.source,
+			glossary: opts.glossary ?? []
+		}
 	};
 }
 

@@ -19,7 +19,7 @@
 	import { onMount } from 'svelte';
 	import InteractiveLessonPlayer from '#lib/modules/InteractiveLesson/InteractiveLessonPlayer.svelte';
 	import SeoJsonLd from '#lib/components/SeoJsonLd.svelte';
-	import PdfCanvasViewer from '#lib/components/PdfCanvasViewer.svelte';
+	import SmartExamReader from '#lib/components/SmartExamReader.svelte';
 	import type { InteractiveLessonData } from '#lib/modules/MathTemplates/types';
 
 	let { data }: { data: any } = $props();
@@ -476,11 +476,38 @@
 				{/key}
 			</div>
 		{:else}
-			<div class="relative w-full bg-white {isFullscreen ? 'flex-1' : 'h-[78vh] min-h-[520px]'}">
-				{#if activeTab === 'exam' && doc.pdfUrl}
-					<PdfCanvasViewer url={doc.pdfUrl} title="قارئ الموضوع" />
-				{:else if activeTab === 'solution' && doc.solutionUrl}
-					<PdfCanvasViewer url={doc.solutionUrl} title="قارئ التصحيح" />
+			<div class="relative w-full overflow-hidden bg-white {isFullscreen ? 'flex-1' : 'h-[80vh] min-h-[540px]'}">
+				{#if doc.pdfUrl}
+					<SmartExamReader
+						subjectUrl={doc.pdfUrl}
+						solutionUrl={doc.solutionUrl}
+						bind:mode={activeTab}
+						title={doc.titleAr || doc.title}
+					/>
+					{#if doc.hasSolution && doc.solutionUrl}
+						<div
+							class="absolute bottom-3 left-1/2 z-30 flex -translate-x-1/2 items-center gap-1 rounded-full border border-white/15 bg-zinc-900/90 p-1 shadow-2xl backdrop-blur-md"
+						>
+							<button
+								type="button"
+								onclick={() => (activeTab = 'exam')}
+								class="rounded-full px-4 py-1.5 text-xs font-bold transition-all {activeTab === 'exam'
+									? 'bg-blue-600 text-white shadow-md shadow-blue-600/20'
+									: 'text-white/75 hover:bg-white/10 hover:text-white'}"
+							>
+								الموضوع
+							</button>
+							<button
+								type="button"
+								onclick={() => (activeTab = 'solution')}
+								class="rounded-full px-4 py-1.5 text-xs font-bold transition-all {activeTab === 'solution'
+									? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/20'
+									: 'text-white/75 hover:bg-white/10 hover:text-white'}"
+							>
+								الحل النموذجي
+							</button>
+						</div>
+					{/if}
 				{:else}
 					<div class="flex h-full w-full items-center justify-center text-zinc-500">
 						لا يوجد ملف لعرضه بصيغة PDF

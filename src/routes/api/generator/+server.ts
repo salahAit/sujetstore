@@ -6,6 +6,7 @@ import { generatorEngine, subjectRegistry, type ExamVariant } from '#lib/kernel'
 import { gradeQuizSubmission } from '#lib/server/quiz-grading';
 import { awardQuizGamification } from '#lib/server/gamification';
 import { getOrCreateFingerprint } from '#lib/server/auth';
+import { serializeExamForWeb } from '#lib/server/exam-web-serializer';
 import { randomUUID } from 'crypto';
 import { resolve } from 'path';
 
@@ -315,7 +316,8 @@ export const POST: RequestHandler = async (event) => {
 				totalPoints: paper.totalPoints,
 				pdfUrl: compiled.pdfUrl,
 				solutionUrl: compiled.solutionUrl,
-				cached: compiled.cached
+				cached: compiled.cached,
+				webExam: serializeExamForWeb(paper.examDoc as unknown as Record<string, any>)
 			});
 		}
 
@@ -425,7 +427,8 @@ export const POST: RequestHandler = async (event) => {
 			success: true,
 			title: `${docType === 'test' ? 'فرض' : 'اختبار'} مقترح — ${ys.year_name}${streamPart} (${ys.subject_name})`,
 			pdfUrl: `/uploads/sujet/${fileId}.pdf`,
-			solutionUrl: solRes.success ? `/uploads/sujet/${fileId}-sol.pdf` : `/uploads/sujet/${fileId}.pdf`
+			solutionUrl: solRes.success ? `/uploads/sujet/${fileId}-sol.pdf` : `/uploads/sujet/${fileId}.pdf`,
+			webExam: serializeExamForWeb(examDoc as unknown as Record<string, any>)
 		});
 	}
 
