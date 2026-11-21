@@ -1,11 +1,14 @@
 #import "arabic_poetry.typ": render-arabic-poem
 #import "islamic_blocks.typ": quran-box, hadith-box, islamic-rubric-table
 
-#let safe-eval(content, mode: "markup") = {
+#let safe-eval(content, mode: "markup", replace-dots: true) = {
   if content == "" or content == none { return [] }
   
-  let prepared = if mode == "markup" and type(content) == str {
-    content.replace(regex("\\.{12,}[ \\t]*\\.?"), "#repeat(gap: 1.8pt)[.];")
+  let prepared = if replace-dots and mode == "markup" and type(content) == str {
+    // 1. Mid-sentence blanks (dots followed by more text on the same line) -> compact inline dotted box
+    let s1 = content.replace(regex("\\.{12,}([ \\t]+[^\\n.])"), m => "#box(width: 5.5em, baseline: 1pt)[#repeat(gap: 1.8pt)[.]];" + m.captures.at(0))
+    // 2. End-of-line or standalone dotted lines -> responsive full-width dotted fill (absorbing stray trailing period)
+    s1.replace(regex("\\.{12,}[ \\t]*\\.?"), "#repeat(gap: 1.8pt)[.];")
   } else {
     content
   }
@@ -218,9 +221,9 @@
   ] else if b.type == "typst_raw" [
     #grid(columns: (1fr, auto), [
       #(if is-solution and b.at("answer", default: "") != "" {
-        text(fill: blue)[#safe-eval(b.answer)]
+        text(fill: blue)[#safe-eval(b.answer, replace-dots: false)]
       } else {
-        safe-eval(b.content)
+        safe-eval(b.content, replace-dots: false)
       })
     ], if is-solution and b.at("mark", default: "") != "" { align(bottom)[#text(size: body-size, fill: red)[#b.mark ن]] } else { [] })
   ] else if b.type == "columns" [

@@ -9,9 +9,11 @@
 
 	let { url, title = 'قارئ الوثيقة', class: className = '' }: Props = $props();
 
-	let loading = $state(true);
+	let manifestLoading = $state(true);
 	let errorMsg = $state<string | null>(null);
-	let pages = $state<number[]>([]);
+	// Start immediately with Page 1 at t=0ms — ZERO 2-RTT waterfall!
+	let pages = $state<number[]>([1]);
+	let loadedPages = $state<Record<number, boolean>>({});
 	let zoom = $state(100);
 	let reloadNonce = $state(0);
 
@@ -20,15 +22,23 @@
 		return clean.includes('?') ? `${clean}&${param}` : `${clean}?${param}`;
 	}
 
-	let pageUrls = $derived(pages.map((p) => ({ num: p, src: appendQuery(url, `page=${p}`) })));
+	let pageUrls = $derived(
+		url
+			? pages.map((p) => ({
+					num: p,
+					src: appendQuery(url, reloadNonce > 0 ? `page=${p}&r=${reloadNonce}` : `page=${p}`)
+				}))
+			: []
+	);
 
 	let activeReq = 0;
 
 	async function loadPagesManifest(targetUrl: string) {
 		const reqId = ++activeReq;
-		loading = true;
+		manifestLoading = true;
 		errorMsg = null;
-		pages = [];
+		pages = [1];
+		loadedPages = {};
 
 		try {
 			const res = await fetch(appendQuery(targetUrl, 'render=pages'), {
@@ -52,10 +62,10 @@
 				throw new Error('لم يتم العثور على صفحات للعرض');
 			}
 			pages = list;
-			loading = false;
+			manifestLoading = false;
 		} catch (err: any) {
 			if (reqId !== activeReq) return;
-			loading = false;
+			manifestLoading = false;
 			errorMsg = err?.message || 'حدث خطأ أثناء عرض الموضوع';
 		}
 	}
@@ -71,6 +81,10 @@
 	function setZoom(next: number) {
 		zoom = Math.max(70, Math.min(200, next));
 	}
+
+	function markLoaded(pageNum: number) {
+		loadedPages = { ...loadedPages, [pageNum]: true };
+	}
 </script>
 
 <div
@@ -82,12 +96,14 @@
 		class="z-10 flex shrink-0 items-center justify-between gap-2 border-b border-black/10 bg-zinc-100/95 px-3 py-1.5 text-xs text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-zinc-950/95 dark:text-zinc-200"
 	>
 		<div class="flex items-center gap-1.5 font-bold">
-			{#if pages.length > 0}
+			{#if !manifestLoading && pages.length > 0}
 				<span class="rounded-md bg-black/5 px-2 py-0.5 dark:bg-white/10">
 					{pages.length === 1 ? 'صفحة واحدة' : pages.length === 2 ? 'صفحتان' : `${pages.length} صفحات`}
 				</span>
-			{:else if loading}
-				<span class="text-muted-foreground">جاري العرض...</span>
+			{:else if manifestLoading}
+				<span class="text-muted-foreground inline-flex items-center gap-1.5">
+					<Loader2 size={12} class="animate-spin" /> جاري فتح الموضوع...
+				</span>
 			{/if}
 		</div>
 
@@ -95,7 +111,7 @@
 			<button
 				type="button"
 				onclick={() => setZoom(zoom - 20)}
-				disabled={loading || zoom <= 70}
+				disabled={zoom <= 70}
 				class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-black/10 bg-white/80 transition hover:bg-white disabled:opacity-40 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/15"
 				title="تصغير"
 				aria-label="تصغير"
@@ -106,7 +122,7 @@
 			<button
 				type="button"
 				onclick={() => setZoom(zoom + 20)}
-				disabled={loading || zoom >= 200}
+				disabled={zoom >= 200}
 				class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-black/10 bg-white/80 transition hover:bg-white disabled:opacity-40 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/15"
 				title="تكبير"
 				aria-label="تكبير"
@@ -127,14 +143,9 @@
 		</div>
 	</div>
 
-	<!-- 60fps Native Image Pages Scroller (Zero PDF.js JS, 100% Native Poppler Arabic Fonts) -->
+	<!-- Instant Parallel Native Image Scroller (Zero PDF.js, Zero 2-RTT Waterfall, Crisp Poppler Fonts) -->
 	<div class="relative flex-1 overflow-auto p-2.5 pb-20 sm:p-4">
-		{#if loading}
-			<div class="flex h-full min-h-[260px] flex-col items-center justify-center gap-3 text-zinc-600 dark:text-zinc-300">
-				<Loader2 size={30} class="text-primary animate-spin" />
-				<p class="text-sm font-bold">جاري فتح الموضوع...</p>
-			</div>
-		{:else if errorMsg}
+		{#if errorMsg}
 			<div class="flex h-full min-h-[260px] flex-col items-center justify-center gap-3 px-4 text-center">
 				<AlertCircle size={34} class="text-red-500" />
 				<p class="max-w-md text-sm font-bold text-zinc-800 dark:text-zinc-100">{errorMsg}</p>
@@ -151,14 +162,31 @@
 				class="mx-auto space-y-3 transition-all duration-150"
 				style="width: {zoom}%; max-width: {zoom > 100 ? 'none' : '860px'};"
 			>
-				{#each pageUrls as p (p.num)}
-					<div class="relative overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black/10">
+				{#each pageUrls as p (p.src)}
+					{@const isReady = Boolean(loadedPages[p.num])}
+					<div
+						class="relative overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black/10 {!isReady
+							? 'aspect-[210/297]'
+							: ''}"
+					>
+						{#if !isReady}
+							<div
+								class="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-zinc-50 text-zinc-500"
+							>
+								<Loader2 size={24} class="text-primary animate-spin" />
+								<span class="text-xs font-bold">جاري تحميل الصفحة {p.num}...</span>
+							</div>
+						{/if}
 						<img
 							src={p.src}
 							alt="{title} — صفحة {p.num}"
-							loading={p.num === 1 ? 'eager' : 'lazy'}
+							loading={p.num <= 3 ? 'eager' : 'lazy'}
+							fetchpriority={p.num === 1 ? 'high' : 'auto'}
 							decoding="async"
-							class="block h-auto w-full select-none"
+							onload={() => markLoaded(p.num)}
+							class="block h-auto w-full select-none transition-opacity duration-150 {isReady
+								? 'opacity-100'
+								: 'opacity-0'}"
 						/>
 						<span
 							class="pointer-events-none absolute bottom-2 left-2 rounded-md bg-black/55 px-2 py-0.5 text-[10px] font-bold text-white"

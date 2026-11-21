@@ -956,19 +956,42 @@
 			}}
 		>
 			<div
-				class="mx-auto flex w-full max-w-5xl items-center justify-between border border-white/10 bg-black/10 px-4 py-3 shadow-sm sm:rounded-t-xl dark:bg-white/5"
+				class="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-2 border border-white/10 bg-black/10 px-3 py-2.5 shadow-sm sm:rounded-t-xl sm:px-4 sm:py-3 dark:bg-white/5"
 			>
-				<div class="text-foreground/90 flex items-center gap-3 truncate">
+				<div class="text-foreground/90 flex min-w-0 flex-1 items-center gap-2 truncate">
 					<h2
-						class="inline-block max-w-[150px] truncate align-middle text-sm font-bold sm:max-w-md sm:text-lg"
+						class="inline-block max-w-[140px] truncate align-middle text-sm font-bold sm:max-w-md sm:text-lg"
 					>
 						{selectedDoc.title_ar || selectedDoc.title}
 					</h2>
-					<span
-						class="badge-{selectedDoc.type} mx-2 inline-block rounded-full border px-2 py-0.5 align-middle text-xs"
-					>
-						{activeTab === 'exam' ? 'الموضوع' : 'التصحيح'}
-					</span>
+					{#if (selectedDoc.has_solution || selectedDoc.hasSolution) && selectedDoc.solution_url}
+						<div class="border-border bg-background/80 inline-flex shrink-0 items-center rounded-lg border p-0.5 shadow-sm">
+							<button
+								type="button"
+								onclick={() => openDoc(selectedDoc, 'exam')}
+								class="rounded-md px-2.5 py-1 text-xs font-bold transition-all {activeTab === 'exam'
+									? 'bg-blue-600 text-white shadow-sm'
+									: 'text-muted-foreground hover:text-foreground'}"
+							>
+								الموضوع
+							</button>
+							<button
+								type="button"
+								onclick={() => openDoc(selectedDoc, 'solution')}
+								class="rounded-md px-2.5 py-1 text-xs font-bold transition-all {activeTab === 'solution'
+									? 'bg-emerald-600 text-white shadow-sm'
+									: 'text-muted-foreground hover:text-foreground'}"
+							>
+								الحل
+							</button>
+						</div>
+					{:else}
+						<span
+							class="badge-{selectedDoc.type} mx-1 inline-block shrink-0 rounded-full border px-2 py-0.5 align-middle text-xs"
+						>
+							{activeTab === 'exam' ? 'الموضوع' : 'التصحيح'}
+						</span>
+					{/if}
 				</div>
 
 				<div class="flex items-center gap-2">
@@ -1058,25 +1081,27 @@
 			</div>
 
 			<!-- Mobile/Desktop Toggle inside Fullscreen -->
-			{#if selectedDoc.has_solution && selectedDoc.solution_url}
+			{#if (selectedDoc.has_solution || selectedDoc.hasSolution) && selectedDoc.solution_url}
 				<div
-					class="absolute bottom-6 left-1/2 z-60 flex -translate-x-1/2 items-center rounded-full border border-white/10 bg-black/80 p-1.5 shadow-2xl backdrop-blur-md"
+					class="fixed bottom-4 left-1/2 z-[60] flex -translate-x-1/2 items-center gap-1 rounded-full border border-white/15 bg-zinc-900/90 p-1.5 shadow-2xl backdrop-blur-md"
 				>
 					<button
+						type="button"
 						onclick={() => openDoc(selectedDoc, 'exam')}
-						class="rounded-full px-4 py-2 text-sm font-bold transition-all {activeTab === 'exam'
+						class="rounded-full px-4 py-1.5 text-xs font-bold transition-all sm:text-sm {activeTab === 'exam'
 							? 'bg-blue-600 text-white shadow-md shadow-blue-600/20'
-							: 'text-white/70 hover:bg-white/10 hover:text-white'}"
+							: 'text-white/75 hover:bg-white/10 hover:text-white'}"
 					>
 						الموضوع
 					</button>
 					<button
+						type="button"
 						onclick={() => openDoc(selectedDoc, 'solution')}
-						class="rounded-full px-4 py-2 text-sm font-bold transition-all {activeTab === 'solution'
+						class="rounded-full px-4 py-1.5 text-xs font-bold transition-all sm:text-sm {activeTab === 'solution'
 							? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/20'
-							: 'text-white/70 hover:bg-white/10 hover:text-white'}"
+							: 'text-white/75 hover:bg-white/10 hover:text-white'}"
 					>
-						التصحيح
+						الحل النموذجي
 					</button>
 				</div>
 			{/if}

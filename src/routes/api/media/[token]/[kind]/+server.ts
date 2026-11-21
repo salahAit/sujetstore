@@ -12,7 +12,12 @@ import {
 } from '#lib/server/media-signing';
 import { recordAuditEvent } from '#lib/server/telemetry';
 import { watermarkPdfViaRust } from '#lib/server/rust-worker';
-import { ensurePdfPagesRendered, getRenderedPdfPage } from '#lib/server/pdf-pages';
+import {
+	ensurePdfPagesRendered,
+	getCachedPdfPage,
+	getCachedPdfPageCount,
+	getRenderedPdfPage
+} from '#lib/server/pdf-pages';
 
 interface DocumentMediaRow {
 	id: number;
@@ -21,6 +26,7 @@ interface DocumentMediaRow {
 	solution_url: string | null;
 	access_tier: string | null;
 	is_published: number | null;
+	updated_at: string | null;
 }
 
 function jsonError(status: number, errorMessage: string, extraHeaders?: Record<string, string>): Response {
@@ -91,7 +97,7 @@ export const GET: RequestHandler = async (event) => {
 	// 2. Lookup document by opaque public_token
 	const doc = contentSqlite
 		.query(
-			`SELECT id, slug, pdf_url, solution_url, access_tier, is_published
+			`SELECT id, slug, pdf_url, solution_url, access_tier, is_published, updated_at
 			 FROM documents
 			 WHERE public_token = ?
 			 LIMIT 1`
@@ -167,7 +173,54 @@ export const GET: RequestHandler = async (event) => {
 		quotaRemaining = quota.remaining;
 	}
 
-	// 6. Read bytes from RustFS / local mirror
+	const wmKeyPart = accessTier !== 'public' ? `wm:${locals.user?.id ?? 'm'}` : 'pub';
+	const renderCacheKey = `${doc.id}:${kind}:${relKey}:${doc.updated_at || 'v1'}:${wmKeyPart}`;
+
+	// 5b. ULTRA-FAST /dev/shm RAM Cache Fast-Path BEFORE touching RustFS S3! (< 2ms!)
+	if (isPageImageRequest) {
+		const pageNum = parseInt(pageParam!, 10);
+		const ramHit = await getCachedPdfPage(renderCacheKey, pageNum);
+		if (ramHit) {
+			return new Response(new Uint8Array(ramHit.bytes), {
+				status: 200,
+				headers: {
+					'Content-Type': 'image/jpeg',
+					'Content-Length': String(ramHit.bytes.byteLength),
+					'Cache-Control': 'private, max-age=600',
+					'X-Content-Type-Options': 'nosniff',
+					'X-Storage-Backend': 'ram-cache'
+				}
+			});
+		}
+	}
+
+	if (renderMode === 'pages') {
+		const cachedCount = await getCachedPdfPageCount(renderCacheKey);
+		if (cachedCount) {
+			recordAuditEvent({
+				event,
+				eventType: 'pdf_view',
+				statusCode: 200,
+				resourceId: `${doc.id}:${kind}`
+			});
+			return new Response(
+				JSON.stringify({
+					pageCount: cachedCount,
+					pages: Array.from({ length: cachedCount }, (_, i) => i + 1)
+				}),
+				{
+					status: 200,
+					headers: {
+						'Content-Type': 'application/json; charset=utf-8',
+						'Cache-Control': 'private, max-age=300',
+						'X-Storage-Backend': 'ram-cache'
+					}
+				}
+			);
+		}
+	}
+
+	// 6. Read bytes from RustFS / local mirror (only on RAM cache miss or full PDF download)
 	const obj = await readMediaObject(relKey);
 	if (!obj) {
 		return jsonError(404, 'الملف غير موجود في التخزين');
@@ -176,14 +229,11 @@ export const GET: RequestHandler = async (event) => {
 	let pdfBytes: Uint8Array = obj.bytes;
 
 	// 7. Best-effort dynamic watermarking for non-public documents via Rust worker (with LRU cache)
-	const wmKeyPart = accessTier !== 'public' ? `wm:${locals.user?.id ?? 'm'}` : 'pub';
 	if (accessTier !== 'public') {
 		const watermarkText = `SujetStore Pro | ${locals.user?.email || 'member'} | ${new Date().toISOString().slice(0, 10)}`;
 		const wm = await watermarkPdfViaRust(obj.bytes, watermarkText, actorKey);
 		pdfBytes = wm.bytes;
 	}
-
-	const renderCacheKey = `${doc.id}:${kind}:${relKey}:${obj.bytes.byteLength}:${wmKeyPart}`;
 
 	// 7b. Ultra-fast Server-Rendered Crisp Page Preview (0 KB pdf.js, 100% native Poppler Arabic fonts!)
 	if (renderMode === 'pages') {
@@ -203,7 +253,7 @@ export const GET: RequestHandler = async (event) => {
 				status: 200,
 				headers: {
 					'Content-Type': 'application/json; charset=utf-8',
-					'Cache-Control': 'private, no-store',
+					'Cache-Control': 'private, max-age=300',
 					'X-Storage-Backend': obj.backend
 				}
 			}
@@ -221,7 +271,7 @@ export const GET: RequestHandler = async (event) => {
 			headers: {
 				'Content-Type': 'image/jpeg',
 				'Content-Length': String(rendered.bytes.byteLength),
-				'Cache-Control': 'private, max-age=300',
+				'Cache-Control': 'private, max-age=600',
 				'X-Content-Type-Options': 'nosniff',
 				'X-Storage-Backend': obj.backend
 			}

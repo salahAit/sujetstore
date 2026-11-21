@@ -109,7 +109,9 @@ export const load: PageServerLoad = async (event) => {
 		SELECT id, year_subject_id, trimester_id, title, title_ar, slug, public_token, type,
 			pdf_url, solution_url, file_size, source, academic_year, difficulty,
 			origin_type, download_count, created_at, updated_at,
-			is_published as isPublished, has_solution as hasSolution, access_tier as accessTier,
+			is_published, is_published as isPublished,
+			has_solution, has_solution as hasSolution,
+			access_tier, access_tier as accessTier,
 			CASE WHEN content IS NOT NULL AND LENGTH(content) > 2 THEN 1 ELSE 0 END as hasContent
 		FROM documents
 		WHERE year_subject_id IN (${placeholders}) AND is_published = 1

@@ -4,6 +4,22 @@
 
 #let quran-font = ("KFGQPC Uthman Taha Naskh", "Arabic Transparent")
 
+// Renders fill-in-the-blank dot sequences (4+ dots) inside Quranic/Hadith passages as crisp inline dotted boxes
+// so Typst code NEVER leaks as literal text and verse numbers stay properly aligned in RTL flow.
+#let _render-islamic-text(s) = {
+  if type(s) != str { return s }
+  let parts = s.split(regex("\\.{4,}"))
+  if parts.len() <= 1 { return [#s] }
+  let out = ()
+  for (i, p) in parts.enumerate() {
+    if p != "" { out.push([#p]) }
+    if i < parts.len() - 1 {
+      out.push(box(width: 6.2em, baseline: 1pt)[#repeat(gap: 1.8pt)[.]])
+    }
+  }
+  out.join()
+}
+
 #let quran-box(
   verses: "",
   surah: "",
@@ -25,7 +41,7 @@
     ]
     #align(center)[
       #par(leading: 0.88em, justify: false)[
-        #text(font: quran-font, size: 15.5pt, fill: rgb("#0f172a"))[﴿#verses﴾]
+        #text(font: quran-font, size: 15.5pt, fill: rgb("#0f172a"))[﴿#_render-islamic-text(verses)﴾]
       ]
     ]
     #if surah != "" [
@@ -68,7 +84,7 @@
     ]
     #par(leading: 0.76em, justify: true)[
       #if narrator != "" [#text(size: 13.5pt, fill: rgb("#1e293b"))[#narrator] ]
-      #text(size: 14pt, weight: "bold", fill: rgb("#0f172a"))[«#text-body»]
+      #text(size: 14pt, weight: "bold", fill: rgb("#0f172a"))[«#_render-islamic-text(text-body)»]
     ]
     #if source != "" [
       #v(4pt)
