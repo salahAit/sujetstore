@@ -19,6 +19,7 @@
 	import { onMount } from 'svelte';
 	import InteractiveLessonPlayer from '#lib/modules/InteractiveLesson/InteractiveLessonPlayer.svelte';
 	import SeoJsonLd from '#lib/components/SeoJsonLd.svelte';
+	import PdfCanvasViewer from '#lib/components/PdfCanvasViewer.svelte';
 	import type { InteractiveLessonData } from '#lib/modules/MathTemplates/types';
 
 	let { data }: { data: any } = $props();
@@ -360,7 +361,7 @@
 							<Printer size={18} />
 						</button>
 						<a
-							href={doc.pdfUrl}
+							href={doc.pdfUrl + (doc.pdfUrl.includes('?') ? '&download=1' : '?download=1')}
 							download
 							target="_blank"
 							onclick={trackDownload}
@@ -377,7 +378,7 @@
 							<Printer size={18} />
 						</button>
 						<a
-							href={doc.solutionUrl}
+							href={doc.solutionUrl + (doc.solutionUrl.includes('?') ? '&download=1' : '?download=1')}
 							download
 							target="_blank"
 							onclick={trackDownload}
@@ -477,17 +478,9 @@
 		{:else}
 			<div class="relative w-full bg-white {isFullscreen ? 'flex-1' : 'h-[78vh] min-h-[520px]'}">
 				{#if activeTab === 'exam' && doc.pdfUrl}
-					<iframe
-						src={doc.pdfUrl + '#toolbar=0&view=FitH'}
-						title="قارئ الموضوع"
-						class="h-full w-full border-0"
-					></iframe>
+					<PdfCanvasViewer url={doc.pdfUrl} title="قارئ الموضوع" />
 				{:else if activeTab === 'solution' && doc.solutionUrl}
-					<iframe
-						src={doc.solutionUrl + '#toolbar=0&view=FitH'}
-						title="قارئ التصحيح"
-						class="h-full w-full border-0"
-					></iframe>
+					<PdfCanvasViewer url={doc.solutionUrl} title="قارئ التصحيح" />
 				{:else}
 					<div class="flex h-full w-full items-center justify-center text-zinc-500">
 						لا يوجد ملف لعرضه بصيغة PDF

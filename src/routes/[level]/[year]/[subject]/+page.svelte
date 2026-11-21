@@ -28,6 +28,7 @@
 	import ShareModal from '#lib/components/ShareModal.svelte';
 	import OfflinePackButton from '#lib/components/OfflinePackButton.svelte';
 	import SeoJsonLd from '#lib/components/SeoJsonLd.svelte';
+	import PdfCanvasViewer from '#lib/components/PdfCanvasViewer.svelte';
 	import { toggleBookmark, isBookmarked } from '#lib/stores/bookmarks.svelte';
 
 	let { data }: { data: any } = $props();
@@ -983,7 +984,7 @@
 							<Printer size={22} />
 						</button>
 						<a
-							href={selectedDoc.pdf_url}
+							href={selectedDoc.pdf_url + (selectedDoc.pdf_url.includes('?') ? '&download=1' : '?download=1')}
 							download
 							target="_blank"
 							onclick={() =>
@@ -1009,7 +1010,7 @@
 							<Printer size={22} />
 						</button>
 						<a
-							href={selectedDoc.solution_url}
+							href={selectedDoc.solution_url + (selectedDoc.solution_url.includes('?') ? '&download=1' : '?download=1')}
 							download
 							target="_blank"
 							onclick={() =>
@@ -1046,17 +1047,9 @@
 				class="relative mx-auto w-full max-w-5xl flex-1 overflow-hidden border-x border-b border-white/10 bg-white shadow-2xl sm:rounded-b-xl"
 			>
 				{#if activeTab === 'exam' && selectedDoc.pdf_url}
-					<iframe
-						src={selectedDoc.pdf_url + '#toolbar=0&view=FitH'}
-						title="قارئ الوثيقة"
-						class="absolute inset-0 h-full w-full border-0"
-					></iframe>
+					<PdfCanvasViewer url={selectedDoc.pdf_url} title="قارئ الموضوع" />
 				{:else if activeTab === 'solution' && selectedDoc.solution_url}
-					<iframe
-						src={selectedDoc.solution_url + '#toolbar=0&view=FitH'}
-						title="قارئ الوثيقة"
-						class="absolute inset-0 h-full w-full border-0"
-					></iframe>
+					<PdfCanvasViewer url={selectedDoc.solution_url} title="قارئ التصحيح" />
 				{:else}
 					<div class="flex h-full w-full items-center justify-center text-black/50">
 						لا يوجد ملف لعرضه بصيغة PDF

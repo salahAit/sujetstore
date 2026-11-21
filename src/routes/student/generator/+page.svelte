@@ -1,5 +1,6 @@
 <script lang="ts">
 	import QuizPlayer from '#lib/modules/QuizBuilder/components/player/QuizPlayer.svelte';
+	import PdfCanvasViewer from '#lib/components/PdfCanvasViewer.svelte';
 	import {
 		Sparkles,
 		Brain,
@@ -440,12 +441,8 @@
 							</div>
 						</div>
 
-						<div class="overflow-hidden rounded-xl border bg-neutral-900">
-							<iframe
-								src={`${pdfResult.pdfUrl}#view=FitH`}
-								title={pdfResult.title}
-								class="h-[520px] w-full"
-							></iframe>
+						<div class="h-[560px] overflow-hidden rounded-xl border bg-neutral-900">
+							<PdfCanvasViewer url={pdfResult.pdfUrl} title={pdfResult.title} />
 						</div>
 					</div>
 				{/if}
