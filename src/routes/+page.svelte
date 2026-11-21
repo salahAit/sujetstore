@@ -9,6 +9,7 @@
 	} from 'lucide-svelte';
 	import DynamicIcon from '#lib/components/DynamicIcon.svelte';
 	import SeoJsonLd from '#lib/components/SeoJsonLd.svelte';
+	import { i18n } from '#lib/i18n/i18n.svelte';
 	let { data }: { data: any } = $props();
 
 	const homeJsonLd = [
@@ -61,19 +62,17 @@
 			class="text-muted-foreground mb-8 inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/5 px-4 py-2 text-sm backdrop-blur-sm dark:border-white/10 dark:bg-white/5"
 		>
 			<span class="inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>
-			المنهج الدراسي الجزائري - محدّث
+			{i18n.t('home.heroBadge')}
 		</div>
 
 		<h1 class="mb-6 text-4xl leading-tight font-extrabold sm:text-5xl lg:text-7xl">
-			<span class="gradient-text">بنك الفروض</span>
+			<span class="gradient-text">{i18n.t('home.heroTitle')}</span>
 			<br />
-			<span class="text-foreground">والاختبارات</span>
+			<span class="text-foreground">SujetStore</span>
 		</h1>
 
 		<p class="text-muted-foreground mx-auto mb-12 max-w-2xl text-lg leading-relaxed sm:text-xl">
-			دروس، ملخصات، فروض واختبارات لجميع المراحل التعليمية
-			<br class="hidden sm:block" />
-			وفق المنهاج الدراسي الوطني الجزائري
+			{i18n.t('home.heroSubtitle')}
 		</p>
 
 		<div class="flex flex-wrap justify-center gap-4">
@@ -83,9 +82,9 @@
 					class="group border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 inline-flex items-center gap-3 rounded-xl border px-6 py-3 font-bold transition-all duration-300 hover:scale-105"
 				>
 					<DynamicIcon name={lvl.icon} size={22} />
-					<span>{lvl.name_ar}</span>
+					<span>{i18n.pick(lvl, 'name')}</span>
 					{#if lvl.visibility === 'coming_soon'}
-						<span class="rounded bg-amber-500/20 px-2 py-0.5 text-xs text-amber-500">قريباً</span>
+						<span class="rounded bg-amber-500/20 px-2 py-0.5 text-xs text-amber-500">{i18n.t('nav.comingSoon')}</span>
 					{/if}
 				</a>
 			{/each}
@@ -94,7 +93,7 @@
 				class="group inline-flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-6 py-3 font-bold text-emerald-600 transition-all duration-300 hover:scale-105 hover:bg-emerald-500/20 dark:text-emerald-400"
 			>
 				<Calculator size={22} />
-				حاسبة المعدل ومحاكي الشهادات
+				{i18n.t('nav.simulatorFull')}
 			</a>
 		</div>
 	</div>
@@ -108,19 +107,19 @@
 		<div class="grid grid-cols-2 gap-6 text-center sm:grid-cols-4">
 			<div>
 				<div class="gradient-text text-3xl font-extrabold">{data.stats?.totalDocs || 0}</div>
-				<div class="text-muted-foreground mt-1 text-sm">وثيقة تعليمية</div>
+				<div class="text-muted-foreground mt-1 text-sm">{i18n.t('home.statsDocuments')}</div>
 			</div>
 			<div>
 				<div class="text-3xl font-extrabold text-red-400">{data.stats?.examCount || 0}</div>
-				<div class="text-muted-foreground mt-1 text-sm">اختبار</div>
+				<div class="text-muted-foreground mt-1 text-sm">{i18n.t('filters.exam')}</div>
 			</div>
 			<div>
 				<div class="text-3xl font-extrabold text-orange-400">{data.stats?.testCount || 0}</div>
-				<div class="text-muted-foreground mt-1 text-sm">فرض</div>
+				<div class="text-muted-foreground mt-1 text-sm">{i18n.t('filters.test')}</div>
 			</div>
 			<div>
 				<div class="text-3xl font-extrabold text-emerald-400">{data.stats?.subjectCount || 0}</div>
-				<div class="text-muted-foreground mt-1 text-sm">مادة دراسية</div>
+				<div class="text-muted-foreground mt-1 text-sm">{i18n.t('home.statsSubjects')}</div>
 			</div>
 		</div>
 	</div>
@@ -130,8 +129,8 @@
 <section class="py-16 lg:py-24">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="mb-12 text-center">
-			<h2 class="mb-4 text-3xl font-bold lg:text-4xl">المراحل التعليمية</h2>
-			<p class="text-muted-foreground text-lg">اختر المرحلة التعليمية للوصول إلى المحتوى</p>
+			<h2 class="mb-4 text-3xl font-bold lg:text-4xl">{i18n.t('home.levelsHeading')}</h2>
+			<p class="text-muted-foreground text-lg">{i18n.t('nav.chooseLevel')}</p>
 		</div>
 
 		<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -149,18 +148,18 @@
 						</div>
 
 						<!-- Title -->
-						<h3 class="mb-3 text-2xl font-bold">{level.name_ar}</h3>
-						<p class="text-muted-foreground mb-6 text-sm">{level.name_fr}</p>
+						<h3 class="mb-3 text-2xl font-bold">{i18n.pick(level, 'name')}</h3>
+						<p class="text-muted-foreground mb-6 text-sm">{i18n.locale === 'ar' ? level.name_fr : level.name_ar}</p>
 
 						<!-- Stats -->
 						<div class="flex justify-center gap-6 text-sm">
 							<div class="text-center">
 								<div class="text-lg font-bold">{level.yearCount}</div>
-								<div class="text-muted-foreground">سنوات</div>
+								<div class="text-muted-foreground">{i18n.t('filters.year')}</div>
 							</div>
 							<div class="text-center">
 								<div class="text-lg font-bold">{level.docCount}</div>
-								<div class="text-muted-foreground">وثيقة</div>
+								<div class="text-muted-foreground">{i18n.t('home.statsDocuments')}</div>
 							</div>
 						</div>
 

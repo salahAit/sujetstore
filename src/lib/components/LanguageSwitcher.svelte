@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Globe, Check, ChevronDown } from 'lucide-svelte';
+	import { invalidateAll } from '$app/navigation';
 	import { i18n, type Locale } from '#lib/i18n/i18n.svelte';
 
 	interface Props {
@@ -22,6 +23,7 @@
 	function selectLocale(code: Locale) {
 		i18n.setLocale(code);
 		open = false;
+		invalidateAll().catch(() => {});
 	}
 
 	function handleKeydown(e: KeyboardEvent) {

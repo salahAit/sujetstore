@@ -1,3 +1,4 @@
+import { untrack } from 'svelte';
 import ar from './locales/ar';
 import fr from './locales/fr';
 import en from './locales/en';
@@ -39,6 +40,7 @@ function firstNonEmpty(...values: unknown[]): string {
 
 export class I18nManager {
 	locale = $state<Locale>('ar');
+	private lastServerLocale: Locale | null = null;
 
 	constructor(initialLocale: Locale = 'ar') {
 		if (typeof window !== 'undefined' && typeof document !== 'undefined') {
@@ -64,7 +66,11 @@ export class I18nManager {
 	 */
 	hydrate(initial: Locale | string | null | undefined): void {
 		const valid = normalizeLocale(initial);
-		if (this.locale !== valid) {
+		if (this.lastServerLocale === valid) return;
+		this.lastServerLocale = valid;
+
+		const current = untrack(() => this.locale);
+		if (current !== valid) {
 			this.locale = valid;
 		}
 		if (typeof document !== 'undefined') {
@@ -76,6 +82,7 @@ export class I18nManager {
 	setLocale(next: Locale): void {
 		const valid = normalizeLocale(next);
 		this.locale = valid;
+		this.lastServerLocale = valid;
 
 		if (typeof document !== 'undefined') {
 			document.documentElement.lang = valid;

@@ -37,8 +37,8 @@
 {#if !isSujetBuilder}
 	{#if data?.siteLockActive && isStaff}
 		<div class="bg-amber-500 px-3 py-1.5 text-center text-xs font-extrabold text-slate-950">
-			<span>🔒 الموقع مغلق حالياً عن الجمهور (وضع الحماية/التحديث) — أنت تتصفح بصلاحية المدير.</span>
-			<a href="/admin/site-lock" class="ms-2 underline underline-offset-2">إدارة القفل</a>
+			<span>🔒 {i18n.t('common.siteLockBanner')}</span>
+			<a href="/admin/site-lock" class="ms-2 underline underline-offset-2">{i18n.t('common.manageLock')}</a>
 		</div>
 	{/if}
 	<TopNavbar

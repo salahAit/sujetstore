@@ -30,6 +30,7 @@
 	import SeoJsonLd from '#lib/components/SeoJsonLd.svelte';
 	import SmartExamReader from '#lib/components/SmartExamReader.svelte';
 	import { toggleBookmark, isBookmarked } from '#lib/stores/bookmarks.svelte';
+	import { i18n } from '#lib/i18n/i18n.svelte';
 
 	let { data }: { data: any } = $props();
 
@@ -372,26 +373,26 @@
 		class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8"
 	>
 		<nav class="text-muted-foreground flex flex-wrap items-center gap-2 text-sm">
-			<a href="/" class="hover:text-foreground transition-colors">الرئيسية</a>
+			<a href="/" class="hover:text-foreground transition-colors">{i18n.t('nav.home')}</a>
 			<span class="opacity-50">/</span>
 			<a href="/{data.level.slug}" class="hover:text-foreground transition-colors"
-				>{data.level.name_ar}</a
+				>{i18n.pick(data.level, 'name')}</a
 			>
 			<span class="opacity-50">/</span>
 			<a href="/{data.level.slug}/{data.year.slug}" class="hover:text-foreground transition-colors"
-				>{data.year.name_ar}</a
+				>{i18n.pick(data.year, 'name')}</a
 			>
 			<span class="opacity-50">/</span>
 			{#if data.mode === 'subject' && data.streamInfo}
 				<a
 					href="/{data.level.slug}/{data.year.slug}/{data.streamInfo.id.toLowerCase()}"
 					class="hover:text-foreground transition-colors"
-					>{data.streamInfo.name_ar}</a
+					>{i18n.pick(data.streamInfo, 'name')}</a
 				>
 				<span class="opacity-50">/</span>
 			{/if}
 			<span class="text-foreground font-semibold">
-				{data.mode === 'stream' ? data.stream.name_ar : data.subject.name_ar}
+				{data.mode === 'stream' ? i18n.pick(data.stream, 'name') : i18n.pick(data.subject, 'name')}
 			</span>
 		</nav>
 
@@ -427,17 +428,17 @@
 		<div class="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
 			<div class="text-muted-foreground mb-3 inline-flex items-center gap-2 text-sm">
 				<span class="flex items-center"><GraduationCap size={16} /></span>
-				<span>{data.year.name_ar}</span>
+				<span>{i18n.pick(data.year, 'name')}</span>
 			</div>
-			<h1 class="mb-2 text-3xl font-extrabold lg:text-4xl">{data.stream.name_ar}</h1>
-			<p class="text-muted-foreground">{data.stream.name_fr}</p>
+			<h1 class="mb-2 text-3xl font-extrabold lg:text-4xl">{i18n.pick(data.stream, 'name')}</h1>
+			<p class="text-muted-foreground">{i18n.locale === 'ar' ? data.stream.name_fr : data.stream.name_ar}</p>
 		</div>
 	</section>
 
 	<!-- Stream Subjects Grid -->
 	<section class="py-12 lg:py-16">
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-			<h2 class="mb-8 text-center text-2xl font-bold">المواد الدراسية</h2>
+			<h2 class="mb-8 text-center text-2xl font-bold">{i18n.t('subject.title')}</h2>
 
 			<div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
 				{#each data.subjects as subject}
@@ -456,7 +457,7 @@
 							<div class="min-w-0 flex-1">
 								<div class="flex items-center justify-between gap-2">
 									<h3 class="group-hover:text-primary truncate text-lg font-bold transition-colors">
-										{subject.name_ar}
+										{i18n.pick(subject, 'name')}
 									</h3>
 									<div class="flex flex-wrap items-center gap-1.5">
 										<div
@@ -516,15 +517,15 @@
 				>
 					<DynamicIcon name={data.subject.icon} size={32} />
 				</div>
-				<div class="text-center sm:text-right">
-					<h1 class="text-3xl font-extrabold lg:text-4xl">{data.subject.name_ar}</h1>
+				<div class="text-center sm:text-start">
+					<h1 class="text-3xl font-extrabold lg:text-4xl">{i18n.pick(data.subject, 'name')}</h1>
 					<p class="text-muted-foreground">
-						{data.year.name_ar}
+						{i18n.pick(data.year, 'name')}
 						{#if data.streamInfo}
-							— شعبة {data.streamInfo.name_ar}
+							— {i18n.pick(data.streamInfo, 'name')}
 							{#if data.yearSubject?.coefficient}
-								<span class="mr-2 inline-block rounded-full bg-blue-500/15 px-2.5 py-0.5 text-xs font-bold text-blue-400">
-									المعامل: {data.yearSubject.coefficient}
+								<span class="ms-2 inline-block rounded-full bg-blue-500/15 px-2.5 py-0.5 text-xs font-bold text-blue-400">
+									{i18n.t('subject.coefficient')}: {data.yearSubject.coefficient}
 								</span>
 							{/if}
 						{/if}
@@ -591,7 +592,13 @@
 									? 'bg-background text-foreground shadow-sm'
 									: 'hover:text-foreground'}"
 							>
-								الفصل {trimester.id.replace('t', '')}
+								{trimester.id === 't1'
+									? i18n.t('subject.trimester1')
+									: trimester.id === 't2'
+										? i18n.t('subject.trimester2')
+										: trimester.id === 't3'
+											? i18n.t('subject.trimester3')
+											: i18n.pick(trimester, 'name')}
 							</button>
 						{/each}
 					</div>

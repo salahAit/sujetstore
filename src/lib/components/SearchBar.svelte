@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Search, X, FileText, FileEdit, BookOpen, Loader2, Brain } from 'lucide-svelte';
 	import { goto } from '$app/navigation';
+	import { i18n } from '#lib/i18n/i18n.svelte';
 
 	let { staticMode = false }: { staticMode?: boolean } = $props();
 
@@ -118,10 +119,10 @@
 <button
 	onclick={open}
 	class="text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-lg border border-black/5 bg-black/5 px-3 py-1.5 text-sm transition-colors hover:bg-black/10 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-	title="بحث (Ctrl+K)"
+	title="{i18n.t('common.search')} (Ctrl+K)"
 >
 	<Search size={16} />
-	<span class="hidden sm:inline">بحث...</span>
+	<span class="hidden sm:inline">{i18n.t('nav.search')}</span>
 	<kbd
 		class="bg-muted text-muted-foreground hidden rounded px-1.5 py-0.5 font-mono text-[10px] sm:inline"
 		>Ctrl+K</kbd
@@ -150,7 +151,7 @@
 					oninput={onInput}
 					onkeydown={onKeydown}
 					type="text"
-					placeholder="ابحث عن فروض، اختبارات، تمارين تفاعلية..."
+					placeholder={i18n.t('filters.searchPlaceholder')}
 					class="text-foreground placeholder:text-muted-foreground w-full bg-transparent text-base outline-none"
 				/>
 				{#if isLoading}

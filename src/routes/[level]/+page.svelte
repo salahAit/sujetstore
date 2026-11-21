@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { BookOpen, FileText } from 'lucide-svelte';
 	import DynamicIcon from '#lib/components/DynamicIcon.svelte';
+	import { i18n } from '#lib/i18n/i18n.svelte';
 	let { data }: { data: any } = $props();
 
 	const levelColors: Record<string, string> = {
@@ -21,9 +22,9 @@
 <div class="border-b border-white/10 bg-white/[0.02]">
 	<div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
 		<nav class="text-muted-foreground flex items-center gap-2 text-sm">
-			<a href="/" class="hover:text-foreground transition-colors">الرئيسية</a>
+			<a href="/" class="hover:text-foreground transition-colors">{i18n.t('nav.home')}</a>
 			<span class="opacity-50">/</span>
-			<span class="text-foreground font-semibold">{data.level.name_ar}</span>
+			<span class="text-foreground font-semibold">{i18n.pick(data.level, 'name')}</span>
 		</nav>
 	</div>
 </div>
@@ -34,8 +35,8 @@
 		<div class="text-primary mb-4 flex justify-center">
 			<DynamicIcon name={data.level.icon} size={64} />
 		</div>
-		<h1 class="mb-3 text-3xl font-extrabold lg:text-5xl">{data.level.name_ar}</h1>
-		<p class="text-muted-foreground text-lg">{data.level.name_fr}</p>
+		<h1 class="mb-3 text-3xl font-extrabold lg:text-5xl">{i18n.pick(data.level, 'name')}</h1>
+		<p class="text-muted-foreground text-lg">{i18n.locale === 'ar' ? data.level.name_fr : data.level.name_ar}</p>
 		{#if data.level.description}
 			<p class="text-muted-foreground mx-auto mt-3 max-w-xl">{data.level.description}</p>
 		{/if}
@@ -45,13 +46,13 @@
 <!-- Years Grid -->
 <section class="py-12 lg:py-16">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<h2 class="mb-8 text-center text-2xl font-bold">اختر السنة الدراسية</h2>
+		<h2 class="mb-8 text-center text-2xl font-bold">{i18n.t('subject.selectYear')}</h2>
 
 		{#if data.level.visibility === 'coming_soon'}
 			<div class="glass-card mx-auto max-w-xl rounded-2xl border p-10 text-center">
-				<div class="mb-3 text-3xl font-extrabold text-amber-500">قريباً</div>
+				<div class="mb-3 text-3xl font-extrabold text-amber-500">{i18n.t('nav.comingSoon')}</div>
 				<p class="text-muted-foreground text-sm leading-relaxed">
-					يجري حالياً تجهيز ومراجعة مواضيع وفروض <strong>{data.level.name_ar}</strong>. تابعنا أو تصفح الأطوار المتاحة الآن!
+					<strong>{i18n.pick(data.level, 'name')}</strong>
 				</p>
 			</div>
 		{:else}
@@ -77,12 +78,12 @@
 
 						<div class="min-w-0 flex-1">
 							<h3 class="mb-1 text-lg font-bold group-hover:text-{color}-400 transition-colors">
-								{year.name_ar}
+								{i18n.pick(year, 'name')}
 								{#if year.visibility === 'coming_soon'}
-									<span class="mr-1 rounded bg-amber-500/15 px-1.5 py-0.5 text-[10px] text-amber-500">قريباً</span>
+									<span class="mr-1 rounded bg-amber-500/15 px-1.5 py-0.5 text-[10px] text-amber-500">{i18n.t('nav.comingSoon')}</span>
 								{/if}
 							</h3>
-							<p class="text-muted-foreground mb-3 text-sm">{year.name_fr}</p>
+							<p class="text-muted-foreground mb-3 text-sm">{i18n.locale === 'ar' ? year.name_fr : year.name_ar}</p>
 
 							<div class="text-muted-foreground flex items-center gap-4 text-xs">
 								<span class="flex items-center gap-1">
