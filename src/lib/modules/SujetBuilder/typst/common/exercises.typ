@@ -1,18 +1,22 @@
 #import "arabic_poetry.typ": render-arabic-poem
+#import "islamic_blocks.typ": quran-box, hadith-box, islamic-rubric-table
 
 #let safe-eval(content, mode: "markup") = {
   if content == "" or content == none { return [] }
   
   let prepared = if mode == "markup" and type(content) == str {
-    content.replace(regex("\.{12,}"), "#repeat(gap: 1.8pt)[.]")
+    content.replace(regex("\\.{12,}[ \\t]*\\.?"), "#repeat(gap: 1.8pt)[.];")
   } else {
     content
   }
   
-  // Define common units & poetry renderer in eval scope
+  // Define common units, poetry renderer & Islamic blocks in eval scope
   let scope = (
     cm: 1cm, mm: 1mm, pt: 1pt, em: 1em,
     render-arabic-poem: render-arabic-poem,
+    quran-box: quran-box,
+    hadith-box: hadith-box,
+    islamic-rubric-table: islamic-rubric-table,
   )
   
   let result = eval(prepared, mode: mode, scope: scope)

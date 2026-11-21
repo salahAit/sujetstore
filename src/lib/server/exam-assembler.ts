@@ -87,6 +87,12 @@ import {
 	type AssembledFrenchSecondaryPaper,
 	type FrenchSecondaryVariant
 } from './assemblers/exam-french-secondary';
+import {
+	assembleIslamicPaper,
+	type AssembledIslamicPaper,
+	type AssembleIslamicOptions,
+	type IslamicExamVariant
+} from './assemblers/exam-islamic';
 import { compileTypstPdf } from './typst';
 import {
 	SECONDARY_TRACK_IDS,
@@ -99,6 +105,7 @@ import type { SciencesTrackId } from '../modules/SciencesTemplates/types';
 import type { ArabicTrackId } from '../modules/ArabicTemplates/types';
 import type { EnglishTrackId } from '../modules/EnglishTemplates/types';
 import type { FrenchTrackId } from '../modules/FrenchTemplates/types';
+import type { IslamicTrackId } from '../modules/IslamicTemplates/types';
 import type { TrimesterId } from '../modules/SujetBuilder/types';
 
 export type UnifiedAssembledExam =
@@ -130,6 +137,8 @@ export type UnifiedAssembledFrenchExam =
 	| AssembledFrenchPrimaryPaper
 	| AssembledFrenchMiddlePaper
 	| AssembledFrenchSecondaryPaper;
+
+export type UnifiedAssembledIslamicExam = AssembledIslamicPaper;
 
 export interface AssembleExamOptions {
 	grade: GradeId;
@@ -289,7 +298,8 @@ export async function compileAssembledExamPdf(
 		| UnifiedAssembledSciencesExam
 		| UnifiedAssembledArabicExam
 		| UnifiedAssembledEnglishExam
-		| UnifiedAssembledFrenchExam,
+		| UnifiedAssembledFrenchExam
+		| UnifiedAssembledIslamicExam,
 	paths: { subjectOutPath: string; solutionOutPath: string }
 ) {
 	const [subjectResult, solutionResult] = await Promise.all([
@@ -936,4 +946,58 @@ export function assembleFrenchExam(opts: AssembleFrenchExamOptions): UnifiedAsse
 			});
 		}
 	}
+}
+
+const ISLAMIC_BASIC_SET: ReadonlySet<string> = new Set([
+	'1ap',
+	'2ap',
+	'3ap',
+	'4ap',
+	'5ap',
+	'1am',
+	'2am',
+	'3am',
+	'4am'
+]);
+
+export function yearSubjectToIslamicTrack(
+	yearId: string,
+	subjectId: string,
+	streamId?: string | null
+): IslamicTrackId | null {
+	if (subjectId === 'ISL-B' && ISLAMIC_BASIC_SET.has(yearId)) {
+		return yearId as IslamicTrackId;
+	}
+	if (subjectId === 'ISL-ALL') {
+		const s = (streamId || '').toUpperCase();
+		if (yearId === '1as') {
+			return s === 'TCL' ? '1as_tcl' : '1as_tcst';
+		}
+		if (yearId === '2as') {
+			if (s === 'TM') return '2as_tm';
+			if (s === 'MATH') return '2as_math';
+			if (s === 'GE') return '2as_ge';
+			if (s === 'LP') return '2as_lp';
+			if (s === 'LE') return '2as_le';
+			return '2as_se';
+		}
+		if (yearId === '3as') {
+			if (s === 'TM') return '3as_tm';
+			if (s === 'MATH') return '3as_math';
+			if (s === 'GE') return '3as_ge';
+			if (s === 'LP') return '3as_lp';
+			if (s === 'LE') return '3as_le';
+			return '3as_se';
+		}
+	}
+	return null;
+}
+
+export type AssembleIslamicExamOptions = AssembleIslamicOptions;
+export type { IslamicExamVariant };
+
+export function assembleIslamicExam(
+	opts: AssembleIslamicExamOptions
+): UnifiedAssembledIslamicExam {
+	return assembleIslamicPaper(opts);
 }

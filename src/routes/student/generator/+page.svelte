@@ -89,14 +89,30 @@
 		'3as:FRE-SEC:MATH': 2,
 		'3as:FRE-SEC:GE': 2,
 		'3as:FRE-SEC:LP': 3,
-		'3as:FRE-SEC:LE': 5
+		'3as:FRE-SEC:LE': 5,
+		'1as:ISL-ALL:TCST': 2,
+		'1as:ISL-ALL:TCL': 2,
+		'2as:ISL-ALL:SE': 2,
+		'2as:ISL-ALL:TM': 2,
+		'2as:ISL-ALL:MATH': 2,
+		'2as:ISL-ALL:GE': 2,
+		'2as:ISL-ALL:LP': 2,
+		'2as:ISL-ALL:LE': 2,
+		'3as:ISL-ALL:SE': 2,
+		'3as:ISL-ALL:TM': 2,
+		'3as:ISL-ALL:MATH': 2,
+		'3as:ISL-ALL:GE': 2,
+		'3as:ISL-ALL:LP': 2,
+		'3as:ISL-ALL:LE': 2
 	};
 
 	function formatYsLabel(ys: any): string {
 		const subjLabel =
 			ys.subjectId === 'SCI-B' && typeof ys.yearId === 'string' && ys.yearId.endsWith('ap')
 				? 'التربية العلمية والتكنولوجية'
-				: ys.subjectName;
+				: ys.subjectId === 'ISL-ALL'
+					? 'العلوم الإسلامية'
+					: ys.subjectName;
 		if (ys.streamName && ys.streamId !== 'GEN') {
 			const coeff = ys.coefficient ?? SECONDARY_COEFFS[`${ys.yearId}:${ys.subjectId}:${ys.streamId}`];
 			const coeffPart = coeff ? ` (معامل ${coeff})` : '';

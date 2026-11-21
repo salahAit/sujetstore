@@ -92,7 +92,9 @@ export function sanitizeForTypst(text: string): string {
 			// 1. Escape `//` (e.g. genetic allele notation `P//P`, `HbA//HbS`) so Typst never treats it as a comment
 			// 2. Convert Markdown `**bold**` and Arabic-prefixed `*bold*` (like `و*الأوردة*`) into `#strong[...]`
 			//    so Typst never fails with `unclosed delimiter` on word-attached asterisks.
-			let out = part.replace(/(?<!:)\/\//g, '\\/\\/');
+			let out = part
+				.replace(/ﷺ/g, 'صلى الله عليه وسلم')
+				.replace(/(?<!:)\/\//g, '\\/\\/');
 			out = out.replace(/\*\*([^\s*\n](?:[^*\n]*?[^\s*\n])?)\*\*/g, '#strong[$1]');
 			out = out.replace(/(?<!\\)\*([^\s*\n](?:[^*\n]*?[^\s*\n])?)\*/g, '#strong[$1]');
 			return out;

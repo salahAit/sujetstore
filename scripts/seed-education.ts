@@ -254,7 +254,7 @@ const subjectsData = [
 	{ id: 'PHI-LE',  name: 'Philosophy (LE)', name_ar: 'الفلسفة (لغات)', name_fr: 'Philosophie (LE)', slug: 'phi-le', exam_group: 'philosophy', icon: 'Brain', color: '#7c3aed' },
 
 	// --- مواد موحدة لجميع الشعب ---
-	{ id: 'ISL-ALL', name: 'Islamic Education (All)', name_ar: 'التربية الإسلامية', name_fr: 'Éducation Islamique', slug: 'isl-all', exam_group: 'islamic', icon: 'Book', color: '#059669' },
+	{ id: 'ISL-ALL', name: 'Islamic Sciences', name_ar: 'العلوم الإسلامية', name_fr: 'Sciences Islamiques', slug: 'isl-all', exam_group: 'islamic', icon: 'Book', color: '#059669' },
 	{ id: 'AMZ-ALL', name: 'Amazigh (All)', name_ar: 'اللغة الأمازيغية', name_fr: 'Langue Amazighe', slug: 'amz-all', exam_group: 'amazigh', icon: 'Languages', color: '#d97706' },
 
 	// --- مواد التخصص الدقيق: تقني رياضي ---
