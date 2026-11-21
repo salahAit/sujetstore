@@ -62,7 +62,7 @@
 	onMount(() => {
 		try {
 			const savedScale = Number(localStorage.getItem('sujetstore_reader_scale'));
-			if (Number.isFinite(savedScale) && savedScale >= 85 && savedScale <= 140) {
+			if (Number.isFinite(savedScale) && savedScale >= 85 && savedScale <= 150) {
 				fontScale = savedScale;
 			}
 			const savedTheme = localStorage.getItem('sujetstore_reader_theme') as ReaderTheme | null;
@@ -77,7 +77,7 @@
 	});
 
 	function setFontScale(next: number) {
-		const clamped = Math.max(85, Math.min(135, next));
+		const clamped = Math.max(85, Math.min(150, next));
 		fontScale = clamped;
 		try {
 			localStorage.setItem('sujetstore_reader_scale', String(clamped));
@@ -287,7 +287,7 @@
 				<button
 					type="button"
 					onclick={() => setFontScale(fontScale + 10)}
-					disabled={fontScale >= 135}
+					disabled={fontScale >= 150}
 					class="ser-tool-btn px-2 font-extrabold disabled:opacity-40"
 					title="تكبير الخط"
 					aria-label="تكبير الخط"
@@ -398,7 +398,7 @@
 				<div
 					class="ser-exam-paper mx-auto max-w-3xl space-y-4 sm:space-y-5"
 					dir={meta.dir}
-					style="font-size: {fontScale * 1.06}%;"
+					style="font-size: {fontScale * 1.13}%;"
 				>
 					<!-- Official Exam Header Banner -->
 					<header class="ser-card ser-header-card relative overflow-hidden rounded-2xl p-4 sm:p-6">
@@ -956,10 +956,10 @@
 										>
 											{#if isExSolVisible}
 												<EyeOff size={14} />
-												<span>{isRtl ? 'إخفاء حل التمرين' : 'Masquer le corrigé'}</span>
+												<span>{isRtl ? 'إخفاء الحل' : 'Masquer le corrigé'}</span>
 											{:else}
 												<Eye size={14} />
-												<span>{isRtl ? 'إظهار حل هذا التمرين' : 'Voir le corrigé'}</span>
+												<span>{isRtl ? 'إظهار الحل' : 'Voir le corrigé'}</span>
 											{/if}
 										</button>
 									</div>
@@ -1154,6 +1154,6 @@
 		margin: 0.25em 0;
 	}
 	:global(.ser-root .katex) {
-		font-size: 1.06em;
+		font-size: 1.12em;
 	}
 </style>

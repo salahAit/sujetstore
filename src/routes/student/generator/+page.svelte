@@ -434,7 +434,7 @@
 					{#if generatingPdf}
 						<Loader2 size={18} class="animate-spin" /> جاري تركيب وتوليد ملف PDF...
 					{:else}
-						<FileText size={18} /> توليد موضوع PDF + التصحيح النموذجي
+						<FileText size={18} /> توليد موضوع PDF + الحل
 					{/if}
 				</button>
 
@@ -463,7 +463,7 @@
 											? 'bg-emerald-600 text-white shadow-sm'
 											: 'text-muted-foreground hover:text-foreground'}"
 									>
-										التصحيح النموذجي
+										الحل
 									</button>
 								</div>
 								<a
@@ -480,7 +480,7 @@
 									download
 									class="inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 px-4 py-2 text-xs font-bold text-white hover:bg-emerald-700"
 								>
-									<Eye size={14} /> تحميل التصحيح (PDF)
+									<Eye size={14} /> تحميل الحل (PDF)
 								</a>
 							</div>
 						</div>

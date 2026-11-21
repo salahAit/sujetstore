@@ -27,6 +27,7 @@
 	font-weight: 400 500;
 	font-style: normal;
 	font-display: swap;
+	size-adjust: 115%;
 }
 
 @font-face {
@@ -35,6 +36,7 @@
 	font-weight: 600 900;
 	font-style: normal;
 	font-display: swap;
+	size-adjust: 115%;
 }
 
 @custom-variant dark (&:is(.dark *));

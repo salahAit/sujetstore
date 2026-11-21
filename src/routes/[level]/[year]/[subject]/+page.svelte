@@ -989,7 +989,7 @@
 						<span
 							class="badge-{selectedDoc.type} mx-1 inline-block shrink-0 rounded-full border px-2 py-0.5 align-middle text-xs"
 						>
-							{activeTab === 'exam' ? 'الموضوع' : 'التصحيح'}
+							{activeTab === 'exam' ? 'الموضوع' : 'الحل'}
 						</span>
 					{/if}
 				</div>
@@ -1104,7 +1104,7 @@
 							? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/20'
 							: 'text-white/75 hover:bg-white/10 hover:text-white'}"
 					>
-						الحل النموذجي
+						الحل
 					</button>
 				</div>
 			{/if}

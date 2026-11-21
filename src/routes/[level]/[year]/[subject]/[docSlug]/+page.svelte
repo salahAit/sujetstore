@@ -347,7 +347,7 @@
 									? 'bg-emerald-600 text-white'
 									: 'text-muted-foreground hover:text-foreground'}"
 							>
-								التصحيح
+								الحل
 							</button>
 						</div>
 					{/if}
@@ -384,7 +384,7 @@
 							onclick={trackDownload}
 							class="flex h-9 items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700"
 						>
-							<Download size={16} /> <span class="hidden sm:inline">تحميل التصحيح</span>
+							<Download size={16} /> <span class="hidden sm:inline">تحميل الحل</span>
 						</a>
 					{/if}
 
@@ -504,7 +504,7 @@
 									? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/20'
 									: 'text-white/75 hover:bg-white/10 hover:text-white'}"
 							>
-								الحل النموذجي
+								الحل
 							</button>
 						</div>
 					{/if}
