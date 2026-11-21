@@ -394,7 +394,7 @@
 	{/if}
 {/snippet}
 
-<div class="lesson-player space-y-5 text-right" dir="rtl">
+<div class="lesson-player font-exam space-y-5 text-right" dir="rtl">
 	<!-- Lesson Header Card -->
 	<header class="bg-card border-border rounded-2xl border p-4 shadow-sm sm:p-6">
 		<div class="mb-3 flex flex-wrap items-center gap-2">
@@ -464,7 +464,7 @@
 	<!-- Interactive Stage Navigation Tabs -->
 	<nav
 		aria-label="مراحل الدرس التفاعلي"
-		class="bg-card border-border flex flex-wrap items-center justify-between gap-2 rounded-2xl border p-2 shadow-sm"
+		class="font-sans bg-card border-border flex flex-wrap items-center justify-between gap-2 rounded-2xl border p-2 shadow-sm"
 	>
 		<div class="grid w-full grid-cols-2 gap-1.5 sm:flex sm:w-auto sm:flex-1 sm:flex-wrap">
 			<button

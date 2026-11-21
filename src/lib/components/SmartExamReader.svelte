@@ -396,9 +396,9 @@
 				{@const meta = payload.metadata}
 				{@const isRtl = meta.dir === 'rtl'}
 				<div
-					class="mx-auto max-w-3xl space-y-4 sm:space-y-5"
+					class="ser-exam-paper mx-auto max-w-3xl space-y-4 sm:space-y-5"
 					dir={meta.dir}
-					style="font-size: {fontScale}%;"
+					style="font-size: {fontScale * 1.06}%;"
 				>
 					<!-- Official Exam Header Banner -->
 					<header class="ser-card ser-header-card relative overflow-hidden rounded-2xl p-4 sm:p-6">
@@ -977,6 +977,15 @@
 	/* =========================================================================
 	   Paper Themes (Light / Eye-Care Sepia / AMOLED Dark)
 	   ========================================================================= */
+	.ser-exam-paper {
+		font-family: var(--font-exam);
+	}
+	.ser-quran-verses {
+		font-family: 'KFGQPC Uthman Taha Naskh', 'Noto Naskh Arabic', serif;
+		font-size: 1.24em;
+		line-height: 2.2;
+		letter-spacing: 0;
+	}
 	.ser-theme-light {
 		background-color: #eef2f6;
 		color: #0f172a;
@@ -1066,12 +1075,6 @@
 		background-color: rgba(16, 185, 129, 0.07);
 		border: 1px solid rgba(16, 185, 129, 0.28);
 		border-inline-start: 4px solid #059669;
-	}
-	.ser-quran-verses {
-		font-family: 'KFGQPC Uthman Taha Naskh', 'Cairo', serif;
-		font-size: 1.28em;
-		line-height: 2.2;
-		letter-spacing: 0;
 	}
 	:global(.ser-ayah-num) {
 		display: inline-block;

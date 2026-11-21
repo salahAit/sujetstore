@@ -675,8 +675,8 @@
 		<!-- Question Card -->
 		{#if currentQuestion}
 			{#key currentQuestion.id}
-				<div class="bg-card rounded-2xl border p-6 shadow-sm sm:p-8">
-					<div class="mb-4 flex items-center justify-between">
+				<div class="font-exam bg-card rounded-2xl border p-6 shadow-sm sm:p-8">
+					<div class="font-sans mb-4 flex items-center justify-between">
 						<span
 							class="rounded-full bg-purple-500/15 px-3 py-1 text-xs font-semibold text-purple-600 dark:text-purple-400"
 						>
@@ -971,7 +971,7 @@
 
 			<!-- Detailed Answer Review -->
 			{#if allowShowAnswers && showReview}
-				<div class="mb-8 space-y-4 text-right">
+				<div class="font-exam mb-8 space-y-4 text-right">
 					{#each results.details as detail, i}
 						<div
 							class="bg-card overflow-hidden rounded-xl border {detail.correct

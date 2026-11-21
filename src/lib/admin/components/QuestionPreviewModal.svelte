@@ -204,7 +204,7 @@
 			</div>
 
 			<!-- Body -->
-			<div class="space-y-5 p-6">
+			<div class="font-exam space-y-5 p-6">
 				<!-- Question Text -->
 				<h3 class="text-base font-bold leading-relaxed sm:text-lg">
 					<MathRenderer
