@@ -1,5 +1,6 @@
 import type { ArabicInteractiveLessonData } from '../../types';
 import { svgGrammarTree, svgIrabBox, svgSpellingCard, svgTextPatternMap } from '../../svg-arabic';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // الدروس التفاعلية — السنة الخامسة ابتدائي — اللغة العربية — الفصل الثالث (5AP T3)
@@ -28,30 +29,7 @@ export const LESSONS_5AP_T3: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'في حكاية من التراث الجزائري عن الأمانة، وردت ثلاثة أفعال: «وَقَفَ» و«قَالَ» و«سَعَى». لاحظ موضع حرف العلة (و، ا، ي) في كل فعل: مرة في الأول، ومرة في الوسط، ومرة في الآخر!',
-			svg: svgGrammarTree({
-				title: 'أنواع الفعل المعتل حسب موضع حرف العلة (و، ا، ي)',
-				rootLabel: 'الفعل المعتل (أحد حروفه الأصلية حرف علة)',
-				branches: [
-					{
-						label: '1. المثال (أوله علة)',
-						detail: 'يبدأ بواو أو ياء أصلية',
-						example: 'وَقَفَ — وَعَدَ — وَصَلَ — يَبِسَ',
-						color: '#1d4ed8'
-					},
-					{
-						label: '2. الأجوف (أوسطه علة)',
-						detail: 'يتوسطه حرف علة',
-						example: 'قَالَ — صَامَ — بَاعَ — نَالَ',
-						color: '#047857'
-					},
-					{
-						label: '3. الناقص (آخره علة)',
-						detail: 'ينتهي بحرف علة',
-						example: 'دَعَا — سَعَى — جَرَى — رَمَى',
-						color: '#b45309'
-					}
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_03_algerian_village_orchard'),
 			steps: [
 				{
 					promptAr: 'ما حروف العلة الثلاثة في اللغة العربية؟ وأين وقع حرف العلة في «وَقَفَ»؟',
@@ -372,24 +350,7 @@ export const LESSONS_5AP_T3: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'قارن بين هاتين الجملتين: «سَافَرَ المُهَنْدِسُ إِلَى قُسَنْطِينَةَ» و«صَنَعَ المُهَنْدِسُ جِهَازاً ذَكِيّاً». لماذا تمّ المعنى في الجملة الأولى دون مفعول به، بينما احتاج الفعل «صَنَعَ» إلى مفعول به؟',
-			svg: svgGrammarTree({
-				title: 'التمييز بين الفعل اللازم والفعل المتعدي',
-				rootLabel: 'اختبار سريع: أضف «هاء الغائب (ـهُ)» إلى الفعل!',
-				branches: [
-					{
-						label: 'الفعل اللازم',
-						detail: 'يكتفي بفاعله ولا يقبل «ـهُ»',
-						example: 'نَجَحَ — جَلَسَ — سَافَرَ — نَامَ',
-						color: '#047857'
-					},
-					{
-						label: 'الفعل المتعدي',
-						detail: 'ينصب مفعولاً به ويقبل «ـهُ»',
-						example: 'قَرَأَهُ — صَنَعَهُ — سَاعَدَهُ — تَعَلَّمَهُ',
-						color: '#1d4ed8'
-					}
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_08_sahara_oasis_dunes'),
 			steps: [
 				{
 					promptAr: 'في جملة «نَجَحَ المُجْتَهِدُ»، هل تمّ المعنى بالفعل والفاعل وحدهما أم نحتاج إلى مفعول به؟',

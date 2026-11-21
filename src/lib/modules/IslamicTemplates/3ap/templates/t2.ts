@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock, ExerciseBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../../MathTemplates/rng';
 import {
 	buildHadithPassageBlock,
@@ -260,6 +261,12 @@ const imanKutub3apT2: IslamicParameterizedTemplate = {
 			points: 3,
 			instruction: 'تأمل الآية الكريمة ثم أجب عن السؤالين:',
 			content: [
+				buildIllustratedFigureBlock('pri_isl_04_mushaf_wooden_stand', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'القُرْآنُ الكَرِيمُ — خَاتَمُ الكُتُبِ السَّمَاوِيَّةِ المُنَزَّلَةِ'
+				}),
 				buildQuranPassageBlock({
 					verses: 'آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ',
 					surah: 'البقرة',
@@ -381,6 +388,12 @@ const salatJamaah3apT2: IslamicParameterizedTemplate = {
 			points: 3,
 			instruction: 'اقرأ الحديث الشريف ثم أجب عن السؤالين:',
 			content: [
+				buildIllustratedFigureBlock('pri_isl_03_masjid_al_aqsa', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'اجْتِمَاعُ المُسْلِمِينَ وَتَرَاصُّهُمْ فِي بُيُوتِ اللَّهِ'
+				}),
 				buildHadithPassageBlock({
 					narrator: 'عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ:',
 					text: 'صَلَاةُ الْجَمَاعَةِ تَفْضُلُ صَلَاةَ الْفَذِّ بِسَبْعٍ وَعِشْرِينَ دَرَجَةً',
@@ -496,6 +509,12 @@ const mashKhuffayn3apT2: IslamicParameterizedTemplate = {
 			points: 3,
 			instruction: 'اقرأ الحديث الشريف ثم أجب عن الأسئلة الآتية:',
 			content: [
+				buildIllustratedFigureBlock('pri_isl_05_wudu_water_pitcher', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'تَيْسِيرُ الطَّهَارَةِ وَالوُضُوءِ فِي الإِسْلَامِ'
+				}),
 				buildHadithPassageBlock({
 					narrator: 'عَنِ الْمُغِيرَةِ بْنِ شُعْبَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّهُ أَهْوَى لِيَنْزِعَ خُفَّيِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَقَالَ:',
 					text: 'دَعْهُمَا، فَإِنِّي أَدْخَلْتُهُمَا طَاهِرَتَيْنِ',

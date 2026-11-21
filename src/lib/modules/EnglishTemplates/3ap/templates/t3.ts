@@ -9,6 +9,7 @@ import {
 	buildEnglishPassageBlock,
 	buildEnglishWrittenExpressionBlock
 } from '../../english-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. Comprehension (4 pts) — Clean Animals, Nature & Healthy Food
@@ -133,6 +134,16 @@ const comprehension3apT3: EnglishParameterizedTemplate = {
 					title: 'Nature and Healthy Food',
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
+				}),
+				buildIllustratedFigureBlock('pri_ara_05_fresh_fruits_honey_basket', {
+					lang: 'en',
+					title: 'Healthy Food: Fresh Fruits and Pure Honey',
+					customLegend: [
+						{ num: '1', label: 'Fresh fruits (apples, oranges, grapes)' },
+						{ num: '2', label: 'Pure honey and olive oil' }
+					],
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'text',
@@ -412,6 +423,11 @@ const animalsSentences3apT3: EnglishParameterizedTemplate = {
 			points: 3,
 			instruction: 'Answer the following tasks carefully:',
 			content: [
+				buildIllustratedFigureBlock('pri_lang_03_weather_icons_quad', {
+					lang: 'en',
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `Task 1: Classify the words in the table: ( ${s.words.join(' - ')} )`
@@ -554,6 +570,16 @@ const writtenExpression3apT3: EnglishParameterizedTemplate = {
 			customTitle: 'Part Three: Written Expression',
 			points: 3,
 			content: [
+				buildIllustratedFigureBlock('pri_ara_06_four_seasons_trees', {
+					lang: 'en',
+					title: 'Green Trees and Nature in All Four Seasons',
+					customLegend: [
+						{ num: '1', label: 'Spring flowers and summer fruits' },
+						{ num: '2', label: 'Autumn leaves and winter snow' }
+					],
+					maxHeight: 102,
+					width: '54%'
+				}),
 				buildEnglishWrittenExpressionBlock({
 					topicOnePrompt: `Read ${pr.name} ID Card and write 3 or 4 clean sentences introducing ${pr.name} and healthy food likes:`,
 					topicOneNotes: [

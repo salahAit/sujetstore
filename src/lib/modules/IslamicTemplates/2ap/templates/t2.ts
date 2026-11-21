@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import {
 	buildHadithPassageBlock,
 	buildIslamicIntegrationBlock,
@@ -247,6 +248,12 @@ const tplSurahMaun: IslamicParameterizedTemplate = {
 		const quizPrompt = `مَا مَعْنَى «${quizVocab.word}» فِي سُورَةِ المَاعُونِ؟`;
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_isl_07_wheat_olive_zakat', {
+				maxHeight: 112,
+				width: '58%',
+				mode: 'image_only',
+				title: 'الإِحْسَانُ إِلَى اليَتِيمِ وَإِطْعَامُ المِسْكِينِ وَالتَّعَاوُنُ'
+			}),
 			buildQuranPassageBlock({
 				verses: fv.shown,
 				surah: 'المَاعُون',
@@ -392,6 +399,12 @@ const tplWuduMethod: IslamicParameterizedTemplate = {
 		const mcq = buildUniqueMcqOptions(v.quizCorrect, [...v.quizDistractors], rng);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_isl_05_wudu_water_pitcher', {
+				maxHeight: 112,
+				width: '58%',
+				mode: 'image_only',
+				title: 'الطَّهَارَةُ وَالوُضُوءُ بِالمَاءِ الطَّهُورِ دُونَ إِسْرَافٍ'
+			}),
 			buildQuranPassageBlock({
 				verses: 'يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قُمْتُمْ إِلَى الصَّلَاةِ فَاغْسِلُوا وُجُوهَكُمْ وَأَيْدِيَكُمْ إِلَى الْمَرَافِقِ وَامْسَحُوا بِرُءُوسِكُمْ وَأَرْجُلَكُمْ إِلَى الْكَعْبَيْنِ',
 				surah: 'المَائِدَة',
@@ -527,6 +540,14 @@ const tplPrayersMosque: IslamicParameterizedTemplate = {
 		const quizPrompt = `كَمْ عَدَدُ رَكَعَاتِ ${targetPrayer.name}؟`;
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_isl_02_masjid_an_nabawi', {
+				maxHeight: 112,
+				width: '58%',
+				customLegend: [
+					{ num: '1', label: 'القُبَّةُ الخَضْرَاءُ وَمَآذِنُ المَسْجِدِ النَّبَوِيِّ الشَّرِيفِ' },
+					{ num: '2', label: 'تَعْظِيمُ بُيُوتِ اللَّهِ بِالوُضُوءِ وَالسَّكِينَةِ وَالنَّظَافَةِ' }
+				]
+			}),
 			buildIslamicTableBlock(
 				['الصَّلَاةُ المَفْرُوضَةُ', 'عَدَدُ رَكَعَاتِهَا وَوَقْتُهَا'],
 				rows.map((p) => [

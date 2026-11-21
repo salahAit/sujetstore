@@ -4,65 +4,40 @@ import {
 	svgEnglishPrimaryCards,
 	svgEnglishWritingStructure
 } from '../../svg-english';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — 3AP Trimester 3 (Animals & Nature, Healthy Food, Likes/Dislikes, Guided Sentences)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgAnimalsDiscover = svgEnglishPrimaryCards({
-	title: 'Clean Animals & Nature — الحيوانات الطاهرة والطبيعة',
-	subtitle: 'Animals and Plants Around Us',
-	cards: [
-		{ word: 'cat', arabic: 'قطة', color: '#2563eb' },
-		{ word: 'bird', arabic: 'عصفور', color: '#059669' },
-		{ word: 'sheep', arabic: 'خروف', color: '#d97706' },
-		{ word: 'camel', arabic: 'جمل', color: '#7c3aed' },
-		{ word: 'tree', arabic: 'شجرة', color: '#0284c7' }
-	],
-	width: 520,
-	height: 185
+const svgAnimalsDiscover = renderLessonIllustration('pri_lang_07_clean_park_planting', {
+	lang: 'en',
+	title: 'Nature Around Us: Trees, Flowers & Plural (-s)',
+	customLegend: [
+		{ num: '1', label: 'One green tree / two green trees (Plural -s)' },
+		{ num: '2', label: 'Watering colorful flowers in the clean garden' },
+		{ num: '3', label: 'Keeping nature clean with the waste bin' }
+	]
 });
 
-const svgAnimalsSummary = svgEnglishGrammarMap({
-	title: 'Animals, Nature & Singular / Plural — المفرد والجمع البسيط',
-	rootLabel: 'One vs Many (Plural -s)',
-	rootSub: 'Add -s to count two or more',
-	branches: [
-		{
-			label: 'Clean Animals',
-			rule: 'cat, bird, camel, horse, rabbit',
-			example: 'one cat / two cats',
-			color: '#1d4ed8'
-		},
-		{
-			label: 'Nature',
-			rule: 'tree, flower, sun, garden',
-			example: 'three green trees',
-			color: '#047857'
-		},
-		{
-			label: 'Special Word',
-			rule: 'sheep stays sheep!',
-			example: 'one sheep / four sheep',
-			color: '#b45309'
-		}
-	],
-	width: 520,
-	height: 250
+const svgAnimalsSummary = renderLessonIllustration('pri_lang_03_weather_icons_quad', {
+	lang: 'en',
+	title: 'Nature, Weather & Seasons Around Us',
+	customLegend: [
+		{ num: '1', label: 'Sunny and warm sky' },
+		{ num: '2', label: 'Rainy weather and a colorful rainbow' },
+		{ num: '3', label: 'Cold snowy winter' },
+		{ num: '4', label: 'Windy autumn breeze' }
+	]
 });
 
-const svgFoodDiscover = svgEnglishPrimaryCards({
-	title: 'Healthy Food & Drinks — الغذاء الصحي والمشروبات',
-	subtitle: 'Good Food Keeps Us Strong',
-	cards: [
-		{ word: 'apple', arabic: 'تفاحة', color: '#dc2626' },
-		{ word: 'dates', arabic: 'تمر', color: '#b45309' },
-		{ word: 'bread', arabic: 'خبز', color: '#d97706' },
-		{ word: 'milk', arabic: 'حليب', color: '#2563eb' },
-		{ word: 'water', arabic: 'ماء', color: '#0284c7' }
-	],
-	width: 520,
-	height: 185
+const svgFoodDiscover = renderLessonIllustration('pri_ara_05_fresh_fruits_honey_basket', {
+	lang: 'en',
+	title: 'Healthy Food: Fresh Fruits and Pure Honey',
+	customLegend: [
+		{ num: '1', label: 'A basket of fresh fruits (apples, oranges, grapes)' },
+		{ num: '2', label: 'Pure honey and healthy olive oil' }
+	]
 });
 
 const svgFoodSummary = svgEnglishGrammarMap({
@@ -93,17 +68,13 @@ const svgFoodSummary = svgEnglishGrammarMap({
 	height: 250
 });
 
-const svgLikesDiscover = svgEnglishPrimaryCards({
-	title: 'Likes & Dislikes — ما أحبّه وما لا أحبّه',
-	subtitle: 'I like ... / I do not like ...',
-	cards: [
-		{ word: 'I like', arabic: 'أنا أحبّ', color: '#059669' },
-		{ word: 'I do not like', arabic: 'أنا لا أحبّ', color: '#dc2626' },
-		{ word: 'Yes, I do.', arabic: 'نعم، أحبّ ذلك', color: '#2563eb' },
-		{ word: 'No, I do not.', arabic: 'لا، لا أحبّ ذلك', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgLikesDiscover = renderLessonIllustration('pri_ara_06_four_seasons_trees', {
+	lang: 'en',
+	title: 'Likes & Nature Across the Four Seasons',
+	customLegend: [
+		{ num: '1', label: 'I like spring flowers and sweet summer fruits' },
+		{ num: '2', label: 'Golden autumn leaves and white winter snow' }
+	]
 });
 
 const svgLikesSummary = svgEnglishGrammarMap({

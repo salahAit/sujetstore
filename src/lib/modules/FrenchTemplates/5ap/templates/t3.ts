@@ -10,6 +10,7 @@ import {
 	buildFrenchWordFamilyTableBlock,
 	buildFrenchWrittenProductionBlock
 } from '../../french-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ===============================================================================
 // Parameterized Templates - 5AP French - Trimester 3
@@ -155,6 +156,12 @@ const tplCompProtectionCivileT3: FrenchParameterizedTemplate = {
 				paragraphs: p.paragraphs,
 				source: 'Texte adapté — Préparation à l’Évaluation des Acquis 5AP',
 				glossary: p.glossary
+			}),
+			buildIllustratedFigureBlock('pri_lang_05_professions_tools', {
+				lang: 'fr',
+				title: 'Les métiers nobles et les secours (médecin, pompier, boulanger, enseignant)',
+				maxHeight: 108,
+				width: '58%'
 			}),
 			{
 				type: 'text',
@@ -358,6 +365,11 @@ const tplCompProtegeonsNatureT3: FrenchParameterizedTemplate = {
 				paragraphs: p.paragraphs,
 				source: 'Texte adapté — Préparation à l’Évaluation des Acquis 5AP (Projet 4)',
 				glossary: p.glossary
+			}),
+			buildIllustratedFigureBlock('pri_lang_07_clean_park_planting', {
+				lang: 'fr',
+				maxHeight: 108,
+				width: '58%'
 			}),
 			{
 				type: 'text',
@@ -705,6 +717,11 @@ const tplLangFuturImperatifImparfaitT3: FrenchParameterizedTemplate = {
 		);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_lang_03_weather_icons_quad', {
+				lang: 'fr',
+				maxHeight: 104,
+				width: '56%'
+			}),
 			{
 				type: 'text',
 				content: 'Activité 1 : Conjugue les verbes entre parenthèses au temps indiqué (futur simple ou imparfait) (1.5 pts) :'
@@ -842,6 +859,16 @@ const tplWrittenEvalAcquisT3: FrenchParameterizedTemplate = {
 		);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_ara_06_four_seasons_trees', {
+				lang: 'fr',
+				title: 'Protéger nos arbres et nos forêts au fil des quatre saisons',
+				customLegend: [
+					{ num: '1', label: "Le printemps fleuri et l'été ensoleillé" },
+					{ num: '2', label: "L'automne doré et l'hiver enneigé" }
+				],
+				maxHeight: 102,
+				width: '54%'
+			}),
 			buildFrenchWrittenProductionBlock({
 				sujetUnTitle: `Production écrite (Évaluation des Acquis 5AP) : ${p.topicTitle}`,
 				sujetUnPrompt: p.prompt,

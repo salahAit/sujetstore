@@ -1,4 +1,5 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgGrammarTree,
 	svgPrimaryArabicVisual
@@ -155,15 +156,7 @@ export const LESSONS_1AP_T3: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'سَأَلَتِ الأُمُّ ابْنَتَهَا هَاجَرَ بَعْدَ عَوْدَتِهَا مِنَ المَدْرَسَةِ: «هَلْ كَتَبْتِ وَاجِبَكِ؟ أَيْنَ وَضَعْتِ مِحْفَظَتَكِ؟ مَاذَا تَعَلَّمْتِ اليَوْمَ؟»',
-			svg: svgPrimaryArabicVisual({
-				title: 'أَدَوَاتُ الاِسْتِفْهَامِ الثَّلَاثُ (؟)',
-				subtitle: 'كُلُّ أَدَاةٍ نَسْأَلُ بِهَا عَنْ شَيْءٍ مُحَدَّدٍ',
-				cards: [
-					{ bigText: 'هَلْ؟', label: 'الإِجَابَةُ: نَعَمْ / لَا', color: '#2563eb' },
-					{ bigText: 'أَيْنَ؟', label: 'لِلسُّؤَالِ عَنِ المَكَانِ', color: '#059669' },
-					{ bigText: 'مَاذَا؟', label: 'لِلسُّؤَالِ عَنِ الفِعْلِ', color: '#d97706' }
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_06_four_seasons_trees'),
 			steps: [
 				{
 					promptAr: 'بِمَاذَا نُجِيبُ عَنِ السُّؤَالِ الَّذِي يَبْدَأُ بِـ «هَلْ»؟',
@@ -286,16 +279,7 @@ export const LESSONS_1AP_T3: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'خَرَجَ رَيَّانُ مِنْ البَيْتِ، وَذَهَبَ إِلَى المَدْرَسَةِ، ثُمَّ وَضَعَ مِحْفَظَتَهُ عَلَى الطَّاوِلَةِ، وَجَلَسَ فِي القِسْمِ يَسْتَمِعُ لِلْمُعَلِّمِ.',
-			svg: svgPrimaryArabicVisual({
-				title: 'حُرُوفُ الجَرِّ الأَرْبَعَةُ تَرْبِطُ الكَلِمَاتِ',
-				subtitle: 'تَجْعَلُ الجُمْلَةَ وَاضِحَةً وَتَضَعُ كَسْرَةً تَحْتَ الاِسْمِ بَعْدَهَا',
-				cards: [
-					{ bigText: 'فِي', label: 'دَاخِلَ المَكَانِ', color: '#2563eb' },
-					{ bigText: 'عَلَى', label: 'فَوْقَ الشَّيْءِ', color: '#059669' },
-					{ bigText: 'إِلَى', label: 'الوِجْهَةُ', color: '#d97706' },
-					{ bigText: 'مِنْ', label: 'الاِبْتِدَاءُ', color: '#7c3aed' }
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_01_school_bag_supplies'),
 			steps: [
 				{
 					promptAr: 'بِأَيِّ حَرْفٍ عَرَفْنَا المَكَانَ الَّذِي خَرَجَ مِنْهُ رَيَّانُ، وَالمَكَانَ الَّذِي ذَهَبَ إِلَيْهِ؟',
@@ -420,15 +404,7 @@ export const LESSONS_1AP_T3: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'اقْرَأْ قِصَّةَ «القِطُّ العَطْشَانُ»: «فِي يَوْمٍ حَارٍّ، رَأَى عُمَرُ قِطًّا صَغِيرًا عَطْشَانَ أَمَامَ البَيْتِ. أَسْرَعَ عُمَرُ فَأَحْضَرَ إِنَاءً فِيهِ مَاءٌ بَارِدٌ وَسَقَى القِطَّ. شَرِبَ القِطُّ وَفَرِحَ، فَقَالَتِ الأُمُّ: أَحْسَنْتَ يَا بُنَيَّ، الرِّفْقُ بِالحَيَوَانِ يُرْضِي اللَّهَ تَعَالَى.»',
-			svg: svgPrimaryArabicVisual({
-				title: 'عَنَاصِرُ القِصَّةِ القَصِيرَةِ',
-				subtitle: 'كُلُّ قِصَّةٍ لَهَا بِدَايَةٌ وَحَدَثٌ وَنِهَايَةٌ جَمِيلَةٌ',
-				cards: [
-					{ bigText: '1', label: 'البِدَايَةُ (قِطٌّ عَطْشَانُ)', color: '#2563eb' },
-					{ bigText: '2', label: 'الحَدَثُ (سَقَاهُ عُمَرُ)', color: '#059669' },
-					{ bigText: '3', label: 'العِبْرَةُ (الرِّفْقُ بِالحَيَوَانِ)', color: '#d97706' }
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_03_algerian_village_orchard'),
 			steps: [
 				{
 					promptAr: 'مَا المُشْكِلَةُ الَّتِي رَآهَا عُمَرُ فِي بِدَايَةِ القِصَّةِ؟',

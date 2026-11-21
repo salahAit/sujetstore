@@ -10,6 +10,7 @@ import {
 	buildEnglishPhonologyTableBlock,
 	buildEnglishWrittenExpressionBlock
 } from '../../english-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ===============================================================================
 // Parameterized Templates - 5AP English - Trimester 2 (Hometown, Amenities & Directions)
@@ -151,6 +152,16 @@ const tplCompHometownT2: EnglishParameterizedTemplate = {
 				source: 'Adapted 5AP Algerian Hometown Reading Text',
 				glossary: p.glossary
 			}),
+			buildIllustratedFigureBlock('pri_ara_04_algeria_flag_martyrs_memorial', {
+				lang: 'en',
+				title: 'My Country Algeria: Historic Landmarks and National Flag',
+				customLegend: [
+					{ num: '1', label: 'Martyrs Memorial and historic Algerian cities' },
+					{ num: '2', label: 'The Algerian national flag' }
+				],
+				maxHeight: 108,
+				width: '58%'
+			}),
 			{
 				type: 'text',
 				content: 'Task 1: Read the text and write True or False (2 pts):'
@@ -285,6 +296,11 @@ const tplGrammarPrepositionsDirT2: EnglishParameterizedTemplate = {
 		const mcq = buildUniqueMcqOptions(quizItem.correct, distractors, rng);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_lang_07_clean_park_planting', {
+				lang: 'en',
+				maxHeight: 104,
+				width: '56%'
+			}),
 			{
 				type: 'text',
 				content: 'Activity 1: Tick the right preposition of place or direction word (1.5 pts):'

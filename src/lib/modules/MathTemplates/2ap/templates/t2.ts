@@ -1,4 +1,5 @@
 import type { ExerciseBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { SeededRng, buildUniqueMcqOptions } from '../../rng';
 import {
 	saveSvgAsset,
@@ -588,6 +589,10 @@ const tplAddCarrySubSimple: ParameterizedTemplate = {
 			points: 2,
 			instruction: 'ضع وأنجز العمليتين التاليتين عمودياً:',
 			content: [
+				buildIllustratedFigureBlock('pri_math_03_base_ten_blocks', {
+					maxHeight: 112,
+					width: '58%'
+				}),
 				{
 					type: 'table',
 					headers: ['1- الجمع بالاحتفاظ', '2- الطرح دون استلاف'],
@@ -1012,7 +1017,13 @@ const tplTimeAndCalendar: ParameterizedTemplate = {
 					content: `2- في الرزنامة: إذا كان اليوم هو ${startDay}، فما هو اليوم بعد ${daysDelta} أيام؟\n\nاليوم هو: ........................\n\n- أكمل: $1$ يوم $= dots$ ساعة ، و $1$ ساعة $= dots$ دقيقة.`,
 					answer: `2- اليوم بعد ${daysDelta} أيام هو: ${endDay}.\n\n- $1$ يوم $= 24$ ساعة ، و $1$ ساعة $= 60$ دقيقة.`,
 					mark: '1'
-				}
+				},
+				buildIllustratedFigureBlock('pri_math_05_analog_clock_ticks', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'تَذْكِيرٌ بَصَرِيٌّ: دَوْرَةُ عَقْرَبِ الدَّقَائِقِ (60 دَقِيقَةً = 1 سَاعَة)'
+				})
 			]
 		};
 
@@ -1199,7 +1210,13 @@ const tplRightAngleShapes: ParameterizedTemplate = {
 							caption: `المستطيل ${shapeName}`
 						}
 					]
-				}
+				},
+				buildIllustratedFigureBlock('pri_math_08_geometry_tools_set', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'أَدَوَاتُ التَّحَقُّقِ وَالقِيَاسِ الهَنْدَسِيِّ'
+				})
 			]
 		};
 

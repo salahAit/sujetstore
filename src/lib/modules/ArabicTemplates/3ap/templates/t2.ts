@@ -10,6 +10,10 @@ import {
 	buildProsePassageBlock,
 	buildWrittenProductionBlock
 } from '../../arabic-helpers';
+import {
+	buildIllustratedFigureBlock,
+	type IllustrationId
+} from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. البناء الفكري (3 ن) — الهوية الوطنية والطبيعة والبيئة
@@ -110,11 +114,22 @@ const readingComp3apT2: ArabicParameterizedTemplate = {
 			explanation: `العنوان الأنسب هو «${p.bestTitle}» لأنه يعبّر بدقة عن مضمون النص.`
 		};
 
+		const illustrationId: IllustrationId =
+			p.title === 'وَطَنِي الجَزَائِرُ'
+				? 'pri_ara_04_algeria_flag_martyrs_memorial'
+				: 'pri_ara_06_four_seasons_trees';
+
 		const sujetExercise: ExerciseBlock = {
 			customTitle: 'السند والبناء الفكري',
 			points: 3,
 			instruction: 'اقرأ السند جيداً ثم أجب عن الأسئلة:',
 			content: [
+				buildIllustratedFigureBlock(illustrationId, {
+					mode: 'image_only',
+					title: p.title,
+					maxHeight: 112,
+					width: '58%'
+				}),
 				buildProsePassageBlock({
 					title: p.title,
 					paragraphs: p.paragraphs,
@@ -493,10 +508,19 @@ const integration3apT2: ArabicParameterizedTemplate = {
 			explanation: `الجملة الصحيحة هي «${t.mcqCorrect}» لأنها تجمع التوظيف المطلوب بتركيب سليم.`
 		};
 
+		const tIllustrationId: IllustrationId = t.context.includes('صحراء')
+			? 'pri_ara_08_sahara_oasis_dunes'
+			: 'pri_ara_06_four_seasons_trees';
+
 		const sujetExercise: ExerciseBlock = {
 			customTitle: 'الوضعية الإدماجية',
 			points: 3,
 			content: [
+				buildIllustratedFigureBlock(tIllustrationId, {
+					mode: 'labeled',
+					maxHeight: 112,
+					width: '58%'
+				}),
 				buildWrittenProductionBlock({
 					context: t.context,
 					supportQuote: t.supportQuote,

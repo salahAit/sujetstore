@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import {
 	buildHadithPassageBlock,
 	buildIslamicIntegrationBlock,
@@ -130,6 +131,10 @@ const tplSurahFatiha: IslamicParameterizedTemplate = {
 		const mcq = buildUniqueMcqOptions(v.quizCorrect, [...v.quizDistractors], rng);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_isl_04_mushaf_wooden_stand', {
+				maxHeight: 112,
+				width: '58%'
+			}),
 			buildQuranPassageBlock({
 				verses: v.shownVerses,
 				surah: 'الفَاتِحَة',
@@ -269,6 +274,12 @@ const tplPillarsIslam: IslamicParameterizedTemplate = {
 		);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_isl_01_masjid_al_haram_kaaba', {
+				maxHeight: 112,
+				width: '58%',
+				mode: 'image_only',
+				title: 'الكَعْبَةُ المُشَرَّفَةُ — قِبْلَةُ المُسْلِمِينَ وَمَقْصِدُ الحَجِّ'
+			}),
 			buildHadithPassageBlock({
 				narrator: 'عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ رَضِيَ اللَّهُ عَنْهُمَا قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ:',
 				text: 'بُنِيَ الإِسْلَامُ عَلَى خَمْسٍ: شَهَادَةِ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَإِقَامِ الصَّلَاةِ، وَإِيتَاءِ الزَّكَاةِ، وَالحَجِّ، وَصَوْمِ رَمَضَانَ.',

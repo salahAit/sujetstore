@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock, ExerciseBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../../MathTemplates/rng';
 import {
 	buildHadithPassageBlock,
@@ -548,6 +549,12 @@ const tplTayammumFiqhT1: IslamicParameterizedTemplate = {
 		};
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_isl_05_wudu_water_pitcher', {
+				maxHeight: 112,
+				width: '58%',
+				mode: 'image_only',
+				title: 'الطَّهَارَةُ وَرُخْصَةُ التَّيَمُّمِ بِالصَّعِيدِ الطَّاهِرِ'
+			}),
 			buildIslamicContextBlock({
 				title: v.caseTitle,
 				text: v.caseText
@@ -878,6 +885,12 @@ const tplIntegrationValuesT1: IslamicParameterizedTemplate = {
 			points: 4,
 			instruction: 'اقرأ السياق والسند والتعليمة بعناية، ثم حرّر فقرة منظّمة متماسكة:',
 			content: [
+				buildIllustratedFigureBlock('pri_isl_08_goodly_olive_tree', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'مَثَلُ الكَلِمَةِ الطَّيِّبَةِ وَالِاسْتِقَامَةِ كَالشَّجَرَةِ الطَّيِّبَةِ'
+				}),
 				buildIslamicIntegrationBlock({
 					context: v.context,
 					supportQuote: v.supportQuote,

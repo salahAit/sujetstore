@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import {
 	buildHadithPassageBlock,
 	buildIslamicIntegrationBlock,
@@ -416,6 +417,12 @@ const tplGuestNeighbor: IslamicParameterizedTemplate = {
 		const mcq = buildUniqueMcqOptions(v.quizCorrect, [...v.quizDistractors], rng);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_isl_06_ramadan_dates_milk', {
+				maxHeight: 112,
+				width: '58%',
+				title: 'إِكْرَامُ الضَّيْفِ وَالجُودُ بِالطَّيِّبَاتِ',
+				mode: 'image_only'
+			}),
 			buildHadithPassageBlock({
 				narrator: v.narrator,
 				text: v.hadith,

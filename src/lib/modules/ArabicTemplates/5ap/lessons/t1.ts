@@ -1,4 +1,5 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import { svgGrammarTree, svgIrabBox, svgSpellingCard } from '../../svg-arabic';
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -370,30 +371,7 @@ export const LESSONS_5AP_T1: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'في يوم العلم (16 أفريل)، كرّمت المدرسة المتفوقين، فكتبنا: «شَجَّعَ المُعَلِّمُونَ المُتَفَوِّقَاتِ وَوَزَّعُوا الكُتُبَ». في هذه الجملة القصيرة اجتمعت أنواع الجموع الثلاثة في العربية!',
-			svg: svgGrammarTree({
-				title: 'أنواع الجموع الثلاثة وعلامات إعرابها',
-				rootLabel: 'الجمع (ما دلّ على أكثر من اثنين أو اثنتين)',
-				branches: [
-					{
-						label: 'جمع المذكر السالم',
-						detail: 'يرفع بالواو | ينصب ويجر بالياء',
-						example: 'المُعَلِّمُونَ / المُعَلِّمِينَ',
-						color: '#1d4ed8'
-					},
-					{
-						label: 'جمع المؤنث السالم',
-						detail: 'يرفع بالضمة | ينصب ويجر بالكسرة',
-						example: 'المُتَفَوِّقَاتُ / المُتَفَوِّقَاتِ',
-						color: '#047857'
-					},
-					{
-						label: 'جمع التكسير',
-						detail: 'تتغير صورة مفرده (ضمة/فتحة/كسرة)',
-						example: 'كِتَاب -> كُتُبٌ / كُتُباً / كُتُبٍ',
-						color: '#b45309'
-					}
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_01_school_bag_supplies'),
 			steps: [
 				{
 					promptAr: 'ما مفرد «المُعَلِّمُونَ»؟ وماذا أضفنا إلى آخره دون تغيير حروف المفرد؟',
@@ -722,16 +700,7 @@ export const LESSONS_5AP_T1: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'كتب تلميذ فقرة عن ثورة التحرير: «قَدَّمَتِ الجَزَائِرُ تَضْحِيَاتٍ عَظِيمَةً وَانْتَصَرَ أَبْنَاؤُهَا فِي وَقْتٍ عَصِيبٍ». لاحظ أشكال التاء والهمزات في أول الكلمات لتستنتج قواعد الإملاء ببساطة.',
-			svg: svgSpellingCard({
-				title: 'بطاقة التاء المفتوحة والتاء المربوطة',
-				ruleSummary: 'الفرق النطقي: المربوطة تُنطق هاءً عند الوقف، والمفتوحة تبقى تاءً دائماً',
-				cases: [
-					{ condition: 'تاء مفتوحة (في الأفعال)', examples: 'كَتَبَتْ — نَجَحْتُ — اِنْتَصَرَتْ', color: '#1d4ed8' },
-					{ condition: 'تاء مفتوحة (جمع مؤنث / ثلاثي ساكن)', examples: 'تَضْحِيَات — بَيْت — وَقْت — صَوْت', color: '#047857' },
-					{ condition: 'تاء مربوطة (اسم مفرد مؤنث)', examples: 'جَزَائِرِيَّة — مَدْرَسَة — شَهِيدَة', color: '#b45309' },
-					{ condition: 'تاء مربوطة (جمع تكسير)', examples: 'قُضَاة — دُعَاة — رُوَاة (مفردها بلا تاء)', color: '#7c3aed' }
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_04_algeria_flag_martyrs_memorial'),
 			steps: [
 				{
 					promptAr: 'لماذا كُتبت التاء مفتوحة في «قَدَّمَتْ» و«تَضْحِيَات» و«وَقْت»؟',

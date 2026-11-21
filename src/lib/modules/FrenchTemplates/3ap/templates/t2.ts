@@ -10,6 +10,10 @@ import {
 	buildFrenchPassageBlock,
 	buildFrenchWrittenProductionBlock
 } from '../../french-helpers';
+import {
+	buildIllustratedFigureBlock,
+	getIllustrationJpgUrl
+} from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. Compréhension 1 (4 pts) — En famille !
@@ -122,6 +126,12 @@ const compFamille3apT2: FrenchParameterizedTemplate = {
 					title: sc.title,
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
+				}),
+				buildIllustratedFigureBlock('pri_lang_04_house_rooms_cutaway', {
+					lang: 'fr',
+					title: 'Ma maison et ma famille',
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'text',
@@ -307,6 +317,16 @@ const compFerme3apT2: FrenchParameterizedTemplate = {
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
 				}),
+				buildIllustratedFigureBlock('pri_ara_05_fresh_fruits_honey_basket', {
+					lang: 'fr',
+					title: "L'alimentation saine de la campagne : fruits frais et miel pur",
+					customLegend: [
+						{ num: '1', label: 'Un panier de fruits et légumes frais' },
+						{ num: '2', label: "Le miel naturel et l'huile d'olive" }
+					],
+					maxHeight: 108,
+					width: '58%'
+				}),
 				{
 					type: 'text',
 					content: '#strong[1)] Coche la bonne réponse :'
@@ -440,7 +460,7 @@ const langSonsAnimaux3apT2: FrenchParameterizedTemplate = {
 		const sujetExercise: ExerciseBlock = {
 			customTitle: 'II. Fonctionnement de la langue',
 			points: 3,
-			instruction: 'Fais les deux activités sur les sons complexes :',
+			instruction: 'Fais les trois activités suivantes :',
 			content: [
 				{
 					type: 'text',
@@ -448,17 +468,46 @@ const langSonsAnimaux3apT2: FrenchParameterizedTemplate = {
 				},
 				buildFrenchClassificationTableBlock({
 					columns: [
-						{ header: 'Son « ou »', items: s.colOu, mark: '0.5' },
-						{ header: 'Son « on »', items: s.colOn, mark: '0.5' },
-						{ header: 'Son « oi »', items: s.colOi, mark: '0.5' },
-						{ header: 'Son « ch »', items: s.colCh, mark: '0.5' }
+						{ header: 'Son « ou »', items: s.colOu, mark: '0.25' },
+						{ header: 'Son « on »', items: s.colOn, mark: '0.25' },
+						{ header: 'Son « oi »', items: s.colOi, mark: '0.25' },
+						{ header: 'Son « ch »', items: s.colCh, mark: '0.25' }
 					]
 				}),
 				{
 					type: 'text',
 					content: `#strong[Activité 2 :] ${s.fillPrompt}`,
 					answer: `#strong[Activité 2 :] ${s.fillAnswer}`,
-					mark: '1'
+					mark: '0.5'
+				},
+				{
+					type: 'text',
+					content:
+						'#strong[Activité 3 :] Associe et écris le nom sous chaque image : ( une maison - un gâteau - des fruits )'
+				},
+				{
+					type: 'image_grid',
+					columns: 3,
+					items: [
+						{
+							src: getIllustrationJpgUrl('pri_lang_04_house_rooms_cutaway'),
+							label: '........................',
+							answer: 'une maison',
+							mark: '0.5'
+						},
+						{
+							src: getIllustrationJpgUrl('pri_lang_08_birthday_cake_party'),
+							label: '........................',
+							answer: 'un gâteau',
+							mark: '0.5'
+						},
+						{
+							src: getIllustrationJpgUrl('pri_ara_05_fresh_fruits_honey_basket'),
+							label: '........................',
+							answer: 'des fruits',
+							mark: '0.5'
+						}
+					]
 				}
 			] as ContentBlock[]
 		};

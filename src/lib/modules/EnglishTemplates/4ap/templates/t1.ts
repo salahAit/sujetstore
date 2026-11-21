@@ -9,6 +9,7 @@ import {
 	buildEnglishPassageBlock,
 	buildEnglishWrittenExpressionBlock
 } from '../../english-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. Comprehension (4 pts) — Family, Friends, Nationalities & School Subjects
@@ -142,6 +143,16 @@ const comprehension4apT1: EnglishParameterizedTemplate = {
 					title: 'My Friends and My School',
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: true
+				}),
+				buildIllustratedFigureBlock('pri_ara_04_algeria_flag_martyrs_memorial', {
+					lang: 'en',
+					title: 'My Country Algeria: Algiers, Martyrs Memorial and National Flag',
+					customLegend: [
+						{ num: '1', label: 'Martyrs Memorial and the Casbah of Algiers' },
+						{ num: '2', label: 'The Algerian flag: I am from Algeria, I am Algerian' }
+					],
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'table',
@@ -296,6 +307,11 @@ const beHave4apT1: EnglishParameterizedTemplate = {
 			points: 3,
 			instruction: 'Do the following grammar tasks:',
 			content: [
+				buildIllustratedFigureBlock('pri_lang_05_professions_tools', {
+					lang: 'en',
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `Task 1: Fill in with (am / is / are):\n1) ${s.be1}\n2) ${s.be2}`,
@@ -431,6 +447,12 @@ const possessiveNumbers4apT1: EnglishParameterizedTemplate = {
 			points: 3,
 			instruction: 'Complete the three tasks below:',
 			content: [
+				buildIllustratedFigureBlock('pri_lang_08_birthday_cake_party', {
+					lang: 'en',
+					title: 'School Success Celebration: Cake, Balloons and Gifts',
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `Task 1: Fill in with (My / Your / His / Her):\n1) ${s.pos1}\n2) ${s.pos2}`,

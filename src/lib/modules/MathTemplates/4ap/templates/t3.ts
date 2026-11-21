@@ -1,4 +1,5 @@
 import type { ContentBlock, ExerciseBlock, TableCell } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, roundTo, SeededRng } from '../../rng';
 import { saveSvgAsset, svgAnalogClock, svgRectangle } from '../../svg-helpers';
 import type { Difficulty, GeneratedExerciseInstance, ParameterizedTemplate } from '../../types';
@@ -738,6 +739,16 @@ const tplDecimalAddSub: ParameterizedTemplate = {
 				answer: `1) أ) $${addPadA} + ${fmtNum(addB, 2)} = ${fmtNum(addSum, 2)}$\n\nب) $${subPadA} - ${fmtNum(subB, 2)} = ${fmtNum(subDiff, 2)}$`,
 				mark: '1'
 			},
+			...(ctx.unit === 'L'
+				? [
+						buildIllustratedFigureBlock('pri_math_07_measuring_vessels_liter', {
+							maxHeight: 112,
+							width: '58%',
+							mode: 'image_only',
+							title: 'قِيَاسُ السِّعَاتِ بِاللِّتْرِ (L)'
+						})
+					]
+				: []),
 			{
 				type: 'text',
 				content: `2) ${ctx.item} ${ctx.verb} ${ltr(`${fmtNum(wpTotal, 2)} ${ctx.unit}`)}، ${ctx.action} ${ltr(`${fmtNum(wpUsed, 2)} ${ctx.unit}`)}. احسب الكمية المتبقية.`,
@@ -1001,7 +1012,13 @@ const tplDecimalMulDiv10_100_1000: ParameterizedTemplate = {
 				content: `أكمل التحويلين الآتيين باستعمال الضرب أو القسمة على $1000$:\n\nأ) ${ltr(`${convKmStr} km = ........ m`)}  ،  ب) ${ltr(`${convGrams} g = ........ kg`)}`,
 				answer: `أ) ${ltr(`${convKmStr} km = ${convMetersStr} m`)}  ،  ب) ${ltr(`${convGrams} g = ${convKgStr} kg`)}`,
 				mark: '0.5'
-			}
+			},
+			buildIllustratedFigureBlock('pri_math_07_measuring_vessels_liter', {
+				maxHeight: 112,
+				width: '58%',
+				mode: 'image_only',
+				title: 'تَذْكِيرٌ بَصَرِيٌّ: التَّحْوِيلُ بِالضَّرْبِ أَوِ القِسْمَةِ عَلَى 10 وَ 100 وَ 1000'
+			})
 		];
 
 		return {

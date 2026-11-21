@@ -4,22 +4,19 @@ import {
 	svgEnglishPhoneticsChart,
 	svgEnglishPrimaryCards
 } from '../../svg-english';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — 3AP Trimester 1 (Greetings, Alphabet & Phonics, Numbers & Colors, Family)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgGreetingsDiscover = svgEnglishPrimaryCards({
-	title: 'Greetings & Introducing Myself — التحية والتعريف بالنفس',
-	subtitle: 'My First English Words in 3AP',
-	cards: [
-		{ word: 'Hello!', arabic: 'مرحباً', color: '#2563eb' },
-		{ word: 'Good morning', arabic: 'صباح الخير', color: '#059669' },
-		{ word: 'My name is...', arabic: 'اسمي هو...', color: '#d97706' },
-		{ word: 'Goodbye!', arabic: 'إلى اللقاء', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgGreetingsDiscover = renderLessonIllustration('pri_ara_01_school_bag_supplies', {
+	lang: 'en',
+	title: 'My School Things & First Greetings in 3AP',
+	customLegend: [
+		{ num: '1', label: 'A clean school bag, books and copybooks (Hello! Good morning!)' },
+		{ num: '2', label: 'A pencil case, pens, pencils and a ruler' }
+	]
 });
 
 const svgGreetingsSummary = svgEnglishGrammarMap({
@@ -91,17 +88,14 @@ const svgAlphabetSummary = svgEnglishPhoneticsChart({
 	height: 210
 });
 
-const svgNumbersColorsDiscover = svgEnglishPrimaryCards({
-	title: 'Numbers 0 to 10 & Colors — الأرقام والألوان',
-	subtitle: 'Count and Name Basic Colors in English',
-	cards: [
-		{ word: 'one (1)', arabic: 'واحد — red أحمر', color: '#dc2626' },
-		{ word: 'two (2)', arabic: 'اثنان — blue أزرق', color: '#2563eb' },
-		{ word: 'three (3)', arabic: 'ثلاثة — green أخضر', color: '#059669' },
-		{ word: 'five (5)', arabic: 'خمسة — yellow أصفر', color: '#d97706' }
-	],
-	width: 520,
-	height: 185
+const svgNumbersColorsDiscover = renderLessonIllustration('pri_lang_08_birthday_cake_party', {
+	lang: 'en',
+	title: 'Numbers & Colors: School Success Celebration',
+	customLegend: [
+		{ num: '1', label: 'One red strawberry cake' },
+		{ num: '2', label: 'Colorful balloons (red, blue, green, yellow)' },
+		{ num: '3', label: 'Three wrapped gift boxes with bright ribbons' }
+	]
 });
 
 const svgNumbersColorsSummary = svgEnglishGrammarMap({

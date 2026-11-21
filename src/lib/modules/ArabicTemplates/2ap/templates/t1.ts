@@ -6,6 +6,10 @@ import type {
 import type { ContentBlock } from '../../../SujetBuilder/types';
 import { buildProsePassageBlock, buildWrittenProductionBlock } from '../../arabic-helpers';
 import { buildUniqueMcqOptions, SeededRng } from '../../../MathTemplates/rng';
+import {
+	buildIllustratedFigureBlock,
+	type IllustrationId
+} from '../../../VisualAssets/illustrations-registry';
 
 function makeRng(seed: number, difficulty: Difficulty, salt: number): SeededRng {
 	const d = difficulty === 'easy' ? 11 : difficulty === 'medium' ? 23 : 41;
@@ -82,8 +86,18 @@ const tplReadingFamilySchool2ap: ArabicParameterizedTemplate = {
 
 		const p = rng.pick(passages);
 		const mcq = buildUniqueMcqOptions(p.correct, [...p.distractors], rng);
+		const illustrationId: IllustrationId =
+			p.title === 'تَعَاوُنُ الأُسْرَةِ فِي البَيْتِ'
+				? 'pri_ara_02_warm_algerian_home'
+				: 'pri_ara_01_school_bag_supplies';
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock(illustrationId, {
+				mode: 'image_only',
+				title: p.title,
+				maxHeight: 112,
+				width: '58%'
+			}),
 			buildProsePassageBlock({
 				title: p.title,
 				paragraphs: [p.text]

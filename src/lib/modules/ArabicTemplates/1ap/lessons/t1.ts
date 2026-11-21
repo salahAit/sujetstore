@@ -1,4 +1,5 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgGrammarTree,
 	svgPrimaryArabicVisual,
@@ -420,15 +421,7 @@ export const LESSONS_1AP_T1: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'اقْرَأْ هَذَا النَّصَّ القَصِيرَ بِصَوْتٍ وَاضِحٍ: «اسْتَيْقَظَ آدَمُ بَاكِرًا، وَسَلَّمَ عَلَى أَبِيهِ وَأُمِّهِ قَائِلًا: السَّلَامُ عَلَيْكُمْ. تَنَاوَلَ آدَمُ فُطُورَهُ وَقَالَ: بِسْمِ اللَّهِ، ثُمَّ حَمَلَ مِحْفَظَتَهُ وَذَهَبَ مَسْرُورًا إِلى المَدْرَسَةِ.»',
-			svg: svgPrimaryArabicVisual({
-				title: 'مَفَاتِيحُ فَهْمِ النَّصِّ القَصِيرِ',
-				subtitle: 'نَقْرَأُ النَّصَّ ثُمَّ نُجِيبُ عَنْ ثَلَاثَةِ أَسْئِلَةٍ سَهْلَةٍ',
-				cards: [
-					{ bigText: 'مَنْ؟', label: 'الشَّخْصِيَّةُ (آدَمُ)', color: '#2563eb' },
-					{ bigText: 'أَيْنَ؟', label: 'المَكَانُ (المَدْرَسَةُ)', color: '#059669' },
-					{ bigText: 'مَاذَا؟', label: 'الفِعْلُ (سَلَّمَ وَذَهَبَ)', color: '#d97706' }
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_02_warm_algerian_home'),
 			steps: [
 				{
 					promptAr: 'مَنْ بَطَلُ هَذَا النَّصِّ القَصِيرِ؟',

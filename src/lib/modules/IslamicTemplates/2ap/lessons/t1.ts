@@ -1,4 +1,5 @@
 import type { IslamicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgIslamicCards,
 	svgIslamicConceptTree,
@@ -429,17 +430,7 @@ export const LESSONS_2AP_T1: IslamicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'وَجَدَتْ سَارَةُ سَاعَةً جَمِيلَةً فِي سَاحَةِ المَدْرَسَةِ بَعْدَ الِاسْتِرَاحَةِ، فَلَمْ تَأْخُذْهَا لِنَفْسِهَا، بَلْ سَلَّمَتْهَا فَوْرًا لِلْمُعَلِّمِ لِيَرُدَّهَا إِلَى صَاحِبِهَا، فَشَكَرَهَا المُعَلِّمُ وَقَالَ: «أَنْتِ تِلْمِيذَةٌ أَمِينَةٌ يَا سَارَةُ!».',
-			svg: svgIslamicCards({
-				title: 'صُوَرُ الأَمَانَةِ فِي حَيَاةِ التِّلْمِيذِ المُسْلِمِ',
-				subtitle: '﴿إِنَّ اللَّهَ يَأْمُرُكُمْ أَنْ تُؤَدُّوا الْأَمَانَاتِ إِلَى أَهْلِهَا﴾',
-				columns: 2,
-				cards: [
-					{ badge: '1', title: 'رَدُّ الأَغْرَاضِ', detail: 'أَرُدُّ مَا اسْتَعَرْتُهُ أَوْ وَجَدْتُهُ لِصَاحِبِهِ', color: '#047857' },
-					{ badge: '2', title: 'حِفْظُ المَدْرَسَةِ', detail: 'أُحَافِظُ عَلَى الطَّاوِلَاتِ وَالكُتُبِ', color: '#1d4ed8' },
-					{ badge: '3', title: 'أَمَانَةُ الدِّرَاسَةِ', detail: 'أُنْجِزُ وَاجِبَاتِي بِنَفْسِي وَلَا أَغُشُّ', color: '#b45309' },
-					{ badge: '4', title: 'حِفْظُ الأَسْرَارِ', detail: 'لَا أُفْشِي سِرًّا ائْتَمَنَنِي عَلَيْهِ صَدِيقِي', color: '#0f766e' }
-				]
-			}),
+			svg: renderLessonIllustration('pri_isl_08_goodly_olive_tree'),
 			steps: [
 				{
 					promptAr: 'مَاذَا فَعَلَتْ سَارَةُ عِنْدَمَا وَجَدَتِ السَّاعَةَ فِي سَاحَةِ المَدْرَسَةِ؟',

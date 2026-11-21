@@ -9,6 +9,10 @@ import {
 	buildEnglishPassageBlock,
 	buildEnglishWrittenExpressionBlock
 } from '../../english-helpers';
+import {
+	buildIllustratedFigureBlock,
+	getIllustrationJpgUrl
+} from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. Comprehension (4 pts) — Greetings, Introducing Oneself & My Family
@@ -127,6 +131,16 @@ const comprehension3apT1: EnglishParameterizedTemplate = {
 					title: 'Me and My Family',
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
+				}),
+				buildIllustratedFigureBlock('pri_ara_01_school_bag_supplies', {
+					lang: 'en',
+					title: 'My School Things (Bag, Book, Pen and Ruler)',
+					customLegend: [
+						{ num: '1', label: 'A clean school bag, books and copybooks' },
+						{ num: '2', label: 'A pencil case, pens, pencils and a white ruler' }
+					],
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'table',
@@ -295,13 +309,36 @@ const vocabPhonics3apT1: EnglishParameterizedTemplate = {
 					type: 'text',
 					content: `Task 2: Write the numbers in English letters: ${s.numPairs[0].digit} = ............  |  ${s.numPairs[1].digit} = ............`,
 					answer: `${s.numPairs[0].digit} = ${s.numPairs[0].word}  |  ${s.numPairs[1].digit} = ${s.numPairs[1].word}`,
-					mark: '1'
+					mark: '0.5'
 				},
 				{
 					type: 'text',
-					content: `Task 3: Rewrite the sentence with the right capital letters: "${s.capSentence}"`,
-					answer: s.capAnswer,
-					mark: '1'
+					content:
+						'Task 3: Look at the pictures and write the word under each picture: ( a bag - a bus - a cake )'
+				},
+				{
+					type: 'image_grid',
+					columns: 3,
+					items: [
+						{
+							src: getIllustrationJpgUrl('pri_ara_01_school_bag_supplies'),
+							label: '........................',
+							answer: 'a bag',
+							mark: '0.5'
+						},
+						{
+							src: getIllustrationJpgUrl('pri_lang_01_red_bus_train'),
+							label: '........................',
+							answer: 'a bus',
+							mark: '0.5'
+						},
+						{
+							src: getIllustrationJpgUrl('pri_lang_08_birthday_cake_party'),
+							label: '........................',
+							answer: 'a cake',
+							mark: '0.5'
+						}
+					]
 				}
 			] as ContentBlock[]
 		};
@@ -417,6 +454,12 @@ const familyGreetings3apT1: EnglishParameterizedTemplate = {
 			points: 3,
 			instruction: 'Answer the following three tasks:',
 			content: [
+				buildIllustratedFigureBlock('pri_lang_08_birthday_cake_party', {
+					lang: 'en',
+					title: 'Family Celebration: Cake, Balloons and Gifts',
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `Task 1: Cross out the odd word (الكلمة الدخيلة): ( ${s.oddGroup} )`,

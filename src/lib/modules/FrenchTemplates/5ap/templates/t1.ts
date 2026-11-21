@@ -9,6 +9,7 @@ import {
 	buildFrenchPassageBlock,
 	buildFrenchWrittenProductionBlock
 } from '../../french-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ===============================================================================
 // Parameterized Templates - 5AP French - Trimester 1
@@ -178,6 +179,16 @@ const tplCompAnimauxSaharaT1: FrenchParameterizedTemplate = {
 				paragraphs: p.paragraphs,
 				source: 'Texte pédagogique adapté — 5AP (Projet 1)',
 				glossary: p.glossary
+			}),
+			buildIllustratedFigureBlock('pri_ara_08_sahara_oasis_dunes', {
+				lang: 'fr',
+				title: 'Le Sahara algérien et ses oasis verdoyantes',
+				customLegend: [
+					{ num: '1', label: 'Les dunes de sable doré du Sahara algérien' },
+					{ num: '2', label: "L'oasis fraîche et les palmiers dattiers" }
+				],
+				maxHeight: 108,
+				width: '58%'
 			}),
 			{
 				type: 'text',
@@ -381,6 +392,16 @@ const tplCompVisiteZooT1: FrenchParameterizedTemplate = {
 				paragraphs: p.paragraphs,
 				source: 'Texte pédagogique adapté — 5AP (Au zoo)',
 				glossary: p.glossary
+			}),
+			buildIllustratedFigureBlock('pri_ara_05_fresh_fruits_honey_basket', {
+				lang: 'fr',
+				title: "Les fruits frais et les plantes dans la nature",
+				customLegend: [
+					{ num: '1', label: 'Les fruits et les végétaux frais' },
+					{ num: '2', label: 'Les bienfaits naturels de la terre' }
+				],
+				maxHeight: 106,
+				width: '56%'
 			}),
 			{
 				type: 'text',
@@ -716,6 +737,12 @@ const tplLangPresentTypesT1: FrenchParameterizedTemplate = {
 		);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_lang_06_hygiene_washbasin', {
+				lang: 'fr',
+				title: "Les bonnes habitudes d'hygiène au quotidien",
+				maxHeight: 104,
+				width: '56%'
+			}),
 			{
 				type: 'text',
 				content: 'Activité 1 : Conjugue les verbes entre parenthèses au présent de l’indicatif (1.5 pts) :'

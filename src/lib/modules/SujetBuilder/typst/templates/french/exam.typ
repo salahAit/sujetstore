@@ -2,6 +2,8 @@
 // Supports Primary (3AP-5AP + Évaluation des Acquis), Middle (1AM-4AM BEM), Secondary (1AS-3AS), and BAC.
 // Clean legal header: République Algérienne Démocratique et Populaire + SujetStore (NO Ministère / NO ONEC).
 
+#import "../../common/illustrated_figure.typ": render-illustrated-figure
+
 #let safe-eval-fr(content, mode: "markup") = {
   if content == "" or content == none { return [] }
   let prepared = if mode == "markup" and type(content) == str {
@@ -151,6 +153,29 @@
         }
       ]
     }
+  ] else if b.type == "image_grid" [
+    #v(4pt)
+    #align(center)[
+      #table(
+        columns: (1fr,) * b.columns,
+        align: center + horizon,
+        stroke: 0.5pt + rgb("CBD5E1"),
+        inset: 5pt,
+        ..b.items.map(it => [
+          #box(width: 100%, height: 74pt, inset: 0pt)[#image(it.src, fit: "contain")]
+        ]),
+        ..b.items.map(it => [
+          #set text(size: calc.max(body-size - 1pt, 10pt))
+          #stack(dir: ttb, spacing: 3pt,
+            if is-solution and it.at("answer", default: "") != "" { text(fill: rgb("1D4ED8"), weight: "bold")[#safe-eval-fr(it.answer)] } else { safe-eval-fr(it.label) },
+            if is-solution and it.at("mark", default: "") != "" { text(size: 9pt, fill: rgb("B91C1C"))[#it.mark pts] }
+          )
+        ])
+      )
+    ]
+    #v(4pt)
+  ] else if b.type == "illustrated_figure" [
+    #render-illustrated-figure(b, is-solution, body-size: body-size, is-ltr: true, eval-fn: s => safe-eval-fr(s))
   ] else if b.type == "typst_raw" [
     #grid(
       columns: (1fr, auto),

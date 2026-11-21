@@ -230,8 +230,8 @@ export const SCIENCES_LESSONS_1AS_TCST_T1: SciencesInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'أنجز فلاح تجربة التقشير الحلقي السطحي (إزالة اللحاء) على غصن شجرة مثمرة؛ فلاحظ بعد أسابيع تشكل انتفاخ غني بالسكريات أعلى منطقة التقشير وتوقف نمو الأجزاء السفلية للغصن.',
-			svg: svgPlantAndPrimaryDiagram('stomata_sap', {
-				title: 'مسار النسغ الناقص والنسغ الكامل في النبات الأخضر'
+			svg: svgPlantAndPrimaryDiagram('xylem_phloem', {
+				title: 'بنية الأوعية الخشبية والأوعية اللحائية ودوران النسغين'
 			}),
 			steps: [
 				{

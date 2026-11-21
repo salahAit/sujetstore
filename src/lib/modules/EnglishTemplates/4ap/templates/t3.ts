@@ -9,6 +9,7 @@ import {
 	buildEnglishPassageBlock,
 	buildEnglishWrittenExpressionBlock
 } from '../../english-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. Comprehension (4 pts) — Animals & Habitats, Seasons & Healthy Habits
@@ -127,6 +128,16 @@ const comprehension4apT3: EnglishParameterizedTemplate = {
 					title: sc.title,
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: true
+				}),
+				buildIllustratedFigureBlock('pri_ara_05_fresh_fruits_honey_basket', {
+					lang: 'en',
+					title: 'Healthy Food: Fresh Fruits, Vegetables and Natural Honey',
+					customLegend: [
+						{ num: '1', label: 'A basket of fresh fruits and vegetables' },
+						{ num: '2', label: 'Pure honey and healthy olive oil' }
+					],
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'table',
@@ -277,6 +288,11 @@ const habitatsWeather4apT3: EnglishParameterizedTemplate = {
 			points: 3,
 			instruction: 'Do the following three activities:',
 			content: [
+				buildIllustratedFigureBlock('pri_lang_03_weather_icons_quad', {
+					lang: 'en',
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `Task 1: Classify the words in the table: ( ${s.words.join(' - ')} )`
@@ -428,6 +444,11 @@ const healthyHabitsGrammar4apT3: EnglishParameterizedTemplate = {
 			points: 3,
 			instruction: 'Do the three tasks carefully:',
 			content: [
+				buildIllustratedFigureBlock('pri_lang_06_hygiene_washbasin', {
+					lang: 'en',
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `Task 1: Complete the healthy advice with the right word:\n1) ${s.imp1}\n2) ${s.imp2}`,
@@ -578,6 +599,16 @@ const writtenExpression4apT3: EnglishParameterizedTemplate = {
 			customTitle: 'Part Three: Written Expression',
 			points: 3,
 			content: [
+				buildIllustratedFigureBlock('pri_ara_06_four_seasons_trees', {
+					lang: 'en',
+					title: 'The Four Seasons and Nature in Algeria',
+					customLegend: [
+						{ num: '1', label: 'Spring flowers and sunny summer fruits' },
+						{ num: '2', label: 'Golden autumn leaves and snowy winter mountains' }
+					],
+					maxHeight: 102,
+					width: '54%'
+				}),
 				buildEnglishWrittenExpressionBlock({
 					topicOnePrompt: `Use the Fact File below to write a neat paragraph of 4 or 5 short sentences about ${pr.subject}:`,
 					topicOneNotes: pr.notes,

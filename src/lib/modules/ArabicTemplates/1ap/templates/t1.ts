@@ -6,6 +6,10 @@ import type {
 import type { ContentBlock } from '../../../SujetBuilder/types';
 import { buildProsePassageBlock, buildWrittenProductionBlock } from '../../arabic-helpers';
 import { buildUniqueMcqOptions, SeededRng } from '../../../MathTemplates/rng';
+import {
+	buildIllustratedFigureBlock,
+	type IllustrationId
+} from '../../../VisualAssets/illustrations-registry';
 
 function makeRng(seed: number, difficulty: Difficulty, salt: number): SeededRng {
 	const d = difficulty === 'easy' ? 11 : difficulty === 'medium' ? 23 : 41;
@@ -103,8 +107,18 @@ const tplReadingFamilySchool: ArabicParameterizedTemplate = {
 
 		const item = rng.pick(passages);
 		const mcq = buildUniqueMcqOptions(item.correct, [...item.distractors], rng);
+		const illustrationId: IllustrationId =
+			item.title === 'بِلَالٌ فِي القِسْمِ'
+				? 'pri_ara_01_school_bag_supplies'
+				: 'pri_ara_02_warm_algerian_home';
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock(illustrationId, {
+				mode: 'image_only',
+				title: item.title,
+				maxHeight: 112,
+				width: '58%'
+			}),
 			buildProsePassageBlock({
 				title: item.title,
 				paragraphs: [item.text]
@@ -478,8 +492,16 @@ const tplIntegrationWordsSentence: ArabicParameterizedTemplate = {
 		);
 
 		const qText = `رَتِّبِ الكَلِمَاتِ التَّالِيَةَ لِتَكْوِينَ جُمْلَةٍ مُفِيدَةٍ: (${sc.shuffledWords.join(' — ')})`;
+		const scIllustrationId: IllustrationId = sc.context.includes('الطَّعَامِ')
+			? 'pri_ara_05_fresh_fruits_honey_basket'
+			: 'pri_ara_01_school_bag_supplies';
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock(scIllustrationId, {
+				mode: 'labeled',
+				maxHeight: 112,
+				width: '58%'
+			}),
 			{
 				type: 'text',
 				content: `1) ${sc.fillPrompt}`,

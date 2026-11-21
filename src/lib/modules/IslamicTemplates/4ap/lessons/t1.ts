@@ -1,6 +1,6 @@
 import type { IslamicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
-	svgIslamicCards,
 	svgIslamicCompare,
 	svgIslamicConceptTree,
 	svgIslamicSequence
@@ -10,15 +10,7 @@ import {
 // SVGs — السنة الرابعة ابتدائي — الفصل الأول
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgAlaqDiscover = svgIslamicSequence({
-	title: 'محاور سورة العلق (أول ما نزل من القرآن الكريم)',
-	steps: [
-		{ step: 'الأمر بالقراءة والعلم (الآيات 1-5)', detail: 'أول وحي نزل في غار حراء يرفع قيمة القراءة والقلم والعلم النافع', color: '#047857' },
-		{ step: 'التحذير من الطغيان والاغترار بالمال (الآيات 6-8)', detail: 'الإنسان يطغى إذا استغنى وينسى أن الرجوع إلى الله وحده', color: '#b45309' },
-		{ step: 'عاقبة من ينهى عن الصلاة (الآيات 9-18)', detail: 'تهديد شديد لمن يصدّ عن الهدى والصلاة كأبي جهل، والله يرى كل شيء', color: '#be123c' },
-		{ step: 'أمر النبي والمؤمن بالسجود والاقتراب (الآية 19)', detail: 'كلا لا تطعه واسجد واقترب: القرب من الله يكون بالصلاة والسجود', color: '#1d4ed8' }
-	]
-});
+const svgAlaqDiscover = renderLessonIllustration('pri_isl_04_mushaf_wooden_stand');
 
 const svgAlaqSummary = svgIslamicConceptTree({
 	title: 'هدايات سورة العلق (19 آية — مكية)',
@@ -46,17 +38,7 @@ const svgAlaqSummary = svgIslamicConceptTree({
 	]
 });
 
-const svgTinDiscover = svgIslamicCards({
-	title: 'الأماكن المباركة التي أقسم الله بها في سورة التين',
-	subtitle: 'أقسم الله بأربعة أشياء عظيمة على تكريم خلق الإنسان',
-	cards: [
-		{ badge: '1', title: 'التِّينُ وَالزَّيْتُونُ', detail: 'أرض الشام وبيت المقدس المباركة', color: '#047857' },
-		{ badge: '2', title: 'طُورُ سِينِينَ', detail: 'الجبل الذي كلم الله عليه موسى', color: '#1d4ed8' },
-		{ badge: '3', title: 'الْبَلَدُ الْأَمِينُ', detail: 'مكة المكرمة مهبط الوحي والكعبة', color: '#b45309' },
-		{ badge: '4', title: 'أَحْسَنُ تَقْوِيمٍ', detail: 'خلق الله الإنسان في أجمل صورة وعقل', color: '#6d28d9' }
-	],
-	columns: 2
-});
+const svgTinDiscover = renderLessonIllustration('pri_isl_07_wheat_olive_zakat');
 
 const svgTinSummary = svgIslamicCompare({
 	title: 'مصير الإنسان في سورة التين (8 آيات — مكية)',
@@ -82,18 +64,7 @@ const svgTinSummary = svgIslamicCompare({
 	}
 });
 
-const svgRusulDiscover = svgIslamicCards({
-	title: 'أولو العزم من الرسل عليهم السلام (الخمسة)',
-	subtitle: 'الإيمان بالرسل هو الركن الرابع من أركان الإيمان الستة',
-	cards: [
-		{ badge: '1', title: 'نُوحٌ عَلَيْهِ السَّلَامُ', detail: 'أول الرسل إلى أهل الأرض بعد الشرك', color: '#047857' },
-		{ badge: '2', title: 'إِبْرَاهِيمُ عَلَيْهِ السَّلَامُ', detail: 'خليل الله وباني الكعبة المشرفة', color: '#1d4ed8' },
-		{ badge: '3', title: 'مُوسَى عَلَيْهِ السَّلَامُ', detail: 'كليم الله وصاحب التوراة', color: '#b45309' },
-		{ badge: '4', title: 'عِيسَى عَلَيْهِ السَّلَامُ', detail: 'رسول الله إلى بني إسرائيل وصاحب الإنجيل', color: '#6d28d9' },
-		{ badge: '5', title: 'مُحَمَّدٌ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ', detail: 'خاتم الأنبياء والمرسلين للعالمين', color: '#0f766e' }
-	],
-	columns: 3
-});
+const svgRusulDiscover = renderLessonIllustration('pri_isl_03_masjid_al_aqsa');
 
 const svgRusulSummary = svgIslamicConceptTree({
 	title: 'أركان الإيمان بالرسل عليهم السلام وخصائصهم',

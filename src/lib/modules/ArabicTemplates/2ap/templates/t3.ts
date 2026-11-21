@@ -6,6 +6,10 @@ import type {
 import type { ContentBlock } from '../../../SujetBuilder/types';
 import { buildProsePassageBlock, buildWrittenProductionBlock } from '../../arabic-helpers';
 import { buildUniqueMcqOptions, SeededRng } from '../../../MathTemplates/rng';
+import {
+	buildIllustratedFigureBlock,
+	type IllustrationId
+} from '../../../VisualAssets/illustrations-registry';
 
 function makeRng(seed: number, difficulty: Difficulty, salt: number): SeededRng {
 	const d = difficulty === 'easy' ? 17 : difficulty === 'medium' ? 31 : 47;
@@ -82,8 +86,20 @@ const tplReadingHomelandScience: ArabicParameterizedTemplate = {
 
 		const p = rng.pick(passages);
 		const mcq = buildUniqueMcqOptions(p.correct, [...p.distractors], rng);
+		const illustrationId: IllustrationId =
+			p.title === 'وَطَنِي الجَزَائِرُ الجَمِيلُ'
+				? 'pri_ara_04_algeria_flag_martyrs_memorial'
+				: p.title === 'شَجَرَةُ الزَّيْتُونِ المُبَارَكَةُ'
+					? 'pri_ara_03_algerian_village_orchard'
+					: 'pri_ara_01_school_bag_supplies';
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock(illustrationId, {
+				mode: 'image_only',
+				title: p.title,
+				maxHeight: 112,
+				width: '58%'
+			}),
 			buildProsePassageBlock({
 				title: p.title,
 				paragraphs: [p.text]
@@ -422,8 +438,16 @@ const tplIntegrationShortParagraph2apT3: ArabicParameterizedTemplate = {
 		);
 
 		const qText = `${tr.context}\nمَا التَّرْتِيبُ الصَّحِيحُ لِلْجُمَلِ التَّالِيَةِ لِتَكْوِينَ فِقْرَةٍ مُتَرَابِطَةٍ؟\n${shuffledLines.join('\n')}`;
+		const trIllustrationId: IllustrationId = tr.context.includes('بُسْتَانٍ')
+			? 'pri_ara_06_four_seasons_trees'
+			: 'pri_ara_01_school_bag_supplies';
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock(trIllustrationId, {
+				mode: 'labeled',
+				maxHeight: 112,
+				width: '58%'
+			}),
 			buildWrittenProductionBlock({
 				context: tr.context,
 				supportQuote: shuffledLines.join('  |  '),

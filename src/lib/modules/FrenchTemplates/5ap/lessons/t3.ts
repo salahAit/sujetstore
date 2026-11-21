@@ -2,11 +2,9 @@ import type { FrenchInteractiveLessonData } from '../../types';
 import {
 	svgFrenchConjugationChart,
 	svgFrenchGrammarMap,
-	svgFrenchPrimaryCards,
-	svgFrenchTenseTimeline,
-	svgFrenchWordFormation,
 	svgFrenchWritingBlueprint
 } from '../../svg-french';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ===============================================================================
 // Interactive Lessons - 5AP French - Trimester 3
@@ -37,14 +35,14 @@ export const LESSONS_5AP_T3: FrenchInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'عند وقوع حريق غابة أو فيضان أو زلزال، يتدخل أبطال الحماية المدنية والأطباء بسرعة وشجاعة: «En cas d’incendie, les pompiers de la Protection civile arrivent avec le camion-citerne pour éteindre le feu. Les médecins et les secouristes soignent les blessés.»',
-			svg: svgFrenchPrimaryCards({
-				title: 'Les métiers qui sauvent des vies',
-				subtitle: 'المهن النبيلة التي تنقذ الأرواح في الكوارث',
-				cards: [
-					{ word: 'Le pompier', arabic: 'رجل الإطفاء', color: '#b45309' },
-					{ word: 'Protection civile', arabic: 'الحماية المدنية', color: '#1d4ed8' },
-					{ word: 'Le médecin', arabic: 'الطبيب', color: '#047857' },
-					{ word: 'Le secouriste', arabic: 'المسعف', color: '#7c3aed' }
+			svg: renderLessonIllustration('pri_lang_05_professions_tools', {
+				lang: 'fr',
+				title: 'Les métiers qui sauvent et servent notre communauté (5AP)',
+				customLegend: [
+					{ num: '1', label: 'Le médecin et les secouristes : stéthoscope et trousse de secours' },
+					{ num: '2', label: 'Le pompier de la Protection civile : casque rouge et lance à eau' },
+					{ num: '3', label: 'Le boulanger : le pain chaud quotidien' },
+					{ num: '4', label: "L'enseignant(e) : transmettre le savoir et les consignes de sécurité" }
 				]
 			}),
 			steps: [
@@ -343,13 +341,14 @@ export const LESSONS_5AP_T3: FrenchInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'في يوم التشجير، قال المعلم: «Demain, nous planterons des arbres et la cour sera belle ! Maintenant, écoutez ces conseils : Ferme le robinet ! Protégeons l’eau ! Gardez la forêt propre !» تأمّل الفرق بين أفعال المستقبل وأفعال النصيحة.',
-			svg: svgFrenchTenseTimeline({
-				title: 'Projet 4 : Protégeons la nature',
-				tenseName: 'Le futur simple',
-				formula: 'Infinitif + (-ai, -as, -a, -ons, -ez, -ont) | être : serai | avoir : aurai',
-				activeZone: 'future',
-				example: 'Demain, nous planterons des oliviers et ils grandiront vite.',
-				markers: 'demain, bientôt, la semaine prochaine, plus tard'
+			svg: renderLessonIllustration('pri_lang_07_clean_park_planting', {
+				lang: 'fr',
+				title: 'Projet 4 : Futur simple et Impératif présent — Protégeons la nature !',
+				customLegend: [
+					{ num: '1', label: 'Demain, nous planterons un arbre / Plante un arbre !' },
+					{ num: '2', label: "Arrosons les fleurs le soir pour économiser l'eau !" },
+					{ num: '3', label: 'Jette toujours les déchets dans la poubelle !' }
+				]
 			}),
 			steps: [
 				{
@@ -493,13 +492,15 @@ export const LESSONS_5AP_T3: FrenchInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'اقرأ هذا المقطع الوصفي في الماضي: «Autrefois, la forêt était verte et les oiseaux chantaient. Après l’incendie, les élèves ont décidé de replanter des arbres pour assurer la protection de la nature.» لاحظ نهايات أفعال الماضي الناقص والكلمات المشتقة (replanter, protection).',
-			svg: svgFrenchWordFormation({
-				title: 'Former un mot : Préfixe + Radical + Suffixe',
-				prefix: 're-',
-				root: 'plant',
-				suffix: '-ation',
-				derivedWord: 'replantation (famille de : plante, planter, replanter)',
-				meaningNote: 'Le préfixe «re-» indique la répétition ; le suffixe «-ation» forme un nom.'
+			svg: renderLessonIllustration('pri_lang_03_weather_icons_quad', {
+				lang: 'fr',
+				title: "Décrire le temps et les saisons à l'imparfait et familles de mots",
+				customLegend: [
+					{ num: '1', label: 'Le soleil brillait (soleil -> ensoleillé)' },
+					{ num: '2', label: "La pluie tombait sur la forêt (pluie -> pluvieux)" },
+					{ num: '3', label: 'La neige couvrait les sommets (neige -> enneigé)' },
+					{ num: '4', label: 'Le vent soufflait en automne (vent -> venteux)' }
+				]
 			}),
 			steps: [
 				{
@@ -638,13 +639,12 @@ export const LESSONS_5AP_T3: FrenchInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'يستعد تلاميذ السنة الخامسة لاجتياز تقييم المكتسبات في اللغة الفرنسية. نصحتهم المعلمة: «اقرؤوا النص مرتين بتركيز، أجيبوا عن أسئلة الفهم من النص، ثم خطّطوا للإنتاج الكتابي باستعمال صندوق الأدوات قبل نقله بخط واضح على الورقة.»',
-			svg: svgFrenchWritingBlueprint({
-				title: 'Les 4 clés pour réussir l’Évaluation des Acquis 5AP',
-				steps: [
-					{ stage: 'Lire 2 fois', detail: 'Titre, paragraphes et mots-clés avant de répondre.', color: '#1d4ed8' },
-					{ stage: 'Comprendre', detail: 'Vérifier Vrai/Faux et les réponses directement dans le texte.', color: '#047857' },
-					{ stage: 'Maîtriser', detail: 'Vérifier le temps demandé, les accords et les homophones.', color: '#b45309' },
-					{ stage: 'Rédiger', detail: '4 à 5 phrases propres avec la boîte à outils et la ponctuation.', color: '#7c3aed' }
+			svg: renderLessonIllustration('pri_ara_06_four_seasons_trees', {
+				lang: 'fr',
+				title: "Évaluation des Acquis 5AP : la nature algérienne au fil des 4 saisons",
+				customLegend: [
+					{ num: '1', label: "Le printemps fleuri et l'été lumineux : protéger nos forêts" },
+					{ num: '2', label: "L'automne doré et l'hiver enneigé : préserver l'eau précieuse" }
 				]
 			}),
 			steps: [

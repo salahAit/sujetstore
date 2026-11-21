@@ -1,5 +1,9 @@
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import {
+	renderLessonIllustration,
+	type IllustrationId
+} from '../VisualAssets/illustrations-registry';
 
 const SCIENCES_SVG_DIR = process.env.MEDIA_ROOT
 	? resolve(process.env.MEDIA_ROOT, 'generated/sciences-svg')
@@ -8,12 +12,36 @@ const SCIENCES_SVG_DIR = process.env.MEDIA_ROOT
 		: resolve('static/generated/sciences-svg');
 
 export function saveSciencesSvgAsset(filename: string, svgContent: string): string {
+	const trimmed = svgContent.trim();
+	if (trimmed.startsWith('{"kind":"illustrated"')) {
+		try {
+			const parsed = JSON.parse(trimmed) as {
+				src?: string;
+				title?: string;
+				pins?: Array<{ num: string | number; xPct: number; yPct: number; color?: string }>;
+				legend?: Array<{ num: string | number; label: string }>;
+			};
+			const jpgUrl = (parsed.src || '').replace(/\.webp$/i, '.jpg');
+			if (jpgUrl) {
+				const figMeta = encodeURIComponent(
+					JSON.stringify({
+						title: parsed.title || '',
+						pins: parsed.pins || [],
+						legend: parsed.legend || []
+					})
+				);
+				return `${jpgUrl}#fig=${figMeta}`;
+			}
+		} catch {
+			// Fall back to SVG file write if malformed
+		}
+	}
 	const safeName = filename.replace(/[^a-zA-Z0-9._-]/g, '_').replace(/\.svg$/i, '') + '.svg';
 	if (!existsSync(SCIENCES_SVG_DIR)) {
 		mkdirSync(SCIENCES_SVG_DIR, { recursive: true });
 	}
 	const outPath = join(SCIENCES_SVG_DIR, safeName);
-	writeFileSync(outPath, svgContent.trim() + '\n', 'utf-8');
+	writeFileSync(outPath, trimmed + '\n', 'utf-8');
 	return `/generated/sciences-svg/${safeName}`;
 }
 
@@ -437,6 +465,60 @@ export function svgCellUltrastructure(
 	opts?: { numbered?: boolean; title?: string }
 ): string {
 	const numbered = opts?.numbered ?? false;
+	const cellNumberedPins: Partial<
+		Record<typeof kind, Array<{ num: string; xPct: number; yPct: number; color: string }>>
+	> = {
+		animal: [
+			{ num: '1', xPct: 50, yPct: 44, color: '#6d28d9' },
+			{ num: '2', xPct: 32, yPct: 42, color: '#1d4ed8' },
+			{ num: '3', xPct: 14, yPct: 72, color: '#0f766e' },
+			{ num: '4', xPct: 68, yPct: 24, color: '#15803d' },
+			{ num: '5', xPct: 44, yPct: 16, color: '#c2410c' },
+			{ num: '6', xPct: 47, yPct: 62, color: '#1e40af' }
+		],
+		chloroplast: [
+			{ num: '1', xPct: 22, yPct: 26, color: '#15803d' },
+			{ num: '2', xPct: 38, yPct: 47, color: '#166534' },
+			{ num: '3', xPct: 30, yPct: 64, color: '#b45309' },
+			{ num: '4', xPct: 45, yPct: 68, color: '#ca8a04' },
+			{ num: '5', xPct: 65, yPct: 60, color: '#0f766e' }
+		],
+		mitochondria: [
+			{ num: '1', xPct: 24, yPct: 82, color: '#9a3412' },
+			{ num: '2', xPct: 44, yPct: 46, color: '#b45309' },
+			{ num: '3', xPct: 62, yPct: 38, color: '#1d4ed8' },
+			{ num: '4', xPct: 54, yPct: 58, color: '#7c3aed' }
+		],
+		neuron: [
+			{ num: '1', xPct: 19, yPct: 49, color: '#1d4ed8' },
+			{ num: '2', xPct: 45, yPct: 50, color: '#b45309' },
+			{ num: '3', xPct: 58, yPct: 50, color: '#dc2626' },
+			{ num: '4', xPct: 86, yPct: 42, color: '#15803d' }
+		],
+		synapse: [
+			{ num: '1', xPct: 36, yPct: 36, color: '#b45309' },
+			{ num: '2', xPct: 22, yPct: 44, color: '#0f766e' },
+			{ num: '3', xPct: 34, yPct: 82, color: '#6d28d9' },
+			{ num: '4', xPct: 62, yPct: 22, color: '#1d4ed8' },
+			{ num: '5', xPct: 52, yPct: 72, color: '#15803d' },
+			{ num: '6', xPct: 78, yPct: 88, color: '#9a3412' }
+		]
+	};
+	const cellIllMap: Partial<Record<typeof kind, IllustrationId>> = {
+		animal: 'sci_27_eukaryotic_cell_ultrastructure',
+		chloroplast: 'sci_28_chloroplast_ultrastructure',
+		mitochondria: 'sci_29_mitochondrion_ultrastructure',
+		neuron: 'sci_19_neuron_synapse_arc',
+		synapse: 'sci_35_chemical_synapse'
+	};
+	const cellIllId = cellIllMap[kind];
+	if (cellIllId && (!numbered || cellNumberedPins[kind])) {
+		return renderLessonIllustration(cellIllId, {
+			title: opts?.title,
+			pins: numbered ? cellNumberedPins[kind] : undefined,
+			hideLegend: numbered
+		});
+	}
 	const w = 460;
 	const h = 265;
 	let body = `<rect x="6" y="6" width="${w - 12}" height="${h - 12}" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>`;
@@ -662,6 +744,29 @@ export function svgMolecularBiology(
 	}
 ): string {
 	const numbered = opts?.numbered ?? false;
+	if (kind === 'translation' && numbered) {
+		return renderLessonIllustration('sci_30_ribosome_translation', {
+			title: opts?.title ?? 'رسم تخطيطي مرقّم لآلية الترجمة على مستوى الريبوزوم (5\' -> 3\')',
+			hideLegend: true,
+			pins: [
+				{ num: '1', xPct: 43, yPct: 18, color: '#6d28d9' },
+				{ num: '2', xPct: 64, yPct: 46, color: '#4338ca' },
+				{ num: '3', xPct: 60, yPct: 90, color: '#1d4ed8' }
+			]
+		});
+	}
+	if (!numbered && !opts?.codons && !opts?.aminoAcids && !opts?.electrophoresis) {
+		const molIllMap: Partial<Record<typeof kind, IllustrationId>> = {
+			translation: 'sci_30_ribosome_translation',
+			dna_double_helix: 'sci_26_dna_double_helix',
+			enzyme_substrate: 'sci_31_enzyme_active_site',
+			membrane_channels: 'sci_36_membrane_channels_pump'
+		};
+		const illId = molIllMap[kind];
+		if (illId) {
+			return renderLessonIllustration(illId, { title: opts?.title });
+		}
+	}
 	const w = 460;
 	const h = 250;
 	let body = `<rect x="6" y="6" width="${w - 12}" height="${h - 12}" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>`;
@@ -885,6 +990,32 @@ export function svgImmunologyDiagram(
 	opts?: { numbered?: boolean; title?: string }
 ): string {
 	const numbered = opts?.numbered ?? false;
+	if (kind === 'antibody_complex' && numbered) {
+		return renderLessonIllustration('sci_32_antibody_immune_complex', {
+			title: opts?.title ?? 'بنية الجسم المضاد وتشكيل المعقد المناعي',
+			hideLegend: true,
+			pins: [
+				{ num: '1', xPct: 38, yPct: 36, color: '#b91c1c' },
+				{ num: '2', xPct: 54, yPct: 56, color: '#0d9488' },
+				{ num: '3', xPct: 77, yPct: 92, color: '#1d4ed8' },
+				{ num: '4', xPct: 90, yPct: 16, color: '#7c3aed' },
+				{ num: '5', xPct: 73, yPct: 53, color: '#b45309' },
+				{ num: '6', xPct: 84, yPct: 74, color: '#1e40af' }
+			]
+		});
+	}
+	if (!numbered) {
+		const immIllMap: Partial<Record<typeof kind, IllustrationId>> = {
+			antibody_complex: 'sci_32_antibody_immune_complex',
+			hiv_cycle: 'sci_34_hiv_retrovirus_structure',
+			cmh_presentation: 'sci_33_fluid_mosaic_membrane',
+			phagocytosis: 'sci_18_phagocytosis_stages'
+		};
+		const illId = immIllMap[kind];
+		if (illId) {
+			return renderLessonIllustration(illId, { title: opts?.title });
+		}
+	}
 	const w = 460;
 	const h = 250;
 	let body = `<rect x="6" y="6" width="${w - 12}" height="${h - 12}" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>`;

@@ -1,4 +1,5 @@
 import { buildUniqueMcqOptions, SeededRng } from '../../rng';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import {
 	saveSvgAsset,
 	svgBaseTenBlocks,
@@ -408,6 +409,10 @@ const templateCompareOrder: ParameterizedTemplate = {
 
 		const [p1a, p1b, p2a, p2b] = nums;
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_math_02_colored_pencils_bundles', {
+				maxHeight: 112,
+				width: '58%'
+			}),
 			{
 				type: 'text',
 				content: `1) قارن باستعمال أحد الرمزين ($<$ أو $>$):  $${p1a}$ ..... $${p1b}$    و    $${p2a}$ ..... $${p2b}$`,
@@ -648,6 +653,10 @@ const templateAddDoubleHalf: ParameterizedTemplate = {
 		}
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_math_03_base_ten_blocks', {
+				maxHeight: 112,
+				width: '58%'
+			}),
 			{
 				type: 'text',
 				content: `1) احسب المجموع (دون احتفاظ):  $${a} + ${b} =$ .....`,

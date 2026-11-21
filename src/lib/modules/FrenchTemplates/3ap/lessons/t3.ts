@@ -2,66 +2,41 @@ import type { FrenchInteractiveLessonData } from '../../types';
 import {
 	svgFrenchConjugationChart,
 	svgFrenchGrammarMap,
-	svgFrenchPrimaryCards,
 	svgFrenchWritingBlueprint
 } from '../../svg-french';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — 3AP Trimestre 3 (Projet 3 : À la campagne / Protéger la nature)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgFruitsSaisonsDiscover = svgFrenchPrimaryCards({
-	title: 'Les 4 saisons et les fruits — الفصول الأربعة والفواكه',
-	subtitle: 'À la campagne, la nature change à chaque saison',
-	cards: [
-		{ word: 'le printemps', arabic: 'الربيع', color: '#059669' },
-		{ word: "l'été", arabic: 'الصيف', color: '#d97706' },
-		{ word: "l'automne", arabic: 'الخريف', color: '#b45309' },
-		{ word: "l'hiver", arabic: 'الشتاء', color: '#2563eb' }
-	],
-	width: 520,
-	height: 185
+const svgFruitsSaisonsDiscover = renderLessonIllustration('pri_ara_06_four_seasons_trees', {
+	lang: 'fr',
+	title: 'Les quatre saisons et les arbres à la campagne',
+	customLegend: [
+		{ num: '1', label: "Le printemps fleuri et l'été aux fruits mûrs" },
+		{ num: '2', label: "L'automne aux feuilles dorées et l'hiver enneigé" }
+	]
 });
 
-const svgFruitsSaisonsSummary = svgFrenchGrammarMap({
-	title: 'Fruits, légumes et saisons — الفواكه والخضر والفصول',
-	rootLabel: 'Les bienfaits de la nature',
-	rootSub: 'Vocabulaire du Projet 3 (3AP)',
-	branches: [
-		{
-			label: 'Les fruits',
-			rule: 'pomme, orange, datte',
-			example: 'Je mange une pomme.',
-			color: '#1d4ed8'
-		},
-		{
-			label: 'Les légumes',
-			rule: 'carotte, tomate, laitue',
-			example: 'La carotte est orange.',
-			color: '#047857'
-		},
-		{
-			label: 'Les 4 saisons',
-			rule: 'printemps, été, automne, hiver',
-			example: 'En hiver, il pleut.',
-			color: '#b45309'
-		}
-	],
-	width: 520,
-	height: 250
+const svgFruitsSaisonsSummary = renderLessonIllustration('pri_ara_05_fresh_fruits_honey_basket', {
+	lang: 'fr',
+	title: "L'alimentation saine : fruits frais, légumes et miel pur",
+	customLegend: [
+		{ num: '1', label: 'Un panier de fruits et légumes frais (pomme, orange, raisin)' },
+		{ num: '2', label: "Le miel naturel et l'huile d'olive bénéfiques" }
+	]
 });
 
-const svgSonsT3Discover = svgFrenchPrimaryCards({
-	title: 'Les sons : an/en, in, eau/au — أصوات الفصل الثالث',
-	subtitle: 'Des lettres différentes peuvent faire le même son !',
-	cards: [
-		{ word: 'an / en', arabic: 'orange - enfant', color: '#2563eb' },
-		{ word: 'in', arabic: 'jardin - lapin', color: '#059669' },
-		{ word: 'eau', arabic: 'oiseau - gâteau', color: '#d97706' },
-		{ word: 'au', arabic: 'automne - jaune', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgSonsT3Discover = renderLessonIllustration('pri_lang_03_weather_icons_quad', {
+	lang: 'fr',
+	title: 'La météo des saisons et les sons (an/en, in, eau/au)',
+	customLegend: [
+		{ num: '1', label: 'Il fait beau et chaud au soleil (son « au »)' },
+		{ num: '2', label: "L'eau de pluie et l'arc-en-ciel (sons « eau » et « en »)" },
+		{ num: '3', label: 'Il neige en hiver dans le jardin (son « in »)' },
+		{ num: '4', label: 'Il y a du vent en automne (son « en »)' }
+	]
 });
 
 const svgSonsT3Summary = svgFrenchConjugationChart({
@@ -91,17 +66,14 @@ const svgSonsT3Summary = svgFrenchConjugationChart({
 	height: 210
 });
 
-const svgPlurielVerbesDiscover = svgFrenchPrimaryCards({
-	title: 'Le pluriel (-s) et le 1er groupe — الجمع وأفعال الفوج الأول',
-	subtitle: 'Singulier (1) -> Pluriel (2 ou plus)',
-	cards: [
-		{ word: 'une pomme', arabic: 'des pommes', color: '#2563eb' },
-		{ word: 'un arbre', arabic: 'des arbres', color: '#059669' },
-		{ word: 'je plante', arabic: 'أنا أغرس', color: '#d97706' },
-		{ word: 'il mange', arabic: 'هو يأكل', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgPlurielVerbesDiscover = renderLessonIllustration('pri_lang_07_clean_park_planting', {
+	lang: 'fr',
+	title: 'Le pluriel (-s) et les verbes en -er : protégeons le jardin',
+	customLegend: [
+		{ num: '1', label: 'Je plante un arbre / Nous plantons des arbres' },
+		{ num: '2', label: "J'arrose les fleurs avec l'arrosoir" },
+		{ num: '3', label: 'Ils jettent les déchets dans la poubelle' }
+	]
 });
 
 const svgPlurielVerbesSummary = svgFrenchConjugationChart({

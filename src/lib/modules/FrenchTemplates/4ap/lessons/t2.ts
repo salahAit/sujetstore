@@ -1,27 +1,23 @@
 import type { FrenchInteractiveLessonData } from '../../types';
 import {
 	svgFrenchConjugationChart,
-	svgFrenchGrammarMap,
-	svgFrenchPrimaryCards,
-	svgFrenchWordFormation
+	svgFrenchGrammarMap
 } from '../../svg-french';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — 4AP Trimestre 2 (Projet 2 : Les belles fêtes algériennes et islamiques)
 // 100% Halal: Aïd El-Fitr, Aïd El-Adha, Yaoum El-Ilm (16 Avril), Fête de la réussite scolaire
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgFetesDiscover = svgFrenchPrimaryCards({
-	title: 'Les belles fêtes algériennes et islamiques — الأعياد والمناسبات',
-	subtitle: 'Joie, solidarité, science et réussite en Algérie',
-	cards: [
-		{ word: "L'Aïd El-Fitr", arabic: 'عيد الفطر', color: '#059669' },
-		{ word: "L'Aïd El-Adha", arabic: 'عيد الأضحى', color: '#1d4ed8' },
-		{ word: 'Yaoum El-Ilm', arabic: 'يوم العلم (16 أفريل)', color: '#d97706' },
-		{ word: 'La réussite', arabic: 'حفل النجاح المدرسي', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgFetesDiscover = renderLessonIllustration('pri_lang_08_birthday_cake_party', {
+	lang: 'fr',
+	title: "Les belles fêtes de l'Aïd et de la réussite scolaire",
+	customLegend: [
+		{ num: '1', label: 'Partager un bon gâteau aux fruits en famille' },
+		{ num: '2', label: "Décorer la salle pour la fête de la réussite à l'école" },
+		{ num: '3', label: 'Offrir des cadeaux et des livres utiles aux lauréats' }
+	]
 });
 
 const svgFetesSummary = svgFrenchGrammarMap({
@@ -52,16 +48,13 @@ const svgFetesSummary = svgFrenchGrammarMap({
 	height: 250
 });
 
-const svgPossessifsDiscover = svgFrenchPrimaryCards({
-	title: 'Les déterminants possessifs — صفات الملكية',
-	subtitle: 'Pour dire à qui appartient une chose (mon, ma, mes...)',
-	cards: [
-		{ word: 'mon / ma / mes', arabic: 'ملكي (أنا)', color: '#1d4ed8' },
-		{ word: 'ton / ta / tes', arabic: 'ملكك (أنت)', color: '#047857' },
-		{ word: 'son / sa / ses', arabic: 'ملكه / ملكها', color: '#d97706' }
-	],
-	width: 520,
-	height: 185
+const svgPossessifsDiscover = renderLessonIllustration('pri_ara_05_fresh_fruits_honey_basket', {
+	lang: 'fr',
+	title: "Les déterminants possessifs et l'alimentation saine",
+	customLegend: [
+		{ num: '1', label: 'Mon panier, ma pomme, mes fruits frais (mon / ma / mes)' },
+		{ num: '2', label: 'Son miel pur, sa bonne huile, ses dattes (son / sa / ses)' }
+	]
 });
 
 const svgPossessifsSummary = svgFrenchConjugationChart({
@@ -146,15 +139,15 @@ const svgVerbes2gSummary = svgFrenchGrammarMap({
 	height: 250
 });
 
-const svgFemininDiscover = svgFrenchWordFormation({
-	title: 'Former le féminin : règle générale (+ e) et (-er -> -ère)',
-	prefix: 'un -> une',
-	root: 'boulanger',
-	suffix: '-ère',
-	derivedWord: 'une boulangère (خبّازة)',
-	meaningNote: 'Règle simple : + e (petit -> petite) | -er -> -ère (premier -> première)',
-	width: 520,
-	height: 185
+const svgFemininDiscover = renderLessonIllustration('pri_lang_05_professions_tools', {
+	lang: 'fr',
+	title: 'Les métiers et la formation du féminin (+e / -er -> -ère)',
+	customLegend: [
+		{ num: '1', label: 'Un médecin / un infirmier -> une infirmière (-ère)' },
+		{ num: '2', label: 'Un pompier courageux de la Protection civile' },
+		{ num: '3', label: 'Un boulanger -> une boulangère (-er devient -ère)' },
+		{ num: '4', label: 'Un enseignant -> une enseignante (+e)' }
+	]
 });
 
 const svgFemininSummary = svgFrenchConjugationChart({

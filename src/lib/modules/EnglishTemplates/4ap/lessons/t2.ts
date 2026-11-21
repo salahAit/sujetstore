@@ -1,25 +1,20 @@
 import type { EnglishInteractiveLessonData } from '../../types';
-import {
-	svgEnglishGrammarMap,
-	svgEnglishPrimaryCards,
-	svgEnglishTenseTimeline
-} from '../../svg-english';
+import { svgEnglishGrammarMap } from '../../svg-english';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — 4AP Trimester 2 (School Facilities & Prepositions, Clean Hobbies, Present Simple, Can)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgPrepositionsDiscover = svgEnglishPrimaryCards({
-	title: 'School Facilities & Prepositions — مرافق المدرسة وحروف المكان',
-	subtitle: 'in / on / under / next to',
-	cards: [
-		{ word: 'in', arabic: 'في / داخل', color: '#2563eb' },
-		{ word: 'on', arabic: 'على / فوق', color: '#059669' },
-		{ word: 'under', arabic: 'تحت', color: '#d97706' },
-		{ word: 'next to', arabic: 'بجانب', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgPrepositionsDiscover = renderLessonIllustration('pri_lang_04_house_rooms_cutaway', {
+	lang: 'en',
+	title: 'Prepositions of Place (in, on, under, next to) in Rooms & School',
+	customLegend: [
+		{ num: '1', label: 'The lamp is next to the bed in the bedroom' },
+		{ num: '2', label: 'The sink is next to the bathtub in the bathroom' },
+		{ num: '3', label: 'The plates are in the cupboards in the kitchen' },
+		{ num: '4', label: 'The flowers are in the garden next to the house' }
+	]
 });
 
 const svgPrepositionsSummary = svgEnglishGrammarMap({
@@ -50,18 +45,14 @@ const svgPrepositionsSummary = svgEnglishGrammarMap({
 	height: 250
 });
 
-const svgHobbiesDiscover = svgEnglishPrimaryCards({
-	title: 'Fun Time & Clean Hobbies — وقت الفراغ والهوايات المفيدة',
-	subtitle: 'Wholesome Sports & Creative Hobbies',
-	cards: [
-		{ word: 'reading', arabic: 'القراءة', color: '#2563eb' },
-		{ word: 'playing football', arabic: 'كرة القدم', color: '#059669' },
-		{ word: 'swimming', arabic: 'السباحة', color: '#0284c7' },
-		{ word: 'drawing', arabic: 'الرسم', color: '#d97706' },
-		{ word: 'running', arabic: 'الجري', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgHobbiesDiscover = renderLessonIllustration('pri_lang_07_clean_park_planting', {
+	lang: 'en',
+	title: 'Fun Time & Clean Hobbies: Gardening and Protecting Nature',
+	customLegend: [
+		{ num: '1', label: 'Gardening: planting a green sapling in the soil' },
+		{ num: '2', label: 'Watering colorful flowers in free time' },
+		{ num: '3', label: 'Keeping our park clean for sports and walking' }
+	]
 });
 
 const svgHobbiesSummary = svgEnglishGrammarMap({
@@ -92,15 +83,13 @@ const svgHobbiesSummary = svgEnglishGrammarMap({
 	height: 250
 });
 
-const svgPresentSimpleDiscover = svgEnglishTenseTimeline({
-	title: 'Present Simple Tense',
-	tenseName: 'Habits & Daily Routines',
-	formula: 'I/You/We/They + Verb  |  He/She/It + Verb-s',
-	activeZone: 'present',
-	example: 'I play football. / He plays football every Friday.',
-	markers: 'every day, on Friday, always, in the morning',
-	width: 520,
-	height: 215
+const svgPresentSimpleDiscover = renderLessonIllustration('pri_lang_01_red_bus_train', {
+	lang: 'en',
+	title: 'Present Simple Tense: Daily School Bus & Train Routines',
+	customLegend: [
+		{ num: '1', label: 'I go to school by bus / He goes to school by bus (-es)' },
+		{ num: '2', label: 'The fast train leaves at eight o clock every morning' }
+	]
 });
 
 const svgPresentSimpleSummary = svgEnglishGrammarMap({
@@ -131,17 +120,13 @@ const svgPresentSimpleSummary = svgEnglishGrammarMap({
 	height: 250
 });
 
-const svgModalCanDiscover = svgEnglishPrimaryCards({
-	title: 'Expressing Ability with Can — التعبير عن القدرة بـ Can',
-	subtitle: 'Can you...? Yes, I can. / No, I cannot.',
-	cards: [
-		{ word: 'I can swim.', arabic: 'أستطيع السباحة', color: '#059669' },
-		{ word: 'I cannot fly.', arabic: 'لا أستطيع الطيران', color: '#dc2626' },
-		{ word: 'Can you run?', arabic: 'هل تستطيع الجري؟', color: '#2563eb' },
-		{ word: 'Yes, I can.', arabic: 'نعم، أستطيع', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgModalCanDiscover = renderLessonIllustration('pri_lang_02_airplane_ship', {
+	lang: 'en',
+	title: 'Expressing Ability with Can / Cannot: Sky and Sea',
+	customLegend: [
+		{ num: '1', label: 'An airplane can fly high in the sky' },
+		{ num: '2', label: 'A ship can sail on the sea, but it cannot fly' }
+	]
 });
 
 const svgModalCanSummary = svgEnglishGrammarMap({

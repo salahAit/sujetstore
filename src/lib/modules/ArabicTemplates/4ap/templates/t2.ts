@@ -10,6 +10,10 @@ import {
 	buildProsePassageBlock,
 	buildWrittenProductionBlock
 } from '../../arabic-helpers';
+import {
+	buildIllustratedFigureBlock,
+	type IllustrationId
+} from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. البناء الفكري (3 ن) — الهوية الوطنية والجزائر وحماية البيئة
@@ -110,11 +114,22 @@ const readingComp4apT2: ArabicParameterizedTemplate = {
 			explanation: `العنوان الأنسب هو «${p.bestTitle}».`
 		};
 
+		const illustrationId: IllustrationId =
+			p.title === 'حِمَايَةُ البِيئَةِ وَاجِبُ الجَمِيعِ'
+				? 'pri_ara_06_four_seasons_trees'
+				: 'pri_ara_04_algeria_flag_martyrs_memorial';
+
 		const sujetExercise: ExerciseBlock = {
 			customTitle: 'السند والبناء الفكري',
 			points: 3,
 			instruction: 'اقرأ السند جيداً ثم أجب عن الأسئلة الآتية:',
 			content: [
+				buildIllustratedFigureBlock(illustrationId, {
+					mode: 'image_only',
+					title: p.title,
+					maxHeight: 112,
+					width: '58%'
+				}),
 				buildProsePassageBlock({
 					title: p.title,
 					paragraphs: p.paragraphs,

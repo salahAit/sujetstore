@@ -10,6 +10,10 @@ import {
 	buildProsePassageBlock,
 	buildWrittenProductionBlock
 } from '../../arabic-helpers';
+import {
+	buildIllustratedFigureBlock,
+	type IllustrationId
+} from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // قوالب التمارين والاختبارات — السنة الخامسة ابتدائي — اللغة العربية — الفصل الأول
@@ -163,7 +167,20 @@ const tplIntellectualT1: ArabicParameterizedTemplate = {
 			explanation: `الإجابة الصحيحة مستخرجة مباشرة من معاني النص: ${pack.quizCorrect}.`
 		};
 
+		const illustrationId: IllustrationId =
+			pack.title === 'الإخلاص في العمل والتعاون'
+				? 'pri_ara_03_algerian_village_orchard'
+				: pack.title === 'حب الوطن ووفاء الأجيال'
+					? 'pri_ara_04_algeria_flag_martyrs_memorial'
+					: 'pri_ara_01_school_bag_supplies';
+
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock(illustrationId, {
+				mode: 'image_only',
+				title: pack.title,
+				maxHeight: 112,
+				width: '58%'
+			}),
 			buildProsePassageBlock({
 				title: pack.title,
 				paragraphs: pack.paragraphs,

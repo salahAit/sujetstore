@@ -1,4 +1,5 @@
 import { buildUniqueMcqOptions, SeededRng } from '../../rng';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import {
 	saveSvgAsset,
 	svgNumberLine,
@@ -1199,7 +1200,19 @@ const tplMassCapacity: ParameterizedTemplate = {
 					content: `2) قارن باستعمال أحد الرموز ($<$ أو $>$ أو $=$): $${cmpKg}$ kg $${cmpG}$ g  .....  $${cmpRightG}$ g.`,
 					answer: `2) نحول إلى الغرام: $${cmpLeftTotalG} ${cmpSymbol} ${cmpRightG}$، إذن $${cmpKg}$ kg $${cmpG}$ g $${cmpSymbol}$ $${cmpRightG}$ g.`,
 					mark: '0.25'
-				}
+				},
+				buildIllustratedFigureBlock(
+					variant === 0 ? 'pri_math_07_measuring_vessels_liter' : 'pri_math_04_two_pan_balance',
+					{
+						maxHeight: 112,
+						width: '58%',
+						mode: 'image_only',
+						title:
+							variant === 0
+								? 'الأَوَانِي المُدَرَّجَةُ لِقِيَاسِ السِّعَاتِ (1 L = 100 cL)'
+								: 'المِيزَانُ ذُو الكِفَّتَيْنِ لِقِيَاسِ الكُتَلِ (1 kg = 1000 g)'
+					}
+				)
 			]
 		};
 

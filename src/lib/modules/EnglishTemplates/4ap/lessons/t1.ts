@@ -4,23 +4,23 @@ import {
 	svgEnglishPhoneticsChart,
 	svgEnglishPrimaryCards
 } from '../../svg-english';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — 4AP Trimester 1 (Nationalities, Numbers 11-30 & Subjects, To Be / To Have, Possessives)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgNationalitiesDiscover = svgEnglishPrimaryCards({
-	title: 'Countries & Nationalities — البلدان والجنسيات',
-	subtitle: 'Where are you from? I am from Algeria. I am Algerian.',
-	cards: [
-		{ word: 'Algeria', arabic: 'Algerian (جزائري)', color: '#059669' },
-		{ word: 'Tunisia', arabic: 'Tunisian (تونسي)', color: '#dc2626' },
-		{ word: 'Egypt', arabic: 'Egyptian (مصري)', color: '#d97706' },
-		{ word: 'Palestine', arabic: 'Palestinian (فلسطيني)', color: '#1d4ed8' }
-	],
-	width: 520,
-	height: 185
-});
+const svgNationalitiesDiscover = renderLessonIllustration(
+	'pri_ara_04_algeria_flag_martyrs_memorial',
+	{
+		lang: 'en',
+		title: 'My Country Algeria & Nationalities (4AP)',
+		customLegend: [
+			{ num: '1', label: 'Martyrs Memorial and the Casbah of Algiers' },
+			{ num: '2', label: 'The Algerian flag: I am from Algeria. I am Algerian.' }
+		]
+	}
+);
 
 const svgNationalitiesSummary = svgEnglishGrammarMap({
 	title: 'Asking About Origin & Nationality — السؤال عن البلد والجنسية',
@@ -90,17 +90,15 @@ const svgNumbersSubjectsSummary = svgEnglishPhoneticsChart({
 	height: 210
 });
 
-const svgBeHaveDiscover = svgEnglishPrimaryCards({
-	title: 'Verb To Be & Verb To Have — فعلا الكينونة والملكية',
-	subtitle: 'I am / You are / He is  |  I have / He has',
-	cards: [
-		{ word: 'I am / have', arabic: 'أنا أكون / عندي', color: '#2563eb' },
-		{ word: 'He is / has', arabic: 'هو يكون / عنده', color: '#059669' },
-		{ word: 'She is / has', arabic: 'هي تكون / عندها', color: '#d97706' },
-		{ word: 'We are / have', arabic: 'نحن نكون / عندنا', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgBeHaveDiscover = renderLessonIllustration('pri_lang_05_professions_tools', {
+	lang: 'en',
+	title: 'Verb To Be & Verb To Have: Family Jobs and Tools',
+	customLegend: [
+		{ num: '1', label: 'He is a doctor. He has a stethoscope.' },
+		{ num: '2', label: 'He is a firefighter. He has a red helmet.' },
+		{ num: '3', label: 'He is a baker. He has warm bread.' },
+		{ num: '4', label: 'She is a teacher. She has books and a ruler.' }
+	]
 });
 
 const svgBeHaveSummary = svgEnglishGrammarMap({
@@ -131,17 +129,14 @@ const svgBeHaveSummary = svgEnglishGrammarMap({
 	height: 250
 });
 
-const svgPossessivesDiscover = svgEnglishPrimaryCards({
-	title: 'Possessive Adjectives — صفات الملكية',
-	subtitle: 'my / your / his / her',
-	cards: [
-		{ word: 'my', arabic: 'ملكي (my book)', color: '#2563eb' },
-		{ word: 'your', arabic: 'ملكك (your pen)', color: '#059669' },
-		{ word: 'his', arabic: 'ملكه (his bag)', color: '#d97706' },
-		{ word: 'her', arabic: 'ملكها (her ruler)', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgPossessivesDiscover = renderLessonIllustration('pri_lang_08_birthday_cake_party', {
+	lang: 'en',
+	title: 'Possessive Adjectives (my, your, his, her): School Success Celebration',
+	customLegend: [
+		{ num: '1', label: 'Our strawberry cake for school success' },
+		{ num: '2', label: 'My colorful balloons and your nice banner' },
+		{ num: '3', label: 'His gift box and her new storybook' }
+	]
 });
 
 const svgPossessivesSummary = svgEnglishGrammarMap({

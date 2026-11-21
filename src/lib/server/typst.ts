@@ -104,21 +104,22 @@ export function sanitizeForTypst(text: string): string {
 
 function sanitizeImagePath(src: unknown): unknown {
 	if (typeof src !== 'string') return src;
-	if (src.startsWith('/static/') || src.startsWith('/data/')) {
-		return src;
+	const cleanSrc = src.includes('#') ? src.slice(0, src.indexOf('#')) : src;
+	if (cleanSrc.startsWith('/static/') || cleanSrc.startsWith('/data/')) {
+		return cleanSrc;
 	}
-	if (src.startsWith('/uploads/')) {
-		const dataCandidate = join(PROJECT_ROOT, 'data', src.slice(1));
-		if (existsSync(dataCandidate)) return `/data/${src.slice(1)}`;
-		return `/static/${src.slice(1)}`;
+	if (cleanSrc.startsWith('/uploads/')) {
+		const dataCandidate = join(PROJECT_ROOT, 'data', cleanSrc.slice(1));
+		if (existsSync(dataCandidate)) return `/data/${cleanSrc.slice(1)}`;
+		return `/static/${cleanSrc.slice(1)}`;
 	}
-	if (src.startsWith('/')) {
-		const staticCandidate = join(PROJECT_ROOT, 'static', src.slice(1));
-		if (existsSync(staticCandidate)) return `/static/${src.slice(1)}`;
-		const mediaCandidate = join(PROJECT_ROOT, 'data/media', src.slice(1));
-		if (existsSync(mediaCandidate)) return `/data/media/${src.slice(1)}`;
+	if (cleanSrc.startsWith('/')) {
+		const staticCandidate = join(PROJECT_ROOT, 'static', cleanSrc.slice(1));
+		if (existsSync(staticCandidate)) return `/static/${cleanSrc.slice(1)}`;
+		const mediaCandidate = join(PROJECT_ROOT, 'data/media', cleanSrc.slice(1));
+		if (existsSync(mediaCandidate)) return `/data/media/${cleanSrc.slice(1)}`;
 	}
-	return src;
+	return cleanSrc;
 }
 
 function sanitizeBlock(block: any) {
@@ -130,12 +131,57 @@ function sanitizeBlock(block: any) {
 		if (typeof block.answer === 'string') block.answer = sanitizeForTypst(block.answer);
 	}
 	if (block.type === 'image') {
-		if (block.src) block.src = sanitizeImagePath(block.src);
+		if (typeof block.src === 'string' && block.src.includes('#fig=')) {
+			const hashIdx = block.src.indexOf('#fig=');
+			const baseSrc = block.src.slice(0, hashIdx);
+			const rawMeta = block.src.slice(hashIdx + 5);
+			try {
+				const parsed = JSON.parse(decodeURIComponent(rawMeta)) as {
+					title?: string;
+					pins?: Array<{ num: string | number; xPct: number; yPct: number; color?: string }>;
+					legend?: Array<{ num: string | number; label: string }>;
+				};
+				block.type = 'illustrated_figure';
+				block.src = sanitizeImagePath(baseSrc);
+				block.title = parsed.title ? sanitizeForTypst(parsed.title) : undefined;
+				block.width = block.width || '66%';
+				block.maxHeight = block.maxHeight || 132;
+				block.pins = Array.isArray(parsed.pins) ? parsed.pins : [];
+				block.legend = Array.isArray(parsed.legend)
+					? parsed.legend.map((it) => ({
+							num: it.num,
+							label: sanitizeForTypst(String(it.label ?? ''))
+						}))
+					: [];
+				if (typeof block.caption === 'string') {
+					block.caption = sanitizeForTypst(block.caption);
+				}
+				return;
+			} catch {
+				block.src = sanitizeImagePath(baseSrc);
+			}
+		} else if (block.src) {
+			block.src = sanitizeImagePath(block.src);
+		}
 		if (typeof block.caption === 'string') block.caption = sanitizeForTypst(block.caption);
+	}
+	if (block.type === 'illustrated_figure') {
+		if (block.src) block.src = sanitizeImagePath(block.src);
+		if (typeof block.title === 'string') block.title = sanitizeForTypst(block.title);
+		if (typeof block.caption === 'string') block.caption = sanitizeForTypst(block.caption);
+		if (Array.isArray(block.legend)) {
+			for (const it of block.legend) {
+				if (it && typeof it.label === 'string') {
+					it.label = sanitizeForTypst(it.label);
+				}
+			}
+		}
 	}
 	if (block.type === 'image_grid' && Array.isArray(block.items)) {
 		for (const it of block.items) {
 			if (it?.src) it.src = sanitizeImagePath(it.src);
+			if (typeof it?.label === 'string') it.label = sanitizeForTypst(it.label);
+			if (typeof it?.answer === 'string') it.answer = sanitizeForTypst(it.answer);
 		}
 	}
 	if (block.type === 'columns' && Array.isArray(block.children)) {

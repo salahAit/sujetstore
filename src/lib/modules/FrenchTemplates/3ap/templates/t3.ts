@@ -10,6 +10,7 @@ import {
 	buildFrenchPassageBlock,
 	buildFrenchWrittenProductionBlock
 } from '../../french-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. Compréhension 1 (4 pts) — À la campagne : fruits, légumes et saisons
@@ -119,6 +120,16 @@ const compCampagne3apT3: FrenchParameterizedTemplate = {
 					title: sc.title,
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
+				}),
+				buildIllustratedFigureBlock('pri_ara_06_four_seasons_trees', {
+					lang: 'fr',
+					title: 'Les quatre saisons et les arbres à la campagne',
+					customLegend: [
+						{ num: '1', label: "Le printemps fleuri et l'été aux fruits mûrs" },
+						{ num: '2', label: "L'automne doré et l'hiver enneigé" }
+					],
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'text',
@@ -301,6 +312,11 @@ const compNature3apT3: FrenchParameterizedTemplate = {
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
 				}),
+				buildIllustratedFigureBlock('pri_lang_07_clean_park_planting', {
+					lang: 'fr',
+					maxHeight: 108,
+					width: '58%'
+				}),
 				{
 					type: 'text',
 					content: '#strong[1)] Coche la bonne réponse :'
@@ -433,6 +449,11 @@ const langSonsPluriel3apT3: FrenchParameterizedTemplate = {
 			points: 3,
 			instruction: 'Fais les deux activités suivantes :',
 			content: [
+				buildIllustratedFigureBlock('pri_lang_03_weather_icons_quad', {
+					lang: 'fr',
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `#strong[Activité 1 :] Classe les mots dans le tableau selon le son : ( ${s.words.join(' - ')} )`

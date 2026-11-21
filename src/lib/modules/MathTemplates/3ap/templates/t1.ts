@@ -1,4 +1,5 @@
 import { buildUniqueMcqOptions, SeededRng } from '../../rng';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { saveSvgAsset, svgBarChart, svgGridPoints, svgNumberLine } from '../../svg-helpers';
 import type { ContentBlock, ExerciseBlock } from '../../../SujetBuilder/types';
 import type {
@@ -1498,6 +1499,12 @@ const templateGeometryT1: ParameterizedTemplate = {
 					answer: `2) زاوية أصغر من القائمة: الزاوية ${acuteIdx + 1} ، وزاوية أكبر من القائمة: الزاوية ${obtuseIdx + 1}.`,
 					mark: '0.5'
 				},
+				buildIllustratedFigureBlock('pri_math_08_geometry_tools_set', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'أَدَوَاتُ الإِنْشَاءِ الهَنْدَسِيِّ (المِسْطَرَةُ وَالكُوسُ)'
+				}),
 				{
 					type: 'text',
 					content: `3) ارسم قطعة مستقيم $[A B]$ طولها $${totalCm}$ ${ltrUnit('cm')}، ثم عيّن النقطة $M$ منتصفها. ما هو طول القطعة $[A M]$؟`,
@@ -2410,7 +2417,15 @@ const templateIntegrationT1: ParameterizedTemplate = {
 					customTitle: 'الوضعية الإدماجية',
 					points: 4,
 					instruction: `${introTypst} اقرأ الجدول والأسئلة ثم أجب بتنظيم:`,
-					content
+					content: [
+						buildIllustratedFigureBlock('pri_math_03_base_ten_blocks', {
+							maxHeight: 112,
+							width: '58%',
+							mode: 'image_only',
+							title: 'تَذْكِيرٌ بَصَرِيٌّ بِالمَرَاتِبِ العَشْرِيَّةِ عِنْدَ وَضْعِ العَمَلِيَّاتِ العَمُودِيَّةِ'
+						}),
+						...content
+					]
 				},
 				hints,
 				solutionStepsAr,

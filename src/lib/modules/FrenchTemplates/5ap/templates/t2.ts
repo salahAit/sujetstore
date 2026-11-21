@@ -9,6 +9,7 @@ import {
 	buildFrenchPassageBlock,
 	buildFrenchWrittenProductionBlock
 } from '../../french-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ===============================================================================
 // Parameterized Templates - 5AP French - Trimester 2
@@ -152,6 +153,16 @@ const tplCompPatrimoineT2: FrenchParameterizedTemplate = {
 				paragraphs: p.paragraphs,
 				source: 'Texte pédagogique adapté — 5AP (Projet 2)',
 				glossary: p.glossary
+			}),
+			buildIllustratedFigureBlock('pri_ara_04_algeria_flag_martyrs_memorial', {
+				lang: 'fr',
+				title: "Mon pays l'Algérie : Maqam Echahid, la Casbah et le drapeau national",
+				customLegend: [
+					{ num: '1', label: "Maqam Echahid et les monuments historiques d'Alger" },
+					{ num: '2', label: 'Le drapeau national algérien, symbole de souveraineté' }
+				],
+				maxHeight: 108,
+				width: '58%'
 			}),
 			{
 				type: 'text',
@@ -355,6 +366,12 @@ const tplCompJardinMuseeT2: FrenchParameterizedTemplate = {
 				paragraphs: p.paragraphs,
 				source: 'Texte pédagogique adapté — 5AP (Au musée / Patrimoine)',
 				glossary: p.glossary
+			}),
+			buildIllustratedFigureBlock('pri_lang_01_red_bus_train', {
+				lang: 'fr',
+				title: 'En sortie scolaire : le bus et le train',
+				maxHeight: 106,
+				width: '56%'
 			}),
 			{
 				type: 'text',
@@ -854,6 +871,12 @@ const tplWrittenVisitePatrimoineT2: FrenchParameterizedTemplate = {
 		);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_lang_02_airplane_ship', {
+				lang: 'fr',
+				title: "Découvrir l'Algérie en voyage : par avion et par bateau",
+				maxHeight: 102,
+				width: '54%'
+			}),
 			buildFrenchWrittenProductionBlock({
 				sujetUnTitle: `Production écrite : Raconter une visite à ${p.site}`,
 				sujetUnPrompt: `Ton école a organisé une sortie pédagogique à ${p.site}. Rédige un court récit de 4 à 5 phrases pour raconter cette visite à tes parents.`,

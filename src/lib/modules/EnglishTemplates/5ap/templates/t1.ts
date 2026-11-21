@@ -9,6 +9,7 @@ import {
 	buildEnglishPassageBlock,
 	buildEnglishWrittenExpressionBlock
 } from '../../english-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ===============================================================================
 // Parameterized Templates - 5AP English - Trimester 1 (Jobs, Occupations & Hobbies)
@@ -177,6 +178,11 @@ const tplCompJobsHobbiesT1: EnglishParameterizedTemplate = {
 				paragraphs: p.paragraphs,
 				source: 'Adapted 5AP Educational Reading Text',
 				glossary: p.glossary
+			}),
+			buildIllustratedFigureBlock('pri_lang_05_professions_tools', {
+				lang: 'en',
+				maxHeight: 108,
+				width: '58%'
 			}),
 			{
 				type: 'text',
@@ -349,6 +355,12 @@ const tplGrammarPresentSimpleT1: EnglishParameterizedTemplate = {
 		);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_lang_06_hygiene_washbasin', {
+				lang: 'en',
+				title: 'Healthy Daily Habits and Present Simple',
+				maxHeight: 104,
+				width: '56%'
+			}),
 			{
 				type: 'text',
 				content: 'Activity 1: Tick the correct verb form in Present Simple (1.5 pts):'
@@ -469,6 +481,16 @@ const tplVocabJobsArticlesT1: EnglishParameterizedTemplate = {
 		);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_ara_05_fresh_fruits_honey_basket', {
+				lang: 'en',
+				title: 'Indefinite Articles (a / an) with Healthy Food and Professions',
+				customLegend: [
+					{ num: '1', label: 'Use "an" before vowel sounds: an apple, an orange, an engineer' },
+					{ num: '2', label: 'Use "a" before consonant sounds: a basket, a doctor, a baker' }
+				],
+				maxHeight: 104,
+				width: '56%'
+			}),
 			{
 				type: 'text',
 				content: 'Activity 1: Complete the table with the right article (a or an) and the matching workplace (3 pts):'

@@ -1,4 +1,5 @@
 import type { ContentBlock, TableCell } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { SeededRng, buildUniqueMcqOptions, gcd, roundTo } from '../../rng';
 import { saveSvgAsset, svgAnalogClock, svgRectangle, svgTriangle } from '../../svg-helpers';
 import type { Difficulty, GeneratedExerciseInstance, ParameterizedTemplate } from '../../types';
@@ -942,6 +943,10 @@ const tplConversionsMatrix: ParameterizedTemplate = {
 				points: 1.5,
 				instruction: 'أكمل جدول التحويلات الآتي بالعدد المناسب في كل خانة:',
 				content: [
+					buildIllustratedFigureBlock('pri_math_07_measuring_vessels_liter', {
+						maxHeight: 112,
+						width: '58%'
+					}),
 					{
 						type: 'table',
 						headerBackground: true,
@@ -1468,6 +1473,12 @@ const tplGeometryQuadCircleSolids: ParameterizedTemplate = {
 							{ type: 'image', src: svgPath }
 						]
 					},
+					buildIllustratedFigureBlock('pri_math_06_3d_geometric_solids', {
+						maxHeight: 112,
+						width: '58%',
+						mode: 'image_only',
+						title: 'تَذْكِيرٌ بَصَرِيٌّ بِالمُجَسَّمَاتِ الهَنْدَسِيَّةِ المَأْلُوفَةِ'
+					}),
 					{
 						type: 'true_false',
 						items: [

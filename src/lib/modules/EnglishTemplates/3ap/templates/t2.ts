@@ -9,6 +9,10 @@ import {
 	buildEnglishPassageBlock,
 	buildEnglishWrittenExpressionBlock
 } from '../../english-helpers';
+import {
+	buildIllustratedFigureBlock,
+	getIllustrationJpgUrl
+} from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. Comprehension (4 pts) — My School Bag, Classroom & My Home
@@ -130,6 +134,12 @@ const comprehension3apT2: EnglishParameterizedTemplate = {
 					title: 'My School and My Home',
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
+				}),
+				buildIllustratedFigureBlock('pri_lang_04_house_rooms_cutaway', {
+					lang: 'en',
+					title: 'My House and Its Rooms',
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'text',
@@ -273,6 +283,16 @@ const pronounsBe3apT2: EnglishParameterizedTemplate = {
 			points: 3,
 			instruction: 'Complete the three grammar activities:',
 			content: [
+				buildIllustratedFigureBlock('pri_ara_05_fresh_fruits_honey_basket', {
+					lang: 'en',
+					title: 'Healthy Food: An Apple, An Orange and Pure Honey',
+					customLegend: [
+						{ num: '1', label: 'It is a basket of fresh fruits (an apple, an orange)' },
+						{ num: '2', label: 'It is pure honey and olive oil' }
+					],
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `Task 1: Fill in the blanks with (am / is):\n1) ${s.s1}\n2) ${s.s2}`,
@@ -409,7 +429,7 @@ const daysHome3apT2: EnglishParameterizedTemplate = {
 					type: 'text',
 					content: `Task 1: Complete the missing days of the week:\n${s.daySeq}`,
 					answer: s.dayAns,
-					mark: '1'
+					mark: '0.5'
 				},
 				{
 					type: 'text',
@@ -432,9 +452,32 @@ const daysHome3apT2: EnglishParameterizedTemplate = {
 				},
 				{
 					type: 'text',
-					content: `Task 3: Complete the question with (Who / Where): "${s.whereQ}"`,
-					answer: s.whereA,
-					mark: '1'
+					content:
+						'Task 3: Look at the pictures and write the word: ( house - bus - bag )'
+				},
+				{
+					type: 'image_grid',
+					columns: 3,
+					items: [
+						{
+							src: getIllustrationJpgUrl('pri_lang_04_house_rooms_cutaway'),
+							label: '........................',
+							answer: 'house',
+							mark: '0.5'
+						},
+						{
+							src: getIllustrationJpgUrl('pri_lang_01_red_bus_train'),
+							label: '........................',
+							answer: 'bus',
+							mark: '0.5'
+						},
+						{
+							src: getIllustrationJpgUrl('pri_ara_01_school_bag_supplies'),
+							label: '........................',
+							answer: 'bag',
+							mark: '0.5'
+						}
+					]
 				}
 			] as ContentBlock[]
 		};

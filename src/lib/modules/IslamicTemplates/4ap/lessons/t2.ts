@@ -1,4 +1,5 @@
 import type { IslamicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgIslamicCards,
 	svgIslamicCompare,
@@ -69,31 +70,7 @@ const svgDuhaSummary = svgIslamicCards({
 	columns: 3
 });
 
-const svgSiyamDiscover = svgIslamicConceptTree({
-	title: 'أحكام الصيام في الإسلام (الركن الرابع)',
-	rootLabel: 'صَوْمُ رَمَضَانَ (فرض عين)',
-	rootSub: 'الإمساك عن المفطرات من الفجر إلى المغرب بنية',
-	branches: [
-		{
-			label: 'ركنا الصيام',
-			detail: '1) النية ليلاً   2) الإمساك من الفجر للمغرب',
-			example: 'لا يصح الصوم بلا نية',
-			color: '#047857'
-		},
-		{
-			label: 'مبطلات الصيام',
-			detail: 'الأكل والشرب عمداً والقيء عمداً',
-			example: 'من أكل ناسياً أتمّ صومه',
-			color: '#be123c'
-		},
-		{
-			label: 'الأعذار المبيحة للفطر',
-			detail: 'المريض والمسافر والشيخ العاجز',
-			example: 'يقضي المريض والمسافر بعد رمضان',
-			color: '#1d4ed8'
-		}
-	]
-});
+const svgSiyamDiscover = renderLessonIllustration('pri_isl_06_ramadan_dates_milk');
 
 const svgSiyamSummary = svgIslamicCards({
 	title: 'فوائد الصيام وحكمته العظيمة',
@@ -107,17 +84,7 @@ const svgSiyamSummary = svgIslamicCards({
 	columns: 2
 });
 
-const svgTarawihDiscover = svgIslamicCards({
-	title: 'فضائل شهر رمضان المبارك وصلاة التراويح',
-	subtitle: 'موسم عظيم للطاعات وتلاوة القرآن والقيام',
-	cards: [
-		{ badge: '1', title: 'شَهْرُ الْقُرْآنِ', detail: 'فيه أُنزل القرآن هدى للناس', color: '#047857' },
-		{ badge: '2', title: 'لَيْلَةُ الْقَدْرِ', detail: 'عبادتها خير من ألف شهر', color: '#b45309' },
-		{ badge: '3', title: 'صَلَاةُ التَّرَاوِيحِ', detail: 'سنة مؤكدة بعد العشاء ركعتين ركعتين', color: '#1d4ed8' },
-		{ badge: '4', title: 'مَغْفِرَةُ الذُّنُوبِ', detail: 'لمن قامه إيماناً واحتساباً [متفق عليه]', color: '#6d28d9' }
-	],
-	columns: 2
-});
+const svgTarawihDiscover = renderLessonIllustration('pri_isl_06_ramadan_dates_milk');
 
 const svgTarawihSummary = svgIslamicSequence({
 	title: 'كيف نحيي ليالي رمضان بصلاة التراويح؟',

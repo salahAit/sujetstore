@@ -1,4 +1,5 @@
 import type { IslamicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgIslamicCards,
 	svgIslamicCompare,
@@ -82,18 +83,7 @@ const svgAdiyatSummary = svgIslamicConceptTree({
 	]
 });
 
-const svgKutubDiscover = svgIslamicCards({
-	title: 'الكتب السماوية المنزلة من عند الله تعالى',
-	subtitle: 'الإيمان بالكتب هو الركن الثالث من أركان الإيمان الستة',
-	cards: [
-		{ badge: '1', title: 'الْقُرْآنُ الْكَرِيمُ', detail: 'أُنزل على محمد صلى الله عليه وسلم', color: '#047857' },
-		{ badge: '2', title: 'التَّوْرَاةُ', detail: 'أُنزلت على موسى عليه السلام', color: '#1d4ed8' },
-		{ badge: '3', title: 'الْإِنْجِيلُ', detail: 'أُنزل على عيسى عليه السلام', color: '#b45309' },
-		{ badge: '4', title: 'الزَّبُورُ', detail: 'أُنزل على داود عليه السلام', color: '#6d28d9' },
-		{ badge: '5', title: 'صُحُفُ إِبْرَاهِيمَ وَمُوسَى', detail: 'أُنزلت على إبراهيم وموسى عليهما السلام', color: '#0f766e' }
-	],
-	columns: 3
-});
+const svgKutubDiscover = renderLessonIllustration('pri_isl_04_mushaf_wooden_stand');
 
 const svgKutubSummary = svgIslamicConceptTree({
 	title: 'ميزة القرآن الكريم بين الكتب السماوية',
@@ -121,29 +111,7 @@ const svgKutubSummary = svgIslamicConceptTree({
 	]
 });
 
-const svgJamaahDiscover = svgIslamicCompare({
-	title: 'مقارنة بين صلاة الجماعة وصلاة الفذ (المنفرد)',
-	rightCol: {
-		heading: 'صَلَاةُ الْجَمَاعَةِ',
-		points: [
-			'تفضل صلاة الفذ بـ 27 درجة',
-			'تجمع المسلمين وتنشر المحبة والألفة',
-			'تعلّم النظام والانضباط خلف الإمام',
-			'كل خطوة للمسجد ترفع درجة وتحط خطيئة'
-		],
-		color: '#047857'
-	},
-	leftCol: {
-		heading: 'صَلَاةُ الْمُنْفَرِدِ (الْفَذِّ)',
-		points: [
-			'أجرها درجة واحدة فقط',
-			'يفوت صاحبها ثواب الجماعة العظيم',
-			'لا يشهد فيها اجتماع المسلمين بالمسجد',
-			'لا يُعذر بترك الجماعة إلا لعذر شرعي'
-		],
-		color: '#b45309'
-	}
-});
+const svgJamaahDiscover = renderLessonIllustration('pri_isl_03_masjid_al_aqsa');
 
 const svgJamaahSummary = svgIslamicSequence({
 	title: 'آداب صلاة الجماعة في المسجد',
@@ -155,17 +123,7 @@ const svgJamaahSummary = svgIslamicSequence({
 	]
 });
 
-const svgMashDiscover = svgIslamicCards({
-	title: 'رخصة المسح على الخفين في الوضوء',
-	subtitle: 'من تيسير الإسلام ورفع الحرج عن المسلمين خاصة في البرد والسفر',
-	cards: [
-		{ badge: '1', title: 'شَرْطُ الطَّهَارَةِ', detail: 'أن يُلبس الخفان على وضوء كامل', color: '#047857' },
-		{ badge: '2', title: 'سَتْرُ الْكَعْبَيْنِ', detail: 'أن يكون الخفان ساترين لمحل الغسل', color: '#1d4ed8' },
-		{ badge: '3', title: 'مُدَّةُ الْمُقِيمِ', detail: 'يوم وليلة (24 ساعة) من أول مسح', color: '#b45309' },
-		{ badge: '4', title: 'مُدَّةُ الْمُسَافِرِ', detail: 'ثلاثة أيام بلياليها (72 ساعة)', color: '#6d28d9' }
-	],
-	columns: 2
-});
+const svgMashDiscover = renderLessonIllustration('pri_isl_05_wudu_water_pitcher');
 
 const svgMashSummary = svgIslamicSequence({
 	title: 'كيفية المسح على الخفين ومبطلاته',

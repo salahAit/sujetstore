@@ -24,10 +24,30 @@
 	let { lesson }: { lesson: InteractiveLessonData } = $props();
 
 	type SectionTab = 'discover' | 'summary' | 'practice' | 'all';
+	type IllustratedPin = {
+		num: string;
+		xPct: number;
+		yPct: number;
+		color?: string;
+	};
+	type IllustratedLegendItem = {
+		num: string;
+		label: string;
+	};
 	type VisualAsset =
 		| { kind: 'inline'; html: string }
 		| { kind: 'img'; src: string }
+		| {
+				kind: 'illustrated';
+				src: string;
+				title?: string;
+				pins: IllustratedPin[];
+				legend: IllustratedLegendItem[];
+				isLtr?: boolean;
+		  }
 		| null;
+
+	let activePinNum = $state<string | null>(null);
 
 	const gradeLabels: Record<string, string> = {
 		'1ap': 'السنة الأولى ابتدائي',
@@ -123,6 +143,51 @@
 		if (!raw || typeof raw !== 'string') return null;
 		const trimmed = raw.trim();
 		if (!trimmed) return null;
+
+		if (trimmed.startsWith('{"kind":"illustrated"')) {
+			try {
+				const parsed = JSON.parse(trimmed) as {
+					kind?: string;
+					src?: string;
+					title?: string;
+					pins?: Array<{ num?: string | number; xPct?: number; yPct?: number; color?: string }>;
+					legend?: Array<{ num?: string | number; label?: string }>;
+					isLtr?: boolean;
+				};
+				if (
+					parsed.kind === 'illustrated' &&
+					typeof parsed.src === 'string' &&
+					/^(\/[^/]|https?:\/\/|data:image\/(png|jpeg|webp|svg\+xml))/i.test(parsed.src.trim())
+				) {
+					return {
+						kind: 'illustrated',
+						src: parsed.src.trim(),
+						title: typeof parsed.title === 'string' ? parsed.title : undefined,
+						pins: Array.isArray(parsed.pins)
+							? parsed.pins
+									.filter((p) => p && Number.isFinite(p.xPct) && Number.isFinite(p.yPct))
+									.map((p) => ({
+										num: String(p.num ?? ''),
+										xPct: Math.min(96, Math.max(4, Number(p.xPct))),
+										yPct: Math.min(96, Math.max(4, Number(p.yPct))),
+										color: typeof p.color === 'string' ? p.color : '#1d4ed8'
+									}))
+							: [],
+						legend: Array.isArray(parsed.legend)
+							? parsed.legend
+									.filter((it) => it && typeof it.label === 'string' && it.label.trim() !== '')
+									.map((it) => ({
+										num: String(it.num ?? ''),
+										label: it.label!.trim()
+									}))
+							: [],
+						isLtr: Boolean(parsed.isLtr)
+					};
+				}
+			} catch {
+				// Fall through if malformed
+			}
+		}
 
 		if (/^(\/[^/]|https?:\/\/|data:image\/(png|jpeg|webp|svg\+xml))/i.test(trimmed)) {
 			return { kind: 'img', src: trimmed };
@@ -234,17 +299,88 @@
 	{#if asset}
 		<div class="my-4 flex flex-col items-center">
 			<div
-				class="border-border max-w-full overflow-x-auto rounded-xl border bg-white p-3 text-slate-900 shadow-xs sm:p-4 dark:border-white/15"
+				class="border-border w-full max-w-2xl overflow-x-auto rounded-2xl border bg-white p-3 text-slate-900 shadow-xs sm:p-4 dark:border-white/15"
 			>
 				{#if asset.kind === 'inline'}
 					<div class="lesson-svg mx-auto flex justify-center">
 						<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 						{@html asset.html}
 					</div>
+				{:else if asset.kind === 'illustrated'}
+					<div class="flex flex-col items-center">
+						{#if asset.title}
+							<div class="mb-2.5 text-center text-xs font-extrabold text-slate-900 sm:text-sm">
+								{asset.title}
+							</div>
+						{/if}
+						<div class="relative mx-auto inline-block max-w-full">
+							<img
+								src={asset.src}
+								alt={asset.title || altText}
+								loading="eager"
+								decoding="async"
+								class="mx-auto block max-h-72 max-w-full rounded-lg object-contain sm:max-h-80"
+							/>
+							{#each asset.pins as pin}
+								{@const isPinActive = activePinNum === pin.num}
+								<button
+									type="button"
+									dir="ltr"
+									aria-label="العنصر رقم {pin.num}"
+									onmouseenter={() => (activePinNum = pin.num)}
+									onmouseleave={() => (activePinNum = null)}
+									onclick={() => (activePinNum = activePinNum === pin.num ? null : pin.num)}
+									style="left: {pin.xPct}%; top: {pin.yPct}%; background-color: {pin.color || '#1d4ed8'};"
+									class="absolute flex h-6 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-[11px] font-extrabold text-white shadow-md transition-transform {isPinActive
+										? 'z-20 scale-125 ring-2 ring-amber-400'
+										: 'z-10 hover:scale-115'}"
+								>
+									{pin.num}
+								</button>
+							{/each}
+						</div>
+						{#if asset.legend.length > 0}
+							<div
+								dir={asset.isLtr ? 'ltr' : 'rtl'}
+								class="mt-3 grid w-full gap-1.5 border-t border-slate-200 pt-2.5 {asset.legend
+									.length === 1
+									? 'grid-cols-1'
+									: asset.legend.length <= 4
+										? 'grid-cols-1 sm:grid-cols-2'
+										: 'grid-cols-2 sm:grid-cols-3'}"
+							>
+								{#each asset.legend as item}
+									{@const isItemActive = activePinNum !== null && activePinNum === item.num}
+									<button
+										type="button"
+										onmouseenter={() => (activePinNum = item.num || null)}
+										onmouseleave={() => (activePinNum = null)}
+										onclick={() =>
+											(activePinNum = activePinNum === item.num ? null : item.num || null)}
+										class="flex items-center gap-2 rounded-lg border px-2.5 py-1.5 text-start text-xs transition {isItemActive
+											? 'border-blue-500 bg-blue-50 font-bold text-blue-950 shadow-2xs'
+											: 'border-slate-200/80 bg-slate-50/80 font-semibold text-slate-800 hover:bg-slate-100'}"
+									>
+										{#if item.num}
+											<span
+												dir="ltr"
+												class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-700 text-[11px] font-extrabold text-white"
+											>
+												{item.num}
+											</span>
+										{/if}
+										<span class="leading-snug">{item.label}</span>
+									</button>
+								{/each}
+							</div>
+						{/if}
+					</div>
 				{:else}
 					<img
 						src={asset.src}
 						alt={altText}
+						loading="eager"
+						decoding="async"
 						class="mx-auto max-h-80 max-w-full object-contain"
 					/>
 				{/if}

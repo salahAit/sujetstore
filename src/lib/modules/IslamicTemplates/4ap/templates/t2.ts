@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock, ExerciseBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../../MathTemplates/rng';
 import {
 	buildHadithPassageBlock,
@@ -259,6 +260,12 @@ const siyamAhkam4apT2: IslamicParameterizedTemplate = {
 			points: 3,
 			instruction: 'اقرأ الآية الكريمة ثم أجب عن السؤالين:',
 			content: [
+				buildIllustratedFigureBlock('pri_isl_06_ramadan_dates_milk', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'شَهْرُ رَمَضَانَ المُبَارَكُ — فَرِيضَةُ الصِّيَامِ وَآدَابُ الفِطْرِ'
+				}),
 				buildQuranPassageBlock({
 					verses: 'يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الصِّيَامُ كَمَا كُتِبَ عَلَى الَّذِينَ مِنْ قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ',
 					surah: 'البقرة',

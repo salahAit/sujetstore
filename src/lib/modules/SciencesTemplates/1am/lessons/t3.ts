@@ -37,40 +37,9 @@ const svgYeastFlasksDiscover = wrapSciencesSvg(
 		`<text x="118" y="206" text-anchor="middle" font-size="9.4" font-weight="bold" fill="#dc2626">رائحة كحول + تعكر رائق الكلس</text>`
 );
 
-const svgUrinarySystem = wrapSciencesSvg(
-	460,
-	245,
-	`<rect x="6" y="6" width="448" height="233" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>` +
-		`<text x="230" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">مكونات الجهاز البولي عند الإنسان ودوره في تصفية الدم</text>` +
-		// Central aorta (red) & vena cava (blue)
-		`<line x1="224" y1="48" x2="224" y2="144" stroke="#dc2626" stroke-width="6"/>` +
-		`<line x1="236" y1="48" x2="236" y2="144" stroke="#2563eb" stroke-width="6"/>` +
-		// Renal vessels
-		`<line x1="184" y1="88" x2="276" y2="88" stroke="#dc2626" stroke-width="3.5"/>` +
-		`<line x1="184" y1="96" x2="276" y2="96" stroke="#2563eb" stroke-width="3.5"/>` +
-		// Left & Right kidneys (bean shapes)
-		`<ellipse cx="168" cy="92" rx="22" ry="30" fill="#b91c1c" stroke="#7f1d1d" stroke-width="2"/>` +
-		`<ellipse cx="292" cy="92" rx="22" ry="30" fill="#b91c1c" stroke="#7f1d1d" stroke-width="2"/>` +
-		// Ureters
-		`<path d="M 180 116 Q 198 156 218 176" fill="none" stroke="#d97706" stroke-width="3.5"/>` +
-		`<path d="M 280 116 Q 262 156 242 176" fill="none" stroke="#d97706" stroke-width="3.5"/>` +
-		// Bladder
-		`<ellipse cx="230" cy="186" rx="28" ry="20" fill="#fef08a" stroke="#ca8a04" stroke-width="2.2"/>` +
-		// Urethra
-		`<line x1="230" y1="206" x2="230" y2="228" stroke="#ca8a04" stroke-width="4.5"/>` +
-		// Labels
-		`<line x1="292" y1="74" x2="348" y2="66" stroke="#475569" stroke-width="1.1"/>` +
-		`<text x="352" y="70" text-anchor="start" font-size="11" font-weight="bold" fill="#991b1b">1. كلية (تصفية الدم)</text>` +
-		`<line x1="274" y1="138" x2="348" y2="138" stroke="#475569" stroke-width="1.1"/>` +
-		`<text x="352" y="142" text-anchor="start" font-size="11" font-weight="bold" fill="#b45309">2. حالب (نقل البول)</text>` +
-		`<line x1="258" y1="186" x2="348" y2="186" stroke="#475569" stroke-width="1.1"/>` +
-		`<text x="352" y="190" text-anchor="start" font-size="11" font-weight="bold" fill="#854d0e">3. مثانة بولية (تجميع)</text>` +
-		`<line x1="230" y1="218" x2="112" y2="218" stroke="#475569" stroke-width="1.1"/>` +
-		`<text x="108" y="222" text-anchor="end" font-size="11" font-weight="bold" fill="#0f172a">4. إحليل (طرح البول)</text>` +
-		`<line x1="196" y1="88" x2="112" y2="66" stroke="#475569" stroke-width="1.1"/>` +
-		`<text x="108" y="70" text-anchor="end" font-size="10.5" font-weight="bold" fill="#dc2626">شريان ووريد كلوي</text>` +
-		`<text x="108" y="142" text-anchor="end" font-size="10" fill="#334155">يطرح البولة والأملاح الزائدة</text>`
-);
+const svgUrinarySystem = svgPhysiologyDiagram('kidney_urinary', {
+	title: 'مكونات الجهاز البولي عند الإنسان ودوره في تصفية الدم'
+});
 
 const svgSweatAndExcretion = wrapSciencesSvg(
 	460,

@@ -471,27 +471,9 @@ const wasteSortingBinsTemplate: SciencesParameterizedTemplate = {
 			rng
 		);
 
-		const svg = wrapSciencesSvg(
-			420,
-			190,
-			`<rect x="6" y="6" width="408" height="178" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>` +
-				`<text x="210" y="27" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">حاويات الفرز الانتقائي للنفايات</text>` +
-				[
-					{ x: 314, col: '#eab308', bg: '#fefce8', lbl: 'بلاستيك', sub: 'صفراء' },
-					{ x: 214, col: '#2563eb', bg: '#eff6ff', lbl: 'ورق', sub: 'زرقاء' },
-					{ x: 114, col: '#16a34a', bg: '#f0fdf4', lbl: 'زجاج', sub: 'خضراء' },
-					{ x: 14, col: '#92400e', bg: '#fffbeb', lbl: 'عضوية', sub: 'بنية' }
-				]
-					.map(
-						(b) =>
-							`<rect x="${b.x}" y="46" width="92" height="92" rx="9" fill="${b.bg}" stroke="${b.col}" stroke-width="1.8"/>` +
-							`<rect x="${b.x + 26}" y="58" width="40" height="32" rx="4" fill="${b.col}"/>` +
-							`<text x="${b.x + 46}" y="110" text-anchor="middle" font-size="11" font-weight="bold" fill="${b.col}">${b.lbl}</text>` +
-							`<text x="${b.x + 46}" y="128" text-anchor="middle" font-size="9.5" fill="#334155">(${b.sub})</text>`
-					)
-					.join('') +
-				`<text x="210" y="164" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">أين نضع: ${esc(target.waste)}؟</text>`
-		);
+		const svg = svgPlantAndPrimaryDiagram('recycling_solar', {
+			title: 'حاويات الفرز الانتقائي وحماية المحيط'
+		});
 		const imageUrl = saveSciencesSvgAsset(`sci_3ap_t3_waste_sorting_bins_${difficulty}_s${seed}`, svg);
 
 		const qText = `أثناء الفرز الانتقائي للنفايات في المدرسة، في أي حاوية نضع **${target.waste}**؟`;

@@ -1,65 +1,42 @@
 import type { FrenchInteractiveLessonData } from '../../types';
 import {
 	svgFrenchConjugationChart,
-	svgFrenchGrammarMap,
-	svgFrenchPrimaryCards,
-	svgFrenchTenseTimeline
+	svgFrenchGrammarMap
 } from '../../svg-french';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — 4AP Trimestre 3 (Projet 3 : L'eau, la mer et les vacances utiles)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgEauNatureDiscover = svgFrenchPrimaryCards({
-	title: "L'eau et la nature algérienne — الماء والطبيعة الجزائرية",
-	subtitle: "L'eau est précieuse : protégeons-la !",
-	cards: [
-		{ word: 'la source', arabic: 'المنبع', color: '#2563eb' },
-		{ word: 'la rivière', arabic: 'النهر / الوادي', color: '#0284c7' },
-		{ word: 'la pluie', arabic: 'المطر', color: '#059669' },
-		{ word: 'la mer', arabic: 'البحر', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgEauNatureDiscover = renderLessonIllustration('pri_lang_03_weather_icons_quad', {
+	lang: 'fr',
+	title: "L'eau, la météo et les saisons en Algérie",
+	customLegend: [
+		{ num: '1', label: 'En été : il fait beau et le soleil brille sur la mer' },
+		{ num: '2', label: "La pluie bienfaisante remplit les sources et les rivières" },
+		{ num: '3', label: 'En hiver : la neige blanche couvre les montagnes' },
+		{ num: '4', label: 'En automne : le vent pousse les nuages' }
+	]
 });
 
-const svgEauNatureSummary = svgFrenchGrammarMap({
-	title: "Protéger l'eau et passer des vacances utiles",
-	rootLabel: "L'eau, c'est la vie !",
-	rootSub: 'Vocabulaire du Projet 3 (4AP)',
-	branches: [
-		{
-			label: "Sources d'eau",
-			rule: 'pluie, source, rivière, mer',
-			example: 'la mer Méditerranée',
-			color: '#1d4ed8'
-		},
-		{
-			label: 'Bons gestes',
-			rule: 'économiser, fermer, protéger',
-			example: 'Je ferme le robinet.',
-			color: '#047857'
-		},
-		{
-			label: 'Vacances utiles',
-			rule: 'lire, réviser, visiter la famille',
-			example: 'Une plage propre',
-			color: '#b45309'
-		}
-	],
-	width: 520,
-	height: 250
+const svgEauNatureSummary = renderLessonIllustration('pri_lang_06_hygiene_washbasin', {
+	lang: 'fr',
+	title: "L'hygiène quotidienne et l'économie de l'eau potable",
+	customLegend: [
+		{ num: '1', label: 'Se laver les mains et fermer le robinet pour économiser l’eau' },
+		{ num: '2', label: 'Se brosser les dents avec la brosse à dents et un verre d’eau' },
+		{ num: '3', label: 'Utiliser du savon et une serviette bien propre' }
+	]
 });
 
-const svgFuturDiscover = svgFrenchTenseTimeline({
-	title: 'Le futur simple — زمن المستقبل البسيط',
-	tenseName: 'Futur simple',
-	formula: 'Infinitif (-er) + (-ai, -as, -a, -ons, -ez, -ont)',
-	activeZone: 'future',
-	example: 'Demain, nous visiterons la plage de Jijel et nous serons heureux.',
-	markers: 'demain, bientôt, la semaine prochaine, cet été',
-	width: 520,
-	height: 215
+const svgFuturDiscover = renderLessonIllustration('pri_lang_02_airplane_ship', {
+	lang: 'fr',
+	title: 'Le futur simple : nos projets de vacances et de voyage',
+	customLegend: [
+		{ num: '1', label: "Cet été, nous voyagerons par avion vers le Sud algérien" },
+		{ num: '2', label: 'Demain, le bateau naviguera sur la mer Méditerranée' }
+	]
 });
 
 const svgFuturSummary = svgFrenchConjugationChart({
@@ -89,16 +66,14 @@ const svgFuturSummary = svgFrenchConjugationChart({
 	height: 210
 });
 
-const svgCodComplementsDiscover = svgFrenchPrimaryCards({
-	title: 'Les compléments de la phrase — مكملات الجملة',
-	subtitle: 'Trois questions magiques pour les trouver !',
-	cards: [
-		{ word: 'COD', arabic: 'Qui ? / Quoi ?', color: '#1d4ed8' },
-		{ word: 'CCL (Lieu)', arabic: 'Où ? (المكان)', color: '#047857' },
-		{ word: 'CCT (Temps)', arabic: 'Quand ? (الزمان)', color: '#d97706' }
-	],
-	width: 520,
-	height: 185
+const svgCodComplementsDiscover = renderLessonIllustration('pri_lang_07_clean_park_planting', {
+	lang: 'fr',
+	title: 'COD (Quoi ?), CCL (Où ?) et CCT (Quand ?) dans le jardin',
+	customLegend: [
+		{ num: '1', label: 'Ce matin (CCT), Amine plante un arbuste (COD) dans le parc (CCL)' },
+		{ num: '2', label: 'Sara arrose les fleurs (COD) avec un arrosoir' },
+		{ num: '3', label: 'Les enfants jettent les déchets (COD) dans la poubelle (CCL)' }
+	]
 });
 
 const svgCodComplementsSummary = svgFrenchGrammarMap({
@@ -156,32 +131,13 @@ const svgHomophonesDiscover = svgFrenchConjugationChart({
 	height: 210
 });
 
-const svgHomophonesSummary = svgFrenchGrammarMap({
-	title: 'Vérifier son orthographe avant de rendre sa copie',
-	rootLabel: '3 réflexes simples (4AP)',
-	rootSub: 'Remplacer dans sa tête !',
-	branches: [
-		{
-			label: 'Tester « a »',
-			rule: 'Remplace par « avait »',
-			example: 'Sara a (avait) un livre.',
-			color: '#1d4ed8'
-		},
-		{
-			label: 'Tester « est »',
-			rule: 'Remplace par « était »',
-			example: 'Le ciel est (était) bleu.',
-			color: '#047857'
-		},
-		{
-			label: 'Accord S-V',
-			rule: 'Trouve le sujet (Qui ?)',
-			example: 'Les enfants protègent l’eau.',
-			color: '#b45309'
-		}
-	],
-	width: 520,
-	height: 250
+const svgHomophonesSummary = renderLessonIllustration('pri_ara_06_four_seasons_trees', {
+	lang: 'fr',
+	title: 'Accords et homophones au fil des quatre saisons',
+	customLegend: [
+		{ num: '1', label: "Le printemps est fleuri et l'été a un beau soleil" },
+		{ num: '2', label: "Les feuilles tombent en automne et la neige couvre l'hiver" }
+	]
 });
 
 // ═══════════════════════════════════════════════════════════════════════════════

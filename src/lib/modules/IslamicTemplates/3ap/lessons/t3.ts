@@ -1,4 +1,5 @@
 import type { IslamicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgIslamicCards,
 	svgIslamicCompare,
@@ -152,15 +153,7 @@ const svgJarSummary = svgIslamicCompare({
 	}
 });
 
-const svgBathahDiscover = svgIslamicSequence({
-	title: 'مراحل بعثة النبي صلى الله عليه وسلم والدعوة بمكة',
-	steps: [
-		{ step: 'نزول الوحي في غار حراء (سن 40)', detail: 'نزل جبريل عليه السلام بأول آيات سورة العلق: اقرأ باسم ربك', color: '#047857' },
-		{ step: 'الدعوة السرية (3 سنوات)', detail: 'دعا صلى الله عليه وسلم المقربين سراً واجتمع بهم في دار الأرقم', color: '#1d4ed8' },
-		{ step: 'الأمر بالدعوة الجهرية', detail: 'نزل قوله تعالى: وأنذر عشيرتك الأقربين، ثم: فاصدع بما تؤمر', color: '#b45309' },
-		{ step: 'الصبر والثبات أمام أذى قريش', detail: 'صعد جبل الصفا ودعا قريشاً للتوحيد فصبر صلى الله عليه وسلم على أذاهم', color: '#6d28d9' }
-	]
-});
+const svgBathahDiscover = renderLessonIllustration('pri_isl_01_masjid_al_haram_kaaba');
 
 const svgBathahSummary = svgIslamicCompare({
 	title: 'المقارنة بين الدعوة السرية والدعوة الجهرية',

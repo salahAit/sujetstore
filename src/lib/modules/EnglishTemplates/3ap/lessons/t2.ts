@@ -1,26 +1,21 @@
 import type { EnglishInteractiveLessonData } from '../../types';
 import {
 	svgEnglishGrammarMap,
-	svgEnglishPhoneticsChart,
-	svgEnglishPrimaryCards
+	svgEnglishPhoneticsChart
 } from '../../svg-english';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — 3AP Trimester 2 (School Objects, Pronouns & To Be, Days, My Home)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgSchoolObjectsDiscover = svgEnglishPrimaryCards({
-	title: 'My School Bag & Classroom — أدواتي المدرسية وقسمي',
-	subtitle: 'What is in my school bag?',
-	cards: [
-		{ word: 'a pen', arabic: 'قلم حبر', color: '#2563eb' },
-		{ word: 'a book', arabic: 'كتاب', color: '#059669' },
-		{ word: 'a ruler', arabic: 'مسطرة', color: '#d97706' },
-		{ word: 'a bag', arabic: 'محفظة', color: '#7c3aed' },
-		{ word: 'a desk', arabic: 'طاولة', color: '#0284c7' }
-	],
-	width: 520,
-	height: 185
+const svgSchoolObjectsDiscover = renderLessonIllustration('pri_ara_01_school_bag_supplies', {
+	lang: 'en',
+	title: 'My School Bag and Classroom Objects',
+	customLegend: [
+		{ num: '1', label: 'A tidy school bag, books and notebooks' },
+		{ num: '2', label: 'A pencil case, a pen, a pencil and a ruler' }
+	]
 });
 
 const svgSchoolObjectsSummary = svgEnglishGrammarMap({
@@ -51,17 +46,13 @@ const svgSchoolObjectsSummary = svgEnglishGrammarMap({
 	height: 250
 });
 
-const svgPronounsDiscover = svgEnglishPrimaryCards({
-	title: 'Pronouns & Verb To Be — الضمائر وفعل الكينونة',
-	subtitle: 'I am / He is / She is / It is',
-	cards: [
-		{ word: 'I am', arabic: 'أنا أكون', color: '#2563eb' },
-		{ word: 'He is', arabic: 'هو يكون (للمذكر)', color: '#059669' },
-		{ word: 'She is', arabic: 'هي تكون (للمؤنث)', color: '#d97706' },
-		{ word: 'It is', arabic: 'هو/هي لغير العاقل', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgPronounsDiscover = renderLessonIllustration('pri_ara_05_fresh_fruits_honey_basket', {
+	lang: 'en',
+	title: 'Pronouns (I / He / She / It) & Healthy Food (a / an)',
+	customLegend: [
+		{ num: '1', label: 'It is a basket of fresh fruits (an apple, an orange)' },
+		{ num: '2', label: 'It is pure honey and healthy olive oil' }
+	]
 });
 
 const svgPronounsSummary = svgEnglishGrammarMap({
@@ -98,17 +89,13 @@ const svgPronounsSummary = svgEnglishGrammarMap({
 	height: 255
 });
 
-const svgDaysDiscover = svgEnglishPrimaryCards({
-	title: 'Days of the Week — أيام الأسبوع',
-	subtitle: 'School starts on Sunday in Algeria!',
-	cards: [
-		{ word: 'Sunday', arabic: 'الأحد', color: '#2563eb' },
-		{ word: 'Monday', arabic: 'الاثنين', color: '#059669' },
-		{ word: 'Tuesday', arabic: 'الثلاثاء', color: '#d97706' },
-		{ word: 'Friday', arabic: 'الجمعة', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgDaysDiscover = renderLessonIllustration('pri_lang_01_red_bus_train', {
+	lang: 'en',
+	title: 'Days of the Week: Going to School by Bus & Weekend Train Trip',
+	customLegend: [
+		{ num: '1', label: 'School days (Sunday to Thursday): yellow school bus' },
+		{ num: '2', label: 'Weekend trip (Friday & Saturday): fast passenger train' }
+	]
 });
 
 const svgDaysSummary = svgEnglishPhoneticsChart({
@@ -138,17 +125,15 @@ const svgDaysSummary = svgEnglishPhoneticsChart({
 	height: 210
 });
 
-const svgHomeDiscover = svgEnglishPrimaryCards({
-	title: 'My Sweet Home — بيتي وغرفه',
-	subtitle: 'Rooms in My House',
-	cards: [
-		{ word: 'bedroom', arabic: 'غرفة النوم', color: '#2563eb' },
-		{ word: 'kitchen', arabic: 'المطبخ', color: '#059669' },
-		{ word: 'living room', arabic: 'غرفة الجلوس', color: '#d97706' },
-		{ word: 'garden', arabic: 'الحديقة', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgHomeDiscover = renderLessonIllustration('pri_lang_04_house_rooms_cutaway', {
+	lang: 'en',
+	title: 'My Sweet Home and Its Rooms',
+	customLegend: [
+		{ num: '1', label: 'The bedroom (a tidy bed and a lamp)' },
+		{ num: '2', label: 'The bathroom (a clean sink and bathtub)' },
+		{ num: '3', label: 'The kitchen (Mother cooks healthy meals)' },
+		{ num: '4', label: 'The living room and the flower garden' }
+	]
 });
 
 const svgHomeSummary = svgEnglishGrammarMap({

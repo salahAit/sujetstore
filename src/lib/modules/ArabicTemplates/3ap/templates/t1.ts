@@ -10,6 +10,10 @@ import {
 	buildProsePassageBlock,
 	buildWrittenProductionBlock
 } from '../../arabic-helpers';
+import {
+	buildIllustratedFigureBlock,
+	type IllustrationId
+} from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. البناء الفكري (3 ن) — نص نثري في القيم الإنسانية والتعاون وبر الوالدين
@@ -110,11 +114,24 @@ const readingComp3apT1: ArabicParameterizedTemplate = {
 			explanation: `يدور النص حول «${p.bestTitle}» بدليل أفكاره وكلماته الأساسية.`
 		};
 
+		const illustrationId: IllustrationId =
+			p.title === 'التَّعَاوُنُ فِي الحَيِّ'
+				? 'pri_ara_03_algerian_village_orchard'
+				: p.title === 'بِرُّ الوَالِدَيْنِ'
+					? 'pri_ara_02_warm_algerian_home'
+					: 'pri_ara_01_school_bag_supplies';
+
 		const sujetExercise: ExerciseBlock = {
 			customTitle: 'السند والبناء الفكري',
 			points: 3,
 			instruction: 'اقرأ النص قراءة متأنية ثم أجب عن الأسئلة الآتية:',
 			content: [
+				buildIllustratedFigureBlock(illustrationId, {
+					mode: 'image_only',
+					title: p.title,
+					maxHeight: 112,
+					width: '58%'
+				}),
 				buildProsePassageBlock({
 					title: p.title,
 					paragraphs: p.paragraphs,

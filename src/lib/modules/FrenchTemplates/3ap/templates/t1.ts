@@ -10,6 +10,10 @@ import {
 	buildFrenchPassageBlock,
 	buildFrenchWrittenProductionBlock
 } from '../../french-helpers';
+import {
+	buildIllustratedFigureBlock,
+	getIllustrationJpgUrl
+} from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. Compréhension 1 (4 pts) — Saluer et se présenter à l'école
@@ -116,6 +120,12 @@ const compSalutations3apT1: FrenchParameterizedTemplate = {
 					title: sc.title,
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
+				}),
+				buildIllustratedFigureBlock('pri_lang_01_red_bus_train', {
+					lang: 'fr',
+					title: "En route vers l'école : le bus scolaire et le train",
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'text',
@@ -304,6 +314,16 @@ const compCartable3apT1: FrenchParameterizedTemplate = {
 					title: sc.title,
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
+				}),
+				buildIllustratedFigureBlock('pri_ara_01_school_bag_supplies', {
+					lang: 'fr',
+					title: 'Les affaires scolaires dans mon cartable',
+					customLegend: [
+						{ num: '1', label: 'Le cartable propre, les livres et les cahiers' },
+						{ num: '2', label: 'La trousse, les stylos, les crayons et la règle' }
+					],
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'text',
@@ -577,19 +597,42 @@ const langDeterminants3apT1: FrenchParameterizedTemplate = {
 					type: 'text',
 					content: `#strong[Activité 1 :] Complète avec « un » ou « une » :\n${s.unUnePrompt}`,
 					answer: `#strong[Activité 1 :] ${s.unUneAnswer}`,
-					mark: '1'
+					mark: '0.75'
 				},
 				{
 					type: 'text',
 					content: `#strong[Activité 2 :] Complète avec « le », « la » ou « l’ » :\n${s.leLaPrompt}`,
 					answer: `#strong[Activité 2 :] ${s.leLaAnswer}`,
-					mark: '1'
+					mark: '0.75'
 				},
 				{
 					type: 'text',
-					content: `#strong[Activité 3 :] Barre le mot intrus (الكلمة الدخيلة) : ( ${s.intrusList} )`,
-					answer: `#strong[Activité 3 :] Le mot intrus est : ${s.intrusAns}.`,
-					mark: '1'
+					content:
+						'#strong[Activité 3 :] Observe les images et écris le nom sous chaque image : ( un cartable - un bus - une maison )'
+				},
+				{
+					type: 'image_grid',
+					columns: 3,
+					items: [
+						{
+							src: getIllustrationJpgUrl('pri_ara_01_school_bag_supplies'),
+							label: '........................',
+							answer: 'un cartable',
+							mark: '0.5'
+						},
+						{
+							src: getIllustrationJpgUrl('pri_lang_01_red_bus_train'),
+							label: '........................',
+							answer: 'un bus',
+							mark: '0.5'
+						},
+						{
+							src: getIllustrationJpgUrl('pri_lang_04_house_rooms_cutaway'),
+							label: '........................',
+							answer: 'une maison',
+							mark: '0.5'
+						}
+					]
 				}
 			] as ContentBlock[]
 		};

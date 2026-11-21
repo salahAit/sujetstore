@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock, ExerciseBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../../MathTemplates/rng';
 import {
 	buildHadithPassageBlock,
@@ -263,6 +264,12 @@ const bathahDawah3apT3: IslamicParameterizedTemplate = {
 			points: 3,
 			instruction: 'اقرأ السند التاريخي ثم أجب عن السؤالين:',
 			content: [
+				buildIllustratedFigureBlock('pri_isl_01_masjid_al_haram_kaaba', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'مَكَّةُ المُكَرَّمَةُ — مَهْبِطُ الوَحْيِ وَمُنْطَلَقُ الدَّعْوَةِ النَّبَوِيَّةِ'
+				}),
 				buildIslamicContextBlock({ title: 'من السيرة النبوية الشريفة:', text: v.context }),
 				{ type: 'text', content: `1) ${v.q1}`, answer: v.a1, mark: '1' },
 				{ type: 'text', content: '2) أكمل الجدول الآتي بالمعلومة التاريخية الصحيحة:' },

@@ -9,6 +9,7 @@ import {
 	buildEnglishPassageBlock,
 	buildEnglishWrittenExpressionBlock
 } from '../../english-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. Comprehension (4 pts) — School Facilities, Prepositions & Clean Hobbies
@@ -139,6 +140,12 @@ const comprehension4apT2: EnglishParameterizedTemplate = {
 					title: 'My School and My Free Time',
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: true
+				}),
+				buildIllustratedFigureBlock('pri_lang_04_house_rooms_cutaway', {
+					lang: 'en',
+					title: 'Prepositions of Place at Home and School (in, on, under, next to)',
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'text',
@@ -282,6 +289,11 @@ const presentPrepositions4apT2: EnglishParameterizedTemplate = {
 			points: 3,
 			instruction: 'Do the following grammar activities carefully:',
 			content: [
+				buildIllustratedFigureBlock('pri_lang_01_red_bus_train', {
+					lang: 'en',
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `Task 1: Write the verbs in brackets in the Present Simple:\n1) ${s.v1}\n2) ${s.v2}\n3) ${s.v3}`,
@@ -407,6 +419,11 @@ const canHobbies4apT2: EnglishParameterizedTemplate = {
 			points: 3,
 			instruction: 'Answer the three tasks below:',
 			content: [
+				buildIllustratedFigureBlock('pri_lang_07_clean_park_planting', {
+					lang: 'en',
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `Task 1: Reorder the words to make a question: ( ${s.qScrambled} )`,
@@ -555,6 +572,11 @@ const writtenExpression4apT2: EnglishParameterizedTemplate = {
 			customTitle: 'Part Three: Written Expression',
 			points: 3,
 			content: [
+				buildIllustratedFigureBlock('pri_lang_02_airplane_ship', {
+					lang: 'en',
+					maxHeight: 102,
+					width: '54%'
+				}),
 				buildEnglishWrittenExpressionBlock({
 					topicOnePrompt: pr.prompt,
 					topicOneNotes: pr.notes,

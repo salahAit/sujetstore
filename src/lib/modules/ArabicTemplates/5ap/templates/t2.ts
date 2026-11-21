@@ -10,6 +10,10 @@ import {
 	buildProsePassageBlock,
 	buildWrittenProductionBlock
 } from '../../arabic-helpers';
+import {
+	buildIllustratedFigureBlock,
+	type IllustrationId
+} from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // قوالب التمارين والاختبارات — السنة الخامسة ابتدائي — اللغة العربية — الفصل الثاني
@@ -158,7 +162,20 @@ const tplIntellectualT2: ArabicParameterizedTemplate = {
 			explanation: `الإجابة الدقيقة من السند: ${pack.quizCorrect}.`
 		};
 
+		const illustrationId: IllustrationId =
+			pack.title === 'حملة التشجير وحماية البيئة'
+				? 'pri_ara_06_four_seasons_trees'
+				: pack.title === 'الصحة تاج والرياضة نشاط'
+					? 'pri_ara_05_fresh_fruits_honey_basket'
+					: 'pri_ara_07_science_library_telescope';
+
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock(illustrationId, {
+				mode: 'image_only',
+				title: pack.title,
+				maxHeight: 112,
+				width: '58%'
+			}),
 			buildProsePassageBlock({
 				title: pack.title,
 				paragraphs: pack.paragraphs,

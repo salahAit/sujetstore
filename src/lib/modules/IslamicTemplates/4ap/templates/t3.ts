@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock, ExerciseBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../../MathTemplates/rng';
 import {
 	buildHadithPassageBlock,
@@ -235,6 +236,12 @@ const zakahMasarif4apT3: IslamicParameterizedTemplate = {
 			points: 3,
 			instruction: 'تأمل الآية الكريمة من سورة التوبة ثم أجب عن السؤالين:',
 			content: [
+				buildIllustratedFigureBlock('pri_isl_07_wheat_olive_zakat', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'الزَّكَاةُ — تَطْهِيرٌ لِلْمَالِ وَتَكَافُلٌ بَيْنَ المُسْلِمِينَ'
+				}),
 				buildQuranPassageBlock({
 					verses: 'إِنَّمَا الصَّدَقَاتُ لِلْفُقَرَاءِ وَالْمَسَاكِينِ وَالْعَامِلِينَ عَلَيْهَا وَالْمُؤَلَّفَةِ قُلُوبُهُمْ وَفِي الرِّقَابِ وَالْغَارِمِينَ وَفِي سَبِيلِ اللَّهِ وَابْنِ السَّبِيلِ فَرِيضَةً مِنَ اللَّهِ وَاللَّهُ عَلِيمٌ حَكِيمٌ',
 					surah: 'التوبة',
@@ -369,6 +376,12 @@ const hijrahMuakhah4apT3: IslamicParameterizedTemplate = {
 			points: 3,
 			instruction: 'اقرأ السند التاريخي ثم أجب عن الأسئلة الآتية:',
 			content: [
+				buildIllustratedFigureBlock('pri_isl_02_masjid_an_nabawi', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'المَسْجِدُ النَّبَوِيُّ الشَّرِيفُ بِالمَدِينَةِ المُنَوَّرَةِ'
+				}),
 				buildIslamicContextBlock({ title: 'من السيرة النبوية الشريفة:', text: v.context }),
 				{ type: 'text', content: `1) ${v.q1}`, answer: v.a1, mark: '1' },
 				{ type: 'text', content: `2) ${v.q2}`, answer: v.a2, mark: '1' },

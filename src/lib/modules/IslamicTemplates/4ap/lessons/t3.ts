@@ -1,9 +1,9 @@
 import type { IslamicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgIslamicCards,
 	svgIslamicCompare,
-	svgIslamicConceptTree,
-	svgIslamicSequence
+	svgIslamicConceptTree
 } from '../../svg-islamic';
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -60,19 +60,7 @@ const svgLaylSummary = svgIslamicConceptTree({
 	]
 });
 
-const svgZakahDiscover = svgIslamicCards({
-	title: 'مصارف الزكاة الثمانية في سورة التوبة (الآية 60)',
-	subtitle: 'الزكاة هي الركن الثالث من أركان الإسلام وتطهر المال والقلب',
-	cards: [
-		{ badge: '1', title: 'الْفُقَرَاءُ وَالْمَسَاكِينُ', detail: 'ذوو الحاجة الذين لا يجدون كفايتهم', color: '#047857' },
-		{ badge: '2', title: 'الْعَامِلُونَ عَلَيْهَا', detail: 'المكلفون بجمع الزكاة وتوزيعها', color: '#1d4ed8' },
-		{ badge: '3', title: 'الْمُؤَلَّفَةُ قُلُوبُهُمْ', detail: 'من يُرجى إسلامهم أو تثبيت إيمانهم', color: '#b45309' },
-		{ badge: '4', title: 'فِي الرِّقَابِ وَالْغَارِمِينَ', detail: 'تحرير الأرقاء وسداد ديون العاجزين', color: '#6d28d9' },
-		{ badge: '5', title: 'فِي سَبِيلِ اللَّهِ', detail: 'نصرة الدين والمصالح الشرعية العامة', color: '#0f766e' },
-		{ badge: '6', title: 'ابْنُ السَّبِيلِ', detail: 'المسافر المنقطع الذي نفد ماله', color: '#be123c' }
-	],
-	columns: 3
-});
+const svgZakahDiscover = renderLessonIllustration('pri_isl_07_wheat_olive_zakat');
 
 const svgZakahSummary = svgIslamicConceptTree({
 	title: 'الزكاة: حكمها وشروطها وحكمتها الاجتماعية',
@@ -100,15 +88,7 @@ const svgZakahSummary = svgIslamicConceptTree({
 	]
 });
 
-const svgHijrahDiscover = svgIslamicSequence({
-	title: 'محطات الهجرة النبوية الشريفة إلى المدينة المنورة (1 هـ)',
-	steps: [
-		{ step: 'مؤامرة قريش ومبيت علي في الفراش', detail: 'بات علي بن أبي طالب رضي الله عنه في فراش النبي صلى الله عليه وسلم لرد الأمانات', color: '#be123c' },
-		{ step: 'غار ثور ومعية الله لنبيه وأبي بكر', detail: 'مكثا ثلاث ليالٍ وقال النبي لصاحبه: لا تحزن إن الله معنا', color: '#047857' },
-		{ step: 'الوصول إلى قباء وبناء أول مسجد', detail: 'وصل النبي صلى الله عليه وسلم إلى قباء وبنى مسجد قباء على التقوى', color: '#1d4ed8' },
-		{ step: 'دخول المدينة وبناء المسجد النبوي', detail: 'استقبله الأنصار بفرح عظيم وبنى المسجد النبوي وأسس دولة الإسلام', color: '#b45309' }
-	]
-});
+const svgHijrahDiscover = renderLessonIllustration('pri_isl_02_masjid_an_nabawi');
 
 const svgHijrahSummary = svgIslamicCards({
 	title: 'شخصيات عظيمة ساهمت في نجاح الهجرة النبوية',
@@ -122,29 +102,7 @@ const svgHijrahSummary = svgIslamicCards({
 	columns: 2
 });
 
-const svgMuakhahDiscover = svgIslamicCompare({
-	title: 'المؤاخاة الخالدة بين المهاجرين والأنصار في المدينة',
-	rightCol: {
-		heading: 'الْمُهَاجِرُونَ رضي الله عنهم',
-		points: [
-			'تركوا مكة وبيوتهم وأموالهم في سبيل الله',
-			'ضربوا أروع أمثلة العفة والعمل والكسب الحلال',
-			'مثال: عبد الرحمن بن عوف رضي الله عنه',
-			'قال لأخيه: بارك الله لك، دلني على السوق'
-		],
-		color: '#047857'
-	},
-	leftCol: {
-		heading: 'الْأَنْصَارُ رضي الله عنهم',
-		points: [
-			'أهل المدينة من الأوس والخزرج',
-			'آووا النبي صلى الله عليه وسلم وإخوانهم المهاجرين',
-			'قاسموهم بيوتهم وأموالهم بإيثار عظيم',
-			'مثال: سعد بن الربيع رضي الله عنه'
-		],
-		color: '#1d4ed8'
-	}
-});
+const svgMuakhahDiscover = renderLessonIllustration('pri_isl_03_masjid_al_aqsa');
 
 const svgMuakhahSummary = svgIslamicConceptTree({
 	title: 'أثر المؤاخاة في بناء المجتمع المسلم المتماسك',

@@ -1,4 +1,5 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgGrammarTree,
 	svgPrimaryArabicVisual,
@@ -283,14 +284,7 @@ export const LESSONS_1AP_T2: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'يُشِيرُ أَمِينُ إِلى أَفْرَادِ أُسْرَتِهِ وَأَدَوَاتِهِ وَيَقُولُ بِفَرَحٍ: «هَذَا أَبِي الحَبِيبُ، وَهَذِهِ أُمِّي الحَنُونُ؛ هَذَا كِتَابِي، وَهَذِهِ مِحْفَظَتِي!»',
-			svg: svgPrimaryArabicVisual({
-				title: 'أُشِيرُ بِـ «هَذَا» وَ«هَذِهِ»',
-				subtitle: 'أَسْمَاءُ الإِشَارَةِ لِلْقَرِيبِ',
-				cards: [
-					{ bigText: 'هَذَا', label: 'لِلْمُفْرَدِ المُذَكَّرِ', color: '#2563eb' },
-					{ bigText: 'هَذِهِ', label: 'لِلْمُفْرَدِ المُؤَنَّثِ', color: '#059669' }
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_02_warm_algerian_home'),
 			steps: [
 				{
 					promptAr: 'لِمَاذَا قَالَ أَمِينُ «هَذَا أَبِي» وَلَمْ يَقُلْ «هَذِهِ أَبِي»؟',

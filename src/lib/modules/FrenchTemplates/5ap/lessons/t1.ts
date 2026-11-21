@@ -3,9 +3,9 @@ import {
 	svgFrenchConjugationChart,
 	svgFrenchGrammarMap,
 	svgFrenchPrimaryCards,
-	svgFrenchTenseTimeline,
 	svgFrenchWritingBlueprint
 } from '../../svg-french';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ===============================================================================
 // Interactive Lessons - 5AP French - Trimester 1
@@ -35,14 +35,12 @@ export const LESSONS_5AP_T1: FrenchInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'أثناء زيارة حديقة الحيوانات، كتب يوسف وصفاً لبعض حيوانات الصحراء الجزائرية: «Le fennec est un petit animal. Il a de grandes oreilles. La gazelle est rapide. Les dromadaires sont forts.» تأمّل الكلمات الواصفة وموقعها من الاسم.',
-			svg: svgFrenchPrimaryCards({
-				title: 'Les animaux sauvages au zoo et au Sahara',
-				subtitle: 'حيوانات برية في المشروع الأول (5AP)',
-				cards: [
-					{ word: 'Le fennec', arabic: 'الفنك', color: '#d97706' },
-					{ word: 'La gazelle', arabic: 'الغزال', color: '#059669' },
-					{ word: 'Le dromadaire', arabic: 'الجمل', color: '#b45309' },
-					{ word: 'Le lion', arabic: 'الأسد', color: '#1d4ed8' }
+			svg: renderLessonIllustration('pri_ara_08_sahara_oasis_dunes', {
+				lang: 'fr',
+				title: 'Le Sahara algérien : habitat du fennec, de la gazelle et du dromadaire',
+				customLegend: [
+					{ num: '1', label: 'Les dunes dorées (un petit fennec, une gazelle rapide)' },
+					{ num: '2', label: "L'oasis fraîche et les grands palmiers verts" }
 				]
 			}),
 			steps: [
@@ -337,13 +335,13 @@ export const LESSONS_5AP_T1: FrenchInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'تأمّل جمل البطاقة الوصفية: «Le fennec habite au Sahara. Il a de grandes oreilles. La gazelle bondit sur le sable. Les lions sont forts et rugissent dans la savane.» لاحظ نهايات الأفعال المصرّفة في الحاضر.',
-			svg: svgFrenchTenseTimeline({
-				title: 'Temps du récit descriptif',
-				tenseName: 'Le présent de l’indicatif',
-				formula: '1er gr. (-e,-es,-e,-ons,-ez,-ent) | 2e gr. (-is,-is,-it,-issons,-issez,-issent)',
-				activeZone: 'present',
-				example: 'Le fennec habite au désert et la gazelle bondit vite.',
-				markers: 'aujourd’hui, maintenant, en ce moment, toujours'
+			svg: renderLessonIllustration('pri_ara_05_fresh_fruits_honey_basket', {
+				lang: 'fr',
+				title: "Le présent de l'indicatif et l'alimentation saine",
+				customLegend: [
+					{ num: '1', label: 'Nous mangeons des fruits frais (1er groupe : mangeons)' },
+					{ num: '2', label: 'Les fruits et le miel pur nourrissent le corps (2e groupe : nourrissent)' }
+				]
 			}),
 			steps: [
 				{
@@ -521,13 +519,13 @@ export const LESSONS_5AP_T1: FrenchInteractiveLessonData[] = [
 				'الجملة التعجبية (phrase exclamative) تعبّر عن الدهشة أو الإعجاب وتنتهي بعلامة تعجب (!): «Quelle belle gazelle !».',
 				'الجملة الأمرية (phrase impérative) تعطي أمراً أو نصيحة، يبدأ فعلها في صيغة الأمر دون ضمير فاعل وتنتهي بـ (.) أو (!): «Ne dérange pas les animaux !».'
 			],
-			visualSvg: svgFrenchPrimaryCards({
-				title: 'Les signes de ponctuation de fin de phrase',
-				subtitle: 'علامات نهاية الجملة في الفرنسية',
-				cards: [
-					{ word: 'Point (.)', arabic: 'جملة خبرية / أمرية', color: '#1d4ed8' },
-					{ word: 'Point (?)', arabic: 'جملة استفهامية', color: '#047857' },
-					{ word: 'Point (!)', arabic: 'جملة تعجبية / أمرية', color: '#b45309' }
+			visualSvg: renderLessonIllustration('pri_lang_06_hygiene_washbasin', {
+				lang: 'fr',
+				title: "Types de phrases et bonnes habitudes d'hygiène (. / ? / !)",
+				customLegend: [
+					{ num: '1', label: "Impérative (!) : Lave-toi les mains à l'eau propre !" },
+					{ num: '2', label: 'Interrogative (?) : Est-ce que tu te brosses les dents ?' },
+					{ num: '3', label: 'Déclarative (.) : La serviette et le savon sont propres.' }
 				]
 			}),
 			visualCaptionAr: 'علامات الترقيم المميِّزة لنهاية كل نوع من أنواع الجمل',

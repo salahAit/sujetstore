@@ -1,21 +1,12 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import { svgGrammarTree, svgIrabBox, svgPrimaryArabicVisual } from '../../svg-arabic';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — السنة الثالثة ابتدائي — الفصل الثاني
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgNumberDiscover = svgPrimaryArabicVisual({
-	title: 'العددُ في الأسماءِ: واحدٌ، اثنانِ، أو أكثر',
-	subtitle: 'لاحظِ الحروفَ المضافةَ في آخرِ الاسمِ',
-	cards: [
-		{ bigText: 'تِلْمِيذٌ', label: 'مُفْرَدٌ (1)', color: '#1d4ed8' },
-		{ bigText: 'تِلْمِيذَانِ', label: 'مُثَنًّى (2)', color: '#047857' },
-		{ bigText: 'تَلَامِيذُ', label: 'جَمْعٌ (3 فأكثر)', color: '#b45309' }
-	],
-	width: 520,
-	height: 185
-});
+const svgNumberDiscover = renderLessonIllustration('pri_ara_04_algeria_flag_martyrs_memorial');
 
 const svgNumberSummary = svgGrammarTree({
 	title: 'المفرد والمثنى والجمع في اللغة العربية',
@@ -70,17 +61,7 @@ const svgJarSummary = svgIrabBox({
 	height: 205
 });
 
-const svgPronounsDiscover = svgPrimaryArabicVisual({
-	title: 'الضمائرُ المنفصلةُ الثلاثةُ أقسام',
-	subtitle: 'تُغني عن تكرار الاسم وتدلّ على صاحبه',
-	cards: [
-		{ bigText: 'أَنَا / نَحْنُ', label: 'ضمائرُ المتكلِّم', color: '#1d4ed8' },
-		{ bigText: 'أَنْتَ / أَنْتِ', label: 'ضمائرُ المخاطَب', color: '#047857' },
-		{ bigText: 'هُوَ / هِيَ', label: 'ضمائرُ الغائب', color: '#b45309' }
-	],
-	width: 520,
-	height: 185
-});
+const svgPronounsDiscover = renderLessonIllustration('pri_ara_06_four_seasons_trees');
 
 const svgPronounsSummary = svgGrammarTree({
 	title: 'تصريف الفعل مع الضمائر المنفصلة',
@@ -110,18 +91,7 @@ const svgPronounsSummary = svgGrammarTree({
 	height: 255
 });
 
-const svgDemonstrativeDiscover = svgPrimaryArabicVisual({
-	title: 'نُشيرُ ونَصِلُ الكلامَ بأسماءٍ خاصّة',
-	subtitle: 'أسماء الإشارة للقريب + الأسماء الموصولة',
-	cards: [
-		{ bigText: 'هَذَا / هَذِهِ', label: 'للمفرد المذكر والمؤنث', color: '#1d4ed8' },
-		{ bigText: 'هَؤُلَاءِ', label: 'للجمع العاقل', color: '#047857' },
-		{ bigText: 'الَّذِي / الَّتِي', label: 'اسم موصول للمفرد', color: '#b45309' },
-		{ bigText: 'الَّذِينَ', label: 'اسم موصول للجمع', color: '#7c3aed' }
-	],
-	width: 540,
-	height: 185
-});
+const svgDemonstrativeDiscover = renderLessonIllustration('pri_ara_08_sahara_oasis_dunes');
 
 const svgDemonstrativeSummary = svgGrammarTree({
 	title: 'أسماء الإشارة والأسماء الموصولة',

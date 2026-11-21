@@ -14,36 +14,24 @@ import {
 	wrapSciencesSvg
 } from '../../svg-sciences';
 
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
+
 function svgBloodSmearLabeled(numbered = false): string {
-	let body = `<rect x="6" y="6" width="448" height="232" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>`;
-	body += `<text x="230" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">الوثيقة: سحبة دموية ملونة تحت المجهر الضوئي</text>`;
-
-	// Microscopic circular field of view
-	body += `<circle cx="230" cy="134" r="88" fill="#fefce8" stroke="#334155" stroke-width="2.4"/>`;
-	// RBCs (red biconcave discs)
-	for (const [rx, ry] of [[186, 112], [214, 96], [268, 108], [276, 152], [198, 172], [242, 184]]) {
-		body += `<circle cx="${rx}" cy="${ry}" r="12" fill="#ef4444" stroke="#991b1b" stroke-width="1.5"/>`;
-		body += `<circle cx="${rx}" cy="${ry}" r="5" fill="#fca5a5"/>`;
+	if (numbered) {
+		return renderLessonIllustration('sci_17_blood_smear_cells', {
+			title: 'سحبة دموية ملونة تحت المجهر الضوئي',
+			hideLegend: true,
+			pins: [
+				{ num: '1', xPct: 58, yPct: 21, color: '#b91c1c' },
+				{ num: '2', xPct: 35, yPct: 34, color: '#1d4ed8' },
+				{ num: '3', xPct: 49, yPct: 12, color: '#b45309' },
+				{ num: '4', xPct: 74, yPct: 56, color: '#6d28d9' }
+			]
+		});
 	}
-	// WBC (larger cell with lobed blue nucleus)
-	body += `<circle cx="230" cy="138" r="21" fill="#e0e7ff" stroke="#1d4ed8" stroke-width="2"/>`;
-	body += `<circle cx="223" cy="134" r="6" fill="#4338ca"/><circle cx="237" cy="134" r="6" fill="#4338ca"/><circle cx="230" cy="146" r="6" fill="#4338ca"/>`;
-	// Platelets (small purple dots)
-	for (const [px, py] of [[176, 148], [182, 153], [262, 134], [267, 139]]) {
-		body += `<circle cx="${px}" cy="${py}" r="3.2" fill="#7c3aed"/>`;
-	}
-
-	const lbls = [
-		{ x1: 268, y1: 108, ex: 356, ty: 84, text: numbered ? '1' : 'كرية دموية حمراء', side: 'right', col: '#b91c1c' },
-		{ x1: 248, y1: 138, ex: 356, ty: 142, text: numbered ? '2' : 'كرية دموية بيضاء', side: 'right', col: '#1d4ed8' },
-		{ x1: 266, y1: 186, ex: 356, ty: 196, text: numbered ? '3' : 'البلازما (المصورة)', side: 'right', col: '#a16207' },
-		{ x1: 176, y1: 148, ex: 104, ty: 152, text: numbered ? '4' : 'صفائح دموية', side: 'left', col: '#6d28d9' }
-	];
-	for (const l of lbls) {
-		body += `<line x1="${l.x1}" y1="${l.y1}" x2="${l.ex}" y2="${l.ty}" stroke="#475569" stroke-width="1.2"/>`;
-		body += `<text x="${l.side === 'left' ? l.ex - 5 : l.ex + 5}" y="${l.ty + 4}" text-anchor="${l.side === 'left' ? 'end' : 'start'}" font-size="10.8" font-weight="bold" fill="${l.col}">${esc(l.text)}</text>`;
-	}
-	return wrapSciencesSvg(460, 244, body);
+	return renderLessonIllustration('sci_17_blood_smear_cells', {
+		title: 'سحبة دموية ملونة تحت المجهر الضوئي'
+	});
 }
 
 function svgCeliacBiopsyComparison(): string {

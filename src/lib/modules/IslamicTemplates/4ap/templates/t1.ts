@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock, ExerciseBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../../MathTemplates/rng';
 import {
 	buildHadithPassageBlock,
@@ -138,6 +139,17 @@ const quranAlaqTin4apT1: IslamicParameterizedTemplate = {
 			points: 3,
 			instruction: 'اقرأ السند القرآني الآتي ثم أجب عن الأسئلة:',
 			content: [
+				buildIllustratedFigureBlock(
+					v.surah.includes('التين') ? 'pri_isl_07_wheat_olive_zakat' : 'pri_isl_04_mushaf_wooden_stand',
+					{
+						maxHeight: 112,
+						width: '58%',
+						mode: 'image_only',
+						title: v.surah.includes('التين')
+							? 'تَأَمُّلٌ فِي نِعَمِ اللَّهِ المُبَارَكَةِ (سُورَةُ التِّينِ)'
+							: 'القُرْآنُ الكَرِيمُ وَفَضْلُ القِرَاءَةِ وَالعِلْمِ (سُورَةُ العَلَقِ)'
+					}
+				),
 				buildQuranPassageBlock({
 					verses: v.verses,
 					surah: v.surah,
@@ -260,6 +272,10 @@ const imanRusul4apT1: IslamicParameterizedTemplate = {
 			points: 3,
 			instruction: 'اقرأ الآية الكريمة ثم أجب عن السؤالين:',
 			content: [
+				buildIllustratedFigureBlock('pri_isl_03_masjid_al_aqsa', {
+					maxHeight: 112,
+					width: '58%'
+				}),
 				buildQuranPassageBlock({
 					verses: 'وَلَقَدْ بَعَثْنَا فِي كُلِّ أُمَّةٍ رَسُولًا أَنِ اعْبُدُوا اللَّهَ وَاجْتَنِبُوا الطَّاغُوتَ',
 					surah: 'النحل',

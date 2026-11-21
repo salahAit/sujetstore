@@ -10,6 +10,10 @@ import {
 	buildProsePassageBlock,
 	buildWrittenProductionBlock
 } from '../../arabic-helpers';
+import {
+	buildIllustratedFigureBlock,
+	type IllustrationId
+} from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // قوالب التمارين والاختبارات — السنة الخامسة ابتدائي — اللغة العربية — الفصل الثالث
@@ -159,7 +163,20 @@ const tplIntellectualT3: ArabicParameterizedTemplate = {
 			explanation: `الصواب المستخلص من السند: ${pack.quizCorrect}.`
 		};
 
+		const illustrationId: IllustrationId =
+			pack.title === 'رحلة إلى مدينة الجسور المعلقة'
+				? 'pri_ara_08_sahara_oasis_dunes'
+				: pack.title === 'الاستعمال الراشد للتكنولوجيا والإنترنت'
+					? 'pri_ara_07_science_library_telescope'
+					: 'pri_ara_03_algerian_village_orchard';
+
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock(illustrationId, {
+				mode: 'image_only',
+				title: pack.title,
+				maxHeight: 112,
+				width: '58%'
+			}),
 			buildProsePassageBlock({
 				title: pack.title,
 				paragraphs: pack.paragraphs,
@@ -615,11 +632,20 @@ const tplIntegrationT3Standard: ArabicParameterizedTemplate = {
 			explanation: `الصواب: ${c.quizCorrect}.`
 		};
 
+		const cIllustrationId: IllustrationId = c.context.includes('رحلة مدرسية')
+			? 'pri_ara_08_sahara_oasis_dunes'
+			: 'pri_ara_07_science_library_telescope';
+
 		const sujetExercise: ExerciseBlock = {
 			customTitle: 'الوضعية الإدماجية (الإنتاج الكتابي)',
 			points: 4,
 			instruction: 'اقرأ السياق والسند والتعليمة بعناية ثم حرّر موضوعك منظماً ومضبوطاً:',
 			content: [
+				buildIllustratedFigureBlock(cIllustrationId, {
+					mode: 'image_only',
+					maxHeight: 112,
+					width: '58%'
+				}),
 				buildWrittenProductionBlock({
 					context: c.context,
 					supportQuote: c.supportQuote,
@@ -840,7 +866,20 @@ const tplTaqyeemMuktasabat2025: ArabicParameterizedTemplate = {
 			explanation: `الصواب: ${p.quizCorrect}.`
 		};
 
+		const pIllustrationId: IllustrationId =
+			p.title === 'برّ الوالدين والاجتهاد في طلب العلم'
+				? 'pri_ara_01_school_bag_supplies'
+				: p.title === 'تضحيات شهداء الجزائر وأمانة الاستقلال'
+					? 'pri_ara_04_algeria_flag_martyrs_memorial'
+					: 'pri_ara_06_four_seasons_trees';
+
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock(pIllustrationId, {
+				mode: 'image_only',
+				title: p.title,
+				maxHeight: 112,
+				width: '58%'
+			}),
 			buildProsePassageBlock({
 				title: p.title,
 				paragraphs: p.paragraphs,

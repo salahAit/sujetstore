@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import {
 	buildHadithPassageBlock,
 	buildIslamicIntegrationBlock,
@@ -424,6 +425,10 @@ const tplKnowledgeTrustworthiness: IslamicParameterizedTemplate = {
 		const mcq = buildUniqueMcqOptions(v.quizCorrect, [...v.quizDistractors], rng);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_isl_08_goodly_olive_tree', {
+				maxHeight: 112,
+				width: '58%'
+			}),
 			buildHadithPassageBlock({
 				narrator: v.narrator,
 				text: v.hadith,

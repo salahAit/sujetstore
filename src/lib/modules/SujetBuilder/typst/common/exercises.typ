@@ -1,5 +1,6 @@
 #import "arabic_poetry.typ": render-arabic-poem
 #import "islamic_blocks.typ": quran-box, hadith-box, islamic-rubric-table
+#import "illustrated_figure.typ": render-illustrated-figure
 
 #let safe-eval(content, mode: "markup", replace-dots: true) = {
   if content == "" or content == none { return [] }
@@ -218,6 +219,8 @@
         }
       ]
     }
+  ] else if b.type == "illustrated_figure" [
+    #render-illustrated-figure(b, is-solution, body-size: body-size, is-ltr: false, eval-fn: s => safe-eval(s))
   ] else if b.type == "typst_raw" [
     #grid(columns: (1fr, auto), [
       #(if is-solution and b.at("answer", default: "") != "" {

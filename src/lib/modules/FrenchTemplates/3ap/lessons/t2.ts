@@ -4,22 +4,21 @@ import {
 	svgFrenchGrammarMap,
 	svgFrenchPrimaryCards
 } from '../../svg-french';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — 3AP Trimestre 2 (Projet 2 : En famille ! / Les animaux et les fruits)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgFamilleDiscover = svgFrenchPrimaryCards({
-	title: 'Les membres de la famille — أفراد العائلة',
-	subtitle: 'Voici ma famille en Algérie',
-	cards: [
-		{ word: 'le père', arabic: 'الأب (papa)', color: '#1d4ed8' },
-		{ word: 'la mère', arabic: 'الأم (maman)', color: '#047857' },
-		{ word: 'le frère', arabic: 'الأخ', color: '#d97706' },
-		{ word: 'la sœur', arabic: 'الأخت', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgFamilleDiscover = renderLessonIllustration('pri_lang_04_house_rooms_cutaway', {
+	lang: 'fr',
+	title: 'Ma famille dans notre maison et ses pièces',
+	customLegend: [
+		{ num: '1', label: 'La chambre rangée (le frère et la sœur)' },
+		{ num: '2', label: 'La salle de bains propre' },
+		{ num: '3', label: 'La cuisine (la mère prépare le repas)' },
+		{ num: '4', label: 'Le salon et le jardin (le père et les grands-parents)' }
+	]
 });
 
 const svgFamilleSummary = svgFrenchGrammarMap({
@@ -50,17 +49,14 @@ const svgFamilleSummary = svgFrenchGrammarMap({
 	height: 250
 });
 
-const svgSonsDiscover = svgFrenchPrimaryCards({
-	title: 'Les sons complexes : ou, on, oi, ch — الأصوات المركّبة',
-	subtitle: 'Deux lettres qui forment un seul son',
-	cards: [
-		{ word: 'ou', arabic: 'poule - mouton', color: '#2563eb' },
-		{ word: 'on', arabic: 'maison - ballon', color: '#059669' },
-		{ word: 'oi', arabic: 'poire - poisson', color: '#d97706' },
-		{ word: 'ch', arabic: 'chat - cheval', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgSonsDiscover = renderLessonIllustration('pri_lang_08_birthday_cake_party', {
+	lang: 'fr',
+	title: 'Les sons complexes (ou, on, oi) : la fête de la réussite',
+	customLegend: [
+		{ num: '1', label: 'Un gâteau rouge aux fraises (son « ou » : rouge)' },
+		{ num: '2', label: 'Des ballons multicolores (son « on » : ballon, bonbon)' },
+		{ num: '3', label: 'Des boîtes de cadeaux (son « oi » : boîte)' }
+	]
 });
 
 const svgSonsSummary = svgFrenchConjugationChart({
@@ -131,17 +127,13 @@ const svgAnimauxSummary = svgFrenchGrammarMap({
 	height: 250
 });
 
-const svgEtreAvoirDiscover = svgFrenchPrimaryCards({
-	title: 'Être et Avoir au présent — فعلا الكينونة والملكية',
-	subtitle: 'Avec je, tu, il, elle (المفرد)',
-	cards: [
-		{ word: 'Je suis', arabic: 'أنا (أكون)', color: '#2563eb' },
-		{ word: 'Il / Elle est', arabic: 'هو / هي (يكون)', color: '#059669' },
-		{ word: "J'ai", arabic: 'أنا عندي', color: '#d97706' },
-		{ word: 'Il / Elle a', arabic: 'هو / هي عنده', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgEtreAvoirDiscover = renderLessonIllustration('pri_ara_05_fresh_fruits_honey_basket', {
+	lang: 'fr',
+	title: "Être et Avoir avec l'alimentation saine",
+	customLegend: [
+		{ num: '1', label: "J'ai un panier de fruits frais (pomme, orange, raisin)" },
+		{ num: '2', label: "Le miel pur est bon pour la santé (l'huile d'olive est pure)" }
+	]
 });
 
 const svgEtreAvoirSummary = svgFrenchConjugationChart({

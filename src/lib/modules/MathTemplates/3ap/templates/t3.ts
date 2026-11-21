@@ -1,4 +1,5 @@
 import type { ContentBlock, ExerciseBlock, TableCell } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../rng';
 import { saveSvgAsset, svgAnalogClock, svgGridPoints, svgRectangle } from '../../svg-helpers';
 import type { Difficulty, GeneratedExerciseInstance, ParameterizedTemplate } from '../../types';
@@ -857,7 +858,13 @@ const tplTimeDurations: ParameterizedTemplate = {
 						content: `3) حوّل إلى الوحدة المطلوبة:\n\n- ${ltr(`${convH} h ${convM} min = ........ min`)}   ؛   ${ltr(`${convSecMin} min = ........ s`)}`,
 						answer: `- ${ltr(`${convH} h ${convM} min = ${totalConvMin} min`)} (لأن ${ltr('1 h = 60 min')})\n\n- ${ltr(`${convSecMin} min = ${totalConvSec} s`)} (لأن ${ltr('1 min = 60 s')})`,
 						mark: '0.5'
-					}
+					},
+					buildIllustratedFigureBlock('pri_math_05_analog_clock_ticks', {
+						maxHeight: 112,
+						width: '58%',
+						mode: 'image_only',
+						title: 'تَذْكِيرٌ بَصَرِيٌّ: العَقْرَبُ الصَّغِيرُ لِلسَّاعَاتِ وَالكَبِيرُ لِلدَّقَائِقِ (1 h = 60 min)'
+					})
 				]
 			},
 			hints,
@@ -1310,6 +1317,12 @@ const tplSymmetryAndSolids: ParameterizedTemplate = {
 									}
 								]
 							},
+							buildIllustratedFigureBlock('pri_math_06_3d_geometric_solids', {
+								maxHeight: 112,
+								width: '58%',
+								mode: 'image_only',
+								title: '3) أَكْمِلْ جَدْوَلَ خَصَائِصِ المُجَسَّمَاتِ المَأْلُوفَةِ'
+							}),
 							{
 								type: 'table',
 								headers: ['المجسم', 'عدد الوجوه', 'عدد الأحرف', 'عدد الرؤوس', 'يتدحرج؟'],

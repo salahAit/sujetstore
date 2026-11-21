@@ -10,6 +10,7 @@ import {
 	buildFrenchPassageBlock,
 	buildFrenchWrittenProductionBlock
 } from '../../french-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. Compréhension 1 (4 pts) — C'est notre quartier ! (Situer sa maison)
@@ -122,6 +123,12 @@ const compQuartier4apT1: FrenchParameterizedTemplate = {
 					title: sc.title,
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
+				}),
+				buildIllustratedFigureBlock('pri_lang_04_house_rooms_cutaway', {
+					lang: 'fr',
+					title: 'Ma maison dans un quartier calme et propre',
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'text',
@@ -305,6 +312,12 @@ const compBibliotheque4apT1: FrenchParameterizedTemplate = {
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
 				}),
+				buildIllustratedFigureBlock('pri_lang_05_professions_tools', {
+					lang: 'fr',
+					title: 'Les lieux et les métiers utiles de notre quartier',
+					maxHeight: 108,
+					width: '58%'
+				}),
 				{
 					type: 'text',
 					content: '#strong[1)] Coche la bonne réponse :'
@@ -440,6 +453,16 @@ const langPhrasesNoms4apT1: FrenchParameterizedTemplate = {
 			points: 3,
 			instruction: 'Fais les trois exercices suivants :',
 			content: [
+				buildIllustratedFigureBlock('pri_ara_04_algeria_flag_martyrs_memorial', {
+					lang: 'fr',
+					title: "Mon pays l'Algérie : Alger, Maqam Echahid et le drapeau national",
+					customLegend: [
+						{ num: '1', label: "Maqam Echahid et la Casbah d'Alger (Noms propres)" },
+						{ num: '2', label: 'Le drapeau national algérien vert, blanc et rouge' }
+					],
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `#strong[Activité 1 :] Classe les mots dans le tableau : ( ${s.words.join(' - ')} )`
@@ -585,6 +608,11 @@ const langPronomsVerbes4apT1: FrenchParameterizedTemplate = {
 			points: 3,
 			instruction: 'Fais les deux activités suivantes :',
 			content: [
+				buildIllustratedFigureBlock('pri_lang_01_red_bus_train', {
+					lang: 'fr',
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `#strong[Activité 1 :] Remplace le sujet par le pronom personnel convenable (Il / Elle / Ils / Elles) :\n1) ${s.sub1}\n2) ${s.sub2}`,

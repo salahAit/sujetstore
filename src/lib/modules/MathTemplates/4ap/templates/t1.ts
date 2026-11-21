@@ -4,6 +4,7 @@ import type {
 	ParameterizedTemplate
 } from '../../types';
 import type { ContentBlock, ExerciseBlock, TableCell } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../rng';
 import { saveSvgAsset, svgBarChart, svgRectangle } from '../../svg-helpers';
 
@@ -1142,7 +1143,11 @@ const templateMetricUnits: ParameterizedTemplate = {
 					content: 'الترتيب التصاعدي: ........................................................................................',
 					answer: `الترتيب التصاعدي: ${ltrUnit(`${formatGroupedRtlSafe(ordLowML)} mL`)} ، ثم ${ltrUnit(`${ordExactL} L`)} ، ثم ${ltrUnit(`${ordMidDL} dL`)} ، ثم ${ltrUnit(`${ordHighCL} cL`)}`,
 					mark: '0.5'
-				}
+				},
+				buildIllustratedFigureBlock('pri_math_07_measuring_vessels_liter', {
+					maxHeight: 112,
+					width: '58%'
+				})
 			]
 		};
 
@@ -1501,7 +1506,13 @@ const templateLinesAndQuadrilaterals: ParameterizedTemplate = {
 					content: 'الإجابة: ....................................................................................',
 					answer: `الإجابة: ${extraAnswerTypst}`,
 					mark: '0.5'
-				}
+				},
+				buildIllustratedFigureBlock('pri_math_08_geometry_tools_set', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'أَدَوَاتُ التَّحَقُّقِ الهَنْدَسِيِّ (المِسْطَرَةُ وَالكُوسُ وَالمِدْوَرُ)'
+				})
 			]
 		};
 

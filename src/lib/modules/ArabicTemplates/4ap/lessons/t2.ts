@@ -1,8 +1,7 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgGrammarTree,
-	svgIrabBox,
-	svgPrimaryArabicVisual,
 	svgSpellingCard
 } from '../../svg-arabic';
 
@@ -10,17 +9,7 @@ import {
 // SVGs — السنة الرابعة ابتدائي — الفصل الثاني
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgSifaDiscover = svgIrabBox({
-	title: 'الصفةُ تتبعُ الموصوفَ في أربعةِ أشياءَ',
-	tokens: [
-		{ word: 'نُحِبُّ', role: 'فعلٌ مضارعٌ', sign: 'والفاعل نحن', color: '#047857' },
-		{ word: 'الوَطَنَ', role: 'الموصوفُ', sign: 'معرفة — مفرد — منصوب', color: '#1d4ed8' },
-		{ word: 'العَزِيزَ', role: 'الصِّفَةُ (النَّعْتُ)', sign: 'معرفة — مفرد — منصوب', color: '#b45309' }
-	],
-	note: 'الصفةُ تصفُ اسماً قبلها (الموصوف) وتطابقه في الحركة والتعريف والتذكير والعدد',
-	width: 540,
-	height: 205
-});
+const svgSifaDiscover = renderLessonIllustration('pri_ara_04_algeria_flag_martyrs_memorial');
 
 const svgSifaSummary = svgGrammarTree({
 	title: 'أوجهُ مطابقةِ الصفةِ للموصوفِ الأربعة',
@@ -50,17 +39,7 @@ const svgSifaSummary = svgGrammarTree({
 	height: 255
 });
 
-const svgMudafDiscover = svgIrabBox({
-	title: 'تركيبُ الإضافةِ: المضافُ + المضافُ إليهِ',
-	tokens: [
-		{ word: 'نَظَافَةُ', role: 'المُضافُ (مبتدأ)', sign: 'نكرة غير منوّن', color: '#1d4ed8' },
-		{ word: 'المَدْرَسَةِ', role: 'مضافٌ إليهِ', sign: 'مجرور بالكسرة', color: '#047857' },
-		{ word: 'وَاجِبَةٌ', role: 'خبرٌ', sign: 'مرفوع بالضمة', color: '#b45309' }
-	],
-	note: 'المضافُ إليهِ اسمٌ مجرورٌ يوضّحُ الاسمَ النكرةَ الذي قبلهُ ويخصّصه',
-	width: 540,
-	height: 205
-});
+const svgMudafDiscover = renderLessonIllustration('pri_ara_08_sahara_oasis_dunes');
 
 const svgMudafSummary = svgGrammarTree({
 	title: 'أحكامُ المضافِ والمضافِ إليهِ وعلاماتُ الجرِّ',
@@ -90,17 +69,7 @@ const svgMudafSummary = svgGrammarTree({
 	height: 255
 });
 
-const svgKana4apDiscover = svgIrabBox({
-	title: 'أثرُ كَانَ وأخواتِها على الجملةِ الاسميةِ',
-	tokens: [
-		{ word: 'ظَلَّ', role: 'فعلٌ ماضٍ ناقصٌ', sign: 'من أخوات كان', color: '#b45309' },
-		{ word: 'المُجَاهِدُونَ', role: 'اسمُ ظَلَّ', sign: 'مرفوع بالواو', color: '#1d4ed8' },
-		{ word: 'صَامِدِينَ', role: 'خبرُ ظَلَّ', sign: 'منصوب بالياء', color: '#047857' }
-	],
-	note: 'كان وأخواتها ترفع المبتدأ (اسمها) وتنصب الخبر (خبرها) بالفتحة أو الياء أو الكسرة',
-	width: 540,
-	height: 205
-});
+const svgKana4apDiscover = renderLessonIllustration('pri_ara_03_algerian_village_orchard');
 
 const svgKana4apSummary = svgGrammarTree({
 	title: 'عملُ كَانَ وأخواتِها مع المفرد والمثنى والجمع',
@@ -130,18 +99,7 @@ const svgKana4apSummary = svgGrammarTree({
 	height: 255
 });
 
-const svgMedialHamzaDiscover = svgPrimaryArabicVisual({
-	title: 'سلَّمُ قوَّةِ الحركاتِ لكتابةِ الهمزةِ المتوسطة',
-	subtitle: 'نُقارنُ حركةَ الهمزةِ وحركةَ الحرفِ الذي قبلها ونختارُ الأقوى',
-	cards: [
-		{ bigText: '1. الكَسْرَةُ', label: 'الأقوى ← نَبِرَة (ئـ)', color: '#dc2626' },
-		{ bigText: '2. الضَّمَّةُ', label: 'ثاني أقوى ← وَاو (ؤ)', color: '#1d4ed8' },
-		{ bigText: '3. الفَتْحَةُ', label: 'ثالثاً ← أَلِف (أ)', color: '#047857' },
-		{ bigText: '4. السُّكُونُ', label: 'أضعفُ الحركات', color: '#64748b' }
-	],
-	width: 540,
-	height: 185
-});
+const svgMedialHamzaDiscover = renderLessonIllustration('pri_ara_06_four_seasons_trees');
 
 const svgMedialHamzaSummary = svgSpellingCard({
 	title: 'قاعدة كتابة الهمزة المتوسطة (النبرة — الواو — الألف)',

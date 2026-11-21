@@ -3,9 +3,9 @@ import {
 	svgFrenchConjugationChart,
 	svgFrenchGrammarMap,
 	svgFrenchPrimaryCards,
-	svgFrenchTenseTimeline,
 	svgFrenchWritingBlueprint
 } from '../../svg-french';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ===============================================================================
 // Interactive Lessons - 5AP French - Trimester 2
@@ -74,13 +74,12 @@ export const LESSONS_5AP_T2: FrenchInteractiveLessonData[] = [
 				'يمتاز كل من CCL و CCT بإمكانية نقلهما (في بداية الجملة أو نهايتها) أو حذفهما دون إفساد تركيب الجملة.',
 				'يبدأ مؤشر المكان غالباً بحرف جر مكاني: à, au, dans, devant, près de, sur, sous.'
 			],
-			visualSvg: svgFrenchPrimaryCards({
-				title: 'Repérer CCL et CCT facilement',
-				subtitle: 'السؤالان الذهبيان في السنة الخامسة',
-				cards: [
-					{ word: 'Où ? = CCL', arabic: 'à Tlemcen / au musée', color: '#1d4ed8' },
-					{ word: 'Quand ? = CCT', arabic: 'hier / à 9 heures', color: '#047857' },
-					{ word: 'Mobilité', arabic: 'يمكن نقله في الجملة', color: '#b45309' }
+			visualSvg: renderLessonIllustration('pri_ara_04_algeria_flag_martyrs_memorial', {
+				lang: 'fr',
+				title: "Mon pays l'Algérie : repérer le CCL (Où ?) et le CCT (Quand ?)",
+				customLegend: [
+					{ num: '1', label: "CCL (Où ?) : à Maqam Echahid et à la Casbah d'Alger" },
+					{ num: '2', label: 'CCT (Quand ?) : la semaine dernière, à neuf heures' }
 				]
 			}),
 			visualCaptionAr: 'تمييز مؤشر المكان (CCL) ومؤشر الزمان (CCT) بالسؤالين Où و Quand',
@@ -183,13 +182,13 @@ export const LESSONS_5AP_T2: FrenchInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'قرأ كريم دفتر الرحلات: «Hier, nous avons visité la Grande Mosquée de Tlemcen. Nous avons choisi des cartes postales. Khadidja est arrivée tôt et les élèves sont partis en bus.» لاحظ عدد الكلمات في كل فعل ولماذا أضفنا «e» أو «s» في الآخر.',
-			svg: svgFrenchTenseTimeline({
-				title: 'Temps du récit au passé',
-				tenseName: 'Le passé composé',
-				formula: 'Auxiliaire (avoir / être au présent) + Participe passé (-é / -i)',
-				activeZone: 'past',
-				example: 'Hier, les élèves ont visité la Casbah et sont rentrés heureux.',
-				markers: 'hier, la semaine dernière, l’an dernier, tout à l’heure'
+			svg: renderLessonIllustration('pri_lang_01_red_bus_train', {
+				lang: 'fr',
+				title: 'Le passé composé : départ en excursion scolaire',
+				customLegend: [
+					{ num: '1', label: 'Avec AVOIR : Nous avons pris le bus scolaire à 8 heures.' },
+					{ num: '2', label: 'Avec ÊTRE : Les voyageurs sont partis en train rapide.' }
+				]
 			}),
 			steps: [
 				{
@@ -644,14 +643,12 @@ export const LESSONS_5AP_T2: FrenchInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'كتبت خديجة فقرة عن رحلة قسمها: «La semaine dernière, notre classe est allée à la Grande Mosquée de Tlemcen. Nous avons pris le bus à huit heures. Sur place, nous avons admiré les belles colonnes et les anciens manuscrits. Nous sommes rentrés très heureux de cette visite.»',
-			svg: svgFrenchPrimaryCards({
-				title: 'Notre patrimoine algérien (Projet 2)',
-				subtitle: 'معالم جزائرية عريقة للتعبير الكتابي في 5AP',
-				cards: [
-					{ word: 'La Casbah', arabic: 'قصبة الجزائر', color: '#1d4ed8' },
-					{ word: 'Tlemcen', arabic: 'الجامع الكبير', color: '#047857' },
-					{ word: 'Timgad', arabic: 'تيمقاد (باتنة)', color: '#b45309' },
-					{ word: 'Jardin d’Essai', arabic: 'حديقة التجارب', color: '#15803d' }
+			svg: renderLessonIllustration('pri_lang_02_airplane_ship', {
+				lang: 'fr',
+				title: "Raconter un voyage ou une visite en Algérie (par avion / en bateau)",
+				customLegend: [
+					{ num: '1', label: "Voyager par avion vers les oasis du Sud algérien" },
+					{ num: '2', label: 'Admirer la côte méditerranéenne en bateau' }
 				]
 			}),
 			steps: [

@@ -2,25 +2,23 @@ import type { FrenchInteractiveLessonData } from '../../types';
 import {
 	svgFrenchConjugationChart,
 	svgFrenchGrammarMap,
-	svgFrenchPrimaryCards,
 	svgFrenchTenseTimeline
 } from '../../svg-french';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — 4AP Trimestre 1 (Projet 1 : C'est notre quartier !)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgQuartierDiscover = svgFrenchPrimaryCards({
-	title: 'Les lieux de notre quartier — مرافق حينا',
-	subtitle: 'Situer sa maison dans le quartier (4AP)',
-	cards: [
-		{ word: 'la mosquée', arabic: 'المسجد', color: '#059669' },
-		{ word: "l'école", arabic: 'المدرسة', color: '#2563eb' },
-		{ word: 'la bibliothèque', arabic: 'المكتبة', color: '#7c3aed' },
-		{ word: 'la boulangerie', arabic: 'المخبزة', color: '#d97706' }
-	],
-	width: 520,
-	height: 185
+const svgQuartierDiscover = renderLessonIllustration('pri_lang_04_house_rooms_cutaway', {
+	lang: 'fr',
+	title: 'Situer ma maison et ses pièces dans notre quartier (4AP)',
+	customLegend: [
+		{ num: '1', label: 'La chambre propre et lumineuse' },
+		{ num: '2', label: 'La salle de bains rangée' },
+		{ num: '3', label: 'La cuisine familiale' },
+		{ num: '4', label: "Le salon et le jardin près de l'école et de la mosquée" }
+	]
 });
 
 const svgQuartierSummary = svgFrenchGrammarMap({
@@ -51,16 +49,13 @@ const svgQuartierSummary = svgFrenchGrammarMap({
 	height: 250
 });
 
-const svgTypesPhrasesDiscover = svgFrenchPrimaryCards({
-	title: 'Déclarative ou Interrogative ? — الجملة الخبرية والاستفهامية',
-	subtitle: 'Observe la ponctuation à la fin de chaque phrase',
-	cards: [
-		{ word: 'Déclarative (.)', arabic: 'تُخبر بمعلومة', color: '#2563eb' },
-		{ word: 'Interrogative (?)', arabic: 'تطرح سؤالاً', color: '#059669' },
-		{ word: 'Est-ce que... ?', arabic: 'هل...؟', color: '#d97706' }
-	],
-	width: 520,
-	height: 185
+const svgTypesPhrasesDiscover = renderLessonIllustration('pri_lang_01_red_bus_train', {
+	lang: 'fr',
+	title: 'Déclarative (.) ou Interrogative (?) : les transports du quartier',
+	customLegend: [
+		{ num: '1', label: "Phrase déclarative (.) : Le bus scolaire s'arrête devant l'école." },
+		{ num: '2', label: 'Phrase interrogative (?) : Est-ce que le train arrive à la gare ?' }
+	]
 });
 
 const svgTypesPhrasesSummary = svgFrenchGrammarMap({
@@ -129,17 +124,13 @@ const svgPronomsVerbesSummary = svgFrenchConjugationChart({
 	height: 210
 });
 
-const svgNomsPonctDiscover = svgFrenchPrimaryCards({
-	title: 'Nom propre ou Nom commun ? — اسم العلم واسم الجنس',
-	subtitle: 'Le nom propre prend toujours une MAJUSCULE !',
-	cards: [
-		{ word: 'Amine / Alger', arabic: 'Nom propre (علم)', color: '#1d4ed8' },
-		{ word: 'un quartier', arabic: 'Nom commun (مشترك)', color: '#047857' },
-		{ word: 'la mosquée', arabic: 'Nom commun (مشترك)', color: '#d97706' },
-		{ word: '.  ?  !  ,', arabic: 'La ponctuation', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgNomsPonctDiscover = renderLessonIllustration('pri_ara_04_algeria_flag_martyrs_memorial', {
+	lang: 'fr',
+	title: "Mon pays l'Algérie : Noms propres (Majuscule) et Noms communs",
+	customLegend: [
+		{ num: '1', label: "Nom propre : Maqam Echahid à Alger, capitale de l'Algérie" },
+		{ num: '2', label: 'Nom commun : un monument, un drapeau, une ville !' }
+	]
 });
 
 const svgNomsPonctSummary = svgFrenchConjugationChart({

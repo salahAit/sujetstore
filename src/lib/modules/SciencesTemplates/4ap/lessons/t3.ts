@@ -66,33 +66,9 @@ const svgHomeElectricalSafety4ap = wrapSciencesSvg(
 		`<text x="339" y="200" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">التجارب المدرسية بالبطارية فقط</text>`
 );
 
-const svgShadowAndDayNight4ap = wrapSciencesSvg(
-	460,
-	245,
-	`<rect x="6" y="6" width="448" height="233" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>` +
-		`<text x="230" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">تشكّل الظل ودوران الأرض حول نفسها (تعاقب الليل والنهار)</text>` +
-		// Sun on right
-		`<circle cx="386" cy="128" r="32" fill="#facc15" stroke="#ca8a04" stroke-width="2.4"/>` +
-		`<text x="386" y="132" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#713f12">الشمس</text>` +
-		// Sun rays pointing left
-		`<line x1="346" y1="98" x2="246" y2="98" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="6,4"/>` +
-		`<line x1="346" y1="128" x2="246" y2="128" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="6,4"/>` +
-		`<line x1="346" y1="158" x2="246" y2="158" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="6,4"/>` +
-		// Earth sphere: right half bright (Day), left half dark (Night)
-		`<circle cx="176" cy="128" r="54" fill="#1e293b" stroke="#0f172a" stroke-width="2.2"/>` +
-		`<path d="M 176 74 A 54 54 0 0 1 176 182 Z" fill="#38bdf8"/>` +
-		// Tilted rotation axis
-		`<line x1="192" y1="54" x2="160" y2="202" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,3"/>` +
-		// Rotation curved arrow
-		`<path d="M 152 62 Q 176 50 202 64" fill="none" stroke="#16a34a" stroke-width="2.2"/>` +
-		`<polygon points="198,58 206,65 196,68" fill="#16a34a"/>` +
-		// Labels
-		haloText(`x="202" y="132" text-anchor="middle" font-size="11.5" font-weight="bold"`, '#0c4a6e', 'نهار') +
-		haloText(`x="148" y="132" text-anchor="middle" font-size="11.5" font-weight="bold"`, '#f8fafc', 'ليل') +
-		`<text x="176" y="45" text-anchor="middle" font-size="10.2" font-weight="bold" fill="#15803d">دوران من الغرب إلى الشرق</text>` +
-		`<rect x="20" y="196" width="420" height="32" rx="7" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.4"/>` +
-		`<text x="230" y="216" text-anchor="middle" font-size="10.8" font-weight="bold" fill="#1e3a8a">تدور الأرض حول محورها دورة كاملة خلال 24 ساعة فينتج الليل والنهار</text>`
-);
+const svgShadowAndDayNight4ap = svgPlantAndPrimaryDiagram('day_night_earth', {
+	title: 'دوران الأرض حول نفسها وتعاقب الليل والنهار (24 ساعة)'
+});
 
 const svgEarthSeasons4ap = wrapSciencesSvg(
 	460,

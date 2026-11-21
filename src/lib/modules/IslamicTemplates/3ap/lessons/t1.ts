@@ -1,4 +1,5 @@
 import type { IslamicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgIslamicCards,
 	svgIslamicCompare,
@@ -155,17 +156,7 @@ const svgAdhanSummary = svgIslamicSequence({
 	]
 });
 
-const svgBirrDiscover = svgIslamicCards({
-	title: 'مظاهر بر الوالدين والإحسان إليهما',
-	subtitle: 'قرن الله تعالى الإحسان إلى الوالدين بعبادته وحده',
-	cards: [
-		{ badge: '1', title: 'الطَّاعَةُ فِي الْمَعْرُوفِ', detail: 'أستجيب لأمرهما بسرور ودون تذمر', color: '#047857' },
-		{ badge: '2', title: 'الْقَوْلُ الْكَرِيمُ', detail: 'أخفض صوتي ولا أقول لهما أفٍّ', color: '#1d4ed8' },
-		{ badge: '3', title: 'الْمُسَاعَدَةُ وَالْخِدْمَةُ', detail: 'أعين أمي في البيت وأساعد أبي', color: '#b45309' },
-		{ badge: '4', title: 'الدُّعَاءُ لَهُمَا', detail: 'رب ارحمهما كما ربياني صغيرا', color: '#6d28d9' }
-	],
-	columns: 2
-});
+const svgBirrDiscover = renderLessonIllustration('pri_isl_08_goodly_olive_tree');
 
 const svgBirrSummary = svgIslamicConceptTree({
 	title: 'منزلة بر الوالدين وثمراته العظيمة',

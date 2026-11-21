@@ -1,4 +1,5 @@
 import type { Difficulty, GeneratedExerciseInstance, ParameterizedTemplate } from '../../types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../rng';
 import { saveSvgAsset, svgBarChart, svgGridPoints } from '../../svg-helpers';
 
@@ -692,7 +693,13 @@ const massBarChartTemplate: ParameterizedTemplate = {
 						content: comparePrompt,
 						answer: compareAnswer,
 						mark: '0.5'
-					}
+					},
+					buildIllustratedFigureBlock('pri_math_04_two_pan_balance', {
+						maxHeight: 112,
+						width: '58%',
+						mode: 'image_only',
+						title: 'المِيزَانُ ذُو الكِفَّتَيْنِ لِقِيَاسِ وَمُقَارَنَةِ الكُتَلِ'
+					})
 				]
 			},
 			hints: [
@@ -835,6 +842,12 @@ const gridSymmetryAndSolidsTemplate: ParameterizedTemplate = {
 								}
 							]
 						},
+						buildIllustratedFigureBlock('pri_math_06_3d_geometric_solids', {
+							maxHeight: 112,
+							width: '58%',
+							mode: 'image_only',
+							title: '2) أَكْمِلْ جَدْوَلَ خَصَائِصِ المُجَسَّمَاتِ المَأْلُوفَةِ'
+						}),
 						{
 							type: 'table',
 							headers: ['المجسم', 'عدد الوجوه', 'عدد الأحرف', 'عدد الرؤوس', 'شكل الوجوه'],
@@ -983,6 +996,12 @@ const gridSymmetryAndSolidsTemplate: ParameterizedTemplate = {
 								}
 							]
 						},
+						buildIllustratedFigureBlock('pri_math_06_3d_geometric_solids', {
+							maxHeight: 112,
+							width: '58%',
+							mode: 'image_only',
+							title: '2) أَكْمِلْ جَدْوَلَ خَصَائِصِ المُجَسَّمَاتِ المَأْلُوفَةِ'
+						}),
 						{
 							type: 'table',
 							headers: ['المجسم', 'عدد الوجوه', 'عدد الأحرف', 'عدد الرؤوس', 'شكل الوجوه'],

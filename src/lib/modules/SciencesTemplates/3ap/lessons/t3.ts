@@ -92,29 +92,9 @@ const svg3apT3ThermometerDiscover = wrapSciencesSvg(
 		`<text x="316" y="183" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e3a8a">تجمد الماء وانصهار الجليد: 0 درجة</text>`
 );
 
-const svg3apT3WasteSortingDiscover = wrapSciencesSvg(
-	460,
-	225,
-	`<rect x="6" y="6" width="448" height="213" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>` +
-		`<text x="230" y="27" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#0f172a">الفرز الانتقائي للنفايات لإعادة التدوير وحماية المحيط</text>` +
-		// 4 colored recycling bins RTL
-		[
-			{ x: 342, col: '#eab308', bg: '#fefce8', head: 'بلاستيك', ex: 'قارورات وأكياس' },
-			{ x: 234, col: '#2563eb', bg: '#eff6ff', head: 'ورق وكرتون', ex: 'جرائد وعلب ورقية' },
-			{ x: 126, col: '#16a34a', bg: '#f0fdf4', head: 'زجاج', ex: 'قنينات زجاجية' },
-			{ x: 18, col: '#92400e', bg: '#fffbeb', head: 'عضوية', ex: 'قشور الخضر والفواكه' }
-		]
-			.map(
-				(b) =>
-					`<rect x="${b.x}" y="52" width="100" height="132" rx="10" fill="${b.bg}" stroke="${b.col}" stroke-width="2"/>` +
-					`<rect x="${b.x + 22}" y="66" width="56" height="46" rx="5" fill="${b.col}"/>` +
-					`<rect x="${b.x + 18}" y="60" width="64" height="8" rx="3" fill="#334155"/>` +
-					`<text x="${b.x + 50}" y="136" text-anchor="middle" font-size="11.2" font-weight="bold" fill="${b.col}">${b.head}</text>` +
-					`<text x="${b.x + 50}" y="160" text-anchor="middle" font-size="9.2" fill="#334155">${b.ex}</text>`
-			)
-			.join('') +
-		`<text x="230" y="206" text-anchor="middle" font-size="10.8" font-weight="bold" fill="#0f766e">فرز النفايات يسهّل إعادة تدويرها ويحمي التربة والماء والهواء من التلوث</text>`
-);
+const svg3apT3WasteSortingDiscover = svgPlantAndPrimaryDiagram('recycling_solar', {
+	title: 'الفرز الانتقائي للنفايات والطاقة النظيفة لحماية المحيط'
+});
 
 export const SCIENCES_LESSONS_3AP_T3: SciencesInteractiveLessonData[] = [
 	{

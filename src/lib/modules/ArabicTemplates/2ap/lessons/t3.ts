@@ -1,4 +1,5 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgGrammarTree,
 	svgPrimaryArabicVisual,
@@ -25,15 +26,7 @@ export const LESSONS_2AP_T3: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'قَالَ زَيْدٌ مُعْتَزًّا بِمَدْرَسَتِهِ: «هَذَا المُعَلِّمُ **الَّذِي** يُعَلِّمُنَا الخَيْرَ، وَهَذِهِ المَدْرَسَةُ **الَّتِي** نَتَعَلَّمُ فِيهَا، وَ**هَؤُلَاءِ** أَصْدِقَائِي المُجْتَهِدُونَ.»',
-			svg: svgPrimaryArabicVisual({
-				title: 'أَسْمَاءُ الإِشَارَةِ وَالأَسْمَاءُ المَوْصُولَةُ',
-				subtitle: 'نُشِيرُ بِـ «هَذَا/هَذِهِ/هَؤُلَاءِ» وَنَصِلُ الكَلَامَ بِـ «الَّذِي/الَّتِي»',
-				cards: [
-					{ bigText: 'هَؤُلَاءِ', label: 'إِشَارَةٌ لِلْجَمْعِ العَاقِلِ', color: '#2563eb' },
-					{ bigText: 'الَّذِي', label: 'مَوْصُولٌ لِلْمُذَكَّرِ', color: '#059669' },
-					{ bigText: 'الَّتِي', label: 'مَوْصُولٌ لِلْمُؤَنَّثِ', color: '#d97706' }
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_04_algeria_flag_martyrs_memorial'),
 			steps: [
 				{
 					promptAr: 'مَاذَا اسْتَعْمَلَ زَيْدٌ لِلْإِشَارَةِ إِلى أَصْدِقَائِهِ الكَثِيرِينَ؟',
@@ -433,15 +426,7 @@ export const LESSONS_2AP_T3: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'أَرَادَتْ إِيمَانُ كِتَابَةَ فِقْرَةٍ عَنْ يَوْمِ التَّشْجِيرِ، فَكَتَبَتْ ثَلَاثَ جُمَلٍ غَيْرِ مُرَتَّبَةٍ: (أ) ثُمَّ سَقَيْنَاهَا بِالمَاءِ العَذْبِ. (ب) ذَهَبْنَا صَبَاحًا إِلى سَاحَةِ المَدْرَسَةِ. (ج) حَفَرْنَا حُفَرًا وَغَرَسْنَا فِيهَا الشُّجَيْرَاتِ.',
-			svg: svgPrimaryArabicVisual({
-				title: 'خُطُوَاتُ بِنَاءِ فِقْرَةٍ قَصِيرَةٍ جَمِيلَةٍ',
-				subtitle: 'أُرَتِّبُ الأَحْدَاثَ ← أَرْبِطُهَا ← أَضَعُ عَلَامَاتِ التَّرْقِيمِ',
-				cards: [
-					{ bigText: '1', label: 'البِدَايَةُ (ذَهَبْنَا...)', color: '#2563eb' },
-					{ bigText: '2', label: 'الحَدَثُ (غَرَسْنَا...)', color: '#059669' },
-					{ bigText: '3', label: 'النِّهَايَةُ (ثُمَّ سَقَيْنَا.)', color: '#d97706' }
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_06_four_seasons_trees'),
 			steps: [
 				{
 					promptAr: 'بِأَيِّ جُمْلَةٍ تَبْدَأُ فِقْرَةُ إِيمَانَ؟ وَلِمَاذَا؟',

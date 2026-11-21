@@ -1,4 +1,5 @@
 import { buildUniqueMcqOptions, roundTo, SeededRng } from '../../rng';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { saveSvgAsset, svgNumberLine, svgRectangle, svgTriangle } from '../../svg-helpers';
 import type { Difficulty, GeneratedExerciseInstance, ParameterizedTemplate } from '../../types';
 import type { ContentBlock, TableBlock } from '../../../SujetBuilder/types';
@@ -891,6 +892,19 @@ const t2ProportionalityUnitRate: ParameterizedTemplate = {
 				points: 1.5,
 				instruction: `${ctx.intro} أكمل جدول التناسبية التالي باستعمال المرور بالوحدة:`,
 				content: [
+					buildIllustratedFigureBlock(
+						ctx.row1.includes('(L)')
+							? 'pri_math_07_measuring_vessels_liter'
+							: ctx.row1.includes('(kg)')
+								? 'pri_math_04_two_pan_balance'
+								: 'pri_math_02_colored_pencils_bundles',
+						{
+							maxHeight: 112,
+							width: '58%',
+							mode: 'image_only',
+							title: ctx.intro
+						}
+					),
 					tableBlock,
 					{
 						type: 'text',

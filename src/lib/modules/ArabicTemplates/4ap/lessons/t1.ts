@@ -1,4 +1,5 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgGrammarTree,
 	svgIrabBox,
@@ -10,17 +11,7 @@ import {
 // SVGs — السنة الرابعة ابتدائي — الفصل الأول
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgFailDiscover = svgIrabBox({
-	title: 'اكتشفِ الفاعلَ بطرحِ السؤالِ «مَنْ؟» قبلَ الفعلِ',
-	tokens: [
-		{ word: 'شَرَحَ', role: 'فعلٌ ماضٍ', sign: 'مبني على الفتح', color: '#047857' },
-		{ word: 'المُعَلِّمُ', role: 'فاعلٌ (مَنْ شَرَحَ؟)', sign: 'مرفوع بالضمة', color: '#1d4ed8' },
-		{ word: 'الدَّرْسَ', role: 'مفعولٌ به', sign: 'منصوب بالفتحة', color: '#b45309' }
-	],
-	note: 'الفاعلُ هو الاسمُ المرفوعُ الذي يدلُّ على مَنْ قامَ بالفعلِ ويأتي بعدَهُ',
-	width: 540,
-	height: 205
-});
+const svgFailDiscover = renderLessonIllustration('pri_ara_02_warm_algerian_home');
 
 const svgFailSummary = svgGrammarTree({
 	title: 'علاماتُ رفعِ الفاعلِ في السنةِ الرابعةِ ابتدائي',
@@ -50,17 +41,7 @@ const svgFailSummary = svgGrammarTree({
 	height: 255
 });
 
-const svgMafulDiscover = svgIrabBox({
-	title: 'اكتشفِ المفعولَ به بطرحِ السؤالِ «مَاذَا؟»',
-	tokens: [
-		{ word: 'يَحْفَظُ', role: 'فعلٌ مضارعٌ', sign: 'مرفوع بالضمة', color: '#047857' },
-		{ word: 'المُسْلِمُ', role: 'فاعلٌ', sign: 'مرفوع بالضمة', color: '#1d4ed8' },
-		{ word: 'القُرْآنَ', role: 'مفعولٌ به (مَاذَا؟)', sign: 'منصوب بالفتحة', color: '#b45309' }
-	],
-	note: 'المفعولُ به اسمٌ منصوبٌ يقعُ عليهِ فعلُ الفاعلِ',
-	width: 540,
-	height: 205
-});
+const svgMafulDiscover = renderLessonIllustration('pri_ara_01_school_bag_supplies');
 
 const svgMafulSummary = svgGrammarTree({
 	title: 'علاماتُ نصبِ المفعولِ به في اللغة العربية',

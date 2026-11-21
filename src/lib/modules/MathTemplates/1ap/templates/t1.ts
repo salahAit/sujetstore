@@ -1,5 +1,6 @@
 import { buildUniqueMcqOptions, SeededRng } from '../../rng';
 import { saveSvgAsset, svgCountingObjects, svgShapesStrip } from '../../svg-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import type {
 	Difficulty,
 	GeneratedExerciseInstance,
@@ -1547,7 +1548,13 @@ const templateAdditionUnder10: ParameterizedTemplate = {
 				content: `3) أَكْمِلْ بِالْعَدَدِ المُنَاسِبِ:   $${e} +$ ..... $= ${e + f}$`,
 				answer: `$ ${e} + ${f} = ${e + f} $`,
 				mark: '1'
-			}
+			},
+			buildIllustratedFigureBlock('pri_math_01_apple_baskets', {
+				maxHeight: 112,
+				width: '58%',
+				mode: 'image_only',
+				title: 'تَذْكِيرٌ بَصَرِيٌّ: الضَّمُّ وَالجَمْعُ فِي السَّلَّتَيْنِ'
+			})
 		];
 
 		return {

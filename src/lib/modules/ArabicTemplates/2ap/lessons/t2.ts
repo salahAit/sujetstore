@@ -1,4 +1,5 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgGrammarTree,
 	svgPrimaryArabicVisual
@@ -284,14 +285,7 @@ export const LESSONS_2AP_T2: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'قَالَتْ خَدِيجَةُ: «المُسْلِمُ **لَا يَكْذِبُ** أَبَدًا، وَأَخِي عُمَرُ **لَمْ يَتَأَخَّرْ** عَنِ المَدْرَسَةِ أَمْسِ.»',
-			svg: svgPrimaryArabicVisual({
-				title: 'أَدَاتَا النَّفْيِ «لَا» وَ«لَمْ»',
-				subtitle: 'تَدْخُلَانِ عَلَى الفِعْلِ المُضَارِعِ لِنَفْيِ وُقُوعِ الفِعْلِ',
-				cards: [
-					{ bigText: 'لَا يَكْذِبُ', label: 'نَفْيٌ بِـ «لَا» (ضَمَّةٌ)', color: '#2563eb' },
-					{ bigText: 'لَمْ يَتَأَخَّرْ', label: 'نَفْيٌ بِـ «لَمْ» (سُكُونٌ)', color: '#059669' }
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_03_algerian_village_orchard'),
 			steps: [
 				{
 					promptAr: 'مَاذَا أَفَادَتْ كَلِمَةُ «لَا» فِي جُمْلَةِ «المُسْلِمُ لَا يَكْذِبُ»؟',

@@ -1,4 +1,5 @@
 import type { ContentBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../rng';
 import {
 	saveSvgAsset,
@@ -975,6 +976,10 @@ const templateAddSubNoCarry: ParameterizedTemplate = {
 		}
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_math_02_colored_pencils_bundles', {
+				maxHeight: 112,
+				width: '58%'
+			}),
 			{
 				type: 'columns',
 				widths: ['1fr', '1fr'],

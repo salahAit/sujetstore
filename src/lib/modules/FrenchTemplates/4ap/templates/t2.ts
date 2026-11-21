@@ -9,6 +9,7 @@ import {
 	buildFrenchPassageBlock,
 	buildFrenchWrittenProductionBlock
 } from '../../french-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. Compréhension 1 (4 pts) — L'Aïd El-Fitr et L'Aïd El-Adha (100% Halal)
@@ -121,6 +122,12 @@ const compAid4apT2: FrenchParameterizedTemplate = {
 					title: sc.title,
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
+				}),
+				buildIllustratedFigureBlock('pri_lang_08_birthday_cake_party', {
+					lang: 'fr',
+					title: 'La joie des fêtes et du partage : gâteaux, ballons et cadeaux',
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'text',
@@ -299,6 +306,16 @@ const compScienceReussite4apT2: FrenchParameterizedTemplate = {
 					title: sc.title,
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
+				}),
+				buildIllustratedFigureBlock('pri_ara_07_science_library_telescope', {
+					lang: 'fr',
+					title: 'Yaoum El-Ilm (16 Avril) : la lecture, le savoir et la réussite',
+					customLegend: [
+						{ num: '1', label: 'Les livres utiles, la loupe et le globe terrestre' },
+						{ num: '2', label: 'Le télescope et la recherche scientifique' }
+					],
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'text',
@@ -560,6 +577,16 @@ const langPresent2g4apT2: FrenchParameterizedTemplate = {
 			points: 3,
 			instruction: 'Conjugue les verbes au présent de l’indicatif :',
 			content: [
+				buildIllustratedFigureBlock('pri_ara_05_fresh_fruits_honey_basket', {
+					lang: 'fr',
+					title: "L'alimentation saine et le partage : fruits frais et miel pur",
+					customLegend: [
+						{ num: '1', label: 'Un panier de fruits et légumes frais' },
+						{ num: '2', label: "Le miel pur et l'huile d'olive naturelle" }
+					],
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `#strong[Activité 1 :] Conjugue « être » ou « avoir » au présent :\n1) ${s.ea1}\n2) ${s.ea2}`,

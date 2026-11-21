@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock, ExerciseBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../../MathTemplates/rng';
 import {
 	buildHadithPassageBlock,
@@ -520,6 +521,12 @@ const tplHajjPillarsT2: IslamicParameterizedTemplate = {
 		};
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_isl_01_masjid_al_haram_kaaba', {
+				maxHeight: 112,
+				width: '58%',
+				mode: 'image_only',
+				title: 'الكَعْبَةُ المُشَرَّفَةُ وَالمَسْجِدُ الحَرَامُ — مَنَاسِكُ الحَجِّ'
+			}),
 			buildIslamicContextBlock({
 				title: v.caseTitle,
 				text: v.caseText
@@ -842,6 +849,12 @@ const tplIntegrationItharT2: IslamicParameterizedTemplate = {
 			points: 4,
 			instruction: 'اقرأ السياق والسند والتعليمة بعناية، ثم اكتب فقرة منظمة ومترابطة:',
 			content: [
+				buildIllustratedFigureBlock('pri_isl_07_wheat_olive_zakat', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'الإِيثَارُ وَالبَذْلُ وَالتَّكَافُلُ الِاجْتِمَاعِيُّ'
+				}),
 				buildIslamicIntegrationBlock({
 					context: v.context,
 					supportQuote: v.supportQuote,

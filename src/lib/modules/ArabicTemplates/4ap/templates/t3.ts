@@ -10,6 +10,10 @@ import {
 	buildProsePassageBlock,
 	buildWrittenProductionBlock
 } from '../../arabic-helpers';
+import {
+	buildIllustratedFigureBlock,
+	type IllustrationId
+} from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. البناء الفكري (3 ن) — العلم والابتكار والصحة والبيئة
@@ -110,11 +114,24 @@ const readingComp4apT3: ArabicParameterizedTemplate = {
 			explanation: `العنوان الأنسب هو «${p.bestTitle}».`
 		};
 
+		const illustrationId: IllustrationId =
+			p.title === 'العِلْمُ مِفْتَاحُ النَّهْضَةِ'
+				? 'pri_ara_07_science_library_telescope'
+				: p.title === 'الطَّاقَةُ الشَّمْسِيَّةُ النَّظِيفَةُ'
+					? 'pri_ara_08_sahara_oasis_dunes'
+					: 'pri_ara_05_fresh_fruits_honey_basket';
+
 		const sujetExercise: ExerciseBlock = {
 			customTitle: 'السند والبناء الفكري',
 			points: 3,
 			instruction: 'اقرأ السند قراءة متمعنة ثم أجب عن الأسئلة الآتية:',
 			content: [
+				buildIllustratedFigureBlock(illustrationId, {
+					mode: 'image_only',
+					title: p.title,
+					maxHeight: 112,
+					width: '58%'
+				}),
 				buildProsePassageBlock({
 					title: p.title,
 					paragraphs: p.paragraphs,

@@ -5,6 +5,7 @@ import {
 	svgEnglishPrimaryCards,
 	svgEnglishWritingStructure
 } from '../../svg-english';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ===============================================================================
 // Interactive Lessons - 5AP English - Trimester 2 (Hometown, Amenities & Directions)
@@ -33,15 +34,13 @@ export const LESSONS_5AP_T2: EnglishInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'يصف أنس حيّه النظيف في مدينة سطيف قائلاً: «In my neighbourhood, there is a big mosque, a primary school, and a public library. There are two bakeries and a green park.» لاحظ الفرق بين There is و There are.',
-			svg: svgEnglishPrimaryCards({
-				title: 'Places in My Algerian Town',
-				subtitle: 'أهم المرافق في مدينتي الجزائرية',
-				cards: [
-					{ word: 'Mosque', arabic: 'مسجد', color: '#059669' },
-					{ word: 'School', arabic: 'مدرسة', color: '#2563eb' },
-					{ word: 'Library', arabic: 'مكتبة', color: '#7c3aed' },
-					{ word: 'Hospital', arabic: 'مستشفى', color: '#0284c7' },
-					{ word: 'Bakery', arabic: 'مخبزة', color: '#d97706' }
+			svg: renderLessonIllustration('pri_lang_07_clean_park_planting', {
+				lang: 'en',
+				title: 'Places in My Town: Keeping Our Public Park Clean (There is / There are)',
+				customLegend: [
+					{ num: '1', label: 'There is a green park with young trees' },
+					{ num: '2', label: 'There are colorful flowers in our neighbourhood' },
+					{ num: '3', label: 'Keep our town clean using waste bins' }
 				]
 			}),
 			steps: [
@@ -634,15 +633,12 @@ export const LESSONS_5AP_T2: EnglishInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'كتب ياسين فقرة قصيرة لصديقه عن مدينته: «I live in Constantine. It is a historic and beautiful city in Algeria. There are famous bridges, big mosques, and many schools. My house is near the mosque and opposite a green park. I love my hometown.»',
-			svg: svgEnglishPrimaryCards({
-				title: 'Beautiful Algerian Cities',
-				subtitle: 'مدن جزائرية عريقة وجميلة',
-				cards: [
-					{ word: 'Constantine', arabic: 'قسنطينة', color: '#1d4ed8' },
-					{ word: 'Tlemcen', arabic: 'تلمسان', color: '#047857' },
-					{ word: 'Ghardaia', arabic: 'غرداية', color: '#d97706' },
-					{ word: 'Bejaia', arabic: 'بجاية', color: '#0284c7' },
-					{ word: 'Oran', arabic: 'وهران', color: '#7c3aed' }
+			svg: renderLessonIllustration('pri_ara_04_algeria_flag_martyrs_memorial', {
+				lang: 'en',
+				title: 'My Beloved Country Algeria and Historic Hometowns',
+				customLegend: [
+					{ num: '1', label: 'Martyrs Memorial and historic Algerian landmarks' },
+					{ num: '2', label: 'The Algerian flag: proud of my hometown in Algeria' }
 				]
 			}),
 			steps: [

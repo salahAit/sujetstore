@@ -4,6 +4,7 @@ import {
 	svgEnglishPrimaryCards,
 	svgEnglishWritingStructure
 } from '../../svg-english';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ===============================================================================
 // Interactive Lessons - 5AP English - Trimester 3 (Holidays, Seasons & Competency Evaluation)
@@ -32,14 +33,12 @@ export const LESSONS_5AP_T3: EnglishInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'تتنوع الفصول الأربعة في الجزائر بجمالها: في الصيف يكون الجو حاراً ومشمساً على شواطئ بجاية ووهران، وفي الشتاء يكون بارداً وممطراً ومثلجاً في جبال جرجرة والأوراس. تأمل أسماء الفصول وصفات الطقس.',
-			svg: svgEnglishPrimaryCards({
-				title: 'The Four Seasons in Algeria',
-				subtitle: 'الفصول الأربعة في الجزائر',
-				cards: [
-					{ word: 'Spring', arabic: 'الربيع', color: '#059669' },
-					{ word: 'Summer', arabic: 'الصيف', color: '#d97706' },
-					{ word: 'Autumn', arabic: 'الخريف', color: '#b45309' },
-					{ word: 'Winter', arabic: 'الشتاء', color: '#2563eb' }
+			svg: renderLessonIllustration('pri_ara_06_four_seasons_trees', {
+				lang: 'en',
+				title: 'The Four Seasons in Algeria (Spring, Summer, Autumn, Winter)',
+				customLegend: [
+					{ num: '1', label: 'In spring (flowers bloom) and in summer (hot and sunny)' },
+					{ num: '2', label: 'In autumn (golden leaves) and in winter (cold and snowy)' }
 				]
 			}),
 			steps: [
@@ -70,16 +69,8 @@ export const LESSONS_5AP_T3: EnglishInteractiveLessonData[] = [
 				'للإجابة نستعمل الضمير «It is»: مثال «It is cold and rainy in winter.» و«It is hot and sunny in summer.».',
 				'صفات الطقس الأساسية: sunny (مشمس)، hot (حار)، warm (دافئ)، cool (معتدل مائل للبرودة)، cloudy (غائم)، windy (عاصف)، rainy (ممطر)، cold (بارد)، snowy (مثلج).'
 			],
-			visualSvg: svgEnglishGrammarMap({
-				title: 'Seasons and Typical Weather',
-				rootLabel: 'What is the weather like?',
-				rootSub: 'It is + Weather Adjective',
-				branches: [
-					{ label: 'Spring', rule: 'Warm and sunny', example: 'Flowers bloom.', color: '#047857' },
-					{ label: 'Summer', rule: 'Hot and sunny', example: 'We swim at the beach.', color: '#d97706' },
-					{ label: 'Autumn', rule: 'Windy and cloudy', example: 'Leaves fall down.', color: '#b45309' },
-					{ label: 'Winter', rule: 'Cold, rainy, snowy', example: 'We wear warm coats.', color: '#1d4ed8' }
-				]
+			visualSvg: renderLessonIllustration('pri_lang_03_weather_icons_quad', {
+				lang: 'en'
 			}),
 			visualCaptionAr: 'خريطة الفصول الأربعة وحالة الطقس المناسبة لكل فصل',
 			examples: [
@@ -186,16 +177,9 @@ export const LESSONS_5AP_T3: EnglishInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'في العطلة المدرسية، تسافر العائلات الجزائرية لزيارة الأقارب والمعالم الجميلة: يذهب يوسف إلى المدرسة «on foot»، ويسافر إلى بجاية «by train»، أما عمه فيسافر إلى تمنراست «by plane». لاحظ حروف الجر قبل وسائل النقل.',
-			svg: svgEnglishPrimaryCards({
-				title: 'Means of Transport',
-				subtitle: 'وسائل النقل باللغة الإنجليزية',
-				cards: [
-					{ word: 'By Bus', arabic: 'بالحافلة', color: '#2563eb' },
-					{ word: 'By Train', arabic: 'بالقطار', color: '#059669' },
-					{ word: 'By Car', arabic: 'بالسيارة', color: '#d97706' },
-					{ word: 'By Plane', arabic: 'بالطائرة', color: '#7c3aed' },
-					{ word: 'On Foot', arabic: 'سيراً على الأقدام', color: '#0284c7' }
-				]
+			svg: renderLessonIllustration('pri_lang_01_red_bus_train', {
+				lang: 'en',
+				title: 'Means of Transport in Algeria: By Bus and By Train'
 			}),
 			steps: [
 				{
@@ -345,15 +329,9 @@ export const LESSONS_5AP_T3: EnglishInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'تتحدث خديجة عن خطتها لعطلة الصيف القادمة: «Next summer, I am going to visit my grandparents in Tlemcen. My father is going to drive our car. We are going to see the Great Mosque and walk in the green parks.»',
-			svg: svgEnglishGrammarMap({
-				title: 'Future Plans: be + going to + Base Verb',
-				rootLabel: 'Subject + am / is / are + going to + Verb',
-				rootSub: 'للتعبير عن خطط ومشاريع العطلة القادمة',
-				branches: [
-					{ label: 'I', rule: 'am going to + Verb', example: 'I am going to visit Oran.', color: '#1d4ed8' },
-					{ label: 'He / She / It', rule: 'is going to + Verb', example: 'He is going to swim.', color: '#047857' },
-					{ label: 'You / We / They', rule: 'are going to + Verb', example: 'We are going to travel.', color: '#b45309' }
-				]
+			svg: renderLessonIllustration('pri_lang_02_airplane_ship', {
+				lang: 'en',
+				title: 'Future Holiday Plans (be + going to): By Plane and By Ship'
 			}),
 			steps: [
 				{

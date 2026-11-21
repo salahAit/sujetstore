@@ -10,6 +10,7 @@ import {
 	buildEnglishPhonologyTableBlock,
 	buildEnglishWrittenExpressionBlock
 } from '../../english-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ===============================================================================
 // Parameterized Templates - 5AP English - Trimester 3
@@ -164,6 +165,16 @@ const tplCompHolidaysSeasonsT3: EnglishParameterizedTemplate = {
 				source: 'Adapted 5AP Algerian Holidays Reading Text',
 				glossary: p.glossary
 			}),
+			buildIllustratedFigureBlock('pri_ara_06_four_seasons_trees', {
+				lang: 'en',
+				title: 'Algerian Holidays Across the Four Seasons',
+				customLegend: [
+					{ num: '1', label: 'Warm spring flowers and sunny summer' },
+					{ num: '2', label: 'Cool autumn leaves and rainy winter' }
+				],
+				maxHeight: 108,
+				width: '58%'
+			}),
 			{
 				type: 'text',
 				content: 'Task 1: Read the text carefully and write True or False (2 pts):'
@@ -310,6 +321,11 @@ const tplGrammarGoingToTransportT3: EnglishParameterizedTemplate = {
 		);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_lang_01_red_bus_train', {
+				lang: 'en',
+				maxHeight: 104,
+				width: '56%'
+			}),
 			{
 				type: 'text',
 				content: 'Activity 1: Put the verbs in brackets into the future using (am / is / are + going to) (1.5 pts):'
@@ -422,6 +438,11 @@ const tplVocabWeatherPhonicsT3: EnglishParameterizedTemplate = {
 		);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_lang_03_weather_icons_quad', {
+				lang: 'en',
+				maxHeight: 104,
+				width: '56%'
+			}),
 			{
 				type: 'text',
 				content: 'Activity 1: Complete the table with the typical weather for each season (1.5 pts):'
@@ -564,6 +585,11 @@ const tplWrittenHolidayPlanT3: EnglishParameterizedTemplate = {
 		);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_lang_02_airplane_ship', {
+				lang: 'en',
+				maxHeight: 102,
+				width: '54%'
+			}),
 			buildEnglishWrittenExpressionBlock({
 				topicOnePrompt: `Write a short paragraph (4 to 5 sentences) about your next holiday plan in ${plan.city}, Algeria.`,
 				topicOneNotes: [

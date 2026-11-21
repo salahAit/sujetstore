@@ -1,4 +1,5 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgGrammarTree,
 	svgIrabBox,
@@ -51,17 +52,7 @@ const svgWordPartsSummary = svgGrammarTree({
 	height: 255
 });
 
-const svgVerbTensesDiscover = svgPrimaryArabicVisual({
-	title: 'ثلاثُ أزمنةٍ للفِعْلِ في يومِ التلميذِ',
-	subtitle: 'راقِبْ متى يقعُ العملُ في كلِّ بطاقة',
-	cards: [
-		{ bigText: 'قَرَأَ', label: 'الماضي (انتهى)', color: '#1d4ed8' },
-		{ bigText: 'يَقْرَأُ', label: 'المضارع (الآن)', color: '#047857' },
-		{ bigText: 'اِقْرَأْ', label: 'الأمر (طَلَبٌ)', color: '#b45309' }
-	],
-	width: 520,
-	height: 185
-});
+const svgVerbTensesDiscover = renderLessonIllustration('pri_ara_02_warm_algerian_home');
 
 const svgVerbTensesSummary = svgGrammarTree({
 	title: 'أزمنة الفعل الثلاثة وعلاماتُها البسيطة',
@@ -91,16 +82,7 @@ const svgVerbTensesSummary = svgGrammarTree({
 	height: 255
 });
 
-const svgSentencesDiscover = svgPrimaryArabicVisual({
-	title: 'انظرْ إلى الكلمةِ الأُولَى في كلِّ جملة',
-	subtitle: 'أوَّلُ كلمةٍ تحدِّدُ نوعَ الجملةِ',
-	cards: [
-		{ bigText: 'يَحْتَرِمُ التِّلْمِيذُ أُسْتَاذَهُ', label: 'تبدأُ بفعلٍ: جملة فعلية', color: '#047857' },
-		{ bigText: 'التِّلْمِيذُ مُجْتَهِدٌ', label: 'تبدأُ باسمٍ: جملة اسمية', color: '#1d4ed8' }
-	],
-	width: 540,
-	height: 185
-});
+const svgSentencesDiscover = renderLessonIllustration('pri_ara_03_algerian_village_orchard');
 
 const svgSentencesSummary = svgIrabBox({
 	title: 'تحليل الجملة الفعلية والجملة الاسمية',
@@ -115,18 +97,7 @@ const svgSentencesSummary = svgIrabBox({
 	height: 205
 });
 
-const svgTaaDiscover = svgPrimaryArabicVisual({
-	title: 'كيف نكتبُ التاءَ في آخرِ الكلمة؟',
-	subtitle: 'جرِّبِ الوقوفَ على الكلمةِ بالسكونِ',
-	cards: [
-		{ bigText: 'مَدْرَسَةٌ', label: 'تنطقُ هاءً عند الوقف: ة', color: '#1d4ed8' },
-		{ bigText: 'بَيْتٌ', label: 'تبقى تاءً عند الوقف: ت', color: '#047857' },
-		{ bigText: 'كَتَبَتْ', label: 'في آخرِ الفعل: ت', color: '#b45309' },
-		{ bigText: 'مُعَلِّمَاتٌ', label: 'جمع المؤنث السالم: ت', color: '#7c3aed' }
-	],
-	width: 540,
-	height: 185
-});
+const svgTaaDiscover = renderLessonIllustration('pri_ara_01_school_bag_supplies');
 
 const svgTaaSummary = svgSpellingCard({
 	title: 'قاعدة التاء المفتوحة (ت) والتاء المربوطة (ة / ـة)',

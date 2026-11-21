@@ -1,8 +1,8 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgGrammarTree,
 	svgIrabBox,
-	svgPrimaryArabicVisual,
 	svgSpellingCard
 } from '../../svg-arabic';
 
@@ -50,18 +50,7 @@ const svgInnaSummary = svgGrammarTree({
 	height: 255
 });
 
-const svgMafulMutlaqDiscover = svgIrabBox({
-	title: 'المفعولُ المطلقُ: مصدرٌ منصوبٌ من لفظِ الفعلِ',
-	tokens: [
-		{ word: 'اِجْتَهَدَ', role: 'فعلٌ ماضٍ', sign: 'مبني على الفتح', color: '#047857' },
-		{ word: 'التِّلْمِيذُ', role: 'فاعلٌ', sign: 'مرفوع بالضمة', color: '#1d4ed8' },
-		{ word: 'اِجْتِهَاداً', role: 'مفعولٌ مطلقٌ', sign: 'منصوب بالفتحة', color: '#b45309' },
-		{ word: 'كَبِيراً', role: 'صفةٌ', sign: 'منصوبة بالفتحة', color: '#7c3aed' }
-	],
-	note: 'لاحظ التشابه بين الفعل (اِجْتَهَدَ) والمصدر المنصوب (اِجْتِهَاداً)',
-	width: 540,
-	height: 205
-});
+const svgMafulMutlaqDiscover = renderLessonIllustration('pri_ara_05_fresh_fruits_honey_basket');
 
 const svgMafulMutlaqSummary = svgGrammarTree({
 	title: 'أنواعُ المفعولِ المطلقِ الثلاثةُ المبسّطة',
@@ -91,18 +80,7 @@ const svgMafulMutlaqSummary = svgGrammarTree({
 	height: 255
 });
 
-const svgSoundWeakDiscover = svgPrimaryArabicVisual({
-	title: 'حروفُ العِلَّةِ الثلاثةُ في اللغةِ العربية',
-	subtitle: 'تُجمعُ في كلمة «وَايٌ» — نُرجِعُ الفعلَ للماضي مع «هُوَ» أولاً',
-	cards: [
-		{ bigText: 'كَتَبَ / قَرَأَ', label: 'فعلٌ صحيحٌ (بلا علة)', color: '#047857' },
-		{ bigText: 'وَصَلَ', label: 'معتلّ الأوّل (مِثَال)', color: '#1d4ed8' },
-		{ bigText: 'قَالَ', label: 'معتلّ الوسط (أَجْوَف)', color: '#b45309' },
-		{ bigText: 'دَعَا / سَعَى', label: 'معتلّ الآخر (نَاقِص)', color: '#7c3aed' }
-	],
-	width: 540,
-	height: 185
-});
+const svgSoundWeakDiscover = renderLessonIllustration('pri_ara_07_science_library_telescope');
 
 const svgSoundWeakSummary = svgGrammarTree({
 	title: 'الفعلُ الصحيحُ والفعلُ المعتلُّ (مبسّط 4AP)',

@@ -4,6 +4,7 @@ import {
 	svgFrenchGrammarMap,
 	svgFrenchPrimaryCards
 } from '../../svg-french';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — 3AP Trimestre 1 (Projet 1 : Vive l'école ! / Se présenter et saluer)
@@ -48,17 +49,13 @@ const svgAlphabetSummary = svgFrenchConjugationChart({
 	height: 210
 });
 
-const svgSalutationsDiscover = svgFrenchPrimaryCards({
-	title: 'Saluer et se présenter — التحية والتعريف بالنفس',
-	subtitle: 'Mes premiers mots de politesse en 3AP',
-	cards: [
-		{ word: 'Bonjour !', arabic: 'صباح الخير', color: '#2563eb' },
-		{ word: 'Bonsoir !', arabic: 'مساء الخير', color: '#059669' },
-		{ word: "Je m'appelle...", arabic: 'اسمي...', color: '#d97706' },
-		{ word: 'Au revoir !', arabic: 'إلى اللقاء', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgSalutationsDiscover = renderLessonIllustration('pri_lang_01_red_bus_train', {
+	lang: 'fr',
+	title: "En route vers l'école : saluer ses camarades (3AP)",
+	customLegend: [
+		{ num: '1', label: "Le bus scolaire jaune devant l'école : Bonjour !" },
+		{ num: '2', label: 'Le train rapide des voyageurs : Au revoir !' }
+	]
 });
 
 const svgSalutationsSummary = svgFrenchGrammarMap({
@@ -129,17 +126,13 @@ const svgSyllabesSummary = svgFrenchConjugationChart({
 	height: 210
 });
 
-const svgFournituresDiscover = svgFrenchPrimaryCards({
-	title: 'Les fournitures scolaires — الأدوات المدرسية',
-	subtitle: 'Dans mon cartable de 3AP',
-	cards: [
-		{ word: 'un cahier', arabic: 'كراس', color: '#2563eb' },
-		{ word: 'un stylo', arabic: 'قلم سيال', color: '#059669' },
-		{ word: 'une trousse', arabic: 'مقلمة', color: '#d97706' },
-		{ word: 'une règle', arabic: 'مسطرة', color: '#7c3aed' }
-	],
-	width: 520,
-	height: 185
+const svgFournituresDiscover = renderLessonIllustration('pri_ara_01_school_bag_supplies', {
+	lang: 'fr',
+	title: 'Les affaires scolaires dans mon cartable (3AP)',
+	customLegend: [
+		{ num: '1', label: 'Un cartable propre, un livre et un cahier' },
+		{ num: '2', label: 'Une trousse, un stylo, un crayon et une règle' }
+	]
 });
 
 const svgFournituresSummary = svgFrenchGrammarMap({

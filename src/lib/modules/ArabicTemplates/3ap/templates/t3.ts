@@ -10,6 +10,10 @@ import {
 	buildProsePassageBlock,
 	buildWrittenProductionBlock
 } from '../../arabic-helpers';
+import {
+	buildIllustratedFigureBlock,
+	type IllustrationId
+} from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. البناء الفكري (3 ن) — الرياضة والصحة وطلب العلم
@@ -110,11 +114,24 @@ const readingComp3apT3: ArabicParameterizedTemplate = {
 			explanation: `العنوان المناسب هو «${p.bestTitle}» لأنه يلخّص الفكرة الأساسية في النص.`
 		};
 
+		const illustrationId: IllustrationId =
+			p.title === 'العَقْلُ السَّلِيمُ فِي الجِسْمِ السَّلِيمِ'
+				? 'pri_ara_05_fresh_fruits_honey_basket'
+				: p.title === 'طَلَبُ العِلْمِ وَالمُطَالَعَةُ'
+					? 'pri_ara_07_science_library_telescope'
+					: 'pri_ara_03_algerian_village_orchard';
+
 		const sujetExercise: ExerciseBlock = {
 			customTitle: 'السند والبناء الفكري',
 			points: 3,
 			instruction: 'اقرأ السند بعناية ثم أجب عن الأسئلة الآتية:',
 			content: [
+				buildIllustratedFigureBlock(illustrationId, {
+					mode: 'image_only',
+					title: p.title,
+					maxHeight: 112,
+					width: '58%'
+				}),
 				buildProsePassageBlock({
 					title: p.title,
 					paragraphs: p.paragraphs,
@@ -531,10 +548,19 @@ const integration3apT3: ArabicParameterizedTemplate = {
 			explanation: `الإجابة الصحيحة هي: «${t.mcqCorrect}».`
 		};
 
+		const tIllustrationId: IllustrationId = t.context.includes('مكتبة')
+			? 'pri_ara_07_science_library_telescope'
+			: 'pri_ara_05_fresh_fruits_honey_basket';
+
 		const sujetExercise: ExerciseBlock = {
 			customTitle: 'الوضعية الإدماجية',
 			points: 3,
 			content: [
+				buildIllustratedFigureBlock(tIllustrationId, {
+					mode: 'labeled',
+					maxHeight: 112,
+					width: '58%'
+				}),
 				buildWrittenProductionBlock({
 					context: t.context,
 					supportQuote: t.supportQuote,

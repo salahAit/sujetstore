@@ -1,4 +1,5 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgGrammarTree,
 	svgPrimaryArabicVisual,
@@ -160,15 +161,7 @@ export const LESSONS_2AP_T1: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'أَمْلَتِ المُعَلِّمَةُ عَلَى مَرْيَمَ كَلِمَتَيْنِ: «بَيْتٌ» وَ«مَدْرَسَةٌ». تَسَاءَلَتْ مَرْيَمُ: لِمَاذَا نَكْتُبُ التَّاءَ مَفْتُوحَةً فِي «بَيْتٌ» وَمَرْبُوطَةً فِي «مَدْرَسَةٌ»؟',
-			svg: svgPrimaryArabicVisual({
-				title: 'سِرُّ التَّاءِ المَفْتُوحَةِ وَالتَّاءِ المَرْبُوطَةِ',
-				subtitle: 'قِفْ عَلَى الكَلِمَةِ بِالسُّكُونِ وَاسْتَمِعْ إِلى الصَّوْتِ الأَخِيرِ!',
-				cards: [
-					{ bigText: 'بَيْتْ', label: 'نُطِقَتْ تَاءً ← مَفْتُوحَةٌ', color: '#2563eb' },
-					{ bigText: 'كَتَبَتْ', label: 'فِعْلٌ ← مَفْتُوحَةٌ', color: '#059669' },
-					{ bigText: 'مَدْرَسَهْ', label: 'نُطِقَتْ هَاءً ← مَرْبُوطَةٌ', color: '#d97706' }
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_02_warm_algerian_home'),
 			steps: [
 				{
 					promptAr: 'قِفْ بِالسُّكُونِ عَلَى كَلِمَةِ «مَدْرَسَةٌ» (بِدُونِ حَرَكَةٍ فِي الآخِرِ). هَلْ تَنْطِقُهَا تَاءً أَمْ هَاءً؟',
@@ -296,15 +289,7 @@ export const LESSONS_2AP_T1: ArabicInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'تَعَرَّفَ أَنَسٌ عَلَى زَمِيلِهِ الجَدِيدِ فِي القِسْمِ، فَقَالَ: «أَنَا أَنَسٌ، وَنَحْنُ فِي السَّنَةِ الثَّانِيَةِ. أَنْتَ تِلْمِيذٌ نَشِيطٌ، وَأَنْتِ يَا أَسْمَاءُ تِلْمِيذَةٌ مُجْتَهِدَةٌ. أَمَّا خَالِدٌ فَهُوَ يَقْرَأُ القِصَّةَ، وَمَرْيَمُ هِيَ تَرْسُمُ وَرْدَةً.»',
-			svg: svgPrimaryArabicVisual({
-				title: 'الضَّمَائِرُ المُنْفَصِلَةُ السِّتَّةُ',
-				subtitle: 'مُتَكَلِّمٌ — مُخَاطَبٌ — غَائِبٌ',
-				cards: [
-					{ bigText: 'أَنَا / نَحْنُ', label: 'لِلْمُتَكَلِّمِ', color: '#2563eb' },
-					{ bigText: 'أَنْتَ / أَنْتِ', label: 'لِلْمُخَاطَبِ', color: '#059669' },
-					{ bigText: 'هُوَ / هِيَ', label: 'لِلْغَائِبِ', color: '#d97706' }
-				]
-			}),
+			svg: renderLessonIllustration('pri_ara_01_school_bag_supplies'),
 			steps: [
 				{
 					promptAr: 'مَا الضَّمِيرَانِ اللَّذَانِ اسْتَعْمَلَهُمَا أَنَسٌ لِلْحَدِيثِ عَنْ خَالِدٍ وَعَنْ مَرْيَمَ؟',

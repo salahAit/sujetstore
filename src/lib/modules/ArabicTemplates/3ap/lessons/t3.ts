@@ -1,4 +1,5 @@
 import type { ArabicInteractiveLessonData } from '../../types';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 import {
 	svgGrammarTree,
 	svgIrabBox,
@@ -10,16 +11,7 @@ import {
 // SVGs — السنة الثالثة ابتدائي — الفصل الثالث
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgKanaDiscover = svgPrimaryArabicVisual({
-	title: 'ماذا تفعلُ «كَانَ» بالجملةِ الاسمية؟',
-	subtitle: 'قارِنْ حركةَ الكلمةِ الثانيةِ قبلَ وبعدَ «كَانَ»',
-	cards: [
-		{ bigText: 'الجَوُّ بَارِدٌ', label: 'قبلَ دخولِ كَانَ (ضمة — ضمة)', color: '#1d4ed8' },
-		{ bigText: 'كَانَ الجَوُّ بَارِداً', label: 'بعدَ دخولِ كَانَ (ضمة — فتحة)', color: '#047857' }
-	],
-	width: 540,
-	height: 185
-});
+const svgKanaDiscover = renderLessonIllustration('pri_ara_05_fresh_fruits_honey_basket');
 
 const svgKanaSummary = svgIrabBox({
 	title: 'عملُ كَانَ وأخواتِها المبسّط (أَصْبَحَ، صَارَ، ظَلَّ، أَمْسَى، لَيْسَ)',
@@ -68,17 +60,7 @@ const svgHamzaSummary = svgSpellingCard({
 	width: 540
 });
 
-const svgPluralsDiscover = svgPrimaryArabicVisual({
-	title: 'ثلاثةُ أنواعٍ للجمعِ في اللغة العربية',
-	subtitle: 'لاحظْ كيف يتغيّرُ المفردُ عند الجمع',
-	cards: [
-		{ bigText: 'مُعَلِّمُونَ', label: 'جمع مذكر سالم (ون / ين)', color: '#1d4ed8' },
-		{ bigText: 'مُعَلِّمَاتٌ', label: 'جمع مؤنث سالم (ات)', color: '#047857' },
-		{ bigText: 'أَقْلَامٌ', label: 'جمع تكسير (تغيّر المفرد)', color: '#b45309' }
-	],
-	width: 520,
-	height: 185
-});
+const svgPluralsDiscover = renderLessonIllustration('pri_ara_07_science_library_telescope');
 
 const svgPluralsSummary = svgGrammarTree({
 	title: 'أنواع الجموع الثلاثة في اللغة العربية',

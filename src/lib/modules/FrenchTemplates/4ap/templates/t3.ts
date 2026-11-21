@@ -10,6 +10,7 @@ import {
 	buildFrenchPassageBlock,
 	buildFrenchWrittenProductionBlock
 } from '../../french-helpers';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 1. Compréhension 1 (4 pts) — L'eau, c'est la vie ! (Vocabulaire de l'eau)
@@ -119,6 +120,12 @@ const compEau4apT3: FrenchParameterizedTemplate = {
 					title: sc.title,
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
+				}),
+				buildIllustratedFigureBlock('pri_lang_03_weather_icons_quad', {
+					lang: 'fr',
+					title: "La pluie, la neige et le cycle du temps : l'eau est précieuse",
+					maxHeight: 108,
+					width: '58%'
 				}),
 				{
 					type: 'text',
@@ -305,6 +312,11 @@ const compMerVacances4apT3: FrenchParameterizedTemplate = {
 					paragraphs: sc.paragraphs,
 					numberedParagraphs: false
 				}),
+				buildIllustratedFigureBlock('pri_lang_02_airplane_ship', {
+					lang: 'fr',
+					maxHeight: 108,
+					width: '58%'
+				}),
 				{
 					type: 'text',
 					content: '#strong[1)] Coche la bonne réponse :'
@@ -449,6 +461,16 @@ const langFutur4apT3: FrenchParameterizedTemplate = {
 			points: 3,
 			instruction: 'Conjugue les verbes entre parenthèses au futur simple :',
 			content: [
+				buildIllustratedFigureBlock('pri_ara_06_four_seasons_trees', {
+					lang: 'fr',
+					title: 'Les quatre saisons en Algérie (printemps, été, automne, hiver)',
+					customLegend: [
+						{ num: '1', label: "Le printemps fleuri et l'été ensoleillé" },
+						{ num: '2', label: "L'automne doré et l'hiver enneigé" }
+					],
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `#strong[Activité 1 :] Verbes du 1er groupe au futur simple :\n1) ${s.v1}\n2) ${s.v2}\n3) ${s.v3}`,
@@ -577,6 +599,11 @@ const langCodHomophones4apT3: FrenchParameterizedTemplate = {
 			points: 3,
 			instruction: 'Fais les trois activités suivantes :',
 			content: [
+				buildIllustratedFigureBlock('pri_lang_07_clean_park_planting', {
+					lang: 'fr',
+					maxHeight: 104,
+					width: '56%'
+				}),
 				{
 					type: 'text',
 					content: `#strong[Activité 1 :] Lis la phrase puis place chaque complément dans le tableau :\n« ${s.sentence} »`
@@ -714,6 +741,12 @@ const prodEauVacances4apT3: FrenchParameterizedTemplate = {
 			customTitle: 'III. Production écrite',
 			points: 3,
 			content: [
+				buildIllustratedFigureBlock('pri_lang_06_hygiene_washbasin', {
+					lang: 'fr',
+					title: "Économiser l'eau potable au quotidien et protéger la nature",
+					maxHeight: 102,
+					width: '54%'
+				}),
 				buildFrenchWrittenProductionBlock({
 					sujetUnTitle: "Situation d'intégration :",
 					sujetUnPrompt: pr.prompt,

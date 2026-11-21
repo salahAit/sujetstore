@@ -148,8 +148,8 @@ export const tpl1asTcstT1PhloemMatterRecall: SciencesParameterizedTemplate = {
 		]);
 		const sucroseConc = rng.pick(difficulty === 'easy' ? [120, 150] : [135, 165, 180]);
 
-		const svg = svgPlantAndPrimaryDiagram('stomata_sap', {
-			title: 'انتقال النسغ الناقص والنسغ الكامل لتغذية أعضاء النبات'
+		const svg = svgPlantAndPrimaryDiagram('xylem_phloem', {
+			title: 'بنية الأوعية الخشبية والأوعية اللحائية (الأنابيب الغربالية والخلايا المرافقة)'
 		});
 		const svgUrl = saveSciencesSvgAsset(`sci_1as_tcst_t1_phloem_s${seed}_${difficulty}`, svg);
 

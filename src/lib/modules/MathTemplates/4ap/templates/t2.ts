@@ -1,4 +1,5 @@
 import type { ContentBlock, ExerciseBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, gcd, roundTo, SeededRng } from '../../rng';
 import { saveSvgAsset, svgFractionBar, svgNumberLine, svgTriangle } from '../../svg-helpers';
 import type { Difficulty, GeneratedExerciseInstance, ParameterizedTemplate } from '../../types';
@@ -1847,6 +1848,10 @@ const templateIntegrationHarvest: ParameterizedTemplate = {
 			points: 4,
 			instruction: introTypst,
 			content: [
+				buildIllustratedFigureBlock('pri_math_04_two_pan_balance', {
+					maxHeight: 112,
+					width: '58%'
+				}),
 				{
 					type: 'text',
 					content: `1) احسب الكتلة الإجمالية لمحصول ${ctx.crop} بالكيلوغرام (ضع العملية عمودياً).`,

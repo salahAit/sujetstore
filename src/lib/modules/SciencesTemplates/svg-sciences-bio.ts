@@ -1,4 +1,8 @@
 import { calloutBadge, esc, escRich, haloText, wrapSciencesSvg } from './svg-sciences-core';
+import {
+	renderLessonIllustration,
+	type IllustrationId
+} from '../VisualAssets/illustrations-registry';
 
 /** 6. Human Physiology Diagrams (4AM BEM, 1AS, 2AS SE/MATH) */
 export function svgPhysiologyDiagram(
@@ -9,10 +13,41 @@ export function svgPhysiologyDiagram(
 		| 'myotatic_reflex'
 		| 'glycemia_loop'
 		| 'alveolus_gas'
-		| 'cardiac_nerves',
+		| 'cardiac_nerves'
+		| 'kidney_urinary'
+		| 'blood_smear',
 	opts?: { numbered?: boolean; title?: string }
 ): string {
 	const numbered = opts?.numbered ?? false;
+	if (kind === 'digestive_villus' && numbered) {
+		return renderLessonIllustration('sci_13_intestinal_villus', {
+			title: opts?.title ?? 'البنية المجهرية للزغابة المعوية وطريقا الامتصاص',
+			hideLegend: true,
+			pins: [
+				{ num: '1', xPct: 16, yPct: 35, color: '#b45309' },
+				{ num: '2', xPct: 34, yPct: 58, color: '#dc2626' },
+				{ num: '3', xPct: 22, yPct: 92, color: '#dc2626' },
+				{ num: '4', xPct: 50, yPct: 38, color: '#16a34a' },
+				{ num: '5', xPct: 68, yPct: 58, color: '#2563eb' },
+				{ num: '6', xPct: 78, yPct: 94, color: '#16a34a' }
+			]
+		});
+	}
+	if (!numbered) {
+		const physIllMap: Partial<Record<typeof kind, IllustrationId>> = {
+			digestive_villus: 'sci_13_intestinal_villus',
+			digestive_tract: 'sci_12_digestive_tract_organs',
+			reflex_arc: 'sci_19_neuron_synapse_arc',
+			alveolus_gas: 'sci_14_pulmonary_alveolus',
+			cardiac_nerves: 'sci_15_heart_cross_section',
+			kidney_urinary: 'sci_16_kidney_urinary_nephron',
+			blood_smear: 'sci_17_blood_smear_cells'
+		};
+		const illId = physIllMap[kind];
+		if (illId) {
+			return renderLessonIllustration(illId, { title: opts?.title });
+		}
+	}
 	const w = 460;
 	const h = 255;
 	let body = `<rect x="6" y="6" width="${w - 12}" height="${h - 12}" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>`;
@@ -152,26 +187,21 @@ export function svgGeneticsDiagram(
 		punnett?: { p1: [string, string]; p2: [string, string] };
 	}
 ): string {
+	if (kind === 'mitosis_stages') {
+		return renderLessonIllustration('sci_24_plant_mitosis_phases', { title: opts?.title });
+	}
 	const w = 460;
 	const h = 248;
 	let body = `<rect x="6" y="6" width="${w - 12}" height="${h - 12}" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>`;
 
-	if (kind === 'mitosis_stages' || kind === 'meiosis_stages') {
-		const isMeiosis = kind === 'meiosis_stages';
-		body += `<text x="${w / 2}" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">${escRich(opts?.title ?? (isMeiosis ? 'مراحل الانقسام المنصف (2n ← n)' : 'مراحل الانقسام الخيطي المتساوي (2n ← 2n)'))}</text>`;
-		const stages = isMeiosis
-			? [
-					{ x: 382, t: 'تمهيدية I', sub: 'تقارب رباعيات + عبور' },
-					{ x: 280, t: 'استوائية I', sub: 'اصطفاف أزواج متماثلة' },
-					{ x: 178, t: 'انفصالية I', sub: 'افتراق الصبغيات (n)' },
-					{ x: 76, t: 'نهائية II', sub: '4 خلايا أحادية (n)' }
-				]
-			: [
-					{ x: 382, t: 'تمهيدية', sub: 'تضاعف وتكثف الصبغيات' },
-					{ x: 280, t: 'استوائية', sub: 'لوحة استوائية (2n)' },
-					{ x: 178, t: 'انفصالية', sub: 'انفصال الكروماتيدين' },
-					{ x: 76, t: 'نهائية', sub: 'خليتان بنتان (2n)' }
-				];
+	if (kind === 'meiosis_stages') {
+		body += `<text x="${w / 2}" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">${escRich(opts?.title ?? 'مراحل الانقسام المنصف (2n ← n)')}</text>`;
+		const stages = [
+			{ x: 382, t: 'تمهيدية I', sub: 'تقارب رباعيات + عبور' },
+			{ x: 280, t: 'استوائية I', sub: 'اصطفاف أزواج متماثلة' },
+			{ x: 178, t: 'انفصالية I', sub: 'افتراق الصبغيات (n)' },
+			{ x: 76, t: 'نهائية II', sub: '4 خلايا أحادية (n)' }
+		];
 		stages.forEach((st, idx) => {
 			body += `<rect x="${st.x - 44}" y="44" width="88" height="176" rx="8" fill="#ffffff" stroke="#4f46e5" stroke-width="1.6"/>`;
 			body += `<text x="${st.x}" y="64" text-anchor="middle" font-size="11.2" font-weight="bold" fill="#3730a3">${esc(st.t)}</text>`;
@@ -277,6 +307,29 @@ export function svgGeologyDiagram(
 	opts?: { numbered?: boolean; title?: string }
 ): string {
 	const numbered = opts?.numbered ?? false;
+	if (kind === 'oceanic_ridge' && numbered) {
+		return renderLessonIllustration('sci_22_oceanic_ridge_spreading', {
+			title: opts?.title ?? 'نشاط الظهرة المحيطية وتباعد الصفائح',
+			hideLegend: true,
+			pins: [
+				{ num: '1', xPct: 50, yPct: 42, color: '#b91c1c' },
+				{ num: '2', xPct: 68, yPct: 78, color: '#9a3412' }
+			]
+		});
+	}
+	if (!numbered) {
+		const geoIllMap: Partial<Record<typeof kind, IllustrationId>> = {
+			earthquake_fault: 'sci_20_geology_fault_folds',
+			plate_subduction: 'sci_21_subduction_volcano',
+			oceanic_ridge: 'sci_22_oceanic_ridge_spreading',
+			volcano_section: 'sci_21_subduction_volcano',
+			soil_water_table: 'sci_23_soil_horizons_aquifer'
+		};
+		const illId = geoIllMap[kind];
+		if (illId) {
+			return renderLessonIllustration(illId, { title: opts?.title });
+		}
+	}
 	const w = 460;
 	const h = 250;
 	let body = `<rect x="6" y="6" width="${w - 12}" height="${h - 12}" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>`;
@@ -385,10 +438,39 @@ export function svgPlantAndPrimaryDiagram(
 		| 'breathing_lungs'
 		| 'simple_circuit'
 		| 'teeth_types'
-		| 'animal_adaptation',
+		| 'animal_adaptation'
+		| 'day_night_earth'
+		| 'recycling_solar'
+		| 'xylem_phloem',
 	opts?: { numbered?: boolean; title?: string; items?: string[] }
 ): string {
 	const numbered = opts?.numbered ?? false;
+	if (kind === 'day_night_earth') {
+		return renderLessonIllustration('sci_07_earth_day_night_sun', { title: opts?.title });
+	}
+	if (kind === 'recycling_solar') {
+		return renderLessonIllustration('sci_10_recycling_solar_energy', { title: opts?.title });
+	}
+	if (kind === 'xylem_phloem') {
+		return renderLessonIllustration('sci_25_xylem_phloem_vessels', { title: opts?.title });
+	}
+	if (!numbered && !opts?.items) {
+		const priSciIllMap: Partial<Record<typeof kind, IllustrationId>> = {
+			plant_anatomy: 'sci_02_plant_flower_anatomy',
+			stomata_sap: 'sci_11_leaf_photosynthesis_stomata',
+			seed_germination: 'sci_01_seed_germination',
+			water_cycle: 'sci_04_water_cycle',
+			states_of_matter: 'sci_05_states_of_water',
+			balanced_diet: 'sci_03_healthy_food_groups',
+			breathing_lungs: 'sci_09_lungs_ribcage_breathing',
+			simple_circuit: 'sci_06_simple_electric_circuit',
+			teeth_types: 'sci_08_tooth_molar_section'
+		};
+		const illId = priSciIllMap[kind];
+		if (illId) {
+			return renderLessonIllustration(illId, { title: opts?.title });
+		}
+	}
 	const w = 460;
 	const h = 250;
 	let body = `<rect x="6" y="6" width="${w - 12}" height="${h - 12}" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>`;

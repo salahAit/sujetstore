@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock, ExerciseBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../../MathTemplates/rng';
 import {
 	buildHadithPassageBlock,
@@ -492,6 +493,12 @@ const tplFathMakkahT3: IslamicParameterizedTemplate = {
 					});
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_isl_01_masjid_al_haram_kaaba', {
+				maxHeight: 112,
+				width: '58%',
+				mode: 'image_only',
+				title: 'فَتْحُ مَكَّةَ المُكَرَّمَةِ وَتَطْهِيرُ الكَعْبَةِ المُشَرَّفَةِ (8 هـ)'
+			}),
 			stimulusBlock,
 			{ type: 'text', content: '1) وظّف مكتسباتك في السيرة والأخلاق لإتمام الجدول الآتي:' },
 			buildIslamicTableBlock(
@@ -728,6 +735,12 @@ const tplHajjatWadaCompetencyT3: IslamicParameterizedTemplate = {
 						});
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_isl_01_masjid_al_haram_kaaba', {
+				maxHeight: 112,
+				width: '58%',
+				mode: 'image_only',
+				title: 'حَجَّةُ الوَدَاعِ عِنْدَ البَيْتِ الحَرَامِ (10 هـ)'
+			}),
 			stimulusBlock,
 			{ type: 'text', content: '1) أجب بـ«صحيح» أو «خطأ» مع تصحيح الخطأ إن وُجد:' },
 			{ type: 'true_false', items: v.tfItems },

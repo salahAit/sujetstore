@@ -4,6 +4,7 @@ import {
 	svgEnglishPrimaryCards,
 	svgEnglishWritingStructure
 } from '../../svg-english';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ===============================================================================
 // Interactive Lessons - 5AP English - Trimester 1 (Jobs, Occupations & Hobbies)
@@ -32,16 +33,9 @@ export const LESSONS_5AP_T1: EnglishInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'في حصة الإنجليزية، عرض الأستاذ بطاقات لأصحاب مهن نافعة تخدم الحي والوطن: طبيب يعالج المرضى في المستشفى، ومعلم يدرّس في المدرسة، وخباز يخبز الخبز في المخبزة. لاحظ العلاقة بين المهنة ومكان العمل.',
-			svg: svgEnglishPrimaryCards({
-				title: 'Useful Jobs in Our Community',
-				subtitle: 'المهن النافعة في مجتمعنا الجزائري',
-				cards: [
-					{ word: 'Teacher', arabic: 'معلم', color: '#2563eb' },
-					{ word: 'Doctor', arabic: 'طبيب', color: '#059669' },
-					{ word: 'Baker', arabic: 'خباز', color: '#d97706' },
-					{ word: 'Farmer', arabic: 'فلاح', color: '#15803d' },
-					{ word: 'Engineer', arabic: 'مهندس', color: '#7c3aed' }
-				]
+			svg: renderLessonIllustration('pri_lang_05_professions_tools', {
+				lang: 'en',
+				title: 'Useful Jobs and Workplaces in Our Community (5AP)'
 			}),
 			steps: [
 				{
@@ -492,13 +486,12 @@ export const LESSONS_5AP_T1: EnglishInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'كتب أمين جملتين على اللوحة: «My uncle is a doctor.» و«My aunt is an engineer.» ثم سأل: لماذا وضعنا «a» قبل doctor و«an» قبل engineer؟ ولماذا كتبنا حرف M كبيراً؟',
-			svg: svgEnglishGrammarMap({
-				title: 'Indefinite Articles: a / an',
-				rootLabel: 'Singular Countable Noun',
-				rootSub: 'قبل الاسم المفرد النكرة',
-				branches: [
-					{ label: 'Use: a', rule: 'Before consonant sound', example: 'a teacher / a baker / a nurse', color: '#1d4ed8' },
-					{ label: 'Use: an', rule: 'Before vowel sound (a,e,i,o,u)', example: 'an engineer / an architect', color: '#047857' }
+			svg: renderLessonIllustration('pri_ara_05_fresh_fruits_honey_basket', {
+				lang: 'en',
+				title: 'Indefinite Articles (a / an) with Healthy Food and Jobs',
+				customLegend: [
+					{ num: '1', label: 'Use "an" before vowels: an apple, an orange, an engineer' },
+					{ num: '2', label: 'Use "a" before consonants: a basket, a jar of honey, a doctor' }
 				]
 			}),
 			steps: [
@@ -647,15 +640,13 @@ export const LESSONS_5AP_T1: EnglishInteractiveLessonData[] = [
 		discover: {
 			scenarioAr:
 				'ينظّم بلال وقته بين الدراسة والهوايات المفيدة، فيقول: «I wake up early, pray Fajr, and go to school at eight. In my free time, I like reading stories and playing football. My sister likes swimming and cycling.»',
-			svg: svgEnglishPrimaryCards({
-				title: 'Clean Hobbies and Sports',
-				subtitle: 'هوايات ورياضات نافعة لتلميذ السنة الخامسة',
-				cards: [
-					{ word: 'Reading', arabic: 'المطالعة', color: '#2563eb' },
-					{ word: 'Swimming', arabic: 'السباحة', color: '#0284c7' },
-					{ word: 'Football', arabic: 'كرة القدم', color: '#059669' },
-					{ word: 'Chess', arabic: 'الشطرنج', color: '#7c3aed' },
-					{ word: 'Cycling', arabic: 'ركوب الدراجة', color: '#d97706' }
+			svg: renderLessonIllustration('pri_lang_06_hygiene_washbasin', {
+				lang: 'en',
+				title: 'Healthy Daily Routine and Cleanliness (5AP)',
+				customLegend: [
+					{ num: '1', label: 'Wake up early and wash hands with clean water' },
+					{ num: '2', label: 'Brush teeth every morning and evening' },
+					{ num: '3', label: 'Keep clean and practise useful hobbies' }
 				]
 			}),
 			steps: [

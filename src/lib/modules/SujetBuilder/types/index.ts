@@ -113,7 +113,30 @@ export interface ImageBlock {
 	type: 'image';
 	src: string;
 	caption?: string;
-	width?: number;
+	width?: number | string;
+}
+
+/** لوحة علمية أو تعليمية مصوّرة مع دبابيس ترقيم ومفتاح بيانات متجهي */
+export interface IllustratedFigureBlock {
+	id?: string;
+	type: 'illustrated_figure';
+	src: string;
+	title?: string;
+	width?: number | string;
+	maxHeight?: number;
+	pins?: {
+		num: number | string;
+		xPct: number;
+		yPct: number;
+		color?: string;
+	}[];
+	legend?: {
+		num: number | string;
+		label: string;
+		mark?: string | number;
+	}[];
+	legendMode?: 'labeled' | 'quiz';
+	caption?: string;
 }
 
 /** صح أو خطأ مع التصحيح */
@@ -205,6 +228,7 @@ export type ContentBlock =
 	| MathBlock
 	| TableBlock
 	| ImageBlock
+	| IllustratedFigureBlock
 	| TrueFalseBlock
 	| MultipleChoiceBlock
 	| DiagramFlowBlock

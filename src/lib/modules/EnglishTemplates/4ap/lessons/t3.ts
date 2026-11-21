@@ -4,63 +4,38 @@ import {
 	svgEnglishPrimaryCards,
 	svgEnglishWritingStructure
 } from '../../svg-english';
+import { renderLessonIllustration } from '../../../VisualAssets/illustrations-registry';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SVGs — 4AP Trimester 3 (Healthy Habits, Animals & Habitats, Weather & Seasons, Fact File)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const svgHealthyHabitsDiscover = svgEnglishPrimaryCards({
-	title: 'Healthy Habits & Food — العادات الصحية والغذاء السليم',
-	subtitle: 'Cleanliness is Part of Faith & Good Health',
-	cards: [
-		{ word: 'wash hands', arabic: 'أغسل يديّ', color: '#0284c7' },
-		{ word: 'brush teeth', arabic: 'أنظف أسناني', color: '#2563eb' },
-		{ word: 'vegetables', arabic: 'خضروات', color: '#059669' },
-		{ word: 'fruit & honey', arabic: 'فواكه وعسل', color: '#d97706' }
-	],
-	width: 520,
-	height: 185
+const svgHealthyHabitsDiscover = renderLessonIllustration('pri_lang_06_hygiene_washbasin', {
+	lang: 'en',
+	title: 'Daily Hygiene and Healthy Habits (Imperative)',
+	customLegend: [
+		{ num: '1', label: 'Wash your hands with clean water before and after meals' },
+		{ num: '2', label: 'Brush your teeth every morning and evening' },
+		{ num: '3', label: 'Use soap and dry your hands with a clean towel' }
+	]
 });
 
-const svgHealthyHabitsSummary = svgEnglishGrammarMap({
-	title: 'Daily Healthy Habits & Imperatives — العادات الصحية وأسلوب النصيحة',
-	rootLabel: 'Stay Clean and Strong!',
-	rootSub: 'Use the Base Verb for Healthy Advice (Imperative)',
-	branches: [
-		{
-			label: 'Cleanliness',
-			rule: 'Wash your hands / Brush teeth',
-			example: 'Wash your hands before food.',
-			color: '#1d4ed8'
-		},
-		{
-			label: 'Healthy Food',
-			rule: 'vegetables, fruit, honey, dates',
-			example: 'Eat fresh fruit and vegetables.',
-			color: '#047857'
-		},
-		{
-			label: 'Good Sleep',
-			rule: 'Sleep early / Drink water',
-			example: 'Do not eat too many sweets.',
-			color: '#b45309'
-		}
-	],
-	width: 520,
-	height: 250
+const svgHealthyHabitsSummary = renderLessonIllustration('pri_ara_05_fresh_fruits_honey_basket', {
+	lang: 'en',
+	title: 'Healthy Food Advice: Eat Fresh Fruits, Vegetables & Pure Honey',
+	customLegend: [
+		{ num: '1', label: 'Eat fresh fruits and vegetables every day' },
+		{ num: '2', label: 'Natural honey and olive oil keep us strong' }
+	]
 });
 
-const svgHabitatsDiscover = svgEnglishPrimaryCards({
-	title: 'Animals & Their Habitats — الحيوانات ومواطنها الطبيعية',
-	subtitle: 'Where does each animal live?',
-	cards: [
-		{ word: 'desert', arabic: 'الصحراء (camel, fennec)', color: '#d97706' },
-		{ word: 'forest', arabic: 'الغابة (deer, bird)', color: '#059669' },
-		{ word: 'farm', arabic: 'المزرعة (sheep, cow)', color: '#2563eb' },
-		{ word: 'sea', arabic: 'البحر (fish, dolphin)', color: '#0284c7' }
-	],
-	width: 520,
-	height: 185
+const svgHabitatsDiscover = renderLessonIllustration('pri_ara_08_sahara_oasis_dunes', {
+	lang: 'en',
+	title: 'Natural Habitats in Algeria: Desert Dunes & Green Oasis',
+	customLegend: [
+		{ num: '1', label: 'Golden desert dunes (the camel and the fennec fox)' },
+		{ num: '2', label: 'Fresh oasis water and tall date palms' }
+	]
 });
 
 const svgHabitatsSummary = svgEnglishGrammarMap({
@@ -91,45 +66,24 @@ const svgHabitatsSummary = svgEnglishGrammarMap({
 	height: 250
 });
 
-const svgWeatherDiscover = svgEnglishPrimaryCards({
-	title: 'The Four Seasons & Weather — الفصول الأربعة والطقس',
-	subtitle: 'What is the weather like today?',
-	cards: [
-		{ word: 'Spring', arabic: 'الربيع (mild, flowers)', color: '#059669' },
-		{ word: 'Summer', arabic: 'الصيف (hot, sunny)', color: '#d97706' },
-		{ word: 'Autumn', arabic: 'الخريف (windy, cool)', color: '#b45309' },
-		{ word: 'Winter', arabic: 'الشتاء (cold, rainy)', color: '#2563eb' }
-	],
-	width: 520,
-	height: 185
+const svgWeatherDiscover = renderLessonIllustration('pri_lang_03_weather_icons_quad', {
+	lang: 'en',
+	title: 'What is the Weather Like? — Weather & Seasons',
+	customLegend: [
+		{ num: '1', label: 'In summer: it is sunny and hot' },
+		{ num: '2', label: 'In spring: it is rainy with a rainbow' },
+		{ num: '3', label: 'In winter: it is snowy and cold' },
+		{ num: '4', label: 'In autumn: it is windy and cool' }
+	]
 });
 
-const svgWeatherSummary = svgEnglishGrammarMap({
-	title: 'Seasons & Weather Expressions — الفصول ووصف حالة الطقس',
-	rootLabel: 'What is the weather like? -> It is...',
-	rootSub: 'Use "in" before seasons (in spring, in winter)',
-	branches: [
-		{
-			label: 'Spring & Summer',
-			rule: 'sunny, warm, hot',
-			example: 'In summer, it is hot and sunny.',
-			color: '#d97706'
-		},
-		{
-			label: 'Autumn',
-			rule: 'windy, cloudy, cool',
-			example: 'In autumn, it is windy.',
-			color: '#b45309'
-		},
-		{
-			label: 'Winter',
-			rule: 'cold, rainy, snowy',
-			example: 'In winter, it is cold and rainy.',
-			color: '#1d4ed8'
-		}
-	],
-	width: 520,
-	height: 250
+const svgWeatherSummary = renderLessonIllustration('pri_ara_06_four_seasons_trees', {
+	lang: 'en',
+	title: 'The Four Seasons in Algeria (Spring, Summer, Autumn, Winter)',
+	customLegend: [
+		{ num: '1', label: 'In spring (flowers) and in summer (ripe fruits)' },
+		{ num: '2', label: 'In autumn (golden leaves) and in winter (white snow)' }
+	]
 });
 
 const svgFactFileDiscover = svgEnglishPrimaryCards({

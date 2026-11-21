@@ -1,4 +1,5 @@
 import type { ContentBlock, ExerciseBlock, TableCell } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import { buildUniqueMcqOptions, SeededRng } from '../../rng';
 import {
 	saveSvgAsset,
@@ -548,7 +549,13 @@ const templateNumbers20To39: ParameterizedTemplate = {
 				content: `3) فَكِّكِ العَدَدَ $${cmpTriple[1]}$ إِلَى عَشَرَاتٍ وَوَحَدَاتٍ:  $${cmpTriple[1]} = dots + dots$`,
 				answer: `3) التَّفْكِيكُ: $${cmpTriple[1]} = ${Math.floor(cmpTriple[1] / 10) * 10} + ${cmpTriple[1] % 10}$`,
 				mark: '0.5'
-			}
+			},
+			buildIllustratedFigureBlock('pri_math_02_colored_pencils_bundles', {
+				maxHeight: 112,
+				width: '58%',
+				mode: 'image_only',
+				title: 'التَّجْمِيعُ بِالعَشَرَاتِ وَالوَحَدَاتِ (حُزَمُ الأَقْلَامِ)'
+			})
 		];
 
 		return {
@@ -829,7 +836,13 @@ const templateAddSubDoublesHalves: ParameterizedTemplate = {
 				content: `3) أَكْمِلْ مَا يَلِي:\n\nأ) ضِعْفُ العَدَدِ $${doubleBase}$ هُوَ: ........\n\nب) نِصْفُ العَدَدِ $${halfBase}$ هُوَ: ........`,
 				answer: `3) أ) ضِعْفُ $${doubleBase}$ هُوَ $${doubleRes}$ (لِأَنَّ $${doubleBase} + ${doubleBase} = ${doubleRes}$).\n\nب) نِصْفُ $${halfBase}$ هُوَ $${halfRes}$ (لِأَنَّ $${halfRes} + ${halfRes} = ${halfBase}$).`,
 				mark: '0.5'
-			}
+			},
+			buildIllustratedFigureBlock('pri_math_01_apple_baskets', {
+				maxHeight: 112,
+				width: '58%',
+				mode: 'image_only',
+				title: 'تَذْكِيرٌ بَصَرِيٌّ: الضَّمُّ وَالمَجْمُوعَاتُ'
+			})
 		];
 
 		return {
@@ -1101,6 +1114,12 @@ const templatePlaneShapesSolids: ParameterizedTemplate = {
 					}
 				]
 			},
+			buildIllustratedFigureBlock('pri_math_06_3d_geometric_solids', {
+				maxHeight: 112,
+				width: '58%',
+				mode: 'image_only',
+				title: '2) المُجَسَّمَاتُ المَأْلُوفَةُ: أَجِبْ بِصَحِيحٍ أَوْ خَطَإٍ'
+			}),
 			{
 				type: 'true_false',
 				items: solidPair.map((st) => ({
@@ -1478,6 +1497,12 @@ const templateIntegrationStory: ParameterizedTemplate = {
 					answer: `2) التَّفْكِيكُ: $${total} = ${tensPart} + ${onesPart}$ ، وَالمُقَارَنَةُ: $${total} ${total < cmpVal ? '<' : '>'} ${cmpVal}$.`,
 					mark: '1'
 				},
+				buildIllustratedFigureBlock('pri_math_05_analog_clock_ticks', {
+					maxHeight: 112,
+					width: '58%',
+					mode: 'image_only',
+					title: 'تَذْكِيرٌ بَصَرِيٌّ: عَقْرَبَا السَّاعَاتِ وَالدَّقَائِقِ'
+				}),
 				{
 					type: 'text',
 					content: `3) وُضِعَتِ الأَغْرَاضُ فِي عُلْبَةٍ ${boxShape.desc} (${boxShape.solid})، وَ${verbFinished} ${actor.name} العَمَلَ عِنْدَ السَّاعَةِ $${clockChoice.time}$ (${clockChoice.period}).\n\nأ) مَا شَكْلُ كُلِّ وَجْهٍ مِنَ العُلْبَةِ؟ ............\n\nب) اكْتُبِ السَّاعَةَ بِالحُرُوفِ: ..............................`,

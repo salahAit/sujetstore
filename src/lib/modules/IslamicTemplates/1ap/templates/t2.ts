@@ -4,6 +4,7 @@ import type {
 	IslamicParameterizedTemplate
 } from '../../types';
 import type { ContentBlock } from '../../../SujetBuilder/types';
+import { buildIllustratedFigureBlock } from '../../../VisualAssets/illustrations-registry';
 import {
 	buildHadithPassageBlock,
 	buildIslamicIntegrationBlock,
@@ -395,6 +396,10 @@ const tplObeyParents: IslamicParameterizedTemplate = {
 		);
 
 		const content: ContentBlock[] = [
+			buildIllustratedFigureBlock('pri_isl_08_goodly_olive_tree', {
+				maxHeight: 112,
+				width: '58%'
+			}),
 			buildQuranPassageBlock({
 				verses: 'وَقَضَى رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ وَبِالْوَالِدَيْنِ إِحْسَانًا',
 				surah: 'الإِسْرَاء',

@@ -67,23 +67,9 @@ function buildSafetySceneSvg4ap(hazardTitle: string, ruleTitle: string): string 
 function buildEarthMotionSvg4ap(motion: 'rotation' | 'revolution'): string {
 	const isRot = motion === 'rotation';
 	if (isRot) {
-		return wrapSciencesSvg(
-			440,
-			225,
-			`<rect x="6" y="6" width="428" height="213" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>` +
-				`<text x="220" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">دوران الأرض حول نفسها (تعاقب الليل والنهار)</text>` +
-				`<circle cx="366" cy="118" r="30" fill="#facc15" stroke="#ca8a04" stroke-width="2"/>` +
-				`<text x="366" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#713f12">الشمس</text>` +
-				`<line x1="330" y1="96" x2="230" y2="96" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="5,4"/>` +
-				`<line x1="330" y1="118" x2="230" y2="118" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="5,4"/>` +
-				`<line x1="330" y1="140" x2="230" y2="140" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="5,4"/>` +
-				`<circle cx="164" cy="118" r="48" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>` +
-				`<path d="M 164 70 A 48 48 0 0 1 164 166 Z" fill="#38bdf8"/>` +
-				`<line x1="176" y1="54" x2="152" y2="182" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="4,3"/>` +
-				haloText(`x="188" y="122" text-anchor="middle" font-size="11" font-weight="bold"`, '#0c4a6e', 'نهار') +
-				haloText(`x="138" y="122" text-anchor="middle" font-size="11" font-weight="bold"`, '#ffffff', 'ليل') +
-				`<text x="220" y="204" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e3a8a">مدة الدورة الواحدة: 24 ساعة (يوم كامل)</text>`
-		);
+		return svgPlantAndPrimaryDiagram('day_night_earth', {
+			title: 'دوران الأرض حول نفسها (تعاقب الليل والنهار — 24 ساعة)'
+		});
 	}
 	return wrapSciencesSvg(
 		440,

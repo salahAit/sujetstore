@@ -45,34 +45,9 @@ function svgAbsorptionRoutes(): string {
 }
 
 function svgBloodAndInternalMedium(): string {
-	let body = `<rect x="6" y="6" width="448" height="238" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>`;
-	body += `<text x="230" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">مكونات الدم وعلاقة الوسط الداخلي بالخلايا</text>`;
-
-	// Right half: Centrifuged blood tube
-	body += `<rect x="242" y="42" width="198" height="186" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>`;
-	body += `<text x="341" y="60" text-anchor="middle" font-size="11.2" font-weight="bold" fill="#991b1b">فصل مكونات الدم بالترسيب</text>`;
-	// Tube
-	body += `<rect x="378" y="76" width="32" height="134" rx="14" fill="#ffffff" stroke="#334155" stroke-width="2"/>`;
-	body += `<rect x="380" y="80" width="28" height="72" rx="6" fill="#fef08a"/>`;
-	body += `<rect x="380" y="152" width="28" height="9" fill="#e2e8f0"/>`;
-	body += `<rect x="380" y="161" width="28" height="47" rx="10" fill="#dc2626"/>`;
-	body += `<text x="368" y="114" text-anchor="end" font-size="9.8" font-weight="bold" fill="#a16207">بلازما (55%) نقل المغذيات</text>`;
-	body += `<text x="368" y="158" text-anchor="end" font-size="9.4" font-weight="bold" fill="#334155">كريات بيضاء وصفائح (1%)</text>`;
-	body += `<text x="368" y="190" text-anchor="end" font-size="9.8" font-weight="bold" fill="#b91c1c">كريات حمراء (44%) نقل الغازات</text>`;
-
-	// Left half: Internal medium cycle
-	body += `<rect x="20" y="42" width="208" height="186" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5"/>`;
-	body += `<text x="124" y="60" text-anchor="middle" font-size="11.2" font-weight="bold" fill="#1e3a8a">العلاقة بين سوائل الوسط الداخلي</text>`;
-	body += `<rect x="44" y="74" width="160" height="32" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>`;
-	body += `<text x="124" y="94" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#991b1b">الدم (داخل الأوعية الدموية)</text>`;
-	body += `<rect x="44" y="126" width="160" height="34" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>`;
-	body += `<text x="124" y="147" text-anchor="middle" font-size="10.2" font-weight="bold" fill="#854d0e">السائل البيني (يغمر الخلايا)</text>`;
-	body += `<rect x="44" y="180" width="160" height="32" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>`;
-	body += `<text x="124" y="200" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#166534">اللمف (في الأوعية اللمفاوية)</text>`;
-	body += `<text x="124" y="120" text-anchor="middle" font-size="11" font-weight="bold" fill="#334155">↓ ترشيح البلازما</text>`;
-	body += `<text x="124" y="174" text-anchor="middle" font-size="11" font-weight="bold" fill="#334155">↓ امتصاص ثم عودة للدم</text>`;
-
-	return wrapSciencesSvg(460, 250, body);
+	return svgPhysiologyDiagram('blood_smear', {
+		title: 'سحبة دموية ملونة تحت المجهر الضوئي (مكونات الدم الأربعة)'
+	});
 }
 
 function svgCeliacVillusComparison(): string {

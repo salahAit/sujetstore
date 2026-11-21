@@ -357,6 +357,51 @@
 		}
 	}
 
+	function parseQuizImageMeta(rawUrl?: string | null): {
+		src: string;
+		title?: string;
+		pins: Array<{ num: string; xPct: number; yPct: number; color: string }>;
+		legend: Array<{ num: string; label: string }>;
+	} | null {
+		if (!rawUrl || typeof rawUrl !== 'string') return null;
+		const hashIdx = rawUrl.indexOf('#fig=');
+		const baseSrc = (hashIdx >= 0 ? rawUrl.slice(0, hashIdx) : rawUrl).replace(
+			/^(\/documents\/illustrations\/.+)\.jpg$/i,
+			'$1.webp'
+		);
+		if (hashIdx < 0) {
+			return { src: baseSrc, pins: [], legend: [] };
+		}
+		try {
+			const parsed = JSON.parse(decodeURIComponent(rawUrl.slice(hashIdx + 5))) as {
+				title?: string;
+				pins?: Array<{ num?: string | number; xPct?: number; yPct?: number; color?: string }>;
+				legend?: Array<{ num?: string | number; label?: string }>;
+			};
+			return {
+				src: baseSrc,
+				title: parsed.title || undefined,
+				pins: Array.isArray(parsed.pins)
+					? parsed.pins
+							.filter((p) => p && Number.isFinite(p.xPct) && Number.isFinite(p.yPct))
+							.map((p) => ({
+								num: String(p.num ?? ''),
+								xPct: Number(p.xPct),
+								yPct: Number(p.yPct),
+								color: p.color || '#1d4ed8'
+							}))
+					: [],
+				legend: Array.isArray(parsed.legend)
+					? parsed.legend
+							.filter((it) => it && it.label)
+							.map((it) => ({ num: String(it.num ?? ''), label: String(it.label) }))
+					: []
+			};
+		} catch {
+			return { src: baseSrc, pins: [], legend: [] };
+		}
+	}
+
 	// Practice mode: check current question
 	function checkPractice() {
 		const q = currentQuestion;
@@ -629,12 +674,53 @@
 					<h2 class="mb-6 text-lg font-bold sm:text-xl">
 						
 					{#if currentQuestion.imageUrl}
-						<div class="mb-4 text-center">
-							<img src={currentQuestion.imageUrl} alt="صورة السؤال" class="max-h-64 rounded-lg object-contain border border-border inline-block" />
-							{#if currentQuestion.imageCaption}
-								<p class="text-sm text-muted-foreground mt-2">{currentQuestion.imageCaption}</p>
-							{/if}
-						</div>
+						{@const qFig = parseQuizImageMeta(currentQuestion.imageUrl)}
+						{#if qFig}
+							<div class="mb-4 flex flex-col items-center">
+								<div class="border-border inline-flex max-w-full flex-col items-center rounded-xl border bg-white p-3 text-slate-900 shadow-2xs">
+									{#if qFig.title}
+										<div class="mb-2 text-center text-xs font-extrabold text-slate-900 sm:text-sm">
+											{qFig.title}
+										</div>
+									{/if}
+									<div class="relative inline-block max-w-full">
+										<img
+											src={qFig.src}
+											alt={qFig.title || 'صورة السؤال'}
+											loading="eager"
+											decoding="async"
+											class="block max-h-64 max-w-full rounded-lg object-contain"
+										/>
+										{#each qFig.pins as pin}
+											<span
+												dir="ltr"
+												style="left: {pin.xPct}%; top: {pin.yPct}%; background-color: {pin.color};"
+												class="pointer-events-none absolute flex h-6 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-[11px] font-extrabold text-white shadow-md"
+											>
+												{pin.num}
+											</span>
+										{/each}
+									</div>
+									{#if qFig.legend.length > 0}
+										<div class="mt-2.5 grid w-full grid-cols-1 gap-1.5 border-t border-slate-200 pt-2 text-right text-xs font-normal sm:grid-cols-2">
+											{#each qFig.legend as item}
+												<div class="flex items-center gap-1.5 rounded-md bg-slate-50 px-2 py-1 text-slate-800">
+													{#if item.num}
+														<span dir="ltr" class="flex h-4.5 w-4.5 shrink-0 items-center justify-center rounded-full bg-blue-700 text-[10px] font-extrabold text-white">
+															{item.num}
+														</span>
+													{/if}
+													<span class="font-medium">{item.label}</span>
+												</div>
+											{/each}
+										</div>
+									{/if}
+								</div>
+								{#if currentQuestion.imageCaption}
+									<p class="text-muted-foreground mt-2 text-sm font-normal">{currentQuestion.imageCaption}</p>
+								{/if}
+							</div>
+						{/if}
 					{/if}
 					<MathRenderer content={currentQuestion.questionTextAr || currentQuestion.questionText} inline />
 					</h2>
