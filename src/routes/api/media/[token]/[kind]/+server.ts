@@ -12,6 +12,7 @@ import {
 } from '#lib/server/media-signing';
 import { recordAuditEvent } from '#lib/server/telemetry';
 import { watermarkPdfViaRust } from '#lib/server/rust-worker';
+import { ensurePdfPagesRendered, getRenderedPdfPage } from '#lib/server/pdf-pages';
 
 interface DocumentMediaRow {
 	id: number;
@@ -71,6 +72,9 @@ export const GET: RequestHandler = async (event) => {
 	const expStr = url.searchParams.get('exp');
 	const sig = url.searchParams.get('sig');
 	const isDownload = url.searchParams.get('download') === '1';
+	const renderMode = url.searchParams.get('render');
+	const pageParam = url.searchParams.get('page');
+	const isPageImageRequest = Boolean(pageParam && /^\d+$/.test(pageParam));
 
 	// 1. Validate HMAC signature bound to actor (userId or hashed IP)
 	const sigCheck = verifyMediaSignature(token, kind, expStr, sig, actorKey);
@@ -135,28 +139,32 @@ export const GET: RequestHandler = async (event) => {
 		return jsonError(404, 'مسار الملف غير صالح');
 	}
 
-	// 5. Enforce per-tier download/view quota in PostgreSQL
-	const quota = await checkAndRecordMediaQuota({
-		userId: locals.user?.id ?? null,
-		isPremium: isEffectivePremium(locals.user),
-		isStaff: staff,
-		ip,
-		documentId: doc.id,
-		kind
-	});
-
-	if (!quota.allowed) {
-		recordAuditEvent({
-			event,
-			eventType: 'blocked_quota',
-			statusCode: 429,
-			resourceId: `${doc.id}:${kind}`
+	// 5. Enforce per-tier download/view quota in PostgreSQL (skip re-counting individual page images of the same view)
+	let quotaRemaining = 9999;
+	if (!isPageImageRequest) {
+		const quota = await checkAndRecordMediaQuota({
+			userId: locals.user?.id ?? null,
+			isPremium: isEffectivePremium(locals.user),
+			isStaff: staff,
+			ip,
+			documentId: doc.id,
+			kind
 		});
-		return jsonError(
-			429,
-			`لقد تجاوزت الحد المسموح به لتحميل الملفات (${quota.limit} ملف / ${quota.windowLabel}). يرجى المحاولة لاحقاً.`,
-			{ 'Retry-After': '3600' }
-		);
+
+		if (!quota.allowed) {
+			recordAuditEvent({
+				event,
+				eventType: 'blocked_quota',
+				statusCode: 429,
+				resourceId: `${doc.id}:${kind}`
+			});
+			return jsonError(
+				429,
+				`لقد تجاوزت الحد المسموح به لتحميل الملفات (${quota.limit} ملف / ${quota.windowLabel}). يرجى المحاولة لاحقاً.`,
+				{ 'Retry-After': '3600' }
+			);
+		}
+		quotaRemaining = quota.remaining;
 	}
 
 	// 6. Read bytes from RustFS / local mirror
@@ -168,10 +176,56 @@ export const GET: RequestHandler = async (event) => {
 	let pdfBytes: Uint8Array = obj.bytes;
 
 	// 7. Best-effort dynamic watermarking for non-public documents via Rust worker (with LRU cache)
+	const wmKeyPart = accessTier !== 'public' ? `wm:${locals.user?.id ?? 'm'}` : 'pub';
 	if (accessTier !== 'public') {
 		const watermarkText = `SujetStore Pro | ${locals.user?.email || 'member'} | ${new Date().toISOString().slice(0, 10)}`;
 		const wm = await watermarkPdfViaRust(obj.bytes, watermarkText, actorKey);
 		pdfBytes = wm.bytes;
+	}
+
+	const renderCacheKey = `${doc.id}:${kind}:${relKey}:${obj.bytes.byteLength}:${wmKeyPart}`;
+
+	// 7b. Ultra-fast Server-Rendered Crisp Page Preview (0 KB pdf.js, 100% native Poppler Arabic fonts!)
+	if (renderMode === 'pages') {
+		const pageCount = await ensurePdfPagesRendered(renderCacheKey, pdfBytes);
+		recordAuditEvent({
+			event,
+			eventType: 'pdf_view',
+			statusCode: 200,
+			resourceId: `${doc.id}:${kind}`
+		});
+		return new Response(
+			JSON.stringify({
+				pageCount,
+				pages: Array.from({ length: pageCount }, (_, i) => i + 1)
+			}),
+			{
+				status: 200,
+				headers: {
+					'Content-Type': 'application/json; charset=utf-8',
+					'Cache-Control': 'private, no-store',
+					'X-Storage-Backend': obj.backend
+				}
+			}
+		);
+	}
+
+	if (isPageImageRequest) {
+		const pageNum = parseInt(pageParam!, 10);
+		const rendered = await getRenderedPdfPage(renderCacheKey, pdfBytes, pageNum);
+		if (!rendered) {
+			return jsonError(404, 'الصفحة غير موجودة');
+		}
+		return new Response(new Uint8Array(rendered.bytes), {
+			status: 200,
+			headers: {
+				'Content-Type': 'image/jpeg',
+				'Content-Length': String(rendered.bytes.byteLength),
+				'Cache-Control': 'private, max-age=300',
+				'X-Content-Type-Options': 'nosniff',
+				'X-Storage-Backend': obj.backend
+			}
+		});
 	}
 
 	// 8. Record successful PDF view / download telemetry (fire-and-forget)
@@ -194,7 +248,7 @@ export const GET: RequestHandler = async (event) => {
 			'X-Storage-Backend': obj.backend,
 			'X-Content-Type-Options': 'nosniff',
 			'Cache-Control': 'private, no-store',
-			'X-Quota-Remaining': String(quota.remaining)
+			'X-Quota-Remaining': String(quotaRemaining)
 		}
 	});
 };

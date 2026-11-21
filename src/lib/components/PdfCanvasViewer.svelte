@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onDestroy } from 'svelte';
 	import { ZoomIn, ZoomOut, RotateCcw, Loader2, AlertCircle, RefreshCw } from 'lucide-svelte';
 
 	interface Props {
@@ -10,167 +9,82 @@
 
 	let { url, title = 'قارئ الوثيقة', class: className = '' }: Props = $props();
 
-	let containerEl = $state<HTMLDivElement | null>(null);
-	let pagesHostEl = $state<HTMLDivElement | null>(null);
-
 	let loading = $state(true);
 	let errorMsg = $state<string | null>(null);
-	let pageCount = $state(0);
-	let renderedPages = $state(0);
-	let zoom = $state(1);
+	let pages = $state<number[]>([]);
+	let zoom = $state(100);
 	let reloadNonce = $state(0);
 
-	let activePdfDoc: any = null;
-	let renderSequence = 0;
-
-	async function destroyPdfDoc() {
-		if (activePdfDoc) {
-			try {
-				await activePdfDoc.destroy();
-			} catch {}
-			activePdfDoc = null;
-		}
+	function appendQuery(base: string, param: string): string {
+		const clean = base.split('#')[0];
+		return clean.includes('?') ? `${clean}&${param}` : `${clean}?${param}`;
 	}
 
-	async function renderAllPages(pdfDoc: any, seq: number, scaleMultiplier: number) {
-		if (!pagesHostEl || !containerEl) return;
-		pagesHostEl.innerHTML = '';
-		renderedPages = 0;
+	let pageUrls = $derived(pages.map((p) => ({ num: p, src: appendQuery(url, `page=${p}`) })));
 
-		const containerWidth = Math.max(280, (containerEl.clientWidth || 360) - 24);
-		const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+	let activeReq = 0;
 
-		for (let p = 1; p <= pdfDoc.numPages; p++) {
-			if (seq !== renderSequence) return;
-			const page = await pdfDoc.getPage(p);
-			if (seq !== renderSequence) return;
-
-			const baseViewport = page.getViewport({ scale: 1 });
-			const fitScale = Math.min(containerWidth / baseViewport.width, 2.2);
-			const cssScale = Math.max(0.45, fitScale * scaleMultiplier);
-			const cssViewport = page.getViewport({ scale: cssScale });
-			const renderViewport = page.getViewport({ scale: cssScale * dpr });
-
-			const wrapper = document.createElement('div');
-			wrapper.className =
-				'relative mx-auto mb-3 overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black/10';
-			wrapper.style.width = `${Math.floor(cssViewport.width)}px`;
-
-			const canvas = document.createElement('canvas');
-			canvas.width = Math.floor(renderViewport.width);
-			canvas.height = Math.floor(renderViewport.height);
-			canvas.style.width = `${Math.floor(cssViewport.width)}px`;
-			canvas.style.height = `${Math.floor(cssViewport.height)}px`;
-			canvas.style.display = 'block';
-
-			const badge = document.createElement('div');
-			badge.className =
-				'pointer-events-none absolute bottom-2 left-2 rounded-md bg-black/55 px-2 py-0.5 text-[10px] font-bold text-white';
-			badge.textContent = `${p} / ${pdfDoc.numPages}`;
-
-			wrapper.appendChild(canvas);
-			wrapper.appendChild(badge);
-			pagesHostEl.appendChild(wrapper);
-
-			const ctx = canvas.getContext('2d', { alpha: false });
-			if (ctx) {
-				ctx.fillStyle = '#ffffff';
-				ctx.fillRect(0, 0, canvas.width, canvas.height);
-				const task = page.render({ canvasContext: ctx, viewport: renderViewport });
-				await task.promise;
-			}
-			renderedPages = p;
-		}
-	}
-
-	async function loadAndRender(targetUrl: string, currentZoom: number) {
-		const seq = ++renderSequence;
+	async function loadPagesManifest(targetUrl: string) {
+		const reqId = ++activeReq;
 		loading = true;
 		errorMsg = null;
-		pageCount = 0;
-		renderedPages = 0;
-
-		if (pagesHostEl) pagesHostEl.innerHTML = '';
-		await destroyPdfDoc();
+		pages = [];
 
 		try {
-			const cleanUrl = targetUrl.split('#')[0];
-			const res = await fetch(cleanUrl, { credentials: 'include' });
+			const res = await fetch(appendQuery(targetUrl, 'render=pages'), {
+				credentials: 'include'
+			});
 			if (!res.ok) {
 				throw new Error(
 					res.status === 403
 						? 'انتهت صلاحية رابط العرض أو غير مصرح به — أعد فتح الموضوع'
 						: res.status === 429
 							? 'تم تجاوز حد المشاهدات المؤقت، يرجى الانتظار قليلاً'
-							: `تعذر تحميل الملف (HTTP ${res.status})`
+							: `تعذر عرض الملف (HTTP ${res.status})`
 				);
 			}
-			const data = new Uint8Array(await res.arrayBuffer());
-			if (seq !== renderSequence) return;
-
-			// Use legacy ESM build so both modern and older Android WebViews work seamlessly
-			const pdfjsLib: any = await import('pdfjs-dist/legacy/build/pdf.mjs');
-			if (pdfjsLib.GlobalWorkerOptions) {
-				pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
+			const payload = (await res.json()) as { pageCount?: number; pages?: number[] };
+			if (reqId !== activeReq) return;
+			const list = Array.isArray(payload.pages)
+				? payload.pages
+				: Array.from({ length: payload.pageCount || 0 }, (_, i) => i + 1);
+			if (list.length === 0) {
+				throw new Error('لم يتم العثور على صفحات للعرض');
 			}
-
-			const loadingTask = pdfjsLib.getDocument({
-				data,
-				isEvalSupported: false,
-				useSystemFonts: true
-			});
-			const pdfDoc = await loadingTask.promise;
-			if (seq !== renderSequence) {
-				await pdfDoc.destroy().catch(() => {});
-				return;
-			}
-
-			activePdfDoc = pdfDoc;
-			pageCount = pdfDoc.numPages;
+			pages = list;
 			loading = false;
-
-			await renderAllPages(pdfDoc, seq, currentZoom);
 		} catch (err: any) {
-			if (seq !== renderSequence) return;
+			if (reqId !== activeReq) return;
 			loading = false;
-			errorMsg = err?.message || 'حدث خطأ أثناء عرض ملف PDF';
+			errorMsg = err?.message || 'حدث خطأ أثناء عرض الموضوع';
 		}
 	}
 
 	$effect(() => {
 		const u = url;
-		const _nonce = reloadNonce;
+		const _n = reloadNonce;
 		if (typeof window === 'undefined' || !u) return;
-		zoom = 1;
-		loadAndRender(u, 1);
+		zoom = 100;
+		loadPagesManifest(u);
 	});
 
-	async function changeZoom(next: number) {
-		const clamped = Math.max(0.65, Math.min(2.25, Number(next.toFixed(2))));
-		if (clamped === zoom || !activePdfDoc) return;
-		zoom = clamped;
-		const seq = ++renderSequence;
-		await renderAllPages(activePdfDoc, seq, zoom);
+	function setZoom(next: number) {
+		zoom = Math.max(70, Math.min(200, next));
 	}
-
-	onDestroy(() => {
-		renderSequence++;
-		destroyPdfDoc();
-	});
 </script>
 
 <div
 	class="relative flex h-full w-full flex-col overflow-hidden bg-zinc-200 dark:bg-zinc-900 {className}"
 	aria-label={title}
 >
-	<!-- Compact Viewer Toolbar -->
+	<!-- Ultra-Light Compact Toolbar -->
 	<div
 		class="z-10 flex shrink-0 items-center justify-between gap-2 border-b border-black/10 bg-zinc-100/95 px-3 py-1.5 text-xs text-zinc-700 backdrop-blur dark:border-white/10 dark:bg-zinc-950/95 dark:text-zinc-200"
 	>
 		<div class="flex items-center gap-1.5 font-bold">
-			{#if pageCount > 0}
+			{#if pages.length > 0}
 				<span class="rounded-md bg-black/5 px-2 py-0.5 dark:bg-white/10">
-					{renderedPages < pageCount ? `${renderedPages}/${pageCount}` : `${pageCount} صفحات`}
+					{pages.length === 1 ? 'صفحة واحدة' : pages.length === 2 ? 'صفحتان' : `${pages.length} صفحات`}
 				</span>
 			{:else if loading}
 				<span class="text-muted-foreground">جاري العرض...</span>
@@ -180,31 +94,29 @@
 		<div class="flex items-center gap-1" dir="ltr">
 			<button
 				type="button"
-				onclick={() => changeZoom(zoom - 0.2)}
-				disabled={loading || zoom <= 0.65}
+				onclick={() => setZoom(zoom - 20)}
+				disabled={loading || zoom <= 70}
 				class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-black/10 bg-white/80 transition hover:bg-white disabled:opacity-40 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/15"
 				title="تصغير"
 				aria-label="تصغير"
 			>
 				<ZoomOut size={15} />
 			</button>
-			<span class="min-w-[44px] text-center font-mono text-[11px] font-bold">
-				{Math.round(zoom * 100)}%
-			</span>
+			<span class="min-w-[42px] text-center font-mono text-[11px] font-bold">{zoom}%</span>
 			<button
 				type="button"
-				onclick={() => changeZoom(zoom + 0.2)}
-				disabled={loading || zoom >= 2.25}
+				onclick={() => setZoom(zoom + 20)}
+				disabled={loading || zoom >= 200}
 				class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-black/10 bg-white/80 transition hover:bg-white disabled:opacity-40 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/15"
 				title="تكبير"
 				aria-label="تكبير"
 			>
 				<ZoomIn size={15} />
 			</button>
-			{#if zoom !== 1}
+			{#if zoom !== 100}
 				<button
 					type="button"
-					onclick={() => changeZoom(1)}
+					onclick={() => setZoom(100)}
 					class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-black/10 bg-white/80 transition hover:bg-white dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/15"
 					title="ملاءمة العرض"
 					aria-label="ملاءمة العرض"
@@ -215,16 +127,16 @@
 		</div>
 	</div>
 
-	<!-- Scrollable Canvas Pages Area -->
-	<div bind:this={containerEl} class="relative flex-1 overflow-auto p-3 pb-20">
+	<!-- 60fps Native Image Pages Scroller (Zero PDF.js JS, 100% Native Poppler Arabic Fonts) -->
+	<div class="relative flex-1 overflow-auto p-2.5 pb-20 sm:p-4">
 		{#if loading}
 			<div class="flex h-full min-h-[260px] flex-col items-center justify-center gap-3 text-zinc-600 dark:text-zinc-300">
-				<Loader2 size={32} class="text-primary animate-spin" />
-				<p class="text-sm font-bold">جاري تحضير صفحات الموضوع...</p>
+				<Loader2 size={30} class="text-primary animate-spin" />
+				<p class="text-sm font-bold">جاري فتح الموضوع...</p>
 			</div>
 		{:else if errorMsg}
 			<div class="flex h-full min-h-[260px] flex-col items-center justify-center gap-3 px-4 text-center">
-				<AlertCircle size={36} class="text-red-500" />
+				<AlertCircle size={34} class="text-red-500" />
 				<p class="max-w-md text-sm font-bold text-zinc-800 dark:text-zinc-100">{errorMsg}</p>
 				<button
 					type="button"
@@ -234,8 +146,28 @@
 					<RefreshCw size={14} /> إعادة المحاولة
 				</button>
 			</div>
+		{:else}
+			<div
+				class="mx-auto space-y-3 transition-all duration-150"
+				style="width: {zoom}%; max-width: {zoom > 100 ? 'none' : '860px'};"
+			>
+				{#each pageUrls as p (p.num)}
+					<div class="relative overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black/10">
+						<img
+							src={p.src}
+							alt="{title} — صفحة {p.num}"
+							loading={p.num === 1 ? 'eager' : 'lazy'}
+							decoding="async"
+							class="block h-auto w-full select-none"
+						/>
+						<span
+							class="pointer-events-none absolute bottom-2 left-2 rounded-md bg-black/55 px-2 py-0.5 text-[10px] font-bold text-white"
+						>
+							{p.num} / {pages.length}
+						</span>
+					</div>
+				{/each}
+			</div>
 		{/if}
-
-		<div bind:this={pagesHostEl} class="mx-auto w-full"></div>
 	</div>
 </div>

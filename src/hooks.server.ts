@@ -132,13 +132,14 @@ export const handle: Handle = async ({ event, resolve }) => {
 		}
 	}
 
-	// Rate limit abusive GET media/PDF scraping (non-staff)
+	// Rate limit abusive GET media/PDF scraping (non-staff; skip individual ?page=N preview images)
 	if (
 		!isInternalStaticBuild &&
 		method === 'GET' &&
 		!isStaffRole(event.locals.user?.role) &&
 		(path.startsWith('/documents/') || path.startsWith('/generated/') || path.startsWith('/api/media/')) &&
-		!path.toLowerCase().endsWith('.svg')
+		!path.toLowerCase().endsWith('.svg') &&
+		!event.url.searchParams.has('page')
 	) {
 		const ip = getClientIp(event);
 		const rl = checkRateLimit(`media-get:${ip}`, 45, 60 * 60 * 1000);
