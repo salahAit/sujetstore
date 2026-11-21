@@ -1,10 +1,14 @@
 import type { PageServerLoad } from './$types';
 import { contentSqlite } from '#lib/server/db';
 import { canAccessTier, getSiteSettings } from '#lib/server/visibility';
+import { buildMediaActorKey, signMediaUrl } from '#lib/server/media-signing';
+import { getClientIp } from '#lib/server/rate-limit';
 import { error } from '@sveltejs/kit';
 
-export const load: PageServerLoad = async ({ params, url, locals }) => {
+export const load: PageServerLoad = async (event) => {
+	const { params, url, locals } = event;
 	const db = contentSqlite;
+	const actorKey = buildMediaActorKey(locals.user?.id, getClientIp(event));
 	const siteSettings = getSiteSettings();
 	const dynamicPortalUrl = (siteSettings.dynamic_portal_url || '').replace(/\/$/, '');
 
@@ -102,7 +106,11 @@ export const load: PageServerLoad = async ({ params, url, locals }) => {
 	const rawDocuments = db
 		.query(
 			`
-		SELECT *, is_published as isPublished, has_solution as hasSolution, access_tier as accessTier
+		SELECT id, year_subject_id, trimester_id, title, title_ar, slug, public_token, type,
+			pdf_url, solution_url, file_size, source, academic_year, difficulty,
+			origin_type, download_count, created_at, updated_at,
+			is_published as isPublished, has_solution as hasSolution, access_tier as accessTier,
+			CASE WHEN content IS NOT NULL AND LENGTH(content) > 2 THEN 1 ELSE 0 END as hasContent
 		FROM documents
 		WHERE year_subject_id IN (${placeholders}) AND is_published = 1
 		ORDER BY trimester_id,
@@ -133,7 +141,21 @@ export const load: PageServerLoad = async ({ params, url, locals }) => {
 				lockReason: check.reason
 			};
 		}
-		return { ...d, isLocked: false, lockReason: null };
+		// Replace predictable PDF filenames with short-lived opaque HMAC-signed URLs
+		const useOpaque = !locals.isStaticBuild && Boolean(d.public_token);
+		return {
+			...d,
+			pdf_url:
+				useOpaque && d.pdf_url
+					? signMediaUrl({ token: d.public_token, kind: 'subject', actorKey, ttlSeconds: 900 })
+					: d.pdf_url,
+			solution_url:
+				useOpaque && d.solution_url
+					? signMediaUrl({ token: d.public_token, kind: 'solution', actorKey, ttlSeconds: 900 })
+					: d.solution_url,
+			isLocked: false,
+			lockReason: null
+		};
 	});
 
 	const rawQuizzes = db

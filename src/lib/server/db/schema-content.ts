@@ -164,6 +164,7 @@ export const documents = sqliteTable('documents', {
 	title: text('title').notNull(),
 	titleAr: text('title_ar'),
 	slug: text('slug').notNull(),
+	publicToken: text('public_token'),
 
 	// نوع الوثيقة
 	type: text('type', {
@@ -360,6 +361,81 @@ export const siteSettings = sqliteTable('site_settings', {
 	key: text('key').primaryKey(),
 	value: text('value').notNull(),
 	updatedAt: text('updated_at').default(sql`(datetime('now'))`)
+});
+
+/**
+ * 14. ملفات تنسيق الطباعة المركزية (Typst Style Profiles)
+ */
+export const typstStyleProfiles = sqliteTable('typst_style_profiles', {
+	id: integer('id').primaryKey({ autoIncrement: true }),
+	scopeType: text('scope_type', {
+		enum: ['global', 'language', 'level', 'year', 'subject', 'doc_type']
+	}).notNull(),
+	scopeValue: text('scope_value').notNull(), // e.g. 'default', 'ar', 'fr', 'en', 'moyen', '4am', 'math', 'bac_mock'
+	labelAr: text('label_ar').notNull(),
+	configJson: text('config_json').notNull(), // JSON: fonts, sizes, margins, header, logo, qr, footer
+	isActive: integer('is_active', { mode: 'boolean' }).default(true).notNull(),
+	updatedAt: text('updated_at').default(sql`(datetime('now'))`).notNull()
+});
+
+/**
+ * 15. الفيديوهات التفاعلية (Interactive Video Studio — Cloudflare Stream / YouTube)
+ */
+export const videos = sqliteTable('videos', {
+	id: integer('id').primaryKey({ autoIncrement: true }),
+	yearSubjectId: integer('year_subject_id')
+		.references(() => yearSubjects.id)
+		.notNull(),
+	trimesterId: text('trimester_id').references(() => trimesters.id),
+	lessonId: integer('lesson_id').references(() => documents.id, { onDelete: 'set null' }),
+	slug: text('slug').notNull().unique(),
+	title: text('title').notNull(),
+	titleAr: text('title_ar').notNull(),
+	description: text('description'),
+	provider: text('provider', { enum: ['youtube', 'cloudflare_stream', 'external'] })
+		.default('youtube')
+		.notNull(),
+	externalId: text('external_id').notNull(),
+	embedUrl: text('embed_url').notNull(),
+	durationSec: integer('duration_sec').default(0).notNull(),
+	thumbnailUrl: text('thumbnail_url'),
+	accessTier: text('access_tier', { enum: ['public', 'registered', 'premium'] })
+		.default('public')
+		.notNull(),
+	isPublished: integer('is_published', { mode: 'boolean' }).default(true).notNull(),
+	createdAt: text('created_at').default(sql`(datetime('now'))`).notNull(),
+	updatedAt: text('updated_at')
+});
+
+/**
+ * 16. فقرات التفريغ النصي المتزامن للفيديو (Synchronized Video Transcripts)
+ */
+export const videoTranscriptSegments = sqliteTable('video_transcript_segments', {
+	id: integer('id').primaryKey({ autoIncrement: true }),
+	videoId: integer('video_id')
+		.references(() => videos.id, { onDelete: 'cascade' })
+		.notNull(),
+	seqIndex: integer('seq_index').notNull(),
+	startSec: integer('start_sec').notNull(),
+	endSec: integer('end_sec').notNull(),
+	textAr: text('text_ar').notNull(),
+	textNormalized: text('text_normalized').notNull()
+});
+
+/**
+ * 17. الأسئلة التفاعلية المرتبطة بطابع زمني داخل الفيديو (Video Cue Questions)
+ */
+export const videoCueQuestions = sqliteTable('video_cue_questions', {
+	id: integer('id').primaryKey({ autoIncrement: true }),
+	videoId: integer('video_id')
+		.references(() => videos.id, { onDelete: 'cascade' })
+		.notNull(),
+	triggerSec: integer('trigger_sec').notNull(),
+	questionId: integer('question_id')
+		.references(() => questions.id, { onDelete: 'cascade' })
+		.notNull(),
+	isMandatory: integer('is_mandatory', { mode: 'boolean' }).default(false).notNull(),
+	pauseVideo: integer('pause_video', { mode: 'boolean' }).default(true).notNull()
 });
 
 // ============================================

@@ -17,7 +17,7 @@
 
 #let dev-guide-template(body) = {
   set document(
-    title: "SujetStore Developer Guide v4.0",
+    title: "SujetStore Developer Guide v5.0",
     author: "SujetStore Engineering Team",
   )
 
@@ -78,7 +78,7 @@
         grid(
           columns: (1fr, auto),
           align(right, text(font: heading-font, fill: emerald, weight: "bold", size: 8.5pt)[#chap-title]),
-          align(left, text(dir: ltr, font: mono-font, fill: slate-500, size: 8pt)[SUJETSTORE DEV GUIDE v4.0]),
+          align(left, text(dir: ltr, font: mono-font, fill: slate-500, size: 8pt)[SUJETSTORE DEV GUIDE v5.0]),
         )
         v(3pt)
         line(length: 100%, stroke: 0.6pt + emerald.lighten(65%))
@@ -196,7 +196,7 @@
           gutter: 12pt,
           [
             #text(font: heading-font, size: 8.5pt, fill: gold, weight: "bold")[الإصدار المعماري]\
-            #text(size: 10.5pt, weight: "bold")[الإصدار 4.0 (نوفمبر 2026)]
+            #text(size: 10.5pt, weight: "bold")[الإصدار 5.0 (نوفمبر 2026)]
           ],
           [
             #text(font: heading-font, size: 8.5pt, fill: gold, weight: "bold")[حزمة التشغيل]\

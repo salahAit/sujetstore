@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SujetStore</string>
+    <string name="app_full_name">SujetStore — بنك الفروض والاختبارات الجزائرية</string>
+    <string name="offline_title">لا يوجد اتصال بالإنترنت</string>
+    <string name="offline_desc">تعذّر الاتصال بمنصة SujetStore. يرجى التحقق من اتصال الشبكة ثم المحاولة مرة أخرى.</string>
+    <string name="offline_retry">إعادة المحاولة</string>
+    <string name="press_back_again">اضغط رجوع مرة أخرى للخروج من التطبيق</string>
+    <string name="download_started">بدأ تنزيل الملف في مجلد التنزيلات...</string>
+    <string name="download_failed">تعذّر بدء التنزيل، سيتم فتح الرابط خارجياً</string>
+    <string name="share_chooser">مشاركة عبر</string>
+    <string name="shortcut_student_short">فضاء التلميذ</string>
+    <string name="shortcut_student_long">لوحة التلميذ والمتابعة</string>
+    <string name="shortcut_quizzes_short">التمارين</string>
+    <string name="shortcut_quizzes_long">التمارين والاختبارات التفاعلية</string>
+</resources>

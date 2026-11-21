@@ -1,0 +1,17 @@
+{
+  "name": "@sujetstore/mobile-android",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SujetStore Android mobile shell (Capacitor-compatible Android 35 WebView wrapper)",
+  "scripts": {
+    "android:debug": "cd android && ANDROID_HOME=/opt/android-sdk JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 ./gradlew assembleDebug",
+    "android:release": "cd android && ANDROID_HOME=/opt/android-sdk JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 ./gradlew assembleRelease bundleRelease"
+  },
+  "dependencies": {
+    "@capacitor/core": "^6.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/cli": "^6.2.0"
+  }
+}

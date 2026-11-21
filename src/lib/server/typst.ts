@@ -3,6 +3,7 @@ import { existsSync } from 'fs';
 import { mkdir, readFile, rm, writeFile } from 'fs/promises';
 import { join, resolve } from 'path';
 import { randomUUID } from 'crypto';
+import { resolveEffectivePrintStyle } from './print-style';
 
 const PROJECT_ROOT = resolve('.');
 const TYPST_ROOT = join(PROJECT_ROOT, 'src/lib/modules/SujetBuilder/typst');
@@ -191,7 +192,23 @@ export async function compileTypstPdf(options: {
 	isSolution?: boolean;
 }): Promise<{ success: boolean; size?: number; error?: string }> {
 	const { examDoc, outputPath, templateId = 'middle/exam', isSolution = false } = options;
-	const processedDoc = sanitizeTypstDocument(examDoc);
+	const payloadWithStyle = examDoc?.style
+		? examDoc
+		: {
+				...examDoc,
+				style: resolveEffectivePrintStyle({
+					language: templateId.startsWith('french/')
+						? 'fr'
+						: templateId.startsWith('english/')
+							? 'en'
+							: 'ar',
+					levelId: examDoc?.metadata?.levelId,
+					yearId: examDoc?.metadata?.yearId,
+					subjectId: examDoc?.metadata?.subjectId,
+					docType: examDoc?.metadata?.docType
+				})
+			};
+	const processedDoc = sanitizeTypstDocument(payloadWithStyle);
 
 	await mkdir(join(outputPath, '..'), { recursive: true });
 	const tempDataFile = join(TYPST_ROOT, `.tmp-${randomUUID()}.json`);

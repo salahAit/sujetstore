@@ -4,9 +4,12 @@ declare global {
 	namespace App {
 		// interface Error {}
 		interface Locals {
-			user: import('#lib/server/db/schema').User | null;
-			session: import('#lib/server/db/schema').Session | null;
+			user: import('#lib/server/db/schema-pg').User | null;
+			session: import('#lib/server/db/schema-pg').Session | null;
 			isStaticBuild?: boolean;
+			locale?: 'ar' | 'fr' | 'en';
+			isMobileApp?: boolean;
+			siteLockActive?: boolean;
 		}
 		// interface PageData {}
 		// interface PageState {}

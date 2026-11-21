@@ -32,3 +32,4 @@
 #include "chapters/08-student-portal-and-remediation.typ"
 #include "chapters/09-api-and-routes-reference.typ"
 #include "chapters/10-testing-deployment-and-runbooks.typ"
+#include "chapters/11-v5-evolution.typ"

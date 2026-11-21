@@ -235,6 +235,28 @@ export const GET: RequestHandler = async () => {
 		});
 	}
 
+	// 8. All published public interactive videos (/videos/[slug])
+	try {
+		const videoRows = contentSqlite
+			.query(
+				`SELECT slug, updated_at, created_at FROM videos
+				 WHERE is_published = 1 AND COALESCE(access_tier, 'public') = 'public'
+				 ORDER BY id DESC`
+			)
+			.all() as Array<{ slug: string; updated_at: string | null; created_at: string | null }>;
+
+		for (const v of videoRows) {
+			addEntry({
+				path: `/videos/${v.slug}`,
+				lastmod: formatLastMod(v.updated_at || v.created_at, today),
+				changefreq: 'monthly',
+				priority: '0.7'
+			});
+		}
+	} catch {
+		// videos table optional
+	}
+
 	const urlBlocks: string[] = [];
 	for (const entry of entries.values()) {
 		const loc = escapeXml(entry.path === '/' ? `${siteOrigin}/` : `${siteOrigin}${entry.path}`);

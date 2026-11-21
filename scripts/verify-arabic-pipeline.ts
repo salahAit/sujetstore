@@ -55,7 +55,7 @@ async function waitForServer(timeoutMs = 15000): Promise<void> {
 	const start = Date.now();
 	while (Date.now() - start < timeoutMs) {
 		try {
-			const r = await fetch(`${BASE_URL}/`);
+			const r = await fetch(`${BASE_URL}/admin/login`);
 			if (r.status === 200) return;
 		} catch {}
 		await new Promise((r) => setTimeout(r, 250));

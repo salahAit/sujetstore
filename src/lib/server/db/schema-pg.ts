@@ -442,6 +442,106 @@ export const transcriptEdits = pgTable('transcript_edits', {
 });
 
 // ============================================
+// V5.0 PLATFORM SETTINGS, MODULES, SECURITY & TELEMETRY
+// ============================================
+
+export const platformSettings = pgTable('platform_settings', {
+	key: text('key').primaryKey(),
+	value: text('value').notNull(),
+	updatedAt: text('updated_at').default(PG_UTC_NOW).notNull()
+});
+
+export const platformModules = pgTable('platform_modules', {
+	moduleId: text('module_id').primaryKey(),
+	version: text('version').notNull(),
+	tier: text('tier').default('optional').notNull(),
+	category: text('category').default('learning').notNull(),
+	enabled: boolean('enabled').default(true).notNull(),
+	configJson: text('config_json').default('{}').notNull(),
+	updatedAt: text('updated_at').default(PG_UTC_NOW).notNull()
+});
+
+export const mediaDownloadLogs = pgTable(
+	'media_download_logs',
+	{
+		id: serial('id').primaryKey(),
+		userId: integer('user_id').references(() => users.id, { onDelete: 'set null' }),
+		ipHash: text('ip_hash').notNull(),
+		documentId: integer('document_id').notNull(),
+		kind: text('kind').default('subject').notNull(),
+		createdAt: text('created_at').default(PG_UTC_NOW).notNull()
+	},
+	(table) => ({
+		userCreatedIdx: index('idx_media_dl_user_time').on(table.userId, table.createdAt),
+		ipCreatedIdx: index('idx_media_dl_ip_time').on(table.ipHash, table.createdAt)
+	})
+);
+
+export const activityAuditLogs = pgTable(
+	'activity_audit_logs',
+	{
+		id: serial('id').primaryKey(),
+		userId: integer('user_id').references(() => users.id, { onDelete: 'set null' }),
+		userEmail: text('user_email'),
+		userRole: text('user_role'),
+		eventType: text('event_type').notNull(),
+		path: text('path').notNull(),
+		resourceId: text('resource_id'),
+		ipAddress: text('ip_address').notNull(),
+		countryCode: text('country_code'),
+		countryName: text('country_name'),
+		regionCity: text('region_city'),
+		deviceType: text('device_type').default('desktop').notNull(),
+		osName: text('os_name').default('Unknown').notNull(),
+		browserName: text('browser_name').default('Unknown').notNull(),
+		userAgent: text('user_agent'),
+		statusCode: integer('status_code').default(200).notNull(),
+		createdAt: text('created_at').default(PG_UTC_NOW).notNull()
+	},
+	(table) => ({
+		createdIdx: index('idx_audit_created').on(table.createdAt),
+		userIdx: index('idx_audit_user').on(table.userId, table.createdAt),
+		eventIdx: index('idx_audit_event').on(table.eventType, table.createdAt)
+	})
+);
+
+export const videoWatchProgress = pgTable(
+	'video_watch_progress',
+	{
+		id: serial('id').primaryKey(),
+		userId: integer('user_id')
+			.references(() => users.id, { onDelete: 'cascade' })
+			.notNull(),
+		videoId: integer('video_id').notNull(),
+		lastPositionSec: integer('last_position_sec').default(0).notNull(),
+		completed: boolean('completed').default(false).notNull(),
+		answeredCuesJson: text('answered_cues_json').default('[]').notNull(),
+		updatedAt: text('updated_at').default(PG_UTC_NOW).notNull()
+	},
+	(table) => ({
+		userVideoIdx: index('idx_video_progress_user_vid').on(table.userId, table.videoId)
+	})
+);
+
+export const apiTokens = pgTable(
+	'api_tokens',
+	{
+		id: serial('id').primaryKey(),
+		userId: integer('user_id')
+			.references(() => users.id, { onDelete: 'cascade' })
+			.notNull(),
+		tokenHash: text('token_hash').notNull().unique(),
+		label: text('label').default('mobile-client').notNull(),
+		expiresAt: text('expires_at').notNull(),
+		lastUsedAt: text('last_used_at'),
+		createdAt: text('created_at').default(PG_UTC_NOW).notNull()
+	},
+	(table) => ({
+		userIdx: index('idx_api_tokens_user').on(table.userId)
+	})
+);
+
+// ============================================
 // TYPE EXPORTS
 // ============================================
 

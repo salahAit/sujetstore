@@ -194,7 +194,7 @@
 	});
 
 	function isInteractiveLesson(doc: any): boolean {
-		return Boolean(doc && doc.type === 'lesson' && (doc.content || !doc.pdf_url));
+		return Boolean(doc && doc.type === 'lesson' && (doc.hasContent || doc.content || !doc.pdf_url));
 	}
 
 	function getDocUrl(doc: any): string {

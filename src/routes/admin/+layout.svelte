@@ -16,33 +16,50 @@
 		Eye,
 		Ticket,
 		Bell,
-		Users
+		Users,
+		Lock,
+		Activity,
+		Printer,
+		Blocks,
+		Video
 	} from 'lucide-svelte';
 
 	let { data, children } = $props();
 
 	let isMobileMenuOpen = $state(false);
+	let enabledSet = $derived(new Set<string>(data?.enabledModules || []));
+	function isModOn(modId?: string): boolean {
+		if (!modId || enabledSet.size === 0) return true;
+		return enabledSet.has(modId);
+	}
 
-	const navigation = $derived([
-		{ name: 'الرئيسية', href: '/admin', icon: LayoutDashboard },
-		{ name: 'التحكم في الظهور والنشر', href: '/admin/visibility', icon: Eye },
-		{ name: 'المراحل التعليمية', href: '/admin/levels', icon: GraduationCap },
-		{ name: 'المستويات الدراسية', href: '/admin/years', icon: CalendarDays },
-		{ name: 'الشعب الدراسية', href: '/admin/streams', icon: BookOpen },
-		{ name: 'المواد الدراسية', href: '/admin/subjects', icon: BookOpen },
-		{ name: 'منشئ المواضيع', href: '/admin/sujet-builder', icon: FilePlus2 },
-		{ name: 'التمارين التفاعلية', href: '/admin/quizzes', icon: Brain },
-		{ name: 'بنك الأسئلة التفاعلية', href: '/admin/question-bank', icon: Database },
-		{ name: 'بنك التمارين المطبوعة', href: '/admin/exercises', icon: FileText },
-		{ name: 'بنك المواضيع المنشأة', href: '/admin/sujet-bank', icon: FilePlus2 },
-		{ name: 'إحصائيات التمارين', href: '/admin/quiz-analytics', icon: BarChart3 },
-		{ name: 'الوثائق المرفوعة', href: '/admin/documents', icon: FileText },
-		{ name: 'أكواد التفعيل والاشتراكات', href: '/admin/vouchers', icon: Ticket },
-		{ name: 'الإشعارات العامة', href: '/admin/notifications', icon: Bell },
-		...(data.user?.role === 'superadmin'
-			? [{ name: 'المستخدمون والصلاحيات', href: '/admin/users', icon: Users }]
-			: [])
-	]);
+	const navigation = $derived(
+		[
+			{ name: 'الرئيسية', href: '/admin', icon: LayoutDashboard },
+			{ name: 'قفل الموقع والحماية', href: '/admin/site-lock', icon: Lock },
+			{ name: 'تحليلات الزوار والأجهزة', href: '/admin/analytics', icon: Activity },
+			{ name: 'إدارة الإضافات (Kernel)', href: '/admin/modules', icon: Blocks },
+			{ name: 'استوديو الطباعة والهوية', href: '/admin/print-studio', icon: Printer, mod: 'print-studio' },
+			{ name: 'استوديو الفيديو التفاعلي', href: '/admin/videos', icon: Video, mod: 'video-studio' },
+			{ name: 'التحكم في الظهور والنشر', href: '/admin/visibility', icon: Eye },
+			{ name: 'المراحل التعليمية', href: '/admin/levels', icon: GraduationCap },
+			{ name: 'المستويات الدراسية', href: '/admin/years', icon: CalendarDays },
+			{ name: 'الشعب الدراسية', href: '/admin/streams', icon: BookOpen },
+			{ name: 'المواد الدراسية', href: '/admin/subjects', icon: BookOpen },
+			{ name: 'منشئ المواضيع', href: '/admin/sujet-builder', icon: FilePlus2, mod: 'sujet-builder' },
+			{ name: 'التمارين التفاعلية', href: '/admin/quizzes', icon: Brain, mod: 'quiz-engine' },
+			{ name: 'بنك الأسئلة التفاعلية', href: '/admin/question-bank', icon: Database, mod: 'quiz-engine' },
+			{ name: 'بنك التمارين المطبوعة', href: '/admin/exercises', icon: FileText, mod: 'sujet-builder' },
+			{ name: 'بنك المواضيع المنشأة', href: '/admin/sujet-bank', icon: FilePlus2, mod: 'sujet-builder' },
+			{ name: 'إحصائيات التمارين', href: '/admin/quiz-analytics', icon: BarChart3, mod: 'quiz-engine' },
+			{ name: 'الوثائق المرفوعة', href: '/admin/documents', icon: FileText, mod: 'lesson-editor' },
+			{ name: 'أكواد التفعيل والاشتراكات', href: '/admin/vouchers', icon: Ticket },
+			{ name: 'الإشعارات العامة', href: '/admin/notifications', icon: Bell },
+			...(data.user?.role === 'superadmin'
+				? [{ name: 'المستخدمون والصلاحيات', href: '/admin/users', icon: Users }]
+				: [])
+		].filter((item) => isModOn((item as any).mod))
+	);
 	let isSujetBuilder = $derived(page.url.pathname.startsWith('/admin/sujet-builder'));
 </script>
 

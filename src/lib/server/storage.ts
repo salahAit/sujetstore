@@ -5,6 +5,7 @@ import { dirname, extname, normalize, resolve } from 'node:path';
 import { error } from '@sveltejs/kit';
 import { contentSqlite } from './db';
 import { canAccessTier } from './visibility';
+import { isStaffRole } from './auth';
 
 const MIME_TYPES: Record<string, string> = {
 	'.pdf': 'application/pdf',
@@ -167,6 +168,15 @@ export async function serveProtectedMedia(
 	const key = sanitizeObjectKey(`${prefix}/${rawRelPath}`);
 	if (!key) {
 		throw error(400, 'مسار ملف غير صالح');
+	}
+
+	// Block direct guessed PDF filenames when STRICT_OPAQUE_MEDIA=1 (non-staff must use signed /api/media/[token]/[kind])
+	if (
+		process.env.STRICT_OPAQUE_MEDIA === '1' &&
+		key.toLowerCase().endsWith('.pdf') &&
+		!isStaffRole(locals.user?.role)
+	) {
+		throw error(403, 'الوصول المباشر لملفات PDF معطّل — يرجى فتح الملف من داخل المنصة');
 	}
 
 	const publicUrl = `/${key}`;

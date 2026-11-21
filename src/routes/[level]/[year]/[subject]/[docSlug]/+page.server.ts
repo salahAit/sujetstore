@@ -8,10 +8,15 @@ import {
 	yearSubjects
 } from '#lib/server/db/schema-content';
 import { canAccessTier, getSiteSettings } from '#lib/server/visibility';
+import { buildMediaActorKey, signMediaUrl } from '#lib/server/media-signing';
+import { getClientIp } from '#lib/server/rate-limit';
 import { eq, ne, and } from 'drizzle-orm';
+import type { PageServerLoad } from './$types';
 
-export async function load({ params, locals }) {
+export const load: PageServerLoad = async (event) => {
+	const { params, locals } = event;
 	const docSlug = params.docSlug;
+	const actorKey = buildMediaActorKey(locals.user?.id, getClientIp(event));
 
 	const [docRow] = await contentDatabase
 		.select({
@@ -45,8 +50,19 @@ export async function load({ params, locals }) {
 	const dynamicPortalUrl = (siteSettings.dynamic_portal_url || '').replace(/\/$/, '');
 	const accessCheck = canAccessTier(docRow.doc.accessTier, locals.user, locals.isStaticBuild);
 
+	const useOpaque = !locals.isStaticBuild && Boolean(docRow.doc.publicToken);
 	const safeDocument = accessCheck.allowed
-		? docRow.doc
+		? {
+				...docRow.doc,
+				pdfUrl:
+					useOpaque && docRow.doc.pdfUrl && docRow.doc.publicToken
+						? signMediaUrl({ token: docRow.doc.publicToken, kind: 'subject', actorKey, ttlSeconds: 900 })
+						: docRow.doc.pdfUrl,
+				solutionUrl:
+					useOpaque && docRow.doc.solutionUrl && docRow.doc.publicToken
+						? signMediaUrl({ token: docRow.doc.publicToken, kind: 'solution', actorKey, ttlSeconds: 900 })
+						: docRow.doc.solutionUrl
+			}
 		: {
 				...docRow.doc,
 				pdfUrl: null,

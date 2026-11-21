@@ -22,6 +22,9 @@ export const load: LayoutServerLoad = async ({ locals }) => {
 		levels,
 		siteSettings,
 		user,
-		isStaticBuild: !!locals.isStaticBuild
+		isStaticBuild: !!locals.isStaticBuild,
+		locale: locals.locale || 'ar',
+		siteLockActive: !!locals.siteLockActive,
+		isMobileApp: !!locals.isMobileApp
 	};
 };

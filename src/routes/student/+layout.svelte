@@ -16,18 +16,27 @@
 	let { data, children } = $props();
 	let path = $derived(page.url.pathname);
 
-	const navItems = $derived([
-		{ href: '/student', label: 'لوحتي', icon: LayoutDashboard, exact: true },
-		{
-			href: '/student/mistakes',
-			label: 'دفتر الأخطاء',
-			icon: BookMarked,
-			badge: data.unresolvedMistakesCount
-		},
-		{ href: '/student/generator', label: 'المولّد الذكي', icon: Sparkles },
-		{ href: '/student/activate', label: 'الاشتراك والقسائم', icon: CreditCard },
-		{ href: '/simulator', label: 'حاسبة المعدل', icon: Calculator }
-	]);
+	let enabledSet = $derived(new Set<string>(data?.enabledModules || []));
+	function isModOn(modId?: string): boolean {
+		if (!modId || enabledSet.size === 0) return true;
+		return enabledSet.has(modId);
+	}
+
+	const navItems = $derived(
+		[
+			{ href: '/student', label: 'لوحتي', icon: LayoutDashboard, exact: true },
+			{
+				href: '/student/mistakes',
+				label: 'دفتر الأخطاء',
+				icon: BookMarked,
+				badge: data.unresolvedMistakesCount,
+				mod: 'remediation'
+			},
+			{ href: '/student/generator', label: 'المولّد الذكي', icon: Sparkles, mod: 'smart-generator' },
+			{ href: '/student/activate', label: 'الاشتراك والقسائم', icon: CreditCard },
+			{ href: '/simulator', label: 'حاسبة المعدل', icon: Calculator, mod: 'simulator' }
+		].filter((item) => isModOn((item as any).mod))
+	);
 </script>
 
 <div class="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8">

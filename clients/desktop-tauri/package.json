@@ -1,0 +1,17 @@
+{
+  "name": "@sujetstore/desktop-tauri",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SujetStore Desktop App (Tauri v2) for Windows, macOS, and Linux",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.2.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.2.0"
+  }
+}

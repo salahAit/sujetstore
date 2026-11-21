@@ -83,3 +83,14 @@ pipeline/references_arabic/**/*.pdf
 __pycache__/
 *.py[cod]
 
+# Rust & Native Mobile/Desktop Build Artifacts & Keystores
+services/rust-media-worker/target/
+clients/desktop-tauri/src-tauri/target/
+clients/mobile-capacitor/android/.gradle/
+clients/mobile-capacitor/android/app/build/
+clients/mobile-capacitor/android/build/
+clients/mobile-capacitor/android/local.properties
+*.keystore
+*.jks
+keystore.properties
+

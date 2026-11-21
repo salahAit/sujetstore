@@ -2,6 +2,7 @@ import { redirect } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';
 import { pgGet } from '#lib/server/db';
 import { isEffectivePremium } from '#lib/server/auth';
+import { platformRegistry } from '#lib/platform';
 
 export const load: LayoutServerLoad = async ({ locals, url }) => {
 	if (!locals.user) {
@@ -23,6 +24,11 @@ export const load: LayoutServerLoad = async ({ locals, url }) => {
 		])
 	]);
 
+	const snapshot = await platformRegistry.getSnapshot();
+	const enabledModules = Array.from(snapshot.values())
+		.filter((m) => m.enabled)
+		.map((m) => m.moduleId);
+
 	return {
 		studentUser: {
 			id: user.id,
@@ -39,6 +45,7 @@ export const load: LayoutServerLoad = async ({ locals, url }) => {
 		isPremium: isEffectivePremium(user),
 		totalXp: pointsRow?.total || 0,
 		unresolvedMistakesCount: mistakesRow?.c || 0,
-		attemptsCount: attemptsRow?.c || 0
+		attemptsCount: attemptsRow?.c || 0,
+		enabledModules
 	};
 };

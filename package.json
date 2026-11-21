@@ -21,7 +21,7 @@
 		"db:studio": "drizzle-kit studio",
 		"db:studio:content": "drizzle-kit studio --config=drizzle.content.config.ts",
 		"seed": "bun run scripts/seed-education.ts",
-		"docs:dev-guide": "typst compile --root . --font-path static/fonts docs/developer-guide/main.typ docs/developer-guide/SujetStore-Developer-Guide-v4.pdf",
+		"docs:dev-guide": "typst compile --root . --font-path static/fonts docs/developer-guide/main.typ docs/developer-guide/SujetStore-Developer-Guide-v5.pdf",
 		"prepare": "svelte-kit sync || echo ''"
 	},
 	"devDependencies": {

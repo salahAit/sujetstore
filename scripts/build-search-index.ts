@@ -461,6 +461,93 @@ export function rebuildSearchIndex(db: Database): SearchIndexBuildResult {
 			);
 		}
 
+		// 3. Index published interactive videos & synchronized transcript segments (for ?t= timestamp search)
+		try {
+			const videos = db
+				.query(
+					`
+					SELECT v.id, v.slug, v.title, v.title_ar, v.description, v.access_tier,
+						s.name_ar AS subject_name, s.slug AS subject_slug, s.icon AS subject_icon, s.color AS subject_color,
+						y.name_ar AS year_name, y.slug AS year_slug,
+						st.name_ar AS stream_name,
+						el.name_ar AS level_name, el.slug AS level_slug
+					FROM videos v
+					JOIN year_subjects ys ON v.year_subject_id = ys.id
+					JOIN years y ON ys.year_id = y.id
+					JOIN education_levels el ON y.level_id = el.id
+					JOIN subjects s ON ys.subject_id = s.id
+					LEFT JOIN streams st ON ys.stream_id = st.id
+					WHERE v.is_published = 1
+				`
+				)
+				.all() as any[];
+
+			for (const v of videos) {
+				const titleAr = v.title_ar || v.title;
+				const urlPath = `/videos/${v.slug}`;
+				const kw = buildKeywords(
+					[v.description || '', 'فيديو درس مرئي video cours', v.slug.replace(/[-_]+/g, ' ')],
+					[v.title, titleAr, v.subject_name, v.year_name, v.stream_name || '', v.level_name]
+				);
+				insertStmt.run(
+					`video:${v.id}`,
+					String(v.id),
+					'video',
+					v.title,
+					titleAr,
+					v.subject_name,
+					v.year_name,
+					v.stream_name || '',
+					v.level_name,
+					kw,
+					urlPath,
+					null,
+					v.access_tier || 'public',
+					v.subject_slug,
+					v.subject_icon ?? null,
+					v.subject_color ?? null,
+					v.year_slug,
+					v.level_slug,
+					v.slug
+				);
+
+				const segs = db
+					.query(
+						'SELECT id, start_sec, text_ar, text_normalized FROM video_transcript_segments WHERE video_id = ? ORDER BY seq_index ASC'
+					)
+					.all(v.id) as Array<{ id: number; start_sec: number; text_ar: string; text_normalized: string }>;
+
+				for (const seg of segs) {
+					const mm = String(Math.floor(seg.start_sec / 60)).padStart(2, '0');
+					const ss = String(seg.start_sec % 60).padStart(2, '0');
+					const segTitle = `[${mm}:${ss}] ${seg.text_ar.slice(0, 90)}`;
+					insertStmt.run(
+						`vseg:${seg.id}`,
+						String(seg.id),
+						'video_segment',
+						segTitle,
+						`${titleAr} — ${segTitle}`,
+						v.subject_name,
+						v.year_name,
+						v.stream_name || '',
+						v.level_name,
+						`${seg.text_ar} ${seg.text_normalized}`,
+						`/videos/${v.slug}?t=${seg.start_sec}`,
+						null,
+						v.access_tier || 'public',
+						v.subject_slug,
+						v.subject_icon ?? null,
+						v.subject_color ?? null,
+						v.year_slug,
+						v.level_slug,
+						v.slug
+					);
+				}
+			}
+		} catch {
+			// videos table optional on older snapshots
+		}
+
 		db.exec("INSERT INTO search_fts(search_fts) VALUES ('optimize')");
 		db.exec('COMMIT');
 	} catch (err) {
