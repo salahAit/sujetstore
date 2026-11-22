@@ -93,6 +93,13 @@ import {
 	type AssembleIslamicOptions,
 	type IslamicExamVariant
 } from './assemblers/exam-islamic';
+import {
+	assembleHistoryPaper,
+	yearSubjectToHistoryTrack,
+	type AssembledHistoryPaper,
+	type AssembleHistoryOptions,
+	type HistoryExamVariant
+} from './assemblers/exam-history';
 import { compileTypstPdf } from './typst';
 import {
 	SECONDARY_TRACK_IDS,
@@ -1000,4 +1007,15 @@ export function assembleIslamicExam(
 	opts: AssembleIslamicExamOptions
 ): UnifiedAssembledIslamicExam {
 	return assembleIslamicPaper(opts);
+}
+
+export type UnifiedAssembledHistoryExam = AssembledHistoryPaper;
+export type AssembleHistoryExamOptions = AssembleHistoryOptions;
+export type { HistoryExamVariant };
+export { yearSubjectToHistoryTrack };
+
+export function assembleHistoryExam(
+	opts: AssembleHistoryExamOptions
+): UnifiedAssembledHistoryExam {
+	return assembleHistoryPaper(opts);
 }

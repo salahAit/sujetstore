@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T21:45:41.675Z",
+  "updatedAt": "2026-11-22T00:53:02.138Z",
   "subjects": {
     "math": {
       "id": "math",
@@ -63,6 +63,15 @@
       "sizeBytes": 6338451,
       "builtAt": "2026-11-21T21:45:41.674Z",
       "elapsedMs": 463
+    },
+    "history": {
+      "id": "history",
+      "tracks": 21,
+      "lessons": 189,
+      "templates": 384,
+      "sizeBytes": 4176329,
+      "builtAt": "2026-11-22T00:53:02.138Z",
+      "elapsedMs": 295
     }
   }
 }

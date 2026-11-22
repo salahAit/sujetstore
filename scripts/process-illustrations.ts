@@ -37,22 +37,42 @@ function pickLatestRawFile(id: string, allFiles: string[]): string | null {
 	return join(RAW_DIR, candidates[0]);
 }
 
+function parseCategoryArg(): string | null {
+	const eq = process.argv.find((a) => a.startsWith('--category='));
+	if (eq) return eq.slice('--category='.length).trim();
+	const idx = process.argv.indexOf('--category');
+	if (idx !== -1 && process.argv[idx + 1]) return process.argv[idx + 1].trim();
+	return null;
+}
+
 async function main() {
 	const t0 = performance.now();
 	if (!existsSync(RAW_DIR)) {
 		throw new Error(`RAW_DIR not found: ${RAW_DIR}`);
 	}
+	const categoryFilter = parseCategoryArg();
 	const allRawFiles = readdirSync(RAW_DIR);
-	const ids = Object.keys(ILLUSTRATIONS_CATALOG) as IllustrationId[];
+	const ids = (Object.keys(ILLUSTRATIONS_CATALOG) as IllustrationId[]).filter((id) =>
+		categoryFilter ? ILLUSTRATIONS_CATALOG[id].category === categoryFilter : true
+	);
 
 	const jobs: Array<{ id: IllustrationId; category: string; srcPath: string }> = [];
 	const missing: string[] = [];
+	let skippedExisting = 0;
 
 	for (const id of ids) {
 		const meta = ILLUSTRATIONS_CATALOG[id];
 		const srcPath = pickLatestRawFile(id, allRawFiles);
 		if (!srcPath) {
-			missing.push(id);
+			const mediaRoot = process.env.MEDIA_ROOT?.trim() || '/var/lib/sujetstore-media';
+			const hasPublished =
+				existsSync(join(mediaRoot, `documents/illustrations/${meta.category}/${id}.webp`)) &&
+				existsSync(join(mediaRoot, `documents/illustrations/${meta.category}/${id}.jpg`));
+			if (hasPublished) {
+				skippedExisting++;
+			} else {
+				missing.push(id);
+			}
 		} else {
 			jobs.push({ id, category: meta.category, srcPath });
 		}
@@ -60,6 +80,10 @@ async function main() {
 
 	if (missing.length > 0) {
 		throw new Error(`Missing ${missing.length} raw illustrations: ${missing.join(', ')}`);
+	}
+	if (jobs.length === 0) {
+		console.log(`[process-illustrations] Nothing to process (${skippedExisting} already published).`);
+		return;
 	}
 
 	rmSync(TMP_OUT, { recursive: true, force: true });
@@ -104,7 +128,7 @@ for job in jobs:
     bbox = diff.getbbox()
     if bbox:
         im = im.crop(bbox)
-        pad = 18
+        pad = 24
         padded = Image.new("RGB", (im.width + pad * 2, im.height + pad * 2), (255, 255, 255))
         padded.paste(im, (pad, pad))
         im = padded

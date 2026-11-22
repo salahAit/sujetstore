@@ -66,6 +66,14 @@ const ALL_SUBJECTS: readonly SubjectBuildDef[] = [
 		tracksKey: 'ALL_ISLAMIC_TRACK_IDS',
 		lessonsKey: 'ALL_ISLAMIC_LESSONS',
 		templatesKey: 'ALL_ISLAMIC_TEMPLATES'
+	},
+	{
+		id: 'history',
+		entry: 'src/lib/kernel/entries/history.ts',
+		statsModule: 'src/lib/modules/HistoryGeoTemplates/index.ts',
+		tracksKey: 'ALL_HISTORY_TRACK_IDS',
+		lessonsKey: 'ALL_HISTORY_LESSONS',
+		templatesKey: 'ALL_HISTORY_TEMPLATES'
 	}
 ];
 

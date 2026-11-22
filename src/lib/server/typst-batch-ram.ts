@@ -1074,7 +1074,7 @@ function fixLegacyMathOpsInDoc(doc: Record<string, any>): void {
  * Ensures any `/data/...` or `/static/...` image paths referenced inside an examDoc
  * are copied into `<RAM_ROOT>/workspace` before Typst compiles with `--root <RAM_ROOT>/workspace`.
  */
-async function stageReferencedImagesInRam(wsRoot: string, examDoc: Record<string, any>): Promise<void> {
+export async function stageReferencedImagesInRam(wsRoot: string, examDoc: Record<string, any>): Promise<void> {
 	const paths = new Set<string>();
 	const scanBlock = (block: any) => {
 		if (!block || typeof block !== 'object') return;

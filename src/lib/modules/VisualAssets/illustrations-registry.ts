@@ -9,7 +9,13 @@
 
 import type { IllustratedFigureBlock } from '../SujetBuilder/types';
 
-export type IllustrationCategory = 'sciences' | 'math' | 'islamic' | 'arabic' | 'languages';
+export type IllustrationCategory =
+	| 'sciences'
+	| 'math'
+	| 'islamic'
+	| 'arabic'
+	| 'languages'
+	| 'history_geo';
 
 export interface IllustrationPinSpec {
 	num: string | number;
@@ -847,6 +853,164 @@ export const ILLUSTRATIONS_CATALOG = {
 			{ num: '1', label: 'A delicious strawberry cake' },
 			{ num: '2', label: 'Colorful party balloons' },
 			{ num: '3', label: 'Wrapped gift boxes with ribbons' }
+		]
+	},
+
+	// ═══════════════════════════════════════════════════════════════════════════
+	// 7. HISTORY & GEOGRAPHY (3AP–3AS BAC) — Self-Labeled & Numbered Mute Maps
+	// ZERO coordinate-overlay pins! All labels or numbers (1)..(6) are baked directly
+	// into the Nano Banana plate artwork on pure #FFFFFF backgrounds.
+	// ═══════════════════════════════════════════════════════════════════════════
+	hg_01_timeline_historical_sources: {
+		id: 'hg_01_timeline_historical_sources',
+		category: 'history_geo',
+		titleAr: 'مراحل العصور التاريخية ومصادر المعلومة التاريخية',
+		defaultPins: [],
+		legendAr: []
+	},
+	hg_02_compass_directions_map_key: {
+		id: 'hg_02_compass_directions_map_key',
+		category: 'history_geo',
+		titleAr: 'وردة الرياح والجهات الأساسية وعناصر الخريطة',
+		defaultPins: [],
+		legendAr: []
+	},
+	hg_03_algeria_relief_climate_cross_section: {
+		id: 'hg_03_algeria_relief_climate_cross_section',
+		category: 'history_geo',
+		titleAr: 'مقطع تضاريسي ومناخي للجزائر من الشمال إلى الجنوب',
+		defaultPins: [],
+		legendAr: []
+	},
+	hg_04_numidia_roman_monuments_algeria: {
+		id: 'hg_04_numidia_roman_monuments_algeria',
+		category: 'history_geo',
+		titleAr: 'المعالم الأثرية في بلاد المغرب القديم ونوميديا',
+		defaultPins: [],
+		legendAr: []
+	},
+	hg_05_islamic_states_maghrib_landmarks: {
+		id: 'hg_05_islamic_states_maghrib_landmarks',
+		category: 'history_geo',
+		titleAr: 'معالم الدول الإسلامية المستقلة في المغرب الإسلامي',
+		defaultPins: [],
+		legendAr: []
+	},
+	hg_06_ottoman_algeria_fleet_citadel: {
+		id: 'hg_06_ottoman_algeria_fleet_citadel',
+		category: 'history_geo',
+		titleAr: 'الأسطول البحري الجزائري والقصبة في العهد العثماني',
+		defaultPins: [],
+		legendAr: []
+	},
+	hg_07_soummam_congress_november_landmarks: {
+		id: 'hg_07_soummam_congress_november_landmarks',
+		category: 'history_geo',
+		titleAr: 'معالم الثورة التحريرية المظفرة (1954 – 1962)',
+		defaultPins: [],
+		legendAr: []
+	},
+	hg_08_earth_lat_lon_climate_zones: {
+		id: 'hg_08_earth_lat_lon_climate_zones',
+		category: 'history_geo',
+		titleAr: 'الإحداثيات الجغرافية والنطاقات المناخية الكبرى',
+		defaultPins: [],
+		legendAr: []
+	},
+	hg_09_algeria_natural_hazards_prevention: {
+		id: 'hg_09_algeria_natural_hazards_prevention',
+		category: 'history_geo',
+		titleAr: 'المخاطر الطبيعية الكبرى في الجزائر وطرق الوقاية منها',
+		defaultPins: [],
+		legendAr: []
+	},
+	hg_10_global_north_south_trade_divide: {
+		id: 'hg_10_global_north_south_trade_divide',
+		category: 'history_geo',
+		titleAr: 'خريطة الفاصل الاقتصادي بين عالم الشمال المتقدم وعالم الجنوب',
+		defaultPins: [],
+		legendAr: []
+	},
+	hg_11_algeria_mute_map_regions_4: {
+		id: 'hg_11_algeria_mute_map_regions_4',
+		category: 'history_geo',
+		titleAr: 'خريطة الأقاليم التضاريسية الكبرى في الجزائر',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'الشريط الساحلي وإقليم التل' },
+			{ num: '2', label: 'السهول والهضاب العليا' },
+			{ num: '3', label: 'سلسلة الأطلس الصحراوي' },
+			{ num: '4', label: 'الإقليم الصحراوي الجنوبي' }
+		]
+	},
+	hg_12_algeria_six_historical_wilayas_map: {
+		id: 'hg_12_algeria_six_historical_wilayas_map',
+		category: 'history_geo',
+		titleAr: 'خريطة التقسيم العسكري للثورة الجزائرية (الولايات التاريخية الست — مؤتمر الصومام 1956)',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'الولاية الأولى (الأوراس النمامشة)' },
+			{ num: '2', label: 'الولاية الثانية (الشمال القسنطيني)' },
+			{ num: '3', label: 'الولاية الثالثة (القبائل)' },
+			{ num: '4', label: 'الولاية الرابعة (الجزائر والوسط)' },
+			{ num: '5', label: 'الولاية الخامسة (وهران والغرب)' },
+			{ num: '6', label: 'الولاية السادسة (الصحراء)' }
+		]
+	},
+	hg_13_maghrib_mediterranean_mute_map: {
+		id: 'hg_13_maghrib_mediterranean_mute_map',
+		category: 'history_geo',
+		titleAr: 'خريطة دول المغرب العربي وحوض البحر الأبيض المتوسط',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'الجزائر' },
+			{ num: '2', label: 'تونس' },
+			{ num: '3', label: 'المغرب الأقصى' },
+			{ num: '4', label: 'ليبيا' },
+			{ num: '5', label: 'موريتانيا' },
+			{ num: '6', label: 'البحر الأبيض المتوسط' }
+		]
+	},
+	hg_14_world_continents_oceans_mute_map: {
+		id: 'hg_14_world_continents_oceans_mute_map',
+		category: 'history_geo',
+		titleAr: 'خريطة العالم للقارات والمحيطات الكبرى',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'قارة إفريقيا' },
+			{ num: '2', label: 'قارة آسيا' },
+			{ num: '3', label: 'قارة أوروبا' },
+			{ num: '4', label: 'قارة أمريكا' },
+			{ num: '5', label: 'المحيط الأطلسي' },
+			{ num: '6', label: 'المحيط الهادي' }
+		]
+	},
+	hg_15_cold_war_europe_world_mute_map: {
+		id: 'hg_15_cold_war_europe_world_mute_map',
+		category: 'history_geo',
+		titleAr: 'خريطة بؤر التوتر وأقطاب الحرب الباردة (1945 – 1989)',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'الولايات المتحدة الأمريكية' },
+			{ num: '2', label: 'الاتحاد السوفياتي' },
+			{ num: '3', label: 'ألمانيا (أزمة برلين 1948 و1961)' },
+			{ num: '4', label: 'كوبا (أزمة الصواريخ 1962)' },
+			{ num: '5', label: 'شبه الجزيرة الكورية (1950–1953)' },
+			{ num: '6', label: 'مصر (العدوان الثلاثي وقناة السويس 1956)' }
+		]
+	},
+	hg_16_global_economic_poles_mute_map: {
+		id: 'hg_16_global_economic_poles_mute_map',
+		category: 'history_geo',
+		titleAr: 'خريطة الأقطاب الاقتصادية العالمية الكبرى والقوى الصاعدة',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'الولايات المتحدة الأمريكية' },
+			{ num: '2', label: 'الاتحاد الأوروبي' },
+			{ num: '3', label: 'شرق وجنوب شرق آسيا' },
+			{ num: '4', label: 'البرازيل' },
+			{ num: '5', label: 'الهند' },
+			{ num: '6', label: 'الجزائر' }
 		]
 	}
 } as const satisfies Record<string, IllustrationAssetMeta>;

@@ -1,0 +1,511 @@
+{
+  "generated_at": "2026-11-22T00:48:38.297Z",
+  "total_papers": 24,
+  "total_pdfs": 48,
+  "items": [
+    {
+      "slug": "bac-2023-his-ge-t1",
+      "streamGroup": "ge",
+      "subjectId": "HIS-GE",
+      "academicYear": "2023",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 4,
+      "duration": "03 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة تسيير واقتصاد (دورة جوان 2023 - الموضوع الأول)",
+      "themesAr": [
+        "الأزمات الدولية في ظل الحرب الباردة (برلين وكوبا)",
+        "تنظيم مؤتمر الصومام وإفشال المخططات الاستعمارية",
+        "تجارة القمح والأمن الغذائي العالمي",
+        "الأقاليم الاقتصادية الأمريكية ومعيقاتها"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2023-his-ge-t1.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2023-his-ge-t1-sol.pdf",
+      "fileSize": 154042,
+      "solutionFileSize": 176136
+    },
+    {
+      "slug": "bac-2023-his-ge-t2",
+      "streamGroup": "ge",
+      "subjectId": "HIS-GE",
+      "academicYear": "2023",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 4,
+      "duration": "03 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة تسيير واقتصاد (دورة جوان 2023 - الموضوع الثاني)",
+      "themesAr": [
+        "الثورة الجزائرية والولايات التاريخية الست",
+        "حركات التحرر في آسيا وإفريقيا",
+        "الأقطاب الاقتصادية والقوى الصاعدة",
+        "وسائل ومشاكل التنمية في البرازيل"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2023-his-ge-t2.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2023-his-ge-t2-sol.pdf",
+      "fileSize": 193082,
+      "solutionFileSize": 212047
+    },
+    {
+      "slug": "bac-2023-his-le-t1",
+      "streamGroup": "le",
+      "subjectId": "HIS-LE",
+      "academicYear": "2023",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة لغات أجنبية (دورة جوان 2023 - الموضوع الأول)",
+      "themesAr": [
+        "القطبية الثنائية ومبدأ جدانوف واستراتيجيات المعسكرين",
+        "المؤسسات الثورية: الصومام والحكومة المؤقتة",
+        "الفجوة العلمية والبحثية بين الشمال والجنوب",
+        "معاهدة ماستريخت ومظاهر القوة الأوروبية"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2023-his-le-t1.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2023-his-le-t1-sol.pdf",
+      "fileSize": 144876,
+      "solutionFileSize": 165432
+    },
+    {
+      "slug": "bac-2023-his-le-t2",
+      "streamGroup": "le",
+      "subjectId": "HIS-LE",
+      "academicYear": "2023",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة لغات أجنبية (دورة جوان 2023 - الموضوع الثاني)",
+      "themesAr": [
+        "إضراب الطلبة 19 ماي 1956 والولايات الست",
+        "عوامل ومظاهر التعايش السلمي ودور عدم الانحياز",
+        "أسواق الغاز الطبيعي المسال وتحديات أوبك",
+        "قوة الولايات المتحدة الأمريكية وأثرها الدولي"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2023-his-le-t2.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2023-his-le-t2-sol.pdf",
+      "fileSize": 109962,
+      "solutionFileSize": 130866
+    },
+    {
+      "slug": "bac-2023-his-lp-t1",
+      "streamGroup": "lp",
+      "subjectId": "HIS-LP",
+      "academicYear": "2023",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 4,
+      "duration": "03 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة آداب وفلسفة (دورة جوان 2023 - الموضوع الأول)",
+      "themesAr": [
+        "مؤتمر يالطا وبؤر الحرب الباردة",
+        "العمل الدبلوماسي للثورة الجزائرية (1955–1960)",
+        "سوق القمح العالمي وقضية الأمن الغذائي",
+        "السياسة الفلاحية المشتركة وإقليم الراين في الاتحاد الأوروبي"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2023-his-lp-t1.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2023-his-lp-t1-sol.pdf",
+      "fileSize": 157078,
+      "solutionFileSize": 178097
+    },
+    {
+      "slug": "bac-2023-his-lp-t2",
+      "streamGroup": "lp",
+      "subjectId": "HIS-LP",
+      "academicYear": "2023",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 4,
+      "duration": "03 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة آداب وفلسفة (دورة جوان 2023 - الموضوع الثاني)",
+      "themesAr": [
+        "إضراب الثمانية أيام والولايات التاريخية الست",
+        "أزمتا برلين وكوبا وتأثيرهما على الانفراج الدولي",
+        "الصعود الاقتصادي للصين والأقطاب العالمية",
+        "البرازيل: المثلث الصناعي وأزمة الأمازون"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2023-his-lp-t2.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2023-his-lp-t2-sol.pdf",
+      "fileSize": 199205,
+      "solutionFileSize": 217053
+    },
+    {
+      "slug": "bac-2023-his-sci-t1",
+      "streamGroup": "sci",
+      "subjectId": "HIS-SCI",
+      "academicYear": "2023",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — الشعب العلمية والتقنية (علوم تجريبية / رياضيات / تقني رياضي) (دورة جوان 2023 - الموضوع الأول)",
+      "themesAr": [
+        "القطبية الثنائية واستراتيجيات الحرب الباردة (1947–1957)",
+        "هجومات الشمال القسنطيني ومؤتمر الصومام",
+        "سوق البترول ومنظمة الأوبك",
+        "عوامل القوة الاقتصادية الأمريكية وأثرها العالمي"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2023-his-sci-t1.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2023-his-sci-t1-sol.pdf",
+      "fileSize": 74899,
+      "solutionFileSize": 100348
+    },
+    {
+      "slug": "bac-2023-his-sci-t2",
+      "streamGroup": "sci",
+      "subjectId": "HIS-SCI",
+      "academicYear": "2023",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — الشعب العلمية والتقنية (علوم تجريبية / رياضيات / تقني رياضي) (دورة جوان 2023 - الموضوع الثاني)",
+      "themesAr": [
+        "تفجير الثورة والولايات التاريخية الست",
+        "التعايش السلمي وعوامل سقوط الاتحاد السوفياتي",
+        "مؤشرات التقدم والتخلف والفاصل شمال–جنوب",
+        "الاتحاد الأوروبي: التكتل وإقليم الراين والمعيقات"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2023-his-sci-t2.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2023-his-sci-t2-sol.pdf",
+      "fileSize": 178339,
+      "solutionFileSize": 202953
+    },
+    {
+      "slug": "bac-2024-his-ge-t1",
+      "streamGroup": "ge",
+      "subjectId": "HIS-GE",
+      "academicYear": "2024",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 4,
+      "duration": "03 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة تسيير واقتصاد (دورة جوان 2024 - الموضوع الأول)",
+      "themesAr": [
+        "التعايش السلمي والانفراج الدولي",
+        "أزمة كوريا وأزمة السويس (1950–1956)",
+        "عائدات أوبك وأهمية الغاز الطبيعي",
+        "إقليم الراين وسياسات الاندماج الأوروبي"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2024-his-ge-t1.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2024-his-ge-t1-sol.pdf",
+      "fileSize": 72892,
+      "solutionFileSize": 94103
+    },
+    {
+      "slug": "bac-2024-his-ge-t2",
+      "streamGroup": "ge",
+      "subjectId": "HIS-GE",
+      "academicYear": "2024",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 4,
+      "duration": "03 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة تسيير واقتصاد (دورة جوان 2024 - الموضوع الثاني)",
+      "themesAr": [
+        "تصفية الاستعمار وبؤر الحرب الباردة",
+        "التأميمات وبناء الدولة الجزائرية ودورها في عدم الانحياز",
+        "الفجوة التنموية بين الشمال والجنوب",
+        "التجربة التنموية في الهند: الثورة الخضراء والتكنولوجيا والمعيقات"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2024-his-ge-t2.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2024-his-ge-t2-sol.pdf",
+      "fileSize": 222026,
+      "solutionFileSize": 242436
+    },
+    {
+      "slug": "bac-2024-his-le-t1",
+      "streamGroup": "le",
+      "subjectId": "HIS-LE",
+      "academicYear": "2024",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة لغات أجنبية (دورة جوان 2024 - الموضوع الأول)",
+      "themesAr": [
+        "تفكك الاتحاد السوفياتي والشخصيات المعاصرة",
+        "إفشال المخططات الاستعمارية ومفاوضات إيفيان",
+        "براءات الاختراع والشركات المتعددة الجنسيات",
+        "اليابان والتنينات الآسيوية: المقومات والتحديات"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2024-his-le-t1.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2024-his-le-t1-sol.pdf",
+      "fileSize": 79312,
+      "solutionFileSize": 99523
+    },
+    {
+      "slug": "bac-2024-his-le-t2",
+      "streamGroup": "le",
+      "subjectId": "HIS-LE",
+      "academicYear": "2024",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة لغات أجنبية (دورة جوان 2024 - الموضوع الثاني)",
+      "themesAr": [
+        "المنظمة الخاصة ومجموعة الستة والولايات الست",
+        "أسباب الحرب الباردة وآثارها على أوروبا والعالم الثالث",
+        "المبادلات التجارية في المغرب العربي وحوض المتوسط",
+        "واقع المبادلات شمال–جنوب في ظل العولمة"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2024-his-le-t2.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2024-his-le-t2-sol.pdf",
+      "fileSize": 206659,
+      "solutionFileSize": 225649
+    },
+    {
+      "slug": "bac-2024-his-lp-t1",
+      "streamGroup": "lp",
+      "subjectId": "HIS-LP",
+      "academicYear": "2024",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 4,
+      "duration": "03 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة آداب وفلسفة (دورة جوان 2024 - الموضوع الأول)",
+      "themesAr": [
+        "تصفية الاستعمار وتجارب التحرر في إفريقيا وآسيا",
+        "مساعي الانفراج الدولي والتعايش السلمي",
+        "أسواق البترول والاحتياطيات وأهداف أوبك",
+        "الولايات المتحدة: التفوق التكنولوجي والمالي والزراعي"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2024-his-lp-t1.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2024-his-lp-t1-sol.pdf",
+      "fileSize": 74866,
+      "solutionFileSize": 95461
+    },
+    {
+      "slug": "bac-2024-his-lp-t2",
+      "streamGroup": "lp",
+      "subjectId": "HIS-LP",
+      "academicYear": "2024",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 4,
+      "duration": "03 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة آداب وفلسفة (دورة جوان 2024 - الموضوع الثاني)",
+      "themesAr": [
+        "أزمة السويس 1956 وبؤر الحرب الباردة",
+        "إفشال مخططات ديغول ومفاوضات إيفيان",
+        "المؤشرات الاجتماعية والثقافية للتقدم والتخلف",
+        "التنمية في الهند: الثورة الخضراء والتكنولوجيا والتحديات"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2024-his-lp-t2.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2024-his-lp-t2-sol.pdf",
+      "fileSize": 224318,
+      "solutionFileSize": 245826
+    },
+    {
+      "slug": "bac-2024-his-sci-t1",
+      "streamGroup": "sci",
+      "subjectId": "HIS-SCI",
+      "academicYear": "2024",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — الشعب العلمية والتقنية (علوم تجريبية / رياضيات / تقني رياضي) (دورة جوان 2024 - الموضوع الأول)",
+      "themesAr": [
+        "التعايش السلمي والانفراج الدولي وحركة عدم الانحياز",
+        "بناء الدولة الجزائرية واختياراتها الكبرى (1962–1989)",
+        "رؤوس الأموال والبورصات والشركات المتعددة الجنسيات",
+        "شرق وجنوب شرق آسيا: العنصر البشري والتحديات"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2024-his-sci-t1.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2024-his-sci-t1-sol.pdf",
+      "fileSize": 70978,
+      "solutionFileSize": 92363
+    },
+    {
+      "slug": "bac-2024-his-sci-t2",
+      "streamGroup": "sci",
+      "subjectId": "HIS-SCI",
+      "academicYear": "2024",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — الشعب العلمية والتقنية (علوم تجريبية / رياضيات / تقني رياضي) (دورة جوان 2024 - الموضوع الثاني)",
+      "themesAr": [
+        "بيان أول نوفمبر والولايات التاريخية الست",
+        "أسباب الحرب الباردة واستراتيجياتها وانعكاساتها",
+        "الثالوث الاقتصادي وإقليم الشمال الشرقي الأمريكي",
+        "أهمية البترول وانعكاسات تذبذب أسعاره"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2024-his-sci-t2.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2024-his-sci-t2-sol.pdf",
+      "fileSize": 106581,
+      "solutionFileSize": 128242
+    },
+    {
+      "slug": "bac-2025-his-ge-t1",
+      "streamGroup": "ge",
+      "subjectId": "HIS-GE",
+      "academicYear": "2025",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 4,
+      "duration": "03 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة تسيير واقتصاد (دورة جوان 2025 - الموضوع الأول)",
+      "themesAr": [
+        "تفكك الاتحاد السوفياتي والنظام الدولي الجديد",
+        "عراقيل المفاوضات واتفاقيات إيفيان الثانية",
+        "إنتاج القمح والنفط لدى الأقطاب الكبرى",
+        "شرق وجنوب شرق آسيا: التنينات والآسيان"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2025-his-ge-t1.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2025-his-ge-t1-sol.pdf",
+      "fileSize": 161845,
+      "solutionFileSize": 178959
+    },
+    {
+      "slug": "bac-2025-his-ge-t2",
+      "streamGroup": "ge",
+      "subjectId": "HIS-GE",
+      "academicYear": "2025",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 4,
+      "duration": "03 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة تسيير واقتصاد (دورة جوان 2025 - الموضوع الثاني)",
+      "themesAr": [
+        "تفجير الثورة التحريرية والولايات التاريخية الست",
+        "آثار الاستقطاب الثنائي وتطور حركة عدم الانحياز",
+        "البورصات العالمية وآليات تبييض الأموال",
+        "مقارنة التجربة التنموية بين البرازيل والهند"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2025-his-ge-t2.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2025-his-ge-t2-sol.pdf",
+      "fileSize": 107756,
+      "solutionFileSize": 129345
+    },
+    {
+      "slug": "bac-2025-his-le-t1",
+      "streamGroup": "le",
+      "subjectId": "HIS-LE",
+      "academicYear": "2025",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة لغات أجنبية (دورة جوان 2025 - الموضوع الأول)",
+      "themesAr": [
+        "مؤتمر بلغراد ومسار التعايش السلمي",
+        "استرجاع السيادة الاقتصادية وبناء الجزائر (1962–1989)",
+        "تطور التجارة السلعية العالمية وعواملها",
+        "التنافس الاقتصادي بين الولايات المتحدة والاتحاد الأوروبي"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2025-his-le-t1.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2025-his-le-t1-sol.pdf",
+      "fileSize": 73473,
+      "solutionFileSize": 92816
+    },
+    {
+      "slug": "bac-2025-his-le-t2",
+      "streamGroup": "le",
+      "subjectId": "HIS-LE",
+      "academicYear": "2025",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة لغات أجنبية (دورة جوان 2025 - الموضوع الثاني)",
+      "themesAr": [
+        "مظاهرات 11 ديسمبر 1960 والولايات الست",
+        "عوامل سقوط المعسكر الشرقي والنظام الدولي الجديد",
+        "أهمية القارات والمحيطات في التجارة العالمية",
+        "مظاهر قوة شرق وجنوب شرق آسيا وأثرها التجاري"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2025-his-le-t2.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2025-his-le-t2-sol.pdf",
+      "fileSize": 176190,
+      "solutionFileSize": 193478
+    },
+    {
+      "slug": "bac-2025-his-lp-t1",
+      "streamGroup": "lp",
+      "subjectId": "HIS-LP",
+      "academicYear": "2025",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 4,
+      "duration": "03 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة آداب وفلسفة (دورة جوان 2025 - الموضوع الأول)",
+      "themesAr": [
+        "مؤتمر الصومام والولايات التاريخية الست",
+        "انهيار المعسكر الشرقي والنظام الدولي الجديد",
+        "الصادرات الصناعية والأقطاب الاقتصادية الكبرى",
+        "استراتيجية التنمية ومكانة شرق وجنوب شرق آسيا"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2025-his-lp-t1.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2025-his-lp-t1-sol.pdf",
+      "fileSize": 202522,
+      "solutionFileSize": 220301
+    },
+    {
+      "slug": "bac-2025-his-lp-t2",
+      "streamGroup": "lp",
+      "subjectId": "HIS-LP",
+      "academicYear": "2025",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 4,
+      "duration": "03 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — شعبة آداب وفلسفة (دورة جوان 2025 - الموضوع الثاني)",
+      "themesAr": [
+        "هيئة الأمم المتحدة وحركات التحرر",
+        "تحديات ما بعد الاستقلال وحصيلة البناء الوطني (1962–1989)",
+        "أسواق القمح والأرز والأمن الغذائي العالمي",
+        "التكتلات الاقتصادية وموازين القوى العالمية"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2025-his-lp-t2.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2025-his-lp-t2-sol.pdf",
+      "fileSize": 76627,
+      "solutionFileSize": 97965
+    },
+    {
+      "slug": "bac-2025-his-sci-t1",
+      "streamGroup": "sci",
+      "subjectId": "HIS-SCI",
+      "academicYear": "2025",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — الشعب العلمية والتقنية (علوم تجريبية / رياضيات / تقني رياضي) (دورة جوان 2025 - الموضوع الأول)",
+      "themesAr": [
+        "انهيار المعسكر الشرقي والنظام الدولي الجديد",
+        "الاستراتيجية الاستعمارية ومفاوضات إيفيان",
+        "أسواق البترول وتطورات أسعار برنت",
+        "عوامل قوة الاتحاد الأوروبي ومكانته التجارية"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2025-his-sci-t1.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2025-his-sci-t1-sol.pdf",
+      "fileSize": 68982,
+      "solutionFileSize": 93114
+    },
+    {
+      "slug": "bac-2025-his-sci-t2",
+      "streamGroup": "sci",
+      "subjectId": "HIS-SCI",
+      "academicYear": "2025",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في التاريخ والجغرافيا — الشعب العلمية والتقنية (علوم تجريبية / رياضيات / تقني رياضي) (دورة جوان 2025 - الموضوع الثاني)",
+      "themesAr": [
+        "من مجازر 08 ماي 1945 إلى الولايات التاريخية الست",
+        "استراتيجيات المعسكرين ودور حركة عدم الانحياز",
+        "التجارة العالمية وهيمنة عالم الشمال",
+        "مظاهر قوة إقليم شرق وجنوب شرق آسيا ومعيقاته"
+      ],
+      "pdfUrl": "/generated/official-bac-history/bac-2025-his-sci-t2.pdf",
+      "solutionUrl": "/generated/official-bac-history/bac-2025-his-sci-t2-sol.pdf",
+      "fileSize": 185458,
+      "solutionFileSize": 207160
+    }
+  ]
+}
