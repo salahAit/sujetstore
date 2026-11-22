@@ -403,7 +403,13 @@
 					<!-- Official Exam Header Banner -->
 					<header class="ser-card ser-header-card relative overflow-hidden rounded-2xl p-4 sm:p-6">
 						<div class="mb-2 text-center text-[0.75em] font-bold tracking-wide opacity-75">
-							{isRtl ? 'الجمهورية الجزائرية الديمقراطية الشعبية — وزارة التربية الوطنية' : 'République Algérienne Démocratique et Populaire'}
+							{isRtl
+								? 'الجمهورية الجزائرية الديمقراطية الشعبية — وزارة التربية الوطنية'
+								: meta.lang === 'es'
+									? 'República Argelina Democrática y Popular'
+									: meta.lang === 'en'
+										? "People's Democratic Republic of Algeria"
+										: 'République Algérienne Démocratique et Populaire'}
 						</div>
 
 						<div class="flex flex-wrap items-center justify-center gap-1.5 text-center text-[0.82em] font-bold opacity-90">
@@ -432,7 +438,13 @@
 							<div class="mt-2.5 flex justify-center">
 								<span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/15 px-3.5 py-1 text-[0.8em] font-extrabold text-emerald-700 dark:text-emerald-300">
 									<CheckCircle2 size={15} />
-									{isRtl ? 'التصحيح النموذجي وسلم التنقيط المفصل' : 'Corrigé Type & Barème Détaillé'}
+									{isRtl
+										? 'التصحيح النموذجي وسلم التنقيط المفصل'
+										: meta.lang === 'es'
+											? 'Corrección Modelo y Baremo Detallado'
+											: meta.lang === 'en'
+												? 'Model Answer & Detailed Marking Scheme'
+												: 'Corrigé Type & Barème Détaillé'}
 								</span>
 							</div>
 						{/if}
@@ -441,7 +453,7 @@
 							{#if meta.duration}
 								<span class="inline-flex items-center gap-1">
 									<Clock size={14} class="opacity-75" />
-									<span>{isRtl ? 'المدة:' : 'Durée :'} {meta.duration}</span>
+									<span>{isRtl ? 'المدة:' : meta.lang === 'es' ? 'Duración :' : meta.lang === 'en' ? 'Duration:' : 'Durée :'} {meta.duration}</span>
 								</span>
 							{/if}
 							{#if meta.coefficient}
@@ -956,10 +968,10 @@
 										>
 											{#if isExSolVisible}
 												<EyeOff size={14} />
-												<span>{isRtl ? 'إخفاء الحل' : 'Masquer le corrigé'}</span>
+												<span>{isRtl ? 'إخفاء الحل' : meta.lang === 'es' ? 'Ocultar solución' : meta.lang === 'en' ? 'Hide solution' : 'Masquer le corrigé'}</span>
 											{:else}
 												<Eye size={14} />
-												<span>{isRtl ? 'إظهار الحل' : 'Voir le corrigé'}</span>
+												<span>{isRtl ? 'إظهار الحل' : meta.lang === 'es' ? 'Ver solución' : meta.lang === 'en' ? 'View solution' : 'Voir le corrigé'}</span>
 											{/if}
 										</button>
 									</div>

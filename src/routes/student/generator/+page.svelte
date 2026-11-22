@@ -118,7 +118,9 @@
 		'3as:HIS-SCI:TM': 2,
 		'3as:HIS-GE:GE': 4,
 		'3as:HIS-LP:LP': 4,
-		'3as:HIS-LE:LE': 2
+		'3as:HIS-LE:LE': 2,
+		'2as:LAN-SPA:LE': 4,
+		'3as:LAN-SPA:LE': 4
 	};
 
 	function formatYsLabel(ys: any): string {

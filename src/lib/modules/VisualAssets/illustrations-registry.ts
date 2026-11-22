@@ -15,7 +15,8 @@ export type IllustrationCategory =
 	| 'islamic'
 	| 'arabic'
 	| 'languages'
-	| 'history_geo';
+	| 'history_geo'
+	| 'spanish';
 
 export interface IllustrationPinSpec {
 	num: string | number;
@@ -35,9 +36,11 @@ export interface IllustrationAssetMeta {
 	titleAr: string;
 	titleFr?: string;
 	titleEn?: string;
+	titleEs?: string;
 	legendAr: IllustrationLegendSpec[];
 	legendFr?: IllustrationLegendSpec[];
 	legendEn?: IllustrationLegendSpec[];
+	legendEs?: IllustrationLegendSpec[];
 	defaultPins?: IllustrationPinSpec[];
 }
 
@@ -1012,6 +1015,123 @@ export const ILLUSTRATIONS_CATALOG = {
 			{ num: '5', label: 'الهند' },
 			{ num: '6', label: 'الجزائر' }
 		]
+	},
+	// ═══════════════════════════════════════════════════════════════════════════
+	// 6. SECONDARY SPANISH LANGUAGE (2AS–3AS LE) — Plates spa_01..spa_06
+	// ═══════════════════════════════════════════════════════════════════════════
+	spa_01_mundo_hispanohablante_mapa_mudo: {
+		id: 'spa_01_mundo_hispanohablante_mapa_mudo',
+		category: 'spanish',
+		titleAr: 'خريطة صماء للعالم الناطق بالإسبانية وحوض المتوسط',
+		titleEs: 'Mapa mudo del mundo hispanohablante y el Mediterráneo',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'إسبانيا (شبه الجزيرة الإيبيرية)' },
+			{ num: '2', label: 'الجزائر (الضفة الجنوبية للمتوسط)' },
+			{ num: '3', label: 'المكسيك (أمريكا الشمالية والوسطى)' },
+			{ num: '4', label: 'الأرجنتين (أمريكا الجنوبية)' },
+			{ num: '5', label: 'المحيط الأطلسي والبحر الأبيض المتوسط' }
+		],
+		legendEs: [
+			{ num: '1', label: 'España (Península Ibérica)' },
+			{ num: '2', label: 'Argelia (Norte de África)' },
+			{ num: '3', label: 'México (Hispanoamérica)' },
+			{ num: '4', label: 'Argentina (Cono Sur)' },
+			{ num: '5', label: 'Océano Atlántico y Mar Mediterráneo' }
+		]
+	},
+	spa_02_patrimonio_andalusi_arquitectura: {
+		id: 'spa_02_patrimonio_andalusi_arquitectura',
+		category: 'spanish',
+		titleAr: 'روائع العمارة الأندلسية والمغاربية المشتركة',
+		titleEs: 'Esplendor de la arquitectura andalusí y magrebí',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'أقواس مسجد قرطبة التاريخية' },
+			{ num: '2', label: 'فناء قصر الحمراء بغرناطة والزخارف الهندسية' },
+			{ num: '3', label: 'المآذن الموحدية والزيانية (إشبيلية وتلمسان)' }
+		],
+		legendEs: [
+			{ num: '1', label: 'Arcos bicolores de Córdoba' },
+			{ num: '2', label: 'Patio de la Alhambra de Granada' },
+			{ num: '3', label: 'Alminares históricos de Sevilla y Tremecén' }
+		]
+	},
+	spa_03_educacion_idiomas_biblioteca: {
+		id: 'spa_03_educacion_idiomas_biblioteca',
+		category: 'spanish',
+		titleAr: 'التعليم وتعلّم اللغات الأجنبية والبحث المعرفي',
+		titleEs: 'La educación, los idiomas y el acceso al conocimiento',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'المطالعة والكتاب (Lectura y conocimiento)' },
+			{ num: '2', label: 'تعلّم اللغات والترجمة (Aprendizaje de idiomas)' },
+			{ num: '3', label: 'البحث الرقمي المنظم (Investigación digital)' },
+			{ num: '4', label: 'النجاح والتفوّق الدراسي (Éxito académico)' }
+		],
+		legendEs: [
+			{ num: '1', label: 'Lectura y conocimiento en biblioteca' },
+			{ num: '2', label: 'Aprendizaje de lenguas extranjeras' },
+			{ num: '3', label: 'Investigación académica rigurosa' },
+			{ num: '4', label: 'Éxito educativo y formación integral' }
+		]
+	},
+	spa_04_medio_ambiente_energias_limpias: {
+		id: 'spa_04_medio_ambiente_energias_limpias',
+		category: 'spanish',
+		titleAr: 'حماية البيئة والطاقات النظيفة والتنمية المستدامة',
+		titleEs: 'Protección del medio ambiente y energías limpias',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'الطاقة الشمسية (Energía solar)' },
+			{ num: '2', label: 'طاقة الرياح (Energía eólica)' },
+			{ num: '3', label: 'التشجير وحماية الغابات (Reforestación)' },
+			{ num: '4', label: 'ترشيد استهلاك المياه (Ahorro del agua)' }
+		],
+		legendEs: [
+			{ num: '1', label: 'Energía solar fotovoltaica' },
+			{ num: '2', label: 'Energía eólica renovable' },
+			{ num: '3', label: 'Reforestación y cuidado de bosques' },
+			{ num: '4', label: 'Ahorro y preservación del agua' }
+		]
+	},
+	spa_05_tecnologia_comunicacion_responsable: {
+		id: 'spa_05_tecnologia_comunicacion_responsable',
+		category: 'spanish',
+		titleAr: 'التكنولوجيات الحديثة والاتصال الرقمي المسؤول',
+		titleEs: 'Nuevas tecnologías y comunicación digital responsable',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'الابتكار العلمي والرقمي (Innovación científica)' },
+			{ num: '2', label: 'الأمن الرقمي وحماية الخصوصية (Seguridad digital)' },
+			{ num: '3', label: 'التعليم الإلكتروني (Educación en línea)' },
+			{ num: '4', label: 'الاستعمال المتوازن والمسؤول (Uso responsable)' }
+		],
+		legendEs: [
+			{ num: '1', label: 'Innovación científica y técnica' },
+			{ num: '2', label: 'Seguridad digital y protección de datos' },
+			{ num: '3', label: 'Educación en línea y bibliotecas virtuales' },
+			{ num: '4', label: 'Uso equilibrado y responsable' }
+		]
+	},
+	spa_06_mundo_laboral_emprendimiento: {
+		id: 'spa_06_mundo_laboral_emprendimiento',
+		category: 'spanish',
+		titleAr: 'عالم الشغل وريادة الأعمال الشبابية والتضامن',
+		titleEs: 'El mundo laboral, el emprendimiento y la solidaridad',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'التكوين المهني والتأهيل (Formación profesional)' },
+			{ num: '2', label: 'ريادة الأعمال والمشاريع الناشئة (Emprendimiento)' },
+			{ num: '3', label: 'الصناعة والابتكار الإنتاجي (Industria e innovación)' },
+			{ num: '4', label: 'التضامن والتنمية المستدامة (Desarrollo sostenible)' }
+		],
+		legendEs: [
+			{ num: '1', label: 'Formación profesional y capacitación' },
+			{ num: '2', label: 'Emprendimiento juvenil y proyectos' },
+			{ num: '3', label: 'Innovación productiva e industria' },
+			{ num: '4', label: 'Solidaridad y desarrollo sostenible' }
+		]
 	}
 } as const satisfies Record<string, IllustrationAssetMeta>;
 
@@ -1035,7 +1155,7 @@ export function renderLessonIllustration(
 	id: IllustrationId,
 	opts?: {
 		title?: string;
-		lang?: 'ar' | 'fr' | 'en';
+		lang?: 'ar' | 'fr' | 'en' | 'es';
 		pins?: IllustrationPinSpec[];
 		customLegend?: IllustrationLegendSpec[];
 		hideLegend?: boolean;
@@ -1048,13 +1168,17 @@ export function renderLessonIllustration(
 			? (meta.titleFr ?? meta.titleAr)
 			: lang === 'en'
 				? (meta.titleEn ?? meta.titleAr)
-				: meta.titleAr;
+				: lang === 'es'
+					? (meta.titleEs ?? meta.titleAr)
+					: meta.titleAr;
 	const defaultLegend =
 		lang === 'fr'
 			? (meta.legendFr ?? meta.legendAr)
 			: lang === 'en'
 				? (meta.legendEn ?? meta.legendAr)
-				: meta.legendAr;
+				: lang === 'es'
+					? (meta.legendEs ?? meta.legendAr)
+					: meta.legendAr;
 
 	return JSON.stringify({
 		kind: 'illustrated',
@@ -1062,7 +1186,7 @@ export function renderLessonIllustration(
 		title: opts?.title ?? defaultTitle,
 		pins: opts?.pins ?? meta.defaultPins ?? [],
 		legend: opts?.hideLegend ? [] : (opts?.customLegend ?? defaultLegend),
-		isLtr: lang === 'fr' || lang === 'en'
+		isLtr: lang === 'fr' || lang === 'en' || lang === 'es'
 	});
 }
 
@@ -1074,7 +1198,7 @@ export function buildIllustratedFigureBlock(
 	id: IllustrationId,
 	opts?: {
 		title?: string;
-		lang?: 'ar' | 'fr' | 'en';
+		lang?: 'ar' | 'fr' | 'en' | 'es';
 		mode?: 'labeled' | 'quiz' | 'image_only';
 		width?: number | string;
 		maxHeight?: number;
@@ -1092,14 +1216,18 @@ export function buildIllustratedFigureBlock(
 			? (meta.titleFr ?? meta.titleAr)
 			: lang === 'en'
 				? (meta.titleEn ?? meta.titleAr)
-				: meta.titleAr;
+				: lang === 'es'
+					? (meta.titleEs ?? meta.titleAr)
+					: meta.titleAr;
 	const rawLegend =
 		opts?.customLegend ??
 		(lang === 'fr'
 			? (meta.legendFr ?? meta.legendAr)
 			: lang === 'en'
 				? (meta.legendEn ?? meta.legendAr)
-				: meta.legendAr);
+				: lang === 'es'
+					? (meta.legendEs ?? meta.legendAr)
+					: meta.legendAr);
 
 	return {
 		type: 'illustrated_figure',

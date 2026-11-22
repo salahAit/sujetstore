@@ -111,10 +111,11 @@ function inferDifficulty(raw: string | null, slug: string): ExamDifficulty {
 	return 'medium';
 }
 
-function detectLanguage(subjectId?: string): 'ar' | 'fr' | 'en' {
+function detectLanguage(subjectId?: string): 'ar' | 'fr' | 'en' | 'es' {
 	const s = (subjectId || '').toUpperCase();
 	if (s.startsWith('ENG') || s.startsWith('LANG')) return 'en';
 	if (s.startsWith('FRE')) return 'fr';
+	if (s === 'LAN-SPA' || s.startsWith('SPA')) return 'es';
 	return 'ar';
 }
 
@@ -204,7 +205,12 @@ function extractVocabPairs(raw: string): Array<{ word: string; meaning: string }
 	return pairs;
 }
 
-function parseFallbackTypstRaw(rawContent: string, lang: 'ar' | 'fr' | 'en', answer?: string, mark?: string): WebBlock {
+function parseFallbackTypstRaw(
+	rawContent: string,
+	lang: 'ar' | 'fr' | 'en' | 'es',
+	answer?: string,
+	mark?: string
+): WebBlock {
 	const trimmed = rawContent.trim();
 
 	// 1. #quran-box(...)
@@ -305,7 +311,7 @@ function parseFallbackTypstRaw(rawContent: string, lang: 'ar' | 'fr' | 'en', ans
 			const vRe = /#strong\[([^\]]+)\]\s*:\s*([^|—\]\n]+)/g;
 			for (const vm of vocabTail.matchAll(vRe)) {
 				const w = unescapeTypstString(vm[1].trim());
-				if (w === 'شرح المفردات:' || w === 'Lexique :' || w === 'Glossary:') continue;
+				if (w === 'شرح المفردات:' || w === 'Lexique :' || w === 'Glossary:' || w === 'Glosario :') continue;
 				vocab.push({ word: w, meaning: unescapeTypstString(vm[2].trim()) });
 			}
 		}
@@ -366,7 +372,7 @@ function serializeTableCell(cell: any): WebTableCell {
 	return { content: '' };
 }
 
-function serializeBlock(block: any, lang: 'ar' | 'fr' | 'en'): WebBlock | null {
+function serializeBlock(block: any, lang: 'ar' | 'fr' | 'en' | 'es'): WebBlock | null {
 	if (!block || typeof block !== 'object') return null;
 	const mark = block.mark !== undefined && block.mark !== '' ? String(block.mark) : undefined;
 
@@ -632,9 +638,13 @@ export function serializeExamForWeb(examDoc: Record<string, any>): WebExamPayloa
 				? docType === 'test'
 					? `Supervised Test — ${meta.trimesterName || 'First Term'}`
 					: `Term Exam — ${meta.trimesterName || 'First Term'}`
-				: docType === 'test'
-					? `فرض محروس في مادة ${meta.subjectName || ''}`
-					: `اختبار في مادة ${meta.subjectName || ''}`;
+				: lang === 'es'
+					? docType === 'test'
+						? `Prueba vigilada — ${meta.trimesterName || '1er Trimestre'}`
+						: `Examen trimestral — ${meta.trimesterName || '1er Trimestre'}`
+					: docType === 'test'
+						? `فرض محروس في مادة ${meta.subjectName || ''}`
+						: `اختبار في مادة ${meta.subjectName || ''}`;
 
 	const rawExercises = Array.isArray(examDoc?.exercises) ? examDoc.exercises : [];
 	let totalPoints = 0;
@@ -650,7 +660,9 @@ export function serializeExamForWeb(examDoc: Record<string, any>): WebExamPayloa
 				? `Exercice ${idx + 1}`
 				: lang === 'en'
 					? `Task ${idx + 1}`
-					: `التمرين ${ex?.num || AR_ORDINALS[idx] || idx + 1}`;
+					: lang === 'es'
+						? `Parte ${idx + 1}`
+						: `التمرين ${ex?.num || AR_ORDINALS[idx] || idx + 1}`;
 
 		const rawBlocks = ex?.blocks || ex?.content || [];
 		const blocks: WebBlock[] = Array.isArray(rawBlocks)

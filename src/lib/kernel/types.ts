@@ -14,6 +14,7 @@ export type SubjectIdKey =
 	| 'french'
 	| 'islamic'
 	| 'history'
+	| 'spanish'
 	| (string & {});
 
 export type ExamVariant =

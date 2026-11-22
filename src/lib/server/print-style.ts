@@ -44,7 +44,7 @@ export interface TypstStyleProfileRecord {
 }
 
 export interface PrintStyleContext {
-	language?: 'ar' | 'fr' | 'en';
+	language?: 'ar' | 'fr' | 'en' | 'es';
 	levelId?: string;
 	yearId?: string;
 	subjectId?: string;

@@ -32,7 +32,9 @@ export type TemplateId =
 	| 'french/primary'
 	| 'french/middle'
 	| 'french/secondary'
-	| 'french/bac_official';
+	| 'french/bac_official'
+	| 'spanish/secondary'
+	| 'spanish/bac_official';
 
 /**
  * Exam metadata — injected into the Typst header.

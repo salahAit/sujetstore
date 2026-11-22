@@ -18,7 +18,7 @@ function parseScope(raw: unknown): BatchRebuildScope {
 	if (obj.all === true || obj.all === 'true' || obj.all === '1') {
 		scope.all = true;
 	}
-	if (obj.language === 'ar' || obj.language === 'fr' || obj.language === 'en') {
+	if (obj.language === 'ar' || obj.language === 'fr' || obj.language === 'en' || obj.language === 'es') {
 		scope.language = obj.language;
 	}
 	if (typeof obj.levelId === 'string' && obj.levelId.trim()) {

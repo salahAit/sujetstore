@@ -100,6 +100,13 @@ import {
 	type AssembleHistoryOptions,
 	type HistoryExamVariant
 } from './assemblers/exam-history';
+import {
+	assembleSpanishExam,
+	yearSubjectToSpanishTrack,
+	type AssembledSpanishPaper,
+	type AssembleSpanishOptions,
+	type SpanishExamVariant
+} from './assemblers/exam-spanish';
 import { compileTypstPdf } from './typst';
 import {
 	SECONDARY_TRACK_IDS,
@@ -1019,3 +1026,8 @@ export function assembleHistoryExam(
 ): UnifiedAssembledHistoryExam {
 	return assembleHistoryPaper(opts);
 }
+
+export type UnifiedAssembledSpanishExam = AssembledSpanishPaper;
+export type AssembleSpanishExamOptions = AssembleSpanishOptions;
+export type { SpanishExamVariant };
+export { assembleSpanishExam, yearSubjectToSpanishTrack };

@@ -17,7 +17,7 @@ import type { ExamType, TrimesterId } from '../modules/SujetBuilder/types';
 
 export interface BatchRebuildScope {
 	all?: boolean;
-	language?: 'ar' | 'fr' | 'en';
+	language?: 'ar' | 'fr' | 'en' | 'es';
 	levelId?: string;
 	yearId?: string;
 	subjectId?: string;
@@ -682,7 +682,7 @@ async function resolvePreviewLogoInRam(wsRoot: string, logoPath: string): Promis
  */
 export async function compilePreviewInRam(opts: {
 	style: TypstStyleConfig;
-	language: 'ar' | 'fr' | 'en';
+	language: 'ar' | 'fr' | 'en' | 'es';
 	levelId: string;
 	includePdf?: boolean;
 }): Promise<PreviewCompileResult> {
@@ -693,8 +693,8 @@ export async function compilePreviewInRam(opts: {
 	const jobsDir = join(wsRoot, 'jobs');
 
 	const style = normalizeStyleConfig(opts.style);
-	const language: 'ar' | 'fr' | 'en' =
-		opts.language === 'fr' || opts.language === 'en' ? opts.language : 'ar';
+	const language: 'ar' | 'fr' | 'en' | 'es' =
+		opts.language === 'fr' || opts.language === 'en' || opts.language === 'es' ? opts.language : 'ar';
 	const levelId =
 		opts.levelId === 'primaire' || opts.levelId === 'secondaire' ? opts.levelId : 'moyen';
 
@@ -860,10 +860,11 @@ function getManifestIndex(): Map<string, ManifestHint> {
 	return map;
 }
 
-export function detectDocumentLanguage(subjectId: string): 'ar' | 'fr' | 'en' {
+export function detectDocumentLanguage(subjectId: string): 'ar' | 'fr' | 'en' | 'es' {
 	const id = (subjectId || '').toUpperCase();
 	if (id.startsWith('ENG') || id.startsWith('LANG')) return 'en';
 	if (id.startsWith('FRE')) return 'fr';
+	if (id === 'LAN-SPA' || id.startsWith('SPA')) return 'es';
 	return 'ar';
 }
 
@@ -881,9 +882,11 @@ function buildScopeWhereClause(scope: BatchRebuildScope): { sql: string; params:
 			clauses.push("(ys.subject_id LIKE 'ENG%' OR ys.subject_id LIKE 'LANG%')");
 		} else if (scope.language === 'fr') {
 			clauses.push("ys.subject_id LIKE 'FRE%'");
+		} else if (scope.language === 'es') {
+			clauses.push("ys.subject_id = 'LAN-SPA'");
 		} else if (scope.language === 'ar') {
 			clauses.push(
-				"(ys.subject_id NOT LIKE 'ENG%' AND ys.subject_id NOT LIKE 'LANG%' AND ys.subject_id NOT LIKE 'FRE%')"
+				"(ys.subject_id NOT LIKE 'ENG%' AND ys.subject_id NOT LIKE 'LANG%' AND ys.subject_id NOT LIKE 'FRE%' AND ys.subject_id != 'LAN-SPA')"
 			);
 		}
 		if (scope.levelId) {
@@ -973,10 +976,13 @@ function inferDifficulty(raw: string | null, slug: string): ExamDifficulty {
 
 function inferTemplateIdForStoredDoc(
 	doc: TargetDocumentRow,
-	language: 'ar' | 'fr' | 'en'
+	language: 'ar' | 'fr' | 'en' | 'es'
 ): string {
 	if (language === 'en') return 'english/exam';
 	if (language === 'fr') return 'french/exam';
+	if (language === 'es') {
+		return doc.slug.toLowerCase().includes('bac') ? 'spanish/bac_official' : 'spanish/secondary';
+	}
 	if (doc.slug.toLowerCase().includes('bac')) return 'secondary/bac_official';
 	if (doc.level_id === 'secondaire') return 'secondary/lycee_exam';
 	return 'middle/exam';
@@ -984,7 +990,7 @@ function inferTemplateIdForStoredDoc(
 
 async function assembleTargetExam(
 	doc: TargetDocumentRow,
-	language: 'ar' | 'fr' | 'en',
+	language: 'ar' | 'fr' | 'en' | 'es',
 	manifests: Map<string, ManifestHint>
 ): Promise<{ examDoc: Record<string, any>; templateId: string } | null> {
 	// 1. Direct stored JSON exam content
