@@ -23,6 +23,11 @@ export const physicsPlugin: SubjectPlugin = {
 				return '1as_tcst';
 			}
 		}
+		if (yearId === '1as' && subjectId === 'PHY-LIT') {
+			if (!streamId || streamId === 'TCL' || streamId === 'tcl' || streamId === 'GEN') {
+				return '1as_tcl';
+			}
+		}
 		if (yearId === '2as' || yearId === '3as') {
 			if (subjectId === 'PHY-SE') return `${yearId}_se`;
 			if (subjectId === 'PHY-MTM') {
@@ -39,6 +44,6 @@ export const physicsPlugin: SubjectPlugin = {
 	},
 
 	getStats() {
-		return getPluginManifestStats('physics', { tracks: 11, lessons: 155, templates: 214 });
+		return getPluginManifestStats('physics', { tracks: 12, lessons: 167, templates: 229 });
 	}
 };

@@ -12,6 +12,7 @@ export type PhysicsMiddleTrackId = '1am' | '2am' | '3am' | '4am';
 
 export type PhysicsSecondaryTrackId =
 	| '1as_tcst'
+	| '1as_tcl'
 	| '2as_se'
 	| '2as_tm'
 	| '2as_math'
@@ -27,6 +28,7 @@ export type PhysicsYearSubjectId =
 	| 638 // 3am PHY-B
 	| 648 // 4am PHY-B
 	| 655 // 1as PHY-SE TCST
+	| 802 // 1as PHY-LIT TCL
 	| 673 // 2as PHY-SE SE
 	| 713 // 2as PHY-MTM TM
 	| 693 // 2as PHY-MTM MATH
@@ -53,10 +55,10 @@ export interface PhysicsGradeMeta {
 	levelId: LevelId;
 	yearId: string;
 	yearName: string;
-	subjectId: 'PHY-B' | 'PHY-SE' | 'PHY-MTM';
+	subjectId: 'PHY-B' | 'PHY-SE' | 'PHY-MTM' | 'PHY-LIT';
 	subjectName: 'العلوم الفيزيائية والتكنولوجيا' | 'العلوم الفيزيائية';
 	yearSubjectId: PhysicsYearSubjectId;
-	streamId?: 'TCST' | 'SE' | 'TM' | 'MATH';
+	streamId?: 'TCST' | 'TCL' | 'SE' | 'TM' | 'MATH';
 	streamNameAr?: string;
 	coefficient?: number;
 }
@@ -109,6 +111,18 @@ export const PHYSICS_GRADE_METADATA: Record<PhysicsTrackId, PhysicsGradeMeta> = 
 		streamId: 'TCST',
 		streamNameAr: 'جذع مشترك علوم وتكنولوجيا',
 		coefficient: 4
+	},
+	'1as_tcl': {
+		grade: '1as_tcl',
+		levelId: 'secondaire',
+		yearId: '1as',
+		yearName: 'السنة الأولى ثانوي — جذع مشترك آداب',
+		subjectId: 'PHY-LIT',
+		subjectName: 'العلوم الفيزيائية والتكنولوجيا',
+		yearSubjectId: 802,
+		streamId: 'TCL',
+		streamNameAr: 'جذع مشترك آداب',
+		coefficient: 2
 	},
 	'2as_se': {
 		grade: '2as_se',
@@ -193,6 +207,7 @@ export const PHYSICS_MIDDLE_TRACK_IDS: readonly PhysicsMiddleTrackId[] = [
 
 export const PHYSICS_SECONDARY_TRACK_IDS: readonly PhysicsSecondaryTrackId[] = [
 	'1as_tcst',
+	'1as_tcl',
 	'2as_se',
 	'2as_tm',
 	'2as_math',

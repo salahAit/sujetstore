@@ -31,6 +31,9 @@ import { LESSONS_4AM_T3 } from './4am/lessons/t3';
 import { LESSONS_1AS_TCST_T1 } from './1as_tcst/lessons/t1';
 import { LESSONS_1AS_TCST_T2 } from './1as_tcst/lessons/t2';
 import { LESSONS_1AS_TCST_T3 } from './1as_tcst/lessons/t3';
+import { LESSONS_1AS_TCL_T1 } from './1as_tcl/lessons/t1';
+import { LESSONS_1AS_TCL_T2 } from './1as_tcl/lessons/t2';
+import { LESSONS_1AS_TCL_T3 } from './1as_tcl/lessons/t3';
 import { LESSONS_2AS_SE_T1 } from './2as_se/lessons/t1';
 import { LESSONS_2AS_SE_T2 } from './2as_se/lessons/t2';
 import { LESSONS_2AS_SE_T3 } from './2as_se/lessons/t3';
@@ -40,6 +43,15 @@ import { LESSONS_2AS_TM_T3 } from './2as_tm/lessons/t3';
 import { LESSONS_2AS_MATH_T1 } from './2as_math/lessons/t1';
 import { LESSONS_2AS_MATH_T2 } from './2as_math/lessons/t2';
 import { LESSONS_2AS_MATH_T3 } from './2as_math/lessons/t3';
+import { LESSONS_2AS_GE_T1 } from './2as_ge/lessons/t1';
+import { LESSONS_2AS_GE_T2 } from './2as_ge/lessons/t2';
+import { LESSONS_2AS_GE_T3 } from './2as_ge/lessons/t3';
+import { LESSONS_2AS_LP_T1 } from './2as_lp/lessons/t1';
+import { LESSONS_2AS_LP_T2 } from './2as_lp/lessons/t2';
+import { LESSONS_2AS_LP_T3 } from './2as_lp/lessons/t3';
+import { LESSONS_2AS_LE_T1 } from './2as_le/lessons/t1';
+import { LESSONS_2AS_LE_T2 } from './2as_le/lessons/t2';
+import { LESSONS_2AS_LE_T3 } from './2as_le/lessons/t3';
 import { LESSONS_3AS_SE_T1 } from './3as_se/lessons/t1';
 import { LESSONS_3AS_SE_T2 } from './3as_se/lessons/t2';
 import { LESSONS_3AS_SE_T3 } from './3as_se/lessons/t3';
@@ -49,6 +61,15 @@ import { LESSONS_3AS_TM_T3 } from './3as_tm/lessons/t3';
 import { LESSONS_3AS_MATH_T1 } from './3as_math/lessons/t1';
 import { LESSONS_3AS_MATH_T2 } from './3as_math/lessons/t2';
 import { LESSONS_3AS_MATH_T3 } from './3as_math/lessons/t3';
+import { LESSONS_3AS_GE_T1 } from './3as_ge/lessons/t1';
+import { LESSONS_3AS_GE_T2 } from './3as_ge/lessons/t2';
+import { LESSONS_3AS_GE_T3 } from './3as_ge/lessons/t3';
+import { LESSONS_3AS_LP_T1 } from './3as_lp/lessons/t1';
+import { LESSONS_3AS_LP_T2 } from './3as_lp/lessons/t2';
+import { LESSONS_3AS_LP_T3 } from './3as_lp/lessons/t3';
+import { LESSONS_3AS_LE_T1 } from './3as_le/lessons/t1';
+import { LESSONS_3AS_LE_T2 } from './3as_le/lessons/t2';
+import { LESSONS_3AS_LE_T3 } from './3as_le/lessons/t3';
 
 import { TEMPLATES_1AP_T1 } from './1ap/templates/t1';
 import { TEMPLATES_1AP_T2 } from './1ap/templates/t2';
@@ -80,6 +101,9 @@ import { TEMPLATES_4AM_T3 } from './4am/templates/t3';
 import { TEMPLATES_1AS_TCST_T1 } from './1as_tcst/templates/t1';
 import { TEMPLATES_1AS_TCST_T2 } from './1as_tcst/templates/t2';
 import { TEMPLATES_1AS_TCST_T3 } from './1as_tcst/templates/t3';
+import { TEMPLATES_1AS_TCL_T1 } from './1as_tcl/templates/t1';
+import { TEMPLATES_1AS_TCL_T2 } from './1as_tcl/templates/t2';
+import { TEMPLATES_1AS_TCL_T3 } from './1as_tcl/templates/t3';
 import { TEMPLATES_2AS_SE_T1 } from './2as_se/templates/t1';
 import { TEMPLATES_2AS_SE_T2 } from './2as_se/templates/t2';
 import { TEMPLATES_2AS_SE_T3 } from './2as_se/templates/t3';
@@ -89,6 +113,15 @@ import { TEMPLATES_2AS_TM_T3 } from './2as_tm/templates/t3';
 import { TEMPLATES_2AS_MATH_T1 } from './2as_math/templates/t1';
 import { TEMPLATES_2AS_MATH_T2 } from './2as_math/templates/t2';
 import { TEMPLATES_2AS_MATH_T3 } from './2as_math/templates/t3';
+import { TEMPLATES_2AS_GE_T1 } from './2as_ge/templates/t1';
+import { TEMPLATES_2AS_GE_T2 } from './2as_ge/templates/t2';
+import { TEMPLATES_2AS_GE_T3 } from './2as_ge/templates/t3';
+import { TEMPLATES_2AS_LP_T1 } from './2as_lp/templates/t1';
+import { TEMPLATES_2AS_LP_T2 } from './2as_lp/templates/t2';
+import { TEMPLATES_2AS_LP_T3 } from './2as_lp/templates/t3';
+import { TEMPLATES_2AS_LE_T1 } from './2as_le/templates/t1';
+import { TEMPLATES_2AS_LE_T2 } from './2as_le/templates/t2';
+import { TEMPLATES_2AS_LE_T3 } from './2as_le/templates/t3';
 import { TEMPLATES_3AS_SE_T1 } from './3as_se/templates/t1';
 import { TEMPLATES_3AS_SE_T2 } from './3as_se/templates/t2';
 import { TEMPLATES_3AS_SE_T3 } from './3as_se/templates/t3';
@@ -98,6 +131,15 @@ import { TEMPLATES_3AS_TM_T3 } from './3as_tm/templates/t3';
 import { TEMPLATES_3AS_MATH_T1 } from './3as_math/templates/t1';
 import { TEMPLATES_3AS_MATH_T2 } from './3as_math/templates/t2';
 import { TEMPLATES_3AS_MATH_T3 } from './3as_math/templates/t3';
+import { TEMPLATES_3AS_GE_T1 } from './3as_ge/templates/t1';
+import { TEMPLATES_3AS_GE_T2 } from './3as_ge/templates/t2';
+import { TEMPLATES_3AS_GE_T3 } from './3as_ge/templates/t3';
+import { TEMPLATES_3AS_LP_T1 } from './3as_lp/templates/t1';
+import { TEMPLATES_3AS_LP_T2 } from './3as_lp/templates/t2';
+import { TEMPLATES_3AS_LP_T3 } from './3as_lp/templates/t3';
+import { TEMPLATES_3AS_LE_T1 } from './3as_le/templates/t1';
+import { TEMPLATES_3AS_LE_T2 } from './3as_le/templates/t2';
+import { TEMPLATES_3AS_LE_T3 } from './3as_le/templates/t3';
 
 export * from './types';
 export * from './rng';
@@ -114,12 +156,19 @@ export const LESSONS_BY_GRADE: Record<GradeId, Record<TrimesterId, InteractiveLe
 	'3am': { t1: LESSONS_3AM_T1, t2: LESSONS_3AM_T2, t3: LESSONS_3AM_T3 },
 	'4am': { t1: LESSONS_4AM_T1, t2: LESSONS_4AM_T2, t3: LESSONS_4AM_T3 },
 	'1as_tcst': { t1: LESSONS_1AS_TCST_T1, t2: LESSONS_1AS_TCST_T2, t3: LESSONS_1AS_TCST_T3 },
+	'1as_tcl': { t1: LESSONS_1AS_TCL_T1, t2: LESSONS_1AS_TCL_T2, t3: LESSONS_1AS_TCL_T3 },
 	'2as_se': { t1: LESSONS_2AS_SE_T1, t2: LESSONS_2AS_SE_T2, t3: LESSONS_2AS_SE_T3 },
 	'2as_tm': { t1: LESSONS_2AS_TM_T1, t2: LESSONS_2AS_TM_T2, t3: LESSONS_2AS_TM_T3 },
 	'2as_math': { t1: LESSONS_2AS_MATH_T1, t2: LESSONS_2AS_MATH_T2, t3: LESSONS_2AS_MATH_T3 },
+	'2as_ge': { t1: LESSONS_2AS_GE_T1, t2: LESSONS_2AS_GE_T2, t3: LESSONS_2AS_GE_T3 },
+	'2as_lp': { t1: LESSONS_2AS_LP_T1, t2: LESSONS_2AS_LP_T2, t3: LESSONS_2AS_LP_T3 },
+	'2as_le': { t1: LESSONS_2AS_LE_T1, t2: LESSONS_2AS_LE_T2, t3: LESSONS_2AS_LE_T3 },
 	'3as_se': { t1: LESSONS_3AS_SE_T1, t2: LESSONS_3AS_SE_T2, t3: LESSONS_3AS_SE_T3 },
 	'3as_tm': { t1: LESSONS_3AS_TM_T1, t2: LESSONS_3AS_TM_T2, t3: LESSONS_3AS_TM_T3 },
-	'3as_math': { t1: LESSONS_3AS_MATH_T1, t2: LESSONS_3AS_MATH_T2, t3: LESSONS_3AS_MATH_T3 }
+	'3as_math': { t1: LESSONS_3AS_MATH_T1, t2: LESSONS_3AS_MATH_T2, t3: LESSONS_3AS_MATH_T3 },
+	'3as_ge': { t1: LESSONS_3AS_GE_T1, t2: LESSONS_3AS_GE_T2, t3: LESSONS_3AS_GE_T3 },
+	'3as_lp': { t1: LESSONS_3AS_LP_T1, t2: LESSONS_3AS_LP_T2, t3: LESSONS_3AS_LP_T3 },
+	'3as_le': { t1: LESSONS_3AS_LE_T1, t2: LESSONS_3AS_LE_T2, t3: LESSONS_3AS_LE_T3 }
 };
 
 export const ALL_LESSONS: InteractiveLessonData[] = [
@@ -153,6 +202,9 @@ export const ALL_LESSONS: InteractiveLessonData[] = [
 	...LESSONS_1AS_TCST_T1,
 	...LESSONS_1AS_TCST_T2,
 	...LESSONS_1AS_TCST_T3,
+	...LESSONS_1AS_TCL_T1,
+	...LESSONS_1AS_TCL_T2,
+	...LESSONS_1AS_TCL_T3,
 	...LESSONS_2AS_SE_T1,
 	...LESSONS_2AS_SE_T2,
 	...LESSONS_2AS_SE_T3,
@@ -162,6 +214,15 @@ export const ALL_LESSONS: InteractiveLessonData[] = [
 	...LESSONS_2AS_MATH_T1,
 	...LESSONS_2AS_MATH_T2,
 	...LESSONS_2AS_MATH_T3,
+	...LESSONS_2AS_GE_T1,
+	...LESSONS_2AS_GE_T2,
+	...LESSONS_2AS_GE_T3,
+	...LESSONS_2AS_LP_T1,
+	...LESSONS_2AS_LP_T2,
+	...LESSONS_2AS_LP_T3,
+	...LESSONS_2AS_LE_T1,
+	...LESSONS_2AS_LE_T2,
+	...LESSONS_2AS_LE_T3,
 	...LESSONS_3AS_SE_T1,
 	...LESSONS_3AS_SE_T2,
 	...LESSONS_3AS_SE_T3,
@@ -170,7 +231,16 @@ export const ALL_LESSONS: InteractiveLessonData[] = [
 	...LESSONS_3AS_TM_T3,
 	...LESSONS_3AS_MATH_T1,
 	...LESSONS_3AS_MATH_T2,
-	...LESSONS_3AS_MATH_T3
+	...LESSONS_3AS_MATH_T3,
+	...LESSONS_3AS_GE_T1,
+	...LESSONS_3AS_GE_T2,
+	...LESSONS_3AS_GE_T3,
+	...LESSONS_3AS_LP_T1,
+	...LESSONS_3AS_LP_T2,
+	...LESSONS_3AS_LP_T3,
+	...LESSONS_3AS_LE_T1,
+	...LESSONS_3AS_LE_T2,
+	...LESSONS_3AS_LE_T3
 ];
 
 export const TEMPLATES_BY_GRADE: Record<GradeId, Record<TrimesterId, ParameterizedTemplate[]>> = {
@@ -184,12 +254,19 @@ export const TEMPLATES_BY_GRADE: Record<GradeId, Record<TrimesterId, Parameteriz
 	'3am': { t1: TEMPLATES_3AM_T1, t2: TEMPLATES_3AM_T2, t3: TEMPLATES_3AM_T3 },
 	'4am': { t1: TEMPLATES_4AM_T1, t2: TEMPLATES_4AM_T2, t3: TEMPLATES_4AM_T3 },
 	'1as_tcst': { t1: TEMPLATES_1AS_TCST_T1, t2: TEMPLATES_1AS_TCST_T2, t3: TEMPLATES_1AS_TCST_T3 },
+	'1as_tcl': { t1: TEMPLATES_1AS_TCL_T1, t2: TEMPLATES_1AS_TCL_T2, t3: TEMPLATES_1AS_TCL_T3 },
 	'2as_se': { t1: TEMPLATES_2AS_SE_T1, t2: TEMPLATES_2AS_SE_T2, t3: TEMPLATES_2AS_SE_T3 },
 	'2as_tm': { t1: TEMPLATES_2AS_TM_T1, t2: TEMPLATES_2AS_TM_T2, t3: TEMPLATES_2AS_TM_T3 },
 	'2as_math': { t1: TEMPLATES_2AS_MATH_T1, t2: TEMPLATES_2AS_MATH_T2, t3: TEMPLATES_2AS_MATH_T3 },
+	'2as_ge': { t1: TEMPLATES_2AS_GE_T1, t2: TEMPLATES_2AS_GE_T2, t3: TEMPLATES_2AS_GE_T3 },
+	'2as_lp': { t1: TEMPLATES_2AS_LP_T1, t2: TEMPLATES_2AS_LP_T2, t3: TEMPLATES_2AS_LP_T3 },
+	'2as_le': { t1: TEMPLATES_2AS_LE_T1, t2: TEMPLATES_2AS_LE_T2, t3: TEMPLATES_2AS_LE_T3 },
 	'3as_se': { t1: TEMPLATES_3AS_SE_T1, t2: TEMPLATES_3AS_SE_T2, t3: TEMPLATES_3AS_SE_T3 },
 	'3as_tm': { t1: TEMPLATES_3AS_TM_T1, t2: TEMPLATES_3AS_TM_T2, t3: TEMPLATES_3AS_TM_T3 },
-	'3as_math': { t1: TEMPLATES_3AS_MATH_T1, t2: TEMPLATES_3AS_MATH_T2, t3: TEMPLATES_3AS_MATH_T3 }
+	'3as_math': { t1: TEMPLATES_3AS_MATH_T1, t2: TEMPLATES_3AS_MATH_T2, t3: TEMPLATES_3AS_MATH_T3 },
+	'3as_ge': { t1: TEMPLATES_3AS_GE_T1, t2: TEMPLATES_3AS_GE_T2, t3: TEMPLATES_3AS_GE_T3 },
+	'3as_lp': { t1: TEMPLATES_3AS_LP_T1, t2: TEMPLATES_3AS_LP_T2, t3: TEMPLATES_3AS_LP_T3 },
+	'3as_le': { t1: TEMPLATES_3AS_LE_T1, t2: TEMPLATES_3AS_LE_T2, t3: TEMPLATES_3AS_LE_T3 }
 };
 
 export const ALL_TEMPLATES: ParameterizedTemplate[] = [
@@ -223,6 +300,9 @@ export const ALL_TEMPLATES: ParameterizedTemplate[] = [
 	...TEMPLATES_1AS_TCST_T1,
 	...TEMPLATES_1AS_TCST_T2,
 	...TEMPLATES_1AS_TCST_T3,
+	...TEMPLATES_1AS_TCL_T1,
+	...TEMPLATES_1AS_TCL_T2,
+	...TEMPLATES_1AS_TCL_T3,
 	...TEMPLATES_2AS_SE_T1,
 	...TEMPLATES_2AS_SE_T2,
 	...TEMPLATES_2AS_SE_T3,
@@ -232,6 +312,15 @@ export const ALL_TEMPLATES: ParameterizedTemplate[] = [
 	...TEMPLATES_2AS_MATH_T1,
 	...TEMPLATES_2AS_MATH_T2,
 	...TEMPLATES_2AS_MATH_T3,
+	...TEMPLATES_2AS_GE_T1,
+	...TEMPLATES_2AS_GE_T2,
+	...TEMPLATES_2AS_GE_T3,
+	...TEMPLATES_2AS_LP_T1,
+	...TEMPLATES_2AS_LP_T2,
+	...TEMPLATES_2AS_LP_T3,
+	...TEMPLATES_2AS_LE_T1,
+	...TEMPLATES_2AS_LE_T2,
+	...TEMPLATES_2AS_LE_T3,
 	...TEMPLATES_3AS_SE_T1,
 	...TEMPLATES_3AS_SE_T2,
 	...TEMPLATES_3AS_SE_T3,
@@ -240,7 +329,16 @@ export const ALL_TEMPLATES: ParameterizedTemplate[] = [
 	...TEMPLATES_3AS_TM_T3,
 	...TEMPLATES_3AS_MATH_T1,
 	...TEMPLATES_3AS_MATH_T2,
-	...TEMPLATES_3AS_MATH_T3
+	...TEMPLATES_3AS_MATH_T3,
+	...TEMPLATES_3AS_GE_T1,
+	...TEMPLATES_3AS_GE_T2,
+	...TEMPLATES_3AS_GE_T3,
+	...TEMPLATES_3AS_LP_T1,
+	...TEMPLATES_3AS_LP_T2,
+	...TEMPLATES_3AS_LP_T3,
+	...TEMPLATES_3AS_LE_T1,
+	...TEMPLATES_3AS_LE_T2,
+	...TEMPLATES_3AS_LE_T3
 ];
 
 export function getTemplatesFor(grade: GradeId, trimesterId: TrimesterId): ParameterizedTemplate[] {

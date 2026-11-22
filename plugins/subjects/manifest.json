@@ -1,23 +1,23 @@
 {
-  "updatedAt": "2026-11-22T02:26:36.004Z",
+  "updatedAt": "2026-11-22T03:54:14.102Z",
   "subjects": {
     "math": {
       "id": "math",
-      "tracks": 16,
-      "lessons": 336,
-      "templates": 288,
-      "sizeBytes": 4199770,
-      "builtAt": "2026-11-21T21:05:34.466Z",
-      "elapsedMs": 85
+      "tracks": 23,
+      "lessons": 441,
+      "templates": 414,
+      "sizeBytes": 5254270,
+      "builtAt": "2026-11-22T03:54:14.102Z",
+      "elapsedMs": 871
     },
     "physics": {
       "id": "physics",
-      "tracks": 11,
-      "lessons": 155,
-      "templates": 214,
-      "sizeBytes": 2041220,
-      "builtAt": "2026-11-21T19:00:13.198Z",
-      "elapsedMs": 2255
+      "tracks": 12,
+      "lessons": 167,
+      "templates": 229,
+      "sizeBytes": 2273542,
+      "builtAt": "2026-11-22T03:03:13.145Z",
+      "elapsedMs": 382
     },
     "sciences": {
       "id": "sciences",
@@ -99,6 +99,15 @@
       "sizeBytes": 715304,
       "builtAt": "2026-11-22T02:26:36.004Z",
       "elapsedMs": 131
+    },
+    "management": {
+      "id": "management",
+      "tracks": 6,
+      "lessons": 72,
+      "templates": 90,
+      "sizeBytes": 2117425,
+      "builtAt": "2026-11-22T03:15:00.093Z",
+      "elapsedMs": 219
     }
   }
 }

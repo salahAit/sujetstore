@@ -20,6 +20,9 @@ import { PHYSICS_LESSONS_4AM_T3 } from './4am/lessons/t3';
 import { PHYSICS_LESSONS_1AS_TCST_T1 } from './1as_tcst/lessons/t1';
 import { PHYSICS_LESSONS_1AS_TCST_T2 } from './1as_tcst/lessons/t2';
 import { PHYSICS_LESSONS_1AS_TCST_T3 } from './1as_tcst/lessons/t3';
+import { PHYSICS_LESSONS_1AS_TCL_T1 } from './1as_tcl/lessons/t1';
+import { PHYSICS_LESSONS_1AS_TCL_T2 } from './1as_tcl/lessons/t2';
+import { PHYSICS_LESSONS_1AS_TCL_T3 } from './1as_tcl/lessons/t3';
 import { PHYSICS_LESSONS_2AS_SE_T1 } from './2as_se/lessons/t1';
 import { PHYSICS_LESSONS_2AS_SE_T2 } from './2as_se/lessons/t2';
 import { PHYSICS_LESSONS_2AS_SE_T3 } from './2as_se/lessons/t3';
@@ -54,6 +57,9 @@ import { PHYSICS_TEMPLATES_4AM_T3 } from './4am/templates/t3';
 import { PHYSICS_TEMPLATES_1AS_TCST_T1 } from './1as_tcst/templates/t1';
 import { PHYSICS_TEMPLATES_1AS_TCST_T2 } from './1as_tcst/templates/t2';
 import { PHYSICS_TEMPLATES_1AS_TCST_T3 } from './1as_tcst/templates/t3';
+import { PHYSICS_TEMPLATES_1AS_TCL_T1 } from './1as_tcl/templates/t1';
+import { PHYSICS_TEMPLATES_1AS_TCL_T2 } from './1as_tcl/templates/t2';
+import { PHYSICS_TEMPLATES_1AS_TCL_T3 } from './1as_tcl/templates/t3';
 import { PHYSICS_TEMPLATES_2AS_SE_T1 } from './2as_se/templates/t1';
 import { PHYSICS_TEMPLATES_2AS_SE_T2 } from './2as_se/templates/t2';
 import { PHYSICS_TEMPLATES_2AS_SE_T3 } from './2as_se/templates/t3';
@@ -90,6 +96,11 @@ export const PHYSICS_LESSONS_BY_GRADE: Record<
 		t1: PHYSICS_LESSONS_1AS_TCST_T1,
 		t2: PHYSICS_LESSONS_1AS_TCST_T2,
 		t3: PHYSICS_LESSONS_1AS_TCST_T3
+	},
+	'1as_tcl': {
+		t1: PHYSICS_LESSONS_1AS_TCL_T1,
+		t2: PHYSICS_LESSONS_1AS_TCL_T2,
+		t3: PHYSICS_LESSONS_1AS_TCL_T3
 	},
 	'2as_se': {
 		t1: PHYSICS_LESSONS_2AS_SE_T1,
@@ -151,6 +162,11 @@ export const PHYSICS_TEMPLATES_BY_GRADE: Record<
 		t1: PHYSICS_TEMPLATES_1AS_TCST_T1,
 		t2: PHYSICS_TEMPLATES_1AS_TCST_T2,
 		t3: PHYSICS_TEMPLATES_1AS_TCST_T3
+	},
+	'1as_tcl': {
+		t1: PHYSICS_TEMPLATES_1AS_TCL_T1,
+		t2: PHYSICS_TEMPLATES_1AS_TCL_T2,
+		t3: PHYSICS_TEMPLATES_1AS_TCL_T3
 	},
 	'2as_se': {
 		t1: PHYSICS_TEMPLATES_2AS_SE_T1,

@@ -55,6 +55,7 @@ export interface AssemblePhysicsSecondaryOptions {
 
 const VALID_SECONDARY_GRADES: readonly PhysicsSecondaryTrackId[] = [
 	'1as_tcst',
+	'1as_tcl',
 	'2as_se',
 	'2as_tm',
 	'2as_math',
@@ -97,6 +98,8 @@ function resolveSecondaryDuration(
 	switch (grade) {
 		case '1as_tcst':
 			return '02 ساعة';
+		case '1as_tcl':
+			return '01 ساعة و30 دقيقة';
 		case '2as_se':
 			return '02 ساعة';
 		case '2as_tm':
@@ -293,8 +296,9 @@ export function assemblePhysicsSecondaryExam(
 			exercises.push(scaled);
 		});
 	} else {
-		// 1AS TCST, 2AS SE/TM/MATH, 3AS SE: 3-exercise layout (6+6+8 for 1AS, 6+7+7 for 2AS/3AS SE)
-		const ptsDist = grade === '1as_tcst' ? EXAM_3_POINTS_1AS : EXAM_3_POINTS_SE;
+		// 1AS TCST/TCL, 2AS SE/TM/MATH, 3AS SE: 3-exercise layout (6+6+8 for 1AS, 6+7+7 for 2AS/3AS SE)
+		const ptsDist =
+			grade === '1as_tcst' || grade === '1as_tcl' ? EXAM_3_POINTS_1AS : EXAM_3_POINTS_SE;
 		let part1Pool = allowedPool.filter((t) => !t.isExperimental && !t.isIntegration);
 		if (part1Pool.length < 2) {
 			part1Pool = allowedPool.filter((t) => !t.isIntegration);

@@ -1,0 +1,387 @@
+{
+  "generated_at": "2026-11-22T03:15:35.163Z",
+  "total_papers": 18,
+  "total_pdfs": 36,
+  "items": [
+    {
+      "slug": "bac-2023-3as-acc-fin-s1",
+      "grade": "3as_acc",
+      "subjectId": "ACC-FIN",
+      "yearSubjectId": 755,
+      "academicYear": "2023",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 6,
+      "duration": "04 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التسيير المحاسبي والمالي — شعبة تسيير واقتصاد (دورة جوان 2023 - الموضوع الأول)",
+      "themesAr": [
+        "الاهتلاك الخطي وخسارة القيمة والتنازل عن التثبيتات",
+        "تسوية المخزونات والزبائن المشكوك فيهم",
+        "جدول حسابات النتائج حسب الطبيعة وقدرة التمويل الذاتي CAF",
+        "محاسبة التسيير: التكاليف الكلية والتبادل المتقابل بين الأقسام المساعدة"
+      ],
+      "pdfUrl": "/documents/official_bac_management/acc-fin/bac-2023-3as-acc-fin-s1.pdf",
+      "solutionUrl": "/documents/official_bac_management/acc-fin/bac-2023-3as-acc-fin-s1-sol.pdf",
+      "fileSize": 148843,
+      "solutionFileSize": 200497
+    },
+    {
+      "slug": "bac-2023-3as-acc-fin-s2",
+      "grade": "3as_acc",
+      "subjectId": "ACC-FIN",
+      "yearSubjectId": 755,
+      "academicYear": "2023",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 6,
+      "duration": "04 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التسيير المحاسبي والمالي — شعبة تسيير واقتصاد (دورة جوان 2023 - الموضوع الثاني)",
+      "themesAr": [
+        "الجرد المتناوب والقيم المنقولة للتوظيف (الأسهم) والتقارب البنكي",
+        "الميزانية الوظيفية ونسب التوازن والاستقلالية المالية",
+        "تحليل الاستغلال التفاضلي وعتبة المردودية SR",
+        "تقييم المشاريع الاستثمارية بـ CAF وفترة الاسترداد DR"
+      ],
+      "pdfUrl": "/documents/official_bac_management/acc-fin/bac-2023-3as-acc-fin-s2.pdf",
+      "solutionUrl": "/documents/official_bac_management/acc-fin/bac-2023-3as-acc-fin-s2-sol.pdf",
+      "fileSize": 124107,
+      "solutionFileSize": 161348
+    },
+    {
+      "slug": "bac-2024-3as-acc-fin-s1",
+      "grade": "3as_acc",
+      "subjectId": "ACC-FIN",
+      "yearSubjectId": 755,
+      "academicYear": "2024",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 6,
+      "duration": "04 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التسيير المحاسبي والمالي — شعبة تسيير واقتصاد (دورة جوان 2024 - الموضوع الأول)",
+      "themesAr": [
+        "جدول الاهتلاك المتناقص وسندات المساهمة",
+        "الميزانية الوظيفية ونسب دوران المخزون والزبائن والموردين",
+        "تسوية شاملة من ميزان المراجعة قبل الجرد: تثبيتات، إفلاس زبون، مؤونات، أعباء معاينة وفواتير لم تصل"
+      ],
+      "pdfUrl": "/documents/official_bac_management/acc-fin/bac-2024-3as-acc-fin-s1.pdf",
+      "solutionUrl": "/documents/official_bac_management/acc-fin/bac-2024-3as-acc-fin-s1-sol.pdf",
+      "fileSize": 149479,
+      "solutionFileSize": 182207
+    },
+    {
+      "slug": "bac-2024-3as-acc-fin-s2",
+      "grade": "3as_acc",
+      "subjectId": "ACC-FIN",
+      "yearSubjectId": 755,
+      "academicYear": "2024",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 6,
+      "duration": "04 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التسيير المحاسبي والمالي — شعبة تسيير واقتصاد (دورة جوان 2024 - الموضوع الثاني)",
+      "themesAr": [
+        "الاهتلاك المتزايد وفوارق الجرد الدائم للمخزونات",
+        "جدول حسابات النتائج حسب الوظيفة ونسب المردودية",
+        "تحليل الاستغلال التفاضلي وعتبة المردودية وتقييم تحديث الطاقة الإنتاجية"
+      ],
+      "pdfUrl": "/documents/official_bac_management/acc-fin/bac-2024-3as-acc-fin-s2.pdf",
+      "solutionUrl": "/documents/official_bac_management/acc-fin/bac-2024-3as-acc-fin-s2-sol.pdf",
+      "fileSize": 106295,
+      "solutionFileSize": 140656
+    },
+    {
+      "slug": "bac-2025-3as-acc-fin-s1",
+      "grade": "3as_acc",
+      "subjectId": "ACC-FIN",
+      "yearSubjectId": 755,
+      "academicYear": "2025",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 6,
+      "duration": "04 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التسيير المحاسبي والمالي — شعبة تسيير واقتصاد (دورة جوان 2025 - الموضوع الأول)",
+      "themesAr": [
+        "استنتاج تاريخ الاقتناء وتسوية الزبائن والأعباء والمنتوجات المعاينة",
+        "استنتاج الميزانية الوظيفية انطلاقاً من النسب المالية",
+        "المحاسبة التحليلية: الأقسام التنازلية بمنتج وسطي S وبقايا مباعة"
+      ],
+      "pdfUrl": "/documents/official_bac_management/acc-fin/bac-2025-3as-acc-fin-s1.pdf",
+      "solutionUrl": "/documents/official_bac_management/acc-fin/bac-2025-3as-acc-fin-s1-sol.pdf",
+      "fileSize": 120968,
+      "solutionFileSize": 160697
+    },
+    {
+      "slug": "bac-2025-3as-acc-fin-s2",
+      "grade": "3as_acc",
+      "subjectId": "ACC-FIN",
+      "yearSubjectId": 755,
+      "academicYear": "2025",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 6,
+      "duration": "04 ساعات و30 دقيقة",
+      "titleAr": "بكالوريا رسمية في التسيير المحاسبي والمالي — شعبة تسيير واقتصاد (دورة جوان 2025 - الموضوع الثاني)",
+      "themesAr": [
+        "استنتاج جدول حسابات النتائج من النسب المالية وقدرة التمويل الذاتي CAF",
+        "الاسترجاع الجزئي لخسارة قيمة التثبيتات والتقارب البنكي",
+        "تقييم المشاريع الاستثمارية بالتدفقات النقدية CAF وفترة الاسترداد DR وعتبة المردودية"
+      ],
+      "pdfUrl": "/documents/official_bac_management/acc-fin/bac-2025-3as-acc-fin-s2.pdf",
+      "solutionUrl": "/documents/official_bac_management/acc-fin/bac-2025-3as-acc-fin-s2-sol.pdf",
+      "fileSize": 117318,
+      "solutionFileSize": 149666
+    },
+    {
+      "slug": "bac-2023-3as-eco-man-s1",
+      "grade": "3as_eco",
+      "subjectId": "ECO-MAN",
+      "yearSubjectId": 756,
+      "academicYear": "2023",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 5,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في الاقتصاد والمناجمنت — شعبة تسيير واقتصاد (دورة جوان 2023 - الموضوع الأول)",
+      "themesAr": [
+        "النقود والكتلة النقدية M1 وM2 والتضخم والسياسات النقدية الحلال",
+        "أساليب القيادة ونظريات الدافعية (ماسلو وهيرزبرغ)",
+        "تحليل النمو الاسمي والحقيقي وأثر التضخم والتشخيص القيادي"
+      ],
+      "pdfUrl": "/documents/official_bac_management/eco-man/bac-2023-3as-eco-man-s1.pdf",
+      "solutionUrl": "/documents/official_bac_management/eco-man/bac-2023-3as-eco-man-s1-sol.pdf",
+      "fileSize": 72920,
+      "solutionFileSize": 97521
+    },
+    {
+      "slug": "bac-2023-3as-eco-man-s2",
+      "grade": "3as_eco",
+      "subjectId": "ECO-MAN",
+      "yearSubjectId": 756,
+      "academicYear": "2023",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 5,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في الاقتصاد والمناجمنت — شعبة تسيير واقتصاد (دورة جوان 2023 - الموضوع الثاني)",
+      "themesAr": [
+        "التجارة الخارجية وسياسات الحماية والحرية وميزان المدفوعات",
+        "الاتصال الإداري وعناصره ومعوقاته",
+        "حساب وتحليل الميزان التجاري ونسبة التغطية وتشخيص الاتصال الأفقي"
+      ],
+      "pdfUrl": "/documents/official_bac_management/eco-man/bac-2023-3as-eco-man-s2.pdf",
+      "solutionUrl": "/documents/official_bac_management/eco-man/bac-2023-3as-eco-man-s2-sol.pdf",
+      "fileSize": 64764,
+      "solutionFileSize": 88636
+    },
+    {
+      "slug": "bac-2024-3as-eco-man-s1",
+      "grade": "3as_eco",
+      "subjectId": "ECO-MAN",
+      "yearSubjectId": 756,
+      "academicYear": "2024",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 5,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في الاقتصاد والمناجمنت — شعبة تسيير واقتصاد (دورة جوان 2024 - الموضوع الأول)",
+      "themesAr": [
+        "البنك المركزي وأدوات الرقابة المشروعة وصيغ التمويل الإسلامي",
+        "الرقابة الإدارية: مراحلها وأنواعها وأدواتها",
+        "تحليل انحرافات لوحة القيادة وتبرير التمويل بالمرابحة"
+      ],
+      "pdfUrl": "/documents/official_bac_management/eco-man/bac-2024-3as-eco-man-s1.pdf",
+      "solutionUrl": "/documents/official_bac_management/eco-man/bac-2024-3as-eco-man-s1-sol.pdf",
+      "fileSize": 68603,
+      "solutionFileSize": 93039
+    },
+    {
+      "slug": "bac-2024-3as-eco-man-s2",
+      "grade": "3as_eco",
+      "subjectId": "ECO-MAN",
+      "yearSubjectId": 756,
+      "academicYear": "2024",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 5,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في الاقتصاد والمناجمنت — شعبة تسيير واقتصاد (دورة جوان 2024 - الموضوع الثاني)",
+      "themesAr": [
+        "البطالة وأنواعها وآثارها والفرق بين النمو والتنمية المستدامة",
+        "التخطيط وأنواعه وتكامله مع الرقابة ونظريتا X وY لماكغريغور",
+        "حساب معدل البطالة ومعدل النمو الحقيقي والربط بالتكوين والمقاولاتية"
+      ],
+      "pdfUrl": "/documents/official_bac_management/eco-man/bac-2024-3as-eco-man-s2.pdf",
+      "solutionUrl": "/documents/official_bac_management/eco-man/bac-2024-3as-eco-man-s2-sol.pdf",
+      "fileSize": 63013,
+      "solutionFileSize": 84060
+    },
+    {
+      "slug": "bac-2025-3as-eco-man-s1",
+      "grade": "3as_eco",
+      "subjectId": "ECO-MAN",
+      "yearSubjectId": 756,
+      "academicYear": "2025",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 5,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في الاقتصاد والمناجمنت — شعبة تسيير واقتصاد (دورة جوان 2025 - الموضوع الأول)",
+      "themesAr": [
+        "الصرف وأنظمة الصرف والمنظمة العالمية للتجارة OMC",
+        "القيادة الموقفية والتكامل بين الاتصال والرقابة",
+        "حساب أثر تقلبات سعر الصرف على الصادرات وتشخيص الاتصال والتفويض"
+      ],
+      "pdfUrl": "/documents/official_bac_management/eco-man/bac-2025-3as-eco-man-s1.pdf",
+      "solutionUrl": "/documents/official_bac_management/eco-man/bac-2025-3as-eco-man-s1-sol.pdf",
+      "fileSize": 60257,
+      "solutionFileSize": 82186
+    },
+    {
+      "slug": "bac-2025-3as-eco-man-s2",
+      "grade": "3as_eco",
+      "subjectId": "ECO-MAN",
+      "yearSubjectId": 756,
+      "academicYear": "2025",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 5,
+      "duration": "03 ساعات",
+      "titleAr": "بكالوريا رسمية في الاقتصاد والمناجمنت — شعبة تسيير واقتصاد (دورة جوان 2025 - الموضوع الثاني)",
+      "themesAr": [
+        "السوق والعرض والطلب والمرونة السعرية والركود التضخمي",
+        "لوحة القيادة والقيادة التشاركية والتحفيز",
+        "حساب توازن السوق ومرونة الطلب السعرية وتقييم القرار التسعيري"
+      ],
+      "pdfUrl": "/documents/official_bac_management/eco-man/bac-2025-3as-eco-man-s2.pdf",
+      "solutionUrl": "/documents/official_bac_management/eco-man/bac-2025-3as-eco-man-s2-sol.pdf",
+      "fileSize": 62497,
+      "solutionFileSize": 89011
+    },
+    {
+      "slug": "bac-2023-3as-law-s1",
+      "grade": "3as_law",
+      "subjectId": "LAW",
+      "yearSubjectId": 757,
+      "academicYear": "2023",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "02 ساعات",
+      "titleAr": "بكالوريا رسمية في القانون — شعبة تسيير واقتصاد (دورة جوان 2023 - الموضوع الأول)",
+      "themesAr": [
+        "عقد العمل الفردي وعناصره وتعليق وإنهاء علاقة العمل",
+        "شركة التضامن SNC وخصائصها وانقضاؤها",
+        "التكييف القانوني للعقد محدد المدة والتسريح التعسفي في قانون 90-11"
+      ],
+      "pdfUrl": "/documents/official_bac_management/law/bac-2023-3as-law-s1.pdf",
+      "solutionUrl": "/documents/official_bac_management/law/bac-2023-3as-law-s1-sol.pdf",
+      "fileSize": 57932,
+      "solutionFileSize": 72699
+    },
+    {
+      "slug": "bac-2023-3as-law-s2",
+      "grade": "3as_law",
+      "subjectId": "LAW",
+      "yearSubjectId": 757,
+      "academicYear": "2023",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 2,
+      "duration": "02 ساعات",
+      "titleAr": "بكالوريا رسمية في القانون — شعبة تسيير واقتصاد (دورة جوان 2023 - الموضوع الثاني)",
+      "themesAr": [
+        "عقد البيع: تعريفه وأركانه والتزامات البائع والمشتري",
+        "الميزانية العامة للدولة: مبادئها ومراحلها والآمر بالصرف والمحاسب العمومي",
+        "دراسة حالة قضائية: بطلان البيع العرفي للعقار وأثر الشهر العقاري"
+      ],
+      "pdfUrl": "/documents/official_bac_management/law/bac-2023-3as-law-s2.pdf",
+      "solutionUrl": "/documents/official_bac_management/law/bac-2023-3as-law-s2-sol.pdf",
+      "fileSize": 55165,
+      "solutionFileSize": 69594
+    },
+    {
+      "slug": "bac-2024-3as-law-s1",
+      "grade": "3as_law",
+      "subjectId": "LAW",
+      "yearSubjectId": 757,
+      "academicYear": "2024",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "02 ساعات",
+      "titleAr": "بكالوريا رسمية في القانون — شعبة تسيير واقتصاد (دورة جوان 2024 - الموضوع الأول)",
+      "themesAr": [
+        "الشركة ذات المسؤولية المحدودة SARL وEURL: الخصائص والتسيير",
+        "النزاعات الجماعية في العمل وطرق تسويتها وشروط الإضراب",
+        "دراسة حالة قضائية: الإضراب غير المشروع والذمة المالية للشريك في SARL"
+      ],
+      "pdfUrl": "/documents/official_bac_management/law/bac-2024-3as-law-s1.pdf",
+      "solutionUrl": "/documents/official_bac_management/law/bac-2024-3as-law-s1-sol.pdf",
+      "fileSize": 62352,
+      "solutionFileSize": 80973
+    },
+    {
+      "slug": "bac-2024-3as-law-s2",
+      "grade": "3as_law",
+      "subjectId": "LAW",
+      "yearSubjectId": 757,
+      "academicYear": "2024",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 2,
+      "duration": "02 ساعات",
+      "titleAr": "بكالوريا رسمية في القانون — شعبة تسيير واقتصاد (دورة جوان 2024 - الموضوع الثاني)",
+      "themesAr": [
+        "الضريبة: خصائصها والفرق عن الرسم وقواعد فرضها وأهدافها",
+        "مقارنة IRG وIBS وTVA وأشكال التهرب الضريبي",
+        "دراسة حالة قضائية: الغش الضريبي وحقوق المساهمين ومحافظ الحسابات في SPA"
+      ],
+      "pdfUrl": "/documents/official_bac_management/law/bac-2024-3as-law-s2.pdf",
+      "solutionUrl": "/documents/official_bac_management/law/bac-2024-3as-law-s2-sol.pdf",
+      "fileSize": 62583,
+      "solutionFileSize": 78201
+    },
+    {
+      "slug": "bac-2025-3as-law-s1",
+      "grade": "3as_law",
+      "subjectId": "LAW",
+      "yearSubjectId": 757,
+      "academicYear": "2025",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "02 ساعات",
+      "titleAr": "بكالوريا رسمية في القانون — شعبة تسيير واقتصاد (دورة جوان 2025 - الموضوع الأول)",
+      "themesAr": [
+        "عقد الشركة: الأركان الموضوعية العامة والخاصة والأركان الشكلية",
+        "شركة المساهمة SPA: خصائصها وهيئات تسييرها ورقابتها",
+        "دراسة حالة قضائية: شرط الأسد والحصة بالعمل والقيد في السجل التجاري"
+      ],
+      "pdfUrl": "/documents/official_bac_management/law/bac-2025-3as-law-s1.pdf",
+      "solutionUrl": "/documents/official_bac_management/law/bac-2025-3as-law-s1-sol.pdf",
+      "fileSize": 61465,
+      "solutionFileSize": 80979
+    },
+    {
+      "slug": "bac-2025-3as-law-s2",
+      "grade": "3as_law",
+      "subjectId": "LAW",
+      "yearSubjectId": 757,
+      "academicYear": "2025",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 2,
+      "duration": "02 ساعات",
+      "titleAr": "بكالوريا رسمية في القانون — شعبة تسيير واقتصاد (دورة جوان 2025 - الموضوع الثاني)",
+      "themesAr": [
+        "النفقات العامة وتزايدها والإيرادات العامة (الدومين والضرائب)",
+        "حالات إنهاء علاقة العمل الفردية في القانون 90-11",
+        "دراسة حالة قضائية: التسريح الاقتصادي ورقابة مجلس المحاسبة والمراقب الميزانياتي"
+      ],
+      "pdfUrl": "/documents/official_bac_management/law/bac-2025-3as-law-s2.pdf",
+      "solutionUrl": "/documents/official_bac_management/law/bac-2025-3as-law-s2-sol.pdf",
+      "fileSize": 60646,
+      "solutionFileSize": 78357
+    }
+  ]
+}

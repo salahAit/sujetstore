@@ -75,6 +75,7 @@ export function sanitizeMathInner(inner: string): string {
 	});
 	masked = masked.replace(/[\u0600-\u06FF]{2,}/g, (word: string) => `"${word}"`);
 	masked = masked.replace(/(\d)([a-zA-Z\u0600-\u06FF])/g, '$1 $2');
+	masked = masked.replace(/\b(Omega|Gamma|Delta|Sigma|Phi|Psi|Theta|Lambda)\(/g, '$1 (');
 
 	return masked.replace(/__Q(\d+)__/g, (_m, idx) => quotedLiterals[Number(idx)] ?? '');
 }

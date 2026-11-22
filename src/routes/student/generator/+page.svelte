@@ -31,13 +31,21 @@
 
 	const SECONDARY_COEFFS: Record<string, number> = {
 		'1as:MAT-SE:TCST': 5,
+		'1as:MAT-LIT:TCL': 2,
 		'2as:MAT-SE:SE': 5,
 		'2as:MAT-TM:TM': 6,
 		'2as:MAT-MATH:MATH': 7,
+		'2as:MAT-GE:GE': 5,
+		'2as:MAT-LIT:LP': 2,
+		'2as:MAT-LIT:LE': 2,
 		'3as:MAT-SE:SE': 5,
 		'3as:MAT-TM:TM': 6,
 		'3as:MAT-MATH:MATH': 7,
+		'3as:MAT-GE:GE': 5,
+		'3as:MAT-LIT:LP': 2,
+		'3as:MAT-LIT:LE': 2,
 		'1as:PHY-SE:TCST': 4,
+		'1as:PHY-LIT:TCL': 2,
 		'2as:PHY-SE:SE': 5,
 		'2as:PHY-MTM:TM': 5,
 		'2as:PHY-MTM:MATH': 6,
@@ -124,7 +132,13 @@
 		'2as:LAN-GER:LE': 4,
 		'3as:LAN-GER:LE': 4,
 		'2as:LAN-ITA:LE': 4,
-		'3as:LAN-ITA:LE': 4
+		'3as:LAN-ITA:LE': 4,
+		'2as:ACC-FIN:GE': 5,
+		'3as:ACC-FIN:GE': 6,
+		'2as:ECO-MAN:GE': 4,
+		'3as:ECO-MAN:GE': 5,
+		'2as:LAW:GE': 2,
+		'3as:LAW:GE': 2
 	};
 
 	function formatYsLabel(ys: any): string {

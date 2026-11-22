@@ -98,6 +98,14 @@ const ALL_SUBJECTS: readonly SubjectBuildDef[] = [
 		tracksKey: 'ALL_ITALIAN_TRACK_IDS',
 		lessonsKey: 'ALL_ITALIAN_LESSONS',
 		templatesKey: 'ALL_ITALIAN_TEMPLATES'
+	},
+	{
+		id: 'management',
+		entry: 'src/lib/kernel/entries/management.ts',
+		statsModule: 'src/lib/modules/ManagementTemplates/index.ts',
+		tracksKey: 'ALL_MANAGEMENT_TRACK_IDS',
+		lessonsKey: 'ALL_MANAGEMENT_LESSONS',
+		templatesKey: 'ALL_MANAGEMENT_TEMPLATES'
 	}
 ];
 

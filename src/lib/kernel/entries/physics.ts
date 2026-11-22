@@ -30,6 +30,7 @@ export function assemble(req: SubjectAssembleRequest): UnifiedExamPaper {
 			});
 		}
 		case '1as_tcst':
+		case '1as_tcl':
 		case '2as_se':
 		case '2as_tm':
 		case '2as_math':

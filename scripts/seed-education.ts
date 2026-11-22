@@ -229,6 +229,7 @@ const subjectsData = [
 	// --- مواد الثانوي: الفيزياء ---
 	{ id: 'PHY-SE',  name: 'Physics (SE)', name_ar: 'العلوم الفيزيائية (علوم تجريبية)', name_fr: 'Physique (SE)', slug: 'phy-se', exam_group: 'physics', icon: 'Zap', color: '#f59e0b' },
 	{ id: 'PHY-MTM', name: 'Physics (Math/TM)', name_ar: 'العلوم الفيزيائية (رياضي/تقني)', name_fr: 'Physique (Math/TM)', slug: 'phy-mtm', exam_group: 'physics', icon: 'Zap', color: '#f59e0b' },
+	{ id: 'PHY-LIT', name: 'Physics (Literary)', name_ar: 'العلوم الفيزيائية والتكنولوجيا (آداب)', name_fr: 'Sciences Physiques (Littéraire)', slug: 'phy-lit', exam_group: 'physics', icon: 'Zap', color: '#f59e0b' },
 
 	// --- مواد الثانوي: العلوم الطبيعية ---
 	{ id: 'SCI-SE',   name: 'Natural Sciences (SE)', name_ar: 'العلوم الطبيعية (علوم تجريبية)', name_fr: 'Sciences Naturelles (SE)', slug: 'sci-se', exam_group: 'science', icon: 'Microscope', color: '#22c55e' },
@@ -301,7 +302,7 @@ const streamSubjectsMap: StreamSubjectEntry[] = [
 	// سنة أولى ثانوي: جذع مشترك علوم وتكنولوجيا
 	{ stream: 'TCST', subjects: ['ARB-SCI', 'MAT-SE', 'PHY-SE', 'SCI-SE', 'FRE-SEC', 'ENG-SEC', 'HIS-SCI', 'ISL-ALL', 'PHI-SCI', 'AMZ-ALL'], years: ['1as'] },
 	// سنة أولى ثانوي: جذع مشترك آداب
-	{ stream: 'TCL', subjects: ['ARB-LP', 'MAT-LIT', 'FRE-SEC', 'ENG-SEC', 'HIS-LP', 'ISL-ALL', 'PHI-LP', 'AMZ-ALL'], years: ['1as'] },
+	{ stream: 'TCL', subjects: ['ARB-LP', 'MAT-LIT', 'PHY-LIT', 'FRE-SEC', 'ENG-SEC', 'HIS-LP', 'ISL-ALL', 'PHI-LP', 'AMZ-ALL'], years: ['1as'] },
 
 	// علوم تجريبية (S2, S3)
 	{ stream: 'SE', subjects: ['ARB-SCI', 'MAT-SE', 'PHY-SE', 'SCI-SE', 'FRE-SEC', 'ENG-SEC', 'HIS-SCI', 'ISL-ALL', 'PHI-SCI', 'AMZ-ALL'], years: ['2as', '3as'] },

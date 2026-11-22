@@ -121,6 +121,13 @@ import {
 	type AssembleItalianOptions,
 	type ItalianExamVariant
 } from './assemblers/exam-italian';
+import {
+	assembleManagementPaper,
+	yearSubjectToManagementTrack,
+	type AssembledManagementPaper,
+	type AssembleManagementOptions,
+	type ManagementExamVariant
+} from './assemblers/exam-management';
 import { compileTypstPdf } from './typst';
 import {
 	SECONDARY_TRACK_IDS,
@@ -211,17 +218,30 @@ export function yearSubjectToGrade(
 			return '1as_tcst';
 		}
 	}
+	if (yearId === '1as' && subjectId === 'MAT-LIT') {
+		if (!streamId || streamId === 'TCL' || streamId === 'tcl' || streamId === 'GEN') {
+			return '1as_tcl';
+		}
+	}
 
 	if (yearId === '2as') {
 		if (subjectId === 'MAT-SE') return '2as_se';
 		if (subjectId === 'MAT-TM') return '2as_tm';
 		if (subjectId === 'MAT-MATH') return '2as_math';
+		if (subjectId === 'MAT-GE') return '2as_ge';
+		if (subjectId === 'MAT-LIT') {
+			return (streamId || '').toUpperCase() === 'LE' ? '2as_le' : '2as_lp';
+		}
 	}
 
 	if (yearId === '3as') {
 		if (subjectId === 'MAT-SE') return '3as_se';
 		if (subjectId === 'MAT-TM') return '3as_tm';
 		if (subjectId === 'MAT-MATH') return '3as_math';
+		if (subjectId === 'MAT-GE') return '3as_ge';
+		if (subjectId === 'MAT-LIT') {
+			return (streamId || '').toUpperCase() === 'LE' ? '3as_le' : '3as_lp';
+		}
 	}
 
 	return null;
@@ -287,12 +307,19 @@ export function assembleExam(opts: AssembleExamOptions): UnifiedAssembledExam {
 			});
 		}
 		case '1as_tcst':
+		case '1as_tcl':
 		case '2as_se':
 		case '2as_tm':
 		case '2as_math':
+		case '2as_ge':
+		case '2as_lp':
+		case '2as_le':
 		case '3as_se':
 		case '3as_tm':
-		case '3as_math': {
+		case '3as_math':
+		case '3as_ge':
+		case '3as_lp':
+		case '3as_le': {
 			let variant: SecondaryVariant;
 			if (opts.variant === 'bac_mock' && opts.grade.startsWith('3as_')) {
 				variant = 'bac_mock';
@@ -362,6 +389,11 @@ export function yearSubjectToPhysicsTrack(
 			return '1as_tcst';
 		}
 	}
+	if (yearId === '1as' && subjectId === 'PHY-LIT') {
+		if (!streamId || streamId === 'TCL' || streamId === 'tcl' || streamId === 'GEN') {
+			return '1as_tcl';
+		}
+	}
 	if (yearId === '2as') {
 		if (subjectId === 'PHY-SE') return '2as_se';
 		if (subjectId === 'PHY-MTM') {
@@ -418,6 +450,7 @@ export function assemblePhysicsExam(
 			});
 		}
 		case '1as_tcst':
+		case '1as_tcl':
 		case '2as_se':
 		case '2as_tm':
 		case '2as_math':
@@ -1055,3 +1088,14 @@ export type UnifiedAssembledItalianExam = AssembledItalianPaper;
 export type AssembleItalianExamOptions = AssembleItalianOptions;
 export type { ItalianExamVariant };
 export { assembleItalianExam, yearSubjectToItalianTrack };
+
+export type UnifiedAssembledManagementExam = AssembledManagementPaper;
+export type AssembleManagementExamOptions = AssembleManagementOptions;
+export type { ManagementExamVariant };
+export { yearSubjectToManagementTrack };
+
+export function assembleManagementExam(
+	opts: AssembleManagementExamOptions
+): UnifiedAssembledManagementExam {
+	return assembleManagementPaper(opts);
+}

@@ -2,12 +2,19 @@ import type { ExerciseBlock, LevelId, TrimesterId } from '../SujetBuilder/types'
 
 export type SecondaryTrackId =
 	| '1as_tcst'
+	| '1as_tcl'
 	| '2as_se'
 	| '2as_tm'
 	| '2as_math'
+	| '2as_ge'
+	| '2as_lp'
+	| '2as_le'
 	| '3as_se'
 	| '3as_tm'
-	| '3as_math';
+	| '3as_math'
+	| '3as_ge'
+	| '3as_lp'
+	| '3as_le';
 
 export type GradeId =
 	| '1ap'
@@ -32,12 +39,19 @@ export type PipelineYearSubjectId =
 	| 634
 	| 644
 	| 654
+	| 664
 	| 672
 	| 692
 	| 712
+	| 738
+	| 760
+	| 776
 	| 682
 	| 702
-	| 725;
+	| 725
+	| 749
+	| 768
+	| 787;
 
 export type Difficulty = 'easy' | 'medium' | 'hard';
 export type MathDomain =
@@ -57,10 +71,10 @@ export interface GradeMeta {
 	levelId: LevelId;
 	yearId: string;
 	yearName: string;
-	subjectId: 'MAT-B' | 'MAT-SE' | 'MAT-TM' | 'MAT-MATH';
+	subjectId: 'MAT-B' | 'MAT-SE' | 'MAT-TM' | 'MAT-MATH' | 'MAT-GE' | 'MAT-LIT';
 	subjectName: 'الرياضيات';
 	yearSubjectId: PipelineYearSubjectId;
-	streamId?: 'TCST' | 'SE' | 'TM' | 'MATH';
+	streamId?: 'TCST' | 'TCL' | 'SE' | 'TM' | 'MATH' | 'GE' | 'LP' | 'LE';
 	streamNameAr?: string;
 	coefficient?: number;
 }
@@ -159,6 +173,18 @@ export const GRADE_METADATA: Record<GradeId, GradeMeta> = {
 		streamNameAr: 'جذع مشترك علوم وتكنولوجيا',
 		coefficient: 5
 	},
+	'1as_tcl': {
+		grade: '1as_tcl',
+		levelId: 'secondaire',
+		yearId: '1as',
+		yearName: 'السنة الأولى ثانوي — جذع مشترك آداب',
+		subjectId: 'MAT-LIT',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 664,
+		streamId: 'TCL',
+		streamNameAr: 'جذع مشترك آداب',
+		coefficient: 2
+	},
 	'2as_se': {
 		grade: '2as_se',
 		levelId: 'secondaire',
@@ -195,6 +221,42 @@ export const GRADE_METADATA: Record<GradeId, GradeMeta> = {
 		streamNameAr: 'رياضيات',
 		coefficient: 7
 	},
+	'2as_ge': {
+		grade: '2as_ge',
+		levelId: 'secondaire',
+		yearId: '2as',
+		yearName: 'السنة الثانية ثانوي — تسيير واقتصاد',
+		subjectId: 'MAT-GE',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 738,
+		streamId: 'GE',
+		streamNameAr: 'تسيير واقتصاد',
+		coefficient: 5
+	},
+	'2as_lp': {
+		grade: '2as_lp',
+		levelId: 'secondaire',
+		yearId: '2as',
+		yearName: 'السنة الثانية ثانوي — آداب وفلسفة',
+		subjectId: 'MAT-LIT',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 760,
+		streamId: 'LP',
+		streamNameAr: 'آداب وفلسفة',
+		coefficient: 2
+	},
+	'2as_le': {
+		grade: '2as_le',
+		levelId: 'secondaire',
+		yearId: '2as',
+		yearName: 'السنة الثانية ثانوي — لغات أجنبية',
+		subjectId: 'MAT-LIT',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 776,
+		streamId: 'LE',
+		streamNameAr: 'لغات أجنبية',
+		coefficient: 2
+	},
 	'3as_se': {
 		grade: '3as_se',
 		levelId: 'secondaire',
@@ -230,17 +292,60 @@ export const GRADE_METADATA: Record<GradeId, GradeMeta> = {
 		streamId: 'MATH',
 		streamNameAr: 'رياضيات',
 		coefficient: 7
+	},
+	'3as_ge': {
+		grade: '3as_ge',
+		levelId: 'secondaire',
+		yearId: '3as',
+		yearName: 'السنة الثالثة ثانوي — تسيير واقتصاد (BAC)',
+		subjectId: 'MAT-GE',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 749,
+		streamId: 'GE',
+		streamNameAr: 'تسيير واقتصاد',
+		coefficient: 5
+	},
+	'3as_lp': {
+		grade: '3as_lp',
+		levelId: 'secondaire',
+		yearId: '3as',
+		yearName: 'السنة الثالثة ثانوي — آداب وفلسفة (BAC)',
+		subjectId: 'MAT-LIT',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 768,
+		streamId: 'LP',
+		streamNameAr: 'آداب وفلسفة',
+		coefficient: 2
+	},
+	'3as_le': {
+		grade: '3as_le',
+		levelId: 'secondaire',
+		yearId: '3as',
+		yearName: 'السنة الثالثة ثانوي — لغات أجنبية (BAC)',
+		subjectId: 'MAT-LIT',
+		subjectName: 'الرياضيات',
+		yearSubjectId: 787,
+		streamId: 'LE',
+		streamNameAr: 'لغات أجنبية',
+		coefficient: 2
 	}
 };
 
 export const SECONDARY_TRACK_IDS: readonly SecondaryTrackId[] = [
 	'1as_tcst',
+	'1as_tcl',
 	'2as_se',
 	'2as_tm',
 	'2as_math',
+	'2as_ge',
+	'2as_lp',
+	'2as_le',
 	'3as_se',
 	'3as_tm',
-	'3as_math'
+	'3as_math',
+	'3as_ge',
+	'3as_lp',
+	'3as_le'
 ];
 
 export const ALL_GRADE_IDS: readonly GradeId[] = [
@@ -360,7 +465,10 @@ export function adaptLessonForTrack(
 	const tail = idSuffix || (suffixMatch ? suffixMatch[1] : `${base.trimesterId}_${base.slug}`);
 	const cleanTail = tail.replace(/^t[123]_/, `${base.trimesterId}_`);
 	const newId = `lesson_${targetGrade}_${cleanTail}`;
-	const slugTail = base.slug.replace(/^(1as_tcst|2as_se|2as_tm|2as_math|3as_se|3as_tm|3as_math|2as_shared|3as_shared)-/, '');
+	const slugTail = base.slug.replace(
+		/^(1as_tcst|1as_tcl|2as_se|2as_tm|2as_math|2as_ge|2as_lp|2as_le|3as_se|3as_tm|3as_math|3as_ge|3as_lp|3as_le|2as_shared_lit|3as_shared_lit|2as_shared|3as_shared|2as-shared-lit|3as-shared-lit|2as-shared|3as-shared)-/,
+		''
+	);
 	return {
 		...base,
 		id: newId,
@@ -379,13 +487,13 @@ export function adaptTemplateForTrack(
 	targetGrade: SecondaryTrackId
 ): ParameterizedTemplate {
 	const newId = base.id.replace(
-		/^tpl_(2as_shared|3as_shared|2as_se|2as_tm|2as_math|3as_se|3as_tm|3as_math)_/,
+		/^tpl_(2as_shared_lit|3as_shared_lit|2as_shared|3as_shared|1as_tcst|1as_tcl|2as_se|2as_tm|2as_math|2as_ge|2as_lp|2as_le|3as_se|3as_tm|3as_math|3as_ge|3as_lp|3as_le)_/,
 		`tpl_${targetGrade}_`
 	);
 	const resolvedId = newId === base.id ? `tpl_${targetGrade}_${base.trimesterId}_${base.id}` : newId;
 	const adaptedLessonId = base.curriculumLessonId
 		? base.curriculumLessonId.replace(
-				/^lesson_(2as_shared|3as_shared|2as_se|2as_tm|2as_math|3as_se|3as_tm|3as_math)_/,
+				/^lesson_(2as_shared_lit|3as_shared_lit|2as_shared|3as_shared|1as_tcst|1as_tcl|2as_se|2as_tm|2as_math|2as_ge|2as_lp|2as_le|3as_se|3as_tm|3as_math|3as_ge|3as_lp|3as_le)_/,
 				`lesson_${targetGrade}_`
 			)
 		: undefined;

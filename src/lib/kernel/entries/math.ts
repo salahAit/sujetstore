@@ -63,12 +63,19 @@ export function assemble(req: SubjectAssembleRequest): UnifiedExamPaper {
 			});
 		}
 		case '1as_tcst':
+		case '1as_tcl':
 		case '2as_se':
 		case '2as_tm':
 		case '2as_math':
+		case '2as_ge':
+		case '2as_lp':
+		case '2as_le':
 		case '3as_se':
 		case '3as_tm':
-		case '3as_math': {
+		case '3as_math':
+		case '3as_ge':
+		case '3as_lp':
+		case '3as_le': {
 			let variant: SecondaryVariant;
 			if (req.variant === 'bac_mock' && grade.startsWith('3as_')) {
 				variant = 'bac_mock';

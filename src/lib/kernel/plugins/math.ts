@@ -27,10 +27,19 @@ export const mathPlugin: SubjectPlugin = {
 				return '1as_tcst';
 			}
 		}
+		if (yearId === '1as' && subjectId === 'MAT-LIT') {
+			if (!streamId || streamId === 'TCL' || streamId === 'tcl' || streamId === 'GEN') {
+				return '1as_tcl';
+			}
+		}
 		if (yearId === '2as' || yearId === '3as') {
 			if (subjectId === 'MAT-SE') return `${yearId}_se`;
 			if (subjectId === 'MAT-TM') return `${yearId}_tm`;
 			if (subjectId === 'MAT-MATH') return `${yearId}_math`;
+			if (subjectId === 'MAT-GE') return `${yearId}_ge`;
+			if (subjectId === 'MAT-LIT') {
+				return (streamId || '').toUpperCase() === 'LE' ? `${yearId}_le` : `${yearId}_lp`;
+			}
 		}
 		return null;
 	},
@@ -41,6 +50,6 @@ export const mathPlugin: SubjectPlugin = {
 	},
 
 	getStats() {
-		return getPluginManifestStats('math', { tracks: 16, lessons: 336, templates: 288 });
+		return getPluginManifestStats('math', { tracks: 23, lessons: 441, templates: 414 });
 	}
 };

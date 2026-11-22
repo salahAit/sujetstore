@@ -10,6 +10,7 @@ import { historyPlugin } from './plugins/history';
 import { spanishPlugin } from './plugins/spanish';
 import { germanPlugin } from './plugins/german';
 import { italianPlugin } from './plugins/italian';
+import { managementPlugin } from './plugins/management';
 
 export const subjectRegistry = new SubjectRegistry();
 
@@ -24,6 +25,7 @@ subjectRegistry.register(historyPlugin);
 subjectRegistry.register(spanishPlugin);
 subjectRegistry.register(germanPlugin);
 subjectRegistry.register(italianPlugin);
+subjectRegistry.register(managementPlugin);
 
 export { SubjectRegistry } from './registry';
 export {
@@ -37,7 +39,8 @@ export {
 	historyPlugin,
 	spanishPlugin,
 	germanPlugin,
-	italianPlugin
+	italianPlugin,
+	managementPlugin
 };
 export {
 	CACHE_TTL_MS,

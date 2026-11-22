@@ -53,7 +53,21 @@ export interface AssembleSecondaryOptions {
 }
 
 const ALL_TRIMESTERS: readonly TrimesterId[] = ['t1', 't2', 't3'];
-const BAC_ELIGIBLE_GRADES: readonly SecondaryTrackId[] = ['3as_se', '3as_tm', '3as_math'];
+const BAC_ELIGIBLE_GRADES: readonly SecondaryTrackId[] = [
+	'3as_se',
+	'3as_tm',
+	'3as_math',
+	'3as_ge',
+	'3as_lp',
+	'3as_le'
+];
+const LITERARY_TRACKS: ReadonlySet<SecondaryTrackId> = new Set([
+	'1as_tcl',
+	'2as_lp',
+	'2as_le',
+	'3as_lp',
+	'3as_le'
+]);
 
 const TEST_POINT_DISTRIBUTION = [6, 6, 8] as const;
 const EXAM_POINT_DISTRIBUTION = [4, 4, 5, 7] as const;
@@ -73,8 +87,13 @@ function isIntegrationTemplate(t: ParameterizedTemplate): boolean {
 }
 
 function isAllowedForTrack(template: ParameterizedTemplate, track: SecondaryTrackId): boolean {
-	const isSeTrack = track === '1as_tcst' || track === '2as_se' || track === '3as_se';
-	if (isSeTrack && template.domain === 'arithmetic_z') {
+	const noArithmeticZ =
+		track === '1as_tcst' ||
+		track === '2as_se' ||
+		track === '3as_se' ||
+		track === '2as_ge' ||
+		track === '3as_ge';
+	if (noArithmeticZ && template.domain === 'arithmetic_z') {
 		return false;
 	}
 	return true;
@@ -87,13 +106,21 @@ function resolveSecondaryDuration(grade: SecondaryTrackId, variant: SecondaryVar
 
 	switch (grade) {
 		case '1as_tcst':
-			return '02 ساعة';
+		case '1as_tcl':
+		case '2as_lp':
+		case '2as_le':
+			return '02 ساعات';
+		case '3as_lp':
+		case '3as_le':
+			return variant === 'bac_mock' ? '02 ساعات و30 دقيقة' : '02 ساعات';
 		case '2as_se':
+		case '2as_ge':
 			return '02 ساعة و30 دقيقة';
 		case '2as_tm':
 		case '2as_math':
 			return '03 ساعات';
 		case '3as_se':
+		case '3as_ge':
 			return '03 ساعات و30 دقيقة';
 		case '3as_tm':
 			return variant === 'bac_mock' ? '04 ساعات و30 دقيقة' : '04 ساعات';
@@ -382,6 +409,37 @@ export function assembleSecondaryExam(opts: AssembleSecondaryOptions): Assembled
 			const scaledBlock = scaleExercisePoints(inst.sujetExercise, targetPts);
 
 			scaledBlock.id = `ex_test_${idx + 1}_${inst.templateId}`;
+			if (idx === 2) {
+				delete scaledBlock.num;
+				scaledBlock.customTitle = TEST_COMPREHENSIVE_TITLE;
+			} else {
+				delete scaledBlock.customTitle;
+				scaledBlock.num = TEST_THREE_ORDINALS[idx];
+			}
+
+			exerciseInstances.push({
+				...inst,
+				sujetExercise: scaledBlock
+			});
+			exercises.push(scaledBlock);
+		});
+	} else if (LITERARY_TRACKS.has(grade)) {
+		const idPrefix = variant === 'bac_mock' ? 'bac' : 'exam';
+		const litPool =
+			variant === 'bac_mock'
+				? ALL_TRIMESTERS.flatMap((tid) => getTemplatesFor(grade, tid)).filter((t) =>
+						isAllowedForTrack(t, grade)
+					)
+				: pool;
+		const selected = selectTestTemplates(litPool, grade, trimesterId, rng);
+
+		selected.forEach((tmpl, idx) => {
+			const exSeed = drawDistinctSeed(rng, usedSeeds);
+			const inst = tmpl.generate(exSeed, difficulty);
+			const targetPts = TEST_POINT_DISTRIBUTION[idx];
+			const scaledBlock = scaleExercisePoints(inst.sujetExercise, targetPts);
+
+			scaledBlock.id = `ex_${idPrefix}_${idx + 1}_${inst.templateId}`;
 			if (idx === 2) {
 				delete scaledBlock.num;
 				scaledBlock.customTitle = TEST_COMPREHENSIVE_TITLE;

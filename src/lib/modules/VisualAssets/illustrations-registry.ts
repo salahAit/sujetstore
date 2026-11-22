@@ -18,7 +18,8 @@ export type IllustrationCategory =
 	| 'history_geo'
 	| 'spanish'
 	| 'german'
-	| 'italian';
+	| 'italian'
+	| 'management';
 
 export interface IllustrationPinSpec {
 	num: string | number;
@@ -1375,6 +1376,76 @@ export const ILLUSTRATIONS_CATALOG = {
 			{ num: '2', label: 'Cereali integrali e frutta secca' },
 			{ num: '3', label: 'Frutta fresca di stagione e acqua' },
 			{ num: '4', label: 'Ceramica geometrica e tessuti artigianali' }
+		]
+	},
+	// ═══════════════════════════════════════════════════════════════════════════
+	// 9. GESTION & ÉCONOMIE MANAGEMENT VERTICAL (2AS GE & 3AS GE) — Plates 01..06
+	// ═══════════════════════════════════════════════════════════════════════════
+	mgt_01_economic_circuit: {
+		id: 'mgt_01_economic_circuit',
+		category: 'management',
+		titleAr: 'الدورة الاقتصادية بين الأعوان الاقتصاديين',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'تدفقات حقيقية (سلع وخدمات وعوامل الإنتاج)' },
+			{ num: '2', label: 'تدفقات نقدية (أجور ومداخيل وضرائب واشتراكات)' },
+			{ num: '3', label: 'الأعوان الأساسيون: المؤسسات الاقتصادية والعائلات والإدارات العمومية' }
+		]
+	},
+	mgt_02_supply_demand_equilibrium: {
+		id: 'mgt_02_supply_demand_equilibrium',
+		category: 'management',
+		titleAr: 'توازن السوق وقانون العرض والطلب',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'منحنى الطلب (D): علاقة عكسية بين السعر والكمية المطلوبة' },
+			{ num: '2', label: 'منحنى العرض (O): علاقة طردية بين السعر والكمية المعروضة' },
+			{ num: '3', label: 'نقطة التوازن (E): تساوي الكمية المعروضة والمطلوبة عند (P*, Q*)' }
+		]
+	},
+	mgt_03_management_functions: {
+		id: 'mgt_03_management_functions',
+		category: 'management',
+		titleAr: 'وظائف التسيير الأربع في المؤسسة الاقتصادية',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'التخطيط: تحديد الأهداف ورسم الخطط المستقبلية' },
+			{ num: '2', label: 'التنظيم: توزيع المهام والصلاحيات والهيكلة' },
+			{ num: '3', label: 'التوجيه: القيادة والتحفيز والاتصال لتحقيق الأهداف' },
+			{ num: '4', label: 'الرقابة: قياس الأداء الفعلي وتصحيح الانحرافات' }
+		]
+	},
+	mgt_04_functional_balance_sheet: {
+		id: 'mgt_04_functional_balance_sheet',
+		category: 'management',
+		titleAr: 'الميزانية الوظيفية ومؤشرات التوازن المالي',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'FRNG = الموارد الثابتة − الاستخدامات المستقرة' },
+			{ num: '2', label: 'BFR = احتياجات الاستغلال + خارج الاستغلال' },
+			{ num: '3', label: 'الخزينة الصافية TN = FRNG − BFR = خزينة الأصول − خزينة الخصوم' }
+		]
+	},
+	mgt_05_cost_accounting_cycle: {
+		id: 'mgt_05_cost_accounting_cycle',
+		category: 'management',
+		titleAr: 'مسار المحاسبة التحليلية وتحديد سعر التكلفة',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'تكلفة الشراء وجرد المخزونات بالتكلفة المتوسطة المرجحة CMUP' },
+			{ num: '2', label: 'تكلفة الإنتاج وسعر التكلفة للمنتجات المباعة' },
+			{ num: '3', label: 'النتيجة التحليلية الصافية = رقم الأعمال − سعر التكلفة' }
+		]
+	},
+	mgt_06_commercial_companies_law: {
+		id: 'mgt_06_commercial_companies_law',
+		category: 'management',
+		titleAr: 'أنواع الشركات التجارية في القانون التجاري الجزائري',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'شركة التضامن (SNC): شركة أشخاص بمسؤولية تضامنية ومطلقة' },
+			{ num: '2', label: 'الشركة ذات المسؤولية المحدودة (SARL): حصص غير قابلة للتداول' },
+			{ num: '3', label: 'شركة المساهمة (SPA): رأس مال مقسم إلى أسهم قابلة للتداول' }
 		]
 	}
 } as const satisfies Record<string, IllustrationAssetMeta>;
