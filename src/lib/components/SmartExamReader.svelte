@@ -398,7 +398,7 @@
 				<div
 					class="ser-exam-paper mx-auto max-w-3xl space-y-4 sm:space-y-5"
 					dir={meta.dir}
-					style="font-size: {fontScale * 1.13}%;"
+					style="font-size: {fontScale * 1.08}%;"
 				>
 					<!-- Official Exam Header Banner -->
 					<header class="ser-card ser-header-card relative overflow-hidden rounded-2xl p-4 sm:p-6">
@@ -982,7 +982,7 @@
 	}
 	.ser-quran-verses {
 		font-family: 'KFGQPC Uthman Taha Naskh', 'Noto Naskh Arabic', serif;
-		font-size: 1.24em;
+		font-size: 1.22em;
 		line-height: 2.2;
 		letter-spacing: 0;
 	}
@@ -1154,6 +1154,6 @@
 		margin: 0.25em 0;
 	}
 	:global(.ser-root .katex) {
-		font-size: 1.12em;
+		font-size: 1.08em;
 	}
 </style>
