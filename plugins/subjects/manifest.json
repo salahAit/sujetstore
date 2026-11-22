@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T01:27:48.995Z",
+  "updatedAt": "2026-11-22T01:56:24.152Z",
   "subjects": {
     "math": {
       "id": "math",
@@ -81,6 +81,15 @@
       "sizeBytes": 708287,
       "builtAt": "2026-11-22T01:27:48.995Z",
       "elapsedMs": 127
+    },
+    "german": {
+      "id": "german",
+      "tracks": 2,
+      "lessons": 24,
+      "templates": 36,
+      "sizeBytes": 727712,
+      "builtAt": "2026-11-22T01:56:24.152Z",
+      "elapsedMs": 61
     }
   }
 }

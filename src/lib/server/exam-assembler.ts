@@ -107,6 +107,13 @@ import {
 	type AssembleSpanishOptions,
 	type SpanishExamVariant
 } from './assemblers/exam-spanish';
+import {
+	assembleGermanExam,
+	yearSubjectToGermanTrack,
+	type AssembledGermanPaper,
+	type AssembleGermanOptions,
+	type GermanExamVariant
+} from './assemblers/exam-german';
 import { compileTypstPdf } from './typst';
 import {
 	SECONDARY_TRACK_IDS,
@@ -1031,3 +1038,8 @@ export type UnifiedAssembledSpanishExam = AssembledSpanishPaper;
 export type AssembleSpanishExamOptions = AssembleSpanishOptions;
 export type { SpanishExamVariant };
 export { assembleSpanishExam, yearSubjectToSpanishTrack };
+
+export type UnifiedAssembledGermanExam = AssembledGermanPaper;
+export type AssembleGermanExamOptions = AssembleGermanOptions;
+export type { GermanExamVariant };
+export { assembleGermanExam, yearSubjectToGermanTrack };

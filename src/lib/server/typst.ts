@@ -251,7 +251,9 @@ export async function compileTypstPdf(options: {
 							? 'en'
 							: templateId.startsWith('spanish/')
 								? 'es'
-								: 'ar',
+								: templateId.startsWith('german/')
+									? 'de'
+									: 'ar',
 					levelId: examDoc?.metadata?.levelId,
 					yearId: examDoc?.metadata?.yearId,
 					subjectId: examDoc?.metadata?.subjectId,

@@ -82,6 +82,14 @@ const ALL_SUBJECTS: readonly SubjectBuildDef[] = [
 		tracksKey: 'ALL_SPANISH_TRACK_IDS',
 		lessonsKey: 'ALL_SPANISH_LESSONS',
 		templatesKey: 'ALL_SPANISH_TEMPLATES'
+	},
+	{
+		id: 'german',
+		entry: 'src/lib/kernel/entries/german.ts',
+		statsModule: 'src/lib/modules/GermanTemplates/index.ts',
+		tracksKey: 'ALL_GERMAN_TRACK_IDS',
+		lessonsKey: 'ALL_GERMAN_LESSONS',
+		templatesKey: 'ALL_GERMAN_TEMPLATES'
 	}
 ];
 

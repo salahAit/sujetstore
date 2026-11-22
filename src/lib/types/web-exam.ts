@@ -105,7 +105,7 @@ export type WebBlock =
 	  }
 	| {
 			type: 'passage_box';
-			lang: 'ar' | 'fr' | 'en' | 'es';
+			lang: 'ar' | 'fr' | 'en' | 'es' | 'de';
 			title?: string;
 			paragraphs: string[];
 			numberedParagraphs?: boolean;
@@ -130,7 +130,7 @@ export interface WebExercise {
 
 export interface WebExamMetadata {
 	dir: 'rtl' | 'ltr';
-	lang: 'ar' | 'fr' | 'en' | 'es';
+	lang: 'ar' | 'fr' | 'en' | 'es' | 'de';
 	levelId: string;
 	yearId: string;
 	yearName: string;

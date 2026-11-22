@@ -16,7 +16,8 @@ export type IllustrationCategory =
 	| 'arabic'
 	| 'languages'
 	| 'history_geo'
-	| 'spanish';
+	| 'spanish'
+	| 'german';
 
 export interface IllustrationPinSpec {
 	num: string | number;
@@ -37,10 +38,12 @@ export interface IllustrationAssetMeta {
 	titleFr?: string;
 	titleEn?: string;
 	titleEs?: string;
+	titleDe?: string;
 	legendAr: IllustrationLegendSpec[];
 	legendFr?: IllustrationLegendSpec[];
 	legendEn?: IllustrationLegendSpec[];
 	legendEs?: IllustrationLegendSpec[];
+	legendDe?: IllustrationLegendSpec[];
 	defaultPins?: IllustrationPinSpec[];
 }
 
@@ -1132,6 +1135,125 @@ export const ILLUSTRATIONS_CATALOG = {
 			{ num: '3', label: 'Innovación productiva e industria' },
 			{ num: '4', label: 'Solidaridad y desarrollo sostenible' }
 		]
+	},
+	// ═══════════════════════════════════════════════════════════════════════════
+	// 7. SECONDARY GERMAN LANGUAGE (2AS–3AS LE) — Plates ger_01..ger_06
+	// ═══════════════════════════════════════════════════════════════════════════
+	ger_01_deutschsprachige_laender_stummkarte: {
+		id: 'ger_01_deutschsprachige_laender_stummkarte',
+		category: 'german',
+		titleAr: 'خريطة صماء للبلدان الناطقة بالألمانية وحوض المتوسط',
+		titleDe: 'Stummkarte der D-A-CH-Länder und des Mittelmeerraums',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'ألمانيا (Deutschland)' },
+			{ num: '2', label: 'النمسا (Österreich)' },
+			{ num: '3', label: 'سويسرا (Schweiz)' },
+			{ num: '4', label: 'الجزائر (Algerien)' },
+			{ num: '5', label: 'البحر الأبيض المتوسط (Mittelmeer)' }
+		],
+		legendDe: [
+			{ num: '1', label: 'Deutschland (Mitteleuropa)' },
+			{ num: '2', label: 'Österreich (Alpenrepublik)' },
+			{ num: '3', label: 'Schweiz (Eidgenossenschaft)' },
+			{ num: '4', label: 'Algerien (Nordafrika)' },
+			{ num: '5', label: 'Mittelmeer (Verbindungsmeer)' }
+		]
+	},
+	ger_02_algerisches_kulturerbe_architektur: {
+		id: 'ger_02_algerisches_kulturerbe_architektur',
+		category: 'german',
+		titleAr: 'التراث المعماري الجزائري والإسلامي والفن الهندسي',
+		titleDe: 'Algerisches Kulturerbe und islamische Baukunst',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'قصبة الجزائر العتيقة (Kasbah von Algier)' },
+			{ num: '2', label: 'الجامع الكبير بتلمسان (Große Moschee von Tlemcen)' },
+			{ num: '3', label: 'وادي ميزاب بغرداية (M’Zab-Tal)' },
+			{ num: '4', label: 'الخط العربي والزخرفة الهندسية (Kalligraphie & Geometrie)' }
+		],
+		legendDe: [
+			{ num: '1', label: 'Die Kasbah von Algier' },
+			{ num: '2', label: 'Die Große Moschee von Tlemcen' },
+			{ num: '3', label: 'Das M’Zab-Tal in Ghardaïa' },
+			{ num: '4', label: 'Arabische Kalligraphie und Ornamentik' }
+		]
+	},
+	ger_03_bildung_sprachen_bibliothek: {
+		id: 'ger_03_bildung_sprachen_bibliothek',
+		category: 'german',
+		titleAr: 'التعليم وتعلّم اللغات والمكتبة المدرسية',
+		titleDe: 'Bildung, Fremdsprachen und Schulbibliothek',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'القاموس الألماني-العربي (Deutsch-Arabisches Wörterbuch)' },
+			{ num: '2', label: 'أقسام القواعد والمطالعة (Grammatik & Lesen)' },
+			{ num: '3', label: 'رفوف الكتب المعرفية (Sachbücher)' },
+			{ num: '4', label: 'التفوق الدراسي والبحث العلمي (Schulerfolg)' }
+		],
+		legendDe: [
+			{ num: '1', label: 'Deutsch-Arabisches Wörterbuch' },
+			{ num: '2', label: 'Grammatik, Lesen und Textanalyse' },
+			{ num: '3', label: 'Sach- und Fachbücherregale' },
+			{ num: '4', label: 'Studienerfolg und Wissenskultur' }
+		]
+	},
+	ger_04_umweltschutz_erneuerbare_energien: {
+		id: 'ger_04_umweltschutz_erneuerbare_energien',
+		category: 'german',
+		titleAr: 'حماية البيئة والطاقات المتجددة والتنمية المستدامة',
+		titleDe: 'Umweltschutz, erneuerbare Energien und Nachhaltigkeit',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'الطاقة الشمسية (Solarenergie)' },
+			{ num: '2', label: 'طاقة الرياح (Windkraft)' },
+			{ num: '3', label: 'إعادة التدوير والفرز (Recycling)' },
+			{ num: '4', label: 'التشجير وحماية الغابات (Aufforstung)' }
+		],
+		legendDe: [
+			{ num: '1', label: 'Solarenergie und Photovoltaik' },
+			{ num: '2', label: 'Windkraftanlagen' },
+			{ num: '3', label: 'Recycling und Mülltrennung' },
+			{ num: '4', label: 'Aufforstung und Waldschutz' }
+		]
+	},
+	ger_05_wissenschaft_technologie_innovation: {
+		id: 'ger_05_wissenschaft_technologie_innovation',
+		category: 'german',
+		titleAr: 'العلوم والتكنولوجيا والابتكار الرقمي المسؤول',
+		titleDe: 'Wissenschaft, Technologie und digitale Innovation',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'المخبر والبحث العلمي (Forschung & Labor)' },
+			{ num: '2', label: 'الرقائق والذكاء التقني (Mikrochip & Technik)' },
+			{ num: '3', label: 'شبكة المعرفة والأمن الرقمي (Digitales Wissen)' },
+			{ num: '4', label: 'الابتكار الهندسي المسؤول (Verantwortung)' }
+		],
+		legendDe: [
+			{ num: '1', label: 'Wissenschaftliches Labor und Analyse' },
+			{ num: '2', label: 'Mikroelektronik und Informatik' },
+			{ num: '3', label: 'Sichere Informationsnetze' },
+			{ num: '4', label: 'Verantwortungsvolle Innovation' }
+		]
+	},
+	ger_06_arbeitswelt_berufsausbildung: {
+		id: 'ger_06_arbeitswelt_berufsausbildung',
+		category: 'german',
+		titleAr: 'عالم الشغل والتكوين المهني وريادة المشاريع',
+		titleDe: 'Arbeitswelt, Berufsausbildung und Unternehmertum',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'المخططات والهندسة الصناعية (Bauplan & Technik)' },
+			{ num: '2', label: 'التكوين المهني والتقني (Berufsausbildung)' },
+			{ num: '3', label: 'إدارة المشاريع والرقمنة (Projektmanagement)' },
+			{ num: '4', label: 'الطاقات الإنتاجية والشباب (Produktivität)' }
+		],
+		legendDe: [
+			{ num: '1', label: 'Technische Planung und Ingenieurwesen' },
+			{ num: '2', label: 'Duale Berufsausbildung und Handwerk' },
+			{ num: '3', label: 'Digitales Projektmanagement' },
+			{ num: '4', label: 'Wirtschaft und nachhaltige Produktion' }
+		]
 	}
 } as const satisfies Record<string, IllustrationAssetMeta>;
 
@@ -1155,7 +1277,7 @@ export function renderLessonIllustration(
 	id: IllustrationId,
 	opts?: {
 		title?: string;
-		lang?: 'ar' | 'fr' | 'en' | 'es';
+		lang?: 'ar' | 'fr' | 'en' | 'es' | 'de';
 		pins?: IllustrationPinSpec[];
 		customLegend?: IllustrationLegendSpec[];
 		hideLegend?: boolean;
@@ -1170,7 +1292,9 @@ export function renderLessonIllustration(
 				? (meta.titleEn ?? meta.titleAr)
 				: lang === 'es'
 					? (meta.titleEs ?? meta.titleAr)
-					: meta.titleAr;
+					: lang === 'de'
+						? (meta.titleDe ?? meta.titleAr)
+						: meta.titleAr;
 	const defaultLegend =
 		lang === 'fr'
 			? (meta.legendFr ?? meta.legendAr)
@@ -1178,7 +1302,9 @@ export function renderLessonIllustration(
 				? (meta.legendEn ?? meta.legendAr)
 				: lang === 'es'
 					? (meta.legendEs ?? meta.legendAr)
-					: meta.legendAr;
+					: lang === 'de'
+						? (meta.legendDe ?? meta.legendAr)
+						: meta.legendAr;
 
 	return JSON.stringify({
 		kind: 'illustrated',
@@ -1186,7 +1312,7 @@ export function renderLessonIllustration(
 		title: opts?.title ?? defaultTitle,
 		pins: opts?.pins ?? meta.defaultPins ?? [],
 		legend: opts?.hideLegend ? [] : (opts?.customLegend ?? defaultLegend),
-		isLtr: lang === 'fr' || lang === 'en' || lang === 'es'
+		isLtr: lang === 'fr' || lang === 'en' || lang === 'es' || lang === 'de'
 	});
 }
 
@@ -1198,7 +1324,7 @@ export function buildIllustratedFigureBlock(
 	id: IllustrationId,
 	opts?: {
 		title?: string;
-		lang?: 'ar' | 'fr' | 'en' | 'es';
+		lang?: 'ar' | 'fr' | 'en' | 'es' | 'de';
 		mode?: 'labeled' | 'quiz' | 'image_only';
 		width?: number | string;
 		maxHeight?: number;
@@ -1218,7 +1344,9 @@ export function buildIllustratedFigureBlock(
 				? (meta.titleEn ?? meta.titleAr)
 				: lang === 'es'
 					? (meta.titleEs ?? meta.titleAr)
-					: meta.titleAr;
+					: lang === 'de'
+						? (meta.titleDe ?? meta.titleAr)
+						: meta.titleAr;
 	const rawLegend =
 		opts?.customLegend ??
 		(lang === 'fr'
@@ -1227,7 +1355,9 @@ export function buildIllustratedFigureBlock(
 				? (meta.legendEn ?? meta.legendAr)
 				: lang === 'es'
 					? (meta.legendEs ?? meta.legendAr)
-					: meta.legendAr);
+					: lang === 'de'
+						? (meta.legendDe ?? meta.legendAr)
+						: meta.legendAr);
 
 	return {
 		type: 'illustrated_figure',

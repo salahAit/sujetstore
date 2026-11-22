@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-11-22T01:56:32.965Z",
+  "total_papers": 6,
+  "total_pdfs": 12,
+  "items": [
+    {
+      "slug": "bac-2023-3as-le-german-t1",
+      "grade": "3as_le",
+      "yearSubjectId": 794,
+      "subjectId": "LAN-GER",
+      "streamId": "LE",
+      "academicYear": "2023",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 4,
+      "duration": "03 Std. 00",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الألمانية — شعبة لغات أجنبية (دورة جوان 2023 — الموضوع الأول: التعليم والتعدد اللغوي والمكتبات كمفتاح للمستقبل)",
+      "titleDe": "Abitur-Probeprüfung (BAC) im Fach Deutsch — Fremdsprachen (Juni 2023 — Thema 1: Bildung, Mehrsprachigkeit und Bibliotheken als Schlüssel zur Zukunft)",
+      "themesDe": [
+        "Bildung und Jugend",
+        "Mehrsprachigkeit",
+        "Schulbibliotheken",
+        "Vorgangspassiv, Wortbildung und Finalsätze"
+      ],
+      "themesAr": [
+        "التعليم والشباب",
+        "التعدد اللغوي",
+        "المكتبات المدرسية",
+        "المبني للمجهول واشتقاق الكلمات وجمل الغاية"
+      ],
+      "pdfUrl": "/generated/official-bac-german/bac-2023-3as-le-german-t1.pdf",
+      "solutionUrl": "/generated/official-bac-german/bac-2023-3as-le-german-t1-sol.pdf",
+      "fileSize": 299861,
+      "solutionFileSize": 297329
+    },
+    {
+      "slug": "bac-2023-3as-le-german-t2",
+      "grade": "3as_le",
+      "yearSubjectId": 794,
+      "subjectId": "LAN-GER",
+      "streamId": "LE",
+      "academicYear": "2023",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 4,
+      "duration": "03 Std. 00",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الألمانية — شعبة لغات أجنبية (دورة جوان 2023 — الموضوع الثاني: الذكاء الاصطناعي والعلوم والمسؤولية الأخلاقية)",
+      "titleDe": "Abitur-Probeprüfung (BAC) im Fach Deutsch — Fremdsprachen (Juni 2023 — Thema 2: Künstliche Intelligenz, Wissenschaft und ethische Verantwortung)",
+      "themesDe": [
+        "Wissenschaft und Technologie",
+        "Künstliche Intelligenz",
+        "Datenschutz und Ethik",
+        "Konjunktiv II und Relativsätze"
+      ],
+      "themesAr": [
+        "العلوم والتكنولوجيا",
+        "الذكاء الاصطناعي",
+        "الأمن الرقمي والأخلاقيات",
+        "صيغة الشرط الافتراضي (Konjunktiv II) وجمل الوصل"
+      ],
+      "pdfUrl": "/generated/official-bac-german/bac-2023-3as-le-german-t2.pdf",
+      "solutionUrl": "/generated/official-bac-german/bac-2023-3as-le-german-t2-sol.pdf",
+      "fileSize": 313128,
+      "solutionFileSize": 310622
+    },
+    {
+      "slug": "bac-2024-3as-le-german-t1",
+      "grade": "3as_le",
+      "yearSubjectId": 794,
+      "subjectId": "LAN-GER",
+      "streamId": "LE",
+      "academicYear": "2024",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 4,
+      "duration": "03 Std. 00",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الألمانية — شعبة لغات أجنبية (دورة جوان 2024 — الموضوع الأول: الطاقات المتجددة وحماية البيئة المستدامة)",
+      "titleDe": "Abitur-Probeprüfung (BAC) im Fach Deutsch — Fremdsprachen (Juni 2024 — Thema 1: Erneuerbare Energien und nachhaltiger Umweltschutz)",
+      "themesDe": [
+        "Umweltschutz",
+        "Erneuerbare Energien",
+        "Wasserschutz und Aufforstung",
+        "Konzessivsätze und Zustandspassiv"
+      ],
+      "themesAr": [
+        "حماية البيئة",
+        "الطاقات المتجددة",
+        "ترشيد المياه والتشجير",
+        "جمل التنازل والمبني للمجهول للحالة"
+      ],
+      "pdfUrl": "/generated/official-bac-german/bac-2024-3as-le-german-t1.pdf",
+      "solutionUrl": "/generated/official-bac-german/bac-2024-3as-le-german-t1-sol.pdf",
+      "fileSize": 297654,
+      "solutionFileSize": 295041
+    },
+    {
+      "slug": "bac-2024-3as-le-german-t2",
+      "grade": "3as_le",
+      "yearSubjectId": 794,
+      "subjectId": "LAN-GER",
+      "streamId": "LE",
+      "academicYear": "2024",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 4,
+      "duration": "03 Std. 00",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الألمانية — شعبة لغات أجنبية (دورة جوان 2024 — الموضوع الثاني: التراث الثقافي الجزائري وتاريخ العلوم الإسلامية)",
+      "titleDe": "Abitur-Probeprüfung (BAC) im Fach Deutsch — Fremdsprachen (Juni 2024 — Thema 2: Algerisches Kulturerbe und islamische Wissenschaftsgeschichte)",
+      "themesDe": [
+        "Algerisches Kulturerbe",
+        "Kasbah, Tlemcen und M’Zab",
+        "Al-Zahrawi, Al-Idrisi und Ibn Khaldoun",
+        "Präteritum, Passiv mit Modalverben und indirekte Rede"
+      ],
+      "themesAr": [
+        "التراث الثقافي الجزائري",
+        "القصبة وتلمسان وميزاب",
+        "الزهراوي والإدريسي وابن خلدون",
+        "الماضي السردي والمبني للمجهول مع الأفعال الناقصة والكلام المنقول"
+      ],
+      "pdfUrl": "/generated/official-bac-german/bac-2024-3as-le-german-t2.pdf",
+      "solutionUrl": "/generated/official-bac-german/bac-2024-3as-le-german-t2-sol.pdf",
+      "fileSize": 338315,
+      "solutionFileSize": 335835
+    },
+    {
+      "slug": "bac-2025-3as-le-german-t1",
+      "grade": "3as_le",
+      "yearSubjectId": 794,
+      "subjectId": "LAN-GER",
+      "streamId": "LE",
+      "academicYear": "2025",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 4,
+      "duration": "03 Std. 00",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الألمانية — شعبة لغات أجنبية (دورة جوان 2025 — الموضوع الأول: عالم الشغل الحديث والتكوين المهني وريادة الأعمال)",
+      "titleDe": "Abitur-Probeprüfung (BAC) im Fach Deutsch — Fremdsprachen (Juni 2025 — Thema 1: Moderne Arbeitswelt, Berufsausbildung und Unternehmertum)",
+      "themesDe": [
+        "Moderne Arbeitswelt",
+        "Duale Berufsausbildung",
+        "Unternehmertum und Handwerk",
+        "Futur I, Adjektivdeklination und Nominalisierung"
+      ],
+      "themesAr": [
+        "عالم الشغل الحديث",
+        "التكوين المهني المزدوج",
+        "المبادرة المقاولاتية",
+        "المستقبل البسيط وإعراب الصفات والاسمية"
+      ],
+      "pdfUrl": "/generated/official-bac-german/bac-2025-3as-le-german-t1.pdf",
+      "solutionUrl": "/generated/official-bac-german/bac-2025-3as-le-german-t1-sol.pdf",
+      "fileSize": 294303,
+      "solutionFileSize": 288346
+    },
+    {
+      "slug": "bac-2025-3as-le-german-t2",
+      "grade": "3as_le",
+      "yearSubjectId": 794,
+      "subjectId": "LAN-GER",
+      "streamId": "LE",
+      "academicYear": "2025",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 4,
+      "duration": "03 Std. 00",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الألمانية — شعبة لغات أجنبية (دورة جوان 2025 — الموضوع الثاني: جغرافية الفضاء الناطق بالألمانية (D-A-CH) وحوض المتوسط)",
+      "titleDe": "Abitur-Probeprüfung (BAC) im Fach Deutsch — Fremdsprachen (Juni 2025 — Thema 2: Geographie des D-A-CH-Raums und der Mittelmeerraum)",
+      "themesDe": [
+        "Landeskunde D-A-CH",
+        "Deutschland, Österreich und Schweiz",
+        "Algerien und der Mittelmeerraum",
+        "Stummkarte, Wechselpräpositionen und Steigerung"
+      ],
+      "themesAr": [
+        "جغرافية البلدان الناطقة بالألمانية",
+        "ألمانيا والنمسا وسويسرا",
+        "الجزائر وحوض المتوسط",
+        "الخريطة الصماء وحروف الجر المتغيرة وصيغ التفضيل"
+      ],
+      "pdfUrl": "/generated/official-bac-german/bac-2025-3as-le-german-t2.pdf",
+      "solutionUrl": "/generated/official-bac-german/bac-2025-3as-le-german-t2-sol.pdf",
+      "fileSize": 256433,
+      "solutionFileSize": 252193
+    }
+  ]
+}
