@@ -17,7 +17,8 @@ export type IllustrationCategory =
 	| 'languages'
 	| 'history_geo'
 	| 'spanish'
-	| 'german';
+	| 'german'
+	| 'italian';
 
 export interface IllustrationPinSpec {
 	num: string | number;
@@ -39,11 +40,13 @@ export interface IllustrationAssetMeta {
 	titleEn?: string;
 	titleEs?: string;
 	titleDe?: string;
+	titleIt?: string;
 	legendAr: IllustrationLegendSpec[];
 	legendFr?: IllustrationLegendSpec[];
 	legendEn?: IllustrationLegendSpec[];
 	legendEs?: IllustrationLegendSpec[];
 	legendDe?: IllustrationLegendSpec[];
+	legendIt?: IllustrationLegendSpec[];
 	defaultPins?: IllustrationPinSpec[];
 }
 
@@ -1254,6 +1257,125 @@ export const ILLUSTRATIONS_CATALOG = {
 			{ num: '3', label: 'Digitales Projektmanagement' },
 			{ num: '4', label: 'Wirtschaft und nachhaltige Produktion' }
 		]
+	},
+	// ═══════════════════════════════════════════════════════════════════════════
+	// 8. SECONDARY ITALIAN LANGUAGE (2AS–3AS LE) — Plates ita_01..ita_06
+	// ═══════════════════════════════════════════════════════════════════════════
+	ita_01_italia_mediterraneo_carta_muta: {
+		id: 'ita_01_italia_mediterraneo_carta_muta',
+		category: 'italian',
+		titleAr: 'خريطة صماء لإيطاليا وحوض البحر الأبيض المتوسط',
+		titleIt: 'Carta muta dell’Italia e del bacino del Mediterraneo',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'إيطاليا (Italia)' },
+			{ num: '2', label: 'الجزائر (Algeria)' },
+			{ num: '3', label: 'جزيرة صقلية (Sicilia)' },
+			{ num: '4', label: 'البحر الأبيض المتوسط (Mar Mediterraneo)' },
+			{ num: '5', label: 'البحر الأدرياتيكي (Mar Adriatico)' }
+		],
+		legendIt: [
+			{ num: '1', label: 'Italia (Penisola Italiana)' },
+			{ num: '2', label: 'Algeria (Nord Africa)' },
+			{ num: '3', label: 'Sicilia (Isola mediterranea)' },
+			{ num: '4', label: 'Mar Mediterraneo' },
+			{ num: '5', label: 'Mar Adriatico' }
+		]
+	},
+	ita_02_patrimonio_architettonico_mediterraneo: {
+		id: 'ita_02_patrimonio_architettonico_mediterraneo',
+		category: 'italian',
+		titleAr: 'التراث المعماري المتوسطي والخرائط العلمية',
+		titleIt: 'Patrimonio architettonico mediterraneo e cartografia storica',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'قصبة الجزائر العتيقة (Casbah di Algeri)' },
+			{ num: '2', label: 'الجامع الكبير بتلمسان (Grande Moschea di Tlemcen)' },
+			{ num: '3', label: 'خرائط الإدريسي التاريخية (Cartografia di Al-Idrisi)' },
+			{ num: '4', label: 'العمارة الحجرية الهندسية (Architettura geometrica)' }
+		],
+		legendIt: [
+			{ num: '1', label: 'La Casbah di Algeri' },
+			{ num: '2', label: 'La Grande Moschea di Tlemcen' },
+			{ num: '3', label: 'La cartografia di Al-Idrisi' },
+			{ num: '4', label: 'Architettura storica mediterranea' }
+		]
+	},
+	ita_03_istruzione_lingue_biblioteca: {
+		id: 'ita_03_istruzione_lingue_biblioteca',
+		category: 'italian',
+		titleAr: 'التعليم وتعلّم اللغات الأجنبية والمكتبة',
+		titleIt: 'Istruzione, lingue straniere e biblioteca scolastica',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'القاموس الإيطالي-العربي (Dizionario Italiano-Arabo)' },
+			{ num: '2', label: 'دفتر القواعد والمطالعة (Grammatica e Lettura)' },
+			{ num: '3', label: 'رفوف الكتب الثقافية (Biblioteca di classe)' },
+			{ num: '4', label: 'النجاح الدراسي والاجتهاد (Successo scolastico)' }
+		],
+		legendIt: [
+			{ num: '1', label: 'Dizionario Italiano–Arabo' },
+			{ num: '2', label: 'Quaderno di grammatica e lettura' },
+			{ num: '3', label: 'Scaffali di libri e ricerca' },
+			{ num: '4', label: 'Studio serio e successo scolastico' }
+		]
+	},
+	ita_04_ambiente_energie_rinnovabili: {
+		id: 'ita_04_ambiente_energie_rinnovabili',
+		category: 'italian',
+		titleAr: 'حماية البيئة والطاقات المتجددة والجزائر الخضراء',
+		titleIt: 'Tutela dell’ambiente, energie rinnovabili e Algeria verde',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'الطاقة الشمسية (Energia solare)' },
+			{ num: '2', label: 'طاقة الرياح (Energia eolica)' },
+			{ num: '3', label: 'الفرز وإعادة التدوير (Riciclaggio)' },
+			{ num: '4', label: 'التشجير وحماية الغابات (Rimboschimento)' }
+		],
+		legendIt: [
+			{ num: '1', label: 'Energia solare pulita' },
+			{ num: '2', label: 'Energia eolica sostenibile' },
+			{ num: '3', label: 'Raccolta differenziata e riciclaggio' },
+			{ num: '4', label: 'Rimboschimento e tutela del verde' }
+		]
+	},
+	ita_05_scienza_tecnologia_informazione: {
+		id: 'ita_05_scienza_tecnologia_informazione',
+		category: 'italian',
+		titleAr: 'العلوم وتكنولوجيا الإعلام والبحث الرقمي المسؤول',
+		titleIt: 'Scienza, tecnologia dell’informazione e uso responsabile',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'المخبر والبحث التجريبي (Laboratorio scientifico)' },
+			{ num: '2', label: 'التعلم الرقمي والمكتبات الإلكترونية (Educazione digitale)' },
+			{ num: '3', label: 'الأمن المعلوماتي وحماية البيانات (Sicurezza dei dati)' },
+			{ num: '4', label: 'شبكة الاتصال والصحافة المسؤولة (Informazione responsabile)' }
+		],
+		legendIt: [
+			{ num: '1', label: 'Microscopio e ricerca scientifica' },
+			{ num: '2', label: 'Apprendimento digitale e libri' },
+			{ num: '3', label: 'Sicurezza informatica e dati' },
+			{ num: '4', label: 'Comunicazione e giornalismo serio' }
+		]
+	},
+	ita_06_alimentazione_sana_artigianato: {
+		id: 'ita_06_alimentazione_sana_artigianato',
+		category: 'italian',
+		titleAr: 'التغذية الصحية الحلال والحرف اليدوية الراقية',
+		titleIt: 'Alimentazione sana mediterranea e artigianato di qualità',
+		defaultPins: [],
+		legendAr: [
+			{ num: '1', label: 'زيت الزيتون والخضر الطازجة (Olio d’oliva e verdure)' },
+			{ num: '2', label: 'الحبوب الكاملة والتمور (Cereali e datteri)' },
+			{ num: '3', label: 'الفواكه الموسمية والماء (Frutta e acqua pura)' },
+			{ num: '4', label: 'الخزف الهندسي والنسيج التقليدي (Artigianato artistico)' }
+		],
+		legendIt: [
+			{ num: '1', label: 'Olio d’oliva naturale e ortaggi' },
+			{ num: '2', label: 'Cereali integrali e frutta secca' },
+			{ num: '3', label: 'Frutta fresca di stagione e acqua' },
+			{ num: '4', label: 'Ceramica geometrica e tessuti artigianali' }
+		]
 	}
 } as const satisfies Record<string, IllustrationAssetMeta>;
 
@@ -1277,7 +1399,7 @@ export function renderLessonIllustration(
 	id: IllustrationId,
 	opts?: {
 		title?: string;
-		lang?: 'ar' | 'fr' | 'en' | 'es' | 'de';
+		lang?: 'ar' | 'fr' | 'en' | 'es' | 'de' | 'it';
 		pins?: IllustrationPinSpec[];
 		customLegend?: IllustrationLegendSpec[];
 		hideLegend?: boolean;
@@ -1294,7 +1416,9 @@ export function renderLessonIllustration(
 					? (meta.titleEs ?? meta.titleAr)
 					: lang === 'de'
 						? (meta.titleDe ?? meta.titleAr)
-						: meta.titleAr;
+						: lang === 'it'
+							? (meta.titleIt ?? meta.titleAr)
+							: meta.titleAr;
 	const defaultLegend =
 		lang === 'fr'
 			? (meta.legendFr ?? meta.legendAr)
@@ -1304,7 +1428,9 @@ export function renderLessonIllustration(
 					? (meta.legendEs ?? meta.legendAr)
 					: lang === 'de'
 						? (meta.legendDe ?? meta.legendAr)
-						: meta.legendAr;
+						: lang === 'it'
+							? (meta.legendIt ?? meta.legendAr)
+							: meta.legendAr;
 
 	return JSON.stringify({
 		kind: 'illustrated',
@@ -1312,7 +1438,7 @@ export function renderLessonIllustration(
 		title: opts?.title ?? defaultTitle,
 		pins: opts?.pins ?? meta.defaultPins ?? [],
 		legend: opts?.hideLegend ? [] : (opts?.customLegend ?? defaultLegend),
-		isLtr: lang === 'fr' || lang === 'en' || lang === 'es' || lang === 'de'
+		isLtr: lang === 'fr' || lang === 'en' || lang === 'es' || lang === 'de' || lang === 'it'
 	});
 }
 
@@ -1324,7 +1450,7 @@ export function buildIllustratedFigureBlock(
 	id: IllustrationId,
 	opts?: {
 		title?: string;
-		lang?: 'ar' | 'fr' | 'en' | 'es' | 'de';
+		lang?: 'ar' | 'fr' | 'en' | 'es' | 'de' | 'it';
 		mode?: 'labeled' | 'quiz' | 'image_only';
 		width?: number | string;
 		maxHeight?: number;
@@ -1346,7 +1472,9 @@ export function buildIllustratedFigureBlock(
 					? (meta.titleEs ?? meta.titleAr)
 					: lang === 'de'
 						? (meta.titleDe ?? meta.titleAr)
-						: meta.titleAr;
+						: lang === 'it'
+							? (meta.titleIt ?? meta.titleAr)
+							: meta.titleAr;
 	const rawLegend =
 		opts?.customLegend ??
 		(lang === 'fr'
@@ -1357,7 +1485,9 @@ export function buildIllustratedFigureBlock(
 					? (meta.legendEs ?? meta.legendAr)
 					: lang === 'de'
 						? (meta.legendDe ?? meta.legendAr)
-						: meta.legendAr);
+						: lang === 'it'
+							? (meta.legendIt ?? meta.legendAr)
+							: meta.legendAr);
 
 	return {
 		type: 'illustrated_figure',

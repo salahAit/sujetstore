@@ -8,6 +8,7 @@
 #import "templates/french/exam.typ": french-exam-template
 #import "templates/spanish/exam.typ": spanish-exam-template
 #import "templates/german/exam.typ": german-exam-template
+#import "templates/italian/exam.typ": italian-exam-template
 
 #let template-id = sys.inputs.at("template-id", default: "middle/quiz")
 #let raw-data = sys.inputs.at("data", default: "{}")
@@ -29,6 +30,8 @@
   #spanish-exam-template(data, template-id: template-id, is-solution: is-solution)
 ] else if template-id.starts-with("german/") [
   #german-exam-template(data, template-id: template-id, is-solution: is-solution)
+] else if template-id.starts-with("italian/") [
+  #italian-exam-template(data, template-id: template-id, is-solution: is-solution)
 ] else if template-id == "secondary/bac_official" [
   #bac-official-template(data, is-solution: is-solution)
 ] else if template-id == "secondary/lycee_exam" or template-id == "secondary/exam" or template-id == "secondary/quiz" or template-id == "secondary/solution" [

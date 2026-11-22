@@ -18,8 +18,10 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	const style = normalizeStyleConfig(body.style ?? body);
 	const rawLang = body.language;
-	const language: 'ar' | 'fr' | 'en' | 'es' | 'de' =
-		rawLang === 'fr' || rawLang === 'en' || rawLang === 'es' || rawLang === 'de' ? rawLang : 'ar';
+	const language: 'ar' | 'fr' | 'en' | 'es' | 'de' | 'it' =
+		rawLang === 'fr' || rawLang === 'en' || rawLang === 'es' || rawLang === 'de' || rawLang === 'it'
+			? rawLang
+			: 'ar';
 	const rawLevel = typeof body.levelId === 'string' ? body.levelId : 'moyen';
 	const levelId =
 		rawLevel === 'primaire' || rawLevel === 'secondaire' ? rawLevel : 'moyen';

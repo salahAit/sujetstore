@@ -114,6 +114,13 @@ import {
 	type AssembleGermanOptions,
 	type GermanExamVariant
 } from './assemblers/exam-german';
+import {
+	assembleItalianExam,
+	yearSubjectToItalianTrack,
+	type AssembledItalianPaper,
+	type AssembleItalianOptions,
+	type ItalianExamVariant
+} from './assemblers/exam-italian';
 import { compileTypstPdf } from './typst';
 import {
 	SECONDARY_TRACK_IDS,
@@ -1043,3 +1050,8 @@ export type UnifiedAssembledGermanExam = AssembledGermanPaper;
 export type AssembleGermanExamOptions = AssembleGermanOptions;
 export type { GermanExamVariant };
 export { assembleGermanExam, yearSubjectToGermanTrack };
+
+export type UnifiedAssembledItalianExam = AssembledItalianPaper;
+export type AssembleItalianExamOptions = AssembleItalianOptions;
+export type { ItalianExamVariant };
+export { assembleItalianExam, yearSubjectToItalianTrack };

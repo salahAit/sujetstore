@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-11-22T02:26:46.341Z",
+  "total_papers": 6,
+  "total_pdfs": 12,
+  "items": [
+    {
+      "slug": "bac-2023-3as-le-italian-t1",
+      "grade": "3as_le",
+      "yearSubjectId": 795,
+      "subjectId": "LAN-ITA",
+      "streamId": "LE",
+      "academicYear": "2023",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 4,
+      "duration": "03 h 00",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإيطالية — شعبة لغات أجنبية (دورة جوان 2023 — الموضوع الأول: الأسرة والتعليم وقيمة المطالعة لدى الشباب)",
+      "titleIt": "Simulazione d’Esame di Maturità (BAC) in Italiano — Lingue Straniere (Giugno 2023 — Traccia 1: La famiglia, l’istruzione e il valore della lettura tra i giovani)",
+      "themesIt": [
+        "Famiglia e sostegno educativo",
+        "Biblioteca scolastica e lettura",
+        "Apprendimento delle lingue straniere",
+        "Forma passiva, famiglia di parole e congiuntivo presente"
+      ],
+      "themesAr": [
+        "الأسرة والدعم التربوي",
+        "المكتبة المدرسية والمطالعة",
+        "تعلّم اللغات الأجنبية",
+        "المبني للمجهول واشتقاق الكلمات والحاضر المنصوب"
+      ],
+      "pdfUrl": "/generated/official-bac-italian/bac-2023-3as-le-italian-t1.pdf",
+      "solutionUrl": "/generated/official-bac-italian/bac-2023-3as-le-italian-t1-sol.pdf",
+      "fileSize": 293109,
+      "solutionFileSize": 289611
+    },
+    {
+      "slug": "bac-2023-3as-le-italian-t2",
+      "grade": "3as_le",
+      "yearSubjectId": 795,
+      "subjectId": "LAN-ITA",
+      "streamId": "LE",
+      "academicYear": "2023",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2023",
+      "coefficient": 4,
+      "duration": "03 h 00",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإيطالية — شعبة لغات أجنبية (دورة جوان 2023 — الموضوع الثاني: تكنولوجيا الإعلام والصحافة الجادة وحماية البيانات)",
+      "titleIt": "Simulazione d’Esame di Maturità (BAC) in Italiano — Lingue Straniere (Giugno 2023 — Traccia 2: Tecnologia dell’informazione, giornalismo serio e tutela dei dati)",
+      "themesIt": [
+        "Tecnologia dell’informazione",
+        "Giornalismo serio e verifica delle fonti",
+        "Tutela dei dati personali",
+        "Congiuntivo, discorso indiretto e connettivi"
+      ],
+      "themesAr": [
+        "تكنولوجيا الإعلام والاتصال",
+        "الصحافة الجادة والتحقق من المصادر",
+        "حماية البيانات الشخصية",
+        "المنصوب والأسلوب غير المباشر والروابط المنطقية"
+      ],
+      "pdfUrl": "/generated/official-bac-italian/bac-2023-3as-le-italian-t2.pdf",
+      "solutionUrl": "/generated/official-bac-italian/bac-2023-3as-le-italian-t2-sol.pdf",
+      "fileSize": 298718,
+      "solutionFileSize": 293810
+    },
+    {
+      "slug": "bac-2024-3as-le-italian-t1",
+      "grade": "3as_le",
+      "yearSubjectId": 795,
+      "subjectId": "LAN-ITA",
+      "streamId": "LE",
+      "academicYear": "2024",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 4,
+      "duration": "03 h 00",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإيطالية — شعبة لغات أجنبية (دورة جوان 2024 — الموضوع الأول: حماية البيئة والطاقات المتجددة ومشروع الجزائر الخضراء)",
+      "titleIt": "Simulazione d’Esame di Maturità (BAC) in Italiano — Lingue Straniere (Giugno 2024 — Traccia 1: Tutela dell’ambiente, energie rinnovabili e il progetto Algeria Verde)",
+      "themesIt": [
+        "Progetto Algeria Verde e Diga Verde",
+        "Energie rinnovabili solare ed eolica",
+        "Raccolta differenziata e risparmio idrico",
+        "Periodo ipotetico 1º/2º tipo e congiuntivo imperfetto"
+      ],
+      "themesAr": [
+        "مشروع الجزائر الخضراء والسد الأخضر",
+        "الطاقات المتجددة الشمسية والريحية",
+        "الفرز الانتقائي وترشيد استهلاك المياه",
+        "الجملة الشرطية (النوع 1 و2) والمنصوب الناقص"
+      ],
+      "pdfUrl": "/generated/official-bac-italian/bac-2024-3as-le-italian-t1.pdf",
+      "solutionUrl": "/generated/official-bac-italian/bac-2024-3as-le-italian-t1-sol.pdf",
+      "fileSize": 306238,
+      "solutionFileSize": 300384
+    },
+    {
+      "slug": "bac-2024-3as-le-italian-t2",
+      "grade": "3as_le",
+      "yearSubjectId": 795,
+      "subjectId": "LAN-ITA",
+      "streamId": "LE",
+      "academicYear": "2024",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2024",
+      "coefficient": 4,
+      "duration": "03 h 00",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإيطالية — شعبة لغات أجنبية (دورة جوان 2024 — الموضوع الثاني: التراث المعماري المتوسطي والخرائط العلمية التاريخية)",
+      "titleIt": "Simulazione d’Esame di Maturità (BAC) in Italiano — Lingue Straniere (Giugno 2024 — Traccia 2: Patrimonio architettonico mediterraneo e cartografia storica)",
+      "themesIt": [
+        "Casbah di Algeri, Tlemcen e Valle dello M’Zab",
+        "Cartografia di Al-Idrisi e medicina di Al-Zahrawi",
+        "Architettura storica del Mediterraneo",
+        "Passato remoto, imperfetto e forma passiva"
+      ],
+      "themesAr": [
+        "قصبة الجزائر وتلمسان ووادي ميزاب",
+        "خرائط الإدريسي وطب الزهراوي",
+        "العمارة التاريخية المتوسطية",
+        "الماضي البعيد والناقص والمبني للمجهول"
+      ],
+      "pdfUrl": "/generated/official-bac-italian/bac-2024-3as-le-italian-t2.pdf",
+      "solutionUrl": "/generated/official-bac-italian/bac-2024-3as-le-italian-t2-sol.pdf",
+      "fileSize": 345864,
+      "solutionFileSize": 341972
+    },
+    {
+      "slug": "bac-2025-3as-le-italian-t1",
+      "grade": "3as_le",
+      "yearSubjectId": 795,
+      "subjectId": "LAN-ITA",
+      "streamId": "LE",
+      "academicYear": "2025",
+      "topicNumber": 1,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 4,
+      "duration": "03 h 00",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإيطالية — شعبة لغات أجنبية (دورة جوان 2025 — الموضوع الأول: التغذية المتوسطية الصحية والرياضة والحرف التقليدية الراقية)",
+      "titleIt": "Simulazione d’Esame di Maturità (BAC) in Italiano — Lingue Straniere (Giugno 2025 — Traccia 1: Alimentazione mediterranea sana, sport e artigianato di qualità)",
+      "themesIt": [
+        "Alimentazione mediterranea sana e naturale",
+        "Sport e benessere giovanile",
+        "Artigianato artistico di qualità",
+        "Pronomi combinati, ci/ne e comparativi"
+      ],
+      "themesAr": [
+        "التغذية المتوسطية الصحية والطبيعية",
+        "الرياضة وتوازن الشباب",
+        "الحرف اليدوية والفنية الأصيلة",
+        "الضمائر المركبة وci/ne وصيغ المقارنة"
+      ],
+      "pdfUrl": "/generated/official-bac-italian/bac-2025-3as-le-italian-t1.pdf",
+      "solutionUrl": "/generated/official-bac-italian/bac-2025-3as-le-italian-t1-sol.pdf",
+      "fileSize": 332619,
+      "solutionFileSize": 322655
+    },
+    {
+      "slug": "bac-2025-3as-le-italian-t2",
+      "grade": "3as_le",
+      "yearSubjectId": 795,
+      "subjectId": "LAN-ITA",
+      "streamId": "LE",
+      "academicYear": "2025",
+      "topicNumber": 2,
+      "sessionAr": "دورة جوان 2025",
+      "coefficient": 4,
+      "duration": "03 h 00",
+      "titleAr": "موضوع بكالوريا تدريبي في اللغة الإيطالية — شعبة لغات أجنبية (دورة جوان 2025 — الموضوع الثاني: حوض البحر الأبيض المتوسط: الجغرافيا واللغات والتبادل الثقافي)",
+      "titleIt": "Simulazione d’Esame di Maturità (BAC) in Italiano — Lingue Straniere (Giugno 2025 — Traccia 2: Il bacino del Mediterraneo : geografia, lingue e scambi culturali)",
+      "themesIt": [
+        "Geografia dell’Italia e del Mediterraneo",
+        "Scambi linguistici e scientifici storici",
+        "Dialogo culturale e identità algerina",
+        "Carta muta, preposizioni articolate e futuro semplice"
+      ],
+      "themesAr": [
+        "جغرافية إيطاليا وحوض المتوسط",
+        "التبادلات اللغوية والعلمية التاريخية",
+        "الحوار الثقافي والهوية الجزائرية",
+        "الخريطة الصماء وحروف الجر المركبة والمستقبل البسيط"
+      ],
+      "pdfUrl": "/generated/official-bac-italian/bac-2025-3as-le-italian-t2.pdf",
+      "solutionUrl": "/generated/official-bac-italian/bac-2025-3as-le-italian-t2-sol.pdf",
+      "fileSize": 277899,
+      "solutionFileSize": 271930
+    }
+  ]
+}

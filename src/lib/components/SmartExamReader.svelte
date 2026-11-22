@@ -409,9 +409,11 @@
 									? 'República Argelina Democrática y Popular'
 									: meta.lang === 'de'
 										? 'Demokratische Volksrepublik Algerien'
-										: meta.lang === 'en'
-											? "People's Democratic Republic of Algeria"
-											: 'République Algérienne Démocratique et Populaire'}
+										: meta.lang === 'it'
+											? 'Repubblica Algerina Democratica e Popolare'
+											: meta.lang === 'en'
+												? "People's Democratic Republic of Algeria"
+												: 'République Algérienne Démocratique et Populaire'}
 						</div>
 
 						<div class="flex flex-wrap items-center justify-center gap-1.5 text-center text-[0.82em] font-bold opacity-90">
@@ -446,9 +448,11 @@
 											? 'Corrección Modelo y Baremo Detallado'
 											: meta.lang === 'de'
 												? 'Musterlösung und Detaillierte Bewertungsskala'
-												: meta.lang === 'en'
-													? 'Model Answer & Detailed Marking Scheme'
-													: 'Corrigé Type & Barème Détaillé'}
+												: meta.lang === 'it'
+													? 'Correzione Modello e Griglia di Valutazione'
+													: meta.lang === 'en'
+														? 'Model Answer & Detailed Marking Scheme'
+														: 'Corrigé Type & Barème Détaillé'}
 								</span>
 							</div>
 						{/if}
@@ -457,7 +461,7 @@
 							{#if meta.duration}
 								<span class="inline-flex items-center gap-1">
 									<Clock size={14} class="opacity-75" />
-									<span>{isRtl ? 'المدة:' : meta.lang === 'es' ? 'Duración :' : meta.lang === 'de' ? 'Dauer :' : meta.lang === 'en' ? 'Duration:' : 'Durée :'} {meta.duration}</span>
+									<span>{isRtl ? 'المدة:' : meta.lang === 'es' ? 'Duración :' : meta.lang === 'de' ? 'Dauer :' : meta.lang === 'it' ? 'Durata :' : meta.lang === 'en' ? 'Duration:' : 'Durée :'} {meta.duration}</span>
 								</span>
 							{/if}
 							{#if meta.coefficient}
@@ -972,10 +976,10 @@
 										>
 											{#if isExSolVisible}
 												<EyeOff size={14} />
-												<span>{isRtl ? 'إخفاء الحل' : meta.lang === 'es' ? 'Ocultar solución' : meta.lang === 'de' ? 'Lösung ausblenden' : meta.lang === 'en' ? 'Hide solution' : 'Masquer le corrigé'}</span>
+												<span>{isRtl ? 'إخفاء الحل' : meta.lang === 'es' ? 'Ocultar solución' : meta.lang === 'de' ? 'Lösung ausblenden' : meta.lang === 'it' ? 'Nascondi soluzione' : meta.lang === 'en' ? 'Hide solution' : 'Masquer le corrigé'}</span>
 											{:else}
 												<Eye size={14} />
-												<span>{isRtl ? 'إظهار الحل' : meta.lang === 'es' ? 'Ver solución' : meta.lang === 'de' ? 'Lösung' : meta.lang === 'en' ? 'View solution' : 'Voir le corrigé'}</span>
+												<span>{isRtl ? 'إظهار الحل' : meta.lang === 'es' ? 'Ver solución' : meta.lang === 'de' ? 'Lösung' : meta.lang === 'it' ? 'Soluzione' : meta.lang === 'en' ? 'View solution' : 'Voir le corrigé'}</span>
 											{/if}
 										</button>
 									</div>

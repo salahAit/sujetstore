@@ -122,7 +122,9 @@
 		'2as:LAN-SPA:LE': 4,
 		'3as:LAN-SPA:LE': 4,
 		'2as:LAN-GER:LE': 4,
-		'3as:LAN-GER:LE': 4
+		'3as:LAN-GER:LE': 4,
+		'2as:LAN-ITA:LE': 4,
+		'3as:LAN-ITA:LE': 4
 	};
 
 	function formatYsLabel(ys: any): string {

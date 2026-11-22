@@ -36,7 +36,9 @@ export type TemplateId =
 	| 'spanish/secondary'
 	| 'spanish/bac_official'
 	| 'german/secondary'
-	| 'german/bac_official';
+	| 'german/bac_official'
+	| 'italian/secondary'
+	| 'italian/bac_official';
 
 /**
  * Exam metadata — injected into the Typst header.

@@ -111,12 +111,13 @@ function inferDifficulty(raw: string | null, slug: string): ExamDifficulty {
 	return 'medium';
 }
 
-function detectLanguage(subjectId?: string): 'ar' | 'fr' | 'en' | 'es' | 'de' {
+function detectLanguage(subjectId?: string): 'ar' | 'fr' | 'en' | 'es' | 'de' | 'it' {
 	const s = (subjectId || '').toUpperCase();
 	if (s.startsWith('ENG') || s.startsWith('LANG')) return 'en';
 	if (s.startsWith('FRE')) return 'fr';
 	if (s === 'LAN-SPA' || s.startsWith('SPA')) return 'es';
 	if (s === 'LAN-GER' || s.startsWith('GER') || s.startsWith('DEU')) return 'de';
+	if (s === 'LAN-ITA' || s.startsWith('ITA')) return 'it';
 	return 'ar';
 }
 
@@ -208,7 +209,7 @@ function extractVocabPairs(raw: string): Array<{ word: string; meaning: string }
 
 function parseFallbackTypstRaw(
 	rawContent: string,
-	lang: 'ar' | 'fr' | 'en' | 'es' | 'de',
+	lang: 'ar' | 'fr' | 'en' | 'es' | 'de' | 'it',
 	answer?: string,
 	mark?: string
 ): WebBlock {
@@ -318,7 +319,9 @@ function parseFallbackTypstRaw(
 					w === 'Glossary:' ||
 					w === 'Glosario :' ||
 					w === 'Worterklärung :' ||
-					w === 'Glossar :'
+					w === 'Glossar :' ||
+					w === 'Glossario :' ||
+					w === 'Lessico :'
 				)
 					continue;
 				vocab.push({ word: w, meaning: unescapeTypstString(vm[2].trim()) });
@@ -381,7 +384,7 @@ function serializeTableCell(cell: any): WebTableCell {
 	return { content: '' };
 }
 
-function serializeBlock(block: any, lang: 'ar' | 'fr' | 'en' | 'es' | 'de'): WebBlock | null {
+function serializeBlock(block: any, lang: 'ar' | 'fr' | 'en' | 'es' | 'de' | 'it'): WebBlock | null {
 	if (!block || typeof block !== 'object') return null;
 	const mark = block.mark !== undefined && block.mark !== '' ? String(block.mark) : undefined;
 
@@ -655,7 +658,11 @@ export function serializeExamForWeb(examDoc: Record<string, any>): WebExamPayloa
 						? docType === 'test'
 							? `Klassenarbeit — ${meta.trimesterName || '1. Trimester'}`
 							: `Trimesterprüfung — ${meta.trimesterName || '1. Trimester'}`
-						: docType === 'test'
+						: lang === 'it'
+							? docType === 'test'
+								? `Verifica scritta — ${meta.trimesterName || '1º Trimestre'}`
+								: `Esame trimestrale — ${meta.trimesterName || '1º Trimestre'}`
+							: docType === 'test'
 						? `فرض محروس في مادة ${meta.subjectName || ''}`
 						: `اختبار في مادة ${meta.subjectName || ''}`;
 
@@ -677,7 +684,9 @@ export function serializeExamForWeb(examDoc: Record<string, any>): WebExamPayloa
 						? `Parte ${idx + 1}`
 						: lang === 'de'
 							? `Teil ${idx + 1}`
-							: `التمرين ${ex?.num || AR_ORDINALS[idx] || idx + 1}`;
+							: lang === 'it'
+								? `Parte ${idx + 1}`
+								: `التمرين ${ex?.num || AR_ORDINALS[idx] || idx + 1}`;
 
 		const rawBlocks = ex?.blocks || ex?.content || [];
 		const blocks: WebBlock[] = Array.isArray(rawBlocks)

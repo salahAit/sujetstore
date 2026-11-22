@@ -23,7 +23,8 @@ function parseScope(raw: unknown): BatchRebuildScope {
 		obj.language === 'fr' ||
 		obj.language === 'en' ||
 		obj.language === 'es' ||
-		obj.language === 'de'
+		obj.language === 'de' ||
+		obj.language === 'it'
 	) {
 		scope.language = obj.language;
 	}
